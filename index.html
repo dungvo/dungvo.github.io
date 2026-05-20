@@ -1,11 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dung Vo Apps</title>
   <meta name="description" content="Apps, writing, support, and privacy pages by Dung Vo." />
   <link rel="stylesheet" href="/assets/styles.css" />
+  
+<script>
+  (function () {
+    const saved = localStorage.getItem("site-lang");
+    const browserLang = (navigator.language || "en").toLowerCase().startsWith("vi") ? "vi" : "en";
+    const lang = saved || browserLang;
+    document.documentElement.dataset.lang = lang;
+    document.documentElement.lang = lang;
+
+    function updateButtons() {
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.classList.toggle("active", button.dataset.setLang === document.documentElement.dataset.lang);
+      });
+    }
+
+    window.setSiteLang = function (lang) {
+      localStorage.setItem("site-lang", lang);
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang;
+      updateButtons();
+    };
+
+    document.addEventListener("DOMContentLoaded", updateButtons);
+  })();
+</script>
+
 </head>
 <body>
   <main class="page">
@@ -20,28 +46,45 @@
         <a href="#legal">Legal</a>
         <a href="mailto:cdung.vo@gmail.com">Contact</a>
       </div>
+      
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-set-lang="en" onclick="setSiteLang('en')">EN</button>
+        <button type="button" data-set-lang="vi" onclick="setSiteLang('vi')">VI</button>
+      </div>
+
     </nav>
 
     <header class="hero">
       <div class="card hero-main">
-        <div class="eyebrow">Independent app builder</div>
-        <h1>Thoughtful apps for clarity, insight, and everyday life.</h1>
-        <p class="lead">
+        <div class="eyebrow" lang-block="en">Independent app builder</div>
+        <div class="eyebrow" lang-block="vi">Nhà phát triển app độc lập</div>
+
+        <h1 lang-block="en">Thoughtful apps for clarity, insight, and everyday life.</h1>
+        <h1 lang-block="vi">Những ứng dụng rõ ràng, hữu ích cho cuộc sống hằng ngày.</h1>
+
+        <p class="lead" lang-block="en">
           Hi, I’m Dung Vo — an independent developer with a background in large-scale analytics and data platforms,
           now building privacy-first consumer apps with clean, useful product experiences.
         </p>
+        <p class="lead" lang-block="vi">
+          Xin chào, tôi là Dung Vo — một nhà phát triển độc lập có nền tảng về hệ thống dữ liệu và phân tích quy mô lớn,
+          hiện đang xây dựng các ứng dụng ưu tiên quyền riêng tư, đơn giản và hữu ích.
+        </p>
+
         <div class="actions">
-          <a class="button primary" href="#apps">View apps</a>
-          <a class="button" href="#writing">Read writing</a>
+          <a class="button primary" href="#apps" lang-block="en">View apps</a>
+          <a class="button primary" href="#apps" lang-block="vi">Xem ứng dụng</a>
+          <a class="button" href="#writing" lang-block="en">Read writing</a>
+          <a class="button" href="#writing" lang-block="vi">Bài viết</a>
         </div>
       </div>
 
       <aside class="card side">
         <div class="profile-avatar">DV</div>
         <h2 style="margin-top:18px">Dung Vo</h2>
-        <p>
-          I build products that turn complex information into simple, calm, and useful experiences.
-        </p>
+        <p lang-block="en">I build products that turn complex information into simple, calm, and useful experiences.</p>
+        <p lang-block="vi">Tôi xây dựng sản phẩm giúp biến thông tin phức tạp thành trải nghiệm đơn giản, rõ ràng và hữu ích.</p>
+
         <div class="meta-list">
           <div class="meta-item"><span>Focus</span><strong>iOS · SwiftUI</strong></div>
           <div class="meta-item"><span>Background</span><strong>Data · Analytics</strong></div>
@@ -53,8 +96,10 @@
     <section id="apps" class="card section-card">
       <div class="section-head">
         <div>
-          <h2>Apps</h2>
-          <p>Products I’m building and maintaining.</p>
+          <h2 lang-block="en">Apps</h2>
+          <h2 lang-block="vi">Ứng dụng</h2>
+          <p lang-block="en">Products I’m building and maintaining.</p>
+          <p lang-block="vi">Những sản phẩm tôi đang xây dựng và phát triển.</p>
         </div>
       </div>
 
@@ -62,54 +107,30 @@
         <article class="item">
           <span class="tag">Finance</span>
           <h3>SpendStory</h3>
-          <p>Expense insights and spending stories that help you understand where your money goes.</p>
+          <p lang-block="en">Expense insights and spending stories that help you understand where your money goes.</p>
+          <p lang-block="vi">Phân tích chi tiêu và câu chuyện tài chính giúp bạn hiểu tiền của mình đang đi đâu.</p>
           <div class="link-row">
-            <a class="mini-link" href="/apps/spendstory/">Overview</a>
+            <a class="mini-link" href="/apps/spendstory/" lang-block="en">Overview</a>
+            <a class="mini-link" href="/apps/spendstory/" lang-block="vi">Giới thiệu</a>
             <a class="mini-link" href="/apps/spendstory/privacy.html">Privacy</a>
             <a class="mini-link" href="/apps/spendstory/support.html">Support</a>
           </div>
         </article>
 
         <article class="item">
-          <span class="tag">Coming soon</span>
+          <span class="tag" lang-block="en">Coming soon</span>
+          <span class="tag" lang-block="vi">Sắp ra mắt</span>
           <h3>Next App</h3>
-          <p>Future products can live here with their own overview, support, and privacy pages.</p>
+          <p lang-block="en">Future products can live here with their own overview, support, and privacy pages.</p>
+          <p lang-block="vi">Các sản phẩm tiếp theo có thể được đặt tại đây cùng trang giới thiệu, hỗ trợ và quyền riêng tư riêng.</p>
         </article>
 
         <article class="item">
-          <span class="tag">Experiments</span>
-          <h3>Product Notes</h3>
-          <p>Small product ideas, design notes, and technical write-ups.</p>
-          <div class="link-row">
-            <a class="mini-link" href="#writing">View writing</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="writing" class="card section-card">
-      <div class="section-head">
-        <div>
-          <h2>Writing</h2>
-          <p>Product notes, launch updates, and engineering thoughts.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <article class="item">
-          <span class="tag">Coming soon</span>
-          <h3>Designing a privacy-first expense app</h3>
-          <p>Notes about local-first data, trust, and personal finance UX.</p>
-        </article>
-        <article class="item">
-          <span class="tag">Coming soon</span>
-          <h3>Building better spending insights</h3>
-          <p>How dashboards can be useful without becoming noisy.</p>
-        </article>
-        <article class="item">
-          <span class="tag">Coming soon</span>
-          <h3>From data platforms to consumer apps</h3>
-          <p>Lessons from analytics systems applied to product design.</p>
+          <span class="tag">Notes</span>
+          <h3 lang-block="en">Product Notes</h3>
+          <h3 lang-block="vi">Ghi chú sản phẩm</h3>
+          <p lang-block="en">Small product ideas, design notes, and technical write-ups.</p>
+          <p lang-block="vi">Ý tưởng sản phẩm, ghi chú thiết kế và bài viết kỹ thuật.</p>
         </article>
       </div>
     </section>
@@ -117,8 +138,10 @@
     <section id="legal" class="card section-card">
       <div class="section-head">
         <div>
-          <h2>Legal & support</h2>
-          <p>Public pages for App Store listings and user support.</p>
+          <h2 lang-block="en">Legal & support</h2>
+          <h2 lang-block="vi">Pháp lý & hỗ trợ</h2>
+          <p lang-block="en">Public pages for App Store listings and user support.</p>
+          <p lang-block="vi">Các trang công khai dùng cho App Store và hỗ trợ người dùng.</p>
         </div>
       </div>
 
@@ -126,33 +149,29 @@
         <article class="item">
           <span class="tag">SpendStory</span>
           <h3>Privacy Policy</h3>
-          <p>How SpendStory handles data and privacy.</p>
-          <div class="link-row">
-            <a class="mini-link" href="/apps/spendstory/privacy.html">Open privacy policy</a>
-          </div>
+          <p lang-block="en">How SpendStory handles data and privacy.</p>
+          <p lang-block="vi">Cách SpendStory xử lý dữ liệu và quyền riêng tư.</p>
+          <div class="link-row"><a class="mini-link" href="/apps/spendstory/privacy.html">Open</a></div>
         </article>
         <article class="item">
           <span class="tag">SpendStory</span>
           <h3>Support</h3>
-          <p>Help and contact information for SpendStory users.</p>
-          <div class="link-row">
-            <a class="mini-link" href="/apps/spendstory/support.html">Open support</a>
-          </div>
+          <p lang-block="en">Help and contact information for SpendStory users.</p>
+          <p lang-block="vi">Thông tin hỗ trợ và liên hệ cho người dùng SpendStory.</p>
+          <div class="link-row"><a class="mini-link" href="/apps/spendstory/support.html">Open</a></div>
         </article>
         <article class="item">
           <span class="tag">Contact</span>
           <h3>Email</h3>
-          <p>For product questions, feedback, or privacy requests.</p>
-          <div class="link-row">
-            <a class="mini-link" href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a>
-          </div>
+          <p lang-block="en">For product questions, feedback, or privacy requests.</p>
+          <p lang-block="vi">Liên hệ khi cần hỗ trợ, góp ý hoặc có yêu cầu về quyền riêng tư.</p>
+          <div class="link-row"><a class="mini-link" href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a></div>
         </article>
       </div>
     </section>
 
     <footer class="footer">© <span id="year"></span> Dung Vo. All rights reserved.</footer>
   </main>
-
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

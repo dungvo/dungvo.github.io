@@ -1,83 +1,114 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SpendStory Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for SpendStory." />
   <link rel="stylesheet" href="/assets/styles.css" />
+  
+<script>
+  (function () {
+    const saved = localStorage.getItem("site-lang");
+    const browserLang = (navigator.language || "en").toLowerCase().startsWith("vi") ? "vi" : "en";
+    const lang = saved || browserLang;
+    document.documentElement.dataset.lang = lang;
+    document.documentElement.lang = lang;
+
+    function updateButtons() {
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.classList.toggle("active", button.dataset.setLang === document.documentElement.dataset.lang);
+      });
+    }
+
+    window.setSiteLang = function (lang) {
+      localStorage.setItem("site-lang", lang);
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang;
+      updateButtons();
+    };
+
+    document.addEventListener("DOMContentLoaded", updateButtons);
+  })();
+</script>
+
 </head>
 <body>
   <main class="page">
     <nav class="nav">
-      <a class="brand" href="/">
-        <span class="logo">SS</span>
-        <span>SpendStory</span>
-      </a>
-      <div class="nav-links">
-        <a href="/apps/spendstory/">Overview</a>
-        <a href="/apps/spendstory/support.html">Support</a>
+      <a class="brand" href="/"><span class="logo">SS</span><span>SpendStory</span></a>
+      <div class="nav-links"><a href="/apps/spendstory/">Overview</a><a href="/apps/spendstory/support.html">Support</a></div>
+      
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-set-lang="en" onclick="setSiteLang('en')">EN</button>
+        <button type="button" data-set-lang="vi" onclick="setSiteLang('vi')">VI</button>
       </div>
+
     </nav>
 
-    <article class="card legal">
+    <article class="card legal" lang-block="en">
       <div class="eyebrow">Privacy Policy</div>
       <h1>SpendStory Privacy Policy</h1>
       <p><strong>Effective date:</strong> May 20, 2026</p>
-
-      <p>
-        SpendStory is designed to help you record expenses and understand your spending insights while respecting your privacy.
-        This Privacy Policy explains how the app handles information.
-      </p>
+      <p>SpendStory helps you record expenses and understand your spending insights while respecting your privacy.</p>
 
       <h2>Information We Collect</h2>
-      <p>
-        SpendStory does not require an account. The app is designed to store your expense data locally on your device.
-        This may include amounts, categories, notes, dates, spending types, jars, cadence information, and other details you enter in the app.
-      </p>
+      <p>SpendStory does not require an account. The app is designed to store your expense data locally on your device. This may include amounts, categories, notes, dates, spending types, jars, cadence information, and other details you enter in the app.</p>
 
       <h2>How Your Data Is Used</h2>
-      <p>
-        Your data is used to provide app features such as expense tracking, summaries, dashboards, reports, insights,
-        financial health views, and spending stories.
-      </p>
+      <p>Your data is used to provide app features such as expense tracking, summaries, dashboards, reports, insights, financial health views, and spending stories.</p>
 
       <h2>Data Sharing</h2>
-      <p>
-        SpendStory does not sell your personal information. SpendStory does not share your expense data with advertisers or data brokers.
-      </p>
+      <p>SpendStory does not sell your personal information. SpendStory does not share your expense data with advertisers or data brokers.</p>
 
       <h2>Analytics and Tracking</h2>
-      <p>
-        The current version of SpendStory does not use third-party advertising tracking. If analytics, cloud sync,
-        or other online services are added in the future, this policy will be updated to explain what data is used and why.
-      </p>
+      <p>The current version of SpendStory does not use third-party advertising tracking. If analytics, cloud sync, or other online services are added in the future, this policy will be updated.</p>
 
       <h2>Local Storage</h2>
-      <p>
-        Expense data is stored on your device. Deleting the app may delete locally stored data unless your device or a future app feature provides backup or sync.
-      </p>
+      <p>Expense data is stored on your device. Deleting the app may delete locally stored data unless your device or a future feature provides backup or sync.</p>
 
       <h2>Children’s Privacy</h2>
-      <p>
-        SpendStory is not intended for children under 13. We do not knowingly collect personal information from children.
-      </p>
+      <p>SpendStory is not intended for children under 13. We do not knowingly collect personal information from children.</p>
 
       <h2>Changes to This Policy</h2>
-      <p>
-        This Privacy Policy may be updated from time to time. Any changes will be posted on this page with an updated effective date.
-      </p>
+      <p>This Privacy Policy may be updated from time to time. Any changes will be posted on this page with an updated effective date.</p>
 
       <h2>Contact</h2>
-      <p>
-        If you have questions about this Privacy Policy, contact:
-        <a href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a>
-      </p>
+      <p>If you have questions about this Privacy Policy, contact: <a href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a></p>
+    </article>
+
+    <article class="card legal" lang-block="vi">
+      <div class="eyebrow">Chính sách quyền riêng tư</div>
+      <h1>Chính sách quyền riêng tư của SpendStory</h1>
+      <p><strong>Ngày hiệu lực:</strong> 20/05/2026</p>
+      <p>SpendStory giúp bạn ghi lại chi tiêu và hiểu rõ hơn về thói quen tài chính, đồng thời tôn trọng quyền riêng tư của bạn.</p>
+
+      <h2>Thông tin chúng tôi thu thập</h2>
+      <p>SpendStory không yêu cầu tài khoản. Ứng dụng được thiết kế để lưu dữ liệu chi tiêu cục bộ trên thiết bị của bạn. Dữ liệu có thể bao gồm số tiền, danh mục, ghi chú, ngày tháng, loại chi tiêu, hũ tiền, chu kỳ và các thông tin khác bạn nhập trong ứng dụng.</p>
+
+      <h2>Cách dữ liệu được sử dụng</h2>
+      <p>Dữ liệu của bạn được dùng để cung cấp các tính năng như ghi chép chi tiêu, tổng quan, dashboard, báo cáo, phân tích, sức khỏe tài chính và câu chuyện chi tiêu.</p>
+
+      <h2>Chia sẻ dữ liệu</h2>
+      <p>SpendStory không bán thông tin cá nhân của bạn. SpendStory không chia sẻ dữ liệu chi tiêu của bạn cho nhà quảng cáo hoặc bên môi giới dữ liệu.</p>
+
+      <h2>Phân tích và theo dõi</h2>
+      <p>Phiên bản hiện tại của SpendStory không sử dụng theo dõi quảng cáo bên thứ ba. Nếu trong tương lai có thêm analytics, đồng bộ đám mây hoặc dịch vụ online khác, chính sách này sẽ được cập nhật.</p>
+
+      <h2>Lưu trữ cục bộ</h2>
+      <p>Dữ liệu chi tiêu được lưu trên thiết bị của bạn. Việc xóa ứng dụng có thể xóa dữ liệu cục bộ, trừ khi thiết bị hoặc một tính năng trong tương lai cung cấp sao lưu/đồng bộ.</p>
+
+      <h2>Quyền riêng tư của trẻ em</h2>
+      <p>SpendStory không dành cho trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em.</p>
+
+      <h2>Thay đổi chính sách</h2>
+      <p>Chính sách này có thể được cập nhật theo thời gian. Mọi thay đổi sẽ được đăng tại trang này cùng ngày hiệu lực mới.</p>
+
+      <h2>Liên hệ</h2>
+      <p>Nếu bạn có câu hỏi về chính sách quyền riêng tư, vui lòng liên hệ: <a href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a></p>
     </article>
 
     <footer class="footer">© <span id="year"></span> Dung Vo. All rights reserved.</footer>
   </main>
-
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
