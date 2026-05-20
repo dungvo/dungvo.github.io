@@ -1,177 +1,158 @@
+
 <!doctype html>
 <html lang="en" data-lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dung Vo Apps</title>
-  <meta name="description" content="Apps, writing, support, and privacy pages by Dung Vo." />
-  <link rel="stylesheet" href="/assets/styles.css" />
-  
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Dung Vo Apps</title>
+<link rel="stylesheet" href="/assets/styles.css"/>
+
 <script>
-  (function () {
-    const saved = localStorage.getItem("site-lang");
-    const browserLang = (navigator.language || "en").toLowerCase().startsWith("vi") ? "vi" : "en";
-    const lang = saved || browserLang;
-    document.documentElement.dataset.lang = lang;
-    document.documentElement.lang = lang;
-
-    function updateButtons() {
-      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
-        button.classList.toggle("active", button.dataset.setLang === document.documentElement.dataset.lang);
-      });
-    }
-
-    window.setSiteLang = function (lang) {
-      localStorage.setItem("site-lang", lang);
-      document.documentElement.dataset.lang = lang;
-      document.documentElement.lang = lang;
-      updateButtons();
-    };
-
-    document.addEventListener("DOMContentLoaded", updateButtons);
-  })();
+(function(){
+const saved=localStorage.getItem('site-lang');
+const lang=saved||(navigator.language||'en').toLowerCase().startsWith('vi')?'vi':'en';
+document.documentElement.dataset.lang=lang;
+window.setSiteLang=function(v){
+localStorage.setItem('site-lang',v);
+document.documentElement.dataset.lang=v;
+document.querySelectorAll('[data-lang-btn]').forEach(b=>b.classList.toggle('active',b.dataset.langBtn===v));
+}
+document.addEventListener('DOMContentLoaded',()=>{
+document.querySelectorAll('[data-lang-btn]').forEach(b=>b.classList.toggle('active',b.dataset.langBtn===lang));
+});
+})();
 </script>
 
 </head>
 <body>
-  <main class="page">
-    <nav class="nav">
-      <a class="brand" href="/">
-        <span class="logo">DV</span>
-        <span>Dung Vo Apps</span>
-      </a>
-      <div class="nav-links">
-        <a href="#apps">Apps</a>
-        <a href="#writing">Writing</a>
-        <a href="#legal">Legal</a>
-        <a href="mailto:cdung.vo@gmail.com">Contact</a>
-      </div>
-      
-      <div class="lang-switch" aria-label="Language switcher">
-        <button type="button" data-set-lang="en" onclick="setSiteLang('en')">EN</button>
-        <button type="button" data-set-lang="vi" onclick="setSiteLang('vi')">VI</button>
-      </div>
+<main class="page">
+<nav class="nav">
+<a class="brand" href="/">
+<span class="logo">DV</span>
+<span>Dung Vo Apps</span>
+</a>
+<div class="nav-links">
+<a href="#apps">Apps</a>
+<a href="#privacy">Privacy</a>
+<a href="mailto:cdung.vo@gmail.com">Contact</a>
+</div>
 
-    </nav>
+<div class="lang-switch">
+<button data-lang-btn="en" onclick="setSiteLang('en')">EN</button>
+<button data-lang-btn="vi" onclick="setSiteLang('vi')">VI</button>
+</div>
 
-    <header class="hero">
-      <div class="card hero-main">
-        <div class="eyebrow" lang-block="en">Independent app builder</div>
-        <div class="eyebrow" lang-block="vi">Nhà phát triển app độc lập</div>
+</nav>
 
-        <h1 lang-block="en">Thoughtful apps for clarity, insight, and everyday life.</h1>
-        <h1 lang-block="vi">Những ứng dụng rõ ràng, hữu ích cho cuộc sống hằng ngày.</h1>
+<header class="hero">
+<div class="card hero-copy">
+<div class="eyebrow" lang-block="en">Independent app builder</div>
+<div class="eyebrow" lang-block="vi">Nhà phát triển ứng dụng độc lập</div>
 
-        <p class="lead" lang-block="en">
-          Hi, I’m Dung Vo — an independent developer with a background in large-scale analytics and data platforms,
-          now building privacy-first consumer apps with clean, useful product experiences.
-        </p>
-        <p class="lead" lang-block="vi">
-          Xin chào, tôi là Dung Vo — một nhà phát triển độc lập có nền tảng về hệ thống dữ liệu và phân tích quy mô lớn,
-          hiện đang xây dựng các ứng dụng ưu tiên quyền riêng tư, đơn giản và hữu ích.
-        </p>
+<h1 lang-block="en">Thoughtful apps for clarity and insight.</h1>
+<h1 lang-block="vi">Ứng dụng rõ ràng và hữu ích cho cuộc sống hằng ngày.</h1>
 
-        <div class="actions">
-          <a class="button primary" href="#apps" lang-block="en">View apps</a>
-          <a class="button primary" href="#apps" lang-block="vi">Xem ứng dụng</a>
-          <a class="button" href="#writing" lang-block="en">Read writing</a>
-          <a class="button" href="#writing" lang-block="vi">Bài viết</a>
-        </div>
-      </div>
+<p class="lead" lang-block="en">
+Hi, I’m Dung Vo — an independent developer building privacy-first consumer apps focused on analytics, clarity, and meaningful product experiences.
+</p>
 
-      <aside class="card side">
-        <div class="profile-avatar">DV</div>
-        <h2 style="margin-top:18px">Dung Vo</h2>
-        <p lang-block="en">I build products that turn complex information into simple, calm, and useful experiences.</p>
-        <p lang-block="vi">Tôi xây dựng sản phẩm giúp biến thông tin phức tạp thành trải nghiệm đơn giản, rõ ràng và hữu ích.</p>
+<p class="lead" lang-block="vi">
+Xin chào, tôi là Dung Vo — một nhà phát triển độc lập xây dựng các ứng dụng ưu tiên quyền riêng tư, phân tích rõ ràng và trải nghiệm sản phẩm tinh tế.
+</p>
 
-        <div class="meta-list">
-          <div class="meta-item"><span>Focus</span><strong>iOS · SwiftUI</strong></div>
-          <div class="meta-item"><span>Background</span><strong>Data · Analytics</strong></div>
-          <div class="meta-item"><span>Values</span><strong>Privacy · Clarity</strong></div>
-        </div>
-      </aside>
-    </header>
+<div class="actions">
+<a class="button primary" href="/apps/spendstory/">SpendStory</a>
+<a class="button" href="/apps/spendstory/privacy.html">Privacy Policy</a>
+</div>
+</div>
 
-    <section id="apps" class="card section-card">
-      <div class="section-head">
-        <div>
-          <h2 lang-block="en">Apps</h2>
-          <h2 lang-block="vi">Ứng dụng</h2>
-          <p lang-block="en">Products I’m building and maintaining.</p>
-          <p lang-block="vi">Những sản phẩm tôi đang xây dựng và phát triển.</p>
-        </div>
-      </div>
+<div class="card phone-preview">
+<img src="/assets/images/home.jpeg"/>
+</div>
+</header>
 
-      <div class="grid">
-        <article class="item">
-          <span class="tag">Finance</span>
-          <h3>SpendStory</h3>
-          <p lang-block="en">Expense insights and spending stories that help you understand where your money goes.</p>
-          <p lang-block="vi">Phân tích chi tiêu và câu chuyện tài chính giúp bạn hiểu tiền của mình đang đi đâu.</p>
-          <div class="link-row">
-            <a class="mini-link" href="/apps/spendstory/" lang-block="en">Overview</a>
-            <a class="mini-link" href="/apps/spendstory/" lang-block="vi">Giới thiệu</a>
-            <a class="mini-link" href="/apps/spendstory/privacy.html">Privacy</a>
-            <a class="mini-link" href="/apps/spendstory/support.html">Support</a>
-          </div>
-        </article>
+<section id="apps" class="card section">
+<div class="section-head">
+<h2>SpendStory</h2>
+<p lang-block="en">Expense insights and spending stories designed for modern personal finance.</p>
+<p lang-block="vi">Phân tích chi tiêu và câu chuyện tài chính cho trải nghiệm quản lý tài chính hiện đại.</p>
+</div>
 
-        <article class="item">
-          <span class="tag" lang-block="en">Coming soon</span>
-          <span class="tag" lang-block="vi">Sắp ra mắt</span>
-          <h3>Next App</h3>
-          <p lang-block="en">Future products can live here with their own overview, support, and privacy pages.</p>
-          <p lang-block="vi">Các sản phẩm tiếp theo có thể được đặt tại đây cùng trang giới thiệu, hỗ trợ và quyền riêng tư riêng.</p>
-        </article>
+<div class="grid">
+<div class="item">
+<img src="/assets/images/capture.png"/>
+<h3>Quick expense capture</h3>
+<p lang-block="en">Log expenses in seconds with categories, notes, cadence, and spending types.</p>
+<p lang-block="vi">Ghi chi tiêu nhanh chóng với danh mục, ghi chú, chu kỳ và loại chi tiêu.</p>
+</div>
 
-        <article class="item">
-          <span class="tag">Notes</span>
-          <h3 lang-block="en">Product Notes</h3>
-          <h3 lang-block="vi">Ghi chú sản phẩm</h3>
-          <p lang-block="en">Small product ideas, design notes, and technical write-ups.</p>
-          <p lang-block="vi">Ý tưởng sản phẩm, ghi chú thiết kế và bài viết kỹ thuật.</p>
-        </article>
-      </div>
-    </section>
+<div class="item">
+<img src="/assets/images/report1.png"/>
+<h3>Spending insights</h3>
+<p lang-block="en">Understand budgets, monthly trends, and financial health at a glance.</p>
+<p lang-block="vi">Hiểu ngân sách, xu hướng và sức khỏe tài chính một cách trực quan.</p>
+</div>
 
-    <section id="legal" class="card section-card">
-      <div class="section-head">
-        <div>
-          <h2 lang-block="en">Legal & support</h2>
-          <h2 lang-block="vi">Pháp lý & hỗ trợ</h2>
-          <p lang-block="en">Public pages for App Store listings and user support.</p>
-          <p lang-block="vi">Các trang công khai dùng cho App Store và hỗ trợ người dùng.</p>
-        </div>
-      </div>
+<div class="item">
+<img src="/assets/images/transaction.jpeg"/>
+<h3>Clear transaction history</h3>
+<p lang-block="en">Review your spending history with clean timelines and patterns.</p>
+<p lang-block="vi">Xem lại lịch sử chi tiêu với timeline rõ ràng và dễ hiểu.</p>
+</div>
+</div>
+</section>
 
-      <div class="grid">
-        <article class="item">
-          <span class="tag">SpendStory</span>
-          <h3>Privacy Policy</h3>
-          <p lang-block="en">How SpendStory handles data and privacy.</p>
-          <p lang-block="vi">Cách SpendStory xử lý dữ liệu và quyền riêng tư.</p>
-          <div class="link-row"><a class="mini-link" href="/apps/spendstory/privacy.html">Open</a></div>
-        </article>
-        <article class="item">
-          <span class="tag">SpendStory</span>
-          <h3>Support</h3>
-          <p lang-block="en">Help and contact information for SpendStory users.</p>
-          <p lang-block="vi">Thông tin hỗ trợ và liên hệ cho người dùng SpendStory.</p>
-          <div class="link-row"><a class="mini-link" href="/apps/spendstory/support.html">Open</a></div>
-        </article>
-        <article class="item">
-          <span class="tag">Contact</span>
-          <h3>Email</h3>
-          <p lang-block="en">For product questions, feedback, or privacy requests.</p>
-          <p lang-block="vi">Liên hệ khi cần hỗ trợ, góp ý hoặc có yêu cầu về quyền riêng tư.</p>
-          <div class="link-row"><a class="mini-link" href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a></div>
-        </article>
-      </div>
-    </section>
+<section id="privacy" class="card section">
+<div class="section-head">
+<h2 lang-block="en">Privacy-first by design</h2>
+<h2 lang-block="vi">Thiết kế ưu tiên quyền riêng tư</h2>
 
-    <footer class="footer">© <span id="year"></span> Dung Vo. All rights reserved.</footer>
-  </main>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<p lang-block="en">SpendStory is built as a local-first expense app. Your spending data stays on your device.</p>
+<p lang-block="vi">SpendStory được xây dựng theo hướng local-first. Dữ liệu chi tiêu của bạn được lưu trên thiết bị.</p>
+</div>
+
+<div class="feature-grid">
+<div class="feature">
+<strong lang-block="en">No account required</strong>
+<strong lang-block="vi">Không cần tài khoản</strong>
+
+<p lang-block="en">SpendStory works without sign up or cloud account creation.</p>
+<p lang-block="vi">SpendStory hoạt động mà không cần đăng ký hoặc tạo tài khoản cloud.</p>
+</div>
+
+<div class="feature">
+<strong lang-block="en">Local-first storage</strong>
+<strong lang-block="vi">Lưu trữ cục bộ</strong>
+
+<p lang-block="en">Expense data is stored locally on your iPhone unless you export it yourself.</p>
+<p lang-block="vi">Dữ liệu chi tiêu được lưu cục bộ trên iPhone trừ khi bạn tự export.</p>
+</div>
+
+<div class="feature">
+<strong lang-block="en">No tracking SDKs</strong>
+<strong lang-block="vi">Không có tracking SDK</strong>
+
+<p lang-block="en">The current version does not include advertising or third-party tracking SDKs.</p>
+<p lang-block="vi">Phiên bản hiện tại không tích hợp SDK quảng cáo hoặc tracking bên thứ ba.</p>
+</div>
+
+<div class="feature">
+<strong lang-block="en">Your data stays yours</strong>
+<strong lang-block="vi">Dữ liệu thuộc về bạn</strong>
+
+<p lang-block="en">Exported files are fully controlled by you.</p>
+<p lang-block="vi">Các file export hoàn toàn do bạn kiểm soát.</p>
+</div>
+</div>
+
+<div class="actions" style="margin-top:24px">
+<a class="button primary" href="/apps/spendstory/privacy.html">Full Privacy Policy</a>
+</div>
+</section>
+
+<footer class="footer">© <span id="year"></span> Dung Vo</footer>
+</main>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

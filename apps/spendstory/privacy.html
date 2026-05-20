@@ -1,114 +1,150 @@
+
 <!doctype html>
 <html lang="en" data-lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SpendStory Privacy Policy</title>
-  <link rel="stylesheet" href="/assets/styles.css" />
-  
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SpendStory Privacy Policy</title>
+<link rel="stylesheet" href="/assets/styles.css"/>
+
 <script>
-  (function () {
-    const saved = localStorage.getItem("site-lang");
-    const browserLang = (navigator.language || "en").toLowerCase().startsWith("vi") ? "vi" : "en";
-    const lang = saved || browserLang;
-    document.documentElement.dataset.lang = lang;
-    document.documentElement.lang = lang;
-
-    function updateButtons() {
-      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
-        button.classList.toggle("active", button.dataset.setLang === document.documentElement.dataset.lang);
-      });
-    }
-
-    window.setSiteLang = function (lang) {
-      localStorage.setItem("site-lang", lang);
-      document.documentElement.dataset.lang = lang;
-      document.documentElement.lang = lang;
-      updateButtons();
-    };
-
-    document.addEventListener("DOMContentLoaded", updateButtons);
-  })();
+(function(){
+const saved=localStorage.getItem('site-lang');
+const lang=saved||(navigator.language||'en').toLowerCase().startsWith('vi')?'vi':'en';
+document.documentElement.dataset.lang=lang;
+window.setSiteLang=function(v){
+localStorage.setItem('site-lang',v);
+document.documentElement.dataset.lang=v;
+document.querySelectorAll('[data-lang-btn]').forEach(b=>b.classList.toggle('active',b.dataset.langBtn===v));
+}
+document.addEventListener('DOMContentLoaded',()=>{
+document.querySelectorAll('[data-lang-btn]').forEach(b=>b.classList.toggle('active',b.dataset.langBtn===lang));
+});
+})();
 </script>
 
 </head>
 <body>
-  <main class="page">
-    <nav class="nav">
-      <a class="brand" href="/"><span class="logo">SS</span><span>SpendStory</span></a>
-      <div class="nav-links"><a href="/apps/spendstory/">Overview</a><a href="/apps/spendstory/support.html">Support</a></div>
-      
-      <div class="lang-switch" aria-label="Language switcher">
-        <button type="button" data-set-lang="en" onclick="setSiteLang('en')">EN</button>
-        <button type="button" data-set-lang="vi" onclick="setSiteLang('vi')">VI</button>
-      </div>
+<main class="page">
+<nav class="nav">
+<a class="brand" href="/">
+<span class="logo">SS</span>
+<span>SpendStory</span>
+</a>
+<div class="nav-links">
+<a href="/apps/spendstory/">Overview</a>
+<a href="/apps/spendstory/support.html">Support</a>
+</div>
 
-    </nav>
+<div class="lang-switch">
+<button data-lang-btn="en" onclick="setSiteLang('en')">EN</button>
+<button data-lang-btn="vi" onclick="setSiteLang('vi')">VI</button>
+</div>
 
-    <article class="card legal" lang-block="en">
-      <div class="eyebrow">Privacy Policy</div>
-      <h1>SpendStory Privacy Policy</h1>
-      <p><strong>Effective date:</strong> May 20, 2026</p>
-      <p>SpendStory helps you record expenses and understand your spending insights while respecting your privacy.</p>
+</nav>
 
-      <h2>Information We Collect</h2>
-      <p>SpendStory does not require an account. The app is designed to store your expense data locally on your device. This may include amounts, categories, notes, dates, spending types, jars, cadence information, and other details you enter in the app.</p>
+<article class="card policy">
 
-      <h2>How Your Data Is Used</h2>
-      <p>Your data is used to provide app features such as expense tracking, summaries, dashboards, reports, insights, financial health views, and spending stories.</p>
+<div class="eyebrow" lang-block="en">Privacy Policy</div>
+<div class="eyebrow" lang-block="vi">Chính sách quyền riêng tư</div>
 
-      <h2>Data Sharing</h2>
-      <p>SpendStory does not sell your personal information. SpendStory does not share your expense data with advertisers or data brokers.</p>
+<h1 lang-block="en">Your financial data stays with you.</h1>
+<h1 lang-block="vi">Dữ liệu tài chính của bạn thuộc về bạn.</h1>
 
-      <h2>Analytics and Tracking</h2>
-      <p>The current version of SpendStory does not use third-party advertising tracking. If analytics, cloud sync, or other online services are added in the future, this policy will be updated.</p>
+<p lang-block="en">
+SpendStory is designed as a local-first personal expense tracker and financial insight app.
+</p>
 
-      <h2>Local Storage</h2>
-      <p>Expense data is stored on your device. Deleting the app may delete locally stored data unless your device or a future feature provides backup or sync.</p>
+<p lang-block="vi">
+SpendStory được thiết kế như một ứng dụng quản lý chi tiêu local-first và phân tích tài chính cá nhân.
+</p>
 
-      <h2>Children’s Privacy</h2>
-      <p>SpendStory is not intended for children under 13. We do not knowingly collect personal information from children.</p>
+<div class="policy-highlight">
+<strong lang-block="en">Quick summary</strong>
+<strong lang-block="vi">Tóm tắt nhanh</strong>
 
-      <h2>Changes to This Policy</h2>
-      <p>This Privacy Policy may be updated from time to time. Any changes will be posted on this page with an updated effective date.</p>
+<ul>
+<li lang-block="en">No account required</li>
+<li lang-block="vi">Không yêu cầu tài khoản</li>
 
-      <h2>Contact</h2>
-      <p>If you have questions about this Privacy Policy, contact: <a href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a></p>
-    </article>
+<li lang-block="en">Data stored locally on your device</li>
+<li lang-block="vi">Dữ liệu lưu cục bộ trên thiết bị</li>
 
-    <article class="card legal" lang-block="vi">
-      <div class="eyebrow">Chính sách quyền riêng tư</div>
-      <h1>Chính sách quyền riêng tư của SpendStory</h1>
-      <p><strong>Ngày hiệu lực:</strong> 20/05/2026</p>
-      <p>SpendStory giúp bạn ghi lại chi tiêu và hiểu rõ hơn về thói quen tài chính, đồng thời tôn trọng quyền riêng tư của bạn.</p>
+<li lang-block="en">No advertising SDKs or tracking SDKs</li>
+<li lang-block="vi">Không có SDK quảng cáo hoặc tracking</li>
 
-      <h2>Thông tin chúng tôi thu thập</h2>
-      <p>SpendStory không yêu cầu tài khoản. Ứng dụng được thiết kế để lưu dữ liệu chi tiêu cục bộ trên thiết bị của bạn. Dữ liệu có thể bao gồm số tiền, danh mục, ghi chú, ngày tháng, loại chi tiêu, hũ tiền, chu kỳ và các thông tin khác bạn nhập trong ứng dụng.</p>
+<li lang-block="en">No selling of personal spending data</li>
+<li lang-block="vi">Không bán dữ liệu chi tiêu cá nhân</li>
+</ul>
+</div>
 
-      <h2>Cách dữ liệu được sử dụng</h2>
-      <p>Dữ liệu của bạn được dùng để cung cấp các tính năng như ghi chép chi tiêu, tổng quan, dashboard, báo cáo, phân tích, sức khỏe tài chính và câu chuyện chi tiêu.</p>
+<div class="gallery">
+<img src="/assets/images/home.jpeg"/>
+<img src="/assets/images/report1.png"/>
+</div>
 
-      <h2>Chia sẻ dữ liệu</h2>
-      <p>SpendStory không bán thông tin cá nhân của bạn. SpendStory không chia sẻ dữ liệu chi tiêu của bạn cho nhà quảng cáo hoặc bên môi giới dữ liệu.</p>
+<h2>1. Data stored by the app</h2>
+<p>
+SpendStory may store expense records, notes, categories, spending types, jars, reminders, onboarding preferences, export/import JSON backups, and timeline markers locally on your device.
+</p>
 
-      <h2>Phân tích và theo dõi</h2>
-      <p>Phiên bản hiện tại của SpendStory không sử dụng theo dõi quảng cáo bên thứ ba. Nếu trong tương lai có thêm analytics, đồng bộ đám mây hoặc dịch vụ online khác, chính sách này sẽ được cập nhật.</p>
+<h2>2. Local-first storage</h2>
+<p>
+The current version of SpendStory does not require user accounts and does not operate a backend syncing service for your spending history.
+</p>
 
-      <h2>Lưu trữ cục bộ</h2>
-      <p>Dữ liệu chi tiêu được lưu trên thiết bị của bạn. Việc xóa ứng dụng có thể xóa dữ liệu cục bộ, trừ khi thiết bị hoặc một tính năng trong tương lai cung cấp sao lưu/đồng bộ.</p>
+<h2>3. Data collection</h2>
+<p>
+SpendStory does not intentionally collect, transmit, sell, rent, or share your personal spending records with the developer or third parties.
+</p>
 
-      <h2>Quyền riêng tư của trẻ em</h2>
-      <p>SpendStory không dành cho trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em.</p>
+<h2>4. Notifications</h2>
+<p>
+Notifications are scheduled locally on your device when you enable reminders.
+</p>
 
-      <h2>Thay đổi chính sách</h2>
-      <p>Chính sách này có thể được cập nhật theo thời gian. Mọi thay đổi sẽ được đăng tại trang này cùng ngày hiệu lực mới.</p>
+<h2>5. Import, export, and deletion</h2>
+<p>
+You may export JSON backups, import compatible backups, and delete local data from inside the app.
+</p>
 
-      <h2>Liên hệ</h2>
-      <p>Nếu bạn có câu hỏi về chính sách quyền riêng tư, vui lòng liên hệ: <a href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a></p>
-    </article>
+<h2>6. Third-party services</h2>
+<p>
+The current version does not include advertising SDKs, analytics SDKs, or tracking SDKs.
+Exchange-rate requests may use a third-party exchange-rate provider without including your personal spending history.
+</p>
 
-    <footer class="footer">© <span id="year"></span> Dung Vo. All rights reserved.</footer>
-  </main>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<h2>7. Financial disclaimer</h2>
+<p>
+SpendStory does not provide investment, accounting, tax, or legal advice.
+</p>
+
+<h2>8. Security</h2>
+<p>
+SpendStory relies on iOS sandboxing and Apple device-level protections.
+</p>
+
+<h2>9. Children’s privacy</h2>
+<p>
+SpendStory is not intended to knowingly collect information from children.
+</p>
+
+<h2>10. Changes</h2>
+<p>
+This policy may be updated if SpendStory features or data practices change.
+</p>
+
+<h2>11. Contact</h2>
+<p>
+Dung Vo<br/>
+<a href="mailto:cdung.vo@gmail.com">cdung.vo@gmail.com</a>
+</p>
+
+</article>
+
+<footer class="footer">© <span id="year"></span> Dung Vo</footer>
+</main>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

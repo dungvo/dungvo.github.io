@@ -1,118 +1,27 @@
+
 <!doctype html>
-<html lang="en" data-lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SpendStory — Expense Insights</title>
-  <meta name="description" content="SpendStory helps you record expenses and understand the stories behind your spending." />
-  <link rel="stylesheet" href="/assets/styles.css" />
-  
-<script>
-  (function () {
-    const saved = localStorage.getItem("site-lang");
-    const browserLang = (navigator.language || "en").toLowerCase().startsWith("vi") ? "vi" : "en";
-    const lang = saved || browserLang;
-    document.documentElement.dataset.lang = lang;
-    document.documentElement.lang = lang;
-
-    function updateButtons() {
-      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
-        button.classList.toggle("active", button.dataset.setLang === document.documentElement.dataset.lang);
-      });
-    }
-
-    window.setSiteLang = function (lang) {
-      localStorage.setItem("site-lang", lang);
-      document.documentElement.dataset.lang = lang;
-      document.documentElement.lang = lang;
-      updateButtons();
-    };
-
-    document.addEventListener("DOMContentLoaded", updateButtons);
-  })();
-</script>
-
-</head>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SpendStory</title>
+<link rel="stylesheet" href="/assets/styles.css"/></head>
 <body>
-  <main class="page">
-    <nav class="nav">
-      <a class="brand" href="/">
-        <span class="logo">SS</span>
-        <span>SpendStory</span>
-      </a>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/apps/spendstory/privacy.html">Privacy</a>
-        <a href="/apps/spendstory/support.html">Support</a>
-      </div>
-      
-      <div class="lang-switch" aria-label="Language switcher">
-        <button type="button" data-set-lang="en" onclick="setSiteLang('en')">EN</button>
-        <button type="button" data-set-lang="vi" onclick="setSiteLang('vi')">VI</button>
-      </div>
+<main class="page">
+<nav class="nav">
+<a class="brand" href="/"><span class="logo">SS</span><span>SpendStory</span></a>
+</nav>
 
-    </nav>
+<header class="card hero-copy">
+<div class="eyebrow">Expense insights & spending stories</div>
+<h1>Understand the story behind your spending.</h1>
+<p class="lead">SpendStory helps you track expenses, review financial patterns, and build healthier spending habits.</p>
+</header>
 
-    <header class="card hero-main">
-      <div class="eyebrow" lang-block="en">Expense insights & spending stories</div>
-      <div class="eyebrow" lang-block="vi">Phân tích chi tiêu & câu chuyện tài chính</div>
-
-      <h1 lang-block="en">Understand the story behind your spending.</h1>
-      <h1 lang-block="vi">Hiểu câu chuyện phía sau chi tiêu của bạn.</h1>
-
-      <p class="lead" lang-block="en">
-        SpendStory helps you record expenses quickly, review spending patterns, and turn everyday transactions
-        into clear financial insights.
-      </p>
-      <p class="lead" lang-block="vi">
-        SpendStory giúp bạn ghi lại chi tiêu nhanh chóng, xem lại thói quen chi tiêu và biến các giao dịch hằng ngày
-        thành những phân tích tài chính dễ hiểu.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="/apps/spendstory/privacy.html">Privacy Policy</a>
-        <a class="button" href="/apps/spendstory/support.html">Support</a>
-      </div>
-    </header>
-
-    <section class="card section-card">
-      <div class="section-head">
-        <div>
-          <h2 lang-block="en">What SpendStory helps with</h2>
-          <h2 lang-block="vi">SpendStory giúp bạn làm gì</h2>
-          <p lang-block="en">Simple tracking, thoughtful analytics, and local-first privacy.</p>
-          <p lang-block="vi">Ghi chép đơn giản, phân tích rõ ràng và ưu tiên dữ liệu trên thiết bị.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <article class="item">
-          <span class="tag" lang-block="en">Fast tracking</span>
-          <span class="tag" lang-block="vi">Ghi nhanh</span>
-          <h3 lang-block="en">Record expenses quickly</h3>
-          <h3 lang-block="vi">Ghi lại chi tiêu nhanh chóng</h3>
-          <p lang-block="en">Capture amount, category, spending type, cadence, jar, notes, and other useful details.</p>
-          <p lang-block="vi">Lưu số tiền, danh mục, loại chi tiêu, chu kỳ, hũ tiền, ghi chú và các thông tin cần thiết.</p>
-        </article>
-        <article class="item">
-          <span class="tag">Insights</span>
-          <h3 lang-block="en">Review spending patterns</h3>
-          <h3 lang-block="vi">Xem lại thói quen chi tiêu</h3>
-          <p lang-block="en">Understand monthly spending, category breakdowns, and financial health signals.</p>
-          <p lang-block="vi">Hiểu chi tiêu theo tháng, phân bổ danh mục và các tín hiệu sức khỏe tài chính.</p>
-        </article>
-        <article class="item">
-          <span class="tag" lang-block="en">Stories</span>
-          <span class="tag" lang-block="vi">Câu chuyện</span>
-          <h3 lang-block="en">Remember important moments</h3>
-          <h3 lang-block="vi">Ghi nhớ các khoảnh khắc quan trọng</h3>
-          <p lang-block="en">Highlight meaningful spending moments such as trips, birthdays, holidays, and life events.</p>
-          <p lang-block="vi">Lưu lại những chi tiêu đáng nhớ như du lịch, sinh nhật, dịp lễ và các sự kiện quan trọng.</p>
-        </article>
-      </div>
-    </section>
-
-    <footer class="footer">© <span id="year"></span> Dung Vo. All rights reserved.</footer>
-  </main>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+<section class="card section">
+<div class="gallery">
+<img src="/assets/images/home.jpeg"/>
+<img src="/assets/images/report1.png"/>
+<img src="/assets/images/report2.jpeg"/>
+<img src="/assets/images/report3.png"/>
+</div>
+</section>
+</main>
+</body></html>
