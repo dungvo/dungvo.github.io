@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SpendStory — Expense Insights</title>
+  <meta name="description" content="SpendStory helps you record expenses and understand the stories behind your spending." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <nav class="nav">
+      <a class="brand" href="/">
+        <span class="logo">SS</span>
+        <span>SpendStory</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/apps/spendstory/privacy.html">Privacy</a>
+        <a href="/apps/spendstory/support.html">Support</a>
+      </div>
+    </nav>
+
+    <header class="card hero-main">
+      <div class="eyebrow">Expense insights & spending stories</div>
+      <h1>Understand the story behind your spending.</h1>
+      <p class="lead">
+        SpendStory helps you record expenses quickly, review spending patterns, and turn everyday transactions
+        into clear financial insights.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="/apps/spendstory/privacy.html">Privacy Policy</a>
+        <a class="button" href="/apps/spendstory/support.html">Support</a>
+      </div>
+    </header>
+
+    <section class="card section-card">
+      <div class="section-head">
+        <div>
+          <h2>What SpendStory helps with</h2>
+          <p>Simple tracking, thoughtful analytics, and local-first privacy.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <span class="tag">Fast tracking</span>
+          <h3>Record expenses quickly</h3>
+          <p>Capture amount, category, spending type, cadence, jar, notes, and other useful details.</p>
+        </article>
+        <article class="item">
+          <span class="tag">Insights</span>
+          <h3>Review spending patterns</h3>
+          <p>Understand monthly spending, category breakdowns, and financial health signals.</p>
+        </article>
+        <article class="item">
+          <span class="tag">Stories</span>
+          <h3>Remember important moments</h3>
+          <p>Highlight meaningful spending moments such as trips, birthdays, holidays, and life events.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card section-card">
+      <div class="section-head">
+        <div>
+          <h2>Privacy-first by design</h2>
+          <p>
+            SpendStory is designed as a local-first personal finance app. Your spending data stays on your device
+            unless a future feature clearly asks for permission.
+          </p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="button" href="/apps/spendstory/privacy.html">Read Privacy Policy</a>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Dung Vo. All rights reserved.</footer>
+  </main>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
