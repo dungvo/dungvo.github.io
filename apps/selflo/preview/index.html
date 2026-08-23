@@ -59,7 +59,45 @@
           <span>Quote &amp; story</span>
           <span>Chọn để preview</span>
         </div>
+
+        <div class="content-filters" aria-label="Bộ lọc nội dung">
+          <label class="content-search-field">
+            <span class="sr-only">Tìm nội dung</span>
+            <input id="contentSearch" type="search" placeholder="Tìm tiêu đề, nội dung hoặc ID…" autocomplete="off">
+          </label>
+          <div class="content-filter-grid">
+            <label>
+              <span class="sr-only">Loại nội dung</span>
+              <select id="contentTypeFilter">
+                <option value="stories">Câu chuyện</option>
+                <option value="all">Tất cả nội dung</option>
+                <option value="linked_stories">Story có quote</option>
+                <option value="unlinked_stories">Story chưa gắn quote</option>
+                <option value="quotes_without_story">Quote chưa có story</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">Trạng thái duyệt</span>
+              <select id="contentReviewFilter">
+                <option value="all">Mọi trạng thái</option>
+                <option value="approved">Đã duyệt</option>
+                <option value="not_approved">Chưa duyệt</option>
+                <option value="needs_edit">Cần sửa</option>
+                <option value="rejected">Từ chối</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
         <div class="content-list" id="contentList"></div>
+        <nav class="content-pagination" aria-label="Phân trang nội dung">
+          <button id="previousPageButton" type="button" aria-label="Trang trước">←</button>
+          <div>
+            <strong id="paginationInfo">Trang 1 / 1</strong>
+            <span id="filterResultCount">0 kết quả</span>
+          </div>
+          <button id="nextPageButton" type="button" aria-label="Trang sau">→</button>
+        </nav>
       </aside>
 
       <section class="preview-stage" aria-label="App preview">

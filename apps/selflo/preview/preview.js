@@ -18,6 +18,13 @@
     selectedStandaloneStoryID: null,
     view: "canvas",
     reviews: readJSON(REVIEW_KEY, {}),
+    contentBrowser: {
+      query: "",
+      type: "stories",
+      review: "all",
+      page: 1,
+      pageSize: 8
+    },
     reader: {
       ...defaultReaderPreferences,
       ...savedReaderPreferences,
@@ -27,7 +34,9 @@
 
   const el = Object.fromEntries([
     "statusDot", "loadStatus", "reloadButton", "exportButton", "quoteCount", "libraryRevision",
-    "contentVersion", "storyCoverage", "contentList", "selectedTheme", "selectedReadingTime",
+    "contentVersion", "storyCoverage", "contentList", "contentSearch", "contentTypeFilter",
+    "contentReviewFilter", "previousPageButton", "nextPageButton", "paginationInfo",
+    "filterResultCount", "selectedTheme", "selectedReadingTime",
     "canvasScreen", "readerScreen", "quoteCard", "quoteKind", "quoteSource", "quoteTitle",
     "quoteText", "quoteSubtitle", "quoteTags", "openReaderButton", "closeReaderButton",
     "readerContextTitle", "bookmarkButton", "readerSettingsButton", "readerSettings", "fontChoices",
@@ -56,6 +65,12 @@
     });
     el.bookmarkButton.addEventListener("click", toggleBookmark);
     el.readerScroll.addEventListener("scroll", updateReaderProgress, { passive: true });
+
+    el.contentSearch.addEventListener("input", updateContentFilters);
+    el.contentTypeFilter.addEventListener("change", updateContentFilters);
+    el.contentReviewFilter.addEventListener("change", updateContentFilters);
+    el.previousPageButton.addEventListener("click", () => changeContentPage(-1));
+    el.nextPageButton.addEventListener("click", () => changeContentPage(1));
 
     document.querySelectorAll("[data-view]").forEach(button => {
       button.addEventListener("click", () => setView(button.dataset.view));
@@ -182,14 +197,30 @@
 
   function renderContentList() {
     el.contentList.replaceChildren();
-    const stories = [...state.stories.values()].sort(compareStories);
-    const quotesWithoutStory = state.quotes.filter(quote => !quote.story_id || !state.stories.has(quote.story_id));
-    const rows = [
-      ...stories.map(story => ({ story, quote: quoteForStory(story.id) })),
-      ...quotesWithoutStory.map(quote => ({ story: null, quote }))
-    ];
+    const allRows = contentRows();
+    const rows = allRows.filter(matchesContentFilters);
+    const totalPages = Math.max(1, Math.ceil(rows.length / state.contentBrowser.pageSize));
+    state.contentBrowser.page = Math.min(Math.max(1, state.contentBrowser.page), totalPages);
+    const startIndex = (state.contentBrowser.page - 1) * state.contentBrowser.pageSize;
+    const pageRows = rows.slice(startIndex, startIndex + state.contentBrowser.pageSize);
 
-    rows.forEach((row, index) => {
+    el.quoteCount.textContent = String(rows.length);
+    el.paginationInfo.textContent = `Trang ${state.contentBrowser.page} / ${totalPages}`;
+    el.filterResultCount.textContent = rows.length
+      ? `${startIndex + 1}–${startIndex + pageRows.length} / ${rows.length} · tổng ${allRows.length}`
+      : `0 kết quả · tổng ${allRows.length}`;
+    el.previousPageButton.disabled = state.contentBrowser.page <= 1;
+    el.nextPageButton.disabled = state.contentBrowser.page >= totalPages;
+
+    if (!pageRows.length) {
+      const message = document.createElement("div");
+      message.className = "error-message";
+      message.textContent = "Không có nội dung phù hợp với bộ lọc này.";
+      el.contentList.append(message);
+      return;
+    }
+
+    pageRows.forEach((row, index) => {
       const { quote, story } = row;
       const reviewKey = quote?.id || `story:${story.id}`;
       const isActive = quote
@@ -198,7 +229,7 @@
       const node = el.contentItemTemplate.content.firstElementChild.cloneNode(true);
       node.dataset.review = reviewFor(reviewKey).decision || lifecycleDecision(quote, story);
       node.classList.toggle("active", isActive);
-      node.querySelector(".content-index").textContent = String(index + 1).padStart(2, "0");
+      node.querySelector(".content-index").textContent = String(startIndex + index + 1).padStart(2, "0");
       node.querySelector("strong").textContent = story?.title_vi || quote.text_vi;
       if (story) {
         const themeName = quote?.__themeName || state.themeNames.get(story.primary_theme) || story.primary_theme;
@@ -212,6 +243,57 @@
       });
       el.contentList.append(node);
     });
+  }
+
+  function contentRows() {
+    const stories = [...state.stories.values()].sort(compareStories);
+    const quotesWithoutStory = state.quotes.filter(quote => !quote.story_id || !state.stories.has(quote.story_id));
+    return [
+      ...stories.map(story => ({ story, quote: quoteForStory(story.id) })),
+      ...quotesWithoutStory.map(quote => ({ story: null, quote }))
+    ];
+  }
+
+  function matchesContentFilters(row) {
+    const { quote, story } = row;
+    const { query, type, review } = state.contentBrowser;
+    if (type === "stories" && !story) return false;
+    if (type === "linked_stories" && (!story || !quote)) return false;
+    if (type === "unlinked_stories" && (!story || quote)) return false;
+    if (type === "quotes_without_story" && (story || !quote)) return false;
+
+    const reviewKey = quote?.id || `story:${story.id}`;
+    const decision = reviewFor(reviewKey).decision || lifecycleDecision(quote, story);
+    if (review === "approved" && decision !== "approved") return false;
+    if (review === "not_approved" && decision === "approved") return false;
+    if (["needs_edit", "rejected"].includes(review) && decision !== review) return false;
+
+    if (!query) return true;
+    const normalizedQuery = normalizeSearch(query);
+    const themeName = quote?.__themeName || state.themeNames.get(story?.primary_theme) || story?.primary_theme;
+    const searchable = [
+      quote?.id, quote?.text_vi, quote?.title_vi, quote?.primary_theme,
+      story?.id, story?.title_vi, story?.subtitle_vi, story?.primary_theme, themeName
+    ].filter(Boolean).join(" ");
+    return normalizeSearch(searchable).includes(normalizedQuery);
+  }
+
+  function normalizeSearch(value) {
+    return String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("vi").trim();
+  }
+
+  function updateContentFilters() {
+    state.contentBrowser.query = el.contentSearch.value;
+    state.contentBrowser.type = el.contentTypeFilter.value;
+    state.contentBrowser.review = el.contentReviewFilter.value;
+    state.contentBrowser.page = 1;
+    renderContentList();
+  }
+
+  function changeContentPage(offset) {
+    state.contentBrowser.page += offset;
+    renderContentList();
+    el.contentList.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
   function selectQuote(quoteID) {
