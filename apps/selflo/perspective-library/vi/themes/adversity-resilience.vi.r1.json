@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "content_version": "0.2.0-story-studio-cosmic-balance",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "adversity_resilience",
+  "display_name_vi": "Nghịch cảnh và phục hồi",
+  "description_vi": "Bản thảo về cách nhiều nguồn lực và việc làm bình thường cùng tạo thành điểm đỡ sau khó khăn.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "quote.roof_of_many_hands",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Không một bàn tay nào giữ được cả mái nhà, nhưng mỗi bàn tay giữ cho một phần khác khỏi rơi xuống.",
+      "subtitle_vi": null,
+      "story_id": "story.roof_of_many_hands",
+      "primary_theme": "adversity_resilience",
+      "selection": {
+        "source_type": "theory",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "phục hồi",
+          "nương tựa",
+          "việc nhỏ"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo Story Studio",
+        "source_detail": "Bản thảo nguyên bản do AI hỗ trợ theo yêu cầu owner; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [
+          "theory.resilience_ordinary_processes"
+        ],
+        "frameworks": [],
+        "emotion_tags": [
+          "worry",
+          "hope"
+        ],
+        "keywords": [
+          "phục hồi",
+          "nguồn lực bình thường",
+          "quy luật tương hỗ"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Bản thảo nguyên bản cần owner review và xác nhận rights trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Phục hồi có thể bắt đầu qua nhiều nguồn lực và việc làm bình thường cùng nâng đỡ nhau.",
+        "observation_key": "resilience.roof.many_hands",
+        "structure_pattern": "parable.distributed_recovery"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.resilience_ordinary_processes.recovery_can_begin_in_small_ordinary_processes"
+        ],
+        "reference_ids": [
+          "ref.masten_2001_resilience"
+        ]
+      }
+    }
+  ]
+}

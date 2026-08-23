@@ -2,37 +2,64 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 1,
-  "content_version": "0.1.0-story-pilots",
+  "library_revision": 2,
+  "content_version": "0.2.0-story-studio-cosmic-balance",
   "language": "vi",
-  "generated_at": "2026-08-23T03:20:14Z",
+  "generated_at": "2026-08-23T05:20:52Z",
   "files": [
     {
       "id": "knowledge.story_pilots.vi",
       "kind": "knowledge_catalog",
-      "revision": 1,
-      "path": "knowledge/knowledge.vi.r1.json",
+      "revision": 2,
+      "path": "knowledge/knowledge.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "a44a88f64dc345f9e073bcdaa0ad1edf153a59a05078fd64f7bd9a4d629794f6",
-      "byte_count": 245
+      "sha256": "05e7d741293f618584ff5fbab11ac2ae21aba8f90a9386ae51f604292316cbf9",
+      "byte_count": 8171
     },
     {
       "id": "theme.work_achievement.story_pilots.vi",
       "kind": "quote_pack",
-      "revision": 1,
-      "path": "themes/work-achievement.vi.r1.json",
+      "revision": 2,
+      "path": "themes/work-achievement.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "c59c96f1303ce59b4300e3b86e4c69bf64c579bba9c5a2963d0460c7ea06bebe",
-      "byte_count": 2513
+      "sha256": "3f8f0da42c0550bdf24aa98b3153cde071737026602cb11a3af1e7207dadc798",
+      "byte_count": 4873
     },
     {
       "id": "theme.change_growth.story_pilots.vi",
       "kind": "quote_pack",
-      "revision": 1,
-      "path": "themes/change-growth.vi.r1.json",
+      "revision": 2,
+      "path": "themes/change-growth.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "f7f4a148f7ff8fc5cd7b54406348252a8d068dd37906cda242fd5062a276d1fc",
-      "byte_count": 2495
+      "sha256": "601811c5b11a52730218cc52b8013b0d4d6a4e6fd67c14234ea554c216b3e960",
+      "byte_count": 4864
+    },
+    {
+      "id": "theme.self_understanding.story_studio.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/self-understanding.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "d247435376703f49b306289a38915f16282d362fdb1864f54b858dbb21cda0e5",
+      "byte_count": 2733
+    },
+    {
+      "id": "theme.rest_wellbeing.story_studio.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/rest-wellbeing.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "7080f5a7d6e19d17f43e9e788232e373068a874a50242b1a26d2810b7de4fff6",
+      "byte_count": 2761
+    },
+    {
+      "id": "theme.adversity_resilience.story_studio.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/adversity-resilience.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "d39a0178893dd563ae831e35c4dbcee599182091648d202f0295a63293ba4976",
+      "byte_count": 2819
     },
     {
       "id": "story.builder_and_shapeless_stones.vi",
@@ -51,6 +78,51 @@
       "media_type": "application/json",
       "sha256": "0ef96726bf678017285d9b7bb2f321a026673cdccde27cd58957cd4d7879338a",
       "byte_count": 8808
+    },
+    {
+      "id": "story.baker_and_black_mark.vi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/baker-and-black-mark/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "39d3071dd8ea1147b6fe19715ffb13569a2046bbb5a2840210fc00924409d087",
+      "byte_count": 7179
+    },
+    {
+      "id": "story.warehouse_path_between_boxes.vi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/warehouse-path-between-boxes/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "05ee8352876c7e1b2561fa3946d6eadab09250a2a21b03e65c09b023e03db341",
+      "byte_count": 7206
+    },
+    {
+      "id": "story.potter_and_two_hands.vi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/potter-and-two-hands/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "0195151adc0662a20118c03eb4c13000f5f6208736e3f2afe5a4cd1f520148f5",
+      "byte_count": 7340
+    },
+    {
+      "id": "story.laundry_and_two_bells.vi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/laundry-and-two-bells/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "a75186e78f2cf92ed7c2bd368b87a7aeec670e22f22f4602e7f057b97c81e577",
+      "byte_count": 7363
+    },
+    {
+      "id": "story.roof_of_many_hands.vi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/roof-of-many-hands/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "896d97ee7acbf9702725f225aeb2865acf13a7e5d8fd59a048b92f7295995e58",
+      "byte_count": 7687
     }
   ]
 }

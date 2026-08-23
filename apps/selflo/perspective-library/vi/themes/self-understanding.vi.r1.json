@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "content_version": "0.2.0-story-studio-cosmic-balance",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "self_understanding",
+  "display_name_vi": "Hiểu bản thân",
+  "description_vi": "Bản thảo về cách nhìn thiếu sót bằng sự trung thực và nâng đỡ thay vì tự phá hủy.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "quote.potter_and_two_hands",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Một bàn tay tạo hình bằng sức ép; bàn tay kia giữ cho đất không vỡ.",
+      "subtitle_vi": null,
+      "story_id": "story.potter_and_two_hands",
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "theory",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "tự cảm thông",
+          "trách nhiệm",
+          "nâng đỡ"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo Story Studio",
+        "source_detail": "Bản thảo nguyên bản do AI hỗ trợ theo yêu cầu owner; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [
+          "theory.self_compassion"
+        ],
+        "frameworks": [],
+        "emotion_tags": [
+          "frustration",
+          "self_doubt"
+        ],
+        "keywords": [
+          "tự cảm thông",
+          "trách nhiệm",
+          "âm dương đời thường"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Bản thảo nguyên bản cần owner review và xác nhận rights trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Sự tử tế với bản thân có thể cùng tồn tại với việc nhìn rõ thiếu sót và sửa chữa.",
+        "observation_key": "self.compassion.two_hands",
+        "structure_pattern": "parable.complementary_support"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "soft_paper_observe"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_compassion.kindness_can_coexist_with_honest_self_view"
+        ],
+        "reference_ids": [
+          "ref.neff_2003_self_compassion"
+        ]
+      }
+    }
+  ]
+}

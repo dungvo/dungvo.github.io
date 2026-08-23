@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "content_version": "0.2.0-story-studio-cosmic-balance",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "rest_wellbeing",
+  "display_name_vi": "Nghỉ ngơi và an lành",
+  "description_vi": "Bản thảo về ranh giới giữa làm việc và hồi phục trong nhịp sống thường ngày.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "quote.laundry_and_two_bells",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Cánh cửa đã đóng với con phố, nhưng bên trong tiệm vẫn chưa có một đêm nào đi qua.",
+      "subtitle_vi": null,
+      "story_id": "story.laundry_and_two_bells",
+      "primary_theme": "rest_wellbeing",
+      "selection": {
+        "source_type": "theory",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "nghỉ ngơi",
+          "công việc",
+          "ranh giới"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo Story Studio",
+        "source_detail": "Bản thảo nguyên bản do AI hỗ trợ theo yêu cầu owner; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [
+          "theory.psychological_detachment"
+        ],
+        "frameworks": [],
+        "emotion_tags": [
+          "fatigue",
+          "pressure"
+        ],
+        "keywords": [
+          "hồi phục",
+          "ranh giới công việc",
+          "âm dương đời thường"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Bản thảo nguyên bản cần owner review và xác nhận rights trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một hệ thống khó hồi phục nếu yêu cầu công việc tiếp tục chạy trong thời gian được gọi là nghỉ.",
+        "observation_key": "rest.detachment.second_bell",
+        "structure_pattern": "parable.work_rest_boundary"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.psychological_detachment.recovery_needs_some_demands_to_stop"
+        ],
+        "reference_ids": [
+          "ref.wendsche_2017_detachment"
+        ]
+      }
+    }
+  ]
+}

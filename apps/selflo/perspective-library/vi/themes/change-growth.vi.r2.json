@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "content_version": "0.2.0-story-studio-cosmic-balance",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "change_growth",
+  "display_name_vi": "Thay đổi và trưởng thành",
+  "description_vi": "Bản thảo về thử nghiệm, phản hồi và những con đường mới được tạo qua thay đổi nhỏ.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "quote.boatman_and_second_mountain",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Tự do bắt đầu từ ngày con đường hiện tại không còn là con đường duy nhất.",
+      "subtitle_vi": null,
+      "story_id": "story.boatman_and_second_mountain",
+      "primary_theme": "change_growth",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "thay đổi",
+          "khám phá",
+          "con đường thứ hai"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo",
+        "source_detail": "Biên tập từ authoring source do owner cung cấp; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [
+          "uncertainty",
+          "hope"
+        ],
+        "keywords": [
+          "chuyển hướng",
+          "thử nghiệm",
+          "tự do"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Cần owner xác nhận provenance và quyết định kind cuối trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một hướng sống khác có thể được nuôi bằng thử nghiệm nhỏ trong khi con đường hiện tại vẫn tiếp tục.",
+        "observation_key": "growth.second_path",
+        "structure_pattern": "parable.parallel_journey"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "soft_paper_observe"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "quote.baker_and_black_mark",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Một vết cháy không tự trở thành bài học; nó chỉ thành chỉ dẫn khi có người chịu nhìn lại ngọn lửa.",
+      "subtitle_vi": null,
+      "story_id": "story.baker_and_black_mark",
+      "primary_theme": "change_growth",
+      "selection": {
+        "source_type": "theory",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "sai sót",
+          "phản hồi",
+          "học hỏi"
+        ],
+        "tie_break_order": 1
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo Story Studio",
+        "source_detail": "Bản thảo nguyên bản do AI hỗ trợ theo yêu cầu owner; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [
+          "theory.learning_from_errors"
+        ],
+        "frameworks": [],
+        "emotion_tags": [
+          "frustration",
+          "hope"
+        ],
+        "keywords": [
+          "sai sót",
+          "phản hồi",
+          "nhân quả đời thường"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Bản thảo nguyên bản cần owner review và xác nhận rights trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Sai sót chỉ hỗ trợ lần thử sau khi dấu vết của nó được quan sát và chuyển thành phản hồi cụ thể.",
+        "observation_key": "growth.error.charcoal_map",
+        "structure_pattern": "parable.error_feedback"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "ember_theory"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.learning_from_errors.feedback_can_turn_error_into_information"
+        ],
+        "reference_ids": [
+          "ref.metcalfe_2017_learning_from_errors"
+        ]
+      }
+    }
+  ]
+}
