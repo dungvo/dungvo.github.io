@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schema/perspective-theme.schema.json",
+  "title": "PerspectiveThemeV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "content_version", "entity", "status", "primary_theme", "display_name_vi", "description_vi", "language", "quotes"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "content_version": { "$ref": "#/$defs/non_empty_string" },
+    "entity": { "const": "perspective_theme" },
+    "status": { "enum": ["structure_preview", "content_preview", "approved"] },
+    "primary_theme": { "$ref": "#/$defs/stable_id" },
+    "display_name_vi": { "$ref": "#/$defs/non_empty_string" },
+    "description_vi": { "$ref": "#/$defs/non_empty_string" },
+    "language": { "const": "vi" },
+    "quotes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/quote" } }
+  },
+  "$defs": {
+    "non_empty_string": { "type": "string", "pattern": "\\S" },
+    "nullable_string": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/non_empty_string" }] },
+    "stable_id": { "type": "string", "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$" },
+    "stable_id_array": { "type": "array", "items": { "$ref": "#/$defs/stable_id" } },
+    "string_array": { "type": "array", "items": { "$ref": "#/$defs/non_empty_string" } },
+    "quote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "revision", "kind", "title_vi", "text_vi", "subtitle_vi", "story_id", "primary_theme", "selection", "authorship", "metadata", "rights", "review", "writing", "display", "knowledge_basis"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "revision": { "type": "integer", "minimum": 1 },
+        "kind": { "enum": ["selflo_original", "verified_quote", "adapted_wisdom"] },
+        "title_vi": { "$ref": "#/$defs/nullable_string" },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "subtitle_vi": { "$ref": "#/$defs/nullable_string" },
+        "story_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "primary_theme": { "$ref": "#/$defs/stable_id" },
+        "selection": { "$ref": "#/$defs/selection" },
+        "authorship": { "$ref": "#/$defs/authorship" },
+        "metadata": { "$ref": "#/$defs/metadata" },
+        "rights": { "$ref": "#/$defs/rights" },
+        "review": { "$ref": "#/$defs/review" },
+        "writing": { "$ref": "#/$defs/writing" },
+        "display": { "$ref": "#/$defs/display" },
+        "knowledge_basis": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/knowledge_basis" }] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "selflo_original" } }, "required": ["kind"] },
+          "then": {
+            "properties": {
+              "authorship": {
+                "allOf": [
+                  { "$ref": "#/$defs/authorship" },
+                  { "type": "object", "properties": { "author_id": { "const": "selflo" }, "author_name": { "const": "Selflo" } } }
+                ]
+              },
+              "rights": {
+                "allOf": [
+                  { "$ref": "#/$defs/rights" },
+                  { "type": "object", "properties": { "status": { "enum": ["selflo_owned", "unverified"] } } }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "verified_quote" } }, "required": ["kind"] },
+          "then": {
+            "properties": {
+              "authorship": {
+                "allOf": [
+                  { "$ref": "#/$defs/authorship" },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "author_id": { "$ref": "#/$defs/stable_id" },
+                      "author_name": { "$ref": "#/$defs/non_empty_string" },
+                      "source_url": { "type": "string", "format": "uri", "pattern": "^[hH][tT][tT][pP][sS]://" },
+                      "source_language": { "$ref": "#/$defs/non_empty_string" }
+                    }
+                  }
+                ]
+              },
+              "rights": {
+                "allOf": [
+                  { "$ref": "#/$defs/rights" },
+                  { "type": "object", "properties": { "status": { "enum": ["public_domain", "licensed", "permission_granted"] } } }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "adapted_wisdom" } }, "required": ["kind"] },
+          "then": {
+            "properties": {
+              "authorship": {
+                "allOf": [
+                  { "$ref": "#/$defs/authorship" },
+                  { "type": "object", "properties": { "source_detail": { "$ref": "#/$defs/non_empty_string" } } }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "metadata": {
+                "anyOf": [
+                  { "type": "object", "not": { "type": "object", "required": ["legacy_content_kind"] } },
+                  { "type": "object", "properties": { "legacy_content_kind": { "type": "null" } }, "required": ["legacy_content_kind"] }
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "writing": {
+                "allOf": [
+                  { "$ref": "#/$defs/writing" },
+                  { "type": "object", "properties": { "structure_pattern": { "$ref": "#/$defs/stable_id" } } }
+                ]
+              },
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "legacy_layer_ids": false,
+                  "legacy_behavior_ids": false
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_type", "reflection_kind", "thought_match_keys", "presentation_tags", "tie_break_order"],
+      "properties": {
+        "source_type": { "enum": ["reflection", "theory", "behavior_loop", "philosophy"] },
+        "reflection_kind": { "oneOf": [{ "type": "null" }, { "enum": ["quote", "observation", "selflo_reflection"] }] },
+        "thought_match_keys": { "$ref": "#/$defs/string_array" },
+        "presentation_tags": { "$ref": "#/$defs/string_array" },
+        "tie_break_order": { "type": "integer" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "source_type": { "const": "reflection" } }, "required": ["source_type"] },
+          "then": {
+            "properties": {
+              "reflection_kind": { "enum": ["quote", "observation", "selflo_reflection"] },
+              "thought_match_keys": { "type": "array", "maxItems": 0 }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "source_type": { "const": "behavior_loop" } }, "required": ["source_type"] },
+          "then": { "properties": { "reflection_kind": { "type": "null" } } }
+        },
+        {
+          "if": { "properties": { "source_type": { "enum": ["theory", "philosophy"] } }, "required": ["source_type"] },
+          "then": {
+            "properties": {
+              "reflection_kind": { "type": "null" },
+              "thought_match_keys": { "type": "array", "maxItems": 0 }
+            }
+          }
+        }
+      ]
+    },
+    "authorship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["author_id", "author_name", "work", "source_url", "source_language", "source_label", "source_detail"],
+      "properties": {
+        "author_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "author_name": { "$ref": "#/$defs/nullable_string" },
+        "work": { "$ref": "#/$defs/nullable_string" },
+        "source_url": { "oneOf": [{ "type": "null" }, { "type": "string", "format": "uri", "pattern": "^[hH][tT][tT][pP][sS]://" }] },
+        "source_language": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/non_empty_string" }] },
+        "source_label": { "$ref": "#/$defs/nullable_string" },
+        "source_detail": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["concepts", "theories", "frameworks", "emotion_tags", "keywords"],
+      "properties": {
+        "concepts": { "$ref": "#/$defs/stable_id_array" },
+        "theories": { "$ref": "#/$defs/stable_id_array" },
+        "frameworks": { "$ref": "#/$defs/stable_id_array" },
+        "emotion_tags": { "$ref": "#/$defs/stable_id_array" },
+        "keywords": { "$ref": "#/$defs/string_array" },
+        "legacy_content_kind": { "$ref": "#/$defs/nullable_string" },
+        "legacy_layer_ids": { "$ref": "#/$defs/stable_id_array" },
+        "legacy_behavior_ids": { "$ref": "#/$defs/stable_id_array" }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "note"],
+      "properties": {
+        "status": { "enum": ["selflo_owned", "public_domain", "licensed", "permission_granted", "unverified"] },
+        "note": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewed_by", "reviewed_at"],
+      "properties": {
+        "status": { "enum": ["draft", "needs_owner_review", "needs_edit", "approved", "rejected"] },
+        "reviewed_by": { "$ref": "#/$defs/nullable_string" },
+        "reviewed_at": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/utc_timestamp" }] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
+          "then": { "properties": { "reviewed_by": { "$ref": "#/$defs/non_empty_string" }, "reviewed_at": { "$ref": "#/$defs/utc_timestamp" } } },
+          "else": { "properties": { "reviewed_by": { "type": "null" }, "reviewed_at": { "type": "null" } } }
+        }
+      ]
+    },
+    "writing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_intent", "observation_key", "structure_pattern"],
+      "properties": {
+        "semantic_intent": { "$ref": "#/$defs/non_empty_string" },
+        "observation_key": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "structure_pattern": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] }
+      }
+    },
+    "display": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "priority", "featured", "style"],
+      "properties": {
+        "mode": { "enum": ["poster", "insight"] },
+        "priority": { "type": "integer" },
+        "featured": { "type": "boolean" },
+        "style": { "oneOf": [{ "type": "null" }, { "enum": ["midnight_quote", "paper_quote", "cool_observe", "ember_theory", "soft_paper_observe"] }] }
+      }
+    },
+    "knowledge_basis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["core_truth_ids", "reference_ids"],
+      "properties": {
+        "core_truth_ids": { "$ref": "#/$defs/stable_id_array" },
+        "reference_ids": { "$ref": "#/$defs/stable_id_array" }
+      }
+    },
+    "utc_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(?:Z|\\+00:00)$"
+    }
+  }
+}

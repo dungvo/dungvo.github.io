@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schema/perspective-library-manifest.schema.json",
+  "title": "PerspectiveLibraryManifestV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "entity",
+    "library_id",
+    "library_revision",
+    "content_version",
+    "language",
+    "generated_at",
+    "files"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "entity": { "const": "perspective_library_manifest" },
+    "library_id": {
+      "enum": [
+        "selflo.perspective.authoring.vi",
+        "selflo.perspective.vi"
+      ]
+    },
+    "library_revision": { "type": "integer", "minimum": 1 },
+    "content_version": { "$ref": "#/$defs/non_empty_string" },
+    "language": { "const": "vi" },
+    "generated_at": { "$ref": "#/$defs/utc_timestamp" },
+    "files": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 500,
+      "items": { "$ref": "#/$defs/file_descriptor" },
+      "allOf": [
+        {
+          "contains": { "type": "object", "properties": { "kind": { "const": "knowledge_catalog" } }, "required": ["kind"] },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": { "type": "object", "properties": { "kind": { "const": "quote_pack" } }, "required": ["kind"] },
+          "minContains": 1
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "non_empty_string": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "stable_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+    },
+    "utc_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(?:Z|\\+00:00)$"
+    },
+    "relative_path": {
+      "type": "string",
+      "maxLength": 240,
+      "$comment": "maxLength is a code-point prefilter; runtime authoritatively enforces 240 UTF-8 bytes and 100 UTF-8 bytes per component.",
+      "pattern": "^(?!/)(?![A-Za-z][A-Za-z0-9+.-]*:)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*[\\\\?#])(?!.*//)(?!.*\/$).+$"
+    },
+    "file_descriptor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "revision", "path", "media_type", "sha256", "byte_count"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "kind": { "enum": ["knowledge_catalog", "quote_pack", "story", "image"] },
+        "revision": { "type": "integer", "minimum": 1 },
+        "path": { "$ref": "#/$defs/relative_path" },
+        "media_type": { "enum": ["application/json", "image/jpeg", "image/png", "image/webp"] },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "byte_count": { "type": "integer", "minimum": 1, "maximum": 5242880 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "enum": ["knowledge_catalog", "quote_pack", "story"] } }, "required": ["kind"] },
+          "then": { "properties": { "media_type": { "const": "application/json" }, "byte_count": { "type": "integer", "maximum": 2097152 } } }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "image" } }, "required": ["kind"] },
+          "then": { "properties": { "media_type": { "enum": ["image/jpeg", "image/png", "image/webp"] } } }
+        }
+      ]
+    }
+  }
+}

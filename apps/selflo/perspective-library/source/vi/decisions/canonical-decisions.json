@@ -1,0 +1,94 @@
+{
+  "schema_version": "selflo.perspective.decisions.v1",
+  "owner_gate": "CP-003-revised",
+  "owner_gate_status": "approved",
+  "release_quote_exclusions": [
+
+  ],
+  "deferred_unmapped": [
+    {
+      "id": "knowledge.antifragility",
+      "quote_id": "wounds_can_become_structure",
+      "retained_concept_id": "concept.resilience",
+      "status": "deferred"
+    }
+  ],
+  "cp004_authoring_mappings": [
+    {
+      "framework_id": "framework.yin_yang_taiji",
+      "candidate_quote_ids": [
+        "quote.potter_and_two_hands",
+        "quote.laundry_and_two_bells"
+      ],
+      "candidate_story_ids": [
+        "story.potter_and_two_hands",
+        "story.laundry_and_two_bells"
+      ],
+      "candidate_theory_ids": [
+        "theory.self_compassion",
+        "theory.psychological_detachment"
+      ],
+      "definition_status": "owner_accepted_for_authoring",
+      "quote_story_mapping_status": "owner_approved_authoring",
+      "theory_mapping_status": "pending_not_approved",
+      "approved": true,
+      "approval_scope": "authoring_quote_and_story_only",
+      "provenance": [
+        "Pilot quote/story metadata.frameworks is empty and story knowledge_basis is null.",
+        "Candidate relationship was proposed from pilot keywords and Story Studio authoring catalog.",
+        "Owner explicitly approved the named quote/story mappings in the CP-003 revised decision.",
+        "Previously proposed theory mappings were not named in that approval and remain pending."
+      ]
+    },
+    {
+      "framework_id": "framework.everyday_causality",
+      "candidate_quote_ids": [
+        "quote.baker_and_black_mark",
+        "quote.warehouse_path_between_boxes"
+      ],
+      "candidate_story_ids": [
+        "story.baker_and_black_mark",
+        "story.warehouse_path_between_boxes"
+      ],
+      "candidate_theory_ids": [
+        "theory.learning_from_errors",
+        "theory.habit_automaticity"
+      ],
+      "definition_status": "owner_accepted_for_authoring",
+      "quote_story_mapping_status": "owner_approved_authoring",
+      "theory_mapping_status": "pending_not_approved",
+      "approved": true,
+      "approval_scope": "authoring_quote_and_story_only",
+      "provenance": [
+        "Pilot quote/story metadata.frameworks is empty and story knowledge_basis is null.",
+        "Candidate relationship was proposed from pilot keywords and Story Studio authoring catalog.",
+        "Owner explicitly approved the named quote/story mappings in the CP-003 revised decision.",
+        "Previously proposed theory mappings were not named in that approval and remain pending."
+      ]
+    },
+    {
+      "framework_id": "framework.mutuality",
+      "candidate_quote_ids": [
+        "quote.roof_of_many_hands"
+      ],
+      "candidate_story_ids": [
+        "story.roof_of_many_hands"
+      ],
+      "candidate_theory_ids": [
+        "theory.resilience_ordinary_processes"
+      ],
+      "definition_status": "owner_accepted_for_authoring",
+      "quote_story_mapping_status": "owner_approved_authoring",
+      "theory_mapping_status": "pending_not_approved",
+      "approved": true,
+      "approval_scope": "authoring_quote_and_story_only",
+      "provenance": [
+        "Pilot quote/story metadata.frameworks is empty and story knowledge_basis is null.",
+        "Candidate relationship was proposed from pilot keywords and Story Studio authoring catalog.",
+        "Owner explicitly approved the named quote/story mappings in the CP-003 revised decision.",
+        "Previously proposed theory mappings were not named in that approval and remain pending."
+      ]
+    }
+  ],
+  "lifecycle_rights_release_approval": "not_granted"
+}

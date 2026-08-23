@@ -1,0 +1,1139 @@
+{
+  "schema_version": "1.0",
+  "content_version": "phase11b-canonical-authoring-1",
+  "entity": "perspective_knowledge_catalog",
+  "status": "content_preview",
+  "language": "vi",
+  "concepts": [
+    {
+      "id": "concept.emotional_awareness",
+      "display_name_vi": "Nhận biết cảm xúc",
+      "description_vi": "Nhận ra và gọi tên điều đang diễn ra trong trải nghiệm cảm xúc mà không mặc định việc gọi tên sẽ giải quyết tất cả.",
+      "primary_theme_ids": [
+        "emotion"
+      ],
+      "related_theory_ids": [
+        "theory.affect_labeling"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.emotional_memory",
+      "display_name_vi": "Ký ức cảm xúc",
+      "description_vi": "Mối liên hệ có thể có giữa trải nghiệm cảm xúc trước đây và cách một tín hiệu hiện tại được nhớ hoặc cảm nhận.",
+      "primary_theme_ids": [
+        "emotion"
+      ],
+      "related_theory_ids": [
+        "theory.emotional_memory"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.overthinking",
+      "display_name_vi": "Suy nghĩ quá mức",
+      "description_vi": "Suy nghĩ kéo dài hoặc lặp lại đến mức khó rời khỏi cùng một vòng và trở về điều đang hiện diện.",
+      "primary_theme_ids": [
+        "attention"
+      ],
+      "related_theory_ids": [
+        "theory.repetitive_negative_thinking"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.comparison",
+      "display_name_vi": "So sánh",
+      "description_vi": "Đánh giá bản thân hoặc tiến trình của mình trong tương quan với người khác và các thước đo bên ngoài.",
+      "primary_theme_ids": [
+        "self_understanding"
+      ],
+      "related_theory_ids": [
+        "theory.social_comparison"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.acceptance",
+      "display_name_vi": "Chấp nhận",
+      "description_vi": "Nhìn nhận trải nghiệm đang hiện diện mà không đồng nhất chấp nhận với đồng ý, yêu thích hoặc buông xuôi.",
+      "primary_theme_ids": [
+        "adversity_resilience"
+      ],
+      "related_theory_ids": [
+        "theory.psychological_acceptance"
+      ],
+      "related_framework_ids": [
+        "framework.dichotomy_of_control"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.present_moment_awareness",
+      "display_name_vi": "Nhận biết hiện tại",
+      "description_vi": "Nhận ra những trải nghiệm đang xảy ra trong khoảnh khắc hiện tại mà thường bị bỏ qua khi sự chú ý bị cuốn đi.",
+      "primary_theme_ids": [
+        "attention"
+      ],
+      "related_theory_ids": [
+        "theory.mindful_attention_control"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.belonging",
+      "display_name_vi": "Cảm giác thuộc về",
+      "description_vi": "Nhu cầu hình thành và duy trì những kết nối ổn định, có sự hiện diện và đáp lại lẫn nhau.",
+      "primary_theme_ids": [
+        "relationships"
+      ],
+      "related_theory_ids": [
+        "theory.need_to_belong"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.attachment_security",
+      "display_name_vi": "Cảm giác an toàn trong gắn kết",
+      "description_vi": "Cảm giác có thể dựa vào sự hiện diện và đáp lại nhất quán trong một mối quan hệ.",
+      "primary_theme_ids": [
+        "relationships"
+      ],
+      "related_theory_ids": [
+        "theory.attachment_security"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.self_compassion",
+      "display_name_vi": "Lòng trắc ẩn với bản thân",
+      "description_vi": "Đối diện khó khăn hoặc thiếu sót của chính mình bằng sự tử tế, tính người chung và nhận biết cân bằng.",
+      "primary_theme_ids": [
+        "self_understanding"
+      ],
+      "related_theory_ids": [
+        "theory.self_compassion"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.habit_formation",
+      "display_name_vi": "Hình thành thói quen",
+      "description_vi": "Hành vi lặp lại trong bối cảnh ổn định có thể dần trở nên tự động hơn.",
+      "primary_theme_ids": [
+        "change_growth"
+      ],
+      "related_theory_ids": [
+        "theory.habit_automaticity"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.learning_from_errors",
+      "display_name_vi": "Học từ sai sót",
+      "description_vi": "Sai sót có thể cung cấp thông tin cho việc học khi được nhận ra, xem lại và có phản hồi phù hợp.",
+      "primary_theme_ids": [
+        "change_growth"
+      ],
+      "related_theory_ids": [
+        "theory.learning_from_errors"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.resilience",
+      "display_name_vi": "Khả năng phục hồi",
+      "description_vi": "Sự thích nghi sau khó khăn có thể được nâng đỡ bởi nhiều quá trình và nguồn lực bình thường trong đời sống.",
+      "primary_theme_ids": [
+        "adversity_resilience"
+      ],
+      "related_theory_ids": [
+        "theory.resilience_ordinary_processes"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.autonomous_motivation",
+      "display_name_vi": "Động lực tự chủ",
+      "description_vi": "Động lực có thể bền vững hơn khi con người cảm thấy có lựa chọn, có năng lực và có kết nối trong việc mình làm.",
+      "primary_theme_ids": [
+        "work_achievement"
+      ],
+      "related_theory_ids": [
+        "theory.self_determination_at_work"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.deliberate_practice",
+      "display_name_vi": "Luyện tập có chủ đích",
+      "description_vi": "Luyện tập tập trung vào điểm cần cải thiện và có phản hồi khác với việc chỉ lặp lại phần đã quen.",
+      "primary_theme_ids": [
+        "work_achievement"
+      ],
+      "related_theory_ids": [
+        "theory.deliberate_practice"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.psychological_detachment",
+      "display_name_vi": "Tách khỏi công việc để hồi phục",
+      "description_vi": "Khoảng thời gian không tiếp tục bị cuốn vào yêu cầu công việc có thể hỗ trợ quá trình hồi phục.",
+      "primary_theme_ids": [
+        "rest_wellbeing"
+      ],
+      "related_theory_ids": [
+        "theory.psychological_detachment"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.sleep_regulation",
+      "display_name_vi": "Nhịp điều hòa giấc ngủ",
+      "description_vi": "Giấc ngủ và thức chịu ảnh hưởng đồng thời từ áp lực ngủ tích lũy và nhịp sinh học theo thời gian.",
+      "primary_theme_ids": [
+        "rest_wellbeing"
+      ],
+      "related_theory_ids": [
+        "theory.two_process_sleep_regulation"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.values_congruent_action",
+      "display_name_vi": "Hành động phù hợp giá trị",
+      "description_vi": "Giá trị có thể đóng vai trò định hướng cho lựa chọn ngay cả khi hoàn cảnh và cảm xúc thay đổi.",
+      "primary_theme_ids": [
+        "meaning_values"
+      ],
+      "related_theory_ids": [
+        "theory.psychological_flexibility_values"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.meaning_in_life",
+      "display_name_vi": "Ý nghĩa trong đời sống",
+      "description_vi": "Ý nghĩa có thể được cảm nhận qua sự gắn kết, mạch lạc và điều con người thấy đáng quan tâm trong đời sống.",
+      "primary_theme_ids": [
+        "meaning_values"
+      ],
+      "related_theory_ids": [
+        "theory.meaning_in_life"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "concept.eudaimonic_wellbeing",
+      "display_name_vi": "An lành có ý nghĩa",
+      "description_vi": "Khái niệm authoring về an lành gắn với ý nghĩa, giá trị và cách sống; chưa gắn theory hoặc core truth khi chưa có Knowledge riêng được review.",
+      "primary_theme_ids": [
+        "rest_wellbeing"
+      ],
+      "related_theory_ids": [
+
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "draft"
+    }
+  ],
+  "theories": [
+    {
+      "id": "theory.emotional_memory",
+      "display_name_vi": "Ký ức cảm xúc",
+      "original_name": "Emotional Memory",
+      "kind": "psychology_theory",
+      "summary_vi": "Cảm xúc có thể ảnh hưởng quá trình ghi nhớ và gợi lại; tín hiệu hoặc trạng thái hiện tại đôi khi liên hệ với trải nghiệm cảm xúc đã có.",
+      "core_truths": [
+        {
+          "id": "theory.emotional_memory.prior_experience_may_shape_present_response",
+          "text_vi": "Một phản ứng ở hiện tại đôi khi có thể mang ảnh hưởng từ trải nghiệm cảm xúc đã hình thành trước đó.",
+          "scope_note_vi": "Không dùng để kết luận nguyên nhân của một phản ứng cá nhân nếu chưa có thêm bối cảnh và xác nhận từ chính người đó."
+        }
+      ],
+      "reference_ids": [
+        "ref.buchanan_2007_emotional_memory_retrieval"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.mindful_attention_control",
+      "display_name_vi": "Theo dõi trải nghiệm hiện tại và kiểm soát chú ý",
+      "original_name": "Mindful attention and attentional control",
+      "kind": "psychology_theory",
+      "summary_vi": "Nghiên cứu về việc theo dõi trải nghiệm hiện tại và sự thay đổi trong một số thước đo kiểm soát chú ý sau huấn luyện mindfulness.",
+      "core_truths": [
+        {
+          "id": "theory.mindful_attention_control.noticing_requires_available_attention",
+          "text_vi": "Điều đang hiện diện có thể không được nhận ra khi sự chú ý liên tục bị cuốn sang nơi khác.",
+          "scope_note_vi": "Không suy diễn rằng chỉ cần chú ý là giải quyết được khó khăn hoặc tạo ra lợi ích giống nhau cho mọi người."
+        }
+      ],
+      "reference_ids": [
+        "ref.chin_2021_mindfulness_attention"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.repetitive_negative_thinking",
+      "display_name_vi": "Suy nghĩ tiêu cực lặp lại",
+      "original_name": "Repetitive Negative Thinking",
+      "kind": "psychology_theory",
+      "summary_vi": "Khái niệm về những dòng suy nghĩ tiêu cực lặp lại, bao gồm lo âu và rumination, có thể liên quan đến khó rời khỏi thông tin không còn hữu ích.",
+      "core_truths": [
+        {
+          "id": "theory.repetitive_negative_thinking.repetition_may_not_add_clarity",
+          "text_vi": "Việc quay lại cùng một dòng suy nghĩ nhiều lần không nhất thiết tạo thêm sự rõ ràng.",
+          "scope_note_vi": "Không dùng để gắn nhãn mọi suy nghĩ nhiều là bệnh lý; suy ngẫm có chủ đích có thể hữu ích trong bối cảnh phù hợp."
+        }
+      ],
+      "reference_ids": [
+        "ref.zetsche_2018_repetitive_negative_thinking"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.affect_labeling",
+      "display_name_vi": "Gọi tên cảm xúc",
+      "original_name": "Affect Labeling",
+      "kind": "psychology_theory",
+      "summary_vi": "Nghiên cứu về việc đưa cảm xúc thành từ ngữ và những thay đổi có thể quan sát trong xử lý cảm xúc ở một số bối cảnh thí nghiệm.",
+      "core_truths": [
+        {
+          "id": "theory.affect_labeling.recognition_can_change_relationship_to_experience",
+          "text_vi": "Nhận ra hoặc gọi tên một trạng thái có thể thay đổi cách con người liên hệ với trải nghiệm đó.",
+          "scope_note_vi": "Không hứa hẹn rằng gọi tên cảm xúc luôn làm cảm xúc giảm hoặc thay thế hỗ trợ chuyên môn."
+        }
+      ],
+      "reference_ids": [
+        "ref.lieberman_2007_affect_labeling"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.need_to_belong",
+      "display_name_vi": "Nhu cầu thuộc về",
+      "original_name": "Belongingness Hypothesis",
+      "kind": "psychology_theory",
+      "summary_vi": "Khung lý thuyết cho rằng con người có động lực mạnh mẽ để hình thành và duy trì những mối quan hệ ổn định, có tương tác và quan tâm lẫn nhau.",
+      "core_truths": [
+        {
+          "id": "theory.need_to_belong.stable_presence_carries_relational_meaning",
+          "text_vi": "Cảm giác thuộc về thường được tạo nên qua sự hiện diện và đáp lại lặp lại trong một mối quan hệ.",
+          "scope_note_vi": "Không suy diễn rằng mọi người cần cùng một mức độ hoặc cùng một hình thức kết nối."
+        }
+      ],
+      "reference_ids": [
+        "ref.baumeister_leary_1995_need_to_belong"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.attachment_security",
+      "display_name_vi": "An toàn trong gắn kết",
+      "original_name": "Attachment Security",
+      "kind": "psychology_theory",
+      "summary_vi": "Khái niệm về cảm giác an toàn khi một mối quan hệ được trải nghiệm là có thể tiếp cận và đáp lại trong những lúc cần thiết.",
+      "core_truths": [
+        {
+          "id": "theory.attachment_security.reliable_presence_supports_exploration",
+          "text_vi": "Sự hiện diện đáng tin cậy trong mối quan hệ có thể tạo điều kiện cho cảm giác an toàn và khả năng bước ra khám phá.",
+          "scope_note_vi": "Không dùng vài hành vi riêng lẻ để gắn attachment style hoặc chẩn đoán một mối quan hệ."
+        }
+      ],
+      "reference_ids": [
+        "ref.mikulincer_2002_attachment_security"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.social_comparison",
+      "display_name_vi": "So sánh xã hội",
+      "original_name": "Social Comparison Theory",
+      "kind": "psychology_theory",
+      "summary_vi": "Lý thuyết mô tả cách con người có thể dùng người khác làm điểm tham chiếu để đánh giá ý kiến, khả năng hoặc bản thân.",
+      "core_truths": [
+        {
+          "id": "theory.social_comparison.one_reference_cannot_measure_every_path",
+          "text_vi": "Một điểm tham chiếu từ người khác không thể phản ánh đầy đủ điều kiện, thời điểm và tiến trình riêng của một người.",
+          "scope_note_vi": "Không xem mọi so sánh là có hại; so sánh có thể cung cấp thông tin tùy bối cảnh và cách sử dụng."
+        }
+      ],
+      "reference_ids": [
+        "ref.festinger_1954_social_comparison"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.self_compassion",
+      "display_name_vi": "Lòng trắc ẩn với bản thân",
+      "original_name": "Self-Compassion",
+      "kind": "psychology_theory",
+      "summary_vi": "Khung gồm sự tử tế với bản thân, nhận ra tính người chung và giữ trải nghiệm khó khăn trong nhận biết cân bằng thay vì tự phán xét quá mức.",
+      "core_truths": [
+        {
+          "id": "theory.self_compassion.kindness_can_coexist_with_honest_self_view",
+          "text_vi": "Nhìn nhận thiếu sót một cách tử tế không loại bỏ trách nhiệm hoặc sự trung thực với điều đã xảy ra.",
+          "scope_note_vi": "Không biến self-compassion thành lời đảm bảo rằng mọi hành động đều đúng hoặc không cần sửa chữa."
+        }
+      ],
+      "reference_ids": [
+        "ref.neff_2003_self_compassion"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.habit_automaticity",
+      "display_name_vi": "Tính tự động của thói quen",
+      "original_name": "Habit Automaticity and Context Stability",
+      "kind": "psychology_theory",
+      "summary_vi": "Nghiên cứu về việc hành vi lặp lại trong bối cảnh ổn định có thể tăng tính tự động và liên kết với tín hiệu quen thuộc.",
+      "core_truths": [
+        {
+          "id": "theory.habit_automaticity.repetition_in_context_leaves_a_path",
+          "text_vi": "Những hành động nhỏ được lặp lại trong bối cảnh quen thuộc có thể dần trở thành lối đi dễ được khởi động hơn.",
+          "scope_note_vi": "Không hứa hẹn một số ngày cố định để hình thành thói quen hoặc xem tính tự động là yếu tố duy nhất."
+        }
+      ],
+      "reference_ids": [
+        "ref.stojanovic_2022_habit_context"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.learning_from_errors",
+      "display_name_vi": "Học từ sai sót",
+      "original_name": "Learning from Errors",
+      "kind": "psychology_theory",
+      "summary_vi": "Nghiên cứu cho thấy sai sót có thể hỗ trợ học trong một số điều kiện, đặc biệt khi có nhận biết và phản hồi sửa chữa phù hợp.",
+      "core_truths": [
+        {
+          "id": "theory.learning_from_errors.feedback_can_turn_error_into_information",
+          "text_vi": "Một sai sót được nhìn lại cùng phản hồi phù hợp có thể trở thành thông tin cho lần thử tiếp theo.",
+          "scope_note_vi": "Không lãng mạn hóa thất bại; sai sót không tự động tạo ra học hỏi nếu thiếu phản hồi hoặc điều kiện an toàn."
+        }
+      ],
+      "reference_ids": [
+        "ref.metcalfe_2017_learning_from_errors"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.psychological_acceptance",
+      "display_name_vi": "Chấp nhận trải nghiệm",
+      "original_name": "Psychological Acceptance",
+      "kind": "psychology_theory",
+      "summary_vi": "Khái niệm về giảm né tránh đối với những trải nghiệm nội tâm không mong muốn, đồng thời vẫn giữ khả năng hành động theo điều quan trọng.",
+      "core_truths": [
+        {
+          "id": "theory.psychological_acceptance.seeing_reality_is_not_surrender",
+          "text_vi": "Nhìn nhận điều đang hiện diện không đồng nghĩa với đồng ý, yêu thích hoặc từ bỏ khả năng phản hồi.",
+          "scope_note_vi": "Không dùng để yêu cầu người dùng chấp nhận tổn hại, bất công hoặc ở lại trong tình huống không an toàn."
+        }
+      ],
+      "reference_ids": [
+        "ref.callahan_2021_acceptance"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.resilience_ordinary_processes",
+      "display_name_vi": "Phục hồi qua những quá trình bình thường",
+      "original_name": "Resilience as Ordinary Processes",
+      "kind": "psychology_theory",
+      "summary_vi": "Khung nhìn resilience như kết quả của nhiều hệ thống thích nghi và nguồn lực bình thường thay vì một phẩm chất phi thường duy nhất.",
+      "core_truths": [
+        {
+          "id": "theory.resilience_ordinary_processes.recovery_can_begin_in_small_ordinary_processes",
+          "text_vi": "Sau khó khăn, phục hồi có thể bắt đầu qua nhiều việc nhỏ và nguồn lực quen thuộc trong đời sống.",
+          "scope_note_vi": "Không hứa hẹn mọi người sẽ phục hồi theo cùng tốc độ hoặc quy trách nhiệm hoàn toàn cho cá nhân."
+        }
+      ],
+      "reference_ids": [
+        "ref.masten_2001_resilience"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.self_determination_at_work",
+      "display_name_vi": "Tự quyết trong công việc",
+      "original_name": "Self-Determination Theory at Work",
+      "kind": "psychology_theory",
+      "summary_vi": "Khung lý thuyết liên hệ động lực với những trải nghiệm về tự chủ, năng lực và kết nối trong bối cảnh công việc.",
+      "core_truths": [
+        {
+          "id": "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected",
+          "text_vi": "Cách một người gắn bó với công việc có thể khác đi khi họ cảm thấy có lựa chọn, có năng lực và có liên hệ với điều mình làm.",
+          "scope_note_vi": "Không quy mọi vấn đề công việc về động lực cá nhân hoặc bỏ qua điều kiện tổ chức và nguồn lực."
+        }
+      ],
+      "reference_ids": [
+        "ref.parker_2022_sdt_work"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.deliberate_practice",
+      "display_name_vi": "Luyện tập có chủ đích",
+      "original_name": "Deliberate Practice",
+      "kind": "psychology_theory",
+      "summary_vi": "Khái niệm về luyện tập tập trung, có mục tiêu cải thiện cụ thể và phản hồi, khác với chỉ lặp lại điều đã thành thạo.",
+      "core_truths": [
+        {
+          "id": "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part",
+          "text_vi": "Cải thiện kỹ năng thường cần chú ý vào phần chưa vững và phản hồi cụ thể, không chỉ lặp lại phần đã quen.",
+          "scope_note_vi": "Không khẳng định luyện tập là yếu tố duy nhất quyết định thành tựu hoặc dùng quy tắc 10.000 giờ."
+        }
+      ],
+      "reference_ids": [
+        "ref.ericsson_1993_deliberate_practice"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.psychological_detachment",
+      "display_name_vi": "Tách khỏi công việc để hồi phục",
+      "original_name": "Psychological Detachment from Work",
+      "kind": "psychology_theory",
+      "summary_vi": "Khái niệm về việc tạm ngừng bị cuốn vào yêu cầu và suy nghĩ công việc trong thời gian ngoài công việc để hỗ trợ hồi phục.",
+      "core_truths": [
+        {
+          "id": "theory.psychological_detachment.recovery_needs_some_demands_to_stop",
+          "text_vi": "Một hệ thống khó hồi phục nếu những yêu cầu đã làm nó mệt vẫn tiếp tục hoạt động trong thời gian nghỉ.",
+          "scope_note_vi": "Không mặc định mọi người có điều kiện công việc hoặc ranh giới thời gian giống nhau."
+        }
+      ],
+      "reference_ids": [
+        "ref.wendsche_2017_detachment"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.two_process_sleep_regulation",
+      "display_name_vi": "Mô hình hai quá trình điều hòa giấc ngủ",
+      "original_name": "Two-Process Model of Sleep Regulation",
+      "kind": "psychology_theory",
+      "summary_vi": "Mô hình mô tả sự tương tác giữa áp lực ngủ tích lũy khi thức và quá trình sinh học theo nhịp ngày đêm.",
+      "core_truths": [
+        {
+          "id": "theory.two_process_sleep_regulation.sleep_is_not_a_single_switch",
+          "text_vi": "Buồn ngủ và thời điểm ngủ không vận hành như một công tắc duy nhất mà chịu ảnh hưởng của nhiều quá trình theo thời gian.",
+          "scope_note_vi": "Không dùng để chẩn đoán mất ngủ hoặc đưa hướng dẫn điều trị, giờ ngủ dành riêng cho cá nhân."
+        }
+      ],
+      "reference_ids": [
+        "ref.borbely_2016_two_process_sleep"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.psychological_flexibility_values",
+      "display_name_vi": "Linh hoạt tâm lý và giá trị",
+      "original_name": "Psychological Flexibility and Values",
+      "kind": "psychology_theory",
+      "summary_vi": "Trong ACT, giá trị là hướng lựa chọn có thể tiếp tục được thể hiện qua hành động ngay cả khi trải nghiệm nội tâm thay đổi.",
+      "core_truths": [
+        {
+          "id": "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes",
+          "text_vi": "Giá trị có thể cho một hướng để lựa chọn nhưng không quyết định thay từng bước hoặc bảo đảm kết quả.",
+          "scope_note_vi": "Không áp đặt giá trị nào là đúng cho người dùng; giá trị cần do chính người đó xác định."
+        }
+      ],
+      "reference_ids": [
+        "ref.hayes_2006_psychological_flexibility"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.meaning_in_life",
+      "display_name_vi": "Cảm nhận và tìm kiếm ý nghĩa",
+      "original_name": "Presence and Search for Meaning in Life",
+      "kind": "psychology_theory",
+      "summary_vi": "Khung nghiên cứu phân biệt cảm nhận rằng đời sống có ý nghĩa với quá trình tìm kiếm ý nghĩa.",
+      "core_truths": [
+        {
+          "id": "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections",
+          "text_vi": "Cảm nhận ý nghĩa có thể gắn với những kết nối, câu chuyện và điều được coi trọng trong đời sống thường ngày.",
+          "scope_note_vi": "Không khẳng định có một ý nghĩa phổ quát hoặc rằng mọi biến cố đều xảy ra vì một lý do."
+        }
+      ],
+      "reference_ids": [
+        "ref.steger_2006_meaning_in_life"
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.dual_process",
+      "display_name_vi": "Xử lý nhanh và cân nhắc",
+      "original_name": "Dual Process",
+      "kind": "psychology_theory",
+      "summary_vi": "Phản ứng nhanh có thể xuất hiện trước quá trình cân nhắc có chủ đích.",
+      "core_truths": [
+        {
+          "id": "theory.dual_process.fast_response_can_precede_deliberation",
+          "text_vi": "Phản ứng nhanh có thể đi trước sự cân nhắc chậm hơn.",
+          "scope_note_vi": "Không dùng nhãn hai hệ thống để kết luận cơ chế của một cá nhân trong một tình huống cụ thể."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.cognitive_behavioral_interpretation",
+      "display_name_vi": "Diễn giải và phản ứng",
+      "original_name": "Cognitive Behavioral Theory",
+      "kind": "psychology_theory",
+      "summary_vi": "Bản nháp phạm vi hẹp về mối liên hệ giữa cách diễn giải một sự việc và phản ứng tiếp theo.",
+      "core_truths": [
+        {
+          "id": "theory.cognitive_behavioral_interpretation.interpretation_can_shape_response",
+          "text_vi": "Cách một sự việc được diễn giải có thể góp phần định hình phản ứng.",
+          "scope_note_vi": "Không dùng để quy mọi khó khăn về suy nghĩ hoặc thay thế đánh giá chuyên môn."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.defense_mechanisms_projection",
+      "display_name_vi": "Căng thẳng nội tâm và quy chiếu",
+      "original_name": "Defense Mechanisms and Projection",
+      "kind": "psychology_theory",
+      "summary_vi": "Bản nháp không chẩn đoán về khả năng một phần căng thẳng nội tâm được gán ra bên ngoài.",
+      "core_truths": [
+        {
+          "id": "theory.defense_mechanisms_projection.internal_tension_may_be_attributed_outward",
+          "text_vi": "Một phần căng thẳng nội tâm đôi khi có thể được quy chiếu ra bên ngoài.",
+          "scope_note_vi": "Không dùng để chẩn đoán, gắn nhãn hoặc khẳng định động cơ của người khác."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.narrative_identity",
+      "display_name_vi": "Bản sắc tự sự",
+      "original_name": "Narrative Identity",
+      "kind": "psychology_theory",
+      "summary_vi": "Câu chuyện một người kể về mình có thể liên hệ với cách họ hiểu bản sắc và lựa chọn hành động.",
+      "core_truths": [
+        {
+          "id": "theory.narrative_identity.self_stories_can_shape_identity_and_action",
+          "text_vi": "Câu chuyện về bản thân có thể góp phần định hình bản sắc và hành động.",
+          "scope_note_vi": "Không xem một câu chuyện đơn lẻ là toàn bộ con người hoặc là nguyên nhân duy nhất của hành vi."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.conservation_of_resources",
+      "display_name_vi": "Bảo toàn nguồn lực",
+      "original_name": "Conservation of Resources",
+      "kind": "psychology_theory",
+      "summary_vi": "Bản nháp về cách mất mát hoặc thiếu hụt nguồn lực có thể thu hẹp lựa chọn đang cảm nhận.",
+      "core_truths": [
+        {
+          "id": "theory.conservation_of_resources.resource_loss_can_narrow_available_choices",
+          "text_vi": "Mất mát nguồn lực có thể làm những lựa chọn khả dụng trở nên hẹp hơn.",
+          "scope_note_vi": "Chưa bao gồm tuyên bố về ego depletion hoặc allostatic load khi chưa source review."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.perma_wellbeing",
+      "display_name_vi": "An lành đa thành phần",
+      "original_name": "PERMA",
+      "kind": "psychology_theory",
+      "summary_vi": "Bản nháp mô tả an lành như một trải nghiệm có nhiều thành phần khác nhau.",
+      "core_truths": [
+        {
+          "id": "theory.perma_wellbeing.wellbeing_can_include_multiple_distinct_elements",
+          "text_vi": "An lành có thể gồm nhiều thành phần khác nhau thay vì chỉ một cảm giác duy nhất.",
+          "scope_note_vi": "Chưa dùng để chấm điểm hoặc kết luận mức độ an lành của một cá nhân."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.broaden_and_build",
+      "display_name_vi": "Mở rộng và bồi đắp",
+      "original_name": "Broaden-and-Build",
+      "kind": "psychology_theory",
+      "summary_vi": "Bản nháp về khả năng cảm xúc tích cực mở rộng lựa chọn hành động và hỗ trợ bồi đắp nguồn lực theo thời gian.",
+      "core_truths": [
+        {
+          "id": "theory.broaden_and_build.positive_emotion_may_broaden_available_actions",
+          "text_vi": "Cảm xúc tích cực có thể mở rộng những hành động mà mình nhận thấy là khả dụng.",
+          "scope_note_vi": "Không khẳng định cảm xúc tích cực luôn tạo tăng trưởng hoặc phủ nhận giá trị của cảm xúc khó chịu."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "theory.avoidance_negative_reinforcement",
+      "display_name_vi": "Né tránh và củng cố âm",
+      "original_name": "Avoidance and Negative Reinforcement",
+      "kind": "psychology_theory",
+      "summary_vi": "Bản nháp về vòng lặp trong đó nhẹ nhõm ngắn hạn có thể làm hành vi né tránh dễ lặp lại.",
+      "core_truths": [
+        {
+          "id": "theory.avoidance_negative_reinforcement.short_term_relief_can_reinforce_avoidance",
+          "text_vi": "Sự nhẹ nhõm ngắn hạn có thể củng cố việc né tránh.",
+          "scope_note_vi": "Không dùng để chẩn đoán rối loạn hoặc quy kết mọi quyết định rút lui là né tránh có hại."
+        }
+      ],
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "framework.dichotomy_of_control",
+      "display_name_vi": "Phân biệt điều có thể và không thể kiểm soát",
+      "description_vi": "Khung triết học phân biệt điều phụ thuộc vào lựa chọn hoặc hành động của mình với điều không hoàn toàn nằm trong tầm kiểm soát. Mô tả này cần được đối chiếu nguồn trước khi dùng cho content đã duyệt.",
+      "source_domain": "philosophy",
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "framework.yin_yang_taiji",
+      "display_name_vi": "Âm dương–Thái cực",
+      "description_vi": "Khung authoring về hai mặt khác biệt nhưng có thể cùng hiện diện và bổ sung cho nhau; chưa dùng như một lý thuyết tâm lý.",
+      "source_domain": "philosophy",
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "framework.everyday_causality",
+      "display_name_vi": "Nhân quả đời thường",
+      "description_vi": "Khung authoring để quan sát mối nối giữa hành động, phản hồi và hệ quả trong đời sống thường ngày; không dùng để khẳng định quan hệ nhân quả khoa học.",
+      "source_domain": "philosophy",
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "framework.mutuality",
+      "display_name_vi": "Tương hỗ",
+      "description_vi": "Khung authoring về sự nâng đỡ qua lại giữa nhiều người, nguồn lực hoặc hành động nhỏ.",
+      "source_domain": "philosophy",
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    },
+    {
+      "id": "framework.dialectical_thinking",
+      "display_name_vi": "Tư duy biện chứng",
+      "description_vi": "Khung triết học authoring cho phép hai mặt có vẻ đối lập cùng được nhìn nhận mà không vội xóa bỏ một phía.",
+      "source_domain": "philosophy",
+      "reference_ids": [
+
+      ],
+      "validation_status": "pending_source_review",
+      "status": "draft"
+    }
+  ],
+  "references": [
+    {
+      "id": "ref.chin_2021_mindfulness_attention",
+      "type": "book_or_paper",
+      "title": "Mindfulness interventions improve momentary and trait measures of attentional control",
+      "authors": [
+        "Brian Chin",
+        "Emily K. Lindsay",
+        "Carol M. Greco",
+        "Kirk Warren Brown",
+        "Joshua M. Smyth",
+        "Aidan G. C. Wright",
+        "J. David Creswell"
+      ],
+      "year": 2021,
+      "publisher_or_journal": "Journal of Experimental Psychology: General",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32969686/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.zetsche_2018_repetitive_negative_thinking",
+      "type": "book_or_paper",
+      "title": "Shedding light on the association between repetitive negative thinking and deficits in cognitive control",
+      "authors": [
+        "Ulrike Zetsche",
+        "Paul-Christian Bürkner",
+        "Lars Schulze"
+      ],
+      "year": 2018,
+      "publisher_or_journal": "Clinical Psychology Review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29913351/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.lieberman_2007_affect_labeling",
+      "type": "book_or_paper",
+      "title": "Putting feelings into words: affect labeling disrupts amygdala activity in response to affective stimuli",
+      "authors": [
+        "Matthew D. Lieberman",
+        "Naomi I. Eisenberger",
+        "Molly J. Crockett",
+        "Sabrina M. Tom",
+        "Jennifer H. Pfeifer",
+        "Baldwin M. Way"
+      ],
+      "year": 2007,
+      "publisher_or_journal": "Psychological Science",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17576282/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.buchanan_2007_emotional_memory_retrieval",
+      "type": "book_or_paper",
+      "title": "Retrieval of Emotional Memories",
+      "authors": [
+        "Tony W. Buchanan"
+      ],
+      "year": 2007,
+      "publisher_or_journal": "Psychological Bulletin",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2265099/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.baumeister_leary_1995_need_to_belong",
+      "type": "book_or_paper",
+      "title": "The need to belong: desire for interpersonal attachments as a fundamental human motivation",
+      "authors": [
+        "Roy F. Baumeister",
+        "Mark R. Leary"
+      ],
+      "year": 1995,
+      "publisher_or_journal": "Psychological Bulletin",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7777651/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.mikulincer_2002_attachment_security",
+      "type": "book_or_paper",
+      "title": "Attachment security in couple relationships: a systemic model and its implications for family dynamics",
+      "authors": [
+        "Mario Mikulincer",
+        "Victor Florian",
+        "Philip A. Cowan",
+        "Carolyn Pape Cowan"
+      ],
+      "year": 2002,
+      "publisher_or_journal": "Family Process",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12395567/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.festinger_1954_social_comparison",
+      "type": "book_or_paper",
+      "title": "A Theory of Social Comparison Processes",
+      "authors": [
+        "Leon Festinger"
+      ],
+      "year": 1954,
+      "publisher_or_journal": "Human Relations",
+      "url": "https://doi.org/10.1177/001872675400700202",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.neff_2003_self_compassion",
+      "type": "book_or_paper",
+      "title": "Self-Compassion: An Alternative Conceptualization of a Healthy Attitude Toward Oneself",
+      "authors": [
+        "Kristin D. Neff"
+      ],
+      "year": 2003,
+      "publisher_or_journal": "Self and Identity",
+      "url": "https://doi.org/10.1080/15298860390129863",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.stojanovic_2022_habit_context",
+      "type": "book_or_paper",
+      "title": "Context Stability in Habit Building Increases Automaticity and Goal Attainment",
+      "authors": [
+        "M. Stojanovic",
+        "A. Grund",
+        "S. Fries"
+      ],
+      "year": 2022,
+      "publisher_or_journal": "Frontiers in Psychology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35756236/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.metcalfe_2017_learning_from_errors",
+      "type": "book_or_paper",
+      "title": "Learning from Errors",
+      "authors": [
+        "Janet Metcalfe"
+      ],
+      "year": 2017,
+      "publisher_or_journal": "Annual Review of Psychology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27648988/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.callahan_2021_acceptance",
+      "type": "book_or_paper",
+      "title": "Acceptance: A Research Overview and Application of This Core ACT Process in ABA",
+      "authors": [
+        "Michael J. Bordieri"
+      ],
+      "year": 2021,
+      "publisher_or_journal": "Behavior Analysis in Practice",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35340386/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.masten_2001_resilience",
+      "type": "book_or_paper",
+      "title": "Ordinary magic: Resilience processes in development",
+      "authors": [
+        "Ann S. Masten"
+      ],
+      "year": 2001,
+      "publisher_or_journal": "American Psychologist",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11315249/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.parker_2022_sdt_work",
+      "type": "book_or_paper",
+      "title": "Understanding and shaping the future of work with self-determination theory",
+      "authors": [
+        "Marylène Gagné",
+        "Sharon K. Parker",
+        "Mark A. Griffin",
+        "Patrick D. Dunlop",
+        "Caroline Knight",
+        "Florian E. Klonek",
+        "Xavier Parent-Rocheleau"
+      ],
+      "year": 2022,
+      "publisher_or_journal": "Nature Reviews Psychology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35574235/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.ericsson_1993_deliberate_practice",
+      "type": "book_or_paper",
+      "title": "The role of deliberate practice in the acquisition of expert performance",
+      "authors": [
+        "K. Anders Ericsson",
+        "Ralf T. Krampe",
+        "Clemens Tesch-Römer"
+      ],
+      "year": 1993,
+      "publisher_or_journal": "Psychological Review",
+      "url": "https://doi.org/10.1037/0033-295X.100.3.363",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.wendsche_2017_detachment",
+      "type": "book_or_paper",
+      "title": "A Meta-Analysis on Antecedents and Outcomes of Detachment from Work",
+      "authors": [
+        "Johannes Wendsche",
+        "Andrea Lohmann-Haislah"
+      ],
+      "year": 2017,
+      "publisher_or_journal": "Frontiers in Psychology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28133454/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.borbely_2016_two_process_sleep",
+      "type": "book_or_paper",
+      "title": "The two-process model of sleep regulation: a reappraisal",
+      "authors": [
+        "Alexander A. Borbély",
+        "Serge Daan",
+        "Anna Wirz-Justice",
+        "Tom Deboer"
+      ],
+      "year": 2016,
+      "publisher_or_journal": "Journal of Sleep Research",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26762182/",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.hayes_2006_psychological_flexibility",
+      "type": "book_or_paper",
+      "title": "Acceptance and Commitment Therapy: Model, processes and outcomes",
+      "authors": [
+        "Steven C. Hayes",
+        "Jason B. Luoma",
+        "Frank W. Bond",
+        "Akihiko Masuda",
+        "Jason Lillis"
+      ],
+      "year": 2006,
+      "publisher_or_journal": "Behaviour Research and Therapy",
+      "url": "https://doi.org/10.1016/j.brat.2005.06.006",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    },
+    {
+      "id": "ref.steger_2006_meaning_in_life",
+      "type": "book_or_paper",
+      "title": "The Meaning in Life Questionnaire: Assessing the Presence of and Search for Meaning in Life",
+      "authors": [
+        "Michael F. Steger",
+        "Patricia Frazier",
+        "Shigehiro Oishi",
+        "Matthew Kaler"
+      ],
+      "year": 2006,
+      "publisher_or_journal": "Journal of Counseling Psychology",
+      "url": "https://doi.org/10.1037/0022-0167.53.1.80",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "pending_source_review"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": "selflo.perspective.publish-audit.v1",
+  "channel": "authoring",
+  "library_revision": 1,
+  "canonical_source_revision": 1,
+  "canonical_source_digest": "40c473da9ba7867cbd5e047c6575602dd50c956b3505b46bd0e0d7f21061070a",
+  "canonical_quote_count": 141,
+  "source_files": [
+    {
+      "id": "knowledge.canonical.vi",
+      "sha256": "56a1cc838dcc0eea6e4fa0728de6bc54cbb8b4dcc09b7b19515339bdb281bbf3",
+      "path": "knowledge/knowledge.vi.json"
+    },
+    {
+      "id": "story.baker_and_black_mark",
+      "sha256": "a6d5287e77f77689e028a5a0ed13612256c2f9a11c4649384ae2bf3ab6e6d653",
+      "path": "stories/baker-and-black-mark/story.vi.json"
+    },
+    {
+      "id": "story.boatman_and_second_mountain",
+      "sha256": "333aeea155c8e84639b4263d5c30ca0e1c14b509a6e0bccd9faf26eeded80061",
+      "path": "stories/boatman-and-second-mountain/story.vi.json"
+    },
+    {
+      "id": "story.builder_and_shapeless_stones",
+      "sha256": "f5a530d0ea0635333a5f0a70981e60bf2f01ba7dabdb8ddce5bcfb7e51c3dd95",
+      "path": "stories/builder-and-shapeless-stones/story.vi.json"
+    },
+    {
+      "id": "story.laundry_and_two_bells",
+      "sha256": "981af3ef3efcd824169d09334691b92c356c5fe9d5a0706fd042d8cc31b55986",
+      "path": "stories/laundry-and-two-bells/story.vi.json"
+    },
+    {
+      "id": "story.potter_and_two_hands",
+      "sha256": "de14b158c80aa722ac651431b708ec0ce33b672d96d9bbaa3f4d89ea459fe2ef",
+      "path": "stories/potter-and-two-hands/story.vi.json"
+    },
+    {
+      "id": "story.roof_of_many_hands",
+      "sha256": "5a7330dab9c67d5e243769a8ce7e57fe2a1f43b5527d14da18402edd6edc0ef4",
+      "path": "stories/roof-of-many-hands/story.vi.json"
+    },
+    {
+      "id": "story.warehouse_path_between_boxes",
+      "sha256": "bafa0c9a83eae2c0a1af09c8e0fbd7772a1ad811a666aff880309a6b60738a2f",
+      "path": "stories/warehouse-path-between-boxes/story.vi.json"
+    },
+    {
+      "id": "theme.adversity_resilience.vi",
+      "sha256": "dcb0d08dc35fdc4950f7731464d5b9117dbaafe1c27ffbd62d9834a00bb470a4",
+      "path": "themes/adversity-resilience.vi.json"
+    },
+    {
+      "id": "theme.attention.vi",
+      "sha256": "158e6250fde58e8456689bf46fc1b5f4ff1eab1df73469deeb6255c1c23c2937",
+      "path": "themes/attention.vi.json"
+    },
+    {
+      "id": "theme.change_growth.vi",
+      "sha256": "9adbdc94ce8a0d5d3ee94ce4545c763e211eb722c83f93b300ec8f53db49e97c",
+      "path": "themes/change-growth.vi.json"
+    },
+    {
+      "id": "theme.emotion.vi",
+      "sha256": "80d51c7dc8f9b8ffed05e60ea8e7db57b2b6e61a3144aa3bcb7bacd575435c18",
+      "path": "themes/emotion.vi.json"
+    },
+    {
+      "id": "theme.meaning_values.vi",
+      "sha256": "95674c1c05c35d963d8f78f96a2d98b0539d11a906aa9b11b4b404e74c9cd325",
+      "path": "themes/meaning-values.vi.json"
+    },
+    {
+      "id": "theme.relationships.vi",
+      "sha256": "6a792cfe0ce42b99b1295fd716898667d5417046b68d33e09e266d5bc9eacfac",
+      "path": "themes/relationships.vi.json"
+    },
+    {
+      "id": "theme.rest_wellbeing.vi",
+      "sha256": "34563460eec97b9bb1e064383531c13895c387c445cc4af8cf8fb28b7a3eac7e",
+      "path": "themes/rest-wellbeing.vi.json"
+    },
+    {
+      "id": "theme.self_understanding.vi",
+      "sha256": "09e48fd66cac901a0a243d603d9aa54fcffefcfe41c30f3b175c0e618debe305",
+      "path": "themes/self-understanding.vi.json"
+    },
+    {
+      "id": "theme.work_achievement.vi",
+      "sha256": "240b3e0fe521c8b8e70a3fe062d31641a8530d91eb16a035605824157ccdeb2f",
+      "path": "themes/work-achievement.vi.json"
+    }
+  ],
+  "changed_file_ids": [
+    "knowledge.canonical.vi",
+    "story.baker_and_black_mark",
+    "story.boatman_and_second_mountain",
+    "story.builder_and_shapeless_stones",
+    "story.laundry_and_two_bells",
+    "story.potter_and_two_hands",
+    "story.roof_of_many_hands",
+    "story.warehouse_path_between_boxes",
+    "theme.adversity_resilience.vi",
+    "theme.attention.vi",
+    "theme.change_growth.vi",
+    "theme.emotion.vi",
+    "theme.meaning_values.vi",
+    "theme.relationships.vi",
+    "theme.rest_wellbeing.vi",
+    "theme.self_understanding.vi",
+    "theme.work_achievement.vi"
+  ],
+  "reused_file_ids": [
+
+  ],
+  "story_links_projected_to_null": [
+
+  ],
+  "explicit_quote_exclusions": [
+
+  ],
+  "manifest_sha256": "438b1014dd9ea40f130d2eba655a4b048b4b8e9d12ecb85d6b3faf7e1bc00466",
+  "generated_at": "2026-08-23T11:42:15Z"
+}

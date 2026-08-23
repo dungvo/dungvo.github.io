@@ -1,0 +1,124 @@
+{
+  "schema_version": "selflo.perspective.authoring-source.v1",
+  "source_revision": 1,
+  "content_version": "phase11b-canonical-authoring-1",
+  "language": "vi",
+  "canonical_quote_count": 141,
+  "generated_from_owner_gate": "CP-003-revised",
+  "files": [
+    {
+      "id": "decisions.canonical.vi",
+      "kind": "authoring_decisions",
+      "path": "decisions/canonical-decisions.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "knowledge.canonical.vi",
+      "kind": "knowledge_catalog",
+      "path": "knowledge/knowledge.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "provenance.source_mapping.vi",
+      "kind": "provenance",
+      "path": "provenance/source-mapping.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.baker_and_black_mark",
+      "kind": "story",
+      "path": "stories/baker-and-black-mark/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.boatman_and_second_mountain",
+      "kind": "story",
+      "path": "stories/boatman-and-second-mountain/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.builder_and_shapeless_stones",
+      "kind": "story",
+      "path": "stories/builder-and-shapeless-stones/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.laundry_and_two_bells",
+      "kind": "story",
+      "path": "stories/laundry-and-two-bells/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.potter_and_two_hands",
+      "kind": "story",
+      "path": "stories/potter-and-two-hands/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.roof_of_many_hands",
+      "kind": "story",
+      "path": "stories/roof-of-many-hands/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.warehouse_path_between_boxes",
+      "kind": "story",
+      "path": "stories/warehouse-path-between-boxes/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.adversity_resilience.vi",
+      "kind": "quote_pack",
+      "path": "themes/adversity-resilience.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.attention.vi",
+      "kind": "quote_pack",
+      "path": "themes/attention.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.change_growth.vi",
+      "kind": "quote_pack",
+      "path": "themes/change-growth.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.emotion.vi",
+      "kind": "quote_pack",
+      "path": "themes/emotion.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.meaning_values.vi",
+      "kind": "quote_pack",
+      "path": "themes/meaning-values.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.relationships.vi",
+      "kind": "quote_pack",
+      "path": "themes/relationships.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.rest_wellbeing.vi",
+      "kind": "quote_pack",
+      "path": "themes/rest-wellbeing.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.self_understanding.vi",
+      "kind": "quote_pack",
+      "path": "themes/self-understanding.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "theme.work_achievement.vi",
+      "kind": "quote_pack",
+      "path": "themes/work-achievement.vi.json",
+      "media_type": "application/json"
+    }
+  ]
+}

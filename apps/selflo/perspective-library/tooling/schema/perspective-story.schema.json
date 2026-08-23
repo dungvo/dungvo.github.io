@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schema/perspective-story.schema.json",
+  "title": "PerspectiveStoryFileV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "entity",
+    "id",
+    "revision",
+    "status",
+    "language",
+    "title_vi",
+    "subtitle_vi",
+    "hero_image",
+    "primary_theme",
+    "metadata",
+    "sections",
+    "takeaway",
+    "authorship",
+    "editorial",
+    "rights",
+    "review"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "entity": { "const": "perspective_story" },
+    "id": { "$ref": "#/$defs/stable_id" },
+    "revision": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["draft", "active", "retired"] },
+    "language": { "const": "vi" },
+    "title_vi": { "$ref": "#/$defs/non_empty_string" },
+    "subtitle_vi": { "$ref": "#/$defs/nullable_string" },
+    "hero_image": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/hero_image" }
+      ]
+    },
+    "primary_theme": { "$ref": "#/$defs/stable_id" },
+    "metadata": { "$ref": "#/$defs/metadata" },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/section" }
+    },
+    "takeaway": { "$ref": "#/$defs/takeaway" },
+    "authorship": { "$ref": "#/$defs/authorship" },
+    "editorial": { "$ref": "#/$defs/editorial" },
+    "rights": { "$ref": "#/$defs/rights" },
+    "review": { "$ref": "#/$defs/review" }
+  },
+  "$defs": {
+    "non_empty_string": { "type": "string", "pattern": "\\S" },
+    "nullable_string": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/non_empty_string" }
+      ]
+    },
+    "stable_id": { "type": "string", "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$" },
+    "stable_id_array": { "type": "array", "items": { "$ref": "#/$defs/stable_id" } },
+    "string_array": { "type": "array", "items": { "$ref": "#/$defs/non_empty_string" } },
+    "hero_image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file_id", "alt_text_vi", "caption_vi"],
+      "properties": {
+        "file_id": { "$ref": "#/$defs/stable_id" },
+        "alt_text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "caption_vi": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["concept_ids", "emotion_tags", "keywords", "story_style"],
+      "properties": {
+        "concept_ids": { "$ref": "#/$defs/stable_id_array" },
+        "emotion_tags": { "$ref": "#/$defs/stable_id_array" },
+        "keywords": { "$ref": "#/$defs/string_array" },
+        "story_style": { "enum": ["parable", "contemporary", "reflective_journey"] }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title_vi", "blocks"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "title_vi": { "$ref": "#/$defs/nullable_string" },
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/block" }
+        }
+      }
+    },
+    "block": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "type", "text_vi"],
+          "properties": {
+            "id": { "$ref": "#/$defs/stable_id" },
+            "type": { "const": "paragraph" },
+            "text_vi": { "$ref": "#/$defs/non_empty_string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "type", "text_vi"],
+          "properties": {
+            "id": { "$ref": "#/$defs/stable_id" },
+            "type": { "const": "heading" },
+            "text_vi": { "$ref": "#/$defs/non_empty_string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "type", "text_vi", "attribution_vi"],
+          "properties": {
+            "id": { "$ref": "#/$defs/stable_id" },
+            "type": { "const": "pull_quote" },
+            "text_vi": { "$ref": "#/$defs/non_empty_string" },
+            "attribution_vi": { "$ref": "#/$defs/nullable_string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "type"],
+          "properties": {
+            "id": { "$ref": "#/$defs/stable_id" },
+            "type": { "const": "divider" }
+          }
+        }
+      ]
+    },
+    "takeaway": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title_vi", "text_vi"],
+      "properties": {
+        "title_vi": { "$ref": "#/$defs/non_empty_string" },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" }
+      }
+    },
+    "authorship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["author_id", "author_name", "source_label", "source_url"],
+      "properties": {
+        "author_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "author_name": { "$ref": "#/$defs/nullable_string" },
+        "source_label": { "$ref": "#/$defs/nullable_string" },
+        "source_url": { "oneOf": [{ "type": "null" }, { "type": "string", "format": "uri", "pattern": "^[hH][tT][tT][pP][sS]://" }] }
+      }
+    },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin_type", "source_collection_id", "source_item_id", "human_edited"],
+      "properties": {
+        "origin_type": { "enum": ["selflo_original", "owner_curated_ai_assisted", "adapted_public_domain", "licensed_source"] },
+        "source_collection_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "source_item_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "human_edited": { "type": "boolean" }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "note"],
+      "properties": {
+        "status": { "enum": ["selflo_owned", "public_domain", "licensed", "permission_granted", "unverified"] },
+        "note": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewed_by", "reviewed_at"],
+      "properties": {
+        "status": { "enum": ["draft", "needs_owner_review", "needs_edit", "approved", "rejected"] },
+        "reviewed_by": { "$ref": "#/$defs/nullable_string" },
+        "reviewed_at": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/utc_timestamp" }] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "reviewed_by": { "$ref": "#/$defs/non_empty_string" },
+              "reviewed_at": { "$ref": "#/$defs/utc_timestamp" }
+            }
+          },
+          "else": {
+            "properties": {
+              "reviewed_by": { "type": "null" },
+              "reviewed_at": { "type": "null" }
+            }
+          }
+        }
+      ]
+    },
+    "utc_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(?:Z|\\+00:00)$"
+    }
+  }
+}
