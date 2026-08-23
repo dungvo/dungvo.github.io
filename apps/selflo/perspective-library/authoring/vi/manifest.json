@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 2,
-  "content_version": "owner-review-authoring-2",
+  "library_revision": 3,
+  "content_version": "owner-review-originals-3",
   "language": "vi",
-  "generated_at": "2026-08-23T12:30:05Z",
+  "generated_at": "2026-08-23T12:53:20Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -168,6 +168,87 @@
       "media_type": "application/json",
       "sha256": "fdacfeb813ed1c37dc4d02c59557b922995ef70c524dca01c5b53fde2e544748",
       "byte_count": 7266
+    },
+    {
+      "id": "story.original_between_two_banks",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-between-two-banks/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "3f895619ab8aa18fa65f14f4ac5eb4e7c43ebce99433291e19d400566d77803d",
+      "byte_count": 13558
+    },
+    {
+      "id": "story.original_boatman_and_second_mountain",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-boatman-and-second-mountain/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "a4fb441ade3c1182d7e0b8b7382308ff0de3e8884fa8349e4565328649d1b8fd",
+      "byte_count": 27579
+    },
+    {
+      "id": "story.original_builder_and_shapeless_stones",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-builder-and-shapeless-stones/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "5d2a238ab88995daf7c61aa5326afd5c8d5b5e62b68116eec075287a8a0310af",
+      "byte_count": 21930
+    },
+    {
+      "id": "story.original_chair_beside_window",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-chair-beside-window/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "ace1b4a4f322d7e295cd8ff4b2f7b8aed87b71574d867ac5c3cb30a6b4d746ac",
+      "byte_count": 37394
+    },
+    {
+      "id": "story.original_if_i_lived_a_human_life",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "10625b735ba030971c75b88a77848e630778e0ad33acac63424b374718219874",
+      "byte_count": 64918
+    },
+    {
+      "id": "story.original_keeper_of_the_lamp",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-keeper-of-the-lamp/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "36ff4a3997e15cadd91fec0fbd484740fcf71e4e67cb1907b5e9010543fc2d22",
+      "byte_count": 42828
+    },
+    {
+      "id": "story.original_lam_and_tomorrow_passenger",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-lam-and-tomorrow-passenger/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "7032b10c41dfc763bafd08bcdaf546cae885c86d6ad2375ed1f0842bfe508be9",
+      "byte_count": 57713
+    },
+    {
+      "id": "story.original_thanh_and_one_more_meter",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-thanh-and-one-more-meter/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "44b13d85c506b89129096f82f90cebde1ed80a58f18e1b4e7129e9ee1f67a91d",
+      "byte_count": 45688
+    },
+    {
+      "id": "story.original_water_carrier_and_tomorrow_stone",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-water-carrier-and-tomorrow-stone/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "30a2248237f88d1187009f820ebe4a2fbe081d93e75739aa733fddb564d73470",
+      "byte_count": 23229
     },
     {
       "id": "story.potter_and_two_hands",
