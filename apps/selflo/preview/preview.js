@@ -196,7 +196,7 @@
         ? quote.id === state.selectedQuoteID
         : story.id === state.selectedStandaloneStoryID;
       const node = el.contentItemTemplate.content.firstElementChild.cloneNode(true);
-      node.dataset.review = reviewFor(reviewKey).decision || "pending";
+      node.dataset.review = reviewFor(reviewKey).decision || lifecycleDecision(quote, story);
       node.classList.toggle("active", isActive);
       node.querySelector(".content-index").textContent = String(index + 1).padStart(2, "0");
       node.querySelector("strong").textContent = story?.title_vi || quote.text_vi;
@@ -361,7 +361,7 @@
 
     el.factQuoteID.textContent = quote?.id || "Chưa gắn quote";
     el.factStoryID.textContent = story?.id || "Không có";
-    el.factLifecycle.textContent = `${quote ? `Quote ${quote.review.status} · ` : ""}Story ${story?.status || "—"}`;
+    el.factLifecycle.textContent = `${quote ? `Quote ${quote.review.status} · ` : ""}Story ${story?.status || "—"} · Review ${story?.review?.status || "—"}`;
     el.factRights.textContent = `${quote ? `${quote.rights.status} · ` : ""}${story?.rights?.status || "—"}`;
     el.reviewNote.value = review.note || "";
     el.decisionChoices.querySelectorAll("button[data-decision]").forEach(button => {
@@ -457,6 +457,11 @@
   function reviewFor(quoteID) {
     state.reviews[quoteID] ||= { decision: null, note: "", updated_at: null };
     return state.reviews[quoteID];
+  }
+
+  function lifecycleDecision(quote, story) {
+    const status = quote?.review?.status || story?.review?.status;
+    return ["approved", "needs_edit", "rejected"].includes(status) ? status : "pending";
   }
 
   function persistReviews() {
