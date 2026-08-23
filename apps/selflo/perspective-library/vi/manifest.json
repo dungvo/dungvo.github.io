@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_library_manifest",
+  "library_id": "selflo.perspective.vi",
+  "library_revision": 1,
+  "content_version": "0.1.0-story-pilots",
+  "language": "vi",
+  "generated_at": "2026-08-23T03:20:14Z",
+  "files": [
+    {
+      "id": "knowledge.story_pilots.vi",
+      "kind": "knowledge_catalog",
+      "revision": 1,
+      "path": "knowledge/knowledge.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "a44a88f64dc345f9e073bcdaa0ad1edf153a59a05078fd64f7bd9a4d629794f6",
+      "byte_count": 245
+    },
+    {
+      "id": "theme.work_achievement.story_pilots.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/work-achievement.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "c59c96f1303ce59b4300e3b86e4c69bf64c579bba9c5a2963d0460c7ea06bebe",
+      "byte_count": 2513
+    },
+    {
+      "id": "theme.change_growth.story_pilots.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/change-growth.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "f7f4a148f7ff8fc5cd7b54406348252a8d068dd37906cda242fd5062a276d1fc",
+      "byte_count": 2495
+    },
+    {
+      "id": "story.builder_and_shapeless_stones.vi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/builder-and-shapeless-stones/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "9abcc5c11ac8618b1031bc550d37a64304073f8c612934ff271e74b27967419f",
+      "byte_count": 7090
+    },
+    {
+      "id": "story.boatman_and_second_mountain.vi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/boatman-and-second-mountain/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "0ef96726bf678017285d9b7bb2f321a026673cdccde27cd58957cd4d7879338a",
+      "byte_count": 8808
+    }
+  ]
+}

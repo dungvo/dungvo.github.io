@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "content_version": "0.1.0-story-pilots",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "change_growth",
+  "display_name_vi": "Thay đổi và trưởng thành",
+  "description_vi": "Bản thảo authoring về việc nuôi một con đường thứ hai mà không phủ nhận con đường hiện tại.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "quote.boatman_and_second_mountain",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Tự do bắt đầu từ ngày con đường hiện tại không còn là con đường duy nhất.",
+      "subtitle_vi": null,
+      "story_id": "story.boatman_and_second_mountain",
+      "primary_theme": "change_growth",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "thay đổi",
+          "khám phá",
+          "con đường thứ hai"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo",
+        "source_detail": "Biên tập từ authoring source do owner cung cấp; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [
+          "uncertainty",
+          "hope"
+        ],
+        "keywords": [
+          "chuyển hướng",
+          "thử nghiệm",
+          "tự do"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Cần owner xác nhận provenance và quyết định kind cuối trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một hướng sống khác có thể được nuôi bằng thử nghiệm nhỏ trong khi con đường hiện tại vẫn tiếp tục.",
+        "observation_key": "growth.second_path",
+        "structure_pattern": "parable.parallel_journey"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "soft_paper_observe"
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

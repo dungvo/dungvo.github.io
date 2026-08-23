@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "content_version": "0.1.0-story-pilots",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "work_achievement",
+  "display_name_vi": "Công việc và thành tựu",
+  "description_vi": "Bản thảo authoring về ranh giới giữa phần việc thực tế và phần hỗn loạn được mang theo trong đầu.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "quote.builder_and_shapeless_stones",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Công việc thật sự của mình đôi khi nhỏ hơn rất nhiều so với công việc mình đã làm trong đầu.",
+      "subtitle_vi": null,
+      "story_id": "story.builder_and_shapeless_stones",
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "ranh giới",
+          "công việc",
+          "điều chưa rõ"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo",
+        "source_detail": "Biên tập từ authoring source do owner cung cấp; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [
+          "frustration",
+          "uncertainty"
+        ],
+        "keywords": [
+          "ranh giới công việc",
+          "giả định",
+          "trách nhiệm"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Cần owner xác nhận provenance và quyết định kind cuối trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Tách phần việc có thể làm khỏi giả định và trách nhiệm thuộc về người khác.",
+        "observation_key": "work.boundary.unowned_load",
+        "structure_pattern": "parable.sorting_objects"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

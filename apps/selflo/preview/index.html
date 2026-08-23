@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Selflo Perspective Library content review preview">
+  <title>Selflo · Content Preview</title>
+  <link rel="stylesheet" href="preview.css">
+</head>
+<body>
+  <div class="review-shell">
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="Selflo Content home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>
+          <strong>Selflo</strong>
+          <small>Content review</small>
+        </span>
+      </a>
+
+      <div class="topbar-status" aria-live="polite">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="loadStatus">Đang tải Library…</span>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="quiet-button" id="reloadButton" type="button">Tải lại</button>
+        <button class="primary-button" id="exportButton" type="button">Xuất review</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="library-panel" aria-label="Danh sách nội dung">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Authoring Library</p>
+            <h1>Nội dung chờ duyệt</h1>
+          </div>
+          <span class="count-badge" id="quoteCount">0</span>
+        </div>
+
+        <div class="library-summary">
+          <div>
+            <span>Revision</span>
+            <strong id="libraryRevision">—</strong>
+          </div>
+          <div>
+            <span>Version</span>
+            <strong id="contentVersion">—</strong>
+          </div>
+          <div>
+            <span>Story</span>
+            <strong id="storyCoverage">—</strong>
+          </div>
+        </div>
+
+        <div class="list-label">
+          <span>Quote &amp; story</span>
+          <span>Chọn để preview</span>
+        </div>
+        <div class="content-list" id="contentList"></div>
+      </aside>
+
+      <section class="preview-stage" aria-label="App preview">
+        <div class="stage-toolbar">
+          <div class="segmented-control" aria-label="Chế độ preview">
+            <button type="button" class="active" data-view="canvas" aria-pressed="true">Góc nhìn</button>
+            <button type="button" data-view="reader" aria-pressed="false">Reader</button>
+          </div>
+
+          <div class="stage-meta">
+            <span id="selectedTheme">—</span>
+            <span class="meta-divider"></span>
+            <span id="selectedReadingTime">—</span>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="phone" id="phonePreview">
+            <div class="phone-speaker" aria-hidden="true"></div>
+
+            <section class="canvas-screen" id="canvasScreen">
+              <div class="canvas-glow canvas-glow-one" aria-hidden="true"></div>
+              <div class="canvas-glow canvas-glow-two" aria-hidden="true"></div>
+
+              <div class="mobile-statusbar" aria-hidden="true">
+                <span>9:41</span>
+                <span>◒ ᯤ ▰</span>
+              </div>
+
+              <header class="canvas-header">
+                <div>
+                  <small>Chào buổi tối</small>
+                  <h2>Góc nhìn</h2>
+                </div>
+                <button type="button" class="round-icon" aria-label="Nội dung đã lưu">♡</button>
+              </header>
+
+              <div class="canvas-context">
+                <span>Một khoảng dừng cho hôm nay</span>
+              </div>
+
+              <article class="quote-card" id="quoteCard">
+                <div class="quote-card-top">
+                  <span class="quote-kind" id="quoteKind">Selflo</span>
+                  <span class="quote-source" id="quoteSource">Bản thảo Selflo</span>
+                </div>
+                <h3 id="quoteTitle" hidden></h3>
+                <blockquote id="quoteText">—</blockquote>
+                <p class="quote-subtitle" id="quoteSubtitle" hidden></p>
+                <div class="quote-tags" id="quoteTags"></div>
+                <button class="reader-cta" id="openReaderButton" type="button">
+                  <span>Đọc câu chuyện</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </article>
+
+              <nav class="mobile-tabbar" aria-label="Điều hướng mô phỏng">
+                <span><i>◌</i>Check-in</span>
+                <span><i>◇</i>Lịch sử</span>
+                <span class="active"><i>◎</i>Góc nhìn</span>
+              </nav>
+            </section>
+
+            <section class="reader-screen" id="readerScreen" hidden>
+              <div class="reader-topbar">
+                <button type="button" class="reader-icon" id="closeReaderButton" aria-label="Quay lại">←</button>
+                <div>
+                  <small>Câu chuyện phía sau</small>
+                  <strong id="readerContextTitle">Selflo</strong>
+                </div>
+                <div class="reader-actions">
+                  <button type="button" class="reader-icon" id="bookmarkButton" aria-label="Lưu quote">♡</button>
+                  <button type="button" class="reader-icon text-icon" id="readerSettingsButton" aria-label="Cài đặt chữ">Aa</button>
+                </div>
+              </div>
+
+              <div class="reader-progress" aria-hidden="true"><span id="readerProgressBar"></span></div>
+
+              <div class="reader-settings" id="readerSettings" hidden>
+                <div class="setting-row">
+                  <span>Kiểu chữ</span>
+                  <div class="mini-segment" id="fontChoices">
+                    <button type="button" data-font="serif" class="active">Serif</button>
+                    <button type="button" data-font="rounded">Tròn</button>
+                    <button type="button" data-font="clean">Gọn</button>
+                  </div>
+                </div>
+                <div class="setting-row">
+                  <label for="fontSize">Cỡ chữ</label>
+                  <input id="fontSize" type="range" min="16" max="23" value="18">
+                </div>
+                <div class="setting-row">
+                  <span>Nền đọc</span>
+                  <div class="theme-dots" id="themeChoices">
+                    <button type="button" data-theme="paper" class="active" aria-label="Nền giấy"></button>
+                    <button type="button" data-theme="warm" aria-label="Nền ấm"></button>
+                    <button type="button" data-theme="night" aria-label="Nền tối"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reader-scroll" id="readerScroll">
+                <article class="story-article">
+                  <header class="story-header">
+                    <p class="story-style" id="storyStyle">Ngụ ngôn</p>
+                    <h2 id="storyTitle">—</h2>
+                    <p id="storySubtitle"></p>
+                    <div class="story-byline">
+                      <span id="storyReadingTime">—</span>
+                      <span>•</span>
+                      <span id="storySectionCount">—</span>
+                    </div>
+                  </header>
+
+                  <div id="storyHero"></div>
+                  <div class="story-sections" id="storySections"></div>
+
+                  <aside class="takeaway">
+                    <span>Mang theo</span>
+                    <h3 id="takeawayTitle">—</h3>
+                    <p id="takeawayText">—</p>
+                  </aside>
+
+                  <footer class="story-footer">
+                    <span>Selflo</span>
+                    <p>Một khoảng dừng để nhìn lại điều đang diễn ra bên trong mình.</p>
+                  </footer>
+                </article>
+              </div>
+
+              <div class="section-indicator" id="sectionIndicator">1 / 1</div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <aside class="review-panel" aria-label="Review nội dung">
+        <div class="panel-heading review-heading">
+          <div>
+            <p class="eyebrow">Review note</p>
+            <h2>Quyết định của bạn</h2>
+          </div>
+          <span class="local-only">Local only</span>
+        </div>
+
+        <div class="warning-card">
+          <span aria-hidden="true">!</span>
+          <p>Bản này chưa publish-ready. Quyết định chỉ được lưu trong browser và không sửa JSON.</p>
+        </div>
+
+        <dl class="content-facts">
+          <div><dt>Quote</dt><dd id="factQuoteID">—</dd></div>
+          <div><dt>Story</dt><dd id="factStoryID">—</dd></div>
+          <div><dt>Lifecycle</dt><dd id="factLifecycle">—</dd></div>
+          <div><dt>Rights</dt><dd id="factRights">—</dd></div>
+        </dl>
+
+        <fieldset class="decision-fieldset">
+          <legend>Đề xuất</legend>
+          <div class="decision-grid" id="decisionChoices">
+            <button type="button" data-decision="approved"><span>✓</span>Duyệt</button>
+            <button type="button" data-decision="needs_edit"><span>↺</span>Cần sửa</button>
+            <button type="button" data-decision="rejected"><span>×</span>Từ chối</button>
+          </div>
+        </fieldset>
+
+        <label class="note-field" for="reviewNote">
+          <span>Ghi chú cho nội dung này</span>
+          <textarea id="reviewNote" rows="7" placeholder="Ví dụ: đoạn chuyển section 3 hơi nhanh, cần giữ thêm khoảng lặng…"></textarea>
+        </label>
+
+        <div class="review-links">
+          <a id="openQuoteJSON" href="#" target="_blank" rel="noopener">Mở quote JSON ↗</a>
+          <a id="openStoryJSON" href="#" target="_blank" rel="noopener">Mở story JSON ↗</a>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <template id="contentItemTemplate">
+    <button class="content-item" type="button">
+      <span class="content-index"></span>
+      <span class="content-item-copy">
+        <strong></strong>
+        <small></small>
+      </span>
+      <span class="review-state-dot"></span>
+    </button>
+  </template>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="preview.js"></script>
+</body>
+</html>
