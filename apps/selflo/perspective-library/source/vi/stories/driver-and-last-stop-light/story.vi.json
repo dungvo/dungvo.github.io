@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.driver_and_last_stop_light",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Người lái xe và ô cửa ở bến cuối",
+  "subtitle_vi": "Một điểm đáng tin không giữ người ta đứng lại; đôi khi nó cho phép họ thôi ngoái nhìn và đi hết con đường.",
+  "hero_image": null,
+  "primary_theme": "relationships",
+  "metadata": {
+    "concept_ids": [
+      "concept.attachment_security"
+    ],
+    "emotion_tags": [
+      "uncertainty",
+      "trust"
+    ],
+    "keywords": [
+      "tin cậy",
+      "đáp lại",
+      "bến cuối",
+      "điểm trở về"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "the_night_route",
+      "title_vi": "Tuyến xe ban đêm",
+      "blocks": [
+        {
+          "id": "the_night_route.1",
+          "type": "paragraph",
+          "text_vi": "Huy lái chuyến xe nhỏ chở công nhân từ khu xưởng ra ga vào ban đêm. Tuyến đường đi qua một đoạn đồng tối, hai cây cầu và nhiều trạm không có mái che. Ở bến cuối, Vân trực một căn phòng kính, ghi giờ xe đến và gọi nếu còn người đang chờ ở trạm nào đó."
+        },
+        {
+          "id": "the_night_route.2",
+          "type": "paragraph",
+          "text_vi": "Huy mới nhận tuyến nên cứ vài phút lại nhìn điện thoại. Anh sợ Vân quên báo một hành khách, sợ căn phòng đóng cửa trước khi mình quay về và sợ phải tự quyết định giữa cánh đồng nếu đường đổi. Vì mải kiểm tra, có hôm anh chạy qua một người đang giơ tay dưới tán cây rồi phải quay xe lại."
+        }
+      ]
+    },
+    {
+      "id": "three_calls",
+      "title_vi": "Ba cuộc gọi ở bến cuối",
+      "blocks": [
+        {
+          "id": "three_calls.1",
+          "type": "paragraph",
+          "text_vi": "Đêm đầu tiên mưa lớn, Vân gọi báo một đoạn đường ngập trước khi Huy tới cây cầu. Đêm sau, cô gọi vì có người đổi sang trạm kế tiếp. Đêm thứ ba không có gì xảy ra, nhưng khi Huy về muộn, ô cửa phòng trực vẫn sáng và trong sổ đã ghi đúng giờ anh rời bến."
+        },
+        {
+          "id": "three_calls.2",
+          "type": "paragraph",
+          "text_vi": "Vân không hứa rằng mọi chuyến đi sẽ êm. Cô đôi khi gọi nhầm số trạm và Huy đôi khi quên báo đã đón đủ người. Sau mỗi lần như vậy, họ sửa dòng trong sổ và thống nhất lại dấu hiệu cần dùng. Điều khiến Huy bớt nhìn điện thoại không phải một lời đảm bảo lớn, mà là nhiều lần có người ở đúng nơi đã nói mình sẽ ở."
+        },
+        {
+          "id": "three_calls.3",
+          "type": "pull_quote",
+          "text_vi": "Ánh đèn ở bến cuối không rút ngắn con đường; nó làm con đường có một nơi để trở về.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "the_far_stop",
+      "title_vi": "Trạm xa hơn",
+      "blocks": [
+        {
+          "id": "the_far_stop.1",
+          "type": "paragraph",
+          "text_vi": "Một tối, nhà máy tan ca muộn và có bốn người đứng ở trạm xa hơn điểm cuối thường lệ. Điện thoại của Huy chỉ còn ít pin. Anh có thể quay về đúng lịch hoặc đi thêm đoạn đường tối mà trước đó anh luôn tránh."
+        },
+        {
+          "id": "the_far_stop.2",
+          "type": "paragraph",
+          "text_vi": "Huy gọi Vân một lần, báo nơi mình sẽ đến và giờ dự kiến quay lại. Cô đọc lại thông tin rồi bảo ô cửa vẫn mở. Sau đó anh cất điện thoại vào ngăn xe. Anh lái qua cây cầu, nhìn kỹ từng tán cây và tìm thấy bốn người đang đứng cạnh một chiếc xe hỏng. Lần đầu tiên trên tuyến đêm, sự chú ý của anh ở trên con đường phía trước thay vì ở nơi phía sau có thể biến mất."
+        }
+      ]
+    },
+    {
+      "id": "the_window_went_dark",
+      "title_vi": "Khi ô cửa tắt đèn",
+      "blocks": [
+        {
+          "id": "the_window_went_dark.1",
+          "type": "paragraph",
+          "text_vi": "Trên đường trở về, mưa quất ngang kính. Từ xa Huy không thấy ô cửa sáng. Anh cảm giác cũ quay lại và bàn tay tìm điện thoại, nhưng màn hình đã tắt vì hết pin. Anh giảm tốc, đi qua cổng bến rồi thấy Vân đứng dưới mái hiên với một chiếc đèn pin. Cầu dao của phòng trực vừa hỏng."
+        },
+        {
+          "id": "the_window_went_dark.2",
+          "type": "paragraph",
+          "text_vi": "Ánh đèn quen không còn, người đợi vẫn ở đó. Huy phụ Vân đưa hành khách cuối vào chỗ trú rồi dùng đèn xe soi để cô ghi nốt giờ đến. Anh hiểu điều mình tin cậy chưa bao giờ chỉ là một ô kính sáng. Đó là cách hai người báo cho nhau, sửa những lần lỡ và có mặt trở lại."
+        }
+      ]
+    },
+    {
+      "id": "another_driver",
+      "title_vi": "Người lái xe mới",
+      "blocks": [
+        {
+          "id": "another_driver.1",
+          "type": "paragraph",
+          "text_vi": "Vài tháng sau, Vân nghỉ một tuần và Huy thay cô trực bến. Người lái xe mới rời cổng rồi quay lại hai lần để hỏi liệu có ai gọi khi tuyến thay đổi không. Huy chỉ cho anh ta cuốn sổ, đọc lại số trạm và nói mình sẽ chờ đến khi chuyến cuối về."
+        },
+        {
+          "id": "another_driver.2",
+          "type": "paragraph",
+          "text_vi": "Chiếc xe khuất sau đoạn đồng. Huy bật đèn trong phòng kính rồi ngồi bên điện thoại. Ô cửa không đi cùng người lái xe qua những cây cầu. Nó chỉ ở yên tại bến cuối, và nhờ vậy một người khác có thể đi xa hơn mà không phải mang cả bến xe theo mình."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Sự an toàn trong một mối quan hệ thường được xây qua những lần đáp lại đáng tin. Một điểm tựa như vậy không ngăn chuyển động; nó có thể giúp mình khám phá, nghỉ và trở về."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "coverage_batch_01_driver_last_stop_light",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Bản thảo nguyên bản do AI hỗ trợ; cần owner biên tập và xác nhận quyền trước khi publish."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

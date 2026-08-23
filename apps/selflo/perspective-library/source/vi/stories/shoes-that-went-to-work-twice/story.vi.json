@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.shoes_that_went_to_work_twice",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Đôi giày đi làm hai lần",
+  "subtitle_vi": "Ca sáng chưa bắt đầu, nhưng có những tối tâm trí đã đứng rất lâu trong phòng họp ngày mai.",
+  "hero_image": null,
+  "primary_theme": "attention",
+  "metadata": {
+    "concept_ids": [
+      "concept.overthinking"
+    ],
+    "emotion_tags": [
+      "anxiety",
+      "uncertainty"
+    ],
+    "keywords": [
+      "lo trước ngày mai",
+      "báo cáo công việc",
+      "suy nghĩ lặp",
+      "đôi giày đi làm"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "the_shift_not_started",
+      "title_vi": "Ca sáng chưa bắt đầu",
+      "blocks": [
+        {
+          "id": "the_shift_not_started.1",
+          "type": "paragraph",
+          "text_vi": "Tối Chủ nhật, Hải đặt đôi giày bảo hộ cạnh cửa rồi ngồi xuống bàn ăn. Sáng mai anh phải báo cáo vì sao dây chuyền đóng chai đã dừng bốn mươi bảy phút trong ca của mình. Anh biết một cảm biến báo sai, biết đội bảo trì đã khởi động lại máy và biết linh kiện thay thế vẫn chưa đến. Phần còn lại anh chưa có câu trả lời."
+        },
+        {
+          "id": "the_shift_not_started.2",
+          "type": "paragraph",
+          "text_vi": "Con gái Hải đang dán lại quai chiếc cặp đi học. Con bé hỏi anh giữ giúp cuộn băng keo, nhưng bàn tay anh vẫn cầm điện thoại. Trong đầu, người quản lý đã hỏi cùng một câu theo nhiều giọng khác nhau. Mỗi lần như vậy, Hải lại trả lời dài hơn, rồi tự tìm ra một chỗ khác trong câu trả lời có thể khiến mình bị trách."
+        }
+      ]
+    },
+    {
+      "id": "the_report_kept_changing",
+      "title_vi": "Bản báo cáo không đổi",
+      "blocks": [
+        {
+          "id": "the_report_kept_changing.1",
+          "type": "paragraph",
+          "text_vi": "Hải mở bản ghi ca làm. Con số vẫn là bốn mươi bảy phút. Tên cảm biến vẫn nằm ở dòng thứ tám. Email của nhà cung cấp vẫn chưa có hồi âm. Anh đóng màn hình, đi rót nước rồi mở lại. Không có thông tin nào mới, chỉ có nhịp tim nhanh hơn và bữa tối đã nguội."
+        },
+        {
+          "id": "the_report_kept_changing.2",
+          "type": "paragraph",
+          "text_vi": "Anh thử nghĩ đến tiền học thêm tháng này, khoản sửa xe và số ngày phép còn lại. Những việc ấy khiến buổi báo cáo có vẻ lớn đến mức không còn nằm trong một căn phòng. Nếu người quản lý không hài lòng, Hải tưởng tượng tiếp đến tháng sau, rồi cuối năm, rồi một ngày chưa có hình dạng nào cả."
+        },
+        {
+          "id": "the_report_kept_changing.3",
+          "type": "pull_quote",
+          "text_vi": "Đôi giày vẫn nằm bên cửa. Chỉ có tâm trí đã đi làm từ tối hôm trước.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "what_the_page_knew",
+      "title_vi": "Điều trang giấy biết",
+      "blocks": [
+        {
+          "id": "what_the_page_knew.1",
+          "type": "paragraph",
+          "text_vi": "Khi điện thoại gần hết pin, Hải lấy một tờ giấy trong cặp. Anh viết thời điểm máy dừng, tín hiệu đã thấy, việc đội bảo trì đã làm và điều cần kiểm tra khi linh kiện tới. Đến dòng tiếp theo, anh định viết người quản lý sẽ nghĩ gì, nhưng đầu bút đứng yên. Trang giấy không biết điều đó. Hải cũng không biết."
+        },
+        {
+          "id": "what_the_page_knew.2",
+          "type": "paragraph",
+          "text_vi": "Anh gạch bỏ ba câu giải thích chỉ được viết để chống lại một lời trách chưa xuất hiện. Sau đó Hải đặt tờ giấy cùng chiếc thẻ nhân viên lên đôi giày. Việc chuẩn bị đã để lại một trang có thể mang theo. Những vòng suy nghĩ còn lại không để lại thêm dữ liệu nào."
+        },
+        {
+          "id": "what_the_page_knew.3",
+          "type": "paragraph",
+          "text_vi": "Con gái đưa cuộn băng keo cho anh lần nữa. Hải giữ quai cặp để con bé dán cho thẳng. Nỗi lo vẫn còn ở trong ngực, nhưng ít nhất tối hôm ấy không còn phải dùng toàn bộ căn phòng để chứa một cuộc họp chưa bắt đầu."
+        }
+      ]
+    },
+    {
+      "id": "the_real_meeting",
+      "title_vi": "Cuộc họp thật",
+      "blocks": [
+        {
+          "id": "the_real_meeting.1",
+          "type": "paragraph",
+          "text_vi": "Sáng hôm sau, người quản lý quả thật hỏi vì sao dây chuyền dừng lâu. Hải nghe giọng mình hơi khô khi đọc những điều đã ghi. Anh nói phần đã khôi phục được, phần chưa xác định và thời điểm có thể kiểm tra tiếp. Người quản lý cau mày vì linh kiện chưa tới, rồi hỏi một câu Hải không chuẩn bị trước."
+        },
+        {
+          "id": "the_real_meeting.2",
+          "type": "paragraph",
+          "text_vi": "Hải không có câu trả lời. Anh nói mình chưa biết và sẽ gọi lại nhà cung cấp trước mười giờ. Căn phòng im vài giây. Không ai khen anh mạnh mẽ. Cuộc họp cũng không trở nên dễ chịu. Nhưng nó chỉ kéo dài mười lăm phút, không phải cả tối Chủ nhật như cuộc họp trong đầu anh."
+        },
+        {
+          "id": "the_real_meeting.3",
+          "type": "paragraph",
+          "text_vi": "Đến trưa, nhà cung cấp xác nhận ngày giao linh kiện. Hải cập nhật bản báo cáo và tiếp tục ca làm. Anh vẫn cần chịu trách nhiệm cho chỗ mình đã bỏ sót. Điều khác là anh đang xử lý một việc đã có hình, thay vì cố tự bảo vệ trước mọi phiên bản có thể xảy ra."
+        }
+      ]
+    },
+    {
+      "id": "one_trip_to_work",
+      "title_vi": "Một lần đi làm",
+      "blocks": [
+        {
+          "id": "one_trip_to_work.1",
+          "type": "paragraph",
+          "text_vi": "Tối đó Hải trở về, tháo giày và đặt chúng cạnh cửa. Con gái chạy ra khoe chiếc cặp đã dán xong. Không ai hỏi cuộc họp đã chứng minh anh giỏi hay kém. Con bé chỉ hỏi sáng mai anh có thể chở nó đến trường sớm hơn một chút không."
+        },
+        {
+          "id": "one_trip_to_work.2",
+          "type": "paragraph",
+          "text_vi": "Điện thoại rung vì có email mới từ công ty. Bàn tay Hải chạm vào túi rồi dừng lại. Anh nhìn đôi giày còn bám bụi nhà máy. Chúng đã đưa anh đi làm một lần và mang anh trở về. Hải đặt điện thoại lên kệ, ngồi xuống nghe con gái kể về chiếc quai cặp. Email vẫn ở đó để được mở. Ca sáng ngày mai cũng vậy."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Chuẩn bị có thể tạo ra một bước tiếp theo hoặc một thông tin có thể dùng. Khi suy nghĩ chỉ chạy lại cùng một tương lai mà không tạo thêm điều gì, tâm trí có thể đang sống một sự kiện nhiều lần trước khi nó thật sự bắt đầu."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio từ tình huống owner cung cấp",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "coverage_batch_02_work_anxiety",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Viết lại nguyên bản từ tình huống owner mô tả; không sao chép lời bài hát hoặc nội dung video. Cần owner biên tập và xác nhận quyền trước khi publish."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

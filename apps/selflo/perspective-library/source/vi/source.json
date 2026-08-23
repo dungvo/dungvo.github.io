@@ -1,7 +1,7 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 1,
-  "content_version": "phase11b-canonical-authoring-1",
+  "source_revision": 2,
+  "content_version": "owner-review-authoring-2",
   "language": "vi",
   "canonical_quote_count": 141,
   "generated_from_owner_gate": "CP-003-revised",
@@ -43,9 +43,33 @@
       "media_type": "application/json"
     },
     {
+      "id": "story.cafe_and_smoke_in_curtain",
+      "kind": "story",
+      "path": "stories/cafe-and-smoke-in-curtain/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.courier_and_waterline",
+      "kind": "story",
+      "path": "stories/courier-and-waterline/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.driver_and_last_stop_light",
+      "kind": "story",
+      "path": "stories/driver-and-last-stop-light/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
       "id": "story.laundry_and_two_bells",
       "kind": "story",
       "path": "stories/laundry-and-two-bells/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.operator_and_one_beat",
+      "kind": "story",
+      "path": "stories/operator-and-one-beat/story.vi.json",
       "media_type": "application/json"
     },
     {
@@ -55,9 +79,33 @@
       "media_type": "application/json"
     },
     {
+      "id": "story.recordist_and_room_not_silent",
+      "kind": "story",
+      "path": "stories/recordist-and-room-not-silent/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
       "id": "story.roof_of_many_hands",
       "kind": "story",
       "path": "stories/roof-of-many-hands/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.shoes_that_went_to_work_twice",
+      "kind": "story",
+      "path": "stories/shoes-that-went-to-work-twice/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.signmaker_and_first_square",
+      "kind": "story",
+      "path": "stories/signmaker-and-first-square/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.two_tailors_and_one_measure",
+      "kind": "story",
+      "path": "stories/two-tailors-and-one-measure/story.vi.json",
       "media_type": "application/json"
     },
     {

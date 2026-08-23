@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const LIBRARY_BASE = new URL("../perspective-library/vi/", window.location.href);
+  const LIBRARY_BASE = new URL("../perspective-library/authoring/vi/", window.location.href);
   const REVIEW_KEY = "selflo.content-preview.reviews.v1";
   const READER_KEY = "selflo.content-preview.reader.v1";
 
@@ -12,8 +12,10 @@
     manifest: null,
     quotes: [],
     stories: new Map(),
+    themeNames: new Map(),
     descriptors: new Map(),
     selectedQuoteID: null,
+    selectedStandaloneStoryID: null,
     view: "canvas",
     reviews: readJSON(REVIEW_KEY, {}),
     reader: {
@@ -83,8 +85,9 @@
 
     el.decisionChoices.addEventListener("click", event => {
       const button = event.target.closest("button[data-decision]");
-      if (!button || !state.selectedQuoteID) return;
-      const review = reviewFor(state.selectedQuoteID);
+      const reviewKey = activeReviewKey();
+      if (!button || !reviewKey) return;
+      const review = reviewFor(reviewKey);
       review.decision = review.decision === button.dataset.decision ? null : button.dataset.decision;
       review.updated_at = new Date().toISOString();
       persistReviews();
@@ -93,8 +96,9 @@
     });
 
     el.reviewNote.addEventListener("input", () => {
-      if (!state.selectedQuoteID) return;
-      const review = reviewFor(state.selectedQuoteID);
+      const reviewKey = activeReviewKey();
+      if (!reviewKey) return;
+      const review = reviewFor(reviewKey);
       review.note = el.reviewNote.value;
       review.updated_at = new Date().toISOString();
       persistReviews();
@@ -132,14 +136,20 @@
       state.manifest = manifest;
       state.descriptors = descriptors;
       state.stories = new Map(stories.map(item => [item.payload.id, { ...item.payload, __path: item.descriptor.path }]));
+      state.themeNames = new Map(quotePacks.map(item => [item.payload.primary_theme, item.payload.display_name_vi]));
       state.quotes = quotePacks.flatMap(item => item.payload.quotes.map(quote => ({
         ...quote,
         __themeName: item.payload.display_name_vi,
         __packPath: item.descriptor.path
       })));
 
-      if (!state.quotes.some(quote => quote.id === state.selectedQuoteID)) {
-        state.selectedQuoteID = state.quotes[0]?.id ?? null;
+      const selectedQuoteExists = state.quotes.some(quote => quote.id === state.selectedQuoteID);
+      const selectedStandaloneStoryExists = state.stories.has(state.selectedStandaloneStoryID);
+      if (!selectedQuoteExists && !selectedStandaloneStoryExists) {
+        const firstStory = [...state.stories.values()].sort(compareStories)[0] ?? null;
+        const linkedQuote = firstStory ? quoteForStory(firstStory.id) : null;
+        state.selectedQuoteID = linkedQuote?.id ?? null;
+        state.selectedStandaloneStoryID = linkedQuote ? null : firstStory?.id ?? null;
       }
 
       renderLibrarySummary();
@@ -172,42 +182,82 @@
 
   function renderContentList() {
     el.contentList.replaceChildren();
-    state.quotes.forEach((quote, index) => {
-      const story = state.stories.get(quote.story_id);
+    const stories = [...state.stories.values()].sort(compareStories);
+    const quotesWithoutStory = state.quotes.filter(quote => !quote.story_id || !state.stories.has(quote.story_id));
+    const rows = [
+      ...stories.map(story => ({ story, quote: quoteForStory(story.id) })),
+      ...quotesWithoutStory.map(quote => ({ story: null, quote }))
+    ];
+
+    rows.forEach((row, index) => {
+      const { quote, story } = row;
+      const reviewKey = quote?.id || `story:${story.id}`;
+      const isActive = quote
+        ? quote.id === state.selectedQuoteID
+        : story.id === state.selectedStandaloneStoryID;
       const node = el.contentItemTemplate.content.firstElementChild.cloneNode(true);
-      node.dataset.quoteID = quote.id;
-      node.dataset.review = reviewFor(quote.id).decision || "pending";
-      node.classList.toggle("active", quote.id === state.selectedQuoteID);
+      node.dataset.review = reviewFor(reviewKey).decision || "pending";
+      node.classList.toggle("active", isActive);
       node.querySelector(".content-index").textContent = String(index + 1).padStart(2, "0");
       node.querySelector("strong").textContent = story?.title_vi || quote.text_vi;
-      node.querySelector("small").textContent = `${quote.__themeName} · ${readingMinutes(story)} phút`;
-      node.addEventListener("click", () => selectQuote(quote.id));
+      if (story) {
+        const themeName = quote?.__themeName || state.themeNames.get(story.primary_theme) || story.primary_theme;
+        node.querySelector("small").textContent = `${themeName} · ${readingMinutes(story)} phút · ${quote ? "Có quote" : "Chưa gắn quote"}`;
+      } else {
+        node.querySelector("small").textContent = `${quote.__themeName} · Chưa có story`;
+      }
+      node.addEventListener("click", () => {
+        if (quote) selectQuote(quote.id);
+        else selectStandaloneStory(story.id);
+      });
       el.contentList.append(node);
     });
   }
 
   function selectQuote(quoteID) {
     state.selectedQuoteID = quoteID;
+    state.selectedStandaloneStoryID = null;
     el.readerSettings.hidden = true;
     el.readerScroll.scrollTop = 0;
     renderContentList();
     renderSelection();
   }
 
+  function selectStandaloneStory(storyID) {
+    state.selectedQuoteID = null;
+    state.selectedStandaloneStoryID = storyID;
+    el.readerSettings.hidden = true;
+    el.readerScroll.scrollTop = 0;
+    renderContentList();
+    renderSelection();
+    setView("reader");
+  }
+
   function renderSelection() {
     const quote = selectedQuote();
-    if (!quote) return;
     const story = selectedStory();
+    if (!quote && !story) return;
     renderQuote(quote, story);
     renderStory(story);
     renderReviewPanel();
-    el.selectedTheme.textContent = quote.__themeName;
+    el.selectedTheme.textContent = quote?.__themeName || state.themeNames.get(story.primary_theme) || story.primary_theme;
     el.selectedReadingTime.textContent = story ? `${readingMinutes(story)} phút đọc` : "Chưa có story";
     updateBookmark();
     requestAnimationFrame(updateReaderProgress);
   }
 
   function renderQuote(quote, story) {
+    if (!quote) {
+      el.quoteCard.dataset.style = "cool_observe";
+      el.quoteKind.textContent = "Bản thảo story";
+      el.quoteSource.textContent = "Chưa gắn quote";
+      toggleText(el.quoteTitle, story.title_vi);
+      el.quoteText.textContent = story.subtitle_vi || "Mở Reader để duyệt câu chuyện này.";
+      toggleText(el.quoteSubtitle, null);
+      el.quoteTags.replaceChildren();
+      el.openReaderButton.hidden = false;
+      return;
+    }
     el.quoteCard.dataset.style = quote.display?.style || "cool_observe";
     el.quoteKind.textContent = reflectionLabel(quote.selection?.reflection_kind);
     el.quoteSource.textContent = quote.authorship?.source_label || "Selflo";
@@ -305,18 +355,20 @@
   function renderReviewPanel() {
     const quote = selectedQuote();
     const story = selectedStory();
-    if (!quote) return;
-    const review = reviewFor(quote.id);
+    if (!quote && !story) return;
+    const reviewKey = activeReviewKey();
+    const review = reviewFor(reviewKey);
 
-    el.factQuoteID.textContent = quote.id;
+    el.factQuoteID.textContent = quote?.id || "Chưa gắn quote";
     el.factStoryID.textContent = story?.id || "Không có";
-    el.factLifecycle.textContent = `Quote ${quote.review.status} · Story ${story?.status || "—"}`;
-    el.factRights.textContent = `${quote.rights.status} · ${story?.rights?.status || "—"}`;
+    el.factLifecycle.textContent = `${quote ? `Quote ${quote.review.status} · ` : ""}Story ${story?.status || "—"}`;
+    el.factRights.textContent = `${quote ? `${quote.rights.status} · ` : ""}${story?.rights?.status || "—"}`;
     el.reviewNote.value = review.note || "";
     el.decisionChoices.querySelectorAll("button[data-decision]").forEach(button => {
       button.classList.toggle("active", button.dataset.decision === review.decision);
     });
-    el.openQuoteJSON.href = new URL(quote.__packPath, LIBRARY_BASE).href;
+    el.openQuoteJSON.href = quote ? new URL(quote.__packPath, LIBRARY_BASE).href : "#";
+    el.openQuoteJSON.hidden = !quote;
     el.openStoryJSON.href = story ? new URL(story.__path, LIBRARY_BASE).href : "#";
     el.openStoryJSON.hidden = !story;
   }
@@ -363,17 +415,17 @@
   }
 
   function toggleBookmark() {
-    const quote = selectedQuote();
-    if (!quote) return;
+    const contentKey = activeReviewKey();
+    if (!contentKey) return;
     state.reader.bookmarked ||= {};
-    state.reader.bookmarked[quote.id] = !state.reader.bookmarked[quote.id];
+    state.reader.bookmarked[contentKey] = !state.reader.bookmarked[contentKey];
     saveReaderPreferences();
     updateBookmark();
-    showToast(state.reader.bookmarked[quote.id] ? "Đã lưu quote trong preview" : "Đã bỏ lưu quote");
+    showToast(state.reader.bookmarked[contentKey] ? "Đã lưu nội dung trong preview" : "Đã bỏ lưu nội dung");
   }
 
   function updateBookmark() {
-    const active = Boolean(state.reader.bookmarked?.[state.selectedQuoteID]);
+    const active = Boolean(state.reader.bookmarked?.[activeReviewKey()]);
     el.bookmarkButton.textContent = active ? "♥" : "♡";
     el.bookmarkButton.setAttribute("aria-pressed", String(active));
   }
@@ -420,8 +472,25 @@
   }
 
   function selectedStory() {
+    if (state.selectedStandaloneStoryID) {
+      return state.stories.get(state.selectedStandaloneStoryID) || null;
+    }
     const quote = selectedQuote();
     return quote?.story_id ? state.stories.get(quote.story_id) || null : null;
+  }
+
+  function quoteForStory(storyID) {
+    return state.quotes.find(quote => quote.story_id === storyID) || null;
+  }
+
+  function activeReviewKey() {
+    if (state.selectedQuoteID) return state.selectedQuoteID;
+    if (state.selectedStandaloneStoryID) return `story:${state.selectedStandaloneStoryID}`;
+    return null;
+  }
+
+  function compareStories(left, right) {
+    return left.title_vi.localeCompare(right.title_vi, "vi");
   }
 
   function readingMinutes(story) {
