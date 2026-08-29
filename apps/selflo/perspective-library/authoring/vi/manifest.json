@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 5,
-  "content_version": "owner-story-review-5",
+  "library_revision": 6,
+  "content_version": "owner-story-review-6",
   "language": "vi",
-  "generated_at": "2026-08-29T03:15:46Z",
+  "generated_at": "2026-08-29T03:20:56Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -240,6 +240,15 @@
       "media_type": "application/json",
       "sha256": "168885cbf1af14b7ca59cb45d8fe60a2f3dae32b36c760715ca6a9b2a49b00df",
       "byte_count": 57731
+    },
+    {
+      "id": "story.original_stone_that_loved_stormy_days",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "9b3fe555d021063cf00fa05b2688d17e5adb41759c8b70747dcc4513cbb4bf02",
+      "byte_count": 20899
     },
     {
       "id": "story.original_thanh_and_one_more_meter",
