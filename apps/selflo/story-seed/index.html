@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Selflo Story Seed — tạo seed và prompt cho quote/story Authoring">
+  <title>Selflo · Story Seed</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Selflo Content home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span><strong>Selflo</strong><small>Story Studio</small></span>
+    </a>
+    <div class="top-note"><span></span>Authoring only · không tự publish</div>
+    <a class="preview-link" href="../preview/">Mở Content Preview ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Story Seed Engine · Framework v3</p>
+      <h1>Một vấn đề.<br><em>Nhiều cách kể thật sự khác nhau.</em></h1>
+      <p>Chọn đầu vào, tạo 3–10 seed, rồi copy prompt sang AI. Mỗi quote được ghép với một story riêng — không dùng chung story.</p>
+    </section>
+
+    <div class="workspace">
+      <form class="builder-card" id="seedForm">
+        <div class="section-heading">
+          <span>01</span>
+          <div><h2>Bạn đang bắt đầu từ đâu?</h2><p>Công cụ sẽ tạo phần còn thiếu của cặp quote ↔ story.</p></div>
+        </div>
+        <div class="mode-grid" id="modeGrid" role="radiogroup" aria-label="Chế độ tạo nội dung"></div>
+
+        <div class="section-heading compact">
+          <span>02</span>
+          <div><h2>Đầu vào</h2><p>Chỉ điền điều bạn đang có.</p></div>
+        </div>
+
+        <label class="field full">
+          <span>Hoàn cảnh hoặc vấn đề đời thường</span>
+          <textarea id="context" rows="4" placeholder="Ví dụ: Tối Chủ nhật lo ngày mai phải báo cáo nhưng chưa biết mình có gì để nói."></textarea>
+        </label>
+
+        <section id="quoteFields" class="conditional-fields" hidden>
+          <div class="field-grid">
+            <label class="field"><span>Quote ID <small>có thể trống</small></span><input id="quoteId" placeholder="quote..."></label>
+            <label class="field full"><span>Nội dung quote</span><textarea id="quoteText" rows="3"></textarea></label>
+            <label class="field source-field"><span>Tác giả</span><input id="quoteAuthor"></label>
+            <label class="field source-field"><span>Tác phẩm / bài nói</span><input id="quoteWork"></label>
+            <label class="field source-field full"><span>URL nguồn</span><input id="quoteSourceUrl" type="url"></label>
+          </div>
+          <p class="field-note" id="sourceNote">Danh ngôn và trích sách chỉ là candidate nếu chưa đủ nguồn và rights review.</p>
+        </section>
+
+        <section id="storyFields" class="conditional-fields" hidden>
+          <div class="field-grid">
+            <label class="field"><span>Story ID <small>có thể trống</small></span><input id="storyId" placeholder="story..."></label>
+            <label class="field full"><span>Tóm tắt story gốc</span><textarea id="storySummary" rows="5"></textarea></label>
+          </div>
+        </section>
+
+        <div class="section-heading compact">
+          <span>03</span>
+          <div><h2>Điểm neo và độ đa dạng</h2><p>Để Auto nếu muốn framework tự phối.</p></div>
+        </div>
+        <div class="field-grid">
+          <label class="field"><span>Loại quote</span><select id="quoteFamily"></select></label>
+          <label class="field"><span>Nhóm quote đời thường</span><select id="observationSubfamily"></select></label>
+          <label class="field"><span>Theme</span><select id="theme"></select></label>
+          <label class="field"><span>Lý thuyết / framework</span><select id="anchor"></select></label>
+          <label class="field full"><span>Tình huống</span><select id="situation"></select></label>
+          <label class="field"><span>Phong cách</span><select id="style"></select></label>
+          <label class="field"><span>Số seed</span><input id="seedCount" type="number" min="3" max="10" value="6"></label>
+          <label class="field"><span>Số bản viết full</span><input id="writeCount" type="number" min="1" max="3" value="1"></label>
+          <label class="field"><span>Mã xáo trộn</span><input id="randomSeed" type="number" value="42"></label>
+        </div>
+
+        <button class="generate-button" type="submit"><span>Tạo seed &amp; prompt</span><span>→</span></button>
+        <p class="error-message" id="errorMessage" role="alert" hidden></p>
+      </form>
+
+      <section class="result-card" aria-live="polite">
+        <div class="result-empty" id="resultEmpty">
+          <span class="empty-orbit"><i></i></span>
+          <h2>Seed sẽ xuất hiện ở đây</h2>
+          <p>Cùng một vấn đề có thể đi qua nhiều lens, nhân vật, bối cảnh và ending khác nhau.</p>
+        </div>
+        <div id="resultContent" hidden>
+          <div class="result-header">
+            <div><p class="eyebrow">Candidate set</p><h2 id="resultTitle">6 seed khác nhau</h2></div>
+            <span class="pair-badge">1 quote ↔ 1 story</span>
+          </div>
+          <div class="findings" id="findings" hidden></div>
+          <div class="seed-list" id="seedList"></div>
+          <div class="prompt-heading">
+            <div><h2>Prompt hoàn chỉnh</h2><p>Copy và gửi cho AI. Output vẫn cần owner review.</p></div>
+            <button id="copyPrompt" class="copy-button" type="button">Copy prompt</button>
+          </div>
+          <textarea id="promptOutput" class="prompt-output" readonly spellcheck="false"></textarea>
+          <div class="result-actions">
+            <button id="downloadRequest" type="button">Tải request JSON</button>
+            <button id="regenerate" type="button">Xáo seed khác</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>Story Seed chỉ tạo brief và prompt trong trình duyệt. Không gọi AI, không ghi vào Library và không gửi dữ liệu lên server.</footer>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
