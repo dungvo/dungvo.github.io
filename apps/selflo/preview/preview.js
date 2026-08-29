@@ -20,7 +20,7 @@
     reviews: readJSON(REVIEW_KEY, {}),
     contentBrowser: {
       query: "",
-      type: "stories",
+      type: "all",
       review: "all",
       page: 1,
       pageSize: 8
@@ -273,6 +273,7 @@
     const themeName = quote?.__themeName || state.themeNames.get(story?.primary_theme) || story?.primary_theme;
     const searchable = [
       quote?.id, quote?.text_vi, quote?.title_vi, quote?.primary_theme,
+      quote?.authorship?.author_name, quote?.authorship?.work, quote?.authorship?.source_label,
       story?.id, story?.title_vi, story?.subtitle_vi, story?.primary_theme, themeName
     ].filter(Boolean).join(" ");
     return normalizeSearch(searchable).includes(normalizedQuery);

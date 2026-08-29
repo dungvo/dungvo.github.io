@@ -1,13 +1,23 @@
 {
   "schema_version": "selflo.quote-research-public-status.v1",
-  "updated_at": "2026-08-29T00:00:00Z",
-  "publication_scope": "progress_metadata_only",
-  "authoring_or_release_library_changed": false,
+  "updated_at": "2026-08-29T08:47:50Z",
+  "publication_scope": "progress_metadata_and_authoring_preview",
+  "authoring_library_changed": true,
+  "release_library_changed": false,
+  "authoring_preview": {
+    "canonical_quote_count": 191,
+    "new_quote_count": 50,
+    "new_quotes_with_story": 0,
+    "content_version": "quote-research-preview-7",
+    "lifecycle": "needs_owner_review",
+    "kind": "adapted_wisdom"
+  },
   "goals": [
     {
       "goal_id": "goal.1.attributed_world_quotes",
       "accepted_target": 1000,
       "research_candidates_collected": 50,
+      "materialized_to_authoring_preview": 50,
       "raw_candidate_remaining_to_1000": 950,
       "accepted_count": 0,
       "accepted_remaining": 1000,
@@ -49,6 +59,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/55317",
       "candidate_quota": 50,
       "collected_count": 50,
+      "materialized_to_authoring_preview": 50,
       "accepted_count": 0,
       "status": "collected_needs_review"
     },
