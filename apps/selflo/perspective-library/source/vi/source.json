@@ -1,7 +1,7 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 4,
-  "content_version": "owner-approved-originals-4",
+  "source_revision": 5,
+  "content_version": "owner-story-review-5",
   "language": "vi",
   "canonical_quote_count": 141,
   "generated_from_owner_gate": "CP-003-revised",
@@ -106,6 +106,12 @@
       "id": "story.original_keeper_of_the_lamp",
       "kind": "story",
       "path": "stories/original-keeper-of-the-lamp/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.original_an_and_lamp_held_too_close",
+      "kind": "story",
+      "path": "stories/original-an-and-lamp-held-too-close/story.vi.json",
       "media_type": "application/json"
     },
     {

@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 4,
-  "content_version": "owner-approved-originals-4",
+  "library_revision": 5,
+  "content_version": "owner-story-review-5",
   "language": "vi",
-  "generated_at": "2026-08-23T13:04:52Z",
+  "generated_at": "2026-08-29T03:15:46Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -168,6 +168,15 @@
       "media_type": "application/json",
       "sha256": "fdacfeb813ed1c37dc4d02c59557b922995ef70c524dca01c5b53fde2e544748",
       "byte_count": 7266
+    },
+    {
+      "id": "story.original_an_and_lamp_held_too_close",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-an-and-lamp-held-too-close/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "ba056ad18293cd25ca7e3824ddbffdc69762616094e5a48068cbb8684f9abbb6",
+      "byte_count": 27821
     },
     {
       "id": "story.original_between_two_banks",
