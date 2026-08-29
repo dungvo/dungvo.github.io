@@ -1,0 +1,65 @@
+{
+  "schema_version": "selflo.quote-research-public-status.v1",
+  "updated_at": "2026-08-29T00:00:00Z",
+  "publication_scope": "progress_metadata_only",
+  "authoring_or_release_library_changed": false,
+  "goals": [
+    {
+      "goal_id": "goal.1.attributed_world_quotes",
+      "accepted_target": 1000,
+      "research_candidates_collected": 50,
+      "raw_candidate_remaining_to_1000": 950,
+      "accepted_count": 0,
+      "accepted_remaining": 1000,
+      "status": "in_progress"
+    },
+    {
+      "goal_id": "goal.2.the_alchemist",
+      "accepted_target": 100,
+      "author": "Paulo Coelho",
+      "work_title_vi": "Nhà giả kim",
+      "work_title_en": "The Alchemist",
+      "provenance_status": "owner_declared_work_source",
+      "edition_verification_status": "needs_edition_translator_isbn_page_locators",
+      "research_candidates_collected": 0,
+      "status": "deferred_not_started",
+      "public_excerpt_count": 0
+    },
+    {
+      "goal_id": "goal.3.selflo_observational_quotes",
+      "accepted_target": 200,
+      "research_candidates_collected": 0,
+      "status": "not_started"
+    },
+    {
+      "goal_id": "goal.4.ai_assisted_quote_story_pairs",
+      "accepted_target": 100,
+      "research_candidates_collected": 0,
+      "status": "not_started"
+    }
+  ],
+  "source_progress": [
+    {
+      "source_id": "source.001.marcus_aurelius.meditations.chrystal_1902",
+      "author": "Marcus Aurelius",
+      "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+      "translator": "George W. Chrystal",
+      "publication_year": 1902,
+      "provider": "Project Gutenberg",
+      "source_url": "https://www.gutenberg.org/ebooks/55317",
+      "candidate_quota": 50,
+      "collected_count": 50,
+      "accepted_count": 0,
+      "status": "collected_needs_review"
+    },
+    {
+      "source_id": "source.002.epictetus.enchiridion",
+      "author": "Epictetus",
+      "work": "The Enchiridion",
+      "candidate_quota": 50,
+      "collected_count": 0,
+      "accepted_count": 0,
+      "status": "next"
+    }
+  ]
+}
