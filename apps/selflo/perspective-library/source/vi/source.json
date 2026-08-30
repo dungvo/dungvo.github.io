@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 7,
-  "content_version": "quote-research-preview-7",
+  "source_revision": 9,
+  "content_version": "story-pairing-preview-9",
   "language": "vi",
-  "canonical_quote_count": 191,
+  "canonical_quote_count": 210,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -22,6 +22,12 @@
       "id": "provenance.source_mapping.vi",
       "kind": "provenance",
       "path": "provenance/source-mapping.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "reading_intents.vi",
+      "kind": "reading_intent_catalog",
+      "path": "reading-intents/reading-intents.vi.json",
       "media_type": "application/json"
     },
     {
