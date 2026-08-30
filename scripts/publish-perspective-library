@@ -108,6 +108,7 @@ def validate_references!(payloads, channel)
   knowledge = payloads.fetch("knowledge_catalog").fetch(0)
   themes = payloads.fetch("quote_pack")
   stories = payloads.fetch("story", [])
+  reading_intent_catalogs = payloads.fetch("reading_intent_catalog", [])
   quotes = themes.flat_map { |theme| theme.fetch("quotes") }
   theme_ids = themes.map { |theme| theme.fetch("primary_theme") }.to_set
   quote_ids = quotes.map { |quote| quote.fetch("id") }
@@ -142,6 +143,17 @@ def validate_references!(payloads, channel)
     missing = story.dig("metadata", "concept_ids").reject { |value| concepts.include?(value) }
     abort("Broken story concept #{story.fetch("id")}: #{missing.join(", ")}") unless missing.empty?
   end
+  abort("More than one Reading Intent Catalog") if reading_intent_catalogs.length > 1
+  reading_intent_catalogs.each do |catalog|
+    intent_ids = catalog.fetch("intents").map { |intent| intent.fetch("id") }
+    abort("Reading intent IDs are not unique") unless intent_ids.uniq.length == intent_ids.length
+    catalog.fetch("intents").each do |intent|
+      memberships = intent.fetch("story_ids")
+      abort("Duplicate story membership on #{intent.fetch("id")}") unless memberships.uniq.length == memberships.length
+      missing = memberships.reject { |story_id| story_ids.include?(story_id) }
+      abort("Broken reading-intent story on #{intent.fetch("id")}: #{missing.join(", ")}") unless missing.empty?
+    end
+  end
   knowledge.fetch("concepts").each do |concept|
     abort("Broken concept theme #{concept.fetch("id")}") unless concept.fetch("primary_theme_ids").all? { |id| theme_ids.include?(id) }
     abort("Broken related theory #{concept.fetch("id")}") unless concept.fetch("related_theory_ids").all? { |id| theories.include?(id) }
@@ -163,12 +175,16 @@ def validate_references!(payloads, channel)
     abort("Release framework not approved/source_checked: #{item.fetch("id")}") unless item.fetch("status") == "approved" && item.fetch("validation_status") == "source_checked"
   end
   knowledge.fetch("references").each { |item| abort("Release reference not source_checked: #{item.fetch("id")}") unless item.fetch("validation_status") == "source_checked" }
+  reading_intent_catalogs.each do |catalog|
+    abort("Release Reading Intent Catalog is not approved") unless catalog.fetch("status") == "approved"
+  end
 end
 
 def run_schema_gate!(schema_root, manifest_path, payload_paths)
   schemas = {
     "knowledge_catalog" => "perspective-knowledge.schema.json",
     "quote_pack" => "perspective-theme.schema.json",
+    "reading_intent_catalog" => "perspective-reading-intent.schema.json",
     "story" => "perspective-story.schema.json",
     "manifest" => "perspective-library-manifest.schema.json"
   }
@@ -188,8 +204,9 @@ end
 source_index = read_json(File.join(source_root, "source.json"))
 validate_source_index!(source_root, source_index)
 source_digest = canonical_source_digest(source_root, source_index)
-content_entries = source_index.fetch("files").select { |entry| %w[knowledge_catalog quote_pack story image].include?(entry.fetch("kind")) }
+content_entries = source_index.fetch("files").select { |entry| %w[knowledge_catalog quote_pack reading_intent_catalog story image].include?(entry.fetch("kind")) }
 abort("Canonical source must contain exactly one Knowledge Catalog") unless content_entries.count { |entry| entry.fetch("kind") == "knowledge_catalog" } == 1
+abort("Canonical source may contain at most one Reading Intent Catalog") if content_entries.count { |entry| entry.fetch("kind") == "reading_intent_catalog" } > 1
 
 decisions_entry = source_index.fetch("files").find { |entry| entry.fetch("kind") == "authoring_decisions" } or abort("Missing decision ledger")
 decisions = read_json(File.join(source_root, decisions_entry.fetch("path")))
@@ -233,6 +250,9 @@ if channel == "release"
     abort("Release blocked: #{invalid_release_quotes.length} quote(s) are not release-valid and have no explicit quote-level exclusion: #{invalid_release_quotes.first(12).map { |quote| quote.fetch("id") }.join(", ")}")
   end
   projected_payloads.delete_if { |id, _| id.start_with?("story.") && !release_story_ids.include?(id) }
+  projected_payloads.delete_if do |_id, payload|
+    payload["entity"] == "perspective_reading_intent_catalog" && payload.fetch("status") != "approved"
+  end
 end
 
 current_manifest_path = File.join(output_root, "manifest.json")
@@ -255,6 +275,7 @@ content_entries.each do |source_entry|
   id = source_entry.fetch("id")
   kind = source_entry.fetch("kind")
   next if kind == "story" && !projected_payloads.key?(id)
+  next if kind == "reading_intent_catalog" && !projected_payloads.key?(id)
   next if kind == "image" && channel == "release" && !release_image_ids.include?(id)
   source_audit << { "id" => id, "sha256" => sha(File.binread(File.join(source_root, source_entry.fetch("path")))), "path" => source_entry.fetch("path") }
   previous = current_descriptors[id]

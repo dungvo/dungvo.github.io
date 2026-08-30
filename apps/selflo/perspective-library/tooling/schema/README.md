@@ -2,13 +2,14 @@
 
 **Trạng thái:** Accepted — Owner Schema Gate pass; được dùng bởi Phase 1–10
 
-Bốn schema trong folder này là biểu diễn machine-readable của [Library Contract](../../../features/perspective-content-system/LIBRARY_CONTRACT.md):
+Năm schema trong folder này là biểu diễn machine-readable của [Library Contract](../../../features/perspective-content-system/LIBRARY_CONTRACT.md):
 
 | File | Payload |
 |---|---|
 | `perspective-library-manifest.schema.json` | manifest và file descriptors |
 | `perspective-theme.schema.json` | quote pack, canonical quote và selection metadata |
 | `perspective-knowledge.schema.json` | concept, theory, framework và reference |
+| `perspective-reading-intent.schema.json` | bộ chọn nhanh đời thường và membership story many-to-many |
 | `perspective-story.schema.json` | story, section, block và optional hero image |
 
 Fixture cần review:

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schema/perspective-reading-intent.schema.json",
+  "title": "PerspectiveReadingIntentCatalogV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "content_version", "entity", "status", "language", "intents"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "content_version": { "$ref": "#/$defs/non_empty_string" },
+    "entity": { "const": "perspective_reading_intent_catalog" },
+    "status": { "enum": ["structure_preview", "content_preview", "approved"] },
+    "language": { "const": "vi" },
+    "intents": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": { "$ref": "#/$defs/reading_intent" }
+    }
+  },
+  "$defs": {
+    "non_empty_string": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "stable_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$"
+    },
+    "reading_intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "display_name_vi", "description_vi", "icon_key", "sort_order", "story_ids"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "display_name_vi": { "$ref": "#/$defs/non_empty_string" },
+        "description_vi": { "$ref": "#/$defs/non_empty_string" },
+        "icon_key": { "$ref": "#/$defs/stable_id" },
+        "sort_order": { "type": "integer", "minimum": 0 },
+        "story_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 500,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/stable_id" }
+        }
+      }
+    }
+  }
+}

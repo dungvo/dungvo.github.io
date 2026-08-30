@@ -41,6 +41,11 @@
         {
           "contains": { "type": "object", "properties": { "kind": { "const": "quote_pack" } }, "required": ["kind"] },
           "minContains": 1
+        },
+        {
+          "contains": { "type": "object", "properties": { "kind": { "const": "reading_intent_catalog" } }, "required": ["kind"] },
+          "minContains": 0,
+          "maxContains": 1
         }
       ]
     }
@@ -71,7 +76,7 @@
       "required": ["id", "kind", "revision", "path", "media_type", "sha256", "byte_count"],
       "properties": {
         "id": { "$ref": "#/$defs/stable_id" },
-        "kind": { "enum": ["knowledge_catalog", "quote_pack", "story", "image"] },
+        "kind": { "enum": ["knowledge_catalog", "quote_pack", "reading_intent_catalog", "story", "image"] },
         "revision": { "type": "integer", "minimum": 1 },
         "path": { "$ref": "#/$defs/relative_path" },
         "media_type": { "enum": ["application/json", "image/jpeg", "image/png", "image/webp"] },
@@ -80,7 +85,7 @@
       },
       "allOf": [
         {
-          "if": { "properties": { "kind": { "enum": ["knowledge_catalog", "quote_pack", "story"] } }, "required": ["kind"] },
+          "if": { "properties": { "kind": { "enum": ["knowledge_catalog", "quote_pack", "reading_intent_catalog", "story"] } }, "required": ["kind"] },
           "then": { "properties": { "media_type": { "const": "application/json" }, "byte_count": { "type": "integer", "maximum": 2097152 } } }
         },
         {

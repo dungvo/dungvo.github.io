@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "content_version": "reading-intent-preview-8",
+  "entity": "perspective_reading_intent_catalog",
+  "status": "content_preview",
+  "language": "vi",
+  "intents": [
+    {
+      "id": "intent.work_overload",
+      "display_name_vi": "Công việc quá tải",
+      "description_vi": "Khi việc dồn lại và bạn chưa biết nên bắt đầu từ đâu.",
+      "icon_key": "workload",
+      "sort_order": 10,
+      "story_ids": [
+        "story.operator_and_one_beat",
+        "story.shoes_that_went_to_work_twice",
+        "story.signmaker_and_first_square",
+        "story.warehouse_path_between_boxes"
+      ]
+    },
+    {
+      "id": "intent.difficult_manager",
+      "display_name_vi": "Gặp sếp khó",
+      "description_vi": "Khi một cuộc trao đổi với sếp khiến bạn căng thẳng hoặc khó xử.",
+      "icon_key": "difficult_manager",
+      "sort_order": 20,
+      "story_ids": [
+        "story.builder_and_shapeless_stones",
+        "story.shoes_that_went_to_work_twice"
+      ]
+    },
+    {
+      "id": "intent.communication_stuck",
+      "display_name_vi": "Bế tắc giao tiếp",
+      "description_vi": "Khi hai bên chưa tìm được cách nói để thật sự hiểu nhau.",
+      "icon_key": "communication",
+      "sort_order": 30,
+      "story_ids": [
+        "story.driver_and_last_stop_light",
+        "story.operator_and_one_beat"
+      ]
+    },
+    {
+      "id": "intent.worry_tomorrow",
+      "display_name_vi": "Lo trước ngày mai",
+      "description_vi": "Khi những điều chưa xảy ra đã chiếm gần hết tâm trí hôm nay.",
+      "icon_key": "tomorrow_worry",
+      "sort_order": 40,
+      "story_ids": [
+        "story.builder_and_shapeless_stones",
+        "story.courier_and_waterline",
+        "story.driver_and_last_stop_light",
+        "story.shoes_that_went_to_work_twice",
+        "story.signmaker_and_first_square"
+      ]
+    },
+    {
+      "id": "intent.lost_motivation",
+      "display_name_vi": "Mất động lực",
+      "description_vi": "Khi bạn vẫn muốn tiến lên nhưng chưa tìm lại được nhịp của mình.",
+      "icon_key": "motivation",
+      "sort_order": 50,
+      "story_ids": [
+        "story.boatman_and_second_mountain",
+        "story.courier_and_waterline",
+        "story.signmaker_and_first_square",
+        "story.two_tailors_and_one_measure"
+      ]
+    },
+    {
+      "id": "intent.find_calm",
+      "display_name_vi": "Muốn bình tâm",
+      "description_vi": "Khi bạn cần một khoảng chậm để trở về với điều đang có mặt.",
+      "icon_key": "calm",
+      "sort_order": 60,
+      "story_ids": [
+        "story.laundry_and_two_bells",
+        "story.operator_and_one_beat",
+        "story.recordist_and_room_not_silent"
+      ]
+    }
+  ]
+}
