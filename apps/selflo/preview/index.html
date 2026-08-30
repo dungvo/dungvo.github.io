@@ -19,9 +19,15 @@
         </span>
       </a>
 
-      <div class="topbar-status" aria-live="polite">
-        <span class="status-dot" id="statusDot"></span>
-        <span id="loadStatus">Đang tải Library…</span>
+      <div class="topbar-center">
+        <div class="page-switcher" role="tablist" aria-label="Chế độ xem">
+          <button id="contentModeButton" class="active" type="button" role="tab" aria-selected="true">Nội dung</button>
+          <button id="matrixModeButton" type="button" role="tab" aria-selected="false">Matrix đa dạng</button>
+        </div>
+        <div class="topbar-status" aria-live="polite">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="loadStatus">Đang tải Library…</span>
+        </div>
       </div>
 
       <div class="topbar-actions">
@@ -30,7 +36,7 @@
       </div>
     </header>
 
-    <main class="workspace">
+    <main class="workspace" id="contentWorkspace">
       <aside class="library-panel" aria-label="Danh sách nội dung">
         <div class="panel-heading">
           <div>
@@ -274,6 +280,74 @@
           <a id="openStoryJSON" href="#" target="_blank" rel="noopener">Mở story JSON ↗</a>
         </div>
       </aside>
+    </main>
+
+    <main class="matrix-dashboard" id="matrixDashboard" hidden>
+      <header class="matrix-hero">
+        <div>
+          <p class="eyebrow">Editorial coverage map</p>
+          <h1>Selflo đang có gì, còn thiếu gì?</h1>
+          <p id="matrixNote">Một quote có thể đồng thời thuộc nhiều trục: nguồn, dạng diễn đạt, phong cách, nền tư tưởng và bối cảnh.</p>
+        </div>
+        <div class="matrix-version">
+          <span>Authoring snapshot</span>
+          <strong id="matrixRevision">—</strong>
+        </div>
+      </header>
+
+      <section class="matrix-summary" aria-label="Tổng quan độ đa dạng">
+        <article><span>Tổng quote</span><strong id="matrixQuoteCount">—</strong><small>đọc trực tiếp từ Library</small></article>
+        <article><span>Tác giả bên ngoài</span><strong id="matrixAuthorCount">—</strong><small id="matrixAuthorDetail">—</small></article>
+        <article><span>Tác phẩm bên ngoài</span><strong id="matrixWorkCount">—</strong><small id="matrixWorkDetail">—</small></article>
+        <article><span>Quote có story</span><strong id="matrixStoryCount">—</strong><small id="matrixStoryDetail">—</small></article>
+        <article><span>Verified quote</span><strong id="matrixVerifiedCount">—</strong><small>đủ attribution và release rights</small></article>
+        <article class="gap-card"><span>Điểm cần bổ sung</span><strong id="matrixGapCount">—</strong><small>thiếu, mỏng, lệch hoặc chưa đo</small></article>
+      </section>
+
+      <section class="matrix-controls" aria-label="Lọc matrix">
+        <label class="matrix-search-field">
+          <span class="sr-only">Tìm trong matrix</span>
+          <input id="matrixSearch" type="search" placeholder="Tìm Marcus, CBT, Âm dương, sách, hài hước…" autocomplete="off">
+        </label>
+        <div class="matrix-filter-row">
+          <div class="matrix-chip-group" id="matrixGroupFilters" role="group" aria-label="Nhóm matrix">
+            <button class="active" type="button" data-matrix-group="all">Tất cả</button>
+            <button type="button" data-matrix-group="source">Nguồn</button>
+            <button type="button" data-matrix-group="form">Dạng quote</button>
+            <button type="button" data-matrix-group="anchor">Lý thuyết</button>
+            <button type="button" data-matrix-group="context">Bối cảnh</button>
+          </div>
+          <label>
+            <span class="sr-only">Mức coverage</span>
+            <select id="matrixStatusFilter">
+              <option value="all">Tất cả coverage</option>
+              <option value="present">Đang có</option>
+              <option value="gaps">Cần bổ sung</option>
+              <option value="missing">Hoàn toàn thiếu</option>
+              <option value="unknown">Chưa đo được</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="matrix-content" aria-live="polite">
+        <div class="matrix-content-heading">
+          <div>
+            <p class="eyebrow">Diversity inventory</p>
+            <h2 id="matrixResultTitle">Tất cả chiều phân loại</h2>
+          </div>
+          <span id="matrixResultCount">—</span>
+        </div>
+        <div class="matrix-column-labels" aria-hidden="true">
+          <span>Nhóm / dạng</span><span>Coverage</span><span>Hiện đang có</span><span>Cần bổ sung</span>
+        </div>
+        <div class="matrix-rows" id="matrixRows"></div>
+      </section>
+
+      <footer class="matrix-footer">
+        <p>Matrix là công cụ editorial, không phải release approval. “Có nhiều” chưa chắc “đa dạng” nếu mọi quote cùng nguồn hoặc cùng giọng.</p>
+        <a href="../quote-research/diversity-matrix.json" target="_blank" rel="noopener">Mở dữ liệu Matrix JSON ↗</a>
+      </footer>
     </main>
   </div>
 

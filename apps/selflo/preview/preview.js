@@ -2,6 +2,7 @@
   "use strict";
 
   const LIBRARY_BASE = new URL("../perspective-library/authoring/vi/", window.location.href);
+  const MATRIX_URL = new URL("../quote-research/diversity-matrix.json", window.location.href);
   const REVIEW_KEY = "selflo.content-preview.reviews.v1";
   const READER_KEY = "selflo.content-preview.reader.v1";
 
@@ -12,12 +13,15 @@
     manifest: null,
     quotes: [],
     stories: new Map(),
+    matrix: null,
     themeNames: new Map(),
     descriptors: new Map(),
     selectedQuoteID: null,
     selectedStandaloneStoryID: null,
     view: "canvas",
     reviews: readJSON(REVIEW_KEY, {}),
+    pageMode: "content",
+    matrixBrowser: { query: "", group: "all", status: "all" },
     contentBrowser: {
       query: "",
       type: "all",
@@ -33,7 +37,8 @@
   };
 
   const el = Object.fromEntries([
-    "statusDot", "loadStatus", "reloadButton", "exportButton", "quoteCount", "libraryRevision",
+    "statusDot", "loadStatus", "reloadButton", "exportButton", "contentModeButton", "matrixModeButton",
+    "contentWorkspace", "matrixDashboard", "quoteCount", "libraryRevision",
     "contentVersion", "storyCoverage", "contentList", "contentSearch", "contentTypeFilter",
     "contentReviewFilter", "previousPageButton", "nextPageButton", "paginationInfo",
     "filterResultCount", "selectedTheme", "selectedReadingTime",
@@ -44,7 +49,11 @@
     "storySubtitle", "storyReadingTime", "storySectionCount", "storyHero", "storySections",
     "takeawayTitle", "takeawayText", "sectionIndicator", "factQuoteID", "factStoryID",
     "factLifecycle", "factRights", "decisionChoices", "reviewNote", "openQuoteJSON",
-    "openStoryJSON", "contentItemTemplate", "toast"
+    "openStoryJSON", "contentItemTemplate", "toast", "matrixNote", "matrixRevision",
+    "matrixQuoteCount", "matrixAuthorCount", "matrixAuthorDetail", "matrixWorkCount",
+    "matrixWorkDetail", "matrixStoryCount", "matrixStoryDetail", "matrixVerifiedCount",
+    "matrixGapCount", "matrixSearch", "matrixGroupFilters", "matrixStatusFilter",
+    "matrixResultTitle", "matrixResultCount", "matrixRows"
   ].map(id => [id, document.getElementById(id)]));
 
   document.addEventListener("DOMContentLoaded", init);
@@ -58,6 +67,8 @@
   function bindEvents() {
     el.reloadButton.addEventListener("click", loadLibrary);
     el.exportButton.addEventListener("click", exportReviews);
+    el.contentModeButton.addEventListener("click", () => setPageMode("content"));
+    el.matrixModeButton.addEventListener("click", () => setPageMode("matrix"));
     el.openReaderButton.addEventListener("click", () => setView("reader"));
     el.closeReaderButton.addEventListener("click", () => setView("canvas"));
     el.readerSettingsButton.addEventListener("click", () => {
@@ -71,6 +82,17 @@
     el.contentReviewFilter.addEventListener("change", updateContentFilters);
     el.previousPageButton.addEventListener("click", () => changeContentPage(-1));
     el.nextPageButton.addEventListener("click", () => changeContentPage(1));
+    el.matrixSearch.addEventListener("input", updateMatrixFilters);
+    el.matrixStatusFilter.addEventListener("change", updateMatrixFilters);
+    el.matrixGroupFilters.addEventListener("click", event => {
+      const button = event.target.closest("button[data-matrix-group]");
+      if (!button) return;
+      state.matrixBrowser.group = button.dataset.matrixGroup;
+      el.matrixGroupFilters.querySelectorAll("button").forEach(item => {
+        item.classList.toggle("active", item === button);
+      });
+      renderMatrixRows();
+    });
 
     document.querySelectorAll("[data-view]").forEach(button => {
       button.addEventListener("click", () => setView(button.dataset.view));
@@ -137,7 +159,7 @@
       const quoteFiles = manifest.files.filter(file => file.kind === "quote_pack");
       const storyFiles = manifest.files.filter(file => file.kind === "story");
 
-      const [quotePacks, stories] = await Promise.all([
+      const [quotePacks, stories, matrix] = await Promise.all([
         Promise.all(quoteFiles.map(async descriptor => ({
           descriptor,
           payload: await fetchJSON(new URL(descriptor.path, LIBRARY_BASE))
@@ -145,12 +167,17 @@
         Promise.all(storyFiles.map(async descriptor => ({
           descriptor,
           payload: await fetchJSON(new URL(descriptor.path, LIBRARY_BASE))
-        })))
+        }))),
+        fetchJSON(MATRIX_URL).catch(error => {
+          console.warn("Diversity matrix unavailable", error);
+          return null;
+        })
       ]);
 
       state.manifest = manifest;
       state.descriptors = descriptors;
       state.stories = new Map(stories.map(item => [item.payload.id, { ...item.payload, __path: item.descriptor.path }]));
+      state.matrix = matrix;
       state.themeNames = new Map(quotePacks.map(item => [item.payload.primary_theme, item.payload.display_name_vi]));
       state.quotes = quotePacks.flatMap(item => item.payload.quotes.map(quote => ({
         ...quote,
@@ -170,6 +197,7 @@
       renderLibrarySummary();
       renderContentList();
       renderSelection();
+      renderMatrix();
       setLoadState("ready", `${state.quotes.length} quote · ${state.stories.size} story · Authoring draft`);
     } catch (error) {
       console.error(error);
@@ -179,6 +207,125 @@
       message.textContent = "Preview không đọc được manifest hoặc payload. Hãy kiểm tra đường dẫn và chạy qua HTTP server thay vì mở file trực tiếp.";
       el.contentList.append(message);
     }
+  }
+
+  function setPageMode(mode) {
+    state.pageMode = mode;
+    const matrixMode = mode === "matrix";
+    el.contentWorkspace.hidden = matrixMode;
+    el.matrixDashboard.hidden = !matrixMode;
+    el.exportButton.hidden = matrixMode;
+    el.contentModeButton.classList.toggle("active", !matrixMode);
+    el.matrixModeButton.classList.toggle("active", matrixMode);
+    el.contentModeButton.setAttribute("aria-selected", String(!matrixMode));
+    el.matrixModeButton.setAttribute("aria-selected", String(matrixMode));
+    if (matrixMode) renderMatrix();
+  }
+
+  function renderMatrix() {
+    const rows = state.matrix?.rows || [];
+    const externalQuotes = state.quotes.filter(quote => {
+      const authorID = quote.authorship?.author_id;
+      return authorID && authorID !== "selflo" && quote.authorship?.author_name;
+    });
+    const authors = [...new Set(externalQuotes.map(quote => quote.authorship.author_name))];
+    const works = [...new Set(externalQuotes.map(quote => quote.authorship?.work).filter(Boolean))];
+    const linkedStories = state.quotes.filter(quote => quote.story_id && state.stories.has(quote.story_id)).length;
+    const verifiedQuotes = state.quotes.filter(quote => quote.kind === "verified_quote").length;
+    const gapStatuses = new Set(["thin", "missing", "unknown", "imbalanced"]);
+
+    el.matrixNote.textContent = state.matrix?.note_vi || "Matrix editorial chưa tải được; số Library bên dưới vẫn là dữ liệu live.";
+    el.matrixRevision.textContent = state.manifest
+      ? `r${state.manifest.library_revision} · ${state.manifest.content_version}`
+      : "—";
+    el.matrixQuoteCount.textContent = String(state.quotes.length);
+    el.matrixAuthorCount.textContent = String(authors.length);
+    el.matrixAuthorDetail.textContent = authors.length ? authors.join(", ") : "chưa có tác giả bên ngoài";
+    el.matrixWorkCount.textContent = String(works.length);
+    el.matrixWorkDetail.textContent = works.length ? works.join(", ") : "chưa có tác phẩm bên ngoài";
+    el.matrixStoryCount.textContent = String(linkedStories);
+    el.matrixStoryDetail.textContent = `${state.quotes.length - linkedStories} quote chưa có story`;
+    el.matrixVerifiedCount.textContent = String(verifiedQuotes);
+    el.matrixGapCount.textContent = String(rows.filter(row => gapStatuses.has(row.status)).length);
+    renderMatrixRows();
+  }
+
+  function updateMatrixFilters() {
+    state.matrixBrowser.query = el.matrixSearch.value;
+    state.matrixBrowser.status = el.matrixStatusFilter.value;
+    renderMatrixRows();
+  }
+
+  function renderMatrixRows() {
+    el.matrixRows.replaceChildren();
+    const matrixRows = state.matrix?.rows || [];
+    const filtered = matrixRows.filter(matchesMatrixFilters);
+    const groupLabels = { source: "Nguồn", form: "Dạng quote", anchor: "Lý thuyết / tư tưởng", context: "Bối cảnh" };
+    const statusLabels = {
+      strong: "Mạnh", partial: "Đang có", thin: "Còn mỏng", missing: "Đang thiếu",
+      unknown: "Chưa đo", imbalanced: "Đang lệch"
+    };
+
+    const groupTitle = state.matrixBrowser.group === "all"
+      ? "Tất cả chiều phân loại"
+      : groupLabels[state.matrixBrowser.group];
+    el.matrixResultTitle.textContent = groupTitle;
+    el.matrixResultCount.textContent = `${filtered.length} / ${matrixRows.length} mục`;
+
+    if (!filtered.length) {
+      const empty = document.createElement("div");
+      empty.className = "matrix-empty";
+      empty.textContent = "Không có mục nào phù hợp với bộ lọc này.";
+      el.matrixRows.append(empty);
+      return;
+    }
+
+    filtered.forEach(row => {
+      const article = document.createElement("article");
+      article.className = "matrix-row";
+      article.dataset.status = row.status;
+
+      const identity = document.createElement("div");
+      identity.className = "matrix-identity";
+      const group = document.createElement("span");
+      group.textContent = groupLabels[row.group] || row.group;
+      const name = document.createElement("strong");
+      name.textContent = row.name_vi;
+      identity.append(group, name);
+
+      const coverage = document.createElement("div");
+      coverage.className = "matrix-coverage";
+      const badge = document.createElement("span");
+      badge.textContent = statusLabels[row.status] || row.status;
+      const count = document.createElement("strong");
+      count.textContent = row.count === null ? "—" : String(row.count);
+      coverage.append(badge, count);
+
+      const evidence = document.createElement("p");
+      evidence.className = "matrix-evidence";
+      evidence.textContent = row.evidence_vi;
+
+      const gap = document.createElement("p");
+      gap.className = "matrix-gap";
+      gap.textContent = row.gap_vi;
+
+      article.append(identity, coverage, evidence, gap);
+      el.matrixRows.append(article);
+    });
+  }
+
+  function matchesMatrixFilters(row) {
+    const { query, group, status } = state.matrixBrowser;
+    if (group !== "all" && row.group !== group) return false;
+    const presentStatuses = new Set(["strong", "partial"]);
+    const gapStatuses = new Set(["thin", "missing", "unknown", "imbalanced"]);
+    if (status === "present" && !presentStatuses.has(row.status)) return false;
+    if (status === "gaps" && !gapStatuses.has(row.status)) return false;
+    if (status === "missing" && row.status !== "missing") return false;
+    if (status === "unknown" && row.status !== "unknown") return false;
+    if (!query.trim()) return true;
+    return normalizeSearch([row.name_vi, row.evidence_vi, row.gap_vi].join(" "))
+      .includes(normalizeSearch(query));
   }
 
   async function fetchJSON(url) {
