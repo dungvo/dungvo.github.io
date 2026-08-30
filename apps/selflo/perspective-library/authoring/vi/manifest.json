@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 10,
-  "content_version": "story-diversity-batch-01-preview-10",
+  "library_revision": 11,
+  "content_version": "story-diversity-batch-02-preview-11",
   "language": "vi",
-  "generated_at": "2026-08-30T05:25:32Z",
+  "generated_at": "2026-08-30T05:35:01Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -28,11 +28,11 @@
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/attention.vi.r4.json",
+      "revision": 5,
+      "path": "themes/attention.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "d21d724a832ee66bfb849e6352312f6b869f3f00a9d4fd367c98a75621a830d2",
-      "byte_count": 63806
+      "sha256": "458baac76ef6f3d7683ffcdf3342066b15ca5c6cd10bdb1b8eaf4289efa019a3",
+      "byte_count": 63834
     },
     {
       "id": "theme.change_growth.vi",
@@ -55,38 +55,38 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/meaning-values.vi.r4.json",
+      "revision": 5,
+      "path": "themes/meaning-values.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "3dbd9f731b529b31fe96a38f55226e6f1f55cd21b33b0a220f7b0f8994d41c7b",
-      "byte_count": 48786
+      "sha256": "cd68ae58659f57a2641809488abe18d87a92bd0f4e5a00fe173acf4e6aab537e",
+      "byte_count": 48814
     },
     {
       "id": "theme.relationships.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/relationships.vi.r4.json",
+      "revision": 5,
+      "path": "themes/relationships.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "20534ba1cc1d83c63f2179f6727871627be0a37b4c89be7e80bbdf48051ca9af",
-      "byte_count": 40182
+      "sha256": "4f55abb04084574052a86037c500df09e38c2a47fd910c8c24e196562a0e886c",
+      "byte_count": 40205
     },
     {
       "id": "theme.rest_wellbeing.vi",
       "kind": "quote_pack",
-      "revision": 5,
-      "path": "themes/rest-wellbeing.vi.r5.json",
+      "revision": 6,
+      "path": "themes/rest-wellbeing.vi.r6.json",
       "media_type": "application/json",
-      "sha256": "19ac887918f684102d7aaefbef31e0c599146618e9880db587a0af14786af2ab",
-      "byte_count": 48106
+      "sha256": "d8d84c1c578cb04351c8c0054a80fdad83c4679706fe788fd3f009f2df7e4717",
+      "byte_count": 48144
     },
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/self-understanding.vi.r4.json",
+      "revision": 5,
+      "path": "themes/self-understanding.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "223d4db6ff9b83132fd12b23e8364a29145a4d12563eaf1b07de2381bfbf59ae",
-      "byte_count": 56359
+      "sha256": "b79e3549d49ff3ad19315f0f2625de133260ac9774da28757049902b61a1e231",
+      "byte_count": 56410
     },
     {
       "id": "theme.work_achievement.vi",
@@ -161,6 +161,15 @@
       "byte_count": 7117
     },
     {
+      "id": "story.chair_across_three_homes",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/chair-across-three-homes/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "bb5528cb5f77742336e14363b8e009f8cc56bf71ae99bb4560fa03148972a87e",
+      "byte_count": 6695
+    },
+    {
       "id": "story.courier_and_waterline",
       "kind": "story",
       "revision": 1,
@@ -197,6 +206,24 @@
       "byte_count": 6536
     },
     {
+      "id": "story.four_pots_on_the_balcony",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/four-pots-on-the-balcony/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "d81d35681edd4cc37e4904e1ba1b288fd9098b76beffb7f56d029cf6e7b53432",
+      "byte_count": 6779
+    },
+    {
+      "id": "story.half_a_wet_shoulder",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/half-a-wet-shoulder/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "4bb70796da162644c62945bba009093f55b6a678b6818b9cb6dd42d221018a97",
+      "byte_count": 6528
+    },
+    {
       "id": "story.last_window_in_the_building",
       "kind": "story",
       "revision": 1,
@@ -213,6 +240,24 @@
       "media_type": "application/json",
       "sha256": "981af3ef3efcd824169d09334691b92c356c5fe9d5a0706fd042d8cc31b55986",
       "byte_count": 7369
+    },
+    {
+      "id": "story.morning_after_the_lantern_festival",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/morning-after-the-lantern-festival/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "6a5266eb91d9d4bbac1a468464557cfe086b2f8d9bc51cd4ea00518e62e2b9b9",
+      "byte_count": 6602
+    },
+    {
+      "id": "story.nine_oclock_morning",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/nine-oclock-morning/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "f1948220803584cb5f51b071e630dc7673ad14dc8fdb5a608029885d24fae150",
+      "byte_count": 6565
     },
     {
       "id": "story.operator_and_one_beat",
@@ -375,6 +420,15 @@
       "media_type": "application/json",
       "sha256": "c55b19331d2d50ced231408be275292276a3d4bad402d3fcca56539cca98a5f3",
       "byte_count": 7465
+    },
+    {
+      "id": "story.three_dots_on_the_screen",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/three-dots-on-the-screen/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "3cf621caaf0148d436a5035fca5ba46dd20ab9c42bebdbd448c862d285f22631",
+      "byte_count": 6453
     },
     {
       "id": "story.two_tailors_and_one_measure",
