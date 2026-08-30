@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "content_version": "observation-diversity-preview-13",
+  "content_version": "multi-source-classics-preview-14",
   "entity": "perspective_theme",
   "status": "content_preview",
   "primary_theme": "change_growth",
@@ -2356,6 +2356,361 @@
           "repeating_pattern"
         ],
         "tie_break_order": 4025
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.epictetus.ench_12.small",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy bắt đầu từ những điều nhỏ.",
+      "subtitle_vi": "Epictetus · Encheiridion · XII",
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "epictetus",
+        "author_name": "Epictetus",
+        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
+        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "source_language": "en",
+        "source_label": "Epictetus · Encheiridion",
+        "source_detail": "George Long (dịch); XII; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "stoicism",
+          "small_steps"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Hãy bắt đầu từ những điều nhỏ.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "stoicism",
+          "small_steps"
+        ],
+        "tie_break_order": 5006
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.laozi.chapter_22.complete",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Cái chưa trọn trở nên trọn; cái cong trở nên thẳng; cái rỗng trở nên đầy; cái mòn trở nên mới.",
+      "subtitle_vi": "Lão Tử · Đạo Đức Kinh · 22",
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "laozi",
+        "author_name": "Laozi",
+        "work": "The Tao Teh King, or the Tao and its Characteristics",
+        "source_url": "https://www.gutenberg.org/ebooks/216",
+        "source_language": "en",
+        "source_label": "Lão Tử · Đạo Đức Kinh",
+        "source_detail": "James Legge (dịch); 22; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "taoism",
+          "transformation"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Cái chưa trọn trở nên trọn; cái cong trở nên thẳng; cái rỗng trở nên đầy; cái mòn trở nên mới.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "taoism",
+          "transformation"
+        ],
+        "tie_break_order": 5024
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.laozi.chapter_64.first_step",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Cây lớn bằng vòng tay bắt đầu từ mầm nhỏ; tháp chín tầng khởi từ một ụ đất; hành trình nghìn dặm bắt đầu bằng một bước.",
+      "subtitle_vi": "Lão Tử · Đạo Đức Kinh · 64",
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "laozi",
+        "author_name": "Laozi",
+        "work": "The Tao Teh King, or the Tao and its Characteristics",
+        "source_url": "https://www.gutenberg.org/ebooks/216",
+        "source_language": "en",
+        "source_label": "Lão Tử · Đạo Đức Kinh",
+        "source_detail": "James Legge (dịch); 64; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "taoism",
+          "small_steps"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Cây lớn bằng vòng tay bắt đầu từ mầm nhỏ; tháp chín tầng khởi từ một ụ đất; hành trình nghìn dặm bắt đầu bằng một bước.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "taoism",
+          "small_steps"
+        ],
+        "tie_break_order": 5029
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.dhammapada.verse_080.fashion_self",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Người đào giếng dẫn nước, người làm tên uốn mũi tên, thợ mộc uốn gỗ; người sáng suốt rèn chính mình.",
+      "subtitle_vi": "Dhammapada · 80",
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "dhammapada_tradition",
+        "author_name": "Dhammapada",
+        "work": "Dhammapada, a Collection of Verses",
+        "source_url": "https://www.gutenberg.org/ebooks/2017",
+        "source_language": "en",
+        "source_label": "Dhammapada",
+        "source_detail": "F. Max Müller (dịch); 80; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "buddhist_text",
+          "self_shaping"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; quote được ghi theo văn bản Dhammapada, không gán trực tiếp cho Đức Phật lịch sử; cần review truyền thống và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Người đào giếng dẫn nước, người làm tên uốn mũi tên, thợ mộc uốn gỗ; người sáng suốt rèn chính mình.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "buddhist_text",
+          "self_shaping"
+        ],
+        "tie_break_order": 5036
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.confucius.book_i_ch08.faults",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi có lỗi, đừng sợ sửa bỏ.",
+      "subtitle_vi": "Khổng Tử · Luận Ngữ · I.8.4",
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "confucius",
+        "author_name": "Confucius",
+        "work": "The Analects of Confucius (from the Chinese Classics)",
+        "source_url": "https://www.gutenberg.org/ebooks/3330",
+        "source_language": "en",
+        "source_label": "Khổng Tử · Luận Ngữ",
+        "source_detail": "James Legge (dịch); I.8.4; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "confucianism",
+          "correction"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Khi có lỗi, đừng sợ sửa bỏ.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "confucianism",
+          "correction"
+        ],
+        "tie_break_order": 5042
       },
       "knowledge_basis": null
     }

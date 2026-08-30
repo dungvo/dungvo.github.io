@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "content_version": "observation-diversity-preview-13",
+  "content_version": "multi-source-classics-preview-14",
   "entity": "perspective_theme",
   "status": "content_preview",
   "primary_theme": "work_achievement",
@@ -1711,6 +1711,219 @@
           "money_pressure"
         ],
         "tie_break_order": 4036
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.laozi.chapter_24.tiptoes",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Người đứng nhón chân không thể đứng vững; người bước quá dài không thể đi dễ dàng.",
+      "subtitle_vi": "Lão Tử · Đạo Đức Kinh · 24",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "laozi",
+        "author_name": "Laozi",
+        "work": "The Tao Teh King, or the Tao and its Characteristics",
+        "source_url": "https://www.gutenberg.org/ebooks/216",
+        "source_language": "en",
+        "source_label": "Lão Tử · Đạo Đức Kinh",
+        "source_detail": "James Legge (dịch); 24; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "taoism",
+          "sustainable_pace"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Người đứng nhón chân không thể đứng vững; người bước quá dài không thể đi dễ dàng.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "taoism",
+          "sustainable_pace"
+        ],
+        "tie_break_order": 5026
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.confucius.book_i_ch01.learning",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Học mà bền bỉ thực hành, chẳng phải là điều vui sao?",
+      "subtitle_vi": "Khổng Tử · Luận Ngữ · I.1",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "confucius",
+        "author_name": "Confucius",
+        "work": "The Analects of Confucius (from the Chinese Classics)",
+        "source_url": "https://www.gutenberg.org/ebooks/3330",
+        "source_language": "en",
+        "source_label": "Khổng Tử · Luận Ngữ",
+        "source_detail": "James Legge (dịch); I.1; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "confucianism",
+          "learning"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Học mà bền bỉ thực hành, chẳng phải là điều vui sao?",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "confucianism",
+          "learning"
+        ],
+        "tie_break_order": 5040
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.confucius.book_vii_ch08.eager",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Tôi không mở điều cần hiểu cho người chưa tha thiết muốn biết, cũng không nói thay người chưa tự cố diễn đạt.",
+      "subtitle_vi": "Khổng Tử · Luận Ngữ · VII.8",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "confucius",
+        "author_name": "Confucius",
+        "work": "The Analects of Confucius (from the Chinese Classics)",
+        "source_url": "https://www.gutenberg.org/ebooks/3330",
+        "source_language": "en",
+        "source_label": "Khổng Tử · Luận Ngữ",
+        "source_detail": "James Legge (dịch); VII.8; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "confucianism",
+          "active_learning"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Tôi không mở điều cần hiểu cho người chưa tha thiết muốn biết, cũng không nói thay người chưa tự cố diễn đạt.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "confucianism",
+          "active_learning"
+        ],
+        "tie_break_order": 5047
       },
       "knowledge_basis": null
     }

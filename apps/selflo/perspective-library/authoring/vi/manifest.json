@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 13,
-  "content_version": "observation-diversity-preview-13",
+  "library_revision": 14,
+  "content_version": "multi-source-classics-preview-14",
   "language": "vi",
-  "generated_at": "2026-08-30T06:01:14Z",
+  "generated_at": "2026-08-30T14:50:05Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -19,83 +19,83 @@
     {
       "id": "theme.adversity_resilience.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/adversity-resilience.vi.r7.json",
+      "revision": 8,
+      "path": "themes/adversity-resilience.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "8a14cd168581b2f3ad1b5a90c45c936790e7d897a2b9cd41aba45a92b75245f8",
-      "byte_count": 68925
+      "sha256": "060998d1a51e81ab1d8007caa12d5656a3fb169d9023c46f29712d918b5c0a1e",
+      "byte_count": 77759
     },
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 6,
-      "path": "themes/attention.vi.r6.json",
+      "revision": 7,
+      "path": "themes/attention.vi.r7.json",
       "media_type": "application/json",
-      "sha256": "6ff32004cd21bbd955a501da97f2c7e6493265b549553c2b757f8498e44622a0",
-      "byte_count": 79806
+      "sha256": "825434bcdc898b66a3078e5bb2513c861ef274dba3795bf425105832cea34636",
+      "byte_count": 90696
     },
     {
       "id": "theme.change_growth.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/change-growth.vi.r7.json",
+      "revision": 8,
+      "path": "themes/change-growth.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "083d101d886d4fff07639c4616bcfea3af9dc5834a77541736319167708fcf0c",
-      "byte_count": 67668
+      "sha256": "6e67582000b1cf7b55ffde1a4e7e601a12d0a474f455eddf52aec1cbf0e6343c",
+      "byte_count": 78705
     },
     {
       "id": "theme.emotion.vi",
       "kind": "quote_pack",
-      "revision": 6,
-      "path": "themes/emotion.vi.r6.json",
+      "revision": 7,
+      "path": "themes/emotion.vi.r7.json",
       "media_type": "application/json",
-      "sha256": "01fede3d392dd53ae863ff91fcb3f3ad9e25ae0b07b154d42e62322a8bb2c810",
-      "byte_count": 39629
+      "sha256": "6b66bc2a37204e1d488ce1531cff0c38fcf65ae3e0a6e0744095a13335df0943",
+      "byte_count": 44090
     },
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/meaning-values.vi.r7.json",
+      "revision": 8,
+      "path": "themes/meaning-values.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "088f468d295f5846f15092e50d11da9e78c3a5796b3853030d2110cbaecbc507",
-      "byte_count": 57821
+      "sha256": "51b2351a4531a6226932f0df903cd208ae72e814e9e0d7453639f6669f35fe7a",
+      "byte_count": 75826
     },
     {
       "id": "theme.relationships.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/relationships.vi.r7.json",
+      "revision": 8,
+      "path": "themes/relationships.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "117d4eb1d4e689b002164b895cc546cf8064a1ddcd59f5d25a060aa1cb475ea6",
-      "byte_count": 40264
+      "sha256": "df7f31d6eaab7968836fc5cc069803b7da78e0e9c33307a235e9270cf50b8d6f",
+      "byte_count": 60585
     },
     {
       "id": "theme.rest_wellbeing.vi",
       "kind": "quote_pack",
-      "revision": 8,
-      "path": "themes/rest-wellbeing.vi.r8.json",
+      "revision": 9,
+      "path": "themes/rest-wellbeing.vi.r9.json",
       "media_type": "application/json",
-      "sha256": "d9cc8199516a99155aca966c8da2b6978a359fc9ebfd4149589c33e45cc4335b",
-      "byte_count": 73175
+      "sha256": "c72f962c85135db81889c26f6c95cffab1a784854a897e46b3c8b8ae1f8b1bd2",
+      "byte_count": 79790
     },
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/self-understanding.vi.r7.json",
+      "revision": 8,
+      "path": "themes/self-understanding.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "2044c5f3f30fdf0e5da1efc2d6ad1f0a2eb542cb0d4f153187c9c5f7c842a74c",
-      "byte_count": 63715
+      "sha256": "c1d63832013d44a37d767b60b4214aef9654366aca5fd2bd0bde5816bfea2fc1",
+      "byte_count": 88958
     },
     {
       "id": "theme.work_achievement.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/work-achievement.vi.r7.json",
+      "revision": 8,
+      "path": "themes/work-achievement.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "6c7a50a59e94103ac0d44830dd0db3ae4f89b8337a7cd9370b6a6a7f52f0ee61",
-      "byte_count": 51649
+      "sha256": "e33737d5e7899b02d5dd4eb5a9344b6600a293b95286ef1bd1722e8f13de07d6",
+      "byte_count": 58358
     },
     {
       "id": "reading_intents.vi",
