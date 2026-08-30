@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.seam_opened_three_times",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Đường may tháo ba lần",
+  "subtitle_vi": "Khoa nhận phần sửa trang phục cho vở kịch lớp và phát hiện một đường chỉ tháo ra vẫn có thể để lại điều hữu ích.",
+  "hero_image": null,
+  "primary_theme": "change_growth",
+  "metadata": {
+    "concept_ids": [
+      "concept.learning_from_errors"
+    ],
+    "emotion_tags": [
+      "frustration",
+      "focus"
+    ],
+    "keywords": [
+      "học may",
+      "học sinh",
+      "trang phục sân khấu",
+      "sửa sai",
+      "bàn tay nhớ"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "the_torn_sleeve",
+      "title_vi": "Ống tay bị rách",
+      "blocks": [
+        {
+          "id": "the_torn_sleeve.1",
+          "type": "paragraph",
+          "text_vi": "Trước buổi diễn của lớp, ống tay áo nhân vật chính bị rách sát đường nách. Khoa từng khoe mình biết may vì hay giúp mẹ đơm nút, nên cả nhóm đưa chiếc áo cho cậu."
+        },
+        {
+          "id": "the_torn_sleeve.2",
+          "type": "paragraph",
+          "text_vi": "Đường may đầu tiên quá chặt, người mặc giơ tay lên thì vải nhăn thành một cục. Khoa tháo chỉ. Lần thứ hai, mũi kim cách nhau không đều và một đoạn bung ra khi kéo nhẹ. Cậu tháo tiếp, mặt nóng lên vì mấy bạn đang chờ."
+        }
+      ]
+    },
+    {
+      "id": "the_third_attempt",
+      "title_vi": "Lần thứ ba",
+      "blocks": [
+        {
+          "id": "the_third_attempt.1",
+          "type": "paragraph",
+          "text_vi": "Bạn phụ trách đạo cụ không giảng gì. Cô chỉ giữ chiếc áo phẳng để Khoa nhìn thấy đường cong của ống tay. Khoa thử trên một mảnh vải thừa, nhận ra tay mình thường kéo chỉ quá mạnh ở đoạn cuối."
+        },
+        {
+          "id": "the_third_attempt.2",
+          "type": "paragraph",
+          "text_vi": "Lần thứ ba, cậu may chậm hơn. Mỗi vài mũi, Khoa đặt chiếc áo xuống, kéo nhẹ và kiểm tra. Dấu kim của hai lần trước vẫn còn, nhưng chính chúng chỉ ra nơi vải đã yếu và nơi bàn tay cậu thường vội."
+        },
+        {
+          "id": "the_third_attempt.3",
+          "type": "pull_quote",
+          "text_vi": "Đường chỉ bị tháo không biến mất khỏi việc học. Nó chuyển thành trí nhớ của bàn tay.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "under_the_stage_light",
+      "title_vi": "Dưới ánh đèn sân khấu",
+      "blocks": [
+        {
+          "id": "under_the_stage_light.1",
+          "type": "paragraph",
+          "text_vi": "Chiếc áo kịp lên sân khấu. Khán giả không biết ống tay đã được may ba lần. Khoa đứng sau cánh gà, cứ mỗi lần diễn viên giơ tay lại nhìn theo đường chỉ."
+        },
+        {
+          "id": "under_the_stage_light.2",
+          "type": "paragraph",
+          "text_vi": "Sau buổi diễn, đường may vẫn giữ. Không hoàn hảo; một đoạn hơi lệch nhưng không nhăn và không bung. Khoa mang mảnh vải thừa về nhà. Tối ấy cậu thử lại đúng đường cong, lần này chỉ cần tháo một lần."
+        },
+        {
+          "id": "under_the_stage_light.3",
+          "type": "paragraph",
+          "text_vi": "Mấy tuần sau, Khoa quên gần hết lời thoại của vở kịch. Nhưng khi cầm kim, bàn tay tự nới lỏng ở đoạn cuối trước khi cậu kịp nhớ vì sao."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Một lần làm sai có thể trở thành thông tin cho lần thử kế tiếp. Phần bị tháo ra khỏi sản phẩm vẫn có thể ở lại trong kỹ năng."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 04",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "seam_opened_three_times",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

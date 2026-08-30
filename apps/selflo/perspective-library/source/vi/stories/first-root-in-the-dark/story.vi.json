@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.first_root_in_the_dark",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Chiếc rễ đầu tiên trong bóng tối",
+  "subtitle_vi": "Trước khi có một mầm xanh trên mặt đất, hạt đã trải qua phần lớn thay đổi ở nơi không ánh mắt nào tới được.",
+  "hero_image": null,
+  "primary_theme": "change_growth",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+      "patience",
+      "quiet_growth"
+    ],
+    "keywords": [
+      "hạt giống",
+      "nảy mầm",
+      "dưới đất",
+      "tiến bộ vô hình",
+      "không có con người"
+    ],
+    "story_style": "reflective_journey"
+  },
+  "sections": [
+    {
+      "id": "under_the_leaves",
+      "title_vi": "Dưới lớp lá",
+      "blocks": [
+        {
+          "id": "under_the_leaves.1",
+          "type": "paragraph",
+          "text_vi": "Một hạt nhỏ nằm dưới lớp lá mục từ cuối mùa mưa. Phía trên, nắng đi qua từng ngày mà không chạm tới nó. Gió di chuyển cành cây, chim tìm thức ăn và mặt đất trông không khác gì tuần trước."
+        },
+        {
+          "id": "under_the_leaves.2",
+          "type": "paragraph",
+          "text_vi": "Bên dưới, vỏ hạt hút nước và mềm dần. Không có màu xanh, không có chiều cao để đo. Chỉ có một đường nứt mảnh xuất hiện trong bóng tối."
+        }
+      ]
+    },
+    {
+      "id": "the_first_direction",
+      "title_vi": "Hướng đầu tiên",
+      "blocks": [
+        {
+          "id": "the_first_direction.1",
+          "type": "paragraph",
+          "text_vi": "Phần đầu tiên đi ra không hướng lên trời. Một chiếc rễ trắng tìm đường xuống sâu hơn, len giữa hai hạt sỏi và bám vào vùng đất ẩm. Mỗi lần gặp chỗ cứng, nó lệch đi một chút."
+        },
+        {
+          "id": "the_first_direction.2",
+          "type": "paragraph",
+          "text_vi": "Năng lượng cất trong hạt được dùng dần. Hình dạng cũ mất đi trước khi hình dạng mới hiện lên trên mặt đất. Suốt nhiều ngày, toàn bộ chuyển động quan trọng nhất không tạo ra dấu hiệu nào phía trên lớp lá."
+        },
+        {
+          "id": "the_first_direction.3",
+          "type": "pull_quote",
+          "text_vi": "Phần đầu tiên của sự lớn lên có thể đi xuống, vào nơi không ai nhìn thấy.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "above_the_soil",
+      "title_vi": "Trên mặt đất",
+      "blocks": [
+        {
+          "id": "above_the_soil.1",
+          "type": "paragraph",
+          "text_vi": "Một sáng, mầm cây đẩy được hạt đất nhỏ sang bên. Hai lá đầu tiên mở ra, nhạt màu và còn gấp. Từ phía trên, có thể tưởng sự sống bắt đầu đúng khoảnh khắc ấy."
+        },
+        {
+          "id": "above_the_soil.2",
+          "type": "paragraph",
+          "text_vi": "Nhưng dưới mầm xanh đã có một chiếc rễ dài hơn thân, một vỏ hạt đã tách và nhiều ngã rẽ từng được chọn trong tối. Mặt đất chỉ vừa kịp cho thấy phần việc đã diễn ra từ lâu."
+        },
+        {
+          "id": "above_the_soil.3",
+          "type": "paragraph",
+          "text_vi": "Đến chiều, nắng chạm vào hai lá. Chiếc rễ vẫn tiếp tục lớn ở phía không ai nhìn, giữ cho điều vừa xuất hiện có chỗ đứng."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Không phải tiến bộ nào cũng xuất hiện ở phần có thể nhìn thấy. Có giai đoạn sự lớn lên đang tạo nền, đổi hướng và bén rễ trước khi có một dấu hiệu bên ngoài."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 04",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "first_root_in_the_dark",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

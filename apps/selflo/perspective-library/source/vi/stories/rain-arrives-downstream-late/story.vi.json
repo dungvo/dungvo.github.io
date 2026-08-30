@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.rain_arrives_downstream_late",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Cơn mưa đến muộn dưới hạ lưu",
+  "subtitle_vi": "Mây đã rời khỏi đầu nguồn, nhưng dòng nước còn mang dấu vết của trận mưa qua nhiều khúc sông.",
+  "hero_image": null,
+  "primary_theme": "emotion",
+  "metadata": {
+    "concept_ids": [
+      "concept.emotional_memory"
+    ],
+    "emotion_tags": [
+      "aftereffect",
+      "calm"
+    ],
+    "keywords": [
+      "dòng sông",
+      "mưa đầu nguồn",
+      "dư âm",
+      "nước đục",
+      "không có con người"
+    ],
+    "story_style": "reflective_journey"
+  },
+  "sections": [
+    {
+      "id": "clear_sky_upstream",
+      "title_vi": "Trời quang ở đầu nguồn",
+      "blocks": [
+        {
+          "id": "clear_sky_upstream.1",
+          "type": "paragraph",
+          "text_vi": "Trận mưa kết thúc trước bình minh. Trên sườn cao, mây tách ra và ánh sáng rơi xuống những tán cây còn ướt. Những giọt cuối cùng rời lá, đi vào khe đất rồi nhập thành các dòng nhỏ."
+        },
+        {
+          "id": "clear_sky_upstream.2",
+          "type": "paragraph",
+          "text_vi": "Bầu trời đã quang, nhưng nước vừa bắt đầu hành trình. Nó mang theo đất mịn, cành gãy và mùi lá mục qua những con dốc không còn mưa."
+        }
+      ]
+    },
+    {
+      "id": "through_the_bends",
+      "title_vi": "Qua những khúc quanh",
+      "blocks": [
+        {
+          "id": "through_the_bends.1",
+          "type": "paragraph",
+          "text_vi": "Dòng nước gặp suối, suối gặp sông. Ở mỗi khúc cong, một phần bùn lắng xuống và một phần khác lại được cuốn lên. Cá tìm vào vùng nước chậm. Cỏ ven bờ cúi theo dòng rồi đứng dần khi mực nước hạ."
+        },
+        {
+          "id": "through_the_bends.2",
+          "type": "paragraph",
+          "text_vi": "Nhiều giờ sau, phía hạ lưu vẫn nắng. Mặt sông bỗng chuyển màu trước khi nước dâng. Trận mưa ở nơi xa vừa đến đây bằng một hình dạng khác."
+        },
+        {
+          "id": "through_the_bends.3",
+          "type": "pull_quote",
+          "text_vi": "Một sự kiện có thể đã dừng ở nơi nó bắt đầu, trong khi dấu vết vẫn còn đang di chuyển.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "water_clears",
+      "title_vi": "Nước trong trở lại",
+      "blocks": [
+        {
+          "id": "water_clears.1",
+          "type": "paragraph",
+          "text_vi": "Dòng sông không giữ màu đục mãi. Đất nặng lắng xuống các bãi bồi, lá mắc lại giữa rễ, nước mới từ những nhánh trong hơn tiếp tục nhập vào."
+        },
+        {
+          "id": "water_clears.2",
+          "type": "paragraph",
+          "text_vi": "Đến ngày sau, đá dưới đáy hiện dần. Không có đường ranh chỉ đúng khoảnh khắc trận mưa thôi tồn tại trong dòng sông. Chỉ có từng lớp nước đi qua, mỗi lớp mang ít dấu vết hơn lớp trước."
+        },
+        {
+          "id": "water_clears.3",
+          "type": "paragraph",
+          "text_vi": "Ở đầu nguồn, một buổi sáng khác đã bắt đầu từ lâu. Ở hạ lưu, cơn mưa vừa mới đi hết phần đường cuối cùng của nó."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Dư âm có thể đến sau và kéo dài hơn sự kiện đã tạo ra nó. Việc hiện tại còn đục không nhất thiết có nghĩa cơn mưa vẫn đang tiếp tục."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 04",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "rain_arrives_downstream_late",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

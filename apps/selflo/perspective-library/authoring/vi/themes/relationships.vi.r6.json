@@ -3,19 +3,19 @@
   "content_version": "quote-research-preview-7",
   "entity": "perspective_theme",
   "status": "content_preview",
-  "primary_theme": "emotion",
-  "display_name_vi": "Cảm xúc",
-  "description_vi": "Nhận biết, đón nhận và sống cùng cảm xúc mà không để cảm xúc định nghĩa toàn bộ mình.",
+  "primary_theme": "relationships",
+  "display_name_vi": "Các mối quan hệ",
+  "description_vi": "Kết nối, yêu thương, giao tiếp, ranh giới và cách mình hiện diện với người khác.",
   "language": "vi",
   "quotes": [
     {
-      "id": "feeling_is_signal_not_command",
+      "id": "small_boundary_is_still_boundary",
       "revision": 1,
       "kind": "selflo_original",
-      "title_vi": "Tín hiệu, không phải mệnh lệnh",
-      "text_vi": "Cảm xúc đang nói một điều quan trọng. Nhưng nó không bắt buộc phải quyết định mọi điều mình làm tiếp theo.",
+      "title_vi": "Một ranh giới nhỏ",
+      "text_vi": "Một lời từ chối nhẹ vẫn là ranh giới. Mình không cần làm nó sắc để nó có giá trị.",
       "subtitle_vi": null,
-      "primary_theme": "emotion",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -39,12 +39,12 @@
 
         ],
         "keywords": [
-          "emotion_layer",
+          "social_layer",
           "control_layer"
         ],
         "legacy_content_kind": "quote",
         "legacy_layer_ids": [
-          "emotion_layer",
+          "social_layer",
           "control_layer"
         ],
         "legacy_behavior_ids": [
@@ -61,15 +61,15 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Cảm xúc cung cấp tín hiệu nhưng không phải mệnh lệnh hành động.",
+        "semantic_intent": "Một lời từ chối nhẹ nhàng vẫn có thể bảo vệ ranh giới cá nhân.",
         "observation_key": null,
         "structure_pattern": null
       },
       "display": {
         "mode": "poster",
-        "priority": 82,
+        "priority": 86,
         "featured": true,
-        "style": "cool_observe"
+        "style": "midnight_quote"
       },
       "story_id": null,
       "selection": {
@@ -79,272 +79,22 @@
 
         ],
         "presentation_tags": [
-          "emotion_layer",
+          "social_layer",
           "control_layer"
         ],
-        "tie_break_order": -82
+        "tie_break_order": -86
       },
       "knowledge_basis": null
     },
     {
-      "id": "name_the_weather_inside",
+      "id": "social_layer_digest",
       "revision": 1,
       "kind": "selflo_original",
-      "title_vi": "Gọi tên thời tiết bên trong",
-      "text_vi": "Gọi tên cảm xúc không làm nó lớn hơn. Nó chỉ giúp mình biết hôm nay nên mang theo chiếc ô nào.",
-      "subtitle_vi": "Nhận diện trước khi điều chỉnh",
-      "primary_theme": "emotion",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "emotion_layer",
-          "awareness"
-        ],
-        "legacy_content_kind": "selflo_reflection",
-        "legacy_layer_ids": [
-          "emotion_layer"
-        ],
-        "legacy_behavior_ids": [
-
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Gọi tên cảm xúc giúp mình nhận biết điều đang diễn ra bên trong.",
-        "observation_key": "inner_weather_umbrella",
-        "structure_pattern": null
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 76,
-        "featured": true,
-        "style": "ember_theory"
-      },
+      "title_vi": "Não của mình là một cơ quan xã hội",
+      "text_vi": "Con người điều hòa cảm xúc qua kết nối, không phải chỉ bằng ý chí.",
+      "subtitle_vi": "Não được hình thành và giữ ổn hơn trong sự liên hệ với người khác. Cảm thấy được thấy, được nghe, được an toàn với ai đó là một phần của ...",
       "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "emotion_layer",
-          "awareness"
-        ],
-        "tie_break_order": -76
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "anxiety_loop_digest",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Vòng lặp lo lắng",
-      "text_vi": "Cái nhẹ ngay lúc này lại thường là điều nuôi cái nặng về sau.",
-      "subtitle_vi": "Dừng lại để gọi tên điều mình đang sợ, rồi chia nó thành một bước nhỏ hơn.",
-      "story_id": null,
-      "primary_theme": "emotion",
-      "selection": {
-        "source_type": "behavior_loop",
-        "reflection_kind": null,
-        "thought_match_keys": [
-          "Co chuyen khong on roi",
-          "Minh khong du tot",
-          "Lo that bai thi sao"
-        ],
-        "presentation_tags": [
-          "lo lang",
-          "cang thang",
-          "deadline",
-          "chuyen chua ro"
-        ],
-        "tie_break_order": 1
-      },
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": null,
-        "source_label": "Vòng lặp con người",
-        "source_detail": "One-time legacy selection migration"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-          "theory.avoidance_negative_reinforcement"
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "anxiety_loop_digest"
-        ],
-        "legacy_content_kind": "behavior_loop_digest",
-        "legacy_layer_ids": [
-          "brain_system",
-          "thought_layer",
-          "behavior_layer"
-        ],
-        "legacy_behavior_ids": [
-          "anxiety_loop"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Legacy migration input; owner rights review required before Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Bảo toàn presentation và selection behavior hiện hành.",
-        "observation_key": null,
-        "structure_pattern": null
-      },
-      "display": {
-        "mode": "insight",
-        "priority": 0,
-        "featured": false,
-        "style": "cool_observe"
-      },
-      "knowledge_basis": {
-        "core_truth_ids": [
-          "theory.avoidance_negative_reinforcement.short_term_relief_can_reinforce_avoidance"
-        ],
-        "reference_ids": [
-
-        ]
-      }
-    },
-    {
-      "id": "yin_yang_of_emotion",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Cảm xúc nào cũng mang hai mặt",
-      "text_vi": "Một cảm xúc không tự nhiên là tốt hoặc xấu. Điều quan trọng hơn là nó đang báo tin gì cho mình.",
-      "subtitle_vi": "Bực bội có thể đang báo hiệu một giới hạn đang bị vượt qua. Lo âu có thể đang báo hiệu một điều quan trọng chưa được xử lý.",
-      "story_id": null,
-      "primary_theme": "emotion",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "philosophy_layer",
-          "control_layer"
-        ],
-        "tie_break_order": 1
-      },
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": null,
-        "source_label": "Yin-Yang + dialectical thinking",
-        "source_detail": "One-time legacy selection migration"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-          "framework.yin_yang_taiji"
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "yin_yang_of_emotion"
-        ],
-        "legacy_content_kind": "philosophy_digest",
-        "legacy_layer_ids": [
-          "philosophy_layer",
-          "control_layer"
-        ],
-        "legacy_behavior_ids": [
-
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Legacy migration input; owner rights review required before Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Bảo toàn presentation và selection behavior hiện hành.",
-        "observation_key": null,
-        "structure_pattern": null
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "knowledge_basis": {
-        "core_truth_ids": [
-
-        ],
-        "reference_ids": [
-
-        ]
-      }
-    },
-    {
-      "id": "memory_layer_digest",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Cơ thể có thể nhớ cả những điều đầu óc đã không còn nhớ bằng lời",
-      "text_vi": "Không phải lúc nào cảm xúc hiện tại cũng bắt đầu từ hiện tại.",
-      "subtitle_vi": "Ký ức cảm xúc được lưu rất sâu. Có khi não và cơ thể nhận ra nguy cơ trước khi mình kịp biết nó đang gợi nhớ lại điều gì.",
-      "story_id": null,
-      "primary_theme": "emotion",
+      "primary_theme": "relationships",
       "selection": {
         "source_type": "theory",
         "reflection_kind": null,
@@ -352,11 +102,11 @@
 
         ],
         "presentation_tags": [
-          "memory_layer",
-          "amygdala",
-          "somatic marker"
+          "social_layer",
+          "secure attachment",
+          "anxious attachment"
         ],
-        "tie_break_order": 9
+        "tie_break_order": 5
       },
       "authorship": {
         "author_id": "selflo",
@@ -364,15 +114,15 @@
         "work": null,
         "source_url": null,
         "source_language": null,
-        "source_label": "Emotional Memory",
+        "source_label": "Attachment Theory",
         "source_detail": "One-time legacy selection migration"
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_memory"
+          "concept.attachment_security"
         ],
         "theories": [
-          "theory.emotional_memory"
+          "theory.attachment_security"
         ],
         "frameworks": [
 
@@ -381,11 +131,11 @@
 
         ],
         "keywords": [
-          "memory_layer_digest"
+          "social_layer_digest"
         ],
         "legacy_content_kind": "theory_digest",
         "legacy_layer_ids": [
-          "memory_layer"
+          "social_layer"
         ],
         "legacy_behavior_ids": [
 
@@ -409,23 +159,23 @@
         "mode": "insight",
         "priority": 0,
         "featured": false,
-        "style": "cool_observe"
+        "style": "ember_theory"
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.emotional_memory.prior_experience_may_shape_present_response"
+          "theory.attachment_security.reliable_presence_supports_exploration"
         ],
         "reference_ids": [
-          "ref.buchanan_2007_emotional_memory_retrieval"
+          "ref.mikulincer_2002_attachment_security"
         ]
       }
     },
     {
-      "id": "light_gives_the_room_a_shape",
+      "id": "empty_chair_changes_the_table",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Căn phòng không khác đi khi bật đèn.\nChỉ là những gì vẫn ở đó bắt đầu có hình.",
-      "primary_theme": "emotion",
+      "text_vi": "Chiếc ghế trống không làm chiếc bàn rộng hơn.\nNó chỉ làm mọi người nhận ra ai thường ngồi ở đó.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -437,10 +187,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_awareness"
+          "concept.belonging"
         ],
         "theories": [
-          "theory.affect_labeling"
+          "theory.need_to_belong"
         ],
         "frameworks": [
 
@@ -449,9 +199,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "awareness",
-          "light"
+          "relationship",
+          "belonging",
+          "chair"
         ]
       },
       "rights": {
@@ -464,9 +214,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Nhận ra không tạo ra trải nghiệm nhưng có thể làm nó rõ hình hơn.",
-        "observation_key": "room_revealed_by_light",
-        "structure_pattern": "same_reality_becomes_visible_when_named"
+        "semantic_intent": "Sự vắng mặt làm lộ ý nghĩa của một hiện diện quen thuộc trong nhóm.",
+        "observation_key": "empty_chair_at_shared_table",
+        "structure_pattern": "absence_reveals_relational_presence"
       },
       "display": {
         "mode": "poster",
@@ -476,10 +226,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.affect_labeling.recognition_can_change_relationship_to_experience"
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
         ],
         "reference_ids": [
-          "ref.lieberman_2007_affect_labeling"
+          "ref.baumeister_leary_1995_need_to_belong"
         ]
       },
       "title_vi": null,
@@ -492,18 +242,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "awareness"
+          "relationship",
+          "belonging"
         ],
-        "tie_break_order": 1015
+        "tie_break_order": 1026
       }
     },
     {
-      "id": "water_heats_before_the_kettle_sings",
+      "id": "lit_window_guides_the_way_home",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Nước không bắt đầu nóng\nvào lúc chiếc ấm cất tiếng reo.",
-      "primary_theme": "emotion",
+      "text_vi": "Một ô cửa sáng không rút ngắn con đường.\nNó chỉ khiến người đi biết có nơi đang đợi mình trở về.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -515,10 +265,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_awareness"
+          "concept.belonging"
         ],
         "theories": [
-          "theory.affect_labeling"
+          "theory.need_to_belong"
         ],
         "frameworks": [
 
@@ -527,9 +277,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "kettle",
-          "signal"
+          "relationship",
+          "belonging",
+          "window"
         ]
       },
       "rights": {
@@ -542,9 +292,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Tín hiệu được nhận ra thường đến sau khi một trạng thái đã bắt đầu hình thành.",
-        "observation_key": "kettle_heats_before_whistle",
-        "structure_pattern": "process_precedes_visible_signal"
+        "semantic_intent": "Dấu hiệu của một nơi đón nhận có thể mang ý nghĩa thuộc về trên hành trình trở lại.",
+        "observation_key": "lit_window_at_home",
+        "structure_pattern": "distant_signal_marks_place_of_return"
       },
       "display": {
         "mode": "poster",
@@ -554,10 +304,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.affect_labeling.recognition_can_change_relationship_to_experience"
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
         ],
         "reference_ids": [
-          "ref.lieberman_2007_affect_labeling"
+          "ref.baumeister_leary_1995_need_to_belong"
         ]
       },
       "title_vi": null,
@@ -570,18 +320,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "kettle"
+          "relationship",
+          "belonging"
         ],
-        "tie_break_order": 1016
+        "tie_break_order": 1027
       }
     },
     {
-      "id": "quiet_house_reveals_the_clock",
-      "revision": 1,
+      "id": "one_umbrella_keeps_two_steps_together",
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Đến khi căn nhà yên,\nngười ta mới nghe tiếng đồng hồ đã chạy suốt đêm.",
-      "primary_theme": "emotion",
+      "text_vi": "Chiếc ô không làm mưa nhỏ đi,\nnhưng đủ để hai người bước chậm cùng nhau.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -593,10 +343,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_awareness"
+          "concept.belonging"
         ],
         "theories": [
-          "theory.affect_labeling"
+          "theory.need_to_belong"
         ],
         "frameworks": [
 
@@ -605,9 +355,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "quiet",
-          "clock"
+          "relationship",
+          "belonging",
+          "umbrella"
         ]
       },
       "rights": {
@@ -620,9 +370,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Một trạng thái có thể luôn hiện diện nhưng chỉ được nhận ra khi nhiễu giảm xuống.",
-        "observation_key": "clock_heard_in_quiet_house",
-        "structure_pattern": "quiet_reveals_continuous_signal"
+        "semantic_intent": "Kết nối không xóa hoàn cảnh khó chịu nhưng có thể tạo một nhịp cùng nhau.",
+        "observation_key": "two_people_under_umbrella",
+        "structure_pattern": "shared_shelter_synchronizes_steps"
       },
       "display": {
         "mode": "poster",
@@ -632,15 +382,15 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.affect_labeling.recognition_can_change_relationship_to_experience"
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
         ],
         "reference_ids": [
-          "ref.lieberman_2007_affect_labeling"
+          "ref.baumeister_leary_1995_need_to_belong"
         ]
       },
       "title_vi": null,
       "subtitle_vi": null,
-      "story_id": null,
+      "story_id": "story.half_a_wet_shoulder",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
@@ -648,18 +398,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "quiet"
+          "relationship",
+          "belonging"
         ],
-        "tie_break_order": 1017
+        "tie_break_order": 1028
       }
     },
     {
-      "id": "sunlight_finds_the_scratch",
+      "id": "kitchen_sounds_like_someone_waiting",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Có những vết xước trên kính\nchỉ hiện ra khi nắng đổi hướng.",
-      "primary_theme": "emotion",
+      "text_vi": "Trong căn bếp nhỏ, tiếng bát đũa va nhau\nđôi khi là cách một ngôi nhà nói rằng có người đang chờ.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -671,10 +421,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_awareness"
+          "concept.belonging"
         ],
         "theories": [
-          "theory.affect_labeling"
+          "theory.need_to_belong"
         ],
         "frameworks": [
 
@@ -683,9 +433,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "glass",
-          "sunlight"
+          "relationship",
+          "belonging",
+          "kitchen"
         ]
       },
       "rights": {
@@ -698,9 +448,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Một thay đổi trong góc nhìn có thể làm điều đã có trở nên dễ nhận biết.",
-        "observation_key": "scratch_seen_in_shifted_sunlight",
-        "structure_pattern": "angle_change_reveals_existing_mark"
+        "semantic_intent": "Những âm thanh lặp lại của chăm sóc đời thường có thể tạo cảm giác được chờ đợi.",
+        "observation_key": "dishes_in_waiting_kitchen",
+        "structure_pattern": "ordinary_household_sound_signals_belonging"
       },
       "display": {
         "mode": "poster",
@@ -710,10 +460,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.affect_labeling.recognition_can_change_relationship_to_experience"
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
         ],
         "reference_ids": [
-          "ref.lieberman_2007_affect_labeling"
+          "ref.baumeister_leary_1995_need_to_belong"
         ]
       },
       "title_vi": null,
@@ -726,18 +476,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "glass"
+          "relationship",
+          "belonging"
         ],
-        "tie_break_order": 1018
+        "tie_break_order": 1029
       }
     },
     {
-      "id": "towel_reveals_what_it_carried",
-      "revision": 1,
+      "id": "familiar_cafe_remembers_the_order",
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Đến lúc chiếc khăn được vắt ra,\nngười ta mới biết nó đã giữ nhiều nước đến đâu.",
-      "primary_theme": "emotion",
+      "text_vi": "Quán quen không giữ người ta bằng chiếc ghế đẹp nhất,\nmà bằng việc có người nhớ món họ thường gọi.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -749,10 +499,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_awareness"
+          "concept.belonging"
         ],
         "theories": [
-          "theory.affect_labeling"
+          "theory.need_to_belong"
         ],
         "frameworks": [
 
@@ -761,9 +511,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "towel",
-          "awareness"
+          "relationship",
+          "belonging",
+          "cafe"
         ]
       },
       "rights": {
@@ -776,9 +526,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Điều được mang theo có thể chỉ rõ khi có một khoảnh khắc để nhận diện.",
-        "observation_key": "water_wrung_from_towel",
-        "structure_pattern": "release_reveals_accumulated_load"
+        "semantic_intent": "Được nhận ra trong những chi tiết nhỏ có thể làm một nơi trở nên thân thuộc.",
+        "observation_key": "cafe_remembers_usual_order",
+        "structure_pattern": "recognition_outweighs_surface_comfort"
       },
       "display": {
         "mode": "poster",
@@ -788,15 +538,15 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.affect_labeling.recognition_can_change_relationship_to_experience"
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
         ],
         "reference_ids": [
-          "ref.lieberman_2007_affect_labeling"
+          "ref.baumeister_leary_1995_need_to_belong"
         ]
       },
       "title_vi": null,
       "subtitle_vi": null,
-      "story_id": null,
+      "story_id": "story.cup_with_less_sugar",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
@@ -804,18 +554,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "towel"
+          "relationship",
+          "belonging"
         ],
-        "tie_break_order": 1019
+        "tie_break_order": 1030
       }
     },
     {
-      "id": "curtain_keeps_the_old_smoke",
+      "id": "bridge_does_not_hold_the_walker",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Căn phòng đã mở cửa từ lâu,\nnhưng rèm cửa đôi khi vẫn giữ mùi khói cũ.",
-      "primary_theme": "emotion",
+      "text_vi": "Chiếc cầu vững không giữ người ở lại giữa sông.\nNó khiến bước chân sang bờ bên kia bớt chần chừ.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -827,10 +577,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_memory"
+          "concept.attachment_security"
         ],
         "theories": [
-          "theory.emotional_memory"
+          "theory.attachment_security"
         ],
         "frameworks": [
 
@@ -839,9 +589,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "memory",
-          "smoke"
+          "relationship",
+          "attachment",
+          "bridge"
         ]
       },
       "rights": {
@@ -854,9 +604,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Dấu vết của trải nghiệm cũ có thể còn lại sau khi hoàn cảnh đã thay đổi.",
-        "observation_key": "old_smoke_in_curtain",
-        "structure_pattern": "event_ended_trace_remains_in_material"
+        "semantic_intent": "Một nền tảng đáng tin cậy có thể hỗ trợ việc bước ra thay vì giữ người ở lại.",
+        "observation_key": "steady_bridge_over_river",
+        "structure_pattern": "reliable_base_enables_crossing"
       },
       "display": {
         "mode": "poster",
@@ -866,10 +616,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.emotional_memory.prior_experience_may_shape_present_response"
+          "theory.attachment_security.reliable_presence_supports_exploration"
         ],
         "reference_ids": [
-          "ref.buchanan_2007_emotional_memory_retrieval"
+          "ref.mikulincer_2002_attachment_security"
         ]
       },
       "title_vi": null,
@@ -882,18 +632,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "memory"
+          "relationship",
+          "attachment"
         ],
-        "tie_break_order": 1020
+        "tie_break_order": 1031
       }
     },
     {
-      "id": "river_carries_the_upstream_rain",
+      "id": "hand_does_not_need_to_grip",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Cơn mưa đã dừng ở đầu nguồn,\ndòng nước dưới này vẫn còn đục.",
-      "primary_theme": "emotion",
+      "text_vi": "Một bàn tay không cần nắm quá chặt\nđể người bên cạnh biết mình chưa rời đi.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -905,10 +655,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_memory"
+          "concept.attachment_security"
         ],
         "theories": [
-          "theory.emotional_memory"
+          "theory.attachment_security"
         ],
         "frameworks": [
 
@@ -917,9 +667,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "memory",
-          "river"
+          "relationship",
+          "attachment",
+          "hand"
         ]
       },
       "rights": {
@@ -932,9 +682,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Điều bắt đầu ở nơi khác hoặc lúc khác vẫn có thể hiện diện trong dòng chảy hiện tại.",
-        "observation_key": "muddy_river_after_upstream_rain",
-        "structure_pattern": "upstream_event_shapes_downstream_state"
+        "semantic_intent": "Sự hiện diện có thể được cảm nhận mà không cần kiểm soát hoặc giữ chặt.",
+        "observation_key": "gentle_handhold",
+        "structure_pattern": "soft_contact_signals_reliable_presence"
       },
       "display": {
         "mode": "poster",
@@ -944,15 +694,15 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.emotional_memory.prior_experience_may_shape_present_response"
+          "theory.attachment_security.reliable_presence_supports_exploration"
         ],
         "reference_ids": [
-          "ref.buchanan_2007_emotional_memory_retrieval"
+          "ref.mikulincer_2002_attachment_security"
         ]
       },
       "title_vi": null,
       "subtitle_vi": null,
-      "story_id": "story.rain_arrives_downstream_late",
+      "story_id": null,
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
@@ -960,18 +710,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "memory"
+          "relationship",
+          "attachment"
         ],
-        "tie_break_order": 1021
+        "tie_break_order": 1032
       }
     },
     {
-      "id": "room_holds_the_bells_echo",
-      "revision": 1,
+      "id": "someone_calls_at_the_last_stop",
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Chiếc chuông đã im,\nnhưng căn phòng vẫn giữ lại một khoảng ngân.",
-      "primary_theme": "emotion",
+      "text_vi": "Người ta ngủ yên hơn trên chuyến xe dài\nkhi biết có người sẽ gọi mình lúc đến trạm.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -983,10 +733,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_memory"
+          "concept.attachment_security"
         ],
         "theories": [
-          "theory.emotional_memory"
+          "theory.attachment_security"
         ],
         "frameworks": [
 
@@ -995,9 +745,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "memory",
-          "echo"
+          "relationship",
+          "attachment",
+          "bus"
         ]
       },
       "rights": {
@@ -1010,9 +760,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Ảnh hưởng của một tín hiệu có thể còn tiếp tục sau khi tín hiệu đã kết thúc.",
-        "observation_key": "bell_echo_in_room",
-        "structure_pattern": "sound_stops_resonance_continues"
+        "semantic_intent": "Sự tin cậy vào một người đáp lại có thể tạo cảm giác an toàn khi tạm buông cảnh giác.",
+        "observation_key": "wake_me_at_bus_stop",
+        "structure_pattern": "expected_response_allows_temporary_rest"
       },
       "display": {
         "mode": "poster",
@@ -1022,15 +772,15 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.emotional_memory.prior_experience_may_shape_present_response"
+          "theory.attachment_security.reliable_presence_supports_exploration"
         ],
         "reference_ids": [
-          "ref.buchanan_2007_emotional_memory_retrieval"
+          "ref.mikulincer_2002_attachment_security"
         ]
       },
       "title_vi": null,
       "subtitle_vi": null,
-      "story_id": null,
+      "story_id": "story.call_me_at_the_last_stop",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
@@ -1038,18 +788,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "memory"
+          "relationship",
+          "attachment"
         ],
-        "tie_break_order": 1022
+        "tie_break_order": 1033
       }
     },
     {
-      "id": "old_song_opens_a_closed_room",
+      "id": "door_stays_where_home_begins",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Có những bài hát chỉ vừa cất lên\nđã mở lại một căn phòng tưởng như đã khóa.",
-      "primary_theme": "emotion",
+      "text_vi": "Cánh cửa không hỏi vì sao đôi giày trở về muộn.\nNó vẫn nằm đúng chỗ để người đi biết mình đã về.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -1061,10 +811,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_memory"
+          "concept.attachment_security"
         ],
         "theories": [
-          "theory.emotional_memory"
+          "theory.attachment_security"
         ],
         "frameworks": [
 
@@ -1073,9 +823,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "memory",
-          "song"
+          "relationship",
+          "attachment",
+          "home"
         ]
       },
       "rights": {
@@ -1088,9 +838,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Một tín hiệu quen thuộc có thể gợi lại bối cảnh cảm xúc đã xa.",
-        "observation_key": "song_reopens_old_room",
-        "structure_pattern": "present_cue_reopens_past_context"
+        "semantic_intent": "Tính ổn định của nơi trở về có thể mang lại một dấu hiệu an toàn.",
+        "observation_key": "door_and_late_shoes",
+        "structure_pattern": "stable_return_point_marks_safety"
       },
       "display": {
         "mode": "poster",
@@ -1100,10 +850,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.emotional_memory.prior_experience_may_shape_present_response"
+          "theory.attachment_security.reliable_presence_supports_exploration"
         ],
         "reference_ids": [
-          "ref.buchanan_2007_emotional_memory_retrieval"
+          "ref.mikulincer_2002_attachment_security"
         ]
       },
       "title_vi": null,
@@ -1116,18 +866,18 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "memory"
+          "relationship",
+          "attachment"
         ],
-        "tie_break_order": 1023
+        "tie_break_order": 1034
       }
     },
     {
-      "id": "coffee_returns_a_distant_morning",
+      "id": "the_opposite_chair_stays_occupied",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Mùi cà phê từ một quán lạ\nđôi khi đưa ta về một buổi sáng rất xa.",
-      "primary_theme": "emotion",
+      "text_vi": "Có những cuộc trò chuyện không cần lời hay nhất.\nChỉ cần chiếc ghế đối diện vẫn còn người ngồi.",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -1139,10 +889,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.emotional_memory"
+          "concept.attachment_security"
         ],
         "theories": [
-          "theory.emotional_memory"
+          "theory.attachment_security"
         ],
         "frameworks": [
 
@@ -1151,9 +901,9 @@
 
         ],
         "keywords": [
-          "emotion",
-          "memory",
-          "coffee"
+          "relationship",
+          "attachment",
+          "conversation"
         ]
       },
       "rights": {
@@ -1166,9 +916,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Một cảm giác hiện tại có thể gợi lại một ký ức cảm xúc không chủ ý.",
-        "observation_key": "coffee_scent_evokes_morning",
-        "structure_pattern": "sensory_cue_bridges_present_and_past"
+        "semantic_intent": "Sự hiện diện bền bỉ đôi khi quan trọng hơn khả năng nói điều hoàn hảo.",
+        "observation_key": "occupied_opposite_chair",
+        "structure_pattern": "continued_presence_outweighs_perfect_words"
       },
       "display": {
         "mode": "poster",
@@ -1178,10 +928,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.emotional_memory.prior_experience_may_shape_present_response"
+          "theory.attachment_security.reliable_presence_supports_exploration"
         ],
         "reference_ids": [
-          "ref.buchanan_2007_emotional_memory_retrieval"
+          "ref.mikulincer_2002_attachment_security"
         ]
       },
       "title_vi": null,
@@ -1194,20 +944,20 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "memory"
+          "relationship",
+          "attachment"
         ],
-        "tie_break_order": 1024
+        "tie_break_order": 1035
       }
     },
     {
-      "id": "attributed.ma.iv_07.suppress_injury",
+      "id": "attributed.ma.vi_06.best_revenge",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Buông ý nghĩ ấy, tiếng kêu “Tôi bị tổn thương” cũng biến mất. Buông tiếng kêu ấy, cảm giác về vết thương cũng đổi khác.",
-      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 7",
-      "primary_theme": "emotion",
+      "text_vi": "Cách đáp trả tốt nhất là không trở thành bản sao của người đã làm điều sai với bạn.",
+      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 6",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
@@ -1215,7 +965,7 @@
         "source_url": "https://www.gutenberg.org/ebooks/55317",
         "source_language": "en",
         "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 7; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 6; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [
@@ -1231,7 +981,7 @@
 
         ],
         "keywords": [
-          "judgment"
+          "integrity"
         ]
       },
       "rights": {
@@ -1244,7 +994,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Buông ý nghĩ ấy, tiếng kêu “Tôi bị tổn thương” cũng biến mất. Buông tiếng kêu ấy, cảm giác về vết thương cũng đổi khác.",
+        "semantic_intent": "Cách đáp trả tốt nhất là không trở thành bản sao của người đã làm điều sai với bạn.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -1262,21 +1012,21 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "judgment"
+          "relationships",
+          "integrity"
         ],
-        "tie_break_order": 1126
+        "tie_break_order": 1141
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.ma.viii_47.judgment_afflicts",
+      "id": "attributed.ma.vi_39.adapt_love",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi buồn khổ vì một điều bên ngoài, không chỉ bản thân sự việc làm bạn đau, mà còn là phán đoán của bạn về nó. Và phán đoán ấy là phần bạn có thể xem xét lại.",
-      "subtitle_vi": "Suy tưởng · Quyển VIII, đoạn 47",
-      "primary_theme": "emotion",
+      "text_vi": "Hãy thích nghi với những gì số phận đã trao; hãy chân thành yêu thương những người mà cuộc đời đặt bên cạnh bạn.",
+      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 39",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
@@ -1284,7 +1034,7 @@
         "source_url": "https://www.gutenberg.org/ebooks/55317",
         "source_language": "en",
         "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 47; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 39; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [
@@ -1300,7 +1050,7 @@
 
         ],
         "keywords": [
-          "judgment"
+          "acceptance"
         ]
       },
       "rights": {
@@ -1313,7 +1063,76 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Khi buồn khổ vì một điều bên ngoài, không chỉ bản thân sự việc làm bạn đau, mà còn là phán đoán của bạn về nó. Và phán đoán ấy là phần bạn có thể xem xét lại.",
+        "semantic_intent": "Hãy thích nghi với những gì số phận đã trao; hãy chân thành yêu thương những người mà cuộc đời đặt bên cạnh bạn.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "relationships",
+          "acceptance"
+        ],
+        "tie_break_order": 1146
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vi_48.others_excellence",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi muốn làm lòng mình sáng lên, hãy nghĩ đến những phẩm chất tốt đẹp của người quanh bạn: sự năng nổ của người này, nét khiêm nhường của người kia, lòng rộng rãi của một người khác.",
+      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 48",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 48; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "appreciation"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Khi muốn làm lòng mình sáng lên, hãy nghĩ đến những phẩm chất tốt đẹp của người quanh bạn: sự năng nổ của người này, nét khiêm nhường của người kia, lòng rộng rãi của một người khác.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -1331,21 +1150,159 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "judgment"
+          "relationships",
+          "appreciation"
         ],
-        "tie_break_order": 1162
+        "tie_break_order": 1147
       },
       "knowledge_basis": null
     },
     {
-      "id": "an_old_scent_can_open_an_old_room",
+      "id": "attributed.ma.vi_54.swarm_bee",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Điều không có ích cho cả đàn thì cũng không thật sự có ích cho một con ong.",
+      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 54",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 54; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "common_good"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Điều không có ích cho cả đàn thì cũng không thật sự có ích cho một con ong.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "relationships",
+          "common_good"
+        ],
+        "tie_break_order": 1150
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vii_07.accept_help",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng xấu hổ khi nhận sự giúp đỡ. Phần việc của bạn vẫn là làm phần mình; nếu không thể vượt bức tường một mình nhưng có thể làm được nhờ người khác, thì sao phải từ chối?",
+      "subtitle_vi": "Suy tưởng · Quyển VII, đoạn 7",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 7; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "support"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đừng xấu hổ khi nhận sự giúp đỡ. Phần việc của bạn vẫn là làm phần mình; nếu không thể vượt bức tường một mình nhưng có thể làm được nhờ người khác, thì sao phải từ chối?",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "relationships",
+          "support"
+        ],
+        "tie_break_order": 1153
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "safe_return_can_help_us_go_farther",
       "revision": 1,
       "kind": "selflo_original",
-      "title_vi": "Cánh cửa của ký ức",
-      "text_vi": "Một mùi cũ có thể mở lại căn phòng cũ trong lòng. Nhận ra cánh cửa ấy không có nghĩa mình phải bước vào.",
+      "title_vi": "Một nơi để trở về",
+      "text_vi": "Một nơi để trở về không giữ chân mình; chính cảm giác có thể trở về mới cho mình can đảm đi xa.",
       "subtitle_vi": null,
-      "primary_theme": "emotion",
+      "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -1369,10 +1326,10 @@
 
         ],
         "keywords": [
-          "ký ức cảm xúc",
-          "mùi hương",
-          "nhận biết",
-          "quá khứ"
+          "tin cậy",
+          "điểm trở về",
+          "an toàn",
+          "khám phá"
         ]
       },
       "rights": {
@@ -1385,7 +1342,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Một mùi cũ có thể mở lại căn phòng cũ trong lòng. Nhận ra cánh cửa ấy không có nghĩa mình phải bước vào.",
+        "semantic_intent": "Một nơi để trở về không giữ chân mình; chính cảm giác có thể trở về mới cho mình can đảm đi xa.",
         "observation_key": null,
         "structure_pattern": "story_distillation"
       },
@@ -1395,7 +1352,7 @@
         "featured": false,
         "style": "paper_quote"
       },
-      "story_id": "story.cafe_and_smoke_in_curtain",
+      "story_id": "story.driver_and_last_stop_light",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
@@ -1403,13 +1360,13 @@
 
         ],
         "presentation_tags": [
-          "emotion",
-          "ký ức cảm xúc",
-          "mùi hương",
-          "nhận biết",
-          "quá khứ"
+          "relationships",
+          "tin cậy",
+          "điểm trở về",
+          "an toàn",
+          "khám phá"
         ],
-        "tie_break_order": 3003
+        "tie_break_order": 3000
       },
       "knowledge_basis": null
     }

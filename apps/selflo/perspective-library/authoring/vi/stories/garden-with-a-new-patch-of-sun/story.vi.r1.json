@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.garden_with_a_new_patch_of_sun",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Khoảng nắng mới trong khu vườn",
+  "subtitle_vi": "Một cành lớn không trở lại sau giông; khoảng trống của nó làm nhịp sống dưới tán cây đổi khác.",
+  "hero_image": null,
+  "primary_theme": "adversity_resilience",
+  "metadata": {
+    "concept_ids": [
+      "concept.resilience"
+    ],
+    "emotion_tags": [
+      "loss",
+      "renewal"
+    ],
+    "keywords": [
+      "cành gãy",
+      "ánh sáng",
+      "khu vườn",
+      "hệ sinh thái",
+      "không có con người"
+    ],
+    "story_style": "reflective_journey"
+  },
+  "sections": [
+    {
+      "id": "the_broken_canopy",
+      "title_vi": "Khoảng trống trên tán",
+      "blocks": [
+        {
+          "id": "the_broken_canopy.1",
+          "type": "paragraph",
+          "text_vi": "Sau đêm giông, một cành lớn nằm ngang dưới gốc cây. Chỗ nó từng nối với thân còn sáng màu. Trên cao, tán lá có một khoảng hở méo, để lộ bầu trời mà khu vườn nhiều năm chưa nhìn thấy."
+        },
+        {
+          "id": "the_broken_canopy.2",
+          "type": "paragraph",
+          "text_vi": "Những lá trên cành gãy héo dần. Tổ chim cũ rơi xuống lớp cỏ. Phần đã mất không mọc lại theo đúng đường cũ."
+        }
+      ]
+    },
+    {
+      "id": "light_reaches_the_ground",
+      "title_vi": "Ánh sáng chạm đất",
+      "blocks": [
+        {
+          "id": "light_reaches_the_ground.1",
+          "type": "paragraph",
+          "text_vi": "Khi mặt trời lên, một vệt nắng đi qua khoảng hở và nằm trên nền đất vốn luôn râm. Đất ấm hơn. Hạt cỏ ngủ trong lớp mùn bắt đầu nứt. Những cây thấp nghiêng lá về phía vùng sáng mới."
+        },
+        {
+          "id": "light_reaches_the_ground.2",
+          "type": "paragraph",
+          "text_vi": "Không phải mọi thay đổi đều thuận lợi. Rêu ở chỗ nắng gắt khô đi, vài cây non mất bóng che. Bọ và kiến đổi đường. Khu vườn không thay một mất mát bằng một phần thưởng tương đương; nó chỉ bắt đầu sắp xếp lại quanh điều đã xảy ra."
+        },
+        {
+          "id": "light_reaches_the_ground.3",
+          "type": "pull_quote",
+          "text_vi": "Ánh sáng mới không làm cành gãy trở lại. Nó chỉ mở một điều kiện chưa từng có ở nơi cành từng che.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "a_different_shape",
+      "title_vi": "Một hình dạng khác",
+      "blocks": [
+        {
+          "id": "a_different_shape.1",
+          "type": "paragraph",
+          "text_vi": "Qua nhiều tuần, cỏ phủ vùng đất trống. Một dây leo tìm được cột nắng và vươn lên. Trên thân cây, các chồi bên dưới vết gãy mở lá theo hướng khác trước."
+        },
+        {
+          "id": "a_different_shape.2",
+          "type": "paragraph",
+          "text_vi": "Khoảng hở vẫn còn nhìn thấy. Mỗi buổi trưa, nó di chuyển một vệt sáng qua nền vườn. Nơi ấy không trở lại hình dạng trước giông, cũng không ngừng là khu vườn."
+        },
+        {
+          "id": "a_different_shape.3",
+          "type": "paragraph",
+          "text_vi": "Khi mùa sau đến, những bông hoa nhỏ xuất hiện đúng dải nắng mới. Phía trên chúng, đầu cành gãy đã sẫm màu, nằm yên như một phần của hình dạng hiện tại."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Phục hồi không nhất thiết là khôi phục nguyên trạng. Một hệ thống có thể giữ dấu vết mất mát, đồng thời tổ chức lại để sự sống tiếp tục trong điều kiện mới."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 04",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "garden_with_a_new_patch_of_sun",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

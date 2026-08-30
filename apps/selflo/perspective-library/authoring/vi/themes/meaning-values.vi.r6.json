@@ -3,170 +3,19 @@
   "content_version": "quote-research-preview-7",
   "entity": "perspective_theme",
   "status": "content_preview",
-  "primary_theme": "work_achievement",
-  "display_name_vi": "Công việc và thành tựu",
-  "description_vi": "Làm việc, sáng tạo, lãnh đạo, thành công và điều mình muốn tạo ra.",
+  "primary_theme": "meaning_values",
+  "display_name_vi": "Ý nghĩa và giá trị",
+  "description_vi": "Điều mình coi trọng, mục đích sống và lựa chọn nhất quán với giá trị.",
   "language": "vi",
   "quotes": [
     {
-      "id": "quote.builder_and_shapeless_stones",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Công việc thật sự của mình đôi khi nhỏ hơn rất nhiều so với công việc mình đã làm trong đầu.",
-      "subtitle_vi": null,
-      "story_id": "story.builder_and_shapeless_stones",
-      "primary_theme": "work_achievement",
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "ranh giới",
-          "công việc",
-          "điều chưa rõ"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": null,
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Bản thảo Selflo",
-        "source_detail": "Biên tập từ authoring source do owner cung cấp; chưa xác nhận quyền phát hành."
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-          "frustration",
-          "uncertainty"
-        ],
-        "keywords": [
-          "ranh giới công việc",
-          "giả định",
-          "trách nhiệm"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Cần owner xác nhận provenance và quyết định kind cuối trước khi publish."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Tách phần việc có thể làm khỏi giả định và trách nhiệm thuộc về người khác.",
-        "observation_key": "work.boundary.unowned_load",
-        "structure_pattern": "parable.sorting_objects"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "cool_observe"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "quote.warehouse_path_between_boxes",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Lối đi không hẹp lại vì một chiếc hộp, cũng không rộng ra nhờ một lần dọn kho.",
-      "subtitle_vi": null,
-      "story_id": "story.warehouse_path_between_boxes",
-      "primary_theme": "work_achievement",
-      "selection": {
-        "source_type": "theory",
-        "reflection_kind": null,
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "thói quen",
-          "lặp lại",
-          "hệ quả"
-        ],
-        "tie_break_order": 1
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": null,
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Bản thảo Selflo Story Studio",
-        "source_detail": "Bản thảo nguyên bản do AI hỗ trợ theo yêu cầu owner; chưa xác nhận quyền phát hành."
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-          "theory.habit_automaticity"
-        ],
-        "frameworks": [
-          "framework.everyday_causality"
-        ],
-        "emotion_tags": [
-          "frustration",
-          "uncertainty"
-        ],
-        "keywords": [
-          "thói quen",
-          "lặp lại",
-          "nhân quả đời thường"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Bản thảo nguyên bản cần owner review và xác nhận rights trước khi publish."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Những hành động nhỏ lặp lại trong cùng bối cảnh có thể dần tạo ra một lối hành động tự động.",
-        "observation_key": "work.habit.warehouse_path",
-        "structure_pattern": "parable.repeated_path"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "cool_observe"
-      },
-      "knowledge_basis": {
-        "core_truth_ids": [
-          "theory.habit_automaticity.repetition_in_context_leaves_a_path"
-        ],
-        "reference_ids": [
-          "ref.stojanovic_2022_habit_context"
-        ]
-      }
-    },
-    {
-      "id": "hands_know_who_the_work_is_for",
+      "id": "candle_is_seen_when_it_goes_out",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Cùng một chiếc bàn, công việc khác đi\nkhi đôi tay biết mình đang làm điều gì và cho ai.",
-      "primary_theme": "work_achievement",
+      "title_vi": "Khi nến tắt",
+      "text_vi": "Ngọn nến cháy đều thường không làm ai chú ý. Nhưng khi tắt đi, mọi người mới nhìn thấy khoảng tối nó từng giữ lại.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -174,14 +23,14 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Quan sát nguyên bản"
       },
       "metadata": {
         "concepts": [
-          "concept.autonomous_motivation"
+
         ],
         "theories": [
-          "theory.self_determination_at_work"
+
         ],
         "frameworks": [
 
@@ -190,9 +39,16 @@
 
         ],
         "keywords": [
-          "work",
-          "motivation",
-          "purpose"
+          "stableGood",
+          "energy_layer"
+        ],
+        "legacy_content_kind": "observation",
+        "legacy_layer_ids": [
+          "energy_layer",
+          "growth_layer"
+        ],
+        "legacy_behavior_ids": [
+
         ]
       },
       "rights": {
@@ -205,9 +61,242 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Cảm nhận về mục đích và kết nối có thể thay đổi cách một người hiện diện trong công việc.",
-        "observation_key": "hands_at_purposeful_worktable",
-        "structure_pattern": "same_task_changes_with_owned_meaning"
+        "semantic_intent": "Giá trị của điều ổn định thường chỉ được nhận ra khi nó vắng mặt.",
+        "observation_key": "candle_goes_out",
+        "structure_pattern": null
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 92,
+        "featured": true,
+        "style": "soft_paper_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "stableGood",
+          "energy_layer"
+        ],
+        "tie_break_order": -92
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "clarity_before_speed",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Rõ trước, nhanh sau",
+      "text_vi": "Không phải lúc nào đi nhanh hơn cũng đưa mình gần hơn. Đôi khi điều cần trước tiên là biết mình đang đi đâu.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "control_layer",
+          "growth_layer"
+        ],
+        "legacy_content_kind": "quote",
+        "legacy_layer_ids": [
+          "control_layer",
+          "growth_layer"
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Biết hướng đi quan trọng hơn việc chỉ tăng tốc.",
+        "observation_key": null,
+        "structure_pattern": null
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 84,
+        "featured": true,
+        "style": "ember_theory"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "control_layer",
+          "growth_layer"
+        ],
+        "tie_break_order": -84
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "meaning_is_often_found_in_how",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Ý nghĩa đôi khi nằm trong cách mình đi qua, không chỉ ở kết quả",
+      "text_vi": "Không phải mọi thứ chỉ có giá trị khi nó đưa tới kết quả lớn. Có những điều có ý nghĩa vì cách nó làm mình trở thành ai.",
+      "subtitle_vi": "Nếu chỉ sống bằng kết quả, mình sẽ bỏ lỡ cách một việc đang nuôi lớn mình từ bên trong.",
+      "story_id": null,
+      "primary_theme": "meaning_values",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "philosophy_layer",
+          "growth_layer",
+          "identity_layer"
+        ],
+        "tie_break_order": 5
+      },
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": null,
+        "source_label": "Meaning-centered view",
+        "source_detail": "One-time legacy selection migration"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.meaning_in_life"
+        ],
+        "theories": [
+          "theory.meaning_in_life"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "meaning_is_often_found_in_how"
+        ],
+        "legacy_content_kind": "philosophy_digest",
+        "legacy_layer_ids": [
+          "philosophy_layer",
+          "growth_layer",
+          "identity_layer"
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Legacy migration input; owner rights review required before Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Bảo toàn presentation và selection behavior hiện hành.",
+        "observation_key": null,
+        "structure_pattern": null
+      },
+      "display": {
+        "mode": "insight",
+        "priority": 0,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections"
+        ],
+        "reference_ids": [
+          "ref.steger_2006_meaning_in_life"
+        ]
+      }
+    },
+    {
+      "id": "compass_keeps_direction_not_steps",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Chiếc la bàn không bước thay người đi.\nNó chỉ giữ một hướng khi con đường đổi dạng.",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.values_congruent_action"
+        ],
+        "theories": [
+          "theory.psychological_flexibility_values"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "values",
+          "compass",
+          "direction"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Giá trị có thể định hướng mà không quyết định thay từng lựa chọn cụ thể.",
+        "observation_key": "compass_on_changing_road",
+        "structure_pattern": "direction_guides_without_taking_steps"
       },
       "display": {
         "mode": "poster",
@@ -217,10 +306,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+          "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes"
         ],
         "reference_ids": [
-          "ref.parker_2022_sdt_work"
+          "ref.hayes_2006_psychological_flexibility"
         ]
       },
       "title_vi": null,
@@ -233,18 +322,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "motivation"
+          "values",
+          "compass"
         ],
-        "tie_break_order": 1077
+        "tie_break_order": 1104
       }
     },
     {
-      "id": "chair_is_repaired_for_someone",
+      "id": "home_is_known_by_what_it_keeps",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Người thợ sửa chiếc ghế kỹ hơn\nkhi biết ai sẽ ngồi lên nó mỗi chiều.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Một căn nhà không chỉ được nhận ra bằng màu sơn,\nmà bằng những thứ chủ nhà chọn giữ qua nhiều lần chuyển chỗ.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -256,10 +345,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.autonomous_motivation"
+          "concept.values_congruent_action"
         ],
         "theories": [
-          "theory.self_determination_at_work"
+          "theory.psychological_flexibility_values"
         ],
         "frameworks": [
 
@@ -268,9 +357,9 @@
 
         ],
         "keywords": [
-          "work",
-          "connection",
-          "craft"
+          "values",
+          "home",
+          "choice"
         ]
       },
       "rights": {
@@ -283,9 +372,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Mối liên hệ giữa việc làm và người được phục vụ có thể làm công việc trở nên cụ thể hơn.",
-        "observation_key": "carpenter_repairs_known_users_chair",
-        "structure_pattern": "relational_context_deepens_care"
+        "semantic_intent": "Những lựa chọn được giữ lại qua thay đổi có thể làm lộ điều được coi trọng.",
+        "observation_key": "objects_kept_across_moves",
+        "structure_pattern": "repeated_choice_reveals_value"
       },
       "display": {
         "mode": "poster",
@@ -295,10 +384,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+          "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes"
         ],
         "reference_ids": [
-          "ref.parker_2022_sdt_work"
+          "ref.hayes_2006_psychological_flexibility"
         ]
       },
       "title_vi": null,
@@ -311,18 +400,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "connection"
+          "values",
+          "home"
         ],
-        "tie_break_order": 1078
+        "tie_break_order": 1105
       }
     },
     {
-      "id": "door_opens_more_lightly_from_inside",
+      "id": "small_suitcase_reveals_what_matters",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Một cánh cửa tự mở từ bên trong\nthường nhẹ hơn cánh cửa bị đẩy mãi từ ngoài.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Mỗi lần chọn một cuốn sách mang theo,\nchiếc vali nhỏ cũng âm thầm kể điều gì đáng ở lại.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -334,10 +423,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.autonomous_motivation"
+          "concept.values_congruent_action"
         ],
         "theories": [
-          "theory.self_determination_at_work"
+          "theory.psychological_flexibility_values"
         ],
         "frameworks": [
 
@@ -346,9 +435,9 @@
 
         ],
         "keywords": [
-          "work",
-          "autonomy",
-          "door"
+          "values",
+          "suitcase",
+          "book"
         ]
       },
       "rights": {
@@ -361,9 +450,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Cảm giác lựa chọn từ bên trong khác với sức ép chỉ đến từ bên ngoài.",
-        "observation_key": "door_opened_from_inside",
-        "structure_pattern": "internal_choice_contrasts_external_pressure"
+        "semantic_intent": "Giới hạn buộc lựa chọn và lựa chọn có thể phản ánh điều được coi trọng.",
+        "observation_key": "book_chosen_for_small_suitcase",
+        "structure_pattern": "limited_space_reveals_priority"
       },
       "display": {
         "mode": "poster",
@@ -373,10 +462,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+          "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes"
         ],
         "reference_ids": [
-          "ref.parker_2022_sdt_work"
+          "ref.hayes_2006_psychological_flexibility"
         ]
       },
       "title_vi": null,
@@ -389,18 +478,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "autonomy"
+          "values",
+          "suitcase"
         ],
-        "tie_break_order": 1079
+        "tie_break_order": 1106
       }
     },
     {
-      "id": "cook_still_wants_to_taste_the_soup",
+      "id": "porch_light_marks_the_kind_of_home",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Căn bếp sáng lâu hơn\nkhi người nấu vẫn còn muốn nếm món mình đang làm.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Ngọn đèn ở hiên không soi hết con đường.\nNó chỉ nói căn nhà này muốn để ai tìm thấy lối về.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -412,10 +501,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.autonomous_motivation"
+          "concept.values_congruent_action"
         ],
         "theories": [
-          "theory.self_determination_at_work"
+          "theory.psychological_flexibility_values"
         ],
         "frameworks": [
 
@@ -424,9 +513,9 @@
 
         ],
         "keywords": [
-          "work",
-          "motivation",
-          "cooking"
+          "values",
+          "light",
+          "home"
         ]
       },
       "rights": {
@@ -439,9 +528,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Sự quan tâm nội tại đến chất lượng công việc có thể duy trì sự gắn bó khác với ép buộc đơn thuần.",
-        "observation_key": "cook_tastes_own_dish",
-        "structure_pattern": "interest_sustains_engagement"
+        "semantic_intent": "Một hành động nhỏ có thể thể hiện loại nơi chốn hoặc mối quan hệ người ta muốn tạo ra.",
+        "observation_key": "porch_light_for_returning_people",
+        "structure_pattern": "small_action_signals_chosen_value"
       },
       "display": {
         "mode": "poster",
@@ -451,10 +540,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+          "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes"
         ],
         "reference_ids": [
-          "ref.parker_2022_sdt_work"
+          "ref.hayes_2006_psychological_flexibility"
         ]
       },
       "title_vi": null,
@@ -467,18 +556,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "motivation"
+          "values",
+          "light"
         ],
-        "tie_break_order": 1080
+        "tie_break_order": 1107
       }
     },
     {
-      "id": "timecard_cannot_measure_presence",
+      "id": "some_footprints_lead_toward_home",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Chiếc đồng hồ chấm công biết ta đã ở đó bao lâu.\nNó không biết có phần nào trong ta thật sự có mặt.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Một ngày bận rộn để lại rất nhiều dấu chân.\nChỉ vài dấu trong số đó dẫn về nơi lòng mình muốn đến.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -490,10 +579,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.autonomous_motivation"
+          "concept.values_congruent_action"
         ],
         "theories": [
-          "theory.self_determination_at_work"
+          "theory.psychological_flexibility_values"
         ],
         "frameworks": [
 
@@ -502,9 +591,9 @@
 
         ],
         "keywords": [
-          "work",
-          "time",
-          "engagement"
+          "values",
+          "footprints",
+          "direction"
         ]
       },
       "rights": {
@@ -517,9 +606,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Thời gian hiện diện không phản ánh đầy đủ chất lượng gắn bó hoặc động lực với công việc.",
-        "observation_key": "timecard_and_inner_presence",
-        "structure_pattern": "measured_duration_differs_from_engagement"
+        "semantic_intent": "Nhiều hoạt động không tự động đồng nghĩa với nhiều hành động phù hợp điều được coi trọng.",
+        "observation_key": "footprints_from_busy_day",
+        "structure_pattern": "activity_volume_differs_from_value_direction"
       },
       "display": {
         "mode": "poster",
@@ -529,10 +618,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+          "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes"
         ],
         "reference_ids": [
-          "ref.parker_2022_sdt_work"
+          "ref.hayes_2006_psychological_flexibility"
         ]
       },
       "title_vi": null,
@@ -545,18 +634,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "time"
+          "values",
+          "footprints"
         ],
-        "tie_break_order": 1081
+        "tie_break_order": 1108
       }
     },
     {
-      "id": "musician_stays_with_one_lost_note",
-      "revision": 1,
+      "id": "old_chair_holds_more_than_wood",
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Người chơi đàn không tập cả bản nhạc mỗi tối.\nCó hôm họ chỉ ngồi lại với một nốt thường bị lạc.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Một chiếc ghế cũ có thể vô giá trong căn nhà,\nkhông vì gỗ tốt mà vì những người từng ngồi quanh nó.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -568,10 +657,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.deliberate_practice"
+          "concept.meaning_in_life"
         ],
         "theories": [
-          "theory.deliberate_practice"
+          "theory.meaning_in_life"
         ],
         "frameworks": [
 
@@ -580,9 +669,9 @@
 
         ],
         "keywords": [
-          "work",
-          "practice",
-          "music"
+          "meaning",
+          "chair",
+          "memory"
         ]
       },
       "rights": {
@@ -595,9 +684,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Luyện tập có thể tập trung vào điểm chưa vững thay vì lặp lại toàn bộ điều đã biết.",
-        "observation_key": "musician_practices_one_note",
-        "structure_pattern": "whole_skill_improves_through_targeted_part"
+        "semantic_intent": "Ý nghĩa của một vật có thể đến từ câu chuyện và kết nối quanh nó hơn là chất liệu.",
+        "observation_key": "old_chair_and_shared_history",
+        "structure_pattern": "relational_history_creates_meaning"
       },
       "display": {
         "mode": "poster",
@@ -607,15 +696,15 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+          "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections"
         ],
         "reference_ids": [
-          "ref.ericsson_1993_deliberate_practice"
+          "ref.steger_2006_meaning_in_life"
         ]
       },
       "title_vi": null,
       "subtitle_vi": null,
-      "story_id": "story.note_in_measure_seventeen",
+      "story_id": "story.chair_across_three_homes",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
@@ -623,18 +712,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "practice"
+          "meaning",
+          "chair"
         ],
-        "tie_break_order": 1082
+        "tie_break_order": 1109
       }
     },
     {
-      "id": "knife_sharpens_at_the_same_angle",
-      "revision": 1,
+      "id": "bus_ticket_keeps_the_day_of_return",
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Con dao sắc lên qua nhiều lần đi đúng góc trên viên đá,\nkhông phải từ một lần mài thật mạnh.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Chiếc vé xe chỉ là mảnh giấy nhỏ,\ncho đến khi nó giữ lại ngày một người quyết định trở về.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -646,10 +735,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.deliberate_practice"
+          "concept.meaning_in_life"
         ],
         "theories": [
-          "theory.deliberate_practice"
+          "theory.meaning_in_life"
         ],
         "frameworks": [
 
@@ -658,9 +747,9 @@
 
         ],
         "keywords": [
-          "work",
-          "practice",
-          "precision"
+          "meaning",
+          "ticket",
+          "return"
         ]
       },
       "rights": {
@@ -673,9 +762,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Sự chính xác và lặp lại có chủ đích khác với một nỗ lực lớn nhưng thiếu điều chỉnh.",
-        "observation_key": "knife_on_sharpening_stone",
-        "structure_pattern": "precise_repetition_outweighs_single_force"
+        "semantic_intent": "Một vật bình thường có thể mang ý nghĩa qua lựa chọn và câu chuyện gắn với nó.",
+        "observation_key": "ticket_from_return_journey",
+        "structure_pattern": "ordinary_object_holds_life_turn"
       },
       "display": {
         "mode": "poster",
@@ -685,15 +774,15 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+          "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections"
         ],
         "reference_ids": [
-          "ref.ericsson_1993_deliberate_practice"
+          "ref.steger_2006_meaning_in_life"
         ]
       },
       "title_vi": null,
       "subtitle_vi": null,
-      "story_id": null,
+      "story_id": "story.ticket_printed_for_tuesday",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
@@ -701,18 +790,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "practice"
+          "meaning",
+          "ticket"
         ],
-        "tie_break_order": 1083
+        "tie_break_order": 1110
       }
     },
     {
-      "id": "carpenter_measures_the_uneven_leg",
+      "id": "village_road_contains_a_childhood",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Người thợ mộc đo lại chiếc chân bàn còn chênh,\nthay vì vuốt mãi phần mặt gỗ đã phẳng.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Con đường làng không dài trên bản đồ,\nnhưng có thể chứa gần như cả tuổi thơ của một người.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -724,10 +813,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.deliberate_practice"
+          "concept.meaning_in_life"
         ],
         "theories": [
-          "theory.deliberate_practice"
+          "theory.meaning_in_life"
         ],
         "frameworks": [
 
@@ -736,9 +825,9 @@
 
         ],
         "keywords": [
-          "work",
-          "practice",
-          "carpentry"
+          "meaning",
+          "road",
+          "childhood"
         ]
       },
       "rights": {
@@ -751,9 +840,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Cải thiện cần quay về phần tạo ra sai lệch thay vì chỉ làm thêm phần đã tốt.",
-        "observation_key": "carpenter_checks_uneven_table_leg",
-        "structure_pattern": "practice_targets_source_of_error"
+        "semantic_intent": "Độ dài vật lý không đo được chiều sâu câu chuyện mà một nơi chốn mang theo.",
+        "observation_key": "village_road_and_childhood",
+        "structure_pattern": "small_place_contains_long_history"
       },
       "display": {
         "mode": "poster",
@@ -763,10 +852,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+          "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections"
         ],
         "reference_ids": [
-          "ref.ericsson_1993_deliberate_practice"
+          "ref.steger_2006_meaning_in_life"
         ]
       },
       "title_vi": null,
@@ -779,18 +868,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "practice"
+          "meaning",
+          "road"
         ],
-        "tie_break_order": 1084
+        "tie_break_order": 1111
       }
     },
     {
-      "id": "even_stitch_follows_many_undoings",
+      "id": "morning_thread_gathers_the_days",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Một mũi khâu đều được sinh ra\ntừ rất nhiều mũi khâu từng phải tháo.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Một việc nhỏ lặp lại mỗi sáng\nđôi khi là sợi chỉ giữ nhiều ngày rời rạc thành một đời sống.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -802,10 +891,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.deliberate_practice"
+          "concept.meaning_in_life"
         ],
         "theories": [
-          "theory.deliberate_practice"
+          "theory.meaning_in_life"
         ],
         "frameworks": [
 
@@ -814,9 +903,9 @@
 
         ],
         "keywords": [
-          "work",
-          "practice",
-          "sewing"
+          "meaning",
+          "morning",
+          "continuity"
         ]
       },
       "rights": {
@@ -829,9 +918,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Kỹ năng vững dần qua nhiều vòng thử, nhận phản hồi và sửa lại.",
-        "observation_key": "even_stitch_after_unstitching",
-        "structure_pattern": "skill_emerges_through_corrected_attempts"
+        "semantic_intent": "Những thực hành thường ngày có thể tạo cảm giác liên tục và mạch lạc qua thời gian.",
+        "observation_key": "morning_ritual_as_thread",
+        "structure_pattern": "small_ritual_connects_separate_days"
       },
       "display": {
         "mode": "poster",
@@ -841,10 +930,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+          "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections"
         ],
         "reference_ids": [
-          "ref.ericsson_1993_deliberate_practice"
+          "ref.steger_2006_meaning_in_life"
         ]
       },
       "title_vi": null,
@@ -857,18 +946,18 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "practice"
+          "meaning",
+          "morning"
         ],
-        "tie_break_order": 1085
+        "tie_break_order": 1112
       }
     },
     {
-      "id": "mason_checks_the_string_each_row",
+      "id": "chipped_cup_stays_for_its_story",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Bức tường thẳng bắt đầu từ việc người thợ\nnhìn lại sợi dây sau từng hàng gạch.",
-      "primary_theme": "work_achievement",
+      "text_vi": "Tách trà sứt miệng vẫn ở lại trên kệ,\nvì có những thứ được giữ bởi câu chuyện chứ không bởi vẻ nguyên vẹn.",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -880,10 +969,10 @@
       },
       "metadata": {
         "concepts": [
-          "concept.deliberate_practice"
+          "concept.meaning_in_life"
         ],
         "theories": [
-          "theory.deliberate_practice"
+          "theory.meaning_in_life"
         ],
         "frameworks": [
 
@@ -892,9 +981,9 @@
 
         ],
         "keywords": [
-          "work",
-          "practice",
-          "feedback"
+          "meaning",
+          "cup",
+          "story"
         ]
       },
       "rights": {
@@ -907,9 +996,9 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Phản hồi thường xuyên giúp điều chỉnh sai lệch trước khi nó tích lũy thành kết quả lớn.",
-        "observation_key": "mason_checks_alignment_string",
-        "structure_pattern": "frequent_feedback_prevents_accumulated_drift"
+        "semantic_intent": "Ý nghĩa và sự gắn bó có thể tồn tại dù một vật không còn hoàn hảo.",
+        "observation_key": "chipped_teacup_on_shelf",
+        "structure_pattern": "story_preserves_what_perfection_cannot"
       },
       "display": {
         "mode": "poster",
@@ -919,10 +1008,10 @@
       },
       "knowledge_basis": {
         "core_truth_ids": [
-          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+          "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections"
         ],
         "reference_ids": [
-          "ref.ericsson_1993_deliberate_practice"
+          "ref.steger_2006_meaning_in_life"
         ]
       },
       "title_vi": null,
@@ -935,20 +1024,20 @@
 
         ],
         "presentation_tags": [
-          "work",
-          "practice"
+          "meaning",
+          "cup"
         ],
-        "tie_break_order": 1086
+        "tie_break_order": 1113
       }
     },
     {
-      "id": "attributed.ma.iv_31.love_your_art",
+      "id": "attributed.ma.ii_17.fame_forgotten",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy yêu nghề mình đã học, dù nghề ấy khiêm nhường, và tìm thấy niềm thư thái trong chính nó.",
-      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 31",
-      "primary_theme": "work_achievement",
+      "text_vi": "Tồn tại là một cuộc chiến và một hành trình nơi đất lạ; còn điểm cuối của danh tiếng là sự lãng quên.",
+      "subtitle_vi": "Suy tưởng · Quyển II, đoạn 17",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
@@ -956,7 +1045,7 @@
         "source_url": "https://www.gutenberg.org/ebooks/55317",
         "source_language": "en",
         "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 31; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển II, đoạn 17; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [
@@ -972,7 +1061,7 @@
 
         ],
         "keywords": [
-          "craft"
+          "fame"
         ]
       },
       "rights": {
@@ -985,76 +1074,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Hãy yêu nghề mình đã học, dù nghề ấy khiêm nhường, và tìm thấy niềm thư thái trong chính nó.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "cool_observe"
-      },
-      "story_id": "story.photograph_missing_a_corner",
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "work_achievement",
-          "craft"
-        ],
-        "tie_break_order": 1131
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.ma.v_01.proper_business",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Ta thức dậy để làm công việc đúng với một con người; vậy sao lại than phiền khi bắt đầu điều mình được sinh ra để thực hiện?",
-      "subtitle_vi": "Suy tưởng · Quyển V, đoạn 1",
-      "primary_theme": "work_achievement",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển V, đoạn 1; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "purpose"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Ta thức dậy để làm công việc đúng với một con người; vậy sao lại than phiền khi bắt đầu điều mình được sinh ra để thực hiện?",
+        "semantic_intent": "Tồn tại là một cuộc chiến và một hành trình nơi đất lạ; còn điểm cuối của danh tiếng là sự lãng quên.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -1072,21 +1092,21 @@
 
         ],
         "presentation_tags": [
-          "work_achievement",
-          "purpose"
+          "meaning_values",
+          "fame"
         ],
-        "tie_break_order": 1136
+        "tie_break_order": 1118
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.ma.vi_19.human_power",
+      "id": "attributed.ma.iv_17.be_good_now",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu một việc có vẻ rất khó, đừng vội kết luận rằng nó vượt quá khả năng con người. Nếu đó là điều con người có thể làm và thuộc phần việc đúng đắn của họ, hãy tin rằng bạn cũng có thể vươn tới.",
-      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 19",
-      "primary_theme": "work_achievement",
+      "text_vi": "Đừng sắp đặt đời mình như thể còn mười nghìn năm để sống. Khi vẫn đang sống và vẫn còn có thể, hãy sống tử tế.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 17",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
@@ -1094,7 +1114,7 @@
         "source_url": "https://www.gutenberg.org/ebooks/55317",
         "source_language": "en",
         "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 19; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 17; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [
@@ -1110,7 +1130,7 @@
 
         ],
         "keywords": [
-          "self_efficacy"
+          "mortality"
         ]
       },
       "rights": {
@@ -1123,283 +1143,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Nếu một việc có vẻ rất khó, đừng vội kết luận rằng nó vượt quá khả năng con người. Nếu đó là điều con người có thể làm và thuộc phần việc đúng đắn của họ, hãy tin rằng bạn cũng có thể vươn tới.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "cool_observe"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "work_achievement",
-          "self_efficacy"
-        ],
-        "tie_break_order": 1143
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.ma.vi_26.duty_elements",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Trong đời sống, hãy nhớ mỗi bổn phận được tạo nên từ nhiều phần nhỏ. Ta có thể bình tĩnh nhìn từng phần và bắt tay vào việc trước mắt, không cần nổi giận với người đang giận mình.",
-      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 26",
-      "primary_theme": "work_achievement",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 26; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "calm_action"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Trong đời sống, hãy nhớ mỗi bổn phận được tạo nên từ nhiều phần nhỏ. Ta có thể bình tĩnh nhìn từng phần và bắt tay vào việc trước mắt, không cần nổi giận với người đang giận mình.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "midnight_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "work_achievement",
-          "calm_action"
-        ],
-        "tie_break_order": 1145
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.ma.vi_50.good_effort",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Rốt cuộc mục tiêu của bạn là gì? Là thực hiện một nỗ lực tốt đẹp như thế này. Vậy thì bạn đã thành công, dù mục đích ban đầu chưa đạt được.",
-      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 50",
-      "primary_theme": "work_achievement",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 50; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "process"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Rốt cuộc mục tiêu của bạn là gì? Là thực hiện một nỗ lực tốt đẹp như thế này. Vậy thì bạn đã thành công, dù mục đích ban đầu chưa đạt được.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "midnight_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "work_achievement",
-          "process"
-        ],
-        "tie_break_order": 1148
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.ma.vi_51.wise_work",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Người háo danh đặt hạnh phúc vào hành động của người khác. Người chạy theo khoái cảm tìm nó trong cảm giác của mình. Người khôn ngoan tạo ra nó trong chính việc mình làm.",
-      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 51",
-      "primary_theme": "work_achievement",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 51; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "agency"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Người háo danh đặt hạnh phúc vào hành động của người khác. Người chạy theo khoái cảm tìm nó trong cảm giác của mình. Người khôn ngoan tạo ra nó trong chính việc mình làm.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "cool_observe"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "work_achievement",
-          "agency"
-        ],
-        "tie_break_order": 1149
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.ma.viii_32.single_acts",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Hãy sắp xếp đời mình bằng từng hành động riêng lẻ; nếu mỗi hành động hoàn thành được phần của nó trong khả năng có thể, như vậy là đủ. Trong việc ấy, không ai ngăn được bạn.",
-      "subtitle_vi": "Suy tưởng · Quyển VIII, đoạn 32",
-      "primary_theme": "work_achievement",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 32; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "next_step"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Hãy sắp xếp đời mình bằng từng hành động riêng lẻ; nếu mỗi hành động hoàn thành được phần của nó trong khả năng có thể, như vậy là đủ. Trong việc ấy, không ai ngăn được bạn.",
+        "semantic_intent": "Đừng sắp đặt đời mình như thể còn mười nghìn năm để sống. Khi vẫn đang sống và vẫn còn có thể, hãy sống tử tế.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -1417,21 +1161,366 @@
 
         ],
         "presentation_tags": [
-          "work_achievement",
-          "next_step"
+          "meaning_values",
+          "mortality"
         ],
-        "tie_break_order": 1159
+        "tie_break_order": 1129
       },
       "knowledge_basis": null
     },
     {
-      "id": "not_every_stone_is_yours_to_carry_home",
+      "id": "attributed.ma.iv_35.one_day",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Mọi thứ chỉ tồn tại trong một ngày nào đó — cả người nhớ lẫn điều được nhớ.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 35",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 35; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "impermanence"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Mọi thứ chỉ tồn tại trong một ngày nào đó — cả người nhớ lẫn điều được nhớ.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "impermanence"
+        ],
+        "tie_break_order": 1132
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vii_03.worth_pursuit",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Giữa tất cả những điều ấy, hãy đứng vững, tử tế mà không kiêu ngạo, và hiểu rằng giá trị của một người gắn với điều họ lựa chọn theo đuổi.",
+      "subtitle_vi": "Suy tưởng · Quyển VII, đoạn 3",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 3; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "pursuit"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Giữa tất cả những điều ấy, hãy đứng vững, tử tế mà không kiêu ngạo, và hiểu rằng giá trị của một người gắn với điều họ lựa chọn theo đuổi.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "pursuit"
+        ],
+        "tie_break_order": 1152
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vii_56.life_overplus",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy hình dung đời cũ đã kết thúc. Phần còn lại, hãy sống như một khoảng thời gian được trao thêm ngoài điều bạn từng mong đợi.",
+      "subtitle_vi": "Suy tưởng · Quyển VII, đoạn 56",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 56; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "renewal"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Hãy hình dung đời cũ đã kết thúc. Phần còn lại, hãy sống như một khoảng thời gian được trao thêm ngoài điều bạn từng mong đợi.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "renewal"
+        ],
+        "tie_break_order": 1157
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.viii_33.fortune_gifts",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đón nhận quà tặng của vận may mà không kiêu hãnh; và để chúng rời đi mà không miễn cưỡng.",
+      "subtitle_vi": "Suy tưởng · Quyển VIII, đoạn 33",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 33; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "non_attachment"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đón nhận quà tặng của vận may mà không kiêu hãnh; và để chúng rời đi mà không miễn cưỡng.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "non_attachment"
+        ],
+        "tie_break_order": 1160
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.x_16.be_one",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng nói thêm về việc một người tốt nên như thế nào; hãy trở thành người ấy.",
+      "subtitle_vi": "Suy tưởng · Quyển X, đoạn 16",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển X, đoạn 16; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "action"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đừng nói thêm về việc một người tốt nên như thế nào; hãy trở thành người ấy.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "action"
+        ],
+        "tie_break_order": 1163
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "one_days_feeling_is_not_a_whole_life",
       "revision": 1,
       "kind": "selflo_original",
-      "title_vi": "Viên đá nào là của mình",
-      "text_vi": "Không phải viên đá nào người khác đặt xuống cũng là viên đá mình phải mang về nhà.",
+      "title_vi": "Không phải cả cuộc đời",
+      "text_vi": "Cảm xúc của một ngày là thật, nhưng nó không phải bản tóm tắt của cả cuộc đời.",
       "subtitle_vi": null,
-      "primary_theme": "work_achievement",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -1455,10 +1544,10 @@
 
         ],
         "keywords": [
-          "ranh giới",
-          "trách nhiệm",
-          "yêu cầu mơ hồ",
-          "công việc"
+          "cảm xúc",
+          "cuộc đời",
+          "ý nghĩa",
+          "giai đoạn"
         ]
       },
       "rights": {
@@ -1471,7 +1560,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Không phải viên đá nào người khác đặt xuống cũng là viên đá mình phải mang về nhà.",
+        "semantic_intent": "Cảm xúc của một ngày là thật, nhưng nó không phải bản tóm tắt của cả cuộc đời.",
         "observation_key": null,
         "structure_pattern": "story_distillation"
       },
@@ -1481,7 +1570,7 @@
         "featured": false,
         "style": "paper_quote"
       },
-      "story_id": "story.original_builder_and_shapeless_stones",
+      "story_id": "story.original_if_i_lived_a_human_life",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
@@ -1489,24 +1578,24 @@
 
         ],
         "presentation_tags": [
-          "work_achievement",
-          "ranh giới",
-          "trách nhiệm",
-          "yêu cầu mơ hồ",
-          "công việc"
+          "meaning_values",
+          "cảm xúc",
+          "cuộc đời",
+          "ý nghĩa",
+          "giai đoạn"
         ],
-        "tie_break_order": 3010
+        "tie_break_order": 3002
       },
       "knowledge_basis": null
     },
     {
-      "id": "do_not_throw_the_stone_into_the_next_persons_lake",
+      "id": "keep_the_lamp_when_the_sea_has_waves",
       "revision": 1,
       "kind": "selflo_original",
-      "title_vi": "Hồ của người kế tiếp",
-      "text_vi": "Ta không kiểm soát viên đá người khác ném xuống hồ mình, nhưng có thể chọn không ném nó sang hồ của người kế tiếp.",
+      "title_vi": "Giữ ngọn đèn",
+      "text_vi": "Ta không cần bắt biển ngừng có sóng; ta cần học cách giữ ngọn đèn khi chèo thuyền.",
       "subtitle_vi": null,
-      "primary_theme": "work_achievement",
+      "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -1530,10 +1619,10 @@
 
         ],
         "keywords": [
-          "căng thẳng",
-          "giao tiếp",
-          "ranh giới cảm xúc",
-          "công việc"
+          "bất định",
+          "ngọn đèn",
+          "biển",
+          "bước tiếp theo"
         ]
       },
       "rights": {
@@ -1546,7 +1635,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Ta không kiểm soát viên đá người khác ném xuống hồ mình, nhưng có thể chọn không ném nó sang hồ của người kế tiếp.",
+        "semantic_intent": "Ta không cần bắt biển ngừng có sóng; ta cần học cách giữ ngọn đèn khi chèo thuyền.",
         "observation_key": null,
         "structure_pattern": "story_distillation"
       },
@@ -1556,7 +1645,7 @@
         "featured": false,
         "style": "paper_quote"
       },
-      "story_id": "story.original_an_and_lamp_held_too_close",
+      "story_id": "story.original_keeper_of_the_lamp",
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
@@ -1564,13 +1653,13 @@
 
         ],
         "presentation_tags": [
-          "work_achievement",
-          "căng thẳng",
-          "giao tiếp",
-          "ranh giới cảm xúc",
-          "công việc"
+          "meaning_values",
+          "bất định",
+          "ngọn đèn",
+          "biển",
+          "bước tiếp theo"
         ],
-        "tie_break_order": 3018
+        "tie_break_order": 3012
       },
       "knowledge_basis": null
     }

@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.three_numbers_at_the_atm",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Ba con số trên màn hình ATM",
+  "subtitle_vi": "Khi tiền làm thêm giảm, anh Minh phát hiện mỗi quyết định nhỏ đều trở nên nặng hơn quyết định trước.",
+  "hero_image": null,
+  "primary_theme": "rest_wellbeing",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+      "financial_stress",
+      "fatigue"
+    ],
+    "keywords": [
+      "tiền bạc",
+      "gia đình",
+      "ATM",
+      "tài nguyên cạn",
+      "chia sẻ trách nhiệm"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "three_numbers",
+      "title_vi": "Ba con số",
+      "blocks": [
+        {
+          "id": "three_numbers.1",
+          "type": "paragraph",
+          "text_vi": "Máy ATM hiện ba con số anh Minh đã tính từ tối hôm trước: số dư, tiền điện và khoản học phí còn thiếu. Tháng này xưởng ít đơn, giờ làm thêm giảm. Không có biến cố lớn nào xảy ra; chỉ là khoảng cách giữa ba con số nhỏ hơn mọi tháng."
+        },
+        {
+          "id": "three_numbers.2",
+          "type": "paragraph",
+          "text_vi": "Anh in biên lai dù biết mực sẽ mờ sau vài tuần. Trên đường về, Minh định mua cá, rồi đổi sang trứng. Anh nhớ mẹ cần tái khám, con trai cần đóng tiền chuyến đi của lớp, còn chiếc quạt trong phòng ngủ đã kêu suốt ba đêm. Mỗi việc riêng lẻ đều có thể xoay xở. Đặt cạnh nhau, chúng làm đầu anh đặc lại."
+        }
+      ]
+    },
+    {
+      "id": "the_easiest_choice",
+      "title_vi": "Lựa chọn tốn ít sức nhất",
+      "blocks": [
+        {
+          "id": "the_easiest_choice.1",
+          "type": "paragraph",
+          "text_vi": "Tối đó, vợ hỏi nên đóng tiền học trước hay sửa quạt. Minh trả lời sao cũng được, dù trong lòng không thấy điều nào thật sự sao cũng được. Con trai đưa giấy chuyến đi, anh gắt rằng để sau. Cậu bé gấp tờ giấy lại, không nói thêm."
+        },
+        {
+          "id": "the_easiest_choice.2",
+          "type": "paragraph",
+          "text_vi": "Minh ngồi trước ba hóa đơn nhưng không đọc nổi hết một dòng. Anh mở điện thoại, định tìm thêm ca đêm, rồi lại đóng. Sau một ngày phải cân nhắc từng nghìn đồng, lựa chọn dễ nhất là không lựa chọn gì cả."
+        },
+        {
+          "id": "the_easiest_choice.3",
+          "type": "paragraph",
+          "text_vi": "Khi đứng dậy, anh thấy tờ biên lai ATM bị vò trong lòng bàn tay. Ba con số vẫn vậy. Chỉ có anh đã cố giữ chúng một mình quá lâu."
+        },
+        {
+          "id": "the_easiest_choice.4",
+          "type": "pull_quote",
+          "text_vi": "Khi nguồn lực cạn, một lựa chọn nhỏ cũng có thể mang sức nặng của nhiều lựa chọn trước đó.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "the_table",
+      "title_vi": "Trên bàn ăn",
+      "blocks": [
+        {
+          "id": "the_table.1",
+          "type": "paragraph",
+          "text_vi": "Minh trải biên lai và các hóa đơn lên bàn. Anh nói rõ tháng này thiếu bao nhiêu, không thêm câu mình sẽ lo được hết. Vợ anh dời khoản mua nồi mới. Con trai nói chuyến đi có thể đóng làm hai lần và đưa lại tờ giấy để cả nhà đọc."
+        },
+        {
+          "id": "the_table.2",
+          "type": "paragraph",
+          "text_vi": "Không ai tìm ra tiền ở nơi trước đó không có. Họ chỉ biến ba con số từ một tiếng ồn trong đầu Minh thành ba việc có tên, có thời điểm và có người cùng nhìn. Tiền điện được đóng trước. Lịch tái khám được giữ. Chiếc quạt chuyển sang phòng khách để cả nhà dùng chung vài tuần."
+        },
+        {
+          "id": "the_table.3",
+          "type": "paragraph",
+          "text_vi": "Sáng hôm sau, Minh vẫn đi làm với bữa trưa đơn giản hơn. Biên lai ATM nằm phẳng trong ngăn ví. Số dư chưa tăng, nhưng bàn tay anh không còn phải bóp chặt nó suốt cả ngày."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Khi tiền bạc, thời gian hoặc năng lượng cùng cạn, khả năng lựa chọn cũng có thể thu hẹp. Gọi tên từng giới hạn và để người liên quan cùng nhìn không tạo thêm tài nguyên, nhưng có thể giảm phần một người phải giữ một mình."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 03",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "three_numbers_at_the_atm",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

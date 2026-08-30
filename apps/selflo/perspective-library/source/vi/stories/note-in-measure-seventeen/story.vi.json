@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.note_in_measure_seventeen",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Nốt Si ở ô nhịp mười bảy",
+  "subtitle_vi": "Ba người bạn không cần chơi lại cả bản nhạc mỗi tối; họ chỉ cần tìm nơi một nốt thường biến mất.",
+  "hero_image": null,
+  "primary_theme": "work_achievement",
+  "metadata": {
+    "concept_ids": [
+      "concept.deliberate_practice"
+    ],
+    "emotion_tags": [
+      "frustration",
+      "playfulness"
+    ],
+    "keywords": [
+      "âm nhạc",
+      "ban nhạc nghiệp dư",
+      "luyện tập",
+      "phản hồi",
+      "một nốt"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "the_full_song",
+      "title_vi": "Chơi lại từ đầu",
+      "blocks": [
+        {
+          "id": "the_full_song.1",
+          "type": "paragraph",
+          "text_vi": "Thảo, Duyên và Phúc tập một bản nhạc để diễn ở buổi gặp mặt khu phố. Mỗi lần đến đoạn điệp khúc, tiếng đàn của Thảo trượt khỏi hợp âm, nhưng cả nhóm vẫn chơi tiếp rồi bắt đầu lại từ đầu."
+        },
+        {
+          "id": "the_full_song.2",
+          "type": "paragraph",
+          "text_vi": "Sau sáu lần, phần mở đầu rất trôi chảy còn lỗi cũ vẫn nằm ở ô nhịp mười bảy. Cả ba mệt và bắt đầu đổ cho nhạc cụ, tempo rồi căn phòng nóng."
+        }
+      ]
+    },
+    {
+      "id": "one_measure",
+      "title_vi": "Chỉ một ô nhịp",
+      "blocks": [
+        {
+          "id": "one_measure.1",
+          "type": "paragraph",
+          "text_vi": "Duyên tắt máy đếm nhịp. Họ chơi riêng bốn nốt quanh chỗ sai, chậm đến mức nghe rõ tiếng ngón tay đổi vị trí. Thảo nhận ra mình luôn nhấc tay sớm vì sợ không kịp nốt kế tiếp."
+        },
+        {
+          "id": "one_measure.2",
+          "type": "paragraph",
+          "text_vi": "Họ lặp đúng đoạn ấy. Có lần Phúc cố tình dừng trước nốt Si để cả nhóm bật cười. Có lần Thảo vẫn trượt. Nhưng sau mười phút, bàn tay cô không còn lao qua khoảng chuyển như trước."
+        },
+        {
+          "id": "one_measure.3",
+          "type": "pull_quote",
+          "text_vi": "Có buổi luyện tập không cần đi hết một bài. Chỉ cần ở lại đúng nơi thường bị bỏ qua.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "measure_seventeen",
+      "title_vi": "Ô nhịp mười bảy",
+      "blocks": [
+        {
+          "id": "measure_seventeen.1",
+          "type": "paragraph",
+          "text_vi": "Đêm diễn, bản nhạc không hoàn hảo. Phúc vào sớm một nhịp ở phần đầu, micro có lúc rè. Nhưng khi đến ô nhịp mười bảy, Thảo nghe khoảng chuyển mở ra đúng tốc độ đã tập. Nốt Si nằm ở đó, nhỏ và rõ."
+        },
+        {
+          "id": "measure_seventeen.2",
+          "type": "paragraph",
+          "text_vi": "Khán giả không biết nốt nào từng bị lạc. Họ chỉ vỗ tay khi bài kết thúc. Sau sân khấu, ba người không chơi lại cả bản để ăn mừng. Họ gõ riêng bốn nốt lên mặt bàn, rồi phá lên cười khi Phúc vẫn cố tình bỏ mất nốt Si."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Luyện tập có chủ ý không phải lúc nào cũng là làm nhiều hơn. Đôi khi tiến bộ đến từ việc thu nhỏ phạm vi và ở lại đủ lâu với đúng chỗ thường sai."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 04",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "note_in_measure_seventeen",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

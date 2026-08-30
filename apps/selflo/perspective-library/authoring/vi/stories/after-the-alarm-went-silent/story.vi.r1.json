@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.after_the_alarm_went_silent",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Sau khi chuông báo đã im",
+  "subtitle_vi": "Con đã về nhà và ngủ yên, nhưng cơ thể Lan vẫn thức theo nhịp của những đêm trong bệnh viện.",
+  "hero_image": null,
+  "primary_theme": "rest_wellbeing",
+  "metadata": {
+    "concept_ids": [
+      "concept.psychological_detachment"
+    ],
+    "emotion_tags": [
+      "vigilance",
+      "relief"
+    ],
+    "keywords": [
+      "chăm con",
+      "sau bệnh viện",
+      "cơ thể còn cảnh giác",
+      "phục hồi",
+      "chị em"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "home_again",
+      "title_vi": "Về nhà",
+      "blocks": [
+        {
+          "id": "home_again.1",
+          "type": "paragraph",
+          "text_vi": "Sau nhiều ngày ở bệnh viện, Lan đưa con về nhà. Bác sĩ đã cho lịch tái khám và những điều cần theo dõi. Đêm đầu, bé ngủ trong chiếc giường quen, con gấu bông nằm cạnh gối, căn phòng không còn tiếng xe đẩy ngoài hành lang."
+        },
+        {
+          "id": "home_again.2",
+          "type": "paragraph",
+          "text_vi": "Lan vẫn tỉnh mỗi giờ. Không có chuông báo, cô vẫn nghe một tiếng chuông trong đầu. Cô đặt tay lên trán con, kiểm tra đồng hồ rồi nằm xuống. Mười phút sau, cô lại ngồi dậy."
+        }
+      ]
+    },
+    {
+      "id": "the_body_still_listens",
+      "title_vi": "Cơ thể vẫn đang nghe",
+      "blocks": [
+        {
+          "id": "the_body_still_listens.1",
+          "type": "paragraph",
+          "text_vi": "Ban ngày, mọi người nói may quá đã ổn. Lan cũng thấy nhẹ nhõm. Nhưng khi ai làm rơi chiếc thìa, vai cô giật lên. Khi con ho một tiếng trong lúc chơi, cô dừng cả câu đang nói."
+        },
+        {
+          "id": "the_body_still_listens.2",
+          "type": "paragraph",
+          "text_vi": "Chị gái đến ngủ cùng một tối. Chị không bảo Lan đừng lo. Chị trải nệm cạnh phòng con và nói đêm nay nếu có tiếng động, chị sẽ nghe cùng. Lan vẫn thức hai lần, nhưng lần thứ ba cô nghe chị trở mình ngoài cửa và không bật dậy ngay."
+        },
+        {
+          "id": "the_body_still_listens.3",
+          "type": "pull_quote",
+          "text_vi": "Việc đã kết thúc không có nghĩa cơ thể lập tức biết rằng mình được phép nghỉ.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "a_quieter_night",
+      "title_vi": "Một đêm bớt thức",
+      "blocks": [
+        {
+          "id": "a_quieter_night.1",
+          "type": "paragraph",
+          "text_vi": "Những ngày sau, Lan dần trở lại nếp nhà. Cô vẫn làm đúng lịch theo dõi, nhưng không thêm những lần kiểm tra do nỗi sợ tự tạo ra. Có đêm cô ngủ liền ba giờ rồi tỉnh dậy hoảng hốt vì đã ngủ sâu. Con vẫn nằm yên, hơi thở đều."
+        },
+        {
+          "id": "a_quieter_night.2",
+          "type": "paragraph",
+          "text_vi": "Lan ngồi cạnh giường một lát, không tự trách vì cơ thể còn cảnh giác. Cô nhớ những ngày đã phải nghe mọi tiếng động. Bàn tay từng giữ quá nhiều việc cần thời gian mới thôi rung."
+        },
+        {
+          "id": "a_quieter_night.3",
+          "type": "paragraph",
+          "text_vi": "Một sáng, Lan tỉnh trước chuông báo và nhận ra đêm qua mình không ra khỏi giường. Không có khoảnh khắc rõ ràng nào đánh dấu sự hồi phục. Chỉ là căn nhà đã yên thêm một đêm, và cơ thể cô bắt đầu tin điều đó chậm hơn phần còn lại."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Sau một giai đoạn phải cảnh giác hoặc chăm sóc liên tục, cơ thể có thể cần thêm thời gian để rời khỏi nhịp cũ. Dư âm ấy không phủ nhận việc hoàn cảnh đã khá hơn."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 03",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "after_the_alarm_went_silent",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

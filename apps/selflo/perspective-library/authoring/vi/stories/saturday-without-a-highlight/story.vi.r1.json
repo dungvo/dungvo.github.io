@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.saturday_without_a_highlight",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Ngày thứ Bảy không có ảnh đẹp",
+  "subtitle_vi": "Chuyến đi bị hủy khiến Linh nghĩ cả ngày đã mất, cho đến khi buổi tối đến mà không cần một điểm nhấn.",
+  "hero_image": null,
+  "primary_theme": "rest_wellbeing",
+  "metadata": {
+    "concept_ids": [
+      "concept.eudaimonic_wellbeing"
+    ],
+    "emotion_tags": [
+      "disappointment",
+      "contentment"
+    ],
+    "keywords": [
+      "ngày bình thường",
+      "gia đình",
+      "mưa",
+      "nghỉ",
+      "niềm vui yên"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "cancelled_trip",
+      "title_vi": "Chuyến đi bị hủy",
+      "blocks": [
+        {
+          "id": "cancelled_trip.1",
+          "type": "paragraph",
+          "text_vi": "Linh đã lên kế hoạch cho thứ Bảy: đi ngoại ô, ăn ở quán mới và chụp một bộ ảnh gia đình lúc hoàng hôn. Sáu giờ sáng trời mưa trắng cửa sổ. Khu tham quan báo đóng, con đường ngập và cả nhà quay lại giường."
+        },
+        {
+          "id": "cancelled_trip.2",
+          "type": "paragraph",
+          "text_vi": "Linh thấy ngày nghỉ bị lấy mất. Cô lướt ảnh bạn bè đang ở biển, rồi nhìn phòng khách có giỏ quần áo chưa gấp và ba người mặc đồ ở nhà. Không có gì đáng để chụp."
+        }
+      ]
+    },
+    {
+      "id": "nothing_special",
+      "title_vi": "Không có gì đặc biệt",
+      "blocks": [
+        {
+          "id": "nothing_special.1",
+          "type": "paragraph",
+          "text_vi": "Họ ăn mì trứng, sửa tay nắm ngăn kéo và chơi một ván bài chưa xong vì mất điện. Con trai Linh lấy bút vẽ ria mép lên những quân bài hình người. Chồng cô ngủ quên trên ghế khi mưa còn gõ ngoài ban công."
+        },
+        {
+          "id": "nothing_special.2",
+          "type": "paragraph",
+          "text_vi": "Buổi chiều, cả nhà xuống mua bánh mì khi mưa nhỏ. Không ai mặc đẹp. Họ đứng dưới mái che chờ mẻ bánh mới, nghe người bán kể chiếc máy trộn bột sáng nay cũng không chịu làm việc."
+        }
+      ]
+    },
+    {
+      "id": "the_day_that_did_not_peak",
+      "title_vi": "Một ngày không lên đỉnh",
+      "blocks": [
+        {
+          "id": "the_day_that_did_not_peak.1",
+          "type": "paragraph",
+          "text_vi": "Tối đến, Linh không có tấm ảnh hoàng hôn nào. Điện thoại chỉ có một ảnh mờ chụp quân bài có ria mép. Cô định xóa rồi giữ lại."
+        },
+        {
+          "id": "the_day_that_did_not_peak.2",
+          "type": "paragraph",
+          "text_vi": "Ngày ấy không thay đổi gia đình cô. Không ai học bài học lớn. Nhưng khi nằm xuống, Linh nhận ra vai mình không căng như những cuối tuần cố đi đủ nơi. Mưa vẫn rơi, chuyến đi vẫn bị hủy, và cơ thể cô đã có một ngày không phải chạy theo cao trào."
+        },
+        {
+          "id": "the_day_that_did_not_peak.3",
+          "type": "paragraph",
+          "text_vi": "Sáng Chủ nhật, cả nhà thức dậy bình thường. Linh mở rèm, thấy giỏ quần áo đã được gấp từ tối qua. Ngày thứ Bảy không có ảnh đẹp đã để lại căn phòng gọn hơn và một nhịp thở mà không ai nghĩ phải ghi lại."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Một ngày không có đỉnh cao không nhất thiết là ngày trống. Sự ổn định và những việc bình thường cũng có thể là khoảng để cơ thể và mối quan hệ được thở."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 03",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "saturday_without_a_highlight",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

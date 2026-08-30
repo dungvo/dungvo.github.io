@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.cup_with_less_sugar",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Ly sữa ít đường",
+  "subtitle_vi": "Sau khi chuyển nhà, bà Hảo tìm thấy một nơi biết mình không qua câu chuyện lớn nào, chỉ qua một món gọi đều đặn.",
+  "hero_image": null,
+  "primary_theme": "relationships",
+  "metadata": {
+    "concept_ids": [
+      "concept.belonging"
+    ],
+    "emotion_tags": [
+      "loneliness",
+      "warmth"
+    ],
+    "keywords": [
+      "người lớn tuổi",
+      "khu phố mới",
+      "quán quen",
+      "thuộc về",
+      "món thường gọi"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "new_neighborhood",
+      "title_vi": "Khu phố mới",
+      "blocks": [
+        {
+          "id": "new_neighborhood.1",
+          "type": "paragraph",
+          "text_vi": "Bà Hảo chuyển đến ở cùng con gái sau khi căn nhà cũ bị giải tỏa. Khu phố mới có thang máy, siêu thị và những con đường bà chưa nhớ tên. Ban ngày con gái đi làm, bà xuống đi bộ một vòng rồi thường trở về trước khi kịp quen ai."
+        },
+        {
+          "id": "new_neighborhood.2",
+          "type": "paragraph",
+          "text_vi": "Ở góc đường có quán nhỏ. Bà ghé mỗi thứ Ba sau khi mua rau, gọi một ly sữa nóng ít đường và ngồi gần cửa. Không ai hỏi bà từ đâu đến. Bà cũng không kể."
+        }
+      ]
+    },
+    {
+      "id": "the_order",
+      "title_vi": "Món không cần nhắc lại",
+      "blocks": [
+        {
+          "id": "the_order.1",
+          "type": "paragraph",
+          "text_vi": "Sau vài tuần, cô phục vụ nhìn thấy bà bước vào thì hỏi: Vẫn sữa nóng, ít đường phải không cô? Câu hỏi rất nhỏ. Bà Hảo gật đầu, rồi ngồi đúng chiếc bàn có thể nhìn người qua đường."
+        },
+        {
+          "id": "the_order.2",
+          "type": "paragraph",
+          "text_vi": "Có hôm quán đông, bà phải ngồi ghép với một người giao hàng. Có hôm trời mưa, cô phục vụ mang ly ra cùng một chiếc khăn giấy để bà lau kính. Không ai trở thành bạn thân. Nhưng quán dần có những người nhận ra nếu bà vắng một tuần."
+        }
+      ]
+    },
+    {
+      "id": "one_week_absent",
+      "title_vi": "Một tuần vắng mặt",
+      "blocks": [
+        {
+          "id": "one_week_absent.1",
+          "type": "paragraph",
+          "text_vi": "Bà Hảo cảm lạnh nhẹ và ở nhà một tuần. Thứ Ba sau đó, khi bà trở lại, cô phục vụ không hỏi chuyện bệnh. Cô chỉ đặt ly sữa xuống và nói tuần trước cháu pha nhầm một ly ít đường rồi mới nhớ cô không tới."
+        },
+        {
+          "id": "one_week_absent.2",
+          "type": "paragraph",
+          "text_vi": "Bà Hảo cười. Bên ngoài, khu phố vẫn chưa giống nơi bà từng sống. Nhưng trên chiếc bàn gần cửa, có một món đã nhớ đường đến trước cả khi bà gọi tên."
+        },
+        {
+          "id": "one_week_absent.3",
+          "type": "paragraph",
+          "text_vi": "Từ hôm ấy, bà bắt đầu ở lại lâu hơn vài phút. Bà biết tên cô phục vụ là Phương, biết người giao hàng thường nghỉ thứ Hai, và biết lúc bốn giờ nắng sẽ rơi đúng nửa mặt bàn. Một nơi quen không xuất hiện trong một ngày; nó được pha dần bằng những lần có mặt."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Cảm giác thuộc về đôi khi được xây từ những dấu hiệu rất nhỏ rằng sự hiện diện của mình đã được người khác nhận ra và ghi nhớ."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 03",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "cup_with_less_sugar",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

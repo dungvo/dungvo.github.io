@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.call_me_at_the_last_stop",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Gọi em ở trạm cuối",
+  "subtitle_vi": "Vy đã thức gần hết chuyến xe vì sợ đi quá nhà, cho đến khi một người đồng hành nhận phần canh đường.",
+  "hero_image": null,
+  "primary_theme": "relationships",
+  "metadata": {
+    "concept_ids": [
+      "concept.attachment_security"
+    ],
+    "emotion_tags": [
+      "vigilance",
+      "trust"
+    ],
+    "keywords": [
+      "xe buýt",
+      "trạm cuối",
+      "chị em",
+      "tin cậy",
+      "ngủ yên"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "last_bus",
+      "title_vi": "Chuyến xe cuối",
+      "blocks": [
+        {
+          "id": "last_bus.1",
+          "type": "paragraph",
+          "text_vi": "Vy lên chuyến xe buýt cuối sau buổi học tối. Nhà cô ở gần bến cuối, nơi tài xế thường tắt đèn và quay xe. Hai lần trước Vy ngủ quên; một lần phải đi bộ ngược gần hai cây số."
+        },
+        {
+          "id": "last_bus.2",
+          "type": "paragraph",
+          "text_vi": "Đêm ấy mắt cô cay, nhưng mỗi khi đầu gục xuống, Vy lại giật mình nhìn biển trạm. Chị gái ngồi cạnh sẽ xuống sớm hơn bảy điểm dừng. Chị bảo cứ ngủ đi, nhưng Vy vẫn giữ túi trên đùi và nhìn đường."
+        }
+      ]
+    },
+    {
+      "id": "a_small_agreement",
+      "title_vi": "Một thỏa thuận nhỏ",
+      "blocks": [
+        {
+          "id": "a_small_agreement.1",
+          "type": "paragraph",
+          "text_vi": "Trước khi xuống, chị đặt báo thức trên điện thoại của mình rồi nhắn cho Vy: Tới bến chị gọi. Vy hỏi chị đã xuống rồi thì làm sao biết. Chị trả lời cô đi tuyến này mỗi ngày, chỉ cần nghe thời gian và tiếng xe qua cầu."
+        },
+        {
+          "id": "a_small_agreement.2",
+          "type": "paragraph",
+          "text_vi": "Vy không hoàn toàn tin. Nhưng cô đặt điện thoại vào túi áo, tựa đầu vào cửa kính. Tin nhắn cuối của chị là một dấu chuông nhỏ: Ngủ mười lăm phút đi."
+        },
+        {
+          "id": "a_small_agreement.3",
+          "type": "pull_quote",
+          "text_vi": "Tin cậy không làm con đường ngắn lại. Nó cho cơ thể một khoảng không phải tự canh mọi thứ.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "the_call",
+      "title_vi": "Cuộc gọi",
+      "blocks": [
+        {
+          "id": "the_call.1",
+          "type": "paragraph",
+          "text_vi": "Vy tỉnh khi điện thoại rung. Qua loa là tiếng chị hỏi xe qua cầu chưa. Cô nhìn ra ngoài; đúng lúc đèn của bến cuối hiện lên phía trước. Vy bấm chuông xuống và cười vì chị đã tính lệch chỉ một trạm."
+        },
+        {
+          "id": "the_call.2",
+          "type": "paragraph",
+          "text_vi": "Ngày hôm sau, Vy vẫn đi chuyến muộn. Không phải lần nào chị cũng có thể gọi. Có hôm cô nhờ tài xế, có hôm tự đặt báo thức. Nhưng cảm giác của đêm ấy ở lại: một người có thể rời khỏi chiếc ghế bên cạnh mà vẫn giúp mình đi hết đoạn còn lại."
+        },
+        {
+          "id": "the_call.3",
+          "type": "paragraph",
+          "text_vi": "Cuối tuần, khi chị ngủ trên chuyến xe về quê, Vy nhìn biển đường thay cả hai. Gần đến trạm, cô không lay mạnh. Cô chỉ gọi đúng câu đã từng nhận: Tới rồi, dậy thôi."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Một điểm tựa đáng tin không thay mình đi hết hành trình. Nó cho mình một khoảng được thả lỏng vì biết sẽ có tín hiệu khi cần thức dậy."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 03",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "call_me_at_the_last_stop",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

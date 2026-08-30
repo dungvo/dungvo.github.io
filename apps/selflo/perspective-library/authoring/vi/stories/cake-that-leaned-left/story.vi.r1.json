@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.cake_that_leaned_left",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Chiếc bánh nghiêng sang trái",
+  "subtitle_vi": "Hai người bạn định làm một chiếc bánh hoàn hảo; căn bếp lại chọn cho họ hai mẻ cháy và một cái nghiêng.",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [
+      "concept.self_compassion"
+    ],
+    "emotion_tags": [
+      "embarrassment",
+      "joy"
+    ],
+    "keywords": [
+      "làm bánh",
+      "hài hước",
+      "thất bại nhỏ",
+      "tình bạn",
+      "tự tử tế"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "the_reference_photo",
+      "title_vi": "Tấm ảnh tham khảo",
+      "blocks": [
+        {
+          "id": "the_reference_photo.1",
+          "type": "paragraph",
+          "text_vi": "Tùng và Hải muốn làm bánh sinh nhật cho cô hàng xóm thường nhận giúp bưu phẩm. Tấm ảnh tham khảo có ba lớp kem phẳng, dâu xếp đều và dòng chữ thanh mảnh. Cả hai chưa từng nướng bánh."
+        },
+        {
+          "id": "the_reference_photo.2",
+          "type": "paragraph",
+          "text_vi": "Mẻ đầu cháy cạnh nhưng sống giữa. Hải úp nó ra, phần đáy ở lại trong khuôn như không muốn tham gia sinh nhật. Tùng nhìn đồng hồ rồi đề nghị mua bánh ngoài tiệm và giả vờ kế hoạch chưa từng tồn tại."
+        }
+      ]
+    },
+    {
+      "id": "the_second_batch",
+      "title_vi": "Mẻ thứ hai",
+      "blocks": [
+        {
+          "id": "the_second_batch.1",
+          "type": "paragraph",
+          "text_vi": "Họ ăn thử phần không cháy, phát hiện vị vẫn ổn. Sau khi cười đủ lâu về chiếc đáy mắc kẹt, cả hai đọc lại công thức và nhận ra đã dùng khuôn nhỏ hơn nhưng giữ nguyên nhiệt."
+        },
+        {
+          "id": "the_second_batch.2",
+          "type": "paragraph",
+          "text_vi": "Mẻ thứ hai chín. Khi phủ kem, Tùng nghiêng bàn xoay làm cả chiếc bánh lệch sang trái. Hải dùng dâu che, nhưng càng che càng giống một sườn đồi đỏ. Họ bỏ dòng chữ thanh mảnh và cắm một tấm giấy: Bánh tự chọn hướng đứng."
+        },
+        {
+          "id": "the_second_batch.3",
+          "type": "pull_quote",
+          "text_vi": "Một mẻ cháy không xóa mùi thơm của cả buổi chiều.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "the_birthday_table",
+      "title_vi": "Trên bàn sinh nhật",
+      "blocks": [
+        {
+          "id": "the_birthday_table.1",
+          "type": "paragraph",
+          "text_vi": "Cô hàng xóm mở hộp, nhìn chiếc bánh nghiêng rồi cười đến chảy nước mắt. Khi cắt, một lớp kem trượt hẳn sang bên. Không ai nhầm nó với bánh tiệm."
+        },
+        {
+          "id": "the_birthday_table.2",
+          "type": "paragraph",
+          "text_vi": "Mọi người vẫn ăn hết. Phần cạnh mẻ đầu được Tùng và Hải giữ lại làm bữa khuya. Trên điện thoại, họ lưu cả ảnh tham khảo lẫn ảnh chiếc bánh thật, hai hình không giống nhau ở điểm nào ngoài những quả dâu."
+        },
+        {
+          "id": "the_birthday_table.3",
+          "type": "paragraph",
+          "text_vi": "Một tháng sau, họ thử lại. Bánh thứ hai đứng thẳng hơn, nhưng cả hai vẫn giữ tấm giấy Bánh tự chọn hướng đứng trong ngăn bếp, phòng khi căn bếp lại có ý riêng."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Một lần làm chưa tốt không cần trở thành kết luận về khả năng của mình. Khi lỗi được nhìn như thông tin—và đôi khi như chuyện có thể cùng cười—căn bếp vẫn còn chỗ cho lần thử sau."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 04",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "cake_that_leaned_left",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

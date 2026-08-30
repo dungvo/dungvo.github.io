@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.ticket_printed_for_tuesday",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Tấm vé ngày thứ Ba",
+  "subtitle_vi": "Hà luôn định về quê vào một dịp thật đáng; cuối cùng cô mua vé cho một ngày chẳng có lễ gì.",
+  "hero_image": null,
+  "primary_theme": "meaning_values",
+  "metadata": {
+    "concept_ids": [
+      "concept.meaning_in_life"
+    ],
+    "emotion_tags": [
+      "longing",
+      "relief"
+    ],
+    "keywords": [
+      "vé xe",
+      "về quê",
+      "gia đình",
+      "tiền vé",
+      "ngày bình thường"
+    ],
+    "story_style": "reflective_journey"
+  },
+  "sections": [
+    {
+      "id": "later",
+      "title_vi": "Để dịp khác",
+      "blocks": [
+        {
+          "id": "later.1",
+          "type": "paragraph",
+          "text_vi": "Hà làm ở thành phố đã bốn năm. Mỗi lần mẹ hỏi bao giờ về, cô đều có lý do hợp lý: vé lễ đắt, tháng này tăng ca, phòng trọ vừa đóng cọc, chuyến về hai ngày không đáng tiền bằng gửi khoản đó về nhà."
+        },
+        {
+          "id": "later.2",
+          "type": "paragraph",
+          "text_vi": "Cô lưu ảnh những chuyến xe rồi đóng ứng dụng. Trong ngăn kéo có ba món quà chưa kịp mang về: chiếc khăn cho mẹ, bộ cờ cho cha và đôi dép đã mua rộng hơn một cỡ vì sợ để lâu."
+        }
+      ]
+    },
+    {
+      "id": "an_ordinary_tuesday",
+      "title_vi": "Một ngày thứ Ba",
+      "blocks": [
+        {
+          "id": "an_ordinary_tuesday.1",
+          "type": "paragraph",
+          "text_vi": "Một tối, cha gửi ảnh cây mít sau nhà vừa ra trái. Trong ảnh không có ai, chỉ có chiếc ghế nhựa và vệt nắng ngoài sân. Hà nhận ra mình đã chờ một sự kiện đủ lớn để biện minh cho việc trở về, trong khi những thứ cô nhớ đều là chuyện rất nhỏ."
+        },
+        {
+          "id": "an_ordinary_tuesday.2",
+          "type": "paragraph",
+          "text_vi": "Cô mở ứng dụng. Vé thứ Ba rẻ hơn cuối tuần, nhưng phải xin nghỉ một ngày. Ngón tay Hà dừng ở nút thanh toán lâu đến mức màn hình tối đi. Khi bật lại, cô không tính tiếp xem số tiền ấy mua được gì khác. Cô mua vé."
+        },
+        {
+          "id": "an_ordinary_tuesday.3",
+          "type": "pull_quote",
+          "text_vi": "Có quyết định chỉ trở nên thật khi nó có một ngày cụ thể.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "the_return_date",
+      "title_vi": "Ngày trở về",
+      "blocks": [
+        {
+          "id": "the_return_date.1",
+          "type": "paragraph",
+          "text_vi": "Xe về tới huyện lúc gần trưa. Không ai treo cờ, không mâm cỗ, không biến cố. Cha Hà đang vá lưới che cây, mẹ phơi quần áo sau nhà. Cả hai ngạc nhiên vì cô về giữa tuần rồi tiếp tục phần việc đang làm."
+        },
+        {
+          "id": "the_return_date.2",
+          "type": "paragraph",
+          "text_vi": "Hà ngồi trên chiếc ghế trong tấm ảnh, ăn múi mít đầu mùa và nghe cha than con mèo hàng xóm thường sang ngủ nhờ. Những món quà trong túi không vừa hoàn hảo: khăn hơi dày, dép hơi rộng. Nhưng ngày thứ Ba vừa vặn với căn nhà."
+        },
+        {
+          "id": "the_return_date.3",
+          "type": "paragraph",
+          "text_vi": "Khi trở lại thành phố, Hà giữ tấm vé trong ví. Nó không đáng tiền như một món đồ và cũng không kéo dài chuyến về. Nó chỉ giữ một dấu mực nhỏ về ngày cô thôi nói sẽ về, và thật sự bước lên xe."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Ý nghĩa đôi khi không nằm ở một dịp lớn, mà ở khoảnh khắc một điều mình coi trọng được đặt vào lịch và trở thành hành động thật."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 03",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "ticket_printed_for_tuesday",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}
