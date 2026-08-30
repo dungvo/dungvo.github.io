@@ -1,22 +1,22 @@
 {
   "schema_version": "selflo.quote-research-public-status.v1",
-  "updated_at": "2026-08-29T08:47:50Z",
+  "updated_at": "2026-08-30T08:00:00Z",
   "publication_scope": "progress_metadata_and_authoring_preview",
   "authoring_library_changed": true,
   "release_library_changed": false,
   "diversity_matrix": {
     "url": "https://dungvo.github.io/apps/selflo/preview/",
     "data_path": "apps/selflo/quote-research/diversity-matrix.json",
-    "baseline_library_revision": 7,
+    "baseline_library_revision": 13,
     "status": "published_in_preview"
   },
   "authoring_preview": {
-    "canonical_quote_count": 191,
-    "new_quote_count": 50,
+    "canonical_quote_count": 252,
+    "new_quote_count": 42,
     "new_quotes_with_story": 0,
-    "content_version": "quote-research-preview-7",
+    "content_version": "observation-diversity-preview-13",
     "lifecycle": "needs_owner_review",
-    "kind": "adapted_wisdom"
+    "kind": "selflo_original"
   },
   "goals": [
     {
@@ -44,8 +44,11 @@
     {
       "goal_id": "goal.3.selflo_observational_quotes",
       "accepted_target": 200,
-      "research_candidates_collected": 0,
-      "status": "not_started"
+      "research_candidates_collected": 50,
+      "materialized_to_authoring_preview": 50,
+      "accepted_count": 0,
+      "accepted_remaining": 200,
+      "status": "in_progress_needs_owner_review"
     },
     {
       "goal_id": "goal.4.ai_assisted_quote_story_pairs",

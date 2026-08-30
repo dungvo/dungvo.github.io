@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "content_version": "quote-research-preview-7",
+  "content_version": "observation-diversity-preview-13",
   "entity": "perspective_theme",
   "status": "content_preview",
   "primary_theme": "work_achievement",
@@ -1571,6 +1571,146 @@
           "công việc"
         ],
         "tie_break_order": 3018
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "small_daily_expense_reaches_month_end",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Một khoản chi nhỏ lặp lại mỗi ngày không còn nhỏ khi đứng ở cuối tháng.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "money_pressure"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quan sát đời thường cho hoàn cảnh money_pressure.",
+        "observation_key": "small_daily_expense_reaches_month_end",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 47,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "observation",
+          "money_pressure"
+        ],
+        "tie_break_order": 4034
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "price_tag_does_not_show_hours_traded",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Giá trên kệ chỉ nói món đồ cần bao nhiêu tiền; nó không biết số tiền ấy phải đổi bằng bao nhiêu giờ.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "money_pressure"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quan sát đời thường cho hoàn cảnh money_pressure.",
+        "observation_key": "price_tag_does_not_show_hours_traded",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "observation",
+          "money_pressure"
+        ],
+        "tie_break_order": 4036
       },
       "knowledge_basis": null
     }
