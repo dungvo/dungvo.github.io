@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.forest_still_dripping",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Khu rừng còn nhỏ giọt",
+  "subtitle_vi": "Cơn bão đã rời khỏi bờ biển, nhưng nước vẫn đi tiếp qua từng tầng lá, rễ và bùn.",
+  "hero_image": null,
+  "primary_theme": "adversity_resilience",
+  "metadata": {
+    "concept_ids": [
+      "concept.resilience"
+    ],
+    "emotion_tags": [
+      "calm",
+      "recovery"
+    ],
+    "keywords": [
+      "rừng ngập mặn",
+      "sau bão",
+      "phục hồi",
+      "nước",
+      "không có con người"
+    ],
+    "story_style": "reflective_journey"
+  },
+  "sections": [
+    {
+      "id": "after_the_wind",
+      "title_vi": "Sau khi gió đi",
+      "blocks": [
+        {
+          "id": "after_the_wind.1",
+          "type": "paragraph",
+          "text_vi": "Đến gần sáng, cơn bão rời khỏi rừng ngập mặn. Phía chân trời đã có một dải sáng mỏng, nhưng dưới tán cây, nước vẫn rơi dày như mưa. Mỗi chiếc lá giữ lại một giọt, mỗi cành thấp đưa giọt ấy sang cành khác trước khi trả xuống bùn."
+        },
+        {
+          "id": "after_the_wind.2",
+          "type": "paragraph",
+          "text_vi": "Một nhánh đước gãy nằm nghiêng qua lạch nhỏ. Lá trên nhánh chưa rụng hết. Chúng úp mặt xuống dòng nước nâu, nơi những mẩu vỏ cây và cỏ biển tiếp tục trôi về phía cửa sông."
+        }
+      ]
+    },
+    {
+      "id": "water_moves_through",
+      "title_vi": "Nước đi qua từng tầng",
+      "blocks": [
+        {
+          "id": "water_moves_through.1",
+          "type": "paragraph",
+          "text_vi": "Thủy triều bắt đầu rút. Nước không rời khu rừng cùng một lúc. Ở chỗ đất cao, bùn lộ ra trước. Trong các hốc rễ, những vũng nhỏ còn rung mỗi khi một giọt từ tán lá rơi xuống. Sâu hơn bên trong, dòng nước bị cành gãy chặn lại, đổi thành nhiều đường hẹp quanh các búi rễ."
+        },
+        {
+          "id": "water_moves_through.2",
+          "type": "paragraph",
+          "text_vi": "Cua nhỏ vẫn nằm trong hang. Những con cá mắc lại ở vũng thấp chờ con nước sau. Một hạt đước dài bị đẩy vào khe bùn, dừng ở đó sau nhiều lần xoay giữa dòng."
+        },
+        {
+          "id": "water_moves_through.3",
+          "type": "paragraph",
+          "text_vi": "Bầu trời đã trong, nhưng khu rừng chưa khô. Gió đã lặng, nhưng lá non vẫn rung vì phần nước cuối cùng đang chuyển trọng lượng từ đầu lá xuống cuống."
+        }
+      ]
+    },
+    {
+      "id": "what_does_not_return",
+      "title_vi": "Những gì không trở lại như cũ",
+      "blocks": [
+        {
+          "id": "what_does_not_return.1",
+          "type": "paragraph",
+          "text_vi": "Đến trưa, nắng chạm được vào khoảng trống nơi nhánh cây đã gãy. Một con cò đáp xuống bãi bùn mới lộ rồi bay lên ngay khi nền đất sụt dưới chân. Trên thân đước, lớp muối mỏng bắt đầu khô thành những vệt trắng."
+        },
+        {
+          "id": "what_does_not_return.2",
+          "type": "paragraph",
+          "text_vi": "Nhánh cây gãy không tự nối lại. Đám lá bị cuốn ra biển không quay về. Con lạch nhỏ cũng không chảy đúng đường của ngày hôm trước; một ụ bùn mới đã khiến nó uốn thêm một vòng."
+        },
+        {
+          "id": "what_does_not_return.3",
+          "type": "paragraph",
+          "text_vi": "Nhưng ở phía sau ụ bùn, nước chậm lại. Những mảnh lá nhỏ lắng xuống. Hạt đước mắc từ sáng nằm nghiêng, phần đầu nhọn vừa đủ cắm vào nền mềm."
+        },
+        {
+          "id": "what_does_not_return.4",
+          "type": "pull_quote",
+          "text_vi": "Bầu trời quang trước khi mọi thứ bên dưới kịp ráo.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "the_next_tide",
+      "title_vi": "Con nước kế tiếp",
+      "blocks": [
+        {
+          "id": "the_next_tide.1",
+          "type": "paragraph",
+          "text_vi": "Chiều xuống, thủy triều dâng trở lại. Nước mới đi vào con lạch đã đổi hướng, chạm nhánh cây gãy rồi tách làm hai. Một dòng mang lá ra ngoài. Dòng kia đẩy thêm bùn về quanh hạt đước."
+        },
+        {
+          "id": "the_next_tide.2",
+          "type": "paragraph",
+          "text_vi": "Từ xa, khu rừng lại thành một mảng xanh liền. Chỉ khi đến gần mới thấy khoảng trống trên tán, nhánh cây nằm thấp và những vệt nước còn đọng giữa các rễ."
+        },
+        {
+          "id": "the_next_tide.3",
+          "type": "paragraph",
+          "text_vi": "Đêm đó không có bão. Dưới bầu trời yên, khu rừng vẫn nhỏ giọt thêm nhiều giờ. Nó không quay lại buổi sáng trước cơn gió. Nó chỉ tiếp tục đưa phần nước đã nhận đi qua từng tầng của mình, cho đến khi mỗi giọt tìm được nơi để xuống."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Biến cố có thể kết thúc trước khi dư âm trong một hệ thống kịp lắng xuống. Phục hồi không phải lúc nào cũng là trở lại như cũ; đôi khi nó là quá trình chậm để nước tìm đường, bùn lắng lại và sự sống tiếp tục từ hình dạng mới."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 01",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "forest_still_dripping",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

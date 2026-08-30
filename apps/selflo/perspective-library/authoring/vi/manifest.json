@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 9,
-  "content_version": "story-pairing-preview-9",
+  "library_revision": 10,
+  "content_version": "story-diversity-batch-01-preview-10",
   "language": "vi",
-  "generated_at": "2026-08-30T00:35:29Z",
+  "generated_at": "2026-08-30T05:25:32Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -19,11 +19,11 @@
     {
       "id": "theme.adversity_resilience.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/adversity-resilience.vi.r4.json",
+      "revision": 5,
+      "path": "themes/adversity-resilience.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "2e9e020045472505845cda56d748f8ac5a6313f6a78a522cbf72beec1063a1a3",
-      "byte_count": 61742
+      "sha256": "21ffe885ec1e11d13552ba67a09ee2525cc69d45e7940e25c7d53ec83fc711e7",
+      "byte_count": 61767
     },
     {
       "id": "theme.attention.vi",
@@ -37,11 +37,11 @@
     {
       "id": "theme.change_growth.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/change-growth.vi.r4.json",
+      "revision": 5,
+      "path": "themes/change-growth.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "66b6870bd2ad43d467d37fd6e243a9638ff7f04528d089a2b7b198440b8b3154",
-      "byte_count": 60265
+      "sha256": "0a3b2033ee0e5f33b846504e8bdcea7c13a3be2875c765c7ebf3faf7d394a6b3",
+      "byte_count": 60308
     },
     {
       "id": "theme.emotion.vi",
@@ -73,11 +73,11 @@
     {
       "id": "theme.rest_wellbeing.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/rest-wellbeing.vi.r4.json",
+      "revision": 5,
+      "path": "themes/rest-wellbeing.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "8377c12178c46187e6a523ad0d12a415baba343cfb26b5890f294bb42e5a65ad",
-      "byte_count": 48034
+      "sha256": "19ac887918f684102d7aaefbef31e0c599146618e9880db587a0af14786af2ab",
+      "byte_count": 48106
     },
     {
       "id": "theme.self_understanding.vi",
@@ -91,11 +91,11 @@
     {
       "id": "theme.work_achievement.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/work-achievement.vi.r4.json",
+      "revision": 5,
+      "path": "themes/work-achievement.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "9692bf8432b302db14943bd0089c9aad4484f76376c8201e751ee491ccc39fed",
-      "byte_count": 47917
+      "sha256": "2863a2e78a6c34f252e9d592ddd711880c234946d2c07c827dda2cd50830ae5b",
+      "byte_count": 47948
     },
     {
       "id": "reading_intents.vi",
@@ -114,6 +114,15 @@
       "media_type": "application/json",
       "sha256": "a6d5287e77f77689e028a5a0ed13612256c2f9a11c4649384ae2bf3ab6e6d653",
       "byte_count": 7185
+    },
+    {
+      "id": "story.blue_eraser",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/blue-eraser/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "101c66f9c3f8417d66830e12f4ec5f3d9112fd1784ee304a938e46a7ccb1c315",
+      "byte_count": 6844
     },
     {
       "id": "story.boatman_and_second_mountain",
@@ -143,6 +152,15 @@
       "byte_count": 7406
     },
     {
+      "id": "story.cake_for_the_sixth_floor",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/cake-for-the-sixth-floor/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "d0b031b96c2ddd5c8d1d7b4be473e123655b42d71b09bbfa5e81230ee6769e27",
+      "byte_count": 7117
+    },
+    {
       "id": "story.courier_and_waterline",
       "kind": "story",
       "revision": 1,
@@ -159,6 +177,33 @@
       "media_type": "application/json",
       "sha256": "4a8257ac95c5bad040f294a48b9416d7c4c1f650f7ced4fc65f765259858b774",
       "byte_count": 7263
+    },
+    {
+      "id": "story.envelope_that_could_not_hold_strength",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/envelope-that-could-not-hold-strength/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "38a458ebf6c3a16be415cd7dc65aba2f894cee6542e468fc76d76667dfa18403",
+      "byte_count": 6984
+    },
+    {
+      "id": "story.forest_still_dripping",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/forest-still-dripping/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "9ce9e3c6ebce2a289d17ba59cc927f018c93b1affbedfad12081a0d5665c4ffc",
+      "byte_count": 6536
+    },
+    {
+      "id": "story.last_window_in_the_building",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/last-window-in-the-building/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "d08eb365a8081c81f515195750526240db48d570bfce60c874f64052878887bb",
+      "byte_count": 6556
     },
     {
       "id": "story.laundry_and_two_bells",
@@ -276,6 +321,15 @@
       "media_type": "application/json",
       "sha256": "61389e053b543cb0057e7e594dffbffab0ced3a205cc9a4d75fba8885055b6d4",
       "byte_count": 23247
+    },
+    {
+      "id": "story.photograph_missing_a_corner",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/photograph-missing-a-corner/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "a5ae55ed7f4a613c964f4160125ddbc3eb19a9afba9d41c51f1f7d063467a109",
+      "byte_count": 7316
     },
     {
       "id": "story.potter_and_two_hands",

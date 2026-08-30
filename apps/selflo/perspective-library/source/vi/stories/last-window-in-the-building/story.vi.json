@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.last_window_in_the_building",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Ô cửa cuối cùng trong khu nhà",
+  "subtitle_vi": "Sau kỳ thi, Trâm cố bắt giấc ngủ đến đúng giờ và càng lúc càng tỉnh.",
+  "hero_image": null,
+  "primary_theme": "rest_wellbeing",
+  "metadata": {
+    "concept_ids": [
+      "concept.sleep_regulation"
+    ],
+    "emotion_tags": [
+      "restlessness",
+      "fatigue"
+    ],
+    "keywords": [
+      "mất ngủ",
+      "học sinh",
+      "chung cư",
+      "cửa sổ",
+      "chuyển trạng thái"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "after_the_last_exam",
+      "title_vi": "Sau môn thi cuối",
+      "blocks": [
+        {
+          "id": "after_the_last_exam.1",
+          "type": "paragraph",
+          "text_vi": "Môn thi cuối kết thúc lúc bốn giờ chiều. Trâm về nhà, cất tập đề vào ngăn kéo và nói với mẹ rằng tối nay con sẽ ngủ một giấc thật dài. Suốt ba tuần, cô bé đã mong đúng đêm này: không báo thức sớm, không trang ghi chú dưới gối, không câu hỏi nào còn phải học."
+        },
+        {
+          "id": "after_the_last_exam.2",
+          "type": "paragraph",
+          "text_vi": "Mười một giờ, Trâm tắt đèn. Mười một giờ mười hai, cô mở mắt nhìn đồng hồ. Mười một giờ hai mươi sáu, cô đổi phía gối. Mỗi lần kiểm tra giờ, con số mới lại giống một lời nhắc rằng mình vẫn chưa làm được việc đơn giản nhất của đêm."
+        }
+      ]
+    },
+    {
+      "id": "trying_the_switch",
+      "title_vi": "Cố tìm một công tắc",
+      "blocks": [
+        {
+          "id": "trying_the_switch.1",
+          "type": "paragraph",
+          "text_vi": "Trâm kéo chăn lên, rồi đẩy xuống. Cô đếm ngược từ một trăm, nhưng giữa chừng lại nghĩ đến đáp án của câu hình học. Cô bật điện thoại xem cách ngủ nhanh, đọc được vài dòng rồi lo ánh sáng màn hình làm mình thức hơn. Cô tắt máy, đặt úp xuống bàn và lắng nghe tiếng tim như thể nó đang cố tình gây ồn."
+        },
+        {
+          "id": "trying_the_switch.2",
+          "type": "paragraph",
+          "text_vi": "Ngoài cửa sổ là ba dãy chung cư. Một số căn vẫn sáng. Có ô cửa màu xanh của tivi, ô cửa vàng nơi ai đó đang gấp quần áo, và một căn bếp có người đi qua đi lại. Trâm tự hỏi tại sao cả thành phố chưa chịu ngủ cùng lúc với mình."
+        }
+      ]
+    },
+    {
+      "id": "windows_go_dark",
+      "title_vi": "Những ô cửa tắt dần",
+      "blocks": [
+        {
+          "id": "windows_go_dark.1",
+          "type": "paragraph",
+          "text_vi": "Rồi căn bếp phía đối diện tắt trước. Một lúc sau, ô cửa có tivi chuyển thành màu đen. Ở tầng mười, người phụ nữ phơi chiếc khăn cuối cùng rồi kéo rèm. Không có tín hiệu chung nào được phát ra. Khu nhà chỉ lặng dần theo hàng trăm nhịp sống khác nhau."
+        },
+        {
+          "id": "windows_go_dark.2",
+          "type": "paragraph",
+          "text_vi": "Trâm không nhìn đồng hồ nữa. Cô đem cốc nước vào bếp, gấp chiếc áo còn nằm trên ghế, đặt bút vào hộp và khép hờ rèm cửa. Những việc ấy không phải nghi thức bí mật. Chúng chỉ là những ô cửa nhỏ của ngày hôm đó, lần lượt được cô đóng lại."
+        },
+        {
+          "id": "windows_go_dark.3",
+          "type": "paragraph",
+          "text_vi": "Khi trở lại giường, Trâm vẫn chưa buồn ngủ ngay. Nhưng cô thôi coi sự tỉnh táo là một bài thi phải thắng. Cô nằm nghe tiếng thang máy dừng ở tầng dưới, tiếng nước chảy trong đường ống rồi im, tiếng chiếc xe máy cuối ngõ xa dần."
+        },
+        {
+          "id": "windows_go_dark.4",
+          "type": "pull_quote",
+          "text_vi": "Một căn nhà không tối đi trong một lần. Cơ thể cũng không phải chiếc công tắc.",
+          "attribution_vi": null
+        }
+      ]
+    },
+    {
+      "id": "the_last_window",
+      "title_vi": "Ô cửa cuối cùng",
+      "blocks": [
+        {
+          "id": "the_last_window.1",
+          "type": "paragraph",
+          "text_vi": "Sáng hôm sau, Trâm tỉnh dậy khi nắng đã đặt một hình chữ nhật lên chân giường. Cô không nhớ mình ngủ lúc nào. Điện thoại vẫn úp trên bàn, đồng hồ không kịp ghi lại khoảnh khắc chiến thắng nào."
+        },
+        {
+          "id": "the_last_window.2",
+          "type": "paragraph",
+          "text_vi": "Đêm kế tiếp, cô lại có một lúc nằm lâu hơn mong muốn. Ngoài kia, các ô cửa vẫn tắt theo thứ tự riêng. Trâm nhìn chúng một lát, rồi dọn chiếc cốc, gấp trang sách và kéo rèm."
+        },
+        {
+          "id": "the_last_window.3",
+          "type": "paragraph",
+          "text_vi": "Ô cửa phòng cô không phải ô đầu tiên. Cũng không cần là ô đầu tiên. Đến một lúc nào đó, nó chỉ lặng lẽ trở thành ô cửa cuối cùng của dãy nhà chìm vào tối."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Giấc ngủ là một chuyển động dần dần, không phải mệnh lệnh có hiệu lực tức thì. Một đêm chưa ngủ ngay không phải một thất bại cần tiếp tục thi đấu."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Bản thảo Selflo Story Studio · Diversity Batch 01",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "last_window_in_the_building",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nội dung nguyên bản do Selflo Story Studio tạo cho Authoring Preview; cần owner biên tập và xác nhận quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}
