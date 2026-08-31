@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 15,
+  "library_revision": 16,
   "content_version": "framework-taxonomy-preview-15",
   "language": "vi",
-  "generated_at": "2026-08-30T15:05:32Z",
+  "generated_at": "2026-08-31T12:56:49Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -100,11 +100,11 @@
     {
       "id": "reading_intents.vi",
       "kind": "reading_intent_catalog",
-      "revision": 1,
-      "path": "reading-intents/reading-intents.vi.r1.json",
+      "revision": 2,
+      "path": "reading-intents/reading-intents.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "758562a1b88115bd3d680c0a0c9ca8d73f0ca7431f559edb6610471de33872db",
-      "byte_count": 2828
+      "sha256": "20839253e1f7b209fe8235dc1196257c1a250ee87aeb691771d321afa34f130e",
+      "byte_count": 3076
     },
     {
       "id": "story.after_the_alarm_went_silent",
