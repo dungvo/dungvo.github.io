@@ -1,0 +1,388 @@
+{
+  "schema_version": "selflo.perspective.publish-audit.v1",
+  "channel": "authoring",
+  "library_revision": 15,
+  "canonical_source_revision": 15,
+  "canonical_source_digest": "489e79f67195679e32f5ffa51970931e85c9cc6e45f0b07f9cf9bb5917fd290d",
+  "canonical_quote_count": 302,
+  "source_files": [
+    {
+      "id": "knowledge.canonical.vi",
+      "sha256": "76a637835a7ad2ef9df22bca127f29efdd3fc5054764423d6677d14601cadde0",
+      "path": "knowledge/knowledge.vi.json"
+    },
+    {
+      "id": "reading_intents.vi",
+      "sha256": "758562a1b88115bd3d680c0a0c9ca8d73f0ca7431f559edb6610471de33872db",
+      "path": "reading-intents/reading-intents.vi.json"
+    },
+    {
+      "id": "story.after_the_alarm_went_silent",
+      "sha256": "20acb2d348efa642ac4243cf16d51599c014eef4d9f20724e810e8dffd1e3728",
+      "path": "stories/after-the-alarm-went-silent/story.vi.json"
+    },
+    {
+      "id": "story.baker_and_black_mark",
+      "sha256": "a6d5287e77f77689e028a5a0ed13612256c2f9a11c4649384ae2bf3ab6e6d653",
+      "path": "stories/baker-and-black-mark/story.vi.json"
+    },
+    {
+      "id": "story.blue_eraser",
+      "sha256": "101c66f9c3f8417d66830e12f4ec5f3d9112fd1784ee304a938e46a7ccb1c315",
+      "path": "stories/blue-eraser/story.vi.json"
+    },
+    {
+      "id": "story.boatman_and_second_mountain",
+      "sha256": "333aeea155c8e84639b4263d5c30ca0e1c14b509a6e0bccd9faf26eeded80061",
+      "path": "stories/boatman-and-second-mountain/story.vi.json"
+    },
+    {
+      "id": "story.builder_and_shapeless_stones",
+      "sha256": "f5a530d0ea0635333a5f0a70981e60bf2f01ba7dabdb8ddce5bcfb7e51c3dd95",
+      "path": "stories/builder-and-shapeless-stones/story.vi.json"
+    },
+    {
+      "id": "story.cafe_and_smoke_in_curtain",
+      "sha256": "d4e391f70148760a0fdc24b441fce88e286f6f3081570fcf7073f61f943cb11d",
+      "path": "stories/cafe-and-smoke-in-curtain/story.vi.json"
+    },
+    {
+      "id": "story.cake_for_the_sixth_floor",
+      "sha256": "d0b031b96c2ddd5c8d1d7b4be473e123655b42d71b09bbfa5e81230ee6769e27",
+      "path": "stories/cake-for-the-sixth-floor/story.vi.json"
+    },
+    {
+      "id": "story.cake_that_leaned_left",
+      "sha256": "5b5497d6c3da5b2784301cf732b47b33d4669477807c1d0d5c5cd12426b5d9e1",
+      "path": "stories/cake-that-leaned-left/story.vi.json"
+    },
+    {
+      "id": "story.call_me_at_the_last_stop",
+      "sha256": "7560d529cac8a4acdf3dcb99bb4511bf41c9aa7da66d3ac2c54b01040bf0bb6d",
+      "path": "stories/call-me-at-the-last-stop/story.vi.json"
+    },
+    {
+      "id": "story.chair_across_three_homes",
+      "sha256": "bb5528cb5f77742336e14363b8e009f8cc56bf71ae99bb4560fa03148972a87e",
+      "path": "stories/chair-across-three-homes/story.vi.json"
+    },
+    {
+      "id": "story.courier_and_waterline",
+      "sha256": "7bf761bed5e1e9b64aa42eb6777737c2fb6cf59b8a8707795b4c81e17cefc9af",
+      "path": "stories/courier-and-waterline/story.vi.json"
+    },
+    {
+      "id": "story.cup_with_less_sugar",
+      "sha256": "8e36dd9b3ed155f2df35eb4fb1caa76051b212cfb9f32b4d57b12dd1655ddd8e",
+      "path": "stories/cup-with-less-sugar/story.vi.json"
+    },
+    {
+      "id": "story.driver_and_last_stop_light",
+      "sha256": "4a8257ac95c5bad040f294a48b9416d7c4c1f650f7ced4fc65f765259858b774",
+      "path": "stories/driver-and-last-stop-light/story.vi.json"
+    },
+    {
+      "id": "story.envelope_that_could_not_hold_strength",
+      "sha256": "38a458ebf6c3a16be415cd7dc65aba2f894cee6542e468fc76d76667dfa18403",
+      "path": "stories/envelope-that-could-not-hold-strength/story.vi.json"
+    },
+    {
+      "id": "story.first_root_in_the_dark",
+      "sha256": "e66ab0279e2474cc15c28d527cb9e6fc8ac1f1da1497ee9c0e9fd5748bbc6209",
+      "path": "stories/first-root-in-the-dark/story.vi.json"
+    },
+    {
+      "id": "story.forest_still_dripping",
+      "sha256": "9ce9e3c6ebce2a289d17ba59cc927f018c93b1affbedfad12081a0d5665c4ffc",
+      "path": "stories/forest-still-dripping/story.vi.json"
+    },
+    {
+      "id": "story.four_pots_on_the_balcony",
+      "sha256": "d81d35681edd4cc37e4904e1ba1b288fd9098b76beffb7f56d029cf6e7b53432",
+      "path": "stories/four-pots-on-the-balcony/story.vi.json"
+    },
+    {
+      "id": "story.garden_with_a_new_patch_of_sun",
+      "sha256": "2c2d27fa27b701ac644683e8af4fd94333eba7b870272cb8d46083dd71b7c9ea",
+      "path": "stories/garden-with-a-new-patch-of-sun/story.vi.json"
+    },
+    {
+      "id": "story.half_a_wet_shoulder",
+      "sha256": "4bb70796da162644c62945bba009093f55b6a678b6818b9cb6dd42d221018a97",
+      "path": "stories/half-a-wet-shoulder/story.vi.json"
+    },
+    {
+      "id": "story.last_window_in_the_building",
+      "sha256": "d08eb365a8081c81f515195750526240db48d570bfce60c874f64052878887bb",
+      "path": "stories/last-window-in-the-building/story.vi.json"
+    },
+    {
+      "id": "story.laundry_and_two_bells",
+      "sha256": "981af3ef3efcd824169d09334691b92c356c5fe9d5a0706fd042d8cc31b55986",
+      "path": "stories/laundry-and-two-bells/story.vi.json"
+    },
+    {
+      "id": "story.morning_after_the_lantern_festival",
+      "sha256": "6a5266eb91d9d4bbac1a468464557cfe086b2f8d9bc51cd4ea00518e62e2b9b9",
+      "path": "stories/morning-after-the-lantern-festival/story.vi.json"
+    },
+    {
+      "id": "story.nine_oclock_morning",
+      "sha256": "f1948220803584cb5f51b071e630dc7673ad14dc8fdb5a608029885d24fae150",
+      "path": "stories/nine-oclock-morning/story.vi.json"
+    },
+    {
+      "id": "story.note_in_measure_seventeen",
+      "sha256": "cb74057e54f5485429bfacef4ff87caf56edbb659ba1fd3e253741cea4515309",
+      "path": "stories/note-in-measure-seventeen/story.vi.json"
+    },
+    {
+      "id": "story.operator_and_one_beat",
+      "sha256": "fdacfeb813ed1c37dc4d02c59557b922995ef70c524dca01c5b53fde2e544748",
+      "path": "stories/operator-and-one-beat/story.vi.json"
+    },
+    {
+      "id": "story.original_an_and_lamp_held_too_close",
+      "sha256": "ba056ad18293cd25ca7e3824ddbffdc69762616094e5a48068cbb8684f9abbb6",
+      "path": "stories/original-an-and-lamp-held-too-close/story.vi.json"
+    },
+    {
+      "id": "story.original_between_two_banks",
+      "sha256": "7e754b258ad29db416170458d657ee3433dc4e75352219b1a5c18aa21c115582",
+      "path": "stories/original-between-two-banks/story.vi.json"
+    },
+    {
+      "id": "story.original_boatman_and_second_mountain",
+      "sha256": "20b4df02f512a6b3712856cba01771ecc83c226942a0cc9564a7db690309e308",
+      "path": "stories/original-boatman-and-second-mountain/story.vi.json"
+    },
+    {
+      "id": "story.original_builder_and_shapeless_stones",
+      "sha256": "4d51b7ca8437a9daa11323cc1d77d340ad3a66df15b1a411186ebaac1f6089ff",
+      "path": "stories/original-builder-and-shapeless-stones/story.vi.json"
+    },
+    {
+      "id": "story.original_chair_beside_window",
+      "sha256": "f72b51447f61313cc16fbcfd6df05a26cb972afe00da7fc550134f2b219cbf52",
+      "path": "stories/original-chair-beside-window/story.vi.json"
+    },
+    {
+      "id": "story.original_if_i_lived_a_human_life",
+      "sha256": "c36dfa5a8d2da80e7e89a72a761d259d518e86bdece44314e83c466c8f98e80c",
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.json"
+    },
+    {
+      "id": "story.original_keeper_of_the_lamp",
+      "sha256": "2ef6c28b08e00abeab777fd74bfe71094e3da989f714af6136f6f60ab4d39ecb",
+      "path": "stories/original-keeper-of-the-lamp/story.vi.json"
+    },
+    {
+      "id": "story.original_lam_and_tomorrow_passenger",
+      "sha256": "a09e64c0f3b9c131f7d3cfbe978e0451d88749d4c16439870c3e8bde5ef952b9",
+      "path": "stories/original-lam-and-tomorrow-passenger/story.vi.json"
+    },
+    {
+      "id": "story.original_stone_that_loved_stormy_days",
+      "sha256": "9b3fe555d021063cf00fa05b2688d17e5adb41759c8b70747dcc4513cbb4bf02",
+      "path": "stories/original-stone-that-loved-stormy-days/story.vi.json"
+    },
+    {
+      "id": "story.original_thanh_and_one_more_meter",
+      "sha256": "d198c6f86a3aa9cf7f27562db29bf8af5f25f946fb05a9713ecb5a0269fd4434",
+      "path": "stories/original-thanh-and-one-more-meter/story.vi.json"
+    },
+    {
+      "id": "story.original_water_carrier_and_tomorrow_stone",
+      "sha256": "f28e12db16d2197905578f0d8a6850293b1ad9c869f9dbcb4ca0f5250481d2c7",
+      "path": "stories/original-water-carrier-and-tomorrow-stone/story.vi.json"
+    },
+    {
+      "id": "story.photograph_missing_a_corner",
+      "sha256": "a5ae55ed7f4a613c964f4160125ddbc3eb19a9afba9d41c51f1f7d063467a109",
+      "path": "stories/photograph-missing-a-corner/story.vi.json"
+    },
+    {
+      "id": "story.potter_and_two_hands",
+      "sha256": "de14b158c80aa722ac651431b708ec0ce33b672d96d9bbaa3f4d89ea459fe2ef",
+      "path": "stories/potter-and-two-hands/story.vi.json"
+    },
+    {
+      "id": "story.rain_arrives_downstream_late",
+      "sha256": "b21327798b2f6485d72f2de4dd3dedafd9375a913a3bcf925cfafd41bf3b9030",
+      "path": "stories/rain-arrives-downstream-late/story.vi.json"
+    },
+    {
+      "id": "story.recordist_and_room_not_silent",
+      "sha256": "9d6fb51dfc1fd9c8654b24e7045b8f67f42ec793c79ad2e4b0470e2dd7ed11f0",
+      "path": "stories/recordist-and-room-not-silent/story.vi.json"
+    },
+    {
+      "id": "story.roof_of_many_hands",
+      "sha256": "5a7330dab9c67d5e243769a8ce7e57fe2a1f43b5527d14da18402edd6edc0ef4",
+      "path": "stories/roof-of-many-hands/story.vi.json"
+    },
+    {
+      "id": "story.saturday_without_a_highlight",
+      "sha256": "60d5e1bb508dc0dcf753600c1f45f1ef1f3e354a0e22f992640501e39ce26a29",
+      "path": "stories/saturday-without-a-highlight/story.vi.json"
+    },
+    {
+      "id": "story.seam_opened_three_times",
+      "sha256": "bf859237628837462331dec6530c580b57c11a04480504236b7d85f789b4db17",
+      "path": "stories/seam-opened-three-times/story.vi.json"
+    },
+    {
+      "id": "story.shoes_that_went_to_work_twice",
+      "sha256": "6eefb58b1f52d0188afd35ed41fdcc2e74962acebda0e72bd4cbf9dea2dd5891",
+      "path": "stories/shoes-that-went-to-work-twice/story.vi.json"
+    },
+    {
+      "id": "story.signmaker_and_first_square",
+      "sha256": "c55b19331d2d50ced231408be275292276a3d4bad402d3fcca56539cca98a5f3",
+      "path": "stories/signmaker-and-first-square/story.vi.json"
+    },
+    {
+      "id": "story.three_dots_on_the_screen",
+      "sha256": "3cf621caaf0148d436a5035fca5ba46dd20ab9c42bebdbd448c862d285f22631",
+      "path": "stories/three-dots-on-the-screen/story.vi.json"
+    },
+    {
+      "id": "story.three_numbers_at_the_atm",
+      "sha256": "61a6dd69cf4cd3fbe788dcafd8026061cc6845d79330a7f4d385b493ed96834e",
+      "path": "stories/three-numbers-at-the-atm/story.vi.json"
+    },
+    {
+      "id": "story.ticket_printed_for_tuesday",
+      "sha256": "bd7950ec24b601aa16e96a038c3fc87e538b97ad0733257ab36442d505ad786e",
+      "path": "stories/ticket-printed-for-tuesday/story.vi.json"
+    },
+    {
+      "id": "story.two_tailors_and_one_measure",
+      "sha256": "ca2e1cdcd8ed44ecb97cec2e61b7ba58ec11a9b355c669e98decc97bb06f8251",
+      "path": "stories/two-tailors-and-one-measure/story.vi.json"
+    },
+    {
+      "id": "story.warehouse_path_between_boxes",
+      "sha256": "bafa0c9a83eae2c0a1af09c8e0fbd7772a1ad811a666aff880309a6b60738a2f",
+      "path": "stories/warehouse-path-between-boxes/story.vi.json"
+    },
+    {
+      "id": "theme.adversity_resilience.vi",
+      "sha256": "b99d87f31a94743746d38a68337ae63c8747a3756dc5ca99829782c9d4b18834",
+      "path": "themes/adversity-resilience.vi.json"
+    },
+    {
+      "id": "theme.attention.vi",
+      "sha256": "714a6e8f3ff84301d053fc21d114a2c4c1cea7862b85640412f4b39a7964fe0e",
+      "path": "themes/attention.vi.json"
+    },
+    {
+      "id": "theme.change_growth.vi",
+      "sha256": "19e76a5da2ccd024ded8340f726cc519053c5e9772e43e4c48dcfd02cfb4a234",
+      "path": "themes/change-growth.vi.json"
+    },
+    {
+      "id": "theme.emotion.vi",
+      "sha256": "c17bfae4279cc112872f6987e4a14da872be0f5c14dc153f5ecb6cca9fe0fbce",
+      "path": "themes/emotion.vi.json"
+    },
+    {
+      "id": "theme.meaning_values.vi",
+      "sha256": "0edd95adf24d9fe082f807ad682623463354c46b5168e727f6bca23e7aa93f0e",
+      "path": "themes/meaning-values.vi.json"
+    },
+    {
+      "id": "theme.relationships.vi",
+      "sha256": "a00c941b7cf92d7314f5b05eb489e763b6fe3fe2f8e5949facf0b252cdf8b2a3",
+      "path": "themes/relationships.vi.json"
+    },
+    {
+      "id": "theme.rest_wellbeing.vi",
+      "sha256": "03a8b313a8bb4f2511874e0ebebfde06b55085378d22e7286b025ada650962a7",
+      "path": "themes/rest-wellbeing.vi.json"
+    },
+    {
+      "id": "theme.self_understanding.vi",
+      "sha256": "2c7b7a7e3f377b5ee1735184b0ffb9f041a68d03941394bd3b8afb07a7d98fc7",
+      "path": "themes/self-understanding.vi.json"
+    },
+    {
+      "id": "theme.work_achievement.vi",
+      "sha256": "178dc741bf8dc1e83f0f0dbc1274f6cfa055a5a6b3b933a91d12fb49162bc1e8",
+      "path": "themes/work-achievement.vi.json"
+    }
+  ],
+  "changed_file_ids": [
+    "knowledge.canonical.vi",
+    "theme.adversity_resilience.vi",
+    "theme.attention.vi",
+    "theme.change_growth.vi",
+    "theme.emotion.vi",
+    "theme.meaning_values.vi",
+    "theme.relationships.vi",
+    "theme.rest_wellbeing.vi",
+    "theme.self_understanding.vi",
+    "theme.work_achievement.vi"
+  ],
+  "reused_file_ids": [
+    "reading_intents.vi",
+    "story.after_the_alarm_went_silent",
+    "story.baker_and_black_mark",
+    "story.blue_eraser",
+    "story.boatman_and_second_mountain",
+    "story.builder_and_shapeless_stones",
+    "story.cafe_and_smoke_in_curtain",
+    "story.cake_for_the_sixth_floor",
+    "story.cake_that_leaned_left",
+    "story.call_me_at_the_last_stop",
+    "story.chair_across_three_homes",
+    "story.courier_and_waterline",
+    "story.cup_with_less_sugar",
+    "story.driver_and_last_stop_light",
+    "story.envelope_that_could_not_hold_strength",
+    "story.first_root_in_the_dark",
+    "story.forest_still_dripping",
+    "story.four_pots_on_the_balcony",
+    "story.garden_with_a_new_patch_of_sun",
+    "story.half_a_wet_shoulder",
+    "story.last_window_in_the_building",
+    "story.laundry_and_two_bells",
+    "story.morning_after_the_lantern_festival",
+    "story.nine_oclock_morning",
+    "story.note_in_measure_seventeen",
+    "story.operator_and_one_beat",
+    "story.original_an_and_lamp_held_too_close",
+    "story.original_between_two_banks",
+    "story.original_boatman_and_second_mountain",
+    "story.original_builder_and_shapeless_stones",
+    "story.original_chair_beside_window",
+    "story.original_if_i_lived_a_human_life",
+    "story.original_keeper_of_the_lamp",
+    "story.original_lam_and_tomorrow_passenger",
+    "story.original_stone_that_loved_stormy_days",
+    "story.original_thanh_and_one_more_meter",
+    "story.original_water_carrier_and_tomorrow_stone",
+    "story.photograph_missing_a_corner",
+    "story.potter_and_two_hands",
+    "story.rain_arrives_downstream_late",
+    "story.recordist_and_room_not_silent",
+    "story.roof_of_many_hands",
+    "story.saturday_without_a_highlight",
+    "story.seam_opened_three_times",
+    "story.shoes_that_went_to_work_twice",
+    "story.signmaker_and_first_square",
+    "story.three_dots_on_the_screen",
+    "story.three_numbers_at_the_atm",
+    "story.ticket_printed_for_tuesday",
+    "story.two_tailors_and_one_measure",
+    "story.warehouse_path_between_boxes"
+  ],
+  "story_links_projected_to_null": [
+
+  ],
+  "explicit_quote_exclusions": [
+
+  ],
+  "manifest_sha256": "cea6fde58ed9886fd6e76bcf7db8cb32e00beaad6eba1f55590f657876e23562",
+  "generated_at": "2026-08-30T15:05:32Z"
+}

@@ -7,16 +7,16 @@
   "diversity_matrix": {
     "url": "https://dungvo.github.io/apps/selflo/preview/",
     "data_path": "apps/selflo/quote-research/diversity-matrix.json",
-    "baseline_library_revision": 14,
+    "baseline_library_revision": 15,
     "status": "published_in_preview"
   },
   "authoring_preview": {
     "canonical_quote_count": 302,
-    "new_quote_count": 50,
+    "new_quote_count": 0,
     "new_quotes_with_story": 0,
-    "content_version": "multi-source-classics-preview-14",
-    "lifecycle": "needs_owner_review",
-    "kind": "adapted_wisdom"
+    "content_version": "framework-taxonomy-preview-15",
+    "lifecycle": "frameworks_draft_pending_source_review",
+    "kind": "taxonomy_only"
   },
   "goals": [
     {
@@ -137,5 +137,12 @@
       "accepted_count": 0,
       "status": "collected_partial_needs_review"
     }
-  ]
+  ],
+  "framework_taxonomy": {
+    "new_framework_count": 7,
+    "total_framework_count": 12,
+    "new_mapping_count": 129,
+    "interdependence_decision": "alias_to_framework.mutuality",
+    "status": "authoring_only_pending_source_review"
+  }
 }

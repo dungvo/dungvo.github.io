@@ -1,8 +1,8 @@
 {
   "schema_version": "selflo.quote-diversity-matrix.v1",
   "updated_at": "2026-08-30T00:00:00Z",
-  "baseline_library_revision": 14,
-  "baseline_content_version": "multi-source-classics-preview-14",
+  "baseline_library_revision": 15,
+  "baseline_content_version": "framework-taxonomy-preview-15",
   "note_vi": "Một quote có thể thuộc nhiều trục. Coverage lớn không đồng nghĩa đa dạng nếu mọi item cùng một tác giả, tác phẩm hoặc giọng điệu.",
   "rows": [
     {
@@ -241,9 +241,9 @@
       "group": "anchor",
       "name_vi": "Stoicism",
       "count": 70,
-      "status": "imbalanced",
-      "evidence_vi": "Marcus Aurelius 50, Epictetus 10 và Seneca 10 theo provenance.",
-      "gap_vi": "Chưa có framework.stoicism nên chưa filter theo framework; vẫn chiếm phần lớn attributed quote."
+      "status": "partial",
+      "evidence_vi": "framework.stoicism tồn tại ở draft/pending_source_review; map bằng provenance cho 50 Marcus, 10 Epictetus và 10 Seneca.",
+      "gap_vi": "Cần source review definition và owner review từng quote trước Release."
     },
     {
       "group": "anchor",
@@ -266,8 +266,8 @@
       "name_vi": "Tương hỗ",
       "count": 1,
       "status": "thin",
-      "evidence_vi": "Framework canonical đã có.",
-      "gap_vi": "Rất mỏng."
+      "evidence_vi": "framework.mutuality giữ canonical; interdependence/tương thuộc là alias editorial, không tạo ID trùng.",
+      "gap_vi": "Coverage còn mỏng; chỉ tăng khi có mapping explicit."
     },
     {
       "group": "anchor",
@@ -288,42 +288,42 @@
     {
       "group": "anchor",
       "name_vi": "Quy luật tự nhiên / vũ trụ",
-      "count": 0,
-      "status": "missing",
-      "evidence_vi": "Chưa có formal framework.",
-      "gap_vi": "Cần định nghĩa cụ thể, tránh tuyên bố siêu hình không kiểm chứng."
+      "count": 12,
+      "status": "partial",
+      "evidence_vi": "framework.natural_cycles map 12 quote bằng whitelist editorial; nhãn UI là Chu kỳ tự nhiên.",
+      "gap_vi": "Không dùng như định luật vũ trụ hoặc lời hứa về số phận."
     },
     {
       "group": "anchor",
       "name_vi": "Vô thường / Impermanence",
-      "count": null,
-      "status": "unknown",
-      "evidence_vi": "Có tag rải rác.",
-      "gap_vi": "Chưa có framework canonical."
+      "count": 8,
+      "status": "partial",
+      "evidence_vi": "framework.impermanence map 8 quote bằng whitelist editorial.",
+      "gap_vi": "Cần review truyền thống và tránh dùng để phủ nhận mất mát."
     },
     {
       "group": "anchor",
       "name_vi": "Đạo gia / Taoism",
       "count": 10,
       "status": "partial",
-      "evidence_vi": "10 quote Laozi/Tao Teh King theo provenance.",
-      "gap_vi": "Chưa canonical; không đồng nhất máy móc với Âm dương."
+      "evidence_vi": "framework.taoism map 10 quote Laozi bằng provenance.",
+      "gap_vi": "Draft/pending source review; không đồng nhất máy móc với Âm dương."
     },
     {
       "group": "anchor",
       "name_vi": "Buddhist psychology",
       "count": 10,
       "status": "partial",
-      "evidence_vi": "10 câu Dhammapada theo provenance văn bản/truyền thống.",
-      "gap_vi": "Chưa canonical; không gán trực tiếp câu văn bản cho Đức Phật lịch sử."
+      "evidence_vi": "framework.buddhist_practice map 10 câu Dhammapada; phạm vi cố ý giới hạn theo văn bản.",
+      "gap_vi": "Không đại diện mọi trường phái và không gán trực tiếp mọi câu cho Đức Phật lịch sử."
     },
     {
       "group": "anchor",
       "name_vi": "Systems thinking / feedback loop",
-      "count": 0,
-      "status": "missing",
-      "evidence_vi": "Behavior loop có phần gần nghĩa nhưng chưa phải framework.",
-      "gap_vi": "Không rút gọn thành mọi chuyện đều xảy ra có lý do."
+      "count": 9,
+      "status": "partial",
+      "evidence_vi": "framework.systems_feedback map 5 behavior loop và 4 observation repeating-pattern bằng whitelist explicit.",
+      "gap_vi": "Cần source review; không biến thành nhân quả đơn tuyến."
     },
     {
       "group": "anchor",
@@ -658,8 +658,8 @@
       "name_vi": "Nho gia / Confucianism",
       "count": 10,
       "status": "partial",
-      "evidence_vi": "10 quote Analects/Confucius theo provenance.",
-      "gap_vi": "Chưa canonical; cần review cách ghi tác giả truyền thống và bản dịch."
+      "evidence_vi": "framework.confucianism map 10 quote Analects bằng provenance.",
+      "gap_vi": "Draft/pending source review; không đại diện mọi diễn giải lịch sử của Nho gia."
     }
   ]
 }
