@@ -1,0 +1,899 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.rest_wellbeing.002",
+  "primary_theme": "rest_wellbeing",
+  "quotes": [
+    {
+      "id": "hands_keep_the_hammers_echo",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Người thợ đã đặt búa xuống,\nbàn tay vẫn còn rung một lúc trước khi thực sự nghỉ.",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.psychological_detachment"
+        ],
+        "theories": [
+          "theory.psychological_detachment"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "rest",
+          "hammer",
+          "recovery"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Phản ứng do nỗ lực có thể cần thời gian lắng xuống sau khi công việc kết thúc.",
+        "observation_key": "hand_vibrates_after_hammer",
+        "structure_pattern": "load_reaction_outlasts_task"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 45,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.psychological_detachment.recovery_needs_some_demands_to_stop"
+        ],
+        "reference_ids": [
+          "ref.wendsche_2017_detachment"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": "story.after_the_alarm_went_silent",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "rest",
+          "hammer"
+        ],
+        "tie_break_order": 1096
+      }
+    },
+    {
+      "id": "wakeful_hours_fill_the_hourglass",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Sau một ngày dài, đôi mắt giữ từng giờ thức\nnhư chiếc đồng hồ cát giữ lại những hạt đã rơi.",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.sleep_regulation"
+        ],
+        "theories": [
+          "theory.two_process_sleep_regulation"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "sleep",
+          "hourglass",
+          "time"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Thời gian thức có thể tích lũy thành áp lực ngủ dần theo ngày.",
+        "observation_key": "wake_hours_in_hourglass",
+        "structure_pattern": "wake_time_accumulates_sleep_pressure"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 44,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.two_process_sleep_regulation.sleep_is_not_a_single_switch"
+        ],
+        "reference_ids": [
+          "ref.borbely_2016_two_process_sleep"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "sleep",
+          "hourglass"
+        ],
+        "tie_break_order": 1097
+      }
+    },
+    {
+      "id": "dark_room_before_the_body_is_ready",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Căn phòng có thể đã tối,\nnhưng cơ thể vẫn nhận ra buổi chiều chưa đi hết.",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.sleep_regulation"
+        ],
+        "theories": [
+          "theory.two_process_sleep_regulation"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "sleep",
+          "darkness",
+          "circadian"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Tắt ánh sáng không phải yếu tố duy nhất quyết định thời điểm cơ thể sẵn sàng ngủ.",
+        "observation_key": "dark_room_early_evening",
+        "structure_pattern": "external_darkness_differs_from_internal_timing"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 43,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.two_process_sleep_regulation.sleep_is_not_a_single_switch"
+        ],
+        "reference_ids": [
+          "ref.borbely_2016_two_process_sleep"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "sleep",
+          "darkness"
+        ],
+        "tie_break_order": 1098
+      }
+    },
+    {
+      "id": "morning_enters_before_the_alarm",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Buổi sáng lọt qua khe rèm\ntrước khi chiếc chuông báo thức kịp gọi tên ngày mới.",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.sleep_regulation"
+        ],
+        "theories": [
+          "theory.two_process_sleep_regulation"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "sleep",
+          "morning",
+          "light"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Ánh sáng và nhịp ngày có thể báo hiệu thời gian trước tín hiệu nhân tạo.",
+        "observation_key": "morning_light_before_alarm",
+        "structure_pattern": "natural_time_cue_precedes_device"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 42,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.two_process_sleep_regulation.sleep_is_not_a_single_switch"
+        ],
+        "reference_ids": [
+          "ref.borbely_2016_two_process_sleep"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "sleep",
+          "morning"
+        ],
+        "tie_break_order": 1099
+      }
+    },
+    {
+      "id": "tired_body_waits_for_the_train",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Có những đêm thân thể đã mỏi mà giấc ngủ chưa đến,\nnhư sân ga đông người nhưng chuyến tàu còn lệch giờ.",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.sleep_regulation"
+        ],
+        "theories": [
+          "theory.two_process_sleep_regulation"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "sleep",
+          "train",
+          "timing"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Mệt mỏi và thời điểm đi vào giấc ngủ không phải lúc nào cũng trùng nhau.",
+        "observation_key": "tired_station_waiting_for_train",
+        "structure_pattern": "pressure_present_timing_not_aligned"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 41,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.two_process_sleep_regulation.sleep_is_not_a_single_switch"
+        ],
+        "reference_ids": [
+          "ref.borbely_2016_two_process_sleep"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "sleep",
+          "train"
+        ],
+        "tie_break_order": 1100
+      }
+    },
+    {
+      "id": "house_turns_off_one_window_at_a_time",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Giấc ngủ không giống một công tắc.\nNó giống căn nhà tắt dần từng ô cửa.",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.sleep_regulation"
+        ],
+        "theories": [
+          "theory.two_process_sleep_regulation"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "sleep",
+          "house",
+          "transition"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Chuyển sang trạng thái ngủ có thể được hình dung như một quá trình thay vì một thời điểm tức thì.",
+        "observation_key": "house_windows_turn_off",
+        "structure_pattern": "state_changes_gradually_not_instantly"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.two_process_sleep_regulation.sleep_is_not_a_single_switch"
+        ],
+        "reference_ids": [
+          "ref.borbely_2016_two_process_sleep"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": "story.last_window_in_the_building",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "sleep",
+          "house"
+        ],
+        "tie_break_order": 1101
+      }
+    },
+    {
+      "id": "attributed.ma.iv_03.inner_retreat",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Không nơi ẩn náu nào yên tĩnh và thảnh thơi hơn chính tâm hồn mình — nhất là khi bên trong có một điểm mà chỉ cần nhìn vào, ta liền trở về trạng thái nghỉ ngơi.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 3",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 3; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "inner_calm"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Không nơi ẩn náu nào yên tĩnh và thảnh thơi hơn chính tâm hồn mình — nhất là khi bên trong có một điểm mà chỉ cần nhìn vào, ta liền trở về trạng thái nghỉ ngơi.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "rest_wellbeing",
+          "inner_calm"
+        ],
+        "tie_break_order": 1124
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vi_11.return_yourself",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Mỗi khi hoàn cảnh đẩy bạn vào rối ren, hãy sớm trở về với chính mình và đừng để nhịp sống bị gián đoạn lâu hơn mức cần thiết.",
+      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 11",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 11; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "recovery"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Mỗi khi hoàn cảnh đẩy bạn vào rối ren, hãy sớm trở về với chính mình và đừng để nhịp sống bị gián đoạn lâu hơn mức cần thiết.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "rest_wellbeing",
+          "recovery"
+        ],
+        "tie_break_order": 1142
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vii_28.just_calm",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy trở vào bên trong mình. Năng lực suy xét sẽ tìm thấy sự mãn nguyện trong cách hành xử công bằng và trong sự bình thản mà nó mang lại.",
+      "subtitle_vi": "Suy tưởng · Quyển VII, đoạn 28",
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 28; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "integrity"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Hãy trở vào bên trong mình. Năng lực suy xét sẽ tìm thấy sự mãn nguyện trong cách hành xử công bằng và trong sự bình thản mà nó mang lại.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "rest_wellbeing",
+          "integrity"
+        ],
+        "tie_break_order": 1156
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "do_not_let_work_rent_your_mind_after_hours",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Căn phòng trong đầu",
+      "text_vi": "Tan làm là trả công việc lại cho ngày mai, không cho nó thuê miễn phí căn phòng trong đầu tối nay.",
+      "subtitle_vi": null,
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "tan làm",
+          "ranh giới",
+          "nghỉ ngơi",
+          "buổi tối"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Tan làm là trả công việc lại cho ngày mai, không cho nó thuê miễn phí căn phòng trong đầu tối nay.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.original_chair_beside_window",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "rest_wellbeing",
+          "tan làm",
+          "ranh giới",
+          "nghỉ ngơi",
+          "buổi tối"
+        ],
+        "tie_break_order": 3016
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "morning_dew_leaves_when_warm",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Buổi sáng sương còn đọng, không ai vội phủi đi. Nó tự tan khi trời đủ ấm.",
+      "subtitle_vi": null,
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.natural_cycles",
+          "framework.impermanence"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "low_energy"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quan sát đời thường cho hoàn cảnh low_energy.",
+        "observation_key": "morning_dew_leaves_when_warm",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "soft_paper_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "observation",
+          "low_energy"
+        ],
+        "tie_break_order": 4000
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "streetlight_turns_off_when_unneeded",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Đèn đường tắt lúc 5 giờ sáng không phải vì hết điện. Vì không còn cần nữa.",
+      "subtitle_vi": null,
+      "primary_theme": "rest_wellbeing",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "low_energy"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quan sát đời thường cho hoàn cảnh low_energy.",
+        "observation_key": "streetlight_turns_off_when_unneeded",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 41,
+        "featured": false,
+        "style": "soft_paper_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "observation",
+          "low_energy"
+        ],
+        "tie_break_order": 4001
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

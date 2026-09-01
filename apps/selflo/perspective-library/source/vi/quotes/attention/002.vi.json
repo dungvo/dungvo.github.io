@@ -1,0 +1,863 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.attention.002",
+  "primary_theme": "attention",
+  "quotes": [
+    {
+      "id": "maps_hide_the_nearby_door",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Đứng trước quá nhiều tấm bản đồ,\nngười ta có thể quên cánh cửa đang ở ngay sau lưng.",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.overthinking"
+        ],
+        "theories": [
+          "theory.repetitive_negative_thinking"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "overthinking",
+          "maps",
+          "door"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quá nhiều mô phỏng hướng đi có thể che mất điều đang có thể quan sát ngay gần.",
+        "observation_key": "maps_and_nearby_door",
+        "structure_pattern": "many_representations_obscure_immediate_exit"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 42,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.repetitive_negative_thinking.repetition_may_not_add_clarity"
+        ],
+        "reference_ids": [
+          "ref.zetsche_2018_repetitive_negative_thinking"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "overthinking",
+          "maps"
+        ],
+        "tie_break_order": 1010
+      }
+    },
+    {
+      "id": "eyes_memorize_the_unopened_page",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Một trang sách đọc lại quá nhiều lần\ncó thể khiến mắt thuộc từng dòng mà lòng vẫn chưa hiểu.",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.overthinking"
+        ],
+        "theories": [
+          "theory.repetitive_negative_thinking"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "overthinking",
+          "book",
+          "repetition"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Sự quen thuộc do lặp lại không đồng nghĩa với hiểu thêm.",
+        "observation_key": "rereading_same_page",
+        "structure_pattern": "familiarity_increases_without_understanding"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 41,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.repetitive_negative_thinking.repetition_may_not_add_clarity"
+        ],
+        "reference_ids": [
+          "ref.zetsche_2018_repetitive_negative_thinking"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "overthinking",
+          "book"
+        ],
+        "tie_break_order": 1011
+      }
+    },
+    {
+      "id": "pot_cools_between_lid_checks",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Nồi nước không nguội nhanh hơn\nchỉ vì chiếc nắp liên tục được mở ra để nhìn.",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.overthinking"
+        ],
+        "theories": [
+          "theory.repetitive_negative_thinking"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "overthinking",
+          "pot",
+          "time"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Kiểm tra lặp lại không nhất thiết thúc đẩy một quá trình cần thời gian.",
+        "observation_key": "checking_cooling_pot",
+        "structure_pattern": "checking_interrupts_without_accelerating"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.repetitive_negative_thinking.repetition_may_not_add_clarity"
+        ],
+        "reference_ids": [
+          "ref.zetsche_2018_repetitive_negative_thinking"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "overthinking",
+          "pot"
+        ],
+        "tie_break_order": 1012
+      }
+    },
+    {
+      "id": "attributed.ma.ii_07.unsettled_aim",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Người ta cũng có thể làm mình kiệt sức bằng vô số hoạt động, chỉ vì chưa có một mục tiêu rõ ràng để quy tụ mọi mong muốn và dự định.",
+      "subtitle_vi": "Suy tưởng · Quyển II, đoạn 7",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển II, đoạn 7; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "direction"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Người ta cũng có thể làm mình kiệt sức bằng vô số hoạt động, chỉ vì chưa có một mục tiêu rõ ràng để quy tụ mọi mong muốn và dự định.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "direction"
+        ],
+        "tie_break_order": 1115
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.ii_14.past_future",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Không ai có thể đánh mất quá khứ hay tương lai, bởi làm sao ta có thể bị lấy đi một thứ mình không sở hữu?",
+      "subtitle_vi": "Suy tưởng · Quyển II, đoạn 14",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển II, đoạn 14; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "present"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Không ai có thể đánh mất quá khứ hay tương lai, bởi làm sao ta có thể bị lấy đi một thứ mình không sở hữu?",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "present"
+        ],
+        "tie_break_order": 1117
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iii_04.others_affairs",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng dùng phần đời còn lại để bận tâm về người khác, nếu sự bận tâm ấy không phục vụ điều tốt chung.",
+      "subtitle_vi": "Suy tưởng · Quyển III, đoạn 4",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển III, đoạn 4; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "boundaries"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đừng dùng phần đời còn lại để bận tâm về người khác, nếu sự bận tâm ấy không phục vụ điều tốt chung.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "boundaries"
+        ],
+        "tie_break_order": 1120
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iii_10.present_moment",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy nhớ rằng mỗi người chỉ sống trong khoảnh khắc hiện tại đang lướt qua; phần thời gian còn lại hoặc đã hết, hoặc hoàn toàn chưa biết.",
+      "subtitle_vi": "Suy tưởng · Quyển III, đoạn 10",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển III, đoạn 10; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "present"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Hãy nhớ rằng mỗi người chỉ sống trong khoảnh khắc hiện tại đang lướt qua; phần thời gian còn lại hoặc đã hết, hoặc hoàn toàn chưa biết.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "present"
+        ],
+        "tie_break_order": 1122
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iv_18.own_actions",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Ta có thêm biết bao khoảng thảnh thơi khi thôi nhìn người khác nói gì, làm gì hay định làm gì, để chỉ xem hành động của mình có công bằng và đúng đắn hay không.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 18",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 18; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "integrity"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Ta có thêm biết bao khoảng thảnh thơi khi thôi nhìn người khác nói gì, làm gì hay định làm gì, để chỉ xem hành động của mình có công bằng và đúng đắn hay không.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "integrity"
+        ],
+        "tie_break_order": 1130
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.v_16.mind_colour",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Những ấn tượng xuất hiện thường xuyên sẽ tạo nên sắc thái của tâm trí. Tâm hồn nhuốm màu từ những gì nó tiếp nhận.",
+      "subtitle_vi": "Suy tưởng · Quyển V, đoạn 16",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển V, đoạn 16; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "mental_inputs"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Những ấn tượng xuất hiện thường xuyên sẽ tạo nên sắc thái của tâm trí. Tâm hồn nhuốm màu từ những gì nó tiếp nhận.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "mental_inputs"
+        ],
+        "tie_break_order": 1138
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vi_03.look_within",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy nhìn vào bên trong. Đừng để bản chất hay giá trị thật của bất cứ điều gì trượt khỏi sự chú ý của bạn.",
+      "subtitle_vi": "Suy tưởng · Quyển VI, đoạn 3",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 3; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "discernment"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Hãy nhìn vào bên trong. Đừng để bản chất hay giá trị thật của bất cứ điều gì trượt khỏi sự chú ý của bạn.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "discernment"
+        ],
+        "tie_break_order": 1140
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vii_08.future_reason",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng quá phiền muộn về tương lai. Khi cần bước tới đó, bạn vẫn sẽ có năng lực suy xét giống như năng lực đang dùng cho việc hiện tại.",
+      "subtitle_vi": "Suy tưởng · Quyển VII, đoạn 8",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 8; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "future_worry"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đừng quá phiền muộn về tương lai. Khi cần bước tới đó, bạn vẫn sẽ có năng lực suy xét giống như năng lực đang dùng cho việc hiện tại.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "future_worry"
+        ],
+        "tie_break_order": 1154
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.viii_36.present_bounds",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy nhớ rằng quá khứ hay tương lai không trực tiếp đè nặng bạn; chỉ có hiện tại. Nỗi khó của hiện tại sẽ nhỏ lại khi bạn giữ nó trong đúng giới hạn của khoảnh khắc này.",
+      "subtitle_vi": "Suy tưởng · Quyển VIII, đoạn 36",
+      "primary_theme": "attention",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 36; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "overwhelm"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Hãy nhớ rằng quá khứ hay tương lai không trực tiếp đè nặng bạn; chỉ có hiện tại. Nỗi khó của hiện tại sẽ nhỏ lại khi bạn giữ nó trong đúng giới hạn của khoảnh khắc này.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "attention",
+          "overwhelm"
+        ],
+        "tie_break_order": 1161
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

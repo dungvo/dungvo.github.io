@@ -1,0 +1,597 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.emotion.002",
+  "primary_theme": "emotion",
+  "quotes": [
+    {
+      "id": "room_holds_the_bells_echo",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Chiếc chuông đã im,\nnhưng căn phòng vẫn giữ lại một khoảng ngân.",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.emotional_memory"
+        ],
+        "theories": [
+          "theory.emotional_memory"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "emotion",
+          "memory",
+          "echo"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Ảnh hưởng của một tín hiệu có thể còn tiếp tục sau khi tín hiệu đã kết thúc.",
+        "observation_key": "bell_echo_in_room",
+        "structure_pattern": "sound_stops_resonance_continues"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 42,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.emotional_memory.prior_experience_may_shape_present_response"
+        ],
+        "reference_ids": [
+          "ref.buchanan_2007_emotional_memory_retrieval"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "memory"
+        ],
+        "tie_break_order": 1022
+      }
+    },
+    {
+      "id": "old_song_opens_a_closed_room",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Có những bài hát chỉ vừa cất lên\nđã mở lại một căn phòng tưởng như đã khóa.",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.emotional_memory"
+        ],
+        "theories": [
+          "theory.emotional_memory"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "emotion",
+          "memory",
+          "song"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một tín hiệu quen thuộc có thể gợi lại bối cảnh cảm xúc đã xa.",
+        "observation_key": "song_reopens_old_room",
+        "structure_pattern": "present_cue_reopens_past_context"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 41,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.emotional_memory.prior_experience_may_shape_present_response"
+        ],
+        "reference_ids": [
+          "ref.buchanan_2007_emotional_memory_retrieval"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "memory"
+        ],
+        "tie_break_order": 1023
+      }
+    },
+    {
+      "id": "coffee_returns_a_distant_morning",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Mùi cà phê từ một quán lạ\nđôi khi đưa ta về một buổi sáng rất xa.",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.emotional_memory"
+        ],
+        "theories": [
+          "theory.emotional_memory"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "emotion",
+          "memory",
+          "coffee"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một cảm giác hiện tại có thể gợi lại một ký ức cảm xúc không chủ ý.",
+        "observation_key": "coffee_scent_evokes_morning",
+        "structure_pattern": "sensory_cue_bridges_present_and_past"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.emotional_memory.prior_experience_may_shape_present_response"
+        ],
+        "reference_ids": [
+          "ref.buchanan_2007_emotional_memory_retrieval"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "memory"
+        ],
+        "tie_break_order": 1024
+      }
+    },
+    {
+      "id": "attributed.ma.iv_07.suppress_injury",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Buông ý nghĩ ấy, tiếng kêu “Tôi bị tổn thương” cũng biến mất. Buông tiếng kêu ấy, cảm giác về vết thương cũng đổi khác.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 7",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 7; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "judgment"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Buông ý nghĩ ấy, tiếng kêu “Tôi bị tổn thương” cũng biến mất. Buông tiếng kêu ấy, cảm giác về vết thương cũng đổi khác.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "judgment"
+        ],
+        "tie_break_order": 1126
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.viii_47.judgment_afflicts",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi buồn khổ vì một điều bên ngoài, không chỉ bản thân sự việc làm bạn đau, mà còn là phán đoán của bạn về nó. Và phán đoán ấy là phần bạn có thể xem xét lại.",
+      "subtitle_vi": "Suy tưởng · Quyển VIII, đoạn 47",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 47; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "judgment"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Khi buồn khổ vì một điều bên ngoài, không chỉ bản thân sự việc làm bạn đau, mà còn là phán đoán của bạn về nó. Và phán đoán ấy là phần bạn có thể xem xét lại.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "judgment"
+        ],
+        "tie_break_order": 1162
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "an_old_scent_can_open_an_old_room",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Cánh cửa của ký ức",
+      "text_vi": "Một mùi cũ có thể mở lại căn phòng cũ trong lòng. Nhận ra cánh cửa ấy không có nghĩa mình phải bước vào.",
+      "subtitle_vi": null,
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "ký ức cảm xúc",
+          "mùi hương",
+          "nhận biết",
+          "quá khứ"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một mùi cũ có thể mở lại căn phòng cũ trong lòng. Nhận ra cánh cửa ấy không có nghĩa mình phải bước vào.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.cafe_and_smoke_in_curtain",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "ký ức cảm xúc",
+          "mùi hương",
+          "nhận biết",
+          "quá khứ"
+        ],
+        "tie_break_order": 3003
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.epictetus.ench_05.opinion",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Con người không chỉ bị xáo trộn bởi điều xảy ra, mà còn bởi ý kiến của họ về điều ấy.",
+      "subtitle_vi": "Epictetus · Encheiridion · V",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "epictetus",
+        "author_name": "Epictetus",
+        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
+        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "source_language": "en",
+        "source_label": "Epictetus · Encheiridion",
+        "source_detail": "George Long (dịch); V; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "stoicism",
+          "judgment"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Con người không chỉ bị xáo trộn bởi điều xảy ra, mà còn bởi ý kiến của họ về điều ấy.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "stoicism",
+          "judgment"
+        ],
+        "tie_break_order": 5003
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.seneca.letter_13.imagination",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Có nhiều điều làm ta sợ hơn là thật sự quật ngã ta; ta thường đau trong tưởng tượng nhiều hơn trong thực tế.",
+      "subtitle_vi": "Seneca · Thư gửi Lucilius · 13",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "seneca",
+        "author_name": "Seneca",
+        "work": "Moral Letters to Lucilius",
+        "source_url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_13",
+        "source_language": "en",
+        "source_label": "Seneca · Thư gửi Lucilius",
+        "source_detail": "Richard M. Gummere (dịch); 13; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "stoicism",
+          "future_fear"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Bản dịch Gummere xuất bản 1918–1925 và được Wikisource lưu trữ; cần review thẩm quyền áp dụng và bản dịch tiếng Việt trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Có nhiều điều làm ta sợ hơn là thật sự quật ngã ta; ta thường đau trong tưởng tượng nhiều hơn trong thực tế.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "stoicism",
+          "future_fear"
+        ],
+        "tie_break_order": 5015
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

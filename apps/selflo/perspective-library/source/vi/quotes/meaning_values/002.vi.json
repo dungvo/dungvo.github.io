@@ -1,0 +1,860 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.meaning_values.002",
+  "primary_theme": "meaning_values",
+  "quotes": [
+    {
+      "id": "chipped_cup_stays_for_its_story",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Tách trà sứt miệng vẫn ở lại trên kệ,\nvì có những thứ được giữ bởi câu chuyện chứ không bởi vẻ nguyên vẹn.",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.meaning_in_life"
+        ],
+        "theories": [
+          "theory.meaning_in_life"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "meaning",
+          "cup",
+          "story"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Ý nghĩa và sự gắn bó có thể tồn tại dù một vật không còn hoàn hảo.",
+        "observation_key": "chipped_teacup_on_shelf",
+        "structure_pattern": "story_preserves_what_perfection_cannot"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections"
+        ],
+        "reference_ids": [
+          "ref.steger_2006_meaning_in_life"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning",
+          "cup"
+        ],
+        "tie_break_order": 1113
+      }
+    },
+    {
+      "id": "attributed.ma.ii_17.fame_forgotten",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Tồn tại là một cuộc chiến và một hành trình nơi đất lạ; còn điểm cuối của danh tiếng là sự lãng quên.",
+      "subtitle_vi": "Suy tưởng · Quyển II, đoạn 17",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển II, đoạn 17; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "fame"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Tồn tại là một cuộc chiến và một hành trình nơi đất lạ; còn điểm cuối của danh tiếng là sự lãng quên.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "fame"
+        ],
+        "tie_break_order": 1118
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iv_17.be_good_now",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng sắp đặt đời mình như thể còn mười nghìn năm để sống. Khi vẫn đang sống và vẫn còn có thể, hãy sống tử tế.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 17",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 17; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "mortality"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đừng sắp đặt đời mình như thể còn mười nghìn năm để sống. Khi vẫn đang sống và vẫn còn có thể, hãy sống tử tế.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "mortality"
+        ],
+        "tie_break_order": 1129
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iv_35.one_day",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Mọi thứ chỉ tồn tại trong một ngày nào đó — cả người nhớ lẫn điều được nhớ.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 35",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 35; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "impermanence"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Mọi thứ chỉ tồn tại trong một ngày nào đó — cả người nhớ lẫn điều được nhớ.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "impermanence"
+        ],
+        "tie_break_order": 1132
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vii_03.worth_pursuit",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Giữa tất cả những điều ấy, hãy đứng vững, tử tế mà không kiêu ngạo, và hiểu rằng giá trị của một người gắn với điều họ lựa chọn theo đuổi.",
+      "subtitle_vi": "Suy tưởng · Quyển VII, đoạn 3",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 3; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "pursuit"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Giữa tất cả những điều ấy, hãy đứng vững, tử tế mà không kiêu ngạo, và hiểu rằng giá trị của một người gắn với điều họ lựa chọn theo đuổi.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "pursuit"
+        ],
+        "tie_break_order": 1152
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vii_56.life_overplus",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy hình dung đời cũ đã kết thúc. Phần còn lại, hãy sống như một khoảng thời gian được trao thêm ngoài điều bạn từng mong đợi.",
+      "subtitle_vi": "Suy tưởng · Quyển VII, đoạn 56",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 56; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "renewal"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Hãy hình dung đời cũ đã kết thúc. Phần còn lại, hãy sống như một khoảng thời gian được trao thêm ngoài điều bạn từng mong đợi.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "renewal"
+        ],
+        "tie_break_order": 1157
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.viii_33.fortune_gifts",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đón nhận quà tặng của vận may mà không kiêu hãnh; và để chúng rời đi mà không miễn cưỡng.",
+      "subtitle_vi": "Suy tưởng · Quyển VIII, đoạn 33",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 33; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "non_attachment"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đón nhận quà tặng của vận may mà không kiêu hãnh; và để chúng rời đi mà không miễn cưỡng.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "non_attachment"
+        ],
+        "tie_break_order": 1160
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.x_16.be_one",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng nói thêm về việc một người tốt nên như thế nào; hãy trở thành người ấy.",
+      "subtitle_vi": "Suy tưởng · Quyển X, đoạn 16",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển X, đoạn 16; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "action"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đừng nói thêm về việc một người tốt nên như thế nào; hãy trở thành người ấy.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "action"
+        ],
+        "tie_break_order": 1163
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "one_days_feeling_is_not_a_whole_life",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Không phải cả cuộc đời",
+      "text_vi": "Cảm xúc của một ngày là thật, nhưng nó không phải bản tóm tắt của cả cuộc đời.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "cảm xúc",
+          "cuộc đời",
+          "ý nghĩa",
+          "giai đoạn"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Cảm xúc của một ngày là thật, nhưng nó không phải bản tóm tắt của cả cuộc đời.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.original_if_i_lived_a_human_life",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "cảm xúc",
+          "cuộc đời",
+          "ý nghĩa",
+          "giai đoạn"
+        ],
+        "tie_break_order": 3002
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "keep_the_lamp_when_the_sea_has_waves",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Giữ ngọn đèn",
+      "text_vi": "Ta không cần bắt biển ngừng có sóng; ta cần học cách giữ ngọn đèn khi chèo thuyền.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "bất định",
+          "ngọn đèn",
+          "biển",
+          "bước tiếp theo"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Ta không cần bắt biển ngừng có sóng; ta cần học cách giữ ngọn đèn khi chèo thuyền.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.original_keeper_of_the_lamp",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "bất định",
+          "ngọn đèn",
+          "biển",
+          "bước tiếp theo"
+        ],
+        "tie_break_order": 3012
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "applause_ending_is_not_failure",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Tiếng vỗ tay sau buổi diễn rồi cũng dừng. Không phải vì diễn dở.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.natural_cycles",
+          "framework.impermanence"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "after_peak"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quan sát đời thường cho hoàn cảnh after_peak.",
+        "observation_key": "applause_ending_is_not_failure",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 45,
+        "featured": false,
+        "style": "soft_paper_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "observation",
+          "after_peak"
+        ],
+        "tie_break_order": 4014
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "a_good_meal_ends_with_enough",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Bữa ăn ngon nhất kết thúc bằng cảm giác no — không phải thêm một đĩa nữa.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.natural_cycles"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "after_peak"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quan sát đời thường cho hoàn cảnh after_peak.",
+        "observation_key": "a_good_meal_ends_with_enough",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 46,
+        "featured": false,
+        "style": "soft_paper_observe"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "observation",
+          "after_peak"
+        ],
+        "tie_break_order": 4015
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

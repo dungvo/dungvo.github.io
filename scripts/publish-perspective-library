@@ -215,6 +215,34 @@ abort("Owner has not approved CP-003") unless decisions.fetch("owner_gate_status
 source_payloads = content_entries.reject { |entry| entry.fetch("kind") == "image" }.to_h do |entry|
   [entry.fetch("id"), read_json(File.join(source_root, entry.fetch("path")))]
 end
+
+fragment_entries = source_index.fetch("files").select { |entry| entry.fetch("kind") == "quote_fragment" }
+fragments_by_id = fragment_entries.to_h do |entry|
+  payload = read_json(File.join(source_root, entry.fetch("path")))
+  abort("Unsupported quote fragment schema: #{entry.fetch("id")}") unless payload.fetch("schema_version") == "selflo.perspective.quote-fragment.v1"
+  abort("Invalid quote fragment entity: #{entry.fetch("id")}") unless payload.fetch("entity") == "perspective_quote_fragment"
+  abort("Quote fragment ID mismatch: #{entry.fetch("id")}") unless payload.fetch("fragment_id") == entry.fetch("id")
+  abort("Quote fragment must contain quotes: #{entry.fetch("id")}") unless payload.fetch("quotes").is_a?(Array) && !payload.fetch("quotes").empty?
+  [entry.fetch("id"), payload]
+end
+
+used_fragment_ids = []
+source_payloads.each do |id, payload|
+  next unless id.start_with?("theme.") && payload.key?("quote_fragment_ids")
+  fragment_ids = payload.delete("quote_fragment_ids")
+  abort("Theme source has no quote fragments: #{id}") unless fragment_ids.is_a?(Array) && !fragment_ids.empty?
+  fragments = fragment_ids.map do |fragment_id|
+    fragment = fragments_by_id.fetch(fragment_id) { abort("Missing quote fragment #{fragment_id} for #{id}") }
+    abort("Quote fragment theme mismatch: #{fragment_id}") unless fragment.fetch("primary_theme") == payload.fetch("primary_theme")
+    fragment
+  end
+  used_fragment_ids.concat(fragment_ids)
+  payload["quotes"] = fragments.flat_map { |fragment| fragment.fetch("quotes") }
+end
+
+abort("Quote fragment referenced more than once") unless used_fragment_ids.uniq.length == used_fragment_ids.length
+unused_fragment_ids = fragments_by_id.keys - used_fragment_ids
+abort("Unreferenced quote fragments: #{unused_fragment_ids.join(", ")}") unless unused_fragment_ids.empty?
 stories_by_id = source_payloads.select { |id, _| id.start_with?("story.") }
 release_story_ids = stories_by_id.select { |_id, story| release_ready_story?(story) }.keys.to_set
 release_image_ids = stories_by_id
@@ -266,7 +294,13 @@ current_source_files = (current_audit&.fetch("source_files") || []).to_h { |entr
 
 descriptors = []
 payload_bytes_by_path = {}
-source_audit = []
+source_audit = (content_entries + fragment_entries).map do |entry|
+  {
+    "id" => entry.fetch("id"),
+    "sha256" => sha(File.binread(File.join(source_root, entry.fetch("path")))),
+    "path" => entry.fetch("path")
+  }
+end
 changed = []
 reused = []
 payloads_by_kind = Hash.new { |hash, key| hash[key] = [] }
@@ -277,7 +311,6 @@ content_entries.each do |source_entry|
   next if kind == "story" && !projected_payloads.key?(id)
   next if kind == "reading_intent_catalog" && !projected_payloads.key?(id)
   next if kind == "image" && channel == "release" && !release_image_ids.include?(id)
-  source_audit << { "id" => id, "sha256" => sha(File.binread(File.join(source_root, source_entry.fetch("path")))), "path" => source_entry.fetch("path") }
   previous = current_descriptors[id]
   source_bytes = File.binread(File.join(source_root, source_entry.fetch("path")))
   if kind == "image"

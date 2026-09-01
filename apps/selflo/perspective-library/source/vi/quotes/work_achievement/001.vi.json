@@ -1,0 +1,941 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.work_achievement.001",
+  "primary_theme": "work_achievement",
+  "quotes": [
+    {
+      "id": "quote.builder_and_shapeless_stones",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Công việc thật sự của mình đôi khi nhỏ hơn rất nhiều so với công việc mình đã làm trong đầu.",
+      "subtitle_vi": null,
+      "story_id": "story.builder_and_shapeless_stones",
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "ranh giới",
+          "công việc",
+          "điều chưa rõ"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo",
+        "source_detail": "Biên tập từ authoring source do owner cung cấp; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+          "frustration",
+          "uncertainty"
+        ],
+        "keywords": [
+          "ranh giới công việc",
+          "giả định",
+          "trách nhiệm"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Cần owner xác nhận provenance và quyết định kind cuối trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Tách phần việc có thể làm khỏi giả định và trách nhiệm thuộc về người khác.",
+        "observation_key": "work.boundary.unowned_load",
+        "structure_pattern": "parable.sorting_objects"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "quote.warehouse_path_between_boxes",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Lối đi không hẹp lại vì một chiếc hộp, cũng không rộng ra nhờ một lần dọn kho.",
+      "subtitle_vi": null,
+      "story_id": "story.warehouse_path_between_boxes",
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "theory",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "thói quen",
+          "lặp lại",
+          "hệ quả"
+        ],
+        "tie_break_order": 1
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": null,
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Bản thảo Selflo Story Studio",
+        "source_detail": "Bản thảo nguyên bản do AI hỗ trợ theo yêu cầu owner; chưa xác nhận quyền phát hành."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+          "theory.habit_automaticity"
+        ],
+        "frameworks": [
+          "framework.everyday_causality"
+        ],
+        "emotion_tags": [
+          "frustration",
+          "uncertainty"
+        ],
+        "keywords": [
+          "thói quen",
+          "lặp lại",
+          "nhân quả đời thường"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Bản thảo nguyên bản cần owner review và xác nhận rights trước khi publish."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Những hành động nhỏ lặp lại trong cùng bối cảnh có thể dần tạo ra một lối hành động tự động.",
+        "observation_key": "work.habit.warehouse_path",
+        "structure_pattern": "parable.repeated_path"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "cool_observe"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.habit_automaticity.repetition_in_context_leaves_a_path"
+        ],
+        "reference_ids": [
+          "ref.stojanovic_2022_habit_context"
+        ]
+      }
+    },
+    {
+      "id": "hands_know_who_the_work_is_for",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Cùng một chiếc bàn, công việc khác đi\nkhi đôi tay biết mình đang làm điều gì và cho ai.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "motivation",
+          "purpose"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Cảm nhận về mục đích và kết nối có thể thay đổi cách một người hiện diện trong công việc.",
+        "observation_key": "hands_at_purposeful_worktable",
+        "structure_pattern": "same_task_changes_with_owned_meaning"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 49,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "motivation"
+        ],
+        "tie_break_order": 1077
+      }
+    },
+    {
+      "id": "chair_is_repaired_for_someone",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Người thợ sửa chiếc ghế kỹ hơn\nkhi biết ai sẽ ngồi lên nó mỗi chiều.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "connection",
+          "craft"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Mối liên hệ giữa việc làm và người được phục vụ có thể làm công việc trở nên cụ thể hơn.",
+        "observation_key": "carpenter_repairs_known_users_chair",
+        "structure_pattern": "relational_context_deepens_care"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 48,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "connection"
+        ],
+        "tie_break_order": 1078
+      }
+    },
+    {
+      "id": "door_opens_more_lightly_from_inside",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Một cánh cửa tự mở từ bên trong\nthường nhẹ hơn cánh cửa bị đẩy mãi từ ngoài.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "autonomy",
+          "door"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Cảm giác lựa chọn từ bên trong khác với sức ép chỉ đến từ bên ngoài.",
+        "observation_key": "door_opened_from_inside",
+        "structure_pattern": "internal_choice_contrasts_external_pressure"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 47,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "autonomy"
+        ],
+        "tie_break_order": 1079
+      }
+    },
+    {
+      "id": "cook_still_wants_to_taste_the_soup",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Căn bếp sáng lâu hơn\nkhi người nấu vẫn còn muốn nếm món mình đang làm.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "motivation",
+          "cooking"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Sự quan tâm nội tại đến chất lượng công việc có thể duy trì sự gắn bó khác với ép buộc đơn thuần.",
+        "observation_key": "cook_tastes_own_dish",
+        "structure_pattern": "interest_sustains_engagement"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 46,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "motivation"
+        ],
+        "tie_break_order": 1080
+      }
+    },
+    {
+      "id": "timecard_cannot_measure_presence",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Chiếc đồng hồ chấm công biết ta đã ở đó bao lâu.\nNó không biết có phần nào trong ta thật sự có mặt.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "time",
+          "engagement"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Thời gian hiện diện không phản ánh đầy đủ chất lượng gắn bó hoặc động lực với công việc.",
+        "observation_key": "timecard_and_inner_presence",
+        "structure_pattern": "measured_duration_differs_from_engagement"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 45,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "time"
+        ],
+        "tie_break_order": 1081
+      }
+    },
+    {
+      "id": "musician_stays_with_one_lost_note",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Người chơi đàn không tập cả bản nhạc mỗi tối.\nCó hôm họ chỉ ngồi lại với một nốt thường bị lạc.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.deliberate_practice"
+        ],
+        "theories": [
+          "theory.deliberate_practice"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "practice",
+          "music"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Luyện tập có thể tập trung vào điểm chưa vững thay vì lặp lại toàn bộ điều đã biết.",
+        "observation_key": "musician_practices_one_note",
+        "structure_pattern": "whole_skill_improves_through_targeted_part"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 44,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+        ],
+        "reference_ids": [
+          "ref.ericsson_1993_deliberate_practice"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": "story.note_in_measure_seventeen",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "practice"
+        ],
+        "tie_break_order": 1082
+      }
+    },
+    {
+      "id": "knife_sharpens_at_the_same_angle",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Con dao sắc lên qua nhiều lần đi đúng góc trên viên đá,\nkhông phải từ một lần mài thật mạnh.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.deliberate_practice"
+        ],
+        "theories": [
+          "theory.deliberate_practice"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "practice",
+          "precision"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Sự chính xác và lặp lại có chủ đích khác với một nỗ lực lớn nhưng thiếu điều chỉnh.",
+        "observation_key": "knife_on_sharpening_stone",
+        "structure_pattern": "precise_repetition_outweighs_single_force"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 43,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+        ],
+        "reference_ids": [
+          "ref.ericsson_1993_deliberate_practice"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "practice"
+        ],
+        "tie_break_order": 1083
+      }
+    },
+    {
+      "id": "carpenter_measures_the_uneven_leg",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Người thợ mộc đo lại chiếc chân bàn còn chênh,\nthay vì vuốt mãi phần mặt gỗ đã phẳng.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.deliberate_practice"
+        ],
+        "theories": [
+          "theory.deliberate_practice"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "practice",
+          "carpentry"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Cải thiện cần quay về phần tạo ra sai lệch thay vì chỉ làm thêm phần đã tốt.",
+        "observation_key": "carpenter_checks_uneven_table_leg",
+        "structure_pattern": "practice_targets_source_of_error"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 42,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+        ],
+        "reference_ids": [
+          "ref.ericsson_1993_deliberate_practice"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "practice"
+        ],
+        "tie_break_order": 1084
+      }
+    },
+    {
+      "id": "even_stitch_follows_many_undoings",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Một mũi khâu đều được sinh ra\ntừ rất nhiều mũi khâu từng phải tháo.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.deliberate_practice"
+        ],
+        "theories": [
+          "theory.deliberate_practice"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "practice",
+          "sewing"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Kỹ năng vững dần qua nhiều vòng thử, nhận phản hồi và sửa lại.",
+        "observation_key": "even_stitch_after_unstitching",
+        "structure_pattern": "skill_emerges_through_corrected_attempts"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 41,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+        ],
+        "reference_ids": [
+          "ref.ericsson_1993_deliberate_practice"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "practice"
+        ],
+        "tie_break_order": 1085
+      }
+    },
+    {
+      "id": "mason_checks_the_string_each_row",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Bức tường thẳng bắt đầu từ việc người thợ\nnhìn lại sợi dây sau từng hàng gạch.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.deliberate_practice"
+        ],
+        "theories": [
+          "theory.deliberate_practice"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "practice",
+          "feedback"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Phản hồi thường xuyên giúp điều chỉnh sai lệch trước khi nó tích lũy thành kết quả lớn.",
+        "observation_key": "mason_checks_alignment_string",
+        "structure_pattern": "frequent_feedback_prevents_accumulated_drift"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+        ],
+        "reference_ids": [
+          "ref.ericsson_1993_deliberate_practice"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "practice"
+        ],
+        "tie_break_order": 1086
+      }
+    }
+  ]
+}
