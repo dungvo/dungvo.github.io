@@ -217,6 +217,12 @@
         __packPath: item.descriptor.path
       })));
 
+      const requestedQuoteID = new URLSearchParams(window.location.search).get("quote");
+      if (requestedQuoteID && state.quotes.some(quote => quote.id === requestedQuoteID)) {
+        state.selectedQuoteID = requestedQuoteID;
+        state.selectedStandaloneStoryID = null;
+      }
+
       const selectedQuoteExists = state.quotes.some(quote => quote.id === state.selectedQuoteID);
       const selectedStandaloneStoryExists = state.stories.has(state.selectedStandaloneStoryID);
       if (!selectedQuoteExists && !selectedStandaloneStoryExists) {
@@ -822,6 +828,9 @@
   function selectQuote(quoteID) {
     state.selectedQuoteID = quoteID;
     state.selectedStandaloneStoryID = null;
+    const url = new URL(window.location.href);
+    url.searchParams.set("quote", quoteID);
+    window.history.replaceState({}, "", url);
     el.readerSettings.hidden = true;
     el.readerScroll.scrollTop = 0;
     renderContentList();
@@ -831,6 +840,9 @@
   function selectStandaloneStory(storyID) {
     state.selectedQuoteID = null;
     state.selectedStandaloneStoryID = storyID;
+    const url = new URL(window.location.href);
+    url.searchParams.delete("quote");
+    window.history.replaceState({}, "", url);
     el.readerSettings.hidden = true;
     el.readerScroll.scrollTop = 0;
     renderContentList();

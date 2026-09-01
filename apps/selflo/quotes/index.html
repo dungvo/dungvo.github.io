@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f2eee5">
+  <meta name="description" content="Thư viện quote Selflo — đọc và lọc quote theo nguồn, tác giả hoặc sách/tác phẩm.">
+  <meta property="og:title" content="Selflo · Quote Library">
+  <meta property="og:description" content="Đọc nhiều quote cùng lúc và lọc theo nguồn, tác giả hoặc sách/tác phẩm.">
+  <meta property="og:image" content="https://dungvo.github.io/apps/selflo/assets/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://dungvo.github.io/apps/selflo/assets/images/og.png">
+  <title>Selflo · Quote Library</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="quotes.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Selflo home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span><strong>Selflo</strong><small>Quote Library</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Điều hướng chính">
+      <a href="../">Trang chủ</a>
+      <a class="active" href="./">Quotes</a>
+      <a href="../preview/">Thư viện</a>
+      <a href="../preview/?view=matrix">Dashboard</a>
+      <a href="../story-seed/">Story Seed</a>
+      <a href="../privacy/">Privacy</a>
+    </nav>
+    <span class="store-pill" id="libraryState">Đang tải Library…</span>
+  </header>
+
+  <main class="quote-library page-width">
+    <header class="quote-library-heading">
+      <div>
+        <p class="eyebrow">Authoring quote browser</p>
+        <h1>Đọc quote theo đúng nguồn bạn muốn.</h1>
+        <p>Xem nhiều quote cùng lúc, lọc riêng nội dung Selflo, tác giả bên ngoài hoặc một cuốn sách cụ thể. Bấm vào quote khi cần mở bản xem chi tiết.</p>
+      </div>
+      <div class="quote-library-metrics" aria-label="Tổng quan thư viện">
+        <div><span>Quote</span><strong id="totalQuoteMetric">—</strong></div>
+        <div><span>Tác giả ngoài</span><strong id="authorMetric">—</strong></div>
+        <div><span>Sách / tác phẩm</span><strong id="workMetric">—</strong></div>
+      </div>
+    </header>
+
+    <section class="quote-filters" aria-label="Lọc quote">
+      <label class="quote-search">
+        <span>Tìm trong quote</span>
+        <input id="quoteSearch" type="search" placeholder="Nội dung, ID, tác giả hoặc tác phẩm…" autocomplete="off">
+      </label>
+      <label>
+        <span>Nguồn nội dung</span>
+        <select id="sourceFilter">
+          <option value="all">Tất cả nguồn</option>
+          <option value="selflo">Selflo original</option>
+          <option value="author">Tác giả bên ngoài</option>
+          <option value="book">Sách / tác phẩm</option>
+          <option value="studio">Bản thảo Selflo / Story Studio</option>
+        </select>
+      </label>
+      <label>
+        <span>Tác giả</span>
+        <select id="authorFilter"><option value="all">Tất cả tác giả</option></select>
+      </label>
+      <label>
+        <span>Sách / tác phẩm</span>
+        <select id="workFilter"><option value="all">Tất cả sách / tác phẩm</option></select>
+      </label>
+      <label>
+        <span>Theme</span>
+        <select id="themeFilter"><option value="all">Tất cả theme</option></select>
+      </label>
+      <label>
+        <span>Sắp xếp</span>
+        <select id="sortFilter">
+          <option value="source">Theo nguồn</option>
+          <option value="theme">Theo theme</option>
+          <option value="shortest">Quote ngắn trước</option>
+          <option value="longest">Quote dài trước</option>
+        </select>
+      </label>
+      <button class="reset-filters" id="resetFilters" type="button">Xóa bộ lọc</button>
+    </section>
+
+    <section class="quote-results-heading" aria-live="polite">
+      <div><p class="eyebrow">Quote collection</p><h2 id="resultTitle">Tất cả quote</h2></div>
+      <span id="resultCount">—</span>
+    </section>
+
+    <section class="quote-grid" id="quoteGrid" aria-live="polite"></section>
+
+    <nav class="quote-pagination" aria-label="Phân trang quote">
+      <button id="previousPage" type="button">← Trang trước</button>
+      <span id="paginationInfo">Trang 1 / 1</span>
+      <button id="nextPage" type="button">Trang sau →</button>
+    </nav>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div class="page-width footer-bottom"><span>© 2026 Selflo</span><span>Authoring Library · Không tự thay đổi Release</span></div>
+  </footer>
+
+  <script src="quotes.js?v=1"></script>
+</body>
+</html>
