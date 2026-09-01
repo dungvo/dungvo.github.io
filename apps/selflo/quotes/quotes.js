@@ -190,7 +190,7 @@
       .some(value => normalizeSearch(value).includes(query) || query.includes(normalizeSearch(value)));
     const sourceMatches = state.filters.source === "book" || (state.filters.source === "all" && Boolean(query));
     const contextualFiltersMatch = state.filters.author === "all" && state.filters.work === "all" && state.filters.theme === "all";
-    const shouldShow = Boolean(goal && audit && sourceMatches && queryMatches && contextualFiltersMatch);
+    const shouldShow = Boolean(goal && audit && goal.public_excerpt_count === 0 && sourceMatches && queryMatches && contextualFiltersMatch);
 
     el.pendingSources.hidden = !shouldShow;
     el.pendingSources.replaceChildren();

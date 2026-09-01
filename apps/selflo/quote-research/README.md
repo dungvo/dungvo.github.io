@@ -8,5 +8,5 @@ This directory publishes research progress metadata. Valid candidates are also m
 - Source 001: Marcus Aurelius, *Meditations*, George W. Chrystal 1902 — 50 research candidates collected and visible in Authoring Preview as Vietnamese `adapted_wisdom`; 0 accepted pending owner/bilingual/rights review.
 - Authoring Preview: [open all content](../preview/) and search `Marcus Aurelius`.
 - Next source: Epictetus, *The Enchiridion*.
-- Goal 2: 100 quotes from Paulo Coelho's *The Alchemist* / *Nhà giả kim*. The owner file has been fully audited: 122 formatted quote entries, 82 normalized unique pre-candidates, 40 duplicate occurrences across 33 duplicate groups. Edition, translator, ISBN/page locators and rights review remain unresolved, so the exact-edition research count and public excerpt count both remain 0.
-- The [Quote Library](../quotes/?source=book) surfaces this pending source and its audit state without publishing unverified copyrighted excerpts.
+- Goal 2: 100 quotes from Paulo Coelho's *The Alchemist* / *Nhà giả kim*. The owner file has been fully audited: 123 formatted quote entries, 83 normalized unique candidates, 40 duplicate occurrences across 33 duplicate groups.
+- All 83 are visible in the Authoring [Quote Library](../quotes/?source=book&author=Paulo+Coelho&work=Nh%C3%A0+gi%E1%BA%A3+kim) as `adapted_wisdom + needs_owner_review + rights unverified + story_id null`. Exact-edition verification, translator, ISBN/page locators, rights decision and owner acceptance remain pending; accepted count remains 0 and Release is unchanged.

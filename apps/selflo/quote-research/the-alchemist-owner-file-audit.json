@@ -1,0 +1,735 @@
+{
+  "schema_version": "selflo.quote-research-owner-file-audit.v1",
+  "goal_id": "goal.2.the_alchemist",
+  "source_file_sha256": "98cfc16b0b967844111dbbe746a2c67f2f5737003e61bed7786fe8e2848113d1",
+  "audit": {
+    "formatted_quote_entry_count": 123,
+    "unique_normalized_pre_candidate_count": 83,
+    "duplicate_occurrence_count": 40,
+    "duplicate_group_count": 33,
+    "file_sha256": "98cfc16b0b967844111dbbe746a2c67f2f5737003e61bed7786fe8e2848113d1",
+    "theme_distribution": {
+      "adversity_resilience": 9,
+      "attention": 13,
+      "change_growth": 8,
+      "emotion": 3,
+      "meaning_values": 14,
+      "relationships": 11,
+      "rest_wellbeing": 1,
+      "self_understanding": 12,
+      "work_achievement": 12
+    }
+  },
+  "lifecycle": {
+    "kind": "adapted_wisdom",
+    "review_status": "needs_owner_review",
+    "rights_status": "unverified",
+    "release_eligible": false
+  },
+  "records": [
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.001",
+      "source_lines": [
+        5,
+        59,
+        163
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "bb3acc51335d34c931e42cdec8b07f4bb5d68a88fce5b1ae1f178630efcca236"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.002",
+      "source_lines": [
+        12
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "4f18be4299578fcb403bac25dd04d002e83ff1bb1be281c404bad555ed6ebb57"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.003",
+      "source_lines": [
+        15
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "6c77491f026fa035ce2b9201a1418c54a0da87de12f9236ab2a79bd4a2706a51"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.004",
+      "source_lines": [
+        18,
+        249
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "d724cd382293a2fcfe7a9ee56fd72c081dc8f1cfbfc8935f9c53645ce7bd1865"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.005",
+      "source_lines": [
+        21,
+        281
+      ],
+      "primary_theme": "rest_wellbeing",
+      "normalized_text_sha256": "f35126242ee18cea59f3199b7b9036096148f16589be08d4ee4835560c417f1e"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.006",
+      "source_lines": [
+        24,
+        84,
+        293
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "edc19382d45ebda7fdbf2e4620dc835b7344ddd14382328205c40f3cc6eccb6d"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.007",
+      "source_lines": [
+        31,
+        97,
+        318
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "aecd9ef0d2834685d5b7ab84d92eca73bd75500affa4d201c63d684e1dcbfebc"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.008",
+      "source_lines": [
+        34,
+        103,
+        343
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "653de07612fa5d98f2239656306c187aeb0654a268dd65acfe8e2b4f43a8f5c8"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.009",
+      "source_lines": [
+        37,
+        375
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "42b44da7040db7b08a7a381973379521ae7746e3fc9ddae7ab844dfa2ca2bae9"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.010",
+      "source_lines": [
+        40,
+        439
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "ba8f34162c35596d649a82856f26042e73e2b852a8ed85e87110be53f1e088cc"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.011",
+      "source_lines": [
+        43,
+        467,
+        513
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "6d2177e0cf3be39d105be037eecfa4ca42f869d5cbce8c81ddb96a36f45dd59b"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.012",
+      "source_lines": [
+        46,
+        545
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "3769c2862d6ca974d85c980d79c994dca2227659a4de5067d632be696c889e67"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.013",
+      "source_lines": [
+        66
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "98e26bf1ff30545a3cd214ed775e0ab1bd207d691bb681795fb72014401c9231"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.014",
+      "source_lines": [
+        69,
+        199
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "9df5f92a13673caabfbe2a29ddc11670c086690c8860ea05037d610e2fe7b5cd"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.015",
+      "source_lines": [
+        72,
+        207
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "8218e4e0b786c42d37601e418471c91558824c5e94b5c0bf023a2d669bd6f0f0"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.016",
+      "source_lines": [
+        75
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "dc2b5693a2bf6891d8f5b3c8a1335c1dbf565dd33ab25d6fd670bd54e3df176c"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.017",
+      "source_lines": [
+        78,
+        253
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "120c262cab9a8223e2464552550f3d74d0e8e1ae9a8f6926747a547abce6a66f"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.018",
+      "source_lines": [
+        81,
+        265
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "3c75361b7e3d0f0f06d7fabef67ba656dc218b9aaf2e96d307a715fdd89cf41d"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.019",
+      "source_lines": [
+        87,
+        297
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "274d222b8c4e31176b9984c14a2e1509a195d62f188b38ab8df195110da1add2"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.020",
+      "source_lines": [
+        94,
+        305
+      ],
+      "primary_theme": "emotion",
+      "normalized_text_sha256": "38bad8d713ecb4754b75a5a954610997400bbc2d0f8082cc76076bd0ff7ed78e"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.021",
+      "source_lines": [
+        100,
+        322
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "547ac84d13205ee5027de3b0d285fc3cc08e5cf90b2669f0177bfc9ad5b4fecf"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.022",
+      "source_lines": [
+        106,
+        371
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "d07697eb2ebf697a12e3092e89062abd32da84f588c31bee6a58624352bdd5bd"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.023",
+      "source_lines": [
+        109
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "c7864216ae2e63557b169f948f1de7ce3a351f2e178e746c35efc5a8db85941b"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.024",
+      "source_lines": [
+        112
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "aa830ca2abcd7b8299d928e59c3daf20b8ddfc4fb4e55c8eb67ba8d5d7432875"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.025",
+      "source_lines": [
+        115,
+        431
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "ec8c58e693ca219694daf46475c13fcb86d36f7a4c01c2cc86c96bcdb8796a83"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.026",
+      "source_lines": [
+        118,
+        443
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "76bb432c310531d52ff6575066cfaee8fadac89c9b22fd512aab94efc5e6743e"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.027",
+      "source_lines": [
+        121,
+        447
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "58f6ee07e10627c3cec527ac72f85881781d664aa83f2dc9e3cb57ebf6128da2"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.028",
+      "source_lines": [
+        124,
+        455,
+        501
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "bd9820ce456b2c90b368bab47f44e8c6e47f90da220b45c0c397e36e3cfbbd64"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.029",
+      "source_lines": [
+        127,
+        459,
+        505
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "01fb7258e504949ad2b828ca3259fce26840399601543b6f23875f0c56aac53d"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.030",
+      "source_lines": [
+        130,
+        517
+      ],
+      "primary_theme": "emotion",
+      "normalized_text_sha256": "15d413f7a8f9f4e81a0af107af0fd87cad3ac929b9a6d9075362f17a8a265d4e"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.031",
+      "source_lines": [
+        133,
+        521
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "2b3a4ae4a4963035ea8ed89b74cf71209da8f1516b7dacd18d34d8dfb80aef8b"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.032",
+      "source_lines": [
+        136,
+        525
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "d23a66a4fe09c69544a0e725468d53043e7aba788964655e6757d369d67a6e92"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.033",
+      "source_lines": [
+        139,
+        529
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "3c479d275e729f6a4e96ded83ff556c370a89af441ad7bff74bbf7c3bc207d5c"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.034",
+      "source_lines": [
+        142,
+        533
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "f429491ba950434b8710941c62f4473ed62469cc335e37dbdc62951f68b7368f"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.035",
+      "source_lines": [
+        145,
+        537
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "aa631c07413ad9497b2fd537bb7605fc7e80e54329f84ffc05deb36b3d90980c"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.036",
+      "source_lines": [
+        148,
+        541
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "dbb39d31a4ce09f293bfd7fb75b57521aefc37b52583e051f1d0a0516cc091dd"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.037",
+      "source_lines": [
+        151,
+        553
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "95c9b76a2a301f5702342fdb53c1361adf1527a4eaafea080f7bdaac5fbcef21"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.038",
+      "source_lines": [
+        171
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "050e80d95add601e6db76025156fbbfd205a10d0827d38b1b3ee3cf7a157667b"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.039",
+      "source_lines": [
+        175
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "31f519f729dcee72efc1361641d5be4c035ee58efe046887eeb81b1e55e5f5cd"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.040",
+      "source_lines": [
+        179
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "02c77a98e79e3fc75f4888e21b1028db00703c17b9ba2c41ba526c3b0515ba8a"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.041",
+      "source_lines": [
+        183
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "c87c9a506dc012a23d0f6bb760ac2bc1727b10cfd592b0260671f27848610d9d"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.042",
+      "source_lines": [
+        187
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "833a7f8339276afbdee41fac2c7f8e64f666b4c03a9d1924636c93a0ca6dc35d"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.043",
+      "source_lines": [
+        191
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "10f1beb4bd1da18b526a6ed59c5a8c9f8fbf9a475193e902774b138a426fdde1"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.044",
+      "source_lines": [
+        195
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "b297543a3aed27fc637b2bc88e4304998c3cb4ae4ddf49bc23cd0b2d3db26662"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.045",
+      "source_lines": [
+        203
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "3c9db52d57d9b5686a12d02963f925cf1c9492660dd410d7726a47ed230f8fcb"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.046",
+      "source_lines": [
+        211
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "3902a8da2144e9044027c2808ad140b76565789591cacb86d02baf3482337925"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.047",
+      "source_lines": [
+        215
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "22ed02aefcae092f81688f91f54a559f6262b3212ed58d8d16fe2d60ad1ef045"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.048",
+      "source_lines": [
+        229
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "b88d80deca10bfac415300ae45c8668b6dddd4b5efd438aac1a0dbaf8d525314"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.049",
+      "source_lines": [
+        233
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "960c0ff3ad30ce88608f8668181b012f49a7230b27a695cef891a62be38235d9"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.050",
+      "source_lines": [
+        237
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "437e5ebe83c50a4327e0ab790efb2d342c892d620b767844ac079e1670aab6a7"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.051",
+      "source_lines": [
+        241
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "01ed519c7fbc5effba79b813963ca25465819795948562753bfd9792150bb730"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.052",
+      "source_lines": [
+        245
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "c0e8a03028267689465e28e87698505a49aa60db5e409c6dc616817350e559c7"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.053",
+      "source_lines": [
+        257
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "f23b7a281e942d80bed103c7fe5f0b30559748cf8512435b8a58ae85b2d448b1"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.054",
+      "source_lines": [
+        269
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "08509a2ee4722e004727865530db124f1d3673ed75d3765c15817fc7735a6e15"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.055",
+      "source_lines": [
+        273
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "bcdb7ea1470fcd61084b521b049cb35aff67416f08ae0d72bd7cb43254b010cd"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.056",
+      "source_lines": [
+        277
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "e832e2f11c40d2415835deecbf44cf766d7dfa1b56ded14445675c746cf7c2b1"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.057",
+      "source_lines": [
+        289
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "c3bbd19eb37fb5cf61020844e79fd5651a2197885f7bb12c4042c6ee0ad735a1"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.058",
+      "source_lines": [
+        301
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "3f8456df7dc78e66d5a9e14ead6bd5f6e2512c398ff61199621e1c01e22481da"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.059",
+      "source_lines": [
+        326
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "004b1cc98107dffeddf13accd20c53a2261994f0773a7142af3f35776266427c"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.060",
+      "source_lines": [
+        330
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "8a9931d9e07ff55e2d5d819255f53b55799d62ef14f04b562110d8ca34ff4ea6"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.061",
+      "source_lines": [
+        334
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "d47b8bde4e224290a617fe82b07dc8f6242617abc016f5d6ded7d656ee7aaac0"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.062",
+      "source_lines": [
+        347
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "bc99ce055a4d6206e818df5101981fafa49c90939adac9002136e2c3f8a829a3"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.063",
+      "source_lines": [
+        351
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "5bbfbecce34156629c32e46024ba6533c781f961a1a7e57beea590f8418a6f73"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.064",
+      "source_lines": [
+        355
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "589e9a651c73be29233ae0f01d9d008cd8f225933bd19a66420ed1551500d0f4"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.065",
+      "source_lines": [
+        359
+      ],
+      "primary_theme": "meaning_values",
+      "normalized_text_sha256": "e74b8c14811dd9928bc153e1214a9cc3ba7a65f99e737043828c8ea3d61558bb"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.066",
+      "source_lines": [
+        363
+      ],
+      "primary_theme": "emotion",
+      "normalized_text_sha256": "e54189f157788ce4c7ea3a53fce33ce8d2fed452e460cc8adb79a7427a8be413"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.067",
+      "source_lines": [
+        367
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "3fe5d57262594ee0c228844473fd4130a01784fd85d72c24a61888a2dcdd9dce"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.068",
+      "source_lines": [
+        390
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "a5dd403f271e5a02b7d7bfc2b0af0f3c4df8d9d705f9fa097cc2f77d7fcf7bb8"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.069",
+      "source_lines": [
+        394
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "f3ec923915e5bf71ce6f0b2d167ffbc9487a2545c673d221be321b61a00b93eb"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.070",
+      "source_lines": [
+        398
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "8e0d9f6debb42da213b67347a4c7195a9fbe339426c9a5adf1f38244ffd4c18e"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.071",
+      "source_lines": [
+        402
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "345ec53d1e9a512b68e890f1c5e1ea2a676fe125c2642460ffa6e8fe6797eb28"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.072",
+      "source_lines": [
+        406
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "8f49ff2cf4888913a71ffc5bd672bc3f8bbdffa2d25f34f3c2c37bfe9a72e2c6"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.073",
+      "source_lines": [
+        410
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "0b44edb03681f4786278820f6fd7658a1e3c83d0d381c492fdb5dcbbf9fa9fbb"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.074",
+      "source_lines": [
+        414
+      ],
+      "primary_theme": "attention",
+      "normalized_text_sha256": "79c0c6f4cf25122674a04e4cc48daf655781a10bac017861ce139d48ca14e978"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.075",
+      "source_lines": [
+        418
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "a77a3df625edb20a84240b11bdac44dcdc5b97d27a22066543ee30d5a476793e"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.076",
+      "source_lines": [
+        422
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "cd86a5ab32ca08539d8ff6194f798e0673406147833c1654e719df83d1455741"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.077",
+      "source_lines": [
+        435
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "1def9db2e2cd59e59b04ebfd9a9e91b153aea9ae3025bc40437588a60a2562b8"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.078",
+      "source_lines": [
+        451,
+        497
+      ],
+      "primary_theme": "work_achievement",
+      "normalized_text_sha256": "359e0d73a22125717245f597dca51a2f10f82772fb3229dfe0828b9626d35202"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.079",
+      "source_lines": [
+        463,
+        509
+      ],
+      "primary_theme": "self_understanding",
+      "normalized_text_sha256": "bdf88183d85658768e29267b87e3239e8c2ab1c9b9f61c871d7c6410198c8059"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.080",
+      "source_lines": [
+        481
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "cd3488de631c898374c6ab9a4032856391009c98f01fd1974b1e37c7e8110ba2"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.081",
+      "source_lines": [
+        485
+      ],
+      "primary_theme": "adversity_resilience",
+      "normalized_text_sha256": "7eb93734c3d684df5ea362a9adea73bbbc2941b1936ba425af3976595cb34ac6"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.082",
+      "source_lines": [
+        489
+      ],
+      "primary_theme": "change_growth",
+      "normalized_text_sha256": "2311ac541c300fc5c7ef12a2b01c2a9c5691b60fc46666c5d321c39bce3a7db9"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.083",
+      "source_lines": [
+        493
+      ],
+      "primary_theme": "relationships",
+      "normalized_text_sha256": "95f05a313f7655a4ba84c24a45b914af4409cec79c323bb03a39715ae6a38a79"
+    }
+  ]
+}

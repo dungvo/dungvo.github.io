@@ -1,8 +1,8 @@
 {
   "schema_version": "selflo.quote-diversity-matrix.v1",
   "updated_at": "2026-08-30T00:00:00Z",
-  "baseline_library_revision": 15,
-  "baseline_content_version": "framework-taxonomy-preview-15",
+  "baseline_library_revision": 17,
+  "baseline_content_version": "the-alchemist-owner-preview-17",
   "note_vi": "Một quote có thể thuộc nhiều trục. Coverage lớn không đồng nghĩa đa dạng nếu mọi item cùng một tác giả, tác phẩm hoặc giọng điệu.",
   "rows": [
     {
@@ -32,26 +32,26 @@
     {
       "group": "source",
       "name_vi": "Người nổi tiếng có attribution",
-      "count": 100,
+      "count": 183,
       "status": "partial",
-      "evidence_vi": "Marcus Aurelius 50; Epictetus, Seneca, Laozi, Confucius và Dhammapada mỗi source unit 10.",
-      "gap_vi": "Vẫn thiếu nữ tác giả, tác giả Việt Nam, thời hiện đại và nhiều nghề nghiệp."
+      "evidence_vi": "Marcus Aurelius 50; Epictetus, Seneca, Laozi, Confucius và Dhammapada mỗi source unit 10; Paulo Coelho/Nhà giả kim 83 owner-declared preview candidate.",
+      "gap_vi": "Nhà giả kim chưa exact-edition/rights verified; vẫn thiếu nữ tác giả, tác giả Việt Nam và nhiều nghề nghiệp."
     },
     {
       "group": "source",
       "name_vi": "Tác giả bên ngoài Selflo",
-      "count": 5,
+      "count": 6,
       "status": "partial",
-      "evidence_vi": "Marcus Aurelius, Epictetus, Seneca, Laozi và Confucius; Dhammapada được ghi theo văn bản/truyền thống.",
+      "evidence_vi": "Marcus Aurelius, Epictetus, Seneca, Laozi, Confucius và Paulo Coelho; Dhammapada được ghi theo văn bản/truyền thống.",
       "gap_vi": "Cần đa dạng giới, thời đại, địa lý và nghề nghiệp."
     },
     {
       "group": "source",
       "name_vi": "Sách/tác phẩm bên ngoài",
-      "count": 6,
+      "count": 7,
       "status": "partial",
-      "evidence_vi": "Meditations, Encheiridion, Moral Letters, Tao Teh King, Analects và Dhammapada.",
-      "gap_vi": "Nhà giả kim chưa materialize; chưa có nguồn hiện đại."
+      "evidence_vi": "Meditations, Encheiridion, Moral Letters, Tao Teh King, Analects, Dhammapada và Nhà giả kim.",
+      "gap_vi": "Nhà giả kim mới ở owner-declared Authoring Preview; chưa exact-edition/rights verified."
     },
     {
       "group": "source",
@@ -144,10 +144,10 @@
     {
       "group": "form",
       "name_vi": "Quote/trích dẫn",
-      "count": 127,
+      "count": 210,
       "status": "partial",
-      "evidence_vi": "100 adapted quote có attribution và 27 Selflo quote; nguồn mới được giới hạn 10/source.",
-      "gap_vi": "Vẫn thiên về văn bản cổ điển và giọng chỉ dẫn."
+      "evidence_vi": "183 adapted quote có attribution và 27 Selflo quote; 83 Nhà giả kim vẫn là owner-declared preview candidate.",
+      "gap_vi": "Cần owner/source/rights review cho toàn bộ batch Nhà giả kim và tiếp tục đa dạng source medium."
     },
     {
       "group": "form",
@@ -187,7 +187,7 @@
       "count": 50,
       "status": "strong",
       "evidence_vi": "50 quote có CTA Reader; toàn bộ 50 story có quote riêng.",
-      "gap_vi": "252 quote chưa có story; đây là backlog dài hạn, không phải Release gate."
+      "gap_vi": "335 quote chưa có story; đây là backlog dài hạn, không phải Release gate."
     },
     {
       "group": "form",

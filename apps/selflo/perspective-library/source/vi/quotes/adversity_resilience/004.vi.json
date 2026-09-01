@@ -1,230 +1,17 @@
 {
   "schema_version": "selflo.perspective.quote-fragment.v1",
   "entity": "perspective_quote_fragment",
-  "fragment_id": "quote_fragment.relationships.003",
-  "primary_theme": "relationships",
+  "fragment_id": "quote_fragment.adversity_resilience.004",
+  "primary_theme": "adversity_resilience",
   "quotes": [
     {
-      "id": "attributed.dhammapada.verse_049.bee",
+      "id": "attributed.paulo_coelho.the_alchemist.011",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Như ong lấy mật rồi rời đi mà không làm hại bông hoa, màu sắc hay hương thơm của nó, người sáng suốt cũng sống giữa cộng đồng như vậy.",
-      "subtitle_vi": "Dhammapada · 49",
-      "primary_theme": "relationships",
-      "authorship": {
-        "author_id": "dhammapada_tradition",
-        "author_name": "Dhammapada",
-        "work": "Dhammapada, a Collection of Verses",
-        "source_url": "https://www.gutenberg.org/ebooks/2017",
-        "source_language": "en",
-        "source_label": "Dhammapada",
-        "source_detail": "F. Max Müller (dịch); 49; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-          "framework.buddhist_practice"
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "buddhist_text",
-          "gentle_presence"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; quote được ghi theo văn bản Dhammapada, không gán trực tiếp cho Đức Phật lịch sử; cần review truyền thống và bản dịch tiếng Việt trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Như ong lấy mật rồi rời đi mà không làm hại bông hoa, màu sắc hay hương thơm của nó, người sáng suốt cũng sống giữa cộng đồng như vậy.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "relationships",
-          "buddhist_text",
-          "gentle_presence"
-        ],
-        "tie_break_order": 5034
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.confucius.book_i_ch03.fine_words",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Lời lẽ khéo léo và vẻ ngoài lấy lòng hiếm khi đi cùng đức hạnh thật.",
-      "subtitle_vi": "Khổng Tử · Luận Ngữ · I.3",
-      "primary_theme": "relationships",
-      "authorship": {
-        "author_id": "confucius",
-        "author_name": "Confucius",
-        "work": "The Analects of Confucius (from the Chinese Classics)",
-        "source_url": "https://www.gutenberg.org/ebooks/3330",
-        "source_language": "en",
-        "source_label": "Khổng Tử · Luận Ngữ",
-        "source_detail": "James Legge (dịch); I.3; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-          "framework.confucianism"
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "confucianism",
-          "sincerity"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Lời lẽ khéo léo và vẻ ngoài lấy lòng hiếm khi đi cùng đức hạnh thật.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "relationships",
-          "confucianism",
-          "sincerity"
-        ],
-        "tie_break_order": 5041
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.confucius.book_xv_ch23.reciprocity",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Điều mình không muốn người khác làm với mình, đừng làm với người khác.",
-      "subtitle_vi": "Khổng Tử · Luận Ngữ · XV.23",
-      "primary_theme": "relationships",
-      "authorship": {
-        "author_id": "confucius",
-        "author_name": "Confucius",
-        "work": "The Analects of Confucius (from the Chinese Classics)",
-        "source_url": "https://www.gutenberg.org/ebooks/3330",
-        "source_language": "en",
-        "source_label": "Khổng Tử · Luận Ngữ",
-        "source_detail": "James Legge (dịch); XV.23; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-          "framework.confucianism"
-        ],
-        "emotion_tags": [
-
-        ],
-        "keywords": [
-          "confucianism",
-          "reciprocity"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Điều mình không muốn người khác làm với mình, đừng làm với người khác.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
-        "presentation_tags": [
-          "relationships",
-          "confucianism",
-          "reciprocity"
-        ],
-        "tie_break_order": 5049
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.paulo_coelho.the_alchemist.001",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Đúng là em khóc chàng Narziss, nhưng em chưa bao giờ để ý rằng chàng đẹp trai đến thế. Em khóc chàng vì mỗi lần chàng soi người trên mặt hồ thì em mới thấy được sắc đẹp của chính em hiện lên rõ trong đôi mắt chàng",
+      "text_vi": "Hãy bảo nó rằng sợ phải đau khổ còn đau đớn hơn là chính sự đau khổ, và chưa từng có trái tim nào phải chịu đau khổ khi tìm cách thực hiện giấc mơ, vì mỗi phút giây tìm kiếm là một khoảnh khắc gặp gỡ Thượng Đế và sự vĩnh hằng",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -232,7 +19,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md các dòng 5, 59, 163; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md các dòng 43, 467, 513; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -262,7 +49,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Đúng là em khóc chàng Narziss, nhưng em chưa bao giờ để ý rằng chàng đẹp trai đến thế. Em khóc chàng vì mỗi lần chàng soi người trên mặt hồ thì em mới thấy được sắc đẹp của chính em hiện lên rõ trong đôi mắt chàng",
+        "semantic_intent": "Hãy bảo nó rằng sợ phải đau khổ còn đau đớn hơn là chính sự đau khổ, và chưa từng có trái tim nào phải chịu đau khổ khi tìm cách thực hiện giấc mơ, vì mỗi phút giây tìm kiếm là một khoảnh khắc gặp gỡ Thượng Đế và sự vĩnh hằng",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -280,21 +67,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6001
+        "tie_break_order": 6011
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.010",
+      "id": "attributed.paulo_coelho.the_alchemist.023",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "tình yêu không bao giờ ngăn cản ai theo đuổi vận mệnh của mình cả. Nếu để cho chuyện ấy xảy ra thì đó không phải là tình yêu đúng nghĩa, tình yêu của ngôn ngữ vũ trụ",
+      "text_vi": "Có thể Thượng đế tạo ra sa mạc chỉ để cho con người biết quý trọng cây chà là",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -302,7 +89,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md các dòng 40, 439; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md dòng 109; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -332,7 +119,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "tình yêu không bao giờ ngăn cản ai theo đuổi vận mệnh của mình cả. Nếu để cho chuyện ấy xảy ra thì đó không phải là tình yêu đúng nghĩa, tình yêu của ngôn ngữ vũ trụ",
+        "semantic_intent": "Có thể Thượng đế tạo ra sa mạc chỉ để cho con người biết quý trọng cây chà là",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -350,21 +137,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6010
+        "tie_break_order": 6023
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.026",
+      "id": "attributed.paulo_coelho.the_alchemist.031",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Người ta yêu vì yêu. Cần gì phải có lí do",
+      "text_vi": "trước khi cậu đạt được ước mơ thì tâm linh vũ trụ sẽ thử thách mọi điều cậu học được trên đường đi... kết thúc với sự thử thách gay go kẻ chiến thắng",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -372,7 +159,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md các dòng 118, 443; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md các dòng 133, 521; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -402,7 +189,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Người ta yêu vì yêu. Cần gì phải có lí do",
+        "semantic_intent": "trước khi cậu đạt được ước mơ thì tâm linh vũ trụ sẽ thử thách mọi điều cậu học được trên đường đi... kết thúc với sự thử thách gay go kẻ chiến thắng",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -420,21 +207,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6026
+        "tie_break_order": 6031
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.027",
+      "id": "attributed.paulo_coelho.the_alchemist.067",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu những gì ta tìm thấy là thật, là vàng ròng thì chúng sẽ không bao giờ hư hao và bất cứ lúc nào ta quay về thì chúng vẫn còn nguyên vẹn đó...",
+      "text_vi": "Khi không còn đường lui thì chúng ta phải tìm ra cách nào tốt nhất để tiến tới. Mọi chuyện khác phó thác cho Allah",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -442,7 +229,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md các dòng 121, 447; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md dòng 367; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -472,7 +259,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Nếu những gì ta tìm thấy là thật, là vàng ròng thì chúng sẽ không bao giờ hư hao và bất cứ lúc nào ta quay về thì chúng vẫn còn nguyên vẹn đó...",
+        "semantic_intent": "Khi không còn đường lui thì chúng ta phải tìm ra cách nào tốt nhất để tiến tới. Mọi chuyện khác phó thác cho Allah",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -490,21 +277,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6027
+        "tie_break_order": 6067
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.035",
+      "id": "attributed.paulo_coelho.the_alchemist.068",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tình yêu là sức mạnh làm chuyển biến và nâng tâm linh vũ trụ lên cao hơn nữa... vì khi yêu chúng ta cố trở nên tốt hơn",
+      "text_vi": "Có thể Thượng đế tạo ra sa mạc chỉ để cho con người biết quí trọng cây chà là",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -512,7 +299,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md các dòng 145, 537; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md dòng 390; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -542,7 +329,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Tình yêu là sức mạnh làm chuyển biến và nâng tâm linh vũ trụ lên cao hơn nữa... vì khi yêu chúng ta cố trở nên tốt hơn",
+        "semantic_intent": "Có thể Thượng đế tạo ra sa mạc chỉ để cho con người biết quí trọng cây chà là",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -560,21 +347,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6035
+        "tie_break_order": 6068
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.038",
+      "id": "attributed.paulo_coelho.the_alchemist.075",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "...bất cứ người chăn cừu, người thủy thủ hay người khách thương nay đây mai đó nào cũng có ở đâu đó một kẻ khiến cho họ quên mất thú vui được tự do giang hồ đi cùng trời cuối đất",
+      "text_vi": "Can đảm là điều thiết yếu để hiểu được ngôn ngữ vũ trụ",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -582,7 +369,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md dòng 171; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md dòng 418; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -612,7 +399,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "...bất cứ người chăn cừu, người thủy thủ hay người khách thương nay đây mai đó nào cũng có ở đâu đó một kẻ khiến cho họ quên mất thú vui được tự do giang hồ đi cùng trời cuối đất",
+        "semantic_intent": "Can đảm là điều thiết yếu để hiểu được ngôn ngữ vũ trụ",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -630,21 +417,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6038
+        "tie_break_order": 6075
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.046",
+      "id": "attributed.paulo_coelho.the_alchemist.076",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi đã như thế thì họ muốn thay đổi cuộc đời mình. Rồi khi ta không muốn thay đổi như họ muốn thì họ sẽ thất vọng",
+      "text_vi": "Phải yêu quí sa mạc, nhưng không bao giờ được tin nó tuyệt đối, vì sa mạc luôn thử thách con người: nó sẽ giết những kẻ nào lơ là, không cân nhắc từng bước đi một",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -652,7 +439,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md dòng 211; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md dòng 422; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -682,7 +469,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Khi đã như thế thì họ muốn thay đổi cuộc đời mình. Rồi khi ta không muốn thay đổi như họ muốn thì họ sẽ thất vọng",
+        "semantic_intent": "Phải yêu quí sa mạc, nhưng không bao giờ được tin nó tuyệt đối, vì sa mạc luôn thử thách con người: nó sẽ giết những kẻ nào lơ là, không cân nhắc từng bước đi một",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -700,21 +487,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6046
+        "tie_break_order": 6076
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.070",
+      "id": "attributed.paulo_coelho.the_alchemist.080",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "tình yêu, là thứ lực hiện hữu trước cả loài người, thậm chí trước cả sa mạc này và nó sẽ mãi mãi tái hiện với cùng một mãnh lực ở bất cứ nơi nào có hai đôi mắt gặp nhau...",
+      "text_vi": "Ta muốn thử lòng can đảm của cậu đó thôi. Vì can đảm là điều thiết yếu để hiểu được ngôn ngữ vũ trụ",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -722,7 +509,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md dòng 398; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md dòng 481; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -752,7 +539,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "tình yêu, là thứ lực hiện hữu trước cả loài người, thậm chí trước cả sa mạc này và nó sẽ mãi mãi tái hiện với cùng một mãnh lực ở bất cứ nơi nào có hai đôi mắt gặp nhau...",
+        "semantic_intent": "Ta muốn thử lòng can đảm của cậu đó thôi. Vì can đảm là điều thiết yếu để hiểu được ngôn ngữ vũ trụ",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -770,21 +557,21 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6070
+        "tie_break_order": 6080
       },
       "knowledge_basis": null
     },
     {
-      "id": "attributed.paulo_coelho.the_alchemist.071",
+      "id": "attributed.paulo_coelho.the_alchemist.081",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "trên thế giới luôn luôn có một người chờ đợi mình, dù là giữa sa mạc hay trong thành phố lớn. và khi hai người gặp nhau và mắt họ nhìn nhau thì cả quá khứ lẫn tương lai đều không quan trọng nữa, chỉ còn có khoảng khắc này...",
+      "text_vi": "Không được phép sao nhãng, dù đã tiến rất xa. Phải yêu quí sa mạc, nhưng không bao giờ được tin nó tuyệt đối, vì sa mạc luôn thử thách con người: nó sẽ giết những kẻ nào lơ là, không cân nhắc từng bước đi một",
       "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "relationships",
+      "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "paulo_coelho",
         "author_name": "Paulo Coelho",
@@ -792,7 +579,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md dòng 402; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
+        "source_detail": "quote_nhagiakim.md dòng 485; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
         "concepts": [
@@ -822,7 +609,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "trên thế giới luôn luôn có một người chờ đợi mình, dù là giữa sa mạc hay trong thành phố lớn. và khi hai người gặp nhau và mắt họ nhìn nhau thì cả quá khứ lẫn tương lai đều không quan trọng nữa, chỉ còn có khoảng khắc này...",
+        "semantic_intent": "Không được phép sao nhãng, dù đã tiến rất xa. Phải yêu quí sa mạc, nhưng không bao giờ được tin nó tuyệt đối, vì sa mạc luôn thử thách con người: nó sẽ giết những kẻ nào lơ là, không cân nhắc từng bước đi một",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -840,10 +627,10 @@
 
         ],
         "presentation_tags": [
-          "relationships",
+          "adversity_resilience",
           "nhà giả kim"
         ],
-        "tie_break_order": 6071
+        "tie_break_order": 6081
       },
       "knowledge_basis": null
     }

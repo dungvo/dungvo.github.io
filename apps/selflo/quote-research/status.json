@@ -7,16 +7,16 @@
   "diversity_matrix": {
     "url": "https://dungvo.github.io/apps/selflo/preview/",
     "data_path": "apps/selflo/quote-research/diversity-matrix.json",
-    "baseline_library_revision": 15,
+    "baseline_library_revision": 17,
     "status": "published_in_preview"
   },
   "authoring_preview": {
-    "canonical_quote_count": 302,
-    "new_quote_count": 0,
+    "canonical_quote_count": 385,
+    "new_quote_count": 83,
     "new_quotes_with_story": 0,
-    "content_version": "framework-taxonomy-preview-15",
-    "lifecycle": "frameworks_draft_pending_source_review",
-    "kind": "taxonomy_only"
+    "content_version": "the-alchemist-owner-preview-17",
+    "lifecycle": "owner_declared_work_source_needs_owner_edition_and_rights_review",
+    "kind": "owner_file_quote_batch"
   },
   "goals": [
     {
@@ -37,20 +37,20 @@
       "work_title_en": "The Alchemist",
       "provenance_status": "owner_declared_work_source",
       "edition_verification_status": "needs_edition_translator_isbn_page_locators",
-      "research_candidates_collected": 0,
-      "materialized_to_authoring_preview": 0,
+      "research_candidates_collected": 83,
+      "materialized_to_authoring_preview": 83,
       "accepted_count": 0,
       "owner_file_audit": {
         "audited_at": "2026-09-01",
-        "formatted_quote_entry_count": 122,
-        "unique_normalized_pre_candidate_count": 82,
+        "formatted_quote_entry_count": 123,
+        "unique_normalized_pre_candidate_count": 83,
         "duplicate_occurrence_count": 40,
         "duplicate_group_count": 33,
         "exact_edition_verified_count": 0,
         "file_sha256": "98cfc16b0b967844111dbbe746a2c67f2f5737003e61bed7786fe8e2848113d1"
       },
-      "status": "owner_file_audited_waiting_edition_and_rights",
-      "public_excerpt_count": 0
+      "status": "materialized_owner_declared_needs_owner_edition_and_rights_review",
+      "public_excerpt_count": 83
     },
     {
       "goal_id": "goal.3.selflo_observational_quotes",
@@ -69,6 +69,20 @@
     }
   ],
   "source_progress": [
+    {
+      "source_id": "source.goal2.paulo_coelho.the_alchemist.owner_file",
+      "author": "Paulo Coelho",
+      "work": "Nhà giả kim",
+      "translator": null,
+      "publication_year": null,
+      "provider": "Owner-provided Markdown",
+      "source_url": null,
+      "candidate_quota": 100,
+      "collected_count": 83,
+      "materialized_to_authoring_preview": 83,
+      "accepted_count": 0,
+      "status": "materialized_owner_declared_needs_owner_edition_and_rights_review"
+    },
     {
       "source_id": "source.001.marcus_aurelius.meditations.chrystal_1902",
       "author": "Marcus Aurelius",
