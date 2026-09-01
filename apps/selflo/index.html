@@ -2,22 +2,128 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Selflo Content Studio</title>
-  <style>
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;color:#27332f;background:radial-gradient(circle at 15% 15%,#eee0ca,transparent 34rem),radial-gradient(circle at 90% 10%,#dbe8e1,transparent 32rem),#f7f4ed;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.shell{width:min(1000px,calc(100% - 32px));padding:64px 0}.brand{display:flex;align-items:center;gap:12px;margin-bottom:65px}.mark{width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,#759489,#31564f);display:grid;place-items:center;box-shadow:0 10px 24px #31564f33}.mark:after{content:"";width:14px;height:14px;border:2px solid white;border-radius:50% 50% 50% 10%;transform:rotate(-35deg)}.brand span:last-child{font-weight:800}.brand small{display:block;color:#6c7672;font-weight:500;margin-top:3px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#668278}h1{max-width:720px;margin:12px 0 18px;font:500 clamp(42px,7vw,76px)/1 Georgia,serif;letter-spacing:-.04em}p{color:#69736f;line-height:1.7}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:42px}.card{display:block;padding:26px;border:1px solid #ffffffd9;border-radius:25px;color:inherit;text-decoration:none;background:#ffffffb8;box-shadow:0 20px 55px #303c3717;transition:.2s transform,.2s box-shadow}.card:hover{transform:translateY(-3px);box-shadow:0 25px 65px #303c3723}.card strong{display:block;font-size:20px}.card span{display:block;margin-top:9px;color:#68736f;line-height:1.55}.card i{display:inline-grid;width:33px;height:33px;margin-bottom:22px;border-radius:50%;place-items:center;background:#dfeae3;color:#31564f;font-style:normal;font-weight:800}@media(max-width:650px){.grid{grid-template-columns:1fr}.shell{padding:32px 0}.brand{margin-bottom:48px}}
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f2eee5">
+  <meta name="description" content="Selflo — một không gian riêng tư để check-in cảm xúc, nhìn lại nhịp sống và đọc những góc nhìn vừa đủ.">
+  <meta property="og:title" content="Selflo · Một khoảng dừng cho chính mình">
+  <meta property="og:description" content="Ứng dụng local-first cho check-in cảm xúc, nhịp sống và thư viện Góc nhìn.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dungvo.github.io/apps/selflo/">
+  <meta property="og:image" content="https://dungvo.github.io/apps/selflo/assets/images/og.png">
+  <meta property="og:image:alt" content="Selflo — Một khoảng dừng để thấy mình rõ hơn.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Selflo · Một khoảng dừng cho chính mình">
+  <meta name="twitter:description" content="Check-in cảm xúc · Nhịp sống · Góc nhìn">
+  <meta name="twitter:image" content="https://dungvo.github.io/apps/selflo/assets/images/og.png">
+  <title>Selflo · Một khoảng dừng cho chính mình</title>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <main class="shell">
-    <div class="brand"><span class="mark"></span><span>Selflo<small>Content Studio</small></span></div>
-    <span class="eyebrow">Authoring workspace</span>
-    <h1>Tạo, đọc và duyệt nội dung trước khi phát hành.</h1>
-    <p>Hai công cụ độc lập: một nơi tạo seed/prompt đa dạng, một nơi xem quote và story giống trải nghiệm trong app.</p>
-    <section class="grid">
-      <a class="card" href="story-seed/"><i>01</i><strong>Story Seed</strong><span>Chọn hoàn cảnh, quote hoặc story để tạo nhiều hướng kể và prompt hoàn chỉnh.</span></a>
-      <a class="card" href="preview/"><i>02</i><strong>Content Preview</strong><span>Đọc Authoring Library, so sánh quote/story và ghi quyết định review trong trình duyệt.</span></a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Selflo home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span><strong>Selflo</strong><small>Chậm lại để thấy rõ hơn</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Điều hướng chính">
+      <a class="active" href="./">Trang chủ</a>
+      <a href="preview/">Thư viện</a>
+      <a href="preview/?view=matrix">Dashboard</a>
+      <a href="story-seed/">Story Seed</a>
+      <a href="privacy/">Privacy</a>
+    </nav>
+    <span class="store-pill" aria-label="Ứng dụng chưa có trên App Store">App Store · sắp ra mắt</span>
+  </header>
+
+  <main>
+    <section class="hero page-width">
+      <div class="hero-copy">
+        <p class="eyebrow">Ứng dụng cảm xúc · local-first</p>
+        <h1>Một khoảng dừng<br>để <em>thấy mình</em> rõ hơn.</h1>
+        <p class="hero-lede">Selflo giúp bạn ghi lại cảm xúc, nhìn lại nhịp sống và đọc một góc nhìn vừa đủ—không phán xét, không biến trải nghiệm của bạn thành một bảng điểm.</p>
+        <div class="hero-actions">
+          <span class="primary-action is-disabled" aria-disabled="true">Tải trên App Store <small>Sắp có</small></span>
+          <a class="text-action" href="preview/">Mở thư viện nội dung <span>→</span></a>
+        </div>
+        <div class="trust-row">
+          <span><i aria-hidden="true"></i>Dữ liệu trên thiết bị</span>
+          <span><i aria-hidden="true"></i>Không tài khoản</span>
+          <span><i aria-hidden="true"></i>Không quảng cáo</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Mô phỏng trải nghiệm Góc nhìn của Selflo">
+        <img src="assets/images/selflo-autumn.jpg" alt="Con đường nhỏ giữa hàng cây trong ánh nắng mùa thu">
+        <div class="hero-shade"></div>
+        <div class="phone-chrome"><span>9:41</span><span>◒ ᯤ ▰</span></div>
+        <div class="visual-label">GÓC NHÌN · CHÚ Ý</div>
+        <blockquote>“Có những ngày, điều cần hoàn thành trước tiên chỉ là trở về với phút đang có.”</blockquote>
+        <div class="visual-source"><span>Selflo</span><span>Vuốt để đọc tiếp ↑</span></div>
+        <a class="visual-credit" href="https://www.pexels.com/photo/green-trees-in-the-grass-field-13831706/" target="_blank" rel="noopener">Photo · Ryszard Zaleski / Pexels</a>
+      </div>
+    </section>
+
+    <section class="studio-band" aria-labelledby="studio-title">
+      <div class="page-width studio-layout">
+        <div class="studio-intro">
+          <p class="eyebrow">Content workspace</p>
+          <h2 id="studio-title">Đọc, so sánh và chốt nội dung ở một nơi.</h2>
+          <p>Website này vừa là nơi giới thiệu Selflo, vừa là bàn làm việc editorial cho Authoring Library. Mọi thao tác review trên web được giữ tách biệt khỏi Release.</p>
+          <div class="live-status" aria-live="polite"><span class="pulse-dot"></span><span id="libraryStatus">Đang đọc Authoring Library…</span></div>
+        </div>
+
+        <div class="tool-grid">
+          <a class="tool-card featured" href="preview/">
+            <span class="tool-number">01</span><div class="tool-icon" aria-hidden="true">◐</div>
+            <h3>Thư viện review</h3>
+            <p>Đọc nhanh toàn bộ quote và story tương ứng, xem như trong app rồi đánh dấu Duyệt, Cần sửa hoặc Từ chối.</p>
+            <div class="tool-meta"><span id="quoteMetric">— quote</span><span id="storyMetric">— story</span></div>
+          </a>
+          <a class="tool-card" href="preview/?view=matrix">
+            <span class="tool-number">02</span><div class="tool-icon" aria-hidden="true">▦</div>
+            <h3>Dashboard đa dạng</h3>
+            <p>Xem coverage theo nguồn, dạng diễn đạt, lý thuyết, bối cảnh và mở ngay những khoảng trống cần bổ sung.</p>
+            <div class="tool-link">Mở matrix <span>→</span></div>
+          </a>
+          <a class="tool-card" href="story-seed/">
+            <span class="tool-number">03</span><div class="tool-icon" aria-hidden="true">✦</div>
+            <h3>Story Seed</h3>
+            <p>Chọn hoàn cảnh, theme và framework để tạo prompt có output JSON đúng cấu trúc Authoring, sẵn sàng cho bước review.</p>
+            <div class="tool-link">Tạo prompt <span>→</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-story page-width" aria-labelledby="about-selflo">
+      <header class="section-heading"><p class="eyebrow">Selflo làm gì?</p><h2 id="about-selflo">Một ứng dụng nhỏ cho những điều thường khó gọi tên.</h2></header>
+      <div class="feature-grid">
+        <article><span class="feature-kicker">01 · Check-in</span><h3>Ghi lại cảm xúc mà không phải viết dài.</h3><p>Chọn trạng thái đầu óc, điều đang liên quan và cảm xúc gần nhất. Một lần check-in đủ ngắn để dùng mỗi ngày.</p></article>
+        <article><span class="feature-kicker">02 · Nhịp</span><h3>Nhìn lại xu hướng, không chấm điểm bản thân.</h3><p>Selflo gom những ngày đã ghi thành một bức tranh nhẹ nhàng về nhịp cảm xúc và các khoảnh khắc gần đây.</p></article>
+        <article><span class="feature-kicker">03 · Góc nhìn</span><h3>Đọc một câu ngắn, hoặc ở lại với một câu chuyện.</h3><p>Quote và story được kết nối theo theme, hoàn cảnh và nền tảng tư tưởng để gợi mở—không đưa lời khuyên y khoa.</p></article>
+      </div>
+    </section>
+
+    <section class="principles">
+      <div class="page-width principles-grid">
+        <div><p class="eyebrow">Nguyên tắc nội dung</p><h2>Mỗi câu chuyện có lý do để tồn tại.</h2></div>
+        <ol>
+          <li><span>01</span><div><strong>Một quote ↔ một story</strong><p>Cặp nội dung được đọc và review như một đơn vị; không tái dùng story cho nhiều quote.</p></div></li>
+          <li><span>02</span><div><strong>Authoring không phải Release</strong><p>Nội dung nháp có thể xuất hiện trên website review nhưng không tự trở thành nội dung phát hành.</p></div></li>
+          <li><span>03</span><div><strong>Quyết định của owner là bước riêng</strong><p>Review ledger giúp ghi nhớ quyết định; rights, source và lifecycle vẫn phải qua gate riêng.</p></div></li>
+        </ol>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-grid">
+      <div><strong>Selflo</strong><p>Một khoảng dừng riêng tư để nhìn lại điều đang diễn ra bên trong.</p></div>
+      <div><span>Khám phá</span><a href="preview/">Thư viện nội dung</a><a href="preview/?view=matrix">Dashboard đa dạng</a><a href="story-seed/">Story Seed</a></div>
+      <div><span>Thông tin</span><a href="privacy/">Chính sách quyền riêng tư</a><span class="muted-link">App Store · sắp ra mắt</span></div>
+    </div>
+    <div class="page-width footer-bottom"><span>© 2026 Selflo</span><span>Được tạo với sự tôn trọng dành cho những khoảng riêng của bạn.</span></div>
+  </footer>
+  <script src="assets/home.js"></script>
 </body>
 </html>

@@ -4,18 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="Selflo Perspective Library content review preview">
-  <title>Selflo · Content Preview</title>
+  <meta name="description" content="Thư viện nội dung Selflo — đọc quote, story, matrix và ghi quyết định editorial.">
+  <meta property="og:title" content="Selflo · Thư viện nội dung">
+  <meta property="og:description" content="Đọc quote, story, matrix và ghi quyết định editorial trong Authoring Library.">
+  <meta property="og:image" content="https://dungvo.github.io/apps/selflo/assets/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://dungvo.github.io/apps/selflo/assets/images/og.png">
+  <title>Selflo · Thư viện nội dung</title>
   <link rel="stylesheet" href="preview.css">
 </head>
 <body>
+  <nav class="global-nav" aria-label="Selflo website">
+    <a href="../">Trang chủ</a>
+    <a class="active" href="./">Thư viện</a>
+    <a href="?view=matrix">Dashboard</a>
+    <a href="../story-seed/">Story Seed</a>
+    <a href="../privacy/">Privacy</a>
+  </nav>
   <div class="review-shell">
     <header class="topbar">
       <a class="brand" href="../" aria-label="Selflo Content home">
         <span class="brand-mark" aria-hidden="true"><span></span></span>
         <span>
           <strong>Selflo</strong>
-          <small>Content review</small>
+          <small>Editorial Library</small>
         </span>
       </a>
 
@@ -31,8 +43,11 @@
       </div>
 
       <div class="topbar-actions">
+        <span class="review-progress" id="reviewProgress">0 đã review</span>
         <button class="quiet-button" id="reloadButton" type="button">Tải lại</button>
+        <button class="quiet-button" id="importButton" type="button">Nhập ledger</button>
         <button class="primary-button" id="exportButton" type="button">Xuất review</button>
+        <input id="importFile" type="file" accept="application/json,.json" hidden>
       </div>
     </header>
 
@@ -246,12 +261,12 @@
             <p class="eyebrow">Review note</p>
             <h2>Quyết định của bạn</h2>
           </div>
-          <span class="local-only">Local only</span>
+          <span class="local-only">Lưu trên máy này</span>
         </div>
 
         <div class="warning-card">
           <span aria-hidden="true">!</span>
-          <p>Bản này chưa publish-ready. Quyết định chỉ được lưu trong browser và không sửa JSON.</p>
+          <p>Ledger giúp ghi nhớ lựa chọn editorial. Nó không tự đổi rights, lifecycle hoặc Release JSON.</p>
         </div>
 
         <dl class="content-facts">

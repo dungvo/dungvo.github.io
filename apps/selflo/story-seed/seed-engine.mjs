@@ -195,11 +195,22 @@ Chỉ viết bản hoàn chỉnh cho seed: ${selected}. Những seed còn lại 
 - Quote quan sát dựa vào cơ thể/y khoa/khoa học phải có fact gate.
 - Danh ngôn/sách phải giữ provenance riêng; story là sáng tác nguyên bản, không mượn plot của nguồn.
 
-## Output
-1. \`seed_review\`: vì sao seed được chọn khác corpus hiện có.
-2. \`quote_draft\`: ID, text, family/kind, provenance và lifecycle; tạo mới nếu đầu vào là story/context.
-3. \`story_draft\`: ID, title, subtitle, 3–6 section, takeaway và knowledge basis.
+## Output bắt buộc — sẵn sàng đưa vào canonical Authoring sau review
+Trả về đúng thứ tự dưới đây. JSON phải parse được, không có comment và không thêm prose vào trong code fence.
+
+1. \`seed_review\`: giải thích ngắn vì sao seed được chọn khác corpus hiện có.
+2. Một code fence \`json\` có heading filename:
+   \`apps/selflo/perspective-library/source/vi/stories/<story-slug>/story.vi.json\`
+   - Dùng đầy đủ shape \`perspective_story\` schema 1.0: \`schema_version, entity, id, revision, status, language, title_vi, subtitle_vi, hero_image, primary_theme, metadata, sections, takeaway, authorship, editorial, rights, review\`.
+   - Mỗi section và block có stable ID; 3–6 section; block chỉ dùng loại schema cho phép.
+   - Giữ \`status=draft\`, \`review.status=needs_owner_review\`, \`rights.status=unverified\`, \`editorial.human_edited=false\`; không tự nâng lifecycle.
+3. Một code fence \`json\` có heading filename:
+   \`apps/selflo/perspective-library/source/vi/quotes/<primary-theme>/<next-batch>.vi.json\`
+   - Dùng shape \`selflo.perspective.quote-fragment.v1\` với \`entity=perspective_quote_fragment\`, \`fragment_id\`, \`primary_theme\` và mảng \`quotes\`.
+   - Quote phải đầy đủ field theo Perspective Theme schema 1.0, gắn đúng \`story_id\` vừa tạo và giữ lifecycle Authoring fail-closed.
 4. \`pairing_ledger\`: đúng một quote ID ↔ đúng một story ID.
 5. \`diversity_fingerprint\`: lens, shape, protagonist, setting, guide, ending, motif.
-6. \`review_flags\`: nguồn, rights, fact, trùng nội dung và các điểm owner phải duyệt.`;
+6. \`review_flags\`: nguồn, rights, fact, trùng nội dung và các điểm owner phải duyệt.
+
+Không sửa \`source.json\`, không chạy publisher, không commit/push. Maintainer sẽ validate, thêm fragment vào index và publish Authoring Preview sau khi owner review.`;
 }

@@ -20,7 +20,7 @@
     selectedStandaloneStoryID: null,
     view: "canvas",
     reviews: readJSON(REVIEW_KEY, {}),
-    pageMode: "content",
+    pageMode: new URLSearchParams(window.location.search).get("view") === "matrix" ? "matrix" : "content",
     matrixBrowser: { query: "", group: "all", status: "all" },
     contentBrowser: {
       query: "",
@@ -37,7 +37,7 @@
   };
 
   const el = Object.fromEntries([
-    "statusDot", "loadStatus", "reloadButton", "exportButton", "contentModeButton", "matrixModeButton",
+    "statusDot", "loadStatus", "reloadButton", "importButton", "importFile", "exportButton", "reviewProgress", "contentModeButton", "matrixModeButton",
     "contentWorkspace", "matrixDashboard", "quoteCount", "libraryRevision",
     "contentVersion", "storyCoverage", "contentList", "contentSearch", "contentTypeFilter",
     "contentReviewFilter", "previousPageButton", "nextPageButton", "paginationInfo",
@@ -61,11 +61,14 @@
   async function init() {
     bindEvents();
     applyReaderPreferences();
+    setPageMode(state.pageMode, false);
     await loadLibrary();
   }
 
   function bindEvents() {
     el.reloadButton.addEventListener("click", loadLibrary);
+    el.importButton.addEventListener("click", () => el.importFile.click());
+    el.importFile.addEventListener("change", importReviews);
     el.exportButton.addEventListener("click", exportReviews);
     el.contentModeButton.addEventListener("click", () => setPageMode("content"));
     el.matrixModeButton.addEventListener("click", () => setPageMode("matrix"));
@@ -130,6 +133,7 @@
       persistReviews();
       renderReviewPanel();
       renderContentList();
+      renderReviewProgress();
     });
 
     el.reviewNote.addEventListener("input", () => {
@@ -139,6 +143,7 @@
       review.note = el.reviewNote.value;
       review.updated_at = new Date().toISOString();
       persistReviews();
+      renderReviewProgress();
     });
 
     document.addEventListener("click", event => {
@@ -198,6 +203,7 @@
       renderContentList();
       renderSelection();
       renderMatrix();
+      renderReviewProgress();
       setLoadState("ready", `${state.quotes.length} quote · ${state.stories.size} story · Authoring draft`);
     } catch (error) {
       console.error(error);
@@ -209,7 +215,7 @@
     }
   }
 
-  function setPageMode(mode) {
+  function setPageMode(mode, updateURL = true) {
     state.pageMode = mode;
     const matrixMode = mode === "matrix";
     el.contentWorkspace.hidden = matrixMode;
@@ -219,6 +225,15 @@
     el.matrixModeButton.classList.toggle("active", matrixMode);
     el.contentModeButton.setAttribute("aria-selected", String(!matrixMode));
     el.matrixModeButton.setAttribute("aria-selected", String(matrixMode));
+    document.querySelectorAll(".global-nav a").forEach(link => link.classList.remove("active"));
+    const activeGlobalLink = document.querySelector(matrixMode ? '.global-nav a[href="?view=matrix"]' : '.global-nav a[href="./"]');
+    activeGlobalLink?.classList.add("active");
+    if (updateURL) {
+      const url = new URL(window.location.href);
+      if (matrixMode) url.searchParams.set("view", "matrix");
+      else url.searchParams.delete("view");
+      window.history.replaceState({}, "", url);
+    }
     if (matrixMode) renderMatrix();
   }
 
@@ -661,13 +676,31 @@
   }
 
   function exportReviews() {
-    const decisions = state.quotes.map(quote => ({
+    const quoteDecisions = state.quotes.map(quote => ({
+      key: quote.id,
+      entity: quote.story_id ? "quote_story_pair" : "quote",
       quote_id: quote.id,
       story_id: quote.story_id,
       decision: reviewFor(quote.id).decision || "pending",
       note: reviewFor(quote.id).note || "",
       updated_at: reviewFor(quote.id).updated_at || null
     }));
+    const linkedStoryIDs = new Set(state.quotes.map(quote => quote.story_id).filter(Boolean));
+    const standaloneStoryDecisions = [...state.stories.values()]
+      .filter(story => !linkedStoryIDs.has(story.id))
+      .map(story => {
+        const key = `story:${story.id}`;
+        return {
+          key,
+          entity: "story",
+          quote_id: null,
+          story_id: story.id,
+          decision: reviewFor(key).decision || "pending",
+          note: reviewFor(key).note || "",
+          updated_at: reviewFor(key).updated_at || null
+        };
+      });
+    const decisions = [...quoteDecisions, ...standaloneStoryDecisions];
     const payload = {
       schema_version: "1.0",
       library_id: state.manifest?.library_id || null,
@@ -682,6 +715,44 @@
     link.click();
     URL.revokeObjectURL(link.href);
     showToast("Đã xuất file review JSON");
+  }
+
+  async function importReviews(event) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    try {
+      const payload = JSON.parse(await file.text());
+      if (!Array.isArray(payload.decisions)) throw new Error("missing decisions");
+      const imported = {};
+      payload.decisions.forEach(item => {
+        const key = item.key || item.quote_id || (item.story_id ? `story:${item.story_id}` : null);
+        if (!key) return;
+        imported[key] = {
+          decision: ["approved", "needs_edit", "rejected"].includes(item.decision) ? item.decision : null,
+          note: typeof item.note === "string" ? item.note : "",
+          updated_at: item.updated_at || new Date().toISOString()
+        };
+      });
+      state.reviews = { ...state.reviews, ...imported };
+      persistReviews();
+      renderContentList();
+      renderReviewPanel();
+      renderReviewProgress();
+      showToast(`Đã nhập ${Object.keys(imported).length} quyết định`);
+    } catch {
+      showToast("Ledger không đúng định dạng Selflo");
+    }
+  }
+
+  function renderReviewProgress() {
+    const linkedStoryIDs = new Set(state.quotes.map(quote => quote.story_id).filter(Boolean));
+    const keys = [
+      ...state.quotes.map(quote => quote.id),
+      ...[...state.stories.values()].filter(story => !linkedStoryIDs.has(story.id)).map(story => `story:${story.id}`)
+    ];
+    const reviewed = keys.filter(key => reviewFor(key).decision).length;
+    el.reviewProgress.textContent = `${reviewed}/${keys.length} đã review`;
   }
 
   function reviewFor(quoteID) {
