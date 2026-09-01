@@ -2,10 +2,12 @@
   "use strict";
 
   const LIBRARY_BASE = new URL("../perspective-library/authoring/vi/", window.location.href);
+  const RESEARCH_STATUS_URL = new URL("../quote-research/status.json", window.location.href);
   const PAGE_SIZE = 24;
   const params = new URLSearchParams(window.location.search);
   const state = {
     manifest: null,
+    researchStatus: null,
     quotes: [],
     themeNames: new Map(),
     filters: {
@@ -22,7 +24,7 @@
   const el = Object.fromEntries([
     "libraryState", "totalQuoteMetric", "authorMetric", "workMetric", "quoteSearch",
     "sourceFilter", "authorFilter", "workFilter", "themeFilter", "sortFilter", "resetFilters",
-    "resultTitle", "resultCount", "quoteGrid", "previousPage", "nextPage", "paginationInfo"
+    "pendingSources", "resultTitle", "resultCount", "quoteGrid", "previousPage", "nextPage", "paginationInfo"
   ].map(id => [id, document.getElementById(id)]));
 
   document.addEventListener("DOMContentLoaded", init);
@@ -43,7 +45,10 @@
 
   async function loadLibrary() {
     try {
-      const manifest = await fetchJSON(new URL("manifest.json", LIBRARY_BASE));
+      const [manifest, researchStatus] = await Promise.all([
+        fetchJSON(new URL("manifest.json", LIBRARY_BASE)),
+        fetchJSON(RESEARCH_STATUS_URL).catch(() => null)
+      ]);
       const quoteFiles = manifest.files.filter(file => file.kind === "quote_pack");
       const packs = await Promise.all(quoteFiles.map(async descriptor => ({
         descriptor,
@@ -51,6 +56,7 @@
       })));
 
       state.manifest = manifest;
+      state.researchStatus = researchStatus;
       state.themeNames = new Map(packs.map(item => [item.payload.primary_theme, item.payload.display_name_vi]));
       state.quotes = packs.flatMap(item => item.payload.quotes.map(quote => ({
         ...quote,
@@ -171,7 +177,59 @@
     } else {
       pageQuotes.forEach((quote, index) => el.quoteGrid.append(renderQuoteCard(quote, startIndex + index + 1)));
     }
+    renderPendingSources();
     updateURL();
+  }
+
+  function renderPendingSources() {
+    const goal = state.researchStatus?.goals?.find(item => item.goal_id === "goal.2.the_alchemist");
+    const audit = goal?.owner_file_audit;
+    const query = normalizeSearch(state.filters.query);
+    const queryMatches = !query || [goal?.author, goal?.work_title_vi, goal?.work_title_en]
+      .filter(Boolean)
+      .some(value => normalizeSearch(value).includes(query) || query.includes(normalizeSearch(value)));
+    const sourceMatches = state.filters.source === "book" || (state.filters.source === "all" && Boolean(query));
+    const contextualFiltersMatch = state.filters.author === "all" && state.filters.work === "all" && state.filters.theme === "all";
+    const shouldShow = Boolean(goal && audit && sourceMatches && queryMatches && contextualFiltersMatch);
+
+    el.pendingSources.hidden = !shouldShow;
+    el.pendingSources.replaceChildren();
+    if (!shouldShow) return;
+
+    const copy = document.createElement("div");
+    copy.className = "pending-source-copy";
+    const eyebrow = document.createElement("p");
+    eyebrow.className = "eyebrow";
+    eyebrow.textContent = "Nguồn đã nhận · chưa công khai excerpt";
+    const title = document.createElement("h2");
+    title.textContent = `${goal.work_title_vi} · ${goal.author}`;
+    const description = document.createElement("p");
+    description.textContent = "File owner đã được đọc và loại trùng. Quote nguyên văn chưa vào Authoring vì chưa xác định đúng edition, dịch giả, ISBN, trang và quyền sử dụng.";
+    const statusLink = document.createElement("a");
+    statusLink.href = "../quote-research/status.json";
+    statusLink.target = "_blank";
+    statusLink.rel = "noopener";
+    statusLink.textContent = "Mở trạng thái nghiên cứu ↗";
+    copy.append(eyebrow, title, description, statusLink);
+
+    const metrics = document.createElement("div");
+    metrics.className = "pending-source-metrics";
+    [
+      [audit.formatted_quote_entry_count, "entry trong file"],
+      [audit.unique_normalized_pre_candidate_count, "pre-candidate unique"],
+      [audit.duplicate_occurrence_count, "lượt trùng"],
+      [goal.public_excerpt_count, "quote đã public"]
+    ].forEach(([value, label]) => {
+      const metric = document.createElement("div");
+      const strong = document.createElement("strong");
+      strong.textContent = String(value);
+      const span = document.createElement("span");
+      span.textContent = label;
+      metric.append(strong, span);
+      metrics.append(metric);
+    });
+
+    el.pendingSources.append(copy, metrics);
   }
 
   function renderQuoteCard(quote, number) {

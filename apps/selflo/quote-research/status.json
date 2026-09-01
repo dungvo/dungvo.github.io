@@ -1,6 +1,6 @@
 {
   "schema_version": "selflo.quote-research-public-status.v1",
-  "updated_at": "2026-08-30T00:00:00Z",
+  "updated_at": "2026-09-01T00:00:00Z",
   "publication_scope": "progress_metadata_and_authoring_preview",
   "authoring_library_changed": true,
   "release_library_changed": false,
@@ -38,7 +38,18 @@
       "provenance_status": "owner_declared_work_source",
       "edition_verification_status": "needs_edition_translator_isbn_page_locators",
       "research_candidates_collected": 0,
-      "status": "deferred_not_started",
+      "materialized_to_authoring_preview": 0,
+      "accepted_count": 0,
+      "owner_file_audit": {
+        "audited_at": "2026-09-01",
+        "formatted_quote_entry_count": 122,
+        "unique_normalized_pre_candidate_count": 82,
+        "duplicate_occurrence_count": 40,
+        "duplicate_group_count": 33,
+        "exact_edition_verified_count": 0,
+        "file_sha256": "98cfc16b0b967844111dbbe746a2c67f2f5737003e61bed7786fe8e2848113d1"
+      },
+      "status": "owner_file_audited_waiting_edition_and_rights",
       "public_excerpt_count": 0
     },
     {
