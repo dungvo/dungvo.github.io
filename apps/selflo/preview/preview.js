@@ -432,7 +432,8 @@
     const pageRows = rows.slice(startIndex, startIndex + state.bulkBrowser.pageSize);
 
     el.bulkRows.replaceChildren();
-    el.bulkVisibleCount.textContent = `${rows.length} / ${allRows.length} cặp`;
+    const visibleStories = rows.filter(row => row.story).length;
+    el.bulkVisibleCount.textContent = `${rows.length}/${allRows.length} mục · ${visibleStories} có story`;
     el.bulkPaginationInfo.textContent = `Trang ${state.bulkBrowser.page} / ${totalPages} · ${pageRows.length} mục đang hiện`;
     el.bulkPreviousPage.disabled = state.bulkBrowser.page <= 1;
     el.bulkNextPage.disabled = state.bulkBrowser.page >= totalPages;
