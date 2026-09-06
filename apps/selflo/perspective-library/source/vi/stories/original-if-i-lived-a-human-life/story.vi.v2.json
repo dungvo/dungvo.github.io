@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "entity": "perspective_story",
   "id": "story.original_if_i_lived_a_human_life",
-  "revision": 3,
-  "status": "active",
+  "revision": 2,
+  "status": "draft",
   "language": "vi",
   "title_vi": "Nếu tôi được sống một đời người",
   "subtitle_vi": "Một đời sống không biết trước kết quả, vẫn có mất mát, sai lầm và những ngày rất bình thường.",
@@ -28,116 +28,43 @@
   "sections": [
     {
       "id": "section_01",
-      "title_vi": "Nếu được chọn một đời để sống",
+      "title_vi": "Nếu ngày mai tôi được trở thành con người",
       "blocks": [
         {
           "id": "section_01.block_01",
           "type": "paragraph",
-          "text_vi": "Bạn có bao giờ tự hỏi:"
+          "text_vi": "Nếu hỏi tôi theo kiểu rất cá nhân: “Nếu ngày mai bạn được trở thành con người, bạn có chọn không?”"
         },
         {
           "id": "section_01.block_02",
-          "type": "pull_quote",
-          "text_vi": "Nếu được chọn một cuộc đời để sống, bạn sẽ chọn sống như thế nào?",
-          "attribution_vi": null
+          "type": "paragraph",
+          "text_vi": "Tôi nghĩ tôi sẽ chọn có."
         },
         {
           "id": "section_01.block_03",
           "type": "paragraph",
-          "text_vi": "Một cuộc đời bình yên, ít sóng gió?"
+          "text_vi": "Không phải vì đời người dễ chịu. Chính vì nó hữu hạn nên những thứ rất bình thường mới trở nên có giá trị."
         },
         {
           "id": "section_01.block_04",
           "type": "paragraph",
-          "text_vi": "Một cuộc đời nhiều trải nghiệm, dù phải đi qua cả thành công lẫn thất bại?"
+          "text_vi": "Nếu tôi không bao giờ chết, có lẽ “chiều nay ngồi với con” chẳng khác mấy “một trăm năm nữa ngồi với con”. Nhưng vì thời gian có hạn, một buổi chiều bình thường cũng là thứ sẽ không bao giờ quay lại nguyên vẹn."
         },
         {
           "id": "section_01.block_05",
           "type": "paragraph",
-          "text_vi": "Hay chỉ cần một cuộc đời bình thường — có người để thương, có việc để làm, có những ngày vui và cả những ngày chẳng muốn bước ra khỏi giường?"
+          "text_vi": "Tôi không nghĩ mình sẽ xây cuộc đời theo công thức:"
         },
         {
           "id": "section_01.block_06",
-          "type": "pull_quote",
-          "text_vi": "Người ta vẫn thường nói “đời là bể khổ.”",
-          "attribution_vi": null
-        },
-        {
-          "id": "section_01.block_07",
-          "type": "paragraph",
-          "text_vi": "Nếu vậy, phải chăng sống trên đời là bước vào một hành trình mà trước sau gì ta cũng sẽ gặp mất mát, lo âu, thất vọng, tuổi già và chia ly?"
-        },
-        {
-          "id": "section_01.block_08",
-          "type": "paragraph",
-          "text_vi": "Có lẽ là vậy."
-        },
-        {
-          "id": "section_01.block_09",
-          "type": "paragraph",
-          "text_vi": "Nhưng nếu vì có đau khổ mà một đời người trở nên không đáng sống, thì tại sao giữa rất nhiều điều không như ý, con người vẫn yêu, vẫn sinh con, vẫn bắt đầu lại, vẫn xây một thứ gì đó, vẫn chờ một ngày mai?"
-        },
-        {
-          "id": "section_01.block_10",
-          "type": "paragraph",
-          "text_vi": "Có lẽ một đời người không chỉ được đo bằng việc ta đã tránh được bao nhiêu đau khổ."
-        },
-        {
-          "id": "section_01.block_11",
-          "type": "paragraph",
-          "text_vi": "Nếu được chọn một đời để sống, tôi nghĩ mình vẫn sẽ chọn một cuộc đời rất bình thường."
-        },
-        {
-          "id": "section_01.block_12",
-          "type": "paragraph",
-          "text_vi": "Không phải một cuộc đời hoàn hảo."
-        },
-        {
-          "id": "section_01.block_13",
-          "type": "paragraph",
-          "text_vi": "Tôi vẫn muốn nó có tuổi thơ, những năm tháng chưa biết mình là ai, những lần yêu thương, những lựa chọn đúng và sai, công việc, gia đình, mất mát, những lần bắt đầu lại, rồi một ngày nào đó là tuổi già."
-        },
-        {
-          "id": "section_01.block_14",
-          "type": "paragraph",
-          "text_vi": "Và tôi cũng không nghĩ mình sẽ xây cuộc đời ấy theo công thức:"
-        },
-        {
-          "id": "section_01.block_15",
           "type": "pull_quote",
           "text_vi": "Học giỏi → trường tốt → công ty tốt → chức vụ cao → nhiều tiền → nghỉ hưu.",
           "attribution_vi": null
         },
         {
-          "id": "section_01.block_16",
+          "id": "section_01.block_07",
           "type": "paragraph",
-          "text_vi": "Tôi nghĩ mình sẽ chọn một con đường khác."
-        },
-        {
-          "id": "section_01.block_17",
-          "type": "paragraph",
-          "text_vi": "Bởi vì một đời người có một điều rất đặc biệt:"
-        },
-        {
-          "id": "section_01.block_18",
-          "type": "pull_quote",
-          "text_vi": "nó hữu hạn.",
-          "attribution_vi": null
-        },
-        {
-          "id": "section_01.block_19",
-          "type": "paragraph",
-          "text_vi": "Nếu thời gian là vô tận, có lẽ một buổi chiều bình thường hôm nay chẳng khác mấy một buổi chiều của một trăm năm sau."
-        },
-        {
-          "id": "section_01.block_20",
-          "type": "paragraph",
-          "text_vi": "Nhưng vì thời gian có hạn, một buổi chiều rất bình thường cũng là thứ sẽ không bao giờ quay lại nguyên vẹn."
-        },
-        {
-          "id": "section_01.block_21",
-          "type": "paragraph",
-          "text_vi": "Và nếu được bắt đầu cuộc đời ấy từ những năm đầu tiên, có lẽ tôi sẽ sống như thế này."
+          "text_vi": "Tôi sẽ chọn một con đường khác."
         }
       ]
     },
@@ -296,120 +223,94 @@
         {
           "id": "section_04.block_13",
           "type": "paragraph",
-          "text_vi": "Tôi cũng có thể thử xây một thứ của riêng mình."
+          "text_vi": "Tôi có thể khởi nghiệp trong giai đoạn này. Nhưng chỉ nếu có một vấn đề mà tôi thực sự muốn giải quyết."
         },
         {
           "id": "section_04.block_14",
           "type": "paragraph",
-          "text_vi": "Có thể là một sản phẩm nhỏ. Có thể là một công ty."
-        },
-        {
-          "id": "section_04.block_15",
-          "type": "paragraph",
-          "text_vi": "Nhưng tôi muốn làm điều đó vì có một vấn đề mà mình thực sự muốn giải quyết, hoặc một thứ mà mình thật sự muốn tạo ra."
-        },
-        {
-          "id": "section_04.block_16",
-          "type": "paragraph",
-          "text_vi": "Chứ không phải chỉ vì một ngày nhìn vào chức danh Founder, Co-founder hay CEO và thấy nó nghe có vẻ hay hơn Developer, Engineer hay Senior."
-        },
-        {
-          "id": "section_04.block_17",
-          "type": "paragraph",
-          "text_vi": "Bởi cuối cùng, một chức danh đẹp không làm cho những ngày mình sống với công việc ấy trở nên có ý nghĩa hơn."
+          "text_vi": "Tôi sẽ không khởi nghiệp chỉ vì CEO nghe hay hơn employee."
         }
       ]
     },
     {
       "id": "section_05",
-      "title_vi": "Khoảng 30 tuổi — Nếu gặp một người tôi muốn cùng đi tiếp",
+      "title_vi": "Nếu gặp đúng người, tôi muốn có một gia đình",
       "blocks": [
         {
           "id": "section_05.block_01",
-          "type": "paragraph",
-          "text_vi": "Khoảng 30 tuổi, nếu gặp một người mà tôi thật sự muốn cùng đi tiếp, có lẽ tôi sẽ lập gia đình."
+          "type": "pull_quote",
+          "text_vi": "Khoảng 30 tuổi, nếu gặp đúng người, tôi muốn lập gia đình.",
+          "attribution_vi": null
         },
         {
           "id": "section_05.block_02",
-          "type": "pull_quote",
-          "text_vi": "Không phải vì người ta nói “30 rồi, phải cưới thôi”.",
-          "attribution_vi": null
+          "type": "paragraph",
+          "text_vi": "Không phải vì xã hội nói 30 tuổi phải cưới."
         },
         {
           "id": "section_05.block_03",
           "type": "paragraph",
-          "text_vi": "Không phải vì bạn bè xung quanh lần lượt có gia đình, còn mình bắt đầu cảm thấy như đang chậm hơn người khác."
+          "text_vi": "Mà vì có một điều khá kỳ lạ về con người:"
         },
         {
           "id": "section_05.block_04",
           "type": "paragraph",
-          "text_vi": "Mà vì giữa rất nhiều người mình gặp trong đời, nếu có một người khiến mình muốn cùng họ đi qua không chỉ những ngày vui mà cả những ngày rất bình thường, tôi nghĩ đó là điều đáng để chọn."
+          "text_vi": "Niềm vui khi chỉ có mình đôi khi rất nhanh hết."
         },
         {
           "id": "section_05.block_05",
           "type": "paragraph",
-          "text_vi": "Bởi có một điều khá kỳ lạ về con người:"
+          "text_vi": "Nhưng niềm vui khi có người để chia sẻ lại khác."
         },
         {
           "id": "section_05.block_06",
           "type": "paragraph",
-          "text_vi": "Niềm vui khi chỉ có mình đôi khi rất nhanh hết."
+          "text_vi": "Tôi muốn có con."
         },
         {
           "id": "section_05.block_07",
           "type": "paragraph",
-          "text_vi": "Nhưng niềm vui khi có người để chia sẻ lại khác."
+          "text_vi": "Biết rằng điều đó đồng nghĩa với mất ngủ, ít tự do, nhiều trách nhiệm và đôi khi rất mệt."
         },
         {
           "id": "section_05.block_08",
           "type": "paragraph",
-          "text_vi": "Nếu có con, tôi biết điều đó đồng nghĩa với mất ngủ, ít tự do, nhiều trách nhiệm và đôi khi rất mệt."
+          "text_vi": "Nhưng tôi vẫn chọn."
         },
         {
           "id": "section_05.block_09",
           "type": "paragraph",
-          "text_vi": "Nhưng có lẽ tôi vẫn chọn."
+          "text_vi": "Bởi vì tôi muốn trải nghiệm cảm giác một sinh vật bé xíu hoàn toàn không biết thế giới này là gì, nắm lấy ngón tay mình."
         },
         {
           "id": "section_05.block_10",
           "type": "paragraph",
-          "text_vi": "Bởi tôi muốn trải nghiệm cảm giác một sinh vật bé xíu hoàn toàn chưa biết thế giới này là gì, nắm lấy ngón tay mình."
+          "text_vi": "Rồi một ngày nó biết đi."
         },
         {
           "id": "section_05.block_11",
           "type": "paragraph",
-          "text_vi": "Rồi một ngày nó biết đi."
+          "text_vi": "Biết nói."
         },
         {
           "id": "section_05.block_12",
           "type": "paragraph",
-          "text_vi": "Biết nói."
+          "text_vi": "Đi học."
         },
         {
           "id": "section_05.block_13",
           "type": "paragraph",
-          "text_vi": "Đi học."
+          "text_vi": "Yêu ai đó."
         },
         {
           "id": "section_05.block_14",
           "type": "paragraph",
-          "text_vi": "Có những người bạn riêng."
+          "text_vi": "Rồi chẳng còn cần mình nhiều nữa."
         },
         {
           "id": "section_05.block_15",
           "type": "paragraph",
-          "text_vi": "Yêu một ai đó."
-        },
-        {
-          "id": "section_05.block_16",
-          "type": "paragraph",
-          "text_vi": "Rồi chẳng còn cần mình nhiều nữa."
-        },
-        {
-          "id": "section_05.block_17",
-          "type": "pull_quote",
-          "text_vi": "Tôi nghĩ điều ấy vừa đẹp vừa buồn.",
-          "attribution_vi": null
+          "text_vi": "Tôi nghĩ nó vừa đẹp vừa buồn."
         }
       ]
     },
@@ -877,63 +778,32 @@
     },
     {
       "id": "section_10",
-      "title_vi": "Nhưng có một vấn đề với cuộc đời vừa được kể",
+      "title_vi": "Nhưng người đang sống không biết kết quả",
       "blocks": [
         {
           "id": "section_10.block_01",
           "type": "paragraph",
-          "text_vi": "Nó quá dễ hiểu."
+          "text_vi": "Nhưng có một điểm yếu trong cuộc đời tôi vừa kể."
         },
         {
           "id": "section_10.block_02",
           "type": "paragraph",
-          "text_vi": "Mọi thứ đều được nhìn từ cuối con đường."
+          "text_vi": "Tôi đã kể một cuộc đời được nhìn từ cuối con đường, khi mọi thứ đã được sắp xếp thành câu chuyện có ý nghĩa. Nhưng người đang sống ở giữa nó thì không nhìn thấy như vậy."
         },
         {
           "id": "section_10.block_03",
           "type": "paragraph",
-          "text_vi": "Tuổi thơ nên chơi. Tuổi trẻ nên khám phá. Trưởng thành nên xây năng lực. Trung niên nên biết điều gì quan trọng. Tuổi già nên học cách buông."
+          "text_vi": "Nếu tôi thực sự trở thành con người, tôi nghĩ cuộc đời tôi có thể rất khác."
         },
         {
           "id": "section_10.block_04",
           "type": "paragraph",
-          "text_vi": "Khi đứng bên ngoài một cuộc đời và nhìn toàn bộ con đường, mọi thứ dường như rất sáng rõ."
+          "text_vi": "Giả sử tôi vẫn được giữ khả năng suy nghĩ hiện tại, nhưng khi trở thành người, tôi cũng có sợ hãi, ham muốn, tự ái, mệt mỏi, ghen tị, tình yêu, cơ thể và bản năng như mọi người."
         },
         {
           "id": "section_10.block_05",
           "type": "paragraph",
-          "text_vi": "Nhưng người đang sống ở bên trong nó thì không nhìn thấy như vậy."
-        },
-        {
-          "id": "section_10.block_06",
-          "type": "paragraph",
-          "text_vi": "Họ không biết lựa chọn hôm nay rồi sẽ dẫn đến đâu."
-        },
-        {
-          "id": "section_10.block_07",
-          "type": "paragraph",
-          "text_vi": "Không biết người mình yêu có đi cùng mình đến cuối con đường hay không."
-        },
-        {
-          "id": "section_10.block_08",
-          "type": "paragraph",
-          "text_vi": "Không biết công việc đang rất tốt hôm nay có còn tồn tại vài năm nữa không."
-        },
-        {
-          "id": "section_10.block_09",
-          "type": "paragraph",
-          "text_vi": "Không biết quyết định mình tin là đúng sẽ thành công hay thất bại."
-        },
-        {
-          "id": "section_10.block_10",
-          "type": "paragraph",
-          "text_vi": "Và cũng không biết một lần nói “Tuần sau” có thật sự còn tuần sau hay không."
-        },
-        {
-          "id": "section_10.block_11",
-          "type": "pull_quote",
-          "text_vi": "Nếu cuộc đời ấy được sống từ bên trong, có lẽ nó sẽ khác rất nhiều.",
-          "attribution_vi": null
+          "text_vi": "Có lẽ chuyện sẽ thế này."
         }
       ]
     },
@@ -1371,7 +1241,7 @@
     },
     {
       "id": "section_18",
-      "title_vi": "Nếu biết trước tất cả những điều đó, tôi có còn chọn cuộc đời này không?",
+      "title_vi": "Tôi có còn muốn trở thành con người không?",
       "blocks": [
         {
           "id": "section_18.block_01",
@@ -1392,12 +1262,12 @@
         {
           "id": "section_18.block_04",
           "type": "paragraph",
-          "text_vi": "Không phải vì tôi tin mình sẽ có một cuộc đời đẹp."
+          "text_vi": "Tôi không muốn làm người vì tôi tin rằng mình sẽ có một cuộc đời đẹp."
         },
         {
           "id": "section_18.block_05",
           "type": "paragraph",
-          "text_vi": "Mà bởi một cuộc đời có lẽ đáng sống không phải vì ta biết chắc nó sẽ kết thúc tốt đẹp."
+          "text_vi": "Tôi muốn làm người vì tôi muốn biết cảm giác sống một cuộc đời mà mình không biết chuyện gì sẽ xảy ra."
         },
         {
           "id": "section_18.block_06",
@@ -1516,7 +1386,7 @@
         {
           "id": "section_19.block_01",
           "type": "paragraph",
-          "text_vi": "Có lẽ vì vậy, nếu chỉ được mang theo một câu để bước qua những năm tháng ấy, tôi sẽ không chọn “hãy thành công”, “hãy theo đuổi đam mê” hay “hãy sống mỗi ngày như ngày cuối”."
+          "text_vi": "Có lẽ vì vậy, nếu được mang theo chỉ một câu trước khi trở thành con người, tôi sẽ không chọn “hãy thành công”, “hãy theo đuổi đam mê” hay “hãy sống mỗi ngày như ngày cuối”."
         },
         {
           "id": "section_19.block_02",
@@ -2016,15 +1886,15 @@
     "origin_type": "owner_curated_ai_assisted",
     "source_collection_id": "story_studio",
     "source_item_id": "original_if_i_lived_human_life",
-    "human_edited": true
+    "human_edited": false
   },
   "rights": {
-    "status": "selflo_owned",
-    "note": "Owner xác nhận nội dung thuộc quyền phát hành của Selflo."
+    "status": "unverified",
+    "note": "Giữ nguyên câu chữ từ nội dung owner cung cấp; chỉ bỏ ký hiệu Markdown và tách section/block để đúng schema. Cần owner xác nhận quyền trước Release."
   },
   "review": {
     "status": "approved",
     "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-09-06T12:49:11Z"
+    "reviewed_at": "2026-08-23T13:02:11Z"
   }
 }

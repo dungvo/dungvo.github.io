@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 18,
+  "library_revision": 19,
   "content_version": "the-alchemist-owner-preview-17",
   "language": "vi",
-  "generated_at": "2026-09-06T00:09:42Z",
+  "generated_at": "2026-09-06T06:09:59Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -55,11 +55,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 10,
-      "path": "themes/meaning-values.vi.r10.json",
+      "revision": 11,
+      "path": "themes/meaning-values.vi.r11.json",
       "media_type": "application/json",
-      "sha256": "232b05619fc785b07d4d34421656cdf19de47fb52aaf6a74c2383b22f956eb00",
-      "byte_count": 108319
+      "sha256": "2a570d5dd3990474b3ac5112de3923757f144aee556183add741d92e51455545",
+      "byte_count": 108507
     },
     {
       "id": "theme.relationships.vi",
@@ -379,11 +379,11 @@
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "d006761b4c2ba77b900bf637a09ed25dc30c42ea216cc3c2d9649252a7ef0b60",
-      "byte_count": 66558
+      "sha256": "9eb7b616e740a5a72c9257fd9cba1c03bf417224d2528f35960dcd41a1172a3c",
+      "byte_count": 72274
     },
     {
       "id": "story.original_keeper_of_the_lamp",
