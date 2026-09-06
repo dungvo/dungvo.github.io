@@ -22,3 +22,7 @@ The Review workspace stores decisions in the current browser and supports JSON i
 - Generated public review package: `perspective-library/authoring/vi/`.
 - Release: separate fail-closed channel; this website does not modify it.
 - Canonical quote source is split into numbered fragments of at most 12 quote under `source/vi/quotes/<theme>/` so future batches do not make one theme file grow indefinitely.
+
+## Documentation
+
+- [Hướng dẫn đưa một story vào Selflo Release](perspective-library/RELEASE_STORY_GUIDE.vi.md): cấu trúc thư mục, cách tìm quote qua `story_id`, các file cần cập nhật, Release gates và quy trình kiểm tra/publish.

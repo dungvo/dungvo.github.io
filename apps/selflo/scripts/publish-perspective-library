@@ -22,9 +22,9 @@ end.parse!
 channel = options[:channel]
 abort("--channel must be authoring or release") unless %w[authoring release].include?(channel)
 repo_root = options.fetch(:repo_root)
-source_root = options[:source] || File.join(repo_root, "apps/selflo/perspective-library/source/vi")
-output_root = File.join(repo_root, "apps/selflo/perspective-library/#{channel}/vi")
-schema_root = options[:schema_dir] || File.join(repo_root, "apps/selflo/perspective-library/tooling/schema")
+source_root = options[:source] || File.join(repo_root, "perspective-library/source/vi")
+output_root = File.join(repo_root, "perspective-library/#{channel}/vi")
+schema_root = options[:schema_dir] || File.join(repo_root, "perspective-library/tooling/schema")
 
 def read_json(path)
   JSON.parse(File.binread(path))
