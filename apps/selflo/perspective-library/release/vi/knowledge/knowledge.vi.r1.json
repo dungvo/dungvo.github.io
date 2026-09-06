@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_knowledge_catalog",
+  "status": "approved",
+  "language": "vi",
+  "concepts": [
+    {
+      "id": "concept.meaning_in_life",
+      "display_name_vi": "Ý nghĩa trong đời sống",
+      "description_vi": "Ý nghĩa có thể được cảm nhận qua sự gắn kết, mạch lạc và điều con người thấy đáng quan tâm trong đời sống.",
+      "primary_theme_ids": [
+        "meaning_values"
+      ],
+      "related_theory_ids": [
+        "theory.meaning_in_life"
+      ],
+      "related_framework_ids": [
+
+      ],
+      "status": "approved"
+    }
+  ],
+  "theories": [
+    {
+      "id": "theory.meaning_in_life",
+      "display_name_vi": "Cảm nhận và tìm kiếm ý nghĩa",
+      "original_name": "Presence and Search for Meaning in Life",
+      "kind": "psychology_theory",
+      "summary_vi": "Khung nghiên cứu phân biệt cảm nhận rằng đời sống có ý nghĩa với quá trình tìm kiếm ý nghĩa.",
+      "core_truths": [
+        {
+          "id": "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections",
+          "text_vi": "Cảm nhận ý nghĩa có thể gắn với những kết nối, câu chuyện và điều được coi trọng trong đời sống thường ngày.",
+          "scope_note_vi": "Không khẳng định có một ý nghĩa phổ quát hoặc rằng mọi biến cố đều xảy ra vì một lý do."
+        }
+      ],
+      "reference_ids": [
+        "ref.steger_2006_meaning_in_life"
+      ],
+      "validation_status": "source_checked",
+      "status": "approved"
+    }
+  ],
+  "frameworks": [
+
+  ],
+  "references": [
+    {
+      "id": "ref.steger_2006_meaning_in_life",
+      "type": "book_or_paper",
+      "title": "The Meaning in Life Questionnaire: Assessing the Presence of and Search for Meaning in Life",
+      "authors": [
+        "Michael F. Steger",
+        "Patricia Frazier",
+        "Shigehiro Oishi",
+        "Matthew Kaler"
+      ],
+      "year": 2006,
+      "publisher_or_journal": "Journal of Counseling Psychology",
+      "url": "https://doi.org/10.1037/0022-0167.53.1.80",
+      "language": "en",
+      "rights_note": "Chỉ dùng để đối chiếu knowledge; không trích nguyên văn vào Perspective.",
+      "validation_status": "source_checked"
+    }
+  ]
+}

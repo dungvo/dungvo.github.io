@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_library_manifest",
+  "library_id": "selflo.perspective.vi",
+  "library_revision": 1,
+  "content_version": "the-alchemist-owner-preview-17",
+  "language": "vi",
+  "generated_at": "2026-09-06T07:04:33Z",
+  "files": [
+    {
+      "id": "knowledge.canonical.vi",
+      "kind": "knowledge_catalog",
+      "revision": 1,
+      "path": "knowledge/knowledge.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "2b192540cdde6e5856782c313ea7370cac47961b0bce301f02c1142a51554188",
+      "byte_count": 2387
+    },
+    {
+      "id": "theme.meaning_values.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/meaning-values.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "eea0ae6afc5bc7cb800a3c09869fcb916905029789a893ef34c23af938378c35",
+      "byte_count": 2652
+    },
+    {
+      "id": "story.original_if_i_lived_a_human_life",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "0db527c352605f596559977914c24708d3c8d591e302557be20aaa921086a30a",
+      "byte_count": 71063
+    }
+  ]
+}

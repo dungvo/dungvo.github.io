@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "meaning_values",
+  "display_name_vi": "Ý nghĩa và giá trị",
+  "description_vi": "Điều mình coi trọng, mục đích sống và lựa chọn nhất quán với giá trị.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "the_pauses_were_the_life",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Hóa ra đó chính là cuộc đời",
+      "text_vi": "Những thứ mình từng tưởng là khoảng nghỉ giữa cuộc đời — hóa ra chính là cuộc đời.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.meaning_in_life"
+        ],
+        "theories": [
+          "theory.meaning_in_life"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "cuộc đời",
+          "ý nghĩa",
+          "đời thường",
+          "hiện tại",
+          "thời gian hữu hạn"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Owner xác nhận quote được chắt lọc từ nội dung Selflo và thuộc quyền phát hành của Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-06T12:49:11Z"
+      },
+      "writing": {
+        "semantic_intent": "Những khoảnh khắc bình thường mà ta thường xem như khoảng nghỉ thực ra chính là phần lớn cuộc đời.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.original_if_i_lived_a_human_life",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "cuộc đời",
+          "ý nghĩa",
+          "đời thường",
+          "hiện tại"
+        ],
+        "tie_break_order": 3002
+      },
+      "knowledge_basis": null
+    }
+  ]
+}
