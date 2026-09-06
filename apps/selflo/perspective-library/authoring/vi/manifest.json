@@ -2,19 +2,19 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 20,
+  "library_revision": 21,
   "content_version": "the-alchemist-owner-preview-17",
   "language": "vi",
-  "generated_at": "2026-09-06T06:42:59Z",
+  "generated_at": "2026-09-06T08:42:56Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
       "kind": "knowledge_catalog",
-      "revision": 3,
-      "path": "knowledge/knowledge.vi.r3.json",
+      "revision": 4,
+      "path": "knowledge/knowledge.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "76a637835a7ad2ef9df22bca127f29efdd3fc5054764423d6677d14601cadde0",
-      "byte_count": 51890
+      "sha256": "444bcec9c9df5150fdc710bf89d4efb813d7e78a185a1f5a14f06a6d5fb67963",
+      "byte_count": 51882
     },
     {
       "id": "theme.adversity_resilience.vi",
@@ -55,11 +55,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 11,
-      "path": "themes/meaning-values.vi.r11.json",
+      "revision": 12,
+      "path": "themes/meaning-values.vi.r12.json",
       "media_type": "application/json",
-      "sha256": "2a570d5dd3990474b3ac5112de3923757f144aee556183add741d92e51455545",
-      "byte_count": 108507
+      "sha256": "6766145be04e26b8dab8066fdb65e33add9e00a7fbf0c362d4b9d1be5698672a",
+      "byte_count": 108544
     },
     {
       "id": "theme.relationships.vi",
@@ -510,6 +510,15 @@
       "media_type": "application/json",
       "sha256": "c55b19331d2d50ced231408be275292276a3d4bad402d3fcca56539cca98a5f3",
       "byte_count": 7465
+    },
+    {
+      "id": "story.the_compass_does_not_walk_for_you",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "0e88c5c6bc9f8155b7bbe166a68daee2db09bfd3a0e8127603897a4c690fce11",
+      "byte_count": 63413
     },
     {
       "id": "story.three_dots_on_the_screen",
