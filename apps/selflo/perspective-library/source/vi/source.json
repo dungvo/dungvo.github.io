@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 20,
-  "content_version": "laozi-mutual-arising-authoring-20",
+  "source_revision": 21,
+  "content_version": "classical-parables-authoring-21",
   "language": "vi",
-  "canonical_quote_count": 386,
+  "canonical_quote_count": 389,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -616,6 +616,30 @@
       "id": "story.two_sides_of_one_mountain",
       "kind": "story",
       "path": "stories/two-sides-of-one-mountain/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.old_man_and_returning_horse",
+      "kind": "story",
+      "path": "stories/old-man-and-returning-horse/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tree_and_silent_goose",
+      "kind": "story",
+      "path": "stories/tree-and-silent-goose/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.empty_boat_on_the_river",
+      "kind": "story",
+      "path": "stories/empty-boat-on-the-river/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.large_tree_beyond_the_carpenters_measure",
+      "kind": "story",
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.json",
       "media_type": "application/json"
     }
   ]

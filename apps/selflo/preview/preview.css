@@ -553,3 +553,9 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+.library-browse-controls { display:flex; flex-wrap:wrap; gap:14px; align-items:end; margin:16px 24px; padding:14px 18px; background:var(--paper, #fffdf8); border:1px solid #ddd9cf; border-radius:14px; }
+.library-browse-controls label { display:flex; flex-direction:column; gap:5px; font-size:12px; color:#52635c; }
+.library-browse-controls select { min-height:38px; padding:6px 12px; border:1px solid #d3d9d3; border-radius:8px; background:white; color:#263b34; font:inherit; }
+#libraryBrowseNote { flex:1; min-width:180px; font-size:12px; color:#52635c; padding-bottom:8px; }
+.library-update-label { display:block; margin-top:5px; color:#52635c; font-size:11px; }

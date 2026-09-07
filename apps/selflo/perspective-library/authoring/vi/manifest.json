@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 23,
-  "content_version": "laozi-mutual-arising-authoring-20",
+  "library_revision": 24,
+  "content_version": "classical-parables-authoring-21",
   "language": "vi",
-  "generated_at": "2026-09-07T15:10:55Z",
+  "generated_at": "2026-09-07T21:58:39Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -19,11 +19,11 @@
     {
       "id": "theme.adversity_resilience.vi",
       "kind": "quote_pack",
-      "revision": 10,
-      "path": "themes/adversity-resilience.vi.r10.json",
+      "revision": 11,
+      "path": "themes/adversity-resilience.vi.r11.json",
       "media_type": "application/json",
-      "sha256": "2900317bfebc0389e7f0a9bf74b9bc06d6c73051935d6196c6cc22169d2fccde",
-      "byte_count": 98827
+      "sha256": "6ab7547a26dcaf6b240f9ab6a40b47c34f38f4d0887de68696a1a9426f84f86a",
+      "byte_count": 101121
     },
     {
       "id": "theme.attention.vi",
@@ -37,20 +37,20 @@
     {
       "id": "theme.change_growth.vi",
       "kind": "quote_pack",
-      "revision": 10,
-      "path": "themes/change-growth.vi.r10.json",
+      "revision": 11,
+      "path": "themes/change-growth.vi.r11.json",
       "media_type": "application/json",
-      "sha256": "9cbd3823e43a2033ebf975171ef439b6a9d4fd630afa324b295896d5dd6b944c",
-      "byte_count": 97749
+      "sha256": "d5ad8fc5fdef0058a6485b13abe1de9085d87ad0d65f515fffc0f784d919abcb",
+      "byte_count": 100085
     },
     {
       "id": "theme.emotion.vi",
       "kind": "quote_pack",
-      "revision": 9,
-      "path": "themes/emotion.vi.r9.json",
+      "revision": 10,
+      "path": "themes/emotion.vi.r10.json",
       "media_type": "application/json",
-      "sha256": "81bdbe5ded16d6757c0250f8ad8be3f72376697fe3c4f57f2a6e0ea29beca2f6",
-      "byte_count": 51149
+      "sha256": "1bb09acb1dab9c09d722584078c7697d172e5f935dc3f290d1d8fd5031f3d336",
+      "byte_count": 51176
     },
     {
       "id": "theme.meaning_values.vi",
@@ -82,11 +82,11 @@
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 11,
-      "path": "themes/self-understanding.vi.r11.json",
+      "revision": 12,
+      "path": "themes/self-understanding.vi.r12.json",
       "media_type": "application/json",
-      "sha256": "22d60086dda3d73abe51ab96c44b875ad4e80e8cd9de153ae1f3d2f9b1de36a5",
-      "byte_count": 120218
+      "sha256": "f03fe04def4000da93213bbfa9f1b19155ac6582f0d22904f839b361e519c60e",
+      "byte_count": 122809
     },
     {
       "id": "theme.work_achievement.vi",
@@ -224,6 +224,15 @@
       "byte_count": 7263
     },
     {
+      "id": "story.empty_boat_on_the_river",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/empty-boat-on-the-river/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "5a0c65a79b651fe5ac95aabb17eb33cd3409d3387b3b382397faec30fc223233",
+      "byte_count": 3204
+    },
+    {
       "id": "story.envelope_that_could_not_hold_strength",
       "kind": "story",
       "revision": 1,
@@ -278,6 +287,15 @@
       "byte_count": 6528
     },
     {
+      "id": "story.large_tree_beyond_the_carpenters_measure",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "dfdb37cfae648f35bebb45a73899ce87c97c1f3dc4f900e6f46f269759719b8b",
+      "byte_count": 3398
+    },
+    {
       "id": "story.last_window_in_the_building",
       "kind": "story",
       "revision": 1,
@@ -321,6 +339,15 @@
       "media_type": "application/json",
       "sha256": "cb74057e54f5485429bfacef4ff87caf56edbb659ba1fd3e253741cea4515309",
       "byte_count": 4504
+    },
+    {
+      "id": "story.old_man_and_returning_horse",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/old-man-and-returning-horse/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "e6085eb3f81c921252a50edc1dbf13c5783f8abd92123a2f78960a7ea32601a1",
+      "byte_count": 3601
     },
     {
       "id": "story.operator_and_one_beat",
@@ -546,6 +573,15 @@
       "media_type": "application/json",
       "sha256": "bd7950ec24b601aa16e96a038c3fc87e538b97ad0733257ab36442d505ad786e",
       "byte_count": 4906
+    },
+    {
+      "id": "story.tree_and_silent_goose",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/tree-and-silent-goose/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "17fc01bb8e37c2e9f804514558c8b94f032ae6c1bcf9921046381546faee7e2a",
+      "byte_count": 3963
     },
     {
       "id": "story.two_sides_of_one_mountain",

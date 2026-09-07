@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.empty_boat_on_the_river",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Chiếc thuyền trống",
+  "subtitle_vi": "Kể lại từ Trang Tử · Sơn mộc; bản dịch Herbert A. Giles (1889), trang in 249–250.",
+  "hero_image": null,
+  "primary_theme": "emotion",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+
+    ],
+    "keywords": [
+      "Chiếc thuyền trống",
+      "ngụ ngôn",
+      "góc nhìn"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "scene_01",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "scene_01.paragraph_01",
+          "type": "paragraph",
+          "text_vi": "Một người đi thuyền qua sông. Một chiếc thuyền khác đang trôi tới, sắp va vào thuyền của anh."
+        },
+        {
+          "id": "scene_01.paragraph_02",
+          "type": "paragraph",
+          "text_vi": "Anh nhìn sang. Chiếc thuyền kia trống không."
+        },
+        {
+          "id": "scene_01.paragraph_03",
+          "type": "paragraph",
+          "text_vi": "Dù vốn nóng tính, trong trường hợp ấy anh cũng không nổi giận."
+        },
+        {
+          "id": "scene_01.paragraph_04",
+          "type": "paragraph",
+          "text_vi": "Nhưng nếu trong chiếc thuyền kia có một người, anh sẽ gọi người ấy tránh ra. Gọi một lần không nghe, anh gọi tiếp. Đến lần thứ ba vẫn không được đáp lại, lời mắng chửi bật ra."
+        },
+        {
+          "id": "scene_01.paragraph_05",
+          "type": "paragraph",
+          "text_vi": "Chiếc thuyền trống không khiến anh nổi giận; chiếc thuyền có người thì có."
+        },
+        {
+          "id": "scene_01.paragraph_06",
+          "type": "paragraph",
+          "text_vi": "Trang Tử dùng hai tình huống ấy để nói về việc làm trống mình khi đi giữa đời."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Trang Tử dùng hai tình huống ấy để nói về việc làm trống mình khi đi giữa đời."
+  },
+  "authorship": {
+    "author_id": "zhuangzi",
+    "author_name": "Trang Tử",
+    "source_label": "Trang Tử · Sơn mộc; bản dịch Herbert A. Giles (1889), trang in 249–250 · Bản kể lại tiếng Việt Selflo từ truyện cổ do owner sưu tầm; không phải nguyên văn bản dịch xuất bản.",
+    "source_url": "https://en.wikisource.org/wiki/Page:Zhuang_Zi_-_translation_Giles_1889.djvu/283"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "classical_parables",
+    "source_item_id": "empty_boat_on_the_river",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Chất liệu truyện cổ; bản kể lại tiếng Việt do AI hỗ trợ từ nguồn đối chiếu. Chờ owner review nội dung và quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

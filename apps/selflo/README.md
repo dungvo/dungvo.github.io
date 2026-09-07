@@ -26,3 +26,12 @@ The Review workspace stores decisions in the current browser and supports JSON i
 ## Documentation
 
 - [Hướng dẫn đưa một story vào Selflo Release](perspective-library/RELEASE_STORY_GUIDE.vi.md): cấu trúc thư mục, cách tìm quote qua `story_id`, các file cần cập nhật, Release gates và quy trình kiểm tra/publish.
+
+## Tìm nội dung vừa cập nhật và đã Release
+
+Trong `/preview/`, chọn nguồn **Authoring** hoặc **Đã Release**. Mặc định sắp theo **Cập nhật mới nhất**; lọc **Đợt mới nhất**, **7 ngày qua**, **30 ngày qua** kết hợp ô tìm tên/nội dung. Bộ lọc dùng được ở Review nhanh và Xem chi tiết.
+
+- Link mới cập nhật: `/preview/?updated=latest`.
+- Link bản phát hành: `/preview/?channel=release`.
+- Ngày cập nhật là thời điểm từng quote/story thay đổi trong Library, dựa trên lịch sử payload và audit; không lấy ngày sửa cả theme hoặc ngày duyệt ledger. Ngày hiển thị theo múi giờ trình duyệt.
+- Publisher tự sinh `updates.json` cho từng channel bằng `scripts/build-library-updates.py`; không sửa tay. Thiếu lịch sử thì để ngày trống.

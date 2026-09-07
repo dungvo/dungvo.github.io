@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.large_tree_beyond_the_carpenters_measure",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Cây lớn ngoài thước thợ mộc",
+  "subtitle_vi": "Kể lại từ Trang Tử · Nội thiên · Tiêu dao du, đoạn Huệ Tử nói về cây lớn.",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "Cây lớn ngoài thước thợ mộc",
+      "ngụ ngôn",
+      "góc nhìn"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "scene_01",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "scene_01.paragraph_01",
+          "type": "paragraph",
+          "text_vi": "Huệ Tử nói với Trang Tử rằng ông có một cây rất lớn. Thân cây u bướu, không theo dây mực; cành nhỏ cong queo, không theo khuôn thước. Cây đứng bên đường mà thợ mộc chẳng buồn nhìn."
+        },
+        {
+          "id": "scene_01.paragraph_02",
+          "type": "paragraph",
+          "text_vi": "Ông đem cái cây ấy ví với lời Trang Tử: lớn lao nhưng không dùng được."
+        },
+        {
+          "id": "scene_01.paragraph_03",
+          "type": "paragraph",
+          "text_vi": "Trang Tử nhắc đến con chồn khéo rình bắt mồi, nhảy bên đông rồi bên tây, cuối cùng vẫn có thể mắc bẫy. Còn con bò lớn như đám mây che trời thì không bắt được chuột."
+        },
+        {
+          "id": "scene_01.paragraph_04",
+          "type": "paragraph",
+          "text_vi": "Rồi ông trở lại với cái cây: có cây lớn mà lo nó vô dụng, sao không trồng nơi đồng rộng, thong dong đi bên cạnh, thảnh thơi nằm nghỉ dưới tán cây?"
+        },
+        {
+          "id": "scene_01.paragraph_05",
+          "type": "paragraph",
+          "text_vi": "Không bị rìu chặt yểu, không bị vật gì làm hại; không có chỗ để người ta đem ra sử dụng, vậy còn khốn khổ vì đâu?"
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Không bị rìu chặt yểu, không bị vật gì làm hại; không có chỗ để người ta đem ra sử dụng, vậy còn khốn khổ vì đâu?"
+  },
+  "authorship": {
+    "author_id": "zhuangzi",
+    "author_name": "Trang Tử",
+    "source_label": "Trang Tử · Nội thiên · Tiêu dao du, đoạn Huệ Tử nói về cây lớn · Bản kể lại tiếng Việt Selflo từ truyện cổ do owner sưu tầm; không phải nguyên văn bản dịch xuất bản.",
+    "source_url": "https://ctext.org/zhuangzi/enjoyment-in-untroubled-ease/zh"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "classical_parables",
+    "source_item_id": "large_tree_beyond_the_carpenters_measure",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Chất liệu truyện cổ; bản kể lại tiếng Việt do AI hỗ trợ từ nguồn đối chiếu. Chờ owner review nội dung và quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

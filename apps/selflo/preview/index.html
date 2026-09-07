@@ -53,6 +53,13 @@
       </div>
     </header>
 
+    <section class="library-browse-controls" aria-label="Nguồn và cập nhật thư viện">
+      <label>Nội dung <select id="libraryChannel"><option value="authoring">Authoring</option><option value="release">Đã Release</option></select></label>
+      <label>Sắp xếp <select id="librarySort"><option value="updated">Cập nhật mới nhất</option><option value="title">Tên truyện / quote</option></select></label>
+      <label>Cập nhật <select id="libraryUpdated"><option value="all">Tất cả thời gian</option><option value="latest">Đợt mới nhất</option><option value="7">7 ngày qua</option><option value="30">30 ngày qua</option></select></label>
+      <span id="libraryBrowseNote" aria-live="polite"></span>
+    </section>
+
     <main class="bulk-review" id="bulkReview">
       <header class="bulk-hero">
         <div>
@@ -117,8 +124,8 @@
       <aside class="library-panel" aria-label="Danh sách nội dung">
         <div class="panel-heading">
           <div>
-            <p class="eyebrow">Authoring Library</p>
-            <h1>Nội dung chờ duyệt</h1>
+            <p class="eyebrow" id="librarySectionLabel">Authoring Library</p>
+            <h1 id="librarySectionTitle">Nội dung chờ duyệt</h1>
           </div>
           <span class="count-badge" id="quoteCount">0</span>
         </div>

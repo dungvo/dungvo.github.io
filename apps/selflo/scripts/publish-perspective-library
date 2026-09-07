@@ -2853,6 +2853,9 @@ if changed.empty? &&
     )
   )
 
+  unless system("python3", File.join(__dir__, "build-library-updates.py"), output_root)
+    abort("Could not build content update index")
+  end
   exit(0)
 end
 
@@ -3130,6 +3133,11 @@ immutable_write(
 # =============================================================================
 # Result
 # =============================================================================
+
+unless system("python3", File.join(__dir__, "build-library-updates.py"), output_root)
+  abort("Could not build content update index")
+end
+
 
 puts(
   JSON.pretty_generate(

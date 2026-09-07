@@ -1,7 +1,9 @@
 (() => {
   "use strict";
 
-  const LIBRARY_BASE = new URL("../perspective-library/authoring/vi/", window.location.href);
+  const libraryParams = new URLSearchParams(window.location.search);
+  const libraryChannel = libraryParams.get("channel") === "release" ? "release" : "authoring";
+  const LIBRARY_BASE = new URL(`../perspective-library/${libraryChannel}/vi/`, window.location.href);
   const MATRIX_URL = new URL("../quote-research/diversity-matrix.json", window.location.href);
   const REVIEW_KEY = "selflo.content-preview.reviews.v1";
   const READER_KEY = "selflo.content-preview.reader.v1";
@@ -11,6 +13,10 @@
 
   const state = {
     manifest: null,
+    updates: {},
+    updateIndexAvailable: false,
+    sortBy: libraryParams.get("sort") === "title" ? "title" : "updated",
+    updatedFilter: ["latest", "7", "30"].includes(libraryParams.get("updated")) ? libraryParams.get("updated") : "all",
     quotes: [],
     stories: new Map(),
     matrix: null,
@@ -22,7 +28,7 @@
     reviews: readJSON(REVIEW_KEY, {}),
     pageMode: (() => {
       const view = new URLSearchParams(window.location.search).get("view");
-      if (view === "matrix") return "matrix";
+      if (view === "matrix") return libraryChannel === "release" ? "bulk" : "matrix";
       if (view === "detail" || view === "content") return "content";
       return "bulk";
     })(),
@@ -49,7 +55,7 @@
   };
 
   const el = Object.fromEntries([
-    "statusDot", "loadStatus", "reloadButton", "importButton", "importFile", "exportButton", "reviewProgress", "bulkModeButton", "contentModeButton", "matrixModeButton",
+    "libraryChannel", "librarySort", "libraryUpdated", "libraryBrowseNote", "statusDot", "loadStatus", "reloadButton", "importButton", "importFile", "exportButton", "reviewProgress", "bulkModeButton", "contentModeButton", "matrixModeButton",
     "bulkReview", "bulkRows", "bulkSearch", "bulkThemeFilter", "bulkReviewFilter", "bulkPageSize", "bulkPreviousPage", "bulkNextPage", "bulkPaginationInfo", "bulkVisibleCount", "bulkSyncState",
     "contentWorkspace", "matrixDashboard", "quoteCount", "libraryRevision",
     "contentVersion", "storyCoverage", "contentList", "contentSearch", "contentTypeFilter",
@@ -72,6 +78,9 @@
   document.addEventListener("DOMContentLoaded", init);
 
   async function init() {
+    document.getElementById("librarySectionLabel").textContent = libraryChannel === "release" ? "Release Library" : "Authoring Library";
+    document.getElementById("librarySectionTitle").textContent = libraryChannel === "release" ? "Nội dung đã phát hành" : "Nội dung chờ duyệt";
+    el.matrixModeButton.disabled = libraryChannel === "release";
     bindEvents();
     applyReaderPreferences();
     setPageMode(state.pageMode, false);
@@ -79,6 +88,26 @@
   }
 
   function bindEvents() {
+    el.libraryChannel.value = libraryChannel;
+    el.librarySort.value = state.sortBy;
+    el.libraryUpdated.value = state.updatedFilter;
+    el.libraryChannel.addEventListener("change", () => {
+      const url = new URL(window.location.href);
+      url.searchParams.set("channel", el.libraryChannel.value);
+      url.searchParams.delete("quote");
+      url.searchParams.delete("updated");
+      window.location.assign(url.href);
+    });
+    for (const control of [el.librarySort, el.libraryUpdated]) control.addEventListener("change", () => {
+      state.sortBy = el.librarySort.value;
+      state.updatedFilter = el.libraryUpdated.value;
+      state.bulkBrowser.page = state.contentBrowser.page = 1;
+      const url = new URL(window.location.href);
+      url.searchParams.set("sort", state.sortBy);
+      url.searchParams.set("updated", state.updatedFilter);
+      window.history.replaceState({}, "", url);
+      renderBulkRows(); renderContentList();
+    });
     el.reloadButton.addEventListener("click", loadLibrary);
     el.importButton.addEventListener("click", () => el.importFile.click());
     el.importFile.addEventListener("change", importReviews);
@@ -206,6 +235,11 @@
         })
       ]);
 
+      const updates = await fetchJSON(new URL("updates.json", LIBRARY_BASE)).catch(() => null);
+      state.updateIndexAvailable = updates?.library_revision === manifest.library_revision;
+      state.updates = state.updateIndexAvailable ? updates.entities : {};
+      el.libraryUpdated.disabled = !state.updateIndexAvailable;
+      el.libraryBrowseNote.textContent = (libraryChannel === "release" ? "Đang xem đúng bản đã phát hành." : "Đang xem bản biên tập Authoring.") + (state.updateIndexAvailable ? " Ngày cập nhật tính theo từng quote/story khi đưa vào Library." : " Chưa tải được lịch sử cập nhật; đang hiện toàn bộ nội dung.");
       state.manifest = manifest;
       state.descriptors = descriptors;
       state.stories = new Map(stories.map(item => [item.payload.id, { ...item.payload, __path: item.descriptor.path }]));
@@ -239,7 +273,7 @@
       renderSelection();
       renderMatrix();
       renderReviewProgress();
-      setLoadState("ready", `${state.quotes.length} quote · ${state.stories.size} story · Authoring draft`);
+      setLoadState("ready", `${state.quotes.length} quote · ${state.stories.size} story · ${libraryChannel === "release" ? "Đã Release" : "Authoring draft"}`);
     } catch (error) {
       console.error(error);
       setLoadState("error", "Không tải được Library");
@@ -431,7 +465,7 @@
   function renderBulkRows() {
     if (!state.manifest) return;
     const allRows = contentRows();
-    const rows = allRows.filter(matchesBulkFilters);
+    const rows = browseRows(allRows.filter(matchesBulkFilters));
     const totalPages = Math.max(1, Math.ceil(rows.length / state.bulkBrowser.pageSize));
     state.bulkBrowser.page = Math.min(Math.max(1, state.bulkBrowser.page), totalPages);
     const startIndex = (state.bulkBrowser.page - 1) * state.bulkBrowser.pageSize;
@@ -498,7 +532,10 @@
     theme.textContent = themeName;
     const ids = document.createElement("small");
     ids.textContent = [quote?.id, story?.id].filter(Boolean).join(" ↔ ");
-    identityCopy.append(theme, ids);
+    const updatedLabel = document.createElement("span");
+    updatedLabel.className = "library-update-label";
+    updatedLabel.textContent = updatedText({quote, story});
+    identityCopy.append(theme, ids, updatedLabel);
     identity.append(index, identityCopy);
     const stateBadge = document.createElement("span");
     stateBadge.className = "bulk-state-badge";
@@ -726,7 +763,7 @@
   function renderContentList() {
     el.contentList.replaceChildren();
     const allRows = contentRows();
-    const rows = allRows.filter(matchesContentFilters);
+    const rows = browseRows(allRows.filter(matchesContentFilters));
     const totalPages = Math.max(1, Math.ceil(rows.length / state.contentBrowser.pageSize));
     state.contentBrowser.page = Math.min(Math.max(1, state.contentBrowser.page), totalPages);
     const startIndex = (state.contentBrowser.page - 1) * state.contentBrowser.pageSize;
@@ -765,12 +802,35 @@
       } else {
         node.querySelector("small").textContent = `${quote.__themeName} · Chưa có story`;
       }
+      const updateLine = document.createElement("small");
+      updateLine.textContent = updatedText(row);
+      node.querySelector("small").after(updateLine);
       node.addEventListener("click", () => {
         if (quote) selectQuote(quote.id);
         else selectStandaloneStory(story.id);
       });
       el.contentList.append(node);
     });
+  }
+
+  function rowUpdated(row) {
+    return Math.max(...[row.quote?.id, row.story?.id].map(id => Date.parse(state.updates[id]?.updated_at) || 0));
+  }
+
+  function updatedText(row) {
+    const value = rowUpdated(row);
+    return value ? "Cập nhật " + new Intl.DateTimeFormat("vi-VN", {dateStyle:"short", timeStyle:"short"}).format(value) : "Chưa có ngày cập nhật";
+  }
+
+  function browseRows(rows) {
+    const latest = Math.max(0, ...Object.values(state.updates).map(x => x.library_revision || 0));
+    const filtered = !state.updateIndexAvailable ? rows : rows.filter(row => {
+      if (state.updatedFilter === "all") return true;
+      if (state.updatedFilter === "latest") return [row.quote?.id, row.story?.id].some(id => state.updates[id]?.library_revision === latest);
+      return rowUpdated(row) >= Date.now() - Number(state.updatedFilter) * 86400000;
+    });
+    return filtered.sort((a,b) => (state.sortBy === "updated" ? rowUpdated(b) - rowUpdated(a) : 0) ||
+      (a.story?.title_vi || a.quote?.text_vi || "").localeCompare(b.story?.title_vi || b.quote?.text_vi || "", "vi"));
   }
 
   function contentRows() {
