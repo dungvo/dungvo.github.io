@@ -259,7 +259,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, owner đã duyệt phát hành"
       },
       "metadata": {
         "concepts": [
@@ -285,9 +285,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-07T14:13:11Z"
       },
       "writing": {
         "semantic_intent": "Giá trị có thể định hướng mà không quyết định thay từng lựa chọn cụ thể.",

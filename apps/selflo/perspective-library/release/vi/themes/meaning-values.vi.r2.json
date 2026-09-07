@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "meaning_values",
+  "display_name_vi": "Ý nghĩa và giá trị",
+  "description_vi": "Điều mình coi trọng, mục đích sống và lựa chọn nhất quán với giá trị.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "compass_keeps_direction_not_steps",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Chiếc la bàn không bước thay người đi.\nNó chỉ giữ một hướng khi con đường đổi dạng.",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, owner đã duyệt phát hành"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.values_congruent_action"
+        ],
+        "theories": [
+          "theory.psychological_flexibility_values"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "values",
+          "compass",
+          "direction"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-07T14:13:11Z"
+      },
+      "writing": {
+        "semantic_intent": "Giá trị có thể định hướng mà không quyết định thay từng lựa chọn cụ thể.",
+        "observation_key": "compass_on_changing_road",
+        "structure_pattern": "direction_guides_without_taking_steps"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 49,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes"
+        ],
+        "reference_ids": [
+          "ref.hayes_2006_psychological_flexibility"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": "story.the_compass_does_not_walk_for_you",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "values",
+          "compass"
+        ],
+        "tie_break_order": 1104
+      }
+    },
+    {
+      "id": "the_pauses_were_the_life",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Hóa ra đó chính là cuộc đời",
+      "text_vi": "Những thứ mình từng tưởng là khoảng nghỉ giữa cuộc đời — hóa ra chính là cuộc đời.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.meaning_in_life"
+        ],
+        "theories": [
+          "theory.meaning_in_life"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "cuộc đời",
+          "ý nghĩa",
+          "đời thường",
+          "hiện tại",
+          "thời gian hữu hạn"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Owner xác nhận quote được chắt lọc từ nội dung Selflo và thuộc quyền phát hành của Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-06T12:49:11Z"
+      },
+      "writing": {
+        "semantic_intent": "Những khoảnh khắc bình thường mà ta thường xem như khoảng nghỉ thực ra chính là phần lớn cuộc đời.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.original_if_i_lived_a_human_life",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "cuộc đời",
+          "ý nghĩa",
+          "đời thường",
+          "hiện tại"
+        ],
+        "tie_break_order": 3002
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

@@ -185,6 +185,24 @@ def revisioned_path(source_path, revision)
 end
 
 
+# Removed entities are absent from the current manifest but their immutable files remain.
+def next_available_revision(output_root, source_path, previous)
+  relative_dir = File.dirname(source_path)
+  extension = File.extname(source_path)
+  stem = File.basename(source_path, extension)
+  directory = File.join(output_root, relative_dir)
+  pattern = /\A#{Regexp.escape(stem)}\.r(\d+)#{Regexp.escape(extension)}\z/
+  revisions = [previous ? previous.fetch("revision") : 0]
+  if Dir.exist?(directory)
+    Dir.children(directory).each do |name|
+      match = pattern.match(name)
+      revisions << match[1].to_i if match
+    end
+  end
+  revisions.max + 1
+end
+
+
 def without_revisions(value)
   case value
   when Hash
@@ -2602,10 +2620,9 @@ content_entries.each do |source_entry|
     end
 
 
-    revision =
-      previous ?
-        previous.fetch("revision") + 1 :
-        1
+    revision = next_available_revision(
+      output_root, source_entry.fetch("path"), previous
+    )
 
 
     bytes =
@@ -2667,10 +2684,9 @@ content_entries.each do |source_entry|
     end
 
 
-    revision =
-      previous ?
-        previous.fetch("revision") + 1 :
-        1
+    revision = next_available_revision(
+      output_root, source_entry.fetch("path"), previous
+    )
 
 
     # Story file revision

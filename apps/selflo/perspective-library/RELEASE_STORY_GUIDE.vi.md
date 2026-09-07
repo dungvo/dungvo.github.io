@@ -2,6 +2,17 @@
 
 Tài liệu này là nơi tra cứu duy nhất cho quy trình chuyển một story từ Authoring sang Release. Các ví dụ dùng `story.blue_eraser`; khi làm thật, thay ID và slug bằng story cần phát hành.
 
+## Cách nhanh bằng script Python
+
+Dùng [hướng dẫn chuyển quote/story tự động](../scripts/PREPARE_PERSPECTIVE.vi.md) để chọn quote theo ID. Script tự tìm story, chuẩn bị lifecycle và chạy publisher trên bản tạm trước khi cập nhật thư viện.
+
+```bash
+cd /Users/dungvo/xcode/dungvo.github.io/apps/selflo
+python3 scripts/prepare-perspective.py --channel release --quote compass_keeps_direction_not_steps
+```
+
+Đổi `--channel authoring` để đưa cặp về trạng thái cần review và gỡ khỏi package Release hiện hành. Dùng `--dry-run` để xem trước; rights chưa xác minh và knowledge chưa kiểm tra vẫn cần xác nhận có căn cứ như hướng dẫn của script. Các phần dưới đây mô tả quy trình thủ công và các gate tương ứng.
+
 ## Kết luận ngắn
 
 Không move story và không sửa các file được sinh trong `authoring/` hoặc `release/`.
@@ -17,7 +28,7 @@ apps/selflo/perspective-library/source/vi/
 1. Sửa lifecycle của story trong `source/vi/stories/<story-slug>/story.vi.json`.
 2. Tìm quote đang gắn với story qua field `story_id` và kiểm tra lifecycle của quote trong `source/vi/quotes/<theme>/NNN.vi.json`.
 3. Cập nhật version của canonical source trong `source/vi/source.json`.
-4. Đảm bảo các gate toàn Library đã đạt, rồi chạy publisher Authoring trước và Release sau.
+4. Đảm bảo gate của nội dung Release và các knowledge dependency liên quan đã đạt, rồi chạy publisher Authoring trước và Release sau.
 5. Kiểm tra package sinh ra trong `perspective-library/release/vi/`.
 
 Chạy publisher chỉ tạo package local. App ngoài thực tế chỉ nhận được nội dung sau khi package được commit/push/deploy lên GitHub Pages trong một thao tác riêng.
@@ -118,7 +129,7 @@ Phân biệt ba loại liên kết:
 - `reading-intent.story_ids`: story thuộc nhóm nhu cầu đọc nào. Đây là phân loại khám phá, không phải liên kết quote/story.
 - `source.json.files`: story/quote fragment nằm ở file nào. Đây là mục lục nguồn, không phải lifecycle approval.
 
-`story_id` được phép là `null`. Một quote không bắt buộc phải có story. Theo định hướng biên tập hiện tại, nếu có liên kết thì nên là một quote ↔ một story riêng, không tái sử dụng một story cho nhiều quote.
+`story_id` được phép là `null`. Một quote không bắt buộc phải có story. Trong Release, publisher bắt buộc mỗi story có đúng một quote đã phát hành trỏ tới; không tái sử dụng một story cho nhiều quote.
 
 ## Các bước đưa một story vào Release
 
@@ -148,7 +159,7 @@ Dùng lệnh `rg` ở phần trên để tìm toàn bộ quote có:
 
 Kiểm tra các trường hợp:
 
-- Không tìm thấy quote: story có thể tồn tại độc lập, nhưng sẽ không được mở từ một quote. Chỉ thêm liên kết sau khi có quyết định biên tập rõ ràng.
+- Không tìm thấy quote: story có thể tồn tại trong canonical/Authoring, nhưng publisher sẽ bỏ khỏi Release vì chưa có quote Release-ready trỏ tới. Chỉ thêm liên kết sau khi có quyết định biên tập rõ ràng.
 - Tìm thấy đúng một quote: đây là trạng thái mong muốn cho cặp quote/story.
 - Tìm thấy nhiều quote: dừng lại và review mapping; không mặc định cho nhiều quote dùng chung story.
 
@@ -259,30 +270,28 @@ Ví dụ:
 
 Publisher có thể nhận biết thay đổi qua digest, nhưng tăng source version là quy ước cần giữ để audit và lịch sử biên tập dễ hiểu.
 
-### Bước 6 — Kiểm tra các gate toàn Library
+### Bước 6 — Kiểm tra gate cho Release từng phần
 
-Release publisher là gate của toàn bộ Library, không phải lệnh phát hành riêng một story. Một story hoàn chỉnh vẫn chưa đủ để publisher thành công nếu các thành phần khác còn pending.
+Publisher hỗ trợ phát hành một phần Library. Không cần đợi tất cả quote/story được duyệt. Mỗi lần chạy, publisher chọn toàn bộ nội dung hiện đủ điều kiện từ canonical source; lệnh không nhận danh sách story để chỉ phát hành riêng batch đó.
 
-Các gate chính:
+Các quy tắc hiện tại:
 
-1. Mọi quote trong canonical source phải Release-valid (`review = approved` và rights đã xác minh), hoặc phải có explicit owner exclusion trong `source/vi/decisions/canonical-decisions.json`.
-2. Knowledge Catalog phải có `status = approved`.
-3. Mọi concept phải có `status = approved`.
-4. Mọi theory và framework phải có `status = approved` và `validation_status = source_checked`.
-5. Mọi reference phải có `validation_status = source_checked`.
-6. Reading Intent Catalog nếu vẫn là `content_preview` sẽ bị bỏ khỏi Release; nó không chặn Release. Nếu muốn đưa catalog này vào Release, đổi sang `approved` sau khi review thật sự.
-7. Mọi ID và reference phải resolve; theme của story phải tồn tại, knowledge IDs của quote/story phải hợp lệ.
+1. Quote có review đầy đủ và rights hợp lệ được đưa vào Release. Quote pending/unverified được bỏ qua tự động và ghi vào `release_unready_quote_skips`; không cần tạo owner exclusion cho nội dung đang chờ duyệt.
+2. Explicit owner exclusion vẫn dùng khi owner chủ động không phát hành một quote, kể cả khi quote đã đủ điều kiện.
+3. Story phải `active`, có review đầy đủ, rights hợp lệ và có đúng một quote trong Release trỏ tới. Story đủ lifecycle nhưng không có quote tương ứng sẽ được ghi vào `release_unpaired_story_skips` và bỏ khỏi Release.
+4. Quote đủ điều kiện nhưng story chưa đủ điều kiện vẫn được phát hành với `story_id = null`. Theme không còn quote nào sau lọc sẽ bị bỏ khỏi Release.
+5. Knowledge Catalog được rút gọn theo quote/story thực sự phát hành và các dependency liên quan. Chỉ các concept cần dùng phải `approved`; theory/framework cần dùng phải `approved` và `source_checked`; reference cần dùng phải `source_checked`. Dependency cần dùng còn pending hoặc bị thiếu vẫn chặn Release. Không cần duyệt toàn bộ knowledge canonical.
+6. Reading Intent Catalog ở `content_preview` không được đưa vào Release. Nếu catalog đã `approved`, publisher chỉ giữ liên kết tới các story thực sự có trong Release.
+7. Schema và references vẫn phải hợp lệ; phát hành từng phần không bỏ qua lỗi cấu trúc hay liên kết nguồn.
 
-Không bulk-approve Knowledge, rights hoặc quote chỉ để làm publisher pass. Các field này đại diện cho review nội dung, kiểm tra nguồn và quyết định quyền thật.
-
-`source/vi/decisions/canonical-decisions.json` chỉ cần sửa khi owner chủ động loại một quote khỏi Release và có lý do rõ ràng. Không dùng exclusion để đánh dấu một story là approved.
+Không bulk-approve Knowledge, rights hoặc quote chỉ để publisher pass. Kiểm tra nguồn thực tế cho các dependency cần dùng và giữ trạng thái pending của phần chưa review.
 
 ### Bước 7 — Publish Authoring để review trước
 
-Từ root repository:
+Từ thư mục Selflo website (nơi chứa `scripts/`):
 
 ```bash
-cd /Users/dungvo/xcode/dungvo.github.io
+cd /Users/dungvo/xcode/dungvo.github.io/apps/selflo
 ./scripts/publish-perspective-library --channel authoring
 ```
 
@@ -298,7 +307,7 @@ Mở Owner Review/Preview để kiểm tra nội dung, quote và story trước 
 
 ### Bước 8 — Tạo package Release local
 
-Khi toàn bộ Release gate đã đạt:
+Từ cùng thư mục Selflo website, khi nội dung muốn phát hành và dependency liên quan đã đạt gate:
 
 ```bash
 ./scripts/publish-perspective-library --channel release
@@ -314,9 +323,12 @@ Publisher phải kết thúc thành công. Nếu fail, đọc lỗi đầu tiên
 
 ### Bước 9 — Kiểm tra output Release
 
+Các lệnh kiểm tra dưới đây chạy từ root repository. Chỉ kiểm tra revision được manifest hiện hành trỏ tới; file revision cũ được giữ lại để lưu lịch sử.
+
 Xác nhận manifest có story:
 
 ```bash
+cd /Users/dungvo/xcode/dungvo.github.io
 jq -r '
   .files[]
   | select(.id == "story.blue_eraser")
@@ -328,13 +340,15 @@ jq -r '
 Lấy path story từ manifest và kiểm tra lifecycle trong revisioned output. Sau đó tìm quote trong các theme output và xác nhận `story_id` chưa bị project thành `null`:
 
 ```bash
-for file in apps/selflo/perspective-library/release/vi/themes/*.json; do
+jq -r '.files[] | select(.kind == "quote_pack") | .path' \
+  apps/selflo/perspective-library/release/vi/manifest.json |
+while IFS= read -r path; do
   jq -r '
     .quotes[]
     | select(.story_id == "story.blue_eraser")
     | [input_filename, .id, .story_id, .rights.status, .review.status]
     | @tsv
-  ' "$file"
+  ' "apps/selflo/perspective-library/release/vi/$path"
 done
 ```
 
@@ -343,6 +357,10 @@ Kiểm tra audit mới nhất để xem:
 - `changed_file_ids`
 - `reused_file_ids`
 - `story_links_projected_to_null`
+- `release_unready_quote_skips`
+- `release_unpaired_story_skips`
+- `release_empty_theme_skips`
+- `release_knowledge_projection`
 - `explicit_quote_exclusions`
 - manifest digest
 
@@ -403,7 +421,7 @@ Trước khi coi một story đã sẵn sàng:
 - [ ] `source_revision` và `content_version` đã được cập nhật.
 - [ ] Không sửa tay `authoring/`, `release/` hoặc package legacy.
 - [ ] Authoring publisher chạy thành công và nội dung đã được preview.
-- [ ] Các gate toàn Library đã đạt bằng review thật hoặc explicit owner decision.
+- [ ] Nội dung muốn phát hành và knowledge dependency liên quan đã đạt gate; phần pending khác được publisher bỏ qua.
 - [ ] Release publisher chạy thành công.
 - [ ] Release manifest chứa story.
 - [ ] Quote trong Release vẫn giữ đúng `story_id`, không bị đổi thành `null`.
