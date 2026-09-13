@@ -1,16 +1,18 @@
 {
-  "schema_version": "selflo.perspective.quote-fragment.v1",
-  "entity": "perspective_quote_fragment",
-  "fragment_id": "quote_fragment.meaning_values.003",
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
   "primary_theme": "meaning_values",
+  "display_name_vi": "Ý nghĩa và giá trị",
+  "description_vi": "Điều mình coi trọng, mục đích sống và lựa chọn nhất quán với giá trị.",
+  "language": "vi",
   "quotes": [
     {
-      "id": "ordinary_morning_is_a_quiet_gift",
+      "id": "compass_keeps_direction_not_steps",
       "revision": 1,
       "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Buổi sáng bình thường cũng là một loại quà — loại bạn không nhận ra cho đến khi thiếu.",
-      "subtitle_vi": null,
+      "text_vi": "Chiếc la bàn không bước thay người đi.\nNó chỉ giữ một hướng khi con đường đổi dạng.",
       "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
@@ -19,16 +21,25 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, owner đã duyệt phát hành"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
+        "concepts": [
+          "concept.values_congruent_action"
+        ],
+        "theories": [
+          "theory.psychological_flexibility_values"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
-          "observation",
-          "stable_good"
+          "values",
+          "compass",
+          "direction"
         ]
       },
       "rights": {
@@ -36,194 +47,90 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-07T14:13:11Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh stable_good.",
-        "observation_key": "ordinary_morning_is_a_quiet_gift",
-        "structure_pattern": "everyday_observation"
+        "semantic_intent": "Giá trị có thể định hướng mà không quyết định thay từng lựa chọn cụ thể.",
+        "observation_key": "compass_on_changing_road",
+        "structure_pattern": "direction_guides_without_taking_steps"
       },
       "display": {
         "mode": "poster",
-        "priority": 43,
+        "priority": 49,
         "featured": false,
         "style": "paper_quote"
       },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "stable_good"
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes"
         ],
-        "tie_break_order": 4030
+        "reference_ids": [
+          "ref.hayes_2006_psychological_flexibility"
+        ]
       },
-      "knowledge_basis": null
-    },
-    {
-      "id": "new_leaves_do_not_need_an_audience",
-      "revision": 1,
-      "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Cây ra lá mới không cần ai nhìn. Nó cứ ra.",
       "subtitle_vi": null,
-      "primary_theme": "meaning_values",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "stable_good"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh stable_good.",
-        "observation_key": "new_leaves_do_not_need_an_audience",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 44,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
+      "story_id": "story.the_compass_does_not_walk_for_you",
       "selection": {
         "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "stable_good"
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
         ],
-        "tie_break_order": 4031
-      },
-      "knowledge_basis": null
+        "presentation_tags": [
+          "values",
+          "compass"
+        ],
+        "tie_break_order": 1104
+      }
     },
     {
-      "id": "emergency_fund_can_become_breathing_time",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Quỹ dự phòng trông như tiền đứng yên, cho đến ngày nó trở thành khoảng thời gian để thở.",
-      "subtitle_vi": null,
-      "primary_theme": "meaning_values",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "money_pressure"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh money_pressure.",
-        "observation_key": "emergency_fund_can_become_breathing_time",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 41,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "money_pressure"
-        ],
-        "tie_break_order": 4037
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.epictetus.ench_15.banquet",
+      "id": "attributed.ma.iv_17.be_good_now",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trong đời, hãy cư xử như ở một bữa tiệc: điều gì được đưa tới trước mặt, hãy đón nhận phần của mình một cách đúng mực.",
-      "subtitle_vi": "Epictetus · Encheiridion · XV",
+      "text_vi": "Đừng sắp đặt đời mình như thể còn mười nghìn năm để sống. Khi vẫn đang sống và vẫn còn có thể, hãy sống tử tế.",
+      "subtitle_vi": "Suy tưởng · Quyển IV, đoạn 17",
       "primary_theme": "meaning_values",
       "authorship": {
-        "author_id": "epictetus",
-        "author_name": "Epictetus",
-        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
-        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
         "source_language": "en",
-        "source_label": "Epictetus · Encheiridion",
-        "source_detail": "George Long (dịch); XV; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 17; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
-          "stoicism",
-          "enough"
+          "mortality"
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng và bản dịch tiếng Việt trước Release."
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
       },
       "writing": {
-        "semantic_intent": "Trong đời, hãy cư xử như ở một bữa tiệc: điều gì được đưa tới trước mặt, hãy đón nhận phần của mình một cách đúng mực.",
+        "semantic_intent": "Đừng sắp đặt đời mình như thể còn mười nghìn năm để sống. Khi vẫn đang sống và vẫn còn có thể, hãy sống tử tế.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -237,13 +144,159 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "meaning_values",
-          "stoicism",
-          "enough"
+          "mortality"
         ],
-        "tie_break_order": 5007
+        "tie_break_order": 1129
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.x_16.be_one",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng nói thêm về việc một người tốt nên như thế nào; hãy trở thành người ấy.",
+      "subtitle_vi": "Suy tưởng · Quyển X, đoạn 16",
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển X, đoạn 16; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "action"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
+      },
+      "writing": {
+        "semantic_intent": "Đừng nói thêm về việc một người tốt nên như thế nào; hãy trở thành người ấy.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "action"
+        ],
+        "tie_break_order": 1163
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "the_pauses_were_the_life",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Hóa ra đó chính là cuộc đời",
+      "text_vi": "Những thứ mình từng tưởng là khoảng nghỉ giữa cuộc đời — hóa ra chính là cuộc đời.",
+      "subtitle_vi": null,
+      "primary_theme": "meaning_values",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.meaning_in_life"
+        ],
+        "theories": [
+          "theory.meaning_in_life"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "cuộc đời",
+          "ý nghĩa",
+          "đời thường",
+          "hiện tại",
+          "thời gian hữu hạn"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Owner xác nhận quote được chắt lọc từ nội dung Selflo và thuộc quyền phát hành của Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-06T12:49:11Z"
+      },
+      "writing": {
+        "semantic_intent": "Những khoảnh khắc bình thường mà ta thường xem như khoảng nghỉ thực ra chính là phần lớn cuộc đời.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.original_if_i_lived_a_human_life",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "meaning_values",
+          "cuộc đời",
+          "ý nghĩa",
+          "đời thường",
+          "hiện tại"
+        ],
+        "tie_break_order": 3002
       },
       "knowledge_basis": null
     },
@@ -265,12 +318,18 @@
         "source_detail": "George Long (dịch); XVII; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "role"
@@ -300,7 +359,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "meaning_values",
           "stoicism",
@@ -328,12 +389,18 @@
         "source_detail": "Richard M. Gummere (dịch); 20; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "integrity"
@@ -363,7 +430,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "meaning_values",
           "stoicism",
@@ -391,12 +460,18 @@
         "source_detail": "James Legge (dịch); 11; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.taoism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "taoism",
           "empty_space"
@@ -426,7 +501,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "meaning_values",
           "taoism",
@@ -454,12 +531,18 @@
         "source_detail": "James Legge (dịch); 48; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.taoism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "taoism",
           "simplicity"
@@ -489,7 +572,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "meaning_values",
           "taoism",
@@ -517,13 +602,19 @@
         "source_detail": "F. Max Müller (dịch); 6; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.buddhist_practice",
           "framework.impermanence"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "buddhist_text",
           "mortality"
@@ -553,199 +644,15 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "meaning_values",
           "buddhist_text",
           "mortality"
         ],
         "tie_break_order": 5031
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.dhammapada.verse_020.practice",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Người thực hành dù chỉ nhớ ít lời dạy, nhưng biết buông tham, sân và mê để sống với hiểu biết và tâm bình thản, vẫn thật sự bước trên con đường ấy.",
-      "subtitle_vi": "Dhammapada · 20",
-      "primary_theme": "meaning_values",
-      "authorship": {
-        "author_id": "dhammapada_tradition",
-        "author_name": "Dhammapada",
-        "work": "Dhammapada, a Collection of Verses",
-        "source_url": "https://www.gutenberg.org/ebooks/2017",
-        "source_language": "en",
-        "source_label": "Dhammapada",
-        "source_detail": "F. Max Müller (dịch); 20; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.buddhist_practice"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "buddhist_text",
-          "practice"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; quote được ghi theo văn bản Dhammapada, không gán trực tiếp cho Đức Phật lịch sử; cần review truyền thống và bản dịch tiếng Việt trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Người thực hành dù chỉ nhớ ít lời dạy, nhưng biết buông tham, sân và mê để sống với hiểu biết và tâm bình thản, vẫn thật sự bước trên con đường ấy.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "meaning_values",
-          "buddhist_text",
-          "practice"
-        ],
-        "tie_break_order": 5032
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.confucius.book_ii_ch13.action",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Người quân tử hành động trước lời nói, rồi nói phù hợp với điều mình đã làm.",
-      "subtitle_vi": "Khổng Tử · Luận Ngữ · II.13",
-      "primary_theme": "meaning_values",
-      "authorship": {
-        "author_id": "confucius",
-        "author_name": "Confucius",
-        "work": "The Analects of Confucius (from the Chinese Classics)",
-        "source_url": "https://www.gutenberg.org/ebooks/3330",
-        "source_language": "en",
-        "source_label": "Khổng Tử · Luận Ngữ",
-        "source_detail": "James Legge (dịch); II.13; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.confucianism"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "confucianism",
-          "integrity"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Người quân tử hành động trước lời nói, rồi nói phù hợp với điều mình đã làm.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "meaning_values",
-          "confucianism",
-          "integrity"
-        ],
-        "tie_break_order": 5043
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.paulo_coelho.the_alchemist.002",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Đó là: vào một lúc nhất định trong đời, chúng ta không làm chủ được vận mệnh của mình nữa và rồi đời mình sẽ do định mệnh đưa đẩy. Đó chính là điều dối trá nhất thế gian!",
-      "subtitle_vi": "Nhà giả kim · Bản owner cung cấp",
-      "primary_theme": "meaning_values",
-      "authorship": {
-        "author_id": "paulo_coelho",
-        "author_name": "Paulo Coelho",
-        "work": "Nhà giả kim",
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md dòng 12; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "nhà giả kim",
-          "owner-declared work source"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview theo yêu cầu owner. Chưa xác minh edition/bản dịch và chưa có rights decision; không đủ điều kiện cho Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Đó là: vào một lúc nhất định trong đời, chúng ta không làm chủ được vận mệnh của mình nữa và rồi đời mình sẽ do định mệnh đưa đẩy. Đó chính là điều dối trá nhất thế gian!",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 40,
-        "featured": false,
-        "style": "paper_quote"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "meaning_values",
-          "nhà giả kim"
-        ],
-        "tie_break_order": 6002
       },
       "knowledge_basis": null
     }

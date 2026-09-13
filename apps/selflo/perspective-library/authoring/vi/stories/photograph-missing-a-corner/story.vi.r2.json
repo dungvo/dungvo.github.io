@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "entity": "perspective_story",
   "id": "story.photograph_missing_a_corner",
-  "revision": 1,
+  "revision": 2,
   "status": "active",
   "language": "vi",
   "title_vi": "Bức ảnh thiếu một góc",
@@ -10,7 +10,9 @@
   "hero_image": null,
   "primary_theme": "work_achievement",
   "metadata": {
-    "concept_ids": [],
+    "concept_ids": [
+
+    ],
     "emotion_tags": [
       "doubt",
       "quiet_pride"
