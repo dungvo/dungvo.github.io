@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "self_understanding",
+  "display_name_vi": "Hiểu bản thân",
+  "description_vi": "Bản sắc, câu chuyện nội tâm, nhu cầu và cách mình nhìn nhận chính mình.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "attributed.zhuangzi.chapter_01.rest_beneath_tree",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Có cây lớn mà lo nó vô dụng, sao không trồng nơi đồng rộng, thong dong bên cạnh, thảnh thơi nằm nghỉ dưới tán cây?",
+      "subtitle_vi": "Trang Tử · Trang Tử · Tiêu dao du (chương 1) · Dịch/diễn ý Selflo",
+      "primary_theme": "self_understanding",
+      "authorship": {
+        "author_id": "zhuangzi",
+        "author_name": "Trang Tử",
+        "work": "Trang Tử · Tiêu dao du (chương 1)",
+        "source_url": "https://ctext.org/zhuangzi/enjoyment-in-untroubled-ease/zh",
+        "source_language": "zh",
+        "source_label": "Trang Tử · Trang Tử · Tiêu dao du (chương 1)",
+        "source_detail": "Bản Việt dịch/diễn ý Selflo từ đoạn cổ: 今子有大樹，患其無用，何不樹之於無何有之鄉，廣莫之野，彷徨乎無為其側，逍遙乎寢臥其下？ Không phải trích một bản dịch Việt đã xuất bản. Ghi tên tác giả theo quy ước thư mục của tác phẩm."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.taoism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "Cây lớn ngoài thước thợ mộc",
+          "Đạo gia",
+          "góc nhìn"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:15:32Z"
+      },
+      "writing": {
+        "semantic_intent": "Có cây lớn mà lo nó vô dụng, sao không trồng nơi đồng rộng, thong dong bên cạnh, thảnh thơi nằm nghỉ dưới tán cây?",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.large_tree_beyond_the_carpenters_measure",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "self_understanding",
+          "taoism"
+        ],
+        "tie_break_order": 6088
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

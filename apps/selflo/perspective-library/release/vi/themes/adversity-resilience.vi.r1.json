@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "adversity_resilience",
+  "display_name_vi": "Nghịch cảnh và phục hồi",
+  "description_vi": "Thất bại, mất mát, khó khăn, lòng can đảm và khả năng đứng dậy sau biến cố.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "attributed.laozi.chapter_58.fortune_misfortune",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Họa là nơi phúc tựa vào; phúc là nơi họa ẩn náu.",
+      "subtitle_vi": "Lão Tử · Đạo Đức Kinh · Chương 58 · Dịch/diễn ý Selflo",
+      "primary_theme": "adversity_resilience",
+      "authorship": {
+        "author_id": "laozi",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh · Chương 58",
+        "source_url": "https://ctext.org/dao-de-jing",
+        "source_language": "zh",
+        "source_label": "Lão Tử · Đạo Đức Kinh · Chương 58",
+        "source_detail": "Bản Việt dịch/diễn ý Selflo từ đoạn cổ: 禍兮福之所倚，福兮禍之所伏。 Không phải trích một bản dịch Việt đã xuất bản. Ghi tên tác giả theo quy ước thư mục của tác phẩm."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.taoism",
+          "framework.yin_yang_taiji"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "Tái ông thất mã",
+          "Đạo gia",
+          "góc nhìn"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:15:32Z"
+      },
+      "writing": {
+        "semantic_intent": "Họa là nơi phúc tựa vào; phúc là nơi họa ẩn náu.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.old_man_and_returning_horse",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "adversity_resilience",
+          "taoism"
+        ],
+        "tie_break_order": 6085
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

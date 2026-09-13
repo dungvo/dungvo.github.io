@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "change_growth",
+  "display_name_vi": "Thay đổi và trưởng thành",
+  "description_vi": "Học hỏi, xây dựng thói quen, chuyển mình và trưởng thành theo thời gian.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "attributed.zhuangzi.chapter_20.change_with_time",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Cùng thời thế mà biến đổi, không cố chấp vào một cách duy nhất.",
+      "subtitle_vi": "Trang Tử · Trang Tử · Sơn mộc (chương 20) · Dịch/diễn ý Selflo",
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "zhuangzi",
+        "author_name": "Trang Tử",
+        "work": "Trang Tử · Sơn mộc (chương 20)",
+        "source_url": "https://ctext.org/zhuangzi/tree-on-the-mountain/zh",
+        "source_language": "zh",
+        "source_label": "Trang Tử · Trang Tử · Sơn mộc (chương 20)",
+        "source_detail": "Bản Việt dịch/diễn ý Selflo từ đoạn cổ: 與時俱化，而無肯專為。 Không phải trích một bản dịch Việt đã xuất bản. Ghi tên tác giả theo quy ước thư mục của tác phẩm."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.taoism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "Cái cây và con ngỗng không biết kêu",
+          "Đạo gia",
+          "góc nhìn"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:15:32Z"
+      },
+      "writing": {
+        "semantic_intent": "Cùng thời thế mà biến đổi, không cố chấp vào một cách duy nhất.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.tree_and_silent_goose",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "taoism"
+        ],
+        "tie_break_order": 6086
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

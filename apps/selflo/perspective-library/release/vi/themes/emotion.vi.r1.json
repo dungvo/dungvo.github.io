@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "emotion",
+  "display_name_vi": "Cảm xúc",
+  "description_vi": "Nhận biết, đón nhận và sống cùng cảm xúc mà không để cảm xúc định nghĩa toàn bộ mình.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "attributed.epictetus.ench_05.opinion",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Con người không chỉ bị xáo trộn bởi điều xảy ra, mà còn bởi ý kiến của họ về điều ấy.",
+      "subtitle_vi": "Epictetus · Encheiridion · V",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "epictetus",
+        "author_name": "Epictetus",
+        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
+        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "source_language": "en",
+        "source_label": "Epictetus · Encheiridion",
+        "source_detail": "George Long (dịch); V; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "stoicism",
+          "judgment"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:15:32Z"
+      },
+      "writing": {
+        "semantic_intent": "Con người không chỉ bị xáo trộn bởi điều xảy ra, mà còn bởi ý kiến của họ về điều ấy.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote"
+      },
+      "story_id": "story.empty_boat_on_the_river",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "stoicism",
+          "judgment"
+        ],
+        "tie_break_order": 5003
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

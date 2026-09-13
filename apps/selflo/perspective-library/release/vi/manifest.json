@@ -2,19 +2,46 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 2,
-  "content_version": "release-human-life-and-compass-19",
+  "library_revision": 3,
+  "content_version": "release-selected-quotes-22",
   "language": "vi",
-  "generated_at": "2026-09-07T14:14:23Z",
+  "generated_at": "2026-09-13T01:16:21Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
       "kind": "knowledge_catalog",
-      "revision": 2,
-      "path": "knowledge/knowledge.vi.r2.json",
+      "revision": 3,
+      "path": "knowledge/knowledge.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "ed262f6fb092e814242b0e353ab37a3a46577f2f9b47d05176a13ba34e1eedf0",
-      "byte_count": 4596
+      "sha256": "48152fc57c0d188d454a8f5542100bb2da7dfbd368ea4dc38b491f62df8d9088",
+      "byte_count": 6089
+    },
+    {
+      "id": "theme.adversity_resilience.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/adversity-resilience.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "642a6133f5abb843d54aaa8ab67d8abee93f90145bb66fe963b9f2d160e855d2",
+      "byte_count": 2979
+    },
+    {
+      "id": "theme.change_growth.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/change-growth.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "7243973dd905e76b7f10f5a1c9a41ee7b840dc935c2aba13f0bdc8ff4f789cfc",
+      "byte_count": 3003
+    },
+    {
+      "id": "theme.emotion.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/emotion.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "5aa16898ee2c3158c9d30bf4e24e48a05411a9d54a6c047bff1bddb0bde3f44e",
+      "byte_count": 2828
     },
     {
       "id": "theme.meaning_values.vi",
@@ -24,6 +51,42 @@
       "media_type": "application/json",
       "sha256": "07fb340cf2cd0669c1c815879573c3f1c9cef782b29f32a5135e2d5d70aa700b",
       "byte_count": 4891
+    },
+    {
+      "id": "theme.self_understanding.vi",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/self-understanding.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "86c19d27a6d3c51a076de5adc0c934b89d7026f8106b8a1220a83c36412424d2",
+      "byte_count": 3250
+    },
+    {
+      "id": "story.empty_boat_on_the_river",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/empty-boat-on-the-river/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "f7f39778d98b2c6c7c9bf7b1d6d518e661c7c9d98d7733e85491c8936fd11147",
+      "byte_count": 3411
+    },
+    {
+      "id": "story.large_tree_beyond_the_carpenters_measure",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "4bb5c0d9515d1eca57651653582f175ee211f4ea1088d7eef04387c9796f7daf",
+      "byte_count": 3605
+    },
+    {
+      "id": "story.old_man_and_returning_horse",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/old-man-and-returning-horse/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "54f4156b6af0a3f61d28e5d5ed339adefe3877a50a8c687e00618aad6f2f709f",
+      "byte_count": 3808
     },
     {
       "id": "story.original_if_i_lived_a_human_life",
@@ -42,6 +105,15 @@
       "media_type": "application/json",
       "sha256": "70c79e8307d2e9d37b4954a1fb5f3408b7cc706b089fe6f023144d11b5c114a2",
       "byte_count": 63414
+    },
+    {
+      "id": "story.tree_and_silent_goose",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/tree-and-silent-goose/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "0988cc6561ce154d8c02bfb2f2727396a429afddf67268784d5c6867c08f68ba",
+      "byte_count": 4170
     }
   ]
 }
