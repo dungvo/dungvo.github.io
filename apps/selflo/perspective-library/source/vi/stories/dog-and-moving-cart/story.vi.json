@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.dog_and_moving_cart",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Con chó và chiếc xe đang đi",
+  "subtitle_vi": "Kể lại từ hình ảnh Khắc Kỷ cổ về một con chó bị buộc vào chiếc xe: cùng một con đường, nhưng có thể bước theo hoặc chống lại đến kiệt sức.",
+  "hero_image": null,
+  "primary_theme": "adversity_resilience",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [
+      "resistance",
+      "acceptance",
+      "uncertainty"
+    ],
+    "keywords": [
+      "con chó",
+      "chiếc xe",
+      "chấp nhận",
+      "Khắc Kỷ",
+      "dòng chảy"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "scene_01",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "scene_01.paragraph_01",
+          "type": "paragraph",
+          "text_vi": "Có một con chó bị buộc vào một chiếc xe đang đi trên đường."
+        },
+        {
+          "id": "scene_01.paragraph_02",
+          "type": "paragraph",
+          "text_vi": "Sợi dây đủ dài để nó có thể bước đi bên cạnh."
+        },
+        {
+          "id": "scene_01.paragraph_03",
+          "type": "paragraph",
+          "text_vi": "Khi chiếc xe bắt đầu chuyển bánh, con chó có hai cách."
+        },
+        {
+          "id": "scene_01.paragraph_04",
+          "type": "paragraph",
+          "text_vi": "Nó có thể bước theo. Nó vẫn có thể nhìn quanh, chọn bước chân, lúc sang trái, lúc sang phải trong khoảng dây cho phép."
+        },
+        {
+          "id": "scene_01.paragraph_05",
+          "type": "paragraph",
+          "text_vi": "Chiếc xe đi, nó cũng đi."
+        },
+        {
+          "id": "scene_01.paragraph_06",
+          "type": "paragraph",
+          "text_vi": "Nhưng nếu nó nhất quyết không chịu, nó có thể ghì bốn chân xuống đất, quay người về hướng ngược lại và kéo căng sợi dây bằng tất cả sức lực."
+        },
+        {
+          "id": "scene_01.paragraph_07",
+          "type": "paragraph",
+          "text_vi": "Chiếc xe vẫn tiếp tục đi."
+        },
+        {
+          "id": "scene_01.paragraph_08",
+          "type": "paragraph",
+          "text_vi": "Lúc ấy, cùng một con đường ấy, cùng một chiếc xe ấy, cùng một hướng chuyển động ấy — nhưng con chó không còn bước nữa. Nó bị kéo đi."
+        },
+        {
+          "id": "scene_01.paragraph_09",
+          "type": "paragraph",
+          "text_vi": "Điều lạ là trong cả hai trường hợp, chiếc xe đều chuyển động."
+        },
+        {
+          "id": "scene_01.paragraph_10",
+          "type": "paragraph",
+          "text_vi": "Khác biệt nằm ở cách con chó đi cùng nó."
+        },
+        {
+          "id": "scene_01.paragraph_11",
+          "type": "paragraph",
+          "text_vi": "Có những điều trong cuộc đời cũng giống chiếc xe ấy: thời gian đi, cơ thể thay đổi, một người có thể rời khỏi ta, một kế hoạch có thể không xảy ra, một cánh cửa có thể đóng lại."
+        },
+        {
+          "id": "scene_01.paragraph_12",
+          "type": "paragraph",
+          "text_vi": "Ta vẫn có quyền buồn, quyền lựa chọn bước chân tiếp theo, quyền tìm một con đường trong khoảng mình còn có thể đi."
+        },
+        {
+          "id": "scene_01.paragraph_13",
+          "type": "paragraph",
+          "text_vi": "Nhưng đôi khi ta dùng gần như toàn bộ sức lực chỉ để yêu cầu chiếc xe phải quay trở lại nơi nó đã đi qua."
+        },
+        {
+          "id": "scene_01.paragraph_14",
+          "type": "paragraph",
+          "text_vi": "Sợi dây càng căng. Ta càng mệt. Chiếc xe vẫn đi."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Chấp nhận điều đang xảy ra không có nghĩa là từ bỏ lựa chọn; đôi khi nó chỉ là ngừng dùng sức để chống lại điều mình không thể bắt quay ngược."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Hình ảnh Khắc Kỷ cổ về con chó bị buộc vào chiếc xe, được truyền lại gắn với Zeno/Chrysippus. Bản kể lại tiếng Việt Selflo để soi sáng Epictetus · Encheiridion VIII; không ghi Epictetus là tác giả của analogy này.",
+    "source_url": "https://plato.stanford.edu/entries/freedom-ancient/"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "classical_philosophical_analogies",
+    "source_item_id": "stoic_dog_and_cart",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Chất liệu triết học cổ; bản kể lại tiếng Việt do AI hỗ trợ dựa trên nguồn đối chiếu. Cần owner review provenance, wording và quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

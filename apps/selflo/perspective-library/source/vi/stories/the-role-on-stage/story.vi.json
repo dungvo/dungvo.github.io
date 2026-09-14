@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.the_role_on_stage",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Vai diễn trên sân khấu",
+  "subtitle_vi": "Chuyển thể trực tiếp từ hình ảnh diễn viên và vai được trao trong Epictetus · Encheiridion · XVII.",
+  "hero_image": null,
+  "primary_theme": "meaning_values",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [
+      "uncertainty",
+      "identity",
+      "acceptance"
+    ],
+    "keywords": [
+      "vai diễn",
+      "sân khấu",
+      "Epictetus",
+      "hoàn cảnh",
+      "cách sống"
+    ],
+    "story_style": "reflective_parable"
+  },
+  "sections": [
+    {
+      "id": "scene_01",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "scene_01.paragraph_01",
+          "type": "paragraph",
+          "text_vi": "Hãy tưởng tượng cuộc đời là một sân khấu."
+        },
+        {
+          "id": "scene_01.paragraph_02",
+          "type": "paragraph",
+          "text_vi": "Bạn bước ra sau tấm màn, nhưng khi đến nơi mới phát hiện mình không phải người viết kịch bản."
+        },
+        {
+          "id": "scene_01.paragraph_03",
+          "type": "paragraph",
+          "text_vi": "Bạn cũng không được chọn tất cả những gì thuộc về vai diễn."
+        },
+        {
+          "id": "scene_01.paragraph_04",
+          "type": "paragraph",
+          "text_vi": "Có người nhận một vai dài. Có người chỉ xuất hiện trong một đoạn ngắn."
+        },
+        {
+          "id": "scene_01.paragraph_05",
+          "type": "paragraph",
+          "text_vi": "Có người bước lên sân khấu trong giàu có. Có người bắt đầu với rất ít."
+        },
+        {
+          "id": "scene_01.paragraph_06",
+          "type": "paragraph",
+          "text_vi": "Có người khỏe mạnh. Có người phải sống cùng một cơ thể mang nhiều giới hạn."
+        },
+        {
+          "id": "scene_01.paragraph_07",
+          "type": "paragraph",
+          "text_vi": "Có người được trao quyền lực. Có người sống cả đời như một người bình thường mà chẳng mấy ai biết tên."
+        },
+        {
+          "id": "scene_01.paragraph_08",
+          "type": "paragraph",
+          "text_vi": "Nếu cứ đứng sau cánh gà và nói: “Nhưng tôi muốn vai của người kia”, thì vở kịch của mình vẫn đang trôi qua."
+        },
+        {
+          "id": "scene_01.paragraph_09",
+          "type": "paragraph",
+          "text_vi": "Epictetus đưa ra một cách nhìn khác."
+        },
+        {
+          "id": "scene_01.paragraph_10",
+          "type": "paragraph",
+          "text_vi": "Có thể ta không chọn được toàn bộ vai diễn."
+        },
+        {
+          "id": "scene_01.paragraph_11",
+          "type": "paragraph",
+          "text_vi": "Nhưng khi đã bước lên sân khấu, vẫn còn một việc thuộc về mình: diễn vai ấy như thế nào."
+        },
+        {
+          "id": "scene_01.paragraph_12",
+          "type": "paragraph",
+          "text_vi": "Không phải vì vai mình tốt hơn vai khác. Không phải vì mọi điều xảy đến đều công bằng."
+        },
+        {
+          "id": "scene_01.paragraph_13",
+          "type": "paragraph",
+          "text_vi": "Mà bởi ngay cả khi không được chọn tất cả hoàn cảnh, ta vẫn còn một phần không nhỏ: cách mình hiện diện trong hoàn cảnh đó."
+        },
+        {
+          "id": "scene_01.paragraph_14",
+          "type": "paragraph",
+          "text_vi": "Một ngày nào đó, tấm màn sẽ khép lại."
+        },
+        {
+          "id": "scene_01.paragraph_15",
+          "type": "paragraph",
+          "text_vi": "Có lẽ câu hỏi khi ấy không còn là: “Tại sao tôi không được trao một vai khác?”"
+        },
+        {
+          "id": "scene_01.paragraph_16",
+          "type": "paragraph",
+          "text_vi": "Mà là: “Với vai mình đã có, tôi đã sống nó như thế nào?”"
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Ta không chọn được toàn bộ vai diễn của mình, nhưng vẫn có thể chọn cách mình bước lên sân khấu và sống phần được trao."
+  },
+  "authorship": {
+    "author_id": "epictetus",
+    "author_name": "Epictetus",
+    "source_label": "Epictetus · Encheiridion · XVII. Bản kể lại tiếng Việt Selflo từ metaphor diễn viên/vai diễn trong passage gốc; không phải nguyên văn một bản dịch tiếng Việt xuất bản.",
+    "source_url": "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus/The_Encheiridion%2C_or_Manual"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "classical_passages",
+    "source_item_id": "epictetus_encheiridion_17_role",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Chất liệu từ Encheiridion XVII; bản kể lại tiếng Việt do AI hỗ trợ từ nguồn cổ đối chiếu. Cần owner review wording và quyền trước Release."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}
