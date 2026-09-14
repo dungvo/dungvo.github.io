@@ -57,9 +57,10 @@ function introduction(story,heroURL){
   intro.append(kicker,title,subtitle,meta);fragment.append(intro);return fragment;
 }
 
-function storyBody(story){const body=document.createElement('div');body.className='story-body';(story.sections||[]).forEach(section=>{const node=document.createElement('section');node.className='story-section';if(section.title_vi){const heading=document.createElement('h2');heading.textContent=section.title_vi;node.append(heading)};(section.blocks||[]).forEach(block=>node.append(blockNode(block)));body.append(node)});return body}
-function blockNode(block){
-  if(block.type==='pull_quote'){const quote=document.createElement('blockquote');quote.className='pull-quote';quote.append(document.createTextNode(`“${block.text_vi}”`));if(block.attribution_vi){const cite=document.createElement('cite');cite.textContent=block.attribution_vi;quote.append(cite)}return quote}
+function storyBody(story){const body=document.createElement('div');body.className='story-body';const featured=new Set(story.presentation?.featured_quote_ids||[]);const usesEditorialSelection=story.reader_format==='editorial_v2'&&featured.size>0;(story.sections||[]).forEach(section=>{const node=document.createElement('section');node.className='story-section';if(section.title_vi){const heading=document.createElement('h2');heading.textContent=section.title_vi;node.append(heading)};(section.blocks||[]).forEach(block=>node.append(blockNode(block,!usesEditorialSelection||featured.has(block.id))));body.append(node)});return body}
+function blockNode(block,isFeatured=true){
+  if(block.type==='pull_quote'&&isFeatured){const quote=document.createElement('blockquote');quote.className='pull-quote';quote.append(document.createTextNode(block.text_vi||''));if(block.attribution_vi){const cite=document.createElement('cite');cite.textContent=block.attribution_vi;quote.append(cite)}return quote}
+  if(block.type==='pull_quote'){const paragraph=document.createElement('p');paragraph.className='inline-quote';paragraph.textContent=block.text_vi||'';return paragraph}
   if(block.type==='divider'){const divider=document.createElement('div');divider.className='divider';return divider}
   const node=document.createElement(block.type==='heading'?'h2':'p');node.textContent=block.text_vi||'';return node;
 }
