@@ -2,6 +2,7 @@ const $ = id => document.getElementById(id);
 const els = {channel:$('channel'),picker:$('storyPicker'),format:$('format'),theme:$('theme'),fontSize:$('fontSize'),status:$('status'),screen:$('deviceScreen'),scroll:$('readerScroll'),story:$('story'),progress:$('progress'),bookmark:$('bookmark')};
 const bases = {authoring:'../perspective-library/authoring/vi/',release:'../perspective-library/release/vi/'};
 const themeNames = {adversity_resilience:'Nhân sinh & trí tuệ',attention:'Chú tâm',change_growth:'Thay đổi & trưởng thành',emotion:'Cảm xúc',meaning_values:'Ý nghĩa & giá trị',relationships:'Mối quan hệ',rest_wellbeing:'Nghỉ ngơi & an lành',self_understanding:'Thấu hiểu bản thân',work_achievement:'Công việc & thành tựu'};
+const draftFiles=['draft-v2.json','draft-if-human-v2.json'];
 let stories=[];let descriptors=new Map();let selected=null;
 
 const fetchJSON=async url=>{const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error(`Không tải được ${url} (${response.status})`);return response.json()};
@@ -12,7 +13,7 @@ async function load(){
   els.status.textContent='Đang tải story…';descriptors=new Map();
   try{
     if(els.channel.value==='draft'){
-      stories=[await fetchJSON('draft-v2.json')];
+      stories=await Promise.all(draftFiles.map(fetchJSON));
     }else{
       const base=bases[els.channel.value];const manifest=await fetchJSON(`${base}manifest.json`);
       descriptors=new Map(manifest.files.map(file=>[file.id,file]));
