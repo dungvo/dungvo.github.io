@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Selflo Story Reader Lab — xem và kiểm tra story như trong ứng dụng.">
+  <title>Selflo · Story Reader Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="lab-bar">
+    <a class="brand" href="../"><span class="brand-leaf">◒</span><span><strong>Selflo</strong><small>Story Reader Lab</small></span></a>
+    <div class="lab-controls" aria-label="Điều khiển bản xem trước">
+      <label>Nguồn<select id="channel"><option value="draft">V2 Lab Draft</option><option value="authoring">Authoring</option><option value="release">Release</option></select></label>
+      <label>Story<select id="storyPicker"></select></label>
+      <label>Giao diện<select id="format"><option value="auto">Theo payload</option><option value="editorial_v2">Editorial V2</option><option value="classic_v1">Classic V1</option></select></label>
+      <label>Màu<select id="theme"><option value="light">Sáng</option><option value="sepia">Giấy</option><option value="dark">Tối</option></select></label>
+      <label>Cỡ chữ<select id="fontSize"><option value="0.92">Nhỏ</option><option value="1" selected>Vừa</option><option value="1.14">Lớn</option><option value="1.3">Rất lớn</option></select></label>
+    </div>
+    <div class="lab-status" id="status" aria-live="polite">Đang chuẩn bị…</div>
+  </header>
+
+  <main class="stage">
+    <section class="device" aria-label="Bản xem trước Story Reader">
+      <div class="device-screen" id="deviceScreen">
+        <header class="reader-header">
+          <button type="button" aria-label="Quay lại">‹</button>
+          <span>Câu chuyện phía sau</span>
+          <div><button id="bookmark" type="button" aria-label="Lưu câu chuyện">♧</button><button type="button" aria-label="Cài đặt chữ">Aa</button></div>
+        </header>
+        <div class="progress-track"><span id="progress"></span></div>
+        <div class="reader-scroll" id="readerScroll"><article id="story"></article></div>
+      </div>
+    </section>
+  </main>
+
+  <template id="errorTemplate"><div class="message"><strong>Không thể mở story</strong><p></p></div></template>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

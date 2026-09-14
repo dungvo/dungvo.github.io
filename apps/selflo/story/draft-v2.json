@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_story",
+  "id": "story.old_man_and_returning_horse",
+  "revision": 2,
+  "status": "draft",
+  "language": "vi",
+  "reader_format": "editorial_v2",
+  "title_vi": "Tái ông thất mã",
+  "subtitle_vi": "Kể lại từ Hoài Nam Tử · Nhân gian huấn",
+  "hero_image": {
+    "preview_path": "assets/tai-ong-frontier-v1.jpg",
+    "file_id": "image.story_theme.adversity_resilience",
+    "alt_text_vi": "Một người đứng cạnh ngựa giữa phong cảnh biên ải và núi non phủ sương",
+    "caption_vi": null
+  },
+  "primary_theme": "adversity_resilience",
+  "metadata": {"concept_ids": [], "emotion_tags": [], "keywords": ["Tái ông thất mã", "ngụ ngôn", "may và rủi", "góc nhìn"], "story_style": "parable"},
+  "sections": [
+    {"id": "opening", "title_vi": null, "blocks": [
+      {"id": "opening.paragraph_01", "type": "paragraph", "text_vi": "Gần biên ải có một gia đình bị mất ngựa. Con ngựa tự nhiên chạy sang đất Hồ. Những người quanh vùng đến chia buồn."},
+      {"id": "opening.quote_01", "type": "pull_quote", "text_vi": "Làm sao biết việc này không trở thành phúc?", "attribution_vi": "Người cha"}
+    ]},
+    {"id": "turning", "title_vi": null, "blocks": [
+      {"id": "turning.paragraph_01", "type": "paragraph", "text_vi": "Vài tháng sau, con ngựa trở về, dẫn theo một con ngựa tốt của người Hồ. Hàng xóm lại đến chúc mừng."},
+      {"id": "turning.quote_01", "type": "pull_quote", "text_vi": "Làm sao biết việc này không trở thành họa?", "attribution_vi": "Người cha"},
+      {"id": "turning.paragraph_02", "type": "paragraph", "text_vi": "Nhà có thêm ngựa tốt. Người con vốn thích cưỡi ngựa, một lần ngã xuống và gãy chân. Hàng xóm lại đến an ủi."},
+      {"id": "turning.quote_02", "type": "pull_quote", "text_vi": "Làm sao biết việc này không trở thành phúc?", "attribution_vi": "Người cha"}
+    ]},
+    {"id": "ending", "title_vi": null, "blocks": [
+      {"id": "ending.paragraph_01", "type": "paragraph", "text_vi": "Một năm sau, quân Hồ tràn qua biên ải. Những người trai tráng phải cầm cung ra trận; rất nhiều người không trở về."},
+      {"id": "ending.paragraph_02", "type": "paragraph", "text_vi": "Người con vì chân bị tật nên không phải đi. Hai cha con được bảo toàn tính mạng."}
+    ]}
+  ],
+  "takeaway": {"title_vi": "Nhìn lại", "text_vi": "Ta thường vội gọi một biến cố là may hay rủi khi câu chuyện của nó vẫn còn đang tiếp diễn. Một mất mát hôm nay có thể mở ra một hướng khác, còn điều đang thuận lợi cũng có thể mang theo những hệ quả ta chưa nhìn thấy.\n\nKhông phải mọi chuyện xấu rồi sẽ hóa tốt. Chỉ là giữa một biến cố, ta thường chưa đứng đủ xa để thấy toàn bộ ý nghĩa của nó."},
+  "reflection": {
+    "prompts_vi": ["Có điều gì trong cuộc sống hiện tại mà bạn đang vội xem là mất mát?", "Nếu câu chuyện vẫn chưa kết thúc, liệu bạn có thể để ngỏ một cách nhìn khác?"],
+    "closing_vi": "Có những điều chỉ khi đi xa thêm một đoạn, ta mới hiểu mình đã thật sự gặp may hay rủi."
+  },
+  "authorship": {"author_id": null, "author_name": null, "source_label": "Hoài Nam Tử · Nhân gian huấn (人閒訓), đoạn 9 · Bản kể lại tiếng Việt Selflo từ truyện cổ", "source_url": "https://ctext.org/text.pl?if=gb&node=3395&show=parallel"},
+  "editorial": {"origin_type": "adapted_public_domain", "source_collection_id": "classical_parables", "source_item_id": "old_man_and_returning_horse", "human_edited": true},
+  "rights": {"status": "public_domain", "note": "Tác phẩm nguồn thuộc phạm vi công cộng. Phần diễn đạt tiếng Việt được Selflo kể lại mới."},
+  "review": {"status": "needs_owner_review", "reviewed_by": null, "reviewed_at": null}
+}
