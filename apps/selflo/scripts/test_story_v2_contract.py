@@ -13,6 +13,15 @@ from pathlib import Path
 APP_ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = APP_ROOT / "perspective-library/source/vi"
 LOCK_FILE = APP_ROOT / "perspective-library/tooling/locked-story-prose.json"
+RELEASED_STORY_IDS = {
+    "story.empty_boat_on_the_river",
+    "story.large_tree_beyond_the_carpenters_measure",
+    "story.old_man_and_returning_horse",
+    "story.original_if_i_lived_a_human_life",
+    "story.photograph_missing_a_corner",
+    "story.the_compass_does_not_walk_for_you",
+    "story.tree_and_silent_goose",
+}
 
 
 def read_json(path: Path) -> dict:
@@ -25,6 +34,25 @@ def canonical_stories() -> list[dict]:
 
 def body_blocks(story: dict) -> list[dict]:
     return [block for section in story["sections"] for block in section["blocks"]]
+
+
+def manifested_stories(channel: str) -> dict[str, dict]:
+    root = APP_ROOT / f"perspective-library/{channel}/vi"
+    manifest = read_json(root / "manifest.json")
+    return {
+        entry["id"]: read_json(root / entry["path"])
+        for entry in manifest["files"]
+        if entry["kind"] == "story"
+    }
+
+
+def semantic_sequence(story: dict) -> list[str]:
+    sequence = []
+    for section in story["sections"]:
+        if section.get("title_vi"):
+            sequence.append(f"section_title:{section['id']}")
+        sequence.extend(f"block:{block['id']}" for block in section["blocks"])
+    return sequence
 
 
 def locked_prose_digest(story: dict) -> str:
@@ -65,6 +93,23 @@ class StoryV2ContractTests(unittest.TestCase):
                 for left, right in zip(blocks, blocks[1:]):
                     self.assertFalse(left["type"] == right["type"] == "pull_quote")
 
+    def test_released_story_order_survives_materialization(self) -> None:
+        canonical = {story["id"]: story for story in self.stories}
+        authoring = manifested_stories("authoring")
+        release = manifested_stories("release")
+        self.assertEqual(set(release), RELEASED_STORY_IDS)
+        for story_id in RELEASED_STORY_IDS:
+            with self.subTest(story_id=story_id):
+                expected = semantic_sequence(canonical[story_id])
+                self.assertEqual(semantic_sequence(authoring[story_id]), expected)
+                self.assertEqual(semantic_sequence(release[story_id]), expected)
+
+    def test_web_renderer_keeps_section_and_block_order(self) -> None:
+        renderer = (APP_ROOT / "story/app.mjs").read_text(encoding="utf-8")
+        self.assertNotIn("blocks.shift()", renderer)
+        self.assertNotIn("section.blocks.sort", renderer)
+        self.assertIn("(section.blocks||[]).forEach", renderer)
+
     def test_shared_artwork_references_canonical_files(self) -> None:
         source_index = read_json(SOURCE_ROOT / "source.json")
         entries = {entry["id"]: entry for entry in source_index["files"]}
@@ -78,11 +123,11 @@ class StoryV2ContractTests(unittest.TestCase):
     def test_selected_v2_story_shape(self) -> None:
         expected = {
             "story.old_man_and_returning_horse": (3, 8, 3, 0),
-            "story.original_if_i_lived_a_human_life": (26, 205, 16, 3),
-            "story.the_compass_does_not_walk_for_you": (9, 154, 1, 3),
+            "story.original_if_i_lived_a_human_life": (29, 205, 11, 3),
+            "story.the_compass_does_not_walk_for_you": (12, 156, 4, 3),
             "story.empty_boat_on_the_river": (3, 8, 1, 0),
             "story.large_tree_beyond_the_carpenters_measure": (3, 8, 1, 0),
-            "story.photograph_missing_a_corner": (4, 15, 1, 0),
+            "story.photograph_missing_a_corner": (4, 24, 1, 0),
             "story.tree_and_silent_goose": (3, 10, 2, 0),
         }
         for story_id, shape in expected.items():

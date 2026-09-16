@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 6,
+  "library_revision": 7,
   "content_version": "story-editorial-v2-release-26",
   "language": "vi",
-  "generated_at": "2026-09-16T10:29:55Z",
+  "generated_at": "2026-09-16T15:24:25Z",
   "files": [
     {
       "id": "story_artwork.adversity_resilience.v1",
@@ -145,29 +145,29 @@
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "7960e7a1cf11137114efa4d3dc71bd4e4d4ec04feca4dea98f66f961a0c0f7a3",
-      "byte_count": 61120
+      "sha256": "68080cca6d644f27ee986d12a4a0cfccd815ab3491de1d700517048e3ab1518d",
+      "byte_count": 61384
     },
     {
       "id": "story.photograph_missing_a_corner",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/photograph-missing-a-corner/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/photograph-missing-a-corner/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "18f3433e246dd8d6f56a44bb942e16be05b8b357295eb4ff869cfdb6939cc479",
-      "byte_count": 8985
+      "sha256": "2f7741f40e6ce5dff6717134b7e65087260f791ae2a121df82e857cf307ac350",
+      "byte_count": 10355
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "188b5508a0ec00e7e476ada24bd4ca718789d53ff47ee33ebefc6cf69998afd9",
-      "byte_count": 41804
+      "sha256": "1590c96588d6f4e75054c0386dd9eb70cead201561661ae1dd06766de50250e2",
+      "byte_count": 42394
     },
     {
       "id": "story.tree_and_silent_goose",

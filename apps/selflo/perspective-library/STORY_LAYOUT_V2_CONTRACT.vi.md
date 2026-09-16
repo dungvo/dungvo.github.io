@@ -140,6 +140,7 @@ editorial_v2 + primary_theme
 
 - Một mạch scroll từ đầu tới cuối.
 - V2 chỉ hiển thị scroll progress, không hiển thị section counter.
+- Renderer đi qua `sections` theo thứ tự mảng; trong mỗi section, render `title_vi` trước rồi đi qua `blocks` theo đúng thứ tự mảng. Không được nhấc `part_heading` hoặc bất kỳ block nào ra khỏi vị trí của nó.
 - Renderer không tự đổi block type, nối/tách prose hoặc sinh reflection.
 - `part_heading` có hierarchy cao hơn section title nhưng nằm trong document flow.
 - Missing artwork collapse an toàn; story vẫn đọc được.
