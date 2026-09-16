@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 26,
-  "content_version": "release-selected-quotes-23",
+  "library_revision": 27,
+  "content_version": "story-reader-layout-24",
   "language": "vi",
-  "generated_at": "2026-09-13T01:41:15Z",
+  "generated_at": "2026-09-16T09:26:58Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -226,11 +226,11 @@
     {
       "id": "story.empty_boat_on_the_river",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/empty-boat-on-the-river/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/empty-boat-on-the-river/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "be8f4ce9b23966f7874121787ca0a5b5a8b8421fe822207cdf05577824e21832",
-      "byte_count": 3411
+      "sha256": "e98e9c38335aad658b4ee252d49f51bfe76af6a2a48ede3b9c55c1f35e62444e",
+      "byte_count": 4112
     },
     {
       "id": "story.envelope_that_could_not_hold_strength",
@@ -289,11 +289,11 @@
     {
       "id": "story.large_tree_beyond_the_carpenters_measure",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "452e780c09893f421011477423ec7cfbd49cec06dbb0f0b1c59d442c7412b724",
-      "byte_count": 3605
+      "sha256": "14fd1baa140cc49036db32408c5d45fb9f551edfa9ff50dfac56b6cf3aa03d3b",
+      "byte_count": 4204
     },
     {
       "id": "story.last_window_in_the_building",
@@ -343,11 +343,11 @@
     {
       "id": "story.old_man_and_returning_horse",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/old-man-and-returning-horse/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/old-man-and-returning-horse/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "a0534758a740508331540ac8a5053e2f9659e0298871359ca2f473a2cc0dc389",
-      "byte_count": 3808
+      "sha256": "fd9a4ff1962bb37ef4dff6709e6199c4e3527d8bb52cf5cfebfe75b84f77d6d3",
+      "byte_count": 4914
     },
     {
       "id": "story.operator_and_one_beat",
@@ -460,11 +460,11 @@
     {
       "id": "story.photograph_missing_a_corner",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/photograph-missing-a-corner/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/photograph-missing-a-corner/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "2d0911bc06bd3dc844d3a15cf2d79acbb928ac3f57316bb25fe3d720c8ed2deb",
-      "byte_count": 7611
+      "sha256": "0d1e79851c5d138fe1953a1234fade3f9c64c9f91869424dc85472bce1f1cd31",
+      "byte_count": 10920
     },
     {
       "id": "story.potter_and_two_hands",
@@ -577,11 +577,11 @@
     {
       "id": "story.tree_and_silent_goose",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/tree-and-silent-goose/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/tree-and-silent-goose/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "90cd237119d2e9d44e6702949debf0b9643545876bf0f1c2f7f8c9c0e7bebcc8",
-      "byte_count": 4170
+      "sha256": "51ec2b58e49ed39616a6e4abbdad18f24b6bf06bd26a82ecb200a33bb5741206",
+      "byte_count": 4991
     },
     {
       "id": "story.two_sides_of_one_mountain",

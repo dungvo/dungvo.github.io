@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 4,
-  "content_version": "release-selected-quotes-23",
+  "library_revision": 5,
+  "content_version": "story-reader-layout-24",
   "language": "vi",
-  "generated_at": "2026-09-13T01:42:05Z",
+  "generated_at": "2026-09-16T09:27:39Z",
   "files": [
     {
       "id": "knowledge.canonical.vi",
@@ -100,29 +100,29 @@
     {
       "id": "story.empty_boat_on_the_river",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/empty-boat-on-the-river/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/empty-boat-on-the-river/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "f7f39778d98b2c6c7c9bf7b1d6d518e661c7c9d98d7733e85491c8936fd11147",
-      "byte_count": 3411
+      "sha256": "3a9394e41384eda20ab1ee657ef45a3e440ebf1a18942171428c0472b96604c0",
+      "byte_count": 4112
     },
     {
       "id": "story.large_tree_beyond_the_carpenters_measure",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "4bb5c0d9515d1eca57651653582f175ee211f4ea1088d7eef04387c9796f7daf",
-      "byte_count": 3605
+      "sha256": "869eee2c3a1208a97fb395b11061912f9e7c5a62113f299f531e79d1d8f593f8",
+      "byte_count": 4204
     },
     {
       "id": "story.old_man_and_returning_horse",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/old-man-and-returning-horse/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/old-man-and-returning-horse/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "54f4156b6af0a3f61d28e5d5ed339adefe3877a50a8c687e00618aad6f2f709f",
-      "byte_count": 3808
+      "sha256": "f59a8b39c62ddb0621f7f607252048593d749b75fea46d6822aa03f413c105b7",
+      "byte_count": 4914
     },
     {
       "id": "story.original_if_i_lived_a_human_life",
@@ -136,11 +136,11 @@
     {
       "id": "story.photograph_missing_a_corner",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/photograph-missing-a-corner/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/photograph-missing-a-corner/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "6ee72aef0fc872644336372236a4f1ce2530d5437de7b245cc489fbf829e1ac3",
-      "byte_count": 7611
+      "sha256": "b00705a7f1eb4e478507af7da7320c0a8873d4c28674060f280a5586acb8fe9d",
+      "byte_count": 10920
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
@@ -154,11 +154,11 @@
     {
       "id": "story.tree_and_silent_goose",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/tree-and-silent-goose/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/tree-and-silent-goose/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "0988cc6561ce154d8c02bfb2f2727396a429afddf67268784d5c6867c08f68ba",
-      "byte_count": 4170
+      "sha256": "551e7e7657195fe1597008600458f37c0b2c31a7223ce99d25eb2caff8c1cd8f",
+      "byte_count": 4991
     }
   ]
 }
