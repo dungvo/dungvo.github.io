@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.the_compass_does_not_walk_for_you",
-  "revision": 1,
+  "revision": 3,
   "status": "active",
   "language": "vi",
   "title_vi": "Chiếc la bàn không biết đường về",
@@ -1031,9 +1031,9 @@
     "note": "Owner xác nhận nội dung thuộc quyền phát hành của Selflo."
   },
   "review": {
-    "status": "approved",
-    "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-09-16T10:28:09Z"
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
   },
   "reader_format": "editorial_v2",
   "opening_quote_vi": "Chiếc la bàn không bước thay người đi. Nó chỉ giữ một hướng khi con đường đổi dạng.",

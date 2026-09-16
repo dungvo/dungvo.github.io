@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.old_man_and_returning_horse",
-  "revision": 1,
+  "revision": 4,
   "status": "active",
   "language": "vi",
   "title_vi": "Tái ông thất mã",
@@ -112,9 +112,9 @@
     "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
   },
   "review": {
-    "status": "approved",
-    "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-09-16T10:28:09Z"
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
   },
   "reader_format": "editorial_v2",
   "opening_quote_vi": "Làm sao biết việc này không trở thành phúc?",

@@ -1,0 +1,21 @@
+{
+  "schema_version": "selflo.story-locked-prose.v1",
+  "normalization": "Join body block text in document order with one ASCII space, collapse whitespace, append LF, then SHA-256.",
+  "stories": [
+    {
+      "id": "story.old_man_and_returning_horse",
+      "approved_source": "story/draft-v2.json",
+      "sha256": "2a5fd12e82246d52caf0cc8cdde59a136c1f439f406bad028000b0048197d7dc"
+    },
+    {
+      "id": "story.original_if_i_lived_a_human_life",
+      "approved_source": "perspective-library/source/vi/stories/original-if-i-lived-a-human-life/story.vi.json",
+      "sha256": "705c4c43218094fd1dffdf365102e9116bd4fbd04cbe3489b14d1ba082ab75b1"
+    },
+    {
+      "id": "story.the_compass_does_not_walk_for_you",
+      "approved_source": "perspective-library/source/vi/stories/the-compass-does-not-walk-for-you/story.vi.json",
+      "sha256": "5d47d576e50d3537635279f034fd8f3ae7f8a05d38926219e5f78645d1479faa"
+    }
+  ]
+}

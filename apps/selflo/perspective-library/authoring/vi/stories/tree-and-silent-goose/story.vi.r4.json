@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.tree_and_silent_goose",
-  "revision": 1,
+  "revision": 4,
   "status": "active",
   "language": "vi",
   "title_vi": "Cái cây và con ngỗng không biết kêu",
@@ -124,9 +124,9 @@
     "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
   },
   "review": {
-    "status": "approved",
-    "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-09-16T10:28:09Z"
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
   },
   "reader_format": "editorial_v2",
   "opening_quote_vi": "Cái cây vì không dùng được mà sống; con ngỗng vì không dùng được mà chết.",

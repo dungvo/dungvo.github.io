@@ -927,6 +927,13 @@ def validate_references!(
     )
 
 
+  artwork_catalogs =
+    payloads.fetch(
+      "story_artwork_catalog",
+      []
+    )
+
+
   quotes =
     themes.flat_map do |theme|
       theme.fetch("quotes")
@@ -1025,6 +1032,28 @@ def validate_references!(
     abort(
       "Theme IDs are not unique"
     )
+  end
+
+
+  if artwork_catalogs.length > 1
+    abort(
+      "Library may contain at most one Story Artwork Catalog"
+    )
+  end
+
+
+  artwork_catalogs.each do |catalog|
+    artwork_theme_ids =
+      catalog.fetch("themes").map { |item| item.fetch("theme_id") }
+
+    unless artwork_theme_ids.uniq.length == artwork_theme_ids.length
+      abort("Story Artwork Catalog theme IDs are not unique")
+    end
+
+    unknown_theme_ids = artwork_theme_ids.reject { |id| theme_ids.include?(id) }
+    unless unknown_theme_ids.empty?
+      abort("Story Artwork Catalog references unknown themes: #{unknown_theme_ids.join(", ")}")
+    end
   end
 
 
@@ -1500,6 +1529,51 @@ end
 # JSON Schema gate
 # =============================================================================
 
+def validate_story_v2_contract!(payloads)
+  payloads.fetch("story", []).each do |story|
+    next unless story["reader_format"] == "editorial_v2"
+
+    story_id = story.fetch("id")
+    abort("Editorial V2 story must use schema 1.1: #{story_id}") unless story["schema_version"] == "1.1"
+
+    reflection = story["reflection"]
+    prompts = reflection && reflection["prompts_vi"]
+    unless prompts.is_a?(Array) && prompts.length.between?(1, 2)
+      abort("Editorial V2 story requires 1-2 reflection prompts: #{story_id}")
+    end
+
+    blocks = story.fetch("sections").flat_map { |section| section.fetch("blocks") }
+    blocks.select { |block| block["type"] == "paragraph" }.each do |block|
+      unless %w[narrative dialogue_lead transition].include?(block["style"])
+        abort("Editorial V2 paragraph missing/invalid style: #{story_id} / #{block.fetch("id")}")
+      end
+    end
+
+    part_headings = blocks.select { |block| block["type"] == "part_heading" }
+    part_numbers = part_headings.map { |block| block["part_number"] }
+    expected_parts = (1..part_numbers.length).to_a
+    unless part_numbers == expected_parts
+      abort("Editorial V2 part numbers must be continuous in document order: #{story_id}")
+    end
+
+    if blocks.last && blocks.last["type"] == "part_heading"
+      abort("Editorial V2 part heading cannot end the story: #{story_id}")
+    end
+
+    blocks.each_cons(2) do |left, right|
+      if left["type"] == "pull_quote" && right["type"] == "pull_quote"
+        abort("Editorial V2 adjacent pull quotes: #{story_id} / #{left.fetch("id")} / #{right.fetch("id")}")
+      end
+    end
+
+    pull_quote_count = blocks.count { |block| block["type"] == "pull_quote" }
+    needs_layout_review = story.fetch("sections").length > 8 || blocks.length > 80 || pull_quote_count > 3
+    if needs_layout_review && story["layout_review"].nil?
+      abort("Editorial V2 density requires layout_review: #{story_id}")
+    end
+  end
+end
+
 def run_schema_gate!(
   schema_root,
   manifest_path,
@@ -1514,6 +1588,9 @@ def run_schema_gate!(
 
     "reading_intent_catalog" =>
       "perspective-reading-intent.schema.json",
+
+    "story_artwork_catalog" =>
+      "perspective-story-artwork-catalog.schema.json",
 
     "story" =>
       "perspective-story.schema.json",
@@ -1617,6 +1694,7 @@ content_entries =
         knowledge_catalog
         quote_pack
         reading_intent_catalog
+        story_artwork_catalog
         story
         image
       ].include?(
@@ -2316,6 +2394,13 @@ if channel == "release"
       .to_set
 
 
+  projected_payloads
+    .values
+    .select { |payload| payload["entity"] == "perspective_story_artwork_catalog" }
+    .flat_map { |catalog| catalog.fetch("themes") }
+    .each { |item| release_image_ids << item.fetch("file_id") }
+
+
   # ---------------------------------------------------------------------------
   # Reading Intent projection
   # ---------------------------------------------------------------------------
@@ -3006,6 +3091,11 @@ Dir.mktmpdir(
   validate_references!(
     grouped,
     channel
+  )
+
+
+  validate_story_v2_contract!(
+    grouped
   )
 
 

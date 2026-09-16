@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.photograph_missing_a_corner",
-  "revision": 1,
+  "revision": 4,
   "status": "active",
   "language": "vi",
   "title_vi": "Bức ảnh thiếu một góc",
@@ -163,9 +163,9 @@
     "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
   },
   "review": {
-    "status": "approved",
-    "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-09-16T10:28:09Z"
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
   },
   "reader_format": "editorial_v2",
   "opening_quote_vi": "Giữ điều mình còn biết là được.",

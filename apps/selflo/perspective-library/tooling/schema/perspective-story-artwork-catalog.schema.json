@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schema/perspective-story-artwork-catalog.schema.json",
+  "title": "PerspectiveStoryArtworkCatalogV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity", "language", "themes"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "entity": { "const": "perspective_story_artwork_catalog" },
+    "language": { "const": "vi" },
+    "themes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["theme_id", "file_id", "alt_text_vi"],
+        "properties": {
+          "theme_id": { "$ref": "#/$defs/stable_id" },
+          "file_id": { "$ref": "#/$defs/stable_id" },
+          "alt_text_vi": { "$ref": "#/$defs/non_empty_string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "non_empty_string": { "type": "string", "pattern": "\\S" },
+    "stable_id": { "type": "string", "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$" }
+  }
+}
+

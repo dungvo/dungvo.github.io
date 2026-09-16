@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.original_if_i_lived_a_human_life",
-  "revision": 3,
+  "revision": 6,
   "status": "active",
   "language": "vi",
   "title_vi": "Nếu tôi được sống một đời người",
@@ -1437,9 +1437,9 @@
     "note": "Owner xác nhận nội dung thuộc quyền phát hành của Selflo."
   },
   "review": {
-    "status": "approved",
-    "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-09-16T10:28:09Z"
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
   },
   "reader_format": "editorial_v2",
   "opening_quote_vi": "Nếu được chọn một cuộc đời để sống, bạn sẽ chọn sống như thế nào?",

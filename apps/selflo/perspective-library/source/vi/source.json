@@ -1,7 +1,7 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 24,
-  "content_version": "story-reader-layout-24",
+  "source_revision": 26,
+  "content_version": "story-editorial-v2-release-26",
   "language": "vi",
   "canonical_quote_count": 389,
   "generated_from_owner_gate": "CP-003-revised",
@@ -29,6 +29,24 @@
       "kind": "reading_intent_catalog",
       "path": "reading-intents/reading-intents.vi.json",
       "media_type": "application/json"
+    },
+    {
+      "id": "story_artwork.catalog.vi",
+      "kind": "story_artwork_catalog",
+      "path": "artwork/story-artwork-catalog.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story_artwork.adversity_resilience.v1",
+      "kind": "image",
+      "path": "artwork/images/adversity-resilience-v1.jpg",
+      "media_type": "image/jpeg"
+    },
+    {
+      "id": "story_artwork.meaning_values.v1",
+      "kind": "image",
+      "path": "artwork/images/meaning-values-v1.jpg",
+      "media_type": "image/jpeg"
     },
     {
       "id": "story.baker_and_black_mark",

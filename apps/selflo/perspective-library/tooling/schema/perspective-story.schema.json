@@ -24,14 +24,16 @@
     "review"
   ],
   "properties": {
-    "schema_version": { "const": "1.0" },
+    "schema_version": { "enum": ["1.0", "1.1"] },
     "entity": { "const": "perspective_story" },
     "id": { "$ref": "#/$defs/stable_id" },
     "revision": { "type": "integer", "minimum": 1 },
     "status": { "enum": ["draft", "active", "retired"] },
     "language": { "const": "vi" },
+    "reader_format": { "enum": ["classic_v1", "editorial_v2"] },
     "title_vi": { "$ref": "#/$defs/non_empty_string" },
     "subtitle_vi": { "$ref": "#/$defs/nullable_string" },
+    "opening_quote_vi": { "$ref": "#/$defs/nullable_string" },
     "hero_image": {
       "oneOf": [
         { "type": "null" },
@@ -46,11 +48,25 @@
       "items": { "$ref": "#/$defs/section" }
     },
     "takeaway": { "$ref": "#/$defs/takeaway" },
+    "reflection": { "$ref": "#/$defs/reflection" },
+    "layout_review": { "$ref": "#/$defs/layout_review" },
     "authorship": { "$ref": "#/$defs/authorship" },
     "editorial": { "$ref": "#/$defs/editorial" },
     "rights": { "$ref": "#/$defs/rights" },
     "review": { "$ref": "#/$defs/review" }
   },
+  "allOf": [
+    {
+      "if": {
+        "required": ["reader_format"],
+        "properties": { "reader_format": { "const": "editorial_v2" } }
+      },
+      "then": {
+        "required": ["reflection"],
+        "properties": { "schema_version": { "const": "1.1" } }
+      }
+    }
+  ],
   "$defs": {
     "non_empty_string": { "type": "string", "pattern": "\\S" },
     "nullable_string": {
@@ -106,7 +122,20 @@
           "properties": {
             "id": { "$ref": "#/$defs/stable_id" },
             "type": { "const": "paragraph" },
+            "style": { "enum": ["narrative", "dialogue_lead", "transition"] },
             "text_vi": { "$ref": "#/$defs/non_empty_string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "type", "part_number", "title_vi"],
+          "properties": {
+            "id": { "$ref": "#/$defs/stable_id" },
+            "type": { "const": "part_heading" },
+            "part_number": { "type": "integer", "minimum": 1 },
+            "title_vi": { "$ref": "#/$defs/non_empty_string" },
+            "subtitle_vi": { "$ref": "#/$defs/nullable_string" }
           }
         },
         {
@@ -148,6 +177,31 @@
       "properties": {
         "title_vi": { "$ref": "#/$defs/non_empty_string" },
         "text_vi": { "$ref": "#/$defs/non_empty_string" }
+      }
+    },
+    "reflection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompts_vi", "closing_vi"],
+      "properties": {
+        "prompts_vi": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": { "$ref": "#/$defs/non_empty_string" }
+        },
+        "closing_vi": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "layout_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reason_vi", "reviewed_by", "reviewed_at"],
+      "properties": {
+        "status": { "const": "approved_exception" },
+        "reason_vi": { "$ref": "#/$defs/non_empty_string" },
+        "reviewed_by": { "$ref": "#/$defs/non_empty_string" },
+        "reviewed_at": { "$ref": "#/$defs/utc_timestamp" }
       }
     },
     "authorship": {

@@ -11,6 +11,7 @@ Năm schema trong folder này là biểu diễn machine-readable của [Library 
 | `perspective-knowledge.schema.json` | concept, theory, framework và reference |
 | `perspective-reading-intent.schema.json` | bộ chọn nhanh đời thường và membership story many-to-many |
 | `perspective-story.schema.json` | story, section, block và optional hero image |
+| `perspective-story-artwork-catalog.schema.json` | shared Story Reader artwork theo primary theme |
 
 Fixture cần review:
 

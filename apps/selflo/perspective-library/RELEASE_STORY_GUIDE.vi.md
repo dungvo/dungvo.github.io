@@ -1,5 +1,7 @@
 # Hướng dẫn đưa một story vào Selflo Release
 
+Story dùng `reader_format = editorial_v2` phải đồng thời tuân theo [Story Layout V2 Contract](STORY_LAYOUT_V2_CONTRACT.vi.md) và [Hướng dẫn biên tập Story V2](STORY_AUTHORING_V2.vi.md). Web/app parity được định nghĩa tại [Story V2 Web/App parity contract](STORY_V2_WEB_APP_PARITY.vi.md).
+
 Tài liệu này là nơi tra cứu duy nhất cho quy trình chuyển một story từ Authoring sang Release. Các ví dụ dùng `story.blue_eraser`; khi làm thật, thay ID và slug bằng story cần phát hành.
 
 ## Cách nhanh bằng script Python

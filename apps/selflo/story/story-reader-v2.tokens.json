@@ -1,0 +1,34 @@
+{
+  "schema_version": "selflo.story-reader-design-tokens.v1",
+  "colors": {
+    "paper": "#FBFAF6",
+    "background": "#F4F1EA",
+    "ink": "#262723",
+    "muted": "#68716D",
+    "sage": "#285F48",
+    "gold": "#AA7B42",
+    "line": "#DEDBD2"
+  },
+  "typography": {
+    "prose_role": "serif",
+    "interface_role": "sans-serif",
+    "body_size": 18,
+    "body_line_height": 1.62,
+    "part_title_size": 30,
+    "section_title_scale": 1.18,
+    "opening_quote_size": 17,
+    "pull_quote_size": 19
+  },
+  "spacing": {
+    "content_horizontal_inset": 28,
+    "paragraph_bottom": 21,
+    "dialogue_lead_bottom": 8,
+    "transition_top": 34,
+    "part_top": 70,
+    "part_bottom": 42
+  },
+  "artwork": {
+    "height": 255,
+    "fade_into_paper": true
+  }
+}

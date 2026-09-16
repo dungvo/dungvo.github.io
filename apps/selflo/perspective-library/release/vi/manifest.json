@@ -2,11 +2,29 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 5,
-  "content_version": "story-reader-layout-24",
+  "library_revision": 6,
+  "content_version": "story-editorial-v2-release-26",
   "language": "vi",
-  "generated_at": "2026-09-16T09:27:39Z",
+  "generated_at": "2026-09-16T10:29:55Z",
   "files": [
+    {
+      "id": "story_artwork.adversity_resilience.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/adversity-resilience-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "4f56222526ee68aaea182cea1dd59cbcbedd0b80f2924c48f59e0e86c38338b5",
+      "byte_count": 608383
+    },
+    {
+      "id": "story_artwork.meaning_values.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/meaning-values-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "ae0dbd4a7947b9628ba05451241f2546f6a9338d6d75544bf9a9dca32f3ad556",
+      "byte_count": 712036
+    },
     {
       "id": "knowledge.canonical.vi",
       "kind": "knowledge_catalog",
@@ -100,65 +118,74 @@
     {
       "id": "story.empty_boat_on_the_river",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/empty-boat-on-the-river/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/empty-boat-on-the-river/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "3a9394e41384eda20ab1ee657ef45a3e440ebf1a18942171428c0472b96604c0",
-      "byte_count": 4112
+      "sha256": "5eec6496ef534e6470c006186d24bc5655818d38173821ce6de0d0f34e619181",
+      "byte_count": 5755
     },
     {
       "id": "story.large_tree_beyond_the_carpenters_measure",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "869eee2c3a1208a97fb395b11061912f9e7c5a62113f299f531e79d1d8f593f8",
-      "byte_count": 4204
+      "sha256": "00b3d51f45b1cd850cf1fd68176e62a4e8f6c3adbc8cf3c71194256481bf52fb",
+      "byte_count": 5816
     },
     {
       "id": "story.old_man_and_returning_horse",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/old-man-and-returning-horse/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/old-man-and-returning-horse/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "f59a8b39c62ddb0621f7f607252048593d749b75fea46d6822aa03f413c105b7",
-      "byte_count": 4914
+      "sha256": "43b3b59312936e60340216d26a2d5b4e89b33c27bf4697723bde93721d987265",
+      "byte_count": 5045
     },
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "0db527c352605f596559977914c24708d3c8d591e302557be20aaa921086a30a",
-      "byte_count": 71063
+      "sha256": "7960e7a1cf11137114efa4d3dc71bd4e4d4ec04feca4dea98f66f961a0c0f7a3",
+      "byte_count": 61120
     },
     {
       "id": "story.photograph_missing_a_corner",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/photograph-missing-a-corner/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/photograph-missing-a-corner/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "b00705a7f1eb4e478507af7da7320c0a8873d4c28674060f280a5586acb8fe9d",
-      "byte_count": 10920
+      "sha256": "18f3433e246dd8d6f56a44bb942e16be05b8b357295eb4ff869cfdb6939cc479",
+      "byte_count": 8985
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "70c79e8307d2e9d37b4954a1fb5f3408b7cc706b089fe6f023144d11b5c114a2",
-      "byte_count": 63414
+      "sha256": "188b5508a0ec00e7e476ada24bd4ca718789d53ff47ee33ebefc6cf69998afd9",
+      "byte_count": 41804
     },
     {
       "id": "story.tree_and_silent_goose",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/tree-and-silent-goose/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/tree-and-silent-goose/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "551e7e7657195fe1597008600458f37c0b2c31a7223ce99d25eb2caff8c1cd8f",
-      "byte_count": 4991
+      "sha256": "25527e56f909596ca4de35b0f03a057a8297175f0cbf0b8c51ad589f91918b4e",
+      "byte_count": 6183
+    },
+    {
+      "id": "story_artwork.catalog.vi",
+      "kind": "story_artwork_catalog",
+      "revision": 1,
+      "path": "artwork/story-artwork-catalog.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "54ffcfd61971c72d79e8b003af75b7e19e317667aa6fa9330d0969b1e8acb306",
+      "byte_count": 576
     }
   ]
 }

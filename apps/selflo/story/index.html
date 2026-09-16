@@ -11,7 +11,7 @@
   <header class="lab-bar">
     <a class="brand" href="../"><span class="brand-leaf">◒</span><span><strong>Selflo</strong><small>Story Reader Lab</small></span></a>
     <div class="lab-controls" aria-label="Điều khiển bản xem trước">
-      <label>Nguồn<select id="channel"><option value="draft">V2 Lab Draft</option><option value="authoring">Authoring</option><option value="release">Release</option></select></label>
+      <label>Nguồn<select id="channel"><option value="draft">V2 Lab Draft</option><option value="authoring" selected>Authoring</option><option value="release">Release</option></select></label>
       <label>Story<select id="storyPicker"></select></label>
       <label>Giao diện<select id="format"><option value="auto">Theo payload</option><option value="editorial_v2">Editorial V2</option><option value="classic_v1">Classic V1</option></select></label>
       <label>Màu<select id="theme"><option value="light">Sáng</option><option value="sepia">Giấy</option><option value="dark">Tối</option></select></label>
@@ -29,6 +29,7 @@
           <div><button id="bookmark" type="button" aria-label="Lưu câu chuyện">♧</button><button type="button" aria-label="Cài đặt chữ">Aa</button></div>
         </header>
         <div class="progress-track"><span id="progress"></span></div>
+        <div class="reader-source-badge" id="readerSourceBadge"></div>
         <div class="reader-scroll" id="readerScroll"><article id="story"></article></div>
       </div>
     </section>
