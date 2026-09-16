@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 30,
+  "library_revision": 31,
   "content_version": "story-editorial-v2-release-26",
   "language": "vi",
-  "generated_at": "2026-09-16T15:24:16Z",
+  "generated_at": "2026-09-16T16:52:30Z",
   "files": [
     {
       "id": "story_artwork.adversity_resilience.v1",
@@ -17,6 +17,42 @@
       "byte_count": 608383
     },
     {
+      "id": "story_artwork.adversity_resilience.v2",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/adversity-resilience-v2.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "64dad90e99ad4dcca438c2b697689174b22cfa33fe56bdf6501069270a9e0be7",
+      "byte_count": 669788
+    },
+    {
+      "id": "story_artwork.attention.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/attention-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "c3c3011b65dd07faa027e30e6601d3c2fafa0f35c4f3874f42d01fc6f7fcce1a",
+      "byte_count": 448601
+    },
+    {
+      "id": "story_artwork.change_growth.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/change-growth-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "c2d95d3fc0e54e869b8e752dfccb13815fb825f518406aac04a6d8aa38d71438",
+      "byte_count": 733220
+    },
+    {
+      "id": "story_artwork.emotion.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/emotion-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "14083a4c8631480c4c619c6d8632ccee81337f11f39efd5f82e4e3dae43cc817",
+      "byte_count": 569635
+    },
+    {
       "id": "story_artwork.meaning_values.v1",
       "kind": "image",
       "revision": 1,
@@ -24,6 +60,51 @@
       "media_type": "image/jpeg",
       "sha256": "ae0dbd4a7947b9628ba05451241f2546f6a9338d6d75544bf9a9dca32f3ad556",
       "byte_count": 712036
+    },
+    {
+      "id": "story_artwork.meaning_values.v2",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/meaning-values-v2.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "5b72bf8bc166dce84a9e604e0ab6dcf8edcbf61041b7951ad38932c8e2f849c7",
+      "byte_count": 665545
+    },
+    {
+      "id": "story_artwork.relationships.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/relationships-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "18c917a35a00daa7f690e445a503b717d134d082609be0a2c1f3a541625779c0",
+      "byte_count": 766362
+    },
+    {
+      "id": "story_artwork.rest_wellbeing.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/rest-wellbeing-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "9d2c8eb4478e9274c7c0d60ab236e6d5559344de2e34d2c6342e581a76648fd8",
+      "byte_count": 605339
+    },
+    {
+      "id": "story_artwork.self_understanding.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/self-understanding-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "a69c1af4e145a4af27d2e2a54ff040c4048b2426e6650870a6ac7d79719a52e3",
+      "byte_count": 678779
+    },
+    {
+      "id": "story_artwork.work_achievement.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/work-achievement-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "fbd9f49dcc5430606e90c3627b39ecfd2033e9cc4602758eb49ffe5cd2aa4452",
+      "byte_count": 859232
     },
     {
       "id": "knowledge.canonical.vi",
@@ -631,11 +712,11 @@
     {
       "id": "story_artwork.catalog.vi",
       "kind": "story_artwork_catalog",
-      "revision": 1,
-      "path": "artwork/story-artwork-catalog.vi.r1.json",
+      "revision": 2,
+      "path": "artwork/story-artwork-catalog.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "54ffcfd61971c72d79e8b003af75b7e19e317667aa6fa9330d0969b1e8acb306",
-      "byte_count": 576
+      "sha256": "589b4dbfefcacd5ea2d17edb6895170da79a60b38f062c6be9f2aa451a75f551",
+      "byte_count": 2005
     }
   ]
 }
