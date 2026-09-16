@@ -2,6 +2,8 @@
 
 Đọc cùng [Story Layout V2 Contract](STORY_LAYOUT_V2_CONTRACT.vi.md). Mục tiêu không phải tải hoặc tóm tắt một truyện có sẵn, mà là tạo một bản kể tiếng Việt có nhịp đọc tự nhiên, trung thành với sự kiện/ý nghĩa nguồn và đủ provenance để phát hành.
 
+Khi review hoặc cải thiện một story đã tồn tại, dùng [Quy trình review chất lượng Story V2](STORY_EDITORIAL_REVIEW_WORKFLOW.vi.md) làm checklist điều phối. Tài liệu này định nghĩa quy tắc viết; workflow định nghĩa thứ tự review, scorecard và owner gate.
+
 ## Quy trình
 
 1. Xác nhận nguồn, quyền sử dụng và những sự kiện/ý nghĩa không được thay đổi.
@@ -47,4 +49,3 @@
 - [ ] Artwork resolve qua shared catalog hoặc no-image an toàn.
 - [ ] Schema, reference, density và locked-prose checks đều pass.
 - [ ] Web Reference pass ba theme và font scale.
-

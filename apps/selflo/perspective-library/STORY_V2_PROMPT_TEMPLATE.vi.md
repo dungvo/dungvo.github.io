@@ -1,6 +1,6 @@
 # Prompt template — tạo hoặc chỉnh Story V2
 
-Sao chép prompt dưới đây cho các lần authoring tiếp theo. Luôn đính kèm `STORY_LAYOUT_V2_CONTRACT.vi.md` và `STORY_AUTHORING_V2.vi.md` làm nguồn chuẩn.
+Sao chép prompt dưới đây cho các lần authoring tiếp theo. Luôn đính kèm `STORY_LAYOUT_V2_CONTRACT.vi.md` và `STORY_AUTHORING_V2.vi.md` làm nguồn chuẩn. Với story đã tồn tại, đọc thêm `STORY_EDITORIAL_REVIEW_WORKFLOW.vi.md` và hoàn tất editorial diagnosis trước khi sửa canonical.
 
 ```text
 Bạn đang biên tập một Selflo Story theo Story Layout V2.
@@ -30,4 +30,3 @@ Deliverable:
 4. Xác nhận phần prose bị khóa không thay đổi.
 5. Validation report và Web Reference screenshots.
 ```
-
