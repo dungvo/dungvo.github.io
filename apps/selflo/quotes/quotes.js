@@ -269,15 +269,13 @@
 
     const source = document.createElement("footer");
     const author = document.createElement("strong");
-    author.textContent = quote.authorship?.author_name || quote.authorship?.source_label || "Selflo";
-    const work = document.createElement("span");
-    work.textContent = quote.authorship?.work ? displayWork(quote.authorship.work) : quote.authorship?.source_label || "Nội dung gốc Selflo";
+    author.textContent = quote.display?.attribution_vi || quote.authorship?.source_label || quote.authorship?.author_name || "Selflo";
     const detail = document.createElement("small");
     detail.textContent = quote.authorship?.source_detail || quote.id;
     const open = document.createElement("span");
     open.className = "quote-open-detail";
     open.textContent = "Xem chi tiết →";
-    source.append(author, work, detail, open);
+    source.append(author, detail, open);
 
     link.append(header, body, source);
     return link;

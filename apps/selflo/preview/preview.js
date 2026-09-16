@@ -621,15 +621,9 @@
     const blockquote = document.createElement("blockquote");
     blockquote.textContent = quote.text_vi;
     section.append(blockquote);
-    if (quote.subtitle_vi) {
-      const subtitle = document.createElement("p");
-      subtitle.className = "bulk-quote-subtitle";
-      subtitle.textContent = quote.subtitle_vi;
-      section.append(subtitle);
-    }
     const source = document.createElement("p");
     source.className = "bulk-source";
-    source.textContent = quote.authorship?.source_label || quote.authorship?.author_name || "Selflo";
+    source.textContent = displayAttribution(quote);
     section.append(source);
     return section;
   }
@@ -937,7 +931,7 @@
     }
     el.quoteCard.dataset.style = quote.display?.style || "cool_observe";
     el.quoteKind.textContent = reflectionLabel(quote.selection?.reflection_kind);
-    el.quoteSource.textContent = quote.authorship?.source_label || "Selflo";
+    el.quoteSource.textContent = displayAttribution(quote);
     toggleText(el.quoteTitle, quote.title_vi);
     el.quoteText.textContent = quote.text_vi;
     toggleText(el.quoteSubtitle, quote.subtitle_vi);
@@ -947,6 +941,10 @@
       return span;
     }));
     el.openReaderButton.hidden = !story;
+  }
+
+  function displayAttribution(quote) {
+    return quote.display?.attribution_vi || quote.authorship?.source_label || quote.authorship?.author_name || "Selflo";
   }
 
   function renderStory(story) {

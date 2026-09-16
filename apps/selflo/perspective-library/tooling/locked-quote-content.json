@@ -1,0 +1,7 @@
+{
+  "schema_version": "selflo.quote-content-lock.v1",
+  "normalization": "Sort quotes by id; encode [id, text_vi] and [id, authorship] arrays as compact UTF-8 JSON; then SHA-256.",
+  "quote_count": 389,
+  "quote_text_sha256": "8e0794b1f01a36d7572a6bc5526c98b425c63dde0492c876409d1107ac7bf821",
+  "authorship_sha256": "4b509bcca9dca4961e0d6fe87da162b209548b424d72844404e4e4044626c6a7"
+}

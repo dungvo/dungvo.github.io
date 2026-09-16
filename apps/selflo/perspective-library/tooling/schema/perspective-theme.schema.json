@@ -239,12 +239,13 @@
     "display": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["mode", "priority", "featured", "style"],
+      "required": ["mode", "priority", "featured", "style", "attribution_vi"],
       "properties": {
         "mode": { "enum": ["poster", "insight"] },
         "priority": { "type": "integer" },
         "featured": { "type": "boolean" },
-        "style": { "oneOf": [{ "type": "null" }, { "enum": ["midnight_quote", "paper_quote", "cool_observe", "ember_theory", "soft_paper_observe"] }] }
+        "style": { "oneOf": [{ "type": "null" }, { "enum": ["midnight_quote", "paper_quote", "cool_observe", "ember_theory", "soft_paper_observe"] }] },
+        "attribution_vi": { "$ref": "#/$defs/non_empty_string" }
       }
     },
     "knowledge_basis": {
