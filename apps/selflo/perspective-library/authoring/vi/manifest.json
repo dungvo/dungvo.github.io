@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 32,
-  "content_version": "story-editorial-v2-release-26",
+  "library_revision": 33,
+  "content_version": "authoring-selected-quotes-27",
   "language": "vi",
-  "generated_at": "2026-09-16T22:06:51Z",
+  "generated_at": "2026-09-17T08:52:23Z",
   "files": [
     {
       "id": "story_artwork.adversity_resilience.v1",
@@ -145,20 +145,20 @@
     {
       "id": "theme.emotion.vi",
       "kind": "quote_pack",
-      "revision": 13,
-      "path": "themes/emotion.vi.r13.json",
+      "revision": 14,
+      "path": "themes/emotion.vi.r14.json",
       "media_type": "application/json",
-      "sha256": "6498d16d1287156e4fc127b05c48798dc4d528523eed3be2ecf98d0fa9c171ee",
-      "byte_count": 52914
+      "sha256": "c305130a9415ef63b03a2c7fbe12f506a32316aa39a65c719ca05ac8273b3c2c",
+      "byte_count": 52896
     },
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 15,
-      "path": "themes/meaning-values.vi.r15.json",
+      "revision": 16,
+      "path": "themes/meaning-values.vi.r16.json",
       "media_type": "application/json",
-      "sha256": "75b227e9b6128718a67d77e5b86c72df4e5bb966070e450e415f3471b88f7ca6",
-      "byte_count": 111791
+      "sha256": "d2f8a4fe968ca7031665606395c17747104de95c507b8dbe4f0536db7cbd480c",
+      "byte_count": 111773
     },
     {
       "id": "theme.relationships.vi",
@@ -190,11 +190,11 @@
     {
       "id": "theme.work_achievement.vi",
       "kind": "quote_pack",
-      "revision": 12,
-      "path": "themes/work-achievement.vi.r12.json",
+      "revision": 13,
+      "path": "themes/work-achievement.vi.r13.json",
       "media_type": "application/json",
-      "sha256": "d7968564c3f86f2974fe55d83df97c3c3016076cb9115fdb0d7dde26a12f7e76",
-      "byte_count": 87931
+      "sha256": "b90b364d857a22393c876f3490f644536fb59f2823cbaab7ac9bf6ccf7f3c929",
+      "byte_count": 87913
     },
     {
       "id": "reading_intents.vi",

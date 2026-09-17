@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 9,
-  "content_version": "story-editorial-v2-release-26",
+  "library_revision": 10,
+  "content_version": "authoring-selected-quotes-27",
   "language": "vi",
-  "generated_at": "2026-09-16T22:07:29Z",
+  "generated_at": "2026-09-17T08:53:01Z",
   "files": [
     {
       "id": "story_artwork.adversity_resilience.v2",
@@ -127,20 +127,20 @@
     {
       "id": "theme.emotion.vi",
       "kind": "quote_pack",
-      "revision": 3,
-      "path": "themes/emotion.vi.r3.json",
+      "revision": 4,
+      "path": "themes/emotion.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "5cb3fa389bd908e23c0ff0144ba26ccfd3d824a7c7600416f72dcdbff9b40725",
-      "byte_count": 10774
+      "sha256": "b057675028290f4857fbf89e5e05c64e0642835818f2ff755b931a70bcb7c15a",
+      "byte_count": 8155
     },
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/meaning-values.vi.r4.json",
+      "revision": 5,
+      "path": "themes/meaning-values.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "4b3e7972b39f6c5c10ecb4bcc9befdc5950c47e728132aa8eef3c6681b632963",
-      "byte_count": 22592
+      "sha256": "00f0f996c7fc1202d03be54974479c6bfca9a4f0adb6c05da09f9aca0f037ed6",
+      "byte_count": 20108
     },
     {
       "id": "theme.relationships.vi",
@@ -172,11 +172,11 @@
     {
       "id": "theme.work_achievement.vi",
       "kind": "quote_pack",
-      "revision": 2,
-      "path": "themes/work-achievement.vi.r2.json",
+      "revision": 3,
+      "path": "themes/work-achievement.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "dab3fbe44fa26179f823c205eb6beaa422ea0d4ff84264816ab420be1d76d0f1",
-      "byte_count": 13569
+      "sha256": "c8e16fb151ab256c0eb94ad12bf08124fb13c6b838e1c6f9c9f871c013414482",
+      "byte_count": 10707
     },
     {
       "id": "story.empty_boat_on_the_river",
