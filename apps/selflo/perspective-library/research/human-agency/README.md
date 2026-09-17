@@ -35,5 +35,9 @@ Triết lý sản phẩm là tầng định hướng cao nhất. Các bảng ph�
 - Gói duyệt cân bằng Release công khai: `phase-10b-public-release-review-package.md`.
 - La bàn biên tập và tiêu chuẩn truyện: `phase-11-editorial-compass-and-story-rubric.md`.
 - Audit đủ 54 câu Self-understanding và coverage map self-compassion/self-blame: `phase-12a-self-understanding-coverage-audit.md`.
+- Audit Uncertainty / Choice / Agency: `phase-12b-uncertainty-choice-agency-audit.md`.
+- Audit Comparison / External standards / Values: `phase-12c-comparison-values-audit.md`.
+- Audit Attention / Quiet growth / Meaning: `phase-12d-attention-growth-meaning-audit.md`.
+- Bản đồ coverage hợp nhất và hàng đợi quyết định: `phase-12e-release-coverage-map.md`.
 - Đánh giá bảy truyện: `phase-5-released-stories-review.md`.
 - Tổng kết rà soát chất lượng: `phase-6-quality-review-summary.md`.

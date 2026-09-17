@@ -303,3 +303,13 @@ Không nên bắt đầu bằng việc viết thêm nội dung hoặc thêm trư
 - Hai gap thật chưa có winner: hai cảm xúc trái chiều cùng tồn tại; không chắc mình muốn gì.
 - Các câu về thước đo ngoài và cảm xúc so với lựa chọn được chuyển sang Cluster 3/Comparison để cạnh tranh đúng editorial job.
 - Bước tiếp theo: audit Cluster 3 — Uncertainty / Choice / Agency theo cùng phương pháp, không đặt quota.
+
+## 17. Hoàn tất Quote Coverage Audit ba cluster còn lại — 2026-09-17
+
+- Đọc toàn bộ 389 quote qua bảng kiểm canonical; sàng 133 câu cho Uncertainty/Choice/Agency, 80 câu cho Comparison/Values và 132 câu cho Attention/Quiet growth/Meaning. Các tập có giao nhau theo editorial job.
+- Không sửa canonical, review status, Authoring/Release, publisher, schema hoặc app; không viết quote/story mới.
+- Candidate Release mới: `maps_hide_the_nearby_door`, `another_persons_shoes_hurt`, `small_suitcase_reveals_what_matters`. `maps_hide_the_nearby_door` còn knowledge theory/reference ở `draft`/`pending_source_review`, nên chỉ là candidate có điều kiện.
+- Kết hợp với vòng 12A, hàng đợi owner approval có bốn câu, gồm `first_needle_needs_light_not_blame`. Nếu cả bốn đạt mọi gate, Release có thể tăng 61 lên 65; đây không phải quota.
+- Edit candidates bổ sung: `feeling_is_signal_not_command`, `pause_is_an_action`, `progress_can_be_quiet`.
+- Gap thật bổ sung: lựa chọn khó vì cả hai phía đều có điều đáng giữ hoặc phải mất.
+- Quote Coverage Audit cho năm cluster ưu tiên đã hoàn tất. Bước tiếp theo: owner duyệt riêng bốn candidate Release; sau đó kiểm tra knowledge/rights trước khi cân nhắc publish. Edit candidates và Story Coverage là các vòng tách biệt.
