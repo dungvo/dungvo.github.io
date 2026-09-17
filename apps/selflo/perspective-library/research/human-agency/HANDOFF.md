@@ -292,3 +292,14 @@ Không nên bắt đầu bằng việc viết thêm nội dung hoặc thêm trư
 - Không sửa app. Release 11 đã được commit tại `f5403c2`, push lên `main` và GitHub Pages triển khai thành công.
 - Đã xác minh public manifest ở revision 11, `content_version = release-selected-quotes-28`; toàn bộ 27/27 descriptor khớp SHA-256 và byte count, đồng thời đủ đúng tám quote được duyệt.
 - Bước tiếp theo: quan sát chất lượng/phân bố của 61 quote đang Release; chỉ quay lại ba quote có story liên kết sau khi story qua human edit và quyền được xác minh.
+
+## 16. Quote Coverage Audit — Cluster 2 — 2026-09-17
+
+- Khóa baseline ở public Release 11 với 61 quote active; không dùng lại baseline 53.
+- Đọc đủ 54/54 quote `self_understanding` và sàng lọc thêm 101 quote thuộc `emotion`, `relationships`, `rest_wellbeing` để tìm cạnh tranh xuyên theme.
+- Không sửa canonical, review status, Authoring/Release artifact, publisher, schema hoặc app; không viết quote/story mới.
+- Candidate Release duy nhất: `first_needle_needs_light_not_blame`; chưa đổi trạng thái vì cần owner approval riêng.
+- Edit candidates: `damp_paper_is_not_the_pens_fault`, `old_pattern_not_identity`, `self_judgment_loop_digest`, `scratched_table_stays_in_the_home`.
+- Hai gap thật chưa có winner: hai cảm xúc trái chiều cùng tồn tại; không chắc mình muốn gì.
+- Các câu về thước đo ngoài và cảm xúc so với lựa chọn được chuyển sang Cluster 3/Comparison để cạnh tranh đúng editorial job.
+- Bước tiếp theo: audit Cluster 3 — Uncertainty / Choice / Agency theo cùng phương pháp, không đặt quota.
