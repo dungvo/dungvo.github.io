@@ -289,4 +289,6 @@ Không nên bắt đầu bằng việc viết thêm nội dung hoặc thêm trư
 - Ba quote `energy_has_a_budget`, `hands_keep_the_hammers_echo`, `house_turns_off_one_window_at_a_time` đạt về câu chữ nhưng chưa Release vì story liên kết là bản thảo AI-assisted, `human_edited = false` và quyền chưa xác minh. Không tách liên kết để vượt gate.
 - Kiểm tra bốn nhóm knowledge dependency bằng paper khai báo; sửa DOI Self-Compassion sang `10.1080/15298860309032`; lưu bằng chứng tại `RELEASE_R11_SOURCE_REVIEW.vi.md`.
 - Duyệt và phát hành local tám quote độc lập. Authoring tăng lên revision 34; Release tăng lên revision 11 với 61 quote active.
-- Không sửa app. Bước tiếp theo duy nhất: commit/push và xác minh public Release 11 cùng toàn bộ descriptor.
+- Không sửa app. Release 11 đã được commit tại `f5403c2`, push lên `main` và GitHub Pages triển khai thành công.
+- Đã xác minh public manifest ở revision 11, `content_version = release-selected-quotes-28`; toàn bộ 27/27 descriptor khớp SHA-256 và byte count, đồng thời đủ đúng tám quote được duyệt.
+- Bước tiếp theo: quan sát chất lượng/phân bố của 61 quote đang Release; chỉ quay lại ba quote có story liên kết sau khi story qua human edit và quyền được xác minh.
