@@ -280,3 +280,13 @@ Không nên bắt đầu bằng việc viết thêm nội dung hoặc thêm trư
 - Nếu toàn bộ 17 câu ưu tiên được duyệt, Release có thể tăng từ 53 lên 70 câu; đây là hệ quả, không phải chỉ tiêu.
 - Chưa đổi `review.status`, chưa sửa nguyên văn, chưa tạo lại Authoring/Release và chưa publish.
 - Bước tiếp theo duy nhất: chủ sở hữu duyệt từng câu trong `phase-10b-public-release-review-package.md` trước khi có thay đổi nguồn chuẩn riêng.
+
+## 15. Editorial Compass và Release 11 — 2026-09-17
+
+- Thêm La bàn biên tập tám câu hỏi, ánh xạ sáu vai trò biên tập với kiến trúc nghiên cứu hiện có và tiêu chuẩn truyện năm phần. Không tạo taxonomy hoặc lược đồ runtime mới.
+- Ghi ba gia đình nội dung nghiên cứu: nhanh hơn nhưng không nhẹ hơn; nhiều câu trả lời nhưng khó nghe mình hơn; biết đáp án khác với tự hình thành hiểu biết.
+- Owner duyệt phân tầng A–D cho shortlist 20 câu. `roof_releases_the_storm_slowly` được giữ ở Authoring vì trùng vai trò với câu mưa/mặt đất ngắn và mở hơn.
+- Ba quote `energy_has_a_budget`, `hands_keep_the_hammers_echo`, `house_turns_off_one_window_at_a_time` đạt về câu chữ nhưng chưa Release vì story liên kết là bản thảo AI-assisted, `human_edited = false` và quyền chưa xác minh. Không tách liên kết để vượt gate.
+- Kiểm tra bốn nhóm knowledge dependency bằng paper khai báo; sửa DOI Self-Compassion sang `10.1080/15298860309032`; lưu bằng chứng tại `RELEASE_R11_SOURCE_REVIEW.vi.md`.
+- Duyệt và phát hành local tám quote độc lập. Authoring tăng lên revision 34; Release tăng lên revision 11 với 61 quote active.
+- Không sửa app. Bước tiếp theo duy nhất: commit/push và xác minh public Release 11 cùng toàn bộ descriptor.

@@ -1,7 +1,7 @@
 # Giai đoạn 10B — Gói duyệt cân bằng bản phát hành công khai
 
 Ngày lập: 2026-09-17  
-Trạng thái: Sẵn sàng cho chủ sở hữu rà soát  
+Trạng thái: Hoàn tất review và tạo Release 11 local ngày 2026-09-17
 Phạm vi: Quyết định biên tập; chưa thay đổi nguồn chuẩn hoặc Release
 
 ## 1. Đề xuất
@@ -77,6 +77,21 @@ Thứ tự này ưu tiên sửa khoảng lệch lớn nhất của Release hiệ
 - publish Release 10 hoặc Release kế tiếp;
 - tự động hóa quyết định của chủ sở hữu.
 
-## 6. Bước tiếp theo duy nhất
+## 6. Quyết định cuối
 
-Chủ sở hữu duyệt 17 câu ưu tiên trong `phase-10a-public-release-shortlist.md`; sau đó mới lập một thay đổi nguồn chuẩn riêng cho những câu được chấp nhận.
+- Duyệt tám quote độc lập cho Release: `light_gives_the_room_a_shape`, `towel_reveals_what_it_carried`, `rain_stopped_before_ground_dried`, `empty_desk_with_glowing_screen`, `ten_notifications_are_not_ten_priorities`, `some_footprints_lead_toward_home`, `gentle_voice_for_the_broken_bowl`, `neighboring_light_does_not_dim_this_lamp`.
+- Giữ ba quote đã đạt về câu chữ ở Authoring vì story liên kết chưa đủ điều kiện: `energy_has_a_budget`, `hands_keep_the_hammers_echo`, `house_turns_off_one_window_at_a_time`.
+- Giữ `roof_releases_the_storm_slowly` ở Authoring để tránh trùng vai trò với `rain_stopped_before_ground_dried`.
+- Giữ năm câu mức C để biên tập lại và ba câu mức D ngoài đợt này.
+
+## 7. Kết quả thực thi
+
+- Tám quote được chuyển sang `approved` bởi `owner:dungvo` qua script chuẩn.
+- Knowledge dependency được đối chiếu và ghi bằng chứng tại `perspective-library/RELEASE_R11_SOURCE_REVIEW.vi.md`.
+- Sửa URL DOI của `ref.neff_2003_self_compassion` sang DOI hiện hành `10.1080/15298860309032`.
+- Authoring revision 34 và Release revision 11 được tạo qua publisher; Release 11 có 61 quote active.
+- Ba quote liên kết story chưa duyệt, `roof_releases_the_storm_slowly`, năm câu mức C và ba câu mức D vẫn ở Authoring.
+
+## 8. Bước tiếp theo duy nhất
+
+Xác minh public manifest và toàn bộ descriptor sau khi commit/push Release 11.

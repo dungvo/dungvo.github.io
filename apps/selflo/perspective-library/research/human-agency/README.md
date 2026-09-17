@@ -33,5 +33,6 @@ Triết lý sản phẩm là tầng định hướng cao nhất. Các bảng ph�
 - Gói duyệt pilot: `phase-9d-reflection-pilot-review-package.md`.
 - Danh sách rút gọn cân bằng Release công khai: `phase-10a-public-release-shortlist.md`.
 - Gói duyệt cân bằng Release công khai: `phase-10b-public-release-review-package.md`.
+- La bàn biên tập và tiêu chuẩn truyện: `phase-11-editorial-compass-and-story-rubric.md`.
 - Đánh giá bảy truyện: `phase-5-released-stories-review.md`.
 - Tổng kết rà soát chất lượng: `phase-6-quality-review-summary.md`.

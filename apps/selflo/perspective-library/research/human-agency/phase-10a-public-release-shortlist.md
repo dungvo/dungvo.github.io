@@ -1,7 +1,7 @@
 # Giai đoạn 10A — Danh sách rút gọn để cân bằng bản phát hành công khai
 
 Ngày lập: 2026-09-17  
-Trạng thái: Đề xuất biên tập, chờ chủ sở hữu duyệt từng câu  
+Trạng thái: Chủ sở hữu đã duyệt phân tầng A–D ngày 2026-09-17
 Phạm vi: Tuyển chọn từ nguồn chuẩn hiện có; chưa thay đổi trạng thái hoặc bản phát hành
 
 ## 1. Mục tiêu
@@ -244,3 +244,53 @@ Mỗi câu cần được chủ sở hữu quyết định một trong bốn tr�
 - `loại_khỏi_đợt_này`.
 
 Chỉ câu ở trạng thái `duyệt_để_chuẩn_bị_release` mới được xem xét đổi `review.status` trong một thay đổi riêng có validation và audit đầy đủ.
+
+## 7. Quyết định sau Editorial Compass
+
+### Mức A — duyệt Release
+
+- `light_gives_the_room_a_shape`
+- `energy_has_a_budget`
+- `towel_reveals_what_it_carried`
+- `hands_keep_the_hammers_echo`
+- `rain_stopped_before_ground_dried`
+- `empty_desk_with_glowing_screen`
+- `ten_notifications_are_not_ten_priorities`
+- `some_footprints_lead_toward_home`
+
+### Mức B — phù hợp nhưng cần xét vai trò trùng
+
+- `house_turns_off_one_window_at_a_time`
+- `roof_releases_the_storm_slowly`
+- `gentle_voice_for_the_broken_bowl`
+- `neighboring_light_does_not_dim_this_lamp`
+
+Quyết định: giữ `house_turns_off_one_window_at_a_time`, `gentle_voice_for_the_broken_bowl` và `neighboring_light_does_not_dim_this_lamp` ở nhóm được duyệt về quote. Giữ `roof_releases_the_storm_slowly` tại Authoring vì `rain_stopped_before_ground_dried` làm cùng công việc biên tập ngắn hơn và mở hơn.
+
+### Mức C — cần biên tập lại
+
+- `name_the_weather_inside`
+- `tide_does_not_apologize`
+- `morning_dew_leaves_when_warm`
+- `timecard_cannot_measure_presence`
+- `gentleness_creates_room`
+
+Không sửa trực tiếp trong vòng này; tiếp tục giữ Authoring.
+
+### Mức D — chưa Release
+
+- `map_does_not_lower_the_mountain`
+- `emergency_fund_can_become_breathing_time`
+- `small_boundary_is_still_boundary`
+
+### Gate cặp quote/story
+
+Ba quote được duyệt về mặt câu chữ đang liên kết với story chưa đủ điều kiện Release:
+
+- `energy_has_a_budget` → `story.envelope_that_could_not_hold_strength`;
+- `hands_keep_the_hammers_echo` → `story.after_the_alarm_went_silent`;
+- `house_turns_off_one_window_at_a_time` → `story.last_window_in_the_building`.
+
+Ba story đều là bản thảo Story Studio có AI hỗ trợ, `human_edited = false`, quyền chưa xác minh và chưa qua owner review. Không tách liên kết chỉ để phát hành quote. Vì vậy ba cặp tiếp tục ở Authoring cho tới khi story được biên tập và duyệt riêng.
+
+Kết quả Release của vòng này là tám quote độc lập còn lại ở mức A/B.
