@@ -56,3 +56,6 @@ Phạm vi: đọc toàn bộ 389 câu qua bảng kiểm canonical; 80 câu lọt
 - Pending story: `another_persons_measure_cannot_fit_your_life`, `late_flower_meets_another_sky`.
 - Không đổi canonical hoặc review status.
 
+## Kết quả owner review sau audit
+
+Owner đã duyệt `another_persons_shoes_hurt` và `small_suitcase_reveals_what_matters`; cả hai được đưa vào Release 12. Các câu Hold/Pending khác giữ nguyên.

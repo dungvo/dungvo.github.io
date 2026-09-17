@@ -313,3 +313,13 @@ Không nên bắt đầu bằng việc viết thêm nội dung hoặc thêm trư
 - Edit candidates bổ sung: `feeling_is_signal_not_command`, `pause_is_an_action`, `progress_can_be_quiet`.
 - Gap thật bổ sung: lựa chọn khó vì cả hai phía đều có điều đáng giữ hoặc phải mất.
 - Quote Coverage Audit cho năm cluster ưu tiên đã hoàn tất. Bước tiếp theo: owner duyệt riêng bốn candidate Release; sau đó kiểm tra knowledge/rights trước khi cân nhắc publish. Edit candidates và Story Coverage là các vòng tách biệt.
+
+## 18. Release 12 — bốn candidate coverage — 2026-09-17
+
+- Owner duyệt `first_needle_needs_light_not_blame`, `maps_hide_the_nearby_door`, `another_persons_shoes_hurt`, `small_suitcase_reveals_what_matters`.
+- Kiểm tra nguồn Zetsche 2018 cho repetitive negative thinking với phạm vi hẹp; không dùng làm bằng chứng trực tiếp cho choice overload. Lưu tại `RELEASE_R12_SOURCE_REVIEW.vi.md`.
+- Nâng đúng `concept.overthinking`, `theory.repetitive_negative_thinking`, `ref.zetsche_2018_repetitive_negative_thinking` qua knowledge gate.
+- Canonical source revision 29; Authoring revision 35; Release revision 12 với 65 quote active.
+- Xác minh đúng bốn quote mới có trong Release; sáu quote còn story gate không lọt vào.
+- Toàn bộ 79 descriptor Authoring và 27 descriptor Release khớp SHA-256/byte count; test prepare 9/9, updates 1/1, attribution 4/4, story contract 6/6 và Ruby syntax đều đạt.
+- Không sửa app. Bước tiếp theo sau khi public được xác minh: Story Coverage Audit hoặc một vòng riêng cho Edit candidates; không tự viết mới.

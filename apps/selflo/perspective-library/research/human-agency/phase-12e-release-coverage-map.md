@@ -3,7 +3,7 @@
 Ngày tổng hợp: 2026-09-17  
 Baseline: Release 11, 61 Góc nhìn active
 
-## 1. Candidate Release chưa được duyệt
+## 1. Candidate Release đã được owner duyệt
 
 | Cluster | Mã câu | Coverage mới |
 |---|---|---|
@@ -12,7 +12,7 @@ Baseline: Release 11, 61 Góc nhìn active
 | Comparison / External standards | `another_persons_shoes_hurt` | Điều hợp người khác chưa chắc hợp mình |
 | Values | `small_suitcase_reveals_what_matters` | Lựa chọn trong giới hạn làm lộ điều được coi trọng |
 
-Nếu owner duyệt cả bốn và knowledge gate đạt, Release có thể tăng từ 61 lên 65. Đây là hệ quả, không phải chỉ tiêu. Riêng `maps_hide_the_nearby_door` chưa vào gói duyệt cuối cho đến khi theory/reference chuyển khỏi `draft`/`pending_source_review` bằng một vòng kiểm tra nguồn riêng.
+Owner đã duyệt cả bốn. Knowledge gate của `maps_hide_the_nearby_door` đã được kiểm tra với giới hạn diễn giải rõ; Authoring 35 và Release 12 đã được tạo với 65 quote active.
 
 ## 2. Edit candidates
 
@@ -65,8 +65,6 @@ Các gap này chưa tạo quyền viết mới. Chúng được giữ để bư�
 
 Quote Coverage Audit đã hoàn tất cho năm cluster ưu tiên. Bước kế tiếp không tự động là publish:
 
-1. Owner duyệt bốn candidate Release.
-2. Với câu được duyệt, kiểm tra knowledge dependency và quyền.
-3. Chỉ lúc đó mới chạy publisher và xác minh public.
-4. Edit candidates là một vòng riêng; không trộn với approval.
-5. Sau khi chốt quote coverage, chuyển sang Story Coverage Audit trước khi viết hoặc biên tập story.
+1. Xác minh public Release 12 và toàn bộ descriptor.
+2. Edit candidates là một vòng riêng; không trộn với approval.
+3. Sau khi chốt quote coverage, chuyển sang Story Coverage Audit trước khi viết hoặc biên tập story.

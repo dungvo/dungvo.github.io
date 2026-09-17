@@ -54,3 +54,7 @@ Gap là có thật: khoảng dừng giữ quán tính khỏi chọn thay mình. 
 - Edit candidates: `feeling_is_signal_not_command`, `pause_is_an_action`.
 - Gap thật: lựa chọn khó vì cả hai phía đều có điều đáng giữ/mất.
 - Không đổi canonical hoặc review status.
+
+## Kết quả owner review sau audit
+
+Owner đã duyệt `maps_hide_the_nearby_door`. Knowledge source review được ghi tại `RELEASE_R12_SOURCE_REVIEW.vi.md`; dependency chuyển sang `source_checked` và câu được đưa vào Release 12. Các Edit candidate và gap khác giữ nguyên.

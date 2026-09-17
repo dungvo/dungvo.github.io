@@ -156,3 +156,7 @@ Câu bổ sung trải nghiệm chưa được Release phục vụ trực tiếp,
 ## 6. Bước tiếp theo
 
 Chuyển sang Cluster 3 — Uncertainty / Choice / Agency. Dùng cùng phương pháp: baseline Release 11, đọc ứng viên xuyên theme, nhóm theo editorial job và chỉ chọn khi bổ sung coverage. Không sửa app, không viết story và không đặt quota phát hành.
+
+## 7. Kết quả owner review sau audit
+
+Owner đã duyệt `first_needle_needs_light_not_blame`; câu được đưa vào Release 12. Các Edit candidate và gap khác giữ nguyên trạng thái.
