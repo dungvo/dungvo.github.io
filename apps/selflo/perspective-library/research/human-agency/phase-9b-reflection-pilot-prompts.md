@@ -1,7 +1,7 @@
 # Giai đoạn 9B — Lời mời viết cho pilot suy ngẫm
 
 Ngày lập: 2026-09-17  
-Trạng thái: Bản thảo biên tập, chờ chủ sở hữu rà soát  
+Trạng thái: Chủ sở hữu đã duyệt phạm vi pilot đầu ngày 2026-09-17  
 Phạm vi: Nghiên cứu; mã bên dưới chưa phải stable ID runtime
 
 ## 1. Nguyên tắc
@@ -29,7 +29,7 @@ Mỗi lời mời:
 
 ### `draft.naming.what_is_hard_to_name`
 
-**Lời mời:** Có điều gì ở đây bạn chưa gọi tên được không? Bạn có thể viết chưa trọn câu.
+**Lời mời đã duyệt:** Có điều gì ở đây bạn chưa gọi tên được không? Nếu chưa rõ, bạn có thể chỉ ghi lại vài từ.
 
 - Mục đích: giữ chỗ cho trải nghiệm còn mơ hồ.
 - Phần để lại cho người dùng: quyền không cần hiểu ngay.
@@ -83,7 +83,7 @@ Mỗi lời mời:
 
 ### `draft.self_compassion.what_would_be_fair`
 
-**Lời mời:** Với những gì bạn đang mang, cách nhìn nào về mình sẽ công bằng hơn một chút?
+**Lời mời đã duyệt:** Với những gì đang xảy ra, có cách nào để nhìn mình nhẹ hơn mà vẫn thành thật không?
 
 - Mục đích: mở tự cảm thông mà không yêu cầu tự khen.
 - Phần để lại cho người dùng: họ tự đặt tiêu chuẩn “công bằng”.
@@ -100,3 +100,21 @@ Mỗi lời mời cần được đánh dấu:
 - `loại`.
 
 Chỉ sau khi owner duyệt mới cân nhắc cấp stable ID, revision hoặc đưa vào lược đồ.
+
+## 4. Quyết định của chủ sở hữu
+
+### Giữ cho pilot đầu
+
+- `draft.naming.what_is_present` — giữ nguyên.
+- `draft.naming.what_is_hard_to_name` — giữ với câu chữ đã sửa ở trên.
+- `draft.energy.what_is_taking_energy` — giữ nguyên.
+- `draft.values.what_matters_here` — giữ nguyên.
+- `draft.self_compassion.what_would_be_fair` — giữ với câu chữ đã sửa ở trên.
+
+### Tạm hoãn
+
+- `draft.energy.what_can_remain_unfinished`: dễ bị hiểu thành lời khuyên bỏ hoặc trì hoãn việc cần làm.
+- `draft.work.fact_and_interpretation`: có thể mang giọng trị liệu và khiến người dùng cảm thấy bị chất vấn.
+- `draft.choice.what_is_yours_to_choose`: dễ cá nhân hóa vấn đề hệ thống hoặc bất cân xứng quyền lực.
+
+Các mã `draft.*` tiếp tục là mã nghiên cứu tạm thời, chưa phải stable ID runtime.

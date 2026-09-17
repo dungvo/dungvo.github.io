@@ -1,7 +1,7 @@
 # Giai đoạn 9D — Gói duyệt pilot suy ngẫm
 
 Ngày lập: 2026-09-17  
-Trạng thái: Sẵn sàng cho chủ sở hữu rà soát  
+Trạng thái: Chủ sở hữu đã chốt quyết định pilot đầu ngày 2026-09-17  
 Phạm vi: Quyết định biên tập; không tạo runtime package và không thay đổi app
 
 ## 1. Quyết định cần đưa ra
@@ -94,6 +94,16 @@ C4 chỉ hoàn tất sau owner review khi:
 - viết truyện 8–10;
 - nghiên cứu hành vi người dùng.
 
-## 9. Bước tiếp theo duy nhất
+## 9. Quyết định đã chốt
 
-Chủ sở hữu duyệt lần lượt bộ lời mời, danh sách Góc nhìn và ma trận ghép; chưa materialize data trước khi có quyết định này.
+- Giữ năm lời mời viết; hai lời mời đã được sửa câu chữ.
+- Giữ tám Góc nhìn cho corpus nghiên cứu của pilot đầu.
+- Tạm hoãn ba lời mời và năm Góc nhìn có rủi ro dẫn dắt cao hơn.
+- Duyệt ánh xạ tối giản tại `phase-9c-reflection-pilot-pairing.md`.
+- Mặc định kết thúc sau lời người dùng; chỉ đưa Góc nhìn khi người dùng chủ động muốn xem thêm.
+- Không chọn content bằng cách đọc hoặc phân loại user text.
+- Quyết định này không đổi canonical `review.status`, không publish Release và không tạo data contract.
+
+## 10. Bước tiếp theo duy nhất
+
+Rà soát biên tập lần cuối năm lời mời đã chốt trong ngữ cảnh liền mạch, trước khi cân nhắc có cần tạo artifact cho một giai đoạn tích hợp riêng hay không.

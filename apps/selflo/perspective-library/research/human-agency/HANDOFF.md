@@ -268,4 +268,6 @@ Không nên bắt đầu bằng việc viết thêm nội dung hoặc thêm trư
 - Tạo shortlist 13 ứng viên nghiên cứu phủ tự cảm thông, cạn năng lượng, hồi phục, áp lực công việc, gọi tên và lựa chọn. Tất cả vẫn giữ trạng thái canonical hiện tại; không tự nâng lên Release-ready.
 - Tạo tám lời mời viết dạng bản thảo, ma trận ghép có rationale/rủi ro và gói review owner. “Không đưa Góc nhìn” được giữ như một kết quả hợp lệ.
 - Không sửa canonical quote, Authoring/Release artifact, schema, publisher hoặc app; không tạo JSON runtime.
-- Bước tiếp theo duy nhất: owner review `phase-9d-reflection-pilot-review-package.md` theo thứ tự prompt → ứng viên Góc nhìn → từng cặp.
+- Owner đã chốt pilot đầu gồm năm lời mời, tám Góc nhìn và ánh xạ tối giản. Mặc định kết thúc sau lời người dùng; chỉ đưa Góc nhìn khi họ chủ động muốn xem thêm. Không chọn nội dung bằng nguyên văn người dùng.
+- Không đổi canonical `review.status`, không publish Release và không tạo JSON runtime từ quyết định này.
+- Bước tiếp theo duy nhất: rà soát biên tập lần cuối năm lời mời trong ngữ cảnh liền mạch trước khi cân nhắc giai đoạn tích hợp riêng.

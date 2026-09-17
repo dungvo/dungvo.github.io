@@ -1,8 +1,8 @@
 # Giai đoạn 9C — Ma trận ghép lời mời và Góc nhìn
 
 Ngày lập: 2026-09-17  
-Trạng thái: Đề xuất biên tập, chờ chủ sở hữu rà soát  
-Phạm vi: Mapping nghiên cứu; không phải recommendation engine
+Trạng thái: Chủ sở hữu đã duyệt ánh xạ tối giản ngày 2026-09-17  
+Phạm vi: Ánh xạ nghiên cứu; không phải bộ máy đề xuất
 
 ## 1. Quy tắc ghép
 
@@ -54,4 +54,27 @@ Mỗi cặp được đánh dấu một trong các trạng thái:
 - `giữ_im_lặng`;
 - `loại`.
 
-Mapping được duyệt vẫn chỉ là quyết định biên tập. Nó không cho phép suy luận từ user text.
+Ánh xạ được duyệt vẫn chỉ là quyết định biên tập. Nó không cho phép suy luận từ nguyên văn người dùng.
+
+## 5. Ánh xạ được duyệt cho pilot đầu
+
+| Lời mời | Góc nhìn có thể xem thêm | Cách xuất hiện |
+|---|---|---|
+| `draft.naming.what_is_present` | `light_gives_the_room_a_shape`, `name_the_weather_inside` | Chỉ sau khi người dùng chủ động muốn xem thêm |
+| `draft.naming.what_is_hard_to_name` | `light_gives_the_room_a_shape` | Mặc định giữ im lặng; chỉ hiện nếu người dùng chủ động muốn xem thêm |
+| `draft.energy.what_is_taking_energy` | `towel_reveals_what_it_carried`, `tide_does_not_apologize` | Chỉ sau khi người dùng chủ động muốn xem thêm |
+| `draft.values.what_matters_here` | `some_footprints_lead_toward_home` | Chỉ sau khi người dùng chủ động muốn xem thêm |
+| `draft.self_compassion.what_would_be_fair` | `roof_releases_the_storm_slowly`, `rain_stopped_before_ground_dried` | Chỉ sau khi người dùng chủ động muốn xem thêm |
+
+### Nguyên tắc đã khóa
+
+Sau khi người dùng viết, trạng thái mặc định là lời của họ đã đủ để kết thúc trải nghiệm. Hệ thống không tự động đưa Góc nhìn.
+
+Nếu một trải nghiệm tương lai sử dụng mapping này, người dùng phải có lựa chọn rõ ràng tương đương:
+
+- `Dừng lại ở đây`;
+- `Xem thêm một góc nhìn`.
+
+Không được dùng nội dung người dùng vừa viết để chọn chủ đề, Góc nhìn hoặc suy luận trạng thái. Ánh xạ chỉ dựa trên lời mời mà người dùng đã chủ động chọn.
+
+Các cặp khác trong bảng đề xuất ở mục 2 không thuộc pilot đầu, kể cả khi trước đó được đánh dấu `rà thêm`.

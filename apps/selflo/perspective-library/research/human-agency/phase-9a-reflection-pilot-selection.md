@@ -1,7 +1,7 @@
 # Giai đoạn 9A — Tuyển chọn ứng viên cho pilot suy ngẫm
 
 Ngày lập: 2026-09-17  
-Trạng thái: Chờ chủ sở hữu rà soát  
+Trạng thái: Chủ sở hữu đã duyệt phạm vi pilot đầu ngày 2026-09-17  
 Phạm vi: Ứng viên nghiên cứu; chưa phải danh sách phát hành
 
 ## 1. Mục tiêu
@@ -70,3 +70,26 @@ Mỗi ứng viên cần một quyết định độc lập:
 - `loại_khỏi_pilot`.
 
 Không thay đổi `review.status` trong canonical source từ tài liệu này.
+
+## 7. Quyết định của chủ sở hữu
+
+### Giữ để thử trong pilot đầu
+
+1. `light_gives_the_room_a_shape`
+2. `name_the_weather_inside`
+3. `towel_reveals_what_it_carried`
+4. `tide_does_not_apologize`
+5. `rain_stopped_before_ground_dried`
+6. `roof_releases_the_storm_slowly`
+7. `empty_desk_with_glowing_screen`
+8. `some_footprints_lead_toward_home`
+
+### Tạm giữ ngoài pilot đầu
+
+- `damp_paper_is_not_the_pens_fault`: dễ giải thích thay nguyên nhân.
+- `enough_for_today`: dễ trở thành lời khuyên dừng lại.
+- `not_every_stone_is_yours_to_carry_home`: dễ xác nhận quá sớm rằng trách nhiệm không thuộc người dùng.
+- `carpenter_measures_the_uneven_leg`: mang sắc thái tối ưu và sửa lỗi.
+- `small_boundary_is_still_boundary`: chỉ phù hợp nếu người dùng chủ động chọn rõ chủ đề quan hệ và ranh giới.
+
+Quyết định này chỉ chốt tập nội dung nghiên cứu. Tám câu được giữ vẫn giữ nguyên `review.status` trong nguồn chuẩn và chưa được đưa vào Release.
