@@ -26,6 +26,7 @@ The Review workspace stores decisions in the current browser and supports JSON i
 
 ## Documentation
 
+- [Triết lý sản phẩm Selflo](SELFLO_PRODUCT_PHILOSOPHY.vi.md): luận đề nền tảng, vai trò của nội dung và trí tuệ nhân tạo, nguyên tắc riêng tư, cố ý không tự động hóa và câu hỏi kiểm tra khi xây tính năng.
 - [Hướng dẫn đưa một story vào Selflo Release](perspective-library/RELEASE_STORY_GUIDE.vi.md): cấu trúc thư mục, cách tìm quote qua `story_id`, các file cần cập nhật, Release gates và quy trình kiểm tra/publish.
 
 ## Tìm nội dung vừa cập nhật và đã Release
