@@ -31,5 +31,7 @@ Triết lý sản phẩm là tầng định hướng cao nhất. Các bảng ph�
 - Lời mời viết pilot: `phase-9b-reflection-pilot-prompts.md`.
 - Ma trận ghép lời mời và Góc nhìn: `phase-9c-reflection-pilot-pairing.md`.
 - Gói duyệt pilot: `phase-9d-reflection-pilot-review-package.md`.
+- Danh sách rút gọn cân bằng Release công khai: `phase-10a-public-release-shortlist.md`.
+- Gói duyệt cân bằng Release công khai: `phase-10b-public-release-review-package.md`.
 - Đánh giá bảy truyện: `phase-5-released-stories-review.md`.
 - Tổng kết rà soát chất lượng: `phase-6-quality-review-summary.md`.

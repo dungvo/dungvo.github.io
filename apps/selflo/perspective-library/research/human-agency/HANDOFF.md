@@ -271,3 +271,12 @@ Không nên bắt đầu bằng việc viết thêm nội dung hoặc thêm trư
 - Owner đã chốt pilot đầu gồm năm lời mời, tám Góc nhìn và ánh xạ tối giản. Mặc định kết thúc sau lời người dùng; chỉ đưa Góc nhìn khi họ chủ động muốn xem thêm. Không chọn nội dung bằng nguyên văn người dùng.
 - Không đổi canonical `review.status`, không publish Release và không tạo JSON runtime từ quyết định này.
 - Bước tiếp theo duy nhất: rà soát biên tập lần cuối năm lời mời trong ngữ cảnh liền mạch trước khi cân nhắc giai đoạn tích hợp riêng.
+
+## 14. Ưu tiên nội dung — danh sách rút gọn cân bằng Release công khai 2026-09-17
+
+- Owner chốt ưu tiên hoàn thiện content trước khi mở rộng app; app tiếp tục chỉ là tham chiếu đọc.
+- Sàng lọc nguồn chuẩn theo khoảng trống triết lý, độ chắc chắn cao, quyền rõ, chưa Release, không thuộc cụm trùng và không nằm trong ba câu tạm giữ.
+- Từ 61 ứng viên qua điều kiện ban đầu, tạo danh sách rút gọn 20 câu: 17 câu ưu tiên duyệt và 3 câu dự phòng.
+- Nếu toàn bộ 17 câu ưu tiên được duyệt, Release có thể tăng từ 53 lên 70 câu; đây là hệ quả, không phải chỉ tiêu.
+- Chưa đổi `review.status`, chưa sửa nguyên văn, chưa tạo lại Authoring/Release và chưa publish.
+- Bước tiếp theo duy nhất: chủ sở hữu duyệt từng câu trong `phase-10b-public-release-review-package.md` trước khi có thay đổi nguồn chuẩn riêng.
