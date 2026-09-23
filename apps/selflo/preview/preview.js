@@ -2,7 +2,8 @@
   "use strict";
 
   const libraryParams = new URLSearchParams(window.location.search);
-  const libraryChannel = libraryParams.get("channel") === "release" ? "release" : "authoring";
+  const requestedChannel = libraryParams.get("channel");
+  const libraryChannel = ["candidate", "authoring", "release"].includes(requestedChannel) ? requestedChannel : "authoring";
   const LIBRARY_BASE = new URL(`../perspective-library/${libraryChannel}/vi/`, window.location.href);
   const MATRIX_URL = new URL("../quote-research/diversity-matrix.json", window.location.href);
   const REVIEW_KEY = "selflo.content-preview.reviews.v1";
@@ -28,7 +29,7 @@
     reviews: readJSON(REVIEW_KEY, {}),
     pageMode: (() => {
       const view = new URLSearchParams(window.location.search).get("view");
-      if (view === "matrix") return libraryChannel === "release" ? "bulk" : "matrix";
+      if (view === "matrix") return libraryChannel === "authoring" ? "matrix" : "bulk";
       if (view === "detail" || view === "content") return "content";
       return "bulk";
     })(),
@@ -78,9 +79,14 @@
   document.addEventListener("DOMContentLoaded", init);
 
   async function init() {
-    document.getElementById("librarySectionLabel").textContent = libraryChannel === "release" ? "Release Library" : "Authoring Library";
-    document.getElementById("librarySectionTitle").textContent = libraryChannel === "release" ? "Nội dung đã phát hành" : "Nội dung chờ duyệt";
-    el.matrixModeButton.disabled = libraryChannel === "release";
+    const channelLabels = {
+      candidate: ["Daily Candidate Batch", "Vòng 1 · Candidate được chọn hôm nay"],
+      authoring: ["Authoring Library", "Vòng 2 · Nội dung chờ duyệt"],
+      release: ["Release Library", "Nội dung đã phát hành"]
+    };
+    document.getElementById("librarySectionLabel").textContent = channelLabels[libraryChannel][0];
+    document.getElementById("librarySectionTitle").textContent = channelLabels[libraryChannel][1];
+    el.matrixModeButton.disabled = libraryChannel !== "authoring";
     bindEvents();
     applyReaderPreferences();
     setPageMode(state.pageMode, false);
@@ -239,7 +245,12 @@
       state.updateIndexAvailable = updates?.library_revision === manifest.library_revision;
       state.updates = state.updateIndexAvailable ? updates.entities : {};
       el.libraryUpdated.disabled = !state.updateIndexAvailable;
-      el.libraryBrowseNote.textContent = (libraryChannel === "release" ? "Đang xem đúng bản đã phát hành." : "Đang xem bản biên tập Authoring.") + (state.updateIndexAvailable ? " Ngày cập nhật tính theo từng quote/story khi đưa vào Library." : " Chưa tải được lịch sử cập nhật; đang hiện toàn bộ nội dung.");
+      const channelNote = libraryChannel === "release"
+        ? "Đang xem đúng bản đã phát hành."
+        : libraryChannel === "candidate"
+          ? "Đang xem batch Candidate nhỏ cho vòng review đầu tiên."
+          : "Đang xem bản biên tập Authoring.";
+      el.libraryBrowseNote.textContent = channelNote + (state.updateIndexAvailable ? " Ngày cập nhật tính theo từng quote/story khi đưa vào Library." : " Chưa tải được lịch sử cập nhật; đang hiện toàn bộ nội dung.");
       state.manifest = manifest;
       state.descriptors = descriptors;
       state.stories = new Map(stories.map(item => [item.payload.id, { ...item.payload, __path: item.descriptor.path }]));

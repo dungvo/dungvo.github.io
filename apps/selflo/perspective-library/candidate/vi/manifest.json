@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "entity": "perspective_library_manifest",
+  "library_id": "selflo.perspective.candidate.vi",
+  "library_revision": 1,
+  "content_version": "daily-2026-09-23-b001",
+  "language": "vi",
+  "generated_at": "2026-09-23T10:32:48Z",
+  "files": [
+    {
+      "id": "candidate.meaning_values.daily-2026-09-23-b001",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/meaning_values.daily.json",
+      "media_type": "application/json",
+      "sha256": "7ef6758f388d7e50886e1657cd07bdcd3d8eb35f324a73a63b354ee74a7e8985",
+      "byte_count": 2410
+    },
+    {
+      "id": "candidate.relationships.daily-2026-09-23-b001",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/relationships.daily.json",
+      "media_type": "application/json",
+      "sha256": "ac93dc871905feb826ac959c0de61e1b5c0d36510a6b6d996c877b9109eab1d4",
+      "byte_count": 2509
+    },
+    {
+      "id": "candidate.self_understanding.daily-2026-09-23-b001",
+      "kind": "quote_pack",
+      "revision": 1,
+      "path": "themes/self_understanding.daily.json",
+      "media_type": "application/json",
+      "sha256": "4cbada4bf4eb57d95e7bc65fc838df5b6df0b9cbf5c2e32f9ceefb57803afcd2",
+      "byte_count": 6549
+    }
+  ]
+}

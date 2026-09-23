@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "content_version": "daily-2026-09-23-b001",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "meaning_values",
+  "display_name_vi": "Ý nghĩa & giá trị",
+  "description_vi": "Điều quan trọng, ý nghĩa, giá trị và lựa chọn.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "research.laozi.ch01.001",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đạo có thể nói thành lời thì không phải Đạo thường hằng; tên có thể gọi thành tên thì không phải tên thường hằng.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "meaning_values",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "meaning_identity",
+          "human_judgment_ai",
+          "judgment"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Laozi / 老子",
+        "work": "道德經 / Tao Te Ching",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "source_language": null,
+        "source_label": "Laozi / 老子",
+        "source_detail": "Research corpus row 2; content_nature=translated_quote; verification=A - Primary source."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "human_judgment_ai",
+          "judgment"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Public domain / likely"
+      },
+      "review": {
+        "status": "draft",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Đạo có thể nói thành lời thì không phải Đạo thường hằng; tên có thể gọi thành tên thì không phải tên thường hằng.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Laozi / 老子"
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

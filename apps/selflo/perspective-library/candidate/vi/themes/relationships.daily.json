@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "content_version": "daily-2026-09-23-b001",
+  "entity": "perspective_theme",
+  "status": "content_preview",
+  "primary_theme": "relationships",
+  "display_name_vi": "Quan hệ",
+  "description_vi": "Kết nối, ranh giới, thuộc về và đời sống cùng người khác.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "research.laozi.ch02.005",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi mọi người nhận ra cái đẹp là đẹp, ý niệm về cái không đẹp cũng xuất hiện; khi gọi điều này là tốt, điều không tốt cũng được phân biệt.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "society_culture",
+          "comparison_external_values",
+          "comparison"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Laozi / 老子",
+        "work": "道德經 / Tao Te Ching",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "source_language": null,
+        "source_label": "Laozi / 老子",
+        "source_detail": "Research corpus row 6; content_nature=translated_quote; verification=A - Primary source."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "comparison_external_values",
+          "comparison"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Public domain / likely"
+      },
+      "review": {
+        "status": "draft",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Khi mọi người nhận ra cái đẹp là đẹp, ý niệm về cái không đẹp cũng xuất hiện; khi gọi điều này là tốt, điều không tốt cũng được phân biệt.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Laozi / 老子"
+      },
+      "knowledge_basis": null
+    }
+  ]
+}
