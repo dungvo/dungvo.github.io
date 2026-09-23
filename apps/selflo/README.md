@@ -10,7 +10,7 @@ Public root: <https://dungvo.github.io/apps/selflo/>
 - `/apps/selflo/preview/?channel=candidate&updated=latest`: batch Candidate nhỏ để review lượt 1.
 - `/apps/selflo/preview/?channel=authoring&updated=latest`: nội dung Authoring vừa cập nhật để review lượt 2.
 - `/apps/selflo/preview/?channel=release&updated=latest`: nội dung đã Release.
-- `/apps/selflo/review-matrix/`: ma trận quote theo ranking, độ tin cậy, pipeline và Release readiness; hỗ trợ filter, chọn nhiều dòng và copy ID.
+- `/apps/selflo/review-matrix/`: inventory hợp nhất toàn bộ research quotes từ Excel, canonical Authoring và Release; có ranking, độ tin cậy, pipeline, filter, chọn nhiều dòng và copy ID.
 - `/apps/selflo/preview/?view=detail`: focused in-app quote/story reader preview.
 - `/apps/selflo/preview/?view=matrix`: diversity dashboard backed by `quote-research/diversity-matrix.json` and the live Authoring manifest.
 - `/apps/selflo/story/`: app-like Story Reader Lab for testing Classic V1 and Editorial V2 payloads without changing the existing review workspace or Release content.
@@ -34,6 +34,15 @@ The Review workspace stores decisions in the current browser and supports JSON i
 Chạy các lệnh dưới đây từ thư mục `apps/selflo`.
 
 Có thể mở <https://dungvo.github.io/apps/selflo/review-matrix/> để xem hàng đợi theo thứ tự ưu tiên. Chọn các dòng muốn xử lý rồi bấm **Copy ID đã chọn**; gửi danh sách ID để promotion vào Authoring hoặc Release. Các item có nhãn **Mới vào Authoring** là nội dung cần review lượt hai trước khi Release.
+
+Matrix không đọc riêng batch Candidate. Dữ liệu được tạo từ `Selflo_Content_Master_Post90_Phase2_5.xlsx`, Authoring manifest/payload và Release manifest/payload. Sau khi workbook hoặc repository content thay đổi, rebuild bằng:
+
+```bash
+/Users/dungvo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
+  scripts/build-review-matrix.py
+```
+
+Các tổng Research, Authoring chưa Release và Release được hiển thị riêng để tránh cộng trùng research provenance với canonical content.
 
 ### 1. Chọn một batch Candidate nhỏ
 
