@@ -10,6 +10,7 @@ Public root: <https://dungvo.github.io/apps/selflo/>
 - `/apps/selflo/preview/?channel=candidate&updated=latest`: batch Candidate nhỏ để review lượt 1.
 - `/apps/selflo/preview/?channel=authoring&updated=latest`: nội dung Authoring vừa cập nhật để review lượt 2.
 - `/apps/selflo/preview/?channel=release&updated=latest`: nội dung đã Release.
+- `/apps/selflo/review-matrix/`: ma trận quote theo ranking, độ tin cậy, pipeline và Release readiness; hỗ trợ filter, chọn nhiều dòng và copy ID.
 - `/apps/selflo/preview/?view=detail`: focused in-app quote/story reader preview.
 - `/apps/selflo/preview/?view=matrix`: diversity dashboard backed by `quote-research/diversity-matrix.json` and the live Authoring manifest.
 - `/apps/selflo/story/`: app-like Story Reader Lab for testing Classic V1 and Editorial V2 payloads without changing the existing review workspace or Release content.
@@ -31,6 +32,8 @@ The Review workspace stores decisions in the current browser and supports JSON i
 ## Quy trình review hằng ngày
 
 Chạy các lệnh dưới đây từ thư mục `apps/selflo`.
+
+Có thể mở <https://dungvo.github.io/apps/selflo/review-matrix/> để xem hàng đợi theo thứ tự ưu tiên. Chọn các dòng muốn xử lý rồi bấm **Copy ID đã chọn**; gửi danh sách ID để promotion vào Authoring hoặc Release. Các item có nhãn **Mới vào Authoring** là nội dung cần review lượt hai trước khi Release.
 
 ### 1. Chọn một batch Candidate nhỏ
 

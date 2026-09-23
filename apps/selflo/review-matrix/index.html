@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Selflo · Quote Review Matrix</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#24231f;background:#f5f1e8}*{box-sizing:border-box}body{margin:0}header{padding:28px 4vw 18px;background:#143d34;color:#fff}h1{margin:0 0 8px;font-size:clamp(24px,4vw,40px)}header p{margin:0;max-width:900px;color:#dbe8df}.toolbar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;gap:10px;padding:14px 4vw;background:#fff;border-bottom:1px solid #ddd5c8}input,select,button{font:inherit;border:1px solid #c8c0b3;border-radius:8px;padding:9px 11px;background:#fff}input[type=search]{min-width:260px;flex:1}button{cursor:pointer;background:#143d34;color:#fff;border-color:#143d34}.summary{padding:14px 4vw;color:#5e594f}.table-wrap{overflow:auto;margin:0 4vw 40px;background:#fff;border:1px solid #ddd5c8;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:1180px}th{position:sticky;top:67px;background:#eee7da;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.04em}th,td{padding:11px;border-bottom:1px solid #eee8dd;vertical-align:top}.rank{font-weight:800;font-size:18px}.quote{min-width:330px;line-height:1.45}.id{font-family:ui-monospace,monospace;font-size:11px;color:#676157;word-break:break-all}.pill{display:inline-block;padding:3px 7px;border-radius:999px;background:#ece8df;font-size:12px;margin:0 3px 3px 0}.high{background:#dcefe3;color:#175c35}.medium{background:#fff0c7;color:#725000}.blocked{background:#f8d8d6;color:#7d211d}.stage{font-weight:700}.score{font-weight:800}.why{max-width:260px;font-size:13px;color:#544f47}.selected-bar{display:flex;align-items:center;gap:10px}.muted{color:#746e64}.empty{padding:36px;text-align:center}.top{background:#fbf8ef}
+  </style>
+</head>
+<body>
+  <header><h1>Quote Review Matrix</h1><p>Xếp hạng để ưu tiên nội dung tốt trước. Điểm là công cụ sàng lọc editorial, không tự động phê duyệt hay vượt qua source/rights gate.</p></header>
+  <section class="toolbar">
+    <input id="search" type="search" placeholder="Tìm ID, nội dung, tác giả, chủ đề…">
+    <select id="stage"><option value="all">Mọi trạng thái</option><option value="unseen">Chưa review</option><option value="queued">Candidate</option><option value="imported">Mới vào Authoring</option><option value="released">Đã Release</option></select>
+    <select id="confidence"><option value="all">Mọi độ tin cậy</option><option value="high">Nguồn cao</option><option value="medium">Nguồn trung bình</option></select>
+    <select id="readiness"><option value="all">Mọi mức sẵn sàng</option><option value="authoring_review">Cần review Authoring</option><option value="candidate_ready">Sẵn sàng Candidate</option><option value="needs_work">Cần xử lý</option></select>
+    <select id="theme"><option value="all">Mọi chủ đề</option></select>
+    <div class="selected-bar"><strong id="selectedCount">0 ID</strong><button id="copy">Copy ID đã chọn</button></div>
+  </section>
+  <div class="summary" id="summary">Đang tải dữ liệu…</div>
+  <div class="table-wrap"><table><thead><tr><th></th><th>Rank</th><th>Quote / ID</th><th>Tác giả / nguồn</th><th>Chủ đề</th><th>Tin cậy</th><th>Pipeline</th><th>Release readiness</th><th>Vì sao</th></tr></thead><tbody id="rows"></tbody></table></div>
+<script>
+const CURATED={
+  'research.dhammapada.day11.v019':{score:94,why:'Hình ảnh mạnh; phân biệt biết và sống; source verse rõ.'},
+  'research.dhammapada.day11.v064':{score:92,why:'Độc lập tốt; dễ nhớ; chiều sâu về trải nghiệm và tri thức.'},
+  'research.mn.day12.mn22_02':{score:90,why:'Perspective sâu về công cụ và sự buông bỏ; cần kiểm tra overlap story.'},
+  'research.laozi.ch12.034':{score:89,why:'Rất hợp attention overload; nguyên văn rõ; đọc độc lập tốt.'},
+  'research.dhammapada.day11.v276':{score:88,why:'Khớp triết lý Selflo: người khác chỉ đường nhưng không bước thay.'},
+  'research.laozi.ch15.045':{score:87,why:'Ẩn dụ rõ và giàu suy ngẫm; đã có canonical equivalent trong Release.'},
+  'research.laozi.ch11.030':{score:86,why:'Ẩn dụ khoảng trống mạnh; đã có canonical equivalent trong Release.'}
+};
+const $=id=>document.getElementById(id);let all=[],selected=new Set();
+function confidence(c){return String(c.verification||'').startsWith('A')?'high':'medium'}
+function stage(c,s){const x=s.candidates?.[c.id]||{};return x.release==='released'?'released':x.authoring==='imported'?'imported':x.first_review==='queued'?'queued':'unseen'}
+function flags(c){const f=[];if(c.duplicate_cluster_ids)f.push('duplicate');if(c.canonical_collision)f.push('collision');if(/đoạn|văn bản|hai mặt ấy|theo đoạn này/i.test(c.text_vi))f.push('context');return f}
+function computedScore(c){let n=confidence(c)==='high'?72:60;if(c.source_url)n+=5;if(c.rights_research_note)n+=3;if(c.content_nature==='proverb')n-=4;n-=flags(c).length*12;if(c.text_vi.length>=45&&c.text_vi.length<=210)n+=5;return Math.max(0,Math.min(99,n))}
+function readiness(c,st){const f=flags(c);if(st==='released')return 'released';if(st==='imported')return 'authoring_review';if(f.length)return 'needs_work';return 'candidate_ready'}
+function labelStage(s){return {unseen:'Chưa review',queued:'Candidate',imported:'Mới vào Authoring',released:'Đã Release'}[s]||s}
+function labelReady(s){return {released:'Đã Release',authoring_review:'Cần review để Release',candidate_ready:'Sẵn sàng Candidate',needs_work:'Cần xử lý trước'}[s]||s}
+function safe(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function render(){const q=$('search').value.toLowerCase(),sf=$('stage').value,cf=$('confidence').value,rf=$('readiness').value,tf=$('theme').value;const list=all.filter(x=>(!q||x.hay.includes(q))&&(sf==='all'||x.stage===sf)&&(cf==='all'||x.confidence===cf)&&(rf==='all'||x.readiness===rf)&&(tf==='all'||x.c.theme===tf));$('summary').textContent=`${list.length} / ${all.length} quote · ${all.filter(x=>x.stage==='imported').length} mới vào Authoring cần review`;const body=$('rows');body.innerHTML=list.length?'':'<tr><td class="empty" colspan="9">Không có kết quả phù hợp.</td></tr>';list.forEach(x=>{const c=x.c,tr=document.createElement('tr');if(x.rank<=5)tr.className='top';tr.innerHTML=`<td><input type="checkbox" data-id="${safe(c.id)}" ${selected.has(c.id)?'checked':''}></td><td class="rank">#${x.rank}<br><span class="score">${x.score}</span></td><td class="quote">${safe(c.text_vi)}<div class="id">${safe(c.id)}</div></td><td>${safe(c.author)}<br><span class="muted">${safe(c.work)}</span></td><td><span class="pill">${safe(c.theme)}</span><span class="pill">${safe(c.human_experience)}</span></td><td><span class="pill ${x.confidence}">${x.confidence==='high'?'Cao':'Trung bình'}</span><div class="muted">${safe(c.verification)}</div></td><td class="stage">${labelStage(x.stage)}</td><td><span class="pill ${x.readiness==='needs_work'?'blocked':x.readiness==='authoring_review'?'medium':'high'}">${labelReady(x.readiness)}</span>${x.flags.map(f=>`<span class="pill blocked">${safe(f)}</span>`).join('')}</td><td class="why">${safe(x.why)}</td>`;body.append(tr)});}
+async function init(){const [cat,state]=await Promise.all([fetch('../quote-research/review-pipeline/review-candidates.json').then(r=>r.json()),fetch('../quote-research/review-pipeline/state.json').then(r=>r.json())]);all=cat.candidates.map(c=>{const st=stage(c,state),fl=flags(c),cur=CURATED[c.id],score=cur?.score??computedScore(c);return {c,stage:st,flags:fl,confidence:confidence(c),readiness:readiness(c,st),score,why:cur?.why||(fl.length?'Có cảnh báo cần xử lý trước khi ưu tiên.':'Nguồn và cấu trúc đủ cho vòng sàng lọc tiếp theo.'),hay:[c.id,c.text_vi,c.author,c.work,c.theme,c.human_experience].join(' ').toLowerCase()}}).sort((a,b)=>b.score-a.score||a.c.source_row-b.c.source_row);all.forEach((x,i)=>x.rank=i+1);[...new Set(all.map(x=>x.c.theme).filter(Boolean))].sort().forEach(v=>$('theme').insertAdjacentHTML('beforeend',`<option value="${safe(v)}">${safe(v)}</option>`));render()}
+document.querySelector('.toolbar').addEventListener('input',render);$('rows').addEventListener('change',e=>{if(!e.target.dataset.id)return;e.target.checked?selected.add(e.target.dataset.id):selected.delete(e.target.dataset.id);$('selectedCount').textContent=`${selected.size} ID`});$('copy').onclick=async()=>{await navigator.clipboard.writeText([...selected].join('\n'));$('copy').textContent='Đã copy';setTimeout(()=>$('copy').textContent='Copy ID đã chọn',1200)};init().catch(e=>$('summary').textContent=`Không tải được dữ liệu: ${e.message}`);
+</script>
+</body></html>

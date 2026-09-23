@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 35,
-  "content_version": "release-selected-quotes-29",
+  "library_revision": 36,
+  "content_version": "daily-review-authoring-30",
   "language": "vi",
-  "generated_at": "2026-09-17T15:51:38Z",
+  "generated_at": "2026-09-23T13:39:14Z",
   "files": [
     {
       "id": "story_artwork.adversity_resilience.v1",
@@ -127,11 +127,11 @@
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 13,
-      "path": "themes/attention.vi.r13.json",
+      "revision": 14,
+      "path": "themes/attention.vi.r14.json",
       "media_type": "application/json",
-      "sha256": "a1ce0ed1a82595aa2a37b6db0fc940cde76dbd881fe9272572e3630ccb80e29d",
-      "byte_count": 124114
+      "sha256": "dd065eb256be0f43c3db5297ea4f070f9f3018ebc1607514a418512a63479c3c",
+      "byte_count": 126229
     },
     {
       "id": "theme.change_growth.vi",
@@ -181,11 +181,11 @@
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 17,
-      "path": "themes/self-understanding.vi.r17.json",
+      "revision": 18,
+      "path": "themes/self-understanding.vi.r18.json",
       "media_type": "application/json",
-      "sha256": "1b740064f4917c2ec3356da11fd0a05531f432f42300df6a71911534e7379c05",
-      "byte_count": 126215
+      "sha256": "175859c9296750fe36209247ab099555b1c6350027c0bb3f05154b5be73626a1",
+      "byte_count": 135220
     },
     {
       "id": "theme.work_achievement.vi",

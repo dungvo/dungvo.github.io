@@ -21,6 +21,31 @@
     "research.laozi.ch02.006": {
       "first_review": "queued",
       "candidate_batch": "daily-2026-09-23-b001"
+    },
+    "research.dhammapada.day11.v019": {
+      "first_review": "approved",
+      "candidate_note": "Owner approved from editorial top-ranked shortlist for Authoring.",
+      "authoring": "imported"
+    },
+    "research.dhammapada.day11.v064": {
+      "first_review": "approved",
+      "candidate_note": "Owner approved from editorial top-ranked shortlist for Authoring.",
+      "authoring": "imported"
+    },
+    "research.mn.day12.mn22_02": {
+      "first_review": "approved",
+      "candidate_note": "Owner approved from editorial top-ranked shortlist for Authoring; check semantic overlap with existing raft stories before Release.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch12.034": {
+      "first_review": "approved",
+      "candidate_note": "Owner approved from editorial top-ranked shortlist for Authoring.",
+      "authoring": "imported"
+    },
+    "research.dhammapada.day11.v276": {
+      "first_review": "approved",
+      "candidate_note": "Owner approved from editorial top-ranked shortlist for Authoring; classify as Selflo rendering before Release.",
+      "authoring": "imported"
     }
   },
   "history": [
@@ -34,6 +59,30 @@
         "research.laozi.ch01.004",
         "research.laozi.ch02.005",
         "research.laozi.ch02.006"
+      ]
+    },
+    {
+      "at": "2026-09-23T13:39:13Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "/Users/dungvo/.codex/.chatgpt-projects/g-p-69cc99f6f3ac8191aed3e4a8b6b8e7bc/work/top5-authoring-ledger.json",
+      "quote_ids": [
+        "research.dhammapada.day11.v019",
+        "research.dhammapada.day11.v064",
+        "research.mn.day12.mn22_02",
+        "research.laozi.ch12.034",
+        "research.dhammapada.day11.v276"
+      ]
+    },
+    {
+      "at": "2026-09-23T13:40:07Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "/Users/dungvo/.codex/.chatgpt-projects/g-p-69cc99f6f3ac8191aed3e4a8b6b8e7bc/work/top5-authoring-ledger.json",
+      "quote_ids": [
+        "research.dhammapada.day11.v019",
+        "research.dhammapada.day11.v064",
+        "research.mn.day12.mn22_02",
+        "research.laozi.ch12.034",
+        "research.dhammapada.day11.v276"
       ]
     }
   ]
