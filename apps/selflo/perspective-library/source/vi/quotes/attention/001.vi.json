@@ -22,18 +22,10 @@
         "source_detail": "Nội dung gốc Selflo"
       },
       "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "brain_system",
           "control_layer"
@@ -43,9 +35,7 @@
           "brain_system",
           "control_layer"
         ],
-        "legacy_behavior_ids": [
-
-        ]
+        "legacy_behavior_ids": []
       },
       "rights": {
         "status": "selflo_owned",
@@ -72,9 +62,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "brain_system",
           "control_layer"
@@ -101,18 +89,10 @@
         "source_detail": "Nội dung gốc Selflo"
       },
       "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "attention",
           "grounding"
@@ -151,9 +131,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "attention",
           "grounding"
@@ -164,7 +142,7 @@
     },
     {
       "id": "pause_is_an_action",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Dừng lại cũng là hành động",
       "text_vi": "Một khoảng dừng có chủ ý không phải là không làm gì. Nó là lúc mình ngăn quán tính chọn thay cho mình.",
@@ -180,18 +158,10 @@
         "source_detail": "Nội dung gốc Selflo"
       },
       "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "control_layer",
           "behavior_layer"
@@ -201,18 +171,16 @@
           "control_layer",
           "behavior_layer"
         ],
-        "legacy_behavior_ids": [
-
-        ]
+        "legacy_behavior_ids": []
       },
       "rights": {
         "status": "selflo_owned",
-        "note": null
+        "note": "Selflo original; owner approved for quote-only Release on 2026-09-24."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T23:00:08Z"
       },
       "writing": {
         "semantic_intent": "Khoảng dừng có chủ ý giúp ngắt quán tính trước khi lựa chọn.",
@@ -230,9 +198,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "control_layer",
           "behavior_layer"
@@ -253,9 +219,7 @@
       "selection": {
         "source_type": "theory",
         "reflection_kind": null,
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "brain_system",
           "System 1",
@@ -273,18 +237,12 @@
         "source_detail": "One-time legacy selection migration"
       },
       "metadata": {
-        "concepts": [
-
-        ],
+        "concepts": [],
         "theories": [
           "theory.dual_process"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "brain_system_digest"
         ],
@@ -292,9 +250,7 @@
         "legacy_layer_ids": [
           "brain_system"
         ],
-        "legacy_behavior_ids": [
-
-        ]
+        "legacy_behavior_ids": []
       },
       "rights": {
         "status": "unverified",
@@ -321,9 +277,7 @@
         "core_truth_ids": [
           "theory.dual_process.fast_response_can_precede_deliberation"
         ],
-        "reference_ids": [
-
-        ]
+        "reference_ids": []
       }
     },
     {
@@ -338,9 +292,7 @@
       "selection": {
         "source_type": "theory",
         "reflection_kind": null,
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "thought_layer",
           "ABC model",
@@ -358,18 +310,12 @@
         "source_detail": "One-time legacy selection migration"
       },
       "metadata": {
-        "concepts": [
-
-        ],
+        "concepts": [],
         "theories": [
           "theory.cognitive_behavioral_interpretation"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "thought_layer_digest"
         ],
@@ -377,9 +323,7 @@
         "legacy_layer_ids": [
           "thought_layer"
         ],
-        "legacy_behavior_ids": [
-
-        ]
+        "legacy_behavior_ids": []
       },
       "rights": {
         "status": "unverified",
@@ -406,9 +350,7 @@
         "core_truth_ids": [
           "theory.cognitive_behavioral_interpretation.interpretation_can_shape_response"
         ],
-        "reference_ids": [
-
-        ]
+        "reference_ids": []
       }
     },
     {
@@ -433,12 +375,8 @@
         "theories": [
           "theory.mindful_attention_control"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "attention",
           "sunlight",
@@ -480,9 +418,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "attention",
           "sunlight"
@@ -512,12 +448,8 @@
         "theories": [
           "theory.mindful_attention_control"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "attention",
           "rain",
@@ -559,9 +491,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "attention",
           "rain"
@@ -591,12 +521,8 @@
         "theories": [
           "theory.mindful_attention_control"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "attention",
           "tea",
@@ -638,9 +564,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "attention",
           "tea"
@@ -670,12 +594,8 @@
         "theories": [
           "theory.mindful_attention_control"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "attention",
           "shadow",
@@ -717,9 +637,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "attention",
           "shadow"
@@ -749,12 +667,8 @@
         "theories": [
           "theory.mindful_attention_control"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "attention",
           "red_light",
@@ -796,9 +710,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "attention",
           "red_light"
@@ -828,12 +740,8 @@
         "theories": [
           "theory.repetitive_negative_thinking"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "overthinking",
           "needle",
@@ -875,9 +783,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "overthinking",
           "needle"
@@ -907,12 +813,8 @@
         "theories": [
           "theory.repetitive_negative_thinking"
         ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "overthinking",
           "clock",
@@ -954,9 +856,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "overthinking",
           "clock"

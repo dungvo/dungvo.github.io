@@ -1,77 +1,19 @@
 {
-  "schema_version": "selflo.perspective.quote-fragment.v1",
-  "entity": "perspective_quote_fragment",
-  "fragment_id": "quote_fragment.change_growth.003",
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
   "primary_theme": "change_growth",
+  "display_name_vi": "Thay đổi và trưởng thành",
+  "description_vi": "Học hỏi, xây dựng thói quen, chuyển mình và trưởng thành theo thời gian.",
+  "language": "vi",
   "quotes": [
     {
-      "id": "attributed.ma.vii_02.renew_life",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Học được điều này, bạn sẽ đứng vững: bạn luôn có thể làm mới đời mình. Hãy nhìn mọi thứ lại bằng một đôi mắt mới, và đời sống cũng được làm mới.",
-      "subtitle_vi": null,
-      "primary_theme": "change_growth",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 2; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.stoicism"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "renewal"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Học được điều này, bạn sẽ đứng vững: bạn luôn có thể làm mới đời mình. Hãy nhìn mọi thứ lại bằng một đôi mắt mới, và đời sống cũng được làm mới.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "midnight_quote",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VII, đoạn 2"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "change_growth",
-          "renewal"
-        ],
-        "tie_break_order": 1151
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "freedom_begins_when_one_path_is_not_the_only_path",
-      "revision": 1,
+      "id": "progress_can_be_quiet",
+      "revision": 2,
       "kind": "selflo_original",
-      "title_vi": "Ngọn núi thứ hai",
-      "text_vi": "Tự do bắt đầu khi con đường hiện tại không còn là con đường duy nhất mình có thể xây.",
+      "title_vi": "Tiến bộ có thể rất yên",
+      "text_vi": "Có thay đổi không tạo ra khoảnh khắc lớn. Nó chỉ xuất hiện khi một ngày kia mình phản ứng khác đi một chút.",
       "subtitle_vi": null,
       "primary_theme": "change_growth",
       "authorship": {
@@ -81,54 +23,277 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "source_detail": "Nội dung gốc Selflo"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
-          "tự do",
-          "lựa chọn",
-          "con đường khác",
-          "thử nghiệm"
+          "growth_layer",
+          "behavior_layer"
+        ],
+        "legacy_content_kind": "selflo_reflection",
+        "legacy_layer_ids": [
+          "growth_layer",
+          "behavior_layer"
+        ],
+        "legacy_behavior_ids": [
+
         ]
       },
       "rights": {
         "status": "selflo_owned",
-        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+        "note": "Selflo original; owner approved for quote-only Release on 2026-09-24."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T23:00:08Z"
       },
       "writing": {
-        "semantic_intent": "Tự do bắt đầu khi con đường hiện tại không còn là con đường duy nhất mình có thể xây.",
+        "semantic_intent": "Thay đổi đôi khi chỉ hiện ra qua một phản ứng nhỏ khác với trước đây.",
         "observation_key": null,
-        "structure_pattern": "story_distillation"
+        "structure_pattern": null
       },
       "display": {
         "mode": "poster",
-        "priority": 60,
-        "featured": false,
+        "priority": 66,
+        "featured": true,
         "style": "paper_quote",
         "attribution_vi": "Selflo"
       },
-      "story_id": "story.original_boatman_and_second_mountain",
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "growth_layer",
+          "behavior_layer"
+        ],
+        "tie_break_order": -66
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iii_02.cracked_loaf",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy nhìn vẻ duyên dáng xuất hiện ngay trong những điều ngoài dự tính của tự nhiên. Một ổ bánh nứt ra khi nướng, dù không nằm trong ý định của người làm bánh, vẫn có thể đẹp và gợi cảm giác ngon lành.",
+      "subtitle_vi": null,
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển III, đoạn 2; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "imperfection"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
+      },
+      "writing": {
+        "semantic_intent": "Hãy nhìn vẻ duyên dáng xuất hiện ngay trong những điều ngoài dự tính của tự nhiên. Một ổ bánh nứt ra khi nướng, dù không nằm trong ý định của người làm bánh, vẫn có thể đẹp và gợi cảm giác ngon lành.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển III, đoạn 2"
+      },
+      "story_id": null,
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "change_growth",
-          "tự do",
-          "lựa chọn",
-          "con đường khác",
-          "thử nghiệm"
+          "imperfection"
         ],
-        "tie_break_order": 3008
+        "tie_break_order": 1119
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iv_12.change_course",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy sẵn sàng đổi hướng khi gặp một người có thể chỉ ra điều cần sửa trong cách nhìn của bạn.",
+      "subtitle_vi": null,
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 12; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "learning"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T22:58:03Z"
+      },
+      "writing": {
+        "semantic_intent": "Hãy sẵn sàng đổi hướng khi gặp một người có thể chỉ ra điều cần sửa trong cách nhìn của bạn.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển IV, đoạn 12"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "learning"
+        ],
+        "tie_break_order": 1128
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.vi_21.truth_change",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Nếu ai có thể chỉ ra rằng suy nghĩ hay hành động của tôi sai, tôi sẽ vui lòng thay đổi. Tôi tìm sự thật; sự thật không làm hại con người — điều gây hại là cố bám vào sai lầm hoặc vô minh.",
+      "subtitle_vi": null,
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 21; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "truth"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
+      },
+      "writing": {
+        "semantic_intent": "Nếu ai có thể chỉ ra rằng suy nghĩ hay hành động của tôi sai, tôi sẽ vui lòng thay đổi. Tôi tìm sự thật; sự thật không làm hại con người — điều gây hại là cố bám vào sai lầm hoặc vô minh.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 21"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "truth"
+        ],
+        "tie_break_order": 1144
       },
       "knowledge_basis": null
     },
@@ -150,10 +315,18 @@
         "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "đổi nghề",
           "nguồn thu",
@@ -186,7 +359,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "change_growth",
           "đổi nghề",
@@ -199,260 +374,8 @@
       "knowledge_basis": null
     },
     {
-      "id": "worn_carpet_marks_a_familiar_path",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Vết mòn trên thảm là bằng chứng của một con đường quen. Không phải lỗi của thảm.",
-      "subtitle_vi": null,
-      "primary_theme": "change_growth",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.systems_feedback"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "repeating_pattern"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh repeating_pattern.",
-        "observation_key": "worn_carpet_marks_a_familiar_path",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 44,
-        "featured": false,
-        "style": "soft_paper_observe",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "repeating_pattern"
-        ],
-        "tie_break_order": 4022
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "unanswered_alarm_teaches_ears_not_to_hear",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Chuông đồng hồ reo mà không ai tắt thì tai tự học cách không nghe.",
-      "subtitle_vi": null,
-      "primary_theme": "change_growth",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.systems_feedback"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "repeating_pattern"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh repeating_pattern.",
-        "observation_key": "unanswered_alarm_teaches_ears_not_to_hear",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 45,
-        "featured": false,
-        "style": "soft_paper_observe",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "repeating_pattern"
-        ],
-        "tie_break_order": 4023
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "habit_arrives_without_knocking",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Thói quen không có tiếng động. Nó chỉ đến rồi đi mà không gõ cửa.",
-      "subtitle_vi": null,
-      "primary_theme": "change_growth",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.systems_feedback"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "repeating_pattern"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh repeating_pattern.",
-        "observation_key": "habit_arrives_without_knocking",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 46,
-        "featured": false,
-        "style": "soft_paper_observe",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "repeating_pattern"
-        ],
-        "tie_break_order": 4024
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "repeated_story_may_be_unfinished",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Nếu cùng một câu chuyện cứ đến trong đầu — không phải câu chuyện thú vị. Là câu chuyện chưa xong.",
-      "subtitle_vi": null,
-      "primary_theme": "change_growth",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.systems_feedback"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "repeating_pattern"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh repeating_pattern.",
-        "observation_key": "repeated_story_may_be_unfinished",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 47,
-        "featured": false,
-        "style": "soft_paper_observe",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "repeating_pattern"
-        ],
-        "tie_break_order": 4025
-      },
-      "knowledge_basis": null
-    },
-    {
       "id": "attributed.epictetus.ench_12.small",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Hãy bắt đầu từ những điều nhỏ.",
@@ -468,12 +391,18 @@
         "source_detail": "George Long (dịch); XII; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "small_steps"
@@ -504,7 +433,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "change_growth",
           "stoicism",
@@ -516,7 +447,7 @@
     },
     {
       "id": "attributed.laozi.chapter_22.complete",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Cái chưa trọn trở nên trọn; cái cong trở nên thẳng; cái rỗng trở nên đầy; cái mòn trở nên mới.",
@@ -532,13 +463,19 @@
         "source_detail": "James Legge (dịch); 22; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.taoism",
           "framework.natural_cycles"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "taoism",
           "transformation"
@@ -569,7 +506,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "change_growth",
           "taoism",
@@ -581,7 +520,7 @@
     },
     {
       "id": "attributed.laozi.chapter_64.first_step",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Cây lớn bằng vòng tay bắt đầu từ mầm nhỏ; tháp chín tầng khởi từ một ụ đất; hành trình nghìn dặm bắt đầu bằng một bước.",
@@ -597,12 +536,18 @@
         "source_detail": "James Legge (dịch); 64; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.taoism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "taoism",
           "small_steps"
@@ -633,7 +578,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "change_growth",
           "taoism",
@@ -661,12 +608,18 @@
         "source_detail": "F. Max Müller (dịch); 80; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.buddhist_practice"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "buddhist_text",
           "self_shaping"
@@ -697,7 +650,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "change_growth",
           "buddhist_text",
@@ -709,7 +664,7 @@
     },
     {
       "id": "attributed.confucius.book_i_ch08.faults",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Khi có lỗi, đừng sợ sửa bỏ.",
@@ -725,12 +680,18 @@
         "source_detail": "James Legge (dịch); I.8.4; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.confucianism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "confucianism",
           "correction"
@@ -761,13 +722,87 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "change_growth",
           "confucianism",
           "correction"
         ],
         "tie_break_order": 5042
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.zhuangzi.chapter_20.change_with_time",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Cùng thời thế mà biến đổi, không cố chấp vào một cách duy nhất.",
+      "subtitle_vi": null,
+      "primary_theme": "change_growth",
+      "authorship": {
+        "author_id": "zhuangzi",
+        "author_name": "Trang Tử",
+        "work": "Trang Tử · Sơn mộc (chương 20)",
+        "source_url": "https://ctext.org/zhuangzi/tree-on-the-mountain/zh",
+        "source_language": "zh",
+        "source_label": "Trang Tử · Trang Tử · Sơn mộc (chương 20)",
+        "source_detail": "Bản Việt dịch/diễn ý Selflo từ đoạn cổ: 與時俱化，而無肯專為。 Không phải trích một bản dịch Việt đã xuất bản. Ghi tên tác giả theo quy ước thư mục của tác phẩm."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.taoism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "Cái cây và con ngỗng không biết kêu",
+          "Đạo gia",
+          "góc nhìn"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:15:32Z"
+      },
+      "writing": {
+        "semantic_intent": "Cùng thời thế mà biến đổi, không cố chấp vào một cách duy nhất.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Trang Tử · Sơn mộc (chương 20)"
+      },
+      "story_id": "story.tree_and_silent_goose",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "change_growth",
+          "taoism"
+        ],
+        "tie_break_order": 6086
       },
       "knowledge_basis": null
     }
