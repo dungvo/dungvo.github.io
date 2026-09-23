@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.original_chair_beside_window",
-  "revision": 2,
+  "revision": 3,
   "status": "active",
   "language": "vi",
   "title_vi": "Chiếc ghế cạnh cửa sổ",
@@ -806,9 +806,9 @@
         },
         {
           "id": "section_12.block_15",
-          "type": "pull_quote",
-          "text_vi": "Không cho công ty thuê miễn phí căn phòng trong đầu mình sau giờ làm.",
-          "attribution_vi": null
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không cho công ty thuê miễn phí căn phòng trong đầu mình sau giờ làm."
         }
       ]
     }

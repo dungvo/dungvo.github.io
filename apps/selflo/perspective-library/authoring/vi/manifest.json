@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 37,
-  "content_version": "daily-review-authoring-31",
+  "library_revision": 40,
+  "content_version": "release-selected-quotes-33",
   "language": "vi",
-  "generated_at": "2026-09-23T15:01:32Z",
+  "generated_at": "2026-09-23T15:54:38Z",
   "files": [
     {
       "id": "story_artwork.adversity_resilience.v1",
@@ -109,20 +109,20 @@
     {
       "id": "knowledge.canonical.vi",
       "kind": "knowledge_catalog",
-      "revision": 9,
-      "path": "knowledge/knowledge.vi.r9.json",
+      "revision": 10,
+      "path": "knowledge/knowledge.vi.r10.json",
       "media_type": "application/json",
-      "sha256": "0a98b7386e0ac915878b69980f5ccc1f2da5765105caa2bea4a5feffad38e70f",
-      "byte_count": 51803
+      "sha256": "75d53a5a5abb8f15f7864366f1ac7399fa6f1e10e6324cb312acd02bb309bca9",
+      "byte_count": 51783
     },
     {
       "id": "theme.adversity_resilience.vi",
       "kind": "quote_pack",
-      "revision": 15,
-      "path": "themes/adversity-resilience.vi.r15.json",
+      "revision": 16,
+      "path": "themes/adversity-resilience.vi.r16.json",
       "media_type": "application/json",
-      "sha256": "e15ba24ce8b99fe1ef5cd1bb3aa132b1d6c419c83d200028dc040e2a70ecc6a9",
-      "byte_count": 104777
+      "sha256": "9298181a0a351ff6a8bf318facd8adff9e2042805ec2e023b67ff1ad4ab2c4af",
+      "byte_count": 104795
     },
     {
       "id": "theme.attention.vi",
@@ -136,11 +136,11 @@
     {
       "id": "theme.change_growth.vi",
       "kind": "quote_pack",
-      "revision": 14,
-      "path": "themes/change-growth.vi.r14.json",
+      "revision": 15,
+      "path": "themes/change-growth.vi.r15.json",
       "media_type": "application/json",
-      "sha256": "cd857e4eb41f6fc581b33c66a73c68a2c6e849430afe766573bdb69dc7bf92ca",
-      "byte_count": 103367
+      "sha256": "f73904b0023a2d0cc3bc0f1a09d7143a6306b994697f89952542d77335d65f4f",
+      "byte_count": 103385
     },
     {
       "id": "theme.emotion.vi",
@@ -172,11 +172,11 @@
     {
       "id": "theme.rest_wellbeing.vi",
       "kind": "quote_pack",
-      "revision": 14,
-      "path": "themes/rest-wellbeing.vi.r14.json",
+      "revision": 15,
+      "path": "themes/rest-wellbeing.vi.r15.json",
       "media_type": "application/json",
-      "sha256": "b2f3c28058e05dec9299f1d0b8c8ea744f9be5fd66d83764497fe32476825d1d",
-      "byte_count": 84877
+      "sha256": "86dda5f488c3b2ed4c69ac552d73a2308be8fde1dc6131ab90ccadbda798a1e6",
+      "byte_count": 84895
     },
     {
       "id": "theme.self_understanding.vi",
@@ -190,11 +190,11 @@
     {
       "id": "theme.work_achievement.vi",
       "kind": "quote_pack",
-      "revision": 14,
-      "path": "themes/work-achievement.vi.r14.json",
+      "revision": 15,
+      "path": "themes/work-achievement.vi.r15.json",
       "media_type": "application/json",
-      "sha256": "26b3de7e1daaae64c9042451c7095ae4456753564aac655da2a561f2e26c4493",
-      "byte_count": 89924
+      "sha256": "821d43fff2be33735151157da31395ece3c3fcc9bf6afa99613200ce0409243f",
+      "byte_count": 89942
     },
     {
       "id": "reading_intents.vi",
@@ -469,11 +469,11 @@
     {
       "id": "story.original_between_two_banks",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-between-two-banks/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/original-between-two-banks/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "ffa8fbebe24b3970285f88df3c38ef26501bbcc1293ab38833ecc18408069a46",
-      "byte_count": 13564
+      "sha256": "56eba5555125fa89c6578a2552904e2a1de44aee24b832f22474aafd8ade9322",
+      "byte_count": 12147
     },
     {
       "id": "story.original_boatman_and_second_mountain",
@@ -487,20 +487,20 @@
     {
       "id": "story.original_builder_and_shapeless_stones",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-builder-and-shapeless-stones/story.vi.r2.json",
+      "revision": 4,
+      "path": "stories/original-builder-and-shapeless-stones/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "c05c0f46276e2b2235e30ff8dbd65b7659043b0e2084bc252811cb2cf2ed8a4f",
-      "byte_count": 21946
+      "sha256": "5d139b90d3ea0573090a0278035426fddc74f5c8ad582201bc34216845e1aab0",
+      "byte_count": 20085
     },
     {
       "id": "story.original_chair_beside_window",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-chair-beside-window/story.vi.r2.json",
+      "revision": 4,
+      "path": "stories/original-chair-beside-window/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "6ea367d0c0af09a13e8e8579add7475bc21d37e4bf74cc5e0f61f2214534386b",
-      "byte_count": 37412
+      "sha256": "240238ee2fe192be074206909cd72fb906b82762637a234335821d92b9044074",
+      "byte_count": 30827
     },
     {
       "id": "story.original_if_i_lived_a_human_life",
@@ -532,11 +532,11 @@
     {
       "id": "story.original_stone_that_loved_stormy_days",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "9b3fe555d021063cf00fa05b2688d17e5adb41759c8b70747dcc4513cbb4bf02",
-      "byte_count": 20899
+      "sha256": "532bf076e7bfa1d2a119bbfacd59e0bfd3e7d3eefc4a95a4a3ec2fdbc17fd20e",
+      "byte_count": 17622
     },
     {
       "id": "story.original_thanh_and_one_more_meter",

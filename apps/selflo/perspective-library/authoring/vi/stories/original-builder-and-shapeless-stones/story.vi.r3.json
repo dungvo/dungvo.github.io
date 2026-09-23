@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.original_builder_and_shapeless_stones",
-  "revision": 2,
+  "revision": 3,
   "status": "active",
   "language": "vi",
   "title_vi": "Người thợ xây và những viên đá không có hình",
@@ -278,9 +278,9 @@
         },
         {
           "id": "section_03.block_18",
-          "type": "pull_quote",
-          "text_vi": "“Con thấy không? Công việc thực sự của con nhỏ hơn rất nhiều so với công việc con đã làm trong đầu tối qua.”",
-          "attribution_vi": "Người thợ già"
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "“Con thấy không? Công việc thực sự của con nhỏ hơn rất nhiều so với công việc con đã làm trong đầu tối qua.”"
         }
       ]
     },
@@ -344,9 +344,9 @@
         },
         {
           "id": "section_04.block_10",
-          "type": "pull_quote",
-          "text_vi": "“Con đang nhặt viên đá của ngày mai rồi.”",
-          "attribution_vi": "Người thợ già"
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "“Con đang nhặt viên đá của ngày mai rồi.”"
         },
         {
           "id": "section_04.block_11",
@@ -422,9 +422,9 @@
         },
         {
           "id": "section_06.block_03",
-          "type": "pull_quote",
-          "text_vi": "Anh biết viên đá nào cần mang, và viên đá nào phải để lại nơi người khác đặt nó xuống.",
-          "attribution_vi": null
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh biết viên đá nào cần mang, và viên đá nào phải để lại nơi người khác đặt nó xuống."
         }
       ]
     },

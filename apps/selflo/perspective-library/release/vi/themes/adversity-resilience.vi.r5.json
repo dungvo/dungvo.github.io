@@ -1,72 +1,220 @@
 {
-  "schema_version": "selflo.perspective.quote-fragment.v1",
-  "entity": "perspective_quote_fragment",
-  "fragment_id": "quote_fragment.adversity_resilience.003",
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
   "primary_theme": "adversity_resilience",
+  "display_name_vi": "Nghịch cảnh và phục hồi",
+  "description_vi": "Thất bại, mất mát, khó khăn, lòng can đảm và khả năng đứng dậy sau biến cố.",
+  "language": "vi",
   "quotes": [
     {
-      "id": "every_long_road_is_crossed_one_meter_at_a_time",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Một mét tiếp theo",
-      "text_vi": "Không cần đi hết con đường trong một lần. Chỉ cần bước qua một mét đang ở trước mặt.",
+      "id": "attributed.ma.iv_49.promontory",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy như mũi đất nơi những con sóng liên tục xô vào. Nó vẫn đứng vững, để rồi mặt nước đang cuộn giận cũng dần lắng xuống.",
       "subtitle_vi": null,
       "primary_theme": "adversity_resilience",
       "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 49; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
-          "bước nhỏ",
-          "báo cáo",
-          "kiên trì",
-          "một mét"
+          "steadiness"
         ]
       },
       "rights": {
-        "status": "selflo_owned",
-        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
       },
       "writing": {
-        "semantic_intent": "Không cần đi hết con đường trong một lần. Chỉ cần bước qua một mét đang ở trước mặt.",
+        "semantic_intent": "Hãy như mũi đất nơi những con sóng liên tục xô vào. Nó vẫn đứng vững, để rồi mặt nước đang cuộn giận cũng dần lắng xuống.",
         "observation_key": null,
-        "structure_pattern": "story_distillation"
+        "structure_pattern": "attributed_quote"
       },
       "display": {
         "mode": "poster",
-        "priority": 60,
+        "priority": 50,
         "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Selflo"
+        "style": "cool_observe",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển IV, đoạn 49"
       },
-      "story_id": "story.original_thanh_and_one_more_meter",
+      "story_id": null,
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "adversity_resilience",
-          "bước nhỏ",
-          "báo cáo",
-          "kiên trì",
-          "một mét"
+          "steadiness"
         ],
-        "tie_break_order": 3006
+        "tie_break_order": 1134
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.iv_49.brave_bearing",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Điều này không nhất thiết là bất hạnh; có thể mang nó bằng lòng can đảm đã là một điều may mắn.",
+      "subtitle_vi": null,
+      "primary_theme": "adversity_resilience",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 49; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "courage"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
+      },
+      "writing": {
+        "semantic_intent": "Điều này không nhất thiết là bất hạnh; có thể mang nó bằng lòng can đảm đã là một điều may mắn.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển IV, đoạn 49"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "adversity_resilience",
+          "courage"
+        ],
+        "tie_break_order": 1135
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.ma.v_20.obstruction_progress",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Tâm trí có thể biến điều cản trở hành động thành chính vật liệu để hành động; trở ngại trong công việc có thể thành sự trợ giúp, và vật chắn có thể mở ra một cách tiến lên.",
+      "subtitle_vi": null,
+      "primary_theme": "adversity_resilience",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển V, đoạn 20; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "adaptation"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
+      },
+      "writing": {
+        "semantic_intent": "Tâm trí có thể biến điều cản trở hành động thành chính vật liệu để hành động; trở ngại trong công việc có thể thành sự trợ giúp, và vật chắn có thể mở ra một cách tiến lên.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển V, đoạn 20"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "adversity_resilience",
+          "adaptation"
+        ],
+        "tie_break_order": 1139
       },
       "knowledge_basis": null
     },
@@ -88,10 +236,18 @@
         "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "giông bão",
           "chấp nhận",
@@ -124,7 +280,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "adversity_resilience",
           "giông bão",
@@ -133,262 +291,6 @@
           "thay đổi"
         ],
         "tie_break_order": 3007
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "accepting_the_flood_reveals_the_road_still_open",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Đoạn đường vẫn còn đi được",
-      "text_vi": "Chấp nhận con đường đang ngập không phải là bỏ cuộc; đó là lúc mình nhìn rõ đoạn đường vẫn còn đi được.",
-      "subtitle_vi": null,
-      "primary_theme": "adversity_resilience",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "giới hạn",
-          "chấp nhận",
-          "hành động",
-          "đường ngập"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Chấp nhận con đường đang ngập không phải là bỏ cuộc; đó là lúc mình nhìn rõ đoạn đường vẫn còn đi được.",
-        "observation_key": null,
-        "structure_pattern": "story_distillation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 60,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": "story.courier_and_waterline",
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "adversity_resilience",
-          "giới hạn",
-          "chấp nhận",
-          "hành động",
-          "đường ngập"
-        ],
-        "tie_break_order": 3014
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "a_large_task_only_needs_one_first_square",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Ô vuông đầu tiên",
-      "text_vi": "Một việc lớn không cần được ôm trọn để bắt đầu. Hãy tìm ô vuông đầu tiên đủ gần để đặt tay vào.",
-      "subtitle_vi": null,
-      "primary_theme": "adversity_resilience",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "việc lớn",
-          "bắt đầu",
-          "bước nhỏ",
-          "ô vuông"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Một việc lớn không cần được ôm trọn để bắt đầu. Hãy tìm ô vuông đầu tiên đủ gần để đặt tay vào.",
-        "observation_key": null,
-        "structure_pattern": "story_distillation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 60,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": "story.signmaker_and_first_square",
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "adversity_resilience",
-          "việc lớn",
-          "bắt đầu",
-          "bước nhỏ",
-          "ô vuông"
-        ],
-        "tie_break_order": 3017
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "road_dries_from_edge_inward",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Sau mưa mặt đường khô dần từ rìa vào giữa. Chậm, nhưng theo thứ tự.",
-      "subtitle_vi": null,
-      "primary_theme": "adversity_resilience",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.natural_cycles"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "recovery"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh recovery.",
-        "observation_key": "road_dries_from_edge_inward",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 40,
-        "featured": false,
-        "style": "soft_paper_observe",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "recovery"
-        ],
-        "tie_break_order": 4018
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "small_flame_warms_a_small_room",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Ngọn lửa nhỏ nhất cũng đủ làm ấm căn phòng nếu căn phòng đủ nhỏ.",
-      "subtitle_vi": null,
-      "primary_theme": "adversity_resilience",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "recovery"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh recovery.",
-        "observation_key": "small_flame_warms_a_small_room",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 41,
-        "featured": false,
-        "style": "soft_paper_observe",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "recovery"
-        ],
-        "tie_break_order": 4019
       },
       "knowledge_basis": null
     },
@@ -410,13 +312,19 @@
         "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.natural_cycles",
           "framework.impermanence"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "observation",
           "recovery"
@@ -447,7 +355,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "observation",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "observation",
           "recovery"
@@ -457,69 +367,8 @@
       "knowledge_basis": null
     },
     {
-      "id": "muscle_recovers_during_rest",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": null,
-      "text_vi": "Cơ bắp phục hồi trong lúc nghỉ, không phải lúc tập. Tập chỉ là kích hoạt.",
-      "subtitle_vi": null,
-      "primary_theme": "adversity_resilience",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "observation",
-          "recovery"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": null
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh recovery.",
-        "observation_key": "muscle_recovers_during_rest",
-        "structure_pattern": "everyday_observation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 43,
-        "featured": false,
-        "style": "soft_paper_observe",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "observation",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "observation",
-          "recovery"
-        ],
-        "tie_break_order": 4021
-      },
-      "knowledge_basis": null
-    },
-    {
       "id": "attributed.epictetus.ench_01.control",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Có những điều nằm trong quyền của ta, và có những điều không.",
@@ -535,12 +384,18 @@
         "source_detail": "George Long (dịch); I; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "control"
@@ -571,7 +426,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "adversity_resilience",
           "stoicism",
@@ -583,7 +440,7 @@
     },
     {
       "id": "attributed.epictetus.ench_08.flow",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Đừng đòi sự việc phải xảy ra đúng như ý mình; hãy nhìn chúng như chúng đang diễn ra, và đời sống sẽ bớt chống chọi hơn.",
@@ -599,12 +456,18 @@
         "source_detail": "George Long (dịch); VIII; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "acceptance"
@@ -635,7 +498,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "adversity_resilience",
           "stoicism",
@@ -647,7 +512,7 @@
     },
     {
       "id": "attributed.epictetus.ench_10.use",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Mỗi khi một biến cố đến, hãy quay về với mình và hỏi: mình có năng lực nào để dùng nó?",
@@ -663,12 +528,18 @@
         "source_detail": "George Long (dịch); X; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "resourcefulness"
@@ -699,7 +570,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "adversity_resilience",
           "stoicism",
@@ -711,7 +584,7 @@
     },
     {
       "id": "attributed.laozi.chapter_23.storm_passes",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Gió dữ không kéo dài cả buổi sáng; mưa dồn không kéo dài cả ngày.",
@@ -727,14 +600,20 @@
         "source_detail": "James Legge (dịch); 23; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.taoism",
           "framework.natural_cycles",
           "framework.impermanence"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "taoism",
           "impermanence"
@@ -765,13 +644,88 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "adversity_resilience",
           "taoism",
           "impermanence"
         ],
         "tie_break_order": 5025
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.laozi.chapter_58.fortune_misfortune",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Họa là nơi phúc tựa vào; phúc là nơi họa ẩn náu.",
+      "subtitle_vi": null,
+      "primary_theme": "adversity_resilience",
+      "authorship": {
+        "author_id": "laozi",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh · Chương 58",
+        "source_url": "https://ctext.org/dao-de-jing",
+        "source_language": "zh",
+        "source_label": "Lão Tử · Đạo Đức Kinh · Chương 58",
+        "source_detail": "Bản Việt dịch/diễn ý Selflo từ đoạn cổ: 禍兮福之所倚，福兮禍之所伏。 Không phải trích một bản dịch Việt đã xuất bản. Ghi tên tác giả theo quy ước thư mục của tác phẩm."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.taoism",
+          "framework.yin_yang_taiji"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "Tái ông thất mã",
+          "Đạo gia",
+          "góc nhìn"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:15:32Z"
+      },
+      "writing": {
+        "semantic_intent": "Họa là nơi phúc tựa vào; phúc là nơi họa ẩn náu.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Lão Tử · Đạo Đức Kinh · Chương 58"
+      },
+      "story_id": "story.old_man_and_returning_horse",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "adversity_resilience",
+          "taoism"
+        ],
+        "tie_break_order": 6085
       },
       "knowledge_basis": null
     }
