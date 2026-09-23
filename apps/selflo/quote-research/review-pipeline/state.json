@@ -46,6 +46,46 @@
       "first_review": "approved",
       "candidate_note": "Owner approved from editorial top-ranked shortlist for Authoring; classify as Selflo rendering before Release.",
       "authoring": "imported"
+    },
+    "research.laozi.ch02.007": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: strong. Primary text verified; good perspective on action without possession. Review Vietnamese rendering before Release.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch13.037": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: strong. Concise, standalone and relevant to external validation; primary text verified.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch17.054": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: strong. Distinct leadership/agency perspective; retain chapter context in provenance.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch20.061": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: strong. Useful perspective on uncertainty and social comparison; check tone and context before Release.",
+      "authoring": "imported"
+    },
+    "research.dhammapada.day11.v043": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: strong. Primary Pali verse located; classify Vietnamese as Selflo rendering pending translation review.",
+      "authoring": "imported"
+    },
+    "research.dhammapada.day11.v223": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: strong. Relevant to anger and agency; current wording renders only part of the verse, so label as excerpt/adaptation.",
+      "authoring": "imported"
+    },
+    "research.mn.day12.mn20_01": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: strong. Primary Pali source located; useful attention-regulation perspective, but avoid presenting as universal clinical advice.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch05.014": {
+      "first_review": "approved",
+      "candidate_note": "Editorial rank: good. Primary text verified; current Vietnamese is interpretive and needs final translation review.",
+      "authoring": "imported"
     }
   },
   "history": [
@@ -83,6 +123,21 @@
         "research.mn.day12.mn22_02",
         "research.laozi.ch12.034",
         "research.dhammapada.day11.v276"
+      ]
+    },
+    {
+      "at": "2026-09-23T15:01:32Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "/Users/dungvo/.codex/.chatgpt-projects/g-p-69cc99f6f3ac8191aed3e4a8b6b8e7bc/work/next8-authoring-ledger.json",
+      "quote_ids": [
+        "research.laozi.ch02.007",
+        "research.laozi.ch13.037",
+        "research.laozi.ch17.054",
+        "research.laozi.ch20.061",
+        "research.dhammapada.day11.v043",
+        "research.dhammapada.day11.v223",
+        "research.mn.day12.mn20_01",
+        "research.laozi.ch05.014"
       ]
     }
   ]

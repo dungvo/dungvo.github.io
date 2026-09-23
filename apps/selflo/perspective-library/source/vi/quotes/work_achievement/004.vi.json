@@ -22,18 +22,10 @@
         "source_detail": "quote_nhagiakim.md dòng 410; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "nhà giả kim",
           "owner-declared work source"
@@ -64,9 +56,7 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "work_achievement",
           "nhà giả kim"
@@ -93,18 +83,10 @@
         "source_detail": "quote_nhagiakim.md các dòng 451, 497; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
       },
       "metadata": {
-        "concepts": [
-
-        ],
-        "theories": [
-
-        ],
-        "frameworks": [
-
-        ],
-        "emotion_tags": [
-
-        ],
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
         "keywords": [
           "nhà giả kim",
           "owner-declared work source"
@@ -135,14 +117,74 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [
-
-        ],
+        "thought_match_keys": [],
         "presentation_tags": [
           "work_achievement",
           "nhà giả kim"
         ],
         "tie_break_order": 6078
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.laozi.ch17.054",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Việc thành, chuyện xong, mà người ta nói: chúng tôi tự làm được như vậy.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "work_purpose",
+          "meaning_identity_work",
+          "agency"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Laozi / 老子",
+        "work": "道德經 / Tao Te Ching",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "source_language": null,
+        "source_label": "Laozi / 老子",
+        "source_detail": "Research corpus row 55; content_nature=translated_quote; verification=A - Primary source."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "meaning_identity_work",
+          "agency"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Public domain / likely"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Việc thành, chuyện xong, mà người ta nói: chúng tôi tự làm được như vậy.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Laozi / 老子"
       },
       "knowledge_basis": null
     }
