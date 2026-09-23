@@ -78,7 +78,9 @@ def main():
     rows=[]
     for q in raw:
         ident=clean(q.get('Quote ID')); n=normalized.get(ident,{}); m=mapping.get(ident,{})
-        canonical_id=clean(m.get('Canonical ID')); cq=authoring_by_id.get(canonical_id)
+        mapped_id=clean(m.get('Canonical ID'))
+        canonical_id=mapped_id or (ident if ident in authoring_by_id else '')
+        cq=authoring_by_id.get(canonical_id)
         pipeline='release' if canonical_id in release_ids else 'authoring' if cq else 'research'
         score,why=research_score(q,n,m)
         rows.append({'record_type':'research','id':ident,'canonical_id':canonical_id or None,'text_vi':clean(q.get('Bản dịch / bản làm việc tiếng Việt')),'author':clean(n.get('Author canonical') or q.get('Tác giả / Attribution')),'work':clean(n.get('Source/work canonical') or q.get('Tên nguồn / tác phẩm')),'source_url':clean(q.get('Source URL')),'theme':clean(n.get('Theme canonical') or q.get('Chủ đề chính (Theme)')),'human_experience':clean(n.get('Human experience canonical') or q.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(n.get('content_nature canonical') or q.get('Hình thức nội dung (Content Form)')),'confidence':confidence(q.get('Mức xác minh')),'verification':clean(q.get('Mức xác minh')),'rights':clean(q.get('Quyền sử dụng')),'selflo_fit':clean(q.get('Mức phù hợp Selflo')),'release_readiness':clean(q.get('Release readiness')),'pipeline':pipeline,'review':clean(q.get('Owner review')),'story_id':clean(q.get('Story ID liên quan')) or None,'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'score':score,'why':why})
