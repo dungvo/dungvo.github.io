@@ -69,7 +69,8 @@ Bắt buộc: `id`, `type`, `part_number`, `title_vi`. Optional: `subtitle_vi`. 
 | Style | Dùng khi | Presentation |
 |---|---|---|
 | `narrative` | Prose thông thường, thường 1–4 câu cùng beat | Serif body, spacing chuẩn |
-| `dialogue_lead` | Câu dẫn ngắn ngay trước lời thoại hoặc pull quote | Giảm khoảng cách dưới |
+| `dialogue_lead` | Tên người nói ngay trước lời thoại | Sans-serif semibold màu accent, gắn chặt với lời thoại dưới |
+| `dialogue` | Lời thoại ngay sau `dialogue_lead` | Serif body, thụt nhẹ với vạch dọc mảnh; không dùng chat bubble |
 | `transition` | Chuyển thời gian, bối cảnh hoặc bước ngoặt thật | Tăng khoảng thở phía trên |
 
 Không có style `featured`, `emphasis` hoặc `reflection`. Điểm nhấn semantic dùng `pull_quote`; reflection thuộc vùng kết thúc.

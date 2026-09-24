@@ -122,7 +122,7 @@
           "properties": {
             "id": { "$ref": "#/$defs/stable_id" },
             "type": { "const": "paragraph" },
-            "style": { "enum": ["narrative", "dialogue_lead", "transition"] },
+            "style": { "enum": ["narrative", "dialogue_lead", "dialogue", "transition"] },
             "text_vi": { "$ref": "#/$defs/non_empty_string" }
           }
         },

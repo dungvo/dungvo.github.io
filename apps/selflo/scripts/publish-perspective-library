@@ -1544,7 +1544,7 @@ def validate_story_v2_contract!(payloads)
 
     blocks = story.fetch("sections").flat_map { |section| section.fetch("blocks") }
     blocks.select { |block| block["type"] == "paragraph" }.each do |block|
-      unless %w[narrative dialogue_lead transition].include?(block["style"])
+      unless %w[narrative dialogue_lead dialogue transition].include?(block["style"])
         abort("Editorial V2 paragraph missing/invalid style: #{story_id} / #{block.fetch("id")}")
       end
     end

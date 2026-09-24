@@ -92,7 +92,7 @@ class StoryV2ContractTests(unittest.TestCase):
                 blocks = body_blocks(story)
                 for block in blocks:
                     if block["type"] == "paragraph":
-                        self.assertIn(block.get("style"), ("narrative", "dialogue_lead", "transition"))
+                        self.assertIn(block.get("style"), ("narrative", "dialogue_lead", "dialogue", "transition"))
                 parts = [block["part_number"] for block in blocks if block["type"] == "part_heading"]
                 self.assertEqual(parts, list(range(1, len(parts) + 1)))
                 for left, right in zip(blocks, blocks[1:]):
