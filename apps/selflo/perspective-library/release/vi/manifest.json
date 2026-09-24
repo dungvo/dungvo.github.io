@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 21,
-  "content_version": "story-rails-artwork-41",
+  "library_revision": 22,
+  "content_version": "release-selected-quotes-42",
   "language": "vi",
-  "generated_at": "2026-09-24T04:08:59Z",
+  "generated_at": "2026-09-24T04:34:55Z",
   "files": [
     {
       "id": "image.story.original_if_i_lived_a_human_life.v1",
@@ -118,38 +118,38 @@
     {
       "id": "knowledge.canonical.vi",
       "kind": "knowledge_catalog",
-      "revision": 8,
-      "path": "knowledge/knowledge.vi.r8.json",
+      "revision": 9,
+      "path": "knowledge/knowledge.vi.r9.json",
       "media_type": "application/json",
-      "sha256": "6ac56fa59aad95074ffecb0b8fa12c2c78367eefe2d8ceb38dd5887db93394c2",
-      "byte_count": 31987
+      "sha256": "4d5aa872fce16d279621aae4e54ebea4c87835cc9859bf04d769ef3f51f4a26b",
+      "byte_count": 36367
     },
     {
       "id": "theme.adversity_resilience.vi",
       "kind": "quote_pack",
-      "revision": 6,
-      "path": "themes/adversity-resilience.vi.r6.json",
+      "revision": 7,
+      "path": "themes/adversity-resilience.vi.r7.json",
       "media_type": "application/json",
-      "sha256": "b5cf5eec871825700a274a0bf1a37bf3430aa47ecc06077325b36b1585a05450",
-      "byte_count": 27718
+      "sha256": "5b1cefa429bb3ed136ba2ff5239a2a2a1cf4670f8f1425ba1532dcc1961333cc",
+      "byte_count": 36021
     },
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/attention.vi.r7.json",
+      "revision": 8,
+      "path": "themes/attention.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "6f30716c5bf3b04d9d04c92dae77990a2cc5258835f5824c0adb79d3267e6e76",
-      "byte_count": 42751
+      "sha256": "d8f16cc4b01e11893e45e1dd9a97992385395577b3f58aaac75a87446f42868c",
+      "byte_count": 52706
     },
     {
       "id": "theme.change_growth.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/change-growth.vi.r7.json",
+      "revision": 8,
+      "path": "themes/change-growth.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "33db31e197a6d3a644594dabdbf7ba7c16e1bdcc86b4a9696366e4970b0067e9",
-      "byte_count": 34507
+      "sha256": "d452204a33b84cdbb867fd5087aaccae9447aa8475e9d82642e1abb5b76a6fb0",
+      "byte_count": 38848
     },
     {
       "id": "theme.emotion.vi",
@@ -163,11 +163,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 12,
-      "path": "themes/meaning-values.vi.r12.json",
+      "revision": 13,
+      "path": "themes/meaning-values.vi.r13.json",
       "media_type": "application/json",
-      "sha256": "26d96660ee71befe7c20b7ee686e5a25a7e60bdcca0f67f7df7abb272160cba2",
-      "byte_count": 50264
+      "sha256": "ec6303d7610b0cc065064283fe68b08b7f85dddbf8c95f38af3c238fd3e04c8a",
+      "byte_count": 58781
     },
     {
       "id": "theme.relationships.vi",
@@ -181,20 +181,20 @@
     {
       "id": "theme.rest_wellbeing.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/rest-wellbeing.vi.r7.json",
+      "revision": 8,
+      "path": "themes/rest-wellbeing.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "1d1d7a877c19bf8a4720e41d17252dadd36757ba5007e4803c3c24117d409b5f",
-      "byte_count": 25895
+      "sha256": "40870a140a4c88645f1cfd480f4cdcb8da14a4ce06f3c02acecec227a61ab596",
+      "byte_count": 33417
     },
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 9,
-      "path": "themes/self-understanding.vi.r9.json",
+      "revision": 10,
+      "path": "themes/self-understanding.vi.r10.json",
       "media_type": "application/json",
-      "sha256": "577f1a7dfa1fa7fcde61d008643f433662002d8be4ff220bd3e53fdecd98af23",
-      "byte_count": 62158
+      "sha256": "c7b698ee523208372ce94da0f59399d45b6e2c8636d8e5e7421c1bed22196119",
+      "byte_count": 64365
     },
     {
       "id": "theme.work_achievement.vi",

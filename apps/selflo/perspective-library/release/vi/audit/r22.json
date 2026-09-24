@@ -1,0 +1,2544 @@
+{
+  "schema_version": "selflo.perspective.publish-audit.v1",
+  "channel": "release",
+  "library_revision": 22,
+  "canonical_source_revision": 42,
+  "canonical_source_digest": "b01747ea2563572099a83a272b9c1aedfddae136dbe5faf880ecb234de108c81",
+  "canonical_quote_count": 402,
+  "source_files": [
+    {
+      "id": "image.story.original_if_i_lived_a_human_life.v1",
+      "sha256": "1e164ced7076571a8a811f239b88e7d95b12e292154ed86b62ff571847e8e45d",
+      "path": "artwork/images/if-i-lived-a-human-life-v1.jpg"
+    },
+    {
+      "id": "image.story.rails_that_diverge.v1",
+      "sha256": "e54aec6c76fc9ec35ce37a7316fbfd59cfd235c058f7013abd566e23aeb5713c",
+      "path": "artwork/images/rails-that-diverge-v1.jpg"
+    },
+    {
+      "id": "image.story.the_compass_does_not_walk_for_you.v1",
+      "sha256": "96a5cef9c6e6fd861c16c58d28b95cbb7c36f0f34f1396f43f4b6386ebc70887",
+      "path": "artwork/images/compass-no-way-home-v1.jpg"
+    },
+    {
+      "id": "knowledge.canonical.vi",
+      "sha256": "0300a8ad5935a44b6211387fc5ee53118ec8fce9efeb46f76e7fcb14545e1a6f",
+      "path": "knowledge/knowledge.vi.json"
+    },
+    {
+      "id": "quote_fragment.adversity_resilience.001",
+      "sha256": "cd340affdf63569323df4265ce270e6c75e40409a25358996e885329bfcc1d77",
+      "path": "quotes/adversity_resilience/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.adversity_resilience.002",
+      "sha256": "2526ae0411bad758e810e6349535b81d8956d081ab2bd643b6081a4523afb3d6",
+      "path": "quotes/adversity_resilience/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.adversity_resilience.003",
+      "sha256": "0d40e5091b5dcbf54b31ba1595382f044ef798b2bd9961efd189d0c28b3f22cf",
+      "path": "quotes/adversity_resilience/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.adversity_resilience.004",
+      "sha256": "b2192deb4669f0b3fd314c80bca11f05cc6fad1ed572ba5fca12b66a5a6f17a9",
+      "path": "quotes/adversity_resilience/004.vi.json"
+    },
+    {
+      "id": "quote_fragment.attention.001",
+      "sha256": "c35967e37548981ab60657d11dc8667f4b06b606111250a22555f17a2e4f7960",
+      "path": "quotes/attention/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.attention.002",
+      "sha256": "5105869ca65b3add0693a08285eb0daff5edd497900180f336861aabef3ed3b6",
+      "path": "quotes/attention/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.attention.003",
+      "sha256": "aed3943ca37d3328f750406e72f5118b1264a441f514d4cf744bc6d9270bb376",
+      "path": "quotes/attention/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.attention.004",
+      "sha256": "1f9a3f6f89ed3a618645c9766cd0c6f172c1728b8a38c7f5157d187854523b26",
+      "path": "quotes/attention/004.vi.json"
+    },
+    {
+      "id": "quote_fragment.attention.005",
+      "sha256": "467f5f1fa1f4e5909418a9de3ff103b79111fe3f6b0a1550392f8109dafe5070",
+      "path": "quotes/attention/005.vi.json"
+    },
+    {
+      "id": "quote_fragment.change_growth.001",
+      "sha256": "5daba6f76ad74edb25ede30b1a69a6744f21102a04f50e7bc3e9ea5b239b3425",
+      "path": "quotes/change_growth/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.change_growth.002",
+      "sha256": "3f335471108454cddc3799006c58219581db8d999b45f17bbcf1e1de9f2ff603",
+      "path": "quotes/change_growth/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.change_growth.003",
+      "sha256": "c083f787db96c53f3c0117d59d01103717b879ffd8969d9de546c497a98d9a60",
+      "path": "quotes/change_growth/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.change_growth.004",
+      "sha256": "9a59c9e00134aa39afcd86ae9f702cf0449c419ddac2b66d6d43eeed1ee49568",
+      "path": "quotes/change_growth/004.vi.json"
+    },
+    {
+      "id": "quote_fragment.emotion.001",
+      "sha256": "cf3203639fbc2d68e8bb765aa600ec9c0199b39fda59039d03fdc9415b375dd5",
+      "path": "quotes/emotion/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.emotion.002",
+      "sha256": "4361c1b6ef385153e9bb5ccc34e9e7e6b161f8d87df92c727a2a99389af997d6",
+      "path": "quotes/emotion/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.meaning_values.001",
+      "sha256": "bf6714336001c549717717db349ace1f9460e8ae2cbdd1272c9c76a4e0d5bbf4",
+      "path": "quotes/meaning_values/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.meaning_values.002",
+      "sha256": "a34cccef551f77d1ce9d242c3c9a7f6a112b7acec99af99fd3a54ce0b915231c",
+      "path": "quotes/meaning_values/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.meaning_values.003",
+      "sha256": "0dd51b22517d5d4a141f5d27f4581347eac91595d644bc6e3ab0f85fbddb2dc2",
+      "path": "quotes/meaning_values/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.meaning_values.004",
+      "sha256": "e3bf2b77a58c86d3cd248d2bfcc1bd8efd81363496ed22ef0177f8b175b4dfe9",
+      "path": "quotes/meaning_values/004.vi.json"
+    },
+    {
+      "id": "quote_fragment.meaning_values.005",
+      "sha256": "45fd06ca7f4040a76aada5a5f3fcabc9eb59fb2c15857b725dce0b337c8cc89f",
+      "path": "quotes/meaning_values/005.vi.json"
+    },
+    {
+      "id": "quote_fragment.relationships.001",
+      "sha256": "0c6aaad852fc48ac62b232a929d46abe1d000e23aa6029283b5103543857c1c4",
+      "path": "quotes/relationships/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.relationships.002",
+      "sha256": "e885dd4dfea0cd327d202d9c57962f3556df85376d64936b977544ddb66ff509",
+      "path": "quotes/relationships/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.relationships.003",
+      "sha256": "4eb8efa8bf9445b45fcc22efc5bd715a5c3ce69cf147eaf3d46a06b196031d65",
+      "path": "quotes/relationships/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.relationships.004",
+      "sha256": "88a21e0e09ddee9aca2ee5a9b91dd45cdadaa112c7eaeeed23bacf4cf3b1f0cb",
+      "path": "quotes/relationships/004.vi.json"
+    },
+    {
+      "id": "quote_fragment.rest_wellbeing.001",
+      "sha256": "64da2ede8e6e4420b7cf451ae07e046ceeee160d5b08ba4401cf0a4165d7c912",
+      "path": "quotes/rest_wellbeing/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.rest_wellbeing.002",
+      "sha256": "51853745b44bbce838b36e8039697d1ec4ceed9e80b6fb17164e3a6bb17eac49",
+      "path": "quotes/rest_wellbeing/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.rest_wellbeing.003",
+      "sha256": "fd9dd265188f4dc01eae8d17e2adb884552ab03ca31c666f09d825b6d2ad52d7",
+      "path": "quotes/rest_wellbeing/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.rest_wellbeing.004",
+      "sha256": "3a9d4dc0618d3b90ab25a9caec3107456bad2da962c6e9be8ec18ceef54ccc8e",
+      "path": "quotes/rest_wellbeing/004.vi.json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.001",
+      "sha256": "1e0a516628faa40ffa2e15b436a8602476deaa718b11ea60f7de2cd8d0190e47",
+      "path": "quotes/self_understanding/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.002",
+      "sha256": "149b3aa69bea05ff5d6995e0f6c61d9e08f034dbb98765eff3774c917d296aff",
+      "path": "quotes/self_understanding/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.003",
+      "sha256": "931239fd6780e0dd31ac2084f29c883308072ab8e3025a181715e9c301c33a19",
+      "path": "quotes/self_understanding/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.004",
+      "sha256": "c141c490c773901029211b42aee3d3caa0d267a096352a015dfb63c5f71c2225",
+      "path": "quotes/self_understanding/004.vi.json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.005",
+      "sha256": "9152bd4a2999d4c6e2c7af712f0f8b8cb4516b306f3de6be66e08c97da7f7cac",
+      "path": "quotes/self_understanding/005.vi.json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.006",
+      "sha256": "73e971428dc4b0930ff3b38fadf0904c082c2acbcd90fe01fcdfcbec4baf0e2b",
+      "path": "quotes/self_understanding/006.vi.json"
+    },
+    {
+      "id": "quote_fragment.work_achievement.001",
+      "sha256": "503f6fe69b74c96e09c9904a3a527786f73b2292b6fc3ba4b237a15bba3e8b52",
+      "path": "quotes/work_achievement/001.vi.json"
+    },
+    {
+      "id": "quote_fragment.work_achievement.002",
+      "sha256": "d78409b43311e8a85657f7ce6621942ed096c4f6224afe4dac496aa1d12632e3",
+      "path": "quotes/work_achievement/002.vi.json"
+    },
+    {
+      "id": "quote_fragment.work_achievement.003",
+      "sha256": "6d2277c2361d37b226708e91d9f3f45bac73e7a4f4b952d3389b89445534332e",
+      "path": "quotes/work_achievement/003.vi.json"
+    },
+    {
+      "id": "quote_fragment.work_achievement.004",
+      "sha256": "d6099962b2e22299fc090f8456184288b3f12d684ef5897ae791c28d3f644081",
+      "path": "quotes/work_achievement/004.vi.json"
+    },
+    {
+      "id": "reading_intents.vi",
+      "sha256": "20839253e1f7b209fe8235dc1196257c1a250ee87aeb691771d321afa34f130e",
+      "path": "reading-intents/reading-intents.vi.json"
+    },
+    {
+      "id": "story.after_the_alarm_went_silent",
+      "sha256": "20acb2d348efa642ac4243cf16d51599c014eef4d9f20724e810e8dffd1e3728",
+      "path": "stories/after-the-alarm-went-silent/story.vi.json"
+    },
+    {
+      "id": "story.baker_and_black_mark",
+      "sha256": "a6d5287e77f77689e028a5a0ed13612256c2f9a11c4649384ae2bf3ab6e6d653",
+      "path": "stories/baker-and-black-mark/story.vi.json"
+    },
+    {
+      "id": "story.blue_eraser",
+      "sha256": "101c66f9c3f8417d66830e12f4ec5f3d9112fd1784ee304a938e46a7ccb1c315",
+      "path": "stories/blue-eraser/story.vi.json"
+    },
+    {
+      "id": "story.boatman_and_second_mountain",
+      "sha256": "333aeea155c8e84639b4263d5c30ca0e1c14b509a6e0bccd9faf26eeded80061",
+      "path": "stories/boatman-and-second-mountain/story.vi.json"
+    },
+    {
+      "id": "story.builder_and_shapeless_stones",
+      "sha256": "f5a530d0ea0635333a5f0a70981e60bf2f01ba7dabdb8ddce5bcfb7e51c3dd95",
+      "path": "stories/builder-and-shapeless-stones/story.vi.json"
+    },
+    {
+      "id": "story.cafe_and_smoke_in_curtain",
+      "sha256": "d4e391f70148760a0fdc24b441fce88e286f6f3081570fcf7073f61f943cb11d",
+      "path": "stories/cafe-and-smoke-in-curtain/story.vi.json"
+    },
+    {
+      "id": "story.cake_for_the_sixth_floor",
+      "sha256": "d0b031b96c2ddd5c8d1d7b4be473e123655b42d71b09bbfa5e81230ee6769e27",
+      "path": "stories/cake-for-the-sixth-floor/story.vi.json"
+    },
+    {
+      "id": "story.cake_that_leaned_left",
+      "sha256": "5b5497d6c3da5b2784301cf732b47b33d4669477807c1d0d5c5cd12426b5d9e1",
+      "path": "stories/cake-that-leaned-left/story.vi.json"
+    },
+    {
+      "id": "story.call_me_at_the_last_stop",
+      "sha256": "7560d529cac8a4acdf3dcb99bb4511bf41c9aa7da66d3ac2c54b01040bf0bb6d",
+      "path": "stories/call-me-at-the-last-stop/story.vi.json"
+    },
+    {
+      "id": "story.chair_across_three_homes",
+      "sha256": "bb5528cb5f77742336e14363b8e009f8cc56bf71ae99bb4560fa03148972a87e",
+      "path": "stories/chair-across-three-homes/story.vi.json"
+    },
+    {
+      "id": "story.courier_and_waterline",
+      "sha256": "7bf761bed5e1e9b64aa42eb6777737c2fb6cf59b8a8707795b4c81e17cefc9af",
+      "path": "stories/courier-and-waterline/story.vi.json"
+    },
+    {
+      "id": "story.cup_with_less_sugar",
+      "sha256": "8e36dd9b3ed155f2df35eb4fb1caa76051b212cfb9f32b4d57b12dd1655ddd8e",
+      "path": "stories/cup-with-less-sugar/story.vi.json"
+    },
+    {
+      "id": "story.driver_and_last_stop_light",
+      "sha256": "4a8257ac95c5bad040f294a48b9416d7c4c1f650f7ced4fc65f765259858b774",
+      "path": "stories/driver-and-last-stop-light/story.vi.json"
+    },
+    {
+      "id": "story.empty_boat_on_the_river",
+      "sha256": "edc8be322e74abdbf5ab4b804e66278f9f8a90e74fcb8e0017c746c925ba7d80",
+      "path": "stories/empty-boat-on-the-river/story.vi.json"
+    },
+    {
+      "id": "story.envelope_that_could_not_hold_strength",
+      "sha256": "38a458ebf6c3a16be415cd7dc65aba2f894cee6542e468fc76d76667dfa18403",
+      "path": "stories/envelope-that-could-not-hold-strength/story.vi.json"
+    },
+    {
+      "id": "story.first_root_in_the_dark",
+      "sha256": "e66ab0279e2474cc15c28d527cb9e6fc8ac1f1da1497ee9c0e9fd5748bbc6209",
+      "path": "stories/first-root-in-the-dark/story.vi.json"
+    },
+    {
+      "id": "story.forest_still_dripping",
+      "sha256": "9ce9e3c6ebce2a289d17ba59cc927f018c93b1affbedfad12081a0d5665c4ffc",
+      "path": "stories/forest-still-dripping/story.vi.json"
+    },
+    {
+      "id": "story.four_pots_on_the_balcony",
+      "sha256": "d81d35681edd4cc37e4904e1ba1b288fd9098b76beffb7f56d029cf6e7b53432",
+      "path": "stories/four-pots-on-the-balcony/story.vi.json"
+    },
+    {
+      "id": "story.garden_with_a_new_patch_of_sun",
+      "sha256": "2c2d27fa27b701ac644683e8af4fd94333eba7b870272cb8d46083dd71b7c9ea",
+      "path": "stories/garden-with-a-new-patch-of-sun/story.vi.json"
+    },
+    {
+      "id": "story.half_a_wet_shoulder",
+      "sha256": "4bb70796da162644c62945bba009093f55b6a678b6818b9cb6dd42d221018a97",
+      "path": "stories/half-a-wet-shoulder/story.vi.json"
+    },
+    {
+      "id": "story.large_tree_beyond_the_carpenters_measure",
+      "sha256": "1ead7e38c361f83d1c7ac9e3a4ffe8f1a4bf388e0d5ea9ff3f6800713502a9aa",
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.json"
+    },
+    {
+      "id": "story.last_window_in_the_building",
+      "sha256": "d08eb365a8081c81f515195750526240db48d570bfce60c874f64052878887bb",
+      "path": "stories/last-window-in-the-building/story.vi.json"
+    },
+    {
+      "id": "story.laundry_and_two_bells",
+      "sha256": "981af3ef3efcd824169d09334691b92c356c5fe9d5a0706fd042d8cc31b55986",
+      "path": "stories/laundry-and-two-bells/story.vi.json"
+    },
+    {
+      "id": "story.morning_after_the_lantern_festival",
+      "sha256": "6a5266eb91d9d4bbac1a468464557cfe086b2f8d9bc51cd4ea00518e62e2b9b9",
+      "path": "stories/morning-after-the-lantern-festival/story.vi.json"
+    },
+    {
+      "id": "story.nine_oclock_morning",
+      "sha256": "f1948220803584cb5f51b071e630dc7673ad14dc8fdb5a608029885d24fae150",
+      "path": "stories/nine-oclock-morning/story.vi.json"
+    },
+    {
+      "id": "story.note_in_measure_seventeen",
+      "sha256": "cb74057e54f5485429bfacef4ff87caf56edbb659ba1fd3e253741cea4515309",
+      "path": "stories/note-in-measure-seventeen/story.vi.json"
+    },
+    {
+      "id": "story.old_man_and_returning_horse",
+      "sha256": "8b4bc6160600a6a391c3b30d5243626303844da91516de4be99f51cef39d0521",
+      "path": "stories/old-man-and-returning-horse/story.vi.json"
+    },
+    {
+      "id": "story.operator_and_one_beat",
+      "sha256": "fdacfeb813ed1c37dc4d02c59557b922995ef70c524dca01c5b53fde2e544748",
+      "path": "stories/operator-and-one-beat/story.vi.json"
+    },
+    {
+      "id": "story.original_an_and_lamp_held_too_close",
+      "sha256": "ba056ad18293cd25ca7e3824ddbffdc69762616094e5a48068cbb8684f9abbb6",
+      "path": "stories/original-an-and-lamp-held-too-close/story.vi.json"
+    },
+    {
+      "id": "story.original_between_two_banks",
+      "sha256": "bc9b1f723f8401e136330222544703fc4432ce9e9e72ebf15bb4f92d439b9b15",
+      "path": "stories/original-between-two-banks/story.vi.json"
+    },
+    {
+      "id": "story.original_boatman_and_second_mountain",
+      "sha256": "20b4df02f512a6b3712856cba01771ecc83c226942a0cc9564a7db690309e308",
+      "path": "stories/original-boatman-and-second-mountain/story.vi.json"
+    },
+    {
+      "id": "story.original_builder_and_shapeless_stones",
+      "sha256": "7b0a750f4fad0e00fc5a0f2158e0781d04d964fa49d5035e6cff8442d6b05173",
+      "path": "stories/original-builder-and-shapeless-stones/story.vi.json"
+    },
+    {
+      "id": "story.original_chair_beside_window",
+      "sha256": "38c70493fef7b8f3e3bef0e47cf83d40c83511d913179ae64fdc058de3bc9d0a",
+      "path": "stories/original-chair-beside-window/story.vi.json"
+    },
+    {
+      "id": "story.original_if_i_lived_a_human_life",
+      "sha256": "59aae70d2adce902b046af6be90aab510a42f9cc8f0a10aaa635882a82b00d6d",
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.json"
+    },
+    {
+      "id": "story.original_keeper_of_the_lamp",
+      "sha256": "2ef6c28b08e00abeab777fd74bfe71094e3da989f714af6136f6f60ab4d39ecb",
+      "path": "stories/original-keeper-of-the-lamp/story.vi.json"
+    },
+    {
+      "id": "story.original_lam_and_tomorrow_passenger",
+      "sha256": "a09e64c0f3b9c131f7d3cfbe978e0451d88749d4c16439870c3e8bde5ef952b9",
+      "path": "stories/original-lam-and-tomorrow-passenger/story.vi.json"
+    },
+    {
+      "id": "story.original_stone_that_loved_stormy_days",
+      "sha256": "532bf076e7bfa1d2a119bbfacd59e0bfd3e7d3eefc4a95a4a3ec2fdbc17fd20e",
+      "path": "stories/original-stone-that-loved-stormy-days/story.vi.json"
+    },
+    {
+      "id": "story.original_thanh_and_one_more_meter",
+      "sha256": "d198c6f86a3aa9cf7f27562db29bf8af5f25f946fb05a9713ecb5a0269fd4434",
+      "path": "stories/original-thanh-and-one-more-meter/story.vi.json"
+    },
+    {
+      "id": "story.original_water_carrier_and_tomorrow_stone",
+      "sha256": "f28e12db16d2197905578f0d8a6850293b1ad9c869f9dbcb4ca0f5250481d2c7",
+      "path": "stories/original-water-carrier-and-tomorrow-stone/story.vi.json"
+    },
+    {
+      "id": "story.photograph_missing_a_corner",
+      "sha256": "86520e2595016de2114355463ad64a9c38c3caccaecf8c0249f829d2985acffb",
+      "path": "stories/photograph-missing-a-corner/story.vi.json"
+    },
+    {
+      "id": "story.potter_and_two_hands",
+      "sha256": "de14b158c80aa722ac651431b708ec0ce33b672d96d9bbaa3f4d89ea459fe2ef",
+      "path": "stories/potter-and-two-hands/story.vi.json"
+    },
+    {
+      "id": "story.rails_that_diverge",
+      "sha256": "71d5a4f7d644d318db1eca84ab288d74bba6b08395b3fea710a2982d3b833430",
+      "path": "stories/rails-that-diverge/story.vi.json"
+    },
+    {
+      "id": "story.rain_arrives_downstream_late",
+      "sha256": "b21327798b2f6485d72f2de4dd3dedafd9375a913a3bcf925cfafd41bf3b9030",
+      "path": "stories/rain-arrives-downstream-late/story.vi.json"
+    },
+    {
+      "id": "story.recordist_and_room_not_silent",
+      "sha256": "9d6fb51dfc1fd9c8654b24e7045b8f67f42ec793c79ad2e4b0470e2dd7ed11f0",
+      "path": "stories/recordist-and-room-not-silent/story.vi.json"
+    },
+    {
+      "id": "story.roof_of_many_hands",
+      "sha256": "5a7330dab9c67d5e243769a8ce7e57fe2a1f43b5527d14da18402edd6edc0ef4",
+      "path": "stories/roof-of-many-hands/story.vi.json"
+    },
+    {
+      "id": "story.saturday_without_a_highlight",
+      "sha256": "60d5e1bb508dc0dcf753600c1f45f1ef1f3e354a0e22f992640501e39ce26a29",
+      "path": "stories/saturday-without-a-highlight/story.vi.json"
+    },
+    {
+      "id": "story.seam_opened_three_times",
+      "sha256": "bf859237628837462331dec6530c580b57c11a04480504236b7d85f789b4db17",
+      "path": "stories/seam-opened-three-times/story.vi.json"
+    },
+    {
+      "id": "story.shoes_that_went_to_work_twice",
+      "sha256": "6eefb58b1f52d0188afd35ed41fdcc2e74962acebda0e72bd4cbf9dea2dd5891",
+      "path": "stories/shoes-that-went-to-work-twice/story.vi.json"
+    },
+    {
+      "id": "story.signmaker_and_first_square",
+      "sha256": "c55b19331d2d50ced231408be275292276a3d4bad402d3fcca56539cca98a5f3",
+      "path": "stories/signmaker-and-first-square/story.vi.json"
+    },
+    {
+      "id": "story.the_compass_does_not_walk_for_you",
+      "sha256": "6704eeeae0954f9b6a855db0cb3644c5a5ac76e98dc3103b6d3402f9c7d5766b",
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.json"
+    },
+    {
+      "id": "story.three_dots_on_the_screen",
+      "sha256": "3cf621caaf0148d436a5035fca5ba46dd20ab9c42bebdbd448c862d285f22631",
+      "path": "stories/three-dots-on-the-screen/story.vi.json"
+    },
+    {
+      "id": "story.three_numbers_at_the_atm",
+      "sha256": "61a6dd69cf4cd3fbe788dcafd8026061cc6845d79330a7f4d385b493ed96834e",
+      "path": "stories/three-numbers-at-the-atm/story.vi.json"
+    },
+    {
+      "id": "story.ticket_printed_for_tuesday",
+      "sha256": "bd7950ec24b601aa16e96a038c3fc87e538b97ad0733257ab36442d505ad786e",
+      "path": "stories/ticket-printed-for-tuesday/story.vi.json"
+    },
+    {
+      "id": "story.tree_and_silent_goose",
+      "sha256": "2cf91928037300295a8d21ef635b6dd09b81fad7bed7c8cbf75008f4e7d2d354",
+      "path": "stories/tree-and-silent-goose/story.vi.json"
+    },
+    {
+      "id": "story.two_sides_of_one_mountain",
+      "sha256": "629a17ca2a8bdf152e2aeb23c8b2d4d637ca68ddfb9c40f98c0471af6d4e27b7",
+      "path": "stories/two-sides-of-one-mountain/story.vi.json"
+    },
+    {
+      "id": "story.two_tailors_and_one_measure",
+      "sha256": "ca2e1cdcd8ed44ecb97cec2e61b7ba58ec11a9b355c669e98decc97bb06f8251",
+      "path": "stories/two-tailors-and-one-measure/story.vi.json"
+    },
+    {
+      "id": "story.warehouse_path_between_boxes",
+      "sha256": "bafa0c9a83eae2c0a1af09c8e0fbd7772a1ad811a666aff880309a6b60738a2f",
+      "path": "stories/warehouse-path-between-boxes/story.vi.json"
+    },
+    {
+      "id": "story_artwork.adversity_resilience.v1",
+      "sha256": "4f56222526ee68aaea182cea1dd59cbcbedd0b80f2924c48f59e0e86c38338b5",
+      "path": "artwork/images/adversity-resilience-v1.jpg"
+    },
+    {
+      "id": "story_artwork.adversity_resilience.v2",
+      "sha256": "64dad90e99ad4dcca438c2b697689174b22cfa33fe56bdf6501069270a9e0be7",
+      "path": "artwork/images/adversity-resilience-v2.jpg"
+    },
+    {
+      "id": "story_artwork.attention.v1",
+      "sha256": "c3c3011b65dd07faa027e30e6601d3c2fafa0f35c4f3874f42d01fc6f7fcce1a",
+      "path": "artwork/images/attention-v1.jpg"
+    },
+    {
+      "id": "story_artwork.catalog.vi",
+      "sha256": "589b4dbfefcacd5ea2d17edb6895170da79a60b38f062c6be9f2aa451a75f551",
+      "path": "artwork/story-artwork-catalog.vi.json"
+    },
+    {
+      "id": "story_artwork.change_growth.v1",
+      "sha256": "c2d95d3fc0e54e869b8e752dfccb13815fb825f518406aac04a6d8aa38d71438",
+      "path": "artwork/images/change-growth-v1.jpg"
+    },
+    {
+      "id": "story_artwork.emotion.v1",
+      "sha256": "14083a4c8631480c4c619c6d8632ccee81337f11f39efd5f82e4e3dae43cc817",
+      "path": "artwork/images/emotion-v1.jpg"
+    },
+    {
+      "id": "story_artwork.meaning_values.v1",
+      "sha256": "ae0dbd4a7947b9628ba05451241f2546f6a9338d6d75544bf9a9dca32f3ad556",
+      "path": "artwork/images/meaning-values-v1.jpg"
+    },
+    {
+      "id": "story_artwork.meaning_values.v2",
+      "sha256": "5b72bf8bc166dce84a9e604e0ab6dcf8edcbf61041b7951ad38932c8e2f849c7",
+      "path": "artwork/images/meaning-values-v2.jpg"
+    },
+    {
+      "id": "story_artwork.relationships.v1",
+      "sha256": "18c917a35a00daa7f690e445a503b717d134d082609be0a2c1f3a541625779c0",
+      "path": "artwork/images/relationships-v1.jpg"
+    },
+    {
+      "id": "story_artwork.rest_wellbeing.v1",
+      "sha256": "9d2c8eb4478e9274c7c0d60ab236e6d5559344de2e34d2c6342e581a76648fd8",
+      "path": "artwork/images/rest-wellbeing-v1.jpg"
+    },
+    {
+      "id": "story_artwork.self_understanding.v1",
+      "sha256": "a69c1af4e145a4af27d2e2a54ff040c4048b2426e6650870a6ac7d79719a52e3",
+      "path": "artwork/images/self-understanding-v1.jpg"
+    },
+    {
+      "id": "story_artwork.work_achievement.v1",
+      "sha256": "fbd9f49dcc5430606e90c3627b39ecfd2033e9cc4602758eb49ffe5cd2aa4452",
+      "path": "artwork/images/work-achievement-v1.jpg"
+    },
+    {
+      "id": "theme.adversity_resilience.vi",
+      "sha256": "36349bbbde76946c9990739c45996fe2efbb5f4e8d9e7df06a0a3bc914f6f52d",
+      "path": "themes/adversity-resilience.vi.json"
+    },
+    {
+      "id": "theme.attention.vi",
+      "sha256": "3825bb87a705b57b91c8540c9a931eb9e6018d8c836b599033f652e56902abff",
+      "path": "themes/attention.vi.json"
+    },
+    {
+      "id": "theme.change_growth.vi",
+      "sha256": "6b0b89f3440b98e7ee6b282750183ffe7cc01184695971f9e92eb492c288583f",
+      "path": "themes/change-growth.vi.json"
+    },
+    {
+      "id": "theme.emotion.vi",
+      "sha256": "d851435da7e7eb67e1e6eba1ce909009f99ceaeac9bc818992135b258cf151c2",
+      "path": "themes/emotion.vi.json"
+    },
+    {
+      "id": "theme.meaning_values.vi",
+      "sha256": "29b83fb46c45ff7b649f2a07c8949d864425b450084712a1e2f23873c6b9ea7a",
+      "path": "themes/meaning-values.vi.json"
+    },
+    {
+      "id": "theme.relationships.vi",
+      "sha256": "63ed3b9a5b47fa00d7bda87ec591ca87c727da041d68ff7f440dbd1033391499",
+      "path": "themes/relationships.vi.json"
+    },
+    {
+      "id": "theme.rest_wellbeing.vi",
+      "sha256": "b500d8582d4c6d1025b6fb80aa878a2f7b1fc5527f184641b645888fb5f79d79",
+      "path": "themes/rest-wellbeing.vi.json"
+    },
+    {
+      "id": "theme.self_understanding.vi",
+      "sha256": "a8920a3e1114382ce1200a4fc0b327a2b4f70991b3bc2f4a8632eef24c62c8c5",
+      "path": "themes/self-understanding.vi.json"
+    },
+    {
+      "id": "theme.work_achievement.vi",
+      "sha256": "6553dc4916d3c4e47a675ec6c9f4d9f89aa62357b667319addb4827bf7623f82",
+      "path": "themes/work-achievement.vi.json"
+    }
+  ],
+  "changed_file_ids": [
+    "knowledge.canonical.vi",
+    "theme.adversity_resilience.vi",
+    "theme.attention.vi",
+    "theme.change_growth.vi",
+    "theme.meaning_values.vi",
+    "theme.rest_wellbeing.vi",
+    "theme.self_understanding.vi"
+  ],
+  "reused_file_ids": [
+    "image.story.original_if_i_lived_a_human_life.v1",
+    "image.story.rails_that_diverge.v1",
+    "image.story.the_compass_does_not_walk_for_you.v1",
+    "story.empty_boat_on_the_river",
+    "story.large_tree_beyond_the_carpenters_measure",
+    "story.old_man_and_returning_horse",
+    "story.original_between_two_banks",
+    "story.original_builder_and_shapeless_stones",
+    "story.original_chair_beside_window",
+    "story.original_if_i_lived_a_human_life",
+    "story.original_stone_that_loved_stormy_days",
+    "story.photograph_missing_a_corner",
+    "story.rails_that_diverge",
+    "story.the_compass_does_not_walk_for_you",
+    "story.tree_and_silent_goose",
+    "story_artwork.adversity_resilience.v2",
+    "story_artwork.attention.v1",
+    "story_artwork.catalog.vi",
+    "story_artwork.change_growth.v1",
+    "story_artwork.emotion.v1",
+    "story_artwork.meaning_values.v2",
+    "story_artwork.relationships.v1",
+    "story_artwork.rest_wellbeing.v1",
+    "story_artwork.self_understanding.v1",
+    "story_artwork.work_achievement.v1",
+    "theme.emotion.vi",
+    "theme.relationships.vi",
+    "theme.work_achievement.vi"
+  ],
+  "story_links_projected_to_null": [
+    {
+      "quote_id": "a_pause_keeps_the_first_reaction_from_becoming_the_only_choice",
+      "story_id": "story.operator_and_one_beat"
+    },
+    {
+      "quote_id": "energy_has_a_budget",
+      "story_id": "story.envelope_that_could_not_hold_strength"
+    }
+  ],
+  "release_unready_quote_skips": [
+    {
+      "quote_id": "roots_check_themselves_after_storm",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "acceptance_is_not_giving_up",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "quote.roof_of_many_hands",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "wounds_can_become_structure",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "control_layer_digest",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "map_does_not_lower_the_mountain",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "calling_mud_dry_changes_nothing",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "tear_lies_flat_under_the_needle",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "wall_reveals_the_way_around",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "roof_releases_the_storm_slowly",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "new_light_enters_where_branch_broke",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "patched_cloth_finds_another_way_to_stay",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "market_reopens_one_stall_at_a_time",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "morning_after_storm_starts_small",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.ma.iii_12.no_one_hinders",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.ma.iv_08.not_worse",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "every_long_road_is_crossed_one_meter_at_a_time",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "accepting_the_flood_reveals_the_road_still_open",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "a_large_task_only_needs_one_first_square",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "road_dries_from_edge_inward",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "small_flame_warms_a_small_room",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "muscle_recovers_during_rest",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.011",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.023",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.031",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.067",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.068",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.075",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.076",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.080",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.081",
+      "theme_id": "theme.adversity_resilience.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "space_between_stimulus_and_response",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "return_to_what_is_here",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "brain_system_digest",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "thought_layer_digest",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "tea_waits_beside_the_screen",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "shadow_changes_beneath_the_walker",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "red_light_reveals_the_trees",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "needle_reopens_the_same_hole",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "clock_does_not_hurry_when_watched",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "eyes_memorize_the_unopened_page",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "pot_cools_between_lid_checks",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "tomorrow_may_bring_waves_tonight_return_to_breath",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "do_not_go_to_work_twice",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "tomorrows_stone_does_not_get_lighter_overnight",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "peace_does_not_require_a_silent_room",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "too_many_tabs_slow_the_important_one",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "roots_hold_when_wind_changes",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "continuous_looking_only_tires_eyes",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "ninety_nine_percent_is_not_finished",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "pinned_tab_is_not_completed_work",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_04.prepare",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.006",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.009",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.018",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.024",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.029",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.032",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.041",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.045",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.056",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.058",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.062",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.069",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.074",
+      "theme_id": "theme.attention.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "seed_grows_out_of_sight",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "quote.boatman_and_second_mountain",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "quote.baker_and_black_mark",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "accepting_change_without_losing_self",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "avoidance_loop_digest",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "behavior_layer_digest",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "growth_layer_digest",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "hand_finds_the_key_tray",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "coffee_guides_the_hand_to_one_cup",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "worn_step_remembers_many_feet",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "curtain_opens_with_the_alarm",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "eraser_shrinks_as_letters_straighten",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "burn_mark_maps_the_flame",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "restitching_teaches_the_hand",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "wrong_turn_stays_on_the_map",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "crooked_pot_shows_the_heavy_hand",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "freedom_begins_when_one_path_is_not_the_only_path",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "worn_carpet_marks_a_familiar_path",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "unanswered_alarm_teaches_ears_not_to_hear",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "habit_arrives_without_knocking",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "repeated_story_may_be_unfinished",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.019",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.021",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.022",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.028",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.044",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.055",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.063",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.082",
+      "theme_id": "theme.change_growth.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "anxiety_loop_digest",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "yin_yang_of_emotion",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "memory_layer_digest",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "river_carries_the_upstream_rain",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "an_old_scent_can_open_an_old_room",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.020",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.030",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.066",
+      "theme_id": "theme.emotion.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "candle_is_seen_when_it_goes_out",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "home_is_known_by_what_it_keeps",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "porch_light_marks_the_kind_of_home",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "old_chair_holds_more_than_wood",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "bus_ticket_keeps_the_day_of_return",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "keep_the_lamp_when_the_sea_has_waves",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "applause_ending_is_not_failure",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "a_good_meal_ends_with_enough",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "new_leaves_do_not_need_an_audience",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "emergency_fund_can_become_breathing_time",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.002",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.003",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.012",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.015",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.036",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.037",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.049",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.050",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.051",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.053",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.057",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.059",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.064",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.065",
+      "theme_id": "theme.meaning_values.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "social_layer_digest",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "one_umbrella_keeps_two_steps_together",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "familiar_cafe_remembers_the_order",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "someone_calls_at_the_last_stop",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "safe_return_can_help_us_go_farther",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.seneca.letter_47.people",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.001",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.010",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.026",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.027",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.035",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.038",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.046",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.070",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.071",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.072",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.083",
+      "theme_id": "theme.relationships.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "tide_does_not_apologize",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "quote.laundry_and_two_bells",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "stable_is_not_empty",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "energy_layer_digest",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "shop_closes_but_street_continues",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "apron_waits_on_the_hook",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "kitchen_cools_after_the_flame",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "hands_keep_the_hammers_echo",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "wakeful_hours_fill_the_hourglass",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "dark_room_before_the_body_is_ready",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "morning_enters_before_the_alarm",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "tired_body_waits_for_the_train",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "house_turns_off_one_window_at_a_time",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "morning_dew_leaves_when_warm",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "streetlight_turns_off_when_unneeded",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "ten_percent_means_recharge",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "stars_remain_behind_clouds",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "damp_paper_is_not_the_pens_fault",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "sprint_and_marathon_need_different_breath",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "faster_clock_does_not_lengthen_day",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "athlete_sits_after_finish",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "excitement_has_a_lifespan",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "ordinary_day_can_be_recharge",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "wallet_lightens_before_bill_disappears",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.005",
+      "theme_id": "theme.rest_wellbeing.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "comparison_steals_joy",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "quote.potter_and_two_hands",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "self_judgment_loop_digest",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "comparison_loop_digest",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "defense_layer_digest",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "projection_loop_digest",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "identity_layer_digest",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "late_flower_meets_another_sky",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "trains_leave_together_for_different_cities",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "scratched_table_stays_in_the_home",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "young_tree_tied_with_soft_cloth",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "first_burnt_batch_does_not_erase_the_kitchen",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.ma.v_11.use_of_soul",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "another_persons_measure_cannot_fit_your_life",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "shadow_length_depends_on_sun",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "two_trees_begin_with_different_seeds",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "marathoner_does_not_chase_sprinter_at_start",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "each_season_has_its_own_gift",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.seneca.letter_78.opinion",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_160.self_lord",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.004",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.013",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.016",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.025",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.033",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.039",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.040",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.047",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.048",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.054",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.077",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.079",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_02.mutual_arising",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v276",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "research.laozi.ch20.061",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v043",
+      "theme_id": "theme.self_understanding.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "quote.builder_and_shapeless_stones",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "quote.warehouse_path_between_boxes",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "musician_stays_with_one_lost_note",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.ma.v_01.proper_business",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "do_not_throw_the_stone_into_the_next_persons_lake",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "selflo_owned"
+    },
+    {
+      "quote_id": "attributed.confucius.book_vii_ch08.eager",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.007",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.008",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.014",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.017",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.034",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.042",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.043",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.052",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.060",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.061",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.073",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.078",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    },
+    {
+      "quote_id": "research.laozi.ch17.054",
+      "theme_id": "theme.work_achievement.vi",
+      "review_status": "needs_owner_review",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "rights_status": "unverified"
+    }
+  ],
+  "release_empty_theme_skips": [
+
+  ],
+  "release_unpaired_story_skips": [
+
+  ],
+  "explicit_quote_exclusions": [
+
+  ],
+  "reading_intent_story_memberships_removed": [
+
+  ],
+  "release_knowledge_projection": {
+    "concept_ids": [
+      "concept.acceptance",
+      "concept.attachment_security",
+      "concept.autonomous_motivation",
+      "concept.belonging",
+      "concept.comparison",
+      "concept.deliberate_practice",
+      "concept.emotional_awareness",
+      "concept.emotional_memory",
+      "concept.habit_formation",
+      "concept.meaning_in_life",
+      "concept.overthinking",
+      "concept.present_moment_awareness",
+      "concept.psychological_detachment",
+      "concept.self_compassion",
+      "concept.values_congruent_action"
+    ],
+    "theory_ids": [
+      "theory.affect_labeling",
+      "theory.attachment_security",
+      "theory.deliberate_practice",
+      "theory.emotional_memory",
+      "theory.habit_automaticity",
+      "theory.meaning_in_life",
+      "theory.mindful_attention_control",
+      "theory.need_to_belong",
+      "theory.psychological_acceptance",
+      "theory.psychological_detachment",
+      "theory.psychological_flexibility_values",
+      "theory.repetitive_negative_thinking",
+      "theory.self_compassion",
+      "theory.self_determination_at_work",
+      "theory.social_comparison"
+    ],
+    "framework_ids": [
+      "framework.buddhist_practice",
+      "framework.confucianism",
+      "framework.dichotomy_of_control",
+      "framework.impermanence",
+      "framework.natural_cycles",
+      "framework.stoicism",
+      "framework.taoism",
+      "framework.yin_yang_taiji"
+    ],
+    "reference_ids": [
+      "ref.baumeister_leary_1995_need_to_belong",
+      "ref.buchanan_2007_emotional_memory_retrieval",
+      "ref.callahan_2021_acceptance",
+      "ref.chin_2021_mindfulness_attention",
+      "ref.ericsson_1993_deliberate_practice",
+      "ref.festinger_1954_social_comparison",
+      "ref.hayes_2006_psychological_flexibility",
+      "ref.lieberman_2007_affect_labeling",
+      "ref.mikulincer_2002_attachment_security",
+      "ref.neff_2003_self_compassion",
+      "ref.parker_2022_sdt_work",
+      "ref.steger_2006_meaning_in_life",
+      "ref.stojanovic_2022_habit_context",
+      "ref.wendsche_2017_detachment",
+      "ref.zetsche_2018_repetitive_negative_thinking"
+    ],
+    "core_truth_ids": [
+      "theory.affect_labeling.recognition_can_change_relationship_to_experience",
+      "theory.attachment_security.reliable_presence_supports_exploration",
+      "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part",
+      "theory.emotional_memory.prior_experience_may_shape_present_response",
+      "theory.habit_automaticity.repetition_in_context_leaves_a_path",
+      "theory.meaning_in_life.meaning_can_gather_around_ordinary_connections",
+      "theory.mindful_attention_control.noticing_requires_available_attention",
+      "theory.need_to_belong.stable_presence_carries_relational_meaning",
+      "theory.psychological_acceptance.seeing_reality_is_not_surrender",
+      "theory.psychological_detachment.recovery_needs_some_demands_to_stop",
+      "theory.psychological_flexibility_values.values_offer_direction_not_guaranteed_outcomes",
+      "theory.repetitive_negative_thinking.repetition_may_not_add_clarity",
+      "theory.self_compassion.kindness_can_coexist_with_honest_self_view",
+      "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected",
+      "theory.social_comparison.one_reference_cannot_measure_every_path"
+    ]
+  },
+  "manifest_sha256": "fa2fd754cb4ef3920d11a63a871831274ffdc716841cb03282b4799e2e899fac",
+  "generated_at": "2026-09-24T04:34:55Z"
+}
