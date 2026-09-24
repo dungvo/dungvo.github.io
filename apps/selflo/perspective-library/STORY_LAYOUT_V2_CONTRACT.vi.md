@@ -32,7 +32,7 @@ Tài liệu này là nguồn sự thật duy nhất cho dữ liệu trình bày 
 - `subtitle_vi`
 - `opening_quote_vi`: một câu/ý ngắn, treatment nhẹ hơn body pull quote.
 - `reflection.closing_vi`: một câu tạo dư âm, không thêm luận điểm mới.
-- `hero_image`: legacy fallback; V2 ưu tiên shared artwork theo theme.
+- `hero_image`: artwork riêng của story; khi có descriptor hợp lệ, V2 ưu tiên ảnh này trước shared artwork theo theme.
 - `layout_review`: chỉ cần khi vượt density gate.
 
 ## 3. Block types
@@ -127,10 +127,11 @@ Ngoại lệ phải có dấu vết duyệt:
 ## 7. Artwork resolution
 
 ```text
-editorial_v2 + primary_theme
+hero_image.file_id
+→ image descriptor riêng trong cùng immutable snapshot
+→ nếu không có, editorial_v2 + primary_theme
 → story_artwork_catalog
-→ image descriptor trong cùng immutable snapshot
-→ legacy hero_image
+→ shared image descriptor trong cùng immutable snapshot
 → no-image Editorial V2
 ```
 

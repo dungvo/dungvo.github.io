@@ -115,6 +115,14 @@ class StoryV2ContractTests(unittest.TestCase):
         self.assertNotIn("section.blocks.sort", renderer)
         self.assertIn("(section.blocks||[]).forEach", renderer)
 
+    def test_web_renderer_prefers_story_hero_over_theme_artwork(self) -> None:
+        renderer = (APP_ROOT / "story/app.mjs").read_text(encoding="utf-8")
+        story_hero = "descriptors.get(story.hero_image?.file_id)"
+        theme_artwork = "artworkByTheme.get(story.primary_theme)"
+        self.assertIn(story_hero, renderer)
+        self.assertIn(theme_artwork, renderer)
+        self.assertLess(renderer.index(story_hero), renderer.index(theme_artwork))
+
     def test_shared_artwork_references_canonical_files(self) -> None:
         source_index = read_json(SOURCE_ROOT / "source.json")
         entries = {entry["id"]: entry for entry in source_index["files"]}

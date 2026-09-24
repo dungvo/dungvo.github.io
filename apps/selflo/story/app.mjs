@@ -32,12 +32,13 @@ async function load(){
 
 function resolveHero(story){
   if(story.hero_image?.preview_path)return story.hero_image.preview_path;
+  const descriptor=descriptors.get(story.hero_image?.file_id);
+  if(descriptor)return {url:bases[els.channel.value]+descriptor.path,alt:story.hero_image?.alt_text_vi||''};
   if(story.reader_format==='editorial_v2'){
     const mapping=artworkByTheme.get(story.primary_theme);const shared=mapping&&descriptors.get(mapping.file_id);
     if(shared)return {url:bases[els.channel.value]+shared.path,alt:mapping.alt_text_vi||''};
   }
-  const descriptor=descriptors.get(story.hero_image?.file_id);
-  return descriptor?{url:bases[els.channel.value]+descriptor.path,alt:story.hero_image?.alt_text_vi||''}:null;
+  return null;
 }
 
 function render(){
