@@ -61,6 +61,25 @@ def research_score(q, n, m):
     why = 'Điểm sàng lọc từ source, Selflo fit, readiness và cảnh báo duplicate; cần editorial review trước khi chốt.'
     return max(0, min(99, score)), why
 
+def exclusion_reason(q, n):
+    if clean(q.get('Mức phù hợp Selflo')) != 'High':
+        return 'selflo_fit_not_high', 'Chưa phù hợp Selflo ở mức High.'
+    source_url = clean(q.get('Source URL'))
+    if not source_url:
+        return 'missing_source_url', 'Thiếu đường dẫn nguồn.'
+    if not source_url.lower().startswith(('http://', 'https://')):
+        return 'source_url_not_public_http', 'Nguồn không phải đường dẫn công khai có thể kiểm tra.'
+    if not clean(q.get('Mức xác minh')).startswith(('A', 'B')):
+        return 'source_below_B', 'Mức xác minh nguồn thấp hơn B.'
+    if clean(q.get('Rủi ro giáo điều / directive')).lower().startswith(('high', 'cao')):
+        return 'directive_risk_high', 'Rủi ro diễn đạt giáo điều hoặc ra lệnh cao.'
+    text = clean(q.get('Bản dịch / bản làm việc tiếng Việt'))
+    if not 15 <= len(text) <= 600:
+        return 'text_length_outside_gate', 'Độ dài chưa phù hợp để biên tập thành quote.'
+    if clean(n.get('Exact duplicate cluster ID')):
+        return 'exact_duplicate_alternate', 'Biến thể trùng hoàn toàn; đang giữ lại để đối chiếu, không nhập Authoring.'
+    return 'awaiting_authoring_review', 'Chưa được review vòng Canonical → Authoring.'
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--root', type=Path, default=Path(__file__).resolve().parent.parent)
@@ -78,23 +97,36 @@ def main():
     release_manifest, release = load_quotes(root/'perspective-library/release/vi')
     release_ids = {clean(x.get('id')) for x in release}
     authoring_by_id = {clean(x.get('id')): x for x in authoring}
-    rows=[]
+    research_by_id={clean(q.get('Quote ID')):q for q in raw}
+    canonical_to_research={}
     for q in raw:
-        ident=clean(q.get('Quote ID')); n=normalized.get(ident,{}); m=mapping.get(ident,{})
+        ident=clean(q.get('Quote ID')); m=mapping.get(ident,{})
         mapped_id=clean(m.get('Canonical ID'))
         canonical_id=mapped_id or (ident if ident in authoring_by_id else '')
-        cq=authoring_by_id.get(canonical_id)
-        pipeline='release' if canonical_id in release_ids else 'authoring' if cq else 'research'
-        score,why=research_score(q,n,m)
-        rows.append({'record_type':'research','id':ident,'canonical_id':canonical_id or None,'text_vi':clean(q.get('Bản dịch / bản làm việc tiếng Việt')),'author':clean(n.get('Author canonical') or q.get('Tác giả / Attribution')),'work':clean(n.get('Source/work canonical') or q.get('Tên nguồn / tác phẩm')),'source_url':clean(q.get('Source URL')),'theme':clean(n.get('Theme canonical') or q.get('Chủ đề chính (Theme)')),'human_experience':clean(n.get('Human experience canonical') or q.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(n.get('content_nature canonical') or q.get('Hình thức nội dung (Content Form)')),'confidence':confidence(q.get('Mức xác minh')),'verification':clean(q.get('Mức xác minh')),'rights':clean(q.get('Quyền sử dụng')),'selflo_fit':clean(q.get('Mức phù hợp Selflo')),'release_readiness':clean(q.get('Release readiness')),'pipeline':pipeline,'review':clean(q.get('Owner review')),'story_id':clean(q.get('Story ID liên quan')) or None,'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'score':score,'why':why})
+        if canonical_id in authoring_by_id:
+            canonical_to_research.setdefault(canonical_id, ident)
+
+    rows=[]
     for q in authoring:
         ident=clean(q.get('id')); a=q.get('authorship') or {}; rights=q.get('rights') or {}; review=q.get('review') or {}
+        research_id=canonical_to_research.get(ident); rq=research_by_id.get(research_id,{}) if research_id else {}; n=normalized.get(research_id,{}) if research_id else {}
         ai=ai_reviews.get(ident,{}) if ident not in release_ids else {}; ai_score={'ready_for_owner_review':92,'story_review_required':84,'source_verification_required':80,'edit_required':70,'round1_not_pass':30,'source_rights_blocked':20}.get(ai.get('decision'),78)
-        rows.append({'record_type':'canonical','id':ident,'canonical_id':ident,'text_vi':clean(q.get('text_vi')),'author':clean(a.get('author_name')),'work':clean(a.get('work')),'source_url':clean(a.get('source_url')),'theme':clean(q.get('primary_theme')),'human_experience':'','content_nature':clean(q.get('kind')),'confidence':confidence(rights.get('status')),'verification':clean(a.get('source_detail')),'rights':clean(rights.get('status')),'selflo_fit':'','release_readiness':'Released' if ident in release_ids else 'Needs owner review' if review.get('status')=='needs_owner_review' else clean(review.get('status')),'pipeline':'release' if ident in release_ids else 'authoring','review':clean(review.get('status')),'ai_review_status':ai.get('decision'),'ai_review_round':ai.get('review_round'),'ai_review_note':ai.get('note_vi'),'story_id':q.get('story_id'),'exact_duplicate':'','near_duplicate':'','score':100 if ident in release_ids else ai_score,'why':'Canonical quote trong Release.' if ident in release_ids else ai.get('note_vi') or 'Canonical quote trong Authoring; kiểm tra review, rights và source trước Release.'})
+        rows.append({'record_type':'quote','id':ident,'research_id':research_id,'canonical_id':ident,'text_vi':clean(q.get('text_vi')),'author':clean(a.get('author_name')),'work':clean(a.get('work')),'source_url':clean(a.get('source_url')),'theme':clean(q.get('primary_theme')),'human_experience':clean(n.get('Human experience canonical') or rq.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(q.get('kind')),'confidence':confidence(rights.get('status')),'verification':clean(a.get('source_detail')),'rights':clean(rights.get('status')),'selflo_fit':clean(rq.get('Mức phù hợp Selflo')),'release_readiness':'Released' if ident in release_ids else 'Needs owner review' if review.get('status')=='needs_owner_review' else clean(review.get('status')),'pipeline':'release' if ident in release_ids else 'authoring','review':clean(review.get('status')),'ai_review_status':ai.get('decision'),'ai_review_round':ai.get('review_round'),'ai_review_note':ai.get('note_vi'),'story_id':q.get('story_id'),'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'issue_code':None,'score':100 if ident in release_ids else ai_score,'why':'Đã phát hành.' if ident in release_ids else ai.get('note_vi') or 'Đang ở Authoring; cần bạn review vòng 2 trước khi Release.'})
+
+    matched_research=set(canonical_to_research.values())
+    for q in raw:
+        ident=clean(q.get('Quote ID'))
+        if ident in matched_research: continue
+        n=normalized.get(ident,{}); m=mapping.get(ident,{})
+        issue_code,why=exclusion_reason(q,n)
+        pipeline='canonical' if issue_code=='awaiting_authoring_review' else 'excluded'
+        score,_=research_score(q,n,m)
+        rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(q.get('Bản dịch / bản làm việc tiếng Việt')),'author':clean(n.get('Author canonical') or q.get('Tác giả / Attribution')),'work':clean(n.get('Source/work canonical') or q.get('Tên nguồn / tác phẩm')),'source_url':clean(q.get('Source URL')),'theme':clean(n.get('Theme canonical') or q.get('Chủ đề chính (Theme)')),'human_experience':clean(n.get('Human experience canonical') or q.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(n.get('content_nature canonical') or q.get('Hình thức nội dung (Content Form)')),'confidence':confidence(q.get('Mức xác minh')),'verification':clean(q.get('Mức xác minh')),'rights':clean(q.get('Quyền sử dụng')),'selflo_fit':clean(q.get('Mức phù hợp Selflo')),'release_readiness':clean(q.get('Release readiness')),'pipeline':pipeline,'review':clean(q.get('Owner review')),'ai_review_status':None,'story_id':clean(q.get('Story ID liên quan')) or None,'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'issue_code':issue_code,'score':score,'why':why})
     rows.sort(key=lambda x:(-x['score'],x['record_type'],x['id']))
     for i,x in enumerate(rows,1): x['rank']=i
-    summary={'research_quotes':len(raw),'canonical_authoring_quotes':len(authoring),'release_quotes':len(release),'authoring_not_released':len(authoring)-len(release),'matrix_rows':len(rows),'research_with_canonical_match':sum(1 for x in rows if x['record_type']=='research' and x['canonical_id']),'authoring_revision':authoring_manifest.get('library_revision'),'release_revision':release_manifest.get('library_revision')}
-    out={'schema_version':'selflo.review-matrix.v2','generated_from':book.name,'summary':summary,'rows':rows}
+    stage_counts={stage:sum(1 for x in rows if x['pipeline']==stage) for stage in ('canonical','excluded','authoring','release')}
+    summary={'total_quotes':len(rows),'canonical_pending_authoring':stage_counts['canonical'],'excluded_not_authoring':stage_counts['excluded'],'authoring_pending_release':stage_counts['authoring'],'release_quotes':stage_counts['release'],'stage_sum':sum(stage_counts.values()),'research_source_rows':len(raw),'canonical_authoring_quotes':len(authoring),'authoring_revision':authoring_manifest.get('library_revision'),'release_revision':release_manifest.get('library_revision')}
+    out={'schema_version':'selflo.review-matrix.v3','generated_from':book.name,'summary':summary,'rows':rows}
     target=root/'review-matrix/data.json';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(out,ensure_ascii=False,separators=(',',':'))+'\n')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 
