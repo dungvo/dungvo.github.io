@@ -8,6 +8,24 @@
   const MATRIX_URL = new URL("../quote-research/diversity-matrix.json", window.location.href);
   const REVIEW_KEY = "selflo.content-preview.reviews.v1";
   const READER_KEY = "selflo.content-preview.reader.v1";
+  const REVIEW_BATCHES = {
+    "story-28": new Set([
+      "a_large_task_only_needs_one_first_square", "accepting_the_flood_reveals_the_road_still_open",
+      "an_old_scent_can_open_an_old_room", "another_persons_measure_cannot_fit_your_life",
+      "bus_ticket_keeps_the_day_of_return", "comparison_steals_joy", "do_not_go_to_work_twice",
+      "eraser_shrinks_as_letters_straighten", "familiar_cafe_remembers_the_order",
+      "first_burnt_batch_does_not_erase_the_kitchen", "hands_keep_the_hammers_echo",
+      "house_turns_off_one_window_at_a_time", "late_flower_meets_another_sky",
+      "musician_stays_with_one_lost_note", "new_light_enters_where_branch_broke",
+      "old_chair_holds_more_than_wood", "one_umbrella_keeps_two_steps_together",
+      "peace_does_not_require_a_silent_room", "quote.baker_and_black_mark",
+      "quote.builder_and_shapeless_stones", "quote.potter_and_two_hands", "quote.roof_of_many_hands",
+      "river_carries_the_upstream_rain", "roof_releases_the_storm_slowly", "seed_grows_out_of_sight",
+      "someone_calls_at_the_last_stop", "tea_waits_beside_the_screen", "tide_does_not_apologize"
+    ])
+  };
+  const requestedBatch = libraryParams.get("batch");
+  const activeReviewBatch = REVIEW_BATCHES[requestedBatch] || null;
 
   const defaultReaderPreferences = { font: "serif", size: 18, theme: "paper", bookmarked: {} };
   const savedReaderPreferences = readJSON(READER_KEY, defaultReaderPreferences);
@@ -250,7 +268,8 @@
         : libraryChannel === "candidate"
           ? "Đang xem batch Candidate nhỏ cho vòng review đầu tiên."
           : "Đang xem bản biên tập Authoring.";
-      el.libraryBrowseNote.textContent = channelNote + (state.updateIndexAvailable ? " Ngày cập nhật tính theo từng quote/story khi đưa vào Library." : " Chưa tải được lịch sử cập nhật; đang hiện toàn bộ nội dung.");
+      const batchNote = activeReviewBatch ? ` Đang lọc batch ${requestedBatch} gồm ${activeReviewBatch.size} cặp quote–story.` : "";
+      el.libraryBrowseNote.textContent = channelNote + batchNote + (state.updateIndexAvailable ? " Ngày cập nhật tính theo từng quote/story khi đưa vào Library." : " Chưa tải được lịch sử cập nhật; đang hiện toàn bộ nội dung.");
       state.manifest = manifest;
       state.descriptors = descriptors;
       state.stories = new Map(stories.map(item => [item.payload.id, { ...item.payload, __path: item.descriptor.path }]));
@@ -841,10 +860,11 @@
   function contentRows() {
     const stories = [...state.stories.values()].sort(compareStories);
     const quotesWithoutStory = state.quotes.filter(quote => !quote.story_id || !state.stories.has(quote.story_id));
-    return [
+    const rows = [
       ...stories.map(story => ({ story, quote: quoteForStory(story.id) })),
       ...quotesWithoutStory.map(quote => ({ story: null, quote }))
     ];
+    return activeReviewBatch ? rows.filter(row => row.quote && activeReviewBatch.has(row.quote.id)) : rows;
   }
 
   function matchesContentFilters(row) {
