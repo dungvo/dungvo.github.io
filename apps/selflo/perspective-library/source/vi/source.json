@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 44,
-  "content_version": "release-selected-quotes-44",
+  "source_revision": 46,
+  "content_version": "daily-review-authoring-46",
   "language": "vi",
-  "canonical_quote_count": 402,
+  "canonical_quote_count": 460,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -743,6 +743,30 @@
       "kind": "image",
       "path": "artwork/images/compass-no-way-home-v1.jpg",
       "media_type": "image/jpeg"
+    },
+    {
+      "id": "quote_fragment.self_understanding.007",
+      "kind": "quote_fragment",
+      "path": "quotes/self_understanding/007.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.008",
+      "kind": "quote_fragment",
+      "path": "quotes/self_understanding/008.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.009",
+      "kind": "quote_fragment",
+      "path": "quotes/self_understanding/009.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "quote_fragment.self_understanding.010",
+      "kind": "quote_fragment",
+      "path": "quotes/self_understanding/010.vi.json",
+      "media_type": "application/json"
     }
   ]
 }

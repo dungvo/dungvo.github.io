@@ -1,6 +1,6 @@
 {
-  "library_revision": 53,
-  "generated_at": "2026-09-24T10:31:42Z",
+  "library_revision": 55,
+  "generated_at": "2026-09-24T22:50:51Z",
   "entities": {
     "roots_check_themselves_after_storm": {
       "updated_at": "2026-09-16T22:06:51Z",
@@ -185,6 +185,10 @@
     "attributed.laozi.chapter_58.fortune_misfortune": {
       "updated_at": "2026-09-16T22:06:51Z",
       "library_revision": 32
+    },
+    "research.laozi.ch15.043": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
     },
     "space_between_stimulus_and_response": {
       "updated_at": "2026-09-24T10:31:42Z",
@@ -413,6 +417,14 @@
     "research.laozi.ch12.034": {
       "updated_at": "2026-09-23T23:59:43Z",
       "library_revision": 44
+    },
+    "research.laozi.ch11.030": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.ch14.042": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
     },
     "habit_is_a_path_worn_by_feet": {
       "updated_at": "2026-09-24T04:34:16Z",
@@ -1042,6 +1054,10 @@
       "updated_at": "2026-09-23T23:59:43Z",
       "library_revision": 44
     },
+    "research.laozi.ch08.020": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
     "rest_is_part_of_rhythm": {
       "updated_at": "2026-09-24T08:00:22Z",
       "library_revision": 50
@@ -1454,6 +1470,218 @@
       "updated_at": "2026-09-24T00:06:12Z",
       "library_revision": 46
     },
+    "research.day17.future_not_wholly_ours": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day18.18_63": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day18.2_14": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day18.2_47": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day18.6_26": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day19.mundaka_two_birds": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day22.life_over_gold": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day22.root_cause": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day22.worry_no_meal": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day23.nbk_nhan_01": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day23.nbk_nhan_02": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day24.kieu_005": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an1_16": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an2_10": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an2_18": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an4_10": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an4_22": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an4_26": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an5_20": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day25.an6_2": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day26.gaozi_i_fishbear": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day26.gong_sun_chou_miao": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day26.jin_xin_i_book": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day26.li_lou_ii_not_do": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day26.liang_hui_wang_autumnhair": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day27.guo_you_bu_ji": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day27.han_dan_xue_bu": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day27.hua_she_tian_zu": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day27.ke_zhou_qiu_jian": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day27.mang_ren_mo_xiang": {
+      "updated_at": "2026-09-24T22:47:49Z",
+      "library_revision": 54
+    },
+    "research.day71.007": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.day71.010": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.ch09.022": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.ch10.029": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.ch15.046": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.ch16.049": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.ch16.050": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch52.006": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch52.007": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch53.010": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch54.013": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch58.037": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch59.040": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch61.048": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch66.074": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch67.079": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch68.082": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch72.094": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch79.121": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.laozi.day3.ch81.131": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.reaudit.day17.meno_choice_compare": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.zhuangzi.day4.ch03.022": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
+    "research.zhuangzi.day4.ch03.029": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
+    },
     "quote.builder_and_shapeless_stones": {
       "updated_at": "2026-09-16T22:06:51Z",
       "library_revision": 32
@@ -1609,6 +1837,10 @@
     "research.laozi.ch17.054": {
       "updated_at": "2026-09-23T15:01:32Z",
       "library_revision": 37
+    },
+    "research.laozi.ch02.008": {
+      "updated_at": "2026-09-24T22:50:51Z",
+      "library_revision": 55
     },
     "story.after_the_alarm_went_silent": {
       "updated_at": "2026-08-30T05:50:41Z",

@@ -1,15 +1,15 @@
 {
   "schema_version": "selflo.perspective.quote-fragment.v1",
   "entity": "perspective_quote_fragment",
-  "fragment_id": "quote_fragment.self_understanding.006",
+  "fragment_id": "quote_fragment.self_understanding.008",
   "primary_theme": "self_understanding",
   "quotes": [
     {
-      "id": "research.dhammapada.day11.v223",
+      "id": "research.day26.gong_sun_chou_miao",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không nhất thiết phải đáp lại giận dữ bằng giận dữ, hay điều không tử tế bằng cùng một thứ.",
+      "text_vi": "Có việc cần nuôi dưỡng, nhưng không được cưỡng ép nó lớn nhanh; đừng quên, cũng đừng kéo nó lên.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -19,19 +19,18 @@
         "thought_match_keys": [],
         "presentation_tags": [
           "inner_awareness",
-          "uncertainty_choice_agency",
-          "agency"
+          "learning_failure_growth"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/17-Anger.htm",
+        "author_name": "Mencius / 孟子",
+        "work": "孟子 / Mencius",
+        "source_url": "https://ctext.org/mengzi",
         "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research corpus row 733; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "source_label": "Mencius / 孟子",
+        "source_detail": "Research corpus row 1121; content_nature=translated_quote; verification=A/B - passage/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -39,21 +38,20 @@
         "frameworks": [],
         "emotion_tags": [],
         "keywords": [
-          "uncertainty_choice_agency",
-          "agency"
+          "learning_failure_growth"
         ]
       },
       "rights": {
-        "status": "public_domain",
-        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+        "status": "unverified",
+        "note": "Ancient text public domain; platform/translation terms separate"
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:59:42Z"
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Không nhất thiết phải đáp lại giận dữ bằng giận dữ, hay điều không tử tế bằng cùng một thứ.",
+        "semantic_intent": "Có việc cần nuôi dưỡng, nhưng không được cưỡng ép nó lớn nhanh; đừng quên, cũng đừng kéo nó lên.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -62,16 +60,16 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Mencius / 孟子"
       },
       "knowledge_basis": null
     },
     {
-      "id": "research.mn.day12.mn20_01",
+      "id": "research.day26.jin_xin_i_book",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi tâm bị mắc vào một đối tượng gây hại, một khả năng là chuyển sự chú ý sang một đối tượng khác lành hơn.",
+      "text_vi": "Tin hết vào sách thì thà không có sách — nguồn có thẩm quyền vẫn cần phán đoán.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -81,19 +79,18 @@
         "thought_match_keys": [],
         "presentation_tags": [
           "inner_awareness",
-          "attention_noise_focus",
-          "attention"
+          "human_judgment_ai"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 20 Vitakkasaṇṭhānasutta",
-        "source_url": "https://suttacentral.net/mn20/pli/ms",
+        "author_name": "Mencius / 孟子",
+        "work": "孟子 / Mencius",
+        "source_url": "https://ctext.org/mengzi",
         "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research corpus row 750; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "source_label": "Mencius / 孟子",
+        "source_detail": "Research corpus row 1125; content_nature=translated_quote; verification=A/B - passage/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -101,21 +98,20 @@
         "frameworks": [],
         "emotion_tags": [],
         "keywords": [
-          "attention_noise_focus",
-          "attention"
+          "human_judgment_ai"
         ]
       },
       "rights": {
-        "status": "public_domain",
-        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+        "status": "unverified",
+        "note": "Ancient text public domain; platform/translation terms separate"
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Khi tâm bị mắc vào một đối tượng gây hại, một khả năng là chuyển sự chú ý sang một đối tượng khác lành hơn.",
+        "semantic_intent": "Tin hết vào sách thì thà không có sách — nguồn có thẩm quyền vẫn cần phán đoán.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -124,16 +120,16 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Mencius / 孟子"
       },
       "knowledge_basis": null
     },
     {
-      "id": "research.laozi.ch05.014",
+      "id": "research.day26.li_lou_ii_not_do",
       "revision": 1,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nói quá nhiều dễ đi đến cạn; có lúc giữ lại khoảng trung tâm còn hơn tiếp tục thêm lời.",
+      "text_vi": "Có những điều mình quyết định không làm, rồi mới có thể dồn sức cho điều mình chọn làm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -143,79 +139,548 @@
         "thought_match_keys": [],
         "presentation_tags": [
           "inner_awareness",
-          "attention_noise_focus",
+          "uncertainty_choice_agency"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Mencius / 孟子",
+        "work": "孟子 / Mencius",
+        "source_url": "https://ctext.org/mengzi/li-lou-ii",
+        "source_language": null,
+        "source_label": "Mencius / 孟子",
+        "source_detail": "Research corpus row 1116; content_nature=translated_quote; verification=A/B - passage/location verified."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "uncertainty_choice_agency"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Ancient text public domain; platform/translation terms separate"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Có những điều mình quyết định không làm, rồi mới có thể dồn sức cho điều mình chọn làm.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Mencius / 孟子"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day26.liang_hui_wang_autumnhair",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Có thể nhìn thấy điều cực nhỏ mà vẫn bỏ sót một bó củi lớn ngay trước mắt — năng lực không tự bảo đảm mình đang dùng nó đúng chỗ.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "inner_awareness",
           "attention"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Laozi / 老子",
+        "author_name": "Mencius / 孟子",
+        "work": "孟子 / Mencius",
+        "source_url": "https://ctext.org/mengzi",
+        "source_language": null,
+        "source_label": "Mencius / 孟子",
+        "source_detail": "Research corpus row 1123; content_nature=translated_quote; verification=A/B - passage/location verified."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "attention"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Ancient text public domain; platform/translation terms separate"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Có thể nhìn thấy điều cực nhỏ mà vẫn bỏ sót một bó củi lớn ngay trước mắt — năng lực không tự bảo đảm mình đang dùng nó đúng chỗ.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Mencius / 孟子"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day27.guo_you_bu_ji",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Quá nhiều và quá ít có thể cùng làm lệch một việc; tối ưu không phải lúc nào cũng là tăng thêm.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "inner_awareness"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Chinese idiom tradition",
+        "work": "《論語．先進》",
+        "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=1428&powerMode=1",
+        "source_language": null,
+        "source_label": "Chinese idiom tradition",
+        "source_detail": "Research corpus row 1176; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": []
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Traditional/classical wording; dictionary site terms apply"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Quá nhiều và quá ít có thể cùng làm lệch một việc; tối ưu không phải lúc nào cũng là tăng thêm.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Chinese idiom tradition"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day27.han_dan_xue_bu",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Học theo người khác đến mức đánh mất cách đi của mình là một rủi ro khác với học hỏi.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "inner_awareness",
+          "identity"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Chinese idiom tradition",
+        "work": "《莊子．秋水》 tradition",
+        "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=712&powerMode=1",
+        "source_language": null,
+        "source_label": "Chinese idiom tradition",
+        "source_detail": "Research corpus row 1177; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "identity"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Traditional/classical wording; dictionary site terms apply"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Học theo người khác đến mức đánh mất cách đi của mình là một rủi ro khác với học hỏi.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Chinese idiom tradition"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day27.hua_she_tian_zu",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Sau khi một việc đã đủ, thêm nữa có thể làm nó kém đi thay vì tốt hơn.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "inner_awareness"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Chinese idiom tradition",
+        "work": "《戰國策．齊策二》",
+        "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-23&la=0&webMd=2",
+        "source_language": null,
+        "source_label": "Chinese idiom tradition",
+        "source_detail": "Research corpus row 1178; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": []
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Traditional/classical wording; dictionary site terms apply"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Sau khi một việc đã đủ, thêm nữa có thể làm nó kém đi thay vì tốt hơn.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Chinese idiom tradition"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day27.ke_zhou_qiu_jian",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "環 cảnh đã đổi mà phương pháp vẫn giữ nguyên có thể khiến một dấu mốc từng đúng trở thành sai.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "inner_awareness",
+          "change_loss_recovery"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Chinese idiom tradition",
+        "work": "《呂氏春秋．察今》",
+        "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=43&la=0&webMd=2",
+        "source_language": null,
+        "source_label": "Chinese idiom tradition",
+        "source_detail": "Research corpus row 1173; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "change_loss_recovery"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Traditional/classical wording; dictionary site terms apply"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "環 cảnh đã đổi mà phương pháp vẫn giữ nguyên có thể khiến một dấu mốc từng đúng trở thành sai.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Chinese idiom tradition"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day27.mang_ren_mo_xiang",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Một phần trải nghiệm có thể đúng mà vẫn chưa đủ để mô tả toàn bộ sự vật.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "inner_awareness"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Chinese idiom tradition",
+        "work": "《大般涅槃經》卷三十",
+        "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-321&la=0&webMd=2",
+        "source_language": null,
+        "source_label": "Chinese idiom tradition",
+        "source_detail": "Research corpus row 1174; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": []
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Traditional/classical wording; dictionary site terms apply"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một phần trải nghiệm có thể đúng mà vẫn chưa đủ để mô tả toàn bộ sự vật.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Chinese idiom tradition"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day71.007",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi câu trả lời trở nên rẻ, câu hỏi đáng hỏi có thể trở thành nguồn lực quý hơn.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "Công nghệ & đời sống",
+          "human_judgment_ai"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Abundance → scarcity migration",
+        "work": "Abundance → scarcity migration",
+        "source_url": "https://www.nber.org/papers/w35677",
+        "source_language": null,
+        "source_label": "Abundance → scarcity migration",
+        "source_detail": "Research corpus row 1743; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "human_judgment_ai"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Research only / rights review"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Khi câu trả lời trở nên rẻ, câu hỏi đáng hỏi có thể trở thành nguồn lực quý hơn.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Abundance → scarcity migration"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.day71.010",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Nhiều đầu ra hơn không tự động tạo nhiều giá trị hơn nếu xác minh và quyết định không theo kịp.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "Công nghệ & đời sống",
+          "human_judgment_ai"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Abundance → scarcity migration",
+        "work": "Abundance → scarcity migration",
+        "source_url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "source_language": null,
+        "source_label": "Abundance → scarcity migration",
+        "source_detail": "Research corpus row 1746; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "human_judgment_ai"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Research only / rights review"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Nhiều đầu ra hơn không tự động tạo nhiều giá trị hơn nếu xác minh và quyết định không theo kịp.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Abundance → scarcity migration"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.laozi.ch09.022",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Cứ giữ cho đầy mãi, không bằng biết lúc dừng.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "self_understanding",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "Nghỉ ngơi & sức khỏe tinh thần"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Laozi",
         "work": "道德經 / Tao Te Ching",
-        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
         "source_language": null,
-        "source_label": "Laozi / 老子",
-        "source_detail": "Research corpus row 15; content_nature=translated_quote; verification=A - Primary source."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "attention_noise_focus",
-          "attention"
-        ]
-      },
-      "rights": {
-        "status": "public_domain",
-        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
-      },
-      "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
-      },
-      "writing": {
-        "semantic_intent": "Nói quá nhiều dễ đi đến cạn; có lúc giữ lại khoảng trung tâm còn hơn tiếp tục thêm lời.",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Laozi / 老子"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day17.future_not_wholly_ours",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Tương lai không hoàn toàn thuộc quyền mình, nhưng cũng không hoàn toàn nằm ngoài mình.",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Epicurus",
-        "work": "Letter to Menoeceus",
-        "source_url": "https://ericlyonshansen.github.io/Epicurus/Letter_to_Menoeceus_Bailey_Lines.html",
-        "source_language": null,
-        "source_label": "Epicurus",
-        "source_detail": "Research corpus row 880; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "source_label": "Laozi",
+        "source_detail": "Research corpus row 23; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -226,7 +691,7 @@
       },
       "rights": {
         "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
+        "note": "Public domain / likely"
       },
       "review": {
         "status": "needs_owner_review",
@@ -234,7 +699,7 @@
         "reviewed_at": null
       },
       "writing": {
-        "semantic_intent": "Tương lai không hoàn toàn thuộc quyền mình, nhưng cũng không hoàn toàn nằm ngoài mình.",
+        "semantic_intent": "Cứ giữ cho đầy mãi, không bằng biết lúc dừng.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -243,477 +708,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Epicurus"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day18.18_63",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Sau khi trình bày teaching, câu 18.63 vẫn dành một bước cho người nghe: suy xét toàn bộ rồi hành động theo điều mình lựa chọn.",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness",
-          "uncertainty_choice_agency"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?etadi=1&etradi=1&field_chapter_value=18&field_nsutra_value=63&language=dv&setgb=1",
-        "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research corpus row 907; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "uncertainty_choice_agency"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Sau khi trình bày teaching, câu 18.63 vẫn dành một bước cho người nghe: suy xét toàn bộ rồi hành động theo điều mình lựa chọn.",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day18.2_14",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Những cảm giác dễ chịu và khó chịu do tiếp xúc với hoàn cảnh có tính đến rồi đi; đừng vội xem trạng thái hiện tại là toàn bộ thực tại.",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness",
-          "change"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?etadi=1&etgb=1&etpurohit=1&etsiva=1&field_chapter_value=2&field_nsutra_value=14&language=dv",
-        "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research corpus row 900; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "change"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Những cảm giác dễ chịu và khó chịu do tiếp xúc với hoàn cảnh có tính đến rồi đi; đừng vội xem trạng thái hiện tại là toàn bộ thực tại.",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day18.2_47",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Phần hành động của mình và kết quả cuối cùng không phải cùng một vùng kiểm soát; không bám kết quả cũng không đồng nghĩa bám vào bất động.",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?choose=1&etadi=1&etgb=1&etsiva=1&etssa=1&field_chapter_value=2&field_nsutra_value=47&language=dv",
-        "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research corpus row 901; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": []
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Phần hành động của mình và kết quả cuối cùng không phải cùng một vùng kiểm soát; không bám kết quả cũng không đồng nghĩa bám vào bất động.",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day18.6_26",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Khi tâm trí đi lang thang, practice ở đây là nhận ra và đưa nó trở lại—việc đi lạc không được mô tả như một thất bại một lần là xong.",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness",
-          "attention_noise_focus",
-          "attention"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?choose=1&etadi=1&etgb=1&etradi=1&field_chapter_value=6&field_nsutra_value=26&language=dv",
-        "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research corpus row 906; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "attention_noise_focus",
-          "attention"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Khi tâm trí đi lang thang, practice ở đây là nhận ra và đưa nó trở lại—việc đi lạc không được mô tả như một thất bại một lần là xong.",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day19.mundaka_two_birds",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Hai con chim cùng ở trên một cây: một con ăn trái, một con nhìn. Hình ảnh mở ra distinction giữa trải nghiệm đang cuốn mình đi và khả năng quan sát trải nghiệm.",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Selected Upaniṣads / Vedic tradition",
-        "work": "Muṇḍaka Upaniṣad",
-        "source_url": "https://www.vedha360.com/library/upanishad.mundaka?lang=en&mode=study&offset=30",
-        "source_language": null,
-        "source_label": "Selected Upaniṣads / Vedic tradition",
-        "source_detail": "Research corpus row 924; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": []
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Hai con chim cùng ở trên một cây: một con ăn trái, một con nhìn. Hình ảnh mở ra distinction giữa trải nghiệm đang cuốn mình đi và khả năng quan sát trải nghiệm.",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Selected Upaniṣads / Vedic tradition"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day22.life_over_gold",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Mình sống hơn đống vàng",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness",
-          "values"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese proverb tradition / anonymous",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M",
-        "source_language": null,
-        "source_label": "Vietnamese proverb tradition / anonymous",
-        "source_detail": "Research corpus row 998; content_nature=proverb; verification=B - collection witness verified."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "values"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Mình sống hơn đống vàng",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Vietnamese proverb tradition / anonymous"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day22.root_cause",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Mía sâu có đốt, nhà dột có nơi",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese proverb tradition / anonymous",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M",
-        "source_language": null,
-        "source_label": "Vietnamese proverb tradition / anonymous",
-        "source_detail": "Research corpus row 1005; content_nature=proverb; verification=B - collection witness verified."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": []
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Mía sâu có đốt, nhà dột có nơi",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Vietnamese proverb tradition / anonymous"
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "research.day22.worry_no_meal",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Ăn có bữa, lo không có bữa",
-      "subtitle_vi": null,
-      "story_id": null,
-      "primary_theme": "self_understanding",
-      "selection": {
-        "source_type": "philosophy",
-        "reflection_kind": null,
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "inner_awareness"
-        ],
-        "tie_break_order": 0
-      },
-      "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese proverb tradition / anonymous",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A",
-        "source_language": null,
-        "source_label": "Vietnamese proverb tradition / anonymous",
-        "source_detail": "Research corpus row 1007; content_nature=proverb; verification=B - collection witness verified."
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": []
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Ăn có bữa, lo không có bữa",
-        "observation_key": null,
-        "structure_pattern": "research_candidate"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 0,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Vietnamese proverb tradition / anonymous"
+        "attribution_vi": "Laozi"
       },
       "knowledge_basis": null
     }
