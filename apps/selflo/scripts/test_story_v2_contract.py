@@ -23,6 +23,7 @@ RELEASED_STORY_IDS = {
     "story.original_if_i_lived_a_human_life",
     "story.original_stone_that_loved_stormy_days",
     "story.photograph_missing_a_corner",
+    "story.rails_that_diverge",
     "story.the_compass_does_not_walk_for_you",
     "story.tree_and_silent_goose",
 }

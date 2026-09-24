@@ -2,11 +2,38 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 20,
-  "content_version": "release-selected-quotes-40",
+  "library_revision": 21,
+  "content_version": "story-rails-artwork-41",
   "language": "vi",
-  "generated_at": "2026-09-24T00:08:34Z",
+  "generated_at": "2026-09-24T04:08:59Z",
   "files": [
+    {
+      "id": "image.story.original_if_i_lived_a_human_life.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/if-i-lived-a-human-life-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "1e164ced7076571a8a811f239b88e7d95b12e292154ed86b62ff571847e8e45d",
+      "byte_count": 906436
+    },
+    {
+      "id": "image.story.rails_that_diverge.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/rails-that-diverge-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "e54aec6c76fc9ec35ce37a7316fbfd59cfd235c058f7013abd566e23aeb5713c",
+      "byte_count": 735871
+    },
+    {
+      "id": "image.story.the_compass_does_not_walk_for_you.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/compass-no-way-home-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "96a5cef9c6e6fd861c16c58d28b95cbb7c36f0f34f1396f43f4b6386ebc70887",
+      "byte_count": 798090
+    },
     {
       "id": "story_artwork.adversity_resilience.v2",
       "kind": "image",
@@ -136,11 +163,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 11,
-      "path": "themes/meaning-values.vi.r11.json",
+      "revision": 12,
+      "path": "themes/meaning-values.vi.r12.json",
       "media_type": "application/json",
-      "sha256": "55a02b21c58030523f97e70eaa0f9ee4d8f178ed22c9dac6187d2f33b8732178",
-      "byte_count": 47611
+      "sha256": "26d96660ee71befe7c20b7ee686e5a25a7e60bdcca0f67f7df7abb272160cba2",
+      "byte_count": 50264
     },
     {
       "id": "theme.relationships.vi",
@@ -235,11 +262,11 @@
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "68080cca6d644f27ee986d12a4a0cfccd815ab3491de1d700517048e3ab1518d",
-      "byte_count": 61384
+      "sha256": "59aae70d2adce902b046af6be90aab510a42f9cc8f0a10aaa635882a82b00d6d",
+      "byte_count": 61679
     },
     {
       "id": "story.original_stone_that_loved_stormy_days",
@@ -260,13 +287,22 @@
       "byte_count": 10355
     },
     {
+      "id": "story.rails_that_diverge",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/rails-that-diverge/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "71d5a4f7d644d318db1eca84ab288d74bba6b08395b3fea710a2982d3b833430",
+      "byte_count": 68621
+    },
+    {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "1590c96588d6f4e75054c0386dd9eb70cead201561661ae1dd06766de50250e2",
-      "byte_count": 42394
+      "sha256": "05da59036b3e494a2ac5d85ea4d2ac9bf98c4a3d43ca327ab26df2f679dee74f",
+      "byte_count": 42632
     },
     {
       "id": "story.tree_and_silent_goose",

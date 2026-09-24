@@ -1,7 +1,7 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 40,
-  "content_version": "release-selected-quotes-40",
+  "source_revision": 41,
+  "content_version": "story-rails-artwork-41",
   "language": "vi",
   "canonical_quote_count": 402,
   "generated_from_owner_gate": "CP-003-revised",
@@ -719,6 +719,30 @@
       "kind": "quote_fragment",
       "path": "quotes/self_understanding/006.vi.json",
       "media_type": "application/json"
+    },
+    {
+      "id": "story.rails_that_diverge",
+      "kind": "story",
+      "path": "stories/rails-that-diverge/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "image.story.rails_that_diverge.v1",
+      "kind": "image",
+      "path": "artwork/images/rails-that-diverge-v1.jpg",
+      "media_type": "image/jpeg"
+    },
+    {
+      "id": "image.story.original_if_i_lived_a_human_life.v1",
+      "kind": "image",
+      "path": "artwork/images/if-i-lived-a-human-life-v1.jpg",
+      "media_type": "image/jpeg"
+    },
+    {
+      "id": "image.story.the_compass_does_not_walk_for_you.v1",
+      "kind": "image",
+      "path": "artwork/images/compass-no-way-home-v1.jpg",
+      "media_type": "image/jpeg"
     }
   ]
 }
