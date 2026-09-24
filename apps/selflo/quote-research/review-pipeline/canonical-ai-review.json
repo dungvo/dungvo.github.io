@@ -1,0 +1,1639 @@
+{
+  "schema_version": "selflo.canonical-ai-review.v1",
+  "scope": "canonical_authoring_not_released",
+  "policy": "AI prepares and records recommendations; owner approval is still required for Release.",
+  "decisions": [
+    {
+      "quote_id": "a_good_meal_ends_with_enough",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "a_large_task_only_needs_one_first_square",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "accepting_change_without_losing_self",
+      "review_round": 1,
+      "decision": "edit_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Ý có tiềm năng nhưng cần biên tập lại trước khi owner review Release."
+    },
+    {
+      "quote_id": "accepting_the_flood_reveals_the_road_still_open",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "an_old_scent_can_open_an_old_room",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "another_persons_measure_cannot_fit_your_life",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "anxiety_loop_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "apron_waits_on_the_hook",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "attributed.confucius.book_vii_ch08.eager",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_160.self_lord",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_04.prepare",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_02.mutual_arising",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "attributed.ma.iii_12.no_one_hinders",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "attributed.ma.iv_08.not_worse",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "attributed.ma.v_01.proper_business",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "attributed.ma.v_11.use_of_soul",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.001",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.002",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.003",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.004",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.005",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.006",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.007",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.008",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.009",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.010",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.011",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.012",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.013",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.014",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.015",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.016",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.017",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.018",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.019",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.020",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.021",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.022",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.023",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.024",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.025",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.026",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.027",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.028",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.029",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.030",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.031",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.032",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.033",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.034",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.035",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.036",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.037",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.038",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.039",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.040",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.041",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.042",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.043",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.044",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.045",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.046",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.047",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.048",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.049",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.050",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.051",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.052",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.053",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.054",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.055",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.056",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.057",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.058",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.059",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.060",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.061",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.062",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.063",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.064",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.065",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.066",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.067",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.068",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.069",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.070",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.071",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.072",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.073",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.074",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.075",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.076",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.077",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.078",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.079",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.080",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.081",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.082",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.paulo_coelho.the_alchemist.083",
+      "review_round": 1,
+      "decision": "source_rights_blocked",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Không đưa lại vào batch cho đến khi có nguồn nguyên bản và quyền sử dụng phù hợp."
+    },
+    {
+      "quote_id": "attributed.seneca.letter_47.people",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "attributed.seneca.letter_78.opinion",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "avoidance_loop_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "behavior_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "brain_system_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "burn_mark_maps_the_flame",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "bus_ticket_keeps_the_day_of_return",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "calling_mud_dry_changes_nothing",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "candle_is_seen_when_it_goes_out",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "coffee_guides_the_hand_to_one_cup",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "comparison_loop_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "comparison_steals_joy",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "control_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "crooked_pot_shows_the_heavy_hand",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "curtain_opens_with_the_alarm",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "damp_paper_is_not_the_pens_fault",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "dark_room_before_the_body_is_ready",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "defense_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "do_not_go_to_work_twice",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "do_not_throw_the_stone_into_the_next_persons_lake",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "each_season_has_its_own_gift",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "emergency_fund_can_become_breathing_time",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "energy_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "eraser_shrinks_as_letters_straighten",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "every_long_road_is_crossed_one_meter_at_a_time",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "excitement_has_a_lifespan",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "eyes_memorize_the_unopened_page",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "familiar_cafe_remembers_the_order",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "first_burnt_batch_does_not_erase_the_kitchen",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "freedom_begins_when_one_path_is_not_the_only_path",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "growth_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "habit_arrives_without_knocking",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "hand_finds_the_key_tray",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "hands_keep_the_hammers_echo",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "home_is_known_by_what_it_keeps",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "house_turns_off_one_window_at_a_time",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "identity_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "keep_the_lamp_when_the_sea_has_waves",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "late_flower_meets_another_sky",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "marathoner_does_not_chase_sprinter_at_start",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "market_reopens_one_stall_at_a_time",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "memory_layer_digest",
+      "review_round": 1,
+      "decision": "edit_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Ý có tiềm năng nhưng cần biên tập lại trước khi owner review Release."
+    },
+    {
+      "quote_id": "morning_dew_leaves_when_warm",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "morning_enters_before_the_alarm",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "muscle_recovers_during_rest",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "musician_stays_with_one_lost_note",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "needle_reopens_the_same_hole",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "new_light_enters_where_branch_broke",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "ninety_nine_percent_is_not_finished",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "old_chair_holds_more_than_wood",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "one_umbrella_keeps_two_steps_together",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "peace_does_not_require_a_silent_room",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "pinned_tab_is_not_completed_work",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "pot_cools_between_lid_checks",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "projection_loop_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "quote.baker_and_black_mark",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "quote.boatman_and_second_mountain",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "quote.builder_and_shapeless_stones",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "quote.laundry_and_two_bells",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "quote.potter_and_two_hands",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "quote.roof_of_many_hands",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "quote.warehouse_path_between_boxes",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "red_light_reveals_the_trees",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "repeated_story_may_be_unfinished",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v043",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v276",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "research.laozi.ch17.054",
+      "review_round": 1,
+      "decision": "source_verification_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+    },
+    {
+      "quote_id": "research.laozi.ch20.061",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "restitching_teaches_the_hand",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "return_to_what_is_here",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "river_carries_the_upstream_rain",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "road_dries_from_edge_inward",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "roof_releases_the_storm_slowly",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "roots_check_themselves_after_storm",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "roots_hold_when_wind_changes",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "safe_return_can_help_us_go_farther",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "scratched_table_stays_in_the_home",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "seed_grows_out_of_sight",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "shadow_changes_beneath_the_walker",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "shadow_length_depends_on_sun",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "small_flame_warms_a_small_room",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "social_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "someone_calls_at_the_last_stop",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "space_between_stimulus_and_response",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "stable_is_not_empty",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "streetlight_turns_off_when_unneeded",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "tea_waits_beside_the_screen",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "tear_lies_flat_under_the_needle",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "ten_percent_means_recharge",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "thought_layer_digest",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "tide_does_not_apologize",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "tired_body_waits_for_the_train",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "tomorrow_may_bring_waves_tonight_return_to_breath",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "tomorrows_stone_does_not_get_lighter_overnight",
+      "review_round": 1,
+      "decision": "story_review_required",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+    },
+    {
+      "quote_id": "trains_leave_together_for_different_cities",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "two_trees_begin_with_different_seeds",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "unanswered_alarm_teaches_ears_not_to_hear",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "wakeful_hours_fill_the_hourglass",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "wallet_lightens_before_bill_disappears",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "worn_carpet_marks_a_familiar_path",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "worn_step_remembers_many_feet",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "wounds_can_become_structure",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "wrong_turn_stays_on_the_map",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    },
+    {
+      "quote_id": "yin_yang_of_emotion",
+      "review_round": 1,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1: đứng riêng chưa đủ nghĩa, lỗi diễn đạt, quá kỹ thuật, gần trùng hoặc dễ gây hiểu sai."
+    },
+    {
+      "quote_id": "young_tree_tied_with_soft_cloth",
+      "review_round": 1,
+      "decision": "ready_for_owner_review",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-09-24T09:00:00Z",
+      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+    }
+  ]
+}

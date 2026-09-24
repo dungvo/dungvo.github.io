@@ -99,6 +99,12 @@ python3 scripts/daily-content-review.py status
 
 Trạng thái cho biết candidate nào còn unseen, đang review, đã vào Authoring hoặc đã Release. Vì vậy không cần tự ghi nhớ item nào đã đọc trong Excel.
 
+### 5. Theo dõi AI review của nội dung chuẩn
+
+Kết quả review vòng 1 cho các quote chuẩn trong Authoring được lưu bền vững tại `quote-research/review-pipeline/canonical-ai-review.json` và hiển thị trong `/review-matrix/`. Có thể lọc theo: **Vòng 1 đạt · chờ bạn duyệt**, **Cần review cùng story**, **Cần xác minh nguồn**, **Cần biên tập**, **Vòng 1 chưa đạt** và **Bị chặn nguồn/quyền**.
+
+Quote đã mang nhãn **Vòng 1 chưa đạt** hoặc **Bị chặn nguồn/quyền** không được đưa lại vào batch đề xuất kế tiếp, trừ khi có biên tập hoặc bằng chứng nguồn mới. Đây là đề xuất của AI; chỉ quyết định rõ ràng của owner mới được chuyển nội dung sang Release.
+
 `--push` tạo commit và push các file thuộc workflow. Bỏ `--push` nếu chỉ muốn tạo và kiểm tra thay đổi cục bộ trước.
 
 ## Content boundaries
