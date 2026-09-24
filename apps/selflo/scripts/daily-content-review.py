@@ -45,19 +45,38 @@ def ledger_decisions(path):
         q=x.get('quote_id'); d=x.get('quote_decision') or x.get('decision')
         if q and d in VALID_DECISIONS: out[q]={'decision':d,'note':x.get('note') or '','updated_at':x.get('updated_at')}
     return doc,out
-def theme_for(c): return THEME_MAP.get(c.get('life_area'),'self_understanding')
+def theme_for(c):
+    area=(c.get('life_area') or '').strip()
+    if area in THEME_MAP:return THEME_MAP[area]
+    folded=' '.join(str(c.get(k) or '').lower() for k in ('theme','human_experience','life_area'))
+    rules=(
+      ('attention',('attention','chú ý','ai &','công nghệ','focus','noise')),
+      ('work_achievement',('work','công việc','achievement','purpose','thành tựu')),
+      ('relationships',('relationship','quan hệ','family','belong','connection','xã hội')),
+      ('rest_wellbeing',('rest','nghỉ','sleep','burnout','wellbeing','recovery','hồi phục')),
+      ('emotion',('emotion','cảm xúc','grief','fear','compassion','mất mát')),
+      ('change_growth',('change','growth','learning','thay đổi','học tập','trưởng thành')),
+      ('meaning_values',('meaning','values','ý nghĩa','giá trị','identity','bản sắc')),
+      ('adversity_resilience',('adversity','resilience','uncertainty','choice','agency','lựa chọn','bất định')),
+    )
+    for theme,needles in rules:
+        if any(x in folded for x in needles):return theme
+    return 'self_understanding'
 def canonical_quote(c,status='draft'):
     theme=theme_for(c); author=c.get('author') or None; work=c.get('work') or None; url=c.get('source_url') or None
+    nature=(c.get('content_nature') or '').strip()
+    source_is_wording=nature in ('direct_quote','translated_quote','passage','proverb')
+    attribution=author if source_is_wording else ('Selflo · dựa trên '+author if author else 'Selflo · tổng hợp nghiên cứu')
     return {
       'id':c['id'],'revision':1,'kind':'adapted_wisdom','title_vi':None,'text_vi':c['text_vi'],'subtitle_vi':None,
       'story_id':None,'primary_theme':theme,
       'selection':{'source_type':'philosophy','reflection_kind':None,'thought_match_keys':[],'presentation_tags':[x for x in [c.get('life_area'),c.get('human_experience'),c.get('theme')] if x and ' | ' not in x and x!='unresolved'],'tie_break_order':0},
-      'authorship':{'author_id':None,'author_name':author,'work':work,'source_url':url,'source_language':None,'source_label':author or 'Research candidate','source_detail':f"Research corpus row {c.get('source_row')}; content_nature={c.get('content_nature')}; verification={c.get('verification')}."},
+      'authorship':{'author_id':None,'author_name':author,'work':work,'source_url':url,'source_language':None,'source_label':attribution,'source_detail':f"Research ID {c.get('research_id_original') or c.get('id')}; corpus row {c.get('source_row')}; content_nature={nature}; verification={c.get('verification')}."},
       'metadata':{'concepts':[],'theories':[],'frameworks':[],'emotion_tags':[],'keywords':[x for x in [c.get('human_experience'),c.get('theme')] if x and ' | ' not in x and x!='unresolved']},
       'rights':{'status':'unverified','note':c.get('rights_research_note') or None},
       'review':{'status':status,'reviewed_by':None,'reviewed_at':None},
       'writing':{'semantic_intent':c['text_vi'],'observation_key':None,'structure_pattern':'research_candidate'},
-      'display':{'mode':'poster','priority':0,'featured':False,'style':'paper_quote','attribution_vi':author or 'Nguồn đang xác minh'},
+      'display':{'mode':'poster','priority':0,'featured':False,'style':'paper_quote','attribution_vi':attribution},
       'knowledge_basis':None
     }
 def candidate_package(root,batch,candidates):

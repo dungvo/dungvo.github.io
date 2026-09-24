@@ -620,7 +620,7 @@
     },
     {
       "id": "research.laozi.ch15.043",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Thận trọng như người lội sông mùa đông; dè dặt như người biết quanh mình có điều cần lưu ý.",
@@ -645,7 +645,7 @@
         "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": null,
         "source_label": "Laozi / 老子",
-        "source_detail": "Research corpus row 44; content_nature=translated_quote; verification=A - Primary source."
+        "source_detail": "Research ID research.laozi.ch15.043; corpus row 44; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -677,6 +677,68 @@
         "featured": false,
         "style": "paper_quote",
         "attribution_vi": "Laozi / 老子"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.laozi.ch20.062",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Mênh mang như biển; trôi đi như chưa có nơi dừng.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "adversity_resilience",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "Nội tâm & hiểu mình",
+          "uncertainty_choice_agency",
+          "uncertainty"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Laozi",
+        "work": "道德經 / Tao Te Ching",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "source_language": null,
+        "source_label": "Laozi",
+        "source_detail": "Research ID research.laozi.ch20.062; corpus row 63; content_nature=translated_quote; verification=A - Primary source."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "uncertainty_choice_agency",
+          "uncertainty"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Public domain / likely"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Mênh mang như biển; trôi đi như chưa có nơi dừng.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Laozi"
       },
       "knowledge_basis": null
     }

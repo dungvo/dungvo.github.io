@@ -1,6 +1,6 @@
 {
-  "library_revision": 55,
-  "generated_at": "2026-09-24T22:50:51Z",
+  "library_revision": 57,
+  "generated_at": "2026-09-24T23:02:26Z",
   "entities": {
     "roots_check_themselves_after_storm": {
       "updated_at": "2026-09-16T22:06:51Z",
@@ -187,8 +187,480 @@
       "library_revision": 32
     },
     "research.laozi.ch15.043": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
+    },
+    "research.laozi.ch20.062": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch21.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch21.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch33.047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch34.054": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch37.064": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch37.065": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch41.083": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch48.107": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch51.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch57.031": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch57.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch58.034": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch58.035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch64.067": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch69.085": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch73.097": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch73.099": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch80.128": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch07.058": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch06.049": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.1.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.10.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.28.023": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.2_5.039": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.4_1.045": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep001_1": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ira2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v160": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v329": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v330": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn21_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn61_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.buddhist.day14.mn63_arrow_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.rural_uncertainty": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.boat_tension": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.ca_dao_time_uncertain": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.buy_shadow": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.leadership_load": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day19.katha1_2_2_good_pleasant": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day20.panchatantra_four_treasure_seekers": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day20.panchatantra_singlewit": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day24.kieu_choice_under_constraint": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.jinxin_seek": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.korobanu_tsue": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
     },
     "space_between_stimulus_and_response": {
       "updated_at": "2026-09-24T10:31:42Z",
@@ -415,16 +887,960 @@
       "library_revision": 32
     },
     "research.laozi.ch12.034": {
-      "updated_at": "2026-09-23T23:59:43Z",
-      "library_revision": 44
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch11.030": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch14.042": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
+    },
+    "research.laozi.ch05.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch11.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch11.033": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch15.045": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch16.051": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch23.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch26.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch26.021": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch35.058": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch37.067": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch47.103": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch52.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch55.021": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch56.024": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch56.025": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch56.027": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch63.054": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch63.058": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch64.064": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch65.071": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch69.086": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch70.089": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch71.092": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch71.093": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch78.120": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch80.127": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch81.132": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch81.133": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.033": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch06.047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch06.048": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch06.051": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch06.054": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch07.055": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch07.056": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch07.059": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch02.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch04.031": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch04.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.044": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.045": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.067": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.070": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.071": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch07.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch13.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch14.021": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.030": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.031": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.033": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.037": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.038": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.039": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.040": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.041": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.042": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.043": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.5.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.34.026": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.42.029": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.43.030": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.1_1.033": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.1_1.034": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.1_20.038": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book03.3_4.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book08.8_2.030": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book08.8_47.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book09.9_6.034": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book10.10_31.039": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book11.11_1.040": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book12.12_8.046": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.brev2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.brev4": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v021": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v025": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v033": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v334": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn10_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn10_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn118_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn118_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn118_03": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day18.2_62_63": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.katha_chariot": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day19.katha_chariot": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day23.nguyentrai_nature_attention": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.ming_cha_qiu_hao": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.nito": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.backward_step": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.rice_sand": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.furuike": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.shizukasa": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day71.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day72.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day73.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day74.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day75.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day76.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day77.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day78.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day79.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day80.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day81.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day82.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
     },
     "habit_is_a_path_worn_by_feet": {
       "updated_at": "2026-09-24T04:34:16Z",
@@ -606,6 +2022,254 @@
       "updated_at": "2026-09-16T22:06:51Z",
       "library_revision": 32
     },
+    "research.laozi.day2.ch23.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch25.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch27.024": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch29.035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch30.039": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch40.077": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch43.091": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch48.105": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch55.023": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch63.057": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch64.066": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch70.088": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch76.109": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch78.118": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch01.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch01.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.028": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep094": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep106": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v051": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v052": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v065": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn22_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn22_03": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day18.2_48": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day18.4_34": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.mundaka_question_all": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.eat_follow_time": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.rt_th25_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an2_15": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an3_15": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an7_21": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day18.gita2_14_sensations_pass": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day24.kieu_bedau": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day25.an15_31_think_without_learning": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.li_lou_ii_selfattain": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.gong_sun_chou_miao_story": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.li_lou_i_compass": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.li_lou_teach_not_spurn": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.ju_yi_fan_san": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.yi_yang_hua_hulu": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.practice_not_means": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.shu_neng_sheng_qiao": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.shippai": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
     "feeling_is_signal_not_command": {
       "updated_at": "2026-09-23T23:00:08Z",
       "library_revision": 42
@@ -697,6 +2361,202 @@
     "attributed.paulo_coelho.the_alchemist.066": {
       "updated_at": "2026-09-16T22:06:51Z",
       "library_revision": 32
+    },
+    "research.laozi.ch01.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch02.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch13.038": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch20.058": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch49.110": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch62.051": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch63.059": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book05.5_9.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep063": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v129": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v130": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.two_birds_no_blame": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.weather_not_character": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.one_error_overreaction": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.rt_bkc1_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an5_15": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.saru_ki_ochiru": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.hatsu_shigure": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
     },
     "candle_is_seen_when_it_goes_out": {
       "updated_at": "2026-09-24T10:31:42Z",
@@ -894,6 +2754,266 @@
       "updated_at": "2026-09-16T22:06:51Z",
       "library_revision": 32
     },
+    "research.laozi.ch01.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch12.036": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch20.060": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch30.037": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch31.042": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch33.050": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch35.059": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch38.068": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch38.069": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch38.073": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch44.092": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch53.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch54.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch64.065": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch67.077": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch81.136": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.031": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.039": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch05.043": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch05.045": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch06.049": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch07.058": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch07.059": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch14.022": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.22.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.51.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.1_2.035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep071": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep090": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v050": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v183": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v290": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day18.3_35": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.katha_shreyas_preyas": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.katha_nachiketa": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.rt_ngonchi1_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.rt_th1_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.nbk_nttt_04": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an4_17": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.tengwen_wealth": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.tenzo_no_quality_judgment": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.hito_furi": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day85.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
     "small_boundary_is_still_boundary": {
       "updated_at": "2026-09-24T00:00:33Z",
       "library_revision": 45
@@ -1047,16 +3167,300 @@
       "library_revision": 32
     },
     "research.laozi.ch02.007": {
-      "updated_at": "2026-09-24T00:06:12Z",
-      "library_revision": 46
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch13.037": {
-      "updated_at": "2026-09-23T23:59:43Z",
-      "library_revision": 44
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch08.020": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
+    },
+    "research.laozi.ch02.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch17.053": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch20.059": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch62.050": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch62.052": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch67.080": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch74.103": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch79.123": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch05.041": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch05.042": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch04.034": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.046": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.048": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.050": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.16.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book01.1_9.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book02.2_1.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book09.9_42.035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book11.11_8.041": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book11.11_18.043": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep047_2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v197": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day18.6_5": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.spouse_finance": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.homesick": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day16.ne8_friendship_mutual": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day16.ne8_time_trust": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day16.ne9_goodwill_not_friendship": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day16.ne9_friends_not_maximize": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day17.pd27_friendship_security": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day20.panchatantra_heron_crab": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit_day21_hamdanhloi": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day22.matlongtruoc": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day22.motmat_hon_muoi_goi": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day22.motmieng_khidoi": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day24.kieu_reunion_changed": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.ame_jikata": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
     },
     "rest_is_part_of_rhythm": {
       "updated_at": "2026-09-24T08:00:22Z",
@@ -1217,6 +3621,370 @@
     "attributed.paulo_coelho.the_alchemist.005": {
       "updated_at": "2026-09-16T22:06:51Z",
       "library_revision": 32
+    },
+    "research.laozi.ch04.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch09.023": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch11.031": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch15.044": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch15.047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch26.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch59.038": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch59.039": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch79.122": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.038": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.040": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch07.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch07.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch07.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch16.026": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.8.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.1_6.036": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book04.4_3.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book04.4_3.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book06.6_11.023": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book07.7_8.026": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book08.8_36.031": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book10.10_1.036": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep056": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.tranq1": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.tranq2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.tranq3": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.tranq5": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.otio1": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v100": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v204": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v277": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn62_04": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.plato.day15.apol21d_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.katha_reason_not_enough": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.rural_burden": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.mountain_aging": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.rt_ngonchi1_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.rt_th1_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.nbk_gioitham_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an3_21": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.wu_huan_xing_yi": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.ishi_ue_sannen": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.nana_korobi": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.natsukusa": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.samidare_mogami": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.yagate_shinu": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.tsuki_hito": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day83.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
     },
     "comparison_steals_joy": {
       "updated_at": "2026-09-16T22:06:51Z",
@@ -1435,252 +4203,2324 @@
       "library_revision": 32
     },
     "research.dhammapada.day11.v019": {
-      "updated_at": "2026-09-23T23:59:43Z",
-      "library_revision": 44
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.dhammapada.day11.v064": {
-      "updated_at": "2026-09-23T23:59:43Z",
-      "library_revision": 44
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.mn.day12.mn22_02": {
-      "updated_at": "2026-09-23T23:59:43Z",
-      "library_revision": 44
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.dhammapada.day11.v276": {
-      "updated_at": "2026-09-23T13:39:14Z",
-      "library_revision": 36
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch20.061": {
-      "updated_at": "2026-09-23T15:01:32Z",
-      "library_revision": 37
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.dhammapada.day11.v043": {
-      "updated_at": "2026-09-23T15:01:32Z",
-      "library_revision": 37
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.dhammapada.day11.v223": {
-      "updated_at": "2026-09-23T23:59:43Z",
-      "library_revision": 44
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.mn.day12.mn20_01": {
-      "updated_at": "2026-09-24T00:06:12Z",
-      "library_revision": 46
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch05.014": {
-      "updated_at": "2026-09-24T00:06:12Z",
-      "library_revision": 46
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day17.future_not_wholly_ours": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day18.18_63": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day18.2_14": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day18.2_47": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day18.6_26": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day19.mundaka_two_birds": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day22.life_over_gold": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day22.root_cause": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day22.worry_no_meal": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day23.nbk_nhan_01": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day23.nbk_nhan_02": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day24.kieu_005": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an1_16": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an2_10": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an2_18": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an4_10": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an4_22": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an4_26": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an5_20": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day25.an6_2": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day26.gaozi_i_fishbear": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day26.gong_sun_chou_miao": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day26.jin_xin_i_book": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day26.li_lou_ii_not_do": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day26.liang_hui_wang_autumnhair": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day27.guo_you_bu_ji": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day27.han_dan_xue_bu": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day27.hua_she_tian_zu": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day27.ke_zhou_qiu_jian": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day27.mang_ren_mo_xiang": {
-      "updated_at": "2026-09-24T22:47:49Z",
-      "library_revision": 54
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day71.007": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.day71.010": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch09.022": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch10.029": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch15.046": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch16.049": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch16.050": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch52.006": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch52.007": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch53.010": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch54.013": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch58.037": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch59.040": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch61.048": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch66.074": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch67.079": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch68.082": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch72.094": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch79.121": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.day3.ch81.131": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.reaudit.day17.meno_choice_compare": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.zhuangzi.day4.ch03.022": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.zhuangzi.day4.ch03.029": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
+    },
+    "research.laozi.day2.ch21.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch22.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch22.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch23.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch24.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch25.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch27.023": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch27.025": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch28.026": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch28.027": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch28.028": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch28.030": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch28.031": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch29.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch29.033": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch29.034": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch32.043": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch32.044": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch33.046": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch33.048": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch34.053": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch34.055": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch36.061": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch36.062": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch38.071": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch38.072": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch39.075": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch39.076": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch40.078": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch41.079": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch41.080": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch41.081": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch41.082": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch42.085": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch42.087": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch43.089": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch44.093": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch44.094": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch45.095": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch45.096": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch45.097": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch46.101": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch47.102": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch47.104": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch48.106": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch48.108": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch49.109": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day2.ch49.112": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch51.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch51.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch54.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch55.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch57.029": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch60.042": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch61.045": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch63.056": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch64.060": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch64.061": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch64.062": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch66.073": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch66.076": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch67.078": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch68.081": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch70.090": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch70.091": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch72.096": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch73.098": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch75.104": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch76.108": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch76.110": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch76.111": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch77.112": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch77.113": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch78.117": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch80.129": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch81.134": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch01.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch02.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch03.021": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch03.027": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.030": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.034": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.036": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.038": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch05.040": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch05.044": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch06.050": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch06.052": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch07.060": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch01.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch01.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch01.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch02.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch04.029": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch04.035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch04.036": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.041": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch05.042": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch06.050": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch06.051": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch06.052": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.063": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.064": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.065": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.066": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.068": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch07.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch09.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch13.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch13.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch13.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch14.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch14.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch14.023": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch16.024": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch16.027": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.029": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.034": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.035": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch17.036": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.044": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.046": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.049": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.1.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.1.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.1.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.2.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.5.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.6.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.14.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.19.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.24.021": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.4_4.046": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book01.1_7.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book02.2_5.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book02.2_14.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book03.3_12.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book04.4_17.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book05.5_20.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book08.8_1.029": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book12.12_1.044": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep001_2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep001_3": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep013_2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep027": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep028": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep028_2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep104": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep108": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep119": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep119_2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.tranq4": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.otio2": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.otio3": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.otio4": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.otio5": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.brev1": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.brev3": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.brev5": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.brev6": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ira1": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ira3": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ira4": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v081": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v121": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v122": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v133": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.dhammapada.day11.v328": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn19_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn19_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn19_03": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn20_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn27_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn27_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn58_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn62_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn131_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn131_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn140_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.nikaya.day13.sn12_15_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day16.happiness_activity": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day17.desire_categories": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.mundaka_two_knowledge": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.kena_question": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.kena_yaksha": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.isha_whole_context": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day19.upanishad_context": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day20.wedge_monkey": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.work_seasons": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.work_shared": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.work_together": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.boat_roles": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.family_load": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.family_mother": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.spouse_debt": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.status_crowd": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.woman_voice": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.field_cycle": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.labor_repetition": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.domestic_expectation": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.folk_irony": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day21.care_in_need": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.remember_planter": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.eat_watch_pot": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.carry_other_altar": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.poverty_cognition": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.flex_strength": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.favor_conflict": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day22.small_debt_big_return": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.rt_th1_03": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.nbk_nhan_03": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.nbk_nttt_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day23.nbk_gioitham_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an1_4": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an2_13": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an4_24": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an5_10": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an5_26": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day17.pd29_desire_types": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day19.mundaka_two_birds": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day19.kena_question": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day22.an_vo_dua_so_vo_dua": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day24.kieu_memory_after_event": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day25.an9_4_four_absences": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.jinxin_timing": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.gong_sun_courage": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.zhi_lu_wei_ma": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.ni_er_zhong_yan": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.jin_zhu_jin_mo": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.yi_mao_qu_ren": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.seite_shison": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.shiranu_hotoke": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.ino_naka": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.not_good_bad": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.tenzo_available": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.three_minds": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day27.san_ren_cheng_hu": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.nodo": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.fukusui": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day28.todai": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.samidare_oldpond": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.kareeda": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day30.kono_michi": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day33.arabic_middle_eastern_pr.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day34.middle_eastern_wisdom_st.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day36.african_traditions_ii_ig.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day37.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day38.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day39.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day50.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day51.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.011": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day59.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day60.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day61.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day62.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day63.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day64.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day65.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day66.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day67.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day68.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
     },
     "quote.builder_and_shapeless_stones": {
       "updated_at": "2026-09-16T22:06:51Z",
@@ -1835,12 +6675,432 @@
       "library_revision": 32
     },
     "research.laozi.ch17.054": {
-      "updated_at": "2026-09-23T15:01:32Z",
-      "library_revision": 37
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
     },
     "research.laozi.ch02.008": {
-      "updated_at": "2026-09-24T22:50:51Z",
-      "library_revision": 55
+      "updated_at": "2026-09-24T23:02:26Z",
+      "library_revision": 57
+    },
+    "research.laozi.ch09.026": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.ch20.063": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch52.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch59.041": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch61.047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch66.075": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch68.083": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch75.105": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch77.114": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch77.116": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.laozi.day3.ch79.124": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch03.023": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch03.024": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch03.025": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch03.026": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch03.028": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.032": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch04.037": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.zhuangzi.day4.ch07.057": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch02.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch02.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch07.060": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.069": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.073": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.liezi.day5.ch08.074": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch09.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch09.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch09.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch09.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch13.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch16.025": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.045": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.huainanzi.day6.ch18.048": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.4.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.13.013": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.25.022": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.29.024": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.enchiridion.37.028": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.2_11.040": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.2_18.041": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.3_22.043": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.epictetus.day7.discourses.3_24.044": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book01.1_7.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book06.6_6.022": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book06.6_21.024": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book07.7_54.028": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book10.10_16.038": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.marcus.day8.book12.12_17.047": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.seneca.day9.ep019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.musonius.day10.d01_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn10_03": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn39_01": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn61_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.mn.day12.mn62_02": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day24.kieu_006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day25.an2_12": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day21.vieclamruong_tax": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.reaudit.day22.anbo": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day26.li_lou_ii_childheart": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day29.old_tenzo_returns": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day31.saadi.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day32.rumi_hafez.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day35.african_traditions_i_aka.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day41.leo_tolstoy.020": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day42.fyodor_dostoevsky.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.009": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day43.anton_chekhov.017": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day44.hermann_hesse.018": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day45.franz_kafka.016": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day46.015": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day47.014": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day48.019": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day49.012": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day52.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day53.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day54.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day56.005": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day57.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.006": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day58.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day69.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.001": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.002": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.003": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.004": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.007": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day70.008": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
+    },
+    "research.day84.010": {
+      "updated_at": "2026-09-24T23:00:37Z",
+      "library_revision": 56
     },
     "story.after_the_alarm_went_silent": {
       "updated_at": "2026-08-30T05:50:41Z",

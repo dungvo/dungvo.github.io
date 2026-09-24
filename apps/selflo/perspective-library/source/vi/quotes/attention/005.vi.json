@@ -494,7 +494,7 @@
     },
     {
       "id": "research.laozi.ch12.034",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Quá nhiều sắc có thể làm mắt lóa; quá nhiều âm làm tai như điếc; quá nhiều vị làm miệng mất khả năng phân biệt.",
@@ -519,7 +519,7 @@
         "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": null,
         "source_label": "Laozi / 老子",
-        "source_detail": "Research corpus row 35; content_nature=translated_quote; verification=A - Primary source."
+        "source_detail": "Research ID research.laozi.ch12.034; corpus row 35; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -556,7 +556,7 @@
     },
     {
       "id": "research.laozi.ch11.030",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Ba mươi nan hoa cùng tụ vào một trục; chính khoảng rỗng ở giữa làm bánh xe dùng được.",
@@ -581,7 +581,7 @@
         "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": null,
         "source_label": "Laozi / 老子",
-        "source_detail": "Research corpus row 31; content_nature=translated_quote; verification=A - Primary source."
+        "source_detail": "Research ID research.laozi.ch11.030; corpus row 31; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -618,7 +618,7 @@
     },
     {
       "id": "research.laozi.ch14.042",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Nắm một nguyên lý xưa để soi và ứng xử với điều đang có hôm nay.",
@@ -643,7 +643,7 @@
         "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": null,
         "source_label": "Laozi / 老子",
-        "source_detail": "Research corpus row 43; content_nature=translated_quote; verification=A - Primary source."
+        "source_detail": "Research ID research.laozi.ch14.042; corpus row 43; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -675,6 +675,68 @@
         "featured": false,
         "style": "paper_quote",
         "attribution_vi": "Laozi / 老子"
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.laozi.ch05.013",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khoảng giữa trời đất chẳng giống một ống bễ sao? Rỗng mà không kiệt; càng vận động, nó càng tạo ra luồng khí.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "attention",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "AI & tương lai",
+          "attention_noise_focus",
+          "attention"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Laozi",
+        "work": "道德經 / Tao Te Ching",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "source_language": null,
+        "source_label": "Laozi",
+        "source_detail": "Research ID research.laozi.ch05.013; corpus row 14; content_nature=translated_quote; verification=A - Primary source."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "attention_noise_focus",
+          "attention"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Public domain / likely"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Khoảng giữa trời đất chẳng giống một ống bễ sao? Rỗng mà không kiệt; càng vận động, nó càng tạo ra luồng khí.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Laozi"
       },
       "knowledge_basis": null
     }

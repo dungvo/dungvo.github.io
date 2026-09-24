@@ -1,0 +1,68 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.work_achievement.013",
+  "primary_theme": "work_achievement",
+  "quotes": [
+    {
+      "id": "research.day84.010",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Self-blame can mix responsibility with global identity judgments such as turning 'I made a mistake' into 'I am a failure'.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "Đời sống & nội tâm",
+          "compassion"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Kristin Neff",
+        "work": "Research synthesis",
+        "source_url": "https://self-compassion.org/the-research/",
+        "source_language": null,
+        "source_label": "Selflo · dựa trên Kristin Neff",
+        "source_detail": "Research ID research.day84.010; corpus row 1910; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "compassion"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Research only / rights review"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Self-blame can mix responsibility with global identity judgments such as turning 'I made a mistake' into 'I am a failure'.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo · dựa trên Kristin Neff"
+      },
+      "knowledge_basis": null
+    }
+  ]
+}
