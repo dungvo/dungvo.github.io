@@ -344,13 +344,13 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Legacy migration input; owner rights review required before Release."
+        "status": "selflo_owned",
+        "note": "Owner approved this Selflo synthesis for Release in Batch 2."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-24T08:00:21Z"
       },
       "writing": {
         "semantic_intent": "Bảo toàn presentation và selection behavior hiện hành.",
