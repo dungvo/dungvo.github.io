@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 16,
-  "content_version": "release-selected-quotes-36",
+  "library_revision": 18,
+  "content_version": "release-selected-quotes-38",
   "language": "vi",
-  "generated_at": "2026-09-23T23:02:19Z",
+  "generated_at": "2026-09-24T00:01:09Z",
   "files": [
     {
       "id": "story_artwork.adversity_resilience.v2",
@@ -91,11 +91,11 @@
     {
       "id": "knowledge.canonical.vi",
       "kind": "knowledge_catalog",
-      "revision": 7,
-      "path": "knowledge/knowledge.vi.r7.json",
+      "revision": 8,
+      "path": "knowledge/knowledge.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "673091ed99f79e4f40e8710d97b26ebf17bfedf817374a17a8038d3de598e8e1",
-      "byte_count": 23646
+      "sha256": "6ac56fa59aad95074ffecb0b8fa12c2c78367eefe2d8ceb38dd5887db93394c2",
+      "byte_count": 31987
     },
     {
       "id": "theme.adversity_resilience.vi",
@@ -109,11 +109,11 @@
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 5,
-      "path": "themes/attention.vi.r5.json",
+      "revision": 6,
+      "path": "themes/attention.vi.r6.json",
       "media_type": "application/json",
-      "sha256": "fce731ee063eecd9b882d0000523c7df7f3f989dc60295b045a51fc4b6f839f9",
-      "byte_count": 24063
+      "sha256": "d2a9006806849683f76b44bae9021d096249bee0f7fb54fa6d1625d921168a92",
+      "byte_count": 35644
     },
     {
       "id": "theme.change_growth.vi",
@@ -127,29 +127,29 @@
     {
       "id": "theme.emotion.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/emotion.vi.r7.json",
+      "revision": 8,
+      "path": "themes/emotion.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "6d42fbea5b3393fa0dca4485944181740a1ef63c440b431b345cf561c427d950",
-      "byte_count": 16982
+      "sha256": "62a0885013a9a58eb606fe655523528babd555a0a64d841cb514d8e423cd0cf4",
+      "byte_count": 25539
     },
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 9,
-      "path": "themes/meaning-values.vi.r9.json",
+      "revision": 10,
+      "path": "themes/meaning-values.vi.r10.json",
       "media_type": "application/json",
-      "sha256": "c49a79ec15f9b1b4158072b14780879f106e0978657a6c0a5f4382449a0cb0e3",
-      "byte_count": 31227
+      "sha256": "c19ab36fdc9f3ecb954729e536ab7c02b3bc7ef0c2116192513a21fd3b0b4c27",
+      "byte_count": 35944
     },
     {
       "id": "theme.relationships.vi",
       "kind": "quote_pack",
-      "revision": 4,
-      "path": "themes/relationships.vi.r4.json",
+      "revision": 6,
+      "path": "themes/relationships.vi.r6.json",
       "media_type": "application/json",
-      "sha256": "f496c0ccb59e6874c64a5a74b47910c23765ee30f4e29d4dad2ebb8168873b5c",
-      "byte_count": 20564
+      "sha256": "1822f2a4a74909ed179d0aeb2d560813a13965bbb789f250f825a9cb2cf8ca3b",
+      "byte_count": 42903
     },
     {
       "id": "theme.rest_wellbeing.vi",
@@ -163,20 +163,20 @@
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 7,
-      "path": "themes/self-understanding.vi.r7.json",
+      "revision": 8,
+      "path": "themes/self-understanding.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "493f4778a7fae263e05e40b5c3459945f519463789f23439d82572c8522e05fe",
-      "byte_count": 33995
+      "sha256": "0f2f0f218c81debfeb695a5b003b4b9326fa78f2a1989f5854b0a7c16027444a",
+      "byte_count": 50544
     },
     {
       "id": "theme.work_achievement.vi",
       "kind": "quote_pack",
-      "revision": 5,
-      "path": "themes/work-achievement.vi.r5.json",
+      "revision": 7,
+      "path": "themes/work-achievement.vi.r7.json",
       "media_type": "application/json",
-      "sha256": "a00bb49addfd978a7b110f53469db2868f5817d4a92d4dbb0619a94645aea862",
-      "byte_count": 15486
+      "sha256": "ea4b737b1ab2613c140c2aaad3bb59ae251ca8f25b38ffc82a0bab8e9b8ff9d0",
+      "byte_count": 39617
     },
     {
       "id": "story.empty_boat_on_the_river",

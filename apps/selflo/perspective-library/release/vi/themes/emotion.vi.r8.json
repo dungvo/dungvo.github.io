@@ -1,14 +1,333 @@
 {
-  "schema_version": "selflo.perspective.quote-fragment.v1",
-  "entity": "perspective_quote_fragment",
-  "fragment_id": "quote_fragment.emotion.002",
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
   "primary_theme": "emotion",
+  "display_name_vi": "Cảm xúc",
+  "description_vi": "Nhận biết, đón nhận và sống cùng cảm xúc mà không để cảm xúc định nghĩa toàn bộ mình.",
+  "language": "vi",
   "quotes": [
     {
-      "id": "room_holds_the_bells_echo",
+      "id": "feeling_is_signal_not_command",
+      "revision": 2,
+      "kind": "selflo_original",
+      "title_vi": "Tín hiệu, không phải mệnh lệnh",
+      "text_vi": "Cảm xúc đang nói một điều quan trọng. Nhưng nó không bắt buộc phải quyết định mọi điều mình làm tiếp theo.",
+      "subtitle_vi": null,
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "emotion_layer",
+          "control_layer"
+        ],
+        "legacy_content_kind": "quote",
+        "legacy_layer_ids": [
+          "emotion_layer",
+          "control_layer"
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Selflo original; owner approved for quote-only Release on 2026-09-24."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T23:00:08Z"
+      },
+      "writing": {
+        "semantic_intent": "Cảm xúc cung cấp tín hiệu nhưng không phải mệnh lệnh hành động.",
+        "observation_key": null,
+        "structure_pattern": null
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 82,
+        "featured": true,
+        "style": "cool_observe",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion_layer",
+          "control_layer"
+        ],
+        "tie_break_order": -82
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "name_the_weather_inside",
       "revision": 1,
       "kind": "selflo_original",
-      "text_vi": "Chiếc chuông đã im,\nnhưng căn phòng vẫn giữ lại một khoảng ngân.",
+      "title_vi": "Gọi tên thời tiết bên trong",
+      "text_vi": "Gọi tên cảm xúc không làm nó lớn hơn. Nó chỉ giúp mình biết hôm nay nên mang theo chiếc ô nào.",
+      "subtitle_vi": "Nhận diện trước khi điều chỉnh",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "emotion_layer",
+          "awareness"
+        ],
+        "legacy_content_kind": "selflo_reflection",
+        "legacy_layer_ids": [
+          "emotion_layer"
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-24T00:00:33Z"
+      },
+      "writing": {
+        "semantic_intent": "Gọi tên cảm xúc giúp mình nhận biết điều đang diễn ra bên trong.",
+        "observation_key": "inner_weather_umbrella",
+        "structure_pattern": null
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 76,
+        "featured": true,
+        "style": "ember_theory",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion_layer",
+          "awareness"
+        ],
+        "tie_break_order": -76
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "light_gives_the_room_a_shape",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Căn phòng không khác đi khi bật đèn.\nChỉ là những gì vẫn ở đó bắt đầu có hình.",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.emotional_awareness"
+        ],
+        "theories": [
+          "theory.affect_labeling"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "emotion",
+          "awareness",
+          "light"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-17T15:10:54Z"
+      },
+      "writing": {
+        "semantic_intent": "Nhận ra không tạo ra trải nghiệm nhưng có thể làm nó rõ hình hơn.",
+        "observation_key": "room_revealed_by_light",
+        "structure_pattern": "same_reality_becomes_visible_when_named"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 49,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.affect_labeling.recognition_can_change_relationship_to_experience"
+        ],
+        "reference_ids": [
+          "ref.lieberman_2007_affect_labeling"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "awareness"
+        ],
+        "tie_break_order": 1015
+      }
+    },
+    {
+      "id": "towel_reveals_what_it_carried",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Đến lúc chiếc khăn được vắt ra,\nngười ta mới biết nó đã giữ nhiều nước đến đâu.",
+      "primary_theme": "emotion",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.emotional_awareness"
+        ],
+        "theories": [
+          "theory.affect_labeling"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "emotion",
+          "towel",
+          "awareness"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-17T15:10:54Z"
+      },
+      "writing": {
+        "semantic_intent": "Điều được mang theo có thể chỉ rõ khi có một khoảnh khắc để nhận diện.",
+        "observation_key": "water_wrung_from_towel",
+        "structure_pattern": "release_reveals_accumulated_load"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 45,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.affect_labeling.recognition_can_change_relationship_to_experience"
+        ],
+        "reference_ids": [
+          "ref.lieberman_2007_affect_labeling"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "emotion",
+          "towel"
+        ],
+        "tie_break_order": 1019
+      }
+    },
+    {
+      "id": "curtain_keeps_the_old_smoke",
+      "revision": 1,
+      "kind": "selflo_original",
+      "text_vi": "Căn phòng đã mở cửa từ lâu,\nnhưng rèm cửa đôi khi vẫn giữ mùi khói cũ.",
       "primary_theme": "emotion",
       "authorship": {
         "author_id": "selflo",
@@ -26,12 +345,16 @@
         "theories": [
           "theory.emotional_memory"
         ],
-        "frameworks": [],
-        "emotion_tags": [],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "emotion",
           "memory",
-          "echo"
+          "smoke"
         ]
       },
       "rights": {
@@ -39,18 +362,18 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-24T00:00:33Z"
       },
       "writing": {
-        "semantic_intent": "Ảnh hưởng của một tín hiệu có thể còn tiếp tục sau khi tín hiệu đã kết thúc.",
-        "observation_key": "bell_echo_in_room",
-        "structure_pattern": "sound_stops_resonance_continues"
+        "semantic_intent": "Dấu vết của trải nghiệm cũ có thể còn lại sau khi hoàn cảnh đã thay đổi.",
+        "observation_key": "old_smoke_in_curtain",
+        "structure_pattern": "event_ended_trace_remains_in_material"
       },
       "display": {
         "mode": "poster",
-        "priority": 42,
+        "priority": 44,
         "featured": false,
         "style": "paper_quote",
         "attribution_vi": "Selflo"
@@ -69,12 +392,14 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "emotion",
           "memory"
         ],
-        "tie_break_order": 1022
+        "tie_break_order": 1020
       }
     },
     {
@@ -99,8 +424,12 @@
         "theories": [
           "theory.emotional_memory"
         ],
-        "frameworks": [],
-        "emotion_tags": [],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "emotion",
           "memory",
@@ -142,7 +471,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "emotion",
           "memory"
@@ -172,8 +503,12 @@
         "theories": [
           "theory.emotional_memory"
         ],
-        "frameworks": [],
-        "emotion_tags": [],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "emotion",
           "memory",
@@ -215,7 +550,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "selflo_reflection",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "emotion",
           "memory"
@@ -241,12 +578,18 @@
         "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 7; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "judgment"
         ]
@@ -276,7 +619,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "emotion",
           "judgment"
@@ -287,7 +632,7 @@
     },
     {
       "id": "attributed.ma.viii_47.judgment_afflicts",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Khi buồn khổ vì một điều bên ngoài, không chỉ bản thân sự việc làm bạn đau, mà còn là phán đoán của bạn về nó. Và phán đoán ấy là phần bạn có thể xem xét lại.",
@@ -303,12 +648,18 @@
         "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 47; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "judgment"
         ]
@@ -338,7 +689,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "emotion",
           "judgment"
@@ -348,74 +701,8 @@
       "knowledge_basis": null
     },
     {
-      "id": "an_old_scent_can_open_an_old_room",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Cánh cửa của ký ức",
-      "text_vi": "Một mùi cũ có thể mở lại căn phòng cũ trong lòng. Nhận ra cánh cửa ấy không có nghĩa mình phải bước vào.",
-      "subtitle_vi": null,
-      "primary_theme": "emotion",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "ký ức cảm xúc",
-          "mùi hương",
-          "nhận biết",
-          "quá khứ"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Một mùi cũ có thể mở lại căn phòng cũ trong lòng. Nhận ra cánh cửa ấy không có nghĩa mình phải bước vào.",
-        "observation_key": null,
-        "structure_pattern": "story_distillation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 60,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": "story.cafe_and_smoke_in_curtain",
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "emotion",
-          "ký ức cảm xúc",
-          "mùi hương",
-          "nhận biết",
-          "quá khứ"
-        ],
-        "tie_break_order": 3003
-      },
-      "knowledge_basis": null
-    },
-    {
       "id": "attributed.epictetus.ench_05.opinion",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Con người không chỉ bị xáo trộn bởi điều xảy ra, mà còn bởi ý kiến của họ về điều ấy.",
@@ -431,12 +718,18 @@
         "source_detail": "George Long (dịch); V; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "judgment"
@@ -467,7 +760,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "emotion",
           "stoicism",
@@ -479,7 +774,7 @@
     },
     {
       "id": "attributed.seneca.letter_13.imagination",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Có nhiều điều làm ta sợ hơn là thật sự quật ngã ta; ta thường đau trong tưởng tượng nhiều hơn trong thực tế.",
@@ -495,12 +790,18 @@
         "source_detail": "Richard M. Gummere (dịch); 13; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "future_fear"
@@ -531,196 +832,15 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "emotion",
           "stoicism",
           "future_fear"
         ],
         "tie_break_order": 5015
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.paulo_coelho.the_alchemist.020",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Hai chúng ta, cậu cũng như ta, đều phải gột sạch những tư tưởng xấu trong đầu.",
-      "subtitle_vi": null,
-      "primary_theme": "emotion",
-      "authorship": {
-        "author_id": "paulo_coelho",
-        "author_name": "Paulo Coelho",
-        "work": "Nhà giả kim",
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md các dòng 94, 305; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "nhà giả kim",
-          "owner-declared work source"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview theo yêu cầu owner. Chưa xác minh edition/bản dịch và chưa có rights decision; không đủ điều kiện cho Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Hai chúng ta, cậu cũng như ta, đều phải gột sạch những tư tưởng xấu trong đầu.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 40,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Paulo Coelho · Nhà giả kim"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "emotion",
-          "nhà giả kim"
-        ],
-        "tie_break_order": 6020
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.paulo_coelho.the_alchemist.030",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Phần lớn người ta nhìn thế giới như một nơi đầy đe dọa, chính vì thế mà thế giới trở thành nơi đe dọa thật",
-      "subtitle_vi": null,
-      "primary_theme": "emotion",
-      "authorship": {
-        "author_id": "paulo_coelho",
-        "author_name": "Paulo Coelho",
-        "work": "Nhà giả kim",
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md các dòng 130, 517; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "nhà giả kim",
-          "owner-declared work source"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview theo yêu cầu owner. Chưa xác minh edition/bản dịch và chưa có rights decision; không đủ điều kiện cho Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Phần lớn người ta nhìn thế giới như một nơi đầy đe dọa, chính vì thế mà thế giới trở thành nơi đe dọa thật",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 40,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Paulo Coelho · Nhà giả kim"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "emotion",
-          "nhà giả kim"
-        ],
-        "tie_break_order": 6030
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.paulo_coelho.the_alchemist.066",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "không ai phải lo trước về điều chưa xảy tới cả vì mỗi người đều có thể đạt được cái mình muốn và cái mình cần... nỗi sợ đã qua đi khi hiểu rằng diễn biến của đời mình và cả của quả đất đều đã được một bàn tay Người viết trước cả rồi",
-      "subtitle_vi": null,
-      "primary_theme": "emotion",
-      "authorship": {
-        "author_id": "paulo_coelho",
-        "author_name": "Paulo Coelho",
-        "work": "Nhà giả kim",
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Paulo Coelho · Nhà giả kim",
-        "source_detail": "quote_nhagiakim.md dòng 363; bản owner cung cấp; chưa xác minh edition, dịch giả, ISBN hoặc trang sách"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "nhà giả kim",
-          "owner-declared work source"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview theo yêu cầu owner. Chưa xác minh edition/bản dịch và chưa có rights decision; không đủ điều kiện cho Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "không ai phải lo trước về điều chưa xảy tới cả vì mỗi người đều có thể đạt được cái mình muốn và cái mình cần... nỗi sợ đã qua đi khi hiểu rằng diễn biến của đời mình và cả của quả đất đều đã được một bàn tay Người viết trước cả rồi",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 40,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Paulo Coelho · Nhà giả kim"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "emotion",
-          "nhà giả kim"
-        ],
-        "tie_break_order": 6066
       },
       "knowledge_basis": null
     }

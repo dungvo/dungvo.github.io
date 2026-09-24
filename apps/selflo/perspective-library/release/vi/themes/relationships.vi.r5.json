@@ -1,12 +1,16 @@
 {
-  "schema_version": "selflo.perspective.quote-fragment.v1",
-  "entity": "perspective_quote_fragment",
-  "fragment_id": "quote_fragment.relationships.002",
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
   "primary_theme": "relationships",
+  "display_name_vi": "Các mối quan hệ",
+  "description_vi": "Kết nối, yêu thương, giao tiếp, ranh giới và cách mình hiện diện với người khác.",
+  "language": "vi",
   "quotes": [
     {
       "id": "attributed.ma.vi_06.best_revenge",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Cách đáp trả tốt nhất là không trở thành bản sao của người đã làm điều sai với bạn.",
@@ -22,12 +26,18 @@
         "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 6; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "integrity"
         ]
@@ -57,74 +67,14 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "integrity"
         ],
         "tie_break_order": 1141
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "attributed.ma.vi_39.adapt_love",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Hãy thích nghi với những gì số phận đã trao; hãy chân thành yêu thương những người mà cuộc đời đặt bên cạnh bạn.",
-      "subtitle_vi": null,
-      "primary_theme": "relationships",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 39; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.stoicism"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "acceptance"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Hãy thích nghi với những gì số phận đã trao; hãy chân thành yêu thương những người mà cuộc đời đặt bên cạnh bạn.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "cool_observe",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 39"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "relationships",
-          "acceptance"
-        ],
-        "tie_break_order": 1146
       },
       "knowledge_basis": null
     },
@@ -146,12 +96,18 @@
         "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 48; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "appreciation"
         ]
@@ -181,7 +137,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "appreciation"
@@ -191,70 +149,8 @@
       "knowledge_basis": null
     },
     {
-      "id": "attributed.ma.vi_54.swarm_bee",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Điều không có ích cho cả đàn thì cũng không thật sự có ích cho một con ong.",
-      "subtitle_vi": null,
-      "primary_theme": "relationships",
-      "authorship": {
-        "author_id": "marcus_aurelius",
-        "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
-        "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 54; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.stoicism"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "common_good"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Điều không có ích cho cả đàn thì cũng không thật sự có ích cho một con ong.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 54"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "relationships",
-          "common_good"
-        ],
-        "tie_break_order": 1150
-      },
-      "knowledge_basis": null
-    },
-    {
       "id": "attributed.ma.vii_07.accept_help",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Đừng xấu hổ khi nhận sự giúp đỡ. Phần việc của bạn vẫn là làm phần mình; nếu không thể vượt bức tường một mình nhưng có thể làm được nhờ người khác, thì sao phải từ chối?",
@@ -270,12 +166,18 @@
         "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 7; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "support"
         ]
@@ -305,78 +207,14 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "support"
         ],
         "tie_break_order": 1153
-      },
-      "knowledge_basis": null
-    },
-    {
-      "id": "safe_return_can_help_us_go_farther",
-      "revision": 1,
-      "kind": "selflo_original",
-      "title_vi": "Một nơi để trở về",
-      "text_vi": "Một nơi để trở về không giữ chân mình; chính cảm giác có thể trở về mới cho mình can đảm đi xa.",
-      "subtitle_vi": null,
-      "primary_theme": "relationships",
-      "authorship": {
-        "author_id": "selflo",
-        "author_name": "Selflo",
-        "work": null,
-        "source_url": null,
-        "source_language": "vi",
-        "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [],
-        "emotion_tags": [],
-        "keywords": [
-          "tin cậy",
-          "điểm trở về",
-          "an toàn",
-          "khám phá"
-        ]
-      },
-      "rights": {
-        "status": "selflo_owned",
-        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Một nơi để trở về không giữ chân mình; chính cảm giác có thể trở về mới cho mình can đảm đi xa.",
-        "observation_key": null,
-        "structure_pattern": "story_distillation"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 60,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Selflo"
-      },
-      "story_id": "story.driver_and_last_stop_light",
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "relationships",
-          "tin cậy",
-          "điểm trở về",
-          "an toàn",
-          "khám phá"
-        ],
-        "tie_break_order": 3000
       },
       "knowledge_basis": null
     },
@@ -398,12 +236,18 @@
         "source_detail": "Richard M. Gummere (dịch); 3; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "trust"
@@ -434,7 +278,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "stoicism",
@@ -446,7 +292,7 @@
     },
     {
       "id": "attributed.seneca.letter_07.mutual_learning",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Hãy ở gần người giúp bạn tốt lên, và đón nhận người mà bạn có thể giúp họ tốt lên. Việc học hỏi luôn đi theo hai chiều.",
@@ -462,12 +308,18 @@
         "source_detail": "Richard M. Gummere (dịch); 7; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "mutual_growth"
@@ -498,7 +350,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "stoicism",
@@ -526,12 +380,18 @@
         "source_detail": "Richard M. Gummere (dịch); 9; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.stoicism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "stoicism",
           "friendship"
@@ -562,7 +422,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "stoicism",
@@ -573,72 +435,8 @@
       "knowledge_basis": null
     },
     {
-      "id": "attributed.seneca.letter_47.people",
-      "revision": 1,
-      "kind": "adapted_wisdom",
-      "title_vi": null,
-      "text_vi": "Người ta gọi họ là nô lệ. Nhưng trước hết, họ vẫn là con người.",
-      "subtitle_vi": null,
-      "primary_theme": "relationships",
-      "authorship": {
-        "author_id": "seneca",
-        "author_name": "Seneca",
-        "work": "Moral Letters to Lucilius",
-        "source_url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_47",
-        "source_language": "en",
-        "source_label": "Seneca · Thư gửi Lucilius",
-        "source_detail": "Richard M. Gummere (dịch); 47; bản Việt là bản dịch nháp Selflo từ exact English source"
-      },
-      "metadata": {
-        "concepts": [],
-        "theories": [],
-        "frameworks": [
-          "framework.stoicism"
-        ],
-        "emotion_tags": [],
-        "keywords": [
-          "stoicism",
-          "human_dignity"
-        ]
-      },
-      "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Bản dịch Gummere xuất bản 1918–1925 và được Wikisource lưu trữ; cần review thẩm quyền áp dụng và bản dịch tiếng Việt trước Release."
-      },
-      "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
-      },
-      "writing": {
-        "semantic_intent": "Người ta gọi họ là nô lệ. Nhưng trước hết, họ vẫn là con người.",
-        "observation_key": null,
-        "structure_pattern": "attributed_quote"
-      },
-      "display": {
-        "mode": "poster",
-        "priority": 50,
-        "featured": false,
-        "style": "paper_quote",
-        "attribution_vi": "Seneca · Thư gửi Lucilius · 47"
-      },
-      "story_id": null,
-      "selection": {
-        "source_type": "reflection",
-        "reflection_kind": "quote",
-        "thought_match_keys": [],
-        "presentation_tags": [
-          "relationships",
-          "stoicism",
-          "human_dignity"
-        ],
-        "tie_break_order": 5018
-      },
-      "knowledge_basis": null
-    },
-    {
       "id": "attributed.laozi.chapter_08.water",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Đức cao nhất giống như nước: làm lợi cho muôn vật và ở nơi thấp mà người đời không ưa, không tranh giành.",
@@ -654,12 +452,18 @@
         "source_detail": "James Legge (dịch); 8; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.taoism"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "taoism",
           "water"
@@ -690,7 +494,9 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "taoism",
@@ -702,7 +508,7 @@
     },
     {
       "id": "attributed.dhammapada.verse_005.hatred",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Hận thù không chấm dứt bằng hận thù; nó lắng xuống nhờ lòng thương — đó là quy luật xưa.",
@@ -718,12 +524,18 @@
         "source_detail": "F. Max Müller (dịch); 5; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
-        "concepts": [],
-        "theories": [],
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
         "frameworks": [
           "framework.buddhist_practice"
         ],
-        "emotion_tags": [],
+        "emotion_tags": [
+
+        ],
         "keywords": [
           "buddhist_text",
           "non_hatred"
@@ -754,13 +566,231 @@
       "selection": {
         "source_type": "reflection",
         "reflection_kind": "quote",
-        "thought_match_keys": [],
+        "thought_match_keys": [
+
+        ],
         "presentation_tags": [
           "relationships",
           "buddhist_text",
           "non_hatred"
         ],
         "tie_break_order": 5030
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.dhammapada.verse_049.bee",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Như ong lấy mật rồi rời đi mà không làm hại bông hoa, màu sắc hay hương thơm của nó, người sáng suốt cũng sống giữa cộng đồng như vậy.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "dhammapada_tradition",
+        "author_name": "Dhammapada",
+        "work": "Dhammapada, a Collection of Verses",
+        "source_url": "https://www.gutenberg.org/ebooks/2017",
+        "source_language": "en",
+        "source_label": "Dhammapada",
+        "source_detail": "F. Max Müller (dịch); 49; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.buddhist_practice"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "buddhist_text",
+          "gentle_presence"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T22:58:03Z"
+      },
+      "writing": {
+        "semantic_intent": "Như ong lấy mật rồi rời đi mà không làm hại bông hoa, màu sắc hay hương thơm của nó, người sáng suốt cũng sống giữa cộng đồng như vậy.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Dhammapada · 49"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "relationships",
+          "buddhist_text",
+          "gentle_presence"
+        ],
+        "tie_break_order": 5034
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.confucius.book_xv_ch23.reciprocity",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Điều mình không muốn người khác làm với mình, đừng làm với người khác.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "confucius",
+        "author_name": "Confucius",
+        "work": "The Analects of Confucius (from the Chinese Classics)",
+        "source_url": "https://www.gutenberg.org/ebooks/3330",
+        "source_language": "en",
+        "source_label": "Khổng Tử · Luận Ngữ",
+        "source_detail": "James Legge (dịch); XV.23; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.confucianism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "confucianism",
+          "reciprocity"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
+      },
+      "writing": {
+        "semantic_intent": "Điều mình không muốn người khác làm với mình, đừng làm với người khác.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Khổng Tử · Luận Ngữ · XV.23"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "relationships",
+          "confucianism",
+          "reciprocity"
+        ],
+        "tie_break_order": 5049
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "research.laozi.ch13.037",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Được ưu ái hay bị hạ thấp đều có thể khiến lòng bất an.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "society_culture",
+          "comparison_external_values",
+          "comparison"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Laozi / 老子",
+        "work": "道德經 / Tao Te Ching",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "source_language": null,
+        "source_label": "Laozi / 老子",
+        "source_detail": "Research corpus row 38; content_nature=translated_quote; verification=A - Primary source."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "comparison_external_values",
+          "comparison"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T23:59:42Z"
+      },
+      "writing": {
+        "semantic_intent": "Được ưu ái hay bị hạ thấp đều có thể khiến lòng bất an.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Laozi / 老子"
       },
       "knowledge_basis": null
     }
