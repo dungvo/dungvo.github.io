@@ -78,6 +78,19 @@
     "stable_id": { "type": "string", "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$" },
     "stable_id_array": { "type": "array", "items": { "$ref": "#/$defs/stable_id" } },
     "string_array": { "type": "array", "items": { "$ref": "#/$defs/non_empty_string" } },
+    "rich_text_runs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text_vi", "style"],
+        "properties": {
+          "text_vi": { "$ref": "#/$defs/non_empty_string" },
+          "style": { "enum": ["plain", "strong", "emphasis", "accent", "strong_accent"] }
+        }
+      }
+    },
     "hero_image": {
       "type": "object",
       "additionalProperties": false,
@@ -123,7 +136,8 @@
             "id": { "$ref": "#/$defs/stable_id" },
             "type": { "const": "paragraph" },
             "style": { "enum": ["narrative", "dialogue_lead", "dialogue", "transition"] },
-            "text_vi": { "$ref": "#/$defs/non_empty_string" }
+            "text_vi": { "$ref": "#/$defs/non_empty_string" },
+            "runs": { "$ref": "#/$defs/rich_text_runs" }
           }
         },
         {
@@ -145,7 +159,8 @@
           "properties": {
             "id": { "$ref": "#/$defs/stable_id" },
             "type": { "const": "heading" },
-            "text_vi": { "$ref": "#/$defs/non_empty_string" }
+            "text_vi": { "$ref": "#/$defs/non_empty_string" },
+            "runs": { "$ref": "#/$defs/rich_text_runs" }
           }
         },
         {
@@ -156,6 +171,7 @@
             "id": { "$ref": "#/$defs/stable_id" },
             "type": { "const": "pull_quote" },
             "text_vi": { "$ref": "#/$defs/non_empty_string" },
+            "runs": { "$ref": "#/$defs/rich_text_runs" },
             "attribution_vi": { "$ref": "#/$defs/nullable_string" }
           }
         },

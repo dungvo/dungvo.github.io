@@ -93,6 +93,8 @@ class StoryV2ContractTests(unittest.TestCase):
                 for block in blocks:
                     if block["type"] == "paragraph":
                         self.assertIn(block.get("style"), ("narrative", "dialogue_lead", "dialogue", "transition"))
+                    if block.get("runs"):
+                        self.assertEqual("".join(run["text_vi"] for run in block["runs"]), block["text_vi"])
                 parts = [block["part_number"] for block in blocks if block["type"] == "part_heading"]
                 self.assertEqual(parts, list(range(1, len(parts) + 1)))
                 for left, right in zip(blocks, blocks[1:]):
@@ -114,6 +116,12 @@ class StoryV2ContractTests(unittest.TestCase):
         self.assertNotIn("blocks.shift()", renderer)
         self.assertNotIn("section.blocks.sort", renderer)
         self.assertIn("(section.blocks||[]).forEach", renderer)
+
+    def test_web_renderer_uses_safe_semantic_rich_text(self) -> None:
+        renderer = (APP_ROOT / "story/app.mjs").read_text(encoding="utf-8")
+        self.assertIn("function appendRichText", renderer)
+        self.assertIn("span.textContent=run.text_vi", renderer)
+        self.assertNotIn("node.innerHTML=block", renderer)
 
     def test_web_renderer_prefers_story_hero_over_theme_artwork(self) -> None:
         renderer = (APP_ROOT / "story/app.mjs").read_text(encoding="utf-8")

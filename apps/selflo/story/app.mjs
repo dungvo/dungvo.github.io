@@ -66,11 +66,15 @@ function introduction(story,heroAsset){
 }
 
 function storyBody(story){const body=document.createElement('div');body.className='story-body';(story.sections||[]).forEach(section=>{const node=document.createElement('section');node.className='story-section';node.id=section.id;if(section.title_vi){const heading=document.createElement('h2');heading.textContent=section.title_vi;node.append(heading)}(section.blocks||[]).forEach(block=>node.append(blockNode(block)));body.append(node)});return body}
+function appendRichText(node,block){
+  if(!block.runs?.length){node.textContent=block.text_vi||'';return}
+  block.runs.forEach(run=>{const span=document.createElement('span');span.className=`text-${run.style||'plain'}`;span.textContent=run.text_vi;node.append(span)});
+}
 function blockNode(block){
   if(block.type==='part_heading'){const part=document.createElement('header');part.id=block.id;part.className='part-heading';const label=document.createElement('p');label.className='part-label';label.textContent=`Phần ${block.part_number}`;const title=document.createElement('h2');title.textContent=block.title_vi||'';part.append(label,title);if(block.subtitle_vi){const subtitle=document.createElement('p');subtitle.className='part-subtitle';subtitle.textContent=block.subtitle_vi;part.append(subtitle)}return part}
-  if(block.type==='pull_quote'){const quote=document.createElement('blockquote');quote.className='pull-quote';quote.append(document.createTextNode(block.text_vi||''));if(block.attribution_vi){const cite=document.createElement('cite');cite.textContent=block.attribution_vi;quote.append(cite)}return quote}
+  if(block.type==='pull_quote'){const quote=document.createElement('blockquote');quote.className='pull-quote';appendRichText(quote,block);if(block.attribution_vi){const cite=document.createElement('cite');cite.textContent=block.attribution_vi;quote.append(cite)}return quote}
   if(block.type==='divider'){const divider=document.createElement('div');divider.className='divider';return divider}
-  const node=document.createElement(block.type==='heading'?'h3':'p');node.textContent=block.text_vi||'';if(block.type==='paragraph')node.className=`paragraph paragraph-${block.style||'narrative'}`;return node;
+  const node=document.createElement(block.type==='heading'?'h3':'p');appendRichText(node,block);if(block.type==='paragraph')node.className=`paragraph paragraph-${block.style||'narrative'}`;return node;
 }
 
 function editorial(story){const root=document.createDocumentFragment();root.append(introduction(story,resolveHero(story)),storyBody(story));const zone=document.createElement('div');zone.id='reflection';zone.className='reflection-zone';zone.append(takeaway(story));if(story.reflection?.prompts_vi?.length){const prompts=document.createElement('section');prompts.className='prompts';const heading=document.createElement('h2');heading.textContent='Gợi ý suy ngẫm';const list=document.createElement('ul');story.reflection.prompts_vi.slice(0,2).forEach(text=>{const item=document.createElement('li');item.textContent=text;list.append(item)});prompts.append(heading,list);zone.append(prompts)}if(story.reflection?.closing_vi){const closing=document.createElement('p');closing.className='closing';closing.textContent=story.reflection.closing_vi;zone.append(closing)}root.append(zone);return root}

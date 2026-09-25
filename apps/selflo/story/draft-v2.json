@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "entity": "perspective_story",
   "id": "story.old_man_and_returning_horse",
   "revision": 2,
@@ -18,7 +18,11 @@
   "metadata": {"concept_ids": [], "emotion_tags": [], "keywords": ["Tái ông thất mã", "ngụ ngôn", "may và rủi", "góc nhìn"], "story_style": "parable"},
   "sections": [
     {"id": "opening", "title_vi": null, "blocks": [
-      {"id": "opening.paragraph_01", "type": "paragraph", "text_vi": "Gần biên ải có một gia đình bị mất ngựa. Con ngựa tự nhiên chạy sang đất Hồ. Những người quanh vùng đến chia buồn."},
+      {"id": "opening.paragraph_01", "type": "paragraph", "text_vi": "Gần biên ải có một gia đình bị mất ngựa. Con ngựa tự nhiên chạy sang đất Hồ. Những người quanh vùng đến chia buồn.", "runs": [
+        {"text_vi": "Gần biên ải có một gia đình bị mất ngựa. ", "style": "plain"},
+        {"text_vi": "Con ngựa tự nhiên chạy sang đất Hồ.", "style": "strong_accent"},
+        {"text_vi": " Những người quanh vùng đến chia buồn.", "style": "plain"}
+      ]},
       {"id": "opening.quote_01", "type": "pull_quote", "text_vi": "Làm sao biết việc này không trở thành phúc?", "attribution_vi": "Người cha"}
     ]},
     {"id": "turning", "title_vi": null, "blocks": [
