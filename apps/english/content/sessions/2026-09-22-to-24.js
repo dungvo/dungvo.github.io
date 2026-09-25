@@ -1,6 +1,13 @@
-// Add future learned chunks to this array. Keep each id unique.
-// The app reads this file directly, so it works on GitHub Pages without a server or build step.
-window.CHUNKS = [
+(() => {
+const content = {
+  schemaVersion: 1,
+  session: {
+    id: "2026-09-22-to-24",
+    title: "Pipeline troubleshooting and workplace updates",
+    dates: ["2026-09-22", "2026-09-23", "2026-09-24"],
+    topics: ["troubleshooting", "updates", "uncertainty", "dependencies"]
+  },
+  chunks: [
   {id:"give-second",chunk:"Give me a second.",ipa:"/ɡɪv mi ə ˈsekənd/",meaning:"Please wait briefly while I check.",situation:"A coworker asks why the pipeline failed. You need a moment before answering.",example:"Give me a second. I'll check it and get back to you.",gap:"Give me a ___.",answer:"second",alternatives:["minute","result","chance"],note:"Use this to ask someone to wait briefly."},
   {id:"get-back",chunk:"I'll get back to you.",ipa:"/aɪl ɡet bæk tə juː/",meaning:"I will respond later after checking.",situation:"You do not know the answer yet, but you promise to respond after investigating.",example:"I'll check it and get back to you.",gap:"I'll get ___ to you.",answer:"back",alternatives:["again","return","after"],note:"Get back to someone means respond later."},
   {id:"busy-now",chunk:"I'm a bit busy right now.",ipa:"/aɪm ə bɪt ˈbɪzi raɪt naʊ/",meaning:"I am politely saying that I am currently occupied.",situation:"A teammate asks you to investigate immediately, but you are working on something else.",example:"I'm a bit busy right now, but I can start looking into it in about 30 minutes.",gap:"I'm a ___ busy right now.",answer:"bit",alternatives:["few","little of","some"],note:"A bit makes the statement sound softer and more polite."},
@@ -23,4 +30,18 @@ window.CHUNKS = [
   {id:"check-whether",chunk:"Check whether the pipeline works correctly.",ipa:"/tʃek ˈweðər ðə ˈpaɪplaɪn wɝːks kəˈrektli/",meaning:"Verify if the pipeline is working correctly or not.",situation:"After rollback, you need to verify the outcome rather than merely inspect the pipeline.",example:"We can roll back the configuration and check whether the pipeline works correctly.",gap:"Check ___ the pipeline works correctly.",answer:"whether",alternatives:["that","what","does"],note:"Check whether + subject + verb verifies if something is true."},
   {id:"might-fixed",chunk:"The issue might be fixed in two days.",ipa:"/ði ˈɪʃuː maɪt bi fɪkst ɪn tuː deɪz/",meaning:"It is possible that the issue will be resolved two days from now.",situation:"You give an uncertain estimate for resolution and focus on the issue, not the person fixing it.",example:"I think the issue might be fixed in two days.",gap:"The issue might ___ fixed in two days.",answer:"be",alternatives:["is","being","been"],note:"Passive pattern: might + be + past participle."},
   {id:"other-services",chunk:"Other services might break.",ipa:"/ˈʌðər ˈsɝːvɪsɪz maɪt breɪk/",meaning:"Multiple additional or different services could stop working.",situation:"Rolling back may affect several services besides the pipeline.",example:"If we roll back the configuration, other services might break.",gap:"If we roll back, ___ services might break.",answer:"other",alternatives:["another","the other","others"],note:"Other + plural noun. Another + singular noun. The other refers to a specific remaining one."}
-];
+  ]
+};
+const pronunciation = {
+  "give-second": "ghiv-mi-ờ-SE-kầnđ", "get-back": "ail-ghét-BÉC-tờ-du", "busy-now": "aim-ờ-bít-BI-di-rai-NAU",
+  "look-into": "ail-lúc-IN-tu-ịt", "take-about": "Í-tồ-tâyk-mi-ờ-BAO-tu-AO-ờz", "do-best": "ail-đu-mai-BÉT-tờ-ghét-béc-tờ-du-bai-faiv-pi-em",
+  "found-out": "ai-FAUN-đao-đét", "noticed": "ai-NÂU-tịt", "related-to": "ịt-iz-ri-LÂY-tịt-tờ",
+  "update-more": "ail-ập-ĐÂYT-du-oâns-ai-nâu-MO", "seems-caused": "ịt-SIMZ-tờ-hav-KOZD-đờ-FÂY-liờ", "not-sure-whether": "aim-nót-SUA-WE-đờ",
+  "explain-to": "ken-du-ịch-SPLÂYN-đờ-ĐÂY-tờ-flâu-tờ-mi", "understand-correctly": "ịf-ai-ân-đờ-STEN-cờ-RÉC-li", "next-step": "đờ-nékst-STÉP-iz-tờ",
+  "give-update": "ken-du-ghiv-mi-ần-ẬP-đâyt-in-THƠ-ti-MI-nịts", "cant-now": "wi-KENT-râul-ịt-béc-phờ-NAU", "depends-on": "ịt-đi-PENZ-on",
+  "after-that": "ÁP-tờ-đét-wi-ken", "check-whether": "chék-WE-đờ-đờ-PAIP-lain-wơks-cờ-RÉC-li", "might-fixed": "đi-Í-shu-mait-bi-FIKST-in-tu-đâyz",
+  "other-services": "Â-đờ-SƠ-vi-sịt-mait-brâyk"
+};
+content.chunks.forEach((chunk) => { chunk.viPronunciation = pronunciation[chunk.id]; chunk.practiceModes = ["meaning", "situation", "build", "speak"]; });
+window.ChunkContent.register(content);
+})();

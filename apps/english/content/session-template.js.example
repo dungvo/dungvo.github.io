@@ -1,0 +1,27 @@
+// Copy this file into content/sessions/YYYY-MM-DD.js, remove ".example",
+// fill in the content, and push. The published site discovers it automatically.
+window.ChunkContent.register({
+  schemaVersion: 1,
+  session: {
+    id: "YYYY-MM-DD",
+    title: "Short title for this practice session",
+    dates: ["YYYY-MM-DD"],
+    topics: ["topic-one", "topic-two"]
+  },
+  chunks: [
+    {
+      id: "unique-chunk-id",
+      chunk: "A complete reusable English chunk.",
+      ipa: "/IPA pronunciation/",
+      viPronunciation: "Vietnamese-friendly guide with STRESS in caps",
+      meaning: "A short, natural-English explanation.",
+      situation: "A realistic situation where this chunk is appropriate.",
+      example: "A complete example sentence using the chunk.",
+      gap: "A sentence with exactly one ___ gap.",
+      answer: "answer",
+      alternatives: ["wrong one", "wrong two", "wrong three"],
+      note: "A concise grammar, meaning, or usage distinction.",
+      confusedWith: []
+    }
+  ]
+});
