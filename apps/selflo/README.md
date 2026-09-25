@@ -120,6 +120,7 @@ Quote đã mang nhãn **Vòng 1 chưa đạt** hoặc **Bị chặn nguồn/quy�
 
 - [Triết lý sản phẩm Selflo](SELFLO_PRODUCT_PHILOSOPHY.vi.md): luận đề nền tảng, vai trò của nội dung và trí tuệ nhân tạo, nguyên tắc riêng tư, cố ý không tự động hóa và câu hỏi kiểm tra khi xây tính năng.
 - [Hướng dẫn kể chuyện Selflo](perspective-library/STORYTELLING_GUIDE.vi.md): taxonomy story style/life stage/function/depth, cách chọn truyện theo hoàn cảnh người đọc, checklist chống giảng đạo và quy tắc typography cho Story Reader.
+- [Định hướng mở rộng kho nội dung](perspective-library/CONTENT_COVERAGE_GAPS.vi.md): các gap về quy luật đời sống hiện đại, não bộ/thói quen, thơ–âm nhạc, quote cần story/context và nguyên tắc cân bằng nguồn cho các batch tiếp theo.
 - [Hướng dẫn đưa một story vào Selflo Release](perspective-library/RELEASE_STORY_GUIDE.vi.md): cấu trúc thư mục, cách tìm quote qua `story_id`, các file cần cập nhật, Release gates và quy trình kiểm tra/publish.
 - [Daily Content Review](scripts/DAILY_CONTENT_REVIEW.vi.md): chi tiết Candidate → Authoring → Release, quy tắc chọn batch, gate và cách khôi phục khi thao tác dở dang.
 
