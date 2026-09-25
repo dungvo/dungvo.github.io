@@ -42,8 +42,12 @@
             <button class="mode-card sage" data-mode="situation" disabled><span class="mode-icon">◌</span><span><strong>Situation → Chunk</strong><small>Choose what sounds natural</small></span><b>›</b></button>
             <button class="mode-card blue" data-mode="build" disabled><span class="mode-icon">▤</span><span><strong>Build the Sentence</strong><small>Master word order</small></span><b>›</b></button>
             <button class="mode-card yellow" data-mode="speak" disabled><span class="mode-icon">◖</span><span><strong>Speak & Pronounce</strong><small>IPA, listening, and recall</small></span><b>›</b></button>
+            <button class="mode-card violet" data-mode="listen" disabled><span class="mode-icon">♫</span><span><strong>Listen & Understand</strong><small>Understand without reading</small></span><b>›</b></button>
+            <button class="mode-card peach" data-mode="recall" disabled><span class="mode-icon">✦</span><span><strong>Speak from Memory</strong><small>Recall without choices</small></span><b>›</b></button>
           </div>
         </section>
+
+        <section class="learning-path-section"><div class="section-title"><div><p class="eyebrow">STRUCTURED LEARNING PATH</p><h2>Learn one situation at a time</h2></div><span>New → Learning → Reviewing → Mastered</span></div><div class="path-grid" id="pathGrid"></div></section>
 
         <section class="dashboard-grid">
           <article class="review-panel"><p class="eyebrow">PERSONALIZED REVIEW</p><div class="review-body"><span class="target-icon">◎</span><div><h3 id="reviewTitle">Start practicing</h3><p id="reviewCopy">Your difficult chunks will appear here more often.</p><button class="primary small" data-mode="review" disabled>Review weak spots <span>→</span></button></div></div></article>
@@ -55,7 +59,7 @@
 
       <section id="summaryView" class="view summary-view"><div class="summary-card"><div class="summary-burst">✓</div><p class="eyebrow">SESSION COMPLETE</p><h1>Nice work.</h1><p id="summaryLine"></p><div class="summary-stats"><div><strong id="summaryScore">0</strong><span>correct</span></div><div><strong id="summaryAccuracy">0%</strong><span>accuracy</span></div><div><strong id="summaryStreak">0</strong><span>best streak</span></div></div><button class="primary" id="againButton">Practice again</button><button class="text-button" data-nav="home">Back to home</button></div></section>
 
-      <section id="progressView" class="view inner-view"><p class="eyebrow">MY PROGRESS</p><h1>Your learning,<br><em>at a glance.</em></h1><div class="progress-overview"><article><span>All-time reps</span><strong id="allTimeReps">0</strong></article><article><span>All-time accuracy</span><strong id="allTimeAccuracy">—</strong></article><article><span>Current streak</span><strong id="progressStreak">0 days</strong></article></div><article class="focus-list"><h2>Chunks to strengthen</h2><div id="weakList"></div></article></section>
+      <section id="progressView" class="view inner-view"><p class="eyebrow">MY PROGRESS</p><h1>Your learning,<br><em>at a glance.</em></h1><div class="progress-overview"><article><span>All-time reps</span><strong id="allTimeReps">0</strong></article><article><span>All-time accuracy</span><strong id="allTimeAccuracy">—</strong></article><article><span>Current streak</span><strong id="progressStreak">0 days</strong></article><article><span>Mastered chunks</span><strong id="masteredCount">0</strong></article><article><span>Due for review</span><strong id="dueCount">0</strong></article></div><article class="focus-list"><h2>Chunks to strengthen</h2><div id="weakList"></div></article></section>
 
       <section id="speakingView" class="view inner-view speaking-view">
         <div class="speaking-head"><div><p class="eyebrow">GUIDED CONVERSATION PRACTICE</p><h1>Speak with a<br><em>clear purpose.</em></h1><p class="lead">Choose a scenario, prepare with useful chunks, then use the ready-made prompt in ChatGPT Voice.</p></div><div class="speaking-summary"><strong id="speakingTopicCount">0</strong><span>guided topics</span><small>Daily life · Work · Data · Interviews</small></div></div>

@@ -57,3 +57,9 @@ For a reliable local preview, serve the repository with any static file server a
 ## Progress
 
 Scores, daily activity, weak chunks, and streaks are stored in the current browser with `localStorage`. Adding content does not erase existing progress because each chunk has a stable ID.
+
+The learning system introduces no more than five new chunks in a session and fills the remaining reps with reinforcement. Chunks move through New, Learning, Reviewing, and Mastered stages using spaced review intervals of 1, 3, 7, 14, and 30 days. Mastery requires both repeated correct answers and at least one successful speaking use.
+
+Topics form a guided path. The next topic unlocks after at least 70% of the previous topic has been introduced. Listening mode hides the written chunk until after comprehension is tested; Speak from Memory asks for active production without choices.
+
+Speaking Lab results are self-reported because this static website cannot inspect a separate ChatGPT Voice session. After a conversation, learners can mark the target chunks they used from memory, and the app records those speaking uses locally.

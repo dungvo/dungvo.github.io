@@ -60,21 +60,24 @@
     });
   }
 
-  function defaultProgress() { return { total: 0, correct: 0, items: {}, history: {} }; }
+  function defaultProgress() { return { total: 0, correct: 0, items: {}, history: {}, conversations: {} }; }
   function loadProgress() {
     try {
       const current = JSON.parse(localStorage.getItem(KEY));
-      if (current) return { ...defaultProgress(), ...current, items: current.items || {}, history: current.history || {} };
+      if (current) return { ...defaultProgress(), ...current, items: current.items || {}, history: current.history || {}, conversations: current.conversations || {} };
       const legacy = JSON.parse(localStorage.getItem(LEGACY_KEY));
       if (legacy) return { total: legacy.total || 0, correct: legacy.correct || 0, items: legacy.items || {}, history: legacy.today ? { [legacy.today]: { total: legacy.todayCount || 0, correct: 0 } } : {} };
     } catch (_) { /* Start clean if browser storage is malformed. */ }
     return defaultProgress();
   }
   function saveProgress() { localStorage.setItem(KEY, JSON.stringify(progress)); }
-  function itemStat(id) { return progress.items[id] || { seen: 0, correct: 0, wrong: 0 }; }
-  function record(id, correct) {
+  function itemStat(id) { return { seen: 0, correct: 0, wrong: 0, box: 0, due: null, spoken: 0, ...progress.items[id] }; }
+  function record(id, correct, skill = "recognition") {
     const stat = itemStat(id);
     stat.seen += 1; correct ? stat.correct += 1 : stat.wrong += 1; progress.items[id] = stat;
+    if (skill === "speaking" && correct) stat.spoken += 1;
+    const intervals = [0, 1, 3, 7, 14, 30]; stat.box = correct ? Math.min(5, (stat.box || 0) + 1) : 0;
+    stat.due = dateOffset(correct ? intervals[stat.box] : 0); stat.lastSeen = todayKey();
     progress.total += 1; if (correct) progress.correct += 1;
     const day = progress.history[todayKey()] || { total: 0, correct: 0 };
     day.total += 1; if (correct) day.correct += 1; progress.history[todayKey()] = day;
@@ -84,6 +87,14 @@
     const stat = itemStat(chunk.id);
     return stat.seen === 0 ? 2 : (stat.wrong * 3 - stat.correct * 0.25) + 1 / (stat.seen + 1);
   }
+  function learningStage(chunk) {
+    const stat = itemStat(chunk.id); const accuracy = stat.seen ? stat.correct / stat.seen : 0;
+    if (!stat.seen) return "New";
+    if (stat.box >= 4 && accuracy >= 0.8 && stat.spoken > 0) return "Mastered";
+    if (stat.box >= 2) return "Reviewing";
+    return "Learning";
+  }
+  function isDue(chunk) { const stat = itemStat(chunk.id); return stat.seen > 0 && learningStage(chunk) !== "Mastered" && (!stat.due || stat.due <= todayKey()); }
   function dateOffset(days) { const date = new Date(); date.setDate(date.getDate() + days); return date.toISOString().slice(0, 10); }
   function recentStats(days = 7) {
     let total = 0, correct = 0;
@@ -150,9 +161,22 @@
     $("#reviewTitle").textContent = weak.length ? `${weak.length} chunk${weak.length === 1 ? "" : "s"} to strengthen` : "Start practicing";
     $("#reviewCopy").textContent = weak.length ? `${weak[0].chunk}${weak[1] ? ` vs. ${weak[1].chunk}` : ""}` : "Your difficult chunks will appear here more often.";
     $("#bestTopic").textContent = weak[0]?.topics?.[0] || (progress.total ? "Building recall" : "New learner");
+    renderLearningPath();
+  }
+  function renderLearningPath() {
+    const ordered = [...registry.sessions].sort((a, b) => { const aDaily = a.session.id.startsWith("daily-") ? 0 : 1; const bDaily = b.session.id.startsWith("daily-") ? 0 : 1; return aDaily - bDaily || a.session.id.localeCompare(b.session.id); });
+    let previousIntroduced = 1;
+    $("#pathGrid").innerHTML = ordered.map((entry, index) => {
+      const topicChunks = chunks.filter((chunk) => chunk.sessionId === entry.session.id); const stages = { New: 0, Learning: 0, Reviewing: 0, Mastered: 0 };
+      topicChunks.forEach((chunk) => stages[learningStage(chunk)] += 1); const introduced = topicChunks.length - stages.New; const progressPercent = topicChunks.length ? Math.round(introduced / topicChunks.length * 100) : 0;
+      const unlocked = index === 0 || previousIntroduced >= 0.7; previousIntroduced = topicChunks.length ? introduced / topicChunks.length : 0;
+      return `<article class="path-card ${unlocked ? "" : "locked"}"><div><span class="path-number">${String(index + 1).padStart(2, "0")}</span><span class="stage-badge">${stages.Mastered === topicChunks.length ? "Mastered" : introduced ? "In progress" : unlocked ? "Ready" : "Locked"}</span></div><h3>${escapeHtml(entry.session.title)}</h3><p>${stages.New} new · ${stages.Learning} learning · ${stages.Reviewing} reviewing · ${stages.Mastered} mastered</p><div class="path-progress"><span style="width:${progressPercent}%"></span></div><button data-path-topic="${escapeHtml(entry.session.id)}" ${unlocked ? "" : "disabled"}>${unlocked ? introduced ? "Continue topic →" : "Start topic →" : "Complete 70% of the previous topic"}</button></article>`;
+    }).join("");
+    $$('[data-path-topic]').forEach((button) => button.addEventListener("click", () => start("mixed", button.dataset.pathTopic)));
   }
   function updateProgressView() {
     const streak = currentStreak(); $("#allTimeReps").textContent = progress.total; $("#allTimeAccuracy").textContent = progress.total ? `${Math.round(progress.correct / progress.total * 100)}%` : "—"; $("#progressStreak").textContent = `${streak} day${streak === 1 ? "" : "s"}`;
+    $("#masteredCount").textContent = chunks.filter((chunk) => learningStage(chunk) === "Mastered").length; $("#dueCount").textContent = chunks.filter(isDue).length;
     const weak = [...chunks].sort((a, b) => weakness(b) - weakness(a)).slice(0, 8);
     $("#weakList").innerHTML = weak.map((chunk) => { const stat = itemStat(chunk.id); return `<div class="weak-row"><div><strong>${escapeHtml(chunk.chunk)}</strong><span>${escapeHtml(chunk.meaning)}</span></div><span class="weak-score">${stat.wrong ? `${stat.wrong} miss${stat.wrong === 1 ? "" : "es"}` : "Not practiced"}</span></div>`; }).join("");
   }
@@ -182,37 +206,52 @@
   function showSpeakingTopic(id) {
     const topic = speakingTopics.find((item) => item.id === id); if (!topic) return;
     const useful = topic.chunkIds.map((chunkId) => chunks.find((chunk) => chunk.id === chunkId)).filter(Boolean);
-    $("#topicDetail").innerHTML = `<span class="topic-category">${escapeHtml(topic.category)} · ${escapeHtml(topic.level)} · ${topic.minutes} min</span><h2>${escapeHtml(topic.title)}</h2><p>${escapeHtml(topic.goal)}</p><div class="role-box"><b>Your role</b><span>${escapeHtml(topic.userRole)}</span><b>ChatGPT's role</b><span>${escapeHtml(topic.aiRole)}</span><b>Opening line</b><span>“${escapeHtml(topic.opening)}”</span></div><h3>Discussion questions</h3><ol>${topic.questions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}</ol><h3>Useful chunks</h3><div class="topic-chunks">${useful.map((chunk) => `<span>${escapeHtml(chunk.chunk)}</span>`).join("")}</div><details><summary>Preview the ChatGPT Live prompt</summary><p>${escapeHtml(topic.prompt)}</p></details><button class="primary copy-prompt" id="copyLivePrompt">Copy ChatGPT Live prompt</button><a class="open-chatgpt" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT ↗</a><p class="copy-status" id="copyStatus">Paste the prompt into ChatGPT, start Voice, and begin with the opening line.</p>`;
+    const practice = progress.conversations[topic.id] || { runs: 0, used: [] };
+    $("#topicDetail").innerHTML = `<span class="topic-category">${escapeHtml(topic.category)} · ${escapeHtml(topic.level)} · ${topic.minutes} min</span><h2>${escapeHtml(topic.title)}</h2><p>${escapeHtml(topic.goal)}</p><div class="conversation-history">Practiced ${practice.runs} time${practice.runs === 1 ? "" : "s"}</div><div class="role-box"><b>Your role</b><span>${escapeHtml(topic.userRole)}</span><b>ChatGPT's role</b><span>${escapeHtml(topic.aiRole)}</span><b>Opening line</b><span>“${escapeHtml(topic.opening)}”</span></div><h3>Discussion questions</h3><ol>${topic.questions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}</ol><h3>Useful chunks</h3><div class="topic-chunks">${useful.map((chunk) => `<span>${escapeHtml(chunk.chunk)}</span>`).join("")}</div><details><summary>Preview the ChatGPT Live prompt</summary><p>${escapeHtml(topic.prompt)}</p></details><button class="primary copy-prompt" id="copyLivePrompt">Copy ChatGPT Live prompt</button><a class="open-chatgpt" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT ↗</a><p class="copy-status" id="copyStatus">Paste the prompt into ChatGPT, start Voice, and begin with the opening line.</p><div class="conversation-review"><h3>After the conversation</h3><p>Mark the chunks you actually used without reading.</p>${useful.map((chunk) => `<label><input type="checkbox" value="${escapeHtml(chunk.id)}"> <span>${escapeHtml(chunk.chunk)}</span></label>`).join("")}<button class="secondary" id="saveConversation">Save practice result</button><p id="conversationSaved"></p></div>`;
     $("#copyLivePrompt").addEventListener("click", () => copyText(topic.prompt));
+    $("#saveConversation").addEventListener("click", () => saveConversationPractice(topic));
     if (innerWidth < 1000) $("#topicDetail").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  function saveConversationPractice(topic) {
+    const used = [...$("#topicDetail").querySelectorAll('.conversation-review input:checked')].map((input) => input.value);
+    const previous = progress.conversations[topic.id] || { runs: 0, used: [] }; progress.conversations[topic.id] = { runs: previous.runs + 1, last: todayKey(), used: [...new Set([...previous.used, ...used])] };
+    used.forEach((id) => { const stat = itemStat(id); stat.spoken += 1; stat.lastSeen = todayKey(); progress.items[id] = stat; }); saveProgress();
+    $("#conversationSaved").textContent = `Saved: ${used.length} target chunk${used.length === 1 ? "" : "s"} used from memory.`; updateDashboard(); updateProgressView();
   }
   async function copyText(text) {
     try { await navigator.clipboard.writeText(text); $("#copyStatus").textContent = "Prompt copied. Open ChatGPT Voice and paste it."; }
     catch (_) { const area = document.createElement("textarea"); area.value = text; document.body.appendChild(area); area.select(); document.execCommand("copy"); area.remove(); $("#copyStatus").textContent = "Prompt copied. Open ChatGPT Voice and paste it."; }
   }
 
-  function supportsMode(chunk, mode) { return !chunk.practiceModes || chunk.practiceModes.includes(mode); }
-  function poolFor(review, mode) {
-    const eligible = mode && mode !== "mixed" ? chunks.filter((chunk) => supportsMode(chunk, mode)) : chunks;
+  function supportsMode(chunk, mode) { return ["listen", "recall"].includes(mode) || !chunk.practiceModes || chunk.practiceModes.includes(mode); }
+  function poolFor(review, mode, topicId) {
+    const eligible = chunks.filter((chunk) => (!topicId || chunk.sessionId === topicId) && (!mode || mode === "mixed" || supportsMode(chunk, mode)));
     const ranked = [...eligible].sort((a, b) => weakness(b) - weakness(a));
-    if (review) { const missed = ranked.filter((chunk) => itemStat(chunk.id).wrong > 0); return missed.length ? missed : ranked; }
-    const priority = ranked.slice(0, Math.max(SESSION_SIZE * 2, Math.ceil(chunks.length * 0.75))); return shuffle(priority);
+    if (review) { const due = ranked.filter((chunk) => isDue(chunk) || itemStat(chunk.id).wrong > 0); return due.length ? due : ranked; }
+    const due = ranked.filter(isDue); const learning = ranked.filter((chunk) => itemStat(chunk.id).seen > 0 && !isDue(chunk) && learningStage(chunk) !== "Mastered");
+    const fresh = shuffle(ranked.filter((chunk) => learningStage(chunk) === "New")).slice(0, 5); const mastered = shuffle(ranked.filter((chunk) => learningStage(chunk) === "Mastered"));
+    return [...due, ...learning, ...fresh, ...mastered].filter((chunk, index, values) => values.findIndex((item) => item.id === chunk.id) === index);
   }
-  function start(mode) {
+  function start(mode, topicId = null) {
     if (!chunks.length) return;
     const review = mode === "review"; const actualMode = review || mode === "mixed" ? "mixed" : mode;
-    const items = shuffle(poolFor(review, actualMode)).slice(0, Math.min(SESSION_SIZE, chunks.length));
-    session = { mode: actualMode, sourceMode: mode, items, index: 0, score: 0, streak: 0, bestStreak: 0, answered: false };
+    const pool = poolFor(review, actualMode, topicId); const items = pool.slice(0, Math.min(SESSION_SIZE, pool.length));
+    if (items.length && items.length < SESSION_SIZE) { const reinforcement = shuffle(items); let index = 0; while (items.length < SESSION_SIZE) { items.push(reinforcement[index % reinforcement.length]); index += 1; } }
+    session = { mode: actualMode, sourceMode: mode, topicId, items, index: 0, score: 0, streak: 0, bestStreak: 0, answered: false };
     show("practice"); renderQuestion();
   }
   function currentMode() {
     if (session.mode !== "mixed") return session.mode;
     const chunk = session.items[session.index];
-    const modes = ["meaning", "situation", "build", "speak"].filter((mode) => supportsMode(chunk, mode));
+    const modes = ["listen", "meaning", "situation", "recall", "speak", "build"].filter((mode) => supportsMode(chunk, mode) || ["listen", "recall"].includes(mode));
     return modes[session.index % modes.length];
   }
   function pronunciationHtml(chunk) {
-    return `<div class="pronunciation"><div><span>IPA</span><strong>${escapeHtml(chunk.ipa)}</strong></div><div><span>VI GUIDE · STRESS IN CAPS</span><strong>${escapeHtml(chunk.viPronunciation || "Listen and repeat")}</strong></div><div class="audio-actions"><button class="pronounce-button" data-speak="${escapeHtml(chunk.chunk)}" data-rate="0.96" aria-label="Listen at natural speed">▶ Natural</button><button class="slow-button" data-speak="${escapeHtml(chunk.chunk)}" data-rate="0.76" aria-label="Listen slowly">Slow</button></div></div>`;
+    return `<div class="pronunciation"><div><span>IPA</span><strong>${escapeHtml(chunk.ipa)}</strong></div><div><span>VI GUIDE · STRESS IN CAPS</span><strong>${escapeHtml(chunk.viPronunciation || "Listen and repeat")}</strong></div><div class="audio-actions"><button class="pronounce-button" data-speak="${escapeHtml(chunk.chunk)}" data-rate="0.96" aria-label="Listen at natural speed">▶ Natural</button><button class="slow-button" data-speak="${escapeHtml(chunk.chunk)}" data-rate="0.76" aria-label="Listen slowly">Slow</button></div><div class="rhythm-guide"><span>NATURAL RHYTHM · STRESS THE BOLD WORDS</span><p>${rhythmHtml(chunk.chunk)}</p></div></div>`;
+  }
+  function rhythmHtml(text) {
+    const unstressed = new Set(["a","an","the","to","for","of","and","or","but","is","are","am","was","were","be","been","it","this","that","i","you","we","they","my","your","our","in","on","at","with","as"]);
+    return String(text).split(/(\s+)/).map((part) => { const word = part.toLowerCase().replace(/[^a-z']/g, ""); const safe = escapeHtml(part); return word && !unstressed.has(word) && word.length > 2 ? `<b>${safe}</b>` : safe; }).join("");
   }
   function bindPronunciation(root = document) { root.querySelectorAll("[data-speak]").forEach((button) => button.addEventListener("click", () => speak(button.dataset.speak, Number(button.dataset.rate) || 0.96))); }
   function renderQuestion() {
@@ -220,7 +259,7 @@
     $("#sessionProgressBar").style.width = `${session.index / session.items.length * 100}%`; $("#sessionScore").textContent = `${session.score}/${session.index}`;
     if (mode === "meaning") renderChoice(chunk, "WHAT DOES THIS CHUNK MEAN?", chunk.chunk, chunk.meaning, "meaning");
     else if (mode === "situation") renderChoice(chunk, "WHAT WOULD YOU SAY?", chunk.situation, chunk.chunk, "chunk");
-    else if (mode === "build") renderBuild(chunk); else renderSpeak(chunk);
+    else if (mode === "build") renderBuild(chunk); else if (mode === "listen") renderListen(chunk); else if (mode === "recall") renderRecall(chunk); else renderSpeak(chunk);
     document.title = `${session.index + 1}/${session.items.length} · Chunk Lab`;
   }
   function distractors(chunk, field) {
@@ -249,6 +288,19 @@
     $("#practiceCard").innerHTML = `<p class="question-label">BUILD THE SENTENCE</p><h1 class="prompt">Choose the missing word</h1><p class="context">${escapeHtml(chunk.situation)}</p><div class="gap-sentence">${escapeHtml(chunk.gap).replace("___", '<span class="blank" id="blank">___</span>')}</div><div class="word-bank">${words.map((word) => `<button class="word-chip">${escapeHtml(word)}</button>`).join("")}</div><div id="feedbackSlot"></div>`;
     $$(".word-chip").forEach((button) => button.addEventListener("click", () => { if (session.answered) return; $("#blank").textContent = button.textContent; session.answered = true; const correct = button.textContent === chunk.answer; record(chunk.id, correct); updateSessionScore(correct); $$(".word-chip").forEach((item) => item.disabled = true); renderFeedback(correct, chunk); }));
   }
+  function renderListen(chunk) {
+    const options = shuffle([chunk.meaning, ...distractors(chunk, "meaning")]);
+    $("#practiceCard").innerHTML = `<p class="question-label">LISTEN & UNDERSTAND</p><h1 class="prompt">Listen before you read.</h1><p class="context">Play the complete chunk at natural speed, then choose its meaning.</p><button class="listen-hero" id="playListening">▶ Play audio</button><div class="options listening-options">${options.map((option, index) => `<button class="option" data-answer="${escapeHtml(option)}"><span class="option-letter">${String.fromCharCode(65 + index)}</span><span>${escapeHtml(option)}</span></button>`).join("")}</div><div id="feedbackSlot"></div>`;
+    $("#playListening").addEventListener("click", () => speak(chunk.chunk, 0.96));
+    $$(".option").forEach((button) => button.addEventListener("click", () => answerChoice(button, button.dataset.answer === chunk.meaning, chunk, chunk.meaning)));
+  }
+  function renderRecall(chunk) {
+    $("#practiceCard").innerHTML = `<p class="question-label">SPEAK FROM MEMORY</p><h1 class="prompt">What would you say?</h1><p class="context recall-situation">${escapeHtml(chunk.situation)}</p><div class="recall-instruction">Say one natural sentence aloud. Do not translate every word.</div><button class="primary reveal-answer" id="revealRecall">Reveal the natural chunk</button><div id="recallAnswer"></div>`;
+    $("#revealRecall").addEventListener("click", () => {
+      $("#revealRecall").remove(); $("#recallAnswer").innerHTML = `<div class="recall-answer"><p class="eyebrow">NATURAL ANSWER</p><h2>${escapeHtml(chunk.chunk)}</h2>${pronunciationHtml(chunk)}<div class="self-rate"><button class="secondary" id="recallAgain">I need another try</button><button class="primary" id="recallGood">I said it naturally</button></div></div>`;
+      bindPronunciation($("#recallAnswer")); $("#recallAgain").addEventListener("click", () => rateSpeak(false, chunk)); $("#recallGood").addEventListener("click", () => rateSpeak(true, chunk));
+    });
+  }
   function renderSpeak(chunk) {
     $("#practiceCard").innerHTML = `<div class="speak-card"><p class="question-label">SPEAK & PRONOUNCE</p><p class="context">Read the pronunciation, listen, then say the complete chunk aloud.</p><h1 class="speak-quote">${escapeHtml(chunk.chunk)}</h1>${pronunciationHtml(chunk)}<div class="feedback"><strong>Use it like this</strong>${escapeHtml(chunk.example)}</div><div class="self-rate"><button class="secondary" id="againRate">Needs practice</button><button class="primary" id="goodRate">I said it well</button></div></div>`;
     bindPronunciation($("#practiceCard")); $("#againRate").addEventListener("click", () => rateSpeak(false, chunk)); $("#goodRate").addEventListener("click", () => rateSpeak(true, chunk));
@@ -260,7 +312,7 @@
     preferredVoice = preferredNames.map((name) => voices.find((voice) => voice.name.includes(name))).find(Boolean) || voices.find((voice) => voice.lang === "en-US") || voices[0] || null;
   }
   function speak(text, rate = 0.96) { if (!("speechSynthesis" in window)) return; speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = preferredVoice?.lang || "en-US"; if (preferredVoice) utterance.voice = preferredVoice; utterance.rate = rate; utterance.pitch = 1; utterance.volume = 1; speechSynthesis.speak(utterance); }
-  function rateSpeak(correct, chunk) { if (session.answered) return; session.answered = true; record(chunk.id, correct); updateSessionScore(correct); next(); }
+  function rateSpeak(correct, chunk) { if (session.answered) return; session.answered = true; record(chunk.id, correct, "speaking"); updateSessionScore(correct); next(); }
   function next() { session.index += 1; session.answered = false; session.index >= session.items.length ? finish() : renderQuestion(); }
   function finish() {
     const accuracy = Math.round(session.score / session.items.length * 100); $("#summaryScore").textContent = `${session.score}/${session.items.length}`; $("#summaryAccuracy").textContent = `${accuracy}%`; $("#summaryStreak").textContent = session.bestStreak;
@@ -271,7 +323,7 @@
   function bindEvents() {
     $$('[data-mode]').forEach((button) => button.addEventListener("click", () => start(button.dataset.mode)));
     $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
-    $("#againButton").addEventListener("click", () => start(session.sourceMode)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
+    $("#againButton").addEventListener("click", () => start(session.sourceMode, session.topicId)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
     $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); updateDashboard(); updateProgressView(); } });
   }
 
