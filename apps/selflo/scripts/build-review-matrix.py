@@ -42,8 +42,8 @@ def load_quotes(channel_dir):
 
 def confidence(value):
     v = clean(value).lower()
-    if v.startswith('a') or 'verified' in v or v in {'public_domain','selflo_owned','licensed','permission_granted'}: return 'high'
-    if v.startswith('b') or 'likely' in v: return 'medium'
+    if v.startswith('a') or re.search(r'verification\s*=\s*a',v) or v in {'verified','public_domain','selflo_owned','licensed','permission_granted'}: return 'high'
+    if v.startswith('b') or re.search(r'verification\s*=\s*b',v) or 'likely' in v: return 'medium'
     return 'low'
 
 def research_score(q, n, m):
@@ -93,6 +93,9 @@ def main():
     ledger_path=root/'quote-research/review-pipeline/canonical-ai-review.json'
     ledger=json.loads(ledger_path.read_text()) if ledger_path.exists() else {'decisions':[]}
     ai_reviews={x['quote_id']:x for x in ledger.get('decisions',[])}
+    shortlist_path=root/'quote-research/review-pipeline/release-shortlist.json'
+    shortlist=json.loads(shortlist_path.read_text()) if shortlist_path.exists() else {'quote_ids':[]}
+    shortlist_ids=set(shortlist.get('quote_ids',[]))
     authoring_manifest, authoring = load_quotes(root/'perspective-library/authoring/vi')
     release_manifest, release = load_quotes(root/'perspective-library/release/vi')
     release_ids = {clean(x.get('id')) for x in release}
@@ -110,8 +113,11 @@ def main():
     for q in authoring:
         ident=clean(q.get('id')); a=q.get('authorship') or {}; rights=q.get('rights') or {}; review=q.get('review') or {}
         research_id=canonical_to_research.get(ident); rq=research_by_id.get(research_id,{}) if research_id else {}; n=normalized.get(research_id,{}) if research_id else {}
-        ai=ai_reviews.get(ident,{}) if ident not in release_ids else {}; ai_score={'ready_for_owner_review':92,'story_review_required':84,'source_verification_required':80,'edit_required':70,'round1_not_pass':30,'source_rights_blocked':20}.get(ai.get('decision'),78)
-        rows.append({'record_type':'quote','id':ident,'research_id':research_id,'canonical_id':ident,'text_vi':clean(q.get('text_vi')),'author':clean(a.get('author_name')),'work':clean(a.get('work')),'source_url':clean(a.get('source_url')),'theme':clean(q.get('primary_theme')),'human_experience':clean(n.get('Human experience canonical') or rq.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(q.get('kind')),'confidence':confidence(rights.get('status')),'verification':clean(a.get('source_detail')),'rights':clean(rights.get('status')),'selflo_fit':clean(rq.get('Mức phù hợp Selflo')),'release_readiness':'Released' if ident in release_ids else 'Needs owner review' if review.get('status')=='needs_owner_review' else clean(review.get('status')),'pipeline':'release' if ident in release_ids else 'authoring','review':clean(review.get('status')),'ai_review_status':ai.get('decision'),'ai_review_round':ai.get('review_round'),'ai_review_note':ai.get('note_vi'),'story_id':q.get('story_id'),'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'issue_code':None,'score':100 if ident in release_ids else ai_score,'why':'Đã phát hành.' if ident in release_ids else ai.get('note_vi') or 'Đang ở Authoring; cần bạn review vòng 2 trước khi Release.'})
+        ai=ai_reviews.get(ident,{}) if ident not in release_ids else {}
+        if ident in shortlist_ids and ident not in release_ids:
+            ai={**ai,'decision':'release_shortlist','review_round':2,'note_vi':shortlist.get('note_vi')}
+        ai_score={'release_shortlist':96,'ready_for_owner_review':92,'story_review_required':84,'source_verification_required':80,'edit_required':70,'round1_not_pass':30,'source_rights_blocked':20}.get(ai.get('decision'),78)
+        rows.append({'record_type':'quote','id':ident,'research_id':research_id,'canonical_id':ident,'text_vi':clean(q.get('text_vi')),'author':clean(a.get('author_name')),'work':clean(a.get('work')),'source_url':clean(a.get('source_url')),'theme':clean(q.get('primary_theme')),'human_experience':clean(n.get('Human experience canonical') or rq.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(q.get('kind')),'confidence':confidence(a.get('source_detail') or rights.get('status')),'verification':clean(a.get('source_detail')),'rights':clean(rights.get('status')),'selflo_fit':clean(rq.get('Mức phù hợp Selflo')),'release_readiness':'Released' if ident in release_ids else 'Needs owner review' if review.get('status')=='needs_owner_review' else clean(review.get('status')),'pipeline':'release' if ident in release_ids else 'authoring','review':clean(review.get('status')),'ai_review_status':ai.get('decision'),'ai_review_round':ai.get('review_round'),'ai_review_note':ai.get('note_vi'),'story_id':q.get('story_id'),'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'issue_code':None,'score':100 if ident in release_ids else ai_score,'why':'Đã phát hành.' if ident in release_ids else ai.get('note_vi') or 'Đang ở Authoring; cần bạn review vòng 2 trước khi Release.'})
 
     matched_research=set(canonical_to_research.values())
     for q in raw:

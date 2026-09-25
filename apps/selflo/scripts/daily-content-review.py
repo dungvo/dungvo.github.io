@@ -6,6 +6,7 @@ interprets a missing decision as approval and never bypasses rights/source gates
 """
 import argparse, copy, datetime as dt, hashlib, json, re, shutil, subprocess, sys, tempfile
 from pathlib import Path
+from urllib.parse import quote, urlsplit, urlunsplit
 
 THEME_MAP={
  'inner_awareness':'self_understanding','meaning_identity':'meaning_values','work_purpose':'work_achievement',
@@ -31,6 +32,10 @@ def write(p,obj):
     p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 def sha(b): return hashlib.sha256(b).hexdigest()
 def now(): return dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+def public_uri(value):
+    if not value:return None
+    part=urlsplit(value)
+    return urlunsplit((part.scheme,part.netloc,quote(part.path,safe='/%'),quote(part.query,safe='=&;%:+,/?@'),quote(part.fragment,safe='')))
 def run(cmd,cwd=None): subprocess.run(cmd,cwd=cwd,check=True)
 def git(root,*args): run(['git','-C',str(root),*args])
 def state_paths(root):
@@ -63,7 +68,7 @@ def theme_for(c):
         if any(x in folded for x in needles):return theme
     return 'self_understanding'
 def canonical_quote(c,status='draft'):
-    theme=theme_for(c); author=c.get('author') or None; work=c.get('work') or None; url=c.get('source_url') or None
+    theme=theme_for(c); author=c.get('author') or None; work=c.get('work') or None; url=public_uri(c.get('source_url'))
     nature=(c.get('content_nature') or '').strip()
     source_is_wording=nature in ('direct_quote','translated_quote','passage','proverb')
     attribution=author if source_is_wording else ('Selflo · dựa trên '+author if author else 'Selflo · tổng hợp nghiên cứu')

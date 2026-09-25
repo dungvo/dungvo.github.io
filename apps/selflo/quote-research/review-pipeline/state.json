@@ -9,8 +9,10 @@
       "authoring": "imported"
     },
     "research.laozi.ch01.003": {
-      "first_review": "queued",
-      "candidate_batch": "daily-2026-09-23-b001"
+      "first_review": "approved",
+      "candidate_batch": "daily-2026-09-23-b001",
+      "candidate_note": "Nguồn sơ cấp rõ; giữ ở Authoring để review cách chuyển ngữ.",
+      "authoring": "imported"
     },
     "research.laozi.ch01.004": {
       "first_review": "approved",
@@ -6939,6 +6941,81 @@
       "first_review": "approved",
       "candidate_note": "Full-corpus AI review passed: source A/B, Selflo Fit High, no canonical exact duplicate.",
       "authoring": "imported"
+    },
+    "research.laozi.ch03.010": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; phù hợp Selflo, cần owner chốt sắc thái vô vi.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch07.017": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; giữ ngữ cảnh chương khi review vòng 2.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch07.018": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; góc nhìn về cái tôi và vị trí cá nhân.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch08.021": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; passage dạng liệt kê cần review khả năng đứng độc lập.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch09.025": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; câu ngắn, dễ hiểu, phù hợp vòng Authoring.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch10.027": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; cần review thêm vì nghĩa trừu tượng.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch12.035": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; phù hợp attention và ham muốn.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch14.040": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; metaphysical passage cần giữ ngữ cảnh.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch14.041": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; metaphysical passage cần giữ ngữ cảnh.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch17.052": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; phù hợp leadership, cần owner review mức liên quan Selflo.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch18.055": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; giữ ở Authoring để kiểm tra ngữ cảnh và diễn giải.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch18.056": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; giữ ở Authoring để kiểm tra ngữ cảnh và diễn giải.",
+      "authoring": "imported"
+    },
+    "research.laozi.ch19.057": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn sơ cấp rõ; phù hợp simplicity, cần tránh giọng mệnh lệnh.",
+      "authoring": "imported"
+    },
+    "research.day21.status_circle": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn collection rõ; hình ảnh vòng danh lợi phù hợp Selflo.",
+      "authoring": "imported"
+    },
+    "research.day22.strategy_vs_depth": {
+      "first_review": "approved",
+      "candidate_note": "Nguồn collection rõ; cần owner chốt cách hiểu cụm trí dày.",
+      "authoring": "imported"
     }
   },
   "history": [
@@ -12400,6 +12477,52 @@
         "research.day85.008",
         "research.day85.009",
         "research.day85.010"
+      ]
+    },
+    {
+      "at": "2026-09-25T04:10:20Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "/tmp/selflo-authoring-continuation-ledger.json",
+      "quote_ids": [
+        "research.laozi.ch01.003",
+        "research.laozi.ch03.010",
+        "research.laozi.ch07.017",
+        "research.laozi.ch07.018",
+        "research.laozi.ch08.021",
+        "research.laozi.ch09.025",
+        "research.laozi.ch10.027",
+        "research.laozi.ch12.035",
+        "research.laozi.ch14.040",
+        "research.laozi.ch14.041",
+        "research.laozi.ch17.052",
+        "research.laozi.ch18.055",
+        "research.laozi.ch18.056",
+        "research.laozi.ch19.057",
+        "research.day21.status_circle",
+        "research.day22.strategy_vs_depth"
+      ]
+    },
+    {
+      "at": "2026-09-25T04:10:52Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "/tmp/selflo-authoring-continuation-ledger.json",
+      "quote_ids": [
+        "research.laozi.ch01.003",
+        "research.laozi.ch03.010",
+        "research.laozi.ch07.017",
+        "research.laozi.ch07.018",
+        "research.laozi.ch08.021",
+        "research.laozi.ch09.025",
+        "research.laozi.ch10.027",
+        "research.laozi.ch12.035",
+        "research.laozi.ch14.040",
+        "research.laozi.ch14.041",
+        "research.laozi.ch17.052",
+        "research.laozi.ch18.055",
+        "research.laozi.ch18.056",
+        "research.laozi.ch19.057",
+        "research.day21.status_circle",
+        "research.day22.strategy_vs_depth"
       ]
     }
   ]
