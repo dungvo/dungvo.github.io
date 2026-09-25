@@ -117,7 +117,7 @@
     const response = await fetch(`https://api.github.com/repos/${owner}/${repository}/contents/${directory}`, { headers: { Accept: "application/vnd.github+json" } });
     if (!response.ok) throw new Error(`GitHub returned ${response.status} for ${directory}`);
     const entries = await response.json();
-    return entries.filter((item) => item.type === "file" && item.name.endsWith(".js")).sort((a, b) => a.name.localeCompare(b.name)).map((item) => item.download_url);
+    return entries.filter((item) => item.type === "file" && item.name.endsWith(".js")).sort((a, b) => a.name.localeCompare(b.name)).map((item) => `${location.origin}/${item.path}`);
   }
   async function discoverContent() {
     const config = window.CHUNK_CONTENT_CONFIG || {};
@@ -134,6 +134,12 @@
     if (!conversationFiles.length) conversationFiles = config.conversationFallbackFiles || [];
     for (const file of [...files, ...conversationFiles]) {
       try { await loadScript(file); } catch (error) { registry.errors.push(error.message); }
+    }
+    if (!registry.sessions.length && files !== config.fallbackFiles) {
+      for (const file of config.fallbackFiles || []) { try { await loadScript(file); } catch (error) { registry.errors.push(error.message); } }
+    }
+    if (!registry.conversations.length && conversationFiles !== config.conversationFallbackFiles) {
+      for (const file of config.conversationFallbackFiles || []) { try { await loadScript(file); } catch (error) { registry.errors.push(error.message); } }
     }
     const seen = new Set();
     chunks = registry.sessions.flatMap((entry) => entry.chunks.map((chunk) => ({ ...chunk, sessionId: entry.session.id, sessionTitle: entry.session.title, topics: entry.session.topics || [] }))).filter((chunk) => {
