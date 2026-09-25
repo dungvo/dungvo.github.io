@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="A personal English chunk practice game for technical workplace conversations.">
+  <title>Chunk Lab — English Practice</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-nav="home" aria-label="Go home">
+        <span class="brand-mark">C</span><span>Chunk Lab</span>
+      </button>
+      <button class="icon-button" id="resetButton" aria-label="Reset progress" title="Reset progress">↻</button>
+    </header>
+
+    <main>
+      <section id="homeView" class="view active" aria-labelledby="greeting">
+        <div class="hero">
+          <p class="eyebrow">YOUR DAILY ENGLISH GYM</p>
+          <h1 id="greeting">Think in chunks.<br><em>Speak naturally.</em></h1>
+          <p class="hero-copy">Short, focused practice from your real technical conversations.</p>
+          <div class="daily-card">
+            <div>
+              <span class="daily-label">TODAY'S PROGRESS</span>
+              <strong><span id="todayCount">0</span><small> / 10 reps</small></strong>
+            </div>
+            <div class="progress-ring" id="progressRing"><span id="progressPercent">0%</span></div>
+          </div>
+        </div>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <h2>Choose a workout</h2>
+            <span id="chunkCount"></span>
+          </div>
+          <div class="mode-grid">
+            <button class="mode-card coral" data-mode="meaning">
+              <span class="mode-icon">Aa</span>
+              <span><strong>Chunk → Meaning</strong><small>Build instant understanding</small></span>
+              <b>→</b>
+            </button>
+            <button class="mode-card blue" data-mode="situation">
+              <span class="mode-icon">💬</span>
+              <span><strong>Situation → Chunk</strong><small>Choose what sounds natural</small></span>
+              <b>→</b>
+            </button>
+            <button class="mode-card yellow" data-mode="build">
+              <span class="mode-icon">▤</span>
+              <span><strong>Build the Sentence</strong><small>Master word order</small></span>
+              <b>→</b>
+            </button>
+            <button class="mode-card green" data-mode="speak">
+              <span class="mode-icon">◖</span>
+              <span><strong>Speak & Pronounce</strong><small>IPA, listening, and recall</small></span>
+              <b>→</b>
+            </button>
+          </div>
+        </section>
+
+        <section class="review-card" id="reviewCard">
+          <div class="review-top">
+            <span class="review-icon">↺</span>
+            <div><p class="eyebrow">PERSONALIZED REVIEW</p><h2 id="reviewTitle">Start practicing</h2></div>
+          </div>
+          <p id="reviewCopy">Your difficult chunks will appear here more often.</p>
+          <button class="primary dark" data-mode="review">Review weak spots <span>→</span></button>
+        </section>
+      </section>
+
+      <section id="practiceView" class="view" aria-live="polite">
+        <div class="practice-top">
+          <button class="back-button" data-nav="home" aria-label="Back to home">←</button>
+          <div class="session-progress"><span id="sessionProgressBar"></span></div>
+          <span id="sessionScore">0/0</span>
+        </div>
+        <div id="practiceCard" class="practice-card"></div>
+      </section>
+
+      <section id="summaryView" class="view">
+        <div class="summary-card">
+          <div class="summary-burst">✓</div>
+          <p class="eyebrow">SESSION COMPLETE</p>
+          <h1>Nice work.</h1>
+          <p id="summaryLine"></p>
+          <div class="summary-stats">
+            <div><strong id="summaryScore">0</strong><span>correct</span></div>
+            <div><strong id="summaryAccuracy">0%</strong><span>accuracy</span></div>
+            <div><strong id="summaryStreak">0</strong><span>best streak</span></div>
+          </div>
+          <button class="primary" id="againButton">Practice again</button>
+          <button class="text-button" data-nav="home">Back to home</button>
+        </div>
+      </section>
+    </main>
+    <footer>Built from your September 22–24 practice · Progress stays on this device</footer>
+  </div>
+  <script src="data/chunks.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
