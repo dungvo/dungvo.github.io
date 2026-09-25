@@ -91,6 +91,26 @@ Nội dung không nên:
 - biến cảm xúc thành lỗi cần sửa ngay;
 - tạo cảm giác Selflo hiểu người dùng hơn chính họ.
 
+### 7.1. Đúng lúc, ít nhưng sâu
+
+Selflo không xem việc người dùng lướt được nhiều quote là giá trị cốt lõi. Một phiên sử dụng tốt có thể chỉ gồm một perspective hoặc một câu chuyện, nếu nó gặp đúng điều người dùng đang sống và để lại một dấu vết đủ lâu.
+
+Cùng một câu nói có thể không tạo cảm giác khi đứng riêng, nhưng trở nên có sức nặng sau một hoàn cảnh hoặc câu chuyện phù hợp. Điều này giống một bài hát: câu chữ và giai điệu không đổi, nhưng khi người nghe biết câu chuyện phía sau hoặc đang ở đúng tâm trạng, trải nghiệm có thể hoàn toàn khác.
+
+Vì vậy, Selflo ưu tiên:
+
+`nhu cầu hiện tại → nhận diện hoàn cảnh → một góc nhìn phù hợp → story khi cần → khoảng dừng hoặc reflection`
+
+thay vì:
+
+`mở app → lướt nhiều quote → đóng app`
+
+Không phải quote nào cũng cần story. Không phải quote yếu nào cũng nên được cứu bằng story. Chỉ ghép story khi câu chuyện giúp ý nghĩa hiện ra qua trải nghiệm, không phải khi câu chuyện chỉ giải thích lại câu nói.
+
+Selflo không cần buộc người dùng quay lại mỗi ngày. Một quan hệ sản phẩm có giá trị hơn là: khi người dùng đang mắc kẹt, cần một khoảng dừng hoặc muốn nhìn một việc theo cách khác, họ nhớ Selflo là nơi có thể tìm được một góc nhìn vừa đủ và đáng tin.
+
+Thành công của trải nghiệm này nên được đo bằng khả năng nội dung được giữ lại, được gặp lại, giúp người dùng gọi tên điều đang sống hoặc mở ra một suy nghĩ mới—không chỉ bằng số quote đã xem, chuỗi ngày truy cập hay thời gian lướt.
+
 ## 8. Vai trò của trí tuệ nhân tạo
 
 Trí tuệ nhân tạo có thể hỗ trợ phía sau để:
@@ -226,4 +246,3 @@ Selflo không nên tuyên bố thắng vì hiểu người dùng hơn mọi trí
 Khi cần một câu ngắn để kiểm tra quyết định sản phẩm, dùng:
 
 > Người dùng phải là chủ thể; Selflo chỉ tạo không gian và đưa một góc nhìn vừa đủ.
-

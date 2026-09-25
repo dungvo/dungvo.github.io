@@ -12,7 +12,7 @@ Các nhóm cần bổ sung:
 1. Những quy luật và hiện tượng đời sống có tên gọi hoặc bằng chứng rõ ràng.
 2. Các câu nói hiện đại có nguồn xác minh được.
 3. Não bộ, thói quen, học tập và khả năng thay đổi.
-4. Thơ, âm nhạc và hình ảnh giàu liên tưởng.
+4. Cơ chế để một perspective gặp đúng hoàn cảnh và trạng thái của người đọc.
 5. Quote chỉ trở nên có sức nặng khi được đặt trong đúng câu chuyện hoặc hoàn cảnh.
 
 Nguyên tắc: AI chuẩn bị, kiểm tra nguồn và đề xuất; owner quyết định Release.
@@ -24,8 +24,7 @@ Corpus nghiên cứu có nội dung về thói quen và một ít thơ/âm nhạ
 - Knowledge Catalog đã có `habit_formation`, `habit_automaticity`, `learning_from_errors`, `deliberate_practice` và một số lý thuyết tâm lý hiện đại.
 - Research candidates có một nhóm nhỏ về thói quen/automaticity và novelty/boredom.
 - Không tìm thấy candidate rõ ràng về Murphy's Law trong review corpus hiện tại.
-- Nội dung âm nhạc hiện có rất ít; phần lớn nói về ký ức do bài hát gợi lại, chưa hình thành một tuyến nội dung hoàn chỉnh.
-- Thơ và hình ảnh giàu liên tưởng có tồn tại nhưng thường bị xếp sau các nguồn triết học cổ điển.
+- Corpus có quote và story nhưng chưa có lớp biên tập đủ mạnh để quyết định nội dung nào nên đứng một mình, nội dung nào chỉ nên xuất hiện sau một hoàn cảnh hoặc câu chuyện phù hợp.
 - Shortlist gần đây bị nghiêng về Trung Hoa, Khắc kỷ và kinh điển cổ vì đây là nhóm có provenance và độ tin cậy nguồn tốt nhất, không phải vì các nhóm khác không quan trọng.
 
 Kết luận: các chủ đề owner nêu **có một phần trong corpus nhưng thiếu độ sâu, thiếu tỷ trọng và thiếu nguồn đủ mạnh để lên Release**. Murphy's Law gần như là gap thật.
@@ -80,30 +79,30 @@ Tuyến này cần được ưu tiên cao hơn. Các nhóm phù hợp:
 
 Tránh các câu đơn giản hóa như “chỉ cần 21 ngày”, “não có thể làm bất cứ điều gì” hoặc dùng thuật ngữ khoa học để tạo động lực giả.
 
-### 5. Thơ, bài hát và quote giàu liên tưởng
+### 5. Độ chạm đến từ sự phù hợp, không chỉ từ bản thân quote
 
-Selflo nên có một content nature riêng cho nội dung này, ví dụ:
+Ví dụ về một bài hát là mô hình trải nghiệm, không phải yêu cầu tìm thêm quote về âm nhạc: cùng một bài hát có thể nghe bình thường ở một thời điểm, nhưng trở nên rất hay khi người nghe biết câu chuyện phía sau hoặc đang ở đúng tâm trạng. Quote và story trong Selflo cũng vận hành như vậy.
 
-- `poetic_fragment`
-- `song_evoked_reflection`
-- `lyrical_image`
-- `quote_with_story_context`
+Vì thế, đơn vị giá trị của Selflo không nên chỉ là `quote`. Nó nên là một **lần gặp đúng lúc** gồm:
 
-Ba cách sử dụng:
+`nhu cầu hiện tại → hoàn cảnh vừa đủ → perspective phù hợp → khoảng dừng`
 
-1. **Đứng độc lập:** một câu thơ/hình ảnh đủ mở mà không cần giải thích.
-2. **Quote + hoàn cảnh ngắn:** thêm vài dòng về thời điểm, nhân vật hoặc tình huống để câu bắt đầu có sức nặng.
-3. **Quote + story:** câu chỉ xuất hiện sau khi người đọc đã sống qua một câu chuyện; quote trở thành điểm vang lại, không phải phần kết luận giảng đạo.
+Ba chế độ trình bày:
 
-Không phải quote nào chưa chạm cũng nên bị loại vĩnh viễn. Có thể chuyển sang `needs_story_context`, nhưng chỉ khi câu chuyện thực sự làm người đọc cảm được điều câu nói đang mở ra.
+1. **Quote đứng độc lập:** chỉ dùng khi câu đã đủ rõ và đủ chạm mà không cần giải thích.
+2. **Context trước, quote sau:** một hoàn cảnh ngắn giúp người đọc nhận ra “đây giống điều mình đang sống”; quote là điểm vang lại.
+3. **Story trước, quote sau:** người đọc sống qua tình huống rồi mới gặp quote. Quote không giảng lại câu chuyện mà làm ý nghĩa trong truyện hiện lên rõ hơn.
 
-### 6. Lời bài hát và quyền sử dụng
+Thơ, lời hát hoặc hình ảnh ẩn dụ chỉ là một trong nhiều hình thức có thể tạo dư âm. Không cần tạo một kho nội dung “nói về âm nhạc”. Điều cần xây là khả năng ghép đúng nội dung với đúng thời điểm.
 
-- Không sao chép lời bài hát còn bản quyền vào Release nếu chưa có quyền phù hợp.
-- Có thể viết một story gốc về trải nghiệm nghe nhạc mà không chép lời bài hát.
-- Có thể dùng thơ/lời hát thuộc public domain sau khi xác minh văn bản.
-- Có thể dùng câu chữ nguyên bản của Selflo mang tính trữ tình.
-- Metadata có thể ghi bài hát là nguồn cảm hứng nội bộ, nhưng nội dung Release phải độc lập và không mô phỏng quá sát tác phẩm gốc.
+Không phải quote chưa chạm nào cũng đáng viết story để cứu. Chỉ dùng `needs_story_context` khi:
+
+- lõi ý nghĩa của quote đủ tốt;
+- nguồn và quyền sử dụng đạt yêu cầu;
+- có một hoàn cảnh cụ thể làm ý nghĩa hiện ra tự nhiên;
+- story không biến thành lời giải thích hoặc bài học đạo đức.
+
+Nếu dùng câu thơ hoặc lời hát, vẫn phải qua rights gate. Tác phẩm còn bản quyền không được sao chép vào Release khi chưa có quyền phù hợp.
 
 ## Điều chỉnh quy trình tuyển chọn
 
@@ -112,8 +111,8 @@ Các batch tương lai không nên chỉ xếp hạng theo source confidence. C�
 - 20% khoa học tâm lý, não bộ, hành vi và thói quen;
 - 15% quy luật/hiện tượng đời sống hiện đại;
 - 15% tiếng nói hiện đại;
-- 15% thơ, hình ảnh trữ tình hoặc âm nhạc;
-- 15% story-dependent perspectives;
+- 15% perspective giàu hình ảnh hoặc ẩn dụ;
+- tối thiểu 20% ứng viên được đánh giá ở dạng context/story pairing, không chỉ đọc quote riêng lẻ;
 - tối đa khoảng 20% cho cùng một truyền thống triết học trong một batch.
 
 Đây là tỷ lệ định hướng, không phải quota cứng. Chất lượng, quyền sử dụng và khả năng chạm vẫn là gate cuối.
@@ -129,6 +128,6 @@ Các batch tương lai không nên chỉ xếp hạng theo source confidence. C�
 ## Việc tiếp theo
 
 1. Audit đầy đủ corpus theo sáu tuyến trên và tạo dashboard coverage.
-2. Lập shortlist riêng cho `modern_life_rules`, `brain_and_habit`, `poetic_music` và `needs_story_context`.
+2. Lập shortlist riêng cho `modern_life_rules`, `brain_and_habit` và `needs_story_context`.
 3. Chỉ research bổ sung có mục tiêu cho những gap thật, thay vì tiếp tục thêm triết học cổ điển theo số lượng.
 4. Mỗi batch Release phải báo phân bố nguồn/truyền thống để tránh lệch nội dung trở lại.
