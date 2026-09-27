@@ -10,7 +10,7 @@ Public root: <https://dungvo.github.io/apps/selflo/>
 - `/apps/selflo/preview/?channel=candidate&updated=latest`: batch Candidate nhỏ để review lượt 1.
 - `/apps/selflo/preview/?channel=authoring&updated=latest`: nội dung Authoring vừa cập nhật để review lượt 2.
 - `/apps/selflo/preview/?channel=release&updated=latest`: nội dung đã Release.
-- `/apps/selflo/review-matrix/`: inventory hợp nhất toàn bộ research quotes từ Excel, canonical Authoring và Release; có ranking, độ tin cậy, pipeline, filter, chọn nhiều dòng và copy ID.
+- `/apps/selflo/review-matrix/`: inventory hợp nhất toàn bộ research quotes từ Excel, canonical Authoring và Release; có **Ma trận nguồn & khoảng trống**, ranking, độ tin cậy, pipeline, filter, chọn nhiều dòng và copy ID.
 - `/apps/selflo/preview/?view=detail`: focused in-app quote/story reader preview.
 - `/apps/selflo/preview/?view=matrix`: diversity dashboard backed by `quote-research/diversity-matrix.json` and the live Authoring manifest.
 - `/apps/selflo/story/`: app-like Story Reader Lab for testing Classic V1 and Editorial V2 payloads without changing the existing review workspace or Release content.
@@ -35,12 +35,24 @@ Chạy các lệnh dưới đây từ thư mục `apps/selflo`.
 
 Có thể mở <https://dungvo.github.io/apps/selflo/review-matrix/> để xem hàng đợi theo thứ tự ưu tiên. Chọn các dòng muốn xử lý rồi bấm **Copy ID đã chọn**; gửi danh sách ID để promotion vào Authoring hoặc Release. Các item có nhãn **Mới vào Authoring** là nội dung cần review lượt hai trước khi Release.
 
-Matrix không đọc riêng batch Candidate. Dữ liệu được tạo từ `Selflo_Content_Master_Post90_Phase2_5.xlsx`, Authoring manifest/payload và Release manifest/payload. Sau khi workbook hoặc repository content thay đổi, rebuild bằng:
+Matrix không đọc riêng batch Candidate. Dữ liệu được tạo từ `Selflo_Content_Master_Optimized.xlsx` (fallback về các workbook Post-90 cũ), Authoring manifest/payload và Release manifest/payload. Sau khi workbook hoặc repository content thay đổi, rebuild bằng:
 
 ```bash
 /Users/dungvo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
   scripts/build-review-matrix.py
 ```
+
+### Research sau mốc 90 ngày
+
+- `Quote Library v2` là corpus 90-day đã đóng: không chèn thêm dòng, không sửa raw/original research và provenance.
+- Nghiên cứu mới được ghi append-only vào sheet `Research Intake` trong `quote-chatpgt/Selflo_Content_Master_Optimized.xlsx`.
+- Mỗi candidate mới phải có Research ID, original text, nguồn/tác phẩm, vị trí nguồn, URL, bản Việt làm việc, verification và rights note. Trường hợp chưa rõ phải ghi `unresolved`, không đoán.
+- Sheet `Source Coverage Matrix` và phần **Ma trận nguồn & khoảng trống** trên web dùng để chọn nhóm research tiếp theo. Ưu tiên hiện tại là các nhóm phương Tây ngoài Khắc kỷ, tâm lý/hành vi hiện đại, não bộ/thói quen và quy luật/hiệu ứng hiện đại.
+- `Research Intake` không phải Release. Luồng đúng vẫn là: **Research Intake → normalize/verify → Canonical → Authoring → owner review → Release**.
+
+### Cấu trúc workbook tinh gọn
+
+Workbook vận hành chính có 18 sheet thay vì 155. Các sheet `Day X Audit`, `Coverage Audit`, re-audit và dashboard lịch sử đã được gộp vào `Audit Archive`; không xóa dấu vết lịch sử. Hướng dẫn được gộp vào `Workbook Guide`, taxonomy vào `Reference Taxonomy`, lịch sử kế hoạch vào `Research History`, và các báo cáo repository vào `Repository Review`. Các bảng lõi mà pipeline sử dụng (`Quote Library v2`, `Normalized Corpus`, `Research Repo Mapping`) vẫn giữ tên và dữ liệu để script hiện tại tiếp tục chạy.
 
 Các tổng Research, Authoring chưa Release và Release được hiển thị riêng để tránh cộng trùng research provenance với canonical content.
 

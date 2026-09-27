@@ -1,0 +1,69 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.emotion.007",
+  "primary_theme": "emotion",
+  "quotes": [
+    {
+      "id": "authoring.b009.bhagavad_gita_tradition.028",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Người không làm phiền đồng loại và cũng không bị họ làm xao động; thoát khỏi giận dữ, vượt trên vui, buồn và sợ hãi—người ấy được Ta yêu quý.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "emotion",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "emotion_regulation",
+          "emotion_regulation"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Bhagavad Gita tradition",
+        "work": "The Song Celestial; Or, Bhagavad-Gita",
+        "source_url": "https://www.gutenberg.org/ebooks/2388",
+        "source_language": null,
+        "source_label": "Bhagavad Gita tradition",
+        "source_detail": "Research ID research.exp1000.b009.bhagavad_gita_tradition.028; corpus row Chapter Xii; text line 2274; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "emotion_regulation",
+          "emotion_regulation"
+        ]
+      },
+      "rights": {
+        "status": "unverified",
+        "note": "Project Gutenberg: public-domain translation by Edwin Arnold"
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Người không làm phiền đồng loại và cũng không bị họ làm xao động; thoát khỏi giận dữ, vượt trên vui, buồn và sợ hãi—người ấy được Ta yêu quý.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Bhagavad Gita tradition"
+      },
+      "knowledge_basis": null
+    }
+  ]
+}

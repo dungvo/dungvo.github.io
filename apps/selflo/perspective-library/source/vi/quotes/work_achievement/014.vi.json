@@ -1,0 +1,140 @@
+{
+  "schema_version": "selflo.perspective.quote-fragment.v1",
+  "entity": "perspective_quote_fragment",
+  "fragment_id": "quote_fragment.work_achievement.014",
+  "primary_theme": "work_achievement",
+  "quotes": [
+    {
+      "id": "attributed.henry_david_thoreau.thoreau_corporation_with_conscience",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": "Lương tâm của một tổ chức",
+      "text_vi": "Một tổ chức tự nó không có lương tâm; nhưng một tổ chức gồm những con người có lương tâm thì có.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "henry_david_thoreau",
+        "author_name": "Henry David Thoreau",
+        "work": "Walden; Civil Disobedience",
+        "source_url": "https://www.gutenberg.org/ebooks/205",
+        "source_language": "en",
+        "source_label": "Henry David Thoreau",
+        "source_detail": "Civil Disobedience. Original: It is truly enough said that a corporation has no conscience; but a corporation of conscientious men is a corporation with a conscience."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "work",
+          "organization",
+          "conscience"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [],
+        "legacy_behavior_ids": []
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-26T00:10:44Z"
+      },
+      "writing": {
+        "semantic_intent": "Trách nhiệm đạo đức của tổ chức vẫn đi qua lựa chọn của những con người bên trong nó.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Henry David Thoreau"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "work",
+          "organization",
+          "conscience"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.francis_bacon.bacon_power_over_others_lose_self",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": "Quyền lực và tự do",
+      "text_vi": "Thật là một ham muốn kỳ lạ: tìm kiếm quyền lực rồi đánh mất tự do; muốn có quyền trên người khác nhưng lại mất quyền làm chủ chính mình.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "francis_bacon",
+        "author_name": "Francis Bacon",
+        "work": "The Essays of Francis Bacon",
+        "source_url": "https://www.gutenberg.org/ebooks/575",
+        "source_language": "en",
+        "source_label": "Francis Bacon",
+        "source_detail": "Of Great Place. Original: It is a strange desire, to seek power and to lose liberty: or to seek power over others, and to lose power over a man's self."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "power",
+          "freedom",
+          "self_mastery"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [],
+        "legacy_behavior_ids": []
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-26T00:10:44Z"
+      },
+      "writing": {
+        "semantic_intent": "Quyền lực bên ngoài có thể đi cùng sự suy giảm tự do và khả năng làm chủ bản thân.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Francis Bacon"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "power",
+          "freedom",
+          "self_mastery"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null
+    }
+  ]
+}
