@@ -144,7 +144,7 @@ class StoryV2ContractTests(unittest.TestCase):
         expected = {
             "story.old_man_and_returning_horse": (3, 8, 3, 0),
             "story.original_if_i_lived_a_human_life": (29, 205, 11, 3),
-            "story.the_compass_does_not_walk_for_you": (12, 156, 3, 3),
+            "story.the_compass_does_not_walk_for_you": (12, 368, 3, 3),
             "story.empty_boat_on_the_river": (3, 8, 1, 0),
             "story.large_tree_beyond_the_carpenters_measure": (3, 8, 1, 0),
             "story.photograph_missing_a_corner": (4, 24, 1, 0),
