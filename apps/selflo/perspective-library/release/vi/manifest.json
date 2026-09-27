@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 30,
-  "content_version": "release-batch01-western-18-52",
+  "library_revision": 32,
+  "content_version": "authoring-selected-quotes-55",
   "language": "vi",
-  "generated_at": "2026-09-26T00:12:26Z",
+  "generated_at": "2026-09-27T07:10:29Z",
   "files": [
     {
       "id": "image.story.original_if_i_lived_a_human_life.v1",
@@ -199,11 +199,11 @@
     {
       "id": "theme.work_achievement.vi",
       "kind": "quote_pack",
-      "revision": 11,
-      "path": "themes/work-achievement.vi.r11.json",
+      "revision": 12,
+      "path": "themes/work-achievement.vi.r12.json",
       "media_type": "application/json",
-      "sha256": "303a47f32677165df5a0ce68dd449ef88f3246c1dd886f366f3a68a8c28aec7f",
-      "byte_count": 54032
+      "sha256": "4a4a0582ef254c03fb3ad3f4df95b44a05bd906605b5bf43be2382d54f3def94",
+      "byte_count": 51455
     },
     {
       "id": "story.empty_boat_on_the_river",
@@ -235,29 +235,29 @@
     {
       "id": "story.original_between_two_banks",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/original-between-two-banks/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/original-between-two-banks/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "386fee7dd1daf6d4049ce2d704a8060f687f69735593994030832936c21b6685",
-      "byte_count": 12147
+      "sha256": "bf5036885050cd662aa4a64b5f53a086719248b502b95fddd49425f04245a338",
+      "byte_count": 7261
     },
     {
       "id": "story.original_builder_and_shapeless_stones",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/original-builder-and-shapeless-stones/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/original-builder-and-shapeless-stones/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "70107335895462b2570a5c079735e9e1db580fe52ac37a7d7a8274e707936b23",
-      "byte_count": 20085
+      "sha256": "bc1e352ca21d91ec6ccf1f4779ba2e04342e04ebd5f8e37081c37bd68e7f96f7",
+      "byte_count": 15943
     },
     {
       "id": "story.original_chair_beside_window",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/original-chair-beside-window/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/original-chair-beside-window/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "ac9ba0a300c3b1b862ae88ac0f4ccff773281e68dce9e37ff44ce68415860837",
-      "byte_count": 30827
+      "sha256": "8cb1858cfab8f0cf59e42048b02267df1a5d578535722ea19c202e318dc3b589",
+      "byte_count": 17697
     },
     {
       "id": "story.original_if_i_lived_a_human_life",
@@ -271,38 +271,29 @@
     {
       "id": "story.original_stone_that_loved_stormy_days",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "894bbbbde57b048c678859ba8cfe9ce94f9f862aa429bc71952b71be55db33bb",
-      "byte_count": 17622
-    },
-    {
-      "id": "story.photograph_missing_a_corner",
-      "kind": "story",
-      "revision": 4,
-      "path": "stories/photograph-missing-a-corner/story.vi.r4.json",
-      "media_type": "application/json",
-      "sha256": "2f7741f40e6ce5dff6717134b7e65087260f791ae2a121df82e857cf307ac350",
-      "byte_count": 10355
+      "sha256": "e26caf5602bbc1e5d5f95d5a15dec3b6e0211e47f33a21b51661e78ff5c192e7",
+      "byte_count": 15129
     },
     {
       "id": "story.rails_that_diverge",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/rails-that-diverge/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/rails-that-diverge/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "a914cb1fc4573e31b69d9f902d0328474242ce551a5d3a5066cf2537872d52d5",
-      "byte_count": 81787
+      "sha256": "19f8cc4fcfdb7471e2a1d1c0df8240f89ce15559adc19907ca55616e4a89db45",
+      "byte_count": 81606
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 4,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r4.json",
+      "revision": 5,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "05da59036b3e494a2ac5d85ea4d2ac9bf98c4a3d43ca327ab26df2f679dee74f",
-      "byte_count": 42632
+      "sha256": "2488e58af361b63b5fa38652d3dbcd9caf158c96068a5f4437ac6219e11c314c",
+      "byte_count": 42689
     },
     {
       "id": "story.tree_and_silent_goose",

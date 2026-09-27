@@ -22,7 +22,6 @@ RELEASED_STORY_IDS = {
     "story.original_chair_beside_window",
     "story.original_if_i_lived_a_human_life",
     "story.original_stone_that_loved_stormy_days",
-    "story.photograph_missing_a_corner",
     "story.rails_that_diverge",
     "story.the_compass_does_not_walk_for_you",
     "story.tree_and_silent_goose",
@@ -145,7 +144,7 @@ class StoryV2ContractTests(unittest.TestCase):
         expected = {
             "story.old_man_and_returning_horse": (3, 8, 3, 0),
             "story.original_if_i_lived_a_human_life": (29, 205, 11, 3),
-            "story.the_compass_does_not_walk_for_you": (12, 156, 4, 3),
+            "story.the_compass_does_not_walk_for_you": (12, 156, 3, 3),
             "story.empty_boat_on_the_river": (3, 8, 1, 0),
             "story.large_tree_beyond_the_carpenters_measure": (3, 8, 1, 0),
             "story.photograph_missing_a_corner": (4, 24, 1, 0),
