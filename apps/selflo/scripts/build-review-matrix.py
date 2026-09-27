@@ -84,6 +84,15 @@ def load_quotes(channel_dir):
         quotes.extend(doc.get('quotes', []))
     return manifest, quotes
 
+def load_stories(channel_dir):
+    manifest=json.loads((channel_dir/'manifest.json').read_text())
+    stories=[]
+    for entry in manifest.get('files',[]):
+        if entry.get('kind')!='story': continue
+        story=json.loads((channel_dir/entry['path']).read_text())
+        stories.append(story)
+    return manifest,stories
+
 def load_supplemental_captures(root):
     captures=[]
     capture_dir=root/'quote-research/raw-capture'
@@ -157,6 +166,9 @@ def main():
     shortlist_ids=set(shortlist.get('quote_ids',[]))
     authoring_manifest, authoring = load_quotes(root/'perspective-library/authoring/vi')
     release_manifest, release = load_quotes(root/'perspective-library/release/vi')
+    _,authoring_stories=load_stories(root/'perspective-library/authoring/vi')
+    _,release_stories=load_stories(root/'perspective-library/release/vi')
+    released_story_ids={clean(x.get('id')) for x in release_stories}
     release_ids = {clean(x.get('id')) for x in release}
     authoring_by_id = {clean(x.get('id')): x for x in authoring}
     research_by_id={clean(q.get('Quote ID')):q for q in raw}
@@ -207,7 +219,17 @@ def main():
         group=[x for x in rows if source_family(x.get('author'),x.get('work'),x.get('source_url'))==meta['id']]
         counts={stage:sum(1 for x in group if x['pipeline']==stage) for stage in ('canonical','excluded','authoring','release')}
         coverage.append({**meta,'total':len(group),**counts})
-    out={'schema_version':'selflo.review-matrix.v5','generated_from':book.name,'summary':summary,'source_coverage':coverage,'rows':rows}
+    stories=[]
+    for story in authoring_stories:
+        ident=clean(story.get('id')); authorship=story.get('authorship') or {}; editorial=story.get('editorial') or {}; rights=story.get('rights') or {}; review=story.get('review') or {}
+        sections=[]
+        for section in story.get('sections') or []:
+            blocks=[{'type':clean(block.get('type')),'text_vi':clean(block.get('text_vi')),'attribution_vi':clean(block.get('attribution_vi'))} for block in section.get('blocks') or []]
+            sections.append({'title_vi':clean(section.get('title_vi')),'blocks':blocks})
+        stories.append({'id':ident,'title_vi':clean(story.get('title_vi')),'subtitle_vi':clean(story.get('subtitle_vi')),'primary_theme':clean(story.get('primary_theme')),'status':'release' if ident in released_story_ids else 'authoring','review_status':clean(review.get('status')),'source_label':clean(authorship.get('source_label')),'source_url':clean(authorship.get('source_url')),'author_name':clean(authorship.get('author_name')),'origin_type':clean(editorial.get('origin_type')),'human_edited':editorial.get('human_edited'),'rights_status':clean(rights.get('status')),'rights_note':clean(rights.get('note')),'sections':sections,'takeaway':story.get('takeaway') or {}})
+    stories.sort(key=lambda x:(x['status']!='release',x['title_vi'],x['id']))
+    summary.update({'total_stories':len(stories),'release_stories':sum(1 for x in stories if x['status']=='release'),'authoring_stories':sum(1 for x in stories if x['status']=='authoring')})
+    out={'schema_version':'selflo.review-matrix.v6','generated_from':book.name,'summary':summary,'source_coverage':coverage,'rows':rows,'stories':stories}
     target=root/'review-matrix/data.json';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(out,ensure_ascii=False,separators=(',',':'))+'\n')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 
