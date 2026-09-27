@@ -91,7 +91,10 @@ def load_supplemental_captures(root):
     for path in sorted(capture_dir.glob('*.json')):
         doc=json.loads(path.read_text())
         for item in doc.get('items',[]):
-            captures.append({**item,'_capture_file':path.name,'_capture_batch':doc.get('batch')})
+            candidate_id=clean(item.get('candidate_id') or item.get('research_id'))
+            batch_match=re.search(r'\.b(\d{3})\.',candidate_id,re.I)
+            item_batch=f"B{batch_match.group(1)}" if batch_match else doc.get('batch')
+            captures.append({**item,'_capture_file':path.name,'_capture_batch':item_batch})
     return captures
 
 def confidence(value):
@@ -190,7 +193,10 @@ def main():
         ident=clean(item.get('candidate_id'))
         if not ident or ident in known_ids: continue
         topics=item.get('provisional_topics') or []
-        rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(item.get('vietnamese_working_text') or item.get('original_text')),'original_text':clean(item.get('original_text')),'author':clean(item.get('author_or_attribution_as_source_states')),'work':clean(item.get('work_or_page_title')),'source_url':clean(item.get('source_url')),'source_domain':clean(item.get('source_domain')),'source_tier':clean(item.get('source_tier')),'theme':clean(topics[0] if topics else 'unresolved'),'human_experience':'','content_nature':clean(item.get('content_nature')),'confidence':'low','verification':clean(item.get('capture_status')),'rights':clean(item.get('rights_note')),'selflo_fit':'','release_readiness':'Source verification required','pipeline':'excluded','review':'Research only','ai_review_status':'source_verification_required','ai_review_round':None,'ai_review_note':clean(item.get('context_note')),'story_id':None,'exact_duplicate':'','near_duplicate':clean(item.get('near_duplicate_cluster')),'issue_code':'source_below_B','score':35,'why':'Nguồn tổng hợp do owner cung cấp; đã giữ đúng câu chữ nhưng cần truy nguồn gốc trước Authoring.','collection_batch':f"{clean(item.get('_capture_batch'))} · nguồn owner gửi"})
+        source_tier=clean(item.get('source_tier'))
+        is_aggregator='AGGREGATOR' in source_tier.upper()
+        source_confidence='low' if is_aggregator else 'high' if source_tier.upper().startswith('A_') else 'medium'
+        rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(item.get('vietnamese_working_text') or item.get('original_text')),'original_text':clean(item.get('original_text')),'author':clean(item.get('author_or_attribution_as_source_states')),'work':clean(item.get('work_or_page_title')),'source_url':clean(item.get('source_url')),'source_domain':clean(item.get('source_domain')),'source_tier':source_tier,'theme':clean(topics[0] if topics else 'unresolved'),'human_experience':'','content_nature':clean(item.get('content_nature')),'confidence':source_confidence,'verification':clean(item.get('capture_status')),'rights':clean(item.get('rights_note')),'selflo_fit':'','release_readiness':'Translation/editorial review pending' if not is_aggregator else 'Source verification required','pipeline':'excluded','review':'Research only','ai_review_status':'source_verification_required' if is_aggregator else 'collection_review_pending','ai_review_round':None,'ai_review_note':clean(item.get('context_note')),'story_id':None,'exact_duplicate':'','near_duplicate':clean(item.get('near_duplicate_cluster')),'issue_code':'source_below_B' if is_aggregator else 'raw_collection_pending','score':35 if is_aggregator else 55,'why':'Nguồn tổng hợp; cần truy nguồn gốc trước Authoring.' if is_aggregator else 'Đã thu thập đúng nguyên văn từ nguồn được ghi nhận; chờ dịch và editorial review.','collection_batch':clean(item.get('_capture_batch'))})
         known_ids.add(ident)
     rows.sort(key=lambda x:(-x['score'],x['record_type'],x['id']))
     for i,x in enumerate(rows,1): x['rank']=i
