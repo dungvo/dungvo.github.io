@@ -53,7 +53,7 @@ def source_family(author, work='', source_url=''):
         ('western_20c_literature_existential', r'virginia woolf|simone weil|rilke|tolstoy|hesse|arendt|dostoevsky|kafka|chekhov|camus|beauvoir|sartre|baldwin|morrison|le guin|didion|mary oliver|bell hooks|maya angelou|a.?dre lorde'),
         ('pragmatism_humanistic', r'william james|john dewey|peirce|viktor frankl|carl rogers|erich fromm|rollo may|yalom'),
         ('neuroscience_habits', r'wendy wood|fogg|damasio|lisa feldman barrett|dehaene|gazzaniga|davidson|hebb|neuro|brain|habit'),
-        ('modern_laws_effects', r'murphy|parkinson|peter principle|goodhart|hofstadter|planning fallacy|sunk cost|hedonic|habituation|novelty|peak.end|mere exposure'),
+        ('modern_laws_effects', r'murphy|parkinson|peter principle|goodhart|hofstadter|planning fallacy|sunk cost|hedonic|habituation|novelty|peak.end|mere exposure|45 định luật|định luật cuộc sống|ybox\.vn/gia-vi/45-dinh-luat'),
         ('modern_psych_behavior', r'kristin neff|kahneman|tversky|bandura|deci|ryan|csikszentmihalyi|baumeister|gollwitzer|psycholog|research|rumination|burnout|decision'),
         ('middle_east_jewish', r'rumi|hafez|saadi|jewish|do thái|arab|ả rập|persian|ba tư|middle east'),
         ('african_global_indigenous', r'africa|châu phi|indigenous|bản địa'),
@@ -83,6 +83,16 @@ def load_quotes(channel_dir):
         doc = json.loads((channel_dir/f['path']).read_text())
         quotes.extend(doc.get('quotes', []))
     return manifest, quotes
+
+def load_supplemental_captures(root):
+    captures=[]
+    capture_dir=root/'quote-research/raw-capture'
+    if not capture_dir.exists(): return captures
+    for path in sorted(capture_dir.glob('*.json')):
+        doc=json.loads(path.read_text())
+        for item in doc.get('items',[]):
+            captures.append({**item,'_capture_file':path.name,'_capture_batch':doc.get('batch')})
+    return captures
 
 def confidence(value):
     v = clean(value).lower()
@@ -174,16 +184,24 @@ def main():
         pipeline='canonical' if issue_code=='awaiting_authoring_review' else 'excluded'
         score,_=research_score(q,n,m)
         rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(q.get('Bản dịch / bản làm việc tiếng Việt')),'author':clean(n.get('Author canonical') or q.get('Tác giả / Attribution')),'work':clean(n.get('Source/work canonical') or q.get('Tên nguồn / tác phẩm')),'source_url':clean(q.get('Source URL')),'theme':clean(n.get('Theme canonical') or q.get('Chủ đề chính (Theme)')),'human_experience':clean(n.get('Human experience canonical') or q.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(n.get('content_nature canonical') or q.get('Hình thức nội dung (Content Form)')),'confidence':confidence(q.get('Mức xác minh')),'verification':clean(q.get('Mức xác minh')),'rights':clean(q.get('Quyền sử dụng')),'selflo_fit':clean(q.get('Mức phù hợp Selflo')),'release_readiness':clean(q.get('Release readiness')),'pipeline':pipeline,'review':clean(q.get('Owner review')),'ai_review_status':None,'story_id':clean(q.get('Story ID liên quan')) or None,'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'issue_code':issue_code,'score':score,'why':why})
+    known_ids={x['id'] for x in rows}
+    supplemental=load_supplemental_captures(root)
+    for item in supplemental:
+        ident=clean(item.get('candidate_id'))
+        if not ident or ident in known_ids: continue
+        topics=item.get('provisional_topics') or []
+        rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(item.get('vietnamese_working_text') or item.get('original_text')),'original_text':clean(item.get('original_text')),'author':clean(item.get('author_or_attribution_as_source_states')),'work':clean(item.get('work_or_page_title')),'source_url':clean(item.get('source_url')),'source_domain':clean(item.get('source_domain')),'source_tier':clean(item.get('source_tier')),'theme':clean(topics[0] if topics else 'unresolved'),'human_experience':'','content_nature':clean(item.get('content_nature')),'confidence':'low','verification':clean(item.get('capture_status')),'rights':clean(item.get('rights_note')),'selflo_fit':'','release_readiness':'Source verification required','pipeline':'excluded','review':'Research only','ai_review_status':'source_verification_required','ai_review_round':None,'ai_review_note':clean(item.get('context_note')),'story_id':None,'exact_duplicate':'','near_duplicate':clean(item.get('near_duplicate_cluster')),'issue_code':'source_below_B','score':35,'why':'Nguồn tổng hợp do owner cung cấp; đã giữ đúng câu chữ nhưng cần truy nguồn gốc trước Authoring.','collection_batch':f"{clean(item.get('_capture_batch'))} · nguồn owner gửi"})
+        known_ids.add(ident)
     rows.sort(key=lambda x:(-x['score'],x['record_type'],x['id']))
     for i,x in enumerate(rows,1): x['rank']=i
     stage_counts={stage:sum(1 for x in rows if x['pipeline']==stage) for stage in ('canonical','excluded','authoring','release')}
-    summary={'total_quotes':len(rows),'canonical_pending_authoring':stage_counts['canonical'],'excluded_not_authoring':stage_counts['excluded'],'authoring_pending_release':stage_counts['authoring'],'release_quotes':stage_counts['release'],'stage_sum':sum(stage_counts.values()),'research_source_rows':len(raw),'canonical_authoring_quotes':len(authoring),'authoring_revision':authoring_manifest.get('library_revision'),'release_revision':release_manifest.get('library_revision')}
+    summary={'total_quotes':len(rows),'canonical_pending_authoring':stage_counts['canonical'],'excluded_not_authoring':stage_counts['excluded'],'authoring_pending_release':stage_counts['authoring'],'release_quotes':stage_counts['release'],'stage_sum':sum(stage_counts.values()),'research_source_rows':len(raw),'supplemental_raw_captures':len(supplemental),'canonical_authoring_quotes':len(authoring),'authoring_revision':authoring_manifest.get('library_revision'),'release_revision':release_manifest.get('library_revision')}
     coverage=[]
     for meta in SOURCE_FAMILIES:
         group=[x for x in rows if source_family(x.get('author'),x.get('work'),x.get('source_url'))==meta['id']]
         counts={stage:sum(1 for x in group if x['pipeline']==stage) for stage in ('canonical','excluded','authoring','release')}
         coverage.append({**meta,'total':len(group),**counts})
-    out={'schema_version':'selflo.review-matrix.v4','generated_from':book.name,'summary':summary,'source_coverage':coverage,'rows':rows}
+    out={'schema_version':'selflo.review-matrix.v5','generated_from':book.name,'summary':summary,'source_coverage':coverage,'rows':rows}
     target=root/'review-matrix/data.json';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(out,ensure_ascii=False,separators=(',',':'))+'\n')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 
