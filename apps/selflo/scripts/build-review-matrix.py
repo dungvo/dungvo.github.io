@@ -66,6 +66,87 @@ def source_family(author, work='', source_url=''):
 def clean(v):
     return '' if v is None else str(v).strip()
 
+# Canonical coverage groups used by the collection plan. New collection batches
+# are mapped explicitly so sparse records do not fall into the generic bucket.
+BATCH_FAMILY = {
+    **{f'B{i:03d}':'early_buddhism' for i in (1,5,6,7,8)},
+    'B002':'mahayana_buddhism','B003':'zen_chan','B004':'zen_chan','B009':'vietnamese_texts',
+    'B010':'pragmatism_humanistic','B011':'enlightenment_early_modern',
+    'B012':'learning_habits_motivation','B013':'brain_memory_attention','B014':'modern_psych_behavior',
+    'B015':'western_19c_philosophy','B016':'western_19c_literature','B017':'emotion_relationship_attachment',
+    'B018':'african_traditions','B019':'indigenous_traditions','B020':'laws_effects_models',
+    'B021':'daoism','B022':'confucianism_chinese','B023':'tibetan_buddhism','B024':'theravada_pali',
+    'B025':'japanese_thought','B026':'korean_thought','B027':'southeast_asian',
+    'B028':'hindu_vedic_upanishadic','B029':'gita_epic','B030':'jain','B031':'laws_effects_models',
+}
+
+FAMILY_40 = [
+ ('early_buddhism','Phật giáo sơ kỳ & Dhammapada','Kệ Pāli, Dhammapada và kinh điển sớm','Dhammapada; Nikāya; Sutta Nipāta'),
+ ('mahayana_buddhism','Phật giáo Đại thừa','Kinh, luận và trước tác Đại thừa','Shinran; Nāgārjuna; Śāntideva'),
+ ('zen_chan','Thiền / Zen / Chan','Thiền Trung Hoa, Nhật Bản và diễn giải học thuật','D. T. Suzuki; Dōgen; Huệ Năng'),
+ ('theravada_pali','Theravāda & chú giải Pāli','Truyền thống Theravāda và văn bản chú giải','Buddhaghosa; Jātaka; Visuddhimagga'),
+ ('tibetan_buddhism','Phật giáo Tây Tạng','Truyện, giáo huấn và truyền thống Tây Tạng','Milarepa; Tibetan Tales; lojong'),
+ ('daoism','Đạo gia','Lão Tử, Trang Tử và tư tưởng Đạo gia','Tao Te Ching; Zhuangzi; Liezi'),
+ ('confucianism_chinese','Nho gia & kinh điển Trung Hoa','Luận Ngữ, Mạnh Tử và cổ thư Nho gia','Analects; Mencius; Xunzi'),
+ ('hindu_vedic_upanishadic','Ấn Độ giáo, Veda & Upanishad','Veda, Upanishad và triết học Ấn Độ','Upanishads; Vedas; Yoga Sutras'),
+ ('gita_epic','Bhagavad Gītā & sử thi','Gītā, Mahābhārata và Rāmāyaṇa','Bhagavad Gītā; Mahābhārata; Rāmāyaṇa'),
+ ('jain','Kỳ-na giáo (Jain)','Kinh văn và tư tưởng Jain','Mahāvīra; Ācārāṅga Sūtra; Tattvārtha Sūtra'),
+ ('sikh','Sikh giáo','Guru Granth Sahib và các Guru Sikh','Guru Nanak; Guru Granth Sahib'),
+ ('vietnamese_texts','Di sản & văn học Việt Nam','Văn học, tư tưởng, ca dao và tục ngữ Việt','Nguyễn Du; Nguyễn Trãi; Trần Nhân Tông; ca dao'),
+ ('japanese_thought','Tư tưởng & văn học Nhật Bản','Văn học, mỹ học và tư tưởng Nhật','Okakura Kakuzō; Bashō; Sei Shōnagon'),
+ ('korean_thought','Tư tưởng & văn học Hàn Quốc','Truyện, văn học và tư tưởng Hàn','Korean Tales; Yi Hwang; Yi I'),
+ ('southeast_asian','Đông Nam Á','Văn học dân gian và tư tưởng Đông Nam Á','Philippine Folk Tales; Indonesia; Thái Lan'),
+ ('greek_philosophy','Triết học Hy Lạp','Socrates, Plato, Aristotle và tiền Socrates','Plato; Aristotle; Heraclitus'),
+ ('roman_philosophy_literature','Triết học & văn học La Mã','La Mã ngoài phạm vi một trường phái','Cicero; Lucretius; Plutarch; Ovid'),
+ ('stoicism','Khắc kỷ','Khắc kỷ Hy–La','Marcus Aurelius; Seneca; Epictetus'),
+ ('epicurean_skeptic','Epicurean & Hoài nghi','Epicurus, Pyrrhonism và các nhánh liên quan','Epicurus; Sextus Empiricus; Lucretius'),
+ ('early_medieval_christianity','Kitô giáo sơ kỳ & trung cổ','Giáo phụ, thần học và suy niệm trung cổ','Augustine; Boethius; Aquinas; Julian of Norwich'),
+ ('jewish','Do Thái','Kinh điển, rabbi và tư tưởng Do Thái','Hebrew Bible; Pirkei Avot; Maimonides'),
+ ('islamic','Hồi giáo','Qur’an, hadith và tư tưởng Hồi giáo','Qur’an; Al-Ghazali; Ibn Arabi'),
+ ('persian_sufi','Ba Tư & Sufi','Thơ Ba Tư và truyền thống Sufi','Rumi; Saadi; Hafez; Attar'),
+ ('renaissance','Phục Hưng','Tiểu luận, kịch và tư tưởng Phục Hưng','Montaigne; Shakespeare; Machiavelli'),
+ ('enlightenment_early_modern','Cận đại & Khai sáng','Triết học và tiểu luận thế kỷ 17–18','Francis Bacon; Pascal; Spinoza; Hume; Rousseau'),
+ ('western_19c_philosophy','Triết học phương Tây thế kỷ 19','Hiện sinh sơ kỳ và triết học thế kỷ 19','Nietzsche; Kierkegaard; Schopenhauer'),
+ ('western_19c_literature','Văn học phương Tây thế kỷ 19','Tiểu luận, thơ và văn học thế kỷ 19','Emerson; Thoreau; Whitman; Dickinson'),
+ ('western_20c','Văn học & tư tưởng thế kỷ 20','Nguồn public-domain hoặc được phép','Virginia Woolf; Rilke; Kafka; Simone Weil'),
+ ('pragmatism_humanistic','Thực dụng & tâm lý nhân văn','Pragmatism, ý nghĩa và trị liệu nhân văn','William James; John Dewey; Carl Rogers; Viktor Frankl'),
+ ('modern_psych_behavior','Tâm lý học & hành vi hiện đại','Nhận thức, động lực và hành vi','Kahneman; Tversky; Bandura; Deci & Ryan'),
+ ('brain_memory_attention','Não bộ, trí nhớ & chú ý','Nhận thức, trí nhớ, chú ý và thần kinh học','William James; Hebb; Damasio; Dehaene'),
+ ('learning_habits_motivation','Học tập, thói quen & động lực','Học tập, hình thành thói quen và động lực','William James; Wendy Wood; Bandura'),
+ ('emotion_relationship_attachment','Cảm xúc, quan hệ & gắn bó','Cảm xúc, kết nối và attachment','William James; Bowlby; Ainsworth'),
+ ('laws_effects_models','Quy luật, hiệu ứng & mô hình quyết định','Quy luật tổ chức, thiên kiến và hiệu ứng tâm lý','Murphy; Parkinson; Goodhart; Kahneman & Tversky'),
+ ('sleep_rest_wellbeing','Giấc ngủ, nghỉ ngơi & wellbeing','Nghỉ ngơi, phục hồi và sức khỏe tinh thần','William James; nghiên cứu giấc ngủ'),
+ ('science_nature_discovery','Khoa học, tự nhiên & khám phá','Khoa học, tò mò và quan sát tự nhiên','Darwin; Faraday; Curie; Einstein'),
+ ('creativity_art_craft','Sáng tạo, nghệ thuật & nghề thủ công','Quá trình sáng tạo và thực hành nghề','Leonardo; Rodin; Ruskin; nghệ nhân'),
+ ('african_traditions','Truyền thống Châu Phi','Nguồn có quốc gia hoặc cộng đồng rõ','West African Folk-Tales; Yoruba; Akan'),
+ ('indigenous_traditions','Tri thức bản địa','Nguồn bản địa có provenance cụ thể','Cherokee; Māori; First Nations'),
+ ('latin_american','Mỹ Latin','Văn học và tư tưởng Mỹ Latin','José Martí; Sor Juana; Gabriela Mistral'),
+ ('world_proverbs_folklore','Tục ngữ & dân gian thế giới','Tục ngữ, ngụ ngôn và dân gian có xuất xứ','Aesop; Grimm; tục ngữ theo vùng'),
+]
+
+def inferred_family(author, work='', source_url=''):
+    text=' '.join([clean(author),clean(work),clean(source_url)]).lower()
+    rules=[
+      ('selflo',r'\bselflo\b'),
+      ('daoism',r'laozi|lão tử|tao te|zhuangzi|trang tử|liezi|liệt tử|huainan'),
+      ('confucianism_chinese',r'confucius|khổng tử|mencius|mạnh tử|analects|xunzi'),
+      ('vietnamese_texts',r'vietnam|việt nam|nguyễn du|nguyễn trãi|nguyễn bỉnh khiêm|trần nhân tông|ca dao|truyện kiều'),
+      ('zen_chan',r'dōgen|dogen|\bzen\b|\bchan\b|thiền|huệ năng|suzuki'),
+      ('early_buddhism',r'dhammapada|sutta nipata|nik[aā]ya'),('mahayana_buddhism',r'mah[aā]y[aā]na|shinran|nagarjuna|nāgārjuna|shantideva|śāntideva'),
+      ('tibetan_buddhism',r'tibetan|milarepa|lojong'),('hindu_vedic_upanishadic',r'upanishad|vedic|\bveda|yoga sutra'),('gita_epic',r'bhagavad|mah[aā]bh[aā]rata|ramayana|rāmāyaṇa'),('jain',r'jain|mahavira|mahāvīra'),
+      ('stoicism',r'marcus aurelius|seneca|epictetus|musonius|stoic'),('greek_philosophy',r'\bplato\b|aristotle|socrates|heraclitus'),('roman_philosophy_literature',r'cicero|plutarch|ovid'),('epicurean_skeptic',r'epicurus|sextus empiricus|lucretius|pyrrho'),
+      ('renaissance',r'montaigne|shakespeare|machiavelli'),('enlightenment_early_modern',r'francis bacon|pascal|spinoza|\bhume\b|\bkant\b|rousseau|voltaire|adam smith'),('early_medieval_christianity',r'augustine|boethius|aquinas|julian of norwich'),
+      ('western_19c_philosophy',r'nietzsche|schopenhauer|kierkegaard'),('western_19c_literature',r'emerson|thoreau|whitman|dickinson'),('western_20c',r'virginia woolf|simone weil|rilke|tolstoy|hesse|arendt|dostoevsky|kafka|chekhov|camus|beauvoir|sartre'),
+      ('pragmatism_humanistic',r'william james|john dewey|peirce|viktor frankl|carl rogers|erich fromm|rollo may|yalom'),
+      ('brain_memory_attention',r'damasio|lisa feldman barrett|dehaene|gazzaniga|davidson|hebb|neuro|brain|memory|attention'),('learning_habits_motivation',r'wendy wood|fogg|habit|learning|motivation'),('emotion_relationship_attachment',r'bowlby|ainsworth|attachment|emotion|relationship'),
+      ('laws_effects_models',r'murphy|parkinson|peter principle|goodhart|hofstadter|planning fallacy|sunk cost|hedonic|habituation|peak.end|mere exposure|45 định luật|định luật cuộc sống'),('modern_psych_behavior',r'kahneman|tversky|bandura|deci|csikszentmihalyi|psycholog|behavior'),
+      ('persian_sufi',r'rumi|hafez|saadi|att[aā]r|persian|ba tư|sufi'),('jewish',r'jewish|do thái|pirkei|maimonides|hebrew'),('islamic',r'qur.an|hadith|al-ghazali|ibn arabi|arab|ả rập'),
+      ('african_traditions',r'africa|châu phi|yoruba|akan'),('indigenous_traditions',r'indigenous|bản địa|cherokee|māori|maori|first nations'),('world_proverbs_folklore',r'folk|folklore|proverb|tục ngữ|dân gian|aesop|grimm'),
+    ]
+    for ident,pattern in rules:
+        if re.search(pattern,text,re.I): return ident
+    return 'unmapped'
+
 def sheet_records(wb, name):
     rows = wb[name].iter_rows(values_only=True)
     headers = [clean(v) for v in next(rows)]
@@ -214,11 +295,32 @@ def main():
     for i,x in enumerate(rows,1): x['rank']=i
     stage_counts={stage:sum(1 for x in rows if x['pipeline']==stage) for stage in ('canonical','excluded','authoring','release')}
     summary={'total_quotes':len(rows),'canonical_pending_authoring':stage_counts['canonical'],'excluded_not_authoring':stage_counts['excluded'],'authoring_pending_release':stage_counts['authoring'],'release_quotes':stage_counts['release'],'stage_sum':sum(stage_counts.values()),'research_source_rows':len(raw),'supplemental_raw_captures':len(supplemental),'canonical_authoring_quotes':len(authoring),'authoring_revision':authoring_manifest.get('library_revision'),'release_revision':release_manifest.get('library_revision')}
+    # Reclassify once, then expose the classification on every record so filters,
+    # exports and the coverage matrix all share one result.
+    for x in rows:
+        x['source_family']=BATCH_FAMILY.get(clean(x.get('collection_batch')).upper()) or inferred_family(x.get('author'),x.get('work'),x.get('source_url'))
     coverage=[]
-    for meta in SOURCE_FAMILIES:
-        group=[x for x in rows if source_family(x.get('author'),x.get('work'),x.get('source_url'))==meta['id']]
+    metas=[{'id':i,'name_vi':n,'scope_vi':s,'targets':t} for i,n,s,t in FAMILY_40]
+    metas.append({'id':'selflo','name_vi':'Nội dung gốc Selflo','scope_vi':'Góc nhìn do Selflo biên soạn','targets':'Duy trì chất lượng; không tính thay nguồn trích dẫn.'})
+    metas.append({'id':'unmapped','name_vi':'Chưa ánh xạ','scope_vi':'Thiếu metadata đủ để xếp nhóm an toàn','targets':'Bổ sung tác giả, tác phẩm hoặc provenance; không suy đoán.'})
+    for meta in metas:
+        group=[x for x in rows if x['source_family']==meta['id']]
         counts={stage:sum(1 for x in group if x['pipeline']==stage) for stage in ('canonical','excluded','authoring','release')}
-        coverage.append({**meta,'total':len(group),**counts})
+        authors=[]; works=[]; domains=[]
+        for x in group:
+            a=clean(x.get('author')); w=clean(x.get('work')); d=clean(x.get('source_domain'))
+            if not d and clean(x.get('source_url')):
+                d=re.sub(r'^www\.','',re.sub(r'^https?://','',clean(x.get('source_url'))).split('/')[0])
+            if a and a not in authors: authors.append(a)
+            if w and w not in works: works.append(w)
+            if d and d not in domains: domains.append(d)
+        total=len(group)
+        status='Đạt mốc 100+' if total>=100 else 'Còn thiếu' if total else 'Chưa có'
+        priority='maintain' if total>=100 else 'high_research'
+        coverage.append({**meta,'total':total,**counts,'status_vi':status,'priority':priority,
+                         'authors':authors[:18],'works':works[:18],'source_domains':domains[:12],
+                         'author_count':len(authors),'work_count':len(works),'source_count':len(domains),
+                         'remaining_to_100':max(0,100-total)})
     stories=[]
     for story in authoring_stories:
         ident=clean(story.get('id')); authorship=story.get('authorship') or {}; editorial=story.get('editorial') or {}; rights=story.get('rights') or {}; review=story.get('review') or {}
