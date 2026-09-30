@@ -1,5 +1,10 @@
 # Chuyển quote/story giữa Authoring và Release
 
+> Trước khi chuẩn bị một Release có hỗ trợ bộ lọc trong app, đọc
+> [`perspective-library/APP_FILTER_TAG_CONTRACT.vi.md`](../perspective-library/APP_FILTER_TAG_CONTRACT.vi.md).
+> Contract này quy định `tags`, `content_tag_catalog`, coverage report và các gate fail-closed mới.
+> Cho tới khi publisher đã implement các gate đó, không được xem một Release chỉ có tag/catalog thủ công là tương thích filter.
+
 Yêu cầu: Python 3.9+, Ruby và Node/npm để publisher hiện tại kiểm tra JSON Schema. Chạy từ thư mục Selflo website:
 
 ```bash

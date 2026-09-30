@@ -1,0 +1,467 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schema/perspective-story-v3.schema.json",
+  "title": "PerspectiveStoryEditorialV3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "entity", "id", "revision", "status", "language",
+    "reader_format", "title_vi", "subtitle_vi", "hero_image",
+    "primary_theme", "metadata", "sections", "takeaway", "reflection",
+    "authorship", "editorial", "rights", "review"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.2" },
+    "entity": { "const": "perspective_story" },
+    "id": { "$ref": "#/$defs/stable_id" },
+    "revision": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["draft", "active", "retired"] },
+    "language": { "const": "vi" },
+    "reader_format": { "const": "editorial_v3" },
+    "title_vi": { "$ref": "#/$defs/non_empty_string" },
+    "subtitle_vi": { "$ref": "#/$defs/nullable_string" },
+    "opening_quote_vi": { "$ref": "#/$defs/nullable_string" },
+    "hero_image": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/hero_image" }] },
+    "primary_theme": { "$ref": "#/$defs/stable_id" },
+    "metadata": { "$ref": "#/$defs/metadata" },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/section" }
+    },
+    "takeaway": { "$ref": "#/$defs/takeaway" },
+    "reflection": { "$ref": "#/$defs/reflection" },
+    "layout_review": { "$ref": "#/$defs/layout_review" },
+    "authorship": { "$ref": "#/$defs/authorship" },
+    "editorial": { "$ref": "#/$defs/editorial" },
+    "rights": { "$ref": "#/$defs/rights" },
+    "review": { "$ref": "#/$defs/review" },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*:[a-z][a-z0-9_]*$" }
+    }
+  },
+  "$defs": {
+    "non_empty_string": { "type": "string", "pattern": "\\S" },
+    "nullable_string": {
+      "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/non_empty_string" }]
+    },
+    "stable_id": { "type": "string", "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$" },
+    "stable_id_array": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/stable_id" }
+    },
+    "string_array": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/non_empty_string" }
+    },
+    "marks": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["strong", "emphasis", "accent"] }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text_vi", "marks"],
+      "properties": {
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "marks": { "$ref": "#/$defs/marks" }
+      }
+    },
+    "runs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/run" }
+    },
+    "rich_text": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text_vi"],
+      "properties": {
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" }
+      }
+    },
+    "hero_image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file_id", "alt_text_vi", "caption_vi"],
+      "properties": {
+        "file_id": { "$ref": "#/$defs/stable_id" },
+        "alt_text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "caption_vi": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["concept_ids", "emotion_tags", "keywords", "story_style"],
+      "properties": {
+        "concept_ids": { "$ref": "#/$defs/stable_id_array" },
+        "emotion_tags": { "$ref": "#/$defs/stable_id_array" },
+        "keywords": { "$ref": "#/$defs/string_array" },
+        "story_style": { "enum": ["parable", "contemporary", "reflective_journey"] }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "blocks"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "marker_vi": { "$ref": "#/$defs/nullable_string" },
+        "marker_unit_vi": { "$ref": "#/$defs/nullable_string" },
+        "title_vi": { "$ref": "#/$defs/nullable_string" },
+        "subtitle_vi": { "$ref": "#/$defs/nullable_string" },
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/block" }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "marker_vi": { "type": "string" } },
+            "required": ["marker_vi"]
+          },
+          "then": { "properties": { "title_vi": { "$ref": "#/$defs/non_empty_string" } } }
+        },
+        {
+          "if": {
+            "properties": { "marker_unit_vi": { "type": "string" } },
+            "required": ["marker_unit_vi"]
+          },
+          "then": { "properties": { "marker_vi": { "$ref": "#/$defs/non_empty_string" } } }
+        }
+      ]
+    },
+    "block": {
+      "oneOf": [
+        { "$ref": "#/$defs/part_heading" },
+        { "$ref": "#/$defs/paragraph" },
+        { "$ref": "#/$defs/dialogue" },
+        { "$ref": "#/$defs/statement" },
+        { "$ref": "#/$defs/pull_quote" },
+        { "$ref": "#/$defs/divider" },
+        { "$ref": "#/$defs/sequence" },
+        { "$ref": "#/$defs/flow" },
+        { "$ref": "#/$defs/list" },
+        { "$ref": "#/$defs/verse" },
+        { "$ref": "#/$defs/aside" },
+        { "$ref": "#/$defs/figure" },
+        { "$ref": "#/$defs/source_note" }
+      ]
+    },
+    "part_heading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "part_number", "title_vi", "subtitle_vi"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "part_heading" },
+        "part_number": { "type": "integer", "minimum": 1 },
+        "title_vi": { "$ref": "#/$defs/non_empty_string" },
+        "subtitle_vi": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "paragraph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "style", "text_vi"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "paragraph" },
+        "style": { "enum": ["narrative", "lead_in", "transition", "beat"] },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" }
+      }
+    },
+    "speaker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label_vi"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "label_vi": { "$ref": "#/$defs/non_empty_string" }
+      }
+    },
+    "dialogue_paragraph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text_vi"],
+      "properties": {
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" }
+      }
+    },
+    "dialogue_turn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "delivery", "paragraphs"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "speaker": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/speaker" }] },
+        "delivery": { "enum": ["spoken", "thought", "remembered", "written"] },
+        "paragraphs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/dialogue_paragraph" }
+        }
+      }
+    },
+    "dialogue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "style", "turns"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "dialogue" },
+        "style": { "enum": ["exchange", "monologue", "inner_monologue"] },
+        "turns": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/dialogue_turn" }
+        }
+      }
+    },
+    "statement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "presentation", "text_vi", "shareable"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "statement" },
+        "presentation": { "enum": ["centered", "leading"] },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" },
+        "shareable": { "type": "boolean" }
+      }
+    },
+    "pull_quote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "presentation", "text_vi", "shareable"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "pull_quote" },
+        "presentation": { "enum": ["centerpiece", "inset", "rail"] },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" },
+        "attribution_vi": { "$ref": "#/$defs/nullable_string" },
+        "shareable": { "type": "boolean" }
+      }
+    },
+    "divider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "divider" }
+      }
+    },
+    "rich_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text_vi"],
+      "properties": {
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" }
+      }
+    },
+    "sequence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "progression", "items"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "sequence" },
+        "progression": { "enum": ["neutral", "escalating"] },
+        "items": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/rich_item" } }
+      }
+    },
+    "flow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "items"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "flow" },
+        "items": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/rich_item" } }
+      }
+    },
+    "list": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "style", "items"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "list" },
+        "style": { "enum": ["ordered", "unordered", "plain"] },
+        "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/rich_item" } }
+      }
+    },
+    "verse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "lines"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "verse" },
+        "lines": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/rich_item" } },
+        "attribution_vi": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "aside": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "text_vi"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "aside" },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" }
+      }
+    },
+    "figure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "file_id", "alt_text_vi"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "figure" },
+        "file_id": { "$ref": "#/$defs/stable_id" },
+        "alt_text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "caption_vi": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "source_note": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "title_vi", "text_vi"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "type": { "const": "source_note" },
+        "title_vi": { "$ref": "#/$defs/non_empty_string" },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" }
+      }
+    },
+    "takeaway": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title_vi", "text_vi"],
+      "properties": {
+        "title_vi": { "$ref": "#/$defs/non_empty_string" },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "runs": { "$ref": "#/$defs/runs" }
+      }
+    },
+    "reflection_prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "text_vi", "response_mode"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "text_vi": { "$ref": "#/$defs/non_empty_string" },
+        "response_mode": { "enum": ["none", "private_text"] }
+      }
+    },
+    "reflection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompts", "closing_vi"],
+      "properties": {
+        "prompts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": { "$ref": "#/$defs/reflection_prompt" }
+        },
+        "closing_vi": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "layout_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reason_vi", "reviewed_by", "reviewed_at"],
+      "properties": {
+        "status": { "const": "approved_exception" },
+        "reason_vi": { "$ref": "#/$defs/non_empty_string" },
+        "reviewed_by": { "$ref": "#/$defs/non_empty_string" },
+        "reviewed_at": { "$ref": "#/$defs/utc_timestamp" }
+      }
+    },
+    "authorship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["author_id", "author_name", "source_label", "source_url"],
+      "properties": {
+        "author_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "author_name": { "$ref": "#/$defs/nullable_string" },
+        "source_label": { "$ref": "#/$defs/nullable_string" },
+        "source_url": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "uri", "pattern": "^[hH][tT][tT][pP][sS]://" }
+          ]
+        }
+      }
+    },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin_type", "source_collection_id", "source_item_id", "human_edited"],
+      "properties": {
+        "origin_type": { "enum": ["selflo_original", "owner_curated_ai_assisted", "adapted_public_domain", "licensed_source"] },
+        "source_collection_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "source_item_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "human_edited": { "type": "boolean" }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "note"],
+      "properties": {
+        "status": { "enum": ["selflo_owned", "public_domain", "licensed", "permission_granted", "unverified"] },
+        "note": { "$ref": "#/$defs/nullable_string" }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewed_by", "reviewed_at"],
+      "properties": {
+        "status": { "enum": ["draft", "needs_owner_review", "needs_edit", "approved", "rejected"] },
+        "reviewed_by": { "$ref": "#/$defs/nullable_string" },
+        "reviewed_at": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/utc_timestamp" }] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "reviewed_by": { "$ref": "#/$defs/non_empty_string" },
+              "reviewed_at": { "$ref": "#/$defs/utc_timestamp" }
+            }
+          },
+          "else": {
+            "properties": {
+              "reviewed_by": { "type": "null" },
+              "reviewed_at": { "type": "null" }
+            }
+          }
+        }
+      ]
+    },
+    "utc_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(?:Z|\\+00:00)$"
+    }
+  }
+}

@@ -897,6 +897,140 @@ end
 # Referential integrity
 # =============================================================================
 
+CONTENT_TAG_PATTERN = /\A[a-z][a-z0-9_]*:[a-z][a-z0-9_]*\z/
+
+
+def validate_content_tags!(payloads, channel)
+  catalogs = payloads.fetch("content_tag_catalog", [])
+
+  if catalogs.length > 1
+    abort("Library may contain at most one Content Tag Catalog")
+  end
+
+  # A catalog activates the new filter contract. Legacy packages without one
+  # remain publishable while the canonical quote backfill is in progress.
+  return if catalogs.empty?
+
+  catalog = catalogs.fetch(0)
+  dimensions = catalog.fetch("dimensions")
+  dimension_ids = dimensions.map { |dimension| dimension.fetch("id") }
+  unless dimension_ids.uniq.length == dimension_ids.length
+    abort("Content Tag Catalog dimension IDs are not unique")
+  end
+
+  allowed_tags = Set.new
+  dimensions.each do |dimension|
+    dimension_id = dimension.fetch("id")
+    value_ids = dimension.fetch("values").map { |value| value.fetch("id") }
+    unless value_ids.uniq.length == value_ids.length
+      abort("Content Tag Catalog value IDs are not unique: #{dimension_id}")
+    end
+    value_ids.each { |value_id| allowed_tags << "#{dimension_id}:#{value_id}" }
+  end
+
+  quotes = payloads.fetch("quote_pack").flat_map { |theme| theme.fetch("quotes") }
+  quotes.each do |quote|
+    quote_id = quote.fetch("id")
+    tags = quote["tags"]
+
+    if tags.nil?
+      abort("Release quote is missing tags: #{quote_id}") if channel == "release"
+      next
+    end
+
+    unless tags.is_a?(Array)
+      abort("Quote tags must be an array: #{quote_id}")
+    end
+    unless tags.uniq.length == tags.length
+      abort("Quote contains duplicate tags: #{quote_id}")
+    end
+
+    tags.each do |tag|
+      unless tag.is_a?(String) && CONTENT_TAG_PATTERN.match?(tag)
+        abort("Quote contains malformed tag: #{quote_id} / #{tag.inspect}")
+      end
+      unless allowed_tags.include?(tag)
+        abort("Quote contains unknown tag: #{quote_id} / #{tag}")
+      end
+    end
+
+    dimensions.each do |dimension|
+      dimension_id = dimension.fetch("id")
+      matching = tags.select { |tag| tag.start_with?("#{dimension_id}:") }
+      if dimension.fetch("selection") == "single" && matching.length > 1
+        abort("Quote exceeds single-value tag cardinality: #{quote_id} / #{dimension_id}")
+      end
+      next unless channel == "release"
+
+      minimum = dimension.fetch("release_min_count")
+      if matching.length < minimum
+        abort("Release quote has insufficient tags: #{quote_id} / #{dimension_id} requires #{minimum}")
+      end
+    end
+  end
+end
+
+
+def content_tag_coverage(payloads)
+  catalogs = payloads.fetch("content_tag_catalog", [])
+  return nil if catalogs.empty?
+
+  catalog = catalogs.fetch(0)
+  quotes = payloads.fetch("quote_pack").flat_map { |theme| theme.fetch("quotes") }
+  openable_story_ids = payloads.fetch("story", []).map { |story| story.fetch("id") }.to_set
+
+  tags = catalog.fetch("dimensions").flat_map do |dimension|
+    dimension.fetch("values").map do |value|
+      full_tag = [dimension.fetch("id"), value.fetch("id")].join(":")
+      tagged_quotes = quotes.select { |quote| Array(quote["tags"]).include?(full_tag) }
+      {
+        "tag" => full_tag,
+        "quote_count" => tagged_quotes.length,
+        "quote_count_with_openable_story" => tagged_quotes.count do |quote|
+          quote["story_id"] && openable_story_ids.include?(quote["story_id"])
+        end
+      }
+    end
+  end
+
+  missing_required_dimensions = []
+  single_dimension_overlaps = []
+  quotes.each do |quote|
+    quote_tags = Array(quote["tags"])
+    catalog.fetch("dimensions").each do |dimension|
+      dimension_id = dimension.fetch("id")
+      matching = quote_tags.select { |tag| tag.start_with?("#{dimension_id}:") }
+      if matching.length < dimension.fetch("release_min_count")
+        missing_required_dimensions << {
+          "quote_id" => quote.fetch("id"),
+          "dimension_id" => dimension_id,
+          "actual_count" => matching.length,
+          "required_count" => dimension.fetch("release_min_count")
+        }
+      end
+      if dimension.fetch("selection") == "single" && matching.length > 1
+        single_dimension_overlaps << {
+          "quote_id" => quote.fetch("id"),
+          "dimension_id" => dimension_id,
+          "tags" => matching
+        }
+      end
+    end
+  end
+
+  {
+    "quote_count" => quotes.length,
+    "quote_count_with_openable_story" => quotes.count do |quote|
+      quote["story_id"] && openable_story_ids.include?(quote["story_id"])
+    end,
+    "tags" => tags,
+    "missing_required_dimensions" => missing_required_dimensions,
+    "single_dimension_overlaps" => single_dimension_overlaps,
+    "zero_coverage_tags" => tags.select { |entry| entry.fetch("quote_count").zero? }.map { |entry| entry.fetch("tag") },
+    "zero_story_coverage_tags" => tags.select { |entry| entry.fetch("quote_count_with_openable_story").zero? }.map { |entry| entry.fetch("tag") }
+  }
+end
+
 def validate_references!(
   payloads,
   channel
@@ -938,6 +1072,9 @@ def validate_references!(
     themes.flat_map do |theme|
       theme.fetch("quotes")
     end
+
+
+  validate_content_tags!(payloads, channel)
 
 
   theme_ids =
@@ -1589,6 +1726,9 @@ def run_schema_gate!(
     "reading_intent_catalog" =>
       "perspective-reading-intent.schema.json",
 
+    "content_tag_catalog" =>
+      "perspective-content-tag-catalog.schema.json",
+
     "story_artwork_catalog" =>
       "perspective-story-artwork-catalog.schema.json",
 
@@ -1694,6 +1834,7 @@ content_entries =
         knowledge_catalog
         quote_pack
         reading_intent_catalog
+        content_tag_catalog
         story_artwork_catalog
         story
         image
@@ -3007,6 +3148,8 @@ manifest = {
 # Validate projected package before writing
 # =============================================================================
 
+projected_payload_groups = nil
+
 Dir.mktmpdir(
   "selflo-perspective-publish"
 ) do |temporary|
@@ -3073,7 +3216,7 @@ Dir.mktmpdir(
   )
 
 
-  grouped =
+  projected_payload_groups =
     payload_paths
       .group_by do |item|
 
@@ -3089,13 +3232,13 @@ Dir.mktmpdir(
 
 
   validate_references!(
-    grouped,
+    projected_payload_groups,
     channel
   )
 
 
   validate_story_v2_contract!(
-    grouped
+    projected_payload_groups
   )
 
 
@@ -3198,6 +3341,9 @@ audit = {
 
   "release_knowledge_projection" =>
     release_knowledge_projection,
+
+  "content_tag_coverage" =>
+    content_tag_coverage(projected_payload_groups),
 
   "manifest_sha256" =>
     sha(

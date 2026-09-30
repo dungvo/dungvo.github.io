@@ -11,12 +11,17 @@ Năm schema trong folder này là biểu diễn machine-readable của [Library 
 | `perspective-knowledge.schema.json` | concept, theory, framework và reference |
 | `perspective-reading-intent.schema.json` | bộ chọn nhanh đời thường và membership story many-to-many |
 | `perspective-story.schema.json` | story, section, block và optional hero image |
+| `perspective-story-v3.schema.json` | executable contract riêng cho `editorial_v3`; schema `1.2`, semantic block và rich-text marks |
 | `perspective-story-artwork-catalog.schema.json` | shared Story Reader artwork theo primary theme |
 
 Fixture cần review:
 
 - `../fixtures/LibraryV1/authoring-release-ineligible/`: đúng schema và Authoring mode, cố ý không đủ lifecycle để release; story không có ảnh.
 - `../../../../SelfloTests/PerspectiveContent/Fixtures/LibraryV1/valid/`: đúng schema và Release mode; story có JPEG hero thật.
+- `../fixtures/StoryV3/valid/`: fixture Core/Extended V3 đúng schema, dùng cho validator và reference renderer; không phải story production.
+- `../fixtures/StoryV3/invalid/invalid-cases.json`: mutation cases tạo payload sai shape/semantic và package thiếu capability mà không copy nguyên story nhiều lần.
+
+V1/V2 tiếp tục dùng `perspective-story.schema.json`. V3 dùng schema versioned riêng để không nới hoặc đổi acceptance của payload đã phát hành. `required_capabilities` trong manifest là optional đối với package cũ; semantic package validator bắt buộc capability tương ứng khi manifest chứa `editorial_v3`.
 
 Gate chỉ cần xác nhận schema/fixture không thêm hoặc đổi semantics so với contract đã Accepted. Nó không duyệt nội dung production, không bật Library trong app và không cho phép bắt đầu Phase 11 content cutover.
 

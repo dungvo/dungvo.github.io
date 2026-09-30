@@ -138,7 +138,14 @@
         ],
         "tie_break_order": -74
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "old_pattern_not_identity",
@@ -207,7 +214,15 @@
         ],
         "tie_break_order": -70
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "quote.potter_and_two_hands",
@@ -371,7 +386,14 @@
         "reference_ids": [
           "ref.neff_2003_self_compassion"
         ]
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "comparison_loop_digest",
@@ -758,7 +780,14 @@
           "windows"
         ],
         "tie_break_order": 1039
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "another_persons_shoes_hurt",
@@ -831,7 +860,14 @@
           "shoes"
         ],
         "tie_break_order": 1040
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "late_flower_meets_another_sky",

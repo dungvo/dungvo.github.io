@@ -69,7 +69,14 @@
         ],
         "tie_break_order": -100
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     },
     {
       "id": "return_to_what_is_here",
@@ -138,7 +145,14 @@
         ],
         "tie_break_order": -78
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     },
     {
       "id": "pause_is_an_action",
@@ -205,7 +219,14 @@
         ],
         "tie_break_order": -72
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     },
     {
       "id": "brain_system_digest",
@@ -424,7 +445,15 @@
           "sunlight"
         ],
         "tie_break_order": 1003
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "rain_waits_beneath_city_noise",
@@ -497,7 +526,14 @@
           "rain"
         ],
         "tie_break_order": 1004
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     },
     {
       "id": "tea_waits_beside_the_screen",
@@ -643,7 +679,14 @@
           "shadow"
         ],
         "tie_break_order": 1006
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     },
     {
       "id": "red_light_reveals_the_trees",
@@ -716,7 +759,14 @@
           "red_light"
         ],
         "tie_break_order": 1007
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     },
     {
       "id": "needle_reopens_the_same_hole",
@@ -789,7 +839,15 @@
           "needle"
         ],
         "tie_break_order": 1008
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "clock_does_not_hurry_when_watched",
@@ -862,7 +920,14 @@
           "clock"
         ],
         "tie_break_order": 1009
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     }
   ]
 }

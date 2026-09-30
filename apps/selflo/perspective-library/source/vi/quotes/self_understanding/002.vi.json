@@ -75,7 +75,14 @@
           "lamp"
         ],
         "tie_break_order": 1042
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "trains_leave_together_for_different_cities",
@@ -148,7 +155,14 @@
           "train"
         ],
         "tie_break_order": 1043
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "gentle_voice_for_the_broken_bowl",
@@ -221,7 +235,14 @@
           "bowl"
         ],
         "tie_break_order": 1044
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "scratched_table_stays_in_the_home",
@@ -294,7 +315,15 @@
           "table"
         ],
         "tie_break_order": 1045
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "first_needle_needs_light_not_blame",
@@ -367,7 +396,15 @@
           "needle"
         ],
         "tie_break_order": 1046
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "young_tree_tied_with_soft_cloth",
@@ -440,7 +477,14 @@
           "tree"
         ],
         "tie_break_order": 1047
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "first_burnt_batch_does_not_erase_the_kitchen",
@@ -575,7 +619,14 @@
         ],
         "tie_break_order": 1114
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.ii_08.own_soul",
@@ -637,7 +688,14 @@
         ],
         "tie_break_order": 1116
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.v_11.use_of_soul",
@@ -761,7 +819,14 @@
         ],
         "tie_break_order": 1155
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.vii_59.fountain_good",
@@ -823,7 +888,14 @@
         ],
         "tie_break_order": 1158
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     }
   ]
 }

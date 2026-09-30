@@ -218,7 +218,14 @@
           "motivation"
         ],
         "tie_break_order": 1077
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
     },
     {
       "id": "chair_is_repaired_for_someone",
@@ -291,7 +298,14 @@
           "connection"
         ],
         "tie_break_order": 1078
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
     },
     {
       "id": "door_opens_more_lightly_from_inside",
@@ -364,7 +378,14 @@
           "autonomy"
         ],
         "tie_break_order": 1079
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
     },
     {
       "id": "cook_still_wants_to_taste_the_soup",
@@ -437,7 +458,14 @@
           "motivation"
         ],
         "tie_break_order": 1080
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
     },
     {
       "id": "timecard_cannot_measure_presence",
@@ -510,7 +538,14 @@
           "time"
         ],
         "tie_break_order": 1081
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
     },
     {
       "id": "musician_stays_with_one_lost_note",
@@ -656,7 +691,15 @@
           "practice"
         ],
         "tie_break_order": 1083
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "carpenter_measures_the_uneven_leg",
@@ -729,7 +772,15 @@
           "practice"
         ],
         "tie_break_order": 1084
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "even_stitch_follows_many_undoings",
@@ -802,7 +853,15 @@
           "practice"
         ],
         "tie_break_order": 1085
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "mason_checks_the_string_each_row",
@@ -875,7 +934,15 @@
           "practice"
         ],
         "tie_break_order": 1086
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     }
   ]
 }

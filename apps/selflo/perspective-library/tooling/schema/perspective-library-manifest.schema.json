@@ -27,6 +27,17 @@
     "content_version": { "$ref": "#/$defs/non_empty_string" },
     "language": { "const": "vi" },
     "generated_at": { "$ref": "#/$defs/utc_timestamp" },
+    "required_capabilities": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "story_reader.editorial_v3.core",
+          "story_reader.editorial_v3.extended_text",
+          "story_reader.editorial_v3.figure"
+        ]
+      }
+    },
     "files": {
       "type": "array",
       "minItems": 2,
@@ -44,6 +55,11 @@
         },
         {
           "contains": { "type": "object", "properties": { "kind": { "const": "reading_intent_catalog" } }, "required": ["kind"] },
+          "minContains": 0,
+          "maxContains": 1
+        },
+        {
+          "contains": { "type": "object", "properties": { "kind": { "const": "content_tag_catalog" } }, "required": ["kind"] },
           "minContains": 0,
           "maxContains": 1
         }
@@ -76,7 +92,7 @@
       "required": ["id", "kind", "revision", "path", "media_type", "sha256", "byte_count"],
       "properties": {
         "id": { "$ref": "#/$defs/stable_id" },
-        "kind": { "enum": ["knowledge_catalog", "quote_pack", "reading_intent_catalog", "story_artwork_catalog", "story", "image"] },
+        "kind": { "enum": ["knowledge_catalog", "quote_pack", "reading_intent_catalog", "content_tag_catalog", "story_artwork_catalog", "story", "image"] },
         "revision": { "type": "integer", "minimum": 1 },
         "path": { "$ref": "#/$defs/relative_path" },
         "media_type": { "enum": ["application/json", "image/jpeg", "image/png", "image/webp"] },
@@ -85,7 +101,7 @@
       },
       "allOf": [
         {
-          "if": { "properties": { "kind": { "enum": ["knowledge_catalog", "quote_pack", "reading_intent_catalog", "story_artwork_catalog", "story"] } }, "required": ["kind"] },
+          "if": { "properties": { "kind": { "enum": ["knowledge_catalog", "quote_pack", "reading_intent_catalog", "content_tag_catalog", "story_artwork_catalog", "story"] } }, "required": ["kind"] },
           "then": { "properties": { "media_type": { "const": "application/json" }, "byte_count": { "type": "integer", "maximum": 2097152 } } }
         },
         {

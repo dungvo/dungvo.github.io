@@ -1,0 +1,3819 @@
+{
+  "schema_version": "selflo.content-tag-backfill-report.v1",
+  "release_library_revision": 33,
+  "release_quote_count": 313,
+  "tagged_fragment_count": 61,
+  "changed_fragment_count": 0,
+  "applied": true,
+  "assignments": [
+    {
+      "quote_id": "a_good_meal_ends_with_enough",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "a_pause_keeps_the_first_reaction_from_becoming_the_only_choice",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "acceptance_is_not_giving_up",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "another_persons_shoes_hurt",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "applause_ending_is_not_failure",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "apron_waits_on_the_hook",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "athlete_sits_after_finish",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_i_ch01.learning",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_i_ch03.fine_words",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_i_ch08.faults",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_ii_ch13.action",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_ii_ch15.thought",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_ii_ch17.knowledge",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_iv_ch17.inward",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_xv_ch20.seek",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.confucius.book_xv_ch23.reciprocity",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_005.hatred",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_006.end",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_020.practice",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_035.tamed_mind",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_049.bee",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_050.own_deeds",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_080.fashion_self",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_081.rock",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_103.self_conquest",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_01.appearance",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_01.control",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_05.opinion",
+      "primary_theme": "emotion",
+      "story_id": "story.empty_boat_on_the_river",
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_08.flow",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_10.use",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_12.small",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_15.banquet",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_17.role",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.epictetus.ench_20.delay",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.francis_bacon.bacon_friend_against_self_flattery",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.francis_bacon.bacon_power_over_others_lose_self",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.henry_david_thoreau.thoreau_change_convulses_body",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.henry_david_thoreau.thoreau_corporation_with_conscience",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.henry_david_thoreau.thoreau_live_according_to_wisdom",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.henry_david_thoreau.thoreau_return_with_new_experience",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.henry_david_thoreau.thoreau_simple_independent_mind",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.henry_david_thoreau.thoreau_stand_aloof_from_actions",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_08.water",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_09.full_vessel",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_11.empty_space",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_15.muddy_water",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_22.complete",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_23.storm_passes",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_24.tiptoes",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_33.know_self",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_48.diminish",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_58.fortune_misfortune",
+      "primary_theme": "adversity_resilience",
+      "story_id": "story.old_man_and_returning_horse",
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_64.first_step",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.ii_06.short_life",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.ii_07.unsettled_aim",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.ii_08.own_soul",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.ii_14.past_future",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.ii_17.fame_forgotten",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iii_02.cracked_loaf",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iii_04.others_affairs",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iii_05.stand_upright",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iii_10.present_moment",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_03.change_and_thought",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_03.inner_retreat",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_07.suppress_injury",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_12.change_course",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_17.be_good_now",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_18.own_actions",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_35.one_day",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_36.nature_change",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_49.brave_bearing",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.iv_49.promontory",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.v_16.mind_colour",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.v_20.obstruction_progress",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_03.look_within",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_06.best_revenge",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_11.return_yourself",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_19.human_power",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_21.truth_change",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_26.duty_elements",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_39.adapt_love",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_48.others_excellence",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_50.good_effort",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_51.wise_work",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vi_54.swarm_bee",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_02.renew_life",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_03.worth_pursuit",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_07.accept_help",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_08.future_reason",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_15.retain_lustre",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_28.just_calm",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_56.life_overplus",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.vii_59.fountain_good",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.viii_32.single_acts",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.viii_33.fortune_gifts",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.viii_36.present_bounds",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.viii_47.judgment_afflicts",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ma.x_16.be_one",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.ralph_waldo_emerson.emerson_common_wisdom_silenced",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.ralph_waldo_emerson.emerson_each_new_mind",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.ralph_waldo_emerson.emerson_fugitive_deed_expresses_character",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.ralph_waldo_emerson.emerson_love_teaches_self_knowledge",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.ralph_waldo_emerson.emerson_past_into_present_hour",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.ralph_waldo_emerson.emerson_voice_tenderness_truth_courage",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_01.postponing",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_02.nowhere",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_03.loyal",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_07.mutual_learning",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_09.friends",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_13.imagination",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_20.deeds",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.seneca.letter_28.burdens",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.william_james.james_bundles_of_habit",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:research"
+      ]
+    },
+    {
+      "quote_id": "attributed.william_james.james_habits_can_be_courage",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:research"
+      ]
+    },
+    {
+      "quote_id": "attributed.william_james.james_object_occupies_mind",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:research"
+      ]
+    },
+    {
+      "quote_id": "attributed.william_james.james_spectators_judgment",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:research"
+      ]
+    },
+    {
+      "quote_id": "attributed.zhuangzi.chapter_01.rest_beneath_tree",
+      "primary_theme": "self_understanding",
+      "story_id": "story.large_tree_beyond_the_carpenters_measure",
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "attributed.zhuangzi.chapter_20.change_with_time",
+      "primary_theme": "change_growth",
+      "story_id": "story.tree_and_silent_goose",
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "blinking_cursor_does_not_write_first_line",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "bridge_does_not_hold_the_walker",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "burn_mark_maps_the_flame",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "calling_mud_dry_changes_nothing",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "candle_is_seen_when_it_goes_out",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "carpenter_measures_the_uneven_leg",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "chair_is_repaired_for_someone",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "chipped_cup_stays_for_its_story",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "clarity_before_speed",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "clock_does_not_hurry_when_watched",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "coffee_guides_the_hand_to_one_cup",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "coffee_returns_a_distant_morning",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "compass_keeps_direction_not_steps",
+      "primary_theme": "meaning_values",
+      "story_id": "story.the_compass_does_not_walk_for_you",
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "continuous_looking_only_tires_eyes",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "cook_still_wants_to_taste_the_soup",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "crooked_pot_shows_the_heavy_hand",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "curtain_keeps_the_old_smoke",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "curtain_opens_with_the_alarm",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "damp_paper_is_not_the_pens_fault",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "dark_room_before_the_body_is_ready",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "do_not_let_work_rent_your_mind_after_hours",
+      "primary_theme": "rest_wellbeing",
+      "story_id": "story.original_chair_beside_window",
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "do_not_need_to_love_the_storm_to_love_the_journey",
+      "primary_theme": "adversity_resilience",
+      "story_id": "story.original_stone_that_loved_stormy_days",
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "door_opens_more_lightly_from_inside",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "door_stays_where_home_begins",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "each_season_has_its_own_gift",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "emergency_fund_can_become_breathing_time",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "empty_chair_changes_the_table",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "empty_desk_with_glowing_screen",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "energy_has_a_budget",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "enough_for_today",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "even_stitch_follows_many_undoings",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "excitement_has_a_lifespan",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "eyes_memorize_the_unopened_page",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "faster_clock_does_not_lengthen_day",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "feeling_is_signal_not_command",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "first_needle_needs_light_not_blame",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "gentle_voice_for_the_broken_bowl",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "gentleness_creates_room",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "habit_arrives_without_knocking",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "habit_is_a_path_worn_by_feet",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "hand_does_not_need_to_grip",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "hand_finds_the_key_tray",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "hands_know_who_the_work_is_for",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "home_is_known_by_what_it_keeps",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "kitchen_cools_after_the_flame",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "kitchen_sounds_like_someone_waiting",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "knife_sharpens_at_the_same_angle",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "knots_loosen_from_the_edge",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "light_gives_the_room_a_shape",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "lit_window_guides_the_way_home",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "map_does_not_lower_the_mountain",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "maps_hide_the_nearby_door",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "marathoner_does_not_chase_sprinter_at_start",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "market_reopens_one_stall_at_a_time",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "mason_checks_the_string_each_row",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "meaning_is_often_found_in_how",
+      "primary_theme": "meaning_values",
+      "story_id": "story.rails_that_diverge",
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "morning_after_storm_starts_small",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "morning_dew_leaves_when_warm",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "morning_enters_before_the_alarm",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "morning_thread_gathers_the_days",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "muscle_recovers_during_rest",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "name_the_weather_inside",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "needle_reopens_the_same_hole",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "neighboring_light_does_not_dim_this_lamp",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "new_leaves_do_not_need_an_audience",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "not_every_stone_is_yours_to_carry_home",
+      "primary_theme": "work_achievement",
+      "story_id": "story.original_builder_and_shapeless_stones",
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "old_pattern_not_identity",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "old_song_opens_a_closed_room",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "ordinary_day_can_be_recharge",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "ordinary_morning_is_a_quiet_gift",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "patched_cloth_finds_another_way_to_stay",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "pause_is_an_action",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "pillow_hollows_across_many_nights",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "pinned_tab_is_not_completed_work",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "porch_light_marks_the_kind_of_home",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "pot_cools_between_lid_checks",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "price_tag_does_not_show_hours_traded",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "progress_can_be_quiet",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "quiet_house_reveals_the_clock",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "rain_stopped_before_ground_dried",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "rain_waits_beneath_city_noise",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "red_light_reveals_the_trees",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "repeated_story_may_be_unfinished",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "research.day17.future_not_wholly_ours",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day18.2_14",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day18.2_47",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day19.katha_chariot",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day19.mundaka_question_all",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day21.homesick",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:folklore"
+      ]
+    },
+    {
+      "quote_id": "research.day21.mountain_aging",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:folklore"
+      ]
+    },
+    {
+      "quote_id": "research.day21.status_circle",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
+    },
+    {
+      "quote_id": "research.day21.status_crowd",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
+    },
+    {
+      "quote_id": "research.day22.root_cause",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
+    },
+    {
+      "quote_id": "research.day23.nbk_gioitham_02",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day23.nbk_nhan_02",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day23.nbk_nttt_04",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day24.kieu_004",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day24.kieu_005",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day24.kieu_007",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day24.kieu_014",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day24.kieu_019",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an1_16",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an2_10",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an2_12",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an2_15",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an2_18",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an3_21",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an4_10",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an4_22",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an4_26",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an5_20",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an6_2",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day25.an7_21",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day26.gaozi_i_fishbear",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day26.gong_sun_chou_miao",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day26.jin_xin_i_book",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day26.jinxin_timing",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.day26.li_lou_i_compass",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v019",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v064",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v223",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.ch02.007",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.ch05.014",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.ch12.034",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.ch13.037",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch23.010",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch24.013",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch27.023",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch28.026",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch29.034",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch32.044",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch33.046",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch33.047",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch35.059",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch36.061",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch37.067",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch38.073",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch41.080",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.laozi.day2.ch42.085",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.mn.day12.mn20_01",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "research.mn.day12.mn22_02",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "quote_id": "rest_is_part_of_rhythm",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "return_to_what_is_here",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "road_dries_from_edge_inward",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "room_changes_with_one_lamp",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "room_holds_the_bells_echo",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "roots_hold_when_wind_changes",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "row_today_build_one_piece_of_tomorrows_raft",
+      "primary_theme": "change_growth",
+      "story_id": "story.original_between_two_banks",
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "scratched_table_stays_in_the_home",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "self_judgment_loop_digest",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "shadow_changes_beneath_the_walker",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "shadow_length_depends_on_sun",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "shop_closes_but_street_continues",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "silence_between_notes_belongs_to_music",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "small_boundary_is_still_boundary",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "small_daily_expense_reaches_month_end",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "small_flame_warms_a_small_room",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "small_suitcase_reveals_what_matters",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "some_footprints_lead_toward_home",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "space_between_stimulus_and_response",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "sprint_and_marathon_need_different_breath",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "stable_is_not_empty",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "stars_remain_behind_clouds",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "streetlight_turns_off_when_unneeded",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "string_needs_enough_tension",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "stuck_door_opens_the_other_way",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "sunlight_crosses_the_floor",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "sunlight_finds_the_scratch",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "tea_turns_bitter_when_oversteeped",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "tear_lies_flat_under_the_needle",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "ten_notifications_are_not_ten_priorities",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "ten_percent_means_recharge",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "the_opposite_chair_stays_occupied",
+      "primary_theme": "relationships",
+      "story_id": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "the_pauses_were_the_life",
+      "primary_theme": "meaning_values",
+      "story_id": "story.original_if_i_lived_a_human_life",
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "tight_grip_tires_before_arrival",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "timecard_cannot_measure_presence",
+      "primary_theme": "work_achievement",
+      "story_id": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "tired_body_waits_for_the_train",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "too_many_tabs_slow_the_important_one",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "towel_reveals_what_it_carried",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "trains_leave_together_for_different_cities",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "two_trees_begin_with_different_seeds",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "two_windows_receive_the_same_sun",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "unanswered_alarm_teaches_ears_not_to_hear",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "village_road_contains_a_childhood",
+      "primary_theme": "meaning_values",
+      "story_id": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "wakeful_hours_fill_the_hourglass",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "wall_reveals_the_way_around",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "wallet_lightens_before_bill_disappears",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "water_heats_before_the_kettle_sings",
+      "primary_theme": "emotion",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:emotions",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "water_settles_when_untouched",
+      "primary_theme": "rest_wellbeing",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "intent:reduce_anxiety",
+        "support:soothe",
+        "support:small_action",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "waves_arrive_and_leave",
+      "primary_theme": "attention",
+      "story_id": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "window_fogs_before_clearing",
+      "primary_theme": "adversity_resilience",
+      "story_id": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "worn_carpet_marks_a_familiar_path",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "worn_step_remembers_many_feet",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "wrong_turn_stays_on_the_map",
+      "primary_theme": "change_growth",
+      "story_id": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "quote_id": "young_tree_tied_with_soft_cloth",
+      "primary_theme": "self_understanding",
+      "story_id": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
+    }
+  ]
+}

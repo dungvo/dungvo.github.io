@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.fixture_editorial_v3_core",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "reader_format": "editorial_v3",
+  "title_vi": "Một đời người được đọc từ bên trong",
+  "subtitle_vi": "Fixture Core V3 cho app, validator và reference renderer.",
+  "opening_quote_vi": "Không phải điều gì cũng có một lần khác.",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": ["hope"],
+    "keywords": ["thời gian", "lựa chọn", "gia đình"],
+    "story_style": "reflective_journey"
+  },
+  "sections": [
+    {
+      "id": "opening",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Một bản nháp rất dễ hiểu",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "part_1",
+          "type": "part_heading",
+          "part_number": 1,
+          "title_vi": "Cuộc đời trong bản kế hoạch",
+          "subtitle_vi": "Mọi con đường đều thẳng khi được nhìn từ cuối đường."
+        },
+        {
+          "id": "opening_narrative",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Tôi từng nghĩ một đời người có thể được sắp xếp thành những chặng thật rõ ràng.",
+          "runs": [
+            { "text_vi": "Tôi từng nghĩ một đời người có thể được sắp xếp thành ", "marks": [] },
+            { "text_vi": "những chặng thật rõ ràng", "marks": ["strong", "accent"] },
+            { "text_vi": ".", "marks": [] }
+          ]
+        },
+        {
+          "id": "opening_transition",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Rồi bản kế hoạch ấy bắt đầu va vào đời sống."
+        }
+      ]
+    },
+    {
+      "id": "youth",
+      "marker_vi": "13–22",
+      "marker_unit_vi": "tuổi",
+      "title_vi": "Tôi sẽ đi tìm mình là ai",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "youth_narrative",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Tôi muốn học một nghề đủ nghiêm túc để tự nuôi sống mình, nhưng vẫn dành chỗ cho những điều chưa biết sẽ dẫn tới đâu."
+        },
+        {
+          "id": "youth_beat",
+          "type": "paragraph",
+          "style": "beat",
+          "text_vi": "Có thể tôi sẽ chọn sai."
+        },
+        {
+          "id": "youth_inner",
+          "type": "dialogue",
+          "style": "inner_monologue",
+          "turns": [
+            {
+              "id": "turn_self_thought",
+              "speaker": { "id": "self", "label_vi": "Tôi" },
+              "delivery": "thought",
+              "paragraphs": [
+                {
+                  "text_vi": "Nếu mình đi nhầm đường thì sao?",
+                  "runs": [
+                    { "text_vi": "Nếu mình đi nhầm đường", "marks": ["emphasis"] },
+                    { "text_vi": " thì sao?", "marks": [] }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "youth_statement",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Đôi khi đi nhầm đường cũng là một cách tìm đường.",
+          "shareable": true
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "marker_vi": "23–35",
+      "marker_unit_vi": "tuổi",
+      "title_vi": "Tôi sẽ làm việc rất nghiêm túc",
+      "subtitle_vi": "Không phải để có một chức danh đẹp.",
+      "blocks": [
+        {
+          "id": "work_lead",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Tiền mua được một thứ rất quan trọng:"
+        },
+        {
+          "id": "work_statement",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Quyền lựa chọn.",
+          "runs": [
+            { "text_vi": "Quyền lựa chọn", "marks": ["strong", "accent"] },
+            { "text_vi": ".", "marks": [] }
+          ],
+          "shareable": true
+        },
+        {
+          "id": "work_narrative",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Có tiền tiết kiệm, tôi có thể rời một nơi không còn phù hợp và dành thời gian cho người mình thương."
+        },
+        {
+          "id": "work_quote_centerpiece",
+          "type": "pull_quote",
+          "presentation": "centerpiece",
+          "text_vi": "Đừng đợi cuộc đời trở nên ổn rồi mới bắt đầu sống.",
+          "attribution_vi": null,
+          "shareable": true
+        }
+      ]
+    },
+    {
+      "id": "next_week",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Không phải thứ gì cũng có tuần sau",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "next_week_lead",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Một chiều, cha gọi cho tôi."
+        },
+        {
+          "id": "next_week_exchange",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_father",
+              "speaker": { "id": "father", "label_vi": "Cha" },
+              "delivery": "spoken",
+              "paragraphs": [
+                { "text_vi": "Cuối tuần về ăn cơm không?" }
+              ]
+            },
+            {
+              "id": "turn_self",
+              "speaker": { "id": "self", "label_vi": "Tôi" },
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tuần này con bận, tuần sau con về.",
+                  "runs": [
+                    { "text_vi": "Tuần này con bận, ", "marks": [] },
+                    { "text_vi": "tuần sau", "marks": ["emphasis"] },
+                    { "text_vi": " con về.", "marks": [] }
+                  ]
+                },
+                { "text_vi": "Con hứa." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "next_week_monologue",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_father_remembered",
+              "speaker": { "id": "father", "label_vi": "Cha" },
+              "delivery": "remembered",
+              "paragraphs": [
+                { "text_vi": "Về được thì về, cả nhà đợi cơm." },
+                { "text_vi": "Bận quá thì nhớ ăn uống cho đàng hoàng." }
+              ]
+            },
+            {
+              "id": "turn_letter_written",
+              "speaker": { "id": "father", "label_vi": "Cha" },
+              "delivery": "written",
+              "paragraphs": [
+                { "text_vi": "Trên bàn còn phần của con." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "next_week_narrative",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng bây giờ chẳng còn tuần sau nữa."
+        },
+        {
+          "id": "next_week_statement",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Không phải điều gì cũng có một lần khác.",
+          "shareable": true
+        },
+        { "id": "scene_break", "type": "divider" },
+        {
+          "id": "quote_inset",
+          "type": "pull_quote",
+          "presentation": "inset",
+          "text_vi": "Rất nhiều thứ mình nghĩ là khẩn cấp thực ra chẳng quan trọng.",
+          "attribution_vi": null,
+          "shareable": true
+        },
+        {
+          "id": "after_inset",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khoảng lặng sau câu nói ấy ở lại rất lâu."
+        },
+        {
+          "id": "quote_rail",
+          "type": "pull_quote",
+          "presentation": "rail",
+          "text_vi": "Hãy dành thời gian cho điều thật sự đáng được có mặt hôm nay.",
+          "attribution_vi": "Selflo",
+          "shareable": false
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Một kế hoạch tốt không thay thế được sự có mặt. Điều quan trọng đôi khi không phải bước đi hoàn hảo, mà là nhận ra điều gì không nên tiếp tục để sang tuần sau."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_week",
+        "text_vi": "Có một tuần sau nào bạn vẫn đang trì hoãn không?",
+        "response_mode": "private_text"
+      },
+      {
+        "id": "reflection_today",
+        "text_vi": "Điều gì đáng được bạn có mặt trọn vẹn hơn hôm nay?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": "Không phải điều gì cũng có một lần khác."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": "Selflo",
+    "source_label": "Fixture Story Reader V3",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "selflo_original",
+    "source_collection_id": null,
+    "source_item_id": null,
+    "human_edited": true
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Fixture contract; không phải story production."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

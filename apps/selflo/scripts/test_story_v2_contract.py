@@ -163,5 +163,28 @@ class StoryV2ContractTests(unittest.TestCase):
                 self.assertEqual(actual, shape)
 
 
+class ContentTagSchemaContractTests(unittest.TestCase):
+    def test_quote_schema_allows_only_generic_full_tags(self) -> None:
+        schema = read_json(APP_ROOT / "perspective-library/tooling/schema/perspective-theme.schema.json")
+        quote = schema["$defs"]["quote"]
+        self.assertNotIn("tags", quote["required"])
+        self.assertEqual(quote["properties"]["tags"]["items"]["$ref"], "#/$defs/content_tag")
+        self.assertEqual(schema["$defs"]["content_tag"]["pattern"], "^[a-z][a-z0-9_]*:[a-z][a-z0-9_]*$")
+
+    def test_manifest_supports_at_most_one_content_tag_catalog(self) -> None:
+        schema = read_json(APP_ROOT / "perspective-library/tooling/schema/perspective-library-manifest.schema.json")
+        descriptor = schema["$defs"]["file_descriptor"]
+        self.assertIn("content_tag_catalog", descriptor["properties"]["kind"]["enum"])
+        constraints = schema["properties"]["files"]["allOf"]
+        catalog = next(rule for rule in constraints if rule["contains"]["properties"]["kind"].get("const") == "content_tag_catalog")
+        self.assertEqual((catalog["minContains"], catalog["maxContains"]), (0, 1))
+
+    def test_catalog_schema_carries_release_cardinality(self) -> None:
+        schema = read_json(APP_ROOT / "perspective-library/tooling/schema/perspective-content-tag-catalog.schema.json")
+        dimension = schema["properties"]["dimensions"]["items"]
+        self.assertIn("release_min_count", dimension["required"])
+        self.assertEqual(dimension["properties"]["release_min_count"]["minimum"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

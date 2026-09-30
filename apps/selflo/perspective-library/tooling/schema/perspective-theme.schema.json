@@ -21,6 +21,7 @@
     "nullable_string": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/non_empty_string" }] },
     "stable_id": { "type": "string", "pattern": "^[a-z0-9]+([._][a-z0-9]+)*$" },
     "stable_id_array": { "type": "array", "items": { "$ref": "#/$defs/stable_id" } },
+    "content_tag": { "type": "string", "pattern": "^[a-z][a-z0-9_]*:[a-z][a-z0-9_]*$" },
     "string_array": { "type": "array", "items": { "$ref": "#/$defs/non_empty_string" } },
     "quote": {
       "type": "object",
@@ -34,6 +35,7 @@
         "text_vi": { "$ref": "#/$defs/non_empty_string" },
         "subtitle_vi": { "$ref": "#/$defs/nullable_string" },
         "story_id": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/stable_id" }] },
+        "tags": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/content_tag" } },
         "primary_theme": { "$ref": "#/$defs/stable_id" },
         "selection": { "$ref": "#/$defs/selection" },
         "authorship": { "$ref": "#/$defs/authorship" },

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schema/perspective-content-tag-catalog.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "content_version", "entity", "language", "dimensions"],
+  "properties": {
+    "schema_version": { "const": "selflo.content-tags.v1" },
+    "content_version": { "type": "string", "pattern": "\\S" },
+    "entity": { "const": "content_tag_catalog" },
+    "language": { "const": "vi" },
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title_vi", "selection", "matching", "display_order", "release_min_count", "values"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "title_vi": { "type": "string", "pattern": "\\S" },
+          "selection": { "enum": ["single", "multiple"] },
+          "matching": { "const": "required_any" },
+          "display_order": { "type": "integer" },
+          "release_min_count": { "type": "integer", "minimum": 0 },
+          "values": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "title_vi", "icon_key", "display_order"],
+              "properties": {
+                "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+                "title_vi": { "type": "string", "pattern": "\\S" },
+                "icon_key": { "type": ["string", "null"] },
+                "display_order": { "type": "integer" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": "selflo.story-v3-invalid-cases.v1",
+  "base_fixture": "../valid/core-story.valid.json",
+  "cases": [
+    {
+      "id": "runs_mismatch",
+      "operation": "set",
+      "path": "/sections/0/blocks/1/runs/1/text_vi",
+      "value": "một nội dung khác",
+      "expected_semantic_code": "runs_text_mismatch"
+    },
+    {
+      "id": "invalid_mark",
+      "operation": "set",
+      "path": "/sections/0/blocks/1/runs/1/marks/0",
+      "value": "underline",
+      "expected_schema_valid": false,
+      "expected_semantic_code": "unknown_rich_text_mark"
+    },
+    {
+      "id": "dialogue_without_turn",
+      "operation": "set",
+      "path": "/sections/3/blocks/1/turns",
+      "value": [],
+      "expected_schema_valid": false,
+      "expected_semantic_code": "dialogue_without_turn"
+    },
+    {
+      "id": "turn_without_paragraph",
+      "operation": "set",
+      "path": "/sections/3/blocks/1/turns/0/paragraphs",
+      "value": [],
+      "expected_schema_valid": false,
+      "expected_semantic_code": "turn_without_paragraph"
+    },
+    {
+      "id": "invalid_speaker",
+      "operation": "set",
+      "path": "/sections/3/blocks/1/turns/0/speaker",
+      "value": { "id": "father", "label_vi": "" },
+      "expected_schema_valid": false,
+      "expected_semantic_code": "invalid_dialogue_speaker"
+    },
+    {
+      "id": "invalid_delivery",
+      "operation": "set",
+      "path": "/sections/3/blocks/1/turns/0/delivery",
+      "value": "telepathy",
+      "expected_schema_valid": false,
+      "expected_semantic_code": "invalid_dialogue_delivery"
+    },
+    {
+      "id": "exchange_without_distinct_turns",
+      "operation": "set",
+      "path": "/sections/3/blocks/1/turns",
+      "value": [
+        {
+          "id": "turn_alone",
+          "speaker": { "id": "self", "label_vi": "Tôi" },
+          "delivery": "spoken",
+          "paragraphs": [{ "text_vi": "Chỉ có một lượt." }]
+        }
+      ],
+      "expected_semantic_code": "exchange_requires_distinct_turns"
+    },
+    {
+      "id": "inner_monologue_multiple_speakers",
+      "operation": "set",
+      "path": "/sections/1/blocks/2/turns",
+      "value": [
+        {
+          "id": "turn_self_one",
+          "speaker": { "id": "self", "label_vi": "Tôi" },
+          "delivery": "thought",
+          "paragraphs": [{ "text_vi": "Mình đang nghĩ gì?" }]
+        },
+        {
+          "id": "turn_other_thought",
+          "speaker": { "id": "other", "label_vi": "Người khác" },
+          "delivery": "thought",
+          "paragraphs": [{ "text_vi": "Một ý nghĩ khác." }]
+        }
+      ],
+      "expected_semantic_code": "inner_monologue_multiple_speakers"
+    },
+    {
+      "id": "statement_with_attribution",
+      "operation": "set",
+      "path": "/sections/1/blocks/3/attribution_vi",
+      "value": "Người kể",
+      "expected_schema_valid": false,
+      "expected_semantic_code": "statement_has_attribution"
+    },
+    {
+      "id": "statement_wrapped_in_quotes",
+      "operation": "set",
+      "path": "/sections/1/blocks/3/text_vi",
+      "value": "“Đôi khi đi nhầm đường cũng là một cách tìm đường.”",
+      "expected_semantic_code": "statement_quote_wrapper"
+    },
+    {
+      "id": "invalid_quote_presentation",
+      "operation": "set",
+      "path": "/sections/2/blocks/3/presentation",
+      "value": "hero",
+      "expected_schema_valid": false,
+      "expected_semantic_code": "invalid_quote_presentation"
+    },
+    {
+      "id": "lead_in_at_section_end",
+      "operation": "set",
+      "path": "/sections/0/blocks/2/style",
+      "value": "lead_in",
+      "expected_semantic_code": "lead_in_at_section_end"
+    },
+    {
+      "id": "centered_statement_too_long",
+      "operation": "set",
+      "path": "/sections/2/blocks/1/text_vi",
+      "value": "Quyền lựa chọn chỉ thật sự có ý nghĩa khi ta còn đủ thời gian để sống cùng những người mình thương và đủ bình tĩnh để nhận ra điều quan trọng nhất hôm nay.",
+      "expected_semantic_code": "centered_statement_too_long"
+    },
+    {
+      "id": "centerpiece_quote_too_long",
+      "operation": "set",
+      "path": "/sections/2/blocks/3/text_vi",
+      "value": "Đừng đợi cho tới khi mọi điều trong cuộc đời đều trở nên ổn thỏa mới cho phép mình bắt đầu sống, bởi thời gian không đứng lại để chờ một bản kế hoạch hoàn hảo.",
+      "expected_semantic_code": "centerpiece_quote_too_long"
+    }
+  ],
+  "package_cases": [
+    {
+      "id": "v3_core_capability_missing",
+      "story_fixture": "../valid/core-story.valid.json",
+      "required_capabilities": [],
+      "expected_semantic_code": "missing_required_capability"
+    },
+    {
+      "id": "v3_extended_capability_missing",
+      "story_fixture": "../valid/extended-story.valid.json",
+      "required_capabilities": ["story_reader.editorial_v3.core"],
+      "expected_semantic_code": "missing_required_capability"
+    },
+    {
+      "id": "v3_figure_capability_missing",
+      "story_fixture": "../valid/extended-story.valid.json",
+      "required_capabilities": [
+        "story_reader.editorial_v3.core",
+        "story_reader.editorial_v3.extended_text"
+      ],
+      "expected_semantic_code": "missing_required_capability"
+    }
+  ]
+}

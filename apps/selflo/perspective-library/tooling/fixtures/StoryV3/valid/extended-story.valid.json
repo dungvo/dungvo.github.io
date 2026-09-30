@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.fixture_editorial_v3_extended",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "reader_format": "editorial_v3",
+  "title_vi": "Những hình thức đặc biệt",
+  "subtitle_vi": "Fixture capability mở rộng; không phải story production.",
+  "opening_quote_vi": null,
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": ["fixture", "special content"],
+    "story_style": "reflective_journey"
+  },
+  "sections": [
+    {
+      "id": "special",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Special-content board",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "intro",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Các block sau kiểm chứng capability mở rộng mà không đưa presentation tùy ý vào JSON."
+        },
+        {
+          "id": "sequence_escalating",
+          "type": "sequence",
+          "progression": "escalating",
+          "items": [
+            { "text_vi": "Hôm nay mình ghét đi làm." },
+            { "text_vi": "Công việc của mình thật tệ." },
+            { "text_vi": "Cuộc sống của mình thật tệ." }
+          ]
+        },
+        {
+          "id": "life_flow",
+          "type": "flow",
+          "items": [
+            { "text_vi": "Học giỏi" },
+            { "text_vi": "Trường tốt" },
+            { "text_vi": "Công ty tốt" },
+            { "text_vi": "Nghỉ hưu" }
+          ]
+        },
+        {
+          "id": "small_list",
+          "type": "list",
+          "style": "plain",
+          "items": [
+            { "text_vi": "Một nghề nghiệp" },
+            { "text_vi": "Một mái nhà" }
+          ]
+        },
+        {
+          "id": "short_verse",
+          "type": "verse",
+          "lines": [
+            { "text_vi": "Mưa đi qua mái cũ" },
+            { "text_vi": "Khoảng lặng còn ở đây" }
+          ],
+          "attribution_vi": null
+        },
+        {
+          "id": "context_aside",
+          "type": "aside",
+          "text_vi": "Ở tuổi đó, tôi vẫn nghĩ mọi kế hoạch đều có thể kiểm soát được."
+        },
+        {
+          "id": "memory_figure",
+          "type": "figure",
+          "file_id": "image.story.memory_table.v1",
+          "alt_text_vi": "Chiếc bàn ăn trong căn bếp vắng",
+          "caption_vi": "Căn bếp cũ trong ký ức của người kể."
+        },
+        {
+          "id": "about_story",
+          "type": "source_note",
+          "title_vi": "Về câu chuyện",
+          "text_vi": "Đây là fixture kiểm chứng schema và reference renderer, không phải nguồn trích dẫn."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Special content chỉ được dùng khi vai trò semantic của nó rõ hơn một paragraph thông thường."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_form",
+        "text_vi": "Cấu trúc nào giúp ý này dễ hiểu hơn mà không làm đứt mạch đọc?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": "Selflo",
+    "source_label": "Fixture Story Reader V3",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "selflo_original",
+    "source_collection_id": null,
+    "source_item_id": null,
+    "human_edited": true
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Fixture contract; không phải story production."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}

@@ -75,7 +75,14 @@
           "maps"
         ],
         "tie_break_order": 1010
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:selflo"
+      ]
     },
     {
       "id": "eyes_memorize_the_unopened_page",
@@ -148,7 +155,15 @@
           "book"
         ],
         "tie_break_order": 1011
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "pot_cools_between_lid_checks",
@@ -221,7 +236,15 @@
           "pot"
         ],
         "tie_break_order": 1012
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "attributed.ma.ii_07.unsettled_aim",
@@ -283,7 +306,14 @@
         ],
         "tie_break_order": 1115
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.ii_14.past_future",
@@ -345,7 +375,14 @@
         ],
         "tie_break_order": 1117
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.iii_04.others_affairs",
@@ -407,7 +444,14 @@
         ],
         "tie_break_order": 1120
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.iii_10.present_moment",
@@ -469,7 +513,14 @@
         ],
         "tie_break_order": 1122
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.iv_18.own_actions",
@@ -531,7 +582,14 @@
         ],
         "tie_break_order": 1130
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.v_16.mind_colour",
@@ -593,7 +651,14 @@
         ],
         "tie_break_order": 1138
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.vi_03.look_within",
@@ -655,7 +720,14 @@
         ],
         "tie_break_order": 1140
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.vii_08.future_reason",
@@ -717,7 +789,14 @@
         ],
         "tie_break_order": 1154
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.viii_36.present_bounds",
@@ -779,7 +858,14 @@
         ],
         "tie_break_order": 1161
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:soothe",
+        "support:clarify",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     }
   ]
 }
