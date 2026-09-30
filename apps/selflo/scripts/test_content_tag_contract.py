@@ -53,9 +53,15 @@ def validate(payloads: dict, channel: str) -> subprocess.CompletedProcess[str]:
 
 
 class ContentTagSemanticContractTests(unittest.TestCase):
-    def test_legacy_package_without_catalog_remains_compatible(self) -> None:
+    def test_legacy_authoring_without_catalog_remains_compatible(self) -> None:
         payloads = {"quote_pack": [{"quotes": [{"id": "quote.test"}]}]}
-        self.assertEqual(validate(payloads, "release").returncode, 0)
+        self.assertEqual(validate(payloads, "authoring").returncode, 0)
+
+    def test_new_release_without_catalog_is_rejected(self) -> None:
+        payloads = {"quote_pack": [{"quotes": [{"id": "quote.test"}]}]}
+        result = validate(payloads, "release")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("requires exactly one Content Tag Catalog", result.stderr)
 
     def test_authoring_catalog_allows_incremental_missing_tags(self) -> None:
         self.assertEqual(validate(fixture(), "authoring").returncode, 0)

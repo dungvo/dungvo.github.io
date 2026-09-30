@@ -134,7 +134,7 @@ Publisher cần xuất coverage report trước khi activate Release:
 
 Mọi count lấy quote làm đơn vị. Khi bật **Ưu tiên câu chuyện**, count được tính lại sau điều kiện `has_openable_story`; report phải cho thấy coverage ở cả hai trạng thái bật/tắt. Story không có tag coverage riêng.
 
-Trong giai đoạn migration, package legacy chưa có catalog vẫn được publisher đọc/publish để không làm gián đoạn Release đang chạy. Ngay khi canonical source có `content_tag_catalog`, contract mới được kích hoạt: Authoring cho phép quote thiếu tag để backfill dần, còn Release fail-closed theo toàn bộ gate ở trên. Bước khóa cuối sẽ bỏ ngoại lệ legacy sau khi backfill hoàn tất.
+App vẫn đọc được package legacy chưa có catalog. Publisher có thể tạo Authoring không catalog để phục vụ migration, nhưng mọi Release mới bắt buộc có đúng một `content_tag_catalog` và fail-closed theo toàn bộ gate ở trên. Vì vậy content không thể vô tình phát hành một Release mới làm bộ lọc trở về trạng thái không metadata.
 
 Release không được publish catalog trước rồi để quote chưa có tags: app sẽ hiển thị lựa chọn nhưng kết quả lọc bằng 0.
 

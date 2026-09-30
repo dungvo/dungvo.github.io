@@ -3,7 +3,9 @@
 > Trước khi chuẩn bị một Release có hỗ trợ bộ lọc trong app, đọc
 > [`perspective-library/APP_FILTER_TAG_CONTRACT.vi.md`](../perspective-library/APP_FILTER_TAG_CONTRACT.vi.md).
 > Contract này quy định `tags`, `content_tag_catalog`, coverage report và các gate fail-closed mới.
-> Cho tới khi publisher đã implement các gate đó, không được xem một Release chỉ có tag/catalog thủ công là tương thích filter.
+> Publisher đã implement schema, semantic gate và coverage report. Không thêm catalog/tag thủ công ngoài canonical workflow; Release filter mới chỉ được activate sau khi owner duyệt Authoring package và toàn bộ Release gate pass.
+
+Batch migration hiện tại dùng `scripts/backfill-release-content-tags.py` để gắn metadata đúng tập quote của active Release. Script fail nếu gặp quote Release không có trong canonical fragment, origin chưa có mapping duyệt, quote ID trùng hoặc quote ngoài Release đã bị gắn public tag. Luôn chạy dry-run trước, sau đó mới dùng `--apply`; report review nằm trong `perspective-library/tooling/`.
 
 Yêu cầu: Python 3.9+, Ruby và Node/npm để publisher hiện tại kiểm tra JSON Schema. Chạy từ thư mục Selflo website:
 

@@ -1,0 +1,216 @@
+{
+  "schema_version": "selflo.content-tags.v1",
+  "content_version": "content-tags-vi-1",
+  "entity": "content_tag_catalog",
+  "language": "vi",
+  "dimensions": [
+    {
+      "id": "intent",
+      "title_vi": "Điều bạn đang quan tâm",
+      "selection": "multiple",
+      "matching": "required_any",
+      "display_order": 10,
+      "release_min_count": 1,
+      "values": [
+        {
+          "id": "calm",
+          "title_vi": "Bình tâm",
+          "icon_key": null,
+          "display_order": 10
+        },
+        {
+          "id": "reduce_anxiety",
+          "title_vi": "Bớt lo lắng",
+          "icon_key": null,
+          "display_order": 20
+        },
+        {
+          "id": "understand_self",
+          "title_vi": "Hiểu mình hơn",
+          "icon_key": null,
+          "display_order": 30
+        },
+        {
+          "id": "overcome_adversity",
+          "title_vi": "Vượt qua khó khăn",
+          "icon_key": null,
+          "display_order": 40
+        },
+        {
+          "id": "personal_growth",
+          "title_vi": "Phát triển bản thân",
+          "icon_key": null,
+          "display_order": 50
+        },
+        {
+          "id": "relationships",
+          "title_vi": "Các mối quan hệ",
+          "icon_key": null,
+          "display_order": 60
+        },
+        {
+          "id": "work_direction",
+          "title_vi": "Công việc & định hướng",
+          "icon_key": null,
+          "display_order": 70
+        },
+        {
+          "id": "meaning",
+          "title_vi": "Tìm ý nghĩa",
+          "icon_key": null,
+          "display_order": 80
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "title_vi": "Bạn muốn nhận điều gì?",
+      "selection": "multiple",
+      "matching": "required_any",
+      "display_order": 20,
+      "release_min_count": 1,
+      "values": [
+        {
+          "id": "soothe",
+          "title_vi": "Dịu lại",
+          "icon_key": null,
+          "display_order": 10
+        },
+        {
+          "id": "clarify",
+          "title_vi": "Hiểu rõ hơn",
+          "icon_key": null,
+          "display_order": 20
+        },
+        {
+          "id": "motivate",
+          "title_vi": "Có động lực",
+          "icon_key": null,
+          "display_order": 30
+        },
+        {
+          "id": "small_action",
+          "title_vi": "Một bước nhỏ",
+          "icon_key": null,
+          "display_order": 40
+        },
+        {
+          "id": "new_perspective",
+          "title_vi": "Góc nhìn mới",
+          "icon_key": null,
+          "display_order": 50
+        }
+      ]
+    },
+    {
+      "id": "topic",
+      "title_vi": "Chủ đề muốn đọc sâu",
+      "selection": "multiple",
+      "matching": "required_any",
+      "display_order": 30,
+      "release_min_count": 1,
+      "values": [
+        {
+          "id": "attention_presence",
+          "title_vi": "Chú ý & hiện tại",
+          "icon_key": null,
+          "display_order": 10
+        },
+        {
+          "id": "emotions",
+          "title_vi": "Cảm xúc",
+          "icon_key": null,
+          "display_order": 20
+        },
+        {
+          "id": "self_understanding",
+          "title_vi": "Hiểu mình",
+          "icon_key": null,
+          "display_order": 30
+        },
+        {
+          "id": "change_growth",
+          "title_vi": "Thay đổi & trưởng thành",
+          "icon_key": null,
+          "display_order": 40
+        },
+        {
+          "id": "adversity_recovery",
+          "title_vi": "Khó khăn & phục hồi",
+          "icon_key": null,
+          "display_order": 50
+        },
+        {
+          "id": "relationships",
+          "title_vi": "Các mối quan hệ",
+          "icon_key": null,
+          "display_order": 60
+        },
+        {
+          "id": "work_choices",
+          "title_vi": "Công việc & lựa chọn",
+          "icon_key": null,
+          "display_order": 70
+        },
+        {
+          "id": "meaning_values",
+          "title_vi": "Ý nghĩa & giá trị",
+          "icon_key": null,
+          "display_order": 80
+        },
+        {
+          "id": "rest_wellbeing",
+          "title_vi": "Nghỉ ngơi & sức khỏe tinh thần",
+          "icon_key": null,
+          "display_order": 90
+        },
+        {
+          "id": "learning_habits",
+          "title_vi": "Học tập & thói quen",
+          "icon_key": null,
+          "display_order": 100
+        }
+      ]
+    },
+    {
+      "id": "origin",
+      "title_vi": "Xuất xứ góc nhìn",
+      "selection": "single",
+      "matching": "required_any",
+      "display_order": 40,
+      "release_min_count": 1,
+      "values": [
+        {
+          "id": "selflo",
+          "title_vi": "Selflo",
+          "icon_key": null,
+          "display_order": 10
+        },
+        {
+          "id": "book_or_work",
+          "title_vi": "Sách & tác phẩm",
+          "icon_key": null,
+          "display_order": 20
+        },
+        {
+          "id": "research",
+          "title_vi": "Nghiên cứu",
+          "icon_key": null,
+          "display_order": 30
+        },
+        {
+          "id": "classical_text",
+          "title_vi": "Kinh điển",
+          "icon_key": null,
+          "display_order": 40
+        },
+        {
+          "id": "folklore",
+          "title_vi": "Dân gian",
+          "icon_key": null,
+          "display_order": 50
+        }
+      ]
+    }
+  ]
+}

@@ -907,9 +907,10 @@ def validate_content_tags!(payloads, channel)
     abort("Library may contain at most one Content Tag Catalog")
   end
 
-  # A catalog activates the new filter contract. Legacy packages without one
-  # remain publishable while the canonical quote backfill is in progress.
-  return if catalogs.empty?
+  if catalogs.empty?
+    abort("Release requires exactly one Content Tag Catalog") if channel == "release"
+    return
+  end
 
   catalog = catalogs.fetch(0)
   dimensions = catalog.fetch("dimensions")
