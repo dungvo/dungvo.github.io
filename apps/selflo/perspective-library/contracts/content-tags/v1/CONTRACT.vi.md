@@ -10,16 +10,20 @@
 
 **Release đầu tiên:** Perspective Library Release 34
 
+**Contract hub:** [`../../README.md`](../../README.md)
+
 Đây là **nguồn chuẩn duy nhất** cho format tag lọc nội dung giữa app và content. Không duy trì một bản taxonomy/semantics thứ hai trong app repo. App repo chỉ giữ consumer conformance note trỏ về tài liệu này.
 
 ## 1. Các nguồn chuẩn đi cùng contract
+
+Các đường dẫn dưới đây tính từ root `perspective-library/`, cùng quy ước với `contracts/registry.json`:
 
 - Contract con người đọc: file này.
 - Runtime taxonomy: `source/vi/content-tags/content-tags.vi.json`.
 - Quote schema: `tooling/schema/perspective-theme.schema.json`.
 - Catalog schema: `tooling/schema/perspective-content-tag-catalog.schema.json`.
 - Manifest schema: `tooling/schema/perspective-library-manifest.schema.json`.
-- Release gate: `scripts/publish-perspective-library`.
+- Release gate: `../scripts/publish-perspective-library` tính từ `perspective-library/` root, tức `apps/selflo/scripts/publish-perspective-library`.
 - Coverage/review report: `tooling/content-tag-backfill-r33.json` và audit của từng Release.
 - Public package app đọc: `release/vi/manifest.json` cùng các immutable descriptor của manifest.
 

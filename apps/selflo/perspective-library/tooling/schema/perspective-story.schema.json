@@ -24,13 +24,13 @@
     "review"
   ],
   "properties": {
-    "schema_version": { "enum": ["1.0", "1.1"] },
+    "schema_version": { "enum": ["1.0", "1.1", "1.2"] },
     "entity": { "const": "perspective_story" },
     "id": { "$ref": "#/$defs/stable_id" },
     "revision": { "type": "integer", "minimum": 1 },
     "status": { "enum": ["draft", "active", "retired"] },
     "language": { "const": "vi" },
-    "reader_format": { "enum": ["classic_v1", "editorial_v2"] },
+    "reader_format": { "enum": ["classic_v1", "editorial_v2", "editorial_v2_5"] },
     "title_vi": { "$ref": "#/$defs/non_empty_string" },
     "subtitle_vi": { "$ref": "#/$defs/nullable_string" },
     "opening_quote_vi": { "$ref": "#/$defs/nullable_string" },
@@ -64,6 +64,16 @@
       "then": {
         "required": ["reflection"],
         "properties": { "schema_version": { "const": "1.1" } }
+      }
+    },
+    {
+      "if": {
+        "required": ["reader_format"],
+        "properties": { "reader_format": { "const": "editorial_v2_5" } }
+      },
+      "then": {
+        "required": ["reflection"],
+        "properties": { "schema_version": { "const": "1.2" } }
       }
     }
   ],
@@ -172,7 +182,8 @@
             "type": { "const": "pull_quote" },
             "text_vi": { "$ref": "#/$defs/non_empty_string" },
             "runs": { "$ref": "#/$defs/rich_text_runs" },
-            "attribution_vi": { "$ref": "#/$defs/nullable_string" }
+            "attribution_vi": { "$ref": "#/$defs/nullable_string" },
+            "presentation": { "enum": ["rail", "inset", "centerpiece"] }
           }
         },
         {

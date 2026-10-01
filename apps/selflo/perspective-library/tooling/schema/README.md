@@ -2,6 +2,8 @@
 
 **Trạng thái:** Accepted — Owner Schema Gate pass; được dùng bởi Phase 1–10
 
+Ownership, contract version và app/content cutover được index tại [`../../contracts/README.md`](../../contracts/README.md). Thư mục schema là executable wire contract, không phải nơi tạo taxonomy/semantic proposal độc lập.
+
 Năm schema trong folder này là biểu diễn machine-readable của [Library Contract](../../../features/perspective-content-system/LIBRARY_CONTRACT.md):
 
 | File | Payload |

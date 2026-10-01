@@ -1,7 +1,8 @@
 # Chuyển quote/story giữa Authoring và Release
 
 > Trước khi chuẩn bị một Release có hỗ trợ bộ lọc trong app, đọc
-> [`perspective-library/APP_FILTER_TAG_CONTRACT.vi.md`](../perspective-library/APP_FILTER_TAG_CONTRACT.vi.md).
+> shared contract hub [`perspective-library/contracts/README.md`](../perspective-library/contracts/README.md),
+> rồi canonical tag contract [`content-tags/v1/CONTRACT.vi.md`](../perspective-library/contracts/content-tags/v1/CONTRACT.vi.md).
 > Contract này quy định `tags`, `content_tag_catalog`, coverage report và các gate fail-closed mới.
 > Publisher đã implement schema, semantic gate và coverage report. Không thêm catalog/tag thủ công ngoài canonical workflow; Release filter mới chỉ được activate sau khi owner duyệt Authoring package và toàn bộ Release gate pass.
 

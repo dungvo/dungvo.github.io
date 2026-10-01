@@ -1,8 +1,10 @@
 # Selflo Story Format V3 Contract
 
-**Trạng thái:** Gate 2 executable contract complete; chưa app implementation/publish  
+**Contract ID:** `selflo.story-reader.editorial-v3`  
+**Trạng thái:** Gate 2.5 component contract frozen; chưa app implementation/publish  
+**Contract hub:** [`../../README.md`](../../README.md)  
 **Vai trò:** Canonical design contract cho Content, Publisher, Web Reference Renderer và Selflo app  
-**Phạm vi:** Cấu trúc dữ liệu và presentation semantics của Story Reader V3; chưa phải JSON Schema runtime  
+**Phạm vi:** Cấu trúc dữ liệu và presentation semantics của Story Reader V3; executable schema `1.2` đã có, chưa được publisher/app production consume  
 **Không thuộc phạm vi:** Moment, audio/video, timed reveal, branching, persistence, bookmark và progress semantics
 
 ## 1. Mục tiêu
@@ -32,13 +34,23 @@ Story V3 khai báo:
 Quy tắc:
 
 - thiếu `reader_format` hoặc `classic_v1` → Classic Reader;
-- `editorial_v2` → Editorial V2 hiện hành;
+- `editorial_v2` → Editorial V2 hiện hành, presentation không đổi;
+- `editorial_v2_5` → Editorial V2.5 production renderer, schema `1.2`, tương thích cấu trúc V2 và hỗ trợ quote presentation/rich-text runs;
 - `editorial_v3` → V3 semantic presentation policy;
 - app không hỗ trợ capability V3 → không activate package revision mới;
 - package tương thích nhưng một story V3 sai → quarantine riêng story đó;
 - không fallback V3 sang V2/Classic vì có thể làm mất semantics mà vẫn trông như đã đọc được.
 
 App được phép dùng chung Reader shell và component nền giữa V2/V3, nhưng phải giữ presentation policy riêng.
+
+### Editorial V2.5 production boundary
+
+- V2.5 là opt-in bằng `reader_format = editorial_v2_5`; app không tự nâng story V2.
+- V2.5 giữ block family V2: `paragraph`, `part_heading`, `heading`, `pull_quote`, `divider`, cùng `takeaway` và `reflection`.
+- `pull_quote.presentation` nhận `rail`, `inset`, `centerpiece`; thiếu presentation được app fallback `rail`, nhưng content mới phải khai báo rõ.
+- `runs` chỉ dùng cho span ngắn trong paragraph với `plain`, `strong`, `emphasis`, `accent`, `strong_accent`; V2 renderer được phép bỏ qua runs và tiếp tục dùng `text_vi`.
+- Dialogue tiếp tục dùng cặp `paragraph/dialogue_lead` + các `paragraph/dialogue` liên tiếp; app gom cùng speaker thành một turn, không đổi source order.
+- Unknown `reader_format`, block type, style hoặc presentation fail closed tại package load; không fallback âm thầm sang Classic.
 
 ## 3. Cấu trúc một Story
 
@@ -60,6 +72,16 @@ Các vùng top-level hiện hành tiếp tục được giữ: stable ID, revisi
 ### 3.1 Opening
 
 Opening có thể gồm hero artwork, category/theme, title, subtitle, metadata và optional `opening_quote_vi`. Opening quote không được lặp lại ngay trong block đầu nếu không có motif đã được review.
+
+Owner-approved V2/V2.5 presentation contract:
+
+- `hero_image` có thì app render ở đầu story, full reading width và có thể fade/composite vào paper background; đây là renderer policy, không phải content layout field;
+- không có `hero_image` thì app bỏ hẳn image region;
+- reading time do app derive từ nội dung; không lưu số phút cố định trong payload;
+- theme và story kind lấy từ stable metadata/catalog;
+- public author/source dùng `authorship` và xuất hiện trong opening metadata, không đặt mặc định ở cuối truyện;
+- reader chỉ render attribution khi có `author_name`, hoặc `source_label` đi cùng `source_url`; `source_label` đứng một mình được xem là authoring provenance và không đưa nguyên văn lên reader;
+- chi tiết provenance nội bộ vẫn thuộc `editorial`/`rights`. Block `source_note` là nội dung có chủ ý trong story flow và không bị rule attribution này thay đổi.
 
 ### 3.2 Section heading metadata
 
@@ -104,6 +126,14 @@ Marks V3:
 
 Cho phép kết hợp marks, nhưng không thêm enum tổ hợp như `strong_accent`.
 
+Editorial usage:
+
+- plain text là mặc định; rich text không phải yêu cầu để paragraph trông hoàn thiện;
+- `strong` dành cho luận điểm/từ khóa cần giữ, `emphasis` dành cho giọng hoặc đối lập, `accent` dành cho điểm nhìn semantic hiếm;
+- thông thường một paragraph có tối đa một span ngắn cần nhấn; tránh phủ nhiều câu hoặc lặp mark qua các paragraph liên tiếp;
+- không dùng cả ba mark cùng lúc nếu chưa có editorial review;
+- khi toàn câu cần mức nhấn cao, chọn đúng `beat`, `statement` hoặc `pull_quote`, không biến toàn paragraph thành rich text.
+
 Không hỗ trợ trong V3: mã màu, font family, font size, underline, strike-through, background highlight, inline image, inline animation hoặc URL tùy ý.
 
 Validation:
@@ -132,6 +162,8 @@ Chuyển một phần lớn của story dài.
 ```
 
 Không dùng cho section nhỏ hoặc để làm đẹp một câu.
+
+`part_heading` luôn có hierarchy cao hơn section heading metadata. Renderer phải làm section title nhỏ/tiết chế hơn part title; content không thêm style/font-size để đảo hierarchy. Marker như độ tuổi là metadata optional của section, không phải part và không bắt buộc phải được vẽ thành badge hoặc hình tròn.
 
 ### 5.2 `paragraph`
 
@@ -234,6 +266,13 @@ Speaker-label policy thuộc renderer, không có field `show_speaker` trong pay
 - `remembered` và `written` chỉ đổi delivery treatment, không thay speaker identity;
 - VoiceOver luôn giữ speaker/delivery context kể cả khi visual label được rút gọn.
 
+Paragraph grouping policy:
+
+- một turn là một voice unit; speaker label không lặp cho từng paragraph;
+- nhiều paragraph cùng turn có thể được renderer trình bày liền mạch, nhưng source order và accessibility sentence order phải giữ nguyên;
+- content chỉ tạo paragraph mới khi có đổi beat/khoảng dừng có nghĩa, không tách máy móc mỗi câu thành một paragraph;
+- dialogue visual phải phân biệt narration và quote. Rail/indent cụ thể thuộc renderer; content không chèn ký tự hoặc block rỗng để giả rail/spacing.
+
 V2 `dialogue_lead + dialogue...` vẫn được V2 reader hỗ trợ. Authoring V3 không dùng `dialogue_lead`; migration gom chúng thành một dialogue block.
 
 ### 5.4 `statement`
@@ -288,6 +327,14 @@ Presentations hữu hạn:
 - `rail`: căn trái với thanh dọc.
 
 Content không cấu hình alignment, quote mark, font, size hoặc rail riêng lẻ; renderer ánh xạ presentation preset thành UI.
+
+Editorial meaning:
+
+- `centerpiece`: điểm nhớ quan trọng nhất sau một lập luận/section lớn/part; mặc định tối đa một lần trong một part;
+- `inset`: quote có mức nhấn vừa, thường phù hợp chữ viết, hồi ức hoặc câu cần tách nhẹ khỏi body;
+- `rail`: quote tiếp tục trục đọc canh trái và là lựa chọn mặc định cho quoted voice trong mạch truyện.
+
+Visual quote mark lớn, italic, rule trên/dưới hoặc canh giữa là renderer mapping hợp lệ cho `centerpiece`, không phải field content. Không nâng một quote lên `centerpiece` chỉ vì câu ngắn hoặc vì muốn trang đẹp. Nếu text là kết tinh của narrator/author mà không phải quoted voice, dùng `statement`, không dùng `pull_quote`.
 
 Rules:
 
@@ -410,6 +457,10 @@ Hình ảnh trong body, khác hero.
 
 Asset phải nằm trong cùng immutable Library session. Alt text bắt buộc; caption optional.
 
+Figure là opt-in từ content: không có block thì app không tự chèn artwork, kể cả ở `part_heading`. Figure nằm đúng vị trí trong ordered blocks và không được chứa prose rasterized thay cho native text. `hero_image` chỉ điều khiển opening, không cho phép renderer suy ra body artwork.
+
+Contract `1.2` hiện chưa có figure style. Ba candidate semantic cho gate sau là `scene` (thiết lập không gian/chuyển cảnh), `memory` (hình ảnh gắn với ký ức) và `symbolic` (hình ảnh ẩn dụ cho ý). Đây chưa phải wire selector được phép author/publish; phải duyệt mockup, bổ sung schema/fixture/support matrix và app capability trước khi freeze. Không thêm style thuần trang trí như `large`, `left` hoặc `pretty`.
+
 ### 5.13 `source_note`
 
 Nguồn, bản dịch hoặc bối cảnh lịch sử; thường ở cuối section/story.
@@ -526,7 +577,6 @@ flow
 list
 verse
 aside
-figure
 source_note
 ```
 
@@ -619,16 +669,16 @@ Gate 2 chỉ bắt đầu sau khi owner duyệt Gate 1 decision log phía app. G
 
 ## 14. Gate 2 executable artifacts
 
-Canonical executable contract được materialize tại:
+Canonical executable contract được materialize tại các đường dẫn tính từ root `perspective-library/`:
 
 ```text
-perspective-library/tooling/schema/perspective-story-v3.schema.json
-perspective-library/tooling/schema/perspective-library-manifest.schema.json
-perspective-library/tooling/fixtures/StoryV3/valid/core-story.valid.json
-perspective-library/tooling/fixtures/StoryV3/valid/extended-story.valid.json
-perspective-library/tooling/fixtures/StoryV3/invalid/invalid-cases.json
-scripts/story_v3_validator.py
-scripts/test_story_v3_contract.py
+tooling/schema/perspective-story-v3.schema.json
+tooling/schema/perspective-library-manifest.schema.json
+tooling/fixtures/StoryV3/valid/core-story.valid.json
+tooling/fixtures/StoryV3/valid/extended-story.valid.json
+tooling/fixtures/StoryV3/invalid/invalid-cases.json
+../scripts/story_v3_validator.py
+../scripts/test_story_v3_contract.py
 ```
 
 - V1/V2 tiếp tục dùng `perspective-story.schema.json`; V3 dùng schema `1.2` riêng để không nới acceptance của payload đã phát hành.
@@ -636,3 +686,30 @@ scripts/test_story_v3_contract.py
 - Invalid mutation cases là executable fixtures: test materialize payload từ Core fixture rồi xác nhận semantic error code; các case shape-invalid cũng được AJV từ chối.
 - Fixture không nằm trong canonical source index, không phải story production và không được publisher đưa vào Authoring/Release.
 - Gate 2 không sửa publisher output, source story, revision hoặc manifest đang phát hành.
+
+## 15. Gate 2.5 component contract và compatibility freeze
+
+Gate 2.5 bổ sung ngôn ngữ chung để app và content phát triển độc lập:
+
+- [`COMPONENT_CATALOG.vi.md`](COMPONENT_CATALOG.vi.md): semantic intent và minimum rendering promise;
+- [`component-support.json`](component-support.json): trạng thái thật của từng component/capability ở contract, mockup, app, publisher và Release;
+- [`COMPATIBILITY_POLICY.vi.md`](COMPATIBILITY_POLICY.vi.md): cách phân loại thay đổi và rollout additive;
+- `../scripts/test_story_component_contract.py`: executable conformance cho support matrix.
+
+Quy tắc freeze:
+
+1. Classic V1 và Editorial V2 giữ nguyên raw value, shape và renderer dispatch đã phát hành.
+2. App có thể cải thiện visual của component hiện hữu mà content không cần migration, miễn minimum rendering promise không đổi.
+3. Semantic hoặc data structure mới phải app-first và additive; content chỉ opt-in sau khi matrix chuyển `release_status` sang `allowed`.
+4. Không tạo selector theo version UI như `dialog_v3`; version thuộc `reader_format`, còn selector mô tả editorial intent.
+5. App V3 và publisher V3 hiện vẫn disabled; Gate 2.5 không sửa source story, manifest production hoặc generated Authoring/Release output.
+
+## 16. Gate 3 visual approval
+
+Canonical visual index nằm tại [`visual-reference/VISUAL_REFERENCE.vi.md`](visual-reference/VISUAL_REFERENCE.vi.md).
+
+- Gate 3B Round 1 được owner duyệt ngày 2026-10-01 cho statement, quote, divider, takeaway, reflection và extended-text ngoại trừ `figure`.
+- Approval chỉ xác nhận visual intent/minimum hierarchy; không mở app capability, publisher hoặc content Release.
+- Component chưa có mockup approved tiếp tục giữ `mockup_status = pending` trong support matrix.
+- Gate 3C Round 1 được owner duyệt ngày 2026-10-01 cho opening/body, body/ending và continuous-scroll composition của story **Nếu tôi được sống một đời người**.
+- Composition approval không tự thay prose/source story; reflection prompt xuất hiện trong mockup vẫn là candidate riêng cho content review.
