@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 34,
+  "library_revision": 35,
   "content_version": "quote-filter-metadata-v1",
   "language": "vi",
-  "generated_at": "2026-09-30T08:58:49Z",
+  "generated_at": "2026-10-01T11:28:21Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -271,11 +271,11 @@
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 4,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r4.json",
+      "revision": 5,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "59aae70d2adce902b046af6be90aab510a42f9cc8f0a10aaa635882a82b00d6d",
-      "byte_count": 61679
+      "sha256": "cbb87fa5947e108d0e248e65365dd4a009033403e6dee435ae7ecd73235fc456",
+      "byte_count": 62055
     },
     {
       "id": "story.original_stone_that_loved_stormy_days",
@@ -289,20 +289,20 @@
     {
       "id": "story.rails_that_diverge",
       "kind": "story",
-      "revision": 4,
-      "path": "stories/rails-that-diverge/story.vi.r4.json",
+      "revision": 5,
+      "path": "stories/rails-that-diverge/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "19f8cc4fcfdb7471e2a1d1c0df8240f89ce15559adc19907ca55616e4a89db45",
-      "byte_count": 81606
+      "sha256": "a7d0c568f092e90a51937744576ec7272c4e776817070cfab4dc8be995928bf0",
+      "byte_count": 81676
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 6,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r6.json",
+      "revision": 7,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r7.json",
       "media_type": "application/json",
-      "sha256": "326411cdd7665695bdc2706acbc41f5d3bfc441fcd39c611a153308a742a6465",
-      "byte_count": 76346
+      "sha256": "475004bf82001c91ba07cfb841e38f499978d18f9582db55cf58464c3e52ac2c",
+      "byte_count": 76450
     },
     {
       "id": "story.tree_and_silent_goose",
