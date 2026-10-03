@@ -1,7 +1,7 @@
 {
   "schema_version": "selflo.story-reader.component-support.v1",
   "contract_id": "selflo.story-reader.editorial-v3",
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-03",
   "status_values": {
     "contract": [
       "released",
@@ -350,333 +350,333 @@
       "reader_format": "editorial_v3",
       "wire_selector": "story opening metadata",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.part_heading",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=part_heading",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.section_heading",
       "reader_format": "editorial_v3",
       "wire_selector": "section marker/title metadata",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.paragraph.narrative",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=paragraph;style=narrative",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.paragraph.lead_in",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=paragraph;style=lead_in",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.paragraph.transition",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=paragraph;style=transition",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.paragraph.beat",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=paragraph;style=beat",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.dialogue.exchange",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=dialogue;style=exchange",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.dialogue.monologue",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=dialogue;style=monologue",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.dialogue.inner_monologue",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=dialogue;style=inner_monologue",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.dialogue.delivery.spoken",
       "reader_format": "editorial_v3",
       "wire_selector": "dialogue.turns[].delivery=spoken",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.dialogue.delivery.thought",
       "reader_format": "editorial_v3",
       "wire_selector": "dialogue.turns[].delivery=thought",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.dialogue.delivery.remembered",
       "reader_format": "editorial_v3",
       "wire_selector": "dialogue.turns[].delivery=remembered",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.dialogue.delivery.written",
       "reader_format": "editorial_v3",
       "wire_selector": "dialogue.turns[].delivery=written",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.statement.centered",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=statement;presentation=centered",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/01-statements-and-quotes.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.statement.leading",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=statement;presentation=leading",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/01-statements-and-quotes.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.quote.centerpiece",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=pull_quote;presentation=centerpiece",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/01-statements-and-quotes.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.quote.inset",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=pull_quote;presentation=inset",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/01-statements-and-quotes.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.quote.rail",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=pull_quote;presentation=rail",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/01-statements-and-quotes.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.divider",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=divider",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/02-takeaway-and-reflection.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.takeaway",
       "reader_format": "editorial_v3",
       "wire_selector": "takeaway",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/02-takeaway-and-reflection.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.reflection",
       "reader_format": "editorial_v3",
       "wire_selector": "reflection",
       "capability": "story_reader.editorial_v3.core",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/02-takeaway-and-reflection.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.sequence",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=sequence",
       "capability": "story_reader.editorial_v3.extended_text",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/03-extended-text-blocks.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.flow",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=flow",
       "capability": "story_reader.editorial_v3.extended_text",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/03-extended-text-blocks.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.list",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=list",
       "capability": "story_reader.editorial_v3.extended_text",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/03-extended-text-blocks.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.verse",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=verse",
       "capability": "story_reader.editorial_v3.extended_text",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/03-extended-text-blocks.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.aside",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=aside",
       "capability": "story_reader.editorial_v3.extended_text",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/03-extended-text-blocks.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.source_note",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=source_note",
       "capability": "story_reader.editorial_v3.extended_text",
-      "contract_status": "executable",
+      "contract_status": "released",
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/03-extended-text-blocks.png",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     },
     {
       "component_id": "story.figure",
       "reader_format": "editorial_v3",
       "wire_selector": "block.type=figure",
       "capability": "story_reader.editorial_v3.figure",
-      "contract_status": "executable",
-      "mockup_status": "pending",
-      "app_status": "not_supported",
-      "publisher_status": "disabled",
-      "release_status": "not_allowed"
+      "contract_status": "released",
+      "mockup_status": "approved",
+      "app_status": "supported",
+      "publisher_status": "enabled",
+      "release_status": "allowed"
     }
   ]
 }

@@ -59,17 +59,36 @@ def semantic_sequence(story: dict) -> list[str]:
     return sequence
 
 
-def locked_prose_digest(story: dict) -> str:
-    texts = [
-        block["text_vi"]
+def semantic_body_texts(story: dict) -> list[str]:
+    texts = []
+    for block in body_blocks(story):
+        if block["type"] == "part_heading":
+            continue
+        if block["type"] == "dialogue":
+            for turn in block["turns"]:
+                if turn.get("speaker"):
+                    texts.append(turn["speaker"]["label_vi"])
+                texts.extend(paragraph["text_vi"] for paragraph in turn["paragraphs"])
+        elif block.get("text_vi"):
+            texts.append(block["text_vi"])
+    return texts
+
+
+def semantic_block_count(story: dict) -> int:
+    return sum(
+        sum((1 if turn.get("speaker") else 0) + len(turn["paragraphs"]) for turn in block["turns"])
+        if block["type"] == "dialogue" else 1
         for block in body_blocks(story)
-        if block["type"] != "part_heading" and block.get("text_vi")
-    ]
+    )
+
+
+def locked_prose_digest(story: dict) -> str:
+    texts = semantic_body_texts(story)
     normalized = re.sub(r"\s+", " ", " ".join(texts)).strip() + "\n"
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
 
 
-class StoryV2ContractTests(unittest.TestCase):
+class StoryContractTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.stories = canonical_stories()
@@ -155,7 +174,7 @@ class StoryV2ContractTests(unittest.TestCase):
             blocks = body_blocks(story)
             actual = (
                 len(story["sections"]),
-                len(blocks),
+                semantic_block_count(story),
                 sum(block["type"] == "pull_quote" for block in blocks),
                 sum(block["type"] == "part_heading" for block in blocks),
             )

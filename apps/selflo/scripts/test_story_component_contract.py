@@ -32,14 +32,15 @@ class StoryComponentContractTests(unittest.TestCase):
             with self.subTest(component=component["component_id"]):
                 self.assertEqual((component["contract_status"], component["app_status"], component["publisher_status"], component["release_status"]), ("released", "supported", "enabled", "allowed"))
 
-    def test_v3_is_executable_but_not_release_enabled(self):
+    def test_v3_production_baseline_is_released_supported_and_allowed(self):
         v3 = [item for item in self.components if item["reader_format"] == "editorial_v3"]
         self.assertTrue(v3)
         for component in v3:
             with self.subTest(component=component["component_id"]):
-                self.assertEqual(component["contract_status"], "executable")
-                self.assertIn(component["mockup_status"], {"pending", "approved"})
-                self.assertEqual((component["app_status"], component["publisher_status"], component["release_status"]), ("not_supported", "disabled", "not_allowed"))
+                self.assertEqual(component["contract_status"], "released")
+                self.assertEqual(component["mockup_status"], "approved")
+                self.assertEqual(component["app_status"], "supported")
+                self.assertEqual((component["publisher_status"], component["release_status"]), ("enabled", "allowed"))
 
     def test_approved_gate_3b_components_have_existing_visual_reference(self):
         approved_ids = {
@@ -49,13 +50,6 @@ class StoryComponentContractTests(unittest.TestCase):
             "story.sequence", "story.flow", "story.list", "story.verse",
             "story.aside", "story.source_note",
         }
-        actual = {
-            item["component_id"]
-            for item in self.components
-            if item["reader_format"] == "editorial_v3"
-            and item["mockup_status"] == "approved"
-        }
-        self.assertEqual(actual, approved_ids)
         for component_id in approved_ids:
             reference = self.by_id[component_id].get("visual_reference")
             with self.subTest(component=component_id):

@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 36,
+  "library_revision": 37,
   "content_version": "quote-filter-metadata-v1",
   "language": "vi",
-  "generated_at": "2026-10-03T00:17:04Z",
+  "generated_at": "2026-10-03T12:20:53Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -217,101 +217,101 @@
     {
       "id": "story.empty_boat_on_the_river",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/empty-boat-on-the-river/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/empty-boat-on-the-river/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "5eec6496ef534e6470c006186d24bc5655818d38173821ce6de0d0f34e619181",
-      "byte_count": 5755
+      "sha256": "eb9450d59109f62f79ac712cbe70fecdbeb1675ee6c1c7b87bb872e60a0782e1",
+      "byte_count": 6253
     },
     {
       "id": "story.large_tree_beyond_the_carpenters_measure",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "00b3d51f45b1cd850cf1fd68176e62a4e8f6c3adbc8cf3c71194256481bf52fb",
-      "byte_count": 5816
+      "sha256": "864e06ddea1eaf0fc858c5e1504039190e439c4e82210206bab7ee7d77a30481",
+      "byte_count": 6314
     },
     {
       "id": "story.old_man_and_returning_horse",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/old-man-and-returning-horse/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/old-man-and-returning-horse/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "43b3b59312936e60340216d26a2d5b4e89b33c27bf4697723bde93721d987265",
-      "byte_count": 5045
+      "sha256": "175b92ec1be16b13a9feed481313b96d46fae8f3e09046183cd05e9904247502",
+      "byte_count": 5685
     },
     {
       "id": "story.original_between_two_banks",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-between-two-banks/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/original-between-two-banks/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "bf5036885050cd662aa4a64b5f53a086719248b502b95fddd49425f04245a338",
-      "byte_count": 7261
+      "sha256": "a8c671deac88a745bbb12fcd098e972f39b3947eac8ef5447eb66d4ac31e5e12",
+      "byte_count": 8653
     },
     {
       "id": "story.original_builder_and_shapeless_stones",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-builder-and-shapeless-stones/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/original-builder-and-shapeless-stones/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "bc1e352ca21d91ec6ccf1f4779ba2e04342e04ebd5f8e37081c37bd68e7f96f7",
-      "byte_count": 15943
+      "sha256": "870b487b4519d7454aed5a99738902cd2a077af5ad3f2c9431111ec5e1f50d47",
+      "byte_count": 20452
     },
     {
       "id": "story.original_chair_beside_window",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-chair-beside-window/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/original-chair-beside-window/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "8cb1858cfab8f0cf59e42048b02267df1a5d578535722ea19c202e318dc3b589",
-      "byte_count": 17697
+      "sha256": "e0cfe7e814cc6fd94369cfbb5ede633ce0e465593e926f31ab3a2cb6bf544774",
+      "byte_count": 22685
     },
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 6,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r6.json",
+      "revision": 7,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r7.json",
       "media_type": "application/json",
-      "sha256": "91bb41b587ce6bcc7a17de9aafdf3214b629e858b42a820c0fd639ba72cc5152",
-      "byte_count": 61679
+      "sha256": "ecc81e48ec07acc6b17a708e824a04bad856aa12261b826f0e45cda369c7c060",
+      "byte_count": 64671
     },
     {
       "id": "story.original_stone_that_loved_stormy_days",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "e26caf5602bbc1e5d5f95d5a15dec3b6e0211e47f33a21b51661e78ff5c192e7",
-      "byte_count": 15129
+      "sha256": "6d49389acba08f0de2eaee7fc4bdaa47bf93ae7b01168eb57c9926c1094f1985",
+      "byte_count": 16778
     },
     {
       "id": "story.rails_that_diverge",
       "kind": "story",
-      "revision": 6,
-      "path": "stories/rails-that-diverge/story.vi.r6.json",
+      "revision": 7,
+      "path": "stories/rails-that-diverge/story.vi.r7.json",
       "media_type": "application/json",
-      "sha256": "7cb6f52cb0555434260e6778c00f694da6160768df7a8b1447381c0baadf62e2",
-      "byte_count": 81606
+      "sha256": "7965a5f30e146c4b9cab42fd7ccf70ac6f4958707620b6f0f43938197ed47f87",
+      "byte_count": 82957
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 8,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r8.json",
+      "revision": 9,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r9.json",
       "media_type": "application/json",
-      "sha256": "9096b3e3613aa2f0e43c7315292b5e21e35904c27226e619736128466097bd79",
-      "byte_count": 76346
+      "sha256": "7db209f7d5a70b956b20221549c71c12ff79bb19b0e5f860f92f21836cbb09d6",
+      "byte_count": 92576
     },
     {
       "id": "story.tree_and_silent_goose",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/tree-and-silent-goose/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/tree-and-silent-goose/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "25527e56f909596ca4de35b0f03a057a8297175f0cbf0b8c51ad589f91918b4e",
-      "byte_count": 6183
+      "sha256": "46fcbeec2ec56bf94b6cec8701f6162610f78565b928438bb9a5446bdd6ba037",
+      "byte_count": 6752
     },
     {
       "id": "story_artwork.catalog.vi",
@@ -322,5 +322,8 @@
       "sha256": "589b4dbfefcacd5ea2d17edb6895170da79a60b38f062c6be9f2aa451a75f551",
       "byte_count": 2005
     }
+  ],
+  "required_capabilities": [
+    "story_reader.editorial_v3.core"
   ]
 }

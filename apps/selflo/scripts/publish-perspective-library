@@ -6,6 +6,7 @@ require "json"
 require "open3"
 require "optparse"
 require "set"
+require "tempfile"
 require "tmpdir"
 require "time"
 
@@ -1712,6 +1713,41 @@ def validate_story_v2_contract!(payloads)
   end
 end
 
+def validate_story_v3_contract!(payloads, repo_root)
+  validator = File.join(repo_root, "scripts/story_v3_validator.py")
+  payloads.fetch("story", []).each do |story|
+    next unless story["reader_format"] == "editorial_v3"
+
+    capabilities = ["story_reader.editorial_v3.core"]
+    block_types = story.fetch("sections").flat_map { |section| section.fetch("blocks") }.map { |block| block.fetch("type") }.to_set
+    capabilities << "story_reader.editorial_v3.extended_text" unless block_types.disjoint?(Set.new(%w[sequence flow list verse aside source_note]))
+    capabilities << "story_reader.editorial_v3.figure" if block_types.include?("figure")
+    Tempfile.create(["selflo-story-v3", ".json"]) do |file|
+      file.write(json_bytes(story))
+      file.flush
+      command = ["python3", validator, file.path]
+      capabilities.each { |capability| command.concat(["--capability", capability]) }
+      stdout, stderr, status = Open3.capture3(*command)
+      abort("Editorial V3 semantic validation failed for #{story.fetch("id")}:\n#{stdout}#{stderr}") unless status.success?
+    end
+  end
+end
+
+def required_story_capabilities(descriptors, payload_bytes_by_path, output_root)
+  required = Set.new
+  descriptors.select { |descriptor| descriptor["kind"] == "story" }.each do |descriptor|
+    bytes = payload_bytes_by_path[descriptor.fetch("path")] || File.binread(File.join(output_root, descriptor.fetch("path")))
+    story = JSON.parse(bytes)
+    next unless story["reader_format"] == "editorial_v3"
+
+    required << "story_reader.editorial_v3.core"
+    block_types = story.fetch("sections").flat_map { |section| section.fetch("blocks") }.map { |block| block.fetch("type") }.to_set
+    required << "story_reader.editorial_v3.extended_text" unless block_types.disjoint?(Set.new(%w[sequence flow list verse aside source_note]))
+    required << "story_reader.editorial_v3.figure" if block_types.include?("figure")
+  end
+  required.to_a.sort
+end
+
 def run_schema_gate!(
   schema_root,
   manifest_path,
@@ -1752,10 +1788,16 @@ def run_schema_gate!(
 
 
   checks.each do |kind, path|
+    schema_name = if kind == "story" && read_json(path)["reader_format"] == "editorial_v3"
+      "perspective-story-v3.schema.json"
+    else
+      schemas.fetch(kind)
+    end
+
     schema =
       File.join(
         schema_root,
-        schemas.fetch(kind)
+        schema_name
       )
 
 
@@ -3144,6 +3186,9 @@ manifest = {
     end
 }
 
+required_capabilities = required_story_capabilities(descriptors, payload_bytes_by_path, output_root)
+manifest["required_capabilities"] = required_capabilities unless required_capabilities.empty?
+
 
 # =============================================================================
 # Validate projected package before writing
@@ -3241,6 +3286,20 @@ Dir.mktmpdir(
   validate_story_v2_contract!(
     projected_payload_groups
   )
+
+  validate_story_v3_contract!(
+    projected_payload_groups,
+    repo_root
+  )
+
+  if channel == "release"
+    non_v3_story_ids = projected_payload_groups.fetch("story", []).map do |story|
+      story.fetch("id") unless story["reader_format"] == "editorial_v3"
+    end.compact
+    unless non_v3_story_ids.empty?
+      abort("Release stories must use editorial_v3: #{non_v3_story_ids.sort.join(", ")}")
+    end
+  end
 
 
   if options[

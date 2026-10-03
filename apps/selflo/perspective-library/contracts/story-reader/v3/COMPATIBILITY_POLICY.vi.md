@@ -21,7 +21,11 @@ editorial_v3
 → V3 decoder + V3 renderer
 ```
 
-App release hỗ trợ V3 không rewrite, reinterpret hoặc tự nâng story V1/V2. Một Library được phép chứa nhiều story format nếu manifest capability tương thích.
+App release hỗ trợ V3 không rewrite, reinterpret hoặc tự nâng story V1/V2 khi load. Authoring Library được phép chứa nhiều story format nếu manifest capability tương thích. Production Release từ baseline 2026-10-03 chỉ nhận `editorial_v3`.
+
+`editorial_v3` là thế hệ **contract payload**, không phải số phiên bản giao diện. Sau khi contract này được Release, content chỉ được cập nhật prose, metadata và tổ hợp component đã freeze; một app mới có thể đổi presentation của chính component đó mà không đổi payload. App V1/V2/V2.5 dùng compatibility adapter trong memory; không migrate hay publish lại content hiện có chỉ để đạt baseline V3.
+
+Nếu tương lai cần block/structure nằm ngoài vocabulary đã freeze, thay đổi đó không được sửa in-place API/content feed mà app cũ đang dùng. Phải mở contract/API generation mới, ship app support trước, rồi mới cho content mới opt-in. Feed cũ tiếp tục phục vụ payload mà app cũ đã hiểu.
 
 ## 3. Change classification
 
@@ -52,8 +56,10 @@ App release hỗ trợ V3 không rewrite, reinterpret hoặc tự nâng story V1
 4. App decode/render/test capability mới nhưng tiếp tục hỗ trợ format cũ.
 5. App tương thích được phát hành.
 6. Publisher mới được enable capability.
-7. Content opt-in/migrate từng story; không bulk rewrite nếu không có editorial review.
+7. Content mới có thể opt-in. Content V1/V2/V2.5 hiện có tiếp tục được app compatibility adapter đọc nguyên trạng; không bulk migrate để chốt baseline.
 8. Release gate chặn component chưa `allowed`.
+
+Cutover production đầu tiên chỉ migrate các story đã nằm trong Release manifest tại thời điểm cutover. Story chưa release giữ nguyên source format và phải được convert/review theo V3 khi được promote; không bulk migrate toàn bộ authoring backlog. Script migration lấy allowlist trực tiếp từ Release manifest, bảo toàn prose/order và chạy idempotent.
 
 ## 6. Support lifecycle
 
@@ -83,6 +89,8 @@ specified
 - App không bỏ legacy renderer chỉ vì không còn story mới dùng format đó.
 - Content-only Release không được yêu cầu capability chưa có trong app đang phát hành.
 - Một visual regression không được giải quyết bằng cách rewrite toàn bộ content selector nếu semantic không đổi.
+- `authorship`, `editorial`, `rights` là dữ liệu/provenance ổn định dù app có thể ẩn hoặc đổi vị trí UI. Search/phân loại nằm trong `metadata`/`tags`, không tạo block render mới.
+- V3 story lỗi riêng lẻ được app quarantine cùng link/membership liên quan; lỗi integrity package (manifest, checksum, image) vẫn fail toàn package.
 
 ## 8. Breaking-change criteria
 
