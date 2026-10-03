@@ -11,7 +11,7 @@ Mọi thay đổi có thể ảnh hưởng cách app decode, validate, activate 
 | Contract ID | Canonical document | Executable contract | App conformance | Trạng thái |
 |---|---|---|---|---|
 | `selflo.content-tags.v1` | [`content-tags/v1/CONTRACT.vi.md`](content-tags/v1/CONTRACT.vi.md) | catalog/quote/manifest schemas, publisher gate và Release coverage | `Selflo/Docs/authoring/perspectives/APP_FILTER_METADATA_CONTRACT.md` | Active, Release 34+ |
-| `selflo.story-reader.editorial-v3` | [`story-reader/v3/CONTRACT.vi.md`](story-reader/v3/CONTRACT.vi.md) | Versioned Story Reader rules, production V2.5 schema/matrix, V3 fixtures, [component catalog](story-reader/v3/COMPONENT_CATALOG.vi.md), [visual reference](story-reader/v3/visual-reference/VISUAL_REFERENCE.vi.md), [support matrix](story-reader/v3/component-support.json) và semantic validator | `Selflo/Docs/features/perspective-content-system/STORY_READER_COMPONENT_CONFORMANCE.md` | Editorial V2.5 app/schema/publisher enabled; V3 vẫn chưa Release |
+| `selflo.story-reader.editorial-v3` | [`story-reader/v3/CONTRACT.vi.md`](story-reader/v3/CONTRACT.vi.md) | Versioned Story Reader rules, modern V2 defaults, optional V2.5 semantics, V3 fixtures, [component catalog](story-reader/v3/COMPONENT_CATALOG.vi.md), [visual reference](story-reader/v3/visual-reference/VISUAL_REFERENCE.vi.md) và [support matrix](story-reader/v3/component-support.json) | `Selflo/Docs/features/perspective-content-system/STORY_READER_COMPONENT_CONFORMANCE.md` | Editorial V2 modern app presentation active; V2.5 compatible; V3 chưa Release |
 
 Machine-readable index nằm tại [`registry.json`](registry.json). Registry chỉ định vị contract và executable artifacts; semantics normative nằm trong `CONTRACT.vi.md` và schema/fixture được contract dẫn tới.
 

@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 67,
+  "library_revision": 68,
   "content_version": "quote-filter-metadata-v1",
   "language": "vi",
-  "generated_at": "2026-10-01T10:38:15Z",
+  "generated_at": "2026-10-03T00:16:13Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -541,11 +541,11 @@
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 10,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r10.json",
+      "revision": 11,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r11.json",
       "media_type": "application/json",
-      "sha256": "6880c8a59aea24c9791f633f4afb30a1190e902f1914005d95755172dff03ebc",
-      "byte_count": 62056
+      "sha256": "5dc0254a3e1279dbea5e02d17b9c9468dc83b50b896c146ed32abf9d1e2d93a7",
+      "byte_count": 61680
     },
     {
       "id": "story.original_keeper_of_the_lamp",
@@ -613,11 +613,11 @@
     {
       "id": "story.rails_that_diverge",
       "kind": "story",
-      "revision": 5,
-      "path": "stories/rails-that-diverge/story.vi.r5.json",
+      "revision": 6,
+      "path": "stories/rails-that-diverge/story.vi.r6.json",
       "media_type": "application/json",
-      "sha256": "a7d0c568f092e90a51937744576ec7272c4e776817070cfab4dc8be995928bf0",
-      "byte_count": 81676
+      "sha256": "7cb6f52cb0555434260e6778c00f694da6160768df7a8b1447381c0baadf62e2",
+      "byte_count": 81606
     },
     {
       "id": "story.rain_arrives_downstream_late",
@@ -685,11 +685,11 @@
     {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 9,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r9.json",
+      "revision": 10,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r10.json",
       "media_type": "application/json",
-      "sha256": "3879dbe2ff175634fa44748ae4d06577c256b0ff5ce1648d9edd3ed332ed41b0",
-      "byte_count": 76450
+      "sha256": "4683354ee2ff41460b3c0f20bc6c45713073d894bbc5f4eaad3e1872339f1671",
+      "byte_count": 76347
     },
     {
       "id": "story.three_dots_on_the_screen",

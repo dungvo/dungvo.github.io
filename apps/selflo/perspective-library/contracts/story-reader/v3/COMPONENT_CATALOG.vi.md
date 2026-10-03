@@ -122,9 +122,11 @@ Dialogue turn presentation đã được owner chốt từ full-story samples:
 
 ## 3. Legacy components được bảo toàn
 
-### Editorial V2.5 — production opt-in
+### Editorial V2 modern default và V2.5 semantic opt-in
 
-V2.5 không thay semantics của Classic/V2. Content chỉ nhận renderer mới khi khai báo `reader_format = editorial_v2_5` và `schema_version = 1.2`.
+App mới được dùng modern renderer cho payload `editorial_v2` mà không migrate content. V2 giữ default paragraph `narrative`, heading `leading`, pull quote `centerpiece` và plain text khi thiếu runs. Component optional không có dữ liệu thì không xuất hiện.
+
+V2.5 không còn là selector để bật visual mới. Content chỉ dùng `reader_format = editorial_v2_5` và `schema_version = 1.2` khi thật sự cần semantic field additive như quote presentation explicit hoặc rich-text runs. Nếu quote V2.5 vẫn thiếu presentation, renderer fallback `centerpiece`; `rail`/`inset` phải được khai báo rõ.
 
 | Component/style | Ý nghĩa | Dùng khi | Tránh dùng khi |
 |---|---|---|---|

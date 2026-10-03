@@ -19,7 +19,7 @@ Nguyên tắc:
 4. `text_vi` luôn là plain-text fallback. Rich text chỉ là lớp nhấn bổ sung.
 5. V3 giữ nguyên thứ tự section và block; renderer không hoist, reorder hoặc tự suy diễn từ câu chữ.
 6. Unknown format/semantic không được âm thầm render sai. Package capability và quarantine tiếp tục theo ADR-0004.
-7. `classic_v1` và `editorial_v2` giữ nguyên presentation đã phát hành.
+7. `classic_v1` giữ presentation đã phát hành; `editorial_v2` giữ nguyên wire semantics và renderer default, nhưng app mới được cải thiện visual mà không yêu cầu content migration.
 
 ## 2. Version và compatibility
 
@@ -34,7 +34,7 @@ Story V3 khai báo:
 Quy tắc:
 
 - thiếu `reader_format` hoặc `classic_v1` → Classic Reader;
-- `editorial_v2` → Editorial V2 hiện hành, presentation không đổi;
+- `editorial_v2` → cùng semantic payload V2; app cũ dùng reader cũ, app mới được map sang modern renderer theo default policy bên dưới;
 - `editorial_v2_5` → Editorial V2.5 production renderer, schema `1.2`, tương thích cấu trúc V2 và hỗ trợ quote presentation/rich-text runs;
 - `editorial_v3` → V3 semantic presentation policy;
 - app không hỗ trợ capability V3 → không activate package revision mới;
@@ -43,11 +43,15 @@ Quy tắc:
 
 App được phép dùng chung Reader shell và component nền giữa V2/V3, nhưng phải giữ presentation policy riêng.
 
-### Editorial V2.5 production boundary
+### Editorial V2 modern presentation và V2.5 semantic boundary
 
-- V2.5 là opt-in bằng `reader_format = editorial_v2_5`; app không tự nâng story V2.
+- Modern visual không phải content capability: app mới được render `editorial_v2` bằng modern components, còn app cũ tiếp tục dùng reader V2 cũ.
+- Adapter không đổi story ID, revision, prose, section/block order hoặc persisted wire format.
+- Khi V2 không có selector modern: paragraph thiếu style → `narrative`; heading → `leading`; pull quote → `centerpiece`; thiếu runs → plain text; thiếu hero/authorship/reflection → bỏ component tương ứng, không suy tạo content.
+- App không suy `rail`/`inset` từ vị trí hoặc độ dài quote V2. Default `centerpiece` bảo toàn minimum promise của V2 cũ.
+- V2.5 chỉ còn là opt-in cho semantic field additive bằng `reader_format = editorial_v2_5`; không phải điều kiện để nhận modern typography/layout.
 - V2.5 giữ block family V2: `paragraph`, `part_heading`, `heading`, `pull_quote`, `divider`, cùng `takeaway` và `reflection`.
-- `pull_quote.presentation` nhận `rail`, `inset`, `centerpiece`; thiếu presentation được app fallback `rail`, nhưng content mới phải khai báo rõ.
+- `pull_quote.presentation` nhận `rail`, `inset`, `centerpiece`; thiếu presentation fallback `centerpiece`. Content V2.5 mới nên khai báo rõ khi muốn `rail` hoặc `inset`.
 - `runs` chỉ dùng cho span ngắn trong paragraph với `plain`, `strong`, `emphasis`, `accent`, `strong_accent`; V2 renderer được phép bỏ qua runs và tiếp tục dùng `text_vi`.
 - Dialogue tiếp tục dùng cặp `paragraph/dialogue_lead` + các `paragraph/dialogue` liên tiếp; app gom cùng speaker thành một turn, không đổi source order.
 - Unknown `reader_format`, block type, style hoặc presentation fail closed tại package load; không fallback âm thầm sang Classic.
