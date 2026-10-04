@@ -36,7 +36,7 @@ def current_quotes(root):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent.parent)
-    parser.add_argument('--workbook', type=Path, default=Path('quote-chatpgt/Selflo_Content_Master_Post90_Phase2_5.xlsx'))
+    parser.add_argument('--workbook', type=Path, default=Path('content-workspace/raw/quote-spreadsheets/Selflo_Content_Master_Post90_Phase2_5.xlsx'))
     parser.add_argument('--ledger', type=Path, default=Path('/tmp/selflo-full-research-ledger.json'))
     parser.add_argument('--write', action='store_true')
     args=parser.parse_args(); root=args.root.resolve(); workbook=(root/args.workbook).resolve() if not args.workbook.is_absolute() else args.workbook
@@ -69,7 +69,7 @@ def main():
         members.sort(key=lambda pair:(0 if clean(pair[0].get('Mức xác minh')).startswith('A') else 1,nature_rank.get(clean(pair[1].get('content_nature canonical')),9),int(pair[1].get('Source row') or 999999)))
         selected.append(members[0]); reasons['exact_duplicate_alternates_held']+=len(members)-1
     selected.sort(key=lambda pair:int(pair[1].get('Source row') or 999999))
-    catalog_path=root/'quote-research/review-pipeline/review-candidates.json'; catalog=read(catalog_path); existing={x['id']:x for x in catalog['candidates']}
+    catalog_path=root/'content-workspace/curated/quote-research/review-pipeline/review-candidates.json'; catalog=read(catalog_path); existing={x['id']:x for x in catalog['candidates']}
     chosen=[]
     for q,n in selected:
         original_id=clean(q.get('Quote ID')); ident=stable_id(original_id)
@@ -82,7 +82,7 @@ def main():
     audit={'schema_version':'selflo.full-corpus-authoring-audit.v1','generated_at':now,'source_workbook':workbook.name,'research_total':len(raw),'canonical_before':len(current),'selected_for_authoring':len(chosen),'excluded_or_held':len(raw)-len(chosen),'gate':{'selflo_fit':'High','verification':'A or B','source_url':'required','exact_duplicate_policy':'one representative unless already canonical','directive_risk':'exclude High','release_change':False},'reason_counts':dict(sorted(reasons.items())),'selected_ids':[x['id'] for x in chosen],'research_to_canonical_id':{x['research_id_original']:x['id'] for x in chosen if x['research_id_original']!=x['id']}}
     print(json.dumps({'research_total':len(raw),'canonical_before':len(current),'selected_for_authoring':len(chosen),'reason_counts':audit['reason_counts']},ensure_ascii=False,indent=2))
     if args.write:
-        write(catalog_path,catalog); write(args.ledger,ledger); write(root/'quote-research/review-pipeline/full-corpus-authoring-audit.json',audit)
+        write(catalog_path,catalog); write(args.ledger,ledger); write(root/'content-workspace/curated/quote-research/review-pipeline/full-corpus-authoring-audit.json',audit)
 
 
 if __name__=='__main__': main()

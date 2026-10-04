@@ -61,9 +61,9 @@ Không dùng các cờ xác nhận để bỏ qua việc kiểm tra nguồn/quy�
 python3 scripts/daily-content-review.py status
 ```
 
-State được lưu tại `quote-research/review-pipeline/state.json`. Candidate đã queued, approved, rejected, nhập Authoring hoặc Release sẽ không bị chọn lại như nội dung mới.
+State được lưu tại `content-workspace/curated/quote-research/review-pipeline/state.json`. Candidate đã queued, approved, rejected, nhập Authoring hoặc Release sẽ không bị chọn lại như nội dung mới.
 
-Với quote chuẩn đã ở Authoring, kết quả AI review được lưu riêng tại `quote-research/review-pipeline/canonical-ai-review.json` và xuất hiện trong Review Matrix. Nhãn `round1_not_pass` và `source_rights_blocked` giúp loại các quote chưa đạt hoặc bị chặn khỏi những batch đề xuất sau; chỉ đưa lại khi nội dung hoặc bằng chứng nguồn đã thay đổi.
+Với quote chuẩn đã ở Authoring, kết quả AI review được lưu riêng tại `content-workspace/curated/quote-research/review-pipeline/canonical-ai-review.json` và xuất hiện trong Review Matrix. Nhãn `round1_not_pass` và `source_rights_blocked` giúp loại các quote chưa đạt hoặc bị chặn khỏi những batch đề xuất sau; chỉ đưa lại khi nội dung hoặc bằng chứng nguồn đã thay đổi.
 
 ## Nguyên tắc an toàn
 

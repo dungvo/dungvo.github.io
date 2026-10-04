@@ -39,7 +39,7 @@ def public_uri(value):
 def run(cmd,cwd=None): subprocess.run(cmd,cwd=cwd,check=True)
 def git(root,*args): run(['git','-C',str(root),*args])
 def state_paths(root):
-    q=root/'quote-research/review-pipeline'
+    q=root/'content-workspace/curated/quote-research/review-pipeline'
     return q,q/'review-candidates.json',q/'state.json',q/'batches'
 def load_state(p):
     if p.exists(): return read(p)

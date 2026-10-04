@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import hashlib
 import re
 import sys
 from collections import Counter
@@ -40,9 +41,48 @@ def classify(story):
         return "knowledge_insight", "editorial.source_collection_id"
     return "story", "runtime_entity_default"
 
+def quote_item(quote, descriptor, fragment):
+    metadata = quote.get("metadata") or {}
+    selection = quote.get("selection") or {}
+    text_vi = quote.get("text_vi") or ""
+    keywords = metadata.get("keywords", [])
+    search_values = [text_vi, quote.get("title_vi"), quote.get("subtitle_vi"),
+                     (quote.get("authorship") or {}).get("author_name"),
+                     fragment.get("primary_theme"), *keywords,
+                     *selection.get("presentation_tags", [])]
+    return {
+        "id": quote["id"],
+        "title_vi": quote.get("title_vi"),
+        "text_vi": text_vi,
+        "content_type": "quote",
+        "content_type_label_vi": "Quote",
+        "runtime_entity": "perspective_quote",
+        "classification_source": "runtime_entity",
+        "schema_version": fragment.get("schema_version"),
+        "reader_format": "quote_card",
+        "revision": quote.get("revision", 1),
+        "status": (quote.get("review") or {}).get("status", "unknown"),
+        "channel": "authoring",
+        "language": "vi",
+        "primary_theme": quote.get("primary_theme") or fragment.get("primary_theme"),
+        "concept_ids": metadata.get("concepts", []),
+        "emotion_tags": metadata.get("emotion_tags", []),
+        "keywords": keywords,
+        "rights_status": (quote.get("rights") or {}).get("status"),
+        "review_status": (quote.get("review") or {}).get("status"),
+        "source_path": descriptor["path"],
+        "payload_ref": f"perspective-library/source/vi/{descriptor['path']}#{quote['id']}",
+        "reader_url": None,
+        "search_document_vi": re.sub(r"\s+", " ", " ".join(str(v) for v in search_values if v)).strip(),
+    }
+
 source_index = read(SOURCE / "source.json")
 items = []
 for descriptor in source_index["files"]:
+    if descriptor["kind"] == "quote_fragment":
+        fragment = read(SOURCE / descriptor["path"])
+        items.extend(quote_item(quote, descriptor, fragment) for quote in fragment.get("quotes", []))
+        continue
     if descriptor["kind"] != "story":
         continue
     story = read(SOURCE / descriptor["path"])
@@ -70,6 +110,7 @@ for descriptor in source_index["files"]:
         "reader_format": story.get("reader_format", "classic_v1"),
         "revision": story.get("revision"),
         "status": story.get("status"),
+        "channel": "authoring",
         "language": story.get("language"),
         "primary_theme": story.get("primary_theme"),
         "story_style": metadata.get("story_style"),
@@ -85,18 +126,20 @@ for descriptor in source_index["files"]:
         "block_inventory": dict(sorted(block_counter.items())),
         "rich_text_marks": dict(sorted(mark_counter.items())),
         "source_path": descriptor["path"],
-        "reader_url": f"../story/?source=authoring&id={story['id']}",
+        "payload_ref": f"perspective-library/source/vi/{descriptor['path']}",
+        "reader_url": f"../reader/?source=authoring&id={story['id']}",
         "search_document_vi": plain_text(story),
     }
     items.append(item)
 
-items.sort(key=lambda item: (item["content_type"], item["title_vi"].casefold(), item["id"]))
+items.sort(key=lambda item: (item["content_type"], (item.get("title_vi") or item.get("text_vi") or "").casefold(), item["id"]))
 type_counts = Counter(item["content_type"] for item in items)
 format_counts = Counter(item["reader_format"] for item in items)
 theme_counts = Counter(item["primary_theme"] for item in items)
 content_api = {
     "schema_version": "selflo.content-index.v1",
     "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+    "channel": "authoring",
     "source": {
         "kind": "canonical_authoring_source",
         "path": "perspective-library/source/vi/source.json",
@@ -118,8 +161,36 @@ content_api = {
 }
 write(API / "content-index.v1.json", content_api)
 
-authoring_catalog = read(LIBRARY / "contracts" / "story-reader" / "v3" / "component-authoring-catalog.json")
-support = read(LIBRARY / "contracts" / "story-reader" / "v3" / "component-support.json")
+shard_dir = API / "content-index.v1"
+shards = []
+for content_type in ("quote", "story", "knowledge_insight"):
+    selected = [item for item in items if item["content_type"] == content_type]
+    for offset in range(0, len(selected), 500):
+        number = offset // 500 + 1
+        name = f"{content_type}-{number:04d}.json"
+        payload = {
+            "schema_version": "selflo.content-index.v1",
+            "generated_at": content_api["generated_at"],
+            "channel": "authoring",
+            "content_type": content_type,
+            "items": selected[offset:offset + 500],
+        }
+        encoded = (json.dumps(payload, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+        (shard_dir / name).parent.mkdir(parents=True, exist_ok=True)
+        (shard_dir / name).write_bytes(encoded)
+        shards.append({"path": name, "content_type": content_type, "item_count": len(payload["items"]),
+                       "byte_count": len(encoded), "sha256": hashlib.sha256(encoded).hexdigest()})
+write(shard_dir / "manifest.json", {
+    "schema_version": "selflo.content-index-manifest.v1",
+    "generated_at": content_api["generated_at"],
+    "channel": "authoring",
+    "item_count": len(items),
+    "search_mode": "local_first",
+    "shards": shards,
+})
+
+authoring_catalog = read(ROOT / "shared" / "contracts" / "story-reader" / "v3" / "component-authoring-catalog.json")
+support = read(ROOT / "shared" / "contracts" / "story-reader" / "v3" / "component-support.json")
 support_by_selector = {item["wire_selector"]: item for item in support["components"]}
 components = []
 for item in authoring_catalog["components"]:
@@ -138,9 +209,9 @@ component_api = {
     "schema_version": "selflo.component-catalog-api.v1",
     "generated_at": content_api["generated_at"],
     "source": {
-        "authoring_catalog": "perspective-library/contracts/story-reader/v3/component-authoring-catalog.json",
-        "support_matrix": "perspective-library/contracts/story-reader/v3/component-support.json",
-        "contract": "perspective-library/contracts/story-reader/v3/CONTRACT.vi.md",
+        "authoring_catalog": "shared/contracts/story-reader/v3/component-authoring-catalog.json",
+        "support_matrix": "shared/contracts/story-reader/v3/component-support.json",
+        "contract": "shared/contracts/story-reader/v3/CONTRACT.vi.md",
     },
     "components": components,
 }

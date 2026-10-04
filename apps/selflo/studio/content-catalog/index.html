@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Selflo Content Catalog — content index và Story Reader component contract.">
+  <title>Selflo · Content Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero"><div class="shell"><a href="../">← Selflo tools</a><p class="eyebrow">Single-source projection</p><h1>Content Catalog</h1><p>Biết Selflo đang có loại nội dung nào, metadata gì và mỗi block nên được dùng ra sao.</p><nav><button class="active" data-tab="content">Content matrix</button><button data-tab="contract">Block contract</button><a href="../../api/content-index.v1.json">Content API ↗</a><a href="../../api/component-catalog.v1.json">Contract API ↗</a></nav></div></header>
+  <main class="shell">
+    <section id="contentPanel"><div class="summary" id="contentSummary"></div><div class="toolbar"><input id="contentSearch" type="search" placeholder="Tìm title, ID, keyword, nội dung…"><select id="typeFilter"><option value="all">Mọi loại</option></select><select id="formatFilter"><option value="all">Mọi reader format</option></select><select id="themeFilter"><option value="all">Mọi theme</option></select></div><div class="table-wrap"><table><thead><tr><th>ID / Title</th><th>Loại nội dung</th><th>Runtime</th><th>Theme / style</th><th>Lifecycle</th><th>Metadata</th><th>Block coverage</th><th>Xem</th></tr></thead><tbody id="contentRows"></tbody></table></div></section>
+    <section id="contractPanel" hidden><div class="contract-intro"><div><p class="eyebrow">Editorial V3</p><h2>Block và presentation semantics</h2><p>Content chọn ý nghĩa; web và app quyết định typography, spacing và màu cụ thể.</p></div><input id="componentSearch" type="search" placeholder="Tìm paragraph, highlight, flow, quote…"></div><div class="component-grid" id="componentGrid"></div></section>
+  </main>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

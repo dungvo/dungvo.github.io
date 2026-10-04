@@ -1,0 +1,56 @@
+{
+  "schema_version": "selflo.shared-contract-registry.v1",
+  "updated_at": "2026-10-04",
+  "path_base": "apps_selflo_root",
+  "contracts": [
+    {
+      "contract_id": "selflo.content-tags.v1",
+      "status": "active",
+      "canonical_document": "shared/contracts/content-tags/v1/CONTRACT.vi.md",
+      "app_conformance_document": "Selflo/Docs/authoring/perspectives/APP_FILTER_METADATA_CONTRACT.md",
+      "executable_artifacts": [
+        "perspective-library/tooling/schema/perspective-theme.schema.json",
+        "perspective-library/tooling/schema/perspective-content-tag-catalog.schema.json",
+        "perspective-library/tooling/schema/perspective-library-manifest.schema.json",
+        "perspective-library/source/vi/content-tags/content-tags.vi.json",
+        "scripts/publish-perspective-library"
+      ],
+      "release_policy": "content-compatible within v1; app-first for new schema or semantics"
+    },
+    {
+      "contract_id": "selflo.story-reader.editorial-v3",
+      "status": "editorial_v2_modern_active_v2_5_compatible_v3_specified",
+      "canonical_document": "shared/contracts/story-reader/v3/CONTRACT.vi.md",
+      "app_conformance_document": "Selflo/Docs/features/perspective-content-system/STORY_READER_COMPONENT_CONFORMANCE.md",
+      "executable_artifacts": [
+        "perspective-library/tooling/schema/perspective-story.schema.json",
+        "perspective-library/tooling/schema/perspective-story-v3.schema.json",
+        "perspective-library/tooling/schema/perspective-library-manifest.schema.json",
+        "perspective-library/tooling/fixtures/StoryV3/valid/core-story.valid.json",
+        "perspective-library/tooling/fixtures/StoryV3/valid/extended-story.valid.json",
+        "perspective-library/tooling/fixtures/StoryV3/invalid/invalid-cases.json",
+        "shared/contracts/story-reader/v3/COMPONENT_CATALOG.vi.md",
+        "shared/contracts/story-reader/v3/COMPATIBILITY_POLICY.vi.md",
+        "shared/contracts/story-reader/v3/component-support.json",
+        "shared/contracts/story-reader/v3/component-authoring-catalog.json",
+        "scripts/story_v3_validator.py",
+        "scripts/test_story_v3_contract.py",
+        "scripts/test_story_component_contract.py"
+      ],
+      "release_policy": "editorial_v2 remains release-compatible across old/new apps; editorial_v2_5 is optional additive semantics; editorial_v3 remains app-first and not allowed"
+    },
+    {
+      "contract_id": "selflo.content-index.v1",
+      "status": "active",
+      "canonical_document": "shared/contracts/content-index/v1/CONTRACT.vi.md",
+      "app_conformance_document": "Selflo/Docs/features/perspective-content-system/CONTENT_INDEX_CONFORMANCE.md",
+      "executable_artifacts": [
+        "shared/contracts/content-index/v1/content-index.schema.json",
+        "scripts/build-content-catalog.py",
+        "api/content-index.v1.json",
+        "api/content-index.v1/manifest.json"
+      ],
+      "release_policy": "additive fields within v1; breaking identity or semantics require v2 and app-first conformance"
+    }
+  ]
+}

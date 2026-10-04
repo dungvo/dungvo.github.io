@@ -3,8 +3,8 @@ import unittest
 from pathlib import Path
 
 
-LIBRARY_ROOT = Path(__file__).resolve().parents[1] / "perspective-library"
-MATRIX_PATH = LIBRARY_ROOT / "contracts" / "story-reader" / "v3" / "component-support.json"
+APP_ROOT = Path(__file__).resolve().parents[1]
+MATRIX_PATH = APP_ROOT / "shared" / "contracts" / "story-reader" / "v3" / "component-support.json"
 
 
 class StoryComponentContractTests(unittest.TestCase):

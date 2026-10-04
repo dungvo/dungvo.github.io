@@ -1,0 +1,27 @@
+{
+  "schema_version": "selflo.research-registry.v1",
+  "updated_at": "2026-10-04",
+  "topics": [
+    {
+      "id": "ai-human-interaction",
+      "label_vi": "AI và tương tác con người",
+      "path": "topics/ai-human-interaction",
+      "artifacts": ["why-ai-feels-easier-to-ask.sources.md"]
+    },
+    {
+      "id": "technology-history",
+      "label_vi": "Lịch sử phát triển công nghệ",
+      "path": "topics/technology-history",
+      "artifacts": [
+        "raw/ban_do_lich_su_nguyen_ly_du_bao_AI_v0_3.docx",
+        "clean/ban-do-lich-su-nguyen-ly-du-bao-ai.md"
+      ]
+    },
+    {
+      "id": "human-agency",
+      "label_vi": "Năng lực tự chủ của con người",
+      "path": "../perspective-library/research/human-agency",
+      "status": "legacy_location_registered_for_safe_migration"
+    }
+  ]
+}

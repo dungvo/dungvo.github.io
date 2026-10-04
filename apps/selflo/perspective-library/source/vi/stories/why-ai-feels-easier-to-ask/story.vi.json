@@ -144,21 +144,20 @@
           "style": "lead_in",
           "text_vi": "Nếu chỉ xét về kiến thức, việc hỏi dường như rất đơn giản:"
         },
-        {
-          "id": "hesitate_02",
-          "type": "flow",
-          "items": [
-            {
-              "text_vi": "Không biết"
-            },
-            {
-              "text_vi": "Hỏi"
-            },
-            {
-              "text_vi": "Biết thêm"
-            }
-          ]
-        },
+      {
+        "id": "hesitate_02",
+        "type": "paragraph",
+        "style": "narrative",
+        "text_vi": "Không biết → hỏi → biết thêm.",
+        "runs": [
+          {
+            "text_vi": "Không biết → hỏi → biết thêm.",
+            "marks": [
+              "strong"
+            ]
+          }
+        ]
+      },
         {
           "id": "hesitate_03",
           "type": "paragraph",

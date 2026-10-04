@@ -176,7 +176,7 @@ def load_stories(channel_dir):
 
 def load_supplemental_captures(root):
     captures=[]
-    capture_dir=root/'quote-research/raw-capture'
+    capture_dir=root/'content-workspace/curated/quote-research/raw-capture'
     if not capture_dir.exists(): return captures
     for path in sorted(capture_dir.glob('*.json')):
         doc=json.loads(path.read_text())
@@ -232,17 +232,17 @@ def main():
     ap.add_argument('--root', type=Path, default=Path(__file__).resolve().parent.parent)
     ap.add_argument('--workbook', type=Path)
     args = ap.parse_args(); root = args.root.resolve()
-    optimized = root/'quote-chatpgt/Selflo_Content_Master_Optimized.xlsx'
-    source_coverage = root/'quote-chatpgt/Selflo_Content_Master_Post90_SourceCoverage.xlsx'
-    book = args.workbook or (optimized if optimized.exists() else source_coverage if source_coverage.exists() else root/'quote-chatpgt/Selflo_Content_Master_Post90_Phase2_5.xlsx')
+    optimized = root/'content-workspace/raw/quote-spreadsheets/Selflo_Content_Master_Optimized.xlsx'
+    source_coverage = root/'content-workspace/raw/quote-spreadsheets/Selflo_Content_Master_Post90_SourceCoverage.xlsx'
+    book = args.workbook or (optimized if optimized.exists() else source_coverage if source_coverage.exists() else root/'content-workspace/raw/quote-spreadsheets/Selflo_Content_Master_Post90_Phase2_5.xlsx')
     wb = load_workbook(book, read_only=True, data_only=True)
     raw = sheet_records(wb, 'Quote Library v2')
     normalized = {clean(x.get('Quote ID')): x for x in sheet_records(wb, 'Normalized Corpus')}
     mapping = {clean(x.get('Research Quote ID')): x for x in sheet_records(wb, 'Research Repo Mapping')}
-    ledger_path=root/'quote-research/review-pipeline/canonical-ai-review.json'
+    ledger_path=root/'content-workspace/curated/quote-research/review-pipeline/canonical-ai-review.json'
     ledger=json.loads(ledger_path.read_text()) if ledger_path.exists() else {'decisions':[]}
     ai_reviews={x['quote_id']:x for x in ledger.get('decisions',[])}
-    shortlist_path=root/'quote-research/review-pipeline/release-shortlist.json'
+    shortlist_path=root/'content-workspace/curated/quote-research/review-pipeline/release-shortlist.json'
     shortlist=json.loads(shortlist_path.read_text()) if shortlist_path.exists() else {'quote_ids':[]}
     shortlist_ids=set(shortlist.get('quote_ids',[]))
     authoring_manifest, authoring = load_quotes(root/'perspective-library/authoring/vi')

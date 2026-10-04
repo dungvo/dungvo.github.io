@@ -1,21 +1,37 @@
 # Selflo website
 
+> **Bắt đầu ở đây.** Repo này chứa website public, content source và contract dùng chung với app. Nếu chỉ cần thay nội dung, đọc [`docs/content-lifecycle.md`](docs/content-lifecycle.md). Nếu thay format hoặc semantics, đọc [`shared/README.md`](shared/README.md) trước. Danh sách lệnh nằm tại [`docs/commands.md`](docs/commands.md).
+
+## Bản đồ nhanh
+
+| Khu vực | Vai trò |
+|---|---|
+| `shared/` | Contract, proposal và quyết định dùng chung giữa app/content |
+| `perspective-library/source/` | Nguồn chuẩn của quote và story đang biên tập |
+| `perspective-library/release/` | Payload đã phát hành; không sửa tay |
+| `research/` | Nguồn nghiên cứu theo chủ đề, gồm raw và Markdown sạch |
+| `api/` | Projection sinh tự động cho catalog/search; không phải source of truth |
+| `studio/` | Review, Catalog, Matrix, Reader Lab và authoring tools; không xuất hiện trong navigation public |
+| `docs/` | Cấu trúc, workflow, command và mockup đã chốt |
+
+Website public chỉ hiển thị những gì đã Release. Authoring/Developer Studio dùng URL riêng và không được link từ giao diện công khai.
+
 Public root: <https://dungvo.github.io/apps/selflo/>
 
 ## Pages
 
 - `/apps/selflo/`: public-facing app home plus entry points to editorial tools.
-- `/apps/selflo/quotes/`: dense quote-only browser with source, author, work, theme and text filters. Each card deep-links to the focused detail preview.
-- `/apps/selflo/preview/`: bulk quote/story review workspace. It renders 12 items per page by default, pairs linked quote/story side by side, shows the complete story in a bounded reader, reports word count/reading time/section count and stores independent quote/story decisions.
-- `/apps/selflo/preview/?channel=candidate&updated=latest`: batch Candidate nhỏ để review lượt 1.
-- `/apps/selflo/preview/?channel=authoring&updated=latest`: nội dung Authoring vừa cập nhật để review lượt 2.
-- `/apps/selflo/preview/?channel=release&updated=latest`: nội dung đã Release.
-- `/apps/selflo/review-matrix/`: inventory hợp nhất toàn bộ research quotes từ Excel, canonical Authoring và Release; có **Ma trận nguồn & khoảng trống**, ranking, độ tin cậy, pipeline, filter, chọn nhiều dòng và copy ID.
-- `/apps/selflo/preview/?view=detail`: focused in-app quote/story reader preview.
-- `/apps/selflo/preview/?view=matrix`: diversity dashboard backed by `quote-research/diversity-matrix.json` and the live Authoring manifest.
-- `/apps/selflo/story/`: app-like Story Reader Lab for testing Classic V1 and Editorial V2 payloads without changing the existing review workspace or Release content.
-- `/apps/selflo/content-catalog/`: API-backed inventory for Story and Knowledge / Insight metadata, full-text discovery and the Editorial V3 block/presentation guide. Generated endpoints live at `/apps/selflo/api/content-index.v1.json` and `/apps/selflo/api/component-catalog.v1.json`.
-- `/apps/selflo/story-seed/`: local prompt builder for generating Authoring-ready story/quote draft files.
+- `/apps/selflo/studio/quotes/`: dense quote-only browser with source, author, work, theme and text filters. Each card deep-links to the focused detail preview.
+- `/apps/selflo/studio/review/`: bulk quote/story review workspace. It renders 12 items per page by default, pairs linked quote/story side by side, shows the complete story in a bounded reader, reports word count/reading time/section count and stores independent quote/story decisions.
+- `/apps/selflo/studio/review/?channel=candidate&updated=latest`: batch Candidate nhỏ để review lượt 1.
+- `/apps/selflo/studio/review/?channel=authoring&updated=latest`: nội dung Authoring vừa cập nhật để review lượt 2.
+- `/apps/selflo/studio/review/?channel=release&updated=latest`: nội dung đã Release.
+- `/apps/selflo/studio/review-matrix/`: inventory hợp nhất toàn bộ research quotes từ Excel, canonical Authoring và Release; có **Ma trận nguồn & khoảng trống**, ranking, độ tin cậy, pipeline, filter, chọn nhiều dòng và copy ID.
+- `/apps/selflo/studio/review/?view=detail`: focused in-app quote/story reader preview.
+- `/apps/selflo/studio/review/?view=matrix`: diversity dashboard backed by `content-workspace/curated/quote-research/diversity-matrix.json` and the live Authoring manifest.
+- `/apps/selflo/studio/reader/`: app-like Story Reader Lab for testing Classic V1 and Editorial V2 payloads without changing the existing review workspace or Release content.
+- `/apps/selflo/studio/content-catalog/`: API-backed inventory for Story and Knowledge / Insight metadata, full-text discovery and the Editorial V3 block/presentation guide. Generated endpoints live at `/apps/selflo/api/content-index.v1.json` and `/apps/selflo/api/component-catalog.v1.json`.
+- `/apps/selflo/studio/story-seed/`: local prompt builder for generating Authoring-ready story/quote draft files.
 - `/apps/selflo/privacy/`: stable privacy-policy URL for the website and future App Store metadata.
 
 ## Review ledger
@@ -34,7 +50,7 @@ The Review workspace stores decisions in the current browser and supports JSON i
 
 Chạy các lệnh dưới đây từ thư mục `apps/selflo`.
 
-Có thể mở <https://dungvo.github.io/apps/selflo/review-matrix/> để xem hàng đợi theo thứ tự ưu tiên. Chọn các dòng muốn xử lý rồi bấm **Copy ID đã chọn**; gửi danh sách ID để promotion vào Authoring hoặc Release. Các item có nhãn **Mới vào Authoring** là nội dung cần review lượt hai trước khi Release.
+Có thể mở <https://dungvo.github.io/apps/selflo/studio/review-matrix/> để xem hàng đợi theo thứ tự ưu tiên. Chọn các dòng muốn xử lý rồi bấm **Copy ID đã chọn**; gửi danh sách ID để promotion vào Authoring hoặc Release. Các item có nhãn **Mới vào Authoring** là nội dung cần review lượt hai trước khi Release.
 
 Matrix không đọc riêng batch Candidate. Dữ liệu được tạo từ `Selflo_Content_Master_Optimized.xlsx` (fallback về các workbook Post-90 cũ), Authoring manifest/payload và Release manifest/payload. Sau khi workbook hoặc repository content thay đổi, rebuild bằng:
 
@@ -46,7 +62,7 @@ Matrix không đọc riêng batch Candidate. Dữ liệu được tạo từ `Se
 ### Research sau mốc 90 ngày
 
 - `Quote Library v2` là corpus 90-day đã đóng: không chèn thêm dòng, không sửa raw/original research và provenance.
-- Nghiên cứu mới được ghi append-only vào sheet `Research Intake` trong `quote-chatpgt/Selflo_Content_Master_Optimized.xlsx`.
+- Nghiên cứu mới được ghi append-only vào sheet `Research Intake` trong `content-workspace/raw/quote-spreadsheets/Selflo_Content_Master_Optimized.xlsx`.
 - Mỗi candidate mới phải có Research ID, original text, nguồn/tác phẩm, vị trí nguồn, URL, bản Việt làm việc, verification và rights note. Trường hợp chưa rõ phải ghi `unresolved`, không đoán.
 - Sheet `Source Coverage Matrix` và phần **Ma trận nguồn & khoảng trống** trên web dùng để chọn nhóm research tiếp theo. Ưu tiên hiện tại là các nhóm phương Tây ngoài Khắc kỷ, tâm lý/hành vi hiện đại, não bộ/thói quen và quy luật/hiệu ứng hiện đại.
 - `Research Intake` không phải Release. Luồng đúng vẫn là: **Research Intake → normalize/verify → Canonical → Authoring → owner review → Release**.
@@ -65,7 +81,7 @@ python3 scripts/daily-content-review.py select --count 5 --push
 
 Script chọn 5 candidate chưa từng xem, ghi nhận trạng thái và đẩy batch lên GitHub. Review tại:
 
-<https://dungvo.github.io/apps/selflo/preview/?channel=candidate&updated=latest>
+<https://dungvo.github.io/apps/selflo/studio/review/?channel=candidate&updated=latest>
 
 Chọn quyết định trên web rồi bấm **Export review ledger**.
 
@@ -79,7 +95,7 @@ python3 scripts/daily-content-review.py promote-authoring \
 
 Chỉ item được approve mới được chuyển. Review lượt 2 tại:
 
-<https://dungvo.github.io/apps/selflo/preview/?channel=authoring&updated=latest>
+<https://dungvo.github.io/apps/selflo/studio/review/?channel=authoring&updated=latest>
 
 Sau khi review, export ledger Authoring.
 
@@ -114,7 +130,7 @@ Trạng thái cho biết candidate nào còn unseen, đang review, đã vào Aut
 
 ### 5. Theo dõi AI review của nội dung chuẩn
 
-Kết quả review vòng 1 cho các quote chuẩn trong Authoring được lưu bền vững tại `quote-research/review-pipeline/canonical-ai-review.json` và hiển thị trong `/review-matrix/`. Có thể lọc theo: **Vòng 1 đạt · chờ bạn duyệt**, **Cần review cùng story**, **Cần xác minh nguồn**, **Cần biên tập**, **Vòng 1 chưa đạt** và **Bị chặn nguồn/quyền**.
+Kết quả review vòng 1 cho các quote chuẩn trong Authoring được lưu bền vững tại `content-workspace/curated/quote-research/review-pipeline/canonical-ai-review.json` và hiển thị trong `/studio/review-matrix/`. Có thể lọc theo: **Vòng 1 đạt · chờ bạn duyệt**, **Cần review cùng story**, **Cần xác minh nguồn**, **Cần biên tập**, **Vòng 1 chưa đạt** và **Bị chặn nguồn/quyền**.
 
 Quote đã mang nhãn **Vòng 1 chưa đạt** hoặc **Bị chặn nguồn/quyền** không được đưa lại vào batch đề xuất kế tiếp, trừ khi có biên tập hoặc bằng chứng nguồn mới. Đây là đề xuất của AI; chỉ quyết định rõ ràng của owner mới được chuyển nội dung sang Release.
 
@@ -123,7 +139,7 @@ Quote đã mang nhãn **Vòng 1 chưa đạt** hoặc **Bị chặn nguồn/quy�
 ## Content boundaries
 
 - Canonical authoring source: `perspective-library/source/vi/`.
-- Candidate review queue: `quote-research/review-pipeline/`; không phải canonical content.
+- Candidate review queue: `content-workspace/curated/quote-research/review-pipeline/`; không phải canonical content.
 - Generated public review package: `perspective-library/authoring/vi/`.
 - Release: separate fail-closed channel; chỉ script promotion sau quyết định của owner mới được phép cập nhật.
 - Canonical quote source is split into numbered fragments of at most 12 quote under `source/vi/quotes/<theme>/` so future batches do not make one theme file grow indefinitely.
@@ -131,7 +147,7 @@ Quote đã mang nhãn **Vòng 1 chưa đạt** hoặc **Bị chặn nguồn/quy�
 
 ## Documentation
 
-- [Triết lý sản phẩm Selflo](SELFLO_PRODUCT_PHILOSOPHY.vi.md): luận đề nền tảng, vai trò của nội dung và trí tuệ nhân tạo, nguyên tắc riêng tư, cố ý không tự động hóa và câu hỏi kiểm tra khi xây tính năng.
+- [Triết lý sản phẩm Selflo](shared/SELFLO_PRODUCT_PHILOSOPHY.vi.md): luận đề nền tảng, vai trò của nội dung và trí tuệ nhân tạo, nguyên tắc riêng tư, cố ý không tự động hóa và câu hỏi kiểm tra khi xây tính năng.
 - [Hướng dẫn kể chuyện Selflo](perspective-library/STORYTELLING_GUIDE.vi.md): taxonomy story style/life stage/function/depth, cách chọn truyện theo hoàn cảnh người đọc, checklist chống giảng đạo và quy tắc typography cho Story Reader.
 - [Định hướng mở rộng kho nội dung](perspective-library/CONTENT_COVERAGE_GAPS.vi.md): các gap về quy luật đời sống hiện đại, não bộ/thói quen, thơ–âm nhạc, quote cần story/context và nguyên tắc cân bằng nguồn cho các batch tiếp theo.
 - [Hướng dẫn đưa một story vào Selflo Release](perspective-library/RELEASE_STORY_GUIDE.vi.md): cấu trúc thư mục, cách tìm quote qua `story_id`, các file cần cập nhật, Release gates và quy trình kiểm tra/publish.
@@ -139,10 +155,10 @@ Quote đã mang nhãn **Vòng 1 chưa đạt** hoặc **Bị chặn nguồn/quy�
 
 ## Tìm nội dung vừa cập nhật và đã Release
 
-Trong `/preview/`, chọn nguồn **Candidate**, **Authoring** hoặc **Đã Release**. Mặc định sắp theo **Cập nhật mới nhất**; lọc **Đợt mới nhất**, **7 ngày qua**, **30 ngày qua** kết hợp ô tìm tên/nội dung. Bộ lọc dùng được ở Review nhanh và Xem chi tiết.
+Trong `/studio/review/`, chọn nguồn **Candidate**, **Authoring** hoặc **Đã Release**. Mặc định sắp theo **Cập nhật mới nhất**; lọc **Đợt mới nhất**, **7 ngày qua**, **30 ngày qua** kết hợp ô tìm tên/nội dung. Bộ lọc dùng được ở Review nhanh và Xem chi tiết.
 
-- Link batch Candidate mới nhất: `/preview/?channel=candidate&updated=latest`.
-- Link mới cập nhật: `/preview/?updated=latest`.
-- Link bản phát hành: `/preview/?channel=release`.
+- Link batch Candidate mới nhất: `/studio/review/?channel=candidate&updated=latest`.
+- Link mới cập nhật: `/studio/review/?updated=latest`.
+- Link bản phát hành: `/studio/review/?channel=release`.
 - Ngày cập nhật là thời điểm từng quote/story thay đổi trong Library, dựa trên lịch sử payload và audit; không lấy ngày sửa cả theme hoặc ngày duyệt ledger. Ngày hiển thị theo múi giờ trình duyệt.
 - Publisher tự sinh `updates.json` cho từng channel bằng `scripts/build-library-updates.py`; không sửa tay. Thiếu lịch sử thì để ngày trống.

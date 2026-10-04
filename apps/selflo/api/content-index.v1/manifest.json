@@ -1,0 +1,51 @@
+{
+  "schema_version": "selflo.content-index-manifest.v1",
+  "generated_at": "2026-10-04T02:34:29.295517Z",
+  "channel": "authoring",
+  "item_count": 1898,
+  "search_mode": "local_first",
+  "shards": [
+    {
+      "path": "quote-0001.json",
+      "content_type": "quote",
+      "item_count": 500,
+      "byte_count": 637891,
+      "sha256": "8dd3ec1b69a073ec37e00870a7392767c775b6c6f3ce0295d2b5219564d126ae"
+    },
+    {
+      "path": "quote-0002.json",
+      "content_type": "quote",
+      "item_count": 500,
+      "byte_count": 645196,
+      "sha256": "0db0ff65f9190dca87b5c1535e0860a1e8c3386623516b55c9047ecd0ba34c47"
+    },
+    {
+      "path": "quote-0003.json",
+      "content_type": "quote",
+      "item_count": 500,
+      "byte_count": 654738,
+      "sha256": "f42e26c91c6e61d677de0bbc13533671be24c24b534596e3bd2be678b67f04c1"
+    },
+    {
+      "path": "quote-0004.json",
+      "content_type": "quote",
+      "item_count": 340,
+      "byte_count": 436194,
+      "sha256": "fb6c642297b62289c1ead989d88f4e80310ff5cc133ca07275ff84b4d1362f71"
+    },
+    {
+      "path": "story-0001.json",
+      "content_type": "story",
+      "item_count": 57,
+      "byte_count": 391925,
+      "sha256": "841a2af83608e2d9b7901f3fd0cf2041c2a5839b58c55f2e8f820281c0891803"
+    },
+    {
+      "path": "knowledge_insight-0001.json",
+      "content_type": "knowledge_insight",
+      "item_count": 1,
+      "byte_count": 17773,
+      "sha256": "77937ffd0f765ee15bdf1f3901a482263860424a79c06baddb1486b154a89cd2"
+    }
+  ]
+}

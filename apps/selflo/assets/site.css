@@ -154,3 +154,30 @@ button, input, textarea, select { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Public site — developer/authoring tools intentionally live outside this navigation. */
+.public-header .site-nav { max-width: max-content; }
+.hero-visual.app-shot { background: #e8dfcf; transform: rotate(1deg); }
+.hero-visual.app-shot img { object-fit: cover; object-position: top center; }
+.public-section { padding: 105px 0; }
+.public-soft { background: #ebe5d9; }
+.showcase { padding: 110px 0 125px; }
+.screen-row { margin-top: 46px; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 16px; align-items: end; overflow-x: auto; padding-bottom: 14px; }
+.screen-row figure { min-width: 190px; margin: 0; }
+.screen-row img { width: 100%; display: block; border-radius: 25px; box-shadow: 0 24px 48px rgba(34,50,45,.16); }
+.screen-row figcaption { margin-top: 13px; color: var(--muted); text-align: center; font-size: 11px; font-weight: 750; }
+.public-cta { padding: 110px 0; color: #edf3ef; background: #29433b; }
+.public-cta h2 { max-width: 850px; margin: 18px 0; font: 500 clamp(42px,6vw,72px)/1.05 var(--serif); letter-spacing: -.045em; }
+.public-cta p:not(.eyebrow) { max-width: 650px; color: #bacac4; line-height: 1.7; }
+.public-cta .text-action { margin-top: 20px; color: white; }
+.editorial-page { min-height: 78vh; padding-block: 92px 120px; }
+.editorial-page > h1 { max-width: 950px; margin: 18px 0 24px; font: 500 clamp(48px,7vw,82px)/1.02 var(--serif); letter-spacing: -.05em; }
+.page-lede { max-width: 780px; color: var(--muted); font-size: 19px; line-height: 1.75; }
+.prose-grid,.perspective-cards { margin-top: 64px; display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.prose-grid section,.perspective-cards article,.perspective-cards > a { min-height: 240px; padding: 28px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,253,248,.65); text-decoration: none; }
+.prose-grid h2,.perspective-cards h2 { font: 600 27px/1.15 var(--serif); }
+.prose-grid p,.perspective-cards p { color: var(--muted); line-height: 1.7; }
+.perspective-cards article > span { color: var(--sage); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+.perspective-cards blockquote { margin: 65px 0 0; font: 500 27px/1.4 var(--serif); }
+.perspective-cards a { color: var(--sage-deep); font-weight: 750; }
+@media (max-width: 800px) { .screen-row { grid-template-columns: repeat(5,210px); } .prose-grid,.perspective-cards { grid-template-columns: 1fr; } }
