@@ -14,6 +14,7 @@ Public root: <https://dungvo.github.io/apps/selflo/>
 - `/apps/selflo/preview/?view=detail`: focused in-app quote/story reader preview.
 - `/apps/selflo/preview/?view=matrix`: diversity dashboard backed by `quote-research/diversity-matrix.json` and the live Authoring manifest.
 - `/apps/selflo/story/`: app-like Story Reader Lab for testing Classic V1 and Editorial V2 payloads without changing the existing review workspace or Release content.
+- `/apps/selflo/content-catalog/`: API-backed inventory for Story and Knowledge / Insight metadata, full-text discovery and the Editorial V3 block/presentation guide. Generated endpoints live at `/apps/selflo/api/content-index.v1.json` and `/apps/selflo/api/component-catalog.v1.json`.
 - `/apps/selflo/story-seed/`: local prompt builder for generating Authoring-ready story/quote draft files.
 - `/apps/selflo/privacy/`: stable privacy-policy URL for the website and future App Store metadata.
 
