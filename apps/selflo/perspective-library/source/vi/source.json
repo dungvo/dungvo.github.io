@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 57,
+  "source_revision": 58,
   "content_version": "quote-filter-metadata-v1",
   "language": "vi",
-  "canonical_quote_count": 1821,
+  "canonical_quote_count": 1822,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1480,6 +1480,12 @@
       "id": "quote_fragment.self_understanding.056",
       "kind": "quote_fragment",
       "path": "quotes/self_understanding/056.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.why_ai_feels_easier_to_ask",
+      "kind": "story",
+      "path": "stories/why-ai-feels-easier-to-ask/story.vi.json",
       "media_type": "application/json"
     }
   ]

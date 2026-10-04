@@ -834,6 +834,76 @@
         "topic:relationships",
         "origin:classical_text"
       ]
+    },
+    {
+      "id": "selflo.knowledge.why_ai_feels_easier_to_ask",
+      "revision": 1,
+      "kind": "selflo_original",
+      "title_vi": "Khi một câu hỏi để lộ điều ta chưa biết",
+      "text_vi": "Đôi khi điều khó nhất không phải là “không biết”. Điều khó hơn là để một người khác biết rằng mình không biết.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo · Knowledge / Insight",
+        "source_detail": "Câu mở vào bài Knowledge đầu tiên; dùng Story Reader như lớp tương thích tạm thời."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [
+          "anxiety",
+          "self_doubt"
+        ],
+        "keywords": [
+          "đặt câu hỏi",
+          "sợ bị đánh giá",
+          "an toàn tâm lý",
+          "AI",
+          "knowledge insight"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Nội dung gốc Selflo do owner chốt; Authoring Preview trước khi quyết định Release."
+      },
+      "review": {
+        "status": "needs_owner_review",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "writing": {
+        "semantic_intent": "Một câu hỏi có thể tìm kiếm thông tin đồng thời làm lộ điều người đặt câu hỏi chưa biết.",
+        "observation_key": "asking_reveals_not_knowing",
+        "structure_pattern": "knowledge_preview"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 70,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo · Hiểu sâu"
+      },
+      "story_id": "story.why_ai_feels_easier_to_ask",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [],
+        "presentation_tags": [
+          "relationships",
+          "learning",
+          "asking",
+          "psychological safety",
+          "AI"
+        ],
+        "tie_break_order": 2070
+      },
+      "knowledge_basis": null
     }
   ]
 }

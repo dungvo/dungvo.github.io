@@ -1,0 +1,709 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.why_ai_feels_easier_to_ask",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "reader_format": "editorial_v3",
+  "title_vi": "Vì sao có những câu ta dễ hỏi AI hơn hỏi một người?",
+  "subtitle_vi": "Một câu hỏi không chỉ tìm kiếm thông tin; đôi khi nó còn để người khác nhìn thấy điều ta chưa biết.",
+  "hero_image": null,
+  "primary_theme": "relationships",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [
+      "anxiety",
+      "self_doubt"
+    ],
+    "keywords": [
+      "knowledge insight",
+      "đặt câu hỏi",
+      "sợ bị đánh giá",
+      "an toàn tâm lý",
+      "AI",
+      "học tập",
+      "người giải đáp"
+    ],
+    "story_style": "contemporary"
+  },
+  "opening_quote_vi": "Đôi khi điều khó nhất không phải là “không biết”. Điều khó hơn là để một người khác biết rằng mình không biết.",
+  "sections": [
+    {
+      "id": "section_opening",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Một sự im lặng rất quen thuộc",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "opening_01",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Cuối một buổi học:"
+        },
+        {
+          "id": "opening_02",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "opening_02.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Mọi người còn câu hỏi gì không?"
+                },
+                {
+                  "text_vi": "Nếu không còn câu hỏi thì chúng ta dừng ở đây."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opening_03",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cả phòng im lặng. Một cảnh rất bình thường. Nhưng sự im lặng đó thực sự nói lên điều gì?"
+        },
+        {
+          "id": "opening_04",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Có thể mọi người đã hiểu. Nhưng cũng có thể:"
+        },
+        {
+          "id": "opening_05",
+          "type": "list",
+          "style": "unordered",
+          "items": [
+            {
+              "text_vi": "có người chưa hiểu nhưng chưa biết phải hỏi gì;"
+            },
+            {
+              "text_vi": "có người đã có câu hỏi nhưng thấy nó quá cơ bản;"
+            },
+            {
+              "text_vi": "có người nhìn quanh, thấy mọi người đều im lặng nên cũng im lặng;"
+            },
+            {
+              "text_vi": "có người sợ làm mất thời gian;"
+            },
+            {
+              "text_vi": "có người muốn về tự tìm hiểu thêm;"
+            },
+            {
+              "text_vi": "hoặc đơn giản có người chỉ muốn buổi học kết thúc."
+            }
+          ]
+        },
+        {
+          "id": "opening_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhìn từ bên ngoài, tất cả đều giống nhau: không ai hỏi. Nhưng bên trong, mỗi người có thể đang ở một trạng thái hoàn toàn khác."
+        },
+        {
+          "id": "opening_07",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Không ai hỏi không có nghĩa là không ai có câu hỏi.",
+          "shareable": true
+        }
+      ]
+    },
+    {
+      "id": "section_why_hesitate",
+      "marker_vi": "1",
+      "marker_unit_vi": null,
+      "title_vi": "Điều gì khiến mọi người ngại hỏi?",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "hesitate_01",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Nếu chỉ xét về kiến thức, việc hỏi dường như rất đơn giản:"
+        },
+        {
+          "id": "hesitate_02",
+          "type": "flow",
+          "items": [
+            {
+              "text_vi": "Không biết"
+            },
+            {
+              "text_vi": "Hỏi"
+            },
+            {
+              "text_vi": "Biết thêm"
+            }
+          ]
+        },
+        {
+          "id": "hesitate_03",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng khi câu hỏi được nói trước một người khác, một điều khác xảy ra. Khi một người hỏi “Phần này nghĩa là gì?”, họ không chỉ đang tìm thêm thông tin. Câu hỏi đồng thời để lộ một điều: “Tôi chưa biết điều này.”"
+        },
+        {
+          "id": "hesitate_04",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Và lúc đó, một chuỗi suy diễn bắt đầu:"
+        },
+        {
+          "id": "hesitate_05",
+          "type": "sequence",
+          "progression": "escalating",
+          "items": [
+            {
+              "text_vi": "Câu này có quá cơ bản không?"
+            },
+            {
+              "text_vi": "Người khác có nghĩ mình không tập trung không?"
+            },
+            {
+              "text_vi": "Có phải chỉ mình không hiểu?"
+            },
+            {
+              "text_vi": "Nếu hỏi điều này, cấp trên có nghĩ mình không đủ năng lực không?"
+            },
+            {
+              "text_vi": "Mình có đang làm mất thời gian của mọi người không?"
+            },
+            {
+              "text_vi": "Người ta vừa giải thích rồi. Nếu mình vẫn chưa hiểu, họ có khó chịu không?"
+            }
+          ]
+        },
+        {
+          "id": "hesitate_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trong tâm lý học, một phần của hiện tượng này được gọi là nỗi sợ bị đánh giá tiêu cực (fear of negative evaluation) — nỗi lo rằng người khác sẽ đánh giá mình không tốt trong một tình huống xã hội."
+        },
+        {
+          "id": "hesitate_07",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người không cần phải thực sự bị phán xét thì nỗi sợ này mới xuất hiện. Chỉ cần họ tin rằng nếu mình hỏi, người khác có thể nghĩ khác về mình, thì quyết định hỏi hay im lặng đã có thể thay đổi."
+        },
+        {
+          "id": "hesitate_08",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Năm 2021, Erika Nadile, Katelyn Cooper và các cộng sự khảo sát 417 sinh viên đại học từng học trong những lớp khoa học đông người. Trong số các yếu tố khiến sinh viên không thoải mái khi tự nguyện hỏi trước cả lớp, nhóm nghiên cứu ghi nhận:"
+        },
+        {
+          "id": "hesitate_09",
+          "type": "list",
+          "style": "unordered",
+          "items": [
+            {
+              "text_vi": "72,5% cho biết họ không tự tin vào kiến thức của mình;"
+            },
+            {
+              "text_vi": "67,5% lo những sinh viên khác sẽ đánh giá họ;"
+            },
+            {
+              "text_vi": "55,8% cảm thấy có quá nhiều người trong lớp;"
+            },
+            {
+              "text_vi": "52,5% không thoải mái nếu giảng viên phản ứng tiêu cực với câu hỏi của sinh viên khác;"
+            },
+            {
+              "text_vi": "49,4% lo rằng việc hỏi có thể khiến họ cảm thấy mình kém thông minh hơn;"
+            },
+            {
+              "text_vi": "47,2% cho biết việc những người khác không hỏi cũng khiến họ không thoải mái khi trở thành người đặt câu hỏi."
+            }
+          ]
+        },
+        {
+          "id": "hesitate_10",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một phân tích khác từ cùng dự án nghiên cứu cho thấy phần lớn sinh viên nhận thấy câu hỏi và câu trả lời của người khác có ích cho việc học, nhưng chỉ khoảng một nửa cho biết họ thực sự chủ động hỏi hoặc trả lời trước những lớp học đông người."
+        },
+        {
+          "id": "hesitate_11",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Ta có thể biết rằng hỏi là có ích, nhưng vẫn không muốn chính mình trở thành người đặt câu hỏi.",
+          "shareable": true
+        },
+        {
+          "id": "hesitate_12",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một câu hỏi có thể giúp ta biết thêm. Nhưng đồng thời, nó cũng để người khác nhìn thấy điều ta chưa biết."
+        }
+      ]
+    },
+    {
+      "id": "section_people",
+      "marker_vi": "2",
+      "marker_unit_vi": null,
+      "title_vi": "Người giải đáp và những người xung quanh ảnh hưởng thế nào?",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "people_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Hãy hình dung một học sinh vừa hỏi một câu. Người thầy trả lời: “Cái này mà cũng chưa hiểu à?” Có thể người thầy chỉ nói một câu. Nhưng không chỉ học sinh đó nghe thấy. Cả lớp cũng nghe."
+        },
+        {
+          "id": "people_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người khác đang có câu hỏi có thể nghĩ: “Thôi, câu của mình còn cơ bản hơn.” Và câu hỏi đó không bao giờ được nói ra."
+        },
+        {
+          "id": "people_03",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người mới vào công ty hỏi lại một yêu cầu. Người có kinh nghiệm hơn thở dài: “Anh vừa nói rồi mà.” Không chỉ người đang hỏi nhìn thấy phản ứng đó. Những người xung quanh cũng nhìn thấy cách một câu hỏi được tiếp nhận."
+        },
+        {
+          "id": "people_04",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một đứa trẻ liên tục hỏi cha mẹ “Tại sao?”. Nếu thường xuyên nhận được “Hỏi gì mà hỏi nhiều thế?”, đứa trẻ không chỉ nhận được câu trả lời cho một câu hỏi. Nó cũng nhận được một thông tin khác:"
+        },
+        {
+          "id": "people_05",
+          "type": "paragraph",
+          "style": "beat",
+          "text_vi": "Ở đây, việc đặt câu hỏi được đón nhận như thế nào."
+        },
+        {
+          "id": "people_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Điều đáng chú ý là người giải đáp đôi khi không cảm nhận hết rào cản mà người đặt câu hỏi đang trải qua."
+        },
+        {
+          "id": "people_07",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Năm 2010, Vanessa Bohns và Francis Flynn công bố bốn nghiên cứu trên Journal of Experimental Social Psychology về sự khó chịu khi yêu cầu người khác giúp đỡ. Các nghiên cứu cho thấy những người ở vị trí có khả năng giúp thường đánh giá thấp vai trò của sự xấu hổ và khó xử trong quyết định có mở lời xin giúp hay không."
+        },
+        {
+          "id": "people_08",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Hai phía có thể đang nhìn cùng một tình huống rất khác nhau. Người giải đáp nghĩ: “Có gì cứ hỏi.” Người đặt câu hỏi lại nghĩ: “Hỏi câu này liệu họ có nghĩ mình kém không?”"
+        },
+        {
+          "id": "people_09",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Một cánh cửa được mở chưa chắc người đứng bên ngoài đã cảm thấy an toàn để bước vào.",
+          "shareable": true
+        },
+        {
+          "id": "people_10",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vấn đề này không nhất thiết biến mất khi rời khỏi trường học. Lớp học có thể trở thành một cuộc họp. Người thầy có thể trở thành một người quản lý hoặc một người có nhiều kinh nghiệm hơn. “Em chưa hiểu chỗ này” có thể trở thành “Tôi chưa rõ yêu cầu này”, “Tại sao chúng ta lại làm theo cách này?” hoặc “Anh có thể giải thích lại phần vừa rồi không?”"
+        },
+        {
+          "id": "people_11",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bối cảnh đã thay đổi. Nhưng một suy diễn quen thuộc vẫn có thể xuất hiện: “Nếu mình để họ biết rằng mình chưa hiểu, họ sẽ nghĩ gì?”"
+        },
+        {
+          "id": "people_12",
+          "type": "aside",
+          "text_vi": "Không thể kết luận rằng tất cả những lần con người im lặng đều vì sợ bị đánh giá. Cũng không thể nói một đứa trẻ từng không dám hỏi chắc chắn sẽ trở thành một người lớn không dám hỏi."
+        },
+        {
+          "id": "people_13",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng cách những người xung quanh phản ứng với việc “chưa biết” có thể ảnh hưởng đến việc một người có muốn tiếp tục để lộ rằng mình chưa biết hay không."
+        }
+      ]
+    },
+    {
+      "id": "section_ai",
+      "marker_vi": "3",
+      "marker_unit_vi": null,
+      "title_vi": "AI gỡ được trở ngại nào trong giao tiếp giữa người với người?",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "ai_01",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Một người có thể ngại nói trước người khác “Tôi chưa hiểu”, nhưng khi trò chuyện với AI, họ lại có thể rất dễ dàng viết:"
+        },
+        {
+          "id": "ai_02",
+          "type": "list",
+          "style": "unordered",
+          "items": [
+            {
+              "text_vi": "Tôi chưa hiểu."
+            },
+            {
+              "text_vi": "Giải thích lại."
+            },
+            {
+              "text_vi": "Vẫn khó."
+            },
+            {
+              "text_vi": "Cho tôi một ví dụ đơn giản hơn."
+            },
+            {
+              "text_vi": "Tôi không biết gì về chủ đề này. Hãy giải thích từ đầu."
+            },
+            {
+              "text_vi": "Giải thích như cho một người mới bắt đầu."
+            }
+          ]
+        },
+        {
+          "id": "ai_03",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Điểm khác biệt không nhất thiết nằm ở việc AI thông minh hơn một con người. Ở khoảnh khắc đặt câu hỏi, có một thứ khác đã thay đổi."
+        },
+        {
+          "id": "ai_04",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Thường sẽ không có:"
+        },
+        {
+          "id": "ai_05",
+          "type": "list",
+          "style": "unordered",
+          "items": [
+            {
+              "text_vi": "cả lớp đang nhìn;"
+            },
+            {
+              "text_vi": "đồng nghiệp đang quan sát;"
+            },
+            {
+              "text_vi": "cấp trên đang ngồi trước mặt;"
+            },
+            {
+              "text_vi": "ánh mắt ngạc nhiên của người đối diện;"
+            },
+            {
+              "text_vi": "biểu cảm khó chịu;"
+            },
+            {
+              "text_vi": "hay cảm giác nhìn thấy người kia mất kiên nhẫn sau lần giải thích thứ ba."
+            }
+          ]
+        },
+        {
+          "id": "ai_06",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Một phần rủi ro xã hội của việc thừa nhận “tôi chưa biết” đã giảm xuống.",
+          "shareable": true
+        },
+        {
+          "id": "ai_07",
+          "type": "aside",
+          "text_vi": "Điều này không có nghĩa trò chuyện với AI mặc nhiên là ẩn danh hay riêng tư tuyệt đối. Điều thay đổi ở đây là người đặt câu hỏi ít phải đối diện trực tiếp với sự đánh giá của một người quen hoặc một nhóm người đang hiện diện."
+        },
+        {
+          "id": "ai_08",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một nghiên cứu năm 2026 của Alina Sami và các cộng sự tại Temerty Faculty of Medicine, University of Toronto cho thấy một hiện tượng tương tự. Nhóm nghiên cứu triển khai một trợ giảng AI dựa trên ChatGPT-4o trong một môn học bắt buộc dành cho sinh viên y khoa năm nhất."
+        },
+        {
+          "id": "ai_09",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trong nghiên cứu, 87 sinh viên sử dụng trợ giảng AI và kết quả của họ được so sánh với 206 sinh viên không sử dụng. Khảo sát 18 sinh viên và phỏng vấn 10 sinh viên được dùng để tìm hiểu trải nghiệm với công cụ."
+        },
+        {
+          "id": "ai_10",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một số sinh viên cho biết họ từng tránh hỏi trong bài giảng, đặt câu hỏi trên diễn đàn lớp hoặc tìm đến người hướng dẫn vì lo câu hỏi hoặc kiến thức của mình bị đánh giá. Trong khi đó, họ mô tả AI như một nơi riêng tư hơn, ít mang cảm giác bị phán xét hơn, dễ yêu cầu giải thích lại và dễ hỏi những điều họ cho rằng quá cơ bản."
+        },
+        {
+          "id": "ai_11",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhóm nghiên cứu xác định an toàn tâm lý tốt hơn (improved psychological safety) là một trong ba lợi ích nổi bật mà sinh viên cảm nhận được khi sử dụng trợ giảng AI."
+        },
+        {
+          "id": "ai_12",
+          "type": "aside",
+          "text_vi": "Bằng chứng này đến từ một chương trình y khoa cụ thể; phần trải nghiệm dựa trên một nhóm khảo sát và phỏng vấn nhỏ. Nó không chứng minh AI tốt hơn giáo viên hay mọi người đều thích nói chuyện với AI hơn con người."
+        },
+        {
+          "id": "ai_13",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Khi cảm giác bị một người khác trực tiếp đánh giá giảm đi, việc thừa nhận rằng mình chưa hiểu có thể trở nên dễ hơn.",
+          "shareable": true
+        },
+        {
+          "id": "ai_14",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "AI giúp tiếp cận thông tin nhanh hơn. Trong trường hợp này, nó còn làm giảm một phần chi phí xã hội của việc thừa nhận mình chưa biết. Người dùng có thể hỏi lại, bắt đầu bằng một câu rất cơ bản hoặc nói “Tôi vẫn chưa hiểu” mà không phải đồng thời quan sát biểu cảm của người đang giải thích. Có thể đây là một phần lý do khiến nhiều người cảm thấy dễ hỏi AI hơn."
+        }
+      ]
+    },
+    {
+      "id": "section_mirror",
+      "marker_vi": "4",
+      "marker_unit_vi": null,
+      "title_vi": "Vậy điều đáng chú ý có thực sự nằm ở AI?",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "mirror_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nếu một người rất dễ nói “Tôi chưa hiểu” với AI nhưng lại khó nói điều đó với một người khác, thì có lẽ điều đáng quan sát không chỉ nằm ở AI."
+        },
+        {
+          "id": "mirror_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "AI không phát minh ra câu hỏi. AI không tạo ra nhu cầu được giải thích. AI cũng không tạo ra nỗi sợ bị đánh giá. Những điều đó đã tồn tại từ trước."
+        },
+        {
+          "id": "mirror_03",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "AI tạo ra một kiểu tương tác trong đó người đặt câu hỏi ít phải quản lý hình ảnh của mình trước một con người cụ thể hơn.",
+          "shareable": false
+        },
+        {
+          "id": "mirror_04",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ta không phải vừa hỏi vừa đọc nét mặt của người đối diện, đoán họ có đang mất kiên nhẫn hay tự hỏi sau câu này họ có đánh giá mình khác đi không."
+        },
+        {
+          "id": "mirror_05",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Từ đó, một nhu cầu rất cũ trở nên dễ nhìn thấy hơn. Con người không chỉ cần câu trả lời. Đôi khi họ còn cần một nơi mà họ có thể nói “Tôi chưa biết”, “Tôi không hiểu”, “Giải thích lại giúp tôi” mà không cảm thấy những câu đó ngay lập tức trở thành một đánh giá về năng lực hay giá trị của chính mình."
+        },
+        {
+          "id": "mirror_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "AI có thể tạo ra cảm giác đó trong một số tình huống. Nhưng một lớp học cũng có thể. Một gia đình cũng có thể. Một nơi làm việc cũng có thể. Một cuộc trò chuyện giữa hai con người cũng có thể."
+        },
+        {
+          "id": "mirror_07",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Câu hỏi nằm ở cách những người trong đó phản ứng với sự chưa biết của nhau."
+        }
+      ]
+    },
+    {
+      "id": "section_both_sides",
+      "marker_vi": "5",
+      "marker_unit_vi": null,
+      "title_vi": "Chúng ta có thể làm gì ở cả hai phía?",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "both_01",
+          "type": "part_heading",
+          "part_number": 1,
+          "title_vi": "Khi mình là người đặt câu hỏi",
+          "subtitle_vi": null
+        },
+        {
+          "id": "both_02",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Không nhất thiết phải bắt đầu bằng lời khuyên “Phải mạnh dạn lên”. Có thể hữu ích hơn nếu bắt đầu bằng một câu hỏi:"
+        },
+        {
+          "id": "both_03",
+          "type": "paragraph",
+          "style": "beat",
+          "text_vi": "Điều gì đang khiến mình im lặng?"
+        },
+        {
+          "id": "both_04",
+          "type": "list",
+          "style": "unordered",
+          "items": [
+            {
+              "text_vi": "Mình muốn tự tìm trước?"
+            },
+            {
+              "text_vi": "Mình chưa biết phải hỏi như thế nào?"
+            },
+            {
+              "text_vi": "Mình sợ làm phiền?"
+            },
+            {
+              "text_vi": "Người này từng phản ứng khó chịu khi mình hỏi?"
+            },
+            {
+              "text_vi": "Hay mình đang dự đoán rằng họ sẽ đánh giá mình?"
+            }
+          ]
+        },
+        {
+          "id": "both_05",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những nguyên nhân khác nhau cần những cách xử lý khác nhau. Có lúc tự tìm trước là hợp lý. Có lúc nên hỏi. Có lúc nên đổi người để hỏi. Có lúc có thể hỏi AI trước để làm rõ điều mình đang vướng rồi mới trao đổi với một người khác."
+        },
+        {
+          "id": "both_06",
+          "type": "paragraph",
+          "style": "beat",
+          "text_vi": "Mình đang dự đoán người khác sẽ phán xét mình — nhưng dự đoán đó chưa chắc đã đúng."
+        },
+        {
+          "id": "both_07",
+          "type": "part_heading",
+          "part_number": 2,
+          "title_vi": "Khi mình là người giải đáp",
+          "subtitle_vi": null
+        },
+        {
+          "id": "both_08",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Ở phía còn lại, câu hỏi không chỉ là “Mình đã trả lời đúng chưa?”. Có thể còn một câu khác:"
+        },
+        {
+          "id": "both_09",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Cách mình vừa phản ứng có khiến người này muốn hỏi mình lần sau nữa không?",
+          "shareable": true
+        },
+        {
+          "id": "both_10",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Điều này đặc biệt đáng suy nghĩ với cha mẹ, giáo viên, người hướng dẫn, người quản lý và người có nhiều kinh nghiệm hơn."
+        },
+        {
+          "id": "both_11",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một đứa trẻ hỏi một câu rất cơ bản. Một học sinh trả lời sai. Một người mới đi làm hỏi lại điều vừa được giải thích. Một người nói “Tôi vẫn chưa hiểu”. Cách người giải đáp phản ứng lúc đó không chỉ truyền kiến thức. Nó còn truyền một thông điệp:"
+        },
+        {
+          "id": "both_12",
+          "type": "paragraph",
+          "style": "beat",
+          "text_vi": "Ở đây, việc chưa biết có được phép nói ra hay không?"
+        },
+        {
+          "id": "both_13",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "“Cái này mà cũng phải hỏi à?” và “Bạn thử tìm trước hai hướng này. Nếu vẫn vướng, nói cho tôi biết bạn mắc ở bước nào.” đều có thể yêu cầu người học cố gắng. Nhưng chúng tạo ra hai trải nghiệm hoàn toàn khác nhau."
+        },
+        {
+          "id": "both_14",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một bên biến việc chưa biết thành điều đáng xấu hổ. Một bên vẫn giữ yêu cầu người học phải suy nghĩ, nhưng cho phép họ nói ra nơi mình đang mắc."
+        },
+        {
+          "id": "both_15",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Phản ứng của bạn trước một câu hỏi hôm nay có thể quyết định liệu người đó có muốn hỏi bạn lần sau hay không.",
+          "shareable": true
+        }
+      ]
+    },
+    {
+      "id": "section_sources",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Nguồn nghiên cứu chính",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "source_01",
+          "type": "source_note",
+          "title_vi": "Nadile, Cooper và cộng sự (2021)",
+          "text_vi": "Gender Differences in Student Comfort Voluntarily Asking and Answering Questions in Large-Enrollment College Science Courses. Journal of Microbiology & Biology Education. DOI: 10.1128/jmbe.00100-21. Khảo sát 417 sinh viên về mức độ thoải mái và những yếu tố khiến họ ngại hỏi hoặc trả lời trước lớp."
+        },
+        {
+          "id": "source_02",
+          "type": "source_note",
+          "title_vi": "Nadile và cộng sự (2021)",
+          "text_vi": "Call on me! Undergraduates’ perceptions of voluntarily asking and answering questions in front of large-enrollment science classes. PLOS ONE. DOI: 10.1371/journal.pone.0243731. Một phân tích khác từ cùng dự án nghiên cứu về lợi ích được cảm nhận và hành vi tham gia."
+        },
+        {
+          "id": "source_03",
+          "type": "source_note",
+          "title_vi": "Bohns & Flynn (2010)",
+          "text_vi": "Why Didn’t You Just Ask? Underestimating the Discomfort of Help-Seeking. Journal of Experimental Social Psychology. DOI: 10.1016/j.jesp.2009.12.015. Bốn nghiên cứu về việc người có khả năng giúp đánh giá thấp sự xấu hổ và khó xử của người cần mở lời."
+        },
+        {
+          "id": "source_04",
+          "type": "source_note",
+          "title_vi": "Sami và cộng sự (2026)",
+          "text_vi": "Artificial intelligence teaching assistants: a scalable solution for supporting struggling medical students. Academic Medicine. DOI: 10.1093/acamed/wvag208. Nghiên cứu hỗn hợp về trợ giảng AI trong một môn bắt buộc của sinh viên y khoa năm nhất."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một câu để mang theo",
+    "text_vi": "Đôi khi điều khó nhất không phải là “không biết”. Điều khó hơn là để một người khác biết rằng mình không biết. Phản ứng của mình với câu hỏi hôm nay có thể quyết định liệu họ có còn muốn hỏi mình vào ngày mai hay không."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_01",
+        "text_vi": "Lần gần nhất bạn im lặng dù chưa hiểu, điều gì đã khiến bạn im lặng?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_02",
+        "text_vi": "Cách bạn phản ứng với một câu hỏi gần đây có khiến người kia cảm thấy an toàn để hỏi tiếp không?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "selflo",
+    "author_name": "Selflo",
+    "source_label": null,
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "knowledge_insight",
+    "source_item_id": "why_ai_feels_easier_to_ask",
+    "human_edited": true
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Knowledge / Insight do owner Selflo phát triển và chốt nội dung; đóng gói tạm bằng perspective_story để xem trong Reader hiện tại."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  }
+}
