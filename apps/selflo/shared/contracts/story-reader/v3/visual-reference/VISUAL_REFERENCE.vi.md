@@ -6,6 +6,19 @@
 
 Visual reference giúp app và content cùng hiểu hierarchy, nhịp đọc và quan hệ tương đối giữa component. Ảnh không phải pixel contract: font file, kích thước tuyệt đối, padding, ornament và cách compositing asset vẫn thuộc renderer, miễn giữ minimum rendering promise.
 
+## Presentation clarification — 2026-10-04
+
+Owner review bổ sung các ràng buộc áp dụng cho mọi visual reference và implementation:
+
+- App/Web có thể khác typography và responsive layout nhưng phải dùng cùng visible content khi so sánh cùng payload; không thêm “NÓI” hoặc label sinh từ enum ở một surface mà surface còn lại không có;
+- `quote.centerpiece` baseline không có nền/card, dùng mức nhấn serif bold/bold-italic và có thể có một rule ngắn phía dưới;
+- `quote.rail` phải có rail dọc nhìn thấy phía trước text; `quote.inset` chỉ dùng surface nhẹ và không vượt hierarchy của centerpiece;
+- part/section không tự tạo scene divider. Chỉ block `divider` tạo scene break độc lập;
+- takeaway/reflection không mặc định nằm trong khung chữ nhật, card hoặc nền riêng;
+- renderer resolve spacing theo semantic pair và không cộng dồn margin khiến opening → part → section bị rời rạc.
+
+Nếu ảnh cũ thể hiện khác các điểm trên, clarification này và Component Catalog là normative source; ảnh cũ chỉ còn giá trị tham khảo lịch sử cho phần không xung đột.
+
 ## Approved — Gate 3B Round 1
 
 Owner approved ngày 2026-10-01:

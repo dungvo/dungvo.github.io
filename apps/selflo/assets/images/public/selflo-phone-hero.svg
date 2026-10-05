@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 820" role="img" aria-label="Selflo trên iPhone">
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffaf0"/><stop offset=".65" stop-color="#f8edcf"/><stop offset="1" stop-color="#c5d8b6"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#397962"/><stop offset="1" stop-color="#0a4538"/></linearGradient>
+    <filter id="shadow" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="28" stdDeviation="25" flood-color="#102d25" flood-opacity=".35"/></filter>
+  </defs>
+  <g transform="rotate(5 220 410)" filter="url(#shadow)">
+    <rect x="34" y="10" width="372" height="800" rx="74" fill="#111b19"/>
+    <rect x="47" y="23" width="346" height="774" rx="62" fill="url(#screen)"/>
+    <path d="M144 23h152v28c0 15-11 26-26 26H170c-15 0-26-11-26-26Z" fill="#111b19"/>
+    <circle cx="174" cy="312" r="39" fill="#efb85b" opacity=".7"/>
+    <path d="M210 374c-19-50-4-103 69-135 2 65-20 111-69 135Z" fill="url(#leaf)"/>
+    <path d="M210 374c11-47 29-83 58-111" fill="none" stroke="#fff9e9" stroke-width="7" stroke-linecap="round"/>
+    <path d="M205 372c-42-6-70-32-76-71 43 2 73 21 84 57" fill="#588a73"/>
+    <text x="220" y="449" text-anchor="middle" fill="#0b4438" font-family="Georgia,serif" font-size="57" font-weight="600">Selflo</text>
+    <text x="220" y="480" text-anchor="middle" fill="#315e51" font-family="Arial,sans-serif" font-size="16">Lắng nghe chính mình.</text>
+    <circle cx="220" cy="555" r="54" fill="#efb85b" opacity=".58"/>
+    <path d="M47 705 126 626l67 65 72-88 128 117v77H47Z" fill="#a4bf9b"/>
+    <path d="M47 748 143 666l78 73 78-92 94 78v72H47Z" fill="#789f86"/>
+    <path d="M47 780 150 711l84 54 91-73 68 48v57H47Z" fill="#497867"/>
+  </g>
+</svg>

@@ -20,6 +20,8 @@ Nguyên tắc:
 5. V3 giữ nguyên thứ tự section và block; renderer không hoist, reorder hoặc tự suy diễn từ câu chữ.
 6. Unknown format/semantic không được âm thầm render sai. Package capability và quarantine tiếp tục theo ADR-0004.
 7. `classic_v1` giữ presentation đã phát hành; `editorial_v2` giữ nguyên wire semantics và renderer default, nhưng app mới được cải thiện visual mà không yêu cầu content migration.
+8. App/Web được khác typography và responsive geometry, nhưng không được khác visible content, block order, hierarchy hoặc presentation identity. Quy tắc normative nằm trong [`COMPONENT_CATALOG.vi.md`](COMPONENT_CATALOG.vi.md).
+9. Renderer không tự sinh semantic hoặc pseudo-component để “làm đẹp”. Divider chỉ tồn tại khi payload có `divider`; ornament chỉ được nằm trong mapping đã document của chính component.
 
 ## 2. Version và compatibility
 
@@ -537,6 +539,15 @@ Renderer quyết định:
 - VoiceOver grouping;
 - Reduce Motion.
 
+Giới hạn bắt buộc của renderer:
+
+- giữ nguyên visible text từ payload; không thêm nhãn như “NÓI” từ enum delivery nếu catalog chưa định nghĩa visible-label mapping;
+- không sinh divider/rule/card/background giữa các block ngoài presentation mapping normative trong Component Catalog;
+- không dùng ornament cục bộ như một scene separator giả;
+- resolve spacing theo semantic pair, không cộng dồn margin độc lập của hai block;
+- App và Web phải dùng cùng presentation identity: `rail` có rail nhìn thấy, `centerpiece` giữ hierarchy cao nhất và baseline không có nền, `inset` giữ mức nhấn vừa;
+- mọi thay đổi muốn thêm visible label, ornament hoặc region mới phải cập nhật contract chung và visual reference trước khi implementation.
+
 ## 8. Spacing contract
 
 V3 không có `spacing.before/after` trong payload. Renderer tính spacing theo cặp semantic, tối thiểu phải thiết kế/test:
@@ -554,6 +565,8 @@ statement → narrative
 transition → narrative
 divider → section/paragraph
 ```
+
+Normative spacing behavior và thứ tự tương đối `tight < body < section < part` nằm tại mục **Spacing parity** của [`COMPONENT_CATALOG.vi.md`](COMPONENT_CATALOG.vi.md). Một boundary chỉ resolve một spacing token; không cộng `after(A)` với `before(B)`. Opening nối part/section đầu tiên cũng chỉ có một transition spacing, tránh khoảng trống lớn do ba vùng cùng cộng margin.
 
 Không để mỗi component tự cộng padding trên và dưới mà không có policy chung.
 

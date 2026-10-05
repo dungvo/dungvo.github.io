@@ -8,6 +8,19 @@
 
 Catalog này là ngôn ngữ chung để content chọn đúng semantic block và app render đúng vai trò đọc. Content không chọn font, màu, padding hoặc ornament; app không suy semantic từ câu chữ.
 
+## 0. Content parity và giới hạn của renderer
+
+App và Web có thể dùng typography, kích thước responsive và spacing cụ thể khác nhau, nhưng phải render **cùng nội dung nhìn thấy** từ cùng payload:
+
+- `text_vi`, `runs[].text_vi`, title, subtitle, speaker `label_vi`, attribution, caption, takeaway và reflection phải giữ nguyên chữ, thứ tự và nghĩa;
+- renderer không thêm từ mô tả như “NÓI”, “SUY NGHĨ”, “TRÍCH DẪN” hoặc một heading giải thích nếu payload không chứa text đó và catalog không định nghĩa nó là UI label;
+- delivery `spoken|thought|remembered|written` là semantic để chọn treatment và accessibility. Baseline không sinh visible text label từ enum; VoiceOver vẫn phải nêu đúng context. Nếu sau này cần label nhìn thấy, label mapping phải được thêm vào contract chung và áp dụng đồng nhất trên App/Web;
+- renderer không thêm divider, rule, card, background, quote mark hoặc decorative region giữa các block chỉ vì trang “trống” hoặc để làm đẹp;
+- ornament chỉ hợp lệ khi thuộc presentation mapping của **chính component đang render**, được catalog mô tả ở mục tương ứng. Ornament không được hoạt động như một block mới hoặc thay đổi quan hệ giữa hai block;
+- khoảng cách là renderer responsibility nhưng phải đi theo semantic pair ở mục “Spacing parity” bên dưới; không cộng dồn margin độc lập khiến opening, part và section bị tách rời quá mức.
+
+Nguyên tắc kiểm tra parity: ẩn font, màu và kích thước đi thì người đọc App và Web vẫn phải thấy cùng text, cùng hierarchy, cùng component order và cùng loại nhấn. Screenshot so sánh không được dùng hai câu/nhãn khác nhau để minh họa cùng một payload.
+
 ## 1. Quy tắc ổn định
 
 1. Block/style đã Release trong Classic hoặc Editorial V2 không bị đổi tên, đổi shape hoặc reinterpret khi app thêm V3.
@@ -30,6 +43,13 @@ Minimum promise là phần app phải giữ dù visual được redesign. Typogr
 | `story.section_heading` | Mở một section có marker/title | Marker, unit, title và subtitle là một accessibility heading; không ghép text ngược vào content | Ngắt cảnh không cần tên |
 
 Hierarchy bắt buộc của renderer: `story.opening` > `story.part_heading` > `story.section_heading` > body. `part_heading` và `section_heading` không phải hai skin ngang hàng: part tạo ngắt lớn của cấu trúc, còn section tiếp tục mạch đọc và phải có visual weight nhỏ hơn. Content chọn đúng semantic type; không có field font-size để ép một section trông như part.
+
+Baseline presentation chung:
+
+- opening, part heading và section heading dùng typography cùng khoảng trắng để thể hiện hierarchy;
+- `part_heading` không tự sinh một scene divider. Baseline không đặt rule dài phía trên/dưới part; nếu nội dung cần ngắt cảnh độc lập, payload phải có `divider`;
+- section heading không có card, nền hoặc rule mặc định;
+- renderer được thay đổi cỡ chữ/line wrapping theo thiết bị nhưng không được đẩy part/section ra khỏi document order.
 
 Opening metadata promise đã được owner chốt từ ba full-story sample:
 
@@ -90,6 +110,14 @@ Dialogue turn presentation đã được owner chốt từ full-story samples:
 | `inset` | Lời trích, chữ viết hay hồi ức cần được nhận ra như một đơn vị riêng nhưng vẫn gần body | Câu chốt cao nhất của part |
 | `rail` | Lời trích nằm trong mạch đọc, cần quote identity nhưng không làm dừng toàn trang | Câu duy nhất cần người đọc mang theo sau một phần lớn |
 
+Baseline presentation chung để App/Web không diễn giải lệch bản chất:
+
+- `centerpiece`: serif bold hoặc bold-italic, mức nhấn cao nhất trong quote family, không dùng nền/card; có thể có quote mark và **một rule ngắn phía dưới** như ornament cục bộ của quote;
+- `rail`: luôn có rail dọc nhìn thấy ở trước text, căn theo trục đọc; không dùng nền/card mặc định;
+- `inset`: căn trái, thụt nhẹ và có thể dùng surface rất nhẹ; không được có visual weight cao hơn `centerpiece`;
+- quote text và attribution phải giống hệt trên App/Web. Renderer không thêm attribution hoặc nhãn “quote” khi payload không có;
+- không dùng rule dài theo reading column cho quote; rule ngắn của `centerpiece` không có semantic divider và không tách hai block lân cận.
+
 `centerpiece` có thể được renderer thể hiện bằng chữ serif/italic lớn, quote mark và rule như visual reference; ornament cụ thể không phải dữ liệu content. Mặc định ưu tiên `rail`/`inset`; thông thường không quá một `centerpiece` trong một part và nên đặt sau khi ý lớn đã hoàn tất. Nếu câu là kết tinh của người kể chứ không phải lời được trích, dùng `statement.centered`, không đổi thành quote chỉ để nhận visual này.
 
 ### 2.5 Structural và ending
@@ -99,6 +127,13 @@ Dialogue turn presentation đã được owner chốt từ full-story samples:
 | `story.divider` | Ngắt cảnh không cần tên | Có một scene break nhận biết được; app chọn ornament |
 | `story.takeaway` | Một điều để mang theo | Hiển thị đúng một ending region sau body; không sinh lại từ prose |
 | `story.reflection` | Prompt tự nguyện và closing | Giữ prompt order; `private_text` không đồng nghĩa persistence đã được bật |
+
+Baseline presentation chung:
+
+- chỉ `story.divider` tạo một scene break độc lập; renderer không suy divider từ part, section, quote, takeaway hoặc khoảng trống;
+- takeaway và reflection là ending regions trong document flow, không phải card mặc định;
+- baseline dùng label, typography và khoảng trắng để phân cấp takeaway/reflection; không tự thêm nền, border, khung chữ nhật hoặc rule dài;
+- nếu thiết kế sau này cần một surface riêng cho ending, đó là thay đổi presentation contract phải được owner review và cập nhật tại đây trước khi App/Web dùng.
 
 ### 2.6 Extended text và figure
 
@@ -195,6 +230,24 @@ V2 dialogue adjacency tiếp tục được hỗ trợ. App không reinterpret `
 | `shareable = false` | Không expose block-level share affordance |
 | `shareable = true` nhưng app chưa có share capability | App phải decode/giữ intent nhưng được phép chưa expose action; publisher chỉ được hứa share UI khi capability riêng active |
 | `response_mode = private_text` nhưng input/persistence chưa active | Hiển thị prompt như reflection text; không dựng input giả và không lưu dữ liệu |
+
+## 4.1 Spacing parity
+
+Payload không chứa pixel spacing, nhưng App/Web phải dùng cùng **quan hệ khoảng cách**, không tự cộng margin của từng component một cách độc lập:
+
+| Semantic pair | Quan hệ bắt buộc |
+|---|---|
+| `narrative → narrative` | Nhịp body chuẩn |
+| `lead_in → dependent block` | Chặt hơn body rõ rệt; hai block phải được cảm nhận như một cụm |
+| `transition → next block` | Có khoảng nghỉ nhẹ, nhỏ hơn section break |
+| `opening → first part/section/body` | Một lần chuyển vùng; không cộng đồng thời spacing lớn của cả opening và block kế tiếp |
+| `part_heading → section/body` | Ngắt lớn nhất trong body nhưng vẫn cùng continuous scroll |
+| `section_heading → first block` | Nhỏ hơn part break; heading phải gắn với nội dung sau |
+| `centerpiece → adjacent body` | Có khoảng thở rõ, nhưng không tạo cảm giác sang trang hoặc card độc lập |
+| `divider → next block` | Scene break do payload yêu cầu; không chồng thêm part/section separator |
+| `takeaway → reflection` | Hai ending region liên tục; không mặc định biến mỗi vùng thành một card |
+
+Implementation phải dùng pair-spacing/collapsing policy: tại một boundary chỉ áp dụng một khoảng cách đã resolve theo cặp semantic, không lấy `margin-bottom(A) + margin-top(B)`. App và Web được dùng giá trị cụ thể khác nhau để thích nghi màn hình, nhưng hierarchy `tight < body < section < part` phải giữ giống nhau.
 
 ## 5. Content selection checklist
 

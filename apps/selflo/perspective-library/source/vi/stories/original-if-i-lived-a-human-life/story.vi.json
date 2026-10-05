@@ -2,10 +2,10 @@
   "schema_version": "1.2",
   "entity": "perspective_story",
   "id": "story.original_if_i_lived_a_human_life",
-  "revision": 4,
+  "revision": 5,
   "status": "active",
   "language": "vi",
-  "title_vi": "Nếu tôi được sống một đời người",
+  "title_vi": "Nếu được sống một đời người",
   "subtitle_vi": "Một đời sống không biết trước kết quả, vẫn có mất mát, sai lầm và những ngày rất bình thường.",
   "hero_image": {
     "file_id": "image.story.original_if_i_lived_a_human_life.v1",
@@ -41,8 +41,8 @@
           "id": "part_01",
           "type": "part_heading",
           "part_number": 1,
-          "title_vi": "Nếu được sống một đời người",
-          "subtitle_vi": "Một cuộc đời ta nghĩ mình sẽ chọn."
+          "title_vi": "Một cuộc đời ta nghĩ mình sẽ chọn",
+          "subtitle_vi": null
         }
       ]
     },
@@ -50,23 +50,9 @@
       "id": "section_01",
       "marker_vi": null,
       "marker_unit_vi": null,
-      "title_vi": "Nếu được chọn một đời để sống",
+      "title_vi": "Một cuộc đời rất bình thường",
       "subtitle_vi": null,
       "blocks": [
-        {
-          "id": "section_01.block_01",
-          "type": "paragraph",
-          "style": "lead_in",
-          "text_vi": "Bạn có bao giờ tự hỏi:"
-        },
-        {
-          "id": "section_01.block_02",
-          "type": "pull_quote",
-          "text_vi": "Nếu được chọn một cuộc đời để sống, bạn sẽ chọn sống như thế nào?",
-          "attribution_vi": null,
-          "presentation": "centerpiece",
-          "shareable": false
-        },
         {
           "id": "section_01.block_03",
           "type": "paragraph",
