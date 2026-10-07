@@ -6,13 +6,18 @@
   <meta name="theme-color" content="#f7f3ea">
   <meta name="description" content="Selflo — một khoảng dừng riêng tư để lắng nghe chính mình.">
   <title>Selflo · Lắng nghe chính mình</title>
-  <link rel="stylesheet" href="assets/home-v2.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/public/selflo-mountain-lake-sunrise-v1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/public/selflo-phone-hero.svg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/home-v2.css?v=5">
+  <link rel="stylesheet" href="assets/home-v3.css?v=1">
 </head>
 <body>
   <header class="nav-shell">
-    <a class="wordmark" href="./" aria-label="Selflo — Trang chủ"><span class="leaf" aria-hidden="true"></span><span><b>Selflo</b><small>Lắng nghe chính mình</small></span></a>
-    <nav aria-label="Điều hướng chính"><a class="active" href="./">Trang chủ</a><a href="perspectives/">Góc nhìn</a><a href="support/">Hỗ trợ</a><a href="privacy/">Quyền riêng tư</a></nav>
-    <span class="coming">App Store · Sắp ra mắt</span>
+    <a class="wordmark" href="./" aria-label="Selflo — Trang chủ"><b>Selflo</b><img src="assets/images/public/selflo-leaf-mark.svg" alt=""></a>
+    <nav aria-label="Điều hướng chính"><a class="active" href="./">Trang chủ</a><a href="perspectives/">Góc nhìn</a><a href="#ve-selflo">Về Selflo</a><a href="privacy/">Quyền riêng tư</a></nav>
+    <span class="coming"> &nbsp; App Store · Sắp ra mắt</span>
   </header>
 
   <main>
@@ -25,53 +30,39 @@
         <ul class="trust"><li>Dữ liệu trên thiết bị</li><li>Không tài khoản</li><li>Không quảng cáo</li></ul>
       </div>
 
-      <article class="perspective-card reveal" aria-label="Một Góc nhìn trong Selflo">
-        <img src="assets/images/home/forest-light-selflo.jpg" alt="Ánh nắng xuyên qua khu rừng xanh yên tĩnh">
-        <div class="shade"></div>
-        <div class="card-top"><span>9:41</span><span>● ᯤ ▰</span></div>
-        <p class="card-theme">GÓC NHÌN · Ý NGHĨA &amp; GIÁ TRỊ</p>
-        <blockquote>“Những thứ mình từng tưởng là khoảng nghỉ giữa cuộc đời — hóa ra chính là cuộc đời.”</blockquote>
-        <div class="card-bottom"><span>Selflo</span><span>Đọc câu chuyện&nbsp; →</span></div>
-      </article>
+      <div class="hero-phone reveal" aria-label="Selflo trên iPhone"><img src="assets/images/public/selflo-phone-hero.svg" alt="Ứng dụng Selflo trên iPhone" width="430" height="690" fetchpriority="high"></div>
     </section>
 
-    <section class="promise section-pad reveal">
-      <p class="kicker">Một nhịp nhỏ mỗi ngày</p>
-      <h2>Không cần hiểu hết mình.<br>Chỉ cần bắt đầu bằng điều đang có.</h2>
+    <section class="promise section-pad reveal" id="ve-selflo">
+      <div class="promise-intro"><div><p class="kicker">Selflo được tạo ra để làm gì?</p><h2>Giúp bạn hiểu mình hơn<br>trong một thế giới luôn vội.</h2><p>Giữa những bộn bề, Selflo là một khoảng dừng nhẹ nhàng để bạn quay về với cảm xúc thật, nhìn lại nhịp sống, và thấy những góc nhìn mới cho hành trình của riêng mình.</p></div><blockquote>Không cần trở thành phiên bản khác,<br>chỉ cần hiểu rõ phiên bản hiện tại của bạn.</blockquote></div>
       <div class="promise-grid">
-        <article><span>01</span><h3>Check-in</h3><p>Gọi tên cảm xúc và điều đang liên quan mà không cần viết một trang dài.</p></article>
-        <article><span>02</span><h3>Nhìn lại nhịp sống</h3><p>Thấy những chuyển động gần đây mà không tự chấm điểm tốt hay xấu.</p></article>
-        <article><span>03</span><h3>Gặp một góc nhìn</h3><p>Đọc một câu ngắn, hoặc ở lại với một câu chuyện khi bạn muốn đi sâu hơn.</p></article>
+        <article><span class="value-icon">◒</span><h3>Không phán xét</h3><p>Mọi cảm xúc đều có chỗ đứng. Bạn có thể chia sẻ thật lòng, không lo bị đánh giá.</p></article>
+        <article><span class="value-icon gold">♥</span><h3>Không chấm điểm</h3><p>Selflo không đo lường “tốt” hay “xấu”, mà giúp bạn nhìn thấy bức tranh cảm xúc một cách nhẹ nhàng.</p></article>
+        <article><span class="value-icon">▣</span><h3>Tôn trọng khoảng riêng</h3><p>Đây là không gian cá nhân của bạn, luôn an toàn và tôn trọng nhịp sống riêng của mỗi người.</p></article>
       </div>
     </section>
 
     <section class="experience" id="experience">
-      <div class="section-pad experience-head reveal"><div><p class="kicker">Selflo trên iPhone</p><h2>Một trải nghiệm yên,<br>rõ và có khoảng thở.</h2></div><p>Kéo ngang để xem các màn hình thật từ ứng dụng.</p></div>
+      <div class="section-pad experience-head reveal"><div><p class="kicker">Những trải nghiệm chính</p><h2>Những thói quen nhỏ<br>cho một bạn tâm an hơn.</h2></div><p>Chỉ vài khoảnh khắc mỗi ngày,<br>để ghi lại, cảm nhận và nhìn mọi thứ rõ ràng hơn.</p></div>
       <div class="rail-wrap reveal">
         <button class="rail-button prev" type="button" aria-label="Xem màn hình trước">←</button>
         <div class="screen-rail" id="screenRail" tabindex="0">
-          <figure><div class="phone"><img src="assets/images/home/01-checkin.png" alt="Màn hình chọn nội dung check-in"></div><figcaption><b>01</b><span>Chọn điều muốn ghi lại</span></figcaption></figure>
-          <figure><div class="phone"><img src="assets/images/home/02-emotion.png" alt="Màn hình chọn cảm xúc"></div><figcaption><b>02</b><span>Gọi tên cảm xúc</span></figcaption></figure>
-          <figure><div class="phone"><img src="assets/images/home/03-perspective.png" alt="Màn hình Góc nhìn"></div><figcaption><b>03</b><span>Đọc một Góc nhìn</span></figcaption></figure>
-          <figure><div class="phone"><img src="assets/images/home/04-rhythm.png" alt="Màn hình Nhịp"></div><figcaption><b>04</b><span>Nhìn lại nhịp sống</span></figcaption></figure>
-          <figure><div class="phone"><img src="assets/images/home/05-story.png" alt="Màn hình đọc Story"></div><figcaption><b>05</b><span>Ở lại với câu chuyện</span></figcaption></figure>
+          <figure><div class="phone"><img src="assets/images/home/01-checkin.png" alt="Màn hình chọn nội dung check-in" loading="lazy" decoding="async"></div><figcaption><b>01</b><span>Chọn điều muốn ghi lại</span></figcaption></figure>
+          <figure><div class="phone"><img src="assets/images/home/03-perspective.png" alt="Màn hình Góc nhìn" loading="lazy" decoding="async"></div><figcaption><b>03</b><span>Đọc một Góc nhìn</span></figcaption></figure>
+          <figure><div class="phone"><img src="assets/images/home/04-rhythm.png" alt="Màn hình Nhịp" loading="lazy" decoding="async"></div><figcaption><b>04</b><span>Nhìn lại nhịp sống</span></figcaption></figure>
         </div>
         <button class="rail-button next" type="button" aria-label="Xem màn hình tiếp theo">→</button>
       </div>
     </section>
 
-    <section class="story-feature section-pad reveal">
-      <div class="story-image"><img src="studio/reader/assets/if-i-lived-a-human-life-v1.jpg" alt="Artwork của câu chuyện Nếu tôi được sống một đời người"></div>
-      <div class="story-copy"><p class="kicker">Câu chuyện nổi bật</p><h2>Nếu được sống một đời người</h2><p>Một đời sống không biết trước kết quả, vẫn có mất mát, sai lầm và những ngày rất bình thường.</p><a href="perspectives/">Khám phá Góc nhìn <span>→</span></a></div>
-    </section>
-
     <section class="privacy-band reveal"><div class="section-pad"><p class="kicker">Riêng tư từ nền tảng</p><h2>Điều bạn ghi lại<br>vẫn thuộc về bạn.</h2><div class="privacy-notes"><p>Không cần tài khoản.</p><p>Dữ liệu cốt lõi ở trên thiết bị.</p><p>Không quảng cáo và không theo dõi chéo.</p></div></div></section>
+
+    <section class="latest section-pad reveal"><div class="latest-head"><div><p class="kicker">Những bài viết mới nhất</p><h2>Khám phá những góc nhìn<br>dành cho bạn.</h2></div><a href="perspectives/">Xem tất cả &nbsp; →</a></div><div class="latest-grid"><a href="perspectives/read/?story=story.last_time"><img src="perspective-library/release/vi/artwork/images/last-time-v1.r1.jpg" alt="Cha chở con đi học trong nắng sớm"><b>LẦN CUỐI</b><span>Nhận ra giá trị của những điều vẫn đang ở bên mình.</span></a><a href="perspectives/read/?story=story.original_if_i_lived_a_human_life"><img src="perspective-library/release/vi/artwork/images/if-i-lived-a-human-life-v1.r1.jpg" alt="Bình minh trên núi"><b>Nếu được sống một đời người</b><span>Một đời sống có cả mất mát và những ngày rất bình thường.</span></a><a href="perspectives/"><img src="assets/images/home/forest-light-selflo.jpg" alt="Nắng qua tán lá"><b>Bình yên không đến từ việc mọi thứ hoàn hảo</b><span>Mà từ cách bạn nhìn những điều chưa hoàn hảo.</span></a></div></section>
+
+    <section class="brand-cta"><div><img src="assets/images/public/selflo-leaf-mark.svg" alt=""><p><b>Selflo</b><span>Lắng nghe chính mình.</span></p></div><span class="store-button"> &nbsp; App Store · Sắp ra mắt</span></section>
   </main>
 
-  <footer>
-    <div class="footer-main section-pad"><div class="footer-brand"><b>Selflo</b><p>Một khoảng dừng riêng tư để nhìn lại điều đang diễn ra bên trong.</p></div><div><strong>Khám phá</strong><a href="./">Trang chủ</a><a href="perspectives/">Góc nhìn</a></div><div><strong>Đồng hành</strong><a href="support/">Hỗ trợ</a><a href="https://www.facebook.com/profile.php?id=61595002766763">Facebook</a></div><div><strong>Pháp lý</strong><a href="privacy/">Quyền riêng tư</a></div></div>
-    <div class="footer-bottom section-pad"><span>© 2026 Selflo</span><span>Lắng nghe chính mình.</span></div>
-  </footer>
-  <script src="assets/home-v2.js?v=3"></script>
+  <footer><a class="footer-logo" href="./">Selflo</a><nav><a href="./">Trang chủ</a><a href="perspectives/">Góc nhìn</a><a href="#ve-selflo">Về Selflo</a><a href="privacy/">Quyền riêng tư</a><a href="https://www.facebook.com/profile.php?id=61595002766763">Facebook</a></nav></footer>
+  <script src="assets/home-v2.js?v=5"></script>
 </body>
 </html>
