@@ -44,6 +44,12 @@ Guided ChatGPT Voice practice lives in `content/conversations/`. Each topic defi
 
 The initial Speaking Lab contains 20 guided topics across daily life, workplace communication, data engineering, interviews, and open discussion.
 
+## Add a reading story
+
+Story practice lives in `content/stories/`. Each story contains reading paragraphs, reusable chunks with short meanings, and multiple-choice questions with answer explanations. Questions can test three skills: understanding the story, understanding chunk meanings, and applying a chunk in a new situation. Results include a separate score for each skill. The Stories view can read the full story at natural or slow speed, or read one paragraph at a time using the browser's English voice.
+
+The published site discovers new story files automatically from `content/stories/`. For local and offline preview, also add the story path to `storyFallbackFiles` in `content/catalog.js`.
+
 ## Pronunciation playback
 
 The site chooses the best available English system voice, prefers natural US voices when present, and speaks complete chunks at conversational speed. Every pronunciation card also has a separate Slow button for careful repetition. Voice quality depends on the voices installed in the browser or operating system.

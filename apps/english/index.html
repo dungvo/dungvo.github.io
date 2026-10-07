@@ -7,6 +7,7 @@
   <meta name="description" content="Practice reusable English chunks from real technical conversations.">
   <title>Chunk Lab — English Practice</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/stories.css">
 </head>
 <body>
   <div class="site-shell">
@@ -15,7 +16,7 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Chunk Lab</span>
       </button>
       <nav aria-label="Main navigation">
-        <button data-nav="home">Practice</button><button data-nav="speaking">Speaking Lab</button><button data-nav="progress">My progress</button><button data-nav="library">Chunk library</button>
+        <button data-nav="home">Practice</button><button data-nav="stories">Stories</button><button data-nav="speaking">Speaking Lab</button><button data-nav="progress">My progress</button><button data-nav="library">Chunk library</button>
       </nav>
       <div class="header-meta"><span class="streak-badge">● <span id="headerStreak">0 day streak</span></span><button class="avatar" id="resetButton" title="Reset local progress" aria-label="Reset local progress">DV</button></div>
     </header>
@@ -64,6 +65,11 @@
       <section id="speakingView" class="view inner-view speaking-view">
         <div class="speaking-head"><div><p class="eyebrow">GUIDED CONVERSATION PRACTICE</p><h1>Speak with a<br><em>clear purpose.</em></h1><p class="lead">Choose a scenario, prepare with useful chunks, then use the ready-made prompt in ChatGPT Voice.</p></div><div class="speaking-summary"><strong id="speakingTopicCount">0</strong><span>guided topics</span><small>Daily life · Work · Data · Interviews</small></div></div>
         <div class="topic-filters" id="topicFilters"></div><div class="speaking-layout"><div class="topic-grid" id="topicGrid"></div><aside class="topic-detail" id="topicDetail"><p class="eyebrow">HOW IT WORKS</p><h2>Choose a topic</h2><p>Select a conversation to see your role, practice questions, useful chunks, and the ChatGPT Live prompt.</p></aside></div>
+      </section>
+
+      <section id="storiesView" class="view inner-view stories-view">
+        <div class="stories-head"><div><p class="eyebrow">READ · LISTEN · UNDERSTAND</p><h1>Learn chunks<br><em>inside a story.</em></h1><p class="lead">Read at your own pace, listen to natural English, then check your understanding.</p></div><div class="story-summary"><strong id="storyCount">0</strong><span>reading stories</span><small>Daily life · Useful chunks · Comprehension quizzes</small></div></div>
+        <div class="story-layout"><aside class="story-list" id="storyList"></aside><article class="story-reader" id="storyReader"><p class="eyebrow">STORY LIBRARY</p><h2>Choose a story</h2><p>Select a story to start reading and listening.</p></article></div>
       </section>
 
       <section id="libraryView" class="view inner-view"><div class="library-head"><div><p class="eyebrow">CONTENT LIBRARY</p><h1>All your<br><em>learned chunks.</em></h1></div><label class="search-box">⌕<input id="chunkSearch" type="search" placeholder="Search chunks, situations, or meanings…"></label></div><div class="library-overview"><article><span>TOTAL CHUNKS</span><strong id="libraryTotal">0</strong></article><article><span>TOPIC GROUPS</span><strong id="libraryTopics">0</strong></article><article><span>CONTENT FILES</span><strong id="librarySessions">0</strong></article></div><h2 class="library-section-title">Browse by situation</h2><div class="category-grid" id="categoryGrid"></div><div class="library-meta"><span id="libraryCount">0 chunks</span><span id="sessionCount">0 sessions</span></div><div class="chunk-list" id="chunkList"></div></section>

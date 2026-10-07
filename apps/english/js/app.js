@@ -5,9 +5,10 @@
   const LEGACY_KEY = "chunkLabProgressV1";
   const DAILY_TARGET = 10;
   const SESSION_SIZE = 10;
-  const registry = { sessions: [], conversations: [], errors: [] };
+  const registry = { sessions: [], conversations: [], stories: [], errors: [] };
   let chunks = [];
   let speakingTopics = [];
+  let stories = [];
   let preferredVoice = null;
   let libraryTopic = "All";
   let progress = loadProgress();
@@ -34,6 +35,12 @@
       if (payload?.schemaVersion !== 1 || !Array.isArray(payload.topics)) { registry.errors.push("A conversation file has an unsupported format."); return; }
       payload.topics.forEach((topic) => {
         if (topic.id && topic.title && topic.prompt && !registry.conversations.some((item) => item.id === topic.id)) registry.conversations.push(topic);
+      });
+    },
+    registerStories(payload) {
+      if (payload?.schemaVersion !== 1 || !Array.isArray(payload.stories)) { registry.errors.push("A story file has an unsupported format."); return; }
+      payload.stories.forEach((story) => {
+        if (story.id && story.title && Array.isArray(story.paragraphs) && Array.isArray(story.questions) && !registry.stories.some((item) => item.id === story.id)) registry.stories.push(story);
       });
     }
   };
@@ -121,18 +128,20 @@
   }
   async function discoverContent() {
     const config = window.CHUNK_CONTENT_CONFIG || {};
-    let files = [], conversationFiles = [];
+    let files = [], conversationFiles = [], storyFiles = [];
     if (location.hostname === "dungvo.github.io" && config.github) {
       const { owner, repository, directory } = config.github;
       try {
         files = await githubFiles(owner, repository, directory);
         conversationFiles = await githubFiles(owner, repository, config.github.conversationDirectory);
+        storyFiles = await githubFiles(owner, repository, config.github.storyDirectory);
         contentSource = "auto-discovered from GitHub";
       } catch (error) { registry.errors.push(`Discovery failed: ${error.message}`); }
     }
     if (!files.length) files = config.fallbackFiles || [];
     if (!conversationFiles.length) conversationFiles = config.conversationFallbackFiles || [];
-    for (const file of [...files, ...conversationFiles]) {
+    if (!storyFiles.length) storyFiles = config.storyFallbackFiles || [];
+    for (const file of [...files, ...conversationFiles, ...storyFiles]) {
       try { await loadScript(file); } catch (error) { registry.errors.push(error.message); }
     }
     if (!registry.sessions.length && files !== config.fallbackFiles) {
@@ -147,6 +156,7 @@
       seen.add(chunk.id); return true;
     });
     speakingTopics = registry.conversations;
+    stories = registry.stories;
     if (!chunks.length) throw new Error("No valid learning content could be loaded.");
   }
 
@@ -197,6 +207,38 @@
     $("#libraryCount").textContent = `${filtered.length} chunk${filtered.length === 1 ? "" : "s"}`; $("#sessionCount").textContent = `${registry.sessions.length} content session${registry.sessions.length === 1 ? "" : "s"}`;
     $("#chunkList").innerHTML = filtered.map((chunk) => `<article class="chunk-item"><h3>${escapeHtml(chunk.chunk)}</h3><span class="ipa">${escapeHtml(chunk.ipa)}</span><span class="vi-pronunciation">${escapeHtml(chunk.viPronunciation || "Listen and repeat")}</span><p>${escapeHtml(chunk.meaning)}</p><p class="situation-copy"><b>Use it:</b> ${escapeHtml(chunk.situation)}</p><button class="listen-link" data-speak="${escapeHtml(chunk.chunk)}">▶ Listen</button><span class="source-tag">${escapeHtml(chunk.sessionTitle)}</span></article>`).join("") || `<p class="context">No chunks match “${escapeHtml(query)}”.</p>`;
     bindPronunciation($("#chunkList"));
+  }
+
+  function renderStories(selectedId = stories[0]?.id) {
+    $("#storyCount").textContent = stories.length;
+    $("#storyList").innerHTML = stories.map((story) => `<button class="story-card ${story.id === selectedId ? "active" : ""}" data-story-id="${escapeHtml(story.id)}"><span>${escapeHtml(story.level)} · ${story.minutes} min</span><strong>${escapeHtml(story.title)}</strong><small>${escapeHtml(story.summary)}</small></button>`).join("") || '<p class="context">No stories are available yet.</p>';
+    $$('[data-story-id]').forEach((button) => button.addEventListener("click", () => renderStories(button.dataset.storyId)));
+    const story = stories.find((item) => item.id === selectedId); if (!story) return;
+    const completeText = story.paragraphs.join(" ");
+    $("#storyReader").innerHTML = `<div class="story-kicker"><span>${escapeHtml(story.category)} · ${escapeHtml(story.level)}</span><span>${story.paragraphs.length} paragraphs · ${story.questions.length} questions</span></div><h2>${escapeHtml(story.title)}</h2><p class="story-deck">${escapeHtml(story.summary)}</p><div class="story-audio"><button class="primary" data-story-speak="${escapeHtml(completeText)}" data-rate="0.92">▶ Listen to full story</button><button class="secondary" data-story-speak="${escapeHtml(completeText)}" data-rate="0.76">Slow reading</button><button class="text-button" id="stopStoryAudio">■ Stop</button></div><div class="story-copy">${story.paragraphs.map((paragraph, index) => `<section><button class="paragraph-audio" data-story-speak="${escapeHtml(paragraph)}" data-rate="0.92" aria-label="Listen to paragraph ${index + 1}">▶</button><div><span class="paragraph-number">${String(index + 1).padStart(2, "0")}</span><p>${highlightStoryChunks(paragraph, story.chunks)}</p></div></section>`).join("")}</div><aside class="story-chunks"><p class="eyebrow">CHUNKS IN THIS STORY</p><div>${story.chunks.map((item) => `<span title="${escapeHtml(item.meaning)}">${escapeHtml(item.text)}</span>`).join("")}</div><small>Highlighted phrases are reusable chunks. Hover over a chunk here to see its meaning.</small></aside><div class="story-quiz"><p class="eyebrow">STORY · MEANING · APPLICATION</p><h3>Do you understand and know how to use it?</h3><p>Questions test the story, chunk meanings, and how to apply each chunk in a new situation.</p><div id="storyQuestions">${story.questions.map((question, qIndex) => `<fieldset data-story-question="${qIndex}"><div class="question-type">${escapeHtml(question.type || "Story")}</div><legend><span>${qIndex + 1}</span>${escapeHtml(question.prompt)}</legend>${question.options.map((option, oIndex) => `<label><input type="radio" name="story-q-${qIndex}" value="${oIndex}"><span>${escapeHtml(option)}</span></label>`).join("")}<div class="quiz-explanation" hidden></div></fieldset>`).join("")}</div><button class="primary story-submit" id="checkStoryQuiz">Check my answers</button><div id="storyQuizResult" class="story-quiz-result" aria-live="polite"></div></div>`;
+    $$('[data-story-speak]').forEach((button) => button.addEventListener("click", () => speak(button.dataset.storySpeak, Number(button.dataset.rate))));
+    $("#stopStoryAudio").addEventListener("click", () => { if ("speechSynthesis" in window) speechSynthesis.cancel(); });
+    $("#checkStoryQuiz").addEventListener("click", () => gradeStoryQuiz(story));
+  }
+
+  function highlightStoryChunks(text, chunkList) {
+    let safe = escapeHtml(text);
+    [...chunkList].sort((a, b) => b.text.length - a.text.length).forEach((chunk) => {
+      const escaped = escapeHtml(chunk.text); safe = safe.replaceAll(escaped, `<mark title="${escapeHtml(chunk.meaning)}">${escaped}</mark>`);
+    });
+    return safe;
+  }
+
+  function gradeStoryQuiz(story) {
+    let score = 0; const skills = {};
+    story.questions.forEach((question, index) => {
+      const fieldset = $(`[data-story-question="${index}"]`); const selected = fieldset.querySelector("input:checked"); const labels = [...fieldset.querySelectorAll("label")];
+      labels.forEach((label, optionIndex) => { label.classList.remove("correct", "wrong"); if (optionIndex === question.answer) label.classList.add("correct"); });
+      const skill = question.type || "Story"; skills[skill] ||= { score: 0, total: 0 }; skills[skill].total += 1;
+      if (selected && Number(selected.value) === question.answer) { score += 1; skills[skill].score += 1; } else if (selected) selected.closest("label").classList.add("wrong");
+      const explanation = fieldset.querySelector(".quiz-explanation"); explanation.hidden = false; explanation.textContent = question.explanation;
+    });
+    const percent = Math.round(score / story.questions.length * 100); const breakdown = Object.entries(skills).map(([skill, stat]) => `<span><b>${escapeHtml(skill)}:</b> ${stat.score}/${stat.total}</span>`).join(""); const result = $("#storyQuizResult"); result.className = `story-quiz-result ${percent >= 70 ? "good" : "needs-work"}`; result.innerHTML = `<strong>${score}/${story.questions.length} correct · ${percent}%</strong><div class="quiz-breakdown">${breakdown}</div><span>${percent === 100 ? "Excellent—you understood the story and can apply its chunks." : percent >= 70 ? "Good understanding. Review the explanations for the questions you missed." : "Read or listen once more, then try the questions again."}</span>`; result.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   function renderSpeaking(filter = "All") {
@@ -328,7 +370,7 @@
 
   function bindEvents() {
     $$('[data-mode]').forEach((button) => button.addEventListener("click", () => start(button.dataset.mode)));
-    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
+    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
     $("#againButton").addEventListener("click", () => start(session.sourceMode, session.topicId)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
     $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); updateDashboard(); updateProgressView(); } });
   }
@@ -341,8 +383,8 @@
       $("#contentStatus").textContent = `${chunks.length} learned chunks · ${registry.sessions.length} session${registry.sessions.length === 1 ? "" : "s"}`;
       $("#sourceNote").textContent = `${chunks.length} chunks · ${contentSource}`;
       $$('[data-mode]').forEach((button) => { button.disabled = false; });
-      updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking();
-      const requestedView = location.hash.slice(1); if (["speaking", "progress", "library"].includes(requestedView)) show(requestedView);
+      updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories();
+      const requestedView = location.hash.slice(1); if (["stories", "speaking", "progress", "library"].includes(requestedView)) show(requestedView);
     } catch (error) {
       $("#contentStatus").textContent = "Content could not be loaded"; $("#sourceNote").textContent = error.message; console.error(error, registry.errors);
     }
