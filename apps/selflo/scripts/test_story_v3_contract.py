@@ -100,7 +100,18 @@ class StoryV3ContractTests(unittest.TestCase):
             for section in self.extended["sections"]
             for block in section["blocks"]
         }
-        self.assertTrue({"sequence", "flow", "list", "verse", "aside", "figure", "source_note"} <= block_types)
+        self.assertTrue({"sequence", "list", "verse", "aside", "figure", "source_note"} <= block_types)
+        self.assertNotIn("flow", block_types)
+
+    def test_flow_is_rejected_for_new_content(self) -> None:
+        story = copy.deepcopy(self.extended)
+        story["sections"][0]["blocks"][0] = {
+            "id": "deprecated_flow",
+            "type": "flow",
+            "items": [{"text_vi": "A"}, {"text_vi": "B"}],
+        }
+        codes = {finding.code for finding in validate_story(story)}
+        self.assertIn("deprecated_flow_block", codes)
 
     def test_capabilities_are_derived_from_used_blocks(self) -> None:
         self.assertEqual(required_capabilities(self.core), {CORE_CAPABILITY})

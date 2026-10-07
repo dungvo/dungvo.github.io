@@ -382,6 +382,10 @@ Chuỗi cụm hoặc suy nghĩ có nhịp/progression.
 
 ### 5.8 `flow`
 
+> **Deprecated for new content and disabled at Release gate.** Existing app versions
+> keep decoding/rendering `flow` for backward compatibility, but canonical source
+> must migrate the same wording to `sequence` or `list` before a new Release.
+
 Chuỗi tuyến tính có quan hệ nối tiếp.
 
 ```json
@@ -398,6 +402,9 @@ Chuỗi tuyến tính có quan hệ nối tiếp.
 ```
 
 Renderer thêm separator/mũi tên và cung cấp accessibility label tự nhiên; content không chèn ký tự `→` vào một text dài.
+
+Không author `flow` mới. Dùng `sequence` khi thứ tự/progression có ý nghĩa; dùng
+`list` khi các item cùng cấp. Schema tiếp tục nhận `flow` chỉ để đọc package lịch sử.
 
 ### 5.9 `list`
 
@@ -606,7 +613,7 @@ story_reader.editorial_v3.figure
 ```
 
 - Core capability bao phủ Core V3 ở trên, rich text, takeaway và reflection.
-- Extended-text capability bao phủ `sequence`, `flow`, `list`, `verse`, `aside` và `source_note`.
+- Extended-text capability bao phủ `sequence`, `list`, `verse`, `aside` và `source_note` cho content mới. `flow` chỉ còn tương thích đọc package lịch sử và không được Release mới.
 - Figure capability bao phủ `figure` và body asset resolution trong cùng immutable session.
 - Manifest khai báo union capability thực sự được payload sử dụng.
 - App thiếu required capability không activate candidate revision và giữ active snapshot cũ.

@@ -2,7 +2,7 @@
   "schema_version": "1.2",
   "entity": "perspective_story",
   "id": "story.last_time",
-  "revision": 1,
+  "revision": 2,
   "status": "active",
   "language": "vi",
   "reader_format": "editorial_v3",
@@ -16,7 +16,9 @@
   },
   "primary_theme": "meaning_values",
   "metadata": {
-    "concept_ids": [],
+    "concept_ids": [
+
+    ],
     "emotion_tags": [
       "gratitude",
       "tenderness",
@@ -57,10 +59,18 @@
           "type": "sequence",
           "progression": "neutral",
           "items": [
-            { "text_vi": "Không phải Brazil." },
-            { "text_vi": "Không phải Pháp." },
-            { "text_vi": "Không phải Tây Ban Nha." },
-            { "text_vi": "Cũng chẳng phải một trận chung kết World Cup." }
+            {
+              "text_vi": "Không phải Brazil."
+            },
+            {
+              "text_vi": "Không phải Pháp."
+            },
+            {
+              "text_vi": "Không phải Tây Ban Nha."
+            },
+            {
+              "text_vi": "Cũng chẳng phải một trận chung kết World Cup."
+            }
           ]
         },
         {
@@ -69,7 +79,12 @@
           "presentation": "leading",
           "text_vi": "Chỉ là một trận giao hữu.",
           "runs": [
-            { "text_vi": "Chỉ là một trận giao hữu.", "marks": ["strong"] }
+            {
+              "text_vi": "Chỉ là một trận giao hữu.",
+              "marks": [
+                "strong"
+              ]
+            }
           ],
           "shareable": false
         },
@@ -97,7 +112,12 @@
           "style": "beat",
           "text_vi": "Tại sao?",
           "runs": [
-            { "text_vi": "Tại sao?", "marks": ["strong"] }
+            {
+              "text_vi": "Tại sao?",
+              "marks": [
+                "strong"
+              ]
+            }
           ]
         },
         {
@@ -117,9 +137,15 @@
           "type": "sequence",
           "progression": "escalating",
           "items": [
-            { "text_vi": "Họ từng thấy anh đá Copa América." },
-            { "text_vi": "Họ từng thấy anh chơi những trận World Cup lớn nhất." },
-            { "text_vi": "Họ đã thấy anh nâng chiếc cúp mà cả Argentina chờ đợi suốt nhiều thập kỷ." }
+            {
+              "text_vi": "Họ từng thấy anh đá Copa América."
+            },
+            {
+              "text_vi": "Họ từng thấy anh chơi những trận World Cup lớn nhất."
+            },
+            {
+              "text_vi": "Họ đã thấy anh nâng chiếc cúp mà cả Argentina chờ đợi suốt nhiều thập kỷ."
+            }
           ]
         },
         {
@@ -140,7 +166,13 @@
           "presentation": "centered",
           "text_vi": "LẦN CUỐI.",
           "runs": [
-            { "text_vi": "LẦN CUỐI.", "marks": ["strong", "accent"] }
+            {
+              "text_vi": "LẦN CUỐI.",
+              "marks": [
+                "strong",
+                "accent"
+              ]
+            }
           ],
           "shareable": true
         },
@@ -156,7 +188,12 @@
           "presentation": "rail",
           "text_vi": "“Không xem lần này thì còn lần khác.”",
           "runs": [
-            { "text_vi": "“Không xem lần này thì còn lần khác.”", "marks": ["emphasis"] }
+            {
+              "text_vi": "“Không xem lần này thì còn lần khác.”",
+              "marks": [
+                "emphasis"
+              ]
+            }
           ],
           "attribution_vi": null,
           "shareable": false
@@ -173,7 +210,12 @@
           "presentation": "centerpiece",
           "text_vi": "Không còn lần khác nữa.",
           "runs": [
-            { "text_vi": "Không còn lần khác nữa.", "marks": ["strong"] }
+            {
+              "text_vi": "Không còn lần khác nữa.",
+              "marks": [
+                "strong"
+              ]
+            }
           ],
           "attribution_vi": null,
           "shareable": true
@@ -217,7 +259,12 @@
           "presentation": "centered",
           "text_vi": "Phần lớn chúng không được thông báo trước.",
           "runs": [
-            { "text_vi": "Phần lớn chúng không được thông báo trước.", "marks": ["strong"] }
+            {
+              "text_vi": "Phần lớn chúng không được thông báo trước.",
+              "marks": [
+                "strong"
+              ]
+            }
           ],
           "shareable": true
         },
@@ -226,9 +273,15 @@
           "type": "sequence",
           "progression": "neutral",
           "items": [
-            { "text_vi": "Không ai bán vé cho lần cuối cha chở mình đi học." },
-            { "text_vi": "Không có sân vận động nào thông báo lần cuối con mình đưa hai tay lên đòi bế." },
-            { "text_vi": "Không có bảng điện tử đếm ngược đến bữa cơm cuối cùng mà gia đình vẫn còn đông đủ." }
+            {
+              "text_vi": "Không ai bán vé cho lần cuối cha chở mình đi học."
+            },
+            {
+              "text_vi": "Không có sân vận động nào thông báo lần cuối con mình đưa hai tay lên đòi bế."
+            },
+            {
+              "text_vi": "Không có bảng điện tử đếm ngược đến bữa cơm cuối cùng mà gia đình vẫn còn đông đủ."
+            }
           ]
         },
         {
@@ -243,7 +296,12 @@
           "presentation": "inset",
           "text_vi": "“Mai vẫn còn mà.”",
           "runs": [
-            { "text_vi": "“Mai vẫn còn mà.”", "marks": ["emphasis"] }
+            {
+              "text_vi": "“Mai vẫn còn mà.”",
+              "marks": [
+                "emphasis"
+              ]
+            }
           ],
           "attribution_vi": null,
           "shareable": false
@@ -275,7 +333,12 @@
           "presentation": "centered",
           "text_vi": "Nó chỉ làm chúng ta nhận ra giá trị vốn đã ở đó.",
           "runs": [
-            { "text_vi": "Nó chỉ làm chúng ta nhận ra giá trị vốn đã ở đó.", "marks": ["strong"] }
+            {
+              "text_vi": "Nó chỉ làm chúng ta nhận ra giá trị vốn đã ở đó.",
+              "marks": [
+                "strong"
+              ]
+            }
           ],
           "shareable": true
         },
@@ -284,9 +347,15 @@
           "type": "sequence",
           "progression": "neutral",
           "items": [
-            { "text_vi": "Người cha chở mình đi học không trở nên quan trọng hơn vào chuyến đi cuối cùng." },
-            { "text_vi": "Đứa trẻ không đáng yêu hơn vào lần cuối nó đòi được bế." },
-            { "text_vi": "Bữa cơm gia đình cuối cùng cũng không ngon hơn hàng trăm bữa cơm trước đó." }
+            {
+              "text_vi": "Người cha chở mình đi học không trở nên quan trọng hơn vào chuyến đi cuối cùng."
+            },
+            {
+              "text_vi": "Đứa trẻ không đáng yêu hơn vào lần cuối nó đòi được bế."
+            },
+            {
+              "text_vi": "Bữa cơm gia đình cuối cùng cũng không ngon hơn hàng trăm bữa cơm trước đó."
+            }
           ]
         },
         {
@@ -295,9 +364,25 @@
           "style": "narrative",
           "text_vi": "Thứ thay đổi là nhận thức của chúng ta.",
           "runs": [
-            { "text_vi": "Thứ thay đổi là ", "marks": [] },
-            { "text_vi": "nhận thức của chúng ta", "marks": ["strong", "accent"] },
-            { "text_vi": ".", "marks": [] }
+            {
+              "text_vi": "Thứ thay đổi là ",
+              "marks": [
+
+              ]
+            },
+            {
+              "text_vi": "nhận thức của chúng ta",
+              "marks": [
+                "strong",
+                "accent"
+              ]
+            },
+            {
+              "text_vi": ".",
+              "marks": [
+
+              ]
+            }
           ]
         },
         {
@@ -312,7 +397,12 @@
           "presentation": "rail",
           "text_vi": "“Ngày mai vẫn còn.”",
           "runs": [
-            { "text_vi": "“Ngày mai vẫn còn.”", "marks": ["emphasis"] }
+            {
+              "text_vi": "“Ngày mai vẫn còn.”",
+              "marks": [
+                "emphasis"
+              ]
+            }
           ],
           "attribution_vi": null,
           "shareable": false
@@ -335,7 +425,12 @@
           "presentation": "rail",
           "text_vi": "“Đây là lần cuối.”",
           "runs": [
-            { "text_vi": "“Đây là lần cuối.”", "marks": ["emphasis"] }
+            {
+              "text_vi": "“Đây là lần cuối.”",
+              "marks": [
+                "emphasis"
+              ]
+            }
           ],
           "attribution_vi": null,
           "shareable": false
@@ -351,9 +446,15 @@
           "type": "sequence",
           "progression": "neutral",
           "items": [
-            { "text_vi": "Nhận thức ấy tạo ra cảm xúc." },
-            { "text_vi": "Cảm xúc khiến ta nhìn lại điều gì thực sự quan trọng." },
-            { "text_vi": "Và đôi khi, nó thay đổi cả hành vi của chúng ta." }
+            {
+              "text_vi": "Nhận thức ấy tạo ra cảm xúc."
+            },
+            {
+              "text_vi": "Cảm xúc khiến ta nhìn lại điều gì thực sự quan trọng."
+            },
+            {
+              "text_vi": "Và đôi khi, nó thay đổi cả hành vi của chúng ta."
+            }
           ]
         },
         {
@@ -361,10 +462,18 @@
           "type": "list",
           "style": "plain",
           "items": [
-            { "text_vi": "Một người sẵn sàng mua tấm vé mà hôm qua họ thấy quá đắt." },
-            { "text_vi": "Một người ở lại bàn ăn lâu hơn một chút." },
-            { "text_vi": "Một người cất điện thoại xuống." },
-            { "text_vi": "Một người quyết định về thăm cha mẹ thay vì nói:" }
+            {
+              "text_vi": "Một người sẵn sàng mua tấm vé mà hôm qua họ thấy quá đắt."
+            },
+            {
+              "text_vi": "Một người ở lại bàn ăn lâu hơn một chút."
+            },
+            {
+              "text_vi": "Một người cất điện thoại xuống."
+            },
+            {
+              "text_vi": "Một người quyết định về thăm cha mẹ thay vì nói:"
+            }
           ]
         },
         {
@@ -373,7 +482,12 @@
           "presentation": "inset",
           "text_vi": "“Tuần sau con về.”",
           "runs": [
-            { "text_vi": "“Tuần sau con về.”", "marks": ["emphasis"] }
+            {
+              "text_vi": "“Tuần sau con về.”",
+              "marks": [
+                "emphasis"
+              ]
+            }
           ],
           "attribution_vi": null,
           "shareable": false
@@ -411,7 +525,12 @@
           "presentation": "centered",
           "text_vi": "Những thứ mình đang có không có số lần vô hạn.",
           "runs": [
-            { "text_vi": "Những thứ mình đang có không có số lần vô hạn.", "marks": ["strong"] }
+            {
+              "text_vi": "Những thứ mình đang có không có số lần vô hạn.",
+              "marks": [
+                "strong"
+              ]
+            }
           ],
           "shareable": true
         },
@@ -420,10 +539,18 @@
           "type": "sequence",
           "progression": "neutral",
           "items": [
-            { "text_vi": "Con rồi sẽ lớn." },
-            { "text_vi": "Cha mẹ rồi sẽ già." },
-            { "text_vi": "Bạn bè rồi mỗi người sẽ có một cuộc sống." },
-            { "text_vi": "Và chính mình cũng chỉ có một khoảng thời gian hữu hạn để sống cuộc đời này." }
+            {
+              "text_vi": "Con rồi sẽ lớn."
+            },
+            {
+              "text_vi": "Cha mẹ rồi sẽ già."
+            },
+            {
+              "text_vi": "Bạn bè rồi mỗi người sẽ có một cuộc sống."
+            },
+            {
+              "text_vi": "Và chính mình cũng chỉ có một khoảng thời gian hữu hạn để sống cuộc đời này."
+            }
           ]
         },
         {
@@ -446,13 +573,23 @@
             {
               "text_vi": "Thứ gì đang chiếm phần lớn thời gian của mình?",
               "runs": [
-                { "text_vi": "Thứ gì đang chiếm phần lớn thời gian của mình?", "marks": ["strong"] }
+                {
+                  "text_vi": "Thứ gì đang chiếm phần lớn thời gian của mình?",
+                  "marks": [
+                    "strong"
+                  ]
+                }
               ]
             },
             {
               "text_vi": "Thứ gì thực sự quan trọng nhưng luôn được để lại cho “ngày mai”?",
               "runs": [
-                { "text_vi": "Thứ gì thực sự quan trọng nhưng luôn được để lại cho “ngày mai”?", "marks": ["strong"] }
+                {
+                  "text_vi": "Thứ gì thực sự quan trọng nhưng luôn được để lại cho “ngày mai”?",
+                  "marks": [
+                    "strong"
+                  ]
+                }
               ]
             }
           ]
@@ -475,7 +612,12 @@
           "presentation": "rail",
           "text_vi": "“Sống như hôm nay là ngày cuối cùng.”",
           "runs": [
-            { "text_vi": "“Sống như hôm nay là ngày cuối cùng.”", "marks": ["emphasis"] }
+            {
+              "text_vi": "“Sống như hôm nay là ngày cuối cùng.”",
+              "marks": [
+                "emphasis"
+              ]
+            }
           ],
           "attribution_vi": null,
           "shareable": false
@@ -493,7 +635,12 @@
     "title_vi": "Một câu để mang theo",
     "text_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.",
     "runs": [
-      { "text_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.", "marks": ["strong"] }
+      {
+        "text_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.",
+        "marks": [
+          "strong"
+        ]
+      }
     ]
   },
   "reflection": {

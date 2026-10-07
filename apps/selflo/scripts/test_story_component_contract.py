@@ -33,7 +33,10 @@ class StoryComponentContractTests(unittest.TestCase):
                 self.assertEqual((component["contract_status"], component["app_status"], component["publisher_status"], component["release_status"]), ("released", "supported", "enabled", "allowed"))
 
     def test_v3_production_baseline_is_released_supported_and_allowed(self):
-        v3 = [item for item in self.components if item["reader_format"] == "editorial_v3"]
+        v3 = [
+            item for item in self.components
+            if item["reader_format"] == "editorial_v3" and item["component_id"] != "story.flow"
+        ]
         self.assertTrue(v3)
         for component in v3:
             with self.subTest(component=component["component_id"]):
@@ -41,6 +44,12 @@ class StoryComponentContractTests(unittest.TestCase):
                 self.assertEqual(component["mockup_status"], "approved")
                 self.assertEqual(component["app_status"], "supported")
                 self.assertEqual((component["publisher_status"], component["release_status"]), ("enabled", "allowed"))
+
+    def test_flow_is_decode_only_and_blocked_for_new_release(self):
+        flow = self.by_id["story.flow"]
+        self.assertEqual(flow["app_status"], "supported")
+        self.assertEqual(flow["publisher_status"], "disabled")
+        self.assertEqual(flow["release_status"], "deprecated")
 
     def test_approved_gate_3b_components_have_existing_visual_reference(self):
         approved_ids = {

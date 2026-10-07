@@ -1,7 +1,7 @@
 {
   "schema_version": "selflo.story-reader.component-support.v1",
   "contract_id": "selflo.story-reader.editorial-v3",
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-07",
   "status_values": {
     "contract": [
       "released",
@@ -616,8 +616,8 @@
       "mockup_status": "approved",
       "visual_reference": "visual-reference/approved/gate-3b-round-1/03-extended-text-blocks.png",
       "app_status": "supported",
-      "publisher_status": "enabled",
-      "release_status": "allowed"
+      "publisher_status": "disabled",
+      "release_status": "deprecated"
     },
     {
       "component_id": "story.list",

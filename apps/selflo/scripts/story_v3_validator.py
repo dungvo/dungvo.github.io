@@ -110,6 +110,12 @@ def validate_story(story: dict[str, Any]) -> list[Finding]:
             path = f"/sections/{section_index}/blocks/{block_index}"
             block_type = block.get("type")
             all_block_ids.append(str(block.get("id", "")))
+            if block_type == "flow":
+                findings.append(Finding(
+                    "deprecated_flow_block",
+                    path,
+                    "flow đã deprecated và không được Release mới; dùng sequence hoặc list.",
+                ))
             if block_type == "part_heading":
                 part_numbers.append(block.get("part_number"))
             if block_type == "paragraph":
