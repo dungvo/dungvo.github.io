@@ -185,7 +185,7 @@
     $("#pathGrid").innerHTML = ordered.map((entry, index) => {
       const topicChunks = chunks.filter((chunk) => chunk.sessionId === entry.session.id); const stages = { New: 0, Learning: 0, Reviewing: 0, Mastered: 0 };
       topicChunks.forEach((chunk) => stages[learningStage(chunk)] += 1); const introduced = topicChunks.length - stages.New; const progressPercent = topicChunks.length ? Math.round(introduced / topicChunks.length * 100) : 0;
-      const unlocked = index === 0 || previousIntroduced >= 0.7; previousIntroduced = topicChunks.length ? introduced / topicChunks.length : 0;
+      const unlocked = entry.session.alwaysAvailable || index === 0 || previousIntroduced >= 0.7; previousIntroduced = topicChunks.length ? introduced / topicChunks.length : 0;
       return `<article class="path-card ${unlocked ? "" : "locked"}"><div><span class="path-number">${String(index + 1).padStart(2, "0")}</span><span class="stage-badge">${stages.Mastered === topicChunks.length ? "Mastered" : introduced ? "In progress" : unlocked ? "Ready" : "Locked"}</span></div><h3>${escapeHtml(entry.session.title)}</h3><p>${stages.New} new · ${stages.Learning} learning · ${stages.Reviewing} reviewing · ${stages.Mastered} mastered</p><div class="path-progress"><span style="width:${progressPercent}%"></span></div><button data-path-topic="${escapeHtml(entry.session.id)}" ${unlocked ? "" : "disabled"}>${unlocked ? introduced ? "Continue topic →" : "Start topic →" : "Complete 70% of the previous topic"}</button></article>`;
     }).join("");
     $$('[data-path-topic]').forEach((button) => button.addEventListener("click", () => start("mixed", button.dataset.pathTopic)));
