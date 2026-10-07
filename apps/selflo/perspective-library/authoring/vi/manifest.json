@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 72,
-  "content_version": "quote-filter-metadata-v1",
+  "library_revision": 73,
+  "content_version": "story-last-time-v1",
   "language": "vi",
-  "generated_at": "2026-10-04T03:02:11Z",
+  "generated_at": "2026-10-07T07:42:02Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -15,6 +15,15 @@
       "media_type": "application/json",
       "sha256": "c99c210a34b01faea568c7653c4868afea48fc01397793cfc582a7e70e795710",
       "byte_count": 5457
+    },
+    {
+      "id": "image.story.last_time.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/last-time-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "acbc7180646deb8757be936d73292d29d5df3e226f60989335c59e531834e32d",
+      "byte_count": 909153
     },
     {
       "id": "image.story.original_if_i_lived_a_human_life.v1",
@@ -190,11 +199,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 33,
-      "path": "themes/meaning-values.vi.r33.json",
+      "revision": 34,
+      "path": "themes/meaning-values.vi.r34.json",
       "media_type": "application/json",
-      "sha256": "4232687ce5199b0cc39afc20dd7463c41f0a43250a9b181688ade0c56bbbcffe",
-      "byte_count": 265798
+      "sha256": "45790d6bf64b232a2b12f3ff49863243cdd0eb1dfc69a3f2e31dcb3d6ccf4a1b",
+      "byte_count": 268156
     },
     {
       "id": "theme.relationships.vi",
@@ -431,6 +440,15 @@
       "byte_count": 6314
     },
     {
+      "id": "story.last_time",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/last-time/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "75a775d79df27796a58d9640c20d72eb716a76265a75fbb66a4fe3ff389f65c3",
+      "byte_count": 21074
+    },
+    {
       "id": "story.last_window_in_the_building",
       "kind": "story",
       "revision": 1,
@@ -541,11 +559,11 @@
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 12,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r12.json",
+      "revision": 13,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r13.json",
       "media_type": "application/json",
-      "sha256": "17c60509749b544dea87eaed144b899bb7d59789564f834cbde6bd599d70b503",
-      "byte_count": 64672
+      "sha256": "8a6906e75a207056094be953d71b84ee0ea6c0ab59c104cc504a3be17f2ba461",
+      "byte_count": 64125
     },
     {
       "id": "story.original_keeper_of_the_lamp",

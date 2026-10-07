@@ -16,6 +16,7 @@ LOCK_FILE = APP_ROOT / "perspective-library/tooling/locked-story-prose.json"
 RELEASED_STORY_IDS = {
     "story.empty_boat_on_the_river",
     "story.large_tree_beyond_the_carpenters_measure",
+    "story.last_time",
     "story.old_man_and_returning_horse",
     "story.original_between_two_banks",
     "story.original_builder_and_shapeless_stones",

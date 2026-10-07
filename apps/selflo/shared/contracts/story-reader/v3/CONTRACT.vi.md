@@ -1,10 +1,10 @@
 # Selflo Story Format V3 Contract
 
 **Contract ID:** `selflo.story-reader.editorial-v3`  
-**Trạng thái:** Gate 2.5 component contract frozen; chưa app implementation/publish  
+**Trạng thái:** Production; Core, extended text và figure đã được app/publisher hỗ trợ và cho phép Release
 **Contract hub:** [`../../README.md`](../../README.md)  
 **Vai trò:** Canonical design contract cho Content, Publisher, Web Reference Renderer và Selflo app  
-**Phạm vi:** Cấu trúc dữ liệu và presentation semantics của Story Reader V3; executable schema `1.2` đã có, chưa được publisher/app production consume  
+**Phạm vi:** Cấu trúc dữ liệu và presentation semantics của Story Reader V3; executable schema `1.2` đang được publisher và app production consume
 **Không thuộc phạm vi:** Moment, audio/video, timed reveal, branching, persistence, bookmark và progress semantics
 
 ## 1. Mục tiêu

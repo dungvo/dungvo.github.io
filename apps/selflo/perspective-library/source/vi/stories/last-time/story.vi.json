@@ -1,0 +1,534 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.last_time",
+  "revision": 1,
+  "status": "active",
+  "language": "vi",
+  "reader_format": "editorial_v3",
+  "title_vi": "LẦN CUỐI",
+  "subtitle_vi": "Sẽ có những điều trong cuộc sống, đến khi biết không còn lần sau, ta mới nhận ra chúng quan trọng với mình đến mức nào.",
+  "opening_quote_vi": null,
+  "hero_image": {
+    "file_id": "image.story.last_time.v1",
+    "alt_text_vi": "Một người cha chở con gái nhỏ đeo cặp đến trường trên con phố Việt Nam ngập nắng sớm",
+    "caption_vi": null
+  },
+  "primary_theme": "meaning_values",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [
+      "gratitude",
+      "tenderness",
+      "impermanence"
+    ],
+    "keywords": [
+      "lần cuối",
+      "sự hữu hạn",
+      "giá trị",
+      "nhận thức",
+      "gia đình",
+      "thời gian"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "section_01",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Một trận giao hữu",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_01.block_01",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Sáng ngày 7/10/2026 theo giờ Việt Nam, Lionel Messi bước ra sân Monumental trong màu áo Argentina."
+        },
+        {
+          "id": "section_01.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đối thủ là Benin."
+        },
+        {
+          "id": "section_01.block_03",
+          "type": "sequence",
+          "progression": "neutral",
+          "items": [
+            { "text_vi": "Không phải Brazil." },
+            { "text_vi": "Không phải Pháp." },
+            { "text_vi": "Không phải Tây Ban Nha." },
+            { "text_vi": "Cũng chẳng phải một trận chung kết World Cup." }
+          ]
+        },
+        {
+          "id": "section_01.block_04",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Chỉ là một trận giao hữu.",
+          "runs": [
+            { "text_vi": "Chỉ là một trận giao hữu.", "marks": ["strong"] }
+          ],
+          "shareable": false
+        },
+        {
+          "id": "section_01.block_05",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng khoảng 85.000 vé đã được bán sạch chỉ trong khoảng 90 phút."
+        },
+        {
+          "id": "section_01.block_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những vị trí đắt nhất có giá tới 480.000 peso Argentina. Forbes Argentina ước tính riêng tiền bán vé có thể mang về gần 13 triệu USD."
+        },
+        {
+          "id": "section_01.block_07",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một trận giao hữu với Benin bỗng trở thành một trong những sự kiện bóng đá được chờ đợi nhất Argentina."
+        },
+        {
+          "id": "section_01.block_08",
+          "type": "paragraph",
+          "style": "beat",
+          "text_vi": "Tại sao?",
+          "runs": [
+            { "text_vi": "Tại sao?", "marks": ["strong"] }
+          ]
+        },
+        {
+          "id": "section_01.block_09",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Messi đã khoác áo Argentina hơn 200 lần."
+        },
+        {
+          "id": "section_01.block_10",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người hâm mộ đã có hơn hai mươi năm để xem anh thi đấu."
+        },
+        {
+          "id": "section_01.block_11",
+          "type": "sequence",
+          "progression": "escalating",
+          "items": [
+            { "text_vi": "Họ từng thấy anh đá Copa América." },
+            { "text_vi": "Họ từng thấy anh chơi những trận World Cup lớn nhất." },
+            { "text_vi": "Họ đã thấy anh nâng chiếc cúp mà cả Argentina chờ đợi suốt nhiều thập kỷ." }
+          ]
+        },
+        {
+          "id": "section_01.block_12",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vậy tại sao một trận giao hữu với Benin lại khiến hàng chục nghìn người sẵn sàng trả một số tiền rất lớn chỉ để có mặt?"
+        },
+        {
+          "id": "section_01.block_13",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Có lẽ khác biệt nằm ở hai chữ:"
+        },
+        {
+          "id": "section_01.block_14",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "LẦN CUỐI.",
+          "runs": [
+            { "text_vi": "LẦN CUỐI.", "marks": ["strong", "accent"] }
+          ],
+          "shareable": true
+        },
+        {
+          "id": "section_01.block_15",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Ngày hôm qua, một trận đấu của Messi vẫn có thể được nghĩ đơn giản:"
+        },
+        {
+          "id": "section_01.block_16",
+          "type": "pull_quote",
+          "presentation": "rail",
+          "text_vi": "“Không xem lần này thì còn lần khác.”",
+          "runs": [
+            { "text_vi": "“Không xem lần này thì còn lần khác.”", "marks": ["emphasis"] }
+          ],
+          "attribution_vi": null,
+          "shareable": false
+        },
+        {
+          "id": "section_01.block_17",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Nhưng hôm nay:"
+        },
+        {
+          "id": "section_01.block_18",
+          "type": "pull_quote",
+          "presentation": "centerpiece",
+          "text_vi": "Không còn lần khác nữa.",
+          "runs": [
+            { "text_vi": "Không còn lần khác nữa.", "marks": ["strong"] }
+          ],
+          "attribution_vi": null,
+          "shareable": true
+        },
+        {
+          "id": "section_01.block_19",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Và kỳ lạ thay, chỉ một thay đổi trong nhận thức ấy có thể khiến giá trị của cùng một trải nghiệm trở nên hoàn toàn khác."
+        }
+      ]
+    },
+    {
+      "id": "section_02",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Những “lần cuối” không được báo trước",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_02.block_01",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Điều đó khiến tôi nghĩ đến một chuyện khác."
+        },
+        {
+          "id": "section_02.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Có lẽ cuộc đời mỗi người cũng chứa rất nhiều “lần cuối”."
+        },
+        {
+          "id": "section_02.block_03",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Chỉ khác Messi ở một điểm:"
+        },
+        {
+          "id": "section_02.block_04",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Phần lớn chúng không được thông báo trước.",
+          "runs": [
+            { "text_vi": "Phần lớn chúng không được thông báo trước.", "marks": ["strong"] }
+          ],
+          "shareable": true
+        },
+        {
+          "id": "section_02.block_05",
+          "type": "sequence",
+          "progression": "neutral",
+          "items": [
+            { "text_vi": "Không ai bán vé cho lần cuối cha chở mình đi học." },
+            { "text_vi": "Không có sân vận động nào thông báo lần cuối con mình đưa hai tay lên đòi bế." },
+            { "text_vi": "Không có bảng điện tử đếm ngược đến bữa cơm cuối cùng mà gia đình vẫn còn đông đủ." }
+          ]
+        },
+        {
+          "id": "section_02.block_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vì không biết đó là lần cuối, ta sống nó giống như hàng trăm lần trước."
+        },
+        {
+          "id": "section_02.block_07",
+          "type": "pull_quote",
+          "presentation": "inset",
+          "text_vi": "“Mai vẫn còn mà.”",
+          "runs": [
+            { "text_vi": "“Mai vẫn còn mà.”", "marks": ["emphasis"] }
+          ],
+          "attribution_vi": null,
+          "shareable": false
+        },
+        {
+          "id": "section_02.block_08",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Và có lẽ chính câu đó khiến rất nhiều điều quan trọng trở nên bình thường."
+        }
+      ]
+    },
+    {
+      "id": "section_03",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Điều gì thực sự thay đổi?",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_03.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "“Lần cuối” không làm cho một điều trở nên có giá trị."
+        },
+        {
+          "id": "section_03.block_02",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Nó chỉ làm chúng ta nhận ra giá trị vốn đã ở đó.",
+          "runs": [
+            { "text_vi": "Nó chỉ làm chúng ta nhận ra giá trị vốn đã ở đó.", "marks": ["strong"] }
+          ],
+          "shareable": true
+        },
+        {
+          "id": "section_03.block_03",
+          "type": "sequence",
+          "progression": "neutral",
+          "items": [
+            { "text_vi": "Người cha chở mình đi học không trở nên quan trọng hơn vào chuyến đi cuối cùng." },
+            { "text_vi": "Đứa trẻ không đáng yêu hơn vào lần cuối nó đòi được bế." },
+            { "text_vi": "Bữa cơm gia đình cuối cùng cũng không ngon hơn hàng trăm bữa cơm trước đó." }
+          ]
+        },
+        {
+          "id": "section_03.block_04",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Thứ thay đổi là nhận thức của chúng ta.",
+          "runs": [
+            { "text_vi": "Thứ thay đổi là ", "marks": [] },
+            { "text_vi": "nhận thức của chúng ta", "marks": ["strong", "accent"] },
+            { "text_vi": ".", "marks": [] }
+          ]
+        },
+        {
+          "id": "section_03.block_05",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Khi nghĩ rằng:"
+        },
+        {
+          "id": "section_03.block_06",
+          "type": "pull_quote",
+          "presentation": "rail",
+          "text_vi": "“Ngày mai vẫn còn.”",
+          "runs": [
+            { "text_vi": "“Ngày mai vẫn còn.”", "marks": ["emphasis"] }
+          ],
+          "attribution_vi": null,
+          "shareable": false
+        },
+        {
+          "id": "section_03.block_07",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ta định giá một khoảnh khắc theo một cách."
+        },
+        {
+          "id": "section_03.block_08",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Khi biết:"
+        },
+        {
+          "id": "section_03.block_09",
+          "type": "pull_quote",
+          "presentation": "rail",
+          "text_vi": "“Đây là lần cuối.”",
+          "runs": [
+            { "text_vi": "“Đây là lần cuối.”", "marks": ["emphasis"] }
+          ],
+          "attribution_vi": null,
+          "shareable": false
+        },
+        {
+          "id": "section_03.block_10",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ta định giá nó theo một cách khác."
+        },
+        {
+          "id": "section_03.block_11",
+          "type": "flow",
+          "items": [
+            { "text_vi": "Nhận thức ấy tạo ra cảm xúc." },
+            { "text_vi": "Cảm xúc khiến ta nhìn lại điều gì thực sự quan trọng." },
+            { "text_vi": "Và đôi khi, nó thay đổi cả hành vi của chúng ta." }
+          ]
+        },
+        {
+          "id": "section_03.block_12",
+          "type": "list",
+          "style": "plain",
+          "items": [
+            { "text_vi": "Một người sẵn sàng mua tấm vé mà hôm qua họ thấy quá đắt." },
+            { "text_vi": "Một người ở lại bàn ăn lâu hơn một chút." },
+            { "text_vi": "Một người cất điện thoại xuống." },
+            { "text_vi": "Một người quyết định về thăm cha mẹ thay vì nói:" }
+          ]
+        },
+        {
+          "id": "section_03.block_13",
+          "type": "pull_quote",
+          "presentation": "inset",
+          "text_vi": "“Tuần sau con về.”",
+          "runs": [
+            { "text_vi": "“Tuần sau con về.”", "marks": ["emphasis"] }
+          ],
+          "attribution_vi": null,
+          "shareable": false
+        }
+      ]
+    },
+    {
+      "id": "section_04",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Khi vẫn còn thời gian",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_04.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chúng ta không thể biết đâu là lần cuối."
+        },
+        {
+          "id": "section_04.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Và có lẽ cũng không nên sống mỗi ngày trong nỗi sợ rằng mọi thứ sắp biến mất."
+        },
+        {
+          "id": "section_04.block_03",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Nhưng ta có thể nhận thức được một điều đơn giản:"
+        },
+        {
+          "id": "section_04.block_04",
+          "type": "statement",
+          "presentation": "centered",
+          "text_vi": "Những thứ mình đang có không có số lần vô hạn.",
+          "runs": [
+            { "text_vi": "Những thứ mình đang có không có số lần vô hạn.", "marks": ["strong"] }
+          ],
+          "shareable": true
+        },
+        {
+          "id": "section_04.block_05",
+          "type": "sequence",
+          "progression": "neutral",
+          "items": [
+            { "text_vi": "Con rồi sẽ lớn." },
+            { "text_vi": "Cha mẹ rồi sẽ già." },
+            { "text_vi": "Bạn bè rồi mỗi người sẽ có một cuộc sống." },
+            { "text_vi": "Và chính mình cũng chỉ có một khoảng thời gian hữu hạn để sống cuộc đời này." }
+          ]
+        },
+        {
+          "id": "section_04.block_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhận ra điều đó không phải để sợ mất."
+        },
+        {
+          "id": "section_04.block_07",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mà có thể để nhìn lại cách mình đang lựa chọn."
+        },
+        {
+          "id": "section_04.block_08",
+          "type": "list",
+          "style": "plain",
+          "items": [
+            {
+              "text_vi": "Thứ gì đang chiếm phần lớn thời gian của mình?",
+              "runs": [
+                { "text_vi": "Thứ gì đang chiếm phần lớn thời gian của mình?", "marks": ["strong"] }
+              ]
+            },
+            {
+              "text_vi": "Thứ gì thực sự quan trọng nhưng luôn được để lại cho “ngày mai”?",
+              "runs": [
+                { "text_vi": "Thứ gì thực sự quan trọng nhưng luôn được để lại cho “ngày mai”?", "marks": ["strong"] }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_04.block_09",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Và nếu biết một điều mình yêu quý không tồn tại mãi, liệu hôm nay mình có đối xử với nó khác đi một chút không?"
+        },
+        {
+          "id": "section_04.block_10",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Có lẽ ta không cần:"
+        },
+        {
+          "id": "section_04.block_11",
+          "type": "pull_quote",
+          "presentation": "rail",
+          "text_vi": "“Sống như hôm nay là ngày cuối cùng.”",
+          "runs": [
+            { "text_vi": "“Sống như hôm nay là ngày cuối cùng.”", "marks": ["emphasis"] }
+          ],
+          "attribution_vi": null,
+          "shareable": false
+        },
+        {
+          "id": "section_04.block_12",
+          "type": "paragraph",
+          "style": "beat",
+          "text_vi": "Chỉ cần nhớ:"
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một câu để mang theo",
+    "text_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.",
+    "runs": [
+      { "text_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.", "marks": ["strong"] }
+    ]
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_01",
+        "text_vi": "Thứ gì thực sự quan trọng nhưng luôn được để lại cho “ngày mai”?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_02",
+        "text_vi": "Và nếu biết một điều mình yêu quý không tồn tại mãi, liệu hôm nay mình có đối xử với nó khác đi một chút không?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "selflo",
+    "author_name": "Selflo",
+    "source_label": null,
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "content_workspace",
+    "source_item_id": "20261007_lan_cuoi",
+    "human_edited": true
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Nội dung do owner Selflo cung cấp và chốt; artwork hero do owner duyệt cho Story Reader."
+  },
+  "review": {
+    "status": "approved",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-10-07T00:00:00Z"
+  }
+}

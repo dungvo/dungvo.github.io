@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 59,
-  "content_version": "quote-filter-metadata-v1",
+  "source_revision": 60,
+  "content_version": "story-last-time-v1",
   "language": "vi",
-  "canonical_quote_count": 1822,
+  "canonical_quote_count": 1823,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1486,6 +1486,18 @@
       "id": "story.why_ai_feels_easier_to_ask",
       "kind": "story",
       "path": "stories/why-ai-feels-easier-to-ask/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "image.story.last_time.v1",
+      "kind": "image",
+      "path": "artwork/images/last-time-v1.jpg",
+      "media_type": "image/jpeg"
+    },
+    {
+      "id": "story.last_time",
+      "kind": "story",
+      "path": "stories/last-time/story.vi.json",
       "media_type": "application/json"
     }
   ]
