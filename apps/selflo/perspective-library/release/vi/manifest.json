@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 39,
+  "library_revision": 40,
   "content_version": "story-last-time-v1",
   "language": "vi",
-  "generated_at": "2026-10-07T09:47:28Z",
+  "generated_at": "2026-10-08T03:09:49Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -226,110 +226,110 @@
     {
       "id": "story.empty_boat_on_the_river",
       "kind": "story",
-      "revision": 4,
-      "path": "stories/empty-boat-on-the-river/story.vi.r4.json",
+      "revision": 5,
+      "path": "stories/empty-boat-on-the-river/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "eb9450d59109f62f79ac712cbe70fecdbeb1675ee6c1c7b87bb872e60a0782e1",
-      "byte_count": 6253
+      "sha256": "8ed7a4c0f3206150241fbbbe4b35bbd5b7d5713385cba9fc907b8b52f4c6631c",
+      "byte_count": 6321
     },
     {
       "id": "story.large_tree_beyond_the_carpenters_measure",
       "kind": "story",
-      "revision": 4,
-      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r4.json",
+      "revision": 5,
+      "path": "stories/large-tree-beyond-the-carpenters-measure/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "864e06ddea1eaf0fc858c5e1504039190e439c4e82210206bab7ee7d77a30481",
-      "byte_count": 6314
+      "sha256": "2500c1271c8f4059dbda0ca3255543d3ff915e5edfe1a8c8d17d53cd2b0efde3",
+      "byte_count": 6382
     },
     {
       "id": "story.last_time",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/last-time/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/last-time/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "65a9456d8579bcb9da394da296eb56ab6981c3203b09f67da43adc4e4ed46127",
-      "byte_count": 21114
+      "sha256": "a01f4b94e03951f63bdd5ff586fb350a8d465d073f82f7f184e1bea950bc3fbf",
+      "byte_count": 21182
     },
     {
       "id": "story.old_man_and_returning_horse",
       "kind": "story",
-      "revision": 4,
-      "path": "stories/old-man-and-returning-horse/story.vi.r4.json",
+      "revision": 5,
+      "path": "stories/old-man-and-returning-horse/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "175b92ec1be16b13a9feed481313b96d46fae8f3e09046183cd05e9904247502",
-      "byte_count": 5685
+      "sha256": "6c7855a59e258f748acb7fdabab86caaaae06f55e38167f8e4b34a981603233b",
+      "byte_count": 5753
     },
     {
       "id": "story.original_between_two_banks",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/original-between-two-banks/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/original-between-two-banks/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "a8c671deac88a745bbb12fcd098e972f39b3947eac8ef5447eb66d4ac31e5e12",
-      "byte_count": 8653
+      "sha256": "4811ff513d3e28d9af244d54312526307ceb60c445d85615e7b77ad02ad4d77f",
+      "byte_count": 8721
     },
     {
       "id": "story.original_builder_and_shapeless_stones",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/original-builder-and-shapeless-stones/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/original-builder-and-shapeless-stones/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "870b487b4519d7454aed5a99738902cd2a077af5ad3f2c9431111ec5e1f50d47",
-      "byte_count": 20452
+      "sha256": "7ac43ffb67a4cba665d3bdf09dae590efe6ac0d4953303ba87fa76473f3d3108",
+      "byte_count": 20520
     },
     {
       "id": "story.original_chair_beside_window",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/original-chair-beside-window/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/original-chair-beside-window/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "e0cfe7e814cc6fd94369cfbb5ede633ce0e465593e926f31ab3a2cb6bf544774",
-      "byte_count": 22685
+      "sha256": "79d5f97cad0d628c20e86c17d4b0f26160b0b225fbeb98850eb73cf4256013b8",
+      "byte_count": 22753
     },
     {
       "id": "story.original_if_i_lived_a_human_life",
       "kind": "story",
-      "revision": 8,
-      "path": "stories/original-if-i-lived-a-human-life/story.vi.r8.json",
+      "revision": 9,
+      "path": "stories/original-if-i-lived-a-human-life/story.vi.r9.json",
       "media_type": "application/json",
-      "sha256": "35b500f9923a07f5e464be728f5a32a0df18ee2d2e7e22e3bd7913d867d669d0",
-      "byte_count": 64124
+      "sha256": "f8f528f908d71771c3fbcdd5df15d1c537d523a293829f8cbfa7bbe4f4d103ac",
+      "byte_count": 64193
     },
     {
       "id": "story.original_stone_that_loved_stormy_days",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/original-stone-that-loved-stormy-days/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "6d49389acba08f0de2eaee7fc4bdaa47bf93ae7b01168eb57c9926c1094f1985",
-      "byte_count": 16778
+      "sha256": "c9c8f39449a7d7fd38faf2b09e03f4577fd3c5b7112a0161169e1983fa967a56",
+      "byte_count": 16846
     },
     {
       "id": "story.rails_that_diverge",
       "kind": "story",
-      "revision": 7,
-      "path": "stories/rails-that-diverge/story.vi.r7.json",
+      "revision": 8,
+      "path": "stories/rails-that-diverge/story.vi.r8.json",
       "media_type": "application/json",
-      "sha256": "7965a5f30e146c4b9cab42fd7ccf70ac6f4958707620b6f0f43938197ed47f87",
-      "byte_count": 82957
+      "sha256": "ea393d26890e15af3a524871c5cffb505b160309f6566e3d57b32c66ce1c045b",
+      "byte_count": 83026
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
-      "revision": 9,
-      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r9.json",
+      "revision": 10,
+      "path": "stories/the-compass-does-not-walk-for-you/story.vi.r10.json",
       "media_type": "application/json",
-      "sha256": "7db209f7d5a70b956b20221549c71c12ff79bb19b0e5f860f92f21836cbb09d6",
-      "byte_count": 92576
+      "sha256": "b380b4ca6eb0495f6e9a1182343f20ac4f3be96bc8af665888e89fdf205d27e9",
+      "byte_count": 92646
     },
     {
       "id": "story.tree_and_silent_goose",
       "kind": "story",
-      "revision": 4,
-      "path": "stories/tree-and-silent-goose/story.vi.r4.json",
+      "revision": 5,
+      "path": "stories/tree-and-silent-goose/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "46fcbeec2ec56bf94b6cec8701f6162610f78565b928438bb9a5446bdd6ba037",
-      "byte_count": 6752
+      "sha256": "db79a5159c9569e76c36a1f508670bfad54f7383d664d0be728b7e97dfba3132",
+      "byte_count": 6820
     },
     {
       "id": "story_artwork.catalog.vi",

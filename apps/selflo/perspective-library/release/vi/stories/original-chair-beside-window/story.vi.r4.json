@@ -1,0 +1,687 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.original_chair_beside_window",
+  "revision": 4,
+  "status": "active",
+  "language": "vi",
+  "title_vi": "Chiếc ghế cạnh cửa sổ",
+  "subtitle_vi": "Một ngày làm việc có thể chưa xong, nhưng buổi tối vẫn có thể trở về với mình.",
+  "hero_image": null,
+  "primary_theme": "rest_wellbeing",
+  "metadata": {
+    "concept_ids": [
+      "concept.psychological_detachment"
+    ],
+    "emotion_tags": [
+      "frustration",
+      "exhaustion"
+    ],
+    "keywords": [
+      "tan làm",
+      "ranh giới công việc",
+      "buổi tối",
+      "chiếc ghế cửa sổ"
+    ],
+    "story_style": "contemporary",
+    "reading_time_minutes": 5,
+    "related_content_ids": [
+
+    ]
+  },
+  "sections": [
+    {
+      "id": "section_01",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Những chuyện quen thuộc",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_01.block_01",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Anh đã đi làm gần hai mươi năm. Ngày còn trẻ, mỗi lần bắt đầu ở một nơi mới, anh đều nghĩ:"
+        },
+        {
+          "id": "section_01.block_02",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Anh nghĩ:"
+        },
+        {
+          "id": "section_01.block_03.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_01.block_03.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Có lẽ ở đây mình sẽ làm được những điều thật hay."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_01.block_04",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng rồi nơi nào cũng dần xuất hiện những chuyện quen thuộc: một người nói năng khó chịu, một cuộc họp kéo dài, một việc được gọi là rất gấp rồi vài tuần sau không ai nhắc tới."
+        },
+        {
+          "id": "section_01.block_05",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Và cả những yêu cầu mơ hồ:"
+        },
+        {
+          "id": "section_01.block_06.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_01.block_06.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh làm giúp việc này nhé."
+                },
+                {
+                  "text_vi": "Cần khi nào?"
+                },
+                {
+                  "text_vi": "Càng sớm càng tốt."
+                },
+                {
+                  "text_vi": "Cụ thể cần làm thế nào?"
+                },
+                {
+                  "text_vi": "Anh cứ làm bản nháp trước, rồi chúng ta xem tiếp."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_01.block_11",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh ghét nhất câu ấy. Làm bản nháp cho điều mà chính người giao việc cũng chưa biết mình muốn gì?"
+        }
+      ]
+    },
+    {
+      "id": "section_02",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Cuộc họp chỉ có một người",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_02.block_01",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Một buổi chiều, anh lại nhận một yêu cầu như vậy. Hạn hoàn thành đã gần, nhưng thông tin vẫn thiếu. Anh nhắn hỏi. Không ai trả lời."
+        },
+        {
+          "id": "section_02.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Từ một việc chưa rõ, đầu óc anh đi rất xa."
+        },
+        {
+          "id": "section_02.block_03",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Anh tự hỏi:"
+        },
+        {
+          "id": "section_02.block_04.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_02.block_04.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Mình còn phải sống với những chuyện này bao lâu nữa?"
+                },
+                {
+                  "text_vi": "Nếu chuyển sang nơi khác rồi mọi thứ vẫn thế thì sao?"
+                },
+                {
+                  "text_vi": "Chẳng lẽ cuộc đời cứ sáng đi làm, chiều trở về, rồi dần già đi?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_02.block_07",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Đến cuối giờ, văn phòng gần như đã vắng. Anh đóng máy nhưng chưa muốn về. Anh xuống quán nhỏ dưới tòa nhà và ngồi vào chiếc ghế cạnh cửa sổ. Ngoài đường, trời vừa mưa."
+        }
+      ]
+    },
+    {
+      "id": "section_03",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Người phụ nữ lau sàn",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_03.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người phụ nữ đang lau sàn gần đó. Anh thường gặp bà nhưng hai người chưa từng nói chuyện."
+        },
+        {
+          "id": "section_03.block_02",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người phụ nữ:"
+        },
+        {
+          "id": "section_03.block_03.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_03.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh chưa về à?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_04",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người đàn ông:"
+        },
+        {
+          "id": "section_03.block_05.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_05.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Công việc hôm nay hơi mệt."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_06",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người phụ nữ:"
+        },
+        {
+          "id": "section_03.block_07.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_07.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đi làm mà. Có ngày vui, có ngày chỉ muốn nghỉ luôn."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_08",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh bật cười rồi hỏi bà đã làm ở đây bao lâu."
+        },
+        {
+          "id": "section_03.block_09",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người phụ nữ:"
+        },
+        {
+          "id": "section_03.block_10.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_10.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Mười một năm."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_11",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người đàn ông:"
+        },
+        {
+          "id": "section_03.block_12.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_12.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cô không chán sao?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_13",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người phụ nữ:"
+        },
+        {
+          "id": "section_03.block_14.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_14.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Chán chứ. Có người dễ thương. Có người coi mình như không tồn tại. Có hôm tôi vừa lau xong, người ta bước thẳng qua."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_15",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người đàn ông:"
+        },
+        {
+          "id": "section_03.block_16.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_16.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy sao cô chịu được lâu như vậy?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_17",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Bà dừng cây lau nhà, nghĩ một lúc rồi nói:"
+        },
+        {
+          "id": "section_03.block_18.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_18.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì tôi đâu có sống ở đây cả ngày."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_19",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh nhìn đồng hồ. Bà vẫn làm đủ tám tiếng mỗi ngày. Thấy vẻ khó hiểu của anh, bà chỉ ra ngoài cửa kính."
+        },
+        {
+          "id": "section_03.block_20",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người phụ nữ:"
+        },
+        {
+          "id": "section_03.block_21.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_21.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Buổi sáng tôi mua bánh mì cho chồng. Buổi trưa tôi gọi hỏi cháu ngoại đã ăn chưa. Chiều về tôi tưới mấy chậu cây. Tối thứ Tư tôi tập thể dục với mấy người trong xóm. Chủ nhật tôi nấu bún riêu."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_22",
+          "type": "pull_quote",
+          "text_vi": "Nếu tôi để một người làm mình khó chịu lúc hai giờ chiều lấy luôn cả buổi tối, vậy là tôi cho người đó nhiều quá.",
+          "attribution_vi": "Người phụ nữ",
+          "presentation": "centerpiece",
+          "shareable": false
+        },
+        {
+          "id": "section_03.block_23",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh im lặng. Người giao việc cho anh có lẽ đã về nhà, có thể đang ăn tối, cũng có thể đã quên cả yêu cầu buổi chiều. Nhưng anh vẫn tiếp tục cuộc trò chuyện ấy trong đầu — tự hỏi, tự trả lời rồi tự tức giận. Một cuộc họp không có thật mà chỉ mình anh tham dự."
+        },
+        {
+          "id": "section_03.block_24",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Trước khi người phụ nữ rời đi, anh hỏi:"
+        },
+        {
+          "id": "section_03.block_25.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_25.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng nếu ngày mai lại gặp chuyện khó chịu thì sao?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_03.block_26",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người phụ nữ:"
+        },
+        {
+          "id": "section_03.block_27.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_03.block_27.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Thì ngày mai khó chịu tiếp. Còn hôm nay đã hết giờ rồi."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section_04",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Phần của mình",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_04.block_01",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Sáng hôm sau, thông tin anh cần vẫn chưa đến. Lần này anh không ngồi chờ trong bực bội. Anh bắt đầu bằng những gì mình đã biết và đánh dấu những phần còn cần xác nhận."
+        },
+        {
+          "id": "section_04.block_02",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Khi người quản lý hỏi tiến độ, anh nói:"
+        },
+        {
+          "id": "section_04.block_03.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_04.block_03.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi đã có phần khung. Còn ba điểm cần làm rõ trước khi hoàn thiện."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_04.block_04",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Người quản lý nhìn qua:"
+        },
+        {
+          "id": "section_04.block_05.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_04.block_05.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Được, chiều chúng ta trao đổi."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_04.block_06",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cuộc nói chuyện mà anh đã diễn tập hàng chục lần trong đầu kết thúc chưa đầy một phút."
+        },
+        {
+          "id": "section_04.block_07",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vài tháng sau, anh mắc một lỗi. Một người đồng nghiệp nói điều khiến anh nóng mặt. Anh định phản ứng ngay, nhưng rồi nhớ tới chiếc ghế cạnh cửa sổ."
+        },
+        {
+          "id": "section_04.block_08",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh lấy giấy và viết: điều đã xảy ra; phần trách nhiệm của mình; phần không thuộc về mình."
+        },
+        {
+          "id": "section_04.block_09",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh giải quyết điều đã xảy ra và nhận phần trách nhiệm của mình. Phần còn lại, anh để lại nơi nó thuộc về. Buổi tối hôm ấy, anh vẫn ăn cơm bình thường."
+        }
+      ]
+    },
+    {
+      "id": "section_05",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Buổi tối trở về",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_05.block_01",
+          "type": "paragraph",
+          "style": "transition",
+          "text_vi": "Nhiều tuần sau, anh trở lại chiếc ghế cạnh cửa sổ. Người phụ nữ không còn làm ở đó nữa. Bà đã về quê chăm cháu. Anh thậm chí chưa từng hỏi tên bà."
+        },
+        {
+          "id": "section_05.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ngoài cửa kính, mọi người đang trở về nhà. Mỗi người dường như đều mang theo một điều gì đó: một khoản phải trả, một cuộc tranh luận, một người thân đang bệnh, một dự định chưa thành."
+        },
+        {
+          "id": "section_05.block_03",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh nhìn đồng hồ rồi đóng máy. Vẫn còn một việc chưa xong. Ngày mai anh sẽ quay lại."
+        },
+        {
+          "id": "section_05.block_04",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Điện thoại rung. Con gái nhắn:"
+        },
+        {
+          "id": "section_05.block_05.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_05.block_05.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ba về chưa?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_05.block_06",
+          "type": "paragraph",
+          "style": "lead_in",
+          "text_vi": "Anh trả lời:"
+        },
+        {
+          "id": "section_05.block_07.group",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "section_05.block_07.turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ba đang về."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_05.block_08",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trên đường, anh ghé mua một ổ bánh mì. Trời sau cơn mưa khá mát. Công việc chưa tốt hơn. Những người xung quanh cũng chưa thay đổi."
+        },
+        {
+          "id": "section_05.block_09",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng anh đã lấy lại được buổi tối của mình."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn",
+    "text_vi": "Ranh giới không phải lúc nào cũng làm công việc biến mất. Đôi khi nó chỉ giúp ta trả phần chưa xong lại cho ngày mai, để một chuyện ở nơi làm việc không chiếm luôn phần đời còn lại."
+  },
+  "authorship": {
+    "author_id": null,
+    "author_name": null,
+    "source_label": "Nguyên văn owner cung cấp; chỉ chuyển sang cấu trúc Story Selflo",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "story_studio",
+    "source_item_id": "original_chair_beside_window",
+    "human_edited": true
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Nội dung gốc Selflo do owner cung cấp; owner xác nhận quyền phát hành ngày 2026-09-23."
+  },
+  "review": {
+    "status": "approved",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-09-27T06:58:22Z"
+  },
+  "reader_format": "editorial_v3",
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Có chuyện gì đã kết thúc ngoài đời nhưng vẫn đang tiếp tục trong đầu bạn?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_2",
+        "text_vi": "Khi ngày làm việc khép lại, điều gì xứng đáng được nhận lại sự chú ý của bạn?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": "Ngày làm việc có thể chưa trọn vẹn. Buổi tối vẫn có thể thuộc về mình."
+  },
+  "layout_review": {
+    "status": "approved_exception",
+    "reason_vi": "Bản kể dài gồm nhiều chặng đời sống và công việc; các section được giữ để duy trì nhịp chuyển cảnh rõ ràng.",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-09-23T15:50:35Z"
+  },
+  "opening_quote_vi": null
+}

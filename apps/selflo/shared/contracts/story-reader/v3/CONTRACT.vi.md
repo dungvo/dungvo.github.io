@@ -83,11 +83,14 @@ Owner-approved V2/V2.5 presentation contract:
 
 - `hero_image` có thì app render ở đầu story, full reading width và có thể fade/composite vào paper background; đây là renderer policy, không phải content layout field;
 - không có `hero_image` thì app bỏ hẳn image region;
-- reading time do app derive từ nội dung; không lưu số phút cố định trong payload;
+- `metadata.reading_time_minutes` là số phút đọc do publisher materialize từ visible content (hoặc reviewed source override); Release active bắt buộc có giá trị `1...180`. Reader chỉ hiển thị payload, không tự tính;
+- `metadata.related_content_ids` optional, tối đa ba stable ID và giữ nguyên thứ tự editorial. Reader không tự chọn, xếp hạng hoặc bù slot. Thiếu/null/rỗng hiển thị trạng thái framework “Chưa có bài viết liên quan.”; ID sai, trùng, self-reference hoặc chưa active trong cùng Release làm payload fail closed;
 - theme và story kind lấy từ stable metadata/catalog;
 - public author/source dùng `authorship` và xuất hiện trong opening metadata, không đặt mặc định ở cuối truyện;
 - reader chỉ render attribution khi có `author_name`, hoặc `source_label` đi cùng `source_url`; `source_label` đứng một mình được xem là authoring provenance và không đưa nguyên văn lên reader;
 - chi tiết provenance nội bộ vẫn thuộc `editorial`/`rights`. Block `source_note` là nội dung có chủ ý trong story flow và không bị rule attribution này thay đổi.
+
+Hero resolution thống nhất App/Web: `hero_image` explicit → artwork catalog theo `primary_theme` → không có hero region. `hero_image.file_id` đã khai báo nhưng không tồn tại/không hợp lệ là lỗi payload/resource và phải fail closed; renderer không được âm thầm thay bằng theme artwork. Theme fallback chỉ áp dụng khi `hero_image` là `null`.
 
 ### 3.2 Section heading metadata
 

@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.tree_and_silent_goose",
+  "revision": 5,
+  "status": "active",
+  "language": "vi",
+  "title_vi": "Cái cây và con ngỗng không biết kêu",
+  "subtitle_vi": "Kể lại từ Trang Tử · Ngoại thiên · Sơn mộc, đoạn mở đầu.",
+  "hero_image": null,
+  "primary_theme": "change_growth",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+
+    ],
+    "keywords": [
+      "Cái cây và con ngỗng không biết kêu",
+      "ngụ ngôn",
+      "góc nhìn"
+    ],
+    "story_style": "parable",
+    "reading_time_minutes": 2,
+    "related_content_ids": [
+
+    ]
+  },
+  "sections": [
+    {
+      "id": "tree_in_mountain",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Cái cây không dùng được",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "tree_in_mountain.1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trang Tử đi trong núi và thấy một cây lớn, cành lá sum suê. Người đốn củi đứng ngay bên cây nhưng không hề chặt nó."
+        },
+        {
+          "id": "tree_in_mountain.2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khi được hỏi vì sao, người ấy đáp rằng gỗ của cây không dùng được. Trang Tử nói với học trò: nhờ không dùng được mà cái cây có thể sống hết tuổi trời."
+        },
+        {
+          "id": "tree_in_mountain.3",
+          "type": "pull_quote",
+          "text_vi": "Cây này nhờ gỗ không dùng được mà sống hết tuổi trời.",
+          "attribution_vi": "Trang Tử",
+          "presentation": "centerpiece",
+          "shareable": false
+        }
+      ]
+    },
+    {
+      "id": "silent_goose",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Con ngỗng không biết kêu",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "silent_goose.1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ra khỏi núi, Trang Tử đến nhà một người bạn cũ. Chủ nhà vui mừng, sai người làm thịt một con ngỗng để đãi khách."
+        },
+        {
+          "id": "silent_goose.2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người hầu hỏi: trong hai con, một con biết kêu và một con không biết kêu, nên giết con nào? Chủ nhà đáp: giết con không biết kêu."
+        },
+        {
+          "id": "silent_goose.3",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chỉ trong hai ngày, cái vô dụng đã cứu một cái cây và lại khiến một con ngỗng mất mạng."
+        }
+      ]
+    },
+    {
+      "id": "between_use",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Giữa hữu dụng và vô dụng",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "between_use.1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Hôm sau, học trò hỏi Trang Tử: hôm qua cái cây vì không dùng được mà sống; hôm nay con ngỗng vì không dùng được mà chết. Vậy thầy sẽ chọn đứng về phía nào?"
+        },
+        {
+          "id": "between_use.2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trang Tử cười và nói ông sẽ ở giữa hữu dụng và vô dụng. Nhưng rồi ông tự sửa lại: cái ở giữa ấy tưởng đúng mà vẫn chưa thật đúng, vì một vị trí cố định khác cũng có thể trở thành ràng buộc."
+        },
+        {
+          "id": "between_use.3",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông nói đến cách sống cùng thời thế mà biến đổi: khi lên, khi xuống, không cố bảo vệ mãi một công thức từng có ích. Điều giữ mình không phải là chọn được một phía hoàn hảo, mà là còn đủ linh hoạt để nhận ra hoàn cảnh đã đổi."
+        },
+        {
+          "id": "between_use.4",
+          "type": "pull_quote",
+          "text_vi": "Không phải lúc nào hữu dụng cũng cứu ta, và không phải lúc nào vô dụng cũng làm hại ta.",
+          "attribution_vi": null,
+          "presentation": "centerpiece",
+          "shareable": false
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Một phẩm chất có thể bảo vệ ta trong hoàn cảnh này và trở thành bất lợi trong hoàn cảnh khác. Thay vì cố giữ một công thức về hữu dụng hay vô dụng, ta có thể học cách nhìn hoàn cảnh đang đổi và đáp lại nó linh hoạt hơn."
+  },
+  "authorship": {
+    "author_id": "zhuangzi",
+    "author_name": "Trang Tử",
+    "source_label": "Trang Tử · Ngoại thiên · Sơn mộc, đoạn mở đầu · Bản kể lại tiếng Việt Selflo từ truyện cổ do owner sưu tầm; không phải nguyên văn bản dịch xuất bản.",
+    "source_url": "https://ctext.org/zhuangzi/tree-on-the-mountain/zh"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "classical_parables",
+    "source_item_id": "tree_and_silent_goose",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "public_domain",
+    "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+  },
+  "review": {
+    "status": "approved",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-09-16T10:28:09Z"
+  },
+  "reader_format": "editorial_v3",
+  "opening_quote_vi": "Cái cây vì không dùng được mà sống; con ngỗng vì không dùng được mà chết.",
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Có cách sống nào từng bảo vệ bạn nhưng giờ đây đang trở thành một giới hạn?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_2",
+        "text_vi": "Hoàn cảnh hiện tại đang cần bạn giữ vững điều gì và linh hoạt ở điều gì?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": "Không có một phía cố định nào thay ta nhìn lại hoàn cảnh đang đổi."
+  }
+}

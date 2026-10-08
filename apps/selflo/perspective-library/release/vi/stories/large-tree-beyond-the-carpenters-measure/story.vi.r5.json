@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.large_tree_beyond_the_carpenters_measure",
+  "revision": 5,
+  "status": "active",
+  "language": "vi",
+  "title_vi": "Cây lớn ngoài thước thợ mộc",
+  "subtitle_vi": "Kể lại từ Trang Tử · Nội thiên · Tiêu dao du, đoạn Huệ Tử nói về cây lớn.",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+
+    ],
+    "keywords": [
+      "Cây lớn ngoài thước thợ mộc",
+      "ngụ ngôn",
+      "góc nhìn"
+    ],
+    "story_style": "parable",
+    "reading_time_minutes": 2,
+    "related_content_ids": [
+
+    ]
+  },
+  "sections": [
+    {
+      "id": "crooked_tree",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Một cái cây không vừa khuôn",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "crooked_tree.1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Huệ Tử nói với Trang Tử rằng ông có một cây rất lớn. Thân cây u bướu, không theo được dây mực; cành nhỏ cong queo, chẳng vừa khuôn thước của người thợ mộc."
+        },
+        {
+          "id": "crooked_tree.2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cây đứng ngay bên đường nhưng thợ mộc đi qua không buồn ngoái nhìn. Huệ Tử đem nó ví với lời của Trang Tử: lớn lao đấy, nhưng chẳng có chỗ nào dùng được."
+        }
+      ]
+    },
+    {
+      "id": "useful_measure",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Khi mọi thứ bị đo bằng công dụng",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "useful_measure.1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trang Tử nhắc đến con chồn khéo rình bắt mồi. Nó nhảy bên đông, né bên tây, tưởng như rất lanh lợi, cuối cùng vẫn có thể mắc bẫy."
+        },
+        {
+          "id": "useful_measure.2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Còn con bò lớn như đám mây che trời thì không thể bắt chuột. Nhưng không bắt được chuột không có nghĩa sự tồn tại của nó là vô ích."
+        },
+        {
+          "id": "useful_measure.3",
+          "type": "pull_quote",
+          "text_vi": "Một vật không vừa với công dụng ta quen thuộc chưa chắc là một vật không có chỗ để tồn tại.",
+          "attribution_vi": null,
+          "presentation": "centerpiece",
+          "shareable": false
+        }
+      ]
+    },
+    {
+      "id": "wide_field",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Nằm nghỉ dưới tán cây",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "wide_field.1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trang Tử hỏi: có một cây lớn mà lại khổ vì nó vô dụng, sao không trồng nó ở nơi đồng rộng? Ở đó, người ta có thể thong dong đi quanh và thảnh thơi nằm nghỉ dưới tán cây."
+        },
+        {
+          "id": "wide_field.2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vì gỗ không vừa mắt thợ mộc, nó không bị rìu chặt yểu. Điều bị xem là khuyết điểm trong một khuôn đo lại trở thành khoảng sống khi cái cây được đặt ở một nơi khác."
+        },
+        {
+          "id": "wide_field.3",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Có lẽ câu hỏi không chỉ là mình dùng được vào việc gì. Đôi khi còn cần hỏi: mình đang bị đo bằng chiếc thước nào, và có phải mọi đời sống đều cần vừa với chiếc thước ấy hay không?"
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Không vừa với một công dụng quen thuộc không đồng nghĩa với không có giá trị. Có những khả năng chỉ trở nên có nghĩa khi ta rời khỏi chiếc thước đang dùng để đo mình và tìm một không gian khác để sống đúng hình dạng vốn có."
+  },
+  "authorship": {
+    "author_id": "zhuangzi",
+    "author_name": "Trang Tử",
+    "source_label": "Trang Tử · Nội thiên · Tiêu dao du, đoạn Huệ Tử nói về cây lớn · Bản kể lại tiếng Việt Selflo từ truyện cổ do owner sưu tầm; không phải nguyên văn bản dịch xuất bản.",
+    "source_url": "https://ctext.org/zhuangzi/enjoyment-in-untroubled-ease/zh"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "classical_parables",
+    "source_item_id": "large_tree_beyond_the_carpenters_measure",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "public_domain",
+    "note": "Tác phẩm nguồn là các văn bản cổ hoặc đã thuộc phạm vi công cộng. Phần diễn đạt câu trích dẫn bằng tiếng Việt và các câu chuyện trong Selflo được biên soạn hoặc kể lại mới dựa trên nguồn đã dẫn, không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+  },
+  "review": {
+    "status": "approved",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-09-16T10:28:09Z"
+  },
+  "reader_format": "editorial_v3",
+  "opening_quote_vi": "Có những cái cây được sống lâu chính vì chúng không vừa thước của người thợ mộc.",
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Bạn đang dùng chiếc thước nào để đánh giá giá trị của mình?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_2",
+        "text_vi": "Có phẩm chất nào từng bị xem là bất lợi nhưng có thể trở nên hữu ích trong một không gian khác?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": "Không phải cái cây nào cũng sinh ra để trở thành một tấm ván."
+  }
+}

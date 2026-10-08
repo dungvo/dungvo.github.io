@@ -273,6 +273,36 @@ def release_ready_story?(story)
 end
 
 
+def story_visible_text_values(story)
+  values = []
+  append = lambda do |value|
+    case value
+    when String
+      values << value
+    when Array
+      value.each { |item| append.call(item) }
+    when Hash
+      value.each do |key, item|
+        visible_keys = %w[text title subtitle caption closing prompts sections blocks turns paragraphs items lines takeaway reflection]
+        append.call(item) if key.end_with?("_vi") || visible_keys.include?(key)
+      end
+    end
+  end
+  append.call(story["sections"])
+  append.call(story["takeaway"])
+  append.call(story["reflection"])
+  values
+end
+
+
+def materialized_reading_minutes(story)
+  token_count = story_visible_text_values(story).sum do |text|
+    text.split(/\s+/).count { |token| token.match?(/[[:alnum:]]/u) }
+  end
+  [[(token_count + 219) / 220, 1].max, 180].min
+end
+
+
 def release_ready_concept?(concept)
   concept["status"] == "approved"
 end
@@ -2516,6 +2546,29 @@ if channel == "release"
       end
       .keys
       .to_set
+
+
+  # Release metadata is materialized once at the publishing boundary. Readers
+  # display these values verbatim and never derive or recommend content.
+  projected_payloads.each do |id, story|
+    next unless actual_release_story_ids.include?(id)
+
+    metadata = story.fetch("metadata")
+    metadata["reading_time_minutes"] ||= materialized_reading_minutes(story)
+    related_ids = metadata["related_content_ids"] || []
+
+    unless related_ids.is_a?(Array) && related_ids.length <= 3 && related_ids.uniq == related_ids
+      abort("Invalid related content at #{id}.metadata.related_content_ids: expected up to 3 unique IDs, received #{related_ids.inspect}")
+    end
+    if related_ids.include?(id)
+      abort("Invalid related content at #{id}.metadata.related_content_ids: self-reference #{id}; remove it")
+    end
+    missing_related_ids = related_ids.reject { |related_id| actual_release_story_ids.include?(related_id) }
+    unless missing_related_ids.empty?
+      abort("Invalid related content at #{id}.metadata.related_content_ids: unreleased IDs #{missing_related_ids.join(", ")}; release them or remove the references")
+    end
+    metadata["related_content_ids"] = related_ids
+  end
 
 
   # ---------------------------------------------------------------------------
