@@ -1,6 +1,6 @@
 {
   "schema_version": "selflo.content-index.v1",
-  "generated_at": "2026-10-04T02:34:29.295517Z",
+  "generated_at": "2026-10-08T08:22:23.373255Z",
   "channel": "authoring",
   "content_type": "quote",
   "items": [
@@ -3356,6 +3356,40 @@
       "payload_ref": "perspective-library/source/vi/quotes/self_understanding/056.vi.json#authoring.b010.oscar_wilde.011",
       "reader_url": null,
       "search_document_vi": "Nếu tài sản chỉ đem lại thú vui, ta còn chịu được; chính những bổn phận của nó khiến nó trở nên không thể chịu nổi. Oscar Wilde self_understanding self_understanding self_understanding self_understanding self_understanding"
+    },
+    {
+      "id": "selflo.knowledge.if_i_am_wrong_but_chatgpt_agrees",
+      "title_vi": "Nếu tôi sai, nhưng ChatGPT lại đồng ý với tôi thì sao?",
+      "text_vi": "Đôi khi, điều chúng ta muốn nghe không phải là sự thật, mà là một câu trả lời khiến mình cảm thấy mình đúng.",
+      "content_type": "quote",
+      "content_type_label_vi": "Quote",
+      "runtime_entity": "perspective_quote",
+      "classification_source": "runtime_entity",
+      "schema_version": "selflo.perspective.quote-fragment.v1",
+      "reader_format": "quote_card",
+      "revision": 1,
+      "status": "approved",
+      "channel": "authoring",
+      "language": "vi",
+      "primary_theme": "self_understanding",
+      "concept_ids": [],
+      "emotion_tags": [
+        "curiosity",
+        "self_doubt"
+      ],
+      "keywords": [
+        "ChatGPT",
+        "sycophancy",
+        "thiên kiến xác nhận",
+        "tư duy phản biện",
+        "knowledge insight"
+      ],
+      "rights_status": "selflo_owned",
+      "review_status": "approved",
+      "source_path": "quotes/self_understanding/056.vi.json",
+      "payload_ref": "perspective-library/source/vi/quotes/self_understanding/056.vi.json#selflo.knowledge.if_i_am_wrong_but_chatgpt_agrees",
+      "reader_url": null,
+      "search_document_vi": "Đôi khi, điều chúng ta muốn nghe không phải là sự thật, mà là một câu trả lời khiến mình cảm thấy mình đúng. Nếu tôi sai, nhưng ChatGPT lại đồng ý với tôi thì sao? Selflo self_understanding ChatGPT sycophancy thiên kiến xác nhận tư duy phản biện knowledge insight critical_thinking AI confirmation_bias"
     },
     {
       "id": "research.epictetus.day7.enchiridion.1.004",
@@ -13353,34 +13387,6 @@
       "payload_ref": "perspective-library/source/vi/quotes/relationships/008.vi.json#research.day43.anton_chekhov.013",
       "reader_url": null,
       "search_document_vi": "Trong Misery, nỗi đau tăng thêm khi một người không tìm được ai chịu nghe câu chuyện của mình. Anton Chekhov relationships relationships_boundaries_belonging connection Nội tâm & đời sống relationships_boundaries_belonging connection"
-    },
-    {
-      "id": "research.day72.001",
-      "title_vi": null,
-      "text_vi": "Trong môi trường giàu thông tin, chú ý trở thành nguồn lực khan hiếm vì xử lý thông tin tiêu tốn năng lực hữu hạn.",
-      "content_type": "quote",
-      "content_type_label_vi": "Quote",
-      "runtime_entity": "perspective_quote",
-      "classification_source": "runtime_entity",
-      "schema_version": "selflo.perspective.quote-fragment.v1",
-      "reader_format": "quote_card",
-      "revision": 1,
-      "status": "needs_owner_review",
-      "channel": "authoring",
-      "language": "vi",
-      "primary_theme": "attention",
-      "concept_ids": [],
-      "emotion_tags": [],
-      "keywords": [
-        "human_judgment_ai",
-        "attention"
-      ],
-      "rights_status": "unverified",
-      "review_status": "needs_owner_review",
-      "source_path": "quotes/attention/016.vi.json",
-      "payload_ref": "perspective-library/source/vi/quotes/attention/016.vi.json#research.day72.001",
-      "reader_url": null,
-      "search_document_vi": "Trong môi trường giàu thông tin, chú ý trở thành nguồn lực khan hiếm vì xử lý thông tin tiêu tốn năng lực hữu hạn. Attention scarcity attention human_judgment_ai attention Công nghệ & đời sống human_judgment_ai attention"
     }
   ]
 }

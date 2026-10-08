@@ -189,6 +189,44 @@ write(shard_dir / "manifest.json", {
     "shards": shards,
 })
 
+analysis_index_path = SOURCE / "analyses" / "index.json"
+analysis_items = []
+if analysis_index_path.exists():
+    analysis_index = read(analysis_index_path)
+    known_content_ids = {item["id"] for item in items}
+    seen_analysis_ids = set()
+    seen_content_ids = set()
+    for descriptor in analysis_index.get("items", []):
+        analysis = read(analysis_index_path.parent / descriptor["path"])
+        if analysis["id"] != descriptor["id"] or analysis["content_id"] != descriptor["content_id"]:
+            raise SystemExit(f"Analysis descriptor mismatch: {descriptor['path']}")
+        if analysis["id"] in seen_analysis_ids:
+            raise SystemExit(f"Duplicate analysis id: {analysis['id']}")
+        if analysis["content_id"] in seen_content_ids:
+            raise SystemExit(f"Content has more than one v1 analysis: {analysis['content_id']}")
+        if analysis["content_id"] not in known_content_ids:
+            raise SystemExit(f"Analysis references unknown content: {analysis['content_id']}")
+        reference_ids = {reference["id"] for reference in analysis.get("references", [])}
+        used_reference_ids = {
+            reference_id
+            for section in analysis.get("analysis_sections", [])
+            for reference_id in section.get("reference_ids", [])
+        }
+        missing_reference_ids = used_reference_ids - reference_ids
+        if missing_reference_ids:
+            raise SystemExit(f"Analysis has unknown reference ids: {sorted(missing_reference_ids)}")
+        seen_analysis_ids.add(analysis["id"])
+        seen_content_ids.add(analysis["content_id"])
+        analysis_items.append(analysis)
+
+write(API / "content-analysis.v1.json", {
+    "schema_version": "selflo.content-analysis-api.v1",
+    "generated_at": content_api["generated_at"],
+    "channel": "authoring",
+    "source": "perspective-library/source/vi/analyses/index.json",
+    "items": analysis_items,
+})
+
 authoring_catalog = read(ROOT / "shared" / "contracts" / "story-reader" / "v3" / "component-authoring-catalog.json")
 support = read(ROOT / "shared" / "contracts" / "story-reader" / "v3" / "component-support.json")
 support_by_selector = {item["wire_selector"]: item for item in support["components"]}

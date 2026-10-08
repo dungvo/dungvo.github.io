@@ -10,4 +10,6 @@ Trước mọi thay đổi trong `apps/selflo/perspective-library/` hoặc publi
 6. Với app-impacting change, cập nhật proposal/contract và app conformance trước; không publish content đòi capability app chưa phát hành.
 7. Authoring/Release là generated output. Không sửa tay hoặc publish nếu owner chưa yêu cầu rõ.
 
+Với thay đổi hoặc tạo mới public content, story hay artwork, đọc thêm [`editorial-decisions/README.md`](editorial-decisions/README.md) và các ADR còn hiệu lực. Decision record lưu lại bối cảnh và lý do thay đổi; không xóa hoặc viết lại lịch sử chỉ để khớp guideline mới.
+
 Nếu contract, schema, fixture, validator và implementation khác nhau, dừng publish. Canonical contract hub quyết định ownership; executable schema/fixture quyết định wire acceptance; discrepancy phải được resolve bằng decision có review, không fallback ngầm.

@@ -2,6 +2,8 @@
 
 Đây là nguồn canonical duy nhất dùng để publish Authoring Library. Release là projection fail-closed riêng và không được sửa trực tiếp từ website review.
 
+Trước khi tạo hoặc sửa public content, story hay artwork, đọc [`../../editorial-decisions/README.md`](../../editorial-decisions/README.md) và các ADR còn hiệu lực. Thư mục đó lưu cả bối cảnh và lý do thay đổi; không chỉ lưu guideline cuối cùng.
+
 ## Cấu trúc
 
 - `source.json`: index của toàn bộ source file.
@@ -9,6 +11,7 @@
 - `quotes/<theme>/NNN.vi.json`: fragment quote của một theme, tối đa 12 quote/file. Khi fragment cuối đã đủ 12 quote, tạo số kế tiếp thay vì làm file cũ tiếp tục phình ra.
 - `stories/<story-slug>/story.vi.json`: mỗi story có folder và file riêng.
 - `knowledge/`: Knowledge Catalog canonical.
+- `analyses/`: companion analysis tùy chọn, liên kết với public content bằng `content_id`; không nhúng vào Story wire payload.
 - `reading-intents/`: mapping reading intent ↔ story.
 - `provenance/`: mapping nguồn và bằng chứng nghiên cứu.
 - `decisions/`: decision ledger đã được owner chốt trong authoring workflow; không phải browser-local review ledger.

@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 74,
-  "content_version": "story-last-time-v1",
+  "library_revision": 77,
+  "content_version": "knowledge-chatgpt-agreement-v1",
   "language": "vi",
-  "generated_at": "2026-10-07T09:45:11Z",
+  "generated_at": "2026-10-08T08:16:53Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -226,11 +226,11 @@
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 36,
-      "path": "themes/self-understanding.vi.r36.json",
+      "revision": 37,
+      "path": "themes/self-understanding.vi.r37.json",
       "media_type": "application/json",
-      "sha256": "0e9939573df0bb4619a1cb88e8f85730e63a25c02ac0b71c2ae4c88fbc5c333c",
-      "byte_count": 1410499
+      "sha256": "1d2b09ca494244a4e6d49e8cd720dbddee1dd6829333932584d97c6a0c6bd68a",
+      "byte_count": 1412863
     },
     {
       "id": "theme.work_achievement.vi",
@@ -429,6 +429,15 @@
       "media_type": "application/json",
       "sha256": "4bb70796da162644c62945bba009093f55b6a678b6818b9cb6dd42d221018a97",
       "byte_count": 6528
+    },
+    {
+      "id": "story.if_i_am_wrong_but_chatgpt_agrees",
+      "kind": "story",
+      "revision": 3,
+      "path": "stories/if-i-am-wrong-but-chatgpt-agrees/story.vi.r3.json",
+      "media_type": "application/json",
+      "sha256": "7d4695226d6d00bca16d2c82a020f591cb68b40d78073681d3486c26ce571519",
+      "byte_count": 12897
     },
     {
       "id": "story.large_tree_beyond_the_carpenters_measure",

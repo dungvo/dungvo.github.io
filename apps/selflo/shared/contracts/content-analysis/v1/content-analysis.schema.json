@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dungvo.github.io/apps/selflo/shared/contracts/content-analysis/v1/content-analysis.schema.json",
+  "title": "Selflo Content Analysis v1",
+  "type": "object",
+  "required": ["schema_version", "entity", "id", "content_id", "revision", "status", "language", "audience", "editorial_assessment", "analysis_sections", "references"],
+  "properties": {
+    "schema_version": {"const": "selflo.content-analysis.v1"},
+    "entity": {"const": "content_analysis"},
+    "id": {"type": "string", "pattern": "^analysis\\.[a-z0-9_.-]+$"},
+    "content_id": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["draft", "active", "archived"]},
+    "language": {"const": "vi"},
+    "audience": {"enum": ["editorial", "reader_optional"]},
+    "editorial_assessment": {
+      "type": "object",
+      "required": ["depth_status", "public_content_decision", "summary_vi"],
+      "properties": {
+        "depth_status": {"enum": ["sufficient", "needs_revision", "blocked"]},
+        "public_content_decision": {"enum": ["keep_as_approved", "revise_before_release", "do_not_release"]},
+        "summary_vi": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "analysis_sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "title_vi", "body_vi"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "title_vi": {"type": "string", "minLength": 1},
+          "body_vi": {"type": "string", "minLength": 1},
+          "reference_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+        },
+        "additionalProperties": false
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "url", "validation_status"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "url": {"type": "string", "format": "uri"},
+          "validation_status": {"enum": ["source_checked", "pending_source_review"]},
+          "note_vi": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

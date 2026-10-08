@@ -4,6 +4,8 @@ Trạng thái: tài liệu định hướng biên tập nội bộ
 
 Phạm vi: chọn kiểu truyện, thiết kế trải nghiệm đọc và review Story Reader
 
+Lịch sử thay đổi giọng viết và artwork được lưu trong [Selflo editorial decision records](editorial-decisions/README.md). Đọc các ADR còn hiệu lực cùng guide này; ADR bổ sung lý do và ví dụ, không xóa taxonomy hay nguyên tắc cũ.
+
 Nguyên tắc: **Quote → Story → Reflection → người đọc tự nhận ra điều gì đó về chính mình.**
 
 ## 1. Mục đích của truyện trong Selflo

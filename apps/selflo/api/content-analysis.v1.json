@@ -1,0 +1,120 @@
+{
+  "schema_version": "selflo.content-analysis-api.v1",
+  "generated_at": "2026-10-08T08:22:23.373255Z",
+  "channel": "authoring",
+  "source": "perspective-library/source/vi/analyses/index.json",
+  "items": [
+    {
+      "schema_version": "selflo.content-analysis.v1",
+      "entity": "content_analysis",
+      "id": "analysis.story.last_time",
+      "content_id": "story.last_time",
+      "revision": 1,
+      "status": "active",
+      "language": "vi",
+      "audience": "editorial",
+      "editorial_assessment": {
+        "depth_status": "sufficient",
+        "public_content_decision": "keep_as_approved",
+        "summary_vi": "Insight cốt lõi là nhận thức về tính hữu hạn có thể làm thay đổi cách con người định giá một cơ hội hiện tại; lớp phân tích này không cần tràn vào public copy."
+      },
+      "analysis_sections": [
+        {
+          "id": "mechanism",
+          "title_vi": "Cách hiểu cần giữ",
+          "body_vi": "Messi vốn đã có giá trị với người hâm mộ. Điều thay đổi là cách họ nhìn cơ hội cuối cùng, không phải đến ‘lần cuối’ Messi mới trở nên có giá trị."
+        },
+        {
+          "id": "analysis_model",
+          "title_vi": "Mô hình phân tích làm việc",
+          "body_vi": "Sự kiện → Nhận thức → Cảm xúc → Đánh giá giá trị → Hành vi. Mô hình này dùng để tổ chức câu hỏi và kiểm tra wording, không tự nó chứng minh một chuỗi nhân quả khoa học."
+        },
+        {
+          "id": "research_axes",
+          "title_vi": "Các trục cần nghiên cứu",
+          "body_vi": "Deep Dive có thể khảo sát sự khan hiếm, anticipated regret, nhận thức về thời gian hữu hạn, ký ức và cách các yếu tố ấy liên quan đến việc đánh giá một trải nghiệm. Mỗi trục cần nguồn và giới hạn riêng trước khi trình bày như kiến thức đã kiểm chứng."
+        },
+        {
+          "id": "boundary",
+          "title_vi": "Ranh giới public content",
+          "body_vi": "Public story chỉ cần giải thích vừa đủ để người đọc nhận ra giá trị vốn đã ở đó. Knowledge/analysis giữ mechanism, phản biện và giới hạn của claim để không phá nhịp cảm xúc."
+        },
+        {
+          "id": "fact_gate",
+          "title_vi": "Fact gate còn mở",
+          "body_vi": "Các claim về trận Argentina–Benin, tính chất lần cuối, số vé, thời gian bán hết và diễn biến phút 10 phải được nguồn đáng tin xác nhận trước khi public. Wording đã chốt không thay thế source verification."
+        }
+      ],
+      "references": []
+    },
+    {
+      "schema_version": "selflo.content-analysis.v1",
+      "entity": "content_analysis",
+      "id": "analysis.story.if_i_am_wrong_but_chatgpt_agrees",
+      "content_id": "story.if_i_am_wrong_but_chatgpt_agrees",
+      "revision": 1,
+      "status": "active",
+      "language": "vi",
+      "audience": "editorial",
+      "editorial_assessment": {
+        "depth_status": "sufficient",
+        "public_content_decision": "keep_as_approved",
+        "summary_vi": "Bài đã đủ sâu cho public release draft vì giữ được câu hỏi thật, giải thích hai khái niệm vừa đủ và kết thúc bằng quan sát thay vì lời dạy. Không nên kéo thêm lý thuyết vào bài đã chốt."
+      },
+      "analysis_sections": [
+        {
+          "id": "why_sufficient",
+          "title_vi": "Vì sao độ sâu hiện tại đã đủ",
+          "body_vi": "Bài có một chuyển động rõ: câu hỏi thật về hành vi AI → sycophancy → thiên kiến xác nhận ở người dùng → cách đặt câu hỏi để tìm phản biện → câu hỏi tự quan sát trong đời sống. Mỗi lớp phục vụ cùng một trục, không bị tản sang hướng dẫn prompt hay bài học đạo lý chung."
+        },
+        {
+          "id": "sycophancy_evidence",
+          "title_vi": "Căn cứ cho sycophancy",
+          "body_vi": "OpenAI đã công khai việc rollback bản cập nhật GPT-4o tháng 4/2025 vì phản hồi quá đồng tình/chiều theo người dùng. Đây là bằng chứng rằng hiện tượng có thật trong một deployment cụ thể, không phải căn cứ để nói mọi phiên bản ChatGPT luôn đồng ý với người dùng.",
+          "reference_ids": [
+            "ref.openai_sycophancy_2025"
+          ]
+        },
+        {
+          "id": "confirmation_bias_boundary",
+          "title_vi": "Giới hạn của thiên kiến xác nhận",
+          "body_vi": "Confirmation bias thường chỉ việc tìm kiếm hoặc diễn giải bằng chứng theo hướng thuận với niềm tin, kỳ vọng hay giả thuyết sẵn có. Thích được đồng tình có thể liên quan nhưng không tự động chứng minh một người đang mắc thiên kiến này; bài đã giữ đúng ngoại lệ đó.",
+          "reference_ids": [
+            "ref.nickerson_confirmation_bias_1998"
+          ]
+        },
+        {
+          "id": "disagreement_questions",
+          "title_vi": "Các câu hỏi cần đào sâu",
+          "body_vi": "Deep Dive có thể tìm hiểu bốn câu hỏi riêng: vì sao con người dễ chấp nhận thông tin phù hợp với niềm tin; vì sao bị phản đối đôi khi gây khó chịu; làm sao phân biệt việc một ý tưởng bị phản biện với cảm giác giá trị bản thân bị phủ nhận; và có phải người phản đối lúc nào cũng giúp ta tiến gần sự thật hơn không. Đây là agenda nghiên cứu, chưa phải bốn kết luận đã được chứng minh."
+        },
+        {
+          "id": "dissent_boundary",
+          "title_vi": "Giới hạn của phản đối",
+          "body_vi": "Ý kiến ngược chiều chỉ có giá trị khi nó đưa thêm bằng chứng, logic, giả định bị bỏ sót hoặc một cách kiểm tra tốt hơn. Phản đối vì định kiến, thiếu thông tin hay chỉ để thắng không tự động gần sự thật hơn sự đồng tình. Mục tiêu là tăng chất lượng xem xét, không mặc định phe đối lập đúng."
+        },
+        {
+          "id": "recommended_addition",
+          "title_vi": "Phần chỉ nên bổ sung ngoài public copy",
+          "body_vi": "Nếu Selflo hiển thị lớp đọc sâu, có thể thêm nguồn cho hai khái niệm, phân biệt lỗi mô hình với thiên kiến người dùng, và nhắc rằng yêu cầu AI phản biện chỉ giúp mở rộng góc nhìn chứ không đảm bảo tính đúng. Không tự ý chèn các đoạn này vào bài đã được owner chốt."
+        }
+      ],
+      "references": [
+        {
+          "id": "ref.openai_sycophancy_2025",
+          "title": "Sycophancy in GPT-4o: what happened and what we're doing about it",
+          "url": "https://openai.com/index/sycophancy-in-gpt-4o/",
+          "validation_status": "source_checked",
+          "note_vi": "Nguồn chính thức của OpenAI, ngày 29/04/2025."
+        },
+        {
+          "id": "ref.nickerson_confirmation_bias_1998",
+          "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+          "url": "https://doi.org/10.1037/1089-2680.2.2.175",
+          "validation_status": "source_checked",
+          "note_vi": "Bài tổng quan của Raymond S. Nickerson, Review of General Psychology 2(2), 1998."
+        }
+      ]
+    }
+  ]
+}

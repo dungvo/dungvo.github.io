@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 60,
-  "content_version": "story-last-time-v1",
+  "source_revision": 61,
+  "content_version": "knowledge-chatgpt-agreement-v1",
   "language": "vi",
-  "canonical_quote_count": 1823,
+  "canonical_quote_count": 1824,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1498,6 +1498,12 @@
       "id": "story.last_time",
       "kind": "story",
       "path": "stories/last-time/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.if_i_am_wrong_but_chatgpt_agrees",
+      "kind": "story",
+      "path": "stories/if-i-am-wrong-but-chatgpt-agrees/story.vi.json",
       "media_type": "application/json"
     }
   ]

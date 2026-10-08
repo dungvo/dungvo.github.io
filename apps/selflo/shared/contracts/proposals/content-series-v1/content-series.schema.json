@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dungvo.github.io/apps/selflo/shared/contracts/proposals/content-series-v1/content-series.schema.json",
+  "title": "Proposed Selflo Content Series Catalog v1",
+  "type": "object",
+  "required": ["schema_version", "entity", "revision", "language", "series"],
+  "properties": {
+    "schema_version": {"const": "selflo.content-series-catalog.v1"},
+    "entity": {"const": "content_series_catalog"},
+    "revision": {"type": "integer", "minimum": 1},
+    "language": {"const": "vi"},
+    "series": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title_vi", "status", "presentation", "episodes"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^series\\.[a-z0-9_.-]+$"},
+          "title_vi": {"type": "string", "minLength": 1},
+          "description_vi": {"type": ["string", "null"]},
+          "introduction_content_id": {"type": ["string", "null"]},
+          "status": {"enum": ["draft", "ongoing", "complete", "archived"]},
+          "presentation": {
+            "type": "object",
+            "required": ["numbering", "spoiler_policy"],
+            "properties": {
+              "numbering": {"enum": ["episode", "chapter", "part"]},
+              "spoiler_policy": {"enum": ["show_published_only", "show_upcoming_titles"]}
+            },
+            "additionalProperties": false
+          },
+          "episodes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["content_id", "ordinal", "publication_status"],
+              "properties": {
+                "content_id": {"type": "string", "minLength": 1},
+                "ordinal": {"type": "integer", "minimum": 1},
+                "title_override_vi": {"type": ["string", "null"]},
+                "publication_status": {"enum": ["draft", "scheduled", "published"]}
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

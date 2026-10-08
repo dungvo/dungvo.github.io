@@ -1,9 +1,37 @@
 {
   "schema_version": "selflo.content-index.v1",
-  "generated_at": "2026-10-04T02:34:29.295517Z",
+  "generated_at": "2026-10-08T08:22:23.373255Z",
   "channel": "authoring",
   "content_type": "quote",
   "items": [
+    {
+      "id": "research.day72.001",
+      "title_vi": null,
+      "text_vi": "Trong môi trường giàu thông tin, chú ý trở thành nguồn lực khan hiếm vì xử lý thông tin tiêu tốn năng lực hữu hạn.",
+      "content_type": "quote",
+      "content_type_label_vi": "Quote",
+      "runtime_entity": "perspective_quote",
+      "classification_source": "runtime_entity",
+      "schema_version": "selflo.perspective.quote-fragment.v1",
+      "reader_format": "quote_card",
+      "revision": 1,
+      "status": "needs_owner_review",
+      "channel": "authoring",
+      "language": "vi",
+      "primary_theme": "attention",
+      "concept_ids": [],
+      "emotion_tags": [],
+      "keywords": [
+        "human_judgment_ai",
+        "attention"
+      ],
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "source_path": "quotes/attention/016.vi.json",
+      "payload_ref": "perspective-library/source/vi/quotes/attention/016.vi.json#research.day72.001",
+      "reader_url": null,
+      "search_document_vi": "Trong môi trường giàu thông tin, chú ý trở thành nguồn lực khan hiếm vì xử lý thông tin tiêu tốn năng lực hữu hạn. Attention scarcity attention human_judgment_ai attention Công nghệ & đời sống human_judgment_ai attention"
+    },
     {
       "id": "research.day61.006",
       "title_vi": null,
@@ -8810,6 +8838,40 @@
       "payload_ref": "perspective-library/source/vi/quotes/attention/004.vi.json#attributed.epictetus.ench_20.delay",
       "reader_url": null,
       "search_document_vi": "Đừng để ấn tượng đầu tiên cuốn mình đi. Khi tạo được một khoảng chờ, bạn sẽ dễ làm chủ phản ứng hơn. Epictetus attention stoicism pause attention stoicism pause"
+    },
+    {
+      "id": "do_not_wait_until_the_last_time",
+      "title_vi": "Đừng đợi đến lần cuối",
+      "text_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.",
+      "content_type": "quote",
+      "content_type_label_vi": "Quote",
+      "runtime_entity": "perspective_quote",
+      "classification_source": "runtime_entity",
+      "schema_version": "selflo.perspective.quote-fragment.v1",
+      "reader_format": "quote_card",
+      "revision": 1,
+      "status": "approved",
+      "channel": "authoring",
+      "language": "vi",
+      "primary_theme": "meaning_values",
+      "concept_ids": [],
+      "emotion_tags": [
+        "gratitude",
+        "tenderness"
+      ],
+      "keywords": [
+        "lần cuối",
+        "sự hữu hạn",
+        "giá trị",
+        "gia đình",
+        "thời gian"
+      ],
+      "rights_status": "selflo_owned",
+      "review_status": "approved",
+      "source_path": "quotes/meaning_values/011.vi.json",
+      "payload_ref": "perspective-library/source/vi/quotes/meaning_values/011.vi.json#do_not_wait_until_the_last_time",
+      "reader_url": null,
+      "search_document_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu. Đừng đợi đến lần cuối Selflo meaning_values lần cuối sự hữu hạn giá trị gia đình thời gian meaning_values sự hữu hạn gia đình thời gian giá trị"
     },
     {
       "id": "research.day73.007",

@@ -1,8 +1,8 @@
 {
   "schema_version": "selflo.content-index-manifest.v1",
-  "generated_at": "2026-10-04T02:34:29.295517Z",
+  "generated_at": "2026-10-08T08:22:23.373255Z",
   "channel": "authoring",
-  "item_count": 1898,
+  "item_count": 1902,
   "search_mode": "local_first",
   "shards": [
     {
@@ -10,42 +10,42 @@
       "content_type": "quote",
       "item_count": 500,
       "byte_count": 637891,
-      "sha256": "8dd3ec1b69a073ec37e00870a7392767c775b6c6f3ce0295d2b5219564d126ae"
+      "sha256": "7a19f8217505aa5e63964f0e99e86bb2267a94615650f690813f2557db75310d"
     },
     {
       "path": "quote-0002.json",
       "content_type": "quote",
       "item_count": 500,
       "byte_count": 645196,
-      "sha256": "0db0ff65f9190dca87b5c1535e0860a1e8c3386623516b55c9047ecd0ba34c47"
+      "sha256": "e33269dce6974b9f000ac915d48b35b56c98261917a2909a35003bbc589c9970"
     },
     {
       "path": "quote-0003.json",
       "content_type": "quote",
       "item_count": 500,
-      "byte_count": 654738,
-      "sha256": "f42e26c91c6e61d677de0bbc13533671be24c24b534596e3bd2be678b67f04c1"
+      "byte_count": 655113,
+      "sha256": "e9331335ee70ea98427322fc21f12d16021fa677dbce42d982d05a1ba7ca9ca3"
     },
     {
       "path": "quote-0004.json",
       "content_type": "quote",
-      "item_count": 340,
-      "byte_count": 436194,
-      "sha256": "fb6c642297b62289c1ead989d88f4e80310ff5cc133ca07275ff84b4d1362f71"
+      "item_count": 342,
+      "byte_count": 439038,
+      "sha256": "c80d1e4ba112883ea3eee7a0bb011c7231025af3b1db010b273c6f467c98b104"
     },
     {
       "path": "story-0001.json",
       "content_type": "story",
-      "item_count": 57,
-      "byte_count": 391925,
-      "sha256": "841a2af83608e2d9b7901f3fd0cf2041c2a5839b58c55f2e8f820281c0891803"
+      "item_count": 58,
+      "byte_count": 398897,
+      "sha256": "e4fc343b81462984307796e54b562e0dec47251ea5371ae186a1f1982d7d9b9b"
     },
     {
       "path": "knowledge_insight-0001.json",
       "content_type": "knowledge_insight",
-      "item_count": 1,
-      "byte_count": 17773,
-      "sha256": "77937ffd0f765ee15bdf1f3901a482263860424a79c06baddb1486b154a89cd2"
+      "item_count": 2,
+      "byte_count": 23732,
+      "sha256": "0b8b9d0b36e0419e32a6e7e98bfafcd0636b41b3bc36cd12cb1facfe86a59507"
     }
   ]
 }

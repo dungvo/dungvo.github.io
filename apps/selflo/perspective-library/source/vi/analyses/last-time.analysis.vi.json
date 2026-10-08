@@ -1,0 +1,23 @@
+{
+  "schema_version": "selflo.content-analysis.v1",
+  "entity": "content_analysis",
+  "id": "analysis.story.last_time",
+  "content_id": "story.last_time",
+  "revision": 1,
+  "status": "active",
+  "language": "vi",
+  "audience": "editorial",
+  "editorial_assessment": {
+    "depth_status": "sufficient",
+    "public_content_decision": "keep_as_approved",
+    "summary_vi": "Insight cốt lõi là nhận thức về tính hữu hạn có thể làm thay đổi cách con người định giá một cơ hội hiện tại; lớp phân tích này không cần tràn vào public copy."
+  },
+  "analysis_sections": [
+    {"id": "mechanism", "title_vi": "Cách hiểu cần giữ", "body_vi": "Messi vốn đã có giá trị với người hâm mộ. Điều thay đổi là cách họ nhìn cơ hội cuối cùng, không phải đến ‘lần cuối’ Messi mới trở nên có giá trị."},
+    {"id": "analysis_model", "title_vi": "Mô hình phân tích làm việc", "body_vi": "Sự kiện → Nhận thức → Cảm xúc → Đánh giá giá trị → Hành vi. Mô hình này dùng để tổ chức câu hỏi và kiểm tra wording, không tự nó chứng minh một chuỗi nhân quả khoa học."},
+    {"id": "research_axes", "title_vi": "Các trục cần nghiên cứu", "body_vi": "Deep Dive có thể khảo sát sự khan hiếm, anticipated regret, nhận thức về thời gian hữu hạn, ký ức và cách các yếu tố ấy liên quan đến việc đánh giá một trải nghiệm. Mỗi trục cần nguồn và giới hạn riêng trước khi trình bày như kiến thức đã kiểm chứng."},
+    {"id": "boundary", "title_vi": "Ranh giới public content", "body_vi": "Public story chỉ cần giải thích vừa đủ để người đọc nhận ra giá trị vốn đã ở đó. Knowledge/analysis giữ mechanism, phản biện và giới hạn của claim để không phá nhịp cảm xúc."},
+    {"id": "fact_gate", "title_vi": "Fact gate còn mở", "body_vi": "Các claim về trận Argentina–Benin, tính chất lần cuối, số vé, thời gian bán hết và diễn biến phút 10 phải được nguồn đáng tin xác nhận trước khi public. Wording đã chốt không thay thế source verification."}
+  ],
+  "references": []
+}

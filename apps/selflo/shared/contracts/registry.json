@@ -1,6 +1,6 @@
 {
   "schema_version": "selflo.shared-contract-registry.v1",
-  "updated_at": "2026-10-07",
+  "updated_at": "2026-10-08",
   "path_base": "apps_selflo_root",
   "contracts": [
     {
@@ -51,6 +51,19 @@
         "api/content-index.v1/manifest.json"
       ],
       "release_policy": "additive fields within v1; breaking identity or semantics require v2 and app-first conformance"
+    },
+    {
+      "contract_id": "selflo.content-analysis.v1",
+      "status": "active_authoring_only",
+      "canonical_document": "shared/contracts/content-analysis/v1/CONTRACT.vi.md",
+      "app_conformance_document": null,
+      "executable_artifacts": [
+        "shared/contracts/content-analysis/v1/content-analysis.schema.json",
+        "perspective-library/source/vi/analyses/index.json",
+        "scripts/build-content-catalog.py",
+        "api/content-analysis.v1.json"
+      ],
+      "release_policy": "authoring-only companion API; reader_optional publication requires an explicit consumer and release gate"
     }
   ]
 }

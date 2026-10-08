@@ -1,0 +1,27 @@
+{
+  "schema_version": "selflo.content-series-catalog.v1",
+  "entity": "content_series_catalog",
+  "revision": 1,
+  "language": "vi",
+  "series": [
+    {
+      "id": "series.tang_khong_ton_tai",
+      "title_vi": "Tầng Không Tồn Tại",
+      "description_vi": null,
+      "introduction_content_id": "story.tang_khong_ton_tai.introduction",
+      "status": "draft",
+      "presentation": {
+        "numbering": "episode",
+        "spoiler_policy": "show_published_only"
+      },
+      "episodes": [
+        {
+          "content_id": "story.tang_khong_ton_tai.episode_01",
+          "ordinal": 1,
+          "title_override_vi": null,
+          "publication_status": "draft"
+        }
+      ]
+    }
+  ]
+}

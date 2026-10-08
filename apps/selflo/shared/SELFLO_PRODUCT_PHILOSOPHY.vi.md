@@ -4,6 +4,8 @@ Trạng thái: Định hướng nền tảng đã được chủ sở hữu ch�
 Ngày thiết lập: 2026-09-17  
 Phạm vi: Dùng để định hướng sản phẩm, nội dung, dữ liệu, trí tuệ nhân tạo và cách đánh giá tính năng
 
+Lịch sử các quyết định bổ sung cho triết lý này được lưu tại [`decisions/README.md`](decisions/README.md); không viết lại lịch sử chỉ để giữ lại kết luận cuối.
+
 ## 1. Selflo là gì
 
 Selflo là một không gian suy ngẫm riêng tư giúp con người dừng lại, nhận ra điều đang diễn ra bên trong, nhìn nó từ một góc độ vừa đủ và giữ quyền tự hình thành cách hiểu cùng lựa chọn của mình.
@@ -108,6 +110,20 @@ thay vì:
 Không phải quote nào cũng cần story. Không phải quote yếu nào cũng nên được cứu bằng story. Chỉ ghép story khi câu chuyện giúp ý nghĩa hiện ra qua trải nghiệm, không phải khi câu chuyện chỉ giải thích lại câu nói.
 
 Selflo không cần buộc người dùng quay lại mỗi ngày. Một quan hệ sản phẩm có giá trị hơn là: khi người dùng đang mắc kẹt, cần một khoảng dừng hoặc muốn nhìn một việc theo cách khác, họ nhớ Selflo là nơi có thể tìm được một góc nhìn vừa đủ và đáng tin.
+
+### 7.2. Story đúng tâm trạng và một khoảng để gỡ
+
+Khi người dùng đang lo, sợ, áy náy, do dự hoặc bị một việc giữ trong đầu, Selflo nên là nơi họ có thể tìm thấy một câu chuyện gần với trải nghiệm đó. Câu chuyện không quyết định thay, nhưng có thể giúp họ gọi tên cảm xúc, phân biệt sự việc với suy diễn, nhìn rõ nỗi sợ bị đánh giá và nhận ra điều mình thực sự coi trọng.
+
+Kết quả tốt không nhất thiết là một action step. Đôi khi đó là cảm giác được hiểu, nhẹ hơn vì nút thắt đã rõ hơn, và vẫn giữ quyền tự chọn. Selflo không coaching, chẩn đoán hay trấn an máy móc rằng mọi nỗi lo chỉ là do suy diễn. Quyết định và các ranh giới đầy đủ được ghi tại [`decisions/ADR-0001-story-dung-tam-trang-va-khoang-go.vi.md`](decisions/ADR-0001-story-dung-tam-trang-va-khoang-go.vi.md).
+
+### 7.3. Nội dung không chỉ để tạo cảm xúc
+
+Selflo có thể giúp người đọc cảm, hiểu hoặc nhìn một hiện tượng rõ hơn. Không phải nội dung nào cũng cần dẫn bằng Story; tùy chất liệu, Selflo dùng bốn phương thức biên tập: **Khám phá, Quan sát, Trải nghiệm và Góc nhìn**.
+
+Một chủ đề có thể gồm bài chính ngắn gọn và các lớp tùy chọn như Deep Dive, Reflection hoặc nội dung liên quan. Người đọc không cần đi qua toàn bộ các lớp để nhận được giá trị. Bài chính phải đứng độc lập; phần mở rộng phục vụ sự tò mò, không biến mọi trải nghiệm thành bài giảng.
+
+Selflo ưu tiên giúp người đọc khám phá một điều đáng suy nghĩ hơn là luôn cố khiến họ xúc động hoặc kết thúc bằng một bài học cuộc sống. Quyết định biên tập chi tiết được lưu tại [`../perspective-library/editorial-decisions/ADR-0002-bon-phuong-thuc-tiep-can-noi-dung.vi.md`](../perspective-library/editorial-decisions/ADR-0002-bon-phuong-thuc-tiep-can-noi-dung.vi.md).
 
 Thành công của trải nghiệm này nên được đo bằng khả năng nội dung được giữ lại, được gặp lại, giúp người dùng gọi tên điều đang sống hoặc mở ra một suy nghĩ mới—không chỉ bằng số quote đã xem, chuỗi ngày truy cập hay thời gian lướt.
 

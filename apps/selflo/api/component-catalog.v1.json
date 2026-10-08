@@ -1,6 +1,6 @@
 {
   "schema_version": "selflo.component-catalog-api.v1",
-  "generated_at": "2026-10-04T02:34:29.295517Z",
+  "generated_at": "2026-10-08T08:22:23.373255Z",
   "source": {
     "authoring_catalog": "shared/contracts/story-reader/v3/component-authoring-catalog.json",
     "support_matrix": "shared/contracts/story-reader/v3/component-support.json",
@@ -333,18 +333,18 @@
       "block_type": "flow",
       "variant": null,
       "wire_selector": "block.type=flow",
-      "label_vi": "Flow",
-      "meaning_vi": "Chuỗi tuyến tính có quan hệ bước trước dẫn tới bước sau.",
-      "use_when_vi": "Quy trình thật sự như A → B → C.",
-      "avoid_vi": "Không dùng cho một câu giải thích đơn giản hoặc chỉ để trang trí.",
-      "web_ui_vi": "Các bước với separator/mũi tên.",
-      "app_ui_vi": "Flow component theo chiều phù hợp màn hình; accessibility đọc tuyến tính.",
+      "label_vi": "Flow · deprecated",
+      "meaning_vi": "Block cũ cho chuỗi tuyến tính; chỉ giữ để đọc package lịch sử.",
+      "use_when_vi": "Không dùng cho content mới. Chọn sequence nếu có progression hoặc list nếu các item cùng cấp.",
+      "avoid_vi": "Không author hoặc Release flow mới.",
+      "web_ui_vi": "Renderer chỉ giữ backward compatibility cho package lịch sử.",
+      "app_ui_vi": "App tiếp tục decode/render package cũ; publisher chặn Release mới.",
       "support": {
         "contract_status": "released",
         "mockup_status": "approved",
         "app_status": "supported",
-        "publisher_status": "enabled",
-        "release_status": "allowed"
+        "publisher_status": "disabled",
+        "release_status": "deprecated"
       }
     },
     {
