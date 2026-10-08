@@ -5,8 +5,10 @@ window.CHUNK_CONTENT_CONFIG = {
     repository: "dungvo.github.io",
     directory: "apps/english/content/sessions",
     conversationDirectory: "apps/english/content/conversations",
-    storyDirectory: "apps/english/content/stories"
+    storyDirectory: "apps/english/content/stories",
+    contextDirectory: "apps/english/content/contexts"
   },
+  contextFallbackFiles: ["content/contexts/think-in-english.js"],
   storyFallbackFiles: ["content/stories/birthday-dinner.js", "content/stories/selflo-launch.js", "content/stories/first-day.js"],
   conversationFallbackFiles: ["content/conversations/speaking-topics.js"],
   fallbackFiles: [

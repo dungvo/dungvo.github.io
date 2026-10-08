@@ -36,7 +36,14 @@ Current library:
 
 - 22 chunks from the September 22–24 sessions
 - 300 common daily chunks across ten topic files
-- 322 chunks total
+- 16 onboarding and professional-email chunks
+- 338 chunks total
+
+## Add a Think in English situation
+
+Context-first practice lives in `content/contexts/`. Each situation contains a realistic email, chat, conversation, or article-style passage; overall and implied-intent questions; contextual chunk explanations; and a short writing response. The app saves the best comprehension score and draft locally. When a contextual phrase is linked to an existing stable chunk ID, completing the lesson also feeds that chunk into the existing spaced-review system.
+
+The bundled situations cover workplace communication, daily life, and article-style technology/business reading. The published site discovers new context files automatically. For local and offline preview, also add the file path to `contextFallbackFiles` in `content/catalog.js`.
 
 ## Add a speaking topic
 
@@ -62,7 +69,7 @@ For a reliable local preview, serve the repository with any static file server a
 
 ## Progress
 
-Scores, daily activity, weak chunks, and streaks are stored in the current browser with `localStorage`. Adding content does not erase existing progress because each chunk has a stable ID.
+Scores, daily activity, weak chunks, contextual-practice results, writing drafts, and streaks are stored in the current browser with `localStorage`. Adding content does not erase existing progress because each chunk has a stable ID. Think in English extends the existing `chunkLabProgressV2` record instead of replacing it.
 
 The learning system introduces no more than five new chunks in a session and fills the remaining reps with reinforcement. Chunks move through New, Learning, Reviewing, and Mastered stages using spaced review intervals of 1, 3, 7, 14, and 30 days. Mastery requires both repeated correct answers and at least one successful speaking use.
 

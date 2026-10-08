@@ -5,10 +5,11 @@
   const LEGACY_KEY = "chunkLabProgressV1";
   const DAILY_TARGET = 10;
   const SESSION_SIZE = 10;
-  const registry = { sessions: [], conversations: [], stories: [], errors: [] };
+  const registry = { sessions: [], conversations: [], stories: [], contexts: [], errors: [] };
   let chunks = [];
   let speakingTopics = [];
   let stories = [];
+  let contexts = [];
   let preferredVoice = null;
   let libraryTopic = "All";
   let progress = loadProgress();
@@ -42,6 +43,13 @@
       payload.stories.forEach((story) => {
         if (story.id && story.title && Array.isArray(story.paragraphs) && Array.isArray(story.questions) && !registry.stories.some((item) => item.id === story.id)) registry.stories.push(story);
       });
+    },
+    registerContexts(payload) {
+      if (payload?.schemaVersion !== 1 || !Array.isArray(payload.contexts)) { registry.errors.push("A context file has an unsupported format."); return; }
+      payload.contexts.forEach((context) => {
+        const valid = context.id && context.title && Array.isArray(context.passage) && Array.isArray(context.chunks) && Array.isArray(context.questions);
+        if (valid && !registry.contexts.some((item) => item.id === context.id)) registry.contexts.push(context);
+      });
     }
   };
 
@@ -67,11 +75,11 @@
     });
   }
 
-  function defaultProgress() { return { total: 0, correct: 0, items: {}, history: {}, conversations: {} }; }
+  function defaultProgress() { return { total: 0, correct: 0, items: {}, history: {}, conversations: {}, contexts: {} }; }
   function loadProgress() {
     try {
       const current = JSON.parse(localStorage.getItem(KEY));
-      if (current) return { ...defaultProgress(), ...current, items: current.items || {}, history: current.history || {}, conversations: current.conversations || {} };
+      if (current) return { ...defaultProgress(), ...current, items: current.items || {}, history: current.history || {}, conversations: current.conversations || {}, contexts: current.contexts || {} };
       const legacy = JSON.parse(localStorage.getItem(LEGACY_KEY));
       if (legacy) return { total: legacy.total || 0, correct: legacy.correct || 0, items: legacy.items || {}, history: legacy.today ? { [legacy.today]: { total: legacy.todayCount || 0, correct: 0 } } : {} };
     } catch (_) { /* Start clean if browser storage is malformed. */ }
@@ -128,20 +136,22 @@
   }
   async function discoverContent() {
     const config = window.CHUNK_CONTENT_CONFIG || {};
-    let files = [], conversationFiles = [], storyFiles = [];
+    let files = [], conversationFiles = [], storyFiles = [], contextFiles = [];
     if (location.hostname === "dungvo.github.io" && config.github) {
       const { owner, repository, directory } = config.github;
       try {
         files = await githubFiles(owner, repository, directory);
         conversationFiles = await githubFiles(owner, repository, config.github.conversationDirectory);
         storyFiles = await githubFiles(owner, repository, config.github.storyDirectory);
+        contextFiles = await githubFiles(owner, repository, config.github.contextDirectory);
         contentSource = "auto-discovered from GitHub";
       } catch (error) { registry.errors.push(`Discovery failed: ${error.message}`); }
     }
     if (!files.length) files = config.fallbackFiles || [];
     if (!conversationFiles.length) conversationFiles = config.conversationFallbackFiles || [];
     if (!storyFiles.length) storyFiles = config.storyFallbackFiles || [];
-    for (const file of [...files, ...conversationFiles, ...storyFiles]) {
+    if (!contextFiles.length) contextFiles = config.contextFallbackFiles || [];
+    for (const file of [...files, ...conversationFiles, ...storyFiles, ...contextFiles]) {
       try { await loadScript(file); } catch (error) { registry.errors.push(error.message); }
     }
     if (!registry.sessions.length && files !== config.fallbackFiles) {
@@ -157,6 +167,7 @@
     });
     speakingTopics = registry.conversations;
     stories = registry.stories;
+    contexts = registry.contexts;
     if (!chunks.length) throw new Error("No valid learning content could be loaded.");
   }
 
@@ -239,6 +250,43 @@
       const explanation = fieldset.querySelector(".quiz-explanation"); explanation.hidden = false; explanation.textContent = question.explanation;
     });
     const percent = Math.round(score / story.questions.length * 100); const breakdown = Object.entries(skills).map(([skill, stat]) => `<span><b>${escapeHtml(skill)}:</b> ${stat.score}/${stat.total}</span>`).join(""); const result = $("#storyQuizResult"); result.className = `story-quiz-result ${percent >= 70 ? "good" : "needs-work"}`; result.innerHTML = `<strong>${score}/${story.questions.length} correct · ${percent}%</strong><div class="quiz-breakdown">${breakdown}</div><span>${percent === 100 ? "Excellent—you understood the story and can apply its chunks." : percent >= 70 ? "Good understanding. Review the explanations for the questions you missed." : "Read or listen once more, then try the questions again."}</span>`; result.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function contextProgress(id) { return { attempts: 0, best: 0, completed: false, responseWritten: false, ...progress.contexts[id] }; }
+  function renderContexts(filter = "All", selectedId = null) {
+    const categories = [...new Set(contexts.map((context) => context.category))];
+    const visible = contexts.filter((context) => filter === "All" || context.category === filter);
+    const selected = visible.some((context) => context.id === selectedId) ? selectedId : visible[0]?.id;
+    $("#contextCount").textContent = contexts.length;
+    $("#contextFilters").innerHTML = ["All", ...categories].map((category) => `<button class="filter-chip ${category === filter ? "active" : ""}" data-context-filter="${escapeHtml(category)}">${escapeHtml(category)}</button>`).join("");
+    $("#contextList").innerHTML = visible.map((context) => { const saved = contextProgress(context.id); return `<button class="context-card ${context.id === selected ? "active" : ""}" data-context-id="${escapeHtml(context.id)}"><span>${escapeHtml(context.format)} · ${context.minutes} min</span><strong>${escapeHtml(context.title)}</strong><small>${escapeHtml(context.summary)}</small><b>${saved.completed ? `Best ${saved.best}% · completed` : "Not completed"}</b></button>`; }).join("");
+    $$('[data-context-filter]').forEach((button) => button.addEventListener("click", () => renderContexts(button.dataset.contextFilter)));
+    $$('[data-context-id]').forEach((button) => button.addEventListener("click", () => { renderContexts(filter, button.dataset.contextId); }));
+    const context = contexts.find((item) => item.id === selected); if (context) renderContextReader(context);
+  }
+  function renderContextReader(context) {
+    const completeText = context.passage.map((item) => `${item.speaker}. ${item.text}`).join(" "); const saved = contextProgress(context.id);
+    $("#contextReader").innerHTML = `<div class="context-kicker"><span>${escapeHtml(context.category)} · ${escapeHtml(context.format)} · ${escapeHtml(context.level)}</span><span>${saved.completed ? `Best score ${saved.best}%` : "Read for intent first"}</span></div><h2>${escapeHtml(context.title)}</h2><p class="story-deck">${escapeHtml(context.summary)}</p><div class="context-instruction"><b>Think first:</b> Who is communicating, why now, and what response do they expect?</div><button class="secondary context-listen" data-story-speak="${escapeHtml(completeText)}" data-rate="0.92">▶ Listen without translating</button><div class="context-passage">${context.passage.map((item) => `<section><span>${escapeHtml(item.speaker)}</span><p>${highlightStoryChunks(item.text, context.chunks)}</p></section>`).join("")}</div><div class="context-quiz"><p class="eyebrow">STEP 1 · UNDERSTAND THE INTENT</p><h3>What is really happening here?</h3>${context.questions.map((question, index) => `<fieldset data-context-question="${index}"><div class="question-type">${escapeHtml(question.type)}</div><legend><span>${index + 1}</span>${escapeHtml(question.prompt)}</legend>${question.options.map((option, optionIndex) => `<label><input type="radio" name="context-${escapeHtml(context.id)}-${index}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join("")}<div class="quiz-explanation" hidden></div></fieldset>`).join("")}<button class="primary story-submit" id="checkContextQuiz">Check my understanding</button><div id="contextQuizResult" class="story-quiz-result" aria-live="polite"></div></div><section class="chunk-unpack" id="chunkUnpack" hidden><p class="eyebrow">STEP 2 · UNPACK THE CHUNKS</p><h3>Notice what each phrase is doing.</h3>${context.chunks.map((item) => `<article><strong>${escapeHtml(item.text)}</strong><p>${escapeHtml(item.meaning)}</p><span><b>Speaker’s intent:</b> ${escapeHtml(item.intent)}</span>${item.chunkId && chunks.some((chunk) => chunk.id === item.chunkId) ? '<em>Already connected to your chunk library</em>' : ""}</article>`).join("")}</section><section class="context-response" id="contextResponse" hidden><p class="eyebrow">STEP 3 · RESPOND IN ENGLISH</p><h3>${escapeHtml(context.responsePrompt)}</h3><div class="response-hints"><b>Useful openings</b>${context.responseHints.map((hint) => `<button type="button" data-response-hint="${escapeHtml(hint)}">${escapeHtml(hint)}</button>`).join("")}</div><textarea id="contextWriting" rows="6" placeholder="Write your response here. Focus on meaning first; edit the grammar afterward."></textarea><div class="response-actions"><button class="secondary" id="revealModelResponse">Compare with a natural response</button><button class="primary" id="saveContextResponse">Save my response</button></div><div id="modelResponse" class="model-response" hidden><b>One natural response</b><p>${escapeHtml(context.modelResponse)}</p><small>Do not copy it word for word. Compare its intent, structure, and chunks with yours.</small></div><p id="contextSaveStatus" class="context-save-status">${saved.responseWritten ? "You have already saved a response for this situation." : "Your writing stays only in this browser."}</p></section>`;
+    $$('[data-story-speak]').forEach((button) => button.addEventListener("click", () => speak(button.dataset.storySpeak, Number(button.dataset.rate))));
+    $("#checkContextQuiz").addEventListener("click", () => gradeContextQuiz(context));
+  }
+  function gradeContextQuiz(context) {
+    let score = 0;
+    context.questions.forEach((question, index) => { const fieldset = $(`[data-context-question="${index}"]`); const selected = fieldset.querySelector("input:checked"); const labels = [...fieldset.querySelectorAll("label")]; labels.forEach((label, optionIndex) => { label.classList.remove("correct", "wrong"); if (optionIndex === question.answer) label.classList.add("correct"); }); if (selected && Number(selected.value) === question.answer) score += 1; else if (selected) selected.closest("label").classList.add("wrong"); const explanation = fieldset.querySelector(".quiz-explanation"); explanation.hidden = false; explanation.textContent = question.explanation; });
+    const percent = Math.round(score / context.questions.length * 100); const previous = contextProgress(context.id); progress.contexts[context.id] = { ...previous, attempts: previous.attempts + 1, best: Math.max(previous.best, percent), completed: true, last: todayKey() }; saveProgress();
+    if (!previous.completed) context.chunks.filter((item) => item.chunkId).slice(0, 3).forEach((item) => { const chunk = chunks.find((candidate) => candidate.id === item.chunkId); if (chunk) record(chunk.id, percent >= 70); });
+    const result = $("#contextQuizResult"); result.className = `story-quiz-result ${percent >= 70 ? "good" : "needs-work"}`; result.innerHTML = `<strong>${score}/${context.questions.length} correct · ${percent}%</strong><span>${percent >= 70 ? "Good. Now inspect how the chunks carry the intent, then write your response." : "Read once more, especially the implied meaning. The explanations will guide you."}</span>`;
+    $("#chunkUnpack").hidden = false; $("#contextResponse").hidden = false;
+    $$('[data-response-hint]').forEach((button) => button.addEventListener("click", () => { const area = $("#contextWriting"); area.value = `${area.value}${area.value ? " " : ""}${button.dataset.responseHint}`; area.focus(); }));
+    $("#revealModelResponse").addEventListener("click", () => { $("#modelResponse").hidden = false; });
+    $("#saveContextResponse").addEventListener("click", () => saveContextResponse(context));
+    updateDashboard();
+  }
+  function saveContextResponse(context) {
+    const value = $("#contextWriting").value.trim(); if (!value) { $("#contextSaveStatus").textContent = "Write at least one sentence before saving."; return; }
+    const saved = contextProgress(context.id); progress.contexts[context.id] = { ...saved, responseWritten: true, response: value, responseDate: todayKey() };
+    context.chunks.filter((item) => item.chunkId && value.toLowerCase().includes(item.text.toLowerCase())).forEach((item) => { const stat = itemStat(item.chunkId); stat.spoken += 1; progress.items[item.chunkId] = stat; });
+    saveProgress(); $("#contextSaveStatus").textContent = "Saved on this device. Nice—meaning first, then language.";
   }
 
   function renderSpeaking(filter = "All") {
@@ -370,7 +418,7 @@
 
   function bindEvents() {
     $$('[data-mode]').forEach((button) => button.addEventListener("click", () => start(button.dataset.mode)));
-    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
+    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
     $("#againButton").addEventListener("click", () => start(session.sourceMode, session.topicId)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
     $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); updateDashboard(); updateProgressView(); } });
   }
@@ -383,8 +431,8 @@
       $("#contentStatus").textContent = `${chunks.length} learned chunks · ${registry.sessions.length} session${registry.sessions.length === 1 ? "" : "s"}`;
       $("#sourceNote").textContent = `${chunks.length} chunks · ${contentSource}`;
       $$('[data-mode]').forEach((button) => { button.disabled = false; });
-      updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories();
-      const requestedView = location.hash.slice(1); if (["stories", "speaking", "progress", "library"].includes(requestedView)) show(requestedView);
+      updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories(); renderContexts();
+      const requestedView = location.hash.slice(1); if (["think", "stories", "speaking", "progress", "library"].includes(requestedView)) show(requestedView);
     } catch (error) {
       $("#contentStatus").textContent = "Content could not be loaded"; $("#sourceNote").textContent = error.message; console.error(error, registry.errors);
     }

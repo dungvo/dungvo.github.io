@@ -16,7 +16,7 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Chunk Lab</span>
       </button>
       <nav aria-label="Main navigation">
-        <button data-nav="home">Practice</button><button data-nav="stories">Stories</button><button data-nav="speaking">Speaking Lab</button><button data-nav="progress">My progress</button><button data-nav="library">Chunk library</button>
+        <button data-nav="home">Practice</button><button data-nav="think">Think in English</button><button data-nav="stories">Stories</button><button data-nav="speaking">Speaking Lab</button><button data-nav="progress">My progress</button><button data-nav="library">Chunk library</button>
       </nav>
       <div class="header-meta"><span class="streak-badge">● <span id="headerStreak">0 day streak</span></span><button class="avatar" id="resetButton" title="Reset local progress" aria-label="Reset local progress">DV</button></div>
     </header>
@@ -54,6 +54,8 @@
           <article class="review-panel"><p class="eyebrow">PERSONALIZED REVIEW</p><div class="review-body"><span class="target-icon">◎</span><div><h3 id="reviewTitle">Start practicing</h3><p id="reviewCopy">Your difficult chunks will appear here more often.</p><button class="primary small" data-mode="review" disabled>Review weak spots <span>→</span></button></div></div></article>
           <article class="week-panel"><p class="eyebrow">THIS WEEK</p><div class="week-stats"><div><span class="stat-icon">▥</span><strong id="weekReps">0 reps</strong><small>Build the habit.</small></div><div><span class="stat-icon">◔</span><strong id="weekAccuracy">—</strong><small>Accuracy</small></div><div><span class="stat-icon">↗</span><strong id="bestTopic">New learner</strong><small>Current focus</small></div></div></article>
         </section>
+
+        <section class="think-launch"><div><p class="eyebrow">CONTEXT BEFORE TRANSLATION</p><h2>Understand the situation, then find the words.</h2><p>Read realistic emails, chats, daily-life scenes, and article-style reports. Work out the main intent and implied meaning before exploring the chunks.</p></div><button class="primary" data-nav="think">Start Think in English →</button></section>
       </section>
 
       <section id="practiceView" class="view practice-view" aria-live="polite"><div class="practice-top"><button class="back-button" data-nav="home" aria-label="Back to practice home">←</button><div class="session-progress"><span id="sessionProgressBar"></span></div><span id="sessionScore">0/0</span></div><div id="practiceCard" class="practice-card"></div></section>
@@ -72,10 +74,16 @@
         <div class="story-layout"><aside class="story-list" id="storyList"></aside><article class="story-reader" id="storyReader"><p class="eyebrow">STORY LIBRARY</p><h2>Choose a story</h2><p>Select a story to start reading and listening.</p></article></div>
       </section>
 
+      <section id="thinkView" class="view inner-view think-view">
+        <div class="think-head"><div><p class="eyebrow">READ · THINK · RESPOND · RECALL</p><h1>Think in English,<br><em>inside a situation.</em></h1><p class="lead">Do not translate line by line. First understand why the person is communicating, then notice the chunks that carry the meaning.</p></div><div class="think-summary"><strong id="contextCount">0</strong><span>realistic situations</span><small>Work · Daily life · Article-style reading</small></div></div>
+        <div class="context-filters" id="contextFilters"></div>
+        <div class="think-layout"><aside class="context-list" id="contextList"></aside><article class="context-reader" id="contextReader"><p class="eyebrow">THINK IN ENGLISH</p><h2>Choose a situation</h2><p>Read for the big picture first. You can unpack the language after answering.</p></article></div>
+      </section>
+
       <section id="libraryView" class="view inner-view"><div class="library-head"><div><p class="eyebrow">CONTENT LIBRARY</p><h1>All your<br><em>learned chunks.</em></h1></div><label class="search-box">⌕<input id="chunkSearch" type="search" placeholder="Search chunks, situations, or meanings…"></label></div><div class="library-overview"><article><span>TOTAL CHUNKS</span><strong id="libraryTotal">0</strong></article><article><span>TOPIC GROUPS</span><strong id="libraryTopics">0</strong></article><article><span>CONTENT FILES</span><strong id="librarySessions">0</strong></article></div><h2 class="library-section-title">Browse by situation</h2><div class="category-grid" id="categoryGrid"></div><div class="library-meta"><span id="libraryCount">0 chunks</span><span id="sessionCount">0 sessions</span></div><div class="chunk-list" id="chunkList"></div></section>
     </main>
     <footer><span>Chunk Lab · Your personal English practice</span><span id="sourceNote">Loading content…</span></footer>
   </div>
-  <script src="content/catalog.js?v=20261007"></script><script src="js/app.js?v=20261007"></script>
+  <script src="content/catalog.js?v=20261008"></script><script src="js/app.js?v=20261008"></script>
 </body>
 </html>
