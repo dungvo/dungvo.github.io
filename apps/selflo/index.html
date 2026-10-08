@@ -13,12 +13,14 @@
   <link rel="preload" as="image" href="assets/images/public/selflo-phone-hero-v2.png" fetchpriority="high">
   <link rel="stylesheet" href="assets/home-v2.css?v=5">
   <link rel="stylesheet" href="assets/home-v3.css?v=1">
+  <link rel="stylesheet" href="assets/public-shell.css?v=2">
 </head>
 <body>
-  <header class="nav-shell">
-    <a class="wordmark" href="./" aria-label="Selflo — Trang chủ"><b>Selflo</b><img src="assets/images/public/selflo-leaf-mark.svg" alt=""></a>
+  <header class="selflo-site-header">
+    <a class="selflo-shell-brand" href="./" aria-label="Selflo — Trang chủ"><img src="assets/images/public/selflo-leaf-mark.svg" alt=""><span>Selflo</span></a>
+    <button class="selflo-shell-toggle" type="button" aria-label="Mở điều hướng" aria-expanded="false">☰</button>
     <nav aria-label="Điều hướng chính"><a class="active" href="./">Trang chủ</a><a href="perspectives/">Góc nhìn</a><a href="support/">Hỗ trợ</a><a href="privacy/">Quyền riêng tư</a></nav>
-    <span class="coming"> &nbsp; App Store · Sắp ra mắt</span>
+    <span class="selflo-store"> &nbsp; App Store · Sắp ra mắt</span>
   </header>
 
   <main>
@@ -55,7 +57,8 @@
     <section class="brand-cta"><div><img src="assets/images/public/selflo-leaf-mark.svg" alt=""><p><b>Selflo</b><span>Lắng nghe chính mình.</span></p></div><span class="store-button"> &nbsp; App Store · Sắp ra mắt</span></section>
   </main>
 
-  <footer><a class="footer-logo" href="./">Selflo</a><nav><a href="./">Trang chủ</a><a href="perspectives/">Góc nhìn</a><a href="support/">Hỗ trợ</a><a href="privacy/">Quyền riêng tư</a><a href="https://www.facebook.com/profile.php?id=61595002766763">Facebook</a></nav></footer>
+  <footer class="selflo-site-footer"><div><a class="selflo-shell-brand" href="./"><img src="assets/images/public/selflo-leaf-mark.svg" alt=""><span>Selflo</span></a><small>Lắng nghe chính mình.</small></div><nav><a href="./">Trang chủ</a><a href="perspectives/">Góc nhìn</a><a href="support/">Hỗ trợ</a><a href="privacy/">Quyền riêng tư</a><a href="privacy-policy/">Privacy Policy</a><a href="https://www.facebook.com/profile.php?id=61595002766763">Facebook</a></nav></footer>
+  <script src="assets/public-shell-static.js?v=1"></script>
   <script src="assets/home-v2.js?v=5"></script>
 </body>
 </html>

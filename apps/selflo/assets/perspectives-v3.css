@@ -3,3 +3,4 @@
 .nav-shell nav{padding:0;border:0;border-radius:0;background:none}.nav-shell nav a{padding:0;border-radius:0}.nav-shell nav a.active{color:#173f3a;background:none}footer nav{padding:0;border:0;border-radius:0;background:none}footer nav a{border-radius:0}
 @media(max-width:760px){.nav-shell nav a:not(.active){display:none}.library-intro h1{max-width:100%;font-size:40px;line-height:1.02;letter-spacing:-.04em}.library-intro>p:not(.kicker){max-width:100%}.library-hero-v3{overflow:hidden}.featured-library,.editorial-library{overflow:hidden}}
 @media(max-width:760px){body{overflow-x:hidden}.library-intro{width:calc(100vw - 48px);min-width:0}.hero-library-search{width:calc(100vw - 48px)}}
+.article-card-art-empty{width:100%;aspect-ratio:1.9/1;background:linear-gradient(135deg,#e8eee3,#f7f2e6)}

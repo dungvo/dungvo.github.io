@@ -6,3 +6,4 @@ html,body{overflow-x:hidden}@media(max-width:650px){.knowledge-layout{grid-templ
 @media(max-width:650px){.knowledge-hero{background-image:linear-gradient(180deg,rgba(250,247,238,.9),rgba(250,247,238,.55)),url("images/public/selflo-mountain-lake-sunrise-v1.png")}}
 .knowledge-brand sup,.footer-brand sup{display:none}.knowledge-brand:after,.footer-brand b:after{content:"";display:inline-block;width:13px;height:13px;margin-left:3px;background:url("images/public/selflo-leaf-mark.svg") center/contain no-repeat}.store-button{font-family:-apple-system,BlinkMacSystemFont,var(--sans)}
 .knowledge-toc{top:calc(50vh - 145px);transform:none}.knowledge-toc a:first-of-type{color:#748079;border-left:1px solid rgba(14,68,56,.22);padding-left:20px}.knowledge-toc a.active{color:var(--ink);border-left:3px solid var(--green);padding-left:18px;font-weight:600}
+.knowledge-meta{display:none!important}
