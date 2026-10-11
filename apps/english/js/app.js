@@ -432,7 +432,7 @@
       $("#sourceNote").textContent = `${chunks.length} chunks · ${contentSource}`;
       $$('[data-mode]').forEach((button) => { button.disabled = false; });
       updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories(); renderContexts();
-      const requestedView = location.hash.slice(1); if (["think", "stories", "speaking", "progress", "library"].includes(requestedView)) show(requestedView);
+      const requestedView = location.hash.slice(1); if (["lab", "think", "stories", "speaking", "progress", "library"].includes(requestedView)) show(requestedView);
     } catch (error) {
       $("#contentStatus").textContent = "Content could not be loaded"; $("#sourceNote").textContent = error.message; console.error(error, registry.errors);
     }

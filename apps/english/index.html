@@ -8,6 +8,7 @@
   <title>Chunk Lab — English Practice</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/stories.css">
+  <link rel="stylesheet" href="css/sentence-lab.css">
 </head>
 <body>
   <div class="site-shell">
@@ -16,7 +17,7 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Chunk Lab</span>
       </button>
       <nav aria-label="Main navigation">
-        <button data-nav="home">Practice</button><button data-nav="think">Think in English</button><button data-nav="stories">Stories</button><button data-nav="speaking">Speaking Lab</button><button data-nav="progress">My progress</button><button data-nav="library">Chunk library</button>
+        <button data-nav="home">Practice</button><button data-nav="lab">Sentence Lab</button><button data-nav="think">Think in English</button><button data-nav="stories">Stories</button><button data-nav="speaking">Speaking Lab</button><button data-nav="progress">My progress</button><button data-nav="library">Chunk library</button>
       </nav>
       <div class="header-meta"><span class="streak-badge">● <span id="headerStreak">0 day streak</span></span><button class="avatar" id="resetButton" title="Reset local progress" aria-label="Reset local progress">DV</button></div>
     </header>
@@ -80,10 +81,18 @@
         <div class="think-layout"><aside class="context-list" id="contextList"></aside><article class="context-reader" id="contextReader"><p class="eyebrow">THINK IN ENGLISH</p><h2>Choose a situation</h2><p>Read for the big picture first. You can unpack the language after answering.</p></article></div>
       </section>
 
+      <section id="labView" class="view inner-view sentence-lab-view">
+        <div class="sentence-lab-head">
+          <div><p class="eyebrow">SEGMENT · MAP · UNDERSTAND · USE</p><h1>See how a sentence<br><em>builds its meaning.</em></h1><p class="lead">Work through sourced news and business writing one structural decision at a time.</p></div>
+          <div class="sentence-lab-summary"><strong>3</strong><span>sourced lessons</span><small>Short news · Long read · Business communication</small></div>
+        </div>
+        <div class="sentence-lab-layout"><aside class="sentence-lesson-list" id="sentenceLessonList"></aside><article class="sentence-workspace" id="sentenceWorkspace"><p class="eyebrow">SENTENCE LAB</p><h2>Choose a sourced lesson</h2><p>Select a lesson to split every word, map clauses, discover reusable chunks, and reconstruct the full meaning.</p></article></div>
+      </section>
+
       <section id="libraryView" class="view inner-view"><div class="library-head"><div><p class="eyebrow">CONTENT LIBRARY</p><h1>All your<br><em>learned chunks.</em></h1></div><label class="search-box">⌕<input id="chunkSearch" type="search" placeholder="Search chunks, situations, or meanings…"></label></div><div class="library-overview"><article><span>TOTAL CHUNKS</span><strong id="libraryTotal">0</strong></article><article><span>TOPIC GROUPS</span><strong id="libraryTopics">0</strong></article><article><span>CONTENT FILES</span><strong id="librarySessions">0</strong></article></div><h2 class="library-section-title">Browse by situation</h2><div class="category-grid" id="categoryGrid"></div><div class="library-meta"><span id="libraryCount">0 chunks</span><span id="sessionCount">0 sessions</span></div><div class="chunk-list" id="chunkList"></div></section>
     </main>
     <footer><span>Chunk Lab · Your personal English practice</span><span id="sourceNote">Loading content…</span></footer>
   </div>
-  <script src="content/catalog.js?v=20261008"></script><script src="js/app.js?v=20261008"></script>
+  <script src="content/catalog.js?v=20261008"></script><script src="content/sentence-lab/real-world-lessons.js?v=20261011"></script><script src="js/app.js?v=20261011"></script><script src="js/sentence-lab.js?v=20261011"></script>
 </body>
 </html>
