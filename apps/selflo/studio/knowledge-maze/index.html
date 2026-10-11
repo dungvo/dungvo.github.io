@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Selflo Knowledge Maze Lab — prototype đọc kiến thức có nhánh.">
+  <title>Selflo · Knowledge Maze Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="lab-header">
+    <a class="brand" href="../" aria-label="Quay lại Selflo Studio">
+      <span class="brand-mark" aria-hidden="true"><i></i></span>
+      <span><strong>Selflo</strong><small>Knowledge Maze Lab</small></span>
+    </a>
+    <div class="lab-meta"><span class="status-dot"></span>Prototype · chưa public</div>
+    <button class="map-toggle" id="mapToggle" type="button" aria-expanded="false" aria-controls="journeyPanel">Đường đã đi</button>
+  </header>
+
+  <main>
+    <section class="welcome" id="welcomeView">
+      <div class="welcome-copy">
+        <p class="eyebrow">Mê cung kiến thức · Prototype 01</p>
+        <h1>Một khái niệm.<br><em>Nhiều đường để hiểu.</em></h1>
+        <p class="welcome-lede">Bắt đầu từ điều bạn đang thắc mắc. Trong khi đọc, bạn có thể mở một khái niệm, đi sâu thêm rồi quay lại đúng mạch ban đầu.</p>
+      </div>
+
+      <div class="topic-stage">
+        <div class="taiji-orbit" aria-hidden="true">
+          <div class="taiji-symbol"><span></span></div>
+          <i class="orbit orbit-one"></i><i class="orbit orbit-two"></i>
+        </div>
+        <div class="topic-card">
+          <span class="topic-label">Chủ đề đang thử nghiệm</span>
+          <h2>Thái cực là gì?</h2>
+          <p>Một thuật ngữ trong lịch sử tư tưởng Trung Hoa — thường được nhắc cùng âm–dương, Kinh Dịch, thái cực đồ và Thái Cực Quyền.</p>
+          <div class="entry-list" aria-label="Chọn câu hỏi bắt đầu">
+            <button type="button" data-entry="root"><span>01</span><strong>Thái cực có nghĩa là gì?</strong><small>Đi từ câu hỏi nền</small></button>
+            <button type="button" data-entry="taijitu"><span>02</span><strong>Có phải là biểu tượng âm–dương?</strong><small>Đi từ hình ảnh quen thuộc</small></button>
+            <button type="button" data-entry="taijiquan"><span>03</span><strong>Có liên quan gì tới Thái Cực Quyền?</strong><small>Phân biệt khái niệm và võ thuật</small></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="welcome-note"><span>Không cần đọc hết</span><span>Không có điểm số</span><span>Luôn có đường quay lại</span></div>
+    </section>
+
+    <section class="reader-shell" id="readerView" hidden>
+      <aside class="journey-panel" id="journeyPanel">
+        <div class="journey-heading">
+          <div><p class="eyebrow">Đường đã đi</p><h2>Hành trình của bạn</h2></div>
+          <button id="closeMap" type="button" aria-label="Đóng bản đồ">×</button>
+        </div>
+        <ol class="journey-list" id="journeyList"></ol>
+        <div class="journey-help">
+          <strong>Đây không phải tiến độ.</strong>
+          <p>Bản đồ chỉ giúp bạn nhớ mình đã rời bài gốc từ đâu và đang khám phá điều gì.</p>
+        </div>
+        <button class="restart-button" id="restartButton" type="button">Về màn chọn chủ đề</button>
+      </aside>
+
+      <section class="reader-column">
+        <nav class="breadcrumbs" id="breadcrumbs" aria-label="Đường dẫn kiến thức"></nav>
+        <article class="knowledge-article" id="article" tabindex="-1"></article>
+      </section>
+
+      <aside class="context-panel">
+        <p class="eyebrow">Bạn đang tìm hiểu</p>
+        <h2 id="contextTitle">Thái cực là gì?</h2>
+        <p id="contextSummary"></p>
+        <div class="context-actions">
+          <button id="backButton" type="button">← Quay lại phần trước</button>
+          <button id="rootButton" type="button">Về bài gốc</button>
+        </div>
+        <div class="visited-block">
+          <span>Đã mở trong phiên này</span>
+          <strong id="visitedCount">1 nội dung</strong>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div class="concept-backdrop" id="conceptBackdrop" hidden></div>
+  <section class="concept-sheet" id="conceptSheet" role="dialog" aria-modal="true" aria-labelledby="conceptTitle" hidden>
+    <button class="sheet-close" id="sheetClose" type="button" aria-label="Đóng giải thích">×</button>
+    <p class="eyebrow">Giải thích nhanh</p>
+    <h2 id="conceptTitle"></h2>
+    <p id="conceptText"></p>
+    <div class="sheet-note" id="conceptNote"></div>
+    <div class="sheet-actions">
+      <button id="sheetReturn" type="button">Quay lại đọc</button>
+      <button id="sheetDeepDive" type="button">Đọc sâu hơn →</button>
+    </div>
+  </section>
+
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
+

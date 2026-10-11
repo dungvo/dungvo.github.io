@@ -1,6 +1,6 @@
 {
   "schema_version": "selflo.component-catalog-api.v1",
-  "generated_at": "2026-10-08T08:22:23.373255Z",
+  "generated_at": "2026-10-11T10:32:37.815981Z",
   "source": {
     "authoring_catalog": "shared/contracts/story-reader/v3/component-authoring-catalog.json",
     "support_matrix": "shared/contracts/story-reader/v3/component-support.json",
@@ -313,12 +313,12 @@
       "block_type": "sequence",
       "variant": "neutral|escalating",
       "wire_selector": "block.type=sequence",
-      "label_vi": "Sequence",
-      "meaning_vi": "Chuỗi suy nghĩ hoặc cụm có progression.",
-      "use_when_vi": "Khi thứ tự cho thấy tăng dần hoặc diễn tiến.",
-      "avoid_vi": "Không dùng cho bullet độc lập; bài phân tích đơn giản thường chỉ cần list.",
-      "web_ui_vi": "Các item xếp dọc có nhịp.",
-      "app_ui_vi": "Sequence component; không timed reveal.",
+      "label_vi": "Sequence · tạm ngừng authoring",
+      "meaning_vi": "Chuỗi suy nghĩ hoặc cụm có progression; chỉ giữ khả năng đọc package lịch sử.",
+      "use_when_vi": "Không author cho content mới trong giai đoạn hiện tại.",
+      "avoid_vi": "Không dùng trên nội dung mới; chuyển sang list hoặc paragraph phù hợp cho màn hình nhỏ.",
+      "web_ui_vi": "Renderer giữ tương thích với package lịch sử.",
+      "app_ui_vi": "App tiếp tục decode package cũ; content mới không opt-in.",
       "support": {
         "contract_status": "released",
         "mockup_status": "approved",

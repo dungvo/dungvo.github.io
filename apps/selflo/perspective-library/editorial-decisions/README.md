@@ -13,5 +13,6 @@ Thư mục này lưu lại **quá trình thay đổi** trong cách Selflo viết
 
 - [ADR-0001 — Content mộc, sự việc đủ sâu và artwork kể chuyện](ADR-0001-content-moc-va-artwork-ke-chuyen.vi.md) — accepted, 2026-10-07.
 - [ADR-0002 — Chọn phương thức theo bản chất nội dung](ADR-0002-bon-phuong-thuc-tiep-can-noi-dung.vi.md) — accepted, 2026-10-08.
+- [ADR-0003 — Tạm ngừng authoring block sequence](ADR-0003-tam-ngung-authoring-sequence.vi.md) — accepted, 2026-10-11.
 
 Triết lý cấp sản phẩm về việc gặp người dùng đúng tâm trạng, giúp gọi tên vướng bận mà không coaching được lưu tại [`../../shared/decisions/ADR-0001-story-dung-tam-trang-va-khoang-go.vi.md`](../../shared/decisions/ADR-0001-story-dung-tam-trang-va-khoang-go.vi.md).

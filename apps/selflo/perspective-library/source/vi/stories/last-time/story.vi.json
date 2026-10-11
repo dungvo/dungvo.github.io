@@ -2,7 +2,7 @@
   "schema_version": "1.2",
   "entity": "perspective_story",
   "id": "story.last_time",
-  "revision": 1,
+  "revision": 2,
   "status": "active",
   "language": "vi",
   "reader_format": "editorial_v3",
@@ -54,8 +54,8 @@
         },
         {
           "id": "section_01.block_03",
-          "type": "sequence",
-          "progression": "neutral",
+          "type": "list",
+          "style": "plain",
           "items": [
             { "text_vi": "Không phải Brazil." },
             { "text_vi": "Không phải Pháp." },
@@ -114,8 +114,8 @@
         },
         {
           "id": "section_01.block_11",
-          "type": "sequence",
-          "progression": "escalating",
+          "type": "list",
+          "style": "plain",
           "items": [
             { "text_vi": "Họ từng thấy anh đá Copa América." },
             { "text_vi": "Họ từng thấy anh chơi những trận World Cup lớn nhất." },
@@ -223,8 +223,8 @@
         },
         {
           "id": "section_02.block_05",
-          "type": "sequence",
-          "progression": "neutral",
+          "type": "list",
+          "style": "plain",
           "items": [
             { "text_vi": "Không ai bán vé cho lần cuối cha chở mình đi học." },
             { "text_vi": "Không có sân vận động nào thông báo lần cuối con mình đưa hai tay lên đòi bế." },
@@ -281,8 +281,8 @@
         },
         {
           "id": "section_03.block_03",
-          "type": "sequence",
-          "progression": "neutral",
+          "type": "list",
+          "style": "plain",
           "items": [
             { "text_vi": "Người cha chở mình đi học không trở nên quan trọng hơn vào chuyến đi cuối cùng." },
             { "text_vi": "Đứa trẻ không đáng yêu hơn vào lần cuối nó đòi được bế." },
@@ -348,8 +348,8 @@
         },
         {
           "id": "section_03.block_11",
-          "type": "sequence",
-          "progression": "neutral",
+          "type": "list",
+          "style": "plain",
           "items": [
             { "text_vi": "Nhận thức ấy tạo ra cảm xúc." },
             { "text_vi": "Cảm xúc khiến ta nhìn lại điều gì thực sự quan trọng." },
@@ -417,8 +417,8 @@
         },
         {
           "id": "section_04.block_05",
-          "type": "sequence",
-          "progression": "neutral",
+          "type": "list",
+          "style": "plain",
           "items": [
             { "text_vi": "Con rồi sẽ lớn." },
             { "text_vi": "Cha mẹ rồi sẽ già." },

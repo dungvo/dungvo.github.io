@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 61,
-  "content_version": "knowledge-chatgpt-agreement-v1",
+  "source_revision": 64,
+  "content_version": "two-perspectives-stories-v1",
   "language": "vi",
-  "canonical_quote_count": 1824,
+  "canonical_quote_count": 1826,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1505,6 +1505,48 @@
       "kind": "story",
       "path": "stories/if-i-am-wrong-but-chatgpt-agrees/story.vi.json",
       "media_type": "application/json"
+    },
+    {
+      "id": "image.story.why_ai_feels_easier_to_ask.v1",
+      "kind": "image",
+      "path": "artwork/images/why-ai-feels-easier-to-ask-v1.jpg",
+      "media_type": "image/jpeg"
+    },
+    {
+      "id": "image.story.if_i_am_wrong_but_chatgpt_agrees.v1",
+      "kind": "image",
+      "path": "artwork/images/if-i-am-wrong-but-chatgpt-agrees-v1.jpg",
+      "media_type": "image/jpeg"
+    },
+    {
+      "id": "quote_fragment.meaning_values.012",
+      "kind": "quote_fragment",
+      "path": "quotes/meaning_values/012.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.one_event_two_perspectives",
+      "kind": "story",
+      "path": "stories/one-event-two-perspectives/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.half_glass_two_views",
+      "kind": "story",
+      "path": "stories/half-glass-two-views/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "image.story.one_event_two_perspectives.v1",
+      "kind": "image",
+      "path": "artwork/images/one-event-two-perspectives-v1.png",
+      "media_type": "image/png"
+    },
+    {
+      "id": "image.story.half_glass_two_views.v1",
+      "kind": "image",
+      "path": "artwork/images/half-glass-two-views-v1.png",
+      "media_type": "image/png"
     }
   ]
 }

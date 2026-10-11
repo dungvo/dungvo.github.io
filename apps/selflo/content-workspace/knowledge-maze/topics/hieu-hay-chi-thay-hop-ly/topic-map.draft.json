@@ -1,0 +1,86 @@
+{
+  "schema_version": "draft-0.1",
+  "topic": {
+    "id": "understanding-vs-familiarity",
+    "title": "Đọc thấy hợp lý có phải là đã hiểu?",
+    "status": "outline",
+    "root_node_id": "understanding-root"
+  },
+  "nodes": [
+    { "id": "understanding-root", "type": "root_question", "file": "nodes/root.vi.md", "status": "draft" },
+    { "id": "recognition-vs-generation", "type": "concept", "file": "nodes/nhan-ra-va-tu-tao.vi.md", "status": "draft" },
+    { "id": "processing-fluency", "type": "mechanism", "file": "nodes/cam-giac-troi-chay.vi.md", "status": "outline" },
+    { "id": "self-explanation", "type": "practice", "file": "nodes/tu-giai-thich.vi.md", "status": "outline" },
+    { "id": "retrieval-and-transfer", "type": "practice", "file": "nodes/thu-hoi-va-chuyen-giao.vi.md", "status": "draft" },
+    { "id": "learning-with-ai", "type": "application", "file": "nodes/hoc-cung-ai.vi.md", "status": "draft" }
+  ],
+  "links": [
+    {
+      "id": "root-recognition",
+      "from_node_id": "understanding-root",
+      "from_anchor": "familiar-is-not-generation",
+      "to_node_id": "recognition-vs-generation",
+      "relation": "defines",
+      "label": "Vì sao nhận ra đáp án khác với tự tạo đáp án?",
+      "preview": "Hai nhiệm vụ có vẻ giống nhau nhưng đòi hỏi mức chủ động khác nhau.",
+      "return_label": "Quay lại phần “Cảm giác hiểu đến từ đâu?”",
+      "priority": "primary"
+    },
+    {
+      "id": "root-fluency",
+      "from_node_id": "understanding-root",
+      "from_anchor": "why-it-feels-clear",
+      "to_node_id": "processing-fluency",
+      "relation": "explains_why",
+      "label": "Vì sao một lời giải trôi chảy dễ tạo cảm giác hiểu?",
+      "preview": "Khám phá sự khác nhau giữa trải nghiệm đọc dễ dàng và khả năng tự sử dụng kiến thức.",
+      "return_label": "Quay lại phần “Cảm giác hiểu đến từ đâu?”",
+      "priority": "primary"
+    },
+    {
+      "id": "root-self-explanation",
+      "from_node_id": "understanding-root",
+      "from_anchor": "ways-to-check",
+      "to_node_id": "self-explanation",
+      "relation": "checks_understanding",
+      "label": "Tự giải thích giúp kiểm tra sự hiểu như thế nào?",
+      "preview": "Thử nói lại bằng lời của mình, đồng thời nhận ra giới hạn của cách kiểm tra này.",
+      "return_label": "Quay lại phần “Có thể kiểm tra bằng cách nào?”",
+      "priority": "primary"
+    },
+    {
+      "id": "recognition-retrieval",
+      "from_node_id": "recognition-vs-generation",
+      "from_anchor": "try-without-the-answer",
+      "to_node_id": "retrieval-and-transfer",
+      "relation": "applies_to",
+      "label": "Thử lấy kiến thức ra mà không nhìn mẫu",
+      "preview": "Xem việc nhớ lại và dùng trong tình huống mới cho ta biết điều gì.",
+      "return_label": "Quay lại phần “Thử khi không có đáp án trước mắt”",
+      "priority": "primary"
+    },
+    {
+      "id": "root-ai",
+      "from_node_id": "understanding-root",
+      "from_anchor": "when-ai-explains",
+      "to_node_id": "learning-with-ai",
+      "relation": "applies_to",
+      "label": "Điều này thay đổi cách học với AI thế nào?",
+      "preview": "Giữ lại một số thao tác nhận thức cho mình dù AI có thể giải thích rất nhanh.",
+      "return_label": "Quay lại phần “Khi lời giải đến từ AI”",
+      "priority": "primary"
+    },
+    {
+      "id": "ai-retrieval",
+      "from_node_id": "learning-with-ai",
+      "from_anchor": "after-the-answer",
+      "to_node_id": "retrieval-and-transfer",
+      "relation": "checks_understanding",
+      "label": "Sau câu trả lời, thử kiểm tra sự hiểu",
+      "preview": "Ẩn lời giải, lấy lại ý chính và dùng nó trong một ví dụ mới.",
+      "return_label": "Quay lại phần “Sau khi AI giải thích”",
+      "priority": "secondary"
+    }
+  ]
+}
+

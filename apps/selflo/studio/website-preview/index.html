@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Website Preview · Selflo Studio</title>
+  <link rel="icon" href="../../assets/images/public/selflo-leaf-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="preview-bar"><a href="../">← Studio</a><span>Website feature preview · Không public</span><div id="featureBadges"></div></aside>
+  <header class="site-header">
+    <a class="brand" href="./"><img src="../../assets/images/public/selflo-leaf-mark.svg" alt=""><span>Selflo</span></a>
+    <nav><a href="#home">Trang chủ</a><a class="active" href="#perspectives">Góc nhìn</a><a href="#series">Series</a><a href="#analysis">Phân tích</a></nav>
+    <label class="nav-search"><span>⌕</span><input id="siteSearch" type="search" placeholder="Tìm trong bản preview…" aria-label="Tìm nội dung"></label>
+  </header>
+  <main id="home">
+    <section class="hero reveal"><div><p class="eyebrow">Góc nhìn · Feature Lab</p><h1>Đọc theo cách<br>phù hợp với bạn.</h1><p>Câu chuyện độc lập, series dài tập và những bài phân tích sâu hơn — cùng nằm trong một thư viện nhưng giữ rõ vai trò của từng loại nội dung.</p><a href="#perspectives">Khám phá bản thiết kế <span>↓</span></a></div></section>
+    <section class="content shell reveal" id="perspectives">
+      <div class="section-head"><div><p class="eyebrow">Thư viện Góc nhìn</p><h2>Nhiều cách để bước vào một chủ đề.</h2></div><p>Đây là bản mô phỏng gần website public. Các mục thử nghiệm chỉ xuất hiện khi feature catalog bật <code>studio_preview</code>.</p></div>
+      <div class="type-grid" id="typeGrid"></div>
+    </section>
+    <section class="series-zone reveal" id="series"><div class="shell"><div class="section-head"><div><p class="eyebrow">Series câu chuyện</p><h2>Một câu chuyện có thể tiếp tục qua nhiều tập.</h2></div><p>Series có catalog riêng; mỗi tập vẫn là một Story độc lập và được website resolve bằng <code>story_id</code>.</p></div><div id="seriesGrid"></div></div></section>
+    <section class="analysis-zone shell reveal" id="analysis"><div class="section-head"><div><p class="eyebrow">Phân tích</p><h2>Đọc sâu hơn điều nằm phía sau một nội dung.</h2></div><p>Analysis không giả làm Story. Nó giữ mechanism, giới hạn và câu hỏi nghiên cứu trong một entity riêng.</p></div><div class="analysis-grid" id="analysisGrid"></div></section>
+    <section class="search-results shell" id="searchResults" hidden><div class="section-head"><div><p class="eyebrow">Kết quả tìm kiếm</p><h2 id="searchTitle">Nội dung phù hợp</h2></div></div><div class="result-grid" id="resultGrid"></div></section>
+  </main>
+  <footer><a class="brand" href="./"><img src="../../assets/images/public/selflo-leaf-mark.svg" alt=""><span>Selflo</span></a><p>Bản thử nghiệm giao diện và content model trong Studio.</p></footer>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

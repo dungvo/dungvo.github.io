@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.one_event_two_perspectives",
+  "revision": 1,
+  "status": "active",
+  "language": "vi",
+  "reader_format": "editorial_v3",
+  "title_vi": "Một sự việc, hai góc nhìn",
+  "subtitle_vi": "Năm tình huống quen thuộc có thể mở ra những cách nhìn khác nhau.",
+  "opening_quote_vi": "Điều thay đổi đôi khi không phải là sự việc, mà là cách chúng ta nhìn nhận nó.",
+  "hero_image": {
+    "file_id": "image.story.one_event_two_perspectives.v1",
+    "alt_text_vi": "Biển chỉ đường bằng gỗ với hai mũi tên chỉ về hai hướng trên một ngọn núi lúc hoàng hôn",
+    "caption_vi": null
+  },
+  "primary_theme": "meaning_values",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+      "curiosity",
+      "openness"
+    ],
+    "keywords": [
+      "góc nhìn",
+      "thay đổi",
+      "khác biệt",
+      "thời gian",
+      "giới hạn",
+      "điều chưa biết"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "section_01",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Về sự thay đổi",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_01.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Thay đổi là đánh mất những gì quen thuộc."
+        },
+        {
+          "id": "section_01.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Thay đổi là cơ hội khám phá những điều chưa biết."
+        }
+      ]
+    },
+    {
+      "id": "section_02",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Về sự khác biệt",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_02.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người có suy nghĩ khác mình là người khó hòa hợp."
+        },
+        {
+          "id": "section_02.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những suy nghĩ khác biệt có thể giúp ta nhìn thấy điều bản thân chưa từng nghĩ đến."
+        }
+      ]
+    },
+    {
+      "id": "section_03",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Về thời gian",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_03.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Thời gian lấy đi tuổi trẻ của con người."
+        },
+        {
+          "id": "section_03.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Thời gian mang đến những trải nghiệm mà tuổi trẻ chưa có."
+        }
+      ]
+    },
+    {
+      "id": "section_04",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Về những giới hạn",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_04.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Giới hạn là nơi khả năng kết thúc."
+        },
+        {
+          "id": "section_04.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Giới hạn cũng là nơi con người bắt đầu tìm kiếm cách làm mới."
+        }
+      ]
+    },
+    {
+      "id": "section_05",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Về những điều chưa biết",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_05.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không biết là một sự thiếu sót."
+        },
+        {
+          "id": "section_05.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không biết là điểm bắt đầu của việc học hỏi."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Điều thay đổi đôi khi không phải là sự việc, mà là cách chúng ta nhìn nhận nó."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_01",
+        "text_vi": "Có sự việc nào trong cuộc sống của bạn đang cần được nhìn thêm từ một hướng khác?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "selflo",
+    "author_name": "Selflo",
+    "source_label": "Nội dung gốc Selflo",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "owner_approved_content",
+    "source_item_id": "one_event_two_perspectives",
+    "human_edited": true
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Nội dung và artwork do owner Selflo cung cấp, chỉnh sửa và chốt để phát hành."
+  },
+  "review": {
+    "status": "approved",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-10-11T00:00:00Z"
+  }
+}

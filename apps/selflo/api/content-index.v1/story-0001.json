@@ -1,6 +1,6 @@
 {
   "schema_version": "selflo.content-index.v1",
-  "generated_at": "2026-10-08T08:22:23.373255Z",
+  "generated_at": "2026-10-11T10:32:37.815981Z",
   "channel": "authoring",
   "content_type": "story",
   "items": [
@@ -1137,7 +1137,7 @@
       "classification_source": "runtime_entity_default",
       "schema_version": "1.2",
       "reader_format": "editorial_v3",
-      "revision": 1,
+      "revision": 2,
       "status": "active",
       "channel": "authoring",
       "language": "vi",
@@ -1164,7 +1164,7 @@
       "section_count": 4,
       "block_count": 52,
       "block_inventory": {
-        "list:plain": 2,
+        "list:plain": 8,
         "paragraph:beat": 2,
         "paragraph:lead_in": 8,
         "paragraph:narrative": 20,
@@ -1172,7 +1172,6 @@
         "pull_quote:centerpiece": 1,
         "pull_quote:inset": 2,
         "pull_quote:rail": 4,
-        "sequence": 6,
         "statement:centered": 4,
         "statement:leading": 1
       },

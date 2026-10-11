@@ -2,13 +2,17 @@
   "schema_version": "1.2",
   "entity": "perspective_story",
   "id": "story.why_ai_feels_easier_to_ask",
-  "revision": 2,
-  "status": "draft",
+  "revision": 3,
+  "status": "active",
   "language": "vi",
   "reader_format": "editorial_v3",
   "title_vi": "Vì sao có những câu ta dễ hỏi AI hơn hỏi một người?",
   "subtitle_vi": "Một câu hỏi không chỉ tìm kiếm thông tin; đôi khi nó còn để người khác nhìn thấy điều ta chưa biết.",
-  "hero_image": null,
+  "hero_image": {
+    "file_id": "image.story.why_ai_feels_easier_to_ask.v1",
+    "alt_text_vi": "Một người học ngồi lại trong lớp học vắng vào cuối buổi, trước chiếc laptop phát ánh sáng ấm",
+    "caption_vi": null
+  },
   "primary_theme": "relationships",
   "metadata": {
     "concept_ids": [],
@@ -185,8 +189,8 @@
         },
         {
           "id": "hesitate_05",
-          "type": "sequence",
-          "progression": "escalating",
+          "type": "list",
+          "style": "plain",
           "items": [
             {
               "text_vi": "Câu này có quá cơ bản không?"
@@ -892,8 +896,8 @@
     "note": "Knowledge / Insight do owner Selflo phát triển và chốt nội dung; đóng gói tạm bằng perspective_story để xem trong Reader hiện tại."
   },
   "review": {
-    "status": "needs_owner_review",
-    "reviewed_by": null,
-    "reviewed_at": null
+    "status": "approved",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-10-11T08:51:37Z"
   }
 }

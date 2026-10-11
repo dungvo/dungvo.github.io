@@ -18,6 +18,8 @@
     const fileId = item.hero_image?.file_id || themeMap[item.primary_theme];
     return fileId && imageMap[fileId] ? base + imageMap[fileId] : '';
   };
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting)), {threshold:.08,rootMargin:'0px 0px -5%'});
+  const observeReveals = () => document.querySelectorAll('.selflo-scroll-reveal:not([data-reveal-ready])').forEach(element => { element.dataset.revealReady='true'; revealObserver.observe(element); });
 
   function articleCard(item) {
     const art = item.image ? `<img src="${esc(item.image)}" alt="${esc(item.imageAlt || '')}" loading="lazy">` : '<div class="article-card-art-empty" aria-hidden="true"></div>';
@@ -51,6 +53,8 @@
     document.querySelector('#newestGrid').innerHTML = newest.map(articleCard).join('');
     document.querySelector('#reflectionGrid').innerHTML = state.quotes.slice(0, 3).map(quoteCard).join('');
     document.querySelector('#lifeGrid').innerHTML = (life.length === 3 ? life : state.stories.filter(item => !newest.includes(item)).slice(0, 3)).map(articleCard).join('');
+    document.querySelectorAll('.editorial-row,.article-card,.quote-card,.featured-library-grid>a,.perspective-cta').forEach(element => element.classList.add('selflo-scroll-reveal'));
+    observeReveals();
   }
   function renderAll(query = '') {
     const all = document.querySelector('#allContent');
@@ -58,6 +62,8 @@
     const matches = state.items.filter(item => clean(`${item.title} ${item.subtitle} ${item.text} ${themeNames[item.theme]}`).includes(clean(query)));
     all.hidden = false;
     grid.innerHTML = matches.length ? matches.slice(0, 15).map(item => item.type === 'story' ? articleCard(item) : quoteCard(item)).join('') : '<div class="empty-state">Chưa tìm thấy Góc nhìn phù hợp. Hãy thử một từ khóa khác.</div>';
+    grid.querySelectorAll('.article-card,.quote-card').forEach(element => element.classList.add('selflo-scroll-reveal'));
+    observeReveals();
     document.querySelector('#releaseMeta').textContent = `${matches.length} nội dung · Release ${state.revision}`;
   }
   async function loadInitialQuotes() {
@@ -111,8 +117,9 @@
     searchTimer = setTimeout(async () => {
       try { await ensureAllQuotesLoaded(); } catch (error) { console.error('[Selflo Perspectives]', error); }
       renderAll(query);
-      if (query) document.querySelector('#allContent').scrollIntoView({behavior:'smooth',block:'start'});
     }, 180);
   });
+  document.querySelectorAll('.featured-library,.library-hero-v3').forEach(element => element.classList.add('selflo-scroll-reveal'));
+  observeReveals();
   load();
 })();

@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 77,
-  "content_version": "knowledge-chatgpt-agreement-v1",
+  "library_revision": 81,
+  "content_version": "two-perspectives-stories-v1",
   "language": "vi",
-  "generated_at": "2026-10-08T08:16:53Z",
+  "generated_at": "2026-10-11T13:28:29Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -17,6 +17,24 @@
       "byte_count": 5457
     },
     {
+      "id": "image.story.half_glass_two_views.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/half-glass-two-views-v1.r1.png",
+      "media_type": "image/png",
+      "sha256": "e2bea049d9bdc174f4534a34829eddbcad44e42fab68372fe3537a6daa855360",
+      "byte_count": 2840894
+    },
+    {
+      "id": "image.story.if_i_am_wrong_but_chatgpt_agrees.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/if-i-am-wrong-but-chatgpt-agrees-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "0bcfcb5cabbf7b632303e0e337190d01357a766d5704578ac807caa23ce2ead2",
+      "byte_count": 274834
+    },
+    {
       "id": "image.story.last_time.v1",
       "kind": "image",
       "revision": 1,
@@ -24,6 +42,15 @@
       "media_type": "image/jpeg",
       "sha256": "acbc7180646deb8757be936d73292d29d5df3e226f60989335c59e531834e32d",
       "byte_count": 909153
+    },
+    {
+      "id": "image.story.one_event_two_perspectives.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/one-event-two-perspectives-v1.r1.png",
+      "media_type": "image/png",
+      "sha256": "06d908645d81b09fcea3c2dc10d713f3fa16a975343465bd47cb071053aff3a7",
+      "byte_count": 3224161
     },
     {
       "id": "image.story.original_if_i_lived_a_human_life.v1",
@@ -51,6 +78,15 @@
       "media_type": "image/jpeg",
       "sha256": "96a5cef9c6e6fd861c16c58d28b95cbb7c36f0f34f1396f43f4b6386ebc70887",
       "byte_count": 798090
+    },
+    {
+      "id": "image.story.why_ai_feels_easier_to_ask.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/why-ai-feels-easier-to-ask-v1.r1.jpg",
+      "media_type": "image/jpeg",
+      "sha256": "69f8f80f3e8bc0980faefa1925262d91d2ec810c7e5aa6f1102092272e599d9a",
+      "byte_count": 283863
     },
     {
       "id": "story_artwork.adversity_resilience.v1",
@@ -199,20 +235,20 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 34,
-      "path": "themes/meaning-values.vi.r34.json",
+      "revision": 35,
+      "path": "themes/meaning-values.vi.r35.json",
       "media_type": "application/json",
-      "sha256": "45790d6bf64b232a2b12f3ff49863243cdd0eb1dfc69a3f2e31dcb3d6ccf4a1b",
-      "byte_count": 268156
+      "sha256": "3ffa9df9bc1b004a7638f9f4d9712ad934d8cdd4981d220bed36ffe2c8fd565a",
+      "byte_count": 272857
     },
     {
       "id": "theme.relationships.vi",
       "kind": "quote_pack",
-      "revision": 28,
-      "path": "themes/relationships.vi.r28.json",
+      "revision": 30,
+      "path": "themes/relationships.vi.r30.json",
       "media_type": "application/json",
-      "sha256": "4872cb91e61fdec01154e6b4ac79ef3540016d0b148517c9910bc7671a156f34",
-      "byte_count": 288562
+      "sha256": "265b792a600299d66a72363258488fdbb469c5e1673837f37dc307141bad2ee7",
+      "byte_count": 288821
     },
     {
       "id": "theme.rest_wellbeing.vi",
@@ -226,11 +262,11 @@
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 37,
-      "path": "themes/self-understanding.vi.r37.json",
+      "revision": 39,
+      "path": "themes/self-understanding.vi.r39.json",
       "media_type": "application/json",
-      "sha256": "1d2b09ca494244a4e6d49e8cd720dbddee1dd6829333932584d97c6a0c6bd68a",
-      "byte_count": 1412863
+      "sha256": "a03d1b9f8fe418ec8a95e32085b0f61aa8793e11730b33c804679fbddb3153be",
+      "byte_count": 1413077
     },
     {
       "id": "theme.work_achievement.vi",
@@ -431,13 +467,22 @@
       "byte_count": 6528
     },
     {
+      "id": "story.half_glass_two_views",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/half-glass-two-views/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "03f07108441e5a93b87d8c2154da6379ebb882049ca9fa69d392b8f15bd8f8f1",
+      "byte_count": 5580
+    },
+    {
       "id": "story.if_i_am_wrong_but_chatgpt_agrees",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/if-i-am-wrong-but-chatgpt-agrees/story.vi.r3.json",
+      "revision": 4,
+      "path": "stories/if-i-am-wrong-but-chatgpt-agrees/story.vi.r4.json",
       "media_type": "application/json",
-      "sha256": "7d4695226d6d00bca16d2c82a020f591cb68b40d78073681d3486c26ce571519",
-      "byte_count": 12897
+      "sha256": "d1e2d5a3e7d4784461a74d27afa4fc5f4db128d97615a482ce0517aa73ede12f",
+      "byte_count": 13174
     },
     {
       "id": "story.large_tree_beyond_the_carpenters_measure",
@@ -451,11 +496,11 @@
     {
       "id": "story.last_time",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/last-time/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/last-time/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "65a9456d8579bcb9da394da296eb56ab6981c3203b09f67da43adc4e4ed46127",
-      "byte_count": 21114
+      "sha256": "d6ca3c2de246f8ea703351b66bb07217bc3b8b82d46b4000e476ffe7285d64d3",
+      "byte_count": 21039
     },
     {
       "id": "story.last_window_in_the_building",
@@ -510,6 +555,15 @@
       "media_type": "application/json",
       "sha256": "c44e58d9e221d4cfb67ead421c480addd398030dbd7b4aa86e95c257190ad181",
       "byte_count": 5685
+    },
+    {
+      "id": "story.one_event_two_perspectives",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/one-event-two-perspectives/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "7e23f28fec8a031cd1c104e135e18988d38c88c530aa9784bb9ac10b13cdbaf2",
+      "byte_count": 5284
     },
     {
       "id": "story.operator_and_one_beat",
@@ -784,11 +838,11 @@
     {
       "id": "story.why_ai_feels_easier_to_ask",
       "kind": "story",
-      "revision": 3,
-      "path": "stories/why-ai-feels-easier-to-ask/story.vi.r3.json",
+      "revision": 5,
+      "path": "stories/why-ai-feels-easier-to-ask/story.vi.r5.json",
       "media_type": "application/json",
-      "sha256": "83bdbdf1111f2996c49e378e2d4e41d45fa54fb51139ea77556298b04712eb6e",
-      "byte_count": 39073
+      "sha256": "06e0c86747e156fb9691801887f2c10d1aa31da24dab59efe5868cf855a947a2",
+      "byte_count": 39308
     },
     {
       "id": "story_artwork.catalog.vi",

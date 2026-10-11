@@ -1,0 +1,29 @@
+{
+  "schema_version": "selflo.story-series-preview.v1",
+  "revision": 1,
+  "language": "vi",
+  "series": [
+    {
+      "id": "series.the_nonexistent_floor",
+      "slug": "tang-khong-ton-tai",
+      "title_vi": "Tầng không tồn tại",
+      "subtitle_vi": "Một series gồm 10 câu chuyện.",
+      "description_vi": "Nội dung từng tập sẽ được bổ sung từ nguồn do owner cung cấp. Catalog này giữ cấu trúc, thứ tự và trạng thái để website không phải hardcode series.",
+      "status": "planning",
+      "episode_count": 10,
+      "artwork": null,
+      "episodes": [
+        {"number": 1, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 2, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 3, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 4, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 5, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 6, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 7, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 8, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 9, "story_id": null, "title_vi": null, "status": "awaiting_content"},
+        {"number": 10, "story_id": null, "title_vi": null, "status": "awaiting_content"}
+      ]
+    }
+  ]
+}

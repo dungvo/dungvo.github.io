@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.half_glass_two_views",
+  "revision": 1,
+  "status": "active",
+  "language": "vi",
+  "reader_format": "editorial_v3",
+  "title_vi": "Nửa ly nước, hai cách nhìn",
+  "subtitle_vi": "Cùng một sự việc, phần được chú ý có thể làm trải nghiệm trở nên rất khác.",
+  "opening_quote_vi": "Cùng một ly nước, có người thấy phần đã mất, có người thấy phần còn lại.",
+  "hero_image": {
+    "file_id": "image.story.half_glass_two_views.v1",
+    "alt_text_vi": "Một ly nước đã uống một nửa với hai ô chữ: Chỉ còn nửa ly nước và Vẫn còn nửa ly nước",
+    "caption_vi": null
+  },
+  "primary_theme": "meaning_values",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+      "curiosity",
+      "acceptance"
+    ],
+    "keywords": [
+      "nửa ly nước",
+      "góc nhìn",
+      "chú ý",
+      "mất đi",
+      "còn lại"
+    ],
+    "story_style": "contemporary"
+  },
+  "sections": [
+    {
+      "id": "section_01",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Cùng một ly nước",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_01.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Có một câu chuyện nhỏ về hai người cùng nhìn vào một ly nước đã uống một nửa."
+        },
+        {
+          "id": "section_01.block_02",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_01",
+              "speaker": {
+                "id": "first_person",
+                "label_vi": "Người thứ nhất"
+              },
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Chỉ còn nửa ly nước."
+                }
+              ]
+            },
+            {
+              "id": "turn_02",
+              "speaker": {
+                "id": "second_person",
+                "label_vi": "Người thứ hai"
+              },
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vẫn còn nửa ly nước."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section_01.block_03",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cả hai đều nhìn đúng. Lượng nước trong ly không thay đổi. Điều khác biệt nằm ở nơi họ đặt sự chú ý: một người nhìn vào phần đã mất, người kia nhìn vào phần còn lại."
+        }
+      ]
+    },
+    {
+      "id": "section_02",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": "Những việc vẫn diễn ra mỗi ngày",
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "section_02.block_01",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một cơn mưa có thể làm đường đi bất tiện, và cũng có thể làm cây cối dịu lại sau những ngày nắng."
+        },
+        {
+          "id": "section_02.block_02",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một cơn gió có thể làm tóc rối, và cũng có thể đem đến chút mát lành giữa buổi trưa."
+        },
+        {
+          "id": "section_02.block_03",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một món đồ cũ có thể được nhìn như thứ đã hao mòn, và cũng có thể gợi lại những năm tháng nó đã đồng hành cùng ta."
+        },
+        {
+          "id": "section_02.block_04",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cùng một sự việc có thể được nhìn thấy theo nhiều cách khác nhau, tùy vào góc nhìn, trải nghiệm và trạng thái của mỗi người."
+        },
+        {
+          "id": "section_02.block_05",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Cả phần đã mất lẫn phần còn lại đều đáng được nhìn thấy.",
+          "shareable": true
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Một điều để mang theo",
+    "text_vi": "Cùng một ly nước, có người thấy phần đã mất, có người thấy phần còn lại. Cả phần đã mất lẫn phần còn lại đều đáng được nhìn thấy."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_01",
+        "text_vi": "Trong điều đang khiến bạn bận lòng, có phần nào đã mất và phần nào vẫn còn?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "selflo",
+    "author_name": "Selflo",
+    "source_label": "Nội dung gốc Selflo",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "owner_approved_content",
+    "source_item_id": "half_glass_two_views",
+    "human_edited": true
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Nội dung và artwork do owner Selflo cung cấp, chỉnh sửa và chốt để phát hành."
+  },
+  "review": {
+    "status": "approved",
+    "reviewed_by": "owner:dungvo",
+    "reviewed_at": "2026-10-11T00:00:00Z"
+  }
+}

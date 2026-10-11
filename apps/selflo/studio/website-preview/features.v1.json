@@ -1,0 +1,22 @@
+{
+  "schema_version": "selflo.website-feature-preview.v1",
+  "revision": 1,
+  "features": [
+    {
+      "id": "story_series",
+      "label_vi": "Series câu chuyện",
+      "description_vi": "Trang tập hợp các câu chuyện có chung một trục nội dung và thứ tự đọc.",
+      "studio_preview": true,
+      "public_candidate": false,
+      "data_url": "../../content-workspace/story-series/catalog.vi.json"
+    },
+    {
+      "id": "content_analysis",
+      "label_vi": "Phân tích",
+      "description_vi": "Lớp đọc sâu về cơ chế, giới hạn và những câu hỏi còn mở phía sau nội dung.",
+      "studio_preview": true,
+      "public_candidate": false,
+      "data_url": "../../api/content-analysis.v1.json"
+    }
+  ]
+}

@@ -843,6 +843,15 @@
       "text_vi": "Đôi khi điều khó nhất không phải là “không biết”. Điều khó hơn là để một người khác biết rằng mình không biết.",
       "subtitle_vi": null,
       "primary_theme": "relationships",
+      "tags": [
+        "intent:understand_self",
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "topic:learning_habits",
+        "origin:selflo"
+      ],
       "authorship": {
         "author_id": "selflo",
         "author_name": "Selflo",
@@ -873,9 +882,9 @@
         "note": "Nội dung gốc Selflo do owner chốt; Authoring Preview trước khi quyết định Release."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-10-11T08:51:37Z"
       },
       "writing": {
         "semantic_intent": "Một câu hỏi có thể tìm kiếm thông tin đồng thời làm lộ điều người đặt câu hỏi chưa biết.",

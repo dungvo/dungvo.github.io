@@ -1,12 +1,12 @@
 {
   "schema_version": "selflo.content-index.v1",
-  "generated_at": "2026-10-08T08:22:23.373255Z",
+  "generated_at": "2026-10-11T10:32:37.815981Z",
   "channel": "authoring",
   "source": {
     "kind": "canonical_authoring_source",
     "path": "perspective-library/source/vi/source.json",
-    "source_revision": 61,
-    "content_version": "knowledge-chatgpt-agreement-v1"
+    "source_revision": 63,
+    "content_version": "sequence-authoring-disabled-v1"
   },
   "semantics": {
     "content_type": "Editorial semantic type used by catalog/search.",
@@ -100,8 +100,8 @@
       "classification_source": "editorial.source_collection_id",
       "schema_version": "1.2",
       "reader_format": "editorial_v3",
-      "revision": 2,
-      "status": "draft",
+      "revision": 3,
+      "status": "active",
       "channel": "authoring",
       "language": "vi",
       "primary_theme": "relationships",
@@ -123,19 +123,19 @@
       "origin_type": "owner_curated_ai_assisted",
       "source_collection_id": "knowledge_insight",
       "rights_status": "selflo_owned",
-      "review_status": "needs_owner_review",
+      "review_status": "approved",
       "section_count": 6,
       "block_count": 68,
       "block_inventory": {
         "aside": 3,
         "dialogue:monologue": 1,
+        "list:plain": 1,
         "list:unordered": 5,
         "paragraph:beat": 4,
         "paragraph:lead_in": 8,
         "paragraph:narrative": 35,
         "paragraph:transition": 1,
         "part_heading": 2,
-        "sequence": 1,
         "statement:centered": 4,
         "statement:leading": 4
       },
@@ -16533,7 +16533,7 @@
       "schema_version": "selflo.perspective.quote-fragment.v1",
       "reader_format": "quote_card",
       "revision": 1,
-      "status": "needs_owner_review",
+      "status": "approved",
       "channel": "authoring",
       "language": "vi",
       "primary_theme": "relationships",
@@ -16550,7 +16550,7 @@
         "knowledge insight"
       ],
       "rights_status": "selflo_owned",
-      "review_status": "needs_owner_review",
+      "review_status": "approved",
       "source_path": "quotes/relationships/002.vi.json",
       "payload_ref": "perspective-library/source/vi/quotes/relationships/002.vi.json#selflo.knowledge.why_ai_feels_easier_to_ask",
       "reader_url": null,
@@ -50988,7 +50988,7 @@
       "classification_source": "runtime_entity_default",
       "schema_version": "1.2",
       "reader_format": "editorial_v3",
-      "revision": 1,
+      "revision": 2,
       "status": "active",
       "channel": "authoring",
       "language": "vi",
@@ -51015,7 +51015,7 @@
       "section_count": 4,
       "block_count": 52,
       "block_inventory": {
-        "list:plain": 2,
+        "list:plain": 8,
         "paragraph:beat": 2,
         "paragraph:lead_in": 8,
         "paragraph:narrative": 20,
@@ -51023,7 +51023,6 @@
         "pull_quote:centerpiece": 1,
         "pull_quote:inset": 2,
         "pull_quote:rail": 4,
-        "sequence": 6,
         "statement:centered": 4,
         "statement:leading": 1
       },

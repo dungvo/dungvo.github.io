@@ -4,3 +4,4 @@
 @media(max-width:760px){.nav-shell nav a:not(.active){display:none}.library-intro h1{max-width:100%;font-size:40px;line-height:1.02;letter-spacing:-.04em}.library-intro>p:not(.kicker){max-width:100%}.library-hero-v3{overflow:hidden}.featured-library,.editorial-library{overflow:hidden}}
 @media(max-width:760px){body{overflow-x:hidden}.library-intro{width:calc(100vw - 48px);min-width:0}.hero-library-search{width:calc(100vw - 48px)}}
 .article-card-art-empty{width:100%;aspect-ratio:1.9/1;background:linear-gradient(135deg,#e8eee3,#f7f2e6)}
+.reveal.selflo-scroll-reveal{opacity:0!important;transform:translateY(24px)!important}.reveal.selflo-scroll-reveal.is-visible{opacity:1!important;transform:none!important}
