@@ -150,5 +150,122 @@ window.SentenceLabLessons = [
       en: "“What” introduces a fused relative construction meaning “the thing that”; it is not a direct question. The colon then identifies that abstract concern as “the recent job eliminations”. The phrase “weigh heavily on” describes emotional pressure, not physical weight.",
       vi: "“What” mở cấu trúc quan hệ kết hợp, mang nghĩa “điều mà”, chứ không tạo câu hỏi trực tiếp. Dấu hai chấm xác định điều gây lo lắng chính là các đợt cắt giảm việc làm. “Weigh heavily on” nói về áp lực tinh thần, không phải trọng lượng vật lý."
     }
+  },
+  {
+    id: "nasa-sspicy-full-article",
+    kind: "Full recent article",
+    level: "Intermediate",
+    minutes: 35,
+    title: "A spacecraft will inspect inactive objects in orbit",
+    fullText: true,
+    source: {
+      publisher: "NASA Ames Research Center",
+      date: "8 October 2026",
+      url: "https://www.nasa.gov/centers-and-facilities/ames/nasas-sspicy-mission-to-demonstrate-in-space-inspection-technologies/",
+      originalTitle: "NASA’s SSPICY Mission to Demonstrate In-Space Inspection Technologies",
+      note: "The complete article body is reproduced for educational study with credit to NASA. Page navigation, image captions and administrative metadata are excluded."
+    },
+    visual: "orbit",
+    paragraphs: [
+      "A new NASA-supported spacecraft will get up close to satellites that are no longer in service, demonstrating technologies that could support future in-space repairs and reduce orbital debris.",
+      "The Small Spacecraft Propulsion and Inspection Capability (SSPICY) mission launched Oct. 1 from Vandenberg Space Force Base in California. The mission is a technology demonstration where an Otter spacecraft will approach up to four inoperable space objects of U.S. origin in low Earth orbit, such as satellites and rocket bodies.",
+      "In early 2027, the Otter spacecraft, built by Starfish Space, will begin to navigate within hundreds of yards of each object to perform inspections, using autonomous guidance and control software with minimal input from ground controllers. Computer vision and sensors enable software to make real-time navigation decisions as the spacecraft approaches each target.",
+      "During inspection, the Otter spacecraft will gather critical information about each object, such as spin rate, orientation, and surface condition. An electric propulsion system will enable SSPICY to travel between objects, and an articulating robotic boom will test pointing the spacecraft’s thrusters for precise maneuvering between different orbits.",
+      "This mission is the first time these technologies will be tested together as an integrated system, paving the way for future autonomous servicing and orbital debris inspection.",
+      "During the SSPICY mission, the Otter spacecraft won’t touch or dock with any satellites, but will test the technologies needed to one day enable missions to service or repair objects in orbit, or to safely remove them by pulling them into Earth’s atmosphere for disposal.",
+      "Space objects like rocket bodies and satellites that are experiencing issues or no longer in service can break apart or collide with one another, creating varying forms of orbital debris from large fragments to small particles. With thousands of satellites launched each year to provide communications, weather forecasting, navigation, and other services that people rely on daily, keeping the space near Earth safe for operations is increasingly critical.",
+      "Starfish Space developed and operates the Otter 24C spacecraft, which is performing the SSPICY mission. NASA’s Small Spacecraft and Distributed Systems program within the agency’s Research and Technology Mission Directorate funds and manages the technology demonstration.",
+      "NASA’s Small Business Innovation Research / Small Business Technology Transfer program funded awards to Starfish Space to support early development of the spacecraft’s key technologies and capabilities."
+    ],
+    focus: {
+      sentence: "In early 2027, the Otter spacecraft, built by Starfish Space, will begin to navigate within hundreds of yards of each object to perform inspections.",
+      segments: [
+        { text: "In early 2027", type: "Preposition phrase", role: "Time frame", clue: "sets the expected starting period", vi: "vào đầu năm 2027" },
+        { text: "the Otter spacecraft", type: "Noun phrase", role: "Main subject", clue: "the small spacecraft carrying out the mission", vi: "tàu vũ trụ Otter" },
+        { text: "built by Starfish Space", type: "Non-finite verb phrase", role: "Reduced passive modifier", clue: "a shorter form of “which was built by…”", vi: "được chế tạo bởi Starfish Space" },
+        { text: "will begin to navigate", type: "Finite verb phrase", role: "Main predicate", clue: "will start moving and finding its position", vi: "sẽ bắt đầu điều hướng" },
+        { text: "within hundreds of yards of each object", type: "Preposition phrase", role: "Distance", clue: "no farther away than a few hundred yards", vi: "trong phạm vi vài trăm yard quanh mỗi vật thể" },
+        { text: "to perform inspections", type: "Non-finite verb phrase", role: "Purpose", clue: "in order to examine the objects", vi: "để thực hiện việc kiểm tra" }
+      ],
+      mainClause: "In early 2027, the Otter spacecraft will begin to navigate within hundreds of yards of each object",
+      dependentClause: "built by Starfish Space; to perform inspections",
+      linker: "to",
+      relation: "purpose: the spacecraft navigates close to the objects in order to inspect them",
+      chunks: ["get up close to", "no longer in service", "with minimal input from", "pave the way for", "break apart", "rely on + service"],
+      meaning: "The Otter spacecraft will autonomously move close to inactive orbital objects so it can inspect their condition."
+    },
+    paragraphQuestions: [
+      { prompt: "What is the mission’s immediate technical task?", options: ["Approach and inspect inactive orbital objects", "Carry astronauts to Mars", "Build satellites on Earth"], answer: 0, explanation: "The Otter spacecraft will approach up to four objects and inspect them without docking." },
+      { prompt: "Why does the article explain that Otter will not touch the satellites?", options: ["To distinguish this demonstration from actual servicing or removal", "To say the spacecraft cannot navigate", "To cancel the mission"], answer: 0, explanation: "The current mission tests enabling technologies; future missions may perform the physical servicing or removal." },
+      { prompt: "Why is orbital debris presented as important?", options: ["Objects can break apart or collide while society relies on growing numbers of satellites", "All satellites have already stopped working", "Orbital debris improves navigation"], answer: 0, explanation: "The article connects collision risk with the importance and increasing number of satellites." },
+      { prompt: "What roles do NASA and Starfish Space have?", options: ["Starfish developed and operates Otter; NASA programs fund and manage the demonstration", "NASA owns every satellite; Starfish writes the article", "Both organizations only provide weather forecasts"], answer: 0, explanation: "The last two paragraphs identify the developer/operator and the NASA funding and management programs." }
+    ],
+    articleQuestion: { prompt: "What is the article’s complete message?", options: ["A newly launched demonstration will test autonomous inspection technologies that could support future repairs and debris removal", "NASA has already repaired four satellites", "Otter will deliberately collide with unused spacecraft"], answer: 0, explanation: "This preserves the mission status, present test and future purpose without claiming that repairs are already happening." },
+    speaking: "Explain the article in one minute: the problem → the demonstration → how Otter works → what future missions may do.",
+    writing: "Write a four-sentence summary covering mission, method, limitation and future value.",
+    tutor: {
+      en: "The article moves from announcement to mechanism, then limitation, problem significance and organizational responsibility. In the focus sentence, “built by Starfish Space” modifies the spacecraft; it is not the main action. “To perform inspections” expresses purpose.",
+      vi: "Bài đi từ thông báo sang cơ chế hoạt động, sau đó nêu giới hạn, ý nghĩa của vấn đề và trách nhiệm của các tổ chức. Trong câu trọng tâm, “built by Starfish Space” bổ nghĩa cho tàu; hành động chính là “will begin to navigate”."
+    }
+  },
+  {
+    id: "usgs-geology-flights-full-article",
+    kind: "Full recent news release",
+    level: "Intermediate → Advanced",
+    minutes: 40,
+    title: "Low-level flights will map geology in California",
+    fullText: true,
+    source: {
+      publisher: "U.S. Geological Survey",
+      date: "5 October 2026",
+      url: "https://www.usgs.gov/news/state-news-release/media-alert-low-level-flights-image-geology-over-eastern-california",
+      originalTitle: "Media Alert: Low-level Flights to Image Geology over Eastern California",
+      note: "The complete news-release body is reproduced for educational study with credit to the U.S. Geological Survey. Page navigation, media captions and contact metadata are excluded."
+    },
+    visual: "geology",
+    paragraphs: [
+      "RESTON, Va. – Low-level airplane flights will begin in early October over eastern California and a sliver of western Nevada to image geology using airborne geophysical technology.",
+      "The flights are a collaborative effort between the U.S. Geological Survey’s Earth Mapping Resources Initiative and the California Geological Survey (CGS). The USGS Earth Mapping Resources Initiative is an effort to modernize the nation’s maps of geology and mineral resources, and to identify energy and groundwater resources and natural hazards.",
+      "“Partnership with state surveys helps accomplish national goals like mapping the critical minerals the U.S. needs. The California Geological Survey is helping with the work of the nation—and adding to state knowledge crucial to water resources, hazards and the resource economy,” said Jamey Jones, science coordinator for the U.S. Geological Survey's Earth Mapping Resources Initiative.",
+      "“Earth MRI datasets are a coordinated federal-state partnership to collect modern data in priority regions of the state, make those data publicly available, and materially improve our understanding of the geology of California. This 2026 airborne geophysical survey is of significant scale and in an area that has been a focus for some years,” said Jeremy Lancaster, California State Geologist and Director of the California Geological Survey.",
+      "The survey covers a portion of eastern California on the western edge of the Great Basin, which hosts a diverse range of mineral deposits and districts that represent known mineral resources, such as the Pine Creek mine near Bishop, Calif., the largest historic producer of tungsten in the U.S. The survey areas still have significant exploration and production potential.",
+      "Potential critical minerals and related commodities include antimony, arsenic, beryllium, bismuth, boron, copper, fluorine, gallium, germanium, graphite, indium, lead, lithium, mercury, molybdenum, potash, rubidium, silver, tellurium, tin, tungsten, and zinc.",
+      "The new high-resolution geophysical surveys will provide foundational geological data that can be used to support future mineral exploration and also provide crucial subsurface data for assessing geothermal energy potential, as well as volcano and seismic hazards in the Long Valley caldera, the eastern Sierra Nevada range front, and within Owens Valley.",
+      "The survey includes magnetic and radiometric data collection from helicopters along pre-planned flight lines spaced 660 feet (200 meters) apart at an altitude of 330 feet (100 meters). The USGS has contracted NRG Exploration USA Inc. and Woolpert to collect the airborne magnetic and radiometric data. Their AS350 helicopters will be equipped with an elongated “stinger” that extends from the main cabin or helicopter skids and houses sensors collecting data.",
+      "These scientific instruments are completely passive with no emissions that pose a risk to humans, animals, or plant life. No photography or video data will be collected. The aircraft will be flown by experienced pilots who are specially trained and approved for low-level flying. These pilots work with the FAA to ensure flights are safe and in accordance with U.S. law. The surveys will be conducted during daylight hours only.",
+      "Flights will be based out of the Bishop and Lone Pine airports, and will fly over the following counties: Fresno, Inyo, and Mono in California, and Esmeralda and Mineral in Nevada.",
+      "Earth MRI includes airborne geophysical surveys like this one, geochemical reconnaissance surveys, topographic mapping using LiDAR technology, hyperspectral surveys, and geologic mapping projects. The data collected are made freely available to the public on the USGS ScienceBase website."
+    ],
+    focus: {
+      sentence: "These pilots work with the FAA to ensure flights are safe and in accordance with U.S. law.",
+      segments: [
+        { text: "These pilots", type: "Noun phrase", role: "Main subject", clue: "the specially trained pilots mentioned before", vi: "những phi công này" },
+        { text: "work", type: "Finite verb phrase", role: "Main predicate", clue: "cooperate or coordinate", vi: "phối hợp làm việc" },
+        { text: "with the FAA", type: "Preposition phrase", role: "Partner", clue: "together with the Federal Aviation Administration", vi: "với Cục Hàng không Liên bang Hoa Kỳ" },
+        { text: "to ensure", type: "Non-finite verb phrase", role: "Purpose", clue: "in order to make certain", vi: "để đảm bảo" },
+        { text: "flights", type: "Noun phrase", role: "Embedded subject", clue: "the low-level survey flights", vi: "các chuyến bay" },
+        { text: "are", type: "Finite verb phrase", role: "Embedded linking verb", clue: "connects flights with their described condition", vi: "thì / ở trạng thái" },
+        { text: "safe and in accordance with U.S. law", type: "Adjective phrase", role: "Subject complement", clue: "safe and compliant with the law", vi: "an toàn và phù hợp với luật Hoa Kỳ" }
+      ],
+      mainClause: "These pilots work with the FAA",
+      dependentClause: "to ensure flights are safe and in accordance with U.S. law",
+      linker: "to",
+      relation: "purpose: coordination with the FAA is intended to ensure safety and legal compliance",
+      chunks: ["a collaborative effort between", "make data publicly available", "have significant potential", "pose a risk to", "in accordance with", "be equipped with"],
+      meaning: "The trained pilots coordinate with the aviation regulator so the survey flights remain safe and legal."
+    },
+    paragraphQuestions: [
+      { prompt: "What will happen and where?", options: ["Low-level geophysical flights will survey eastern California and part of Nevada", "Passenger flights will stop throughout California", "Satellites will photograph every U.S. state"], answer: 0, explanation: "The opening paragraph states the activity, timing, location and method." },
+      { prompt: "What purposes will the collected data serve?", options: ["Mineral exploration, geothermal assessment and analysis of volcanic and seismic hazards", "Advertising and passenger navigation", "Only photography and video production"], answer: 0, explanation: "The release connects the foundational data with resources, energy and natural hazards." },
+      { prompt: "How does the article address public safety concerns?", options: ["It explains passive instruments, trained pilots, FAA coordination and daylight-only operation", "It says the aircraft will fly without pilots", "It avoids discussing flight safety"], answer: 0, explanation: "The safety paragraph directly addresses emissions, photography, pilot qualifications, legal compliance and timing." },
+      { prompt: "What happens to the resulting data?", options: ["They are made freely available through USGS ScienceBase", "They remain secret indefinitely", "They are used only by helicopter contractors"], answer: 0, explanation: "The final paragraph states that the collected data are publicly available." }
+    ],
+    articleQuestion: { prompt: "Which summary best represents the entire release?", options: ["A federal-state survey will use carefully controlled low-level flights to collect public geological data for resources and hazard assessment", "A private airline is opening a new passenger route", "The government will collect photographs of residents"], answer: 0, explanation: "This includes the partnership, method, purpose, safeguards and public-data outcome." },
+    speaking: "Brief a local resident: explain why the helicopters are flying low, what they collect, how safety is managed and where the data will go.",
+    writing: "Write a four-paragraph public notice: activity → purpose → flight method and safety → data availability.",
+    tutor: {
+      en: "This release anticipates public concern. It first announces the unusual activity, then justifies its scientific value, explains equipment and routes, and answers safety and privacy questions. In the focus sentence, “to ensure” introduces purpose, while “flights are…” is a finite clause inside that purpose unit.",
+      vi: "Bản tin dự đoán trước lo ngại của người dân: thông báo hoạt động bay thấp, giải thích giá trị khoa học, mô tả thiết bị và đường bay, rồi trả lời vấn đề an toàn và quyền riêng tư. Trong câu trọng tâm, “to ensure” chỉ mục đích; “flights are…” là mệnh đề mang thì nằm bên trong cụm mục đích."
+    }
   }
 ];

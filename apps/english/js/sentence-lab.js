@@ -28,6 +28,8 @@
   }
 
   function sceneSvg(type) {
+    if (type === "orbit") return `<svg viewBox="0 0 260 150" role="img" aria-label="A small spacecraft approaches an inactive satellite in Earth orbit"><circle cx="76" cy="78" r="36"/><path d="M48 75c17 10 40 10 56 0M76 42c-10 20-10 52 0 72M42 78h68M25 118c49 24 130 18 194-25"/><rect x="166" y="49" width="30" height="30" rx="4"/><path d="M151 55h15v18h-15m45-18h16v18h-16M181 42v-12m0 61V79M203 100l22 13m-28-3l9-17"/></svg>`;
+    if (type === "geology") return `<svg viewBox="0 0 260 150" role="img" aria-label="A helicopter follows survey lines above layered geology"><path d="M18 118h224M24 118l28-28 25 18 31-45 31 42 25-21 36 34M18 128h224M18 138h224"/><path d="M74 39h79l22 13h-42l-19-15M75 39l-16 15h74M100 55v16m-10 0h20M58 55H38m115 0h30M183 55l16 13"/><circle cx="99" cy="50" r="8"/></svg>`;
     if (type === "health") return `<svg viewBox="0 0 260 150" role="img" aria-label="Health guidance connecting care, movement, food and mental well-being"><circle cx="130" cy="75" r="36"/><path d="M130 53v44M108 75h44M45 35h34v28H45zM181 35h34v28h-34zM45 91h34v28H45zM181 91h34v28h-34zM79 49l25 14M181 49l-25 14M79 105l25-16M181 105l-25-16"/><path d="M55 49h14M198 42c-11 8-11 17 0 25 11-8 11-17 0-25M53 105c8-15 17-15 25 0M191 105h14m-7-7v14"/></svg>`;
     if (type === "devices") return `<svg viewBox="0 0 260 150" role="img" aria-label="A conversation synchronizes across a phone, laptop and watch"><rect x="25" y="35" width="45" height="78" rx="8"/><rect x="99" y="33" width="93" height="63" rx="6"/><path d="M88 112h115l-11-16H99z"/><rect x="215" y="51" width="28" height="45" rx="10"/><path d="M70 58c17-17 28-20 43-19M192 58c12-3 16 0 23 7M112 75c-18 17-28 20-42 18M215 82c-12 4-16 1-23-6"/><path d="M105 35l8 4-5 8M79 88l-9 5 7 8M208 60l7 5-6 7M199 80l-7-4 5-8"/></svg>`;
     return `<svg viewBox="0 0 260 150" role="img" aria-label="A leader sends a message that acknowledges impact, explains context and gives direction"><rect x="35" y="30" width="190" height="92" rx="10"/><path d="M35 43l95 54 95-54M76 26v-9h108v9M79 64h49M79 80h35M146 64h36M146 80h24"/></svg>`;
@@ -50,7 +52,7 @@
 
   function sourceHeader() {
     const lesson = activeLesson;
-    return `<div class="lab-source"><div><span>${escapeHtml(lesson.kind)} · ${escapeHtml(lesson.level)} · ${lesson.minutes} min</span><h2>${escapeHtml(lesson.title)}</h2><p>${escapeHtml(lesson.source.note)}</p></div>${sceneSvg(lesson.visual)}</div><a class="lab-source-link" href="${escapeHtml(lesson.source.url)}" target="_blank" rel="noopener">Read the original: ${escapeHtml(lesson.source.originalTitle)} ↗</a>`;
+    return `<div class="lab-source"><div><span>${escapeHtml(lesson.kind)} · ${escapeHtml(lesson.level)} · ${lesson.minutes} min</span>${lesson.fullText ? '<b class="lab-full-badge">FULL ORIGINAL ARTICLE</b>' : ''}<h2>${escapeHtml(lesson.title)}</h2><p>${escapeHtml(lesson.source.note)}</p></div>${sceneSvg(lesson.visual)}</div><a class="lab-source-link" href="${escapeHtml(lesson.source.url)}" target="_blank" rel="noopener">Read the original: ${escapeHtml(lesson.source.originalTitle)} ↗</a>`;
   }
 
   function readingStage() {
