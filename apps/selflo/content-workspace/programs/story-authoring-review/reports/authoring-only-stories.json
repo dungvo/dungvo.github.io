@@ -1,0 +1,1148 @@
+{
+  "schema_version": "selflo.story-authoring-audit.v1",
+  "generated_at": "2026-10-13T04:39:28Z",
+  "authoring_revision": 84,
+  "release_revision": 45,
+  "summary": {
+    "authoring_story_count": 62,
+    "release_story_count": 16,
+    "authoring_only_story_count": 46,
+    "release_gate_candidate_count": 0,
+    "blocker_counts": {
+      "hero_image_missing": 46,
+      "human_edit_missing": 46,
+      "linked_quote_not_released": 18,
+      "owner_review_missing": 41,
+      "rights_not_cleared": 45,
+      "story_not_active": 46
+    }
+  },
+  "stories": [
+    {
+      "id": "story.after_the_alarm_went_silent",
+      "title_vi": "Sau khi chuông báo đã im",
+      "primary_theme": "rest_wellbeing",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "hands_keep_the_hammers_echo"
+      ],
+      "released_linked_quote_ids": [
+        "hands_keep_the_hammers_echo"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.baker_and_black_mark",
+      "title_vi": "Người thợ làm bánh và dấu than dưới ổ bánh",
+      "primary_theme": "change_growth",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "quote.baker_and_black_mark"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.blue_eraser",
+      "title_vi": "Cục tẩy màu xanh",
+      "primary_theme": "change_growth",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "eraser_shrinks_as_letters_straighten"
+      ],
+      "released_linked_quote_ids": [
+        "eraser_shrinks_as_letters_straighten"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.boatman_and_second_mountain",
+      "title_vi": "Người chèo thuyền và ngọn núi thứ hai",
+      "primary_theme": "change_growth",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "quote.boatman_and_second_mountain"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.builder_and_shapeless_stones",
+      "title_vi": "Người thợ xây và những viên đá không có hình",
+      "primary_theme": "work_achievement",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "quote.builder_and_shapeless_stones"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.cafe_and_smoke_in_curtain",
+      "title_vi": "Quán nhỏ và mùi khói trong tấm rèm",
+      "primary_theme": "emotion",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "an_old_scent_can_open_an_old_room"
+      ],
+      "released_linked_quote_ids": [
+        "an_old_scent_can_open_an_old_room"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.cake_for_the_sixth_floor",
+      "title_vi": "Chiếc bánh dành cho tầng sáu",
+      "primary_theme": "change_growth",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "growth_layer_digest"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.cake_that_leaned_left",
+      "title_vi": "Chiếc bánh nghiêng sang trái",
+      "primary_theme": "self_understanding",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "first_burnt_batch_does_not_erase_the_kitchen"
+      ],
+      "released_linked_quote_ids": [
+        "first_burnt_batch_does_not_erase_the_kitchen"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.call_me_at_the_last_stop",
+      "title_vi": "Gọi em ở trạm cuối",
+      "primary_theme": "relationships",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "someone_calls_at_the_last_stop"
+      ],
+      "released_linked_quote_ids": [
+        "someone_calls_at_the_last_stop"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.chair_across_three_homes",
+      "title_vi": "Chiếc ghế đi qua ba căn nhà",
+      "primary_theme": "meaning_values",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "old_chair_holds_more_than_wood"
+      ],
+      "released_linked_quote_ids": [
+        "old_chair_holds_more_than_wood"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.courier_and_waterline",
+      "title_vi": "Người giao hàng và vạch nước trên tường",
+      "primary_theme": "adversity_resilience",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "accepting_the_flood_reveals_the_road_still_open"
+      ],
+      "released_linked_quote_ids": [
+        "accepting_the_flood_reveals_the_road_still_open"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.cup_with_less_sugar",
+      "title_vi": "Ly sữa ít đường",
+      "primary_theme": "relationships",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "familiar_cafe_remembers_the_order"
+      ],
+      "released_linked_quote_ids": [
+        "familiar_cafe_remembers_the_order"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.driver_and_last_stop_light",
+      "title_vi": "Người lái xe và ô cửa ở bến cuối",
+      "primary_theme": "relationships",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "safe_return_can_help_us_go_farther"
+      ],
+      "released_linked_quote_ids": [
+        "safe_return_can_help_us_go_farther"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.envelope_that_could_not_hold_strength",
+      "title_vi": "Phong bì không đựng được sức người",
+      "primary_theme": "rest_wellbeing",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "energy_has_a_budget"
+      ],
+      "released_linked_quote_ids": [
+        "energy_has_a_budget"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.first_root_in_the_dark",
+      "title_vi": "Chiếc rễ đầu tiên trong bóng tối",
+      "primary_theme": "change_growth",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "seed_grows_out_of_sight"
+      ],
+      "released_linked_quote_ids": [
+        "seed_grows_out_of_sight"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.forest_still_dripping",
+      "title_vi": "Khu rừng còn nhỏ giọt",
+      "primary_theme": "adversity_resilience",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "roof_releases_the_storm_slowly"
+      ],
+      "released_linked_quote_ids": [
+        "roof_releases_the_storm_slowly"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.four_pots_on_the_balcony",
+      "title_vi": "Bốn chậu cây ngoài ban công",
+      "primary_theme": "self_understanding",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "comparison_steals_joy"
+      ],
+      "released_linked_quote_ids": [
+        "comparison_steals_joy"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.garden_with_a_new_patch_of_sun",
+      "title_vi": "Khoảng nắng mới trong khu vườn",
+      "primary_theme": "adversity_resilience",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "new_light_enters_where_branch_broke"
+      ],
+      "released_linked_quote_ids": [
+        "new_light_enters_where_branch_broke"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.half_a_wet_shoulder",
+      "title_vi": "Nửa vai áo bị ướt",
+      "primary_theme": "relationships",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "one_umbrella_keeps_two_steps_together"
+      ],
+      "released_linked_quote_ids": [
+        "one_umbrella_keeps_two_steps_together"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.last_window_in_the_building",
+      "title_vi": "Ô cửa cuối cùng trong khu nhà",
+      "primary_theme": "rest_wellbeing",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "house_turns_off_one_window_at_a_time"
+      ],
+      "released_linked_quote_ids": [
+        "house_turns_off_one_window_at_a_time"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.laundry_and_two_bells",
+      "title_vi": "Tiệm giặt và hai tiếng chuông đóng cửa",
+      "primary_theme": "rest_wellbeing",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "quote.laundry_and_two_bells"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.morning_after_the_lantern_festival",
+      "title_vi": "Buổi sáng sau hội đèn",
+      "primary_theme": "rest_wellbeing",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "tide_does_not_apologize"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.nine_oclock_morning",
+      "title_vi": "Buổi sáng lúc chín giờ",
+      "primary_theme": "self_understanding",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "late_flower_meets_another_sky"
+      ],
+      "released_linked_quote_ids": [
+        "late_flower_meets_another_sky"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.note_in_measure_seventeen",
+      "title_vi": "Nốt Si ở ô nhịp mười bảy",
+      "primary_theme": "work_achievement",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "musician_stays_with_one_lost_note"
+      ],
+      "released_linked_quote_ids": [
+        "musician_stays_with_one_lost_note"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.operator_and_one_beat",
+      "title_vi": "Người trực bàn và một nhịp trống",
+      "primary_theme": "attention",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "a_pause_keeps_the_first_reaction_from_becoming_the_only_choice"
+      ],
+      "released_linked_quote_ids": [
+        "a_pause_keeps_the_first_reaction_from_becoming_the_only_choice"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.original_an_and_lamp_held_too_close",
+      "title_vi": "An và chiếc đèn cầm quá gần — Bản gốc",
+      "primary_theme": "work_achievement",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "do_not_throw_the_stone_into_the_next_persons_lake"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.original_boatman_and_second_mountain",
+      "title_vi": "Người chèo thuyền và ngọn núi thứ hai — Bản gốc",
+      "primary_theme": "change_growth",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "approved",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "freedom_begins_when_one_path_is_not_the_only_path"
+      ],
+      "released_linked_quote_ids": [
+        "freedom_begins_when_one_path_is_not_the_only_path"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.original_keeper_of_the_lamp",
+      "title_vi": "Người giữ ngọn đèn — Bản gốc",
+      "primary_theme": "meaning_values",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "approved",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "keep_the_lamp_when_the_sea_has_waves"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.original_lam_and_tomorrow_passenger",
+      "title_vi": "Lâm và người hành khách tên Ngày Mai — Bản gốc",
+      "primary_theme": "attention",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "approved",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "tomorrow_may_bring_waves_tonight_return_to_breath"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.original_thanh_and_one_more_meter",
+      "title_vi": "Thành và một mét tiếp theo — Bản gốc",
+      "primary_theme": "adversity_resilience",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "approved",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "every_long_road_is_crossed_one_meter_at_a_time"
+      ],
+      "released_linked_quote_ids": [
+        "every_long_road_is_crossed_one_meter_at_a_time"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.original_water_carrier_and_tomorrow_stone",
+      "title_vi": "Người gánh nước và hòn đá của ngày mai — Bản gốc",
+      "primary_theme": "attention",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "approved",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "tomorrows_stone_does_not_get_lighter_overnight"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.photograph_missing_a_corner",
+      "title_vi": "Bức ảnh thiếu một góc",
+      "primary_theme": "work_achievement",
+      "schema_version": "1.1",
+      "story_status": "draft",
+      "rights_status": "public_domain",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "attributed.ma.iv_31.love_your_art"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.potter_and_two_hands",
+      "title_vi": "Người thợ gốm và hai bàn tay",
+      "primary_theme": "self_understanding",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "quote.potter_and_two_hands"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.rain_arrives_downstream_late",
+      "title_vi": "Cơn mưa đến muộn dưới hạ lưu",
+      "primary_theme": "emotion",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "river_carries_the_upstream_rain"
+      ],
+      "released_linked_quote_ids": [
+        "river_carries_the_upstream_rain"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.recordist_and_room_not_silent",
+      "title_vi": "Người thu âm và căn phòng không chịu im",
+      "primary_theme": "attention",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "peace_does_not_require_a_silent_room"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.roof_of_many_hands",
+      "title_vi": "Mái nhà được giữ bởi nhiều bàn tay",
+      "primary_theme": "adversity_resilience",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "quote.roof_of_many_hands"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.saturday_without_a_highlight",
+      "title_vi": "Ngày thứ Bảy không có ảnh đẹp",
+      "primary_theme": "rest_wellbeing",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "rest_is_part_of_rhythm"
+      ],
+      "released_linked_quote_ids": [
+        "rest_is_part_of_rhythm"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.seam_opened_three_times",
+      "title_vi": "Đường may tháo ba lần",
+      "primary_theme": "change_growth",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "restitching_teaches_the_hand"
+      ],
+      "released_linked_quote_ids": [
+        "restitching_teaches_the_hand"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.shoes_that_went_to_work_twice",
+      "title_vi": "Đôi giày đi làm hai lần",
+      "primary_theme": "attention",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "do_not_go_to_work_twice"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.signmaker_and_first_square",
+      "title_vi": "Người làm bảng hiệu và ô vuông đầu tiên",
+      "primary_theme": "adversity_resilience",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "a_large_task_only_needs_one_first_square"
+      ],
+      "released_linked_quote_ids": [
+        "a_large_task_only_needs_one_first_square"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.three_dots_on_the_screen",
+      "title_vi": "Dấu ba chấm trên màn hình",
+      "primary_theme": "attention",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "tea_waits_beside_the_screen"
+      ],
+      "released_linked_quote_ids": [
+        "tea_waits_beside_the_screen"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.three_numbers_at_the_atm",
+      "title_vi": "Ba con số trên màn hình ATM",
+      "primary_theme": "rest_wellbeing",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "energy_layer_digest"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.ticket_printed_for_tuesday",
+      "title_vi": "Tấm vé ngày thứ Ba",
+      "primary_theme": "meaning_values",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "bus_ticket_keeps_the_day_of_return"
+      ],
+      "released_linked_quote_ids": [
+        "bus_ticket_keeps_the_day_of_return"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.two_sides_of_one_mountain",
+      "title_vi": "Hai phía của một ngọn núi",
+      "primary_theme": "self_understanding",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "attributed.laozi.chapter_02.mutual_arising"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.two_tailors_and_one_measure",
+      "title_vi": "Hai người thợ may và một thước đo",
+      "primary_theme": "self_understanding",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "another_persons_measure_cannot_fit_your_life"
+      ],
+      "released_linked_quote_ids": [
+        "another_persons_measure_cannot_fit_your_life"
+      ],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    },
+    {
+      "id": "story.warehouse_path_between_boxes",
+      "title_vi": "Người giữ kho và lối đi giữa những chiếc hộp",
+      "primary_theme": "work_achievement",
+      "schema_version": "1.0",
+      "story_status": "draft",
+      "rights_status": "unverified",
+      "review_status": "needs_owner_review",
+      "human_edited": false,
+      "has_hero_image": false,
+      "linked_quote_ids": [
+        "quote.warehouse_path_between_boxes"
+      ],
+      "released_linked_quote_ids": [],
+      "blockers": [
+        "story_not_active",
+        "rights_not_cleared",
+        "owner_review_missing",
+        "human_edit_missing",
+        "hero_image_missing",
+        "linked_quote_not_released"
+      ],
+      "preliminary_disposition": "needs_editorial_review"
+    }
+  ]
+}
