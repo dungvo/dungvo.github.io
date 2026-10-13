@@ -1,5 +1,7 @@
 # Selflo — Backlog content về học, hiểu và suy luận
 
+> Sổ trạng thái hợp nhất của idea, phân tích, Facebook và Selflo Release nằm tại [`../../../content-workspace/KNOWLEDGE_CONTENT_INVENTORY.vi.md`](../../../content-workspace/KNOWLEDGE_CONTENT_INVENTORY.vi.md). File này tiếp tục giữ brief chi tiết cho nhóm chủ đề học, hiểu và suy luận.
+
 **Ngày:** 2026-10-09  
 **Trạng thái:** Backlog ý tưởng; không phải lịch xuất bản  
 **Nguyên tắc:** Giữ câu hỏi thật, không ép mọi chủ đề thành một câu chuyện cảm xúc hoặc kết luận đạo lý.

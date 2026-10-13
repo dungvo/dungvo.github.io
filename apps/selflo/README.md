@@ -2,6 +2,12 @@
 
 > **Bắt đầu ở đây.** Repo này chứa website public, content source và contract dùng chung với app. Nếu chỉ cần thay nội dung, đọc [`docs/content-lifecycle.md`](docs/content-lifecycle.md). Nếu thay format hoặc semantics, đọc [`shared/README.md`](shared/README.md) trước. Danh sách lệnh nằm tại [`docs/commands.md`](docs/commands.md).
 
+Nếu quay lại để tiếp tục phần đang làm dở, đọc theo thứ tự:
+
+1. [`content-workspace/REPO_WORK_IN_PROGRESS.vi.md`](content-workspace/REPO_WORK_IN_PROGRESS.vi.md) — toàn bộ feature và nội dung đang dang dở, phần nào cần làm tiếp, phần nào đã tạm dừng.
+2. [`content-workspace/KNOWLEDGE_CONTENT_INVENTORY.vi.md`](content-workspace/KNOWLEDGE_CONTENT_INVENTORY.vi.md) — sổ ý tưởng Knowledge, bài phân tích, bản nháp, Facebook và Selflo Release.
+3. [`content-workspace/README.md`](content-workspace/README.md) — ý nghĩa từng khu vực trong workspace và quy tắc cập nhật.
+
 ## Bản đồ nhanh
 
 | Khu vực | Vai trò |
@@ -12,6 +18,7 @@
 | `research/` | Nguồn nghiên cứu theo chủ đề, gồm raw và Markdown sạch |
 | `api/` | Projection sinh tự động cho catalog/search; không phải source of truth |
 | `studio/` | Review, Catalog, Matrix, Reader Lab và authoring tools; không xuất hiện trong navigation public |
+| `content-workspace/` | Ý tưởng, nghiên cứu, bản nháp, prototype và bảng theo dõi công việc chưa phải Release |
 | `docs/` | Cấu trúc, workflow, command và mockup đã chốt |
 
 Website public chỉ hiển thị những gì đã Release. Authoring/Developer Studio dùng URL riêng và không được link từ giao diện công khai.

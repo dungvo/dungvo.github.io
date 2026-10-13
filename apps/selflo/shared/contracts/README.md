@@ -17,6 +17,14 @@ Mọi thay đổi có thể ảnh hưởng cách app decode, validate, activate 
 
 Machine-readable index nằm tại [`registry.json`](registry.json). Registry chỉ định vị contract và executable artifacts; semantics normative nằm trong `CONTRACT.vi.md` và schema/fixture được contract dẫn tới.
 
+## Open proposals
+
+| Proposal | Mục đích | Trạng thái |
+|---|---|---|
+| [`selflo.rhythm-knowledge.v1`](proposals/rhythm-knowledge-v1/PROPOSAL.vi.md) | Tài liệu bàn giao lịch sử cho Knowledge trong `Hiểu nhịp của mình` | Tạm dừng theo ADR-0002; không tiếp tục K2, hợp đồng dùng chung hoặc phát hành |
+
+Proposal chưa phải active contract và không được thêm vào runtime/Release chỉ vì xuất hiện trong bảng này.
+
 ## Cấu trúc bắt buộc
 
 ```text

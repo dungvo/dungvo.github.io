@@ -1,5 +1,7 @@
 # Mê cung kiến thức — Backlog chủ đề
 
+> Sổ trạng thái hợp nhất nằm tại [`../KNOWLEDGE_CONTENT_INVENTORY.vi.md`](../KNOWLEDGE_CONTENT_INVENTORY.vi.md). File này giữ brief riêng của Knowledge Maze; không dùng nó như inventory chung của toàn bộ content.
+
 Backlog này dùng để chọn prototype và phát triển content; không phải lịch release.
 
 ## P0 — Prototype cấu trúc
