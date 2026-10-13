@@ -28,6 +28,7 @@ Hoàn thành
 | Mã | Chương trình | Ưu tiên | Trạng thái | Checkpoint hiện tại | Nơi theo dõi |
 |---|---|---:|---|---|---|
 | `PM-QUOTE-P0` | Làm sạch và vận hành kho quote | P0 | Tạm dừng theo owner | Release 45 public: 656 quote; 1.079 Authoring; 3.735 Research/Raw để review sau | [`quote-library-p0/STATUS.vi.md`](quote-library-p0/STATUS.vi.md) |
-| `PM-STORY-P1` | Review story chỉ có trong Authoring | P1 | Đang thực hiện | Baseline: 62 Authoring, 16 Release, 46 Authoring-only | [`story-authoring-review/STATUS.vi.md`](story-authoring-review/STATUS.vi.md) |
+| `PM-STORY-P1` | Review story chỉ có trong Authoring | P1 | Tạm dừng theo owner | Baseline: 62 Authoring, 16 Release, 46 Authoring-only; owner sẽ đọc và bổ sung sau | [`story-authoring-review/STATUS.vi.md`](story-authoring-review/STATUS.vi.md) |
+| `PM-KNOWLEDGE-P1` | Hoàn thành một bài Knowledge | P1 | Đang thực hiện | Chọn nhóm so sánh xã hội/ghen tị; hợp nhất ba tài liệu hiện có thành một bài để owner đọc | [`knowledge-article-p1/STATUS.vi.md`](knowledge-article-p1/STATUS.vi.md) |
 
 Khi mở lại công việc, đọc Registry → `STATUS.vi.md` → phần cuối `WORKLOG.vi.md` trước khi sửa file.

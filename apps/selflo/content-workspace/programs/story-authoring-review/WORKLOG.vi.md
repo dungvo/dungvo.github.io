@@ -14,3 +14,9 @@
 - Xác nhận 0/46 story đủ toàn bộ gate tự động để Release ngay.
 - Blocker lớn nhất: 46 thiếu hero image, 46 chưa xác nhận human edit, 45 chưa clear quyền, 41 thiếu owner review và 18 chưa có quote liên kết đã Release.
 - Chọn batch đọc đầu tiên gồm năm story từng được đánh dấu `approved` và `Bức ảnh thiếu một góc` vì quyền đang ghi `public_domain` dù nội dung là bản thảo Story Studio; cần kiểm tra semantics trước khi giữ verdict quyền.
+
+## 2026-10-13 — Owner tạm dừng phase story
+
+- Không review, sửa hoặc Release thêm story trong phase hiện tại.
+- Owner sẽ tự đọc và bổ sung story sau.
+- Giữ nguyên checkpoint 46 Authoring-only và report S1 để có thể tiếp tục mà không audit lại.

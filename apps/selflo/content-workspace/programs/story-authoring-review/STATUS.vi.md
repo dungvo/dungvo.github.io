@@ -1,7 +1,7 @@
 # PM-STORY-P1 — Review story chỉ có trong Authoring
 
 **Ưu tiên:** P1
-**Trạng thái tổng:** Đang thực hiện
+**Trạng thái tổng:** Tạm dừng theo quyết định owner
 **Bắt đầu:** 2026-10-13
 **Owner nghiệm thu cuối:** Dũng
 **Phạm vi:** 46 story có trong Authoring revision 84 nhưng chưa có trong Release revision 45.
@@ -53,4 +53,4 @@ Audit chỉ kiểm tra điều kiện dữ liệu. Nó không thay thế việc 
 
 ## Đúng một bước tiếp theo
 
-Review nội dung batch đầu gồm năm story đã từng được đánh dấu `approved` và story `Bức ảnh thiếu một góc` đang có metadata quyền bất thường; ghi disposition nhưng chưa publish.
+Khi owner quay lại story, tiếp tục bằng việc đọc batch đầu gồm năm story đã từng được đánh dấu `approved` và story `Bức ảnh thiếu một góc`; không chạy lại baseline S0–S1.
