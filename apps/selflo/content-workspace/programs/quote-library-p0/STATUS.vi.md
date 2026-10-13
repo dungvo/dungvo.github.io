@@ -45,15 +45,15 @@ Chuẩn đầy đủ: [`../DEFINITION_OF_DONE.vi.md`](../DEFINITION_OF_DONE.vi.m
 | Q3 | Xác minh nguồn và quyền | Hoàn thành cho baseline P0 | Câu chưa đủ bằng chứng đã kết luận Authoring hoặc Research/Raw; không còn bypass quyền |
 | Q4 | Review nội dung và AI-delegated approval | Hoàn thành cho baseline P0 | 656 Release; 1.073 Authoring owner-review; phần còn lại Research/Raw |
 | Q5 | Bổ sung theo khoảng trống | Ngoài phạm vi đóng baseline | Không cần bổ sung quote mới để kết luận 5.470 dòng hiện có |
-| Q6 | Release theo đợt | Hoàn thành package local | Release 45 có 656 quote; chưa deploy web |
-| Q7 | Đối chiếu và đóng chương trình | Hoàn thành phân loại | [`P0_FINAL_CLASSIFICATION_2026-10-13.vi.md`](P0_FINAL_CLASSIFICATION_2026-10-13.vi.md); deployment còn là bước phát hành riêng |
+| Q6 | Release theo đợt | Hoàn thành | Release 45 có 656 quote và đã kiểm tra trên web public |
+| Q7 | Đối chiếu và đóng chương trình | Hoàn thành phần đã chốt; backlog tạm dừng | [`P0_FINAL_CLASSIFICATION_2026-10-13.vi.md`](P0_FINAL_CLASSIFICATION_2026-10-13.vi.md); 3.735 Research/Raw giữ để review sau |
 
 ## Phát hiện đã xác nhận
 
 - Generator Review Matrix trước đây ghi vào `review-matrix/data.json`, nhưng Studio đọc `studio/review-matrix/data.json`; lỗi đã sửa.
 - Dashboard đã được tạo lại và gắn thời gian/revision.
-- Authoring hiện có 1.844 quote và 62 story.
-- Release hiện có 318 quote và 16 story.
+- Authoring hiện có 1.850 quote; trong đó hàng owner-review theo baseline là 1.079.
+- Release 45 hiện có 656 quote trên 9 gói chủ đề.
 - State của daily review có 1.432 candidate đã `imported`, nhưng AI ledger và matrix dùng lifecycle khác; cần hợp nhất trong Q0.
 
 ## Checkpoint gần nhất
@@ -62,4 +62,4 @@ Sổ ngày 2026-10-13 đã phân luồng đủ 5.470 dòng, nhưng **không còn
 
 ## Đúng một bước tiếp theo
 
-Commit/push và kiểm tra web công khai cho Release 45 có 656 quote. Khi owner mở lại backlog, tiếp tục từ 3.735 Research/Raw và report Q8 hiện có; không quét lại từ đầu.
+Khi owner mở lại backlog, tiếp tục từ 3.735 Research/Raw và report Q8 hiện có; không quét lại từ đầu.

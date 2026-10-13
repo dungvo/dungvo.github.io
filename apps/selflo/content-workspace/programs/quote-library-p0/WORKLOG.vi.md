@@ -282,3 +282,11 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 - Không promote sáu câu Kiều từ Authoring lên Release; chúng vẫn cần owner review.
 - Chốt Release 45 với đúng 656 quote làm gói public hiện tại.
 - Checkpoint phục hồi: `reports/q8-raw-source-groups.json`, `reports/q8-kieu-item-review.json`, Authoring 84 và Review Matrix hiện hành.
+
+## 2026-10-13 — Release 45 đã public
+
+- Commit phát hành: `21e4812` (`Publish Selflo quote Release 45`).
+- Đã push lên `origin/main`.
+- Đã kiểm tra manifest trên GitHub Pages: `library_revision = 45`.
+- Đã tải và đếm cả 9 gói chủ đề public: tổng đúng 656 quote.
+- 1.079 quote cần owner review tiếp tục ở Authoring; 3.735 dòng Research/Raw giữ nguyên để xử lý sau.
