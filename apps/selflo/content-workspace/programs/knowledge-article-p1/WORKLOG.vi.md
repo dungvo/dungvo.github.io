@@ -15,3 +15,9 @@
 - Giữ ví dụ đời thường và không gắn với trải nghiệm riêng của owner.
 - Nêu rõ không thể suy động cơ từ một bình luận và bằng chứng mạng xã hội phần lớn không đủ để kết luận chiều nguyên nhân.
 - Chưa tạo artwork, payload Authoring hoặc Release trước khi owner đọc và chấp nhận nội dung.
+
+## 2026-10-13 — Owner tạm dừng phase Knowledge
+
+- Dừng tại bản bài 01; chưa có owner acceptance về nội dung.
+- Không làm artwork, schema, Authoring hoặc Release.
+- Khi quay lại, owner đọc trực tiếp `DRAFT_VI_01.vi.md`; phản hồi theo đoạn rồi mới sửa.

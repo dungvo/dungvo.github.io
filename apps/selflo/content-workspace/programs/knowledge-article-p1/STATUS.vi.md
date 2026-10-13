@@ -1,7 +1,7 @@
 # PM-KNOWLEDGE-P1 — Hoàn thành một bài Knowledge
 
 **Ưu tiên:** P1
-**Trạng thái tổng:** Đang thực hiện
+**Trạng thái tổng:** Tạm dừng theo quyết định owner
 **Bắt đầu:** 2026-10-13
 **Owner nghiệm thu cuối:** Dũng
 
@@ -50,4 +50,4 @@
 
 ## Đúng một bước tiếp theo
 
-Owner đọc `DRAFT_VI_01.vi.md` như một bài Knowledge hoàn chỉnh và đánh dấu đoạn khó hiểu, không chạm hoặc chưa có kiến thức mới; sửa bài trước khi làm artwork/package.
+Khi owner mở lại phase Knowledge, đọc `DRAFT_VI_01.vi.md` như một bài hoàn chỉnh và đánh dấu đoạn khó hiểu, không chạm hoặc chưa có kiến thức mới; sửa bài trước khi làm artwork/package. Không nghiên cứu lại từ đầu và không mở chủ đề khác trước bước này.
