@@ -125,6 +125,9 @@ def staged_publish(root,source_changes,channels):
     library=root/'perspective-library';publisher=root/'scripts/publish-perspective-library'
     with tempfile.TemporaryDirectory(prefix='selflo-daily-review-') as t:
         tmp=Path(t);shutil.copytree(library,tmp/'perspective-library')
+        # The publisher invokes semantic validators relative to --repo-root.
+        # Keep this transaction self-contained, as prepare-perspective does.
+        shutil.copytree(root/'scripts',tmp/'scripts')
         for rel,obj in source_changes.items(): write(tmp/rel,obj)
         for channel in channels:run(['ruby',str(publisher),'--repo-root',str(tmp),'--channel',channel])
         # Install whole canonical and generated channel files that changed, preserving candidate package.

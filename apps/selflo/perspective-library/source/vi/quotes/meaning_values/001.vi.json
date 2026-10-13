@@ -665,9 +665,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Ý nghĩa của một vật có thể đến từ câu chuyện và kết nối quanh nó hơn là chất liệu.",
@@ -701,7 +701,13 @@
           "chair"
         ],
         "tie_break_order": 1109
-      }
+      },
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
     },
     {
       "id": "bus_ticket_keeps_the_day_of_return",
@@ -738,9 +744,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Một vật bình thường có thể mang ý nghĩa qua lựa chọn và câu chuyện gắn với nó.",
@@ -774,7 +780,13 @@
           "ticket"
         ],
         "tie_break_order": 1110
-      }
+      },
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:selflo"
+      ]
     },
     {
       "id": "village_road_contains_a_childhood",

@@ -18,11 +18,12 @@ class PrepareTests(unittest.TestCase):
         self.source = self.root / 'perspective-library/source/vi'
         self.source.mkdir(parents=True)
         self.args = SimpleNamespace(quote=['q'], channel='release', list=False, rights=None,
-                                   rights_note=None, reviewer='owner:test', confirm_knowledge_checked=False, dry_run=False)
-        self.quote = {'id': 'q', 'story_id': 's', 'primary_theme': 'meaning',
+                                   rights_note=None, reviewer='owner:test', confirm_knowledge_checked=False,
+                                   dry_run=False, quote_only=False, backfill_tags_by_theme=False)
+        self.quote = {'id': 'q', 'story_id': 's', 'primary_theme': 'meaning_values',
                       'review': {'status': 'needs_owner_review'}, 'rights': {'status': 'selflo_owned'},
                       'metadata': {'concepts': ['c']}}
-        self.story = {'id': 's', 'status': 'draft', 'primary_theme': 'meaning',
+        self.story = {'id': 's', 'status': 'draft', 'primary_theme': 'meaning_values',
                       'review': {'status': 'needs_owner_review'}, 'rights': {'status': 'selflo_owned'}}
         self.knowledge = {'concepts': [{'id': 'c', 'status': 'draft', 'related_theory_ids': ['t']}],
                           'theories': [{'id': 't', 'status': 'draft', 'validation_status': 'pending_source_review',
@@ -82,6 +83,22 @@ class PrepareTests(unittest.TestCase):
         self.assertEqual(changes[self.source / 'q.json']['quotes'][0]['rights']['status'], 'selflo_owned')
         self.assertNotIn(self.source / 'k.json', changes)
 
+    def test_quote_only_approves_quote_without_changing_story(self):
+        self.args.quote_only = True
+        self.args.confirm_knowledge_checked = True
+        changes = module.prepare(self.root, self.args)
+        self.assertEqual(changes[self.source / 'q.json']['quotes'][0]['review']['status'], 'approved')
+        self.assertNotIn(self.source / 's.json', changes)
+        self.assertEqual(changes[self.source / 'k.json']['concepts'][0]['status'], 'approved')
+
+    def test_backfill_tags_by_theme(self):
+        self.args.quote_only = True
+        self.args.backfill_tags_by_theme = True
+        self.args.confirm_knowledge_checked = True
+        changes = module.prepare(self.root, self.args)
+        tags = changes[self.source / 'q.json']['quotes'][0]['tags']
+        self.assertIn('origin:selflo', tags)
+
     def test_dry_run_never_writes_or_runs_publisher(self):
         self.args.channel = 'authoring'
         self.args.dry_run = True
@@ -123,6 +140,12 @@ class PublisherRevisionTests(unittest.TestCase):
             code = helper + '\nputs next_available_revision(ARGV[0], "stories/story.vi.json", nil)\nputs next_available_revision(ARGV[0], "stories/story.vi.json", {"revision" => 7})\n'
             result = module.subprocess.run(['ruby', '-e', code, str(root)], check=True, capture_output=True, text=True)
             self.assertEqual(result.stdout.splitlines(), ['5', '8'])
+
+
+class StagedPublisherTests(unittest.TestCase):
+    def test_staging_copies_script_dependencies(self):
+        source = Path(__file__).with_name('prepare-perspective.py').read_text()
+        self.assertIn("shutil.copytree(scripts, staged / 'scripts')", source)
 
 
 if __name__ == '__main__':

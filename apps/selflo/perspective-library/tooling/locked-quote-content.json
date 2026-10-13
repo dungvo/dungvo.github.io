@@ -1,7 +1,8 @@
 {
-  "schema_version": "selflo.quote-content-lock.v1",
-  "normalization": "Sort quotes by id; encode [id, text_vi] and [id, authorship] arrays as compact UTF-8 JSON; then SHA-256.",
-  "quote_count": 389,
-  "quote_text_sha256": "8e0794b1f01a36d7572a6bc5526c98b425c63dde0492c876409d1107ac7bf821",
-  "authorship_sha256": "4b509bcca9dca4961e0d6fe87da162b209548b424d72844404e4e4044626c6a7"
+  "schema_version": "selflo.locked-quote-content.v1",
+  "generated_at": "2026-10-13T03:30:47.263986Z",
+  "reason": "P0 quote corpus review: lock canonical text and provenance after Authoring 84 / Release 45.",
+  "quote_count": 1850,
+  "quote_text_sha256": "68a8f118de99e3cbbcb3a34e6157144b0f07621d0af3ff75e5adad88d47f32a8",
+  "authorship_sha256": "8cf17be063fe1260fa58507c569da078a1cef9af75214bd4b31d9701fc161cc5"
 }

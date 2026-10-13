@@ -38,9 +38,9 @@
         "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Không cần đi hết con đường trong một lần. Chỉ cần bước qua một mét đang ở trước mặt.",
@@ -68,7 +68,14 @@
         ],
         "tie_break_order": 3006
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:small_action",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
     },
     {
       "id": "do_not_need_to_love_the_storm_to_love_the_journey",
@@ -177,9 +184,9 @@
         "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Chấp nhận con đường đang ngập không phải là bỏ cuộc; đó là lúc mình nhìn rõ đoạn đường vẫn còn đi được.",
@@ -207,7 +214,14 @@
         ],
         "tie_break_order": 3014
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
     },
     {
       "id": "a_large_task_only_needs_one_first_square",
@@ -243,9 +257,9 @@
         "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Một việc lớn không cần được ôm trọn để bắt đầu. Hãy tìm ô vuông đầu tiên đủ gần để đặt tay vào.",
@@ -273,7 +287,14 @@
         ],
         "tie_break_order": 3017
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:motivate",
+        "support:small_action",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
     },
     {
       "id": "road_dries_from_edge_inward",

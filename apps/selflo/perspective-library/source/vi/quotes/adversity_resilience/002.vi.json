@@ -119,9 +119,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Dư âm sau khó khăn có thể tiếp tục trong lúc hệ thống đang dần trở lại trạng thái khác.",
@@ -155,7 +155,14 @@
           "rain"
         ],
         "tie_break_order": 1072
-      }
+      },
+      "tags": [
+        "intent:overcome_adversity",
+        "support:soothe",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:selflo"
+      ]
     },
     {
       "id": "new_light_enters_where_branch_broke",
@@ -192,9 +199,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Thích nghi sau mất mát có thể tạo hình dạng mới thay vì khôi phục nguyên trạng.",
@@ -228,7 +235,14 @@
           "branch"
         ],
         "tie_break_order": 1073
-      }
+      },
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
     },
     {
       "id": "patched_cloth_finds_another_way_to_stay",

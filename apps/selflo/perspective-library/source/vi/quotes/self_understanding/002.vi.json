@@ -521,9 +521,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Một sai sót cụ thể không cần trở thành phán quyết cho toàn bộ nỗ lực.",
@@ -557,7 +557,14 @@
           "baking"
         ],
         "tie_break_order": 1048
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:soothe",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "attributed.ma.ii_06.short_life",

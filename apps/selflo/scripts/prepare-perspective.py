@@ -12,6 +12,17 @@ import sys
 import tempfile
 
 RIGHTS = ('selflo_owned', 'public_domain', 'licensed', 'permission_granted')
+TAGS_BY_THEME = {
+    'adversity_resilience':['intent:overcome_adversity','support:new_perspective','topic:adversity_recovery'],
+    'attention':['intent:calm','support:clarify','topic:attention_presence'],
+    'change_growth':['intent:personal_growth','support:new_perspective','topic:change_growth'],
+    'emotion':['intent:understand_self','support:clarify','topic:emotions'],
+    'meaning_values':['intent:meaning','support:new_perspective','topic:meaning_values'],
+    'relationships':['intent:relationships','support:clarify','topic:relationships'],
+    'rest_wellbeing':['intent:calm','support:soothe','topic:rest_wellbeing'],
+    'self_understanding':['intent:understand_self','support:clarify','topic:self_understanding'],
+    'work_achievement':['intent:work_direction','support:motivate','topic:work_choices'],
+}
 
 
 def read(path):
@@ -103,7 +114,7 @@ def prepare(root, args):
         q = quotes[ident]
         selected.append(q)
         sid = q.get('story_id')
-        if sid:
+        if sid and not args.quote_only:
             if sid not in stories:
                 raise ValueError('Missing linked story: ' + sid)
             owners = [x['id'] for x in quotes.values() if x.get('story_id') == sid]
@@ -112,7 +123,8 @@ def prepare(root, args):
             if stories[sid]['primary_theme'] != q['primary_theme']:
                 raise ValueError('Quote/story theme mismatch: ' + ident)
             linked[sid] = stories[sid]
-        print(f"{ident} -> {sid or '(quote only)'} -> {args.channel}")
+        target = '(quote only; linked story unchanged)' if sid and args.quote_only else (sid or '(quote only)')
+        print(f"{ident} -> {target} -> {args.channel}")
     now = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     for entity in selected + list(linked.values()):
         rights = entity.setdefault('rights', {})
@@ -134,6 +146,14 @@ def prepare(root, args):
                 entity['review'] = {'status': 'approved', 'reviewed_by': args.reviewer, 'reviewed_at': now}
         else:
             entity['review'] = {'status': 'needs_owner_review', 'reviewed_by': None, 'reviewed_at': None}
+    if args.backfill_tags_by_theme:
+        for quote in selected:
+            if not quote.get('tags'):
+                theme = quote.get('primary_theme')
+                if theme not in TAGS_BY_THEME:
+                    raise ValueError('No reviewed tag mapping for theme: ' + str(theme))
+                origin = 'origin:classical_text' if args.rights == 'public_domain' else 'origin:selflo'
+                quote['tags'] = TAGS_BY_THEME[theme] + [origin]
     for story in linked.values():
         story['status'] = 'active' if args.channel == 'release' else 'draft'
     if args.channel == 'release':
@@ -175,6 +195,12 @@ def publish_transaction(root, changes, args, baseline):
     with tempfile.TemporaryDirectory(prefix='selflo-prepare-') as directory:
         staged = Path(directory)
         shutil.copytree(library, staged / 'perspective-library')
+        # Publisher resolves validators and helper scripts relative to --repo-root.
+        # Keep the staged transaction self-contained instead of reaching back into
+        # the live checkout while validation runs.
+        scripts = root / 'scripts'
+        if scripts.is_dir():
+            shutil.copytree(scripts, staged / 'scripts')
         for path, value in changes.items():
             (staged / path.relative_to(root)).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
         # Authoring demotion must also refresh an existing Release to withdraw the pair.
@@ -224,6 +250,9 @@ def main(argv=None):
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent.parent, help='Selflo website root')
     parser.add_argument('--channel', choices=('authoring', 'release'))
     parser.add_argument('--quote', action='append', help='Exact quote ID; repeat for a batch')
+    parser.add_argument('--quote-file', type=Path, help='JSON report containing a candidates array with quote IDs')
+    parser.add_argument('--quote-only', action='store_true', help='Review/publish selected quotes without changing linked stories; Release projects unresolved story links to null')
+    parser.add_argument('--backfill-tags-by-theme', action='store_true', help='Add conservative content-tags.v1 defaults when selected quotes have no tags')
     parser.add_argument('--list', action='store_true', help='List quote IDs, linked stories and status')
     parser.add_argument('--reviewer', default='owner:dungvo')
     parser.add_argument('--rights', choices=RIGHTS, help='Explicit rights assertion for ALL selected quotes and stories; otherwise retain current rights')
@@ -232,6 +261,10 @@ def main(argv=None):
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args(argv)
     try:
+        if args.quote_file:
+            payload = read(args.quote_file.resolve())
+            file_ids = [item['id'] for item in payload.get('candidates', [])]
+            args.quote = (args.quote or []) + file_ids
         if not args.list and not args.channel:
             raise ValueError('Supply --channel authoring or --channel release explicitly')
         if not args.reviewer.strip():

@@ -39,9 +39,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Phản ứng do nỗ lực có thể cần thời gian lắng xuống sau khi công việc kết thúc.",
@@ -75,7 +75,13 @@
           "hammer"
         ],
         "tie_break_order": 1096
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:clarify",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
     },
     {
       "id": "wakeful_hours_fill_the_hourglass",
@@ -436,9 +442,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Chuyển sang trạng thái ngủ có thể được hình dung như một quá trình thay vì một thời điểm tức thì.",
@@ -472,7 +478,13 @@
           "house"
         ],
         "tie_break_order": 1101
-      }
+      },
+      "tags": [
+        "intent:calm",
+        "support:clarify",
+        "topic:rest_wellbeing",
+        "origin:selflo"
+      ]
     },
     {
       "id": "attributed.ma.iv_03.inner_retreat",

@@ -350,9 +350,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Kết nối không xóa hoàn cảnh khó chịu nhưng có thể tạo một nhịp cùng nhau.",
@@ -386,7 +386,14 @@
           "belonging"
         ],
         "tie_break_order": 1028
-      }
+      },
+      "tags": [
+        "intent:relationships",
+        "support:soothe",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
     },
     {
       "id": "kitchen_sounds_like_someone_waiting",
@@ -504,9 +511,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Được nhận ra trong những chi tiết nhỏ có thể làm một nơi trở nên thân thuộc.",
@@ -540,7 +547,13 @@
           "belonging"
         ],
         "tie_break_order": 1030
-      }
+      },
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
     },
     {
       "id": "bridge_does_not_hold_the_walker",
@@ -737,9 +750,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Sự tin cậy vào một người đáp lại có thể tạo cảm giác an toàn khi tạm buông cảnh giác.",
@@ -773,7 +786,13 @@
           "attachment"
         ],
         "tie_break_order": 1033
-      }
+      },
+      "tags": [
+        "intent:relationships",
+        "support:soothe",
+        "topic:relationships",
+        "origin:selflo"
+      ]
     },
     {
       "id": "door_stays_where_home_begins",

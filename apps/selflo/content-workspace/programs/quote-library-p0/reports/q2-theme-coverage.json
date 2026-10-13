@@ -1,0 +1,2252 @@
+{
+  "schema_version": "selflo.quote-p0-report.v1",
+  "generated_at": "2026-10-12T23:26:53.316464Z",
+  "matrix_generated_at": "2026-10-12T23:26:53.198418Z",
+  "authoring_revision": 84,
+  "release_revision": 45,
+  "summary": {
+    "theme_count": 113,
+    "unresolved_count": 3044
+  },
+  "themes": [
+    {
+      "theme": "unresolved",
+      "total": 3044,
+      "excluded": 3044,
+      "held_research": 244,
+      "duplicate_hold": 1,
+      "needs_normalization": 2799
+    },
+    {
+      "theme": "self_understanding",
+      "total": 657,
+      "release": 212,
+      "released": 212,
+      "authoring": 445,
+      "ready_for_ai_review": 403,
+      "needs_story_review": 2,
+      "needs_source_verification": 5,
+      "needs_round1_review": 17,
+      "needs_edit": 1,
+      "held_not_passed": 5,
+      "blocked_rights": 12
+    },
+    {
+      "theme": "attention",
+      "total": 336,
+      "release": 88,
+      "released": 88,
+      "authoring": 217,
+      "ready_for_ai_review": 189,
+      "needs_story_review": 4,
+      "needs_source_verification": 1,
+      "needs_round1_review": 7,
+      "excluded": 31,
+      "held_research": 31,
+      "held_not_passed": 3,
+      "blocked_rights": 13
+    },
+    {
+      "theme": "adversity_resilience",
+      "total": 166,
+      "release": 54,
+      "released": 54,
+      "authoring": 112,
+      "ready_for_ai_review": 95,
+      "needs_story_review": 1,
+      "needs_round1_review": 1,
+      "held_not_passed": 6,
+      "blocked_rights": 9
+    },
+    {
+      "theme": "work_achievement",
+      "total": 149,
+      "release": 44,
+      "released": 44,
+      "authoring": 105,
+      "ready_for_ai_review": 83,
+      "needs_story_review": 3,
+      "needs_source_verification": 3,
+      "needs_round1_review": 3,
+      "held_not_passed": 1,
+      "blocked_rights": 12
+    },
+    {
+      "theme": "rest_wellbeing",
+      "total": 131,
+      "release": 56,
+      "released": 56,
+      "authoring": 75,
+      "ready_for_ai_review": 71,
+      "needs_story_review": 2,
+      "held_not_passed": 1,
+      "blocked_rights": 1
+    },
+    {
+      "theme": "relationships",
+      "total": 130,
+      "release": 50,
+      "released": 50,
+      "authoring": 80,
+      "ready_for_ai_review": 54,
+      "needs_round1_review": 13,
+      "held_not_passed": 2,
+      "blocked_rights": 11
+    },
+    {
+      "theme": "meaning_values",
+      "total": 122,
+      "release": 68,
+      "released": 68,
+      "authoring": 54,
+      "ready_for_ai_review": 35,
+      "needs_story_review": 1,
+      "needs_round1_review": 4,
+      "blocked_rights": 14
+    },
+    {
+      "theme": "change_growth",
+      "total": 116,
+      "release": 58,
+      "released": 58,
+      "authoring": 58,
+      "ready_for_ai_review": 39,
+      "needs_story_review": 2,
+      "needs_round1_review": 5,
+      "needs_edit": 1,
+      "held_not_passed": 3,
+      "blocked_rights": 8
+    },
+    {
+      "theme": "emotion",
+      "total": 74,
+      "release": 26,
+      "released": 26,
+      "authoring": 48,
+      "ready_for_ai_review": 40,
+      "needs_round1_review": 2,
+      "needs_edit": 1,
+      "held_not_passed": 2,
+      "blocked_rights": 3
+    },
+    {
+      "theme": "laws_effects",
+      "total": 59,
+      "excluded": 59,
+      "needs_source_verification": 59
+    },
+    {
+      "theme": "judgment",
+      "total": 45,
+      "excluded": 45,
+      "held_research": 45
+    },
+    {
+      "theme": "agency",
+      "total": 30,
+      "excluded": 30,
+      "held_research": 30
+    },
+    {
+      "theme": "learning",
+      "total": 26,
+      "excluded": 26,
+      "held_research": 26
+    },
+    {
+      "theme": "karma",
+      "total": 25,
+      "excluded": 25,
+      "needs_source_verification": 25
+    },
+    {
+      "theme": "values",
+      "total": 23,
+      "excluded": 23,
+      "held_research": 23
+    },
+    {
+      "theme": "compassion",
+      "total": 22,
+      "excluded": 22,
+      "held_research": 22
+    },
+    {
+      "theme": "change | identity | meaning",
+      "total": 20,
+      "excluded": 20,
+      "held_research": 20
+    },
+    {
+      "theme": "comparison | values",
+      "total": 20,
+      "excluded": 20,
+      "held_research": 20
+    },
+    {
+      "theme": "failure | learning",
+      "total": 20,
+      "excluded": 20,
+      "held_research": 20
+    },
+    {
+      "theme": "identity",
+      "total": 18,
+      "excluded": 18,
+      "held_research": 18
+    },
+    {
+      "theme": "change",
+      "total": 14,
+      "excluded": 14,
+      "held_research": 14
+    },
+    {
+      "theme": "agency | choice | uncertainty",
+      "total": 10,
+      "excluded": 10,
+      "held_research": 10
+    },
+    {
+      "theme": "recovery | rest",
+      "total": 10,
+      "excluded": 10,
+      "held_research": 10
+    },
+    {
+      "theme": "mortality",
+      "total": 8,
+      "excluded": 8,
+      "held_research": 8
+    },
+    {
+      "theme": "fear",
+      "total": 6,
+      "excluded": 6,
+      "held_research": 6
+    },
+    {
+      "theme": "meaning",
+      "total": 6,
+      "excluded": 6,
+      "held_research": 6
+    },
+    {
+      "theme": "rest",
+      "total": 6,
+      "excluded": 6,
+      "held_research": 6
+    },
+    {
+      "theme": "trust",
+      "total": 6,
+      "excluded": 6,
+      "held_research": 5,
+      "duplicate_hold": 1
+    },
+    {
+      "theme": "choice",
+      "total": 5,
+      "excluded": 5,
+      "held_research": 5
+    },
+    {
+      "theme": "choice | judgment",
+      "total": 5,
+      "excluded": 5,
+      "held_research": 5
+    },
+    {
+      "theme": "responsibility",
+      "total": 5,
+      "excluded": 5,
+      "held_research": 5
+    },
+    {
+      "theme": "uncertainty",
+      "total": 5,
+      "excluded": 5,
+      "held_research": 5
+    },
+    {
+      "theme": "Murphy's law",
+      "total": 4,
+      "excluded": 4,
+      "needs_source_verification": 4
+    },
+    {
+      "theme": "Parkinson's law",
+      "total": 4,
+      "excluded": 4,
+      "needs_source_verification": 4
+    },
+    {
+      "theme": "self_worth",
+      "total": 4,
+      "excluded": 4,
+      "held_research": 4
+    },
+    {
+      "theme": "simplicity",
+      "total": 4,
+      "excluded": 4,
+      "held_research": 4
+    },
+    {
+      "theme": "acceptance",
+      "total": 3,
+      "excluded": 3,
+      "held_research": 3
+    },
+    {
+      "theme": "connection",
+      "total": 3,
+      "excluded": 3,
+      "held_research": 3
+    },
+    {
+      "theme": "Anchoring effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Availability heuristic",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Brooks's law",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Bystander effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Campbell's law",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Cognitive dissonance",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Confirmation bias",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Conway's law",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Diffusion of responsibility",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Diminishing returns",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Dunning–Kruger effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Endowment effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Fundamental attribution error",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Goodhart's law",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Habituation",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Hanlon's razor",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Hawthorne effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Hedonic treadmill",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Hofstadter's law",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Hyperbolic discounting",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "IKEA effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Learned helplessness",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Lindy effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Loss aversion",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Mere-exposure effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Negativity bias",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Omission bias",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Optimism bias",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Pareto principle",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Peak–end rule",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Peter principle",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Planning fallacy",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Present bias",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Principle of least effort",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Pygmalion effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Regression toward the mean",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Self-fulfilling prophecy",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Social loafing",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Spotlight effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Status quo bias",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Sunk cost",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Survivorship bias",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "The Paradox of Choice",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Tragedy of the commons",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Unintended consequences",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "Zeigarnik effect",
+      "total": 2,
+      "excluded": 2,
+      "needs_source_verification": 2
+    },
+    {
+      "theme": "agency | choice",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "agency | learning",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "agency | responsibility",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "agency | uncertainty",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "change | identity",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "comparison",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "control",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 1,
+      "duplicate_hold": 1
+    },
+    {
+      "theme": "learning | uncertainty",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "mortality | values",
+      "total": 2,
+      "excluded": 2,
+      "held_research": 2
+    },
+    {
+      "theme": "attention | compassion",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "attention | recovery",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "change | compassion",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "change | grief",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "change | judgment",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "change | learning",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "change | self_worth",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "choice | control",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "choice | mortality",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "choice | values",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "compassion | recovery",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "control | identity",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "fear | mortality",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "identity | learning",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "judgment | responsibility",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "learning | responsibility",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "meaning | rest",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "meaning | values",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    },
+    {
+      "theme": "recovery",
+      "total": 1,
+      "excluded": 1,
+      "held_research": 1
+    }
+  ],
+  "source_coverage": [
+    {
+      "id": "early_buddhism",
+      "name_vi": "Phật giáo sơ kỳ & Dhammapada",
+      "scope_vi": "Kệ Pāli, Dhammapada và kinh điển sớm",
+      "targets": "Dhammapada; Nikāya; Sutta Nipāta",
+      "total": 529,
+      "canonical": 0,
+      "excluded": 452,
+      "authoring": 63,
+      "release": 14,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Dhammapada",
+        "Dhammapada (Buddhist canonical verse tradition)",
+        "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
+        "Saṁyutta/Aṅguttara Nikāya",
+        "Buddhist canonical tradition",
+        "Dhammapada; translated by F. Max Müller"
+      ],
+      "works": [
+        "Dhammapada, a Collection of Verses",
+        "Dhammapada (Khuddaka Nikāya 2)",
+        "MN 20 Vitakkasaṇṭhānasutta",
+        "MN 22 Alagaddūpamasutta",
+        "MN 10 Satipaṭṭhānasutta",
+        "MN 118 Ānāpānassatisutta",
+        "MN 131 Bhaddekarattasutta",
+        "MN 140 Dhātuvibhaṅgasutta",
+        "MN 19 Dvedhāvitakkasutta",
+        "MN 21 Kakacūpamasutta",
+        "MN 27 Cūḷahatthipadopamasutta",
+        "MN 39 Mahāassapurasutta",
+        "MN 58 Abhayarājakumārasutta",
+        "MN 61 Ambalaṭṭhikarāhulovādasutta",
+        "MN 62 Mahārāhulovādasutta",
+        "SN 12.15 Kaccānagottasutta",
+        "The Dhammapada",
+        "AN 10.60 Girimānandasutta"
+      ],
+      "source_domains": [
+        "gutenberg.org",
+        "ancient-buddhist-texts.net",
+        "suttacentral.net"
+      ],
+      "author_count": 6,
+      "work_count": 36,
+      "source_count": 3,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "mahayana_buddhism",
+      "name_vi": "Phật giáo Đại thừa",
+      "scope_vi": "Kinh, luận và trước tác Đại thừa",
+      "targets": "Shinran; Nāgārjuna; Śāntideva",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Shinran Shōnin; translated by S. Yamabe and L. Adams Beck"
+      ],
+      "works": [
+        "Buddhist Psalms translated from the Japanese of Shinran Shonin"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "zen_chan",
+      "name_vi": "Thiền / Zen / Chan",
+      "scope_vi": "Thiền Trung Hoa, Nhật Bản và diễn giải học thuật",
+      "targets": "D. T. Suzuki; Dōgen; Huệ Năng",
+      "total": 210,
+      "canonical": 0,
+      "excluded": 202,
+      "authoring": 8,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Dōgen / Soto Zen tradition",
+        "Daisetz Teitaro Suzuki",
+        "Arthur Waley"
+      ],
+      "works": [
+        "Tenzo Kyokun",
+        "Tenzo Kyokun commentary",
+        "Fukanzazengi",
+        "Tenzo Kyokun background",
+        "Shikantaza / Bendowa / Fukanzazengi",
+        "Essays in Zen Buddhism (First Series)",
+        "Zen Buddhism, and Its Relation to Art"
+      ],
+      "source_domains": [
+        "sotozen.com",
+        "gutenberg.org"
+      ],
+      "author_count": 3,
+      "work_count": 7,
+      "source_count": 2,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "theravada_pali",
+      "name_vi": "Theravāda & chú giải Pāli",
+      "scope_vi": "Truyền thống Theravāda và văn bản chú giải",
+      "targets": "Buddhaghosa; Jātaka; Visuddhimagga",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Translated from Pāli by Eugene Watson Burlingame"
+      ],
+      "works": [
+        "The Grateful Elephant and Other Stories Translated from the Pāli"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "tibetan_buddhism",
+      "name_vi": "Phật giáo Tây Tạng",
+      "scope_vi": "Truyện, giáo huấn và truyền thống Tây Tạng",
+      "targets": "Milarepa; Tibetan Tales; lojong",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Translated from Tibetan by F. Anton von Schiefner; English by W. R. S. Ralston"
+      ],
+      "works": [
+        "Tibetan Tales, Derived from Indian Sources"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "daoism",
+      "name_vi": "Đạo gia",
+      "scope_vi": "Lão Tử, Trang Tử và tư tưởng Đạo gia",
+      "targets": "Tao Te Ching; Zhuangzi; Liezi",
+      "total": 615,
+      "canonical": 0,
+      "excluded": 223,
+      "authoring": 106,
+      "release": 286,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Laozi",
+        "Lão Tử",
+        "Trang Tử",
+        "Laozi / 老子",
+        "Zhuangzi / 莊子 (Inner Chapters attribution)",
+        "Huainanzi / 淮南子 (compiled under Liu An court)",
+        "Liezi / 列子 (received text; attribution debated)",
+        "Laozi; translated by James Legge"
+      ],
+      "works": [
+        "The Tao Teh King, or the Tao and its Characteristics",
+        "Đạo Đức Kinh · Chương 58",
+        "Trang Tử · Tiêu dao du (chương 1)",
+        "Trang Tử · Sơn mộc (chương 20)",
+        "道德經 / Tao Te Ching",
+        "莊子 / Zhuangzi",
+        "淮南子 / Huainanzi",
+        "列子 / Liezi",
+        "Đạo Đức Kinh"
+      ],
+      "source_domains": [
+        "gutenberg.org",
+        "ctext.org",
+        "zh.wikisource.org"
+      ],
+      "author_count": 8,
+      "work_count": 9,
+      "source_count": 3,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "confucianism_chinese",
+      "name_vi": "Nho gia & kinh điển Trung Hoa",
+      "scope_vi": "Luận Ngữ, Mạnh Tử và cổ thư Nho gia",
+      "targets": "Analects; Mencius; Xunzi",
+      "total": 157,
+      "canonical": 0,
+      "excluded": 110,
+      "authoring": 11,
+      "release": 36,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Confucius",
+        "Confucius tradition / 孔子",
+        "Mencius / 孟子",
+        "Confucius tradition",
+        "Confucius; translated by James Legge"
+      ],
+      "works": [
+        "The Analects of Confucius (from the Chinese Classics)",
+        "論語 / Analects",
+        "孟子 / Mencius",
+        "The Analects of Confucius"
+      ],
+      "source_domains": [
+        "gutenberg.org",
+        "zh.wikisource.org",
+        "ctext.org"
+      ],
+      "author_count": 5,
+      "work_count": 4,
+      "source_count": 3,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "hindu_vedic_upanishadic",
+      "name_vi": "Ấn Độ giáo, Veda & Upanishad",
+      "scope_vi": "Veda, Upanishad và triết học Ấn Độ",
+      "targets": "Upanishads; Vedas; Yoga Sutras",
+      "total": 125,
+      "canonical": 0,
+      "excluded": 109,
+      "authoring": 14,
+      "release": 2,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Selected Upaniṣads / Vedic tradition",
+        "Upanishadic tradition",
+        "Translated from Sanskrit by Swami Paramananda"
+      ],
+      "works": [
+        "Kāṭha Upaniṣad",
+        "Muṇḍaka Upaniṣad",
+        "Īśā Upaniṣad",
+        "Kena Upaniṣad",
+        "Selected Upanishads",
+        "Katha Upanishad",
+        "Kena Upanishad",
+        "Mundaka Upanishad",
+        "The Upanishads"
+      ],
+      "source_domains": [
+        "upasanayoga.com",
+        "vedha360.com",
+        "sanskritdocuments.org",
+        "shastram.org",
+        "upasanayoga.org",
+        "gutenberg.org"
+      ],
+      "author_count": 3,
+      "work_count": 9,
+      "source_count": 6,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "gita_epic",
+      "name_vi": "Bhagavad Gītā & sử thi",
+      "scope_vi": "Gītā, Mahābhārata và Rāmāyaṇa",
+      "targets": "Bhagavad Gītā; Mahābhārata; Rāmāyaṇa",
+      "total": 125,
+      "canonical": 0,
+      "excluded": 114,
+      "authoring": 9,
+      "release": 2,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Bhagavad Gita (traditionally within Mahābhārata)",
+        "Bhagavad Gita tradition",
+        "Bhagavad Gītā; translated from Sanskrit by Sir Edwin Arnold"
+      ],
+      "works": [
+        "Bhagavad Gita",
+        "The Song Celestial; Or, Bhagavad-Gita",
+        "The Song Celestial; Or, Bhagavad-Gîtâ"
+      ],
+      "source_domains": [
+        "gitasupersite.iitk.ac.in",
+        "gutenberg.org"
+      ],
+      "author_count": 3,
+      "work_count": 3,
+      "source_count": 2,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "jain",
+      "name_vi": "Kỳ-na giáo (Jain)",
+      "scope_vi": "Kinh văn và tư tưởng Jain",
+      "targets": "Mahāvīra; Ācārāṅga Sūtra; Tattvārtha Sūtra",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Georg Bühler; translated and edited by James Burgess"
+      ],
+      "works": [
+        "On the Indian Sect of the Jainas"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "sikh",
+      "name_vi": "Sikh giáo",
+      "scope_vi": "Guru Granth Sahib và các Guru Sikh",
+      "targets": "Guru Nanak; Guru Granth Sahib",
+      "total": 0,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Chưa có",
+      "priority": "high_research",
+      "authors": [],
+      "works": [],
+      "source_domains": [],
+      "author_count": 0,
+      "work_count": 0,
+      "source_count": 0,
+      "remaining_to_100": 100
+    },
+    {
+      "id": "vietnamese_texts",
+      "name_vi": "Di sản & văn học Việt Nam",
+      "scope_vi": "Văn học, tư tưởng, ca dao và tục ngữ Việt",
+      "targets": "Nguyễn Du; Nguyễn Trãi; Trần Nhân Tông; ca dao",
+      "total": 198,
+      "canonical": 0,
+      "excluded": 119,
+      "authoring": 66,
+      "release": 13,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Vietnamese oral tradition / anonymous",
+        "Vietnamese proverb tradition / anonymous",
+        "Nguyễn Bỉnh Khiêm",
+        "Nguyễn Du",
+        "Nguyễn Trãi"
+      ],
+      "works": [
+        "Tục ngữ, phong dao và địa vị của nó trong văn học",
+        "Thói ham danh lợi",
+        "Tục ngữ, cổ ngữ, gia ngôn",
+        "Giới tham",
+        "Nhàn",
+        "Nhân tình thế thái",
+        "Truyện Kiều",
+        "Chèo đò",
+        "Theo tục ngữ phong dao, xét về sự sanh hoạt của phụ nữ nước ta",
+        "Tục ngữ phong dao tradition",
+        "Chồng khuyên vợ",
+        "Việc làm ruộng",
+        "Tình cảnh người nhà quê",
+        "Cảnh chồng con",
+        "Bảo kính cảnh giới I",
+        "Ngôn chí I",
+        "Thuật hứng I",
+        "Thuật hứng XXV"
+      ],
+      "source_domains": [
+        "vi.wikisource.org"
+      ],
+      "author_count": 5,
+      "work_count": 21,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "japanese_thought",
+      "name_vi": "Tư tưởng & văn học Nhật Bản",
+      "scope_vi": "Văn học, mỹ học và tư tưởng Nhật",
+      "targets": "Okakura Kakuzō; Bashō; Sei Shōnagon",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Kakuzō Okakura"
+      ],
+      "works": [
+        "The Book of Tea"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "korean_thought",
+      "name_vi": "Tư tưởng & văn học Hàn Quốc",
+      "scope_vi": "Truyện, văn học và tư tưởng Hàn",
+      "targets": "Korean Tales; Yi Hwang; Yi I",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Translated from Korean folklore by Horace Newton Allen"
+      ],
+      "works": [
+        "Korean Tales"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "southeast_asian",
+      "name_vi": "Đông Nam Á",
+      "scope_vi": "Văn học dân gian và tư tưởng Đông Nam Á",
+      "targets": "Philippine Folk Tales; Indonesia; Thái Lan",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Compiled by Mabel Cook Cole from named Philippine traditions"
+      ],
+      "works": [
+        "Philippine Folk Tales"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "greek_philosophy",
+      "name_vi": "Triết học Hy Lạp",
+      "scope_vi": "Socrates, Plato, Aristotle và tiền Socrates",
+      "targets": "Plato; Aristotle; Heraclitus",
+      "total": 73,
+      "canonical": 0,
+      "excluded": 46,
+      "authoring": 27,
+      "release": 0,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Plato (Socratic dialogue tradition)",
+        "Aristotle",
+        "Hannah Arendt"
+      ],
+      "works": [
+        "Apology",
+        "Nicomachean Ethics",
+        "The Human Condition",
+        "The Human Condition / public realm",
+        "On Violence",
+        "The Human Condition / bureaucracy lens",
+        "Eichmann in Jerusalem / responsibility debates",
+        "Eichmann in Jerusalem / responsibility",
+        "Thinking / responsibility writings",
+        "Eichmann debates / editorial caution",
+        "Editorial context",
+        "The Human Condition / natality",
+        "The Human Condition / forgiveness",
+        "Plurality writings",
+        "Editorial synthesis",
+        "The Nicomachean Ethics of Aristotle",
+        "Crito",
+        "Euthyphro"
+      ],
+      "source_domains": [
+        "perseus.tufts.edu",
+        "classics.mit.edu",
+        "plato.stanford.edu",
+        "gutenberg.org",
+        "atlas.perseus.tufts.edu"
+      ],
+      "author_count": 3,
+      "work_count": 25,
+      "source_count": 5,
+      "remaining_to_100": 27
+    },
+    {
+      "id": "roman_philosophy_literature",
+      "name_vi": "Triết học & văn học La Mã",
+      "scope_vi": "La Mã ngoài phạm vi một trường phái",
+      "targets": "Cicero; Lucretius; Plutarch; Ovid",
+      "total": 1,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 1,
+      "release": 0,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Marcus Tullius Cicero"
+      ],
+      "works": [
+        "Treatises on Friendship and Old Age"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 99
+    },
+    {
+      "id": "stoicism",
+      "name_vi": "Khắc kỷ",
+      "scope_vi": "Khắc kỷ Hy–La",
+      "targets": "Marcus Aurelius; Seneca; Epictetus",
+      "total": 262,
+      "canonical": 0,
+      "excluded": 73,
+      "authoring": 79,
+      "release": 110,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Epictetus",
+        "Marcus Aurelius",
+        "Seneca",
+        "Lucius Annaeus Seneca",
+        "Musonius Rufus (teachings preserved by students/compilers)"
+      ],
+      "works": [
+        "A Selection from the Discourses of Epictetus with the Encheiridion",
+        "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "Moral Letters to Lucilius",
+        "De Brevitate Vitae",
+        "Epistulae Morales",
+        "De Ira",
+        "De Otio",
+        "De Tranquillitate Animi",
+        "Enchiridion / Discourses",
+        "Τὰ εἰς ἑαυτόν / Meditations",
+        "Discourses",
+        "Fragments"
+      ],
+      "source_domains": [
+        "gutenberg.org",
+        "en.wikisource.org",
+        "la.wikisource.org",
+        "atlas.perseus.tufts.edu",
+        "perseus.tufts.edu",
+        "iep.utm.edu"
+      ],
+      "author_count": 5,
+      "work_count": 12,
+      "source_count": 6,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "epicurean_skeptic",
+      "name_vi": "Epicurean & Hoài nghi",
+      "scope_vi": "Epicurus, Pyrrhonism và các nhánh liên quan",
+      "targets": "Epicurus; Sextus Empiricus; Lucretius",
+      "total": 24,
+      "canonical": 0,
+      "excluded": 19,
+      "authoring": 4,
+      "release": 1,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Epicurus"
+      ],
+      "works": [
+        "Letter to Menoeceus",
+        "Principal Doctrines"
+      ],
+      "source_domains": [
+        "ericlyonshansen.github.io",
+        "classics.mit.edu",
+        "perseus.tufts.edu",
+        "millerpolitics.com",
+        "epicureanfriends.com"
+      ],
+      "author_count": 1,
+      "work_count": 2,
+      "source_count": 5,
+      "remaining_to_100": 76
+    },
+    {
+      "id": "early_medieval_christianity",
+      "name_vi": "Kitô giáo sơ kỳ & trung cổ",
+      "scope_vi": "Giáo phụ, thần học và suy niệm trung cổ",
+      "targets": "Augustine; Boethius; Aquinas; Julian of Norwich",
+      "total": 0,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Chưa có",
+      "priority": "high_research",
+      "authors": [],
+      "works": [],
+      "source_domains": [],
+      "author_count": 0,
+      "work_count": 0,
+      "source_count": 0,
+      "remaining_to_100": 100
+    },
+    {
+      "id": "jewish",
+      "name_vi": "Do Thái",
+      "scope_vi": "Kinh điển, rabbi và tư tưởng Do Thái",
+      "targets": "Hebrew Bible; Pirkei Avot; Maimonides",
+      "total": 20,
+      "canonical": 0,
+      "excluded": 5,
+      "authoring": 15,
+      "release": 0,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Jewish wisdom traditions"
+      ],
+      "works": [
+        "Tanakh + Pirkei Avot / Mishnah"
+      ],
+      "source_domains": [
+        "sefaria.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 80
+    },
+    {
+      "id": "islamic",
+      "name_vi": "Hồi giáo",
+      "scope_vi": "Qur’an, hadith và tư tưởng Hồi giáo",
+      "targets": "Qur’an; Al-Ghazali; Ibn Arabi",
+      "total": 13,
+      "canonical": 0,
+      "excluded": 4,
+      "authoring": 9,
+      "release": 0,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Arabic / Middle Eastern proverbs",
+        "Classical Arabic tradition"
+      ],
+      "works": [
+        "Regional proverb collections",
+        "Arabian Wisdom: Selections and Translations from the Arabic"
+      ],
+      "source_domains": [
+        "archive.org",
+        "gutenberg.org"
+      ],
+      "author_count": 2,
+      "work_count": 2,
+      "source_count": 2,
+      "remaining_to_100": 87
+    },
+    {
+      "id": "persian_sufi",
+      "name_vi": "Ba Tư & Sufi",
+      "scope_vi": "Thơ Ba Tư và truyền thống Sufi",
+      "targets": "Rumi; Saadi; Hafez; Attar",
+      "total": 45,
+      "canonical": 0,
+      "excluded": 12,
+      "authoring": 33,
+      "release": 0,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Saadi",
+        "Rumi / Hafez (research pool; item not individually attributed)",
+        "Middle Eastern wisdom stories",
+        "Rumination"
+      ],
+      "works": [
+        "Gulistan / Bustan",
+        "Masnavi / Divan-e Shams / Divan of Hafez",
+        "Traceable parables and historical wisdom episodes",
+        "Rumination",
+        "The Gulistan"
+      ],
+      "source_domains": [
+        "ganjoor.net",
+        "pubmed.ncbi.nlm.nih.gov",
+        "pmc.ncbi.nlm.nih.gov",
+        "gutenberg.org"
+      ],
+      "author_count": 4,
+      "work_count": 5,
+      "source_count": 4,
+      "remaining_to_100": 55
+    },
+    {
+      "id": "renaissance",
+      "name_vi": "Phục Hưng",
+      "scope_vi": "Tiểu luận, kịch và tư tưởng Phục Hưng",
+      "targets": "Montaigne; Shakespeare; Machiavelli",
+      "total": 21,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 21,
+      "release": 0,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Michel de Montaigne"
+      ],
+      "works": [
+        "Essays",
+        "Essays of Michel de Montaigne — Complete"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 2,
+      "source_count": 1,
+      "remaining_to_100": 79
+    },
+    {
+      "id": "enlightenment_early_modern",
+      "name_vi": "Cận đại & Khai sáng",
+      "scope_vi": "Triết học và tiểu luận thế kỷ 17–18",
+      "targets": "Francis Bacon; Pascal; Spinoza; Hume; Rousseau",
+      "total": 106,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 4,
+      "release": 2,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Francis Bacon",
+        "Benedictus de Spinoza",
+        "Blaise Pascal",
+        "Adam Smith"
+      ],
+      "works": [
+        "The Essays of Francis Bacon",
+        "Ethics",
+        "Pascal's Pensées",
+        "The Essays or Counsels, Civil and Moral",
+        "The Theory of Moral Sentiments"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 4,
+      "work_count": 5,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "western_19c_philosophy",
+      "name_vi": "Triết học phương Tây thế kỷ 19",
+      "scope_vi": "Hiện sinh sơ kỳ và triết học thế kỷ 19",
+      "targets": "Nietzsche; Kierkegaard; Schopenhauer",
+      "total": 121,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 21,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Søren Kierkegaard",
+        "Arthur Schopenhauer",
+        "Friedrich Nietzsche; translated by Thomas Common"
+      ],
+      "works": [
+        "Either/Or",
+        "Fear and Trembling",
+        "The Concept of Anxiety",
+        "The Sickness Unto Death",
+        "The Wisdom of Life",
+        "Thus Spake Zarathustra"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 3,
+      "work_count": 6,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "western_19c_literature",
+      "name_vi": "Văn học phương Tây thế kỷ 19",
+      "scope_vi": "Tiểu luận, thơ và văn học thế kỷ 19",
+      "targets": "Emerson; Thoreau; Whitman; Dickinson",
+      "total": 114,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 2,
+      "release": 12,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Henry David Thoreau",
+        "Ralph Waldo Emerson"
+      ],
+      "works": [
+        "Walden; Civil Disobedience",
+        "Essays — First Series",
+        "Walden, and On The Duty Of Civil Disobedience",
+        "Essays, First Series"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 2,
+      "work_count": 4,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "western_20c",
+      "name_vi": "Văn học & tư tưởng thế kỷ 20",
+      "scope_vi": "Nguồn public-domain hoặc được phép",
+      "targets": "Virginia Woolf; Rilke; Kafka; Simone Weil",
+      "total": 179,
+      "canonical": 0,
+      "excluded": 5,
+      "authoring": 174,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Leo Tolstoy",
+        "Fyodor Dostoevsky",
+        "Anton Chekhov",
+        "Hermann Hesse",
+        "Franz Kafka",
+        "Albert Camus",
+        "Virginia Woolf",
+        "Rainer Maria Rilke",
+        "Simone Weil"
+      ],
+      "works": [
+        "The Death of Ivan Ilyich",
+        "War and Peace",
+        "Anna Karenina",
+        "How Much Land Does a Man Need?",
+        "Master and Man",
+        "Notes from the Underground",
+        "Crime and Punishment",
+        "The Brothers Karamazov",
+        "The Idiot",
+        "White Nights",
+        "Multiple works",
+        "Crime and Punishment / Brothers Karamazov",
+        "Ward No. 6",
+        "The Bet",
+        "The Lady with the Dog",
+        "Multiple stories",
+        "The Darling",
+        "The Darling / Lady with the Dog"
+      ],
+      "source_domains": [
+        "gutenberg.org",
+        "openlibrary.org"
+      ],
+      "author_count": 9,
+      "work_count": 61,
+      "source_count": 2,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "pragmatism_humanistic",
+      "name_vi": "Thực dụng & tâm lý nhân văn",
+      "scope_vi": "Pragmatism, ý nghĩa và trị liệu nhân văn",
+      "targets": "William James; John Dewey; Carl Rogers; Viktor Frankl",
+      "total": 131,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 27,
+      "release": 4,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "William James",
+        "Carl Rogers",
+        "Viktor Frankl",
+        "John Dewey"
+      ],
+      "works": [
+        "Talks to Teachers on Psychology",
+        "The Principles of Psychology",
+        "Principles / radical empiricism context",
+        "Cross-work synthesis",
+        "Person-Centered Therapy / Rogers 1957",
+        "Rogers — unconditional positive regard",
+        "Rogers — congruence",
+        "Rogers 1957 six conditions",
+        "Person-centered theory",
+        "Person-centered approach",
+        "Organismic valuing synthesis",
+        "Cross-source synthesis",
+        "Logotherapy principles",
+        "Meaning in Logotherapy",
+        "Logotherapy — avenues to meaning",
+        "Logotherapy — attitudinal values",
+        "Logotherapy — responsibility",
+        "Logotherapy — self-transcendence"
+      ],
+      "source_domains": [
+        "gutenberg.org",
+        "yorku.ca",
+        "ncbi.nlm.nih.gov",
+        "viktorfranklinstitute.org"
+      ],
+      "author_count": 4,
+      "work_count": 22,
+      "source_count": 4,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "modern_psych_behavior",
+      "name_vi": "Tâm lý học & hành vi hiện đại",
+      "scope_vi": "Nhận thức, động lực và hành vi",
+      "targets": "Kahneman; Tversky; Bandura; Deci & Ryan",
+      "total": 131,
+      "canonical": 0,
+      "excluded": 104,
+      "authoring": 27,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Psychological flexibility / ACT",
+        "Psychological detachment from work",
+        "Decision making",
+        "Fast execution / slow cognition",
+        "Sleep/decision researchers",
+        "APA",
+        "William James"
+      ],
+      "works": [
+        "ACT / flexibility reviews",
+        "ACT core processes",
+        "ACT values literature",
+        "Ong et al. 2024",
+        "Macri & Rogge 2024",
+        "Psychological detachment from work",
+        "Decision making",
+        "Fast execution / slow cognition",
+        "Research synthesis",
+        "The Principles of Psychology, Volume 1"
+      ],
+      "source_domains": [
+        "pubmed.ncbi.nlm.nih.gov",
+        "pmc.ncbi.nlm.nih.gov",
+        "annualreviews.org",
+        "link.springer.com",
+        "sciencedirect.com",
+        "nature.com",
+        "frontiersin.org",
+        "dictionary.apa.org",
+        "gutenberg.org"
+      ],
+      "author_count": 7,
+      "work_count": 10,
+      "source_count": 9,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "brain_memory_attention",
+      "name_vi": "Não bộ, trí nhớ & chú ý",
+      "scope_vi": "Nhận thức, trí nhớ, chú ý và thần kinh học",
+      "targets": "William James; Hebb; Damasio; Dehaene",
+      "total": 138,
+      "canonical": 0,
+      "excluded": 128,
+      "authoring": 10,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Attention scarcity",
+        "Luo et al.",
+        "Stevenson et al.",
+        "Ohly et al.",
+        "Human Attention Restoration review",
+        "2025 Journal of Environmental Psychology meta-analysis",
+        "Holland & Kensinger",
+        "Holland & Kensinger update",
+        "William James"
+      ],
+      "works": [
+        "Attention scarcity",
+        "Social comparison neuroimaging meta-analysis",
+        "Attention Restoration Theory II systematic review",
+        "Attention Restoration Theory systematic review",
+        "Attention restoration, flow and creativity",
+        "Nature exposure duration and attention restoration",
+        "Emotion and autobiographical memory review",
+        "Autobiographical memory update",
+        "The Principles of Psychology, Volume 1"
+      ],
+      "source_domains": [
+        "journals.aom.org",
+        "link.springer.com",
+        "onlinelibrary.wiley.com",
+        "doi.org",
+        "nist.gov",
+        "sciencedirect.com",
+        "pmc.ncbi.nlm.nih.gov",
+        "pubmed.ncbi.nlm.nih.gov",
+        "gutenberg.org"
+      ],
+      "author_count": 9,
+      "work_count": 9,
+      "source_count": 9,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "learning_habits_motivation",
+      "name_vi": "Học tập, thói quen & động lực",
+      "scope_vi": "Học tập, hình thành thói quen và động lực",
+      "targets": "William James; Wendy Wood; Bandura",
+      "total": 120,
+      "canonical": 0,
+      "excluded": 110,
+      "authoring": 10,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Learning-by-doing",
+        "Bjork Learning and Forgetting Lab",
+        "Kapur",
+        "William James"
+      ],
+      "works": [
+        "Learning-by-doing",
+        "Desirable difficulties research overview",
+        "Learning from productive failure",
+        "The Principles of Psychology, Volume 1"
+      ],
+      "source_domains": [
+        "pubmed.ncbi.nlm.nih.gov",
+        "sciencedirect.com",
+        "link.springer.com",
+        "bjorklab.psych.ucla.edu",
+        "doi.org",
+        "gutenberg.org"
+      ],
+      "author_count": 4,
+      "work_count": 4,
+      "source_count": 6,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "emotion_relationship_attachment",
+      "name_vi": "Cảm xúc, quan hệ & gắn bó",
+      "scope_vi": "Cảm xúc, kết nối và attachment",
+      "targets": "William James; Bowlby; Ainsworth",
+      "total": 117,
+      "canonical": 0,
+      "excluded": 108,
+      "authoring": 9,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Mixed emotions",
+        "Charles Darwin",
+        "Berrios et al.",
+        "Charles et al.",
+        "William James"
+      ],
+      "works": [
+        "Mixed emotions",
+        "The Expression of the Emotions in Man and Animals",
+        "Mixed emotions meta-analysis",
+        "Mixed emotions across adulthood review",
+        "The Principles of Psychology, Volume 2"
+      ],
+      "source_domains": [
+        "pmc.ncbi.nlm.nih.gov",
+        "pubmed.ncbi.nlm.nih.gov",
+        "gutenberg.org"
+      ],
+      "author_count": 5,
+      "work_count": 5,
+      "source_count": 3,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "laws_effects_models",
+      "name_vi": "Quy luật, hiệu ứng & mô hình quyết định",
+      "scope_vi": "Quy luật tổ chức, thiên kiến và hiệu ứng tâm lý",
+      "targets": "Murphy; Parkinson; Goodhart; Kahneman & Tversky",
+      "total": 184,
+      "canonical": 0,
+      "excluded": 184,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Murphy's law",
+        "Parkinson's law",
+        "Peter principle",
+        "Goodhart's law",
+        "Planning fallacy",
+        "Sunk cost",
+        "Hedonic treadmill",
+        "Habituation",
+        "Peak–end rule",
+        "Mere-exposure effect",
+        "Confirmation bias",
+        "Availability heuristic",
+        "Anchoring effect",
+        "Loss aversion",
+        "Status quo bias",
+        "Omission bias",
+        "Endowment effect",
+        "Survivorship bias"
+      ],
+      "works": [
+        "Murphy's law",
+        "Parkinson's Law",
+        "Peter principle",
+        "Goodhart's law",
+        "Planning fallacy",
+        "Sunk cost",
+        "Hedonic treadmill",
+        "Habituation",
+        "Peak–end rule",
+        "Mere-exposure effect",
+        "Confirmation bias",
+        "Availability heuristic",
+        "Anchoring effect",
+        "Loss aversion",
+        "Status quo bias",
+        "Omission bias",
+        "Endowment effect",
+        "Survivorship bias"
+      ],
+      "source_domains": [
+        "en.wikipedia.org",
+        "vanvn.net",
+        "vietcetera.com",
+        "ybox.vn"
+      ],
+      "author_count": 51,
+      "work_count": 51,
+      "source_count": 4,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "sleep_rest_wellbeing",
+      "name_vi": "Giấc ngủ, nghỉ ngơi & wellbeing",
+      "scope_vi": "Nghỉ ngơi, phục hồi và sức khỏe tinh thần",
+      "targets": "William James; nghiên cứu giấc ngủ",
+      "total": 0,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Chưa có",
+      "priority": "high_research",
+      "authors": [],
+      "works": [],
+      "source_domains": [],
+      "author_count": 0,
+      "work_count": 0,
+      "source_count": 0,
+      "remaining_to_100": 100
+    },
+    {
+      "id": "science_nature_discovery",
+      "name_vi": "Khoa học, tự nhiên & khám phá",
+      "scope_vi": "Khoa học, tò mò và quan sát tự nhiên",
+      "targets": "Darwin; Faraday; Curie; Einstein",
+      "total": 0,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Chưa có",
+      "priority": "high_research",
+      "authors": [],
+      "works": [],
+      "source_domains": [],
+      "author_count": 0,
+      "work_count": 0,
+      "source_count": 0,
+      "remaining_to_100": 100
+    },
+    {
+      "id": "creativity_art_craft",
+      "name_vi": "Sáng tạo, nghệ thuật & nghề thủ công",
+      "scope_vi": "Quá trình sáng tạo và thực hành nghề",
+      "targets": "Leonardo; Rodin; Ruskin; nghệ nhân",
+      "total": 0,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Chưa có",
+      "priority": "high_research",
+      "authors": [],
+      "works": [],
+      "source_domains": [],
+      "author_count": 0,
+      "work_count": 0,
+      "source_count": 0,
+      "remaining_to_100": 100
+    },
+    {
+      "id": "african_traditions",
+      "name_vi": "Truyền thống Châu Phi",
+      "scope_vi": "Nguồn có quốc gia hoặc cộng đồng rõ",
+      "targets": "West African Folk-Tales; Yoruba; Akan",
+      "total": 144,
+      "canonical": 0,
+      "excluded": 113,
+      "authoring": 31,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "African traditions I",
+        "African traditions II",
+        "African traditions III",
+        "Collected by W. H. Barker; illustrated by Cecilia Sinclair"
+      ],
+      "works": [
+        "Akan and Yoruba proverb scholarship",
+        "Igbo and Swahili proverb scholarship",
+        "Kafa / Ethiopian proverb scholarship",
+        "West African Folk-Tales"
+      ],
+      "source_domains": [
+        "anthrosource.onlinelibrary.wiley.com",
+        "swahiliproverbs.afrst.illinois.edu",
+        "hrcak.srce.hr",
+        "gutenberg.org"
+      ],
+      "author_count": 4,
+      "work_count": 4,
+      "source_count": 4,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "indigenous_traditions",
+      "name_vi": "Tri thức bản địa",
+      "scope_vi": "Nguồn bản địa có provenance cụ thể",
+      "targets": "Cherokee; Māori; First Nations",
+      "total": 100,
+      "canonical": 0,
+      "excluded": 100,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Collected by James Mooney from named Cherokee sources and communities"
+      ],
+      "works": [
+        "Myths of the Cherokee"
+      ],
+      "source_domains": [
+        "gutenberg.org"
+      ],
+      "author_count": 1,
+      "work_count": 1,
+      "source_count": 1,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "latin_american",
+      "name_vi": "Mỹ Latin",
+      "scope_vi": "Văn học và tư tưởng Mỹ Latin",
+      "targets": "José Martí; Sor Juana; Gabriela Mistral",
+      "total": 0,
+      "canonical": 0,
+      "excluded": 0,
+      "authoring": 0,
+      "release": 0,
+      "status_vi": "Chưa có",
+      "priority": "high_research",
+      "authors": [],
+      "works": [],
+      "source_domains": [],
+      "author_count": 0,
+      "work_count": 0,
+      "source_count": 0,
+      "remaining_to_100": 100
+    },
+    {
+      "id": "world_proverbs_folklore",
+      "name_vi": "Tục ngữ & dân gian thế giới",
+      "scope_vi": "Tục ngữ, ngụ ngôn và dân gian có xuất xứ",
+      "targets": "Aesop; Grimm; tục ngữ theo vùng",
+      "total": 52,
+      "canonical": 0,
+      "excluded": 15,
+      "authoring": 37,
+      "release": 0,
+      "status_vi": "Còn thiếu",
+      "priority": "high_research",
+      "authors": [
+        "Anonymous folk tradition",
+        "Japanese proverb tradition",
+        "European folk proverbs",
+        "Historical proverb collection",
+        "W. E. B. Du Bois"
+      ],
+      "works": [
+        "Thói ham danh lợi",
+        "Authoritative dictionary witness",
+        "Kotobank dictionary witness",
+        "English/French/German/Italian/Spanish proverb collections",
+        "Tục ngữ, cổ ngữ, gia ngôn",
+        "Cảnh chồng con",
+        "The Souls of Black Folk",
+        "Việc làm ruộng"
+      ],
+      "source_domains": [
+        "vi.wikisource.org",
+        "kotobank.jp",
+        "imidas.jp",
+        "wellcomecollection.org",
+        "gutenberg.org"
+      ],
+      "author_count": 5,
+      "work_count": 8,
+      "source_count": 5,
+      "remaining_to_100": 48
+    },
+    {
+      "id": "selflo",
+      "name_vi": "Nội dung gốc Selflo",
+      "scope_vi": "Góc nhìn do Selflo biên soạn",
+      "targets": "Duy trì chất lượng; không tính thay nguồn trích dẫn.",
+      "total": 209,
+      "canonical": 0,
+      "excluded": 5,
+      "authoring": 30,
+      "release": 174,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Selflo",
+        "Simone Weil",
+        "Modern Asian literature / thought",
+        "Self-compassion research",
+        "Psychological flexibility / ACT",
+        "Selflo editorial synthesis"
+      ],
+      "works": [
+        "The Need for Roots / Selflo distinction",
+        "Natsume Sōseki — Botchan / Selflo distinction",
+        "Selflo synthesis from self-kindness",
+        "Selflo synthesis",
+        "All Phase B sources, Days 21–39"
+      ],
+      "source_domains": [
+        "openlibrary.org",
+        "gutenberg.org",
+        "self-compassion.org",
+        "pubmed.ncbi.nlm.nih.gov"
+      ],
+      "author_count": 6,
+      "work_count": 5,
+      "source_count": 4,
+      "remaining_to_100": 0
+    },
+    {
+      "id": "unmapped",
+      "name_vi": "Chưa ánh xạ",
+      "scope_vi": "Thiếu metadata đủ để xếp nhóm an toàn",
+      "targets": "Bổ sung tác giả, tác phẩm hoặc provenance; không suy đoán.",
+      "total": 506,
+      "canonical": 0,
+      "excluded": 160,
+      "authoring": 346,
+      "release": 0,
+      "status_vi": "Đạt mốc 100+",
+      "priority": "maintain",
+      "authors": [
+        "Panchatantra tradition; Pūrṇabhadra recension / traditionally Viṣṇuśarman",
+        "Chinese idiom tradition",
+        "Matsuo Bashō",
+        "Rabindranath Tagore",
+        "Modern Asian literature / thought",
+        "Self-compassion research",
+        "Affect labeling",
+        "Recovery / fatigue / burnout",
+        "Uncertainty tolerance",
+        "Choice / choice overload",
+        "Comparison / self-evaluation",
+        "Meaning / identity / values",
+        "Abundance → scarcity migration",
+        "Information abundance / noise",
+        "Choice → judgment bottleneck",
+        "Trust / verification",
+        "Fast execution / slow cognition",
+        "Skill atrophy / cognitive offloading"
+      ],
+      "works": [
+        "Panchatantra, Book I",
+        "《論語．先進》",
+        "《莊子．秋水》 tradition",
+        "《戰國策．齊策二》",
+        "傅玄〈太子少傅箴〉",
+        "《論語．述而》",
+        "《大般涅槃經》卷三十",
+        "《孟子．梁惠王上》",
+        "Bashō haiku corpus",
+        "Oku no Hosomichi / Hiraizumi",
+        "Oku no Hosomichi / Risshakuji",
+        "Oku no Hosomichi opening",
+        "《呂氏春秋．察今》",
+        "《韓非子．外儲說左上》",
+        "《戰國策．魏策二》",
+        "歐陽修《歸田錄》",
+        "王勃〈滕王閣〉詩",
+        "《韓非子．顯學》"
+      ],
+      "source_domains": [
+        "franpritchett.com",
+        "dict.idioms.moe.edu.tw",
+        "ja.wikisource.org",
+        "www2.yamanashi-ken.ac.jp",
+        "city.ogaki.lg.jp",
+        "gutenberg.org",
+        "self-compassion.org",
+        "pubmed.ncbi.nlm.nih.gov",
+        "journals.sagepub.com",
+        "who.int",
+        "ilo.org",
+        "pmc.ncbi.nlm.nih.gov"
+      ],
+      "author_count": 66,
+      "work_count": 115,
+      "source_count": 38,
+      "remaining_to_100": 0
+    }
+  ]
+}

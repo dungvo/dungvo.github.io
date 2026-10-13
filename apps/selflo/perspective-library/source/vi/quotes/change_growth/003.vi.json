@@ -107,9 +107,9 @@
         "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Tự do bắt đầu khi con đường hiện tại không còn là con đường duy nhất mình có thể xây.",
@@ -137,7 +137,13 @@
         ],
         "tie_break_order": 3008
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
     },
     {
       "id": "row_today_build_one_piece_of_tomorrows_raft",

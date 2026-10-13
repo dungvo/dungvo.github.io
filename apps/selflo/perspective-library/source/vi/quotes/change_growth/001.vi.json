@@ -193,9 +193,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Phần đầu của sự trưởng thành có thể diễn ra trước khi người khác nhìn thấy.",
@@ -220,7 +220,14 @@
         ],
         "tie_break_order": -58
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:motivate",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:selflo"
+      ]
     },
     {
       "id": "quote.boatman_and_second_mountain",

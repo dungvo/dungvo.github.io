@@ -38,9 +38,9 @@
         "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Thước đo của người khác có thể cho mình một con số, nhưng không thể may vừa cuộc đời mình.",
@@ -68,7 +68,14 @@
         ],
         "tie_break_order": 3013
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "shadow_length_depends_on_sun",

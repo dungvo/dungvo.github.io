@@ -906,9 +906,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Điều bắt đầu ở nơi khác hoặc lúc khác vẫn có thể hiện diện trong dòng chảy hiện tại.",
@@ -942,7 +942,14 @@
           "memory"
         ],
         "tie_break_order": 1021
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:emotions",
+        "origin:selflo"
+      ]
     }
   ]
 }

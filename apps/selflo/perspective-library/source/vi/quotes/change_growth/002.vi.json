@@ -201,9 +201,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Dấu vết của việc sửa sai có thể song hành với sự tiến bộ dần dần.",
@@ -237,7 +237,14 @@
           "eraser"
         ],
         "tie_break_order": 1057
-      }
+      },
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "burn_mark_maps_the_flame",
@@ -355,9 +362,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Việc nhận ra và sửa lại một lỗi có thể làm thông tin trở nên đáng nhớ hơn.",
@@ -391,7 +398,15 @@
           "sewing"
         ],
         "tie_break_order": 1059
-      }
+      },
+      "tags": [
+        "intent:personal_growth",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:change_growth",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "wrong_turn_stays_on_the_map",

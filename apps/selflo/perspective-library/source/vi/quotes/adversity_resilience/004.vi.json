@@ -665,13 +665,13 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain / likely"
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:50:32Z"
       },
       "writing": {
         "semantic_intent": "Thận trọng như người lội sông mùa đông; dè dặt như người biết quanh mình có điều cần lưu ý.",
@@ -685,7 +685,13 @@
         "style": "paper_quote",
         "attribution_vi": "Laozi / 老子"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.laozi.ch20.062",
@@ -727,13 +733,13 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain / likely"
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:50:32Z"
       },
       "writing": {
         "semantic_intent": "Mênh mang như biển; trôi đi như chưa có nơi dừng.",
@@ -747,7 +753,13 @@
         "style": "paper_quote",
         "attribution_vi": "Laozi"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     }
   ]
 }

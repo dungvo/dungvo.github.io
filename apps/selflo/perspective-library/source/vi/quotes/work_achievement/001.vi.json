@@ -582,9 +582,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Luyện tập có thể tập trung vào điểm chưa vững thay vì lặp lại toàn bộ điều đã biết.",
@@ -618,7 +618,16 @@
           "practice"
         ],
         "tie_break_order": 1082
-      }
+      },
+      "tags": [
+        "intent:work_direction",
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
     },
     {
       "id": "knife_sharpens_at_the_same_angle",

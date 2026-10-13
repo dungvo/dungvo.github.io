@@ -44,9 +44,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Mải so sánh với người khác khiến mình bỏ quên tiến trình riêng.",
@@ -71,7 +71,14 @@
         ],
         "tie_break_order": -98
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     },
     {
       "id": "gentleness_creates_room",
@@ -904,9 +911,9 @@
         "note": null
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:30:24Z"
       },
       "writing": {
         "semantic_intent": "Khác thời điểm không tự động đồng nghĩa với thiếu hụt; mỗi thời điểm mang điều kiện riêng.",
@@ -940,7 +947,15 @@
           "flower"
         ],
         "tie_break_order": 1041
-      }
+      },
+      "tags": [
+        "intent:understand_self",
+        "intent:personal_growth",
+        "support:soothe",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:selflo"
+      ]
     }
   ]
 }

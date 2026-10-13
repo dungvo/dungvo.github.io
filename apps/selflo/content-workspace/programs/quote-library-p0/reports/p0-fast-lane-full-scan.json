@@ -1,0 +1,3156 @@
+{
+  "schema_version": "selflo.quote-p0-fast-lane-scan.v1",
+  "matrix_generated_at": "2026-10-12T14:32:45.867097Z",
+  "authoring_revision": 82,
+  "release_revision": 44,
+  "total_scanned": 5470,
+  "already_released_count": 343,
+  "new_strict_candidate_count": 313,
+  "strict_release_pool_count": 656,
+  "deferred_count": 4814,
+  "deferred_reason_counts": {
+    "already_released": 343,
+    "not_direct_or_translated_text": 127,
+    "rights_or_edition_needs_more_review": 181,
+    "source_confidence_not_high": 701,
+    "editorial_ai_not_passed": 179,
+    "not_canonical_authoring": 3626
+  },
+  "candidate_host_counts": {
+    "zh.wikisource.org": 265,
+    "la.wikisource.org": 48
+  },
+  "candidates": [
+    {
+      "id": "research.day25.an1_4",
+      "text_vi": "Mỗi ngày tự xét lại mình: làm việc cho người đã hết lòng chưa, với bạn bè đã giữ chữ tín chưa, điều được truyền dạy đã thực hành chưa?",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "self_understanding",
+      "verification": "Research ID research.day25.an1_4; corpus row 1050; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.day25.an2_13",
+      "text_vi": "Hãy làm trước điều mình nói, rồi để lời nói đi theo sau.",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "self_understanding",
+      "verification": "Research ID research.day25.an2_13; corpus row 1055; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.day25.an4_17",
+      "text_vi": "Thấy điều tốt thì nghĩ cách tiến gần; thấy điều chưa tốt thì quay lại tự xét mình.",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "meaning_values",
+      "verification": "Research ID research.day25.an4_17; corpus row 1062; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.day25.an5_10",
+      "text_vi": "Trước nghe lời rồi tin việc; sau nghe lời nhưng còn nhìn việc làm.",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "self_understanding",
+      "verification": "Research ID research.day25.an5_10; corpus row 1066; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.day25.an5_15",
+      "text_vi": "Nhanh nhạy mà vẫn ham học, không xấu hổ khi hỏi người ở vị thế thấp hơn.",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "emotion",
+      "verification": "Research ID research.day25.an5_15; corpus row 1067; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.day25.an5_26",
+      "text_vi": "Một ước nguyện về đời sống: người già được an, bạn bè tin nhau, người trẻ được nâng đỡ.",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "self_understanding",
+      "verification": "Research ID research.day25.an5_26; corpus row 1069; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch01.001",
+      "text_vi": "Đạo có thể nói thành lời thì không phải Đạo thường hằng; tên có thể gọi thành tên thì không phải tên thường hằng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.ch01.001; corpus row 2; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch01.004",
+      "text_vi": "Hai mặt ấy cùng đi ra từ một nguồn, chỉ mang những tên khác nhau.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "emotion",
+      "verification": "Research ID research.laozi.ch01.004; corpus row 5; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch02.005",
+      "text_vi": "Khi mọi người nhận ra cái đẹp là đẹp, ý niệm về cái không đẹp cũng xuất hiện; khi gọi điều này là tốt, điều không tốt cũng được phân biệt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.ch02.005; corpus row 6; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch02.006",
+      "text_vi": "Có và không sinh ra nhau; khó và dễ thành tựu lẫn nhau; dài và ngắn làm rõ nhau; cao và thấp dựa vào nhau; âm và tiếng hòa cùng nhau; trước và sau nối tiếp nhau.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "emotion",
+      "verification": "Research ID research.laozi.ch02.006; corpus row 7; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch05.013",
+      "text_vi": "Khoảng giữa trời đất chẳng giống một ống bễ sao? Rỗng mà không kiệt; càng vận động, nó càng tạo ra luồng khí.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.ch05.013; corpus row 14; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch08.020",
+      "text_vi": "Nước nuôi lợi muôn vật mà không tranh; nó ở những nơi người khác thường tránh, nên được xem là gần với Đạo.",
+      "author": "Laozi / 老子",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.ch08.020; corpus row 21; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch09.022",
+      "text_vi": "Cứ giữ cho đầy mãi, không bằng biết lúc dừng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.ch09.022; corpus row 23; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch11.030",
+      "text_vi": "Ba mươi nan hoa cùng tụ vào một trục; chính khoảng rỗng ở giữa làm bánh xe dùng được.",
+      "author": "Laozi / 老子",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.ch11.030; corpus row 31; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch14.042",
+      "text_vi": "Nắm một nguyên lý xưa để soi và ứng xử với điều đang có hôm nay.",
+      "author": "Laozi / 老子",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.ch14.042; corpus row 43; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.laozi.ch15.043",
+      "text_vi": "Thận trọng như người lội sông mùa đông; dè dặt như người biết quanh mình có điều cần lưu ý.",
+      "author": "Laozi / 老子",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.ch15.043; corpus row 44; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.seneca.day9.brev1",
+      "text_vi": "Có người dành gần cả đời để chuẩn bị sống rồi đời đã đi qua.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Brevitate Vitae",
+      "source_url": "https://la.wikisource.org/wiki/De_brevitate_vitae",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.brev1; corpus row 646; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.seneca.day9.brev3",
+      "text_vi": "Một đời có thể đủ rộng nếu biết mình đang dùng nó cho điều gì.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Brevitate Vitae",
+      "source_url": "https://la.wikisource.org/wiki/De_brevitate_vitae",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.brev3; corpus row 648; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.seneca.day9.brev4",
+      "text_vi": "Ít người định giá thời gian; ta tiêu nó như thể nó miễn phí.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Brevitate Vitae",
+      "source_url": "https://la.wikisource.org/wiki/De_brevitate_vitae",
+      "theme": "attention",
+      "verification": "Research ID research.seneca.day9.brev4; corpus row 649; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.seneca.day9.brev5",
+      "text_vi": "Đời sống có phần đã qua, phần đang có và phần chưa tới.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Brevitate Vitae",
+      "source_url": "https://la.wikisource.org/wiki/De_brevitate_vitae",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.brev5; corpus row 650; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.seneca.day9.brev6",
+      "text_vi": "Một trở ngại lớn của việc sống là cứ treo mình vào ngày mai và đánh mất hôm nay.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Brevitate Vitae",
+      "source_url": "https://la.wikisource.org/wiki/De_brevitate_vitae",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.brev6; corpus row 651; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.seneca.day9.ep001_2",
+      "text_vi": "Có phần thời gian bị lấy mất, có phần bị lấy lén, có phần tự trôi đi.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep001_2; corpus row 597; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.001",
+      "text_vi": "Nước tích chưa đủ sâu thì chưa đủ sức nâng một con thuyền lớn.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch01.001; corpus row 319; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.002",
+      "text_vi": "Gió tích chưa đủ dày thì chưa đủ sức nâng đôi cánh lớn.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch01.002; corpus row 320; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.003",
+      "text_vi": "Cái biết nhỏ không bao trọn cái biết lớn; nhịp sống ngắn không bao trọn nhịp dài.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch01.003; corpus row 321; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.004",
+      "text_vi": "Cả đời khen cũng không vì thế mà cố thêm; cả đời chê cũng không vì thế mà nản.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch01.004; corpus row 322; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.006",
+      "text_vi": "Chim làm tổ trong rừng sâu cũng chỉ cần một cành; chuột uống sông cũng chỉ đầy một bụng.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch01.006; corpus row 324; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.007",
+      "text_vi": "Cùng một khả năng, kết quả khác nhau vì cách và bối cảnh sử dụng khác nhau.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch01.007; corpus row 325; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "release_shortlist"
+    },
+    {
+      "id": "research.day25.an3_15",
+      "text_vi": "Vào thái miếu, Khổng Tử hỏi về từng việc; biết nhiều không loại bỏ việc hỏi.",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "change_growth",
+      "verification": "Research ID research.day25.an3_15; corpus row 1059; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.day25.an4_24",
+      "text_vi": "Chậm trong lời, nhanh trong việc.",
+      "author": "Confucius tradition / 孔子",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "self_understanding",
+      "verification": "Research ID research.day25.an4_24; corpus row 1064; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch02.008",
+      "text_vi": "Việc thành mà không ở lại trong công trạng; chính vì không giữ lấy nên điều ấy không mất đi.",
+      "author": "Laozi / 老子",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.ch02.008; corpus row 9; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch04.011",
+      "text_vi": "Đạo rỗng mà dùng mãi dường như vẫn không đầy.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.ch04.011; corpus row 12; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch09.023",
+      "text_vi": "Mài một mũi nhọn mãi cho sắc hơn thì khó giữ được độ sắc ấy lâu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.ch09.023; corpus row 24; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch09.026",
+      "text_vi": "Việc đã thành thì biết lui; đoạn văn gọi đó là đường của trời.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.ch09.026; corpus row 27; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch10.029",
+      "text_vi": "Sinh dưỡng mà không sở hữu; làm mà không cậy công; giúp lớn lên mà không khống chế — đó được gọi là đức huyền.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.ch10.029; corpus row 30; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch11.031",
+      "text_vi": "Nặn đất thành đồ đựng; chính khoảng rỗng bên trong làm nó có công dụng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.ch11.031; corpus row 32; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch11.032",
+      "text_vi": "Mở cửa và cửa sổ để thành căn phòng; chính khoảng không bên trong làm căn phòng dùng được.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.ch11.032; corpus row 33; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch11.033",
+      "text_vi": "Cái có tạo nên lợi ích; cái không có tạo nên chỗ để sử dụng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.ch11.033; corpus row 34; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch12.036",
+      "text_vi": "Vì vậy người theo Đạo chăm điều nuôi dưỡng bên trong hơn là chạy theo thứ chỉ làm mắt thỏa mãn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.ch12.036; corpus row 37; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch13.038",
+      "text_vi": "Có được thì lo, mất đi cũng lo.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "emotion",
+      "verification": "Research ID research.laozi.ch13.038; corpus row 39; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch15.044",
+      "text_vi": "Tan ra như băng sắp chảy; mộc như gỗ chưa đẽo; rộng như thung lũng; hòa lẫn như nước đục.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.ch15.044; corpus row 45; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch15.045",
+      "text_vi": "Ai có thể để nước đục lắng yên rồi dần trở nên trong?",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.ch15.045; corpus row 46; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch15.046",
+      "text_vi": "Ai có thể ở trong yên mà để chuyển động dần sinh ra?",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.ch15.046; corpus row 47; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch15.047",
+      "text_vi": "Người giữ cách ấy không muốn tự làm mình đầy; chính vì không đầy nên có thể ở cùng cái cũ mà không phải liên tục làm mới mình.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.ch15.047; corpus row 48; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch16.049",
+      "text_vi": "Muôn vật cùng sinh khởi; ta nhìn chúng trở về.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.ch16.049; corpus row 50; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch16.050",
+      "text_vi": "Muôn vật phong phú rồi mỗi thứ lại trở về gốc; trở về gốc được gọi là tĩnh.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.ch16.050; corpus row 51; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch16.051",
+      "text_vi": "Nhìn ra điều có tính lặp lại và bền vững được gọi là sáng rõ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.ch16.051; corpus row 52; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch17.053",
+      "text_vi": "Khi sự đáng tin không đủ, sự không tin cũng xuất hiện.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.ch17.053; corpus row 54; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch20.058",
+      "text_vi": "Điều mọi người sợ không thể đơn giản coi như không đáng sợ; nhưng phạm vi của nỗi sợ ấy dường như không có tận cùng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "emotion",
+      "verification": "Research ID research.laozi.ch20.058; corpus row 59; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch20.059",
+      "text_vi": "Mọi người hân hoan như dự đại tiệc, như lên đài ngắm cảnh mùa xuân.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.ch20.059; corpus row 60; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch20.060",
+      "text_vi": "Mọi người dường như đều dư dả; riêng ta như thể đã bỏ quên hay thiếu mất điều gì.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.ch20.060; corpus row 61; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch20.062",
+      "text_vi": "Mênh mang như biển; trôi đi như chưa có nơi dừng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.ch20.062; corpus row 63; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.ch20.063",
+      "text_vi": "Mọi người đều có vẻ biết mình dùng năng lực vào đâu; riêng ta trông vụng và không hợp thời.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.ch20.063; corpus row 64; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch21.002",
+      "text_vi": "Đạo như một điều vừa mờ vừa khó nắm bắt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day2.ch21.002; corpus row 66; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch21.003",
+      "text_vi": "Trong cái mờ khó nắm vẫn có hình; trong cái mơ hồ vẫn có điều đang hiện hữu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day2.ch21.003; corpus row 67; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch21.005",
+      "text_vi": "Từ xưa đến nay, tên ấy không mất; nhờ đó có thể nhìn lại những khởi đầu của muôn vật.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch21.005; corpus row 69; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch22.006",
+      "text_vi": "Cong có thể giữ được toàn; trũng có thể được đầy; cũ có thể thành mới; ít có thể được, nhiều có thể làm rối.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch22.006; corpus row 70; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch22.007",
+      "text_vi": "Chính vì không tranh nên không ai có thể kéo vào cùng một cuộc tranh.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch22.007; corpus row 71; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch23.009",
+      "text_vi": "Ít lời gần với tự nhiên.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day2.ch23.009; corpus row 73; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch23.011",
+      "text_vi": "Ngay trời đất cũng không duy trì mãi một cơn dữ dội; con người lại càng không thể giữ mãi một trạng thái như vậy.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch23.011; corpus row 75; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch25.017",
+      "text_vi": "Lặng và rộng; đứng riêng mà không đổi, vận hành khắp mà không kiệt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day2.ch25.017; corpus row 81; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch25.018",
+      "text_vi": "Người theo đất, đất theo trời, trời theo Đạo; Đạo theo cái tự nhiên như chính nó.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch25.018; corpus row 82; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch26.019",
+      "text_vi": "Nặng là gốc của nhẹ; tĩnh là chủ của động.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.day2.ch26.019; corpus row 83; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch26.020",
+      "text_vi": "Dù có cảnh huy hoàng, vẫn có thể ở yên mà không bị nó cuốn đi.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day2.ch26.020; corpus row 84; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch26.021",
+      "text_vi": "Quá nhẹ dễ mất gốc; quá xao động dễ mất khả năng làm chủ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day2.ch26.021; corpus row 85; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch27.024",
+      "text_vi": "Người làm tốt có thể là thầy; người chưa làm tốt cũng có thể trở thành điều để người khác học.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day2.ch27.024; corpus row 88; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch27.025",
+      "text_vi": "Dù thông minh vẫn có thể rơi vào mê lầm; đây là điểm tinh tế cần nhớ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch27.025; corpus row 89; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch28.027",
+      "text_vi": "Biết phần sáng mà vẫn giữ được phần tối.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch28.027; corpus row 91; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch28.028",
+      "text_vi": "Biết vinh mà vẫn giữ được khả năng ở cùng phần thấp và khó chịu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch28.028; corpus row 92; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch28.030",
+      "text_vi": "Trở về chỗ không bị giới hạn bởi một cực.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch28.030; corpus row 94; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch28.031",
+      "text_vi": "Trở về phần mộc chưa bị đẽo gọt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch28.031; corpus row 95; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch29.032",
+      "text_vi": "Muốn nắm cả thế giới rồi cưỡng làm theo ý mình, đoạn văn cho rằng điều ấy khó thành.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch29.032; corpus row 96; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch29.033",
+      "text_vi": "Có những điều không thể bị cưỡng làm hay nắm giữ như một vật sở hữu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch29.033; corpus row 97; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch29.035",
+      "text_vi": "Sự vật có lúc đi trước, lúc theo sau; lúc mạnh, lúc yếu; lúc nâng lên, lúc rơi xuống.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day2.ch29.035; corpus row 99; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch30.037",
+      "text_vi": "Đạt kết quả mà không cần tự tôn, kể công hay kiêu ngạo.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day2.ch30.037; corpus row 101; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch30.039",
+      "text_vi": "Điều bị đẩy đến cực thịnh rồi cũng đi về suy; đoạn văn xem cưỡng mạnh kéo dài là trái nhịp.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day2.ch30.039; corpus row 103; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch31.042",
+      "text_vi": "Thắng mà không xem chiến thắng ấy là đẹp; ca tụng nó là điều văn bản cảnh báo.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day2.ch31.042; corpus row 106; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch32.043",
+      "text_vi": "Đạo thường không có tên cố định.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch32.043; corpus row 107; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch33.048",
+      "text_vi": "Biết đủ được gọi là giàu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch33.048; corpus row 112; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch33.050",
+      "text_vi": "Không đánh mất chỗ đứng/nền tảng của mình thì có thể bền.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day2.ch33.050; corpus row 114; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch34.053",
+      "text_vi": "Muôn vật nhờ đó mà sinh; việc thành mà không nhận là sở hữu của mình.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch34.053; corpus row 117; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch34.054",
+      "text_vi": "Nuôi dưỡng muôn vật mà không tự đặt mình làm chủ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day2.ch34.054; corpus row 118; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch34.055",
+      "text_vi": "Không tự đặt mình ở trung tâm có thể trông nhỏ; đón nhận mà không làm chủ lại có thể là một dạng lớn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch34.055; corpus row 119; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch35.058",
+      "text_vi": "Đạo khi nói ra nghe nhạt như không vị.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day2.ch35.058; corpus row 122; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch36.062",
+      "text_vi": "Cá không thể rời vực sâu của nó.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch36.062; corpus row 126; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch37.064",
+      "text_vi": "Đạo thường không cưỡng làm, mà không gì bị bỏ khỏi quá trình vận hành.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day2.ch37.064; corpus row 128; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch37.065",
+      "text_vi": "Nếu người cầm quyền giữ được nguyên tắc ấy, sự vật có thể tự chuyển hóa.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day2.ch37.065; corpus row 129; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch38.068",
+      "text_vi": "Đức cao không bám vào việc mình có đức, nên mới có đức.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day2.ch38.068; corpus row 132; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch38.069",
+      "text_vi": "Đức cao không cưỡng làm vì một cái cớ để chứng minh mình; đức thấp hơn hành động với sự bám vào mục đích ấy.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day2.ch38.069; corpus row 133; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch38.071",
+      "text_vi": "Nghi lễ hình thức, khi lòng tin đã mỏng, có thể trở thành dấu hiệu của rối loạn chứ không phải bằng chứng của chân thành.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch38.071; corpus row 135; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch38.072",
+      "text_vi": "Biết trước và phô diễn tri thức có thể chỉ là phần hoa bên ngoài; bám vào nó có thể mở đầu cho mê lầm.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch38.072; corpus row 136; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch39.075",
+      "text_vi": "Cái được xem là quý dựa trên cái bị xem là thấp; cái cao có nền ở cái thấp.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch39.075; corpus row 139; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch39.076",
+      "text_vi": "Chia chiếc xe thành quá nhiều bộ phận thì có thể không còn thấy chiếc xe; không nhất thiết phải luôn bóng như ngọc hay thô như đá.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch39.076; corpus row 140; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch40.077",
+      "text_vi": "Trở lại là chuyển động của Đạo; mềm/yếu là cách Đạo vận hành.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day2.ch40.077; corpus row 141; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch40.078",
+      "text_vi": "Muôn vật sinh từ cái có; cái có lại được nói là sinh từ cái không.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch40.078; corpus row 142; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch41.079",
+      "text_vi": "Cùng một điều, người khác nhau có thể nghe và đáp lại rất khác nhau.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch41.079; corpus row 143; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch41.081",
+      "text_vi": "Đức lớn có thể trông như thung lũng; cái rất sáng có thể trông như bị hạ; cái rộng có thể trông như còn thiếu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch41.081; corpus row 145; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch41.082",
+      "text_vi": "Hình lớn không bị giới hạn bởi góc; vật lớn thành muộn; âm lớn nghe như ít tiếng; hình lớn như không hình.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch41.082; corpus row 146; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch41.083",
+      "text_vi": "Đạo ẩn và không tên; chính vì vậy nó có thể nâng đỡ sự thành hình mà không chiếm tên.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day2.ch41.083; corpus row 147; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch42.087",
+      "text_vi": "Có khi bớt lại thành thêm; có khi thêm lại thành bớt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch42.087; corpus row 151; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch43.089",
+      "text_vi": "Thứ mềm nhất có thể đi xuyên qua thứ cứng nhất.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch43.089; corpus row 153; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch43.091",
+      "text_vi": "Có những điều được truyền không bằng lời, và có ích lợi đến từ không cưỡng làm.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day2.ch43.091; corpus row 155; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch44.092",
+      "text_vi": "Danh và thân, điều nào gần mình hơn? Thân và của cải, điều nào đáng giữ hơn? Được và mất, phía nào thực sự gây tổn hại?",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day2.ch44.092; corpus row 156; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch44.093",
+      "text_vi": "Bám quá chặt có thể phải trả giá lớn; tích quá nhiều có thể làm phần mất mát lớn hơn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch44.093; corpus row 157; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch44.094",
+      "text_vi": "Biết đủ giúp tránh tự hạ mình; biết dừng giúp tránh nguy; nhờ đó có thể bền lâu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch44.094; corpus row 158; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch45.095",
+      "text_vi": "Điều thành tựu lớn có thể trông như còn thiếu mà công dụng không suy.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch45.095; corpus row 159; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch45.096",
+      "text_vi": "Cái đầy lớn có thể trông như rỗng mà dùng không cạn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch45.096; corpus row 160; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch45.097",
+      "text_vi": "Cái thẳng lớn có thể trông cong; khéo lớn có thể trông vụng; biện lớn có thể trông ít lời.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch45.097; corpus row 161; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch46.101",
+      "text_vi": "Biết thế nào là đủ có thể tạo một dạng đủ bền hơn việc cứ thêm.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch46.101; corpus row 165; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch47.102",
+      "text_vi": "Không bước khỏi cửa vẫn có thể hiểu một phần thế giới; không nhìn qua cửa sổ vẫn có thể nhận ra quy luật.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch47.102; corpus row 166; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch47.103",
+      "text_vi": "Đi càng xa chưa chắc biết càng nhiều; có lúc càng tìm rộng lại càng rời điều cần hiểu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day2.ch47.103; corpus row 167; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch47.104",
+      "text_vi": "Có thể biết mà không chạy khắp nơi, gọi tên mà không cần thấy mọi thứ, tạo điều kiện cho việc thành mà không cưỡng làm.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch47.104; corpus row 168; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch48.105",
+      "text_vi": "Theo việc học, mỗi ngày có thể thêm; theo Đạo, mỗi ngày lại bớt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day2.ch48.105; corpus row 169; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch48.106",
+      "text_vi": "Bớt rồi lại bớt, cho đến khi không còn phải cưỡng làm.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch48.106; corpus row 170; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch48.107",
+      "text_vi": "Không cưỡng làm không đồng nghĩa không có gì được thực hiện.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day2.ch48.107; corpus row 171; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch48.108",
+      "text_vi": "Muốn giữ một hệ lớn không thể mặc định càng can thiệp càng tốt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch48.108; corpus row 172; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch49.109",
+      "text_vi": "Người theo Đạo không cố giữ một tâm thế cố định; lấy lòng của người khác làm điều mình lắng nghe.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch49.109; corpus row 173; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch49.110",
+      "text_vi": "Với người được xem là tốt thì đối xử tốt; với người chưa được xem là tốt cũng không vội bỏ sự thiện.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "emotion",
+      "verification": "Research ID research.laozi.day2.ch49.110; corpus row 174; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day2.ch49.112",
+      "text_vi": "Người theo Đạo làm mềm các phân chia cứng và giữ một tâm không vội đóng khung.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day2.ch49.112; corpus row 176; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch51.001",
+      "text_vi": "Đạo sinh ra; đức nuôi dưỡng; sự vật cho hình; hoàn cảnh làm nên sự thành hình.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch51.001; corpus row 183; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch51.003",
+      "text_vi": "Làm lớn lên, nuôi dưỡng, giúp thành hình, chăm và che chở.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch51.003; corpus row 185; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch51.004",
+      "text_vi": "Sinh dưỡng mà không sở hữu; làm mà không cậy công; giúp lớn mà không cai quản.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch51.004; corpus row 186; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch52.005",
+      "text_vi": "Biết được gốc để hiểu phần ngọn; hiểu phần ngọn rồi vẫn trở về giữ gốc.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch52.005; corpus row 187; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch52.006",
+      "text_vi": "Bớt những cửa khiến mình liên tục bị kéo ra ngoài, có thể bớt sự tiêu hao.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch52.006; corpus row 188; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch52.007",
+      "text_vi": "Nếu cứ mở mọi cửa và chạy theo mọi việc, sự bận rộn có thể không có điểm dừng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch52.007; corpus row 189; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch52.008",
+      "text_vi": "Thấy được điều nhỏ gọi là sáng; giữ được sự mềm gọi là mạnh.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch52.008; corpus row 190; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch53.010",
+      "text_vi": "Con đường lớn vốn bằng phẳng, nhưng người ta thường thích lối tắt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch53.010; corpus row 192; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch53.011",
+      "text_vi": "Cung điện quá chăm chút trong khi ruộng hoang và kho trống.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day3.ch53.011; corpus row 193; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch54.013",
+      "text_vi": "Điều được xây trên nền tốt khó bị nhổ; điều được giữ đúng cách khó tuột mất.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch54.013; corpus row 195; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch54.014",
+      "text_vi": "Điều được thực hành nơi chính mình mới trở thành phần thật của mình.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day3.ch54.014; corpus row 196; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch54.016",
+      "text_vi": "Dùng chính cấp độ ấy để nhìn cấp độ ấy: nhìn người từ người, nhà từ nhà, cộng đồng từ cộng đồng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch54.016; corpus row 198; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch55.019",
+      "text_vi": "Xương còn yếu, gân còn mềm mà bàn tay vẫn nắm chắc.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch55.019; corpus row 201; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch55.021",
+      "text_vi": "Biết sự hòa hợp gọi là biết điều bền; biết điều bền gọi là sáng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch55.021; corpus row 203; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch55.023",
+      "text_vi": "Điều bị đẩy đến cực mạnh rồi cũng đi về suy.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day3.ch55.023; corpus row 205; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch56.024",
+      "text_vi": "Người biết không nhất thiết nói nhiều; người nói nhiều không vì thế mà biết.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch56.024; corpus row 206; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch56.025",
+      "text_vi": "Bớt cửa vào, làm dịu sắc nhọn, gỡ rối, hòa ánh sáng và ở cùng bụi đời.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch56.025; corpus row 207; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch56.027",
+      "text_vi": "Không dễ bị kéo chỉ bởi thân–sơ, lợi–hại.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch56.027; corpus row 209; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch57.029",
+      "text_vi": "Càng nhiều cấm đoán và công cụ sắc bén, hệ thống chưa chắc càng tốt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch57.029; corpus row 211; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch57.031",
+      "text_vi": "Ta bớt cưỡng làm thì người tự chuyển; ta giữ tĩnh thì người tự điều chỉnh.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch57.031; corpus row 213; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch57.032",
+      "text_vi": "Khi người dẫn dắt bớt áp ham muốn của mình, người khác có thể giữ phần mộc của họ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch57.032; corpus row 214; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch58.034",
+      "text_vi": "Trong họa có thể có mầm của phúc; trong phúc có thể ẩn mầm của họa.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch58.034; corpus row 216; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch58.035",
+      "text_vi": "Ai biết được điểm cuối? Không dễ có một đường phân định cố định.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch58.035; corpus row 217; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch58.037",
+      "text_vi": "Có nguyên tắc mà không cắt người khác; sắc sảo mà không làm tổn thương; thẳng mà không áp; sáng mà không chói.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch58.037; corpus row 219; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch59.038",
+      "text_vi": "Trong việc giữ người và giữ hệ, văn bản đề cao sự tiết chế.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.day3.ch59.038; corpus row 220; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch59.039",
+      "text_vi": "Biết tiết chế sớm giúp chuẩn bị trước khi cạn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.day3.ch59.039; corpus row 221; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch59.040",
+      "text_vi": "Chuẩn bị sớm được ví như tích lũy nền tảng từng lớp.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch59.040; corpus row 222; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch59.041",
+      "text_vi": "Rễ sâu, gốc chắc được dùng như hình ảnh của sự bền lâu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch59.041; corpus row 223; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch60.042",
+      "text_vi": "Quản trị một hệ lớn giống nấu cá nhỏ: đảo quá nhiều dễ làm nát.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch60.042; corpus row 224; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch61.045",
+      "text_vi": "Biển lớn ở chỗ thấp nên các dòng chảy hội về.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch61.045; corpus row 227; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch61.047",
+      "text_vi": "Có khi hạ mình để nhận; có khi chính vì ở thấp mà được đón nhận.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch61.047; corpus row 229; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch61.048",
+      "text_vi": "Để hai phía cùng có chỗ đạt điều cần, phía lớn hơn càng cần biết hạ xuống.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch61.048; corpus row 230; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch62.050",
+      "text_vi": "Nó là báu vật của người tốt và cũng là nơi nương của người chưa tốt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.day3.ch62.050; corpus row 232; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch62.051",
+      "text_vi": "Một người chưa tốt — vì sao phải vội bỏ họ?",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "emotion",
+      "verification": "Research ID research.laozi.day3.ch62.051; corpus row 233; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch62.052",
+      "text_vi": "Lời đẹp có thể mua được sự chú ý; hành vi đáng trọng có thể tạo ảnh hưởng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.day3.ch62.052; corpus row 234; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch63.054",
+      "text_vi": "Làm mà không cưỡng làm; xử lý việc từ khi còn chưa thành việc lớn; cảm được cả điều ít vị.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch63.054; corpus row 236; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch63.056",
+      "text_vi": "Tính việc khó khi nó còn dễ; làm việc lớn từ phần nhỏ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch63.056; corpus row 238; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch63.057",
+      "text_vi": "Việc khó bắt đầu từ lúc còn dễ; việc lớn bắt đầu từ điều nhỏ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day3.ch63.057; corpus row 239; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch63.058",
+      "text_vi": "Hứa quá dễ thường làm niềm tin mỏng; xem quá nhiều việc là dễ thường gặp nhiều khó khăn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch63.058; corpus row 240; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch63.059",
+      "text_vi": "Người sáng vẫn coi việc là khó, nhờ vậy không xem nhẹ điều cần chuẩn bị.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "emotion",
+      "verification": "Research ID research.laozi.day3.ch63.059; corpus row 241; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch64.060",
+      "text_vi": "Khi còn ổn thì dễ giữ; khi chưa thành dấu lớn thì dễ tính; cái mong manh dễ tách; cái nhỏ dễ phân tán.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch64.060; corpus row 242; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch64.061",
+      "text_vi": "Làm từ khi vấn đề chưa thành hình; xử lý trước khi rối loạn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch64.061; corpus row 243; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch64.062",
+      "text_vi": "Cây lớn bắt đầu từ mầm nhỏ; đài cao từ từng lớp đất; hành trình xa từ bước dưới chân.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch64.062; corpus row 244; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch64.064",
+      "text_vi": "Cẩn trọng ở cuối như lúc bắt đầu thì ít làm hỏng việc.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch64.064; corpus row 246; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch64.065",
+      "text_vi": "Không để mình bị dẫn chỉ bởi thứ được người khác coi là đáng khao khát.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day3.ch64.065; corpus row 247; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch64.066",
+      "text_vi": "Học cả điều người khác không coi là học, và quay lại nơi số đông thường bỏ qua.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day3.ch64.066; corpus row 248; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch64.067",
+      "text_vi": "Hỗ trợ sự vật phát triển theo tính của nó mà không cưỡng làm thay.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch64.067; corpus row 249; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch65.071",
+      "text_vi": "Biết phân biệt hai cách ấy được xem như một nguyên tắc để soi lại.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch65.071; corpus row 253; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch66.073",
+      "text_vi": "Sông biển thành nơi trăm dòng đổ về vì nó biết ở thấp.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch66.073; corpus row 255; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch66.074",
+      "text_vi": "Muốn dẫn dắt người khác, lời nói cần biết hạ xuống; muốn đi trước, bản thân cần biết đứng sau.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch66.074; corpus row 256; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch66.075",
+      "text_vi": "Ở trên mà người khác không thấy nặng; ở trước mà họ không thấy bị hại.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch66.075; corpus row 257; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch66.076",
+      "text_vi": "Vì không biến mọi thứ thành tranh hơn-thua nên khó bị kéo vào cuộc tranh ấy.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch66.076; corpus row 258; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch67.077",
+      "text_vi": "Văn bản nêu ba điều quý: lòng từ, tiết chế và không vội đặt mình lên trước.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day3.ch67.077; corpus row 259; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch67.078",
+      "text_vi": "Từ ái có thể sinh dũng khí; tiết chế tạo độ rộng; không tranh đứng đầu tạo khả năng dẫn dắt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch67.078; corpus row 260; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch67.079",
+      "text_vi": "Bỏ lòng từ mà chỉ giữ sự gan lì, bỏ tiết chế mà chỉ muốn mở rộng, bỏ phía sau mà chỉ tranh phía trước — văn bản xem đó là con đường tự phá.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch67.079; corpus row 261; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch67.080",
+      "text_vi": "Văn bản dùng hình ảnh lòng từ như thứ làm cả hành động lẫn bảo vệ trở nên vững.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.day3.ch67.080; corpus row 262; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch68.081",
+      "text_vi": "Người giỏi không nhất thiết hiếu chiến; người giỏi đối đầu không nhất thiết bị giận dữ dẫn dắt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch68.081; corpus row 263; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch68.082",
+      "text_vi": "Người khéo vượt xung đột không nhất thiết lao vào đối đầu; người khéo dùng người biết đặt mình thấp.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch68.082; corpus row 264; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch68.083",
+      "text_vi": "Văn bản gọi đó là đức không tranh và khả năng dùng sức của người khác mà không áp họ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch68.083; corpus row 265; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch69.085",
+      "text_vi": "Ta không vội làm chủ cuộc đối đầu; không vội tiến một tấc mà sẵn sàng lùi một thước.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch69.085; corpus row 267; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch69.086",
+      "text_vi": "Không gì dễ gây họa bằng xem nhẹ phía đối diện; xem nhẹ có thể làm mất điều mình quý.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch69.086; corpus row 268; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch70.088",
+      "text_vi": "Điều đơn giản để nói chưa chắc dễ được sống.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day3.ch70.088; corpus row 270; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch70.089",
+      "text_vi": "Lời có gốc; việc có nguyên tắc chủ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch70.089; corpus row 271; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch70.090",
+      "text_vi": "Ít người hiểu không tự động làm điều ấy kém giá trị.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch70.090; corpus row 272; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch70.091",
+      "text_vi": "Bên ngoài mặc vải thô, bên trong giữ ngọc.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch70.091; corpus row 273; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch71.092",
+      "text_vi": "Biết rằng mình chưa biết là điều cao; không biết mà tưởng mình biết là một vấn đề.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch71.092; corpus row 274; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch71.093",
+      "text_vi": "Chính vì nhận ra vấn đề của việc tưởng mình biết nên có thể tránh mắc vào nó.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch71.093; corpus row 275; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch72.094",
+      "text_vi": "Đừng làm chật nơi người khác sống; đừng khiến họ chán chính đời sống của mình.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch72.094; corpus row 276; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch72.096",
+      "text_vi": "Biết mình mà không phô mình; yêu mình mà không tự đặt mình cao hơn.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch72.096; corpus row 278; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch73.097",
+      "text_vi": "Có kiểu dũng cảm lao tới và có kiểu dũng cảm biết không lao tới; hệ quả có thể khác nhau.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch73.097; corpus row 279; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch73.098",
+      "text_vi": "Hai cách đều có thể lợi hoặc hại tùy nơi dùng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch73.098; corpus row 280; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch73.099",
+      "text_vi": "Ngay người sáng cũng xem việc biết chắc điều gì là đúng trong mọi tình huống là khó.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch73.099; corpus row 281; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch74.103",
+      "text_vi": "Thay người thợ lớn cầm rìu đẽo thường dễ làm chính tay mình bị thương.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.day3.ch74.103; corpus row 285; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch75.104",
+      "text_vi": "Văn bản nhìn cái đói như hệ quả của cấu trúc phía trên, không chỉ lỗi của người đói.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch75.104; corpus row 286; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch75.105",
+      "text_vi": "Văn bản quy một phần rối loạn cho sự can thiệp quá mức từ phía trên.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch75.105; corpus row 287; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch76.108",
+      "text_vi": "Khi sống, con người mềm và linh hoạt; khi chết, cơ thể trở nên cứng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch76.108; corpus row 290; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch76.109",
+      "text_vi": "Cây cỏ khi sống mềm non; khi chết thì khô cứng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day3.ch76.109; corpus row 291; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch76.110",
+      "text_vi": "Văn bản đặt cứng mạnh về phía chết, mềm yếu về phía sống.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch76.110; corpus row 292; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch76.111",
+      "text_vi": "Cứng mạnh được đặt phía dưới; mềm linh hoạt được đặt phía trên.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch76.111; corpus row 293; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch77.112",
+      "text_vi": "Đạo trời được ví như giương cung: chỗ cao hạ xuống, chỗ thấp nâng lên; chỗ dư bớt, chỗ thiếu được bù.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch77.112; corpus row 294; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch77.113",
+      "text_vi": "Đường của trời bớt nơi dư để bù nơi thiếu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch77.113; corpus row 295; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch77.114",
+      "text_vi": "Văn bản phê phán khi hệ người làm ngược: lấy từ nơi thiếu để bồi nơi đã dư.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch77.114; corpus row 296; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch77.116",
+      "text_vi": "Làm mà không cậy; việc thành mà không chiếm công.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch77.116; corpus row 298; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch78.117",
+      "text_vi": "Không gì mềm như nước, nhưng trong việc đi qua cái cứng, ít thứ vượt được nó.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch78.117; corpus row 299; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch78.118",
+      "text_vi": "Ai cũng có thể nghe rằng mềm thắng cứng, nhưng sống được điều ấy lại khó.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "change_growth",
+      "verification": "Research ID research.laozi.day3.ch78.118; corpus row 300; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch78.120",
+      "text_vi": "Lời đúng đôi khi nghe như nghịch lý.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch78.120; corpus row 302; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch79.121",
+      "text_vi": "Hòa giải một oán lớn vẫn có thể còn phần oán chưa tan.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch79.121; corpus row 303; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch79.122",
+      "text_vi": "Vậy chỉ làm cho xong bề mặt đã đủ gọi là tốt chưa?",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.laozi.day3.ch79.122; corpus row 304; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch79.123",
+      "text_vi": "Người sáng giữ phần trách nhiệm của mình mà không chỉ chăm chăm đòi phía kia trả nợ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "relationships",
+      "verification": "Research ID research.laozi.day3.ch79.123; corpus row 305; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch79.124",
+      "text_vi": "Người có đức nhìn vào cam kết; người thiếu đức chỉ chăm soi lỗi để thu đủ.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "work_achievement",
+      "verification": "Research ID research.laozi.day3.ch79.124; corpus row 306; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch80.127",
+      "text_vi": "Có công cụ mạnh nhưng không nhất thiết phải dùng chỉ vì nó tồn tại.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch80.127; corpus row 309; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch80.128",
+      "text_vi": "Có phương tiện và vũ khí nhưng không vì có mà phải đem ra dùng.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.laozi.day3.ch80.128; corpus row 310; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch80.129",
+      "text_vi": "Biết ngon với thức ăn mình có, thấy đẹp trong đồ mình mặc, yên nơi mình ở, vui trong nếp sống của mình.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch80.129; corpus row 311; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch81.131",
+      "text_vi": "Lời đáng tin không nhất thiết đẹp; lời đẹp không vì đẹp mà đáng tin.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch81.131; corpus row 313; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch81.132",
+      "text_vi": "Điều tốt không nhất thiết thắng bằng tranh biện; tranh biện giỏi không tự chứng minh điều tốt.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch81.132; corpus row 314; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch81.133",
+      "text_vi": "Biết sâu không nhất thiết biết rộng; biết rộng không tự động thành hiểu sâu.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "attention",
+      "verification": "Research ID research.laozi.day3.ch81.133; corpus row 315; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch81.134",
+      "text_vi": "Người sáng không lấy tích lũy làm mục tiêu tự thân.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "self_understanding",
+      "verification": "Research ID research.laozi.day3.ch81.134; corpus row 316; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.laozi.day3.ch81.136",
+      "text_vi": "Đường của trời làm lợi mà không hại; đường của người sáng làm mà không tranh.",
+      "author": "Laozi",
+      "work": "道德經 / Tao Te Ching",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+      "theme": "meaning_values",
+      "verification": "Research ID research.laozi.day3.ch81.136; corpus row 318; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.reaudit.day25.an15_31_think_without_learning",
+      "text_vi": "Khổng Tử nói từng bỏ ăn, bỏ ngủ để suy nghĩ mà không ích bằng học.",
+      "author": "Confucius tradition",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "change_growth",
+      "verification": "Research ID research.reaudit.day25.an15_31_think_without_learning; corpus row 1115; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.reaudit.day25.an9_4_four_absences",
+      "text_vi": "Văn bản mô tả bốn điều Khổng Tử tránh: võ đoán, tất định, cố chấp và lấy cái tôi làm trung tâm.",
+      "author": "Confucius tradition",
+      "work": "論語 / Analects",
+      "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+      "theme": "self_understanding",
+      "verification": "Research ID research.reaudit.day25.an9_4_four_absences; corpus row 1112; content_nature=translated_quote; verification=A - Chinese passage/location verified.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.brev2",
+      "text_vi": "Không hẳn ta có quá ít thời gian; Seneca cho rằng phần lớn vấn đề là ta để mất nhiều thời gian.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Brevitate Vitae",
+      "source_url": "https://la.wikisource.org/wiki/De_brevitate_vitae",
+      "theme": "attention",
+      "verification": "Research ID research.seneca.day9.brev2; corpus row 647; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep001_1",
+      "text_vi": "Hãy lấy lại chính mình cho mình.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.seneca.day9.ep001_1; corpus row 596; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep001_3",
+      "text_vi": "Hãy giữ lấy từng giờ đang có.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep001_3; corpus row 598; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep002",
+      "text_vi": "Người ở khắp nơi thường chẳng thật sự ở đâu.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "attention",
+      "verification": "Research ID research.seneca.day9.ep002; corpus row 599; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep003",
+      "text_vi": "Khi đã là bạn thì có chỗ cho tin cậy; trước khi kết bạn thì cần có phán đoán.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "relationships",
+      "verification": "Research ID research.seneca.day9.ep003; corpus row 600; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep006",
+      "text_vi": "Con người học trong khi dạy.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "change_growth",
+      "verification": "Research ID research.seneca.day9.ep006; corpus row 601; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep009",
+      "text_vi": "Người biết đủ với chính mình vẫn muốn có bạn.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "relationships",
+      "verification": "Research ID research.seneca.day9.ep009; corpus row 604; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep013",
+      "text_vi": "Có nhiều điều làm ta sợ hơn số điều thực sự đang đè lên ta.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep013; corpus row 605; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep013_2",
+      "text_vi": "Ta thường khổ vì điều mình hình dung hơn vì chính sự việc.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep013_2; corpus row 606; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep016",
+      "text_vi": "Triết học tạo hình tâm trí, sắp xếp đời sống và soi cách hành động.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "meaning_values",
+      "verification": "Research ID research.seneca.day9.ep016; corpus row 607; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep019",
+      "text_vi": "Nếu có thể, hãy rút mình khỏi những bận rộn ấy; nếu không, hãy giành lại mình khỏi chúng.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "work_achievement",
+      "verification": "Research ID research.seneca.day9.ep019; corpus row 608; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep020",
+      "text_vi": "Triết học dạy cách sống, không chỉ cách nói.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "meaning_values",
+      "verification": "Research ID research.seneca.day9.ep020; corpus row 609; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep027",
+      "text_vi": "Những thói quen và điểm mù có thể già đi cùng ta.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep027; corpus row 612; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep028",
+      "text_vi": "Điều cần thay đổi có khi là tâm trí, không phải bầu trời.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep028; corpus row 613; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep028_2",
+      "text_vi": "Cần nhìn vào gánh nặng đang mang trong tâm trí; nếu không, đổi nơi chưa chắc làm nơi nào trở nên dễ chịu.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep028_2; corpus row 614; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep032",
+      "text_vi": "Trong lúc ta trì hoãn, đời vẫn trôi.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep032; corpus row 615; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep047",
+      "text_vi": "Họ là nô lệ? Không—trước hết họ là con người.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "relationships",
+      "verification": "Research ID research.seneca.day9.ep047; corpus row 617; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep047_2",
+      "text_vi": "Hãy đối xử với người ở vị thế thấp hơn như cách bạn mong người ở trên đối xử với mình.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "relationships",
+      "verification": "Research ID research.seneca.day9.ep047_2; corpus row 618; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep056",
+      "text_vi": "Sự yên tĩnh bên ngoài có ích gì nếu bên trong vẫn ồn ào?",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.seneca.day9.ep056; corpus row 620; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep063",
+      "text_vi": "Không cần ép nỗi buồn phải tuân theo một khuôn duy nhất.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "emotion",
+      "verification": "Research ID research.seneca.day9.ep063; corpus row 622; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep071",
+      "text_vi": "Mỗi quyết định nên được nhìn trong tương quan với toàn bộ đời sống.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "meaning_values",
+      "verification": "Research ID research.seneca.day9.ep071; corpus row 623; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep090",
+      "text_vi": "Triết học cần đời sống, không chỉ lời nói.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "meaning_values",
+      "verification": "Research ID research.seneca.day9.ep090; corpus row 626; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep094",
+      "text_vi": "Một phần phẩm chất đến từ học, một phần từ luyện tập.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "change_growth",
+      "verification": "Research ID research.seneca.day9.ep094; corpus row 627; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep104",
+      "text_vi": "Điều cần đổi có khi là chính mình, không phải bầu trời.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep104; corpus row 628; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep106",
+      "text_vi": "Ta học cho trường lớp, không phải cho đời sống.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "change_growth",
+      "verification": "Research ID research.seneca.day9.ep106; corpus row 629; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep108",
+      "text_vi": "Người nghe có thể tìm một điều khác với điều người làm triết học muốn trao.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep108; corpus row 630; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep119",
+      "text_vi": "Có những lúc không khao khát thêm đem lại cảm giác đủ gần với việc đã có.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep119; corpus row 632; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ep119_2",
+      "text_vi": "Điều vượt quá nhu cầu căn bản có thể là thứ ta có thêm, không nhất thiết là thứ phải có.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "Epistulae Morales",
+      "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ep119_2; corpus row 633; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ira1",
+      "text_vi": "Cảm giác bị xúc phạm có thể là tín hiệu khởi đầu của cơn giận.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Ira",
+      "source_url": "https://la.wikisource.org/wiki/De_ira",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ira1; corpus row 653; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ira2",
+      "text_vi": "Seneca hỏi: phản ứng có tự chạy theo ấn tượng đầu tiên, hay còn một bước ta đồng thuận với nó?",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Ira",
+      "source_url": "https://la.wikisource.org/wiki/De_ira",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.seneca.day9.ira2; corpus row 654; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ira3",
+      "text_vi": "Với một số cơn giận, trì hoãn phản ứng là phương thuốc chậm cho một điều đang lao rất nhanh.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Ira",
+      "source_url": "https://la.wikisource.org/wiki/De_ira",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ira3; corpus row 655; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.ira4",
+      "text_vi": "Cách xử lý còn tùy vào mình đang có bao nhiêu sức lực và độ vững.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Ira",
+      "source_url": "https://la.wikisource.org/wiki/De_ira",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.ira4; corpus row 656; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.otio1",
+      "text_vi": "Chỉ riêng việc lùi ra khỏi dòng cuốn đôi khi đã có ích.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Otio",
+      "source_url": "https://la.wikisource.org/wiki/De_Otio",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.seneca.day9.otio1; corpus row 641; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.otio2",
+      "text_vi": "Đời sống có thể tìm lại một nhịp hơn khi không bị xé bởi quá nhiều mục tiêu trái hướng.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Otio",
+      "source_url": "https://la.wikisource.org/wiki/De_Otio",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.otio2; corpus row 642; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.otio3",
+      "text_vi": "Phán đoán của ta không chỉ có thể sai mà còn có thể thay đổi quá nhẹ theo hoàn cảnh.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Otio",
+      "source_url": "https://la.wikisource.org/wiki/De_Otio",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.otio3; corpus row 643; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.otio4",
+      "text_vi": "Ta có thể treo cả mình vào phán đoán của người khác.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Otio",
+      "source_url": "https://la.wikisource.org/wiki/De_Otio",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.otio4; corpus row 644; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.otio5",
+      "text_vi": "Ta dễ đánh giá con đường bằng số dấu chân trên đó hơn là tự nhìn con đường.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Otio",
+      "source_url": "https://la.wikisource.org/wiki/De_Otio",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.otio5; corpus row 645; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.tranq1",
+      "text_vi": "Tôi không hẳn đang bệnh, nhưng cũng chưa thật sự khỏe.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Tranquillitate Animi",
+      "source_url": "https://la.wikisource.org/wiki/De_Tranquillitate_Animi",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.seneca.day9.tranq1; corpus row 636; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.tranq2",
+      "text_vi": "Cơ thể không còn quá bệnh; chỉ là chưa quen lại với trạng thái khỏe.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Tranquillitate Animi",
+      "source_url": "https://la.wikisource.org/wiki/De_Tranquillitate_Animi",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.seneca.day9.tranq2; corpus row 637; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.tranq3",
+      "text_vi": "Ngay cả mặt biển đã yên vẫn còn một độ rung sau cơn bão.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Tranquillitate Animi",
+      "source_url": "https://la.wikisource.org/wiki/De_Tranquillitate_Animi",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.seneca.day9.tranq3; corpus row 638; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.tranq4",
+      "text_vi": "Một phần của sự ổn định là dần có lại niềm tin rằng mình đang đi trên con đường đã cân nhắc.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Tranquillitate Animi",
+      "source_url": "https://la.wikisource.org/wiki/De_Tranquillitate_Animi",
+      "theme": "self_understanding",
+      "verification": "Research ID research.seneca.day9.tranq4; corpus row 639; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.seneca.day9.tranq5",
+      "text_vi": "Người Hy Lạp gọi trạng thái ổn định ấy là euthymia; Seneca gọi nó là sự tĩnh tại của tâm trí.",
+      "author": "Lucius Annaeus Seneca",
+      "work": "De Tranquillitate Animi",
+      "source_url": "https://la.wikisource.org/wiki/De_Tranquillitate_Animi",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.seneca.day9.tranq5; corpus row 640; content_nature=translated_quote; verification=A - Primary-source text located.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.005",
+      "text_vi": "Danh chỉ là khách của cái thực.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "meaning_values",
+      "verification": "Research ID research.zhuangzi.day4.ch01.005; corpus row 323; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch01.008",
+      "text_vi": "Nếu không bị ép phải hữu dụng theo thước đo ấy, còn gì để nó bị làm khổ?",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch01.008; corpus row 326; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.009",
+      "text_vi": "Lúc này, ta đã để cái 'ta' quen thuộc lùi xuống.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch02.009; corpus row 327; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.010",
+      "text_vi": "Gió đi qua muôn lỗ tạo muôn tiếng khác nhau; mỗi hình thể phát ra âm của chính nó.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch02.010; corpus row 328; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.011",
+      "text_vi": "Ngày ngày, tâm trí tự giao chiến.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "rest_wellbeing",
+      "verification": "Research ID research.zhuangzi.day4.ch02.011; corpus row 329; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.012",
+      "text_vi": "Vui, giận, buồn, lo thay nhau ngày đêm, mà ta không phải lúc nào cũng biết chúng khởi từ đâu.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch02.012; corpus row 330; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.013",
+      "text_vi": "Không vật nào chỉ là 'phía kia'; cũng không vật nào chỉ là 'phía này'.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch02.013; corpus row 331; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.014",
+      "text_vi": "Cái kia nảy từ cái này; cái này cũng nhờ cái kia mà thành.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch02.014; corpus row 332; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.015",
+      "text_vi": "Đường lớn có thể bị che bởi những thành tựu nhỏ; điều muốn nói có thể bị che bởi lời quá đẹp.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch02.015; corpus row 333; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.016",
+      "text_vi": "Thực chất không đổi mà cảm xúc đã đổi chỉ vì cách gọi khác đi.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch02.016; corpus row 334; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.017",
+      "text_vi": "Biết dừng ở chỗ mình chưa biết là một mức hiểu biết rất cao.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch02.017; corpus row 335; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.018",
+      "text_vi": "Làm sao ta chắc điều mình đang ưa thích không chứa một phần mê lầm?",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch02.018; corpus row 336; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.019",
+      "text_vi": "Nếu bạn thắng tôi trong tranh luận, điều đó có tự chứng minh bạn đúng và tôi sai không?",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch02.019; corpus row 337; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch02.020",
+      "text_vi": "Xưa Trang Chu mơ mình là bướm.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96",
+      "theme": "meaning_values",
+      "verification": "Research ID research.zhuangzi.day4.ch02.020; corpus row 338; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.021",
+      "text_vi": "Đời người có giới hạn, còn điều có thể biết thì không có bờ.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch03.021; corpus row 339; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.022",
+      "text_vi": "Lấy cái hữu hạn của mình chạy theo cái vô hạn, dễ rơi vào kiệt sức.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch03.022; corpus row 340; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.023",
+      "text_vi": "Điều tôi theo đuổi không chỉ là kỹ thuật, mà là nguyên lý phía sau kỹ thuật.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch03.023; corpus row 341; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.024",
+      "text_vi": "Lúc đầu, trước mắt tôi chỉ thấy nguyên cả con bò.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch03.024; corpus row 342; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.025",
+      "text_vi": "Ba năm sau, tôi không còn chỉ thấy nó như một khối nguyên vẹn nữa.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch03.025; corpus row 343; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.026",
+      "text_vi": "Đi theo cấu trúc vốn có của sự vật, thuận theo chỗ nó vốn như vậy.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch03.026; corpus row 344; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.027",
+      "text_vi": "Giữa các khớp có khoảng; lưỡi dao thì rất mỏng.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch03.027; corpus row 345; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.028",
+      "text_vi": "Mỗi khi gặp chỗ khó, tôi nhận ra độ khó và trở nên cẩn trọng.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch03.028; corpus row 346; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.029",
+      "text_vi": "Làm xong thì lau dao và cất đi.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch03.029; corpus row 347; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.030",
+      "text_vi": "Trước hết giữ cho điều cần giữ trong mình đứng vững, rồi mới nghĩ đến việc sửa người khác.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch04.030; corpus row 348; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.031",
+      "text_vi": "Đức có thể bị cuốn bởi danh; trí có thể biến thành công cụ tranh hơn.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "meaning_values",
+      "verification": "Research ID research.zhuangzi.day4.ch04.031; corpus row 349; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.032",
+      "text_vi": "Lấy lửa cứu lửa, lấy nước cứu nước — đôi khi cách sửa chỉ làm vấn đề nhiều thêm.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch04.032; corpus row 350; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.033",
+      "text_vi": "Khoảng trống là nơi điều mới có thể hội tụ; văn bản gọi đó là 'tâm trai'.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch04.033; corpus row 351; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.034",
+      "text_vi": "Căn phòng trống thì ánh sáng hiện ra.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch04.034; corpus row 352; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.035",
+      "text_vi": "Lời nói có thể tạo sóng.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "relationships",
+      "verification": "Research ID research.zhuangzi.day4.ch04.035; corpus row 353; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.036",
+      "text_vi": "Khi quá vui ta dễ nói quá đẹp; khi quá giận ta dễ nói quá xấu.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch04.036; corpus row 354; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.037",
+      "text_vi": "Đừng liên tục đổi mệnh lệnh; đừng cưỡng ép kết quả phải thành.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch04.037; corpus row 355; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.038",
+      "text_vi": "Vì không bị coi là hữu dụng theo cách thông thường, cây mới sống lâu đến vậy.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch04.038; corpus row 356; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.039",
+      "text_vi": "Ai cũng biết cái lợi của hữu dụng; ít người thấy cái lợi của điều bị gọi là vô dụng.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+      "theme": "meaning_values",
+      "verification": "Research ID research.zhuangzi.day4.ch04.039; corpus row 357; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch05.040",
+      "text_vi": "Người ta không soi mình trong nước chảy mà soi trong nước lặng.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%B7%E5%85%85%E7%AC%A6",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch05.040; corpus row 358; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch05.041",
+      "text_vi": "Chính sự tĩnh có thể làm những thứ khác cùng lắng lại.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%B7%E5%85%85%E7%AC%A6",
+      "theme": "relationships",
+      "verification": "Research ID research.zhuangzi.day4.ch05.041; corpus row 359; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch05.042",
+      "text_vi": "Ta ở cùng thầy mười chín năm mà gần như quên mất mình là người cụt chân.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%B7%E5%85%85%E7%AC%A6",
+      "theme": "relationships",
+      "verification": "Research ID research.zhuangzi.day4.ch05.042; corpus row 360; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch05.043",
+      "text_vi": "Ta gặp nhau ở phần bên trong, sao ông lại tìm ta ở hình hài bên ngoài?",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%B7%E5%85%85%E7%AC%A6",
+      "theme": "meaning_values",
+      "verification": "Research ID research.zhuangzi.day4.ch05.043; corpus row 361; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch05.044",
+      "text_vi": "Chưa cần nói nhiều đã được tin; chưa cần lập công vẫn được gần gũi.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%B7%E5%85%85%E7%AC%A6",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch05.044; corpus row 362; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch05.045",
+      "text_vi": "Khi phẩm chất bên trong đủ lớn, hình thức có thể thôi chiếm toàn bộ sự chú ý.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%B7%E5%85%85%E7%AC%A6",
+      "theme": "meaning_values",
+      "verification": "Research ID research.zhuangzi.day4.ch05.045; corpus row 363; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch06.047",
+      "text_vi": "Dùng điều mình biết để nuôi khả năng ở cùng điều mình chưa biết.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch06.047; corpus row 365; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch06.048",
+      "text_vi": "Điều ta gọi là biết đúng còn phụ thuộc những điều kiện mà chính chúng chưa chắc đã cố định.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch06.048; corpus row 366; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch06.049",
+      "text_vi": "Chạy theo danh mà đánh mất mình không phải là thành tựu.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB",
+      "theme": "meaning_values",
+      "verification": "Research ID research.zhuangzi.day4.ch06.049; corpus row 367; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch06.050",
+      "text_vi": "Hai con cá trên cạn làm ướt nhau để sống; nhưng được quên nhau trong sông hồ còn hơn.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch06.050; corpus row 368; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch06.051",
+      "text_vi": "Không quên nơi mình bắt đầu, cũng không đòi biết trước điểm cuối.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch06.051; corpus row 369; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch06.052",
+      "text_vi": "Cá ở trong sông hồ đến mức quên nước; người ở trong một nền sống phù hợp có thể thôi phải gồng để tồn tại.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch06.052; corpus row 370; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch06.054",
+      "text_vi": "Ta tìm một nguyên nhân đơn nhất cho cảnh ngộ này mà không tìm thấy.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch06.054; corpus row 372; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch07.055",
+      "text_vi": "Bốn lần hỏi, bốn lần đáp: không biết.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch07.055; corpus row 373; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch07.056",
+      "text_vi": "Thuận theo điều đang là, bớt nhét ý riêng của mình vào đó.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch07.056; corpus row 374; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch07.057",
+      "text_vi": "Làm được việc lớn mà không biến công lao thành cái tôi.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B",
+      "theme": "work_achievement",
+      "verification": "Research ID research.zhuangzi.day4.ch07.057; corpus row 375; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch07.058",
+      "text_vi": "Để mỗi sự vật có chỗ tự tìm được niềm vui của nó.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B",
+      "theme": "adversity_resilience",
+      "verification": "Research ID research.zhuangzi.day4.ch07.058; corpus row 376; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch07.059",
+      "text_vi": "Tâm như gương: không kéo điều chưa đến, không giữ điều đã qua; gặp thì phản chiếu.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B",
+      "theme": "attention",
+      "verification": "Research ID research.zhuangzi.day4.ch07.059; corpus row 377; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    },
+    {
+      "id": "research.zhuangzi.day4.ch07.060",
+      "text_vi": "Mỗi ngày khoan cho Hỗn Độn một lỗ; đến ngày thứ bảy, Hỗn Độn chết.",
+      "author": "Zhuangzi / 莊子 (Inner Chapters attribution)",
+      "work": "莊子 / Zhuangzi",
+      "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B",
+      "theme": "self_understanding",
+      "verification": "Research ID research.zhuangzi.day4.ch07.060; corpus row 378; content_nature=translated_quote; verification=A - Primary source.",
+      "ai_review_status": "ready_for_owner_review"
+    }
+  ],
+  "policy_vi": "Scanner bảo thủ: thiếu bất kỳ bằng chứng nào thì hoãn; candidate vẫn phải qua dependency/tag/schema/publisher gate trước Release."
+}

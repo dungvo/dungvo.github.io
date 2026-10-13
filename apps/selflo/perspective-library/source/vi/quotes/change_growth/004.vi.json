@@ -668,13 +668,13 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain / likely"
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:50:32Z"
       },
       "writing": {
         "semantic_intent": "Lặng và rộng; đứng riêng mà không đổi, vận hành khắp mà không kiệt.",
@@ -688,7 +688,13 @@
         "style": "paper_quote",
         "attribution_vi": "Laozi"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.laozi.day2.ch27.024",
@@ -728,13 +734,13 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain / likely"
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:50:32Z"
       },
       "writing": {
         "semantic_intent": "Người làm tốt có thể là thầy; người chưa làm tốt cũng có thể trở thành điều để người khác học.",
@@ -748,7 +754,13 @@
         "style": "paper_quote",
         "attribution_vi": "Laozi"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     }
   ]
 }

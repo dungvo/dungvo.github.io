@@ -112,7 +112,9 @@ class CanonicalReleaseBackfillTests(unittest.TestCase):
                 canonical_quotes[quote["id"]] = quote
 
         tagged_ids = {quote_id for quote_id, quote in canonical_quotes.items() if "tags" in quote}
-        self.assertEqual(len(release_ids), 318)
+        # The release grows by revision; correctness is the exact identity
+        # equality below, not a historical count from Release 43.
+        self.assertTrue(release_ids)
         self.assertEqual(tagged_ids, release_ids)
 
         catalog_entry = next(entry for entry in source_index["files"] if entry["kind"] == "content_tag_catalog")

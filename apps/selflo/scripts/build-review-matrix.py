@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse, json, re
+from datetime import datetime, timezone
 from pathlib import Path
 from openpyxl import load_workbook
 
@@ -252,6 +253,13 @@ def main():
     released_story_ids={clean(x.get('id')) for x in release_stories}
     release_ids = {clean(x.get('id')) for x in release}
     authoring_by_id = {clean(x.get('id')): x for x in authoring}
+    candidate_catalog_path=root/'content-workspace/curated/quote-research/review-pipeline/review-candidates.json'
+    candidate_catalog=json.loads(candidate_catalog_path.read_text()) if candidate_catalog_path.exists() else {'candidates':[]}
+    canonical_to_supplemental={
+        clean(x.get('id')):clean(x.get('research_id_original'))
+        for x in candidate_catalog.get('candidates',[])
+        if clean(x.get('id')) in authoring_by_id and clean(x.get('research_id_original')).startswith('research.10k.')
+    }
     research_by_id={clean(q.get('Quote ID')):q for q in raw}
     canonical_to_research={}
     for q in raw:
@@ -264,7 +272,7 @@ def main():
     rows=[]
     for q in authoring:
         ident=clean(q.get('id')); a=q.get('authorship') or {}; rights=q.get('rights') or {}; review=q.get('review') or {}
-        research_id=canonical_to_research.get(ident); rq=research_by_id.get(research_id,{}) if research_id else {}; n=normalized.get(research_id,{}) if research_id else {}
+        research_id=canonical_to_research.get(ident) or canonical_to_supplemental.get(ident); rq=research_by_id.get(research_id,{}) if research_id else {}; n=normalized.get(research_id,{}) if research_id else {}
         ai=ai_reviews.get(ident,{}) if ident not in release_ids else {}
         if ident in shortlist_ids and ident not in release_ids:
             ai={**ai,'decision':'release_shortlist','review_round':2,'note_vi':shortlist.get('note_vi')}
@@ -281,10 +289,11 @@ def main():
         score,_=research_score(q,n,m)
         rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(q.get('Bản dịch / bản làm việc tiếng Việt')),'author':clean(n.get('Author canonical') or q.get('Tác giả / Attribution')),'work':clean(n.get('Source/work canonical') or q.get('Tên nguồn / tác phẩm')),'source_url':clean(q.get('Source URL')),'theme':clean(n.get('Theme canonical') or q.get('Chủ đề chính (Theme)')),'human_experience':clean(n.get('Human experience canonical') or q.get('Trải nghiệm con người (Human Experience)')),'content_nature':clean(n.get('content_nature canonical') or q.get('Hình thức nội dung (Content Form)')),'confidence':confidence(q.get('Mức xác minh')),'verification':clean(q.get('Mức xác minh')),'rights':clean(q.get('Quyền sử dụng')),'selflo_fit':clean(q.get('Mức phù hợp Selflo')),'release_readiness':clean(q.get('Release readiness')),'pipeline':pipeline,'review':clean(q.get('Owner review')),'ai_review_status':None,'story_id':clean(q.get('Story ID liên quan')) or None,'exact_duplicate':clean(n.get('Exact duplicate cluster ID')),'near_duplicate':clean(n.get('Near-duplicate cluster ID')),'issue_code':issue_code,'score':score,'why':why})
     known_ids={x['id'] for x in rows}
+    matched_supplemental=set(canonical_to_supplemental.values())
     supplemental=load_supplemental_captures(root)
     for item in supplemental:
         ident=clean(item.get('candidate_id'))
-        if not ident or ident in known_ids: continue
+        if not ident or ident in known_ids or ident in matched_supplemental: continue
         topics=item.get('provisional_topics') or []
         source_tier=clean(item.get('source_tier'))
         is_aggregator='AGGREGATOR' in source_tier.upper()
@@ -292,9 +301,51 @@ def main():
         rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(item.get('vietnamese_working_text') or item.get('original_text')),'original_text':clean(item.get('original_text')),'author':clean(item.get('author_or_attribution_as_source_states')),'work':clean(item.get('work_or_page_title')),'source_url':clean(item.get('source_url')),'source_domain':clean(item.get('source_domain')),'source_tier':source_tier,'theme':clean(topics[0] if topics else 'unresolved'),'human_experience':'','content_nature':clean(item.get('content_nature')),'confidence':source_confidence,'verification':clean(item.get('capture_status')),'rights':clean(item.get('rights_note')),'selflo_fit':'','release_readiness':'Translation/editorial review pending' if not is_aggregator else 'Source verification required','pipeline':'excluded','review':'Research only','ai_review_status':'source_verification_required' if is_aggregator else 'collection_review_pending','ai_review_round':None,'ai_review_note':clean(item.get('context_note')),'story_id':None,'exact_duplicate':'','near_duplicate':clean(item.get('near_duplicate_cluster')),'issue_code':'source_below_B' if is_aggregator else 'raw_collection_pending','score':35 if is_aggregator else 55,'why':'Nguồn tổng hợp; cần truy nguồn gốc trước Authoring.' if is_aggregator else 'Đã thu thập đúng nguyên văn từ nguồn được ghi nhận; chờ dịch và editorial review.','collection_batch':clean(item.get('_capture_batch'))})
         known_ids.add(ident)
     rows.sort(key=lambda x:(-x['score'],x['record_type'],x['id']))
+    normalized_text_groups={}
+    for row in rows:
+        key=re.sub(r'[^\w\s]',' ',clean(row.get('text_vi')).lower(),flags=re.UNICODE)
+        key=re.sub(r'\s+',' ',key).strip()
+        if key: normalized_text_groups.setdefault(key,[]).append(row)
+    duplicate_loser_ids=set()
+    stage_priority={'release':0,'authoring':1,'canonical':2,'excluded':3}
+    for group in normalized_text_groups.values():
+        if len(group)<2: continue
+        winner=min(group,key=lambda row:(stage_priority.get(row.get('pipeline'),9),-row.get('score',0),row.get('id','')))
+        duplicate_loser_ids.update(row.get('id') for row in group if row is not winner)
+    def pm_status(row):
+        if row.get('pipeline') == 'release':
+            return 'released', 'Không còn hành động phát hành; chỉ theo dõi chất lượng hoặc thay đổi nguồn.'
+        decision = clean(row.get('ai_review_status'))
+        issue = clean(row.get('issue_code'))
+        if decision == 'source_rights_blocked':
+            return 'blocked_rights', 'Giải quyết quyền sử dụng hoặc giữ ngoài Release.'
+        if decision == 'source_verification_required' or issue == 'source_below_B':
+            return 'needs_source_verification', 'Truy nguồn gốc/primary source và cập nhật bằng chứng.'
+        if decision == 'edit_required':
+            return 'needs_edit', 'Biên tập lại rồi review lại vòng một.'
+        if decision == 'round1_not_pass':
+            return 'held_not_passed', 'Giữ ngoài hàng đề xuất cho đến khi có nội dung hoặc bằng chứng mới.'
+        if decision == 'story_review_required':
+            return 'needs_story_review', 'AI review quote cùng story liên kết; giữ Authoring nếu story chưa đạt gate.'
+        if decision in ('ready_for_owner_review', 'release_shortlist'):
+            return 'ready_for_ai_review', 'AI review nội dung, nguồn, quyền và bản dịch; đạt đủ gate thì Release với reviewer ai:codex.'
+        if row.get('id') in duplicate_loser_ids:
+            return 'duplicate_hold', 'Văn bản trùng thật sau chuẩn hóa; giữ bản ưu tiên cao hơn làm canonical winner.'
+        if row.get('pipeline') == 'authoring':
+            return 'needs_round1_review', 'Hoàn thành review nội dung vòng một.'
+        if row.get('pipeline') == 'canonical':
+            return 'needs_authoring_review', 'Review Canonical → Authoring.'
+        if issue == 'raw_collection_pending':
+            return 'needs_normalization', 'Dịch/chuẩn hóa, xác minh metadata và đánh giá editorial fit.'
+        return 'held_research', 'Giữ ở Research; xử lý issue_code trước khi cân nhắc Authoring.'
+    for row in rows:
+        row['pm_status'], row['pm_next_action_vi'] = pm_status(row)
     for i,x in enumerate(rows,1): x['rank']=i
     stage_counts={stage:sum(1 for x in rows if x['pipeline']==stage) for stage in ('canonical','excluded','authoring','release')}
-    summary={'total_quotes':len(rows),'canonical_pending_authoring':stage_counts['canonical'],'excluded_not_authoring':stage_counts['excluded'],'authoring_pending_release':stage_counts['authoring'],'release_quotes':stage_counts['release'],'stage_sum':sum(stage_counts.values()),'research_source_rows':len(raw),'supplemental_raw_captures':len(supplemental),'canonical_authoring_quotes':len(authoring),'authoring_revision':authoring_manifest.get('library_revision'),'release_revision':release_manifest.get('library_revision')}
+    pm_status_counts={}
+    for row in rows:
+        pm_status_counts[row['pm_status']]=pm_status_counts.get(row['pm_status'],0)+1
+    summary={'total_quotes':len(rows),'canonical_pending_authoring':stage_counts['canonical'],'excluded_not_authoring':stage_counts['excluded'],'authoring_pending_release':stage_counts['authoring'],'release_quotes':stage_counts['release'],'stage_sum':sum(stage_counts.values()),'research_source_rows':len(raw),'supplemental_raw_captures':len(supplemental),'canonical_authoring_quotes':len(authoring),'authoring_revision':authoring_manifest.get('library_revision'),'release_revision':release_manifest.get('library_revision'),'pm_status_counts':pm_status_counts}
     # Reclassify once, then expose the classification on every record so filters,
     # exports and the coverage matrix all share one result.
     for x in rows:
@@ -331,8 +382,18 @@ def main():
         stories.append({'id':ident,'title_vi':clean(story.get('title_vi')),'subtitle_vi':clean(story.get('subtitle_vi')),'primary_theme':clean(story.get('primary_theme')),'status':'release' if ident in released_story_ids else 'authoring','review_status':clean(review.get('status')),'source_label':clean(authorship.get('source_label')),'source_url':clean(authorship.get('source_url')),'author_name':clean(authorship.get('author_name')),'origin_type':clean(editorial.get('origin_type')),'human_edited':editorial.get('human_edited'),'rights_status':clean(rights.get('status')),'rights_note':clean(rights.get('note')),'sections':sections,'takeaway':story.get('takeaway') or {}})
     stories.sort(key=lambda x:(x['status']!='release',x['title_vi'],x['id']))
     summary.update({'total_stories':len(stories),'release_stories':sum(1 for x in stories if x['status']=='release'),'authoring_stories':sum(1 for x in stories if x['status']=='authoring')})
-    out={'schema_version':'selflo.review-matrix.v6','generated_from':book.name,'summary':summary,'source_coverage':coverage,'rows':rows,'stories':stories}
-    target=root/'review-matrix/data.json';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(out,ensure_ascii=False,separators=(',',':'))+'\n')
+    out={
+        'schema_version':'selflo.review-matrix.v6',
+        'generated_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),
+        'generated_from':book.name,
+        'authoring_revision':authoring_manifest.get('library_revision'),
+        'release_revision':release_manifest.get('library_revision'),
+        'summary':summary,
+        'source_coverage':coverage,
+        'rows':rows,
+        'stories':stories,
+    }
+    target=root/'studio/review-matrix/data.json';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(out,ensure_ascii=False,separators=(',',':'))+'\n')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 
 if __name__=='__main__': main()

@@ -7166,6 +7166,60 @@
       "first_review": "approved",
       "candidate_note": "Post-collection high-priority shortlist; import to Authoring as needs_owner_review, not Release.",
       "authoring": "imported"
+    },
+    "research.10k.b009.kieu.0003-0004": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision."
+    },
+    "research.10k.b009.kieu.0039-0040": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision."
+    },
+    "research.10k.b009.kieu.0041-0042": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision."
+    },
+    "research.10k.b009.kieu.0163-0164": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision."
+    },
+    "research.10k.b009.kieu.0181-0182": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision."
+    },
+    "research.10k.b009.kieu.0183-0184": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision."
+    },
+    "research.10k.b009.kieu.0003.0004": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision.",
+      "authoring": "imported"
+    },
+    "research.10k.b009.kieu.0039.0040": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision.",
+      "authoring": "imported"
+    },
+    "research.10k.b009.kieu.0041.0042": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision.",
+      "authoring": "imported"
+    },
+    "research.10k.b009.kieu.0163.0164": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision.",
+      "authoring": "imported"
+    },
+    "research.10k.b009.kieu.0181.0182": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision.",
+      "authoring": "imported"
+    },
+    "research.10k.b009.kieu.0183.0184": {
+      "first_review": "approved",
+      "candidate_note": "Q8 item review: direct Kiều couplet can stand alone; promote to Authoring for owner decision.",
+      "authoring": "imported"
     }
   },
   "history": [
@@ -12710,6 +12764,45 @@
         "authoring.b010.abraham_lincoln.016",
         "authoring.b010.oscar_wilde.011",
         "authoring.b010.benjamin_franklin.022"
+      ]
+    },
+    {
+      "at": "2026-10-12T23:24:41Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "content-workspace/programs/quote-library-p0/reports/q8-kieu-authoring-ledger.json",
+      "quote_ids": [
+        "research.10k.b009.kieu.0003-0004",
+        "research.10k.b009.kieu.0039-0040",
+        "research.10k.b009.kieu.0041-0042",
+        "research.10k.b009.kieu.0163-0164",
+        "research.10k.b009.kieu.0181-0182",
+        "research.10k.b009.kieu.0183-0184"
+      ]
+    },
+    {
+      "at": "2026-10-12T23:25:02Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "content-workspace/programs/quote-library-p0/reports/q8-kieu-authoring-ledger.json",
+      "quote_ids": [
+        "research.10k.b009.kieu.0003-0004",
+        "research.10k.b009.kieu.0039-0040",
+        "research.10k.b009.kieu.0041-0042",
+        "research.10k.b009.kieu.0163-0164",
+        "research.10k.b009.kieu.0181-0182",
+        "research.10k.b009.kieu.0183-0184"
+      ]
+    },
+    {
+      "at": "2026-10-12T23:25:23Z",
+      "action": "apply_candidate_ledger",
+      "ledger": "content-workspace/programs/quote-library-p0/reports/q8-kieu-authoring-ledger.json",
+      "quote_ids": [
+        "research.10k.b009.kieu.0003.0004",
+        "research.10k.b009.kieu.0039.0040",
+        "research.10k.b009.kieu.0041.0042",
+        "research.10k.b009.kieu.0163.0164",
+        "research.10k.b009.kieu.0181.0182",
+        "research.10k.b009.kieu.0183.0184"
       ]
     }
   ]

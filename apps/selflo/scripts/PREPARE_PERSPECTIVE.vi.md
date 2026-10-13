@@ -46,6 +46,17 @@ python3 scripts/prepare-perspective.py --channel release \
   --quote the_pauses_were_the_life
 ```
 
+Nếu chỉ muốn phát hành quote còn story liên kết vẫn đang review/quyền chưa rõ, dùng:
+
+```bash
+python3 scripts/prepare-perspective.py --channel release \
+  --quote quote_id \
+  --quote-only \
+  --reviewer ai:codex
+```
+
+Chế độ này chỉ đổi lifecycle của quote. Story canonical được giữ nguyên; publisher Release sẽ project `story_id = null` cho đến khi story đạt gate. Không dùng `--rights` để gán quyền story trong chế độ quote-only.
+
 Thêm `--dry-run` để xem trước việc tìm cặp, điều kiện quyền/knowledge và danh sách file dự kiến thay đổi. Chế độ này không ghi file và không chạy publisher/schema validation.
 
 ## Quyền sử dụng và kiểm tra nguồn
