@@ -28,7 +28,7 @@ Không đặt mục tiêu đưa đủ cả 46 story lên Release. Chỉ story đ
 |---|---|---|
 | S0 | Đồng bộ baseline Authoring/Release theo `story_id` | Hoàn thành |
 | S1 | Audit gate tự động: lifecycle, quyền, review, human edit, ảnh, quote link | Hoàn thành |
-| S2 | AI đọc và review nội dung 46 story | Đang thực hiện |
+| S2 | AI đọc và review nội dung 46 story | Tạm dừng trước khi bắt đầu review batch |
 | S3 | Sửa canonical theo kết quả review | Chưa bắt đầu |
 | S4 | Owner nghiệm thu hàng cần quyết định | Chưa bắt đầu |
 | S5 | Publish story đạt gate và kiểm tra public | Chưa bắt đầu |
