@@ -5,22 +5,31 @@
   const LEGACY_KEY = "chunkLabProgressV1";
   const DAILY_TARGET = 10;
   const SESSION_SIZE = 10;
-  const registry = { sessions: [], conversations: [], stories: [], contexts: [], errors: [] };
+  const registry = { sessions: [], conversations: [], stories: [], contexts: [], expressions: [], errors: [] };
   let chunks = [];
   let speakingTopics = [];
   let stories = [];
   let contexts = [];
+  let expressions = [];
+  let evidenceItems = [];
+  let evidenceCategory = "All";
+  let expressionCategory = "All";
+  let activeExpressionId = null;
   let preferredVoice = null;
   let libraryTopic = "All";
   let progress = loadProgress();
   let session = null;
+  let quickCurrentId = null;
+  let dailySession = null;
+  let dailyTimerId = null;
   let contentSource = "bundled catalog";
 
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
   const shuffle = (items) => [...items].sort(() => Math.random() - 0.5);
   const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[char]));
-  const todayKey = () => new Date().toISOString().slice(0, 10);
+  const localDateKey = (date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  const todayKey = () => localDateKey(new Date());
 
   window.ChunkContent = {
     register(payload) {
@@ -50,6 +59,13 @@
         const valid = context.id && context.title && Array.isArray(context.passage) && Array.isArray(context.chunks) && Array.isArray(context.questions);
         if (valid && !registry.contexts.some((item) => item.id === context.id)) registry.contexts.push(context);
       });
+    },
+    registerExpressions(payload) {
+      if (payload?.schemaVersion !== 1 || !Array.isArray(payload.scenarios)) { registry.errors.push("An expression file has an unsupported format."); return; }
+      payload.scenarios.forEach((scenario) => {
+        const valid = scenario.id && scenario.title && scenario.thought && Array.isArray(scenario.intentOptions) && Number.isInteger(scenario.intentAnswer) && scenario.reshape && Array.isArray(scenario.hintGroups) && Array.isArray(scenario.answers) && scenario.variation;
+        if (valid && !registry.expressions.some((item) => item.id === scenario.id)) registry.expressions.push(scenario);
+      });
     }
   };
 
@@ -75,13 +91,13 @@
     });
   }
 
-  function defaultProgress() { return { total: 0, correct: 0, items: {}, history: {}, conversations: {}, contexts: {} }; }
+  function defaultProgress() { return { total: 0, correct: 0, items: {}, history: {}, conversations: {}, contexts: {}, expressions: {}, dailyGames: [], quickRecall: { total: 0, seen: {}, hidden: [], recent: [] } }; }
   function loadProgress() {
     try {
       const current = JSON.parse(localStorage.getItem(KEY));
-      if (current) return { ...defaultProgress(), ...current, items: current.items || {}, history: current.history || {}, conversations: current.conversations || {}, contexts: current.contexts || {} };
+      if (current) return { ...defaultProgress(), ...current, items: current.items || {}, history: current.history || {}, conversations: current.conversations || {}, contexts: current.contexts || {}, expressions: current.expressions || {}, dailyGames: current.dailyGames || [], quickRecall: { ...defaultProgress().quickRecall, ...(current.quickRecall || {}) } };
       const legacy = JSON.parse(localStorage.getItem(LEGACY_KEY));
-      if (legacy) return { total: legacy.total || 0, correct: legacy.correct || 0, items: legacy.items || {}, history: legacy.today ? { [legacy.today]: { total: legacy.todayCount || 0, correct: 0 } } : {} };
+      if (legacy) return { ...defaultProgress(), total: legacy.total || 0, correct: legacy.correct || 0, items: legacy.items || {}, history: legacy.today ? { [legacy.today]: { total: legacy.todayCount || 0, correct: 0 } } : {} };
     } catch (_) { /* Start clean if browser storage is malformed. */ }
     return defaultProgress();
   }
@@ -110,7 +126,7 @@
     return "Learning";
   }
   function isDue(chunk) { const stat = itemStat(chunk.id); return stat.seen > 0 && learningStage(chunk) !== "Mastered" && (!stat.due || stat.due <= todayKey()); }
-  function dateOffset(days) { const date = new Date(); date.setDate(date.getDate() + days); return date.toISOString().slice(0, 10); }
+  function dateOffset(days) { const date = new Date(); date.setDate(date.getDate() + days); return localDateKey(date); }
   function recentStats(days = 7) {
     let total = 0, correct = 0;
     for (let offset = 0; offset > -days; offset -= 1) { const day = progress.history[dateOffset(offset)]; if (day) { total += day.total; correct += day.correct; } }
@@ -136,7 +152,7 @@
   }
   async function discoverContent() {
     const config = window.CHUNK_CONTENT_CONFIG || {};
-    let files = [], conversationFiles = [], storyFiles = [], contextFiles = [];
+    let files = [], conversationFiles = [], storyFiles = [], contextFiles = [], expressionFiles = [];
     if (location.hostname === "dungvo.github.io" && config.github) {
       const { owner, repository, directory } = config.github;
       try {
@@ -144,6 +160,7 @@
         conversationFiles = await githubFiles(owner, repository, config.github.conversationDirectory);
         storyFiles = await githubFiles(owner, repository, config.github.storyDirectory);
         contextFiles = await githubFiles(owner, repository, config.github.contextDirectory);
+        expressionFiles = await githubFiles(owner, repository, config.github.expressionDirectory || "apps/english/content/expressions");
         contentSource = "auto-discovered from GitHub";
       } catch (error) { registry.errors.push(`Discovery failed: ${error.message}`); }
     }
@@ -151,7 +168,8 @@
     if (!conversationFiles.length) conversationFiles = config.conversationFallbackFiles || [];
     if (!storyFiles.length) storyFiles = config.storyFallbackFiles || [];
     if (!contextFiles.length) contextFiles = config.contextFallbackFiles || [];
-    for (const file of [...files, ...conversationFiles, ...storyFiles, ...contextFiles]) {
+    if (!expressionFiles.length) expressionFiles = config.expressionFallbackFiles || [];
+    for (const file of [...files, ...conversationFiles, ...storyFiles, ...contextFiles, ...expressionFiles]) {
       try { await loadScript(file); } catch (error) { registry.errors.push(error.message); }
     }
     if (!registry.sessions.length && files !== config.fallbackFiles) {
@@ -168,13 +186,17 @@
     speakingTopics = registry.conversations;
     stories = registry.stories;
     contexts = registry.contexts;
+    expressions = registry.expressions;
+    evidenceItems = Array.isArray(window.RealUsageEvidence) ? window.RealUsageEvidence : [];
     if (!chunks.length) throw new Error("No valid learning content could be loaded.");
   }
 
   function show(view) {
     $$(".view").forEach((item) => item.classList.remove("active"));
     $(`#${view}View`).classList.add("active"); window.scrollTo(0, 0);
-    $$(".site-header nav button").forEach((button) => button.classList.toggle("active", button.dataset.nav === view));
+    const learnViews = new Set(["learn", "express", "lab", "think", "stories", "speaking", "library", "evidence"]);
+    const activeNav = learnViews.has(view) ? "learn" : ["quick", "dailyGame"].includes(view) ? "play" : view;
+    $$(".site-header nav button").forEach((button) => button.classList.toggle("active", button.dataset.nav === activeNav));
   }
   function updateDashboard() {
     const today = progress.history[todayKey()] || { total: 0, correct: 0 };
@@ -188,6 +210,7 @@
     $("#reviewTitle").textContent = weak.length ? `${weak.length} chunk${weak.length === 1 ? "" : "s"} to strengthen` : "Start practicing";
     $("#reviewCopy").textContent = weak.length ? `${weak[0].chunk}${weak[1] ? ` vs. ${weak[1].chunk}` : ""}` : "Your difficult chunks will appear here more often.";
     $("#bestTopic").textContent = weak[0]?.topics?.[0] || (progress.total ? "Building recall" : "New learner");
+    const todayGames = progress.dailyGames.filter((game) => game.date === todayKey()); const best = todayGames.sort((a, b) => b.percent - a.percent)[0]; $("#dailyBestScore").textContent = best ? `${best.score}/${best.total}` : "—";
     renderLearningPath();
   }
   function renderLearningPath() {
@@ -206,6 +229,7 @@
     $("#masteredCount").textContent = chunks.filter((chunk) => learningStage(chunk) === "Mastered").length; $("#dueCount").textContent = chunks.filter(isDue).length;
     const weak = [...chunks].sort((a, b) => weakness(b) - weakness(a)).slice(0, 8);
     $("#weakList").innerHTML = weak.map((chunk) => { const stat = itemStat(chunk.id); return `<div class="weak-row"><div><strong>${escapeHtml(chunk.chunk)}</strong><span>${escapeHtml(chunk.meaning)}</span></div><span class="weak-score">${stat.wrong ? `${stat.wrong} miss${stat.wrong === 1 ? "" : "es"}` : "Not practiced"}</span></div>`; }).join("");
+    $("#dailyGameHistory").innerHTML = progress.dailyGames.length ? progress.dailyGames.slice(0, 8).map((game) => `<div class="game-history-row"><span>${escapeHtml(game.date)}</span><strong>${game.score}/${game.total} · ${game.percent}%</strong><small>${Math.ceil(game.seconds / 60)} min</small></div>`).join("") : "<p>No completed games yet.</p>";
   }
   function renderLibrary(query = "", topic = libraryTopic) {
     libraryTopic = topic;
@@ -289,6 +313,106 @@
     saveProgress(); $("#contextSaveStatus").textContent = "Saved on this device. Nice—meaning first, then language.";
   }
 
+  function quickRecallState() {
+    progress.quickRecall ||= { total: 0, seen: {}, hidden: [], recent: [] };
+    progress.quickRecall.seen ||= {}; progress.quickRecall.hidden ||= []; progress.quickRecall.recent ||= [];
+    return progress.quickRecall;
+  }
+  function chooseQuickChunk() {
+    const state = quickRecallState(); const hidden = new Set(state.hidden); const recent = new Set(state.recent.slice(-18));
+    const available = chunks.filter((chunk) => !hidden.has(chunk.id)); if (!available.length) return null;
+    let candidates = available.filter((chunk) => !recent.has(chunk.id)); if (!candidates.length) candidates = available;
+    const minimum = Math.min(...candidates.map((chunk) => state.seen[chunk.id] || 0));
+    const leastSeen = candidates.filter((chunk) => (state.seen[chunk.id] || 0) <= minimum + 1);
+    return leastSeen[Math.floor(Math.random() * leastSeen.length)];
+  }
+  function quickStructure(chunk) {
+    if (/\+/.test(chunk.chunk)) return chunk.chunk;
+    if (chunk.gap) return chunk.gap.replace("___", `[${chunk.answer || "word"}]`);
+    return chunk.chunk;
+  }
+  function renderQuickRecall() {
+    const chunk = chooseQuickChunk(); const state = quickRecallState(); quickCurrentId = chunk?.id || null;
+    if (!chunk) {
+      $("#quickPracticeCard").innerHTML = `<div class="quick-empty"><span class="spark-icon">✦</span><h2>You have hidden every chunk.</h2><p>Bring hidden chunks back into the rotation to continue.</p><button class="primary" id="quickRestoreAll">Show hidden chunks again</button></div>`;
+      $("#quickRestoreAll").addEventListener("click", restoreAllQuickChunks); renderQuickDashboard(); return;
+    }
+    state.total += 1; state.seen[chunk.id] = (state.seen[chunk.id] || 0) + 1; state.recent = [...state.recent, chunk.id].slice(-18); saveProgress();
+    const situations = shuffle([chunk.situation, ...chunks.filter((item) => item.id !== chunk.id).map((item) => item.situation)]).filter((value, index, values) => value && values.indexOf(value) === index).slice(0, 4);
+    if (!situations.includes(chunk.situation)) situations[0] = chunk.situation;
+    $("#quickPracticeCard").innerHTML = `<div class="quick-card-top"><span>APPEARANCE ${state.seen[chunk.id]}</span><button class="listen-link" data-speak="${escapeHtml(chunk.chunk)}">▶ Listen</button></div><p class="eyebrow">WHEN WOULD YOU USE THIS?</p><h2>${escapeHtml(chunk.chunk)}</h2><div class="quick-options">${shuffle(situations).map((situation, index) => `<button data-quick-answer="${escapeHtml(situation)}"><span>${String.fromCharCode(65 + index)}</span>${escapeHtml(situation)}</button>`).join("")}</div><div id="quickExplanation"></div>`;
+    bindPronunciation($("#quickPracticeCard"));
+    $$('[data-quick-answer]').forEach((button) => button.addEventListener("click", () => answerQuickRecall(chunk, button)));
+    renderQuickDashboard();
+  }
+  function answerQuickRecall(chunk, selectedButton) {
+    const correct = selectedButton.dataset.quickAnswer === chunk.situation;
+    $$('[data-quick-answer]').forEach((button) => { button.disabled = true; button.classList.toggle("correct", button.dataset.quickAnswer === chunk.situation); });
+    if (!correct) selectedButton.classList.add("wrong");
+    $("#quickExplanation").innerHTML = `<section class="quick-explanation"><div class="learning-highlight"><span class="spark-icon">✦</span><div><b>${correct ? "Exactly—this is the right situation." : "Notice the speaker's intention."}</b><p>${escapeHtml(chunk.meaning)}</p></div></div><dl><div><dt>When to use it</dt><dd>${escapeHtml(chunk.situation)}</dd></div><div><dt>Structure</dt><dd><code>${escapeHtml(quickStructure(chunk))}</code></dd></div><div><dt>Natural example</dt><dd>${escapeHtml(chunk.example)}</dd></div><div><dt>Remember</dt><dd>${escapeHtml(chunk.note)}</dd></div></dl><div class="quick-choice-actions"><button class="secondary" id="quickRepeat">Keep in rotation</button><button class="secondary no-repeat" id="quickHide">I know it—don't show again</button><button class="primary" id="quickNext">Next random chunk →</button></div></section>`;
+    $("#quickRepeat").addEventListener("click", () => { setQuickHidden(chunk.id, false); renderQuickRecall(); });
+    $("#quickHide").addEventListener("click", () => { setQuickHidden(chunk.id, true); renderQuickRecall(); });
+    $("#quickNext").addEventListener("click", renderQuickRecall);
+  }
+  function setQuickHidden(id, hidden) {
+    const state = quickRecallState(); state.hidden = hidden ? [...new Set([...state.hidden, id])] : state.hidden.filter((item) => item !== id); saveProgress(); renderQuickDashboard();
+  }
+  function restoreAllQuickChunks() { const state = quickRecallState(); state.hidden = []; saveProgress(); renderQuickRecall(); }
+  function resetQuickRecall() {
+    if (!confirm("Reset all Quick Recall appearances, recent history, and hidden chunks?")) return;
+    progress.quickRecall = { total: 0, seen: {}, hidden: [], recent: [] }; saveProgress(); renderQuickRecall();
+  }
+  function renderQuickDashboard() {
+    const state = quickRecallState(); const hidden = new Set(state.hidden);
+    $("#quickUnique").textContent = Object.keys(state.seen).length; $("#quickTotal").textContent = state.total; $("#quickHidden").textContent = state.hidden.length; $("#quickAvailable").textContent = Math.max(0, chunks.length - state.hidden.length);
+    $("#restoreHiddenChunks").disabled = !state.hidden.length;
+    $("#hiddenChunkList").innerHTML = state.hidden.length ? `<p>Hidden from rotation</p>${state.hidden.map((id) => { const chunk = chunks.find((item) => item.id === id); return chunk ? `<button data-restore-chunk="${escapeHtml(id)}"><span>${escapeHtml(chunk.chunk)}</span><b>Restore</b></button>` : ""; }).join("")}` : '<p>No chunks are hidden.</p>';
+    $$('[data-restore-chunk]').forEach((button) => button.addEventListener("click", () => setQuickHidden(button.dataset.restoreChunk, false)));
+  }
+
+  function expressionProgress(id) { return { attempts: 0, completed: false, variationCompleted: false, ...progress.expressions[id] }; }
+  function renderExpressions(filter = expressionCategory, selectedId = activeExpressionId) {
+    expressionCategory = filter;
+    const categories = [...new Set(expressions.map((scenario) => scenario.category))];
+    const visible = expressions.filter((scenario) => filter === "All" || scenario.category === filter);
+    const selected = visible.some((scenario) => scenario.id === selectedId) ? selectedId : visible[0]?.id;
+    activeExpressionId = selected || null;
+    $("#expressionCount").textContent = expressions.length;
+    $("#expressionFilters").innerHTML = ["All", ...categories].map((category) => `<button class="filter-chip ${category === filter ? "active" : ""}" data-expression-filter="${escapeHtml(category)}">${escapeHtml(category)}</button>`).join("");
+    $("#expressionList").innerHTML = visible.map((scenario) => { const saved = expressionProgress(scenario.id); return `<button class="expression-card ${scenario.id === selected ? "active" : ""}" data-expression-id="${escapeHtml(scenario.id)}"><span>${escapeHtml(scenario.category)} · ${escapeHtml(scenario.level)}</span><strong>${escapeHtml(scenario.title)}</strong><small>${saved.completed ? "Completed · practice the variation" : "Start with the intention"}</small></button>`; }).join("") || '<p class="context">No scenarios in this category yet.</p>';
+    $$('[data-expression-filter]').forEach((button) => button.addEventListener("click", () => renderExpressions(button.dataset.expressionFilter)));
+    $$('[data-expression-id]').forEach((button) => button.addEventListener("click", () => renderExpressions(filter, button.dataset.expressionId)));
+    const scenario = expressions.find((item) => item.id === selected); if (scenario) renderExpressionReader(scenario);
+  }
+  function renderExpressionReader(scenario) {
+    const saved = expressionProgress(scenario.id);
+    $("#expressionReader").innerHTML = `<div class="expression-kicker"><span>${escapeHtml(scenario.category)} · ${escapeHtml(scenario.level)}</span><span>${saved.completed ? "Practiced" : "Meaning before wording"}</span></div><p class="eyebrow">1 · NATURAL VIETNAMESE THOUGHT</p><h2>${escapeHtml(scenario.title)}</h2><blockquote class="vietnamese-thought" lang="vi">${escapeHtml(scenario.thought)}</blockquote><section class="expression-step" id="intentStep"><p class="eyebrow">2 · IDENTIFY THE INTENT</p><h3>What are you really trying to do?</h3><div class="intent-options">${scenario.intentOptions.map((option, index) => `<button data-intent-option="${index}"><span>${String.fromCharCode(65 + index)}</span>${escapeHtml(option)}</button>`).join("")}</div><div id="intentFeedback" class="expression-feedback" hidden></div></section><section class="expression-step locked-step" id="reshapeStep"><p class="eyebrow">3 · RESHAPE THE IDEA</p><h3>Make the thought easier to express.</h3><p>Write two or three short ideas in Vietnamese or simple English. Preserve the meaning; do not translate every word.</p><textarea id="reshapeWriting" rows="4" placeholder="Break the thought into smaller intentions..."></textarea><button class="secondary" id="compareReshape">Compare with a reshaped idea</button><div id="reshapeReference" class="reference-box" hidden><b>One useful reshape</b><p lang="vi">${escapeHtml(scenario.reshape)}</p></div></section><section class="expression-step locked-step" id="constructStep"><p class="eyebrow">4 · FIND CHUNKS & EXPRESS</p><h3>Build your English response.</h3><div class="progressive-hints">${scenario.hintGroups.map((group, index) => `<div><button class="hint-toggle" data-hint-group="${index}">Reveal ${escapeHtml(group.label)} hint</button><div class="hint-content" data-hint-content="${index}" hidden>${group.chunks.map((chunk) => `<button type="button" data-expression-hint="${escapeHtml(chunk)}">${escapeHtml(chunk)}</button>`).join("")}</div></div>`).join("")}</div><textarea id="expressionWriting" rows="6" placeholder="Write naturally. Focus on your intention first..."></textarea><div class="response-actions"><button class="secondary" id="revealExpressionAnswers">View natural answers</button><button class="primary" id="saveExpression">Save my response</button></div><div id="expressionAnswers" class="reference-box" hidden><b>Natural reference answers</b>${scenario.answers.map((answer) => `<p>${escapeHtml(answer)}</p>`).join("")}<small>${escapeHtml(scenario.explanation)}</small></div><p id="expressionSaveStatus" class="context-save-status">${saved.completed ? "You practiced this scenario before. Try a different answer today." : "Your response stays only in this browser."}</p></section><section class="expression-step locked-step" id="variationStep"><p class="eyebrow">5 · VARIED PRACTICE</p><h3>Reuse the intention in a new situation.</h3><blockquote class="variation-thought" lang="vi">${escapeHtml(scenario.variation)}</blockquote><textarea id="variationWriting" rows="5" placeholder="Reuse the chunks, but adapt them to this new situation..."></textarea><button class="primary" id="saveVariation">Complete varied practice</button><p id="variationStatus" class="context-save-status">${saved.variationCompleted ? "Variation completed before—try saying it a new way." : "Retrieval in a new context helps the chunks become flexible."}</p></section>`;
+    $$('[data-intent-option]').forEach((button) => button.addEventListener("click", () => checkExpressionIntent(scenario, button)));
+  }
+  function unlockExpressionStep(selector) { const step = $(selector); step.classList.remove("locked-step"); step.scrollIntoView({ behavior: "smooth", block: "center" }); }
+  function checkExpressionIntent(scenario, button) {
+    const selected = Number(button.dataset.intentOption); const correct = selected === scenario.intentAnswer;
+    $$('[data-intent-option]').forEach((option, index) => { option.disabled = true; option.classList.toggle("correct", index === scenario.intentAnswer); option.classList.toggle("wrong", index === selected && !correct); });
+    const feedback = $("#intentFeedback"); feedback.hidden = false; feedback.className = `expression-feedback ${correct ? "good" : "needs-work"}`; feedback.innerHTML = `<strong>${correct ? "Yes—that's the intention." : "Not quite. Look past the surface details."}</strong><span>${escapeHtml(scenario.intentExplanation)}</span>`;
+    unlockExpressionStep("#reshapeStep");
+    $("#compareReshape").addEventListener("click", () => { $("#reshapeReference").hidden = false; unlockExpressionStep("#constructStep"); bindExpressionConstruction(scenario); }, { once: true });
+  }
+  function bindExpressionConstruction(scenario) {
+    $$('[data-hint-group]').forEach((button) => button.addEventListener("click", () => { const content = $(`[data-hint-content="${button.dataset.hintGroup}"]`); content.hidden = !content.hidden; button.textContent = content.hidden ? button.textContent.replace("Hide", "Reveal") : button.textContent.replace("Reveal", "Hide"); }));
+    $$('[data-expression-hint]').forEach((button) => button.addEventListener("click", () => { const area = $("#expressionWriting"); area.value = `${area.value}${area.value ? " " : ""}${button.dataset.expressionHint}`; area.focus(); }));
+    $("#revealExpressionAnswers").addEventListener("click", () => { $("#expressionAnswers").hidden = false; unlockExpressionStep("#variationStep"); bindExpressionVariation(scenario); }, { once: true });
+    $("#saveExpression").addEventListener("click", () => saveExpressionResponse(scenario));
+  }
+  function saveExpressionResponse(scenario) {
+    const response = $("#expressionWriting").value.trim(); if (!response) { $("#expressionSaveStatus").textContent = "Write at least one sentence before saving."; return; }
+    const saved = expressionProgress(scenario.id); progress.expressions[scenario.id] = { ...saved, attempts: saved.attempts + 1, completed: true, response, last: todayKey() }; saveProgress();
+    $("#expressionSaveStatus").textContent = "Saved. Now compare the intention and structure—not just the exact words."; $("#expressionAnswers").hidden = false; unlockExpressionStep("#variationStep"); bindExpressionVariation(scenario);
+  }
+  function bindExpressionVariation(scenario) {
+    const button = $("#saveVariation"); if (button.dataset.bound) return; button.dataset.bound = "true";
+    button.addEventListener("click", () => { const response = $("#variationWriting").value.trim(); if (!response) { $("#variationStatus").textContent = "Write a response for the new situation first."; return; } const saved = expressionProgress(scenario.id); progress.expressions[scenario.id] = { ...saved, variationCompleted: true, variationResponse: response, variationDate: todayKey() }; saveProgress(); $("#variationStatus").textContent = "Completed. You reused the intention in a different context—that is flexible recall."; });
+  }
+
   function renderSpeaking(filter = "All") {
     const categories = [...new Set(speakingTopics.map((topic) => topic.category))];
     $("#speakingTopicCount").textContent = speakingTopics.length;
@@ -350,6 +474,18 @@
     return String(text).split(/(\s+)/).map((part) => { const word = part.toLowerCase().replace(/[^a-z']/g, ""); const safe = escapeHtml(part); return word && !unstressed.has(word) && word.length > 2 ? `<b>${safe}</b>` : safe; }).join("");
   }
   function bindPronunciation(root = document) { root.querySelectorAll("[data-speak]").forEach((button) => button.addEventListener("click", () => speak(button.dataset.speak, Number(button.dataset.rate) || 0.96))); }
+
+  function renderEvidence() {
+    const categories = ["All", ...new Set(evidenceItems.map((item) => item.category))];
+    $("#evidenceCount").textContent = evidenceItems.length;
+    $("#evidenceFilters").innerHTML = categories.map((category) => `<button class="filter-chip ${category === evidenceCategory ? "active" : ""}" data-evidence-category="${escapeHtml(category)}">${escapeHtml(category)}</button>`).join("");
+    const visible = evidenceItems.filter((item) => evidenceCategory === "All" || item.category === evidenceCategory);
+    $("#evidenceGrid").innerHTML = visible.map((item) => {
+      const linked = item.chunkId && chunks.some((chunk) => chunk.id === item.chunkId);
+      return `<article class="evidence-card"><div class="evidence-card-top"><span>${escapeHtml(item.category)} · ${escapeHtml(item.level)}</span><b>${linked ? "IN YOUR CHUNK LIBRARY" : "VERIFIED SOURCE"}</b></div><h2>${escapeHtml(item.chunk)}</h2><blockquote>${escapeHtml(item.excerpt)}</blockquote><div class="source-line"><span>${escapeHtml(item.source.publisher)} · ${escapeHtml(item.source.date)}</span><a href="${escapeHtml(item.source.url)}" target="_blank" rel="noopener">Open original source ↗</a></div><dl><div><dt>Article situation</dt><dd>${escapeHtml(item.context)}</dd></div><div><dt>What the chunk does</dt><dd>${escapeHtml(item.function)}</dd></div><div><dt>Structure</dt><dd><code>${escapeHtml(item.pattern)}</code></dd></div><div><dt>Transfer to your work</dt><dd>${escapeHtml(item.transfer)}</dd></div></dl><small class="source-title">From “${escapeHtml(item.source.title)}”</small></article>`;
+    }).join("");
+    $$('[data-evidence-category]').forEach((button) => button.addEventListener("click", () => { evidenceCategory = button.dataset.evidenceCategory; renderEvidence(); }));
+  }
   function renderQuestion() {
     const chunk = session.items[session.index]; const mode = currentMode();
     $("#sessionProgressBar").style.width = `${session.index / session.items.length * 100}%`; $("#sessionScore").textContent = `${session.score}/${session.index}`;
@@ -401,6 +537,50 @@
     $("#practiceCard").innerHTML = `<div class="speak-card"><p class="question-label">SPEAK & PRONOUNCE</p><p class="context">Read the pronunciation, listen, then say the complete chunk aloud.</p><h1 class="speak-quote">${escapeHtml(chunk.chunk)}</h1>${pronunciationHtml(chunk)}<div class="feedback"><strong>Use it like this</strong>${escapeHtml(chunk.example)}</div><div class="self-rate"><button class="secondary" id="againRate">Needs practice</button><button class="primary" id="goodRate">I said it well</button></div></div>`;
     bindPronunciation($("#practiceCard")); $("#againRate").addEventListener("click", () => rateSpeak(false, chunk)); $("#goodRate").addEventListener("click", () => rateSpeak(true, chunk));
   }
+
+  function dailyDistractors(chunk, field, count = 3) {
+    return shuffle(chunks.filter((item) => item.id !== chunk.id).map((item) => item[field]).filter((value, index, values) => value && values.indexOf(value) === index)).slice(0, count);
+  }
+  function buildDailyQuestions() {
+    const selected = shuffle(chunks).slice(0, 14);
+    const questions = selected.map((chunk, index) => {
+      if (index % 3 === 0) return { type: "Meaning match", prompt: chunk.chunk, instruction: "What does this chunk mean?", answer: chunk.meaning, options: shuffle([chunk.meaning, ...dailyDistractors(chunk, "meaning")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
+      if (index % 3 === 1) return { type: "Best chunk", prompt: chunk.situation, instruction: "What would sound natural here?", answer: chunk.chunk, options: shuffle([chunk.chunk, ...dailyDistractors(chunk, "chunk")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
+      if (chunk.gap && chunk.answer && Array.isArray(chunk.alternatives)) return { type: "Fill the gap", prompt: chunk.gap, instruction: "Choose the missing word or chunk.", answer: chunk.answer, options: shuffle([chunk.answer, ...chunk.alternatives.slice(0, 3)]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
+      return { type: "Meaning match", prompt: chunk.chunk, instruction: "Choose the closest meaning.", answer: chunk.meaning, options: shuffle([chunk.meaning, ...dailyDistractors(chunk, "meaning")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
+    });
+    questions.splice(3, 0, { type: "Image clue", prompt: "Which sentence best describes the scene?", instruction: "Use the visual details and choose the most accurate sentence.", answer: "The train has been delayed because of the weather.", options: ["The train arrived ahead of schedule.", "The train has been delayed because of the weather.", "The passengers decided to cancel the trip.", "The station is closed for the day."], explanation: "The rain, station clock, and waiting train suggest a weather-related delay. Has been delayed describes a recent event that affects the situation now.", structure: "subject + has/have been + past participle + reason", example: "The train has been delayed because of the weather.", image: true });
+    return questions.slice(0, 15);
+  }
+  function startDailyChallenge() {
+    if (dailyTimerId) clearInterval(dailyTimerId);
+    dailySession = { questions: buildDailyQuestions(), index: 0, score: 0, answered: false, secondsLeft: 600, startedAt: Date.now() };
+    show("dailyGame"); renderDailyQuestion();
+    dailyTimerId = setInterval(() => { if (!dailySession) return; dailySession.secondsLeft -= 1; renderDailyTimer(); if (dailySession.secondsLeft <= 0) finishDailyChallenge(); }, 1000);
+  }
+  function renderDailyTimer() { const seconds = Math.max(0, dailySession?.secondsLeft || 0); $("#dailyGameTimer").textContent = `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`; }
+  function dailyImageHtml() { return `<div class="daily-image-scene" role="img" aria-label="A train waiting at a station during heavy rain"><span class="scene-cloud">☁</span><i class="rain-line r1"></i><i class="rain-line r2"></i><i class="rain-line r3"></i><div class="scene-sign">STATION</div><div class="scene-train">🚆</div><time>08:45</time></div>`; }
+  function renderDailyQuestion() {
+    const question = dailySession.questions[dailySession.index]; dailySession.answered = false;
+    $("#dailyQuestionLabel").textContent = `QUESTION ${dailySession.index + 1} OF ${dailySession.questions.length}`; $("#dailyGameProgressBar").style.width = `${dailySession.index / dailySession.questions.length * 100}%`; renderDailyTimer();
+    $("#dailyGameCard").innerHTML = `<span class="challenge-label">${escapeHtml(question.type.toUpperCase())}</span>${question.image ? dailyImageHtml() : ""}<p class="daily-game-instruction">${escapeHtml(question.instruction)}</p><h2>${escapeHtml(question.prompt).replace("___", '<span class="daily-gap">___</span>')}</h2><div class="daily-answer-grid">${question.options.map((option, index) => `<button data-daily-answer="${escapeHtml(option)}"><b>${String.fromCharCode(65 + index)}</b><span>${escapeHtml(option)}</span></button>`).join("")}</div><div id="dailyAnswerFeedback"></div>`;
+    $$('[data-daily-answer]').forEach((button) => button.addEventListener("click", () => answerDailyQuestion(question, button)));
+  }
+  function answerDailyQuestion(question, button) {
+    if (dailySession.answered) return; dailySession.answered = true; const correct = button.dataset.dailyAnswer === question.answer; if (correct) dailySession.score += 1;
+    if (question.chunkId) record(question.chunkId, correct);
+    $$('[data-daily-answer]').forEach((option) => { option.disabled = true; option.classList.toggle("correct", option.dataset.dailyAnswer === question.answer); }); if (!correct) button.classList.add("wrong");
+    $("#dailyAnswerFeedback").innerHTML = `<section class="daily-answer-explanation"><div><span class="spark-icon">✦</span><div><strong>${correct ? "Exactly." : "Not quite—notice the intention and structure."}</strong><p>${escapeHtml(question.explanation)}</p></div></div><dl><div><dt>Structure</dt><dd><code>${escapeHtml(question.structure)}</code></dd></div><div><dt>Natural example</dt><dd>${escapeHtml(question.example)}</dd></div></dl><button class="primary" id="nextDailyQuestion">${dailySession.index === dailySession.questions.length - 1 ? "See my result" : "Next question →"}</button></section>`;
+    $("#nextDailyQuestion").addEventListener("click", () => { dailySession.index += 1; dailySession.index >= dailySession.questions.length ? finishDailyChallenge() : renderDailyQuestion(); });
+  }
+  function finishDailyChallenge() {
+    if (!dailySession) return; if (dailyTimerId) clearInterval(dailyTimerId); dailyTimerId = null;
+    const total = dailySession.questions.length; const percent = Math.round(dailySession.score / total * 100); const seconds = Math.max(1, Math.round((Date.now() - dailySession.startedAt) / 1000));
+    progress.dailyGames.unshift({ date: todayKey(), score: dailySession.score, total, percent, seconds }); progress.dailyGames = progress.dailyGames.slice(0, 30); saveProgress();
+    $("#dailyGameProgressBar").style.width = "100%"; $("#dailyQuestionLabel").textContent = "CHALLENGE COMPLETE";
+    $("#dailyGameCard").innerHTML = `<div class="daily-result"><div class="summary-burst">${percent >= 70 ? "✓" : "↗"}</div><p class="eyebrow">YOUR DAILY RESULT</p><h2>${dailySession.score}/${total} correct</h2><strong>${percent}% accuracy · ${Math.ceil(seconds / 60)} min</strong><p>${percent >= 85 ? "Excellent recall. Your chunks are becoming automatic." : percent >= 65 ? "Good progress. Missed chunks are now prioritized for review." : "Useful practice. Review the explanations, then try again tomorrow."}</p><div><button class="secondary" data-nav="progress">View my journey</button><button class="primary" id="playDailyAgain">Play again</button></div></div>`;
+    $("#playDailyAgain").addEventListener("click", startDailyChallenge); $("#dailyGameCard [data-nav=progress]").addEventListener("click", () => { updateProgressView(); show("progress"); location.hash = "progress"; }); updateDashboard(); updateProgressView();
+  }
   function selectVoice() {
     if (!("speechSynthesis" in window)) return;
     const voices = speechSynthesis.getVoices().filter((voice) => voice.lang.toLowerCase().startsWith("en"));
@@ -418,9 +598,11 @@
 
   function bindEvents() {
     $$('[data-mode]').forEach((button) => button.addEventListener("click", () => start(button.dataset.mode)));
-    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
+    $$('[data-game="daily"]').forEach((button) => button.addEventListener("click", startDailyChallenge));
+    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (dailyTimerId) { clearInterval(dailyTimerId); dailyTimerId = null; } if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); if (view === "express") renderExpressions(); if (view === "evidence") renderEvidence(); if (view === "quick") renderQuickRecall(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
     $("#againButton").addEventListener("click", () => start(session.sourceMode, session.topicId)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
     $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); updateDashboard(); updateProgressView(); } });
+    $("#restoreHiddenChunks").addEventListener("click", restoreAllQuickChunks); $("#resetQuickRecall").addEventListener("click", resetQuickRecall);
   }
 
   async function init() {
@@ -430,9 +612,10 @@
       await discoverContent();
       $("#contentStatus").textContent = `${chunks.length} learned chunks · ${registry.sessions.length} session${registry.sessions.length === 1 ? "" : "s"}`;
       $("#sourceNote").textContent = `${chunks.length} chunks · ${contentSource}`;
-      $$('[data-mode]').forEach((button) => { button.disabled = false; });
-      updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories(); renderContexts();
-      const requestedView = location.hash.slice(1); if (["lab", "think", "stories", "speaking", "progress", "library"].includes(requestedView)) show(requestedView);
+      $("#playChunkCount").textContent = chunks.length;
+      $$('[data-mode], [data-game]').forEach((button) => { button.disabled = false; });
+      updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories(); renderContexts(); renderExpressions(); renderEvidence();
+      const requestedView = location.hash.slice(1); if (["play", "quick", "learn", "lab", "think", "express", "stories", "speaking", "progress", "library", "evidence"].includes(requestedView)) { if (requestedView === "quick") renderQuickRecall(); show(requestedView); }
     } catch (error) {
       $("#contentStatus").textContent = "Content could not be loaded"; $("#sourceNote").textContent = error.message; console.error(error, registry.errors);
     }

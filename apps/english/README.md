@@ -37,7 +37,26 @@ Current library:
 - 22 chunks from the September 22–24 sessions
 - 300 common daily chunks across ten topic files
 - 16 onboarding and professional-email chunks
-- 338 chunks total
+- 15 intent-first chunks from the October 13 session
+- 353 chunks total
+
+## Add a Think → Express scenario
+
+Production-first practice lives in `content/expressions/`. Each scenario starts with a natural Vietnamese thought and guides the learner through intent selection, idea reshaping, optional progressive chunk hints, an original English response, natural reference answers, and a varied retrieval prompt. The published site discovers expression files automatically. For local and offline preview, also add the file path to `expressionFallbackFiles` in `content/catalog.js`.
+
+This mode complements **Think in English**: the existing mode develops contextual reading and implied-meaning recognition, while **Think → Express** develops active retrieval and sentence construction. Responses and variation completion are stored locally in the existing progress record.
+
+## Quick Recall
+
+Quick Recall draws from the complete chunk library for short, spare-minute practice. It prioritizes chunks with fewer appearances, avoids the 18 most recent chunks when alternatives are available, and asks the learner to identify the appropriate situation before revealing meaning, structure, a natural example, and a usage note.
+
+The learner can keep a chunk in rotation or hide it after mastering it. The dashboard records unique chunks seen, total appearances, hidden chunks, and available chunks. Hidden chunks can be restored individually or together, and Quick Recall history can be reset without affecting the main practice statistics.
+
+## Daily Focus and Daily Challenge
+
+The primary navigation is organized around **Today**, **Play**, **Learn**, and **Journey**. Today recommends a focused learning plan; Play collects the available game modes; Learn preserves the complete lesson toolkit; and Journey combines learning progress with saved game results.
+
+Daily Challenge generates 15 questions from the current chunk library and gives the learner up to 10 minutes. A session mixes meaning recognition, situation-to-chunk selection, fill-the-gap questions, and an animated visual clue. Every answer reveals the relevant meaning, structure, example, and usage note. Completed scores and durations are stored in the browser and shown in Journey. Layouts adapt from multi-column desktop views to a touch-friendly mobile flow with persistent bottom navigation.
 
 ## Add a Think in English situation
 

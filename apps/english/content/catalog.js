@@ -6,14 +6,18 @@ window.CHUNK_CONTENT_CONFIG = {
     directory: "apps/english/content/sessions",
     conversationDirectory: "apps/english/content/conversations",
     storyDirectory: "apps/english/content/stories",
-    contextDirectory: "apps/english/content/contexts"
+    contextDirectory: "apps/english/content/contexts",
+    expressionDirectory: "apps/english/content/expressions"
   },
+  expressionFallbackFiles: ["content/expressions/think-express.js"],
   contextFallbackFiles: ["content/contexts/think-in-english.js"],
   storyFallbackFiles: ["content/stories/birthday-dinner.js", "content/stories/selflo-launch.js", "content/stories/first-day.js"],
   conversationFallbackFiles: ["content/conversations/speaking-topics.js"],
   fallbackFiles: [
     "content/sessions/2026-09-22-to-24.js",
     "content/sessions/2026-10-07-onboarding.js",
+    "content/sessions/2026-10-13-intent-first.js",
+    "content/sessions/source-verified.js",
     "content/sessions/daily-01-routines.js",
     "content/sessions/daily-02-small-talk.js",
     "content/sessions/daily-03-requests.js",

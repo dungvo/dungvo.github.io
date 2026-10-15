@@ -1,5 +1,42 @@
 # English Practice Session --- September 22, 2026
 
+> **Cumulative study note:** This document now also indexes the new material from October 13, 2026. Detailed examples and corrections are in `English_Practice_2026-10-13_Intent_First.md`. Repeated chunks such as **I'll do my best to...**, **I found out that...**, and **more complicated than expected** remain defined once in their original sections below.
+
+## October 13 additions — intent-first production
+
+The updated practice flow is:
+
+**Natural Vietnamese thought → Identify intent → Reshape the idea → Find English chunks → Construct a sentence → Get feedback → Practice variations**
+
+The reshaping step is a temporary bridge. The long-term target remains **Situation → Intention → English chunks → English sentence**.
+
+New, non-duplicate chunks added to the cumulative set:
+
+- **Let's + base verb** — propose a shared action.
+- **Could we + base verb?** — ask politely whether a shared action is possible.
+- **I'd like to + base verb** — state what you want to do.
+- **look through something** — review, often relatively quickly.
+- **go through something together** — review carefully or step by step.
+- **I'm confused about...** — name what you do not understand.
+- **Could you help me understand...?** — request clarification.
+- **so I can + base verb** — state the purpose of a request.
+- **Let me know when you're done with...** — ask for contact after an activity.
+- **I'll make time to...** — arrange your schedule.
+- **I initially thought...** — introduce an earlier assumption.
+- **It turned out to be...** / **It turned out that...** — reveal the actual result.
+- **verb + something + against + target/reference** — identify the target or standard of a technical operation.
+
+Important new contrasts:
+
+- `Let's...` suggests; `Could we...?` requests agreement or availability.
+- `look through` is often an initial review; `go through` is often detailed.
+- `I'm confused` is the feeling; `it's confusing` describes the thing; `it confuses me` describes its effect.
+- `found out` focuses on discovery; `turned out` focuses on the reality that emerged.
+- `by 5 PM` means no later than 5; `before 5 PM` means earlier than 5.
+- In technical language, `against` commonly marks a target or reference: query against a database, validate against a schema, compare against a baseline.
+
+The new website mode adds everyday retrieval practice across friends, family, leisure, shopping, travel, and opinions, while keeping technical work as one category.
+
 ## Purpose
 
 Writing-based English practice focused on workplace/technical

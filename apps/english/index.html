@@ -17,25 +17,19 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Chunk Lab</span>
       </button>
       <nav aria-label="Main navigation">
-        <button data-nav="home">Practice</button><button data-nav="lab">Sentence Lab</button><button data-nav="think">Think in English</button><button data-nav="stories">Stories</button><button data-nav="speaking">Speaking Lab</button><button data-nav="progress">My progress</button><button data-nav="library">Chunk library</button>
+        <button data-nav="home">Today</button><button data-nav="play">Play</button><button data-nav="learn">Learn</button><button data-nav="progress">Journey</button>
       </nav>
       <div class="header-meta"><span class="streak-badge">● <span id="headerStreak">0 day streak</span></span><button class="avatar" id="resetButton" title="Reset local progress" aria-label="Reset local progress">DV</button></div>
     </header>
 
     <main>
       <section id="homeView" class="view active">
-        <div class="hero-grid">
-          <div class="hero-copy-block">
-            <p class="eyebrow">YOUR DAILY ENGLISH GYM</p><h1>Think in chunks.<br><em>Speak naturally.</em></h1>
-            <p class="lead">Practice English from real technical conversations—one useful chunk at a time.</p>
-            <div class="hero-actions"><button class="primary hero-button" data-mode="mixed" disabled>Start today’s practice <span>→</span></button><span>10 reps · about 5 minutes</span></div>
-          </div>
-          <aside class="today-card">
-            <div class="card-label-row"><p class="eyebrow">TODAY’S PROGRESS</p><span id="todayDate"></span></div>
-            <strong><span id="todayCount">0</span> / 10 reps</strong><p id="todayMessage">A few focused reps will build automatic recall.</p>
-            <div class="wide-progress"><span id="todayProgressBar"></span></div><blockquote>“Small steps. Real conversations.<br>A more confident you.”</blockquote>
-          </aside>
-        </div>
+        <div class="daily-hero"><div><p class="eyebrow">TODAY · <span id="todayDate"></span></p><h1>Ten minutes.<br><em>One stronger habit.</em></h1><p class="lead">Your daily challenge mixes weak chunks, recent lessons, and useful English for real conversations.</p></div><aside class="daily-level"><span>DAILY ACTIVITY</span><strong><span id="todayCount">0</span> reps</strong><div class="wide-progress"><span id="todayProgressBar"></span></div><small id="todayMessage">A few focused reps will build automatic recall.</small></aside></div>
+
+        <section class="daily-challenge-card"><div class="daily-art" aria-label="Animated learner climbing through English chunks"><span class="float-token token-a">A</span><span class="float-token token-spark">✦</span><span class="float-token token-question">?</span><div class="learning-hill"></div><div class="daily-character" aria-hidden="true">🧑🏻‍💻</div></div><div class="daily-challenge-copy"><span class="challenge-label">TODAY'S CHALLENGE</span><h2>Intent Quest</h2><p>15 questions · up to 10 minutes</p><div class="challenge-tags"><span>Meaning</span><span>Fill the gap</span><span>Best chunk</span><span>Image clue</span></div><button class="primary daily-start" data-game="daily" disabled>Start challenge <b>→</b></button></div><div class="daily-score-ring"><strong id="dailyBestScore">—</strong><span>best today</span></div></section>
+
+        <div class="home-section-head"><div><p class="eyebrow">CONTINUE YOUR PATH</p><h2>Pick up where you left off</h2></div><button class="text-button" data-nav="learn">See all lessons →</button></div>
+        <section class="continue-grid"><button data-nav="express" class="continue-card coral"><span class="continue-icon">✦</span><small>THINK → EXPRESS</small><strong>Build English from your own ideas</strong><p>Intent → reshape → chunks → natural response</p><b>Continue →</b></button><button data-nav="stories" class="continue-card blue"><span class="continue-icon">◫</span><small>STORY PRACTICE</small><strong>Learn chunks inside a story</strong><p>Read, listen, understand, and apply</p><b>Continue →</b></button><button data-mode="review" class="continue-card gold" disabled><span class="continue-icon">◇</span><small>PERSONAL REVIEW</small><strong id="reviewTitle">Start practicing</strong><p id="reviewCopy">Your difficult chunks will appear here.</p><b>Review →</b></button></section>
 
         <section class="workout-section">
           <div class="section-title"><h2>Choose a workout</h2><span id="contentStatus">Loading your chunks…</span></div>
@@ -49,21 +43,55 @@
           </div>
         </section>
 
+        <section class="quick-recall-launch"><div><span class="spark-icon" aria-hidden="true">✦</span><div><p class="eyebrow">A SPARE-MINUTE MEMORY BOOST</p><h2>Meet one useful chunk at a time.</h2><p>Smart random practice favors chunks you have seen less often and avoids recent repeats.</p></div></div><button class="primary" data-nav="quick">Start Quick Recall →</button></section>
+
         <section class="learning-path-section"><div class="section-title"><div><p class="eyebrow">STRUCTURED LEARNING PATH</p><h2>Learn one situation at a time</h2></div><span>New → Learning → Reviewing → Mastered</span></div><div class="path-grid" id="pathGrid"></div></section>
 
-        <section class="dashboard-grid">
-          <article class="review-panel"><p class="eyebrow">PERSONALIZED REVIEW</p><div class="review-body"><span class="target-icon">◎</span><div><h3 id="reviewTitle">Start practicing</h3><p id="reviewCopy">Your difficult chunks will appear here more often.</p><button class="primary small" data-mode="review" disabled>Review weak spots <span>→</span></button></div></div></article>
-          <article class="week-panel"><p class="eyebrow">THIS WEEK</p><div class="week-stats"><div><span class="stat-icon">▥</span><strong id="weekReps">0 reps</strong><small>Build the habit.</small></div><div><span class="stat-icon">◔</span><strong id="weekAccuracy">—</strong><small>Accuracy</small></div><div><span class="stat-icon">↗</span><strong id="bestTopic">New learner</strong><small>Current focus</small></div></div></article>
-        </section>
+        <section class="week-panel daily-week"><p class="eyebrow">THIS WEEK</p><div class="week-stats"><div><span class="stat-icon">▥</span><strong id="weekReps">0 reps</strong><small>Build the habit.</small></div><div><span class="stat-icon">◔</span><strong id="weekAccuracy">—</strong><small>Accuracy</small></div><div><span class="stat-icon">↗</span><strong id="bestTopic">New learner</strong><small>Current focus</small></div></div></section>
 
         <section class="think-launch"><div><p class="eyebrow">CONTEXT BEFORE TRANSLATION</p><h2>Understand the situation, then find the words.</h2><p>Read realistic emails, chats, daily-life scenes, and article-style reports. Work out the main intent and implied meaning before exploring the chunks.</p></div><button class="primary" data-nav="think">Start Think in English →</button></section>
+        <section class="think-launch express-launch"><div><p class="eyebrow">ACTIVE PRODUCTION · INTENT BEFORE WORDS</p><h2>Start with a real thought. Build natural English.</h2><p>Identify what you mean, reshape the idea, reveal only the chunks you need, write your response, and reuse it in a new situation.</p></div><button class="primary" data-nav="express">Start Think → Express →</button></section>
       </section>
+
+      <section id="playView" class="view inner-view play-hub-view">
+        <div class="play-head"><div><p class="eyebrow">PLAY · PRACTICE · REMEMBER</p><h1>Choose your<br><em>next game.</em></h1><p class="lead">Short games use your existing chunks and lessons. Pick a focused skill or play the mixed Daily Challenge.</p></div><aside><strong id="playChunkCount">0</strong><span>chunks ready to play</span><small>Progress is saved on this device.</small></aside></div>
+        <button class="play-feature" data-game="daily" disabled><div class="play-feature-art"><span>✦</span><span>A</span><span>?</span></div><div><small>RECOMMENDED · MIXED SKILLS</small><strong>Daily Challenge</strong><p>15 questions · 10 minutes · meaning, gaps, situations, and image clues</p></div><b>Play →</b></button>
+        <div class="game-grid"><button class="game-card coral" data-nav="quick"><span>◇</span><div><small>SMART RANDOM</small><strong>Quick Recall</strong><p>Meet less-seen chunks and control which ones return.</p></div><b>→</b></button><button class="game-card blue" data-mode="build" disabled><span>▤</span><div><small>WORD ORDER</small><strong>Fill the Gap</strong><p>Choose the word or chunk that completes a natural sentence.</p></div><b>→</b></button><button class="game-card sage" data-mode="meaning" disabled><span>◎</span><div><small>FAST RECOGNITION</small><strong>Meaning Sprint</strong><p>Match useful chunks with their closest meaning.</p></div><b>→</b></button><button class="game-card yellow" data-mode="situation" disabled><span>✦</span><div><small>CONTEXT</small><strong>Best Chunk</strong><p>Choose what a natural speaker would say in each situation.</p></div><b>→</b></button><button class="game-card violet" data-nav="think"><span>◫</span><div><small>COMPREHENSION</small><strong>Intent Detective</strong><p>Find the main idea, implied meaning, and expected response.</p></div><b>→</b></button><button class="game-card peach" data-nav="stories"><span>♫</span><div><small>READ & LISTEN</small><strong>Story Quest</strong><p>Follow a story and apply its chunks in new situations.</p></div><b>→</b></button></div>
+      </section>
+
+      <section id="dailyGameView" class="view daily-game-view" aria-live="polite"><div class="daily-game-top"><button class="back-button" data-nav="play" aria-label="Leave Daily Challenge">←</button><div><span id="dailyQuestionLabel">QUESTION 1 OF 15</span><div class="daily-game-progress"><i id="dailyGameProgressBar"></i></div></div><time id="dailyGameTimer">10:00</time></div><div id="dailyGameCard" class="daily-game-card"></div></section>
 
       <section id="practiceView" class="view practice-view" aria-live="polite"><div class="practice-top"><button class="back-button" data-nav="home" aria-label="Back to practice home">←</button><div class="session-progress"><span id="sessionProgressBar"></span></div><span id="sessionScore">0/0</span></div><div id="practiceCard" class="practice-card"></div></section>
 
       <section id="summaryView" class="view summary-view"><div class="summary-card"><div class="summary-burst">✓</div><p class="eyebrow">SESSION COMPLETE</p><h1>Nice work.</h1><p id="summaryLine"></p><div class="summary-stats"><div><strong id="summaryScore">0</strong><span>correct</span></div><div><strong id="summaryAccuracy">0%</strong><span>accuracy</span></div><div><strong id="summaryStreak">0</strong><span>best streak</span></div></div><button class="primary" id="againButton">Practice again</button><button class="text-button" data-nav="home">Back to home</button></div></section>
 
-      <section id="progressView" class="view inner-view"><p class="eyebrow">MY PROGRESS</p><h1>Your learning,<br><em>at a glance.</em></h1><div class="progress-overview"><article><span>All-time reps</span><strong id="allTimeReps">0</strong></article><article><span>All-time accuracy</span><strong id="allTimeAccuracy">—</strong></article><article><span>Current streak</span><strong id="progressStreak">0 days</strong></article><article><span>Mastered chunks</span><strong id="masteredCount">0</strong></article><article><span>Due for review</span><strong id="dueCount">0</strong></article></div><article class="focus-list"><h2>Chunks to strengthen</h2><div id="weakList"></div></article></section>
+      <section id="quickView" class="view inner-view quick-view">
+        <div class="quick-head"><div><p class="eyebrow">SMART RANDOM CHUNK PRACTICE</p><h1>Quick<br><em>Recall.</em></h1><p class="lead">Use a spare minute to retrieve one chunk. Less-seen chunks come first, and recent chunks stay out of the rotation for a while.</p></div><button class="text-button" data-nav="home">← Back to Practice</button></div>
+        <div class="quick-layout">
+          <article class="quick-practice-card" id="quickPracticeCard"><p>Loading a chunk…</p></article>
+          <aside class="quick-dashboard"><p class="eyebrow">RECALL DASHBOARD</p><div class="quick-stats"><div><strong id="quickUnique">0</strong><span>chunks seen</span></div><div><strong id="quickTotal">0</strong><span>total appearances</span></div><div><strong id="quickHidden">0</strong><span>hidden</span></div><div><strong id="quickAvailable">0</strong><span>still available</span></div></div><div class="quick-dashboard-actions"><button class="secondary" id="restoreHiddenChunks">Show hidden chunks again</button><button class="text-button danger" id="resetQuickRecall">Reset Quick Recall data</button></div><div class="hidden-chunk-list" id="hiddenChunkList"></div></aside>
+        </div>
+      </section>
+
+      <section id="learnView" class="view inner-view learn-hub-view">
+        <div class="learn-hub-head"><div><p class="eyebrow">EXPLORE YOUR LEARNING TOOLS</p><h1>Choose how you<br><em>want to learn.</em></h1><p class="lead">Read, analyze, speak, or review your chunk library. Everything is still here—organized by the skill you want to practice.</p></div><aside><strong>6</strong><span>focused learning tools</span></aside></div>
+        <div class="learn-hub-grid">
+          <button class="learn-hub-card coral" data-nav="think"><span class="learn-hub-icon">◎</span><span><small>CONTEXT & INTENT</small><strong>Think in English</strong><p>Understand realistic situations and implied meaning before unpacking the language.</p></span><b>→</b></button>
+          <button class="learn-hub-card blue" data-nav="lab"><span class="learn-hub-icon">▤</span><span><small>SENTENCE STRUCTURE</small><strong>Sentence Lab</strong><p>Break down sourced sentences and see how every part carries meaning.</p></span><b>→</b></button>
+          <button class="learn-hub-card sage" data-nav="stories"><span class="learn-hub-icon">◫</span><span><small>READ & LISTEN</small><strong>Stories</strong><p>Learn reusable chunks inside memorable everyday and technical stories.</p></span><b>→</b></button>
+          <button class="learn-hub-card yellow" data-nav="speaking"><span class="learn-hub-icon">◖</span><span><small>GUIDED CONVERSATION</small><strong>Speaking Lab</strong><p>Prepare useful chunks and continue with a purposeful voice conversation.</p></span><b>→</b></button>
+          <button class="learn-hub-card source" data-nav="evidence"><span class="learn-hub-icon">✦</span><span><small>VERIFIED REAL ENGLISH</small><strong>Real Usage</strong><p>See exact chunks inside official articles, with source context and direct links.</p></span><b>→</b></button>
+          <button class="learn-hub-card violet wide" data-nav="library"><span class="learn-hub-icon">◇</span><span><small>SEARCH & REVIEW</small><strong>Chunk Library</strong><p>Browse all learned expressions, meanings, situations, and pronunciation guides.</p></span><b>→</b></button>
+        </div>
+      </section>
+
+      <section id="evidenceView" class="view inner-view evidence-view">
+        <div class="evidence-head"><div><p class="eyebrow">SOURCE · CONTEXT · FUNCTION · TRANSFER</p><h1>Meet chunks in<br><em>real English.</em></h1><p class="lead">Every example below is traceable to an official publication. Source wording is kept separate from our learning explanation.</p></div><div class="evidence-summary"><strong id="evidenceCount">0</strong><span>verified examples</span><small>NASA · NIH · Google Cloud</small></div></div>
+        <div class="evidence-trust"><span class="spark-icon">✦</span><div><strong>No invented source examples</strong><p>Each card identifies the publisher, article, date, exact excerpt, and original link. New chunks are added only after a source match is verified.</p></div></div>
+        <div class="context-filters" id="evidenceFilters"></div><div class="evidence-grid" id="evidenceGrid"></div>
+      </section>
+
+      <section id="progressView" class="view inner-view"><p class="eyebrow">YOUR LEARNING JOURNEY</p><h1>Progress you can<br><em>actually use.</em></h1><div class="progress-overview"><article><span>All-time reps</span><strong id="allTimeReps">0</strong></article><article><span>All-time accuracy</span><strong id="allTimeAccuracy">—</strong></article><article><span>Current streak</span><strong id="progressStreak">0 days</strong></article><article><span>Mastered chunks</span><strong id="masteredCount">0</strong></article><article><span>Due for review</span><strong id="dueCount">0</strong></article></div><div class="journey-grid"><article class="focus-list"><h2>Chunks to strengthen</h2><div id="weakList"></div></article><article class="game-history"><p class="eyebrow">RECENT GAMES</p><h2>Daily Challenge history</h2><div id="dailyGameHistory"><p>No completed games yet.</p></div></article></div></section>
 
       <section id="speakingView" class="view inner-view speaking-view">
         <div class="speaking-head"><div><p class="eyebrow">GUIDED CONVERSATION PRACTICE</p><h1>Speak with a<br><em>clear purpose.</em></h1><p class="lead">Choose a scenario, prepare with useful chunks, then use the ready-made prompt in ChatGPT Voice.</p></div><div class="speaking-summary"><strong id="speakingTopicCount">0</strong><span>guided topics</span><small>Daily life · Work · Data · Interviews</small></div></div>
@@ -81,6 +109,12 @@
         <div class="think-layout"><aside class="context-list" id="contextList"></aside><article class="context-reader" id="contextReader"><p class="eyebrow">THINK IN ENGLISH</p><h2>Choose a situation</h2><p>Read for the big picture first. You can unpack the language after answering.</p></article></div>
       </section>
 
+      <section id="expressView" class="view inner-view expression-view">
+        <div class="expression-head"><div><p class="eyebrow">INTENT · RESHAPE · CHUNKS · EXPRESS · VARY</p><h1>Think first.<br><em>Then express.</em></h1><p class="lead">Start with a natural Vietnamese thought. Preserve its intention—not its word order—and build the English yourself.</p></div><div class="think-summary"><strong id="expressionCount">0</strong><span>production scenarios</span><small>Friends · Family · Leisure · Shopping · Travel · Opinions · Work</small></div></div>
+        <div class="context-filters" id="expressionFilters"></div>
+        <div class="expression-layout"><aside class="expression-list" id="expressionList"></aside><article class="expression-reader" id="expressionReader"><p class="eyebrow">THINK → EXPRESS</p><h2>Choose a situation</h2><p>Begin with the purpose of the message. Language comes after meaning.</p></article></div>
+      </section>
+
       <section id="labView" class="view inner-view sentence-lab-view">
         <div class="sentence-lab-head">
           <div><p class="eyebrow">SEGMENT · MAP · UNDERSTAND · USE</p><h1>See how a sentence<br><em>builds its meaning.</em></h1><p class="lead">Work through sourced news and business writing one structural decision at a time.</p></div>
@@ -93,6 +127,6 @@
     </main>
     <footer><span>Chunk Lab · Your personal English practice</span><span id="sourceNote">Loading content…</span></footer>
   </div>
-  <script src="content/catalog.js?v=20261008"></script><script src="content/sentence-lab/real-world-lessons.js?v=20261011"></script><script src="js/app.js?v=20261011"></script><script src="js/sentence-lab.js?v=20261011"></script>
+  <script src="content/catalog.js?v=20261015"></script><script src="content/evidence/real-usage.js?v=20261015"></script><script src="content/sentence-lab/real-world-lessons.js?v=20261011"></script><script src="js/app.js?v=20261015b"></script><script src="js/sentence-lab.js?v=20261011"></script>
 </body>
 </html>
