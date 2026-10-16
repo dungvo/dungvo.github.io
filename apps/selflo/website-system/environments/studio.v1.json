@@ -1,0 +1,13 @@
+{
+  "schema_version": "selflo.website-environment.v1",
+  "id": "studio",
+  "revision": 1,
+  "base_path": "/apps/selflo/studio/",
+  "robots": "noindex,nofollow",
+  "content_channel": "preview",
+  "developer_navigation": true,
+  "allowed_feature_states": ["released", "public_candidate", "studio_only"],
+  "allow_authoring_data": true,
+  "allow_fixtures": true,
+  "output_policy": "staging"
+}

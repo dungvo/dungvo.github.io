@@ -12,6 +12,7 @@ Nếu quay lại để tiếp tục phần đang làm dở, đọc theo thứ t�
 
 | Khu vực | Vai trò |
 |---|---|
+| `website-system/` | Source/config website dùng chung cho hai target: Studio staging và public production; đang migration theo page |
 | `shared/` | Contract, proposal và quyết định dùng chung giữa app/content |
 | `perspective-library/source/` | Nguồn chuẩn của quote và story đang biên tập |
 | `perspective-library/release/` | Payload đã phát hành; không sửa tay |

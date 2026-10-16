@@ -1,0 +1,24 @@
+{
+  "schema_version": "selflo.website-feature-registry.v1",
+  "revision": 1,
+  "features": [
+    {
+      "id": "analysis_experience",
+      "label_vi": "Trải nghiệm Phân tích (vị trí chưa chốt)",
+      "state": "studio_only",
+      "studio_enabled": false,
+      "public_enabled": false,
+      "owner_acceptance": null,
+      "notes_vi": "Giữ chỗ cho thảo luận; chưa quyết định nằm trong Góc nhìn, tab cấp cao hay cấu trúc khác và chưa có UI runtime."
+    },
+    {
+      "id": "story_series",
+      "label_vi": "Series câu chuyện",
+      "state": "studio_only",
+      "studio_enabled": true,
+      "public_enabled": false,
+      "owner_acceptance": null,
+      "notes_vi": "Migrate từ prototype studio/website-preview; chưa public."
+    }
+  ]
+}

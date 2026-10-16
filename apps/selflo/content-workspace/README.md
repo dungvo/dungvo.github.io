@@ -14,6 +14,7 @@
 | Muốn hiểu các bản K1–K9 cũ | [`rhythm-knowledge/README.md`](rhythm-knowledge/README.md) | Tài liệu lịch sử của hướng Rhythm → Knowledge đã tạm dừng; không dùng làm backlog đang triển khai |
 | Muốn xem nội dung thô chưa chuẩn hóa | [`raw/`](raw/) | Bản nghiên cứu, phân tích và bài viết làm việc; không publish trực tiếp |
 | Muốn xem tài sản đã biên tập cho từng kênh | [`curated/`](curated/) | Tài sản đã được chọn hoặc chuẩn bị, nhưng vẫn phải kiểm tra trạng thái thật trước khi gọi là đã đăng/phát hành |
+| Muốn chọn phong cách cho một bài | [`editorial-styles/`](editorial-styles/) | Các style profile có ID, cấu trúc, giới hạn và checklist; không thay source/evidence gate |
 
 ## Ranh giới quan trọng
 
@@ -32,4 +33,3 @@ Khi một chủ đề đổi trạng thái:
 3. chỉ cập nhật Authoring/Release qua pipeline và gate đã được duyệt.
 
 Khi một hạng mục trong backlog hoàn thành, không xóa dòng cũ. Chuyển trạng thái sang `Đã chốt` hoặc `Hoàn thành`, ghi ngày và bằng chứng nghiệm thu để lần sau không mở lại cùng một việc.
-

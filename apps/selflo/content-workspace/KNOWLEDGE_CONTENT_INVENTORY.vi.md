@@ -1,7 +1,7 @@
 # Selflo — Sổ ý tưởng, phân tích và nội dung Knowledge
 
-**Trạng thái:** Sổ theo dõi đang dùng  
-**Cập nhật:** 2026-10-12  
+**Trạng thái:** Sổ theo dõi đang dùng
+**Cập nhật:** 2026-10-15
 **Mục đích:** Một nơi duy nhất để biết hiện có ý tưởng nào, bài phân tích nào, nội dung nào đã hoàn chỉnh, đã chuẩn bị cho Facebook và đã phát hành trong Selflo.
 
 ## 1. Cách đọc trạng thái
@@ -77,6 +77,20 @@ Nguồn backlog: `content-workspace/knowledge-maze/TOPIC_BACKLOG.vi.md`.
 | Ý tưởng | Trạng thái | Lý do giữ |
 |---|---|---|
 | Vì sao con người thường chú ý đến điều tiêu cực hơn điều tích cực? | Ý tưởng | Câu hỏi Knowledge rõ; cần phân biệt thiên lệch chú ý, tác động mạnh của thông tin tiêu cực và việc một số tín hiệu tiêu cực có giá trị cảnh báo thật |
+| Thái Cực là quy luật hay mô hình quan sát? | Đã có đối thoại nền; chưa source-review | Giữ phản biện: dùng mô hình để đặt câu hỏi, không ép thế giới vận hành theo mô hình |
+| “Vật cực tất phản” đúng trong điều kiện nào? | Ý tưởng | Cần định nghĩa claim, phạm vi thời gian và phản ví dụ; không dùng như dự đoán phổ quát |
+| Có cần cái xấu để nhận ra cái tốt? | Đã có lập luận nền | Tách “tương phản giúp nhận biết” khỏi “cái xấu cần thiết”; chống lãng mạn hóa đau khổ |
+| Tri túc có phải ngừng cố gắng? | Ý tưởng Đạo Đức Kinh | Cần văn bản gốc, locator và diễn giải cạnh tranh |
+| Vô vi có phải không làm gì? | Ý tưởng Đạo Đức Kinh | Cần research lịch sử khái niệm trước khi viết |
+| Các triết lý về biến đổi, đúng mức, quan hệ và tương hỗ | Ý tưởng so sánh | Heraclitus, Khắc kỷ, Aristotle, Ubuntu, Ayni; không đồng nhất thành “Thái Cực tên khác” |
+| Khả năng bị bác bỏ qua ví dụ đời thường | Có giải thích nền | Cần kiểm tra nguồn Popper và nói rõ đây không phải tiêu chí duy nhất cho mọi tri thức |
+| Làm sao kiểm tra AI ít mà vẫn giữ độ tin cậy cao? | Có quy trình nền | Thử quy trình nhãn claim + kiểm tra 3–5 claim chịu lực trên một bài thật |
+| Vấn–đáp giúp con người học như thế nào? | Ý tưởng ưu tiên | Nghiên cứu self-explanation, retrieval, feedback, phản ví dụ và sửa mô hình tinh thần |
+| Suy nghĩ có giúp con người thông minh hơn không? | Ý tưởng | Tách suy nghĩ có chủ đích khỏi suy nghĩ lặp lại; xác định “thông minh hơn” nghĩa gì |
+| Truyện vui, nhân văn không bắt đầu từ triết lý | Ý tưởng định dạng | Dùng hiểu lầm, lựa chọn đời thường và hài hước; không thêm đoạn dạy đời cuối truyện |
+| Truyện cho trẻ lớp 1–5 đọc hiểu | Ý tưởng chương trình | Phân nhóm tuổi, câu/từ cụ thể, ít nhân vật, test đọc hiểu; kiểm tra trùng story hiện có |
+
+Gói intake và seed chi tiết: `content-workspace/taiji-dialogue-2026-10-15/`.
 
 ## 7. Nền lý thuyết đang có nhưng chưa phải bài Knowledge hoàn chỉnh
 

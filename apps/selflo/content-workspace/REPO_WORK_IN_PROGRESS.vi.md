@@ -1,7 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
-**Trạng thái:** Bảng theo dõi đang dùng  
-**Ngày kiểm kê:** 2026-10-12  
+**Trạng thái:** Bảng theo dõi đang dùng
+**Ngày kiểm kê:** 2026-10-15
 **Phạm vi:** Repo content/web `apps/selflo`; không đánh giá hoặc thay đổi repo app.
 
 ## 1. Cách hiểu các trạng thái
@@ -217,7 +217,7 @@ Không nên chờ review xong toàn bộ mới Release một lần. Nên phát h
 | PM-005 | Review 46 story Authoring-only | P1 | Đang dở | Dashboard đúng | Mỗi story có quyết định sửa/chờ/loại/release |
 | PM-006 | Hoàn thành một bài Knowledge | P1 | Parked sau pilot spec-driven | Mở session content riêng; owner chọn hướng tại `content-workspace/social-comparison-envy-v1-2026-10-13/OWNER_DECISION_PACK.md` | Một bài được owner đọc và chốt nội dung trước khi product hóa |
 | PM-007 | Mê cung kiến thức | P2 | Prototype; tạm chưa mở rộng | PM-006 hoặc một topic được chốt | Một đường đọc hoàn chỉnh, source-reviewed và user-tested |
-| PM-008 | Studio → web công khai | P1 | Prototype | Danh mục feature, canonical pipeline | Studio chứa bản đầy đủ để phát triển/nghiệm thu; web công khai chỉ nhận tập con đã Release; cùng một nguồn/pipeline, có gate, audit và rollback |
+| PM-008 | Studio → web công khai + Knowledge Reader | P1 | S2 hoàn thành; chờ thảo luận feature tiếp theo | So sánh vị trí của Phân tích trước khi viết spec UI; không mặc định đặt trong Góc nhìn | Studio có Website/Developer tabs, shared implementation với public, feature lifecycle và Knowledge Reader; public chỉ nhận phần đã Release, có gate/audit/rollback |
 | PM-009 | Chuyển động/hoạt ảnh website | P1 | Thiếu brief; cần khôi phục phạm vi | Owner xác nhận màn hình/ý tưởng cũ | Brief + prototype + kiểm tra mobile/hiệu năng/giảm chuyển động + owner duyệt |
 | PM-010 | Phân tích nội dung thành public content | P2 | Thử nghiệm | Quyết định mô hình content ghép | Chốt public/không public; có contract và consumer nếu public |
 | PM-011 | Series câu chuyện | P3 | Đề xuất, chờ content | Nội dung 10 tập và app/web contract | Series thật hoạt động end-to-end hoặc quyết định đóng |
@@ -226,6 +226,16 @@ Không nên chờ review xong toàn bộ mới Release một lần. Nên phát h
 | PM-014 | Rhythm → Knowledge | — | Tạm dừng có chủ đích | Điều kiện ADR-0002 | Chỉ mở lại khi Knowledge inventory và Check-in input đủ |
 | PM-015 | Dọn tài liệu và dữ liệu cũ | P2 | Đang dở | PM-001 | File status không mâu thuẫn; tài liệu lịch sử được đánh dấu rõ |
 | PM-016 | Đóng hàng đợi Human Agency còn lại | P1 | Nghiên cứu xong, owner queue còn mở | PM-001, PM-002 | Candidate/edit/duplicate/gap còn hiệu lực được nhập backlog mới hoặc đóng có lý do |
+| PM-017 | Thái Cực và phương pháp vấn–đáp | P2 | Đã lưu research intake + seed; chưa source-review | Owner chọn một câu hỏi trung tâm | Một research package có locator, evidence-against và một draft được owner đọc; không tự Release |
+| PM-018 | Đa dạng giọng viết và cách kể | P2 | Đã lưu, chờ thảo luận | Chọn 4–6 story Release và chốt các chiều audit | 16 story Release được audit theo cách kể/giọng/lập luận/nhịp/kết; khoảng trống và profile được owner chấp nhận |
+
+### Snapshot content 2026-10-15
+
+- Review Matrix hiện ghi Authoring revision **84**, Release revision **45**.
+- Quote: **1.850 Authoring**, **656 Release**, **1.194 Authoring chờ Release** trên tổng **5.470** dòng hợp nhất.
+- Story: **62** tổng trong matrix, gồm **16 Release** và **46 Authoring-only**.
+- `daily-content-review.py status` báo **1.438 imported**; nguồn trạng thái này vẫn chưa thống nhất với Review Matrix, nên PM-004A còn mở.
+- Knowledge inventory hiện xác nhận **2 Knowledge/Insight Release** và **3 Story/Góc nhìn Release**; đây là phân loại theo sổ Knowledge, không thay thế số story/quote toàn library.
 
 ## 9. Các quyết định đã chốt
 

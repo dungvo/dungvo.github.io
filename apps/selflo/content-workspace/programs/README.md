@@ -30,7 +30,9 @@ Hoàn thành
 | `PM-QUOTE-P0` | Làm sạch và vận hành kho quote | P0 | Tạm dừng theo owner | Release 45 public: 656 quote; 1.079 Authoring; 3.735 Research/Raw để review sau | [`quote-library-p0/STATUS.vi.md`](quote-library-p0/STATUS.vi.md) |
 | `PM-STORY-P1` | Review story chỉ có trong Authoring | P1 | Tạm dừng theo owner | Baseline: 62 Authoring, 16 Release, 46 Authoring-only; owner sẽ đọc và bổ sung sau | [`story-authoring-review/STATUS.vi.md`](story-authoring-review/STATUS.vi.md) |
 | `PM-KNOWLEDGE-P1` | Hoàn thành một bài Knowledge | P1 | Tạm dừng theo owner | Đã có bản bài 01 về so sánh xã hội/ghen tị; chờ owner đọc, chưa Authoring/Release | [`knowledge-article-p1/STATUS.vi.md`](knowledge-article-p1/STATUS.vi.md) |
+| `PM-STUDIO-P1` | Studio parity, Website Lab và Knowledge Reader | P1 | S2 hoàn thành — chờ thảo luận | Studio có 4 trang parity + Developer; chưa chốt vị trí/tổ chức Phân tích | [`studio-public-knowledge-reader/STATUS.vi.md`](studio-public-knowledge-reader/STATUS.vi.md) |
+| `PM-VOICE-P1` | Đa dạng giọng viết và cách kể | P2 | Đã lưu, chờ thảo luận | Đã ghi vấn đề và baseline 16 story Release; chưa audit từng bài | [`editorial-voice-diversity/STATUS.vi.md`](editorial-voice-diversity/STATUS.vi.md) |
 
-Hiện không có chương trình nào đang chạy. Cả ba phase Quote, Story và Knowledge đều có checkpoint phục hồi; đọc [`SESSION_HANDOFF_2026-10-13.vi.md`](SESSION_HANDOFF_2026-10-13.vi.md) trước khi mở lại.
+Hiện `PM-STUDIO-P1` là chương trình đang chạy. `PM-VOICE-P1` đã được lưu để thảo luận sau, chưa bước vào audit. Ba phase Quote, Story và Knowledge cũ vẫn tạm dừng và có checkpoint phục hồi; đọc [`SESSION_HANDOFF_2026-10-13.vi.md`](SESSION_HANDOFF_2026-10-13.vi.md) trước khi mở lại một phase cũ.
 
 Khi mở lại công việc, đọc Registry → `STATUS.vi.md` → phần cuối `WORKLOG.vi.md` trước khi sửa file.

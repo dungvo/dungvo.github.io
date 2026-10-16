@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://selflo.app/schemas/website-feature-registry.v1.json",
+  "title": "Selflo website feature registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "revision", "features"],
+  "properties": {
+    "schema_version": {"const": "selflo.website-feature-registry.v1"},
+    "revision": {"type": "integer", "minimum": 1},
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label_vi", "state", "studio_enabled", "public_enabled", "owner_acceptance", "notes_vi"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "label_vi": {"type": "string", "minLength": 1},
+          "state": {"enum": ["studio_only", "public_candidate", "released", "retired"]},
+          "studio_enabled": {"type": "boolean"},
+          "public_enabled": {"type": "boolean"},
+          "owner_acceptance": {"type": ["object", "null"]},
+          "notes_vi": {"type": "string"}
+        }
+      }
+    }
+  }
+}
