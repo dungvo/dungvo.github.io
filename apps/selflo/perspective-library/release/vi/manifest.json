@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 45,
-  "content_version": "release-selected-quotes-66",
+  "library_revision": 46,
+  "content_version": "release-taiji-68",
   "language": "vi",
-  "generated_at": "2026-10-12T14:51:15Z",
+  "generated_at": "2026-10-16T07:33:51Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -69,6 +69,15 @@
       "media_type": "image/jpeg",
       "sha256": "e54aec6c76fc9ec35ce37a7316fbfd59cfd235c058f7013abd566e23aeb5713c",
       "byte_count": 735871
+    },
+    {
+      "id": "image.story.taiji_day_night.v1",
+      "kind": "image",
+      "revision": 1,
+      "path": "artwork/images/taiji-day-night-v1.r1.png",
+      "media_type": "image/png",
+      "sha256": "b32c04fd8fa692dbc66c2990e94bdadc836a0c0a546fa51c0c40291cd969efb4",
+      "byte_count": 2955355
     },
     {
       "id": "image.story.the_compass_does_not_walk_for_you.v1",
@@ -217,11 +226,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 23,
-      "path": "themes/meaning-values.vi.r23.json",
+      "revision": 24,
+      "path": "themes/meaning-values.vi.r24.json",
       "media_type": "application/json",
-      "sha256": "bd62a334d22a6dfc8cb300c768009cb877a5164c48168d8e5de853c6cd19649b",
-      "byte_count": 163016
+      "sha256": "939a479b75dcd6be9711af5833169a9e11c12b6dd184cda227b728ecd93d7480",
+      "byte_count": 165483
     },
     {
       "id": "theme.relationships.vi",
@@ -375,6 +384,15 @@
       "media_type": "application/json",
       "sha256": "ea393d26890e15af3a524871c5cffb505b160309f6566e3d57b32c66ce1c045b",
       "byte_count": 83026
+    },
+    {
+      "id": "story.taiji_from_one_to_ten_thousand_things",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/taiji-from-one-to-ten-thousand-things/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "51230470fa9ec4d74081bb6d9ec6e460eda1d110e6d7a651ebd148c58e06ce07",
+      "byte_count": 24572
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",

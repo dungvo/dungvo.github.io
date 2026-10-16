@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 67,
-  "content_version": "daily-review-authoring-67",
+  "source_revision": 68,
+  "content_version": "release-taiji-68",
   "language": "vi",
-  "canonical_quote_count": 1832,
+  "canonical_quote_count": 1833,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1546,6 +1546,24 @@
       "id": "image.story.half_glass_two_views.v1",
       "kind": "image",
       "path": "artwork/images/half-glass-two-views-v1.png",
+      "media_type": "image/png"
+    },
+    {
+      "id": "quote_fragment.meaning_values.013",
+      "kind": "quote_fragment",
+      "path": "quotes/meaning_values/013.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.taiji_from_one_to_ten_thousand_things",
+      "kind": "story",
+      "path": "stories/taiji-from-one-to-ten-thousand-things/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "image.story.taiji_day_night.v1",
+      "kind": "image",
+      "path": "artwork/images/taiji-day-night-v1.png",
       "media_type": "image/png"
     }
   ]
