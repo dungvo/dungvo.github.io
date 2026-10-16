@@ -194,7 +194,7 @@
   function show(view) {
     $$(".view").forEach((item) => item.classList.remove("active"));
     $(`#${view}View`).classList.add("active"); window.scrollTo(0, 0);
-    const learnViews = new Set(["learn", "express", "lab", "think", "stories", "speaking", "library", "evidence"]);
+    const learnViews = new Set(["learn", "curriculum", "express", "lab", "think", "stories", "speaking", "library", "evidence"]);
     const activeNav = learnViews.has(view) ? "learn" : ["quick", "dailyGame"].includes(view) ? "play" : view;
     $$(".site-header nav button").forEach((button) => button.classList.toggle("active", button.dataset.nav === activeNav));
   }
@@ -615,7 +615,7 @@
       $("#playChunkCount").textContent = chunks.length;
       $$('[data-mode], [data-game]').forEach((button) => { button.disabled = false; });
       updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories(); renderContexts(); renderExpressions(); renderEvidence();
-      const requestedView = location.hash.slice(1); if (["play", "quick", "learn", "lab", "think", "express", "stories", "speaking", "progress", "library", "evidence"].includes(requestedView)) { if (requestedView === "quick") renderQuickRecall(); show(requestedView); }
+      const requestedView = location.hash.slice(1); if (["play", "quick", "learn", "curriculum", "lab", "think", "express", "stories", "speaking", "progress", "library", "evidence"].includes(requestedView)) { if (requestedView === "quick") renderQuickRecall(); show(requestedView); }
     } catch (error) {
       $("#contentStatus").textContent = "Content could not be loaded"; $("#sourceNote").textContent = error.message; console.error(error, registry.errors);
     }
