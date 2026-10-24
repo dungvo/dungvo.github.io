@@ -258,10 +258,10 @@
     },
     {
       "id": "research.dhammapada.day11.v329",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu chưa gặp được người đồng hành phù hợp, một quãng đi một mình có thể tốt hơn một sự đồng hành khiến mình rời xa điều quan trọng.",
+      "text_vi": "Khi chưa tìm được người đồng hành sáng suốt, vẫn có thể đi một mình, như con voi bước trong rừng.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -277,12 +277,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/23-Elephant.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v329; corpus row 740; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Kinh Pháp Cú",
+        "work": "Dhammapada — kệ 329; F. Max Müller, The Sacred Books of the East, X, Part I",
+        "source_url": "https://www.gutenberg.org/ebooks/2017",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 329",
+        "source_detail": "Kệ 329, bản tiếng Anh F. Max Müller (1823–1900), Project Gutenberg #2017. Selflo diễn ý trực tiếp từ bản này ngày 2026-10-21; không phải bản dịch nguyên văn hoặc bản Việt truyền thống. Bản nguồn và quyết định từng item: content-workspace/programs/quote-library-p0/reports/q9-dhammapada-review.json."
       },
       "metadata": {
         "concepts": [],
@@ -294,16 +294,16 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Tác phẩm cổ; bản dịch tiếng Anh F. Max Müller (mất 1900), Project Gutenberg #2017 ghi Public domain in the USA. Bản Việt diễn ý mới do Selflo biên soạn từ đúng kệ được lưu trong q9-dhammapada-review.json; không dùng bản dịch Việt hiện đại hay chú giải trên website. Giữ attribution tác phẩm và translator; xem content-workspace/programs/quote-library-p0/Q9_CHECKPOINT.vi.md về phạm vi quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-24T07:56:40Z"
       },
       "writing": {
-        "semantic_intent": "Nếu chưa gặp được người đồng hành phù hợp, một quãng đi một mình có thể tốt hơn một sự đồng hành khiến mình rời xa điều quan trọng.",
+        "semantic_intent": "Khi chưa tìm được người đồng hành sáng suốt, vẫn có thể đi một mình, như con voi bước trong rừng.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -312,9 +312,15 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 329"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.dhammapada.day11.v330",

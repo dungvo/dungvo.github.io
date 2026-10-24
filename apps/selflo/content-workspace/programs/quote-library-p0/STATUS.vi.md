@@ -1,9 +1,9 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
 **Ưu tiên:** P0
-**Trạng thái tổng:** Tạm dừng theo quyết định owner — chốt Release 45; 3.735 Research/Raw để review sau
+**Trạng thái tổng:** Q9 batch 15 Pháp Cú đã kiểm định tại workspace; chờ lưu remote. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
-**Cập nhật gần nhất:** 2026-10-13 — dừng enrichment sau batch Kiều; phát hành phần đã chốt
+**Cập nhật gần nhất:** 2026-10-24 — Authoring 86 / Release 47, 16 tests pass; chưa push/merge/deploy
 **Owner duyệt cuối:** Dũng
 **Phạm vi:** Review toàn bộ corpus; đưa mọi quote đủ điều kiện lên Release; kết luận rõ cho mọi dòng không đủ điều kiện.
 
@@ -60,6 +60,12 @@ Chuẩn đầy đủ: [`../DEFINITION_OF_DONE.vi.md`](../DEFINITION_OF_DONE.vi.m
 
 Sổ ngày 2026-10-13 đã phân luồng đủ 5.470 dòng, nhưng **không còn được xem là kết luận cuối**: owner yêu cầu mở lại 3.741 Research/Raw, tìm thêm nguồn trên internet, dịch/chuẩn hóa và review trước khi loại. Batch enrichment đầu tiên đã review 100 raw capture *Truyện Kiều*: 6 câu được promote vào Authoring 84, 94 câu kết luận Research vì phụ thuộc narrative/context. Baseline hiện tại vẫn đối soát 5.470: 656 Release, 1.079 Authoring, 3.735 Research/Raw.
 
+## Tiếp nối Q9 — 2026-10-24
+
+Authoring 86: 1.851 quote/63 story; Release 47: 672 quote/17 story. Batch thêm đúng 15 Pháp Cú, đã qua publisher đầy đủ và 16 tests. Matrix 5.471 dòng, 247 review ngữ nghĩa. Phân luồng tự động không thay review nguồn/quyền.
+
+Chưa push/merge/deploy: automatic approval review chặn ghi remote, cần owner xác nhận trực tiếp; GitHub không còn blocker 403 đã ghi trước đây. Series vẫn chưa có thân bài. Xem [hand-off](Q9_HANDOFF_2026-10-24.vi.md) và [checkpoint](Q9_CHECKPOINT.vi.md).
+
 ## Đúng một bước tiếp theo
 
-Khi owner mở lại backlog, tiếp tục từ 3.735 Research/Raw và report Q8 hiện có; không quét lại từ đầu.
+Lưu toàn bộ thay đổi đã kiểm định lên branch `content/quote-classification-series-2026-10-21` sau khi xác nhận của owner được bộ kiểm tra chấp nhận; owner tự merge sau.

@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.dhammapada.day11.v050",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thay vì chỉ nhìn điều người khác làm hay không làm, có lúc đáng quay lại nhìn phần mình đã làm và chưa làm.",
+      "text_vi": "Điều đáng nhìn lại là những việc mình đã làm và bỏ sót, thay vì chỉ chăm chú vào lỗi của người khác.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -25,12 +25,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/04-Flowers.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v050; corpus row 711; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Kinh Pháp Cú",
+        "work": "Dhammapada — kệ 50; F. Max Müller, The Sacred Books of the East, X, Part I",
+        "source_url": "https://www.gutenberg.org/ebooks/2017",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 50",
+        "source_detail": "Kệ 50, bản tiếng Anh F. Max Müller (1823–1900), Project Gutenberg #2017. Selflo diễn ý trực tiếp từ bản này ngày 2026-10-21; không phải bản dịch nguyên văn hoặc bản Việt truyền thống. Bản nguồn và quyết định từng item: content-workspace/programs/quote-library-p0/reports/q9-dhammapada-review.json."
       },
       "metadata": {
         "concepts": [],
@@ -42,16 +42,16 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Tác phẩm cổ; bản dịch tiếng Anh F. Max Müller (mất 1900), Project Gutenberg #2017 ghi Public domain in the USA. Bản Việt diễn ý mới do Selflo biên soạn từ đúng kệ được lưu trong q9-dhammapada-review.json; không dùng bản dịch Việt hiện đại hay chú giải trên website. Giữ attribution tác phẩm và translator; xem content-workspace/programs/quote-library-p0/Q9_CHECKPOINT.vi.md về phạm vi quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-24T07:56:40Z"
       },
       "writing": {
-        "semantic_intent": "Thay vì chỉ nhìn điều người khác làm hay không làm, có lúc đáng quay lại nhìn phần mình đã làm và chưa làm.",
+        "semantic_intent": "Điều đáng nhìn lại là những việc mình đã làm và bỏ sót, thay vì chỉ chăm chú vào lỗi của người khác.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -60,9 +60,15 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 50"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.dhammapada.day11.v183",
@@ -126,10 +132,10 @@
     },
     {
       "id": "research.dhammapada.day11.v290",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có lúc buông một dễ chịu nhỏ mở chỗ cho điều rộng hơn; nhưng điều gì đáng đổi vẫn cần chính mình nhìn rõ.",
+      "text_vi": "Buông một niềm vui nhỏ có thể mở đường cho một niềm vui lớn hơn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -144,12 +150,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/21-Miscellaneous.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v290; corpus row 737; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Kinh Pháp Cú",
+        "work": "Dhammapada — kệ 290; F. Max Müller, The Sacred Books of the East, X, Part I",
+        "source_url": "https://www.gutenberg.org/ebooks/2017",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 290",
+        "source_detail": "Kệ 290, bản tiếng Anh F. Max Müller (1823–1900), Project Gutenberg #2017. Selflo diễn ý trực tiếp từ bản này ngày 2026-10-21; không phải bản dịch nguyên văn hoặc bản Việt truyền thống. Bản nguồn và quyết định từng item: content-workspace/programs/quote-library-p0/reports/q9-dhammapada-review.json."
       },
       "metadata": {
         "concepts": [],
@@ -159,16 +165,16 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Tác phẩm cổ; bản dịch tiếng Anh F. Max Müller (mất 1900), Project Gutenberg #2017 ghi Public domain in the USA. Bản Việt diễn ý mới do Selflo biên soạn từ đúng kệ được lưu trong q9-dhammapada-review.json; không dùng bản dịch Việt hiện đại hay chú giải trên website. Giữ attribution tác phẩm và translator; xem content-workspace/programs/quote-library-p0/Q9_CHECKPOINT.vi.md về phạm vi quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-24T07:56:40Z"
       },
       "writing": {
-        "semantic_intent": "Có lúc buông một dễ chịu nhỏ mở chỗ cho điều rộng hơn; nhưng điều gì đáng đổi vẫn cần chính mình nhìn rõ.",
+        "semantic_intent": "Buông một niềm vui nhỏ có thể mở đường cho một niềm vui lớn hơn.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -177,9 +183,15 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 290"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day18.3_35",
