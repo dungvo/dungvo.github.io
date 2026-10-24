@@ -1,0 +1,736 @@
+{
+  "schema_version": "selflo.quote-item-review.v1",
+  "review_date": "2026-10-21",
+  "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017-images.html",
+  "source_html_sha256": "cd355d553c1cc6c532968dbe823393f9e2000e53562528b06505839278953733",
+  "catalog_url": "https://www.gutenberg.org/ebooks/2017",
+  "candidates": [
+    {
+      "id": "research.dhammapada.day11.v276"
+    },
+    {
+      "id": "research.dhammapada.day11.v051"
+    },
+    {
+      "id": "research.dhammapada.day11.v052"
+    },
+    {
+      "id": "research.dhammapada.day11.v329"
+    },
+    {
+      "id": "research.dhammapada.day11.v100"
+    },
+    {
+      "id": "research.dhammapada.day11.v033"
+    },
+    {
+      "id": "research.dhammapada.day11.v005"
+    },
+    {
+      "id": "research.dhammapada.day11.v197"
+    },
+    {
+      "id": "research.dhammapada.day11.v081"
+    },
+    {
+      "id": "research.dhammapada.day11.v121"
+    },
+    {
+      "id": "research.dhammapada.day11.v122"
+    },
+    {
+      "id": "research.dhammapada.day11.v133"
+    },
+    {
+      "id": "research.dhammapada.day11.v328"
+    },
+    {
+      "id": "research.dhammapada.day11.v050"
+    },
+    {
+      "id": "research.dhammapada.day11.v290"
+    }
+  ],
+  "items": [
+    {
+      "id": "research.dhammapada.day11.v276",
+      "verse": 276,
+      "source_quote_en": "276. You yourself must make an effort. The Tathagatas (Buddhas) are only preachers. The thoughtful who enter the way are freed from the bondage of Mara.",
+      "previous_text_vi": "Người khác có thể chỉ đường; phần bước đi vẫn không thể được làm thay hoàn toàn.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/20-Path.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v276; corpus row 734; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Trích ý phần tự nỗ lực và người chỉ đường; không sao chép bản Việt hiện đại, không đưa phần giải thoát khỏi Mara vào quote đời thường.",
+      "text_vi": "Người thầy chỉ đường; nỗ lực bước đi vẫn là phần của mỗi người."
+    },
+    {
+      "id": "research.dhammapada.day11.v043",
+      "verse": 43,
+      "source_quote_en": "43. Not a mother, not a father will do so much, nor any other relative; a well-directed mind will do us greater service.",
+      "previous_text_vi": "Một tâm trí được đặt đúng hướng có thể làm cho đời mình điều mà ngay cả người thân cũng không thể làm thay.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/03-Mind.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v043; corpus row 710; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "So sánh việc rèn tâm với cha mẹ/người thân dễ thành lời phủ nhận hỗ trợ xã hội khi đọc độc lập."
+    },
+    {
+      "id": "research.dhammapada.day11.v129",
+      "verse": 129,
+      "source_quote_en": "129. All men tremble at punishment, all men fear death; remember that you are like unto them, and do not kill, nor cause slaughter.",
+      "previous_text_vi": "Ai cũng biết sợ đau và mất mát; đặt mình vào vị trí của người khác có thể thay đổi cách mình hành động.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/10-Stick.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v129; corpus row 724; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Nguồn hướng đến không sát hại, bản cũ mở rộng sang mọi mất mát; cần giữ phạm vi."
+    },
+    {
+      "id": "research.dhammapada.day11.v130",
+      "verse": 130,
+      "source_quote_en": "130. All men tremble at punishment, all men love life; remember that thou art like unto them, and do not kill, nor cause slaughter.",
+      "previous_text_vi": "Sự sống là quý với mỗi người; nhớ điều đó có thể mở thêm một góc nhìn trước khi gây tổn thương.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/10-Stick.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v130; corpus row 725; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Gần kệ 129; lựa chọn một bản phù hợp sau review ngữ cảnh."
+    },
+    {
+      "id": "research.dhammapada.day11.v020",
+      "verse": 20,
+      "source_quote_en": "20. The follower of the law, even if he can recite only a small portion (of the law), but, having forsaken passion and hatred and foolishness, possesses true knowledge and serenity of mind, he, caring for nothing in this world or that to come, has indeed a share in the priesthood.",
+      "previous_text_vi": "Biết ít hơn nhưng thật sự sống được điều mình hiểu có thể có giá trị hơn việc chỉ tích lũy lời.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v020; corpus row 704; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản cũ loại bỏ ngữ cảnh tu tập và giải thoát; cần chuyển thể có giải thích."
+    },
+    {
+      "id": "research.dhammapada.day11.v051",
+      "verse": 51,
+      "source_quote_en": "51. Like a beautiful flower, full of colour, but without scent, are the fine but fruitless words of him who does not act accordingly.",
+      "previous_text_vi": "Lời đẹp mà không đi vào đời sống giống một bông hoa có màu nhưng không hương.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/04-Flowers.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v051; corpus row 712; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ đối chiếu lời nói–việc làm và hoa không hương.",
+      "text_vi": "Lời hay mà không được sống theo giống bông hoa đẹp nhưng không có hương."
+    },
+    {
+      "id": "research.dhammapada.day11.v052",
+      "verse": 52,
+      "source_quote_en": "52. But, like a beautiful flower, full of colour and full of scent, are the fine and fruitful words of him who acts accordingly.",
+      "previous_text_vi": "Khi lời nói đi cùng cách sống, nó giống bông hoa vừa có sắc vừa có hương.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/04-Flowers.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v052; corpus row 713; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ nửa đối ứng của kệ 51; là một cặp góc nhìn, không phải bản trùng văn bản.",
+      "text_vi": "Lời hay đi cùng việc làm giống bông hoa vừa có sắc, vừa có hương."
+    },
+    {
+      "id": "research.dhammapada.day11.v065",
+      "verse": 65,
+      "source_quote_en": "65. If an intelligent man be associated for one minute only with a wise man, he will soon perceive the truth, as the tongue perceives the taste of soup.",
+      "previous_text_vi": "Người thật sự nếm trải có thể hiểu rất nhanh—như lưỡi nhận ra vị mà chiếc muỗng không thể.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/05-Fools.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v065; corpus row 716; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản cũ thay bối cảnh ở gần người trí bằng trải nghiệm nói chung; cần sửa trước khi phát hành."
+    },
+    {
+      "id": "research.dhammapada.day11.v011",
+      "verse": 11,
+      "source_quote_en": "11. They who imagine truth in untruth, and see untruth in truth, never arrive at truth, but follow vain desires.",
+      "previous_text_vi": "Nếu xem điều không cốt yếu là cốt yếu và bỏ qua điều cốt yếu, ta dễ đi xa khỏi điều thật sự quan trọng.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v011; corpus row 701; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản Müller dùng truth/untruth; bản cũ dùng cốt yếu/không cốt yếu. Cần đối chiếu Pāli trước khi chọn cách dịch."
+    },
+    {
+      "id": "research.dhammapada.day11.v012",
+      "verse": 12,
+      "source_quote_en": "12. They who know truth in truth, and untruth in untruth, arrive at truth, and follow true desires.",
+      "previous_text_vi": "Nhìn điều cốt yếu như điều cốt yếu, và điều không cốt yếu đúng như nó là, giúp ta trở lại với điều đáng giữ.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v012; corpus row 702; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Cùng khác biệt dịch thuật ở kệ 11."
+    },
+    {
+      "id": "research.dhammapada.day11.v160",
+      "verse": 160,
+      "source_quote_en": "160. Self is the lord of self, who else could be the lord? With self well subdued, a man finds a lord such as few can find.",
+      "previous_text_vi": "Mình vẫn là một nơi nương quan trọng của chính mình; không ai có thể hoàn toàn sống phần đời này thay mình.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/12-Self.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v160; corpus row 727; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản cũ mở rộng self/lord/refuge thành không ai sống thay; cần đối chiếu từ Pāli."
+    },
+    {
+      "id": "research.dhammapada.day11.v329",
+      "verse": 329,
+      "source_quote_en": "329. If a man find no prudent companion who walks with him, is wise, and lives soberly, let him walk alone, like a king who has left his conquered country behind,—like an elephant in the forest.",
+      "previous_text_vi": "Nếu chưa gặp được người đồng hành phù hợp, một quãng đi một mình có thể tốt hơn một sự đồng hành khiến mình rời xa điều quan trọng.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/23-Elephant.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v329; corpus row 740; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ hình ảnh đi một mình như voi; bỏ kết luận ngoài nguồn rằng bạn đồng hành khiến mình rời xa giá trị.",
+      "text_vi": "Khi chưa tìm được người đồng hành sáng suốt, vẫn có thể đi một mình, như con voi bước trong rừng."
+    },
+    {
+      "id": "research.dhammapada.day11.v330",
+      "verse": 330,
+      "source_quote_en": "330. It is better to live alone, there is no companionship with a fool; let a man walk alone, let him commit no sin, with few wishes, like an elephant in the forest.",
+      "previous_text_vi": "Ở một mình không nhất thiết là thiếu; đôi khi đó là cách giữ lại khoảng trống để không bị kéo vào điều mình không muốn trở thành.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/23-Elephant.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v330; corpus row 741; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản cũ suy thêm ý bản sắc/khoảng trống; không giữ như bản dịch."
+    },
+    {
+      "id": "research.dhammapada.day11.v100",
+      "verse": 100,
+      "source_quote_en": "100. Even though a speech be a thousand (of words), but made up of senseless words, one word of sense is better, which if a man hears, he becomes quiet.",
+      "previous_text_vi": "Một câu có ý nghĩa giúp tâm lắng lại có thể đáng hơn cả nghìn câu không đưa mình tới đâu.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/08-Thousands.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v100; corpus row 720; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ đối chiếu ý nghĩa và số lượng; không biến thành tuyên bố lâm sàng.",
+      "text_vi": "Một lời có nghĩa, nghe xong lòng lắng lại, đáng hơn nghìn lời vô nghĩa."
+    },
+    {
+      "id": "research.dhammapada.day11.v204",
+      "verse": 204,
+      "source_quote_en": "204. Health is the greatest of gifts, contentedness the best riches; trust is the best of relationships, Nirvana the highest happiness.",
+      "previous_text_vi": "Sức khỏe, biết đủ và sự tin cậy được đặt cạnh những thứ quý nhất—một lời nhắc rằng giá trị không chỉ nằm ở sở hữu.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/15-Happiness.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v204; corpus row 731; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản cũ bỏ Nirvana và thêm luận điểm về sở hữu; cần có chú giải hoặc ghi trích đoạn rõ."
+    },
+    {
+      "id": "research.dhammapada.day11.v021",
+      "verse": 21,
+      "source_quote_en": "21. Earnestness is the path of immortality (Nirvana), thoughtlessness the path of death. Those who are in earnest do not die, those who are thoughtless are as if dead already.",
+      "previous_text_vi": "Sự tỉnh thức giữ đời sống hiện diện; sống trong lơ đãng khiến nhiều phần của đời trôi qua như chưa từng được sống.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/02-Heedfulness.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v021; corpus row 705; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản cũ biến deathless/Nirvana thành hiện diện đời thường; không đủ trung thành."
+    },
+    {
+      "id": "research.dhammapada.day11.v025",
+      "verse": 25,
+      "source_quote_en": "25. By rousing himself, by earnestness, by restraint and control, the wise man may make for himself an island which no flood can overwhelm.",
+      "previous_text_vi": "Bằng sự tỉnh thức và tự chủ, người ta có thể tạo một hòn đảo bên trong mà dòng nước khó cuốn mất.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/02-Heedfulness.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v025; corpus row 706; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Ẩn dụ hòn đảo gắn tu tập; cần diễn giải tránh bảo đảm không bị nghịch cảnh tác động."
+    },
+    {
+      "id": "research.dhammapada.day11.v033",
+      "verse": 33,
+      "source_quote_en": "33. As a fletcher makes straight his arrow, a wise man makes straight his trembling and unsteady thought, which is difficult to guard, difficult to hold back.",
+      "previous_text_vi": "Tâm trí dễ lay động và khó giữ; việc rèn nó giống như người làm tên kiên nhẫn nắn thẳng mũi tên.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/03-Mind.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v033; corpus row 707; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ hình ảnh người làm tên và tâm trí bất định; không thêm cơ chế não bộ.",
+      "text_vi": "Người làm tên nắn thẳng mũi tên; người có trí rèn lại tâm trí chao đảo, khó giữ yên của mình."
+    },
+    {
+      "id": "research.dhammapada.day11.v005",
+      "verse": 5,
+      "source_quote_en": "5. For hatred does not cease by hatred at any time: hatred ceases by love, this is an old rule.",
+      "previous_text_vi": "Hận thù không chấm dứt bằng thêm hận thù; nó lắng bằng điều không phải hận thù.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v005; corpus row 699; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Müller dùng love; bản mới giữ nghĩa của bản dịch được chọn, không trộn với thuật ngữ non-hatred của bản dịch hiện đại. Đây là lời dạy đạo đức, không bảo đảm cách giải quyết bạo lực.",
+      "text_vi": "Hận thù không chấm dứt bằng hận thù. Hận thù lắng xuống bằng lòng thương."
+    },
+    {
+      "id": "research.dhammapada.day11.v197",
+      "verse": 197,
+      "source_quote_en": "197. Let us live happily then, not hating those who hate us! among men who hate us let us dwell free from hatred!",
+      "previous_text_vi": "Giữa những người đang đối nghịch, vẫn có khả năng không để sự đối nghịch trở thành toàn bộ cách mình sống.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/15-Happiness.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v197; corpus row 730; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ khả năng không đáp lại thù hận; bỏ hứa hẹn hạnh phúc tuyệt đối.",
+      "text_vi": "Giữa những người mang lòng thù hận, vẫn có thể sống mà không nuôi lòng thù hận."
+    },
+    {
+      "id": "research.dhammapada.day11.v001",
+      "verse": 1,
+      "source_quote_en": "1. All that we are is the result of what we have thought: it is founded on our thoughts, it is made up of our thoughts. If a man speaks or acts with an evil thought, pain follows him, as the wheel follows the foot of the ox that draws the carriage.",
+      "previous_text_vi": "Ý nghĩ đi trước; khi lời nói hay hành động đi cùng một tâm bị nhuốm, khổ có thể theo sau như bánh xe theo chân con vật kéo xe.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v001; corpus row 695; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Khác biệt bản dịch về tâm/ý và nhân quả đạo đức; cần giải thích ngữ cảnh trước khi phát hành."
+    },
+    {
+      "id": "research.dhammapada.day11.v002",
+      "verse": 2,
+      "source_quote_en": "2. All that we are is the result of what we have thought: it is founded on our thoughts, it is made up of our thoughts. If a man speaks or acts with a pure thought, happiness follows him, like a shadow that never leaves him.",
+      "previous_text_vi": "Ý nghĩ đi trước; khi lời nói hay hành động đi cùng một tâm sáng, an lành có thể theo sau như chiếc bóng không rời.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v002; corpus row 696; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Tương tự kệ 1: tránh biến nhân quả đạo đức thành bảo đảm an lành."
+    },
+    {
+      "id": "research.dhammapada.day11.v003",
+      "verse": 3,
+      "source_quote_en": "3. \"He abused me, he beat me, he defeated me, he robbed me,\"—in those who harbour such thoughts hatred will never cease.",
+      "previous_text_vi": "Khi cứ giữ chặt câu chuyện “họ đã làm tôi tổn thương”, sự đối nghịch khó lắng xuống.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v003; corpus row 697; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Đứng riêng dễ bị hiểu thành trách người chịu tổn thương; cần ngữ cảnh."
+    },
+    {
+      "id": "research.dhammapada.day11.v004",
+      "verse": 4,
+      "source_quote_en": "4. \"He abused me, he beat me, he defeated me, he robbed me,\"—in those who do not harbour such thoughts hatred will cease.",
+      "previous_text_vi": "Khi không tiếp tục ôm chặt câu chuyện bị tổn thương, sự đối nghịch có chỗ để lắng xuống.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v004; corpus row 698; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Đứng riêng dễ thành yêu cầu bỏ qua tổn thương; cần ngữ cảnh."
+    },
+    {
+      "id": "research.dhammapada.day11.v081",
+      "verse": 81,
+      "source_quote_en": "81. As a solid rock is not shaken by the wind, wise people falter not amidst blame and praise.",
+      "previous_text_vi": "Như tảng đá không nghiêng theo từng cơn gió, một người có thể học cách không để khen chê quyết định toàn bộ giá trị của mình.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/06-Wise.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v081; corpus row 718; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ hình ảnh gốc, bỏ phần tự suy thêm về giá trị bản thân.",
+      "text_vi": "Như tảng đá vững không lay trước gió, người có trí không chao đảo giữa lời khen và tiếng chê."
+    },
+    {
+      "id": "research.dhammapada.day11.v121",
+      "verse": 121,
+      "source_quote_en": "121. Let no man think lightly of evil, saying in his heart, It will not come nigh unto me. Even by the falling of water-drops a water-pot is filled; the fool becomes full of evil, even if he gather it little by little.",
+      "previous_text_vi": "Đừng xem nhẹ những điều nhỏ lặp lại; từng giọt cũng có thể làm đầy một bình.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/09-Wickedness.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v121; corpus row 722; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Khôi phục chủ thể điều có hại mà bản cũ đã làm mờ. Diễn ý, không dịch toàn kệ.",
+      "text_vi": "Một chiếc bình đầy lên từ từng giọt nước. Điều có hại cũng tích lại khi được làm từng chút một."
+    },
+    {
+      "id": "research.dhammapada.day11.v122",
+      "verse": 122,
+      "source_quote_en": "122. Let no man think lightly of good, saying in his heart, It will not come nigh unto me. Even by the falling of water-drops a water-pot is filled; the wise man becomes full of good, even if he gather it little by little.",
+      "previous_text_vi": "Đừng xem nhẹ những điều nhỏ có ích; từng giọt cũng có thể làm đầy một bình.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/09-Wickedness.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v122; corpus row 723; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ điều tốt và sự tích lũy; kệ đối ứng với 121.",
+      "text_vi": "Một chiếc bình đầy lên từ từng giọt nước. Điều tốt cũng tích lại khi được làm từng chút một."
+    },
+    {
+      "id": "research.dhammapada.day11.v133",
+      "verse": 133,
+      "source_quote_en": "133. Do not speak harshly to anybody; those who are spoken to will answer thee in the same way. Angry speech is painful, blows for blows will touch thee.",
+      "previous_text_vi": "Lời gay gắt thường gọi thêm lời gay gắt; cách mình nói có thể trở thành một phần của vòng lặp.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/10-Stick.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v133; corpus row 726; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Dùng dễ/có thể để trình bày như góc nhìn giao tiếp, không như quan hệ nhân quả tuyệt đối.",
+      "text_vi": "Lời gay gắt dễ nhận lại lời gay gắt; sự giận dữ trong lời nói có thể làm đau cả hai phía."
+    },
+    {
+      "id": "research.dhammapada.day11.v328",
+      "verse": 328,
+      "source_quote_en": "328. If a man find a prudent companion who walks with him, is wise, and lives soberly, he may walk with him, overcoming all dangers, happy, but considerate.",
+      "previous_text_vi": "Nếu gặp một người đồng hành sáng suốt và tử tế, hãy trân trọng việc cùng đi qua những khó khăn với họ.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/23-Elephant.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v328; corpus row 739; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Giữ đồng hành sáng suốt và chừng mực; dùng khó khăn thay cho hứa hẹn vượt mọi nguy hiểm.",
+      "text_vi": "Có người đồng hành sáng suốt, biết sống chừng mực, ta có thể cùng họ đi qua những khó khăn."
+    },
+    {
+      "id": "research.dhammapada.day11.v035",
+      "verse": 35,
+      "source_quote_en": "35. It is good to tame the mind, which is difficult to hold in and flighty, rushing wherever it listeth; a tamed mind brings happiness.",
+      "previous_text_vi": "Tâm trí nhanh và thường chạy theo nơi nó muốn; học cách làm quen với việc dẫn nó trở lại có thể đem lại nhẹ hơn.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/03-Mind.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v035; corpus row 708; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Cần giữ ý rèn tâm và ngữ cảnh tu tập; bản cũ thêm cách dẫn tâm trở lại."
+    },
+    {
+      "id": "research.dhammapada.day11.v334",
+      "verse": 334,
+      "source_quote_en": "334. The thirst of a thoughtless man grows like a creeper; he runs from life to life, like a monkey seeking fruit in the forest.",
+      "previous_text_vi": "Ham muốn không được nhìn thấy có thể leo phủ đời sống như dây leo, kéo tâm trí từ thứ này sang thứ khác.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/24-Craving.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v334; corpus row 742; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Nguồn nói luân hồi from life to life; bản cũ chuyển thành tâm chuyển từ thứ này sang thứ khác. Cần contextual adaptation riêng."
+    },
+    {
+      "id": "research.dhammapada.day11.v050",
+      "verse": 50,
+      "source_quote_en": "50. Not the perversities of others, not their sins of commission or omission, but his own misdeeds and negligences should a sage take notice of.",
+      "previous_text_vi": "Thay vì chỉ nhìn điều người khác làm hay không làm, có lúc đáng quay lại nhìn phần mình đã làm và chưa làm.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/04-Flowers.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v050; corpus row 711; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Diễn ý lời khuyên tự xét hành động; không yêu cầu bỏ qua sai trái hay xâm hại của người khác.",
+      "text_vi": "Điều đáng nhìn lại là những việc mình đã làm và bỏ sót, thay vì chỉ chăm chú vào lỗi của người khác."
+    },
+    {
+      "id": "research.dhammapada.day11.v183",
+      "verse": 183,
+      "source_quote_en": "183. Not to commit any sin, to do good, and to purify one's mind, that is the teaching of (all) the Awakened.",
+      "previous_text_vi": "Tránh điều gây hại, nuôi điều lành và chăm lại tâm mình—ba hướng đơn giản nhưng không hề nhỏ.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/14-Buddha.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v183; corpus row 729; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Lời dạy đạo đức/tôn giáo có đủ ba vế; không trình bày như quy luật tâm lý."
+    },
+    {
+      "id": "research.dhammapada.day11.v290",
+      "verse": 290,
+      "source_quote_en": "290. If by leaving a small pleasure one sees a great pleasure, let a wise man leave the small pleasure, and look to the great.",
+      "previous_text_vi": "Có lúc buông một dễ chịu nhỏ mở chỗ cho điều rộng hơn; nhưng điều gì đáng đổi vẫn cần chính mình nhìn rõ.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/21-Miscellaneous.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v290; corpus row 737; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "release_candidate_after_gate",
+      "reason_vi": "Diễn ý sự đánh đổi giữa niềm vui nhỏ/lớn; không thêm yêu cầu hy sinh mọi vui thú.",
+      "text_vi": "Buông một niềm vui nhỏ có thể mở đường cho một niềm vui lớn hơn."
+    },
+    {
+      "id": "research.dhammapada.day11.v277",
+      "verse": 277,
+      "source_quote_en": "277. `All created things perish,' he who knows and sees this becomes passive in pain; this is the way to purity.",
+      "previous_text_vi": "Khi thấy những gì được tạo thành đều thay đổi, ta có thể bớt đòi một trạng thái phải ở nguyên mãi.",
+      "previous_authorship": {
+        "author_id": null,
+        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
+        "work": "Dhammapada (Khuddaka Nikāya 2)",
+        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/20-Path.htm",
+        "source_language": null,
+        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
+        "source_detail": "Research ID research.dhammapada.day11.v277; corpus row 735; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+      },
+      "reviewer": "ai:codex",
+      "review_date": "2026-10-21",
+      "decision": "hold_context_or_translation",
+      "reason_vi": "Bản cũ dùng biến đổi trong khi Müller dùng perish; cần kiểm tra nghĩa anicca/dukkha trước khi sửa."
+    }
+  ]
+}

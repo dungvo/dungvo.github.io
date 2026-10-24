@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **Quyết định mới nhất 2026-10-25:** Owner chỉ cho phép upload toàn bộ 44 file Selflo lên `dungvo/dungvo.github.io`, branch `content/quote-classification-series-2026-10-21`; **KHÔNG merge main**. Quyết định này thay thế yêu cầu merge ghi trong lịch sử bên dưới. Đã upload và đối chiếu SHA đủ 44 file; tiến hành cập nhật branch. Phiên sau đọc trạng thái branch thực tế trước khi tiếp tục; không dùng các blocker ghi trước đó làm trạng thái hiện tại.
+
 **Trạng thái:** Bảng theo dõi đang dùng
 **Ngày kiểm kê:** 2026-10-15
 **Phạm vi:** Repo content/web `apps/selflo`; không đánh giá hoặc thay đổi repo app.
@@ -260,3 +262,17 @@ Trong phạm vi repo hiện tại, chưa tìm thấy tài liệu riêng mô tả
 - không có backlog nói rõ animation nào còn thiếu.
 
 Vì vậy PM-009 được ghi là `Thiếu brief; cần khôi phục phạm vi`, không tự suy đoán rằng các hiệu ứng nhỏ hiện có chính là feature owner đang nhắc. Khi owner chỉ ra màn hình hoặc mô tả chuyển động mong muốn, cần ghi ngay vào backlog này trước khi tiếp tục code.
+
+## 11. Content Q9 — cập nhật 2026-10-24
+
+Owner yêu cầu hoàn tất batch 15 Pháp Cú và lưu branch, rồi hand-off; owner tự merge. Đã tạo và kiểm định trong workspace Authoring **86** / Release **47**, gồm **1.851/672 quote**, **63/17 story**. 15 quote thêm mới trong Release, 657 quote cũ và mọi story giữ nguyên. 16 tests và manifest checksum đạt; matrix/reports đã rebuild.
+
+Tổng corpus vẫn 5.471 dòng, 247 review ngữ nghĩa; không coi phân luồng là review đầy đủ. Series Substack chưa có thân bài. Chưa push/merge/deploy: automatic approval review chặn remote write vì không chấp nhận ủy quyền trong hội thoại chuyển tiếp; cần xác nhận trực tiếp, không phải lỗi 403 GitHub.
+
+Hand-off: [`programs/quote-library-p0/Q9_HANDOFF_2026-10-24.vi.md`](programs/quote-library-p0/Q9_HANDOFF_2026-10-24.vi.md). Checkpoint lưu cả lịch sử và trạng thái mới. Metadata source canonical_quote_count kế thừa còn lệch; số báo cáo hiện tại đếm trực tiếp payload, chi tiết trong hand-off.
+
+Bước tiếp theo: lưu kết quả đã kiểm định lên branch `content/quote-classification-series-2026-10-21` sau khi owner xác nhận được bộ kiểm tra chấp nhận; không tự merge main.
+
+## Cập nhật ủy quyền — 2026-10-25
+
+Owner xác nhận trực tiếp: “push va merge vao main giup toi luon”. Quyết định này thay yêu cầu trước đây owner tự merge và chờ xác nhận ghi remote. Đã xác minh branch và main vẫn ở `ec1f303`; đang lưu kết quả qua GitHub connector, tạo PR và merge. Trạng thái merged phải đối chiếu PR/GitHub, không suy từ việc có file này. Sau merge, phiên mới tiếp tục review theo nhóm nguồn từ checkpoint Q9; series vẫn cần nội dung gốc.

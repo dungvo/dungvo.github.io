@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Deliberately refresh the canonical quote text/authorship integrity lock."""
 
+import argparse
 import hashlib
 import json
 from datetime import datetime, timezone
@@ -18,6 +19,11 @@ def digest(value):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--reason', required=True, help='Editorial batch/evidence explaining this intentional lock refresh')
+    args = parser.parse_args()
+    if not args.reason.strip():
+        parser.error('--reason must not be blank')
     quotes = []
     for path in sorted(SOURCE.glob("*/*.vi.json")):
         quotes.extend(json.loads(path.read_text())["quotes"])
@@ -25,7 +31,7 @@ def main():
     payload = {
         "schema_version": "selflo.locked-quote-content.v1",
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "reason": "P0 quote corpus review: lock canonical text and provenance after Authoring 84 / Release 45.",
+        "reason": args.reason.strip(),
         "quote_count": len(quotes),
         "quote_text_sha256": digest([[quote["id"], quote["text_vi"]] for quote in quotes]),
         "authorship_sha256": digest([[quote["id"], quote["authorship"]] for quote in quotes]),
