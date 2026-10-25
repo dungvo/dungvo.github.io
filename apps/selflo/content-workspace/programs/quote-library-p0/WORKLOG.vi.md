@@ -290,3 +290,20 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 - Đã kiểm tra manifest trên GitHub Pages: `library_revision = 45`.
 - Đã tải và đếm cả 9 gói chủ đề public: tổng đúng 656 quote.
 - 1.079 quote cần owner review tiếp tục ở Authoring; 3.735 dòng Research/Raw giữ nguyên để xử lý sau.
+
+## 2026-10-25 — Lưu workspace spec-driven và điều chỉnh batch 100–200
+
+- Owner xác nhận hướng khép kín 5.471 dòng, yêu cầu lưu theo spec-driven và tăng mỗi đợt lên 100–200.
+- Hoàn thiện home quote-library-p0 với README, SPEC, current-state review, DECISIONS, PLAN, TASKS và REVIEWS; entrypoint kế hoạch cũ dẫn về bộ canonical, không tạo workspace song song.
+- Lập assignment 36 batch, mục tiêu 150 dòng: 4 batch Release, 8 Authoring, 5 research/nguồn/trùng và 19 raw.
+- Đã kiểm tra: mỗi batch 100–200, union đúng 5.471 ID duy nhất, không thiếu/trùng, cohort sum đúng. Đây là kiểm tra kế hoạch; chưa review/dịch mới và chưa đổi verdict/Release.
+- Cập nhật registry và current status để quote là ưu tiên duy nhất, story vẫn tạm dừng.
+- Bước tiếp theo: T-01/T-02, sau đó Q10-B001 (166 dòng Release).
+
+## 2026-10-25 — T-01/T-02 và review Q10-B001
+
+- Kế thừa canonical-ai-review làm authority; closure metadata nối program/batch/hash/evidence; không tạo decision ledger cạnh tranh. Matrix đọc được quyết định đóng cho raw; projection chỉ đếm accepted khi public proof khớp manifest.
+- Seed glossary người/tác phẩm, sửa speaker Tăng Tử/Tử Du và locator khác edition. Đã lưu nguyên văn/nguồn, before/after và reason từng ID.
+- Review 166/166: 102 accepted, 64 not_accepted; 51 văn bản biên tập. Chỉ 166 canonical quote đổi, 10 quyết định owner đóng giữ nguyên. Story/source ngoài scope không đổi.
+- Authoring 88 / Release 49 đã kiểm định cục bộ: 1.851/598 quote, 63/17 story. 94 tests đạt; SHA/byte_count đúng. Public chưa xác nhận ở checkpoint này.
+- Bước tiếp theo: push package đã kiểm định, xác nhận public và đóng B001.

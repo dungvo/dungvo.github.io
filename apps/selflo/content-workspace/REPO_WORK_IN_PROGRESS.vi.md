@@ -1,5 +1,11 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **Q10-B001 2026-10-25:** Đã review 166 dòng Release, giữ 102 và loại 64 có lý do; T-01/T-02 xong. Authoring 88 / Release 49 đã build (1.851/598 quote; 63/17 story), 94 tests đạt. Đang kiểm chứng public trước khi đóng batch; không mở B002/story sớm. Xem `programs/quote-library-p0/Q10_B001_CHECKPOINT.vi.md`.
+
+> **Workspace spec-driven 2026-10-25:** Kế hoạch quote hiện hành nằm tại `programs/quote-library-p0/README.md`, `SPEC.vi.md`, `PLAN.vi.md`, `TASKS.vi.md`; **100–200 dòng/đợt, mục tiêu 150, queue 36 đợt phủ 5.471 ID**. Mức 25–40 đã được thay thế. Bước tiếp theo T-01/T-02 rồi Q10-B001; chưa review nội dung batch mới, story tiếp tục tạm dừng.
+
+> **Chỉ đạo ưu tiên mới nhất 2026-10-25:** Tạm dừng PM-005/review story để owner đọc kỹ. Chỉ tập trung khép kín đủ **5.471 dòng quote**: dịch/Việt hóa, xác minh, đưa câu đạt lên Release và đóng câu không đạt có lý do. Không coi ngoại ngữ là lý do loại, không để Research/pending làm kết luận cuối. Kế hoạch: `programs/quote-library-p0/QUOTE_CLOSURE_PLAN_2026-10-25.vi.md`. Chưa thực hiện review/dịch hàng loạt trong lượt lập kế hoạch.
+
 > **Tiếp backlog 2026-10-25 — PM-004A đường ghi:** Đã thêm gate chung chống tái đề xuất/phát hành quote bị loại qua alias; không import lại canonical khi state mất; không ghi state trước khi publisher thành công. 81/81 tests đạt; audit 1.438 candidate, bảo vệ đủ 10 quote owner loại. Không đổi Release 48. Xem `programs/quote-library-p0/PM004A_WRITE_GUARDS_2026-10-25.vi.md`. Bước tiếp theo: lập hàng review 46 story Authoring-only (PM-005), chưa thay nội dung/phát hành.
 
 > **Cập nhật 2026-10-25 — R1–R6:** Owner yêu cầu Việt hóa nhãn nguồn Release, sửa 2 quote và loại 10 quote với quyết định không đạt vĩnh viễn cho đến khi owner mở lại. Đã tạo Authoring 87 / Release 48 (1.851/662 quote; 63/17 story), rebuild Review Matrix; 55/55 tests đạt. Đã commit/push main tại `fb65c40`. Chi tiết: `programs/quote-library-p0/OWNER_REVIEW_CLEANUP_2026-10-25.vi.md`. Lịch sử upload 44 file bên dưới đã hoàn tất ở PR #2/main 9d76067 do owner merge.
@@ -222,7 +228,7 @@ Không nên chờ review xong toàn bộ mới Release một lần. Nên phát h
 | PM-003 | Phân loại 3.050 dòng chủ đề chưa rõ | Backlog | Audit xong; normalization hoãn | PM-001, taxonomy | Chỉ mở lại theo nhu cầu coverage |
 | PM-004 | Xác minh nguồn và quyền quote | Backlog | Có routing 485 source groups; hoãn phần cần verify lâu | PM-001 | Không quote Release nào còn nguồn/quyền mơ hồ |
 | PM-004A | Hợp nhất nguồn trạng thái review quote | P0 | Đã đồng bộ báo cáo + audit/chặn đường ghi qua alias; chưa migrate state lịch sử | PM-001 | CLI, ledger, matrix và Studio hiển thị cùng lifecycle/decision |
-| PM-005 | Review 46 story Authoring-only | P1 | Đang dở | Dashboard đúng | Mỗi story có quyết định sửa/chờ/loại/release |
+| PM-005 | Review 46 story Authoring-only | — | Tạm dừng theo owner 2026-10-25; owner cần đọc kỹ | Dashboard đúng | Mỗi story có quyết định sửa/chờ/loại/release |
 | PM-006 | Hoàn thành một bài Knowledge | P1 | Parked sau pilot spec-driven | Mở session content riêng; owner chọn hướng tại `content-workspace/social-comparison-envy-v1-2026-10-13/OWNER_DECISION_PACK.md` | Một bài được owner đọc và chốt nội dung trước khi product hóa |
 | PM-007 | Mê cung kiến thức | P2 | Prototype; tạm chưa mở rộng | PM-006 hoặc một topic được chốt | Một đường đọc hoàn chỉnh, source-reviewed và user-tested |
 | PM-008 | Studio → web công khai + Knowledge Reader | P1 | S2 hoàn thành; chờ thảo luận feature tiếp theo | So sánh vị trí của Phân tích trước khi viết spec UI; không mặc định đặt trong Góc nhìn | Studio có Website/Developer tabs, shared implementation với public, feature lifecycle và Knowledge Reader; public chỉ nhận phần đã Release, có gate/audit/rollback |

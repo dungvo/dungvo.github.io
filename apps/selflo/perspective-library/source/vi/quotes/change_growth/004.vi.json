@@ -565,7 +565,7 @@
     },
     {
       "id": "research.laozi.day2.ch23.010",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Gió dữ không thổi hết buổi; mưa lớn không kéo suốt ngày.",
@@ -605,9 +605,9 @@
         "note": "Owner confirmed Release 2026-09-25. Wording tiếng Việt do Selflo biên tập từ văn bản cổ thuộc phạm vi công cộng; nguồn tác phẩm và provenance được giữ trên từng quote."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:46:28Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Gió dữ không thổi hết buổi; mưa lớn không kéo suốt ngày.",
@@ -632,7 +632,7 @@
     },
     {
       "id": "research.laozi.day2.ch25.017",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Lặng và rộng; đứng riêng mà không đổi, vận hành khắp mà không kiệt.",
@@ -672,9 +672,9 @@
         "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Lặng và rộng; đứng riêng mà không đổi, vận hành khắp mà không kiệt.",
@@ -698,7 +698,7 @@
     },
     {
       "id": "research.laozi.day2.ch27.024",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Người làm tốt có thể là thầy; người chưa làm tốt cũng có thể trở thành điều để người khác học.",
@@ -710,19 +710,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "Nội tâm & hiểu mình",
-          "learning"
+          "Thay đổi và trưởng thành",
+          "Đạo Đức Kinh"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Laozi",
-        "work": "道德經 / Tao Te Ching",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
         "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
         "source_language": null,
-        "source_label": "Laozi",
-        "source_detail": "Research ID research.laozi.day2.ch27.024; corpus row 88; content_nature=translated_quote; verification=A - Primary source."
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 27",
+        "source_detail": "Research ID research.laozi.day2.ch27.024; corpus row 88; content_nature=translated_quote; verification=A - Primary source. | Q10-B001: Đạo Đức Kinh · chương 27; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
       },
       "metadata": {
         "concepts": [],
@@ -740,7 +740,7 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
       },
       "writing": {
         "semantic_intent": "Người làm tốt có thể là thầy; người chưa làm tốt cũng có thể trở thành điều để người khác học.",
@@ -752,7 +752,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Laozi"
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 27"
       },
       "knowledge_basis": null,
       "tags": [

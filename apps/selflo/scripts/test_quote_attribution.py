@@ -50,12 +50,18 @@ class QuoteAttributionTests(unittest.TestCase):
         expected = {
             "attributed.zhuangzi.chapter_20.change_with_time": "Trang Tử · Sơn mộc (chương 20)",
             "attributed.zhuangzi.chapter_01.rest_beneath_tree": "Trang Tử · Tiêu dao du (chương 1)",
-            "attributed.confucius.book_i_ch01.learning": "Khổng Tử · Luận Ngữ · I.1",
+            "attributed.confucius.book_i_ch01.learning": "Phỏng theo Luận Ngữ · Học Nhi",
             "attributed.epictetus.ench_04.prepare": "Epictetus · Encheiridion · IV",
             "attributed.ma.iv_31.love_your_art": "Marcus Aurelius · Suy tưởng · Quyển IV, đoạn 31",
         }
         for quote_id, attribution in expected.items():
             self.assertEqual(quotes[quote_id]["display"]["attribution_vi"], attribution)
+
+    def test_analects_speakers_are_not_all_attributed_to_confucius(self):
+        quotes={quote['id']:quote for quote in canonical_quotes()}
+        self.assertEqual(quotes['research.day25.an1_4']['authorship']['author_name'],'Tăng Tử')
+        self.assertTrue(quotes['research.day25.an1_4']['display']['attribution_vi'].startswith('Tăng Tử'))
+        self.assertEqual(quotes['research.day25.an4_26']['authorship']['author_name'],'Tử Du')
 
     def test_materialized_packages_preserve_display_attribution(self):
         canonical = {quote["id"]: quote for quote in canonical_quotes()}

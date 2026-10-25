@@ -3,7 +3,7 @@ import argparse, json, re
 from datetime import datetime, timezone
 from pathlib import Path
 from openpyxl import load_workbook
-from review_status import status_input_digests
+from review_status import status_input_digests, apply_closed_decisions
 
 CURATED = {
     'research.dhammapada.day11.v019': (94, 'Hình ảnh mạnh; phân biệt biết và sống; source verse rõ.'),
@@ -45,7 +45,7 @@ def source_family(author, work='', source_url=''):
     text = ' '.join([clean(author), clean(work), clean(source_url)]).lower()
     rules = [
         ('selflo', r'\bselflo\b'),
-        ('chinese_classics', r'laozi|lão tử|zhuangzi|trang tử|liezi|liệt tử|huainanzi|hoài nam|confucius|khổng tử|mencius|mạnh tử|chinese|trung hoa'),
+        ('chinese_classics', r'laozi|lão tử|zhuangzi|trang tử|liezi|liệt tử|huainanzi|hoài nam|confucius|khổng tử|mencius|mạnh tử|tăng tử|tử du|luận ngữ|chinese|trung hoa'),
         ('vietnamese_heritage', r'vietnam|việt nam|nguyễn du|nguyễn trãi|nguyễn bỉnh khiêm|ca dao'),
         ('japanese_zen', r'dōgen|dogen|bashō|basho|japan|nhật bản|zen'),
         ('south_asian_buddhist', r'dhammapada|nik[aā]ya|buddh|phật|bhagavad|upanishad|panchatantra|vedic|hindu|ấn độ|india'),
@@ -131,7 +131,7 @@ def inferred_family(author, work='', source_url=''):
     rules=[
       ('selflo',r'\bselflo\b'),
       ('daoism',r'laozi|lão tử|tao te|zhuangzi|trang tử|liezi|liệt tử|huainan'),
-      ('confucianism_chinese',r'confucius|khổng tử|mencius|mạnh tử|analects|xunzi'),
+      ('confucianism_chinese',r'confucius|khổng tử|mencius|mạnh tử|tăng tử|tử du|luận ngữ|analects|xunzi'),
       ('vietnamese_texts',r'vietnam|việt nam|nguyễn du|nguyễn trãi|nguyễn bỉnh khiêm|trần nhân tông|ca dao|truyện kiều'),
       ('zen_chan',r'dōgen|dogen|\bzen\b|\bchan\b|thiền|huệ năng|suzuki'),
       ('early_buddhism',r'dhammapada|sutta nipata|nik[aā]ya'),('mahayana_buddhism',r'mah[aā]y[aā]na|shinran|nagarjuna|nāgārjuna|shantideva|śāntideva'),
@@ -301,6 +301,7 @@ def main():
         source_confidence='low' if is_aggregator else 'high' if source_tier.upper().startswith('A_') else 'medium'
         rows.append({'record_type':'quote','id':ident,'research_id':ident,'canonical_id':None,'text_vi':clean(item.get('vietnamese_working_text') or item.get('original_text')),'original_text':clean(item.get('original_text')),'author':clean(item.get('author_or_attribution_as_source_states')),'work':clean(item.get('work_or_page_title')),'source_url':clean(item.get('source_url')),'source_domain':clean(item.get('source_domain')),'source_tier':source_tier,'theme':clean(topics[0] if topics else 'unresolved'),'human_experience':'','content_nature':clean(item.get('content_nature')),'confidence':source_confidence,'verification':clean(item.get('capture_status')),'rights':clean(item.get('rights_note')),'selflo_fit':'','release_readiness':'Translation/editorial review pending' if not is_aggregator else 'Source verification required','pipeline':'excluded','review':'Research only','ai_review_status':'source_verification_required' if is_aggregator else 'collection_review_pending','ai_review_round':None,'ai_review_note':clean(item.get('context_note')),'story_id':None,'exact_duplicate':'','near_duplicate':clean(item.get('near_duplicate_cluster')),'issue_code':'source_below_B' if is_aggregator else 'raw_collection_pending','score':35 if is_aggregator else 55,'why':'Nguồn tổng hợp; cần truy nguồn gốc trước Authoring.' if is_aggregator else 'Đã thu thập đúng nguyên văn từ nguồn được ghi nhận; chờ dịch và editorial review.','collection_batch':clean(item.get('_capture_batch'))})
         known_ids.add(ident)
+    apply_closed_decisions(rows, ai_reviews)
     rows.sort(key=lambda x:(-x['score'],x['record_type'],x['id']))
     normalized_text_groups={}
     for row in rows:

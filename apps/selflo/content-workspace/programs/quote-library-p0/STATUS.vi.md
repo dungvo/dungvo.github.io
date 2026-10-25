@@ -1,7 +1,11 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
+> **Q10-B001 — checkpoint 2026-10-25:** T-01/T-02 hoàn tất; đã review đủ 166 dòng, giữ 102, loại 64 (20 duplicate/43 context/1 misleading), sửa 51 văn bản và attribution Tăng Tử/Tử Du. Publisher Authoring 88 / Release 49 (1.851/598 quote; 63/17 story), 94 tests đạt. Chờ kiểm chứng public trước khi đóng batch; chưa mở B002. Bằng chứng `Q10_B001_CHECKPOINT.vi.md`, `reports/q10-b001-review.json`.
+
+> **Checkpoint spec-driven 2026-10-25:** Đã hoàn thiện bộ `README → SPEC → CURRENT_STATE_REVIEW → DECISIONS → PLAN → TASKS → REVIEWS`, kế hoạch **36 batch, 100–200 dòng/batch, mục tiêu 150**. Chưa review nội dung batch mới; quote là ưu tiên duy nhất, story tạm dừng. Đọc `PLAN.vi.md` và `TASKS.vi.md` để thực hiện.
+
 **Ưu tiên:** P0
-**Trạng thái tổng:** R1–R6 đã cập nhật main tại fb65c40; đang tiếp PM-004A. Phần baseline bên dưới là lịch sử.
+**Trạng thái tổng:** Ưu tiên duy nhất: lập và thực hiện kế hoạch khép kín 5.471 dòng quote. Story tạm dừng theo owner ngày 2026-10-25. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
 **Cập nhật gần nhất:** 2026-10-25 — Authoring 87 / Release 48 (1.851/662 quote; 63/17 story); 81 tests pass sau bước đồng bộ báo cáo và bảo vệ đường ghi.
 **Owner duyệt cuối:** Dũng
@@ -17,23 +21,13 @@
 4. Candidate hợp lệ có chủ đề; có báo cáo khoảng trống để quyết định nghiên cứu bổ sung.
 5. Mọi quote đủ điều kiện đã qua owner review và Release gate.
 
-## Definition of Done đã chốt
+## Definition of Done hiện hành — chỉ đạo owner 2026-10-25
 
-P0 chỉ hoàn thành khi **đủ 5.470/5.470 dòng** có identity, phân loại và đúng một kết luận cuối:
+Thay tiêu chí đóng baseline cũ cho riêng chương trình quote bằng [kế hoạch khép kín 5.471 dòng](QUOTE_CLOSURE_PLAN_2026-10-25.vi.md). Đủ 5.471 ID có một kết luận cuối: **released** hoặc **not_accepted** có lý do/bằng chứng và chặn đề xuất lại. “Chưa dịch”, Research, pending hoặc chờ story không tính hoàn thành. Câu được chấp nhận phải qua gate và thực sự có trong Release public. Owner nghiệm thu báo cáo/sample; AI review từng dòng theo policy hiện có.
 
-1. đã Release;
-2. đủ điều kiện Release;
-3. cần owner review và giữ trong Authoring;
-4. cần sửa;
-5. cần xác minh nguồn;
-6. bị chặn quyền;
-7. bản trùng;
-8. giữ làm nghiên cứu;
-9. loại.
+Không review/phát hành story trong chương trình này. Không loại quote chỉ vì tiếng Anh/Hoa/Hy Lạp; dịch và chuẩn hóa tên hiển thị trước khi đánh giá. Nguyên bản/provenance được giữ.
 
-Tổng các nhóm phải bằng 5.470; không còn `imported`, `unresolved`, `pending` hoặc trạng thái mơ hồ. Mọi quote đủ điều kiện phải được Release và kiểm tra trên web công khai. Authoring chỉ giữ nội dung có giá trị cần fit/edit/story review, không dùng làm nơi chứa raw, duplicate hoặc rejected. Owner không phải review từng câu; AI được ủy quyền theo policy và owner nghiệm thu báo cáo cuối.
-
-Chuẩn đầy đủ: [`../DEFINITION_OF_DONE.vi.md`](../DEFINITION_OF_DONE.vi.md).
+Các phase và checkpoint bên dưới phản ánh lịch sử, không chứng minh chương trình 5.471 đã hoàn tất.
 
 ## Tiến độ theo phase
 
@@ -72,4 +66,4 @@ R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ 
 
 ## Đúng một bước tiếp theo
 
-Chuẩn bị danh sách ưu tiên review 46 story Authoring-only (PM-005), báo cáo vấn đề cho owner trước khi thay nội dung/phát hành.
+Kiểm chứng Release 49 trên public (manifest + 9 quote pack), đối soát projection closure, rồi đóng Q10-B001. Chưa mở Q10-B002 hoặc story trước bước này.

@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "attributed.confucius.book_i_ch01.learning",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Học mà bền bỉ thực hành, chẳng phải là điều vui sao?",
@@ -14,12 +14,12 @@
       "primary_theme": "work_achievement",
       "authorship": {
         "author_id": "confucius",
-        "author_name": "Confucius",
-        "work": "The Analects of Confucius (from the Chinese Classics)",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
         "source_url": "https://www.gutenberg.org/ebooks/3330",
         "source_language": "en",
-        "source_label": "Khổng Tử · Luận Ngữ",
-        "source_detail": "James Legge (dịch); I.1; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Luận Ngữ · Học Nhi",
+        "source_detail": "James Legge (dịch); I.1; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B001: Luận Ngữ · Học Nhi · 學而時習之; tên/tác phẩm gốc: Confucius / The Analects of Confucius (from the Chinese Classics); đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
       },
       "metadata": {
         "concepts": [],
@@ -39,8 +39,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
       },
       "writing": {
         "semantic_intent": "Học mà bền bỉ thực hành, chẳng phải là điều vui sao?",
@@ -52,7 +52,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Khổng Tử · Luận Ngữ · I.1"
+        "attribution_vi": "Phỏng theo Luận Ngữ · Học Nhi"
       },
       "story_id": null,
       "selection": {
@@ -60,9 +60,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work_achievement",
-          "confucianism",
-          "learning"
+          "Công việc và lựa chọn",
+          "Luận Ngữ"
         ],
         "tie_break_order": 5040
       },

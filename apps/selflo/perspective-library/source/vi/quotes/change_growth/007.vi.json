@@ -258,7 +258,7 @@
     },
     {
       "id": "research.day25.an2_15",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Học mà không suy xét dễ mờ mịt; suy mà không học dễ nguy.",
@@ -298,9 +298,9 @@
         "note": "Owner confirmed Release 2026-09-25. Wording tiếng Việt do Selflo biên tập từ văn bản cổ thuộc phạm vi công cộng; nguồn tác phẩm và provenance được giữ trên từng quote."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:46:28Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Học mà không suy xét dễ mờ mịt; suy mà không học dễ nguy.",
@@ -325,7 +325,7 @@
     },
     {
       "id": "research.day25.an3_15",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Vào thái miếu, Khổng Tử hỏi về từng việc; biết nhiều không loại bỏ việc hỏi.",
@@ -365,9 +365,9 @@
         "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Vào thái miếu, Khổng Tử hỏi về từng việc; biết nhiều không loại bỏ việc hỏi.",
@@ -391,7 +391,7 @@
     },
     {
       "id": "research.day25.an7_21",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Đi cùng người khác, luôn có điều để học: điều tốt để theo, điều chưa tốt để tự sửa.",
@@ -403,19 +403,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "Đời sống & hiểu mình",
-          "learning_failure_growth"
+          "Thay đổi và trưởng thành",
+          "Luận Ngữ"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Confucius tradition / 孔子",
-        "work": "論語 / Analects",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
         "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
         "source_language": null,
-        "source_label": "Confucius tradition / 孔子",
-        "source_detail": "Research ID research.day25.an7_21; corpus row 1072; content_nature=translated_quote; verification=A - Chinese passage/location verified."
+        "source_label": "Phỏng theo Luận Ngữ · Thuật Nhi",
+        "source_detail": "Research ID research.day25.an7_21; corpus row 1072; content_nature=translated_quote; verification=A - Chinese passage/location verified. | Q10-B001: Luận Ngữ · Thuật Nhi · 三人行; tên/tác phẩm gốc: Confucius tradition / 孔子 / 論語 / Analects; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
       },
       "metadata": {
         "concepts": [],
@@ -432,8 +432,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:46:28Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
       },
       "writing": {
         "semantic_intent": "Đi cùng người khác, luôn có điều để học: điều tốt để theo, điều chưa tốt để tự sửa.",
@@ -445,7 +445,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Luận Ngữ · truyền thống Khổng Tử"
+        "attribution_vi": "Phỏng theo Luận Ngữ · Thuật Nhi"
       },
       "knowledge_basis": null,
       "tags": [
@@ -575,10 +575,10 @@
     },
     {
       "id": "research.reaudit.day25.an15_31_think_without_learning",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khổng Tử nói từng bỏ ăn, bỏ ngủ để suy nghĩ mà không ích bằng học.",
+      "text_vi": "Ta từng nhịn ăn cả ngày, thức suốt đêm để suy nghĩ, nhưng không ích bằng học hỏi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -587,19 +587,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "Học tập",
-          "learning"
+          "Thay đổi và trưởng thành",
+          "Luận Ngữ"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Confucius tradition",
-        "work": "論語 / Analects",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
         "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
         "source_language": null,
-        "source_label": "Confucius tradition",
-        "source_detail": "Research ID research.reaudit.day25.an15_31_think_without_learning; corpus row 1115; content_nature=translated_quote; verification=A - Chinese passage/location verified."
+        "source_label": "Phỏng theo Luận Ngữ · Vệ Linh Công",
+        "source_detail": "Research ID research.reaudit.day25.an15_31_think_without_learning; corpus row 1115; content_nature=translated_quote; verification=A - Chinese passage/location verified. | Q10-B001: Luận Ngữ · Vệ Linh Công · 吾嘗終日不食; tên/tác phẩm gốc: Confucius tradition / 論語 / Analects; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
       },
       "metadata": {
         "concepts": [],
@@ -617,10 +617,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
       },
       "writing": {
-        "semantic_intent": "Khổng Tử nói từng bỏ ăn, bỏ ngủ để suy nghĩ mà không ích bằng học.",
+        "semantic_intent": "Ta từng nhịn ăn cả ngày, thức suốt đêm để suy nghĩ, nhưng không ích bằng học hỏi.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -629,7 +629,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Truyền thống Khổng Tử"
+        "attribution_vi": "Phỏng theo Luận Ngữ · Vệ Linh Công"
       },
       "knowledge_basis": null,
       "tags": [

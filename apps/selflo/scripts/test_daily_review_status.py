@@ -44,3 +44,15 @@ class DailyReviewStatusTests(unittest.TestCase):
         self.path.unlink();result=module.editorial_status(self.root)
         self.assertEqual(result['availability'],'missing')
         self.assertNotIn('states',result)
+
+    def test_raw_rejection_uses_existing_ledger_in_matrix_projection(self):
+        from review_status import apply_closed_decisions
+        rows=[{'id':'raw','pipeline':'excluded','why':'Raw chưa review','ai_review_status':'collection_review_pending'}]
+        apply_closed_decisions(rows,{'raw':{'decision':'round1_not_pass','review_round':3,'note_vi':'Không đứng độc lập.'}})
+        self.assertEqual(rows[0]['ai_review_status'],'round1_not_pass')
+        self.assertEqual(rows[0]['why'],'Không đứng độc lập.')
+    def test_matrix_never_silently_overrides_active_release_from_old_ledger(self):
+        from review_status import apply_closed_decisions
+        rows=[{'id':'q','pipeline':'release','why':'Đã phát hành.'}]
+        apply_closed_decisions(rows,{'q':{'decision':'round1_not_pass','note_vi':'Phải gỡ qua publisher.'}})
+        self.assertNotIn('ai_review_status',rows[0])

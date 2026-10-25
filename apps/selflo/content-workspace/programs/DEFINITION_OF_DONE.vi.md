@@ -36,21 +36,15 @@ Một chương trình chỉ được ghi `Hoàn thành` khi:
 6. Số liệu trước/sau được đối soát; có log, checkpoint và bằng chứng kiểm tra.
 7. Owner nghiệm thu kết quả chương trình theo báo cáo/sample; review từng item có thể được ủy quyền rõ cho AI nếu policy của chương trình cho phép.
 
-## DOD-01 — Kho Quote P0
+## DOD-01 — Kho Quote P0 (cập nhật theo owner 2026-10-25)
 
-Hoàn thành khi toàn bộ 5.470 dòng baseline có identity, phân loại và một kết luận cuối; tổng các kết luận bằng đúng 5.470. Các kết luận cho phép gồm:
+Phạm vi đóng hiện hành là **5.471 dòng**, theo baseline ID/hash đã lưu trong [kế hoạch khép kín quote](quote-library-p0/QUOTE_CLOSURE_PLAN_2026-10-25.vi.md). Tiêu chí cũ 5.470 dòng với các trạng thái “cần sửa/cần nguồn/giữ Research” không còn là chuẩn nghiệm thu cuối cho chương trình này.
 
-- đã Release;
-- đủ điều kiện Release;
-- cần owner review và được giữ trong Authoring;
-- cần sửa;
-- cần xác minh nguồn;
-- bị chặn vì quyền sử dụng;
-- bản trùng;
-- giữ làm nghiên cứu;
-- loại.
+Hoàn thành khi mỗi ID có đúng một kết luận cuối: **released** hoặc **not_accepted** có lý do/bằng chứng, tổng bằng 5.471, không còn pending/chưa dịch/chờ story. Mọi câu được chấp nhận phải thực sự ở Release public sau đủ gate. Quote không đạt được đóng và không tự đề xuất lại; giữ nguyên provenance.
 
-Mọi quote đủ điều kiện phải được Release và kiểm tra trên web công khai. Không yêu cầu cả 5.470 dòng đều được Release. Owner đã ủy quyền AI review từng item theo [`quote-library-p0/AI_DELEGATED_REVIEW_AND_RELEASE_POLICY.vi.md`](quote-library-p0/AI_DELEGATED_REVIEW_AND_RELEASE_POLICY.vi.md); owner nghiệm thu kết quả cuối thay vì đọc lại từng câu.
+Ngoại ngữ không phải lý do loại: cần dịch nội dung, chuẩn hóa nhãn/tên tiếng Việt có cơ sở, rồi review từng dòng. Nguyên bản và tên gốc vẫn giữ để đối chiếu. Không mở review story trong chương trình quote; story tạm dừng để owner đọc kỹ.
+
+AI review từng dòng theo [policy đã được ủy quyền](quote-library-p0/AI_DELEGATED_REVIEW_AND_RELEASE_POLICY.vi.md), owner nghiệm thu báo cáo/sample cuối. Không mở thêm phần sản phẩm khác trước khi khép kín quote.
 
 ## DOD-02 — Kho bài Góc Nhìn
 
