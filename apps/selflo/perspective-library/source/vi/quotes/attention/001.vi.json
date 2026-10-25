@@ -376,7 +376,7 @@
     },
     {
       "id": "sunlight_crosses_the_floor",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Vệt nắng buổi sáng vẫn đi qua sàn nhà mỗi ngày.\nChỉ có những hôm ta kịp nhìn thấy nó.",
       "primary_theme": "attention",
@@ -409,9 +409,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Điều quen thuộc vẫn hiện diện dù sự chú ý không phải lúc nào cũng nhận ra.",
@@ -537,9 +537,9 @@
     },
     {
       "id": "tea_waits_beside_the_screen",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Tách trà vẫn tỏa hương trong lúc màn hình sáng lên.\nCó những điều gần nhất thường đợi lâu nhất để được nhận ra.",
+      "text_vi": "Mải nhìn màn hình, có khi mình quên tách trà vẫn còn ấm ngay bên cạnh.",
       "primary_theme": "attention",
       "authorship": {
         "author_id": "selflo",
@@ -548,7 +548,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · tea_waits_beside_the_screen; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -572,10 +572,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Điều ở gần có thể bị bỏ qua khi sự chú ý bị tín hiệu khác thu hút.",
+        "semantic_intent": "Mải nhìn màn hình, có khi mình quên tách trà vẫn còn ấm ngay bên cạnh.",
         "observation_key": "tea_beside_bright_screen",
         "structure_pattern": "nearby_sensory_detail_outwaits_distractor"
       },
@@ -602,8 +602,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "attention",
-          "tea"
+          "Chú ý và hiện tại",
+          "Selflo"
         ],
         "tie_break_order": 1005
       },

@@ -6,9 +6,9 @@
   "quotes": [
     {
       "id": "worn_step_remembers_many_feet",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Bậc thềm nhẵn nhất thường không phải bậc đẹp nhất.\nNó chỉ là nơi nhiều bàn chân đã đi qua.",
+      "text_vi": "Bậc thềm nhẵn đi sau nhiều lượt bàn chân bước qua.",
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "selflo",
@@ -17,7 +17,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · worn_step_remembers_many_feet; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -40,11 +40,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Sự lặp lại để lại dấu vết dù mỗi lần riêng lẻ rất nhỏ.",
+        "semantic_intent": "Bậc thềm nhẵn đi sau nhiều lượt bàn chân bước qua.",
         "observation_key": "worn_doorstep",
         "structure_pattern": "frequent_passage_smooths_surface"
       },
@@ -71,8 +71,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "habit",
-          "doorstep"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": 1055
       },
@@ -410,9 +410,9 @@
     },
     {
       "id": "wrong_turn_stays_on_the_map",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Con đường đi nhầm đôi khi là phần duy nhất của tấm bản đồ\nngười ta nhớ thật lâu.",
+      "text_vi": "Một con đường từng đi nhầm đôi khi lại được mình nhớ rất lâu.",
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "selflo",
@@ -421,7 +421,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · wrong_turn_stays_on_the_map; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -444,11 +444,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Một sai lệch được nhận biết có thể trở thành điểm tham chiếu rõ cho lần sau.",
+        "semantic_intent": "Một con đường từng đi nhầm đôi khi lại được mình nhớ rất lâu.",
         "observation_key": "remembered_wrong_turn",
         "structure_pattern": "error_becomes_durable_reference"
       },
@@ -475,8 +475,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "learning",
-          "road"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": 1060
       },
@@ -572,20 +572,20 @@
     },
     {
       "id": "attributed.ma.iii_02.cracked_loaf",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy nhìn vẻ duyên dáng xuất hiện ngay trong những điều ngoài dự tính của tự nhiên. Một ổ bánh nứt ra khi nướng, dù không nằm trong ý định của người làm bánh, vẫn có thể đẹp và gợi cảm giác ngon lành.",
+      "text_vi": "Một ổ bánh nứt ra khi nướng, dù ngoài ý người làm bánh, vẫn có thể đẹp và gợi cảm giác ngon lành.",
       "subtitle_vi": null,
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển III, đoạn 2; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển III, đoạn 2",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển III, đoạn 2; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển III, đoạn 2; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -604,11 +604,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Hãy nhìn vẻ duyên dáng xuất hiện ngay trong những điều ngoài dự tính của tự nhiên. Một ổ bánh nứt ra khi nướng, dù không nằm trong ý định của người làm bánh, vẫn có thể đẹp và gợi cảm giác ngon lành.",
+        "semantic_intent": "Một ổ bánh nứt ra khi nướng, dù ngoài ý người làm bánh, vẫn có thể đẹp và gợi cảm giác ngon lành.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -617,7 +617,7 @@
         "priority": 50,
         "featured": false,
         "style": "cool_observe",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển III, đoạn 2"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển III, đoạn 2"
       },
       "story_id": null,
       "selection": {
@@ -625,8 +625,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "change_growth",
-          "imperfection"
+          "Thay đổi và trưởng thành",
+          "Suy tưởng"
         ],
         "tie_break_order": 1119
       },
@@ -641,20 +641,20 @@
     },
     {
       "id": "attributed.ma.iv_03.change_and_thought",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thế giới là một chuỗi đổi thay; đời sống được định hình bởi cách ta nghĩ.",
+      "text_vi": "Thế giới luôn đổi thay; cách mình nghĩ cũng góp phần định hình cách mình sống.",
       "subtitle_vi": null,
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 3; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển IV, đoạn 3",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 3; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển IV, đoạn 3; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -673,11 +673,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Thế giới là một chuỗi đổi thay; đời sống được định hình bởi cách ta nghĩ.",
+        "semantic_intent": "Thế giới luôn đổi thay; cách mình nghĩ cũng góp phần định hình cách mình sống.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -686,7 +686,7 @@
         "priority": 50,
         "featured": false,
         "style": "cool_observe",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển IV, đoạn 3"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển IV, đoạn 3"
       },
       "story_id": null,
       "selection": {
@@ -694,8 +694,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "change_growth",
-          "perspective"
+          "Thay đổi và trưởng thành",
+          "Suy tưởng"
         ],
         "tie_break_order": 1125
       },
@@ -710,7 +710,7 @@
     },
     {
       "id": "attributed.ma.iv_12.change_course",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Hãy sẵn sàng đổi hướng khi gặp một người có thể chỉ ra điều cần sửa trong cách nhìn của bạn.",
@@ -741,9 +741,9 @@
         "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T22:58:03Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Hãy sẵn sàng đổi hướng khi gặp một người có thể chỉ ra điều cần sửa trong cách nhìn của bạn.",
@@ -780,7 +780,7 @@
     },
     {
       "id": "attributed.ma.iv_36.nature_change",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Hãy luôn quan sát rằng mọi thứ tồn tại trong đổi thay; tự nhiên không ngừng biến điều đang có thành những hình dạng khác.",
@@ -789,11 +789,11 @@
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 36; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển IV, đoạn 36",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 36; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển IV, đoạn 36; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -812,8 +812,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
         "semantic_intent": "Hãy luôn quan sát rằng mọi thứ tồn tại trong đổi thay; tự nhiên không ngừng biến điều đang có thành những hình dạng khác.",
@@ -825,7 +825,7 @@
         "priority": 50,
         "featured": false,
         "style": "midnight_quote",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển IV, đoạn 36"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển IV, đoạn 36"
       },
       "story_id": null,
       "selection": {
@@ -833,8 +833,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "change_growth",
-          "impermanence"
+          "Thay đổi và trưởng thành",
+          "Suy tưởng"
         ],
         "tie_break_order": 1133
       },
@@ -849,20 +849,20 @@
     },
     {
       "id": "attributed.ma.vi_21.truth_change",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu ai có thể chỉ ra rằng suy nghĩ hay hành động của tôi sai, tôi sẽ vui lòng thay đổi. Tôi tìm sự thật; sự thật không làm hại con người — điều gây hại là cố bám vào sai lầm hoặc vô minh.",
+      "text_vi": "Nếu ai chỉ ra được suy nghĩ hay hành động của tôi sai, tôi sẵn lòng thay đổi. Điều tôi tìm là sự thật.",
       "subtitle_vi": null,
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 21; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 21",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 21; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VI, đoạn 21; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -881,11 +881,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Nếu ai có thể chỉ ra rằng suy nghĩ hay hành động của tôi sai, tôi sẽ vui lòng thay đổi. Tôi tìm sự thật; sự thật không làm hại con người — điều gây hại là cố bám vào sai lầm hoặc vô minh.",
+        "semantic_intent": "Nếu ai chỉ ra được suy nghĩ hay hành động của tôi sai, tôi sẵn lòng thay đổi. Điều tôi tìm là sự thật.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -894,7 +894,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 21"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 21"
       },
       "story_id": null,
       "selection": {
@@ -902,8 +902,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "change_growth",
-          "truth"
+          "Thay đổi và trưởng thành",
+          "Suy tưởng"
         ],
         "tie_break_order": 1144
       },

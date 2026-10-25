@@ -876,9 +876,9 @@
     },
     {
       "id": "the_opposite_chair_stays_occupied",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Có những cuộc trò chuyện không cần lời hay nhất.\nChỉ cần chiếc ghế đối diện vẫn còn người ngồi.",
+      "text_vi": "Một cuộc trò chuyện đôi khi cần sự có mặt của nhau hơn là những lời thật hay.",
       "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
@@ -887,7 +887,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · the_opposite_chair_stays_occupied; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -910,11 +910,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Sự hiện diện bền bỉ đôi khi quan trọng hơn khả năng nói điều hoàn hảo.",
+        "semantic_intent": "Một cuộc trò chuyện đôi khi cần sự có mặt của nhau hơn là những lời thật hay.",
         "observation_key": "occupied_opposite_chair",
         "structure_pattern": "continued_presence_outweighs_perfect_words"
       },
@@ -941,8 +941,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationship",
-          "attachment"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 1035
       },

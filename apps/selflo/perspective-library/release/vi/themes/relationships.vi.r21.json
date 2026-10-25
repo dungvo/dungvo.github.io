@@ -1,0 +1,2674 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "relationships",
+  "display_name_vi": "Các mối quan hệ",
+  "description_vi": "Kết nối, yêu thương, giao tiếp, ranh giới và cách mình hiện diện với người khác.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "small_boundary_is_still_boundary",
+      "revision": 3,
+      "kind": "selflo_original",
+      "title_vi": "Một ranh giới nhỏ",
+      "text_vi": "Một lời từ chối nhẹ nhàng vẫn là ranh giới. Mình không cần nói gay gắt để nó có giá trị.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · small_boundary_is_still_boundary; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "social_layer",
+          "control_layer"
+        ],
+        "legacy_content_kind": "quote",
+        "legacy_layer_ids": [
+          "social_layer",
+          "control_layer"
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Một lời từ chối nhẹ nhàng vẫn là ranh giới. Mình không cần nói gay gắt để nó có giá trị.",
+        "observation_key": null,
+        "structure_pattern": null
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 86,
+        "featured": true,
+        "style": "midnight_quote",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": -86
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "one_umbrella_keeps_two_steps_together",
+      "revision": 2,
+      "kind": "selflo_original",
+      "text_vi": "Chiếc ô không làm mưa nhỏ đi,\nnhưng đủ để hai người bước chậm cùng nhau.",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · one_umbrella_keeps_two_steps_together; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.belonging"
+        ],
+        "theories": [
+          "theory.need_to_belong"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationship",
+          "belonging",
+          "umbrella"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Chiếc ô không làm mưa nhỏ đi,\nnhưng đủ để hai người bước chậm cùng nhau.",
+        "observation_key": "two_people_under_umbrella",
+        "structure_pattern": "shared_shelter_synchronizes_steps"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 47,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
+        ],
+        "reference_ids": [
+          "ref.baumeister_leary_1995_need_to_belong"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 1028
+      },
+      "tags": [
+        "intent:relationships",
+        "support:soothe",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "kitchen_sounds_like_someone_waiting",
+      "revision": 3,
+      "kind": "selflo_original",
+      "text_vi": "Trong căn bếp nhỏ, tiếng bát đũa va nhau\nđôi khi là cách một ngôi nhà nói rằng có người đang chờ.",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · kitchen_sounds_like_someone_waiting; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.belonging"
+        ],
+        "theories": [
+          "theory.need_to_belong"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationship",
+          "belonging",
+          "kitchen"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Trong căn bếp nhỏ, tiếng bát đũa va nhau\nđôi khi là cách một ngôi nhà nói rằng có người đang chờ.",
+        "observation_key": "dishes_in_waiting_kitchen",
+        "structure_pattern": "ordinary_household_sound_signals_belonging"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 46,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
+        ],
+        "reference_ids": [
+          "ref.baumeister_leary_1995_need_to_belong"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 1029
+      },
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "familiar_cafe_remembers_the_order",
+      "revision": 2,
+      "kind": "selflo_original",
+      "text_vi": "Quán quen đôi khi giữ người ta bằng việc có người nhớ món họ thường gọi.",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · familiar_cafe_remembers_the_order; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.belonging"
+        ],
+        "theories": [
+          "theory.need_to_belong"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationship",
+          "belonging",
+          "cafe"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Quán quen đôi khi giữ người ta bằng việc có người nhớ món họ thường gọi.",
+        "observation_key": "cafe_remembers_usual_order",
+        "structure_pattern": "recognition_outweighs_surface_comfort"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 45,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.need_to_belong.stable_presence_carries_relational_meaning"
+        ],
+        "reference_ids": [
+          "ref.baumeister_leary_1995_need_to_belong"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 1030
+      },
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "hand_does_not_need_to_grip",
+      "revision": 3,
+      "kind": "selflo_original",
+      "text_vi": "Một bàn tay không cần nắm quá chặt\nđể người bên cạnh biết mình chưa rời đi.",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · hand_does_not_need_to_grip; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.attachment_security"
+        ],
+        "theories": [
+          "theory.attachment_security"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationship",
+          "attachment",
+          "hand"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Một bàn tay không cần nắm quá chặt\nđể người bên cạnh biết mình chưa rời đi.",
+        "observation_key": "gentle_handhold",
+        "structure_pattern": "soft_contact_signals_reliable_presence"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 43,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.attachment_security.reliable_presence_supports_exploration"
+        ],
+        "reference_ids": [
+          "ref.mikulincer_2002_attachment_security"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 1032
+      },
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "someone_calls_at_the_last_stop",
+      "revision": 2,
+      "kind": "selflo_original",
+      "text_vi": "Trên chuyến xe dài, biết có người gọi mình lúc đến trạm có thể giúp mình bớt lo khi chợp mắt.",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · someone_calls_at_the_last_stop; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.attachment_security"
+        ],
+        "theories": [
+          "theory.attachment_security"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationship",
+          "attachment",
+          "bus"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Trên chuyến xe dài, biết có người gọi mình lúc đến trạm có thể giúp mình bớt lo khi chợp mắt.",
+        "observation_key": "wake_me_at_bus_stop",
+        "structure_pattern": "expected_response_allows_temporary_rest"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 42,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.attachment_security.reliable_presence_supports_exploration"
+        ],
+        "reference_ids": [
+          "ref.mikulincer_2002_attachment_security"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 1033
+      },
+      "tags": [
+        "intent:relationships",
+        "support:soothe",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "door_stays_where_home_begins",
+      "revision": 3,
+      "kind": "selflo_original",
+      "text_vi": "Đôi giày trở về muộn. Cánh cửa nhà vẫn ở chỗ quen thuộc.",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · door_stays_where_home_begins; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.attachment_security"
+        ],
+        "theories": [
+          "theory.attachment_security"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationship",
+          "attachment",
+          "home"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Đôi giày trở về muộn. Cánh cửa nhà vẫn ở chỗ quen thuộc.",
+        "observation_key": "door_and_late_shoes",
+        "structure_pattern": "stable_return_point_marks_safety"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 41,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.attachment_security.reliable_presence_supports_exploration"
+        ],
+        "reference_ids": [
+          "ref.mikulincer_2002_attachment_security"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 1034
+      },
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "the_opposite_chair_stays_occupied",
+      "revision": 3,
+      "kind": "selflo_original",
+      "text_vi": "Một cuộc trò chuyện đôi khi cần sự có mặt của nhau hơn là những lời thật hay.",
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · the_opposite_chair_stays_occupied; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.attachment_security"
+        ],
+        "theories": [
+          "theory.attachment_security"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationship",
+          "attachment",
+          "conversation"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Một cuộc trò chuyện đôi khi cần sự có mặt của nhau hơn là những lời thật hay.",
+        "observation_key": "occupied_opposite_chair",
+        "structure_pattern": "continued_presence_outweighs_perfect_words"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.attachment_security.reliable_presence_supports_exploration"
+        ],
+        "reference_ids": [
+          "ref.mikulincer_2002_attachment_security"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 1035
+      },
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "attributed.ma.vi_06.best_revenge",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Cách đáp trả tốt nhất là không trở thành bản sao của người đã làm điều sai với bạn.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 6",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 6; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VI, đoạn 6; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "integrity"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Cách đáp trả tốt nhất là không trở thành bản sao của người đã làm điều sai với bạn.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 6"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Suy tưởng"
+        ],
+        "tie_break_order": 1141
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.ma.vi_48.others_excellence",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi muốn lòng mình sáng hơn, có thể nghĩ đến nét tốt của người quanh mình: sự năng nổ, khiêm nhường hay rộng rãi của họ.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 48",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 48; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VI, đoạn 48; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "appreciation"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Khi muốn lòng mình sáng hơn, có thể nghĩ đến nét tốt của người quanh mình: sự năng nổ, khiêm nhường hay rộng rãi của họ.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 48"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Suy tưởng"
+        ],
+        "tie_break_order": 1147
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.ma.vii_07.accept_help",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đừng xấu hổ khi nhận sự giúp đỡ. Có việc mình vẫn làm phần của mình, nhưng cần người khác cùng sức mới đi qua được.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VII, đoạn 7",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 7; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VII, đoạn 7; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "support"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Đừng xấu hổ khi nhận sự giúp đỡ. Có việc mình vẫn làm phần của mình, nhưng cần người khác cùng sức mới đi qua được.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VII, đoạn 7"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Suy tưởng"
+        ],
+        "tie_break_order": 1153
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "safe_return_can_help_us_go_farther",
+      "revision": 2,
+      "kind": "selflo_original",
+      "title_vi": "Một nơi để trở về",
+      "text_vi": "Biết có một nơi an toàn để trở về có thể cho mình thêm can đảm đi xa.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library | Q10-B003: Canonical Selflo · safe_return_can_help_us_go_farther; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "tin cậy",
+          "điểm trở về",
+          "an toàn",
+          "khám phá"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Biết có một nơi an toàn để trở về có thể cho mình thêm can đảm đi xa.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 3000
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:soothe",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "attributed.seneca.letter_03.loyal",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Tình bạn cần chỗ cho sự tin cậy, thay vì chỉ có nghi ngờ.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "seneca",
+        "author_name": "Seneca",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml",
+        "source_language": "en",
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 3.3",
+        "source_detail": "Richard M. Gummere (dịch); 3; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Thư đạo đức gửi Lucilius · Thư 3.3; tên/tác phẩm gốc: Seneca / Moral Letters to Lucilius; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep1.shtml"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "stoicism",
+          "trust"
+        ]
+      },
+      "rights": {
+        "status": "licensed",
+        "note": "Source passage verified 2026-09-24 in Wikisource Moral Letters to Lucilius, Letter 3, Richard M. Gummere translation; Wikisource text is available under CC BY-SA. Vietnamese text is Selflo working translation; source and translator attribution retained."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Tình bạn cần chỗ cho sự tin cậy, thay vì chỉ có nghi ngờ.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 3.3"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Thư đạo đức gửi Lucilius"
+        ],
+        "tie_break_order": 5012
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.seneca.letter_07.mutual_learning",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Ở gần người giúp mình tốt lên, và sẵn lòng chia sẻ điều mình biết với người khác: việc học có thể đi cả hai chiều.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "seneca",
+        "author_name": "Seneca",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml",
+        "source_language": "en",
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 7.8",
+        "source_detail": "Richard M. Gummere (dịch); 7; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Thư đạo đức gửi Lucilius · Thư 7.8; tên/tác phẩm gốc: Seneca / Moral Letters to Lucilius; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep1.shtml"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "stoicism",
+          "mutual_growth"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Ở gần người giúp mình tốt lên, và sẵn lòng chia sẻ điều mình biết với người khác: việc học có thể đi cả hai chiều.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 7.8"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Thư đạo đức gửi Lucilius"
+        ],
+        "tie_break_order": 5013
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.seneca.letter_09.friends",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Có thể tự đứng vững không có nghĩa là mình không cần tình bạn.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "seneca",
+        "author_name": "Seneca",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml",
+        "source_language": "en",
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 9.8–12",
+        "source_detail": "Richard M. Gummere (dịch); 9; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Thư đạo đức gửi Lucilius · Thư 9.8–12; tên/tác phẩm gốc: Seneca / Moral Letters to Lucilius; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep1.shtml"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "stoicism",
+          "friendship"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Có thể tự đứng vững không có nghĩa là mình không cần tình bạn.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 9.8–12"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Thư đạo đức gửi Lucilius"
+        ],
+        "tie_break_order": 5014
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.laozi.chapter_08.water",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Đức cao nhất giống như nước: làm lợi cho muôn vật và ở nơi thấp mà người đời không ưa, không tranh giành.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "laozi",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://www.gutenberg.org/ebooks/216",
+        "source_language": "en",
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 8",
+        "source_detail": "James Legge (dịch); 8; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B001: Đạo Đức Kinh · chương 8; tên/tác phẩm gốc: Laozi / The Tao Teh King, or the Tao and its Characteristics; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.taoism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "taoism",
+          "water"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Đức cao nhất giống như nước: làm lợi cho muôn vật và ở nơi thấp mà người đời không ưa, không tranh giành.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 8"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 5020
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.dhammapada.verse_005.hatred",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hận thù không chấm dứt bằng hận thù; nó lắng xuống nhờ lòng thương — đó là quy luật xưa.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "dhammapada_tradition",
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 5",
+        "source_detail": "F. Max Müller (dịch); 5; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B002: Kinh Pháp Cú · kệ 5; tên/tác phẩm gốc: Dhammapada / Dhammapada, a Collection of Verses; đối chiếu tại https://www.gutenberg.org/cache/epub/2017/pg2017-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.buddhist_practice"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "buddhist_text",
+          "non_hatred"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
+      },
+      "writing": {
+        "semantic_intent": "Hận thù không chấm dứt bằng hận thù; nó lắng xuống nhờ lòng thương — đó là quy luật xưa.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 5"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Kinh Pháp Cú"
+        ],
+        "tie_break_order": 5030
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "selflo.knowledge.why_ai_feels_easier_to_ask",
+      "revision": 2,
+      "kind": "selflo_original",
+      "title_vi": "Khi một câu hỏi để lộ điều ta chưa biết",
+      "text_vi": "Có lúc mình ngại để người khác biết rằng mình không biết, hơn cả việc chưa có câu trả lời.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "tags": [
+        "intent:understand_self",
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "topic:learning_habits",
+        "origin:selflo"
+      ],
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Câu mở vào bài Knowledge đầu tiên; dùng Story Reader như lớp tương thích tạm thời. | Q10-B003: Canonical Selflo · selflo.knowledge.why_ai_feels_easier_to_ask; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+          "anxiety",
+          "self_doubt"
+        ],
+        "keywords": [
+          "đặt câu hỏi",
+          "sợ bị đánh giá",
+          "an toàn tâm lý",
+          "AI",
+          "knowledge insight"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Nội dung gốc Selflo do owner chốt; Authoring Preview trước khi quyết định Release."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Có lúc mình ngại để người khác biết rằng mình không biết, hơn cả việc chưa có câu trả lời.",
+        "observation_key": "asking_reveals_not_knowing",
+        "structure_pattern": "knowledge_preview"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 70,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": "story.why_ai_feels_easier_to_ask",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Selflo"
+        ],
+        "tie_break_order": 2070
+      },
+      "knowledge_basis": null
+    },
+    {
+      "id": "attributed.dhammapada.verse_049.bee",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Như ong lấy mật rồi rời đi mà không làm hại bông hoa, màu sắc hay hương thơm của nó, người sáng suốt cũng sống giữa cộng đồng như vậy.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "dhammapada_tradition",
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 49",
+        "source_detail": "F. Max Müller (dịch); 49; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B002: Kinh Pháp Cú · kệ 49; tên/tác phẩm gốc: Dhammapada / Dhammapada, a Collection of Verses; đối chiếu tại https://www.gutenberg.org/cache/epub/2017/pg2017-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.buddhist_practice"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "buddhist_text",
+          "gentle_presence"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
+      },
+      "writing": {
+        "semantic_intent": "Như ong lấy mật rồi rời đi mà không làm hại bông hoa, màu sắc hay hương thơm của nó, người sáng suốt cũng sống giữa cộng đồng như vậy.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 49"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Kinh Pháp Cú"
+        ],
+        "tie_break_order": 5034
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.confucius.book_i_ch03.fine_words",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Lời lẽ khéo léo và vẻ ngoài lấy lòng hiếm khi đi cùng đức hạnh thật.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "confucius",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
+        "source_url": "https://www.gutenberg.org/ebooks/3330",
+        "source_language": "en",
+        "source_label": "Phỏng theo Luận Ngữ · Học Nhi",
+        "source_detail": "James Legge (dịch); I.3; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B001: Luận Ngữ · Học Nhi · 巧言令色; tên/tác phẩm gốc: Confucius / The Analects of Confucius (from the Chinese Classics); đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.confucianism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "confucianism",
+          "sincerity"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Lời lẽ khéo léo và vẻ ngoài lấy lòng hiếm khi đi cùng đức hạnh thật.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Luận Ngữ · Học Nhi"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Luận Ngữ"
+        ],
+        "tie_break_order": 5041
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.confucius.book_xv_ch23.reciprocity",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Điều mình không muốn người khác làm với mình, đừng làm với người khác.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "confucius",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
+        "source_url": "https://www.gutenberg.org/ebooks/3330",
+        "source_language": "en",
+        "source_label": "Phỏng theo Luận Ngữ · Vệ Linh Công",
+        "source_detail": "James Legge (dịch); XV.23; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B001: Luận Ngữ · Vệ Linh Công · 己所不欲; tên/tác phẩm gốc: Confucius / The Analects of Confucius (from the Chinese Classics); đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.confucianism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "confucianism",
+          "reciprocity"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Điều mình không muốn người khác làm với mình, đừng làm với người khác.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Luận Ngữ · Vệ Linh Công"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Luận Ngữ"
+        ],
+        "tie_break_order": 5049
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.laozi.ch02.005",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi mọi người nhận ra cái đẹp là đẹp, ý niệm về cái không đẹp cũng xuất hiện; khi gọi điều này là tốt, điều không tốt cũng được phân biệt.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "source_language": null,
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 2",
+        "source_detail": "Research ID research.laozi.ch02.005; corpus row 6; content_nature=translated_quote; verification=A - Primary source. | Q10-B001: Đạo Đức Kinh · chương 2; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "comparison_external_values",
+          "comparison"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Khi mọi người nhận ra cái đẹp là đẹp, ý niệm về cái không đẹp cũng xuất hiện; khi gọi điều này là tốt, điều không tốt cũng được phân biệt.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 2"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.laozi.ch17.053",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Khi sự đáng tin không đủ, sự không tin cũng xuất hiện.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "source_language": null,
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 17",
+        "source_detail": "Research ID research.laozi.ch17.053; corpus row 54; content_nature=translated_quote; verification=A - Primary source. | Q10-B001: Đạo Đức Kinh · chương 17; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationships_boundaries_belonging",
+          "trust"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Khi sự đáng tin không đủ, sự không tin cũng xuất hiện.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 17"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.laozi.day3.ch79.123",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Giữ phần cam kết của mình, thay vì chỉ chăm chăm đòi người khác làm đủ phần họ.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "source_language": null,
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 79",
+        "source_detail": "Research ID research.laozi.day3.ch79.123; corpus row 305; content_nature=translated_quote; verification=A - Primary source. | Q10-B002: Đạo Đức Kinh · chương 79; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
+      },
+      "writing": {
+        "semantic_intent": "Giữ phần cam kết của mình, thay vì chỉ chăm chăm đòi người khác làm đủ phần họ.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 79"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.seneca.day9.ep003",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Trước khi kết bạn, hãy cân nhắc; đã nhận nhau là bạn, cần có chỗ cho sự tin cậy.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Thư đạo đức gửi Lucilius"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Seneca",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep1.shtml",
+        "source_language": null,
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · thư 3",
+        "source_detail": "Research ID research.seneca.day9.ep003; corpus row 600; content_nature=translated_quote; verification=A - Primary-source text located. | Q10-B004: Thư đạo đức gửi Lucilius · thư 3; tên/tác phẩm gốc: Lucius Annaeus Seneca / Epistulae Morales; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep1.shtml"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Trước khi kết bạn, hãy cân nhắc; đã nhận nhau là bạn, cần có chỗ cho sự tin cậy.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · thư 3"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.seneca.day9.ep047",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Dù bị gọi là nô lệ, họ trước hết vẫn là con người.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Thư đạo đức gửi Lucilius"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Seneca",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep5.shtml",
+        "source_language": null,
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · thư 47",
+        "source_detail": "Research ID research.seneca.day9.ep047; corpus row 617; content_nature=translated_quote; verification=A - Primary-source text located. | Q10-B004: Thư đạo đức gửi Lucilius · thư 47; tên/tác phẩm gốc: Lucius Annaeus Seneca / Epistulae Morales; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep5.shtml"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Dù bị gọi là nô lệ, họ trước hết vẫn là con người.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · thư 47"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.seneca.day9.ep047_2",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy đối xử với người có ít quyền hơn như cách mình mong người có nhiều quyền hơn đối xử với mình.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Thư đạo đức gửi Lucilius"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Seneca",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep5.shtml",
+        "source_language": null,
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · thư 47",
+        "source_detail": "Research ID research.seneca.day9.ep047_2; corpus row 618; content_nature=translated_quote; verification=A - Primary-source text located. | Q10-B004: Thư đạo đức gửi Lucilius · thư 47; tên/tác phẩm gốc: Lucius Annaeus Seneca / Epistulae Morales; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep5.shtml"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Hãy đối xử với người có ít quyền hơn như cách mình mong người có nhiều quyền hơn đối xử với mình.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · thư 47"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.dhammapada.day11.v197",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Giữa những người mang lòng thù hận, vẫn có thể sống mà không nuôi lòng thù hận.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Kinh Pháp Cú"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 197",
+        "source_detail": "Kệ 197, bản tiếng Anh F. Max Müller (1823–1900), Project Gutenberg #2017. Selflo diễn ý trực tiếp từ bản này ngày 2026-10-21; không phải bản dịch nguyên văn hoặc bản Việt truyền thống. Bản nguồn và quyết định từng item: content-workspace/programs/quote-library-p0/reports/q9-dhammapada-review.json. | Q10-B003: Kinh Pháp Cú · kệ 197; tên/tác phẩm gốc: Kinh Pháp Cú / Dhammapada — kệ 197; F. Max Müller, The Sacred Books of the East, X, Part I; đối chiếu tại https://www.gutenberg.org/cache/epub/2017/pg2017-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationships_boundaries_belonging"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm cổ; bản dịch tiếng Anh F. Max Müller (mất 1900), Project Gutenberg #2017 ghi Public domain in the USA. Bản Việt diễn ý mới do Selflo biên soạn từ đúng kệ được lưu trong q9-dhammapada-review.json; không dùng bản dịch Việt hiện đại hay chú giải trên website. Giữ attribution tác phẩm và translator; xem content-workspace/programs/quote-library-p0/Q9_CHECKPOINT.vi.md về phạm vi quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Giữa những người mang lòng thù hận, vẫn có thể sống mà không nuôi lòng thù hận.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 197"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.day21.homesick",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Ngó lên ngó xuống thì vui, Ngó về quê mẹ ngùi ngùi nhớ thương!",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "relationships",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Ca dao Việt Nam"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Khuyết danh",
+        "work": "Ca dao Việt Nam",
+        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_phong_dao_v%C3%A0_%C4%91%E1%BB%8Ba_v%E1%BB%8B_c%E1%BB%A7a_n%C3%B3_trong_v%C4%83n_h%E1%BB%8Dc",
+        "source_language": null,
+        "source_label": "Ca dao Việt Nam",
+        "source_detail": "Research ID research.day21.homesick; corpus row 972; content_nature=passage; verification=B - collection witness verified. | Q10-B004: Ca dao nhớ mẹ; Phan Khôi dẫn trong Tục ngữ, phong dao và địa vị của nó trong văn học; tên/tác phẩm gốc: Vietnamese oral tradition / anonymous / Tục ngữ, phong dao và địa vị của nó trong văn học; đối chiếu tại https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_phong_dao_v%C3%A0_%C4%91%E1%BB%8Ba_v%E1%BB%8B_c%E1%BB%A7a_n%C3%B3_trong_v%C4%83n_h%E1%BB%8Dc"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "connection"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner confirmed Release 2026-09-25. Nguyên văn dân gian Việt Nam hoặc tác phẩm cổ của Nguyễn Bỉnh Khiêm/Nguyễn Du; provenance và vị trí văn bản được lưu trong từng quote."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Ngó lên ngó xuống thì vui, Ngó về quê mẹ ngùi ngùi nhớ thương!",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Ca dao Việt Nam"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:folklore"
+      ]
+    },
+    {
+      "id": "attributed.ralph_waldo_emerson.emerson_voice_tenderness_truth_courage",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": "Giọng người đang sống",
+      "text_vi": "Một giọng nói chân thành, dịu dàng hay can đảm cũng có thể là thứ âm nhạc đẹp nhất.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "ralph_waldo_emerson",
+        "author_name": "Ralph Waldo Emerson",
+        "work": "Tiểu luận, tập một",
+        "source_url": "https://www.gutenberg.org/cache/epub/2944/pg2944-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Ralph Waldo Emerson · Tiểu luận, tập một · Nghệ thuật",
+        "source_detail": "Art. Original: The sweetest music is not in the oratorio, but in the human voice when it speaks from its instant life tones of tenderness, truth, or courage. | Q10-B004: Tiểu luận, tập một · Nghệ thuật; tên/tác phẩm gốc: Ralph Waldo Emerson / Essays — First Series; đối chiếu tại https://www.gutenberg.org/cache/epub/2944/pg2944-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "connection",
+          "truth",
+          "courage"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [
+
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Một giọng nói chân thành, dịu dàng hay can đảm cũng có thể là thứ âm nhạc đẹp nhất.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Ralph Waldo Emerson · Tiểu luận, tập một · Nghệ thuật"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Tiểu luận, tập một"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "id": "attributed.ralph_waldo_emerson.emerson_each_new_mind",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": "Đến gần một tâm trí mới",
+      "text_vi": "Gặp một cách nghĩ mới, đôi khi ta cần tạm đặt điều đã tin sang một bên để thật sự hiểu nó.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "ralph_waldo_emerson",
+        "author_name": "Ralph Waldo Emerson",
+        "work": "Tiểu luận, tập một",
+        "source_url": "https://www.gutenberg.org/cache/epub/2944/pg2944-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Ralph Waldo Emerson · Tiểu luận, tập một · Trí tuệ",
+        "source_detail": "Intellect. Original: Each new mind we approach seems to require an abdication of all our past and present possessions. | Q10-B004: Tiểu luận, tập một · Trí tuệ; tên/tác phẩm gốc: Ralph Waldo Emerson / Essays — First Series; đối chiếu tại https://www.gutenberg.org/cache/epub/2944/pg2944-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "relationships",
+          "openness",
+          "listening"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [
+
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
+      },
+      "writing": {
+        "semantic_intent": "Gặp một cách nghĩ mới, đôi khi ta cần tạm đặt điều đã tin sang một bên để thật sự hiểu nó.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Ralph Waldo Emerson · Tiểu luận, tập một · Trí tuệ"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Tiểu luận, tập một"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "id": "attributed.william_james.james_spectators_judgment",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": "Phán xét từ bên ngoài",
+      "text_vi": "Nhìn từ bên ngoài, ta dễ bỏ lỡ điều có ý nghĩa với người đang sống trong cuộc.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "william_james",
+        "author_name": "William James",
+        "work": "Bài nói với giáo viên về tâm lý học và với sinh viên về những lý tưởng sống",
+        "source_url": "https://www.gutenberg.org/cache/epub/16287/pg16287-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo William James · Về sự mù lòa ở con người",
+        "source_detail": "The Gospel of Relaxation. Original: The spectator's judgment is sure to miss the root of the matter, and to possess no truth. | Q10-B003: Về sự mù lòa ở con người; tên/tác phẩm gốc: William James / Talks to Teachers on Psychology; đối chiếu tại https://www.gutenberg.org/cache/epub/16287/pg16287-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "perspective",
+          "judgment",
+          "empathy"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [
+
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Nhìn từ bên ngoài, ta dễ bỏ lỡ điều có ý nghĩa với người đang sống trong cuộc.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo William James · Về sự mù lòa ở con người"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Bài nói với giáo viên về tâm lý học và với sinh viên về những lý tưởng sống"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:research"
+      ]
+    },
+    {
+      "id": "attributed.francis_bacon.bacon_friend_against_self_flattery",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": "Người bạn dám nói thật",
+      "text_vi": "Không ai dễ tâng bốc mình bằng chính mình; một người bạn có thể nói thật là điều quý để nhận ra sự tự tâng bốc ấy.",
+      "subtitle_vi": null,
+      "primary_theme": "relationships",
+      "authorship": {
+        "author_id": "francis_bacon",
+        "author_name": "Francis Bacon",
+        "work": "Tiểu luận",
+        "source_url": "https://www.gutenberg.org/cache/epub/575/pg575-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Francis Bacon · Về tình bạn",
+        "source_detail": "Of Friendship. Original: For there is no such flatterer as is a man's self; and there is no such remedy against flattery of a man's self, as the liberty of a friend. | Q10-B003: Về tình bạn; tên/tác phẩm gốc: Francis Bacon / The Essays of Francis Bacon; đối chiếu tại https://www.gutenberg.org/cache/epub/575/pg575-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "friendship",
+          "feedback",
+          "self_knowledge"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [
+
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Không ai dễ tâng bốc mình bằng chính mình; một người bạn có thể nói thật là điều quý để nhận ra sự tự tâng bốc ấy.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Francis Bacon · Về tình bạn"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Quan hệ",
+          "Tiểu luận"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:clarify",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
+    }
+  ]
+}

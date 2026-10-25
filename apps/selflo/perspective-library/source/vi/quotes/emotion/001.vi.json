@@ -468,7 +468,7 @@
     },
     {
       "id": "water_heats_before_the_kettle_sings",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Nước không bắt đầu nóng\nvào lúc chiếc ấm cất tiếng reo.",
       "primary_theme": "emotion",
@@ -479,7 +479,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · water_heats_before_the_kettle_sings; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -502,11 +502,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:07:55Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Tín hiệu được nhận ra thường đến sau khi một trạng thái đã bắt đầu hình thành.",
+        "semantic_intent": "Nước không bắt đầu nóng\nvào lúc chiếc ấm cất tiếng reo.",
         "observation_key": "kettle_heats_before_whistle",
         "structure_pattern": "process_precedes_visible_signal"
       },
@@ -533,8 +533,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "kettle"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": 1016
       },
@@ -630,9 +630,9 @@
     },
     {
       "id": "sunlight_finds_the_scratch",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Có những vết xước trên kính\nchỉ hiện ra khi nắng đổi hướng.",
+      "text_vi": "Vết xước trên kính có thể dễ thấy hơn khi nắng đổi hướng.",
       "primary_theme": "emotion",
       "authorship": {
         "author_id": "selflo",
@@ -641,7 +641,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · sunlight_finds_the_scratch; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -664,11 +664,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:07:55Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Một thay đổi trong góc nhìn có thể làm điều đã có trở nên dễ nhận biết.",
+        "semantic_intent": "Vết xước trên kính có thể dễ thấy hơn khi nắng đổi hướng.",
         "observation_key": "scratch_seen_in_shifted_sunlight",
         "structure_pattern": "angle_change_reveals_existing_mark"
       },
@@ -695,8 +695,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "glass"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": 1018
       },
@@ -711,7 +711,7 @@
     },
     {
       "id": "towel_reveals_what_it_carried",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Đến lúc chiếc khăn được vắt ra,\nngười ta mới biết nó đã giữ nhiều nước đến đâu.",
       "primary_theme": "emotion",
@@ -722,7 +722,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · towel_reveals_what_it_carried; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -745,11 +745,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Điều được mang theo có thể chỉ rõ khi có một khoảnh khắc để nhận diện.",
+        "semantic_intent": "Đến lúc chiếc khăn được vắt ra,\nngười ta mới biết nó đã giữ nhiều nước đến đâu.",
         "observation_key": "water_wrung_from_towel",
         "structure_pattern": "release_reveals_accumulated_load"
       },
@@ -776,8 +776,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "towel"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": 1019
       },

@@ -494,7 +494,7 @@
     },
     {
       "id": "research.day23.nbk_nttt_04",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Giàu thì tìm đến, khó tìm lui.",
@@ -534,9 +534,9 @@
         "note": "Owner confirmed Release 2026-09-25. Nguyên văn dân gian Việt Nam hoặc tác phẩm cổ của Nguyễn Bỉnh Khiêm/Nguyễn Du; provenance và vị trí văn bản được lưu trong từng quote."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:45:29Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Giàu thì tìm đến, khó tìm lui.",
@@ -560,7 +560,7 @@
     },
     {
       "id": "research.day24.kieu_004",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Bên tình bên hiếu, bên nào nặng hơn?",
@@ -572,9 +572,8 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "Đời sống & hiểu mình",
-          "comparison_external_values",
-          "choice"
+          "Ý nghĩa và giá trị",
+          "Truyện Kiều"
         ],
         "tie_break_order": 0
       },
@@ -584,8 +583,8 @@
         "work": "Truyện Kiều",
         "source_url": "https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u",
         "source_language": null,
-        "source_label": "Nguyễn Du",
-        "source_detail": "Research ID research.day24.kieu_004; corpus row 1032; content_nature=translated_quote; verification=A/B - passage verified in Wikisource witness; edition variants exist."
+        "source_label": "Nguyễn Du · Truyện Kiều · câu 602",
+        "source_detail": "Research ID research.day24.kieu_004; corpus row 1032; content_nature=translated_quote; verification=A/B - passage verified in Wikisource witness; edition variants exist. | Q10-B004: Truyện Kiều · câu 602; tên/tác phẩm gốc: Nguyễn Du / Truyện Kiều; đối chiếu tại https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u"
       },
       "metadata": {
         "concepts": [],
@@ -603,8 +602,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:45:29Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
         "semantic_intent": "Bên tình bên hiếu, bên nào nặng hơn?",
@@ -616,7 +615,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Du"
+        "attribution_vi": "Nguyễn Du · Truyện Kiều · câu 602"
       },
       "knowledge_basis": null,
       "tags": [

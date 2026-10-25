@@ -86,9 +86,9 @@
     },
     {
       "id": "trains_leave_together_for_different_cities",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Hai chuyến tàu rời ga cùng một giờ\nvẫn có thể mang theo những thành phố khác nhau.",
+      "text_vi": "Hai chuyến tàu rời ga cùng giờ vẫn có thể đi đến hai thành phố khác nhau.",
       "primary_theme": "self_understanding",
       "authorship": {
         "author_id": "selflo",
@@ -97,7 +97,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · trains_leave_together_for_different_cities; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -120,11 +120,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Cùng điểm bắt đầu hoặc thời điểm không có nghĩa các hành trình phải có cùng đích đến.",
+        "semantic_intent": "Hai chuyến tàu rời ga cùng giờ vẫn có thể đi đến hai thành phố khác nhau.",
         "observation_key": "trains_to_different_cities",
         "structure_pattern": "same_departure_different_destination"
       },
@@ -151,8 +151,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "comparison",
-          "train"
+          "Hiểu bản thân",
+          "Selflo"
         ],
         "tie_break_order": 1043
       },
@@ -408,7 +408,7 @@
     },
     {
       "id": "young_tree_tied_with_soft_cloth",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Cây non nghiêng sau gió thường được buộc vào cọc mềm,\nkhông phải kéo thẳng bằng dây thép.",
       "primary_theme": "self_understanding",
@@ -441,9 +441,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Sự nâng đỡ dịu dàng vẫn có thể hướng đến sửa chữa mà không dùng thêm tổn thương.",
@@ -568,20 +568,20 @@
     },
     {
       "id": "attributed.ma.ii_06.short_life",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đời người rất ngắn; đời bạn cũng đang dần trôi qua — nhưng bạn lại không trân trọng chính mình, mà đi tìm hạnh phúc trong tâm trí của người khác.",
+      "text_vi": "Đời người ngắn ngủi; đừng chỉ tìm sự hài lòng từ cách người khác nhìn mình.",
       "subtitle_vi": null,
       "primary_theme": "self_understanding",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển II, đoạn 6; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển II, đoạn 6",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển II, đoạn 6; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển II, đoạn 6; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -600,11 +600,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Đời người rất ngắn; đời bạn cũng đang dần trôi qua — nhưng bạn lại không trân trọng chính mình, mà đi tìm hạnh phúc trong tâm trí của người khác.",
+        "semantic_intent": "Đời người ngắn ngủi; đừng chỉ tìm sự hài lòng từ cách người khác nhìn mình.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -613,7 +613,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển II, đoạn 6"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển II, đoạn 6"
       },
       "story_id": null,
       "selection": {
@@ -621,8 +621,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "self_understanding",
-          "social_approval"
+          "Hiểu bản thân",
+          "Suy tưởng"
         ],
         "tie_break_order": 1114
       },
@@ -637,7 +637,7 @@
     },
     {
       "id": "attributed.ma.ii_08.own_soul",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Hiếm ai bất hạnh vì không biết người khác đang nghĩ gì. Nhưng người không nhìn rõ những chuyển động trong chính tâm hồn mình thì khó tránh khỏi bất an.",
@@ -668,9 +668,9 @@
         "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:59:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Hiếm ai bất hạnh vì không biết người khác đang nghĩ gì. Nhưng người không nhìn rõ những chuyển động trong chính tâm hồn mình thì khó tránh khỏi bất an.",
@@ -768,7 +768,7 @@
     },
     {
       "id": "attributed.ma.vii_15.retain_lustre",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Dù người khác nói hay làm gì tùy họ, phần tôi vẫn là sống tử tế. Như viên ngọc lục bảo vẫn giữ ánh xanh của mình, bất kể xung quanh nói gì.",
@@ -777,11 +777,11 @@
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 15; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VII, đoạn 15",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 15; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VII, đoạn 15; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -800,8 +800,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:59:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
         "semantic_intent": "Dù người khác nói hay làm gì tùy họ, phần tôi vẫn là sống tử tế. Như viên ngọc lục bảo vẫn giữ ánh xanh của mình, bất kể xung quanh nói gì.",
@@ -813,7 +813,7 @@
         "priority": 50,
         "featured": false,
         "style": "cool_observe",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VII, đoạn 15"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VII, đoạn 15"
       },
       "story_id": null,
       "selection": {
@@ -821,8 +821,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "self_understanding",
-          "integrity"
+          "Hiểu bản thân",
+          "Suy tưởng"
         ],
         "tie_break_order": 1155
       },
@@ -837,20 +837,20 @@
     },
     {
       "id": "attributed.ma.vii_59.fountain_good",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy nhìn vào bên trong. Nguồn mạch của điều thiện nằm ở đó. Cứ đào sâu, nó sẽ không ngừng tuôn chảy.",
+      "text_vi": "Hãy tìm và nuôi dưỡng điều thiện từ bên trong mình.",
       "subtitle_vi": null,
       "primary_theme": "self_understanding",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 59; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VII, đoạn 59",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VII, đoạn 59; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VII, đoạn 59; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -869,11 +869,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Hãy nhìn vào bên trong. Nguồn mạch của điều thiện nằm ở đó. Cứ đào sâu, nó sẽ không ngừng tuôn chảy.",
+        "semantic_intent": "Hãy tìm và nuôi dưỡng điều thiện từ bên trong mình.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -882,7 +882,7 @@
         "priority": 50,
         "featured": false,
         "style": "cool_observe",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VII, đoạn 59"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VII, đoạn 59"
       },
       "story_id": null,
       "selection": {
@@ -890,8 +890,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "self_understanding",
-          "inner_resources"
+          "Hiểu bản thân",
+          "Suy tưởng"
         ],
         "tie_break_order": 1158
       },

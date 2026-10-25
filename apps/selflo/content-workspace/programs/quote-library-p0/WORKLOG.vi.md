@@ -341,3 +341,10 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 - Public kiểm chứng lúc 2026-10-25T09:42:18.212076Z; bằng chứng `reports/q10-b003-public-verification.json`; projection manifest 51 xác nhận cả accepted các đợt trước.
 - 67 câu viết lại, sửa locator William James; 53 exclusion bền vững. Không sửa/phát hành story, không đổi contract/app.
 - Tiếp B004, 165 ID; còn đúng một đợt để chốt mốc rà Release trước Authoring.
+
+## 2026-10-25 — Q10-B004 kiểm định cục bộ
+
+**Q10-B004 — 2026-10-25:** Đã review 165 câu: 87 giữ, 78 không đạt; sửa 62 văn bản. Authoring 91 / Release 52: 1.851/376 quote, 63/17 story; 94 tests đạt. Đối soát Q10.1 đủ 662 dòng (376 giữ/286 loại), chờ public để đóng mốc. Chưa mở B005/story. Xem `Q10_B004_CHECKPOINT.vi.md`.
+
+- Từng ID có source context/before/after/rights retained/hash và lý do; 21 duplicate có winner accepted. 78 exclusion bền vững; giữ 10 owner-closed.
+- Thay đổi content-compatible, không đổi shared contract/app. Đúng 165 canonical quote thay đổi; story và quote ngoài batch không đổi. Đối soát Q10.1 đủ 662 ID và toàn bộ 376 quote active đã có review, ngôn ngữ/attribution khớp.

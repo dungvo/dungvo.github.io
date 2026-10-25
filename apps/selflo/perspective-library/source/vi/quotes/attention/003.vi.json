@@ -547,7 +547,7 @@
     },
     {
       "id": "waves_arrive_and_leave",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Sóng vào bờ rồi rút ra. Không sóng nào ở lại.",
@@ -560,7 +560,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review | Q10-B004: Canonical Selflo · waves_arrive_and_leave; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -581,11 +581,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh restless.",
+        "semantic_intent": "Sóng vào bờ rồi rút ra. Không sóng nào ở lại.",
         "observation_key": "waves_arrive_and_leave",
         "structure_pattern": "everyday_observation"
       },
@@ -602,8 +602,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "restless"
+          "Chú ý và hiện tại",
+          "Selflo"
         ],
         "tie_break_order": 4012
       },
@@ -618,7 +618,7 @@
     },
     {
       "id": "tea_turns_bitter_when_oversteeped",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Trà để quá lâu thì đắng. Không phải trà dở — chỉ là đã ủ quá lâu.",
@@ -648,9 +648,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh restless.",
@@ -686,10 +686,10 @@
     },
     {
       "id": "ten_notifications_are_not_ten_priorities",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Mười thông báo cùng sáng không làm mười việc cùng quan trọng.",
+      "text_vi": "Nhiều tin báo cùng xuất hiện không có nghĩa mọi việc đều quan trọng như nhau.",
       "subtitle_vi": null,
       "primary_theme": "attention",
       "authorship": {
@@ -699,7 +699,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Bản nháp observation Selflo cho lane technology_life; chờ owner review"
+        "source_detail": "Bản nháp observation Selflo cho lane technology_life; chờ owner review | Q10-B004: Canonical Selflo · ten_notifications_are_not_ten_priorities; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -717,11 +717,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh technology_life.",
+        "semantic_intent": "Nhiều tin báo cùng xuất hiện không có nghĩa mọi việc đều quan trọng như nhau.",
         "observation_key": "ten_notifications_are_not_ten_priorities",
         "structure_pattern": "everyday_observation"
       },
@@ -738,8 +738,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "technology_life"
+          "Chú ý và hiện tại",
+          "Selflo"
         ],
         "tie_break_order": 4038
       },

@@ -207,7 +207,7 @@
     },
     {
       "id": "attributed.epictetus.ench_15.banquet",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Trong đời, hãy cư xử như ở một bữa tiệc: điều gì được đưa tới trước mặt, hãy đón nhận phần của mình một cách đúng mực.",
@@ -216,11 +216,11 @@
       "authorship": {
         "author_id": "epictetus",
         "author_name": "Epictetus",
-        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
-        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "work": "Sổ tay",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661-images.html",
         "source_language": "en",
-        "source_label": "Epictetus · Encheiridion",
-        "source_detail": "George Long (dịch); XV; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Epictetus · Sổ tay · chương 15",
+        "source_detail": "George Long (dịch); XV; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Sổ tay · chương 15; tên/tác phẩm gốc: Epictetus / A Selection from the Discourses of Epictetus with the Encheiridion; đối chiếu tại https://www.gutenberg.org/cache/epub/10661/pg10661-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -240,8 +240,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
         "semantic_intent": "Trong đời, hãy cư xử như ở một bữa tiệc: điều gì được đưa tới trước mặt, hãy đón nhận phần của mình một cách đúng mực.",
@@ -253,7 +253,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Epictetus · Encheiridion · XV"
+        "attribution_vi": "Phỏng theo Epictetus · Sổ tay · chương 15"
       },
       "story_id": null,
       "selection": {
@@ -261,9 +261,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning_values",
-          "stoicism",
-          "enough"
+          "Ý nghĩa và giá trị",
+          "Sổ tay"
         ],
         "tie_break_order": 5007
       },
@@ -277,7 +276,7 @@
     },
     {
       "id": "attributed.epictetus.ench_17.role",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Phần của bạn là diễn tốt vai được trao; chọn vai lại thuộc về một nơi khác.",
@@ -309,9 +308,9 @@
         "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T22:58:03Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Phần của bạn là diễn tốt vai được trao; chọn vai lại thuộc về một nơi khác.",
@@ -347,20 +346,20 @@
     },
     {
       "id": "attributed.seneca.letter_20.deeds",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy để hành động chứng minh lời nói.",
+      "text_vi": "Để việc mình làm chứng thực điều mình nói.",
       "subtitle_vi": null,
       "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "seneca",
         "author_name": "Seneca",
-        "work": "Moral Letters to Lucilius",
-        "source_url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_20",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep2.shtml",
         "source_language": "en",
-        "source_label": "Seneca · Thư gửi Lucilius",
-        "source_detail": "Richard M. Gummere (dịch); 20; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 20.1–2",
+        "source_detail": "Richard M. Gummere (dịch); 20; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Thư đạo đức gửi Lucilius · Thư 20.1–2; tên/tác phẩm gốc: Seneca / Moral Letters to Lucilius; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep2.shtml"
       },
       "metadata": {
         "concepts": [],
@@ -380,11 +379,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Hãy để hành động chứng minh lời nói.",
+        "semantic_intent": "Để việc mình làm chứng thực điều mình nói.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -393,7 +392,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Seneca · Thư gửi Lucilius · 20"
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 20.1–2"
       },
       "story_id": null,
       "selection": {
@@ -401,9 +400,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning_values",
-          "stoicism",
-          "integrity"
+          "Ý nghĩa và giá trị",
+          "Thư đạo đức gửi Lucilius"
         ],
         "tie_break_order": 5016
       },

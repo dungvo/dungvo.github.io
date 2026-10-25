@@ -149,10 +149,10 @@
     },
     {
       "id": "window_fogs_before_clearing",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Ô cửa mờ",
-      "text_vi": "Kính có thể mờ đi khi hai phía khác nhiệt độ. Chưa nhìn rõ ngay không có nghĩa là bên ngoài không còn đường.",
+      "text_vi": "Tấm kính đang mờ không có nghĩa bên ngoài không còn đường.",
       "subtitle_vi": null,
       "primary_theme": "adversity_resilience",
       "authorship": {
@@ -162,7 +162,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quan sát nguyên bản"
+        "source_detail": "Quan sát nguyên bản | Q10-B004: Canonical Selflo · window_fogs_before_clearing; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -185,11 +185,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Chưa nhìn thấy đường ngay không có nghĩa là không còn đường.",
+        "semantic_intent": "Tấm kính đang mờ không có nghĩa bên ngoài không còn đường.",
         "observation_key": "fogged_window",
         "structure_pattern": null
       },
@@ -206,8 +206,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "uncertainty",
-          "clarity"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": -62
       },
@@ -593,7 +593,7 @@
     },
     {
       "id": "stuck_door_opens_the_other_way",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Cánh cửa kẹt chỉ bắt đầu mở\nkhi người ta thôi kéo nó về phía vốn không mở.",
       "primary_theme": "adversity_resilience",
@@ -626,9 +626,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Nhìn đúng cách một giới hạn đang vận hành có thể mở ra phản hồi phù hợp hơn.",
@@ -833,7 +833,7 @@
     },
     {
       "id": "tear_lies_flat_under_the_needle",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chiếc áo rách chỉ vừa với đường kim\nkhi vết rách được trải phẳng dưới ánh đèn.",
       "primary_theme": "adversity_resilience",
@@ -866,9 +866,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Việc sửa chữa bắt đầu dễ hơn khi hình dạng thật của tổn hại được nhìn thấy.",

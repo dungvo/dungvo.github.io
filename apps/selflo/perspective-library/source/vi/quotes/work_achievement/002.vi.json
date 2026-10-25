@@ -130,7 +130,7 @@
     },
     {
       "id": "attributed.ma.vi_19.human_power",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Nếu một việc có vẻ rất khó, đừng vội kết luận rằng nó vượt quá khả năng con người. Nếu đó là điều con người có thể làm và thuộc phần việc đúng đắn của họ, hãy tin rằng bạn cũng có thể vươn tới.",
@@ -161,9 +161,9 @@
         "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T22:58:03Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Nếu một việc có vẻ rất khó, đừng vội kết luận rằng nó vượt quá khả năng con người. Nếu đó là điều con người có thể làm và thuộc phần việc đúng đắn của họ, hãy tin rằng bạn cũng có thể vươn tới.",
@@ -199,20 +199,20 @@
     },
     {
       "id": "attributed.ma.vi_26.duty_elements",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trong đời sống, hãy nhớ mỗi bổn phận được tạo nên từ nhiều phần nhỏ. Ta có thể bình tĩnh nhìn từng phần và bắt tay vào việc trước mắt, không cần nổi giận với người đang giận mình.",
+      "text_vi": "Một việc có thể gồm nhiều phần nhỏ. Bình tĩnh nhìn từng phần rồi làm việc trước mắt, thay vì giận theo người đang giận mình.",
       "subtitle_vi": null,
       "primary_theme": "work_achievement",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 26; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 26",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 26; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VI, đoạn 26; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -231,11 +231,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Trong đời sống, hãy nhớ mỗi bổn phận được tạo nên từ nhiều phần nhỏ. Ta có thể bình tĩnh nhìn từng phần và bắt tay vào việc trước mắt, không cần nổi giận với người đang giận mình.",
+        "semantic_intent": "Một việc có thể gồm nhiều phần nhỏ. Bình tĩnh nhìn từng phần rồi làm việc trước mắt, thay vì giận theo người đang giận mình.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -244,7 +244,7 @@
         "priority": 50,
         "featured": false,
         "style": "midnight_quote",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 26"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VI, đoạn 26"
       },
       "story_id": null,
       "selection": {
@@ -252,8 +252,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work_achievement",
-          "calm_action"
+          "Công việc và lựa chọn",
+          "Suy tưởng"
         ],
         "tie_break_order": 1145
       },
@@ -268,7 +268,7 @@
     },
     {
       "id": "attributed.ma.vi_50.good_effort",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Rốt cuộc mục tiêu của bạn là gì? Là thực hiện một nỗ lực tốt đẹp như thế này. Vậy thì bạn đã thành công, dù mục đích ban đầu chưa đạt được.",
@@ -299,9 +299,9 @@
         "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:59:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Rốt cuộc mục tiêu của bạn là gì? Là thực hiện một nỗ lực tốt đẹp như thế này. Vậy thì bạn đã thành công, dù mục đích ban đầu chưa đạt được.",
@@ -337,7 +337,7 @@
     },
     {
       "id": "attributed.ma.vi_51.wise_work",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Người háo danh đặt hạnh phúc vào hành động của người khác. Người chạy theo khoái cảm tìm nó trong cảm giác của mình. Người khôn ngoan tạo ra nó trong chính việc mình làm.",
@@ -368,9 +368,9 @@
         "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Người háo danh đặt hạnh phúc vào hành động của người khác. Người chạy theo khoái cảm tìm nó trong cảm giác của mình. Người khôn ngoan tạo ra nó trong chính việc mình làm.",
@@ -406,20 +406,20 @@
     },
     {
       "id": "attributed.ma.viii_32.single_acts",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy sắp xếp đời mình bằng từng hành động riêng lẻ; nếu mỗi hành động hoàn thành được phần của nó trong khả năng có thể, như vậy là đủ. Trong việc ấy, không ai ngăn được bạn.",
+      "text_vi": "Làm từng việc trước mắt trong khả năng của mình; mỗi việc làm được phần của nó cũng đã có giá trị.",
       "subtitle_vi": null,
       "primary_theme": "work_achievement",
       "authorship": {
         "author_id": "marcus_aurelius",
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Suy tưởng",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317-images.html",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 32; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VIII, đoạn 32",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 32; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Suy tưởng · quyển VIII, đoạn 32; tên/tác phẩm gốc: Marcus Aurelius / The Meditations of the Emperor Marcus Aurelius Antoninus; đối chiếu tại https://www.gutenberg.org/cache/epub/55317/pg55317-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -438,11 +438,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Hãy sắp xếp đời mình bằng từng hành động riêng lẻ; nếu mỗi hành động hoàn thành được phần của nó trong khả năng có thể, như vậy là đủ. Trong việc ấy, không ai ngăn được bạn.",
+        "semantic_intent": "Làm từng việc trước mắt trong khả năng của mình; mỗi việc làm được phần của nó cũng đã có giá trị.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -451,7 +451,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VIII, đoạn 32"
+        "attribution_vi": "Phỏng theo Marcus Aurelius · Suy tưởng · quyển VIII, đoạn 32"
       },
       "story_id": null,
       "selection": {
@@ -459,8 +459,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work_achievement",
-          "next_step"
+          "Công việc và lựa chọn",
+          "Suy tưởng"
         ],
         "tie_break_order": 1159
       },

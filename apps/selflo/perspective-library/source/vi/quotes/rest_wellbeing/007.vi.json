@@ -308,10 +308,10 @@
     },
     {
       "id": "research.day21.mountain_aging",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Non xanh bao tuổi mà già, vì chưng sương tuyết hóa ra bạc đầu.",
+      "text_vi": "Non xanh bao tuổi mà già,\nVì chưng sương tuyết hóa ra bạc đầu.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -320,19 +320,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "Đời sống & hiểu mình",
-          "recovery"
+          "Nghỉ ngơi",
+          "Phong dao Việt Nam"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Vietnamese oral tradition / anonymous",
-        "work": "Tục ngữ, phong dao và địa vị của nó trong văn học",
+        "author_name": "Khuyết danh",
+        "work": "Phong dao Việt Nam",
         "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_phong_dao_v%C3%A0_%C4%91%E1%BB%8Ba_v%E1%BB%8B_c%E1%BB%A7a_n%C3%B3_trong_v%C4%83n_h%E1%BB%8Dc",
         "source_language": null,
-        "source_label": "Vietnamese oral tradition / anonymous",
-        "source_detail": "Research ID research.day21.mountain_aging; corpus row 973; content_nature=passage; verification=B - collection witness verified."
+        "source_label": "Phong dao Việt Nam",
+        "source_detail": "Research ID research.day21.mountain_aging; corpus row 973; content_nature=passage; verification=B - collection witness verified. | Q10-B004: Phong dao non xanh; Phan Khôi dẫn trong Tục ngữ, phong dao và địa vị của nó trong văn học; tên/tác phẩm gốc: Vietnamese oral tradition / anonymous / Tục ngữ, phong dao và địa vị của nó trong văn học; đối chiếu tại https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_phong_dao_v%C3%A0_%C4%91%E1%BB%8Ba_v%E1%BB%8B_c%E1%BB%A7a_n%C3%B3_trong_v%C4%83n_h%E1%BB%8Dc"
       },
       "metadata": {
         "concepts": [],
@@ -349,11 +349,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:45:29Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Non xanh bao tuổi mà già, vì chưng sương tuyết hóa ra bạc đầu.",
+        "semantic_intent": "Non xanh bao tuổi mà già,\nVì chưng sương tuyết hóa ra bạc đầu.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -362,7 +362,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Ca dao, tục ngữ Việt Nam · khuyết danh"
+        "attribution_vi": "Phong dao Việt Nam"
       },
       "knowledge_basis": null,
       "tags": [
@@ -496,7 +496,7 @@
     },
     {
       "id": "research.day23.nbk_gioitham_02",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Đủ no hay vậy, xin thong thả, Sạo sục làm chi, luống nhọc nhằn!",
@@ -536,9 +536,9 @@
         "note": "Owner confirmed Release 2026-09-25. Nguyên văn dân gian Việt Nam hoặc tác phẩm cổ của Nguyễn Bỉnh Khiêm/Nguyễn Du; provenance và vị trí văn bản được lưu trong từng quote."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:45:29Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Đủ no hay vậy, xin thong thả, Sạo sục làm chi, luống nhọc nhằn!",
@@ -624,7 +624,7 @@
     },
     {
       "id": "research.day24.kieu_019",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Phận bèo bao quản nước sa, Lênh đênh đâu nữa cũng là lênh đênh.",
@@ -664,9 +664,9 @@
         "note": "Owner confirmed Release 2026-09-25. Nguyên văn dân gian Việt Nam hoặc tác phẩm cổ của Nguyễn Bỉnh Khiêm/Nguyễn Du; provenance và vị trí văn bản được lưu trong từng quote."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:45:29Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Phận bèo bao quản nước sa, Lênh đênh đâu nữa cũng là lênh đênh.",

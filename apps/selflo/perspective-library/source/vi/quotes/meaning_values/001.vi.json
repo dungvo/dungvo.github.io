@@ -789,7 +789,7 @@
     },
     {
       "id": "village_road_contains_a_childhood",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Con đường làng không dài trên bản đồ,\nnhưng có thể chứa gần như cả tuổi thơ của một người.",
       "primary_theme": "meaning_values",
@@ -800,7 +800,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · village_road_contains_a_childhood; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -823,11 +823,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Độ dài vật lý không đo được chiều sâu câu chuyện mà một nơi chốn mang theo.",
+        "semantic_intent": "Con đường làng không dài trên bản đồ,\nnhưng có thể chứa gần như cả tuổi thơ của một người.",
         "observation_key": "village_road_and_childhood",
         "structure_pattern": "small_place_contains_long_history"
       },
@@ -854,8 +854,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning",
-          "road"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1111
       },

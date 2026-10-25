@@ -249,7 +249,7 @@
     },
     {
       "id": "attributed.ma.iv_07.suppress_injury",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Buông ý nghĩ ấy, tiếng kêu “Tôi bị tổn thương” cũng biến mất. Buông tiếng kêu ấy, cảm giác về vết thương cũng đổi khác.",
@@ -280,9 +280,9 @@
         "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T22:58:03Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Buông ý nghĩ ấy, tiếng kêu “Tôi bị tổn thương” cũng biến mất. Buông tiếng kêu ấy, cảm giác về vết thương cũng đổi khác.",
@@ -319,7 +319,7 @@
     },
     {
       "id": "attributed.ma.viii_47.judgment_afflicts",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Khi buồn khổ vì một điều bên ngoài, không chỉ bản thân sự việc làm bạn đau, mà còn là phán đoán của bạn về nó. Và phán đoán ấy là phần bạn có thể xem xét lại.",
@@ -350,9 +350,9 @@
         "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Khi buồn khổ vì một điều bên ngoài, không chỉ bản thân sự việc làm bạn đau, mà còn là phán đoán của bạn về nó. Và phán đoán ấy là phần bạn có thể xem xét lại.",
@@ -458,7 +458,7 @@
     },
     {
       "id": "attributed.epictetus.ench_05.opinion",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Con người không chỉ bị xáo trộn bởi điều xảy ra, mà còn bởi ý kiến của họ về điều ấy.",
@@ -467,11 +467,11 @@
       "authorship": {
         "author_id": "epictetus",
         "author_name": "Epictetus",
-        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
-        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "work": "Sổ tay",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661-images.html",
         "source_language": "en",
-        "source_label": "Epictetus · Encheiridion",
-        "source_detail": "George Long (dịch); V; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Epictetus · Sổ tay · chương 5",
+        "source_detail": "George Long (dịch); V; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Sổ tay · chương 5; tên/tác phẩm gốc: Epictetus / A Selection from the Discourses of Epictetus with the Encheiridion; đối chiếu tại https://www.gutenberg.org/cache/epub/10661/pg10661-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -491,8 +491,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:15:32Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
         "semantic_intent": "Con người không chỉ bị xáo trộn bởi điều xảy ra, mà còn bởi ý kiến của họ về điều ấy.",
@@ -504,7 +504,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Epictetus · Encheiridion · V"
+        "attribution_vi": "Phỏng theo Epictetus · Sổ tay · chương 5"
       },
       "story_id": "story.empty_boat_on_the_river",
       "selection": {
@@ -512,9 +512,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "stoicism",
-          "judgment"
+          "Cảm xúc",
+          "Sổ tay"
         ],
         "tie_break_order": 5003
       },
@@ -530,20 +529,20 @@
     },
     {
       "id": "attributed.seneca.letter_13.imagination",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có nhiều điều làm ta sợ hơn là thật sự quật ngã ta; ta thường đau trong tưởng tượng nhiều hơn trong thực tế.",
+      "text_vi": "Ta có thể khổ vì điều mình hình dung, ngay cả khi nó chưa xảy ra.",
       "subtitle_vi": null,
       "primary_theme": "emotion",
       "authorship": {
         "author_id": "seneca",
         "author_name": "Seneca",
-        "work": "Moral Letters to Lucilius",
-        "source_url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_13",
+        "work": "Thư đạo đức gửi Lucilius",
+        "source_url": "https://www.thelatinlibrary.com/sen/seneca.ep2.shtml",
         "source_language": "en",
-        "source_label": "Seneca · Thư gửi Lucilius",
-        "source_detail": "Richard M. Gummere (dịch); 13; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 13.4–5",
+        "source_detail": "Richard M. Gummere (dịch); 13; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Thư đạo đức gửi Lucilius · Thư 13.4–5; tên/tác phẩm gốc: Seneca / Moral Letters to Lucilius; đối chiếu tại https://www.thelatinlibrary.com/sen/seneca.ep2.shtml"
       },
       "metadata": {
         "concepts": [],
@@ -563,11 +562,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:41:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Có nhiều điều làm ta sợ hơn là thật sự quật ngã ta; ta thường đau trong tưởng tượng nhiều hơn trong thực tế.",
+        "semantic_intent": "Ta có thể khổ vì điều mình hình dung, ngay cả khi nó chưa xảy ra.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -576,7 +575,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Seneca · Thư gửi Lucilius · 13"
+        "attribution_vi": "Phỏng theo Seneca · Thư đạo đức gửi Lucilius · Thư 13.4–5"
       },
       "story_id": null,
       "selection": {
@@ -584,9 +583,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "stoicism",
-          "future_fear"
+          "Cảm xúc",
+          "Thư đạo đức gửi Lucilius"
         ],
         "tie_break_order": 5015
       },

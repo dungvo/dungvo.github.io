@@ -716,7 +716,7 @@
     },
     {
       "id": "two_windows_receive_the_same_sun",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Hai ô cửa cùng đón nắng, nhưng mỗi căn phòng vẫn sáng theo một cách khác.",
       "primary_theme": "self_understanding",
@@ -727,7 +727,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B004: Canonical Selflo · two_windows_receive_the_same_sun; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -750,11 +750,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Cùng một điều kiện bên ngoài vẫn có thể đi vào những bối cảnh khác nhau theo cách khác nhau.",
+        "semantic_intent": "Hai ô cửa cùng đón nắng, nhưng mỗi căn phòng vẫn sáng theo một cách khác.",
         "observation_key": "sunlight_through_two_windows",
         "structure_pattern": "same_source_different_expression"
       },
@@ -781,8 +781,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "comparison",
-          "windows"
+          "Hiểu bản thân",
+          "Selflo"
         ],
         "tie_break_order": 1039
       },

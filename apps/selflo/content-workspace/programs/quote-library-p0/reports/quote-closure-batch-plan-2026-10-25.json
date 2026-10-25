@@ -583,8 +583,8 @@
       "phase": "Q10.1",
       "title_vi": "Rà Release",
       "row_count": 165,
-      "status": "planned",
-      "reviewed_count": 0,
+      "status": "verifying_public",
+      "reviewed_count": 165,
       "baseline_ids": [
         "string_needs_enough_tension",
         "stuck_door_opens_the_other_way",
@@ -758,7 +758,11 @@
         "vietnamese_texts": 13,
         "western_19c_literature": 12
       },
-      "source_group_count": 25
+      "source_group_count": 25,
+      "accepted_count": 87,
+      "not_accepted_count": 78,
+      "evidence_path": "reports/q10-b004-review.json",
+      "planned_release_revision": 52
     },
     {
       "id": "Q10-B005",

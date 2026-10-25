@@ -229,10 +229,10 @@
     },
     {
       "id": "water_settles_when_untouched",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Nước tự lắng",
-      "text_vi": "Một cốc nước đục sẽ trong dần khi được đặt yên. Có điều trong mình cũng cần ít khuấy động hơn, không cần thêm lời giải.",
+      "text_vi": "Nước lẫn cặn có thể lắng dần khi được đặt yên. Có lúc mình cũng cần bớt khuấy động để nhìn rõ hơn.",
       "subtitle_vi": null,
       "primary_theme": "rest_wellbeing",
       "authorship": {
@@ -242,7 +242,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quan sát nguyên bản"
+        "source_detail": "Quan sát nguyên bản | Q10-B004: Canonical Selflo · water_settles_when_untouched; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -266,11 +266,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Có trạng thái trở nên rõ hơn khi được để yên thay vì tiếp tục khuấy động.",
+        "semantic_intent": "Nước lẫn cặn có thể lắng dần khi được đặt yên. Có lúc mình cũng cần bớt khuấy động để nhìn rõ hơn.",
         "observation_key": "cloudy_water_settles",
         "structure_pattern": null
       },
@@ -287,8 +287,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "recovery",
-          "attention"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": -64
       },

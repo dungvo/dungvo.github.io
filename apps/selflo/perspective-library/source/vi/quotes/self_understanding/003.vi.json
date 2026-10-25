@@ -147,7 +147,7 @@
     },
     {
       "id": "two_trees_begin_with_different_seeds",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Hai cây cùng đất, khác nhau vì hạt giống khác nhau từ đầu.",
@@ -177,9 +177,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh compare_self_judge.",
@@ -354,20 +354,20 @@
     },
     {
       "id": "attributed.epictetus.ench_01.appearance",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy tập nói với mỗi ấn tượng khắc nghiệt: “Bạn chỉ là một ấn tượng, không nhất thiết là điều bạn đang tỏ ra.”",
+      "text_vi": "Khi cảm nhận đầu tiên khiến mình bất an, hãy thử tự nhắc: đây là một cảm nhận, chưa chắc đã là toàn bộ sự việc.",
       "subtitle_vi": null,
       "primary_theme": "self_understanding",
       "authorship": {
         "author_id": "epictetus",
         "author_name": "Epictetus",
-        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
-        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "work": "Sổ tay",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661-images.html",
         "source_language": "en",
-        "source_label": "Epictetus · Encheiridion",
-        "source_detail": "George Long (dịch); I; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Epictetus · Sổ tay · chương 1",
+        "source_detail": "George Long (dịch); I; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B004: Sổ tay · chương 1; tên/tác phẩm gốc: Epictetus / A Selection from the Discourses of Epictetus with the Encheiridion; đối chiếu tại https://www.gutenberg.org/cache/epub/10661/pg10661-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -387,11 +387,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Hãy tập nói với mỗi ấn tượng khắc nghiệt: “Bạn chỉ là một ấn tượng, không nhất thiết là điều bạn đang tỏ ra.”",
+        "semantic_intent": "Khi cảm nhận đầu tiên khiến mình bất an, hãy thử tự nhắc: đây là một cảm nhận, chưa chắc đã là toàn bộ sự việc.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -400,7 +400,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Epictetus · Encheiridion · I"
+        "attribution_vi": "Phỏng theo Epictetus · Sổ tay · chương 1"
       },
       "story_id": null,
       "selection": {
@@ -408,9 +408,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "self_understanding",
-          "stoicism",
-          "first_impression"
+          "Hiểu bản thân",
+          "Sổ tay"
         ],
         "tie_break_order": 5001
       },

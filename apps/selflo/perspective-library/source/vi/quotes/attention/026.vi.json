@@ -6,20 +6,20 @@
   "quotes": [
     {
       "id": "attributed.ralph_waldo_emerson.emerson_past_into_present_hour",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": "Hiện tại ngàn mắt",
-      "text_vi": "Có lẽ một nguyên tắc của sự sáng suốt là đừng chỉ dựa vào ký ức, mà hãy đưa quá khứ về trước hiện tại ngàn mắt để được soi xét, rồi sống trong một ngày mới.",
+      "text_vi": "Đừng chỉ dựa vào ký ức; hãy đem điều từng tin đối chiếu với những gì đang thấy hôm nay.",
       "subtitle_vi": null,
       "primary_theme": "attention",
       "authorship": {
         "author_id": "ralph_waldo_emerson",
         "author_name": "Ralph Waldo Emerson",
-        "work": "Essays — First Series",
-        "source_url": "https://www.gutenberg.org/ebooks/2944",
+        "work": "Tiểu luận, tập một",
+        "source_url": "https://www.gutenberg.org/cache/epub/2944/pg2944-images.html",
         "source_language": "en",
-        "source_label": "Ralph Waldo Emerson",
-        "source_detail": "Self-Reliance. Original: It seems to be a rule of wisdom never to rely on your memory alone, scarcely even in acts of pure memory, but to bring the past for judgment into the thousand-eyed present, and live ever in a new day."
+        "source_label": "Phỏng theo Ralph Waldo Emerson · Tiểu luận, tập một · Tự lực",
+        "source_detail": "Self-Reliance. Original: It seems to be a rule of wisdom never to rely on your memory alone, scarcely even in acts of pure memory, but to bring the past for judgment into the thousand-eyed present, and live ever in a new day. | Q10-B004: Tiểu luận, tập một · Tự lực; tên/tác phẩm gốc: Ralph Waldo Emerson / Essays — First Series; đối chiếu tại https://www.gutenberg.org/cache/epub/2944/pg2944-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -41,11 +41,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-26T00:10:44Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:58:36.104657Z"
       },
       "writing": {
-        "semantic_intent": "Quá khứ cần được soi xét từ hiện tại thay vì được xem như phán quyết cuối cùng.",
+        "semantic_intent": "Đừng chỉ dựa vào ký ức; hãy đem điều từng tin đối chiếu với những gì đang thấy hôm nay.",
         "observation_key": null,
         "structure_pattern": "translated_public_domain_quote"
       },
@@ -54,7 +54,7 @@
         "priority": 60,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Ralph Waldo Emerson"
+        "attribution_vi": "Phỏng theo Ralph Waldo Emerson · Tiểu luận, tập một · Tự lực"
       },
       "story_id": null,
       "selection": {
@@ -62,9 +62,8 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "attention",
-          "memory",
-          "present"
+          "Chú ý và hiện tại",
+          "Tiểu luận, tập một"
         ],
         "tie_break_order": -60
       },
@@ -79,7 +78,7 @@
     },
     {
       "id": "attributed.henry_david_thoreau.thoreau_stand_aloof_from_actions",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": "Lùi lại để nhìn",
       "text_vi": "Bằng một nỗ lực có ý thức, ta có thể lùi lại khỏi hành động và hệ quả của chúng, để mọi điều tốt xấu trôi qua như một dòng nước xiết.",
@@ -113,9 +112,9 @@
         "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-26T00:10:44Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Chú ý có ý thức có thể tạo khoảng cách với dòng sự kiện đang cuốn qua.",
