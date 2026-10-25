@@ -5,19 +5,37 @@
   "decisions": [
     {
       "quote_id": "a_good_meal_ends_with_enough",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bữa ăn ngon nhất không thể quy về no; lượng ăn và cảm nhận khác nhau, hình ảnh dễ khuyến khích ăn đến no dù không cần.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "a_good_meal_ends_with_enough",
+        "reviewed_text_sha256": "5f432a9d2cc73e045d53a7f4afaa8b8d398d063f94ce961fcc83681ea9d27fa6",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "a_large_task_only_needs_one_first_square",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Ý bắt đầu việc lớn bằng phần nhỏ đủ rõ, nhưng ô vuông thiếu cảnh nghề làm biển; sửa phần nhỏ đầu tiên, không đọc/sửa story.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "a_large_task_only_needs_one_first_square",
+        "reviewed_text_sha256": "01ac0b9b5faffa4f48a69ecd06053fdcb9630789151981e732bfbab9c6695629",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "accepting_change_without_losing_self",
@@ -29,27 +47,55 @@
     },
     {
       "quote_id": "accepting_the_flood_reveals_the_road_still_open",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Hình ảnh đường ngập và đường còn đi được đầy đủ; giữ giới hạn thực tế, không diễn giải thành buông xuôi.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "accepting_the_flood_reveals_the_road_still_open",
+        "reviewed_text_sha256": "14da1a63aaaa0957bac6c1f25bc83f770db3237edece89a2cfafa2e85a5d1d6c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "an_old_scent_can_open_an_old_room",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mùi gợi ký ức và quyền không chìm vào đó tự đủ nghĩa; giữ như ẩn dụ, không nêu cơ chế hay claim ký ức chính xác.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "an_old_scent_can_open_an_old_room",
+        "reviewed_text_sha256": "e61c967535358a7f30d3ca13d7841a9b02e4f0e63e36c31a9f385ebe054f0513",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "another_persons_measure_cannot_fit_your_life",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng ý thước đo người khác không hợp mình; giữ đôi giày là hình ảnh tự đủ nghĩa hơn, không pha thước đo với may cuộc đời.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "another_persons_measure_cannot_fit_your_life",
+        "reviewed_text_sha256": "d71ade4e9e51ae1092fa57d18880f761bf7a75dce2ef6f06f84780da324489ca",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "another_persons_shoes_hurt"
+      }
     },
     {
       "quote_id": "anxiety_loop_digest",
@@ -61,11 +107,20 @@
     },
     {
       "quote_id": "apron_waits_on_the_hook",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Vết bột trên tay cần cả buổi tối mới thôi nhắc làm bánh là nhân hóa quá gượng; không có quan sát hoặc ý riêng đủ rõ để giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "apron_waits_on_the_hook",
+        "reviewed_text_sha256": "16ea27c3c7f7fecf9a9e78f2806064d4e033cabbfceae673d52e620e2904da29",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "attributed.confucius.book_vii_ch08.eager",
@@ -837,43 +892,88 @@
     },
     {
       "quote_id": "burn_mark_maps_the_flame",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Vết cháy dưới nồi không chỉ do lửa quá gần; phép ví đặt quan hệ nhân quả sai và ép thất bại vào đồ vật.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "burn_mark_maps_the_flame",
+        "reviewed_text_sha256": "3cf06e5d0a49c6044a983056f3300f9c4c33e6a1d22a546b1b5f680ec61e8952",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "bus_ticket_keeps_the_day_of_return",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Vé xe gắn ngày trở về là hình ảnh cụ thể đủ nghĩa về giá trị tinh thần; không khẳng định sự kiện có thật.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "bus_ticket_keeps_the_day_of_return",
+        "reviewed_text_sha256": "6525777181d9de8ac44a58eac56821987e4616f694deccae595926290d1b79be",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "calling_mud_dry_changes_nothing",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đổi tên không đổi thực trạng qua bùn/đường khô là ẩn dụ rõ; giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "calling_mud_dry_changes_nothing",
+        "reviewed_text_sha256": "263e3e1d9d241c57a4fd8f4a1ec02b3340d7933a0118ac64c12eaf1dda8d55c9",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "candle_is_seen_when_it_goes_out",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nến tắt thì mọi người nhìn thấy khoảng tối nó từng giữ lại là hình ảnh nghịch/mờ; cố suy ý mất mát hơn quan sát, không giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "candle_is_seen_when_it_goes_out",
+        "reviewed_text_sha256": "00331897bb08bb7e4e7fb280774c370137a6a6ebff2703ff7284431bf437c4d0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "coffee_guides_the_hand_to_one_cup",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mùi cà phê kéo tay đến cốc trước lúc có đèn vừa thiếu chủ thể vừa gượng nhân hóa; ý thói quen đã có bản chiếc khay rõ hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "coffee_guides_the_hand_to_one_cup",
+        "reviewed_text_sha256": "b76dbe39b0712d320dd0dc10c78ce35b22f5a9d0e708ea95410b13e7b477f466",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "comparison_loop_digest",
@@ -885,11 +985,20 @@
     },
     {
       "quote_id": "comparison_steals_joy",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "So đường người khác có thể quên bước mình đang đi; sửa câu cho tự nhiên, không cấm nhìn người khác học hỏi.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "comparison_steals_joy",
+        "reviewed_text_sha256": "1f7be5f2c29d618baffc699c25fc7d759e8912a3eaf14a09dd8cd5f6a02206c4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "control_layer_digest",
@@ -901,35 +1010,71 @@
     },
     {
       "quote_id": "crooked_pot_shows_the_heavy_hand",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bình méo có nhiều nguyên nhân, không chỉ tay mạnh; câu đặt quan hệ nhân quả giản lược thành chân lý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "crooked_pot_shows_the_heavy_hand",
+        "reviewed_text_sha256": "ac20a4b003a30862c7187ef81305c8c932e447f9f90459412ca20b1f51bd2575",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "curtain_opens_with_the_alarm",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Lặp chuông rồi mở rèm là tình huống thói quen cụ thể; không claim phản xạ tự động luôn xảy ra.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "curtain_opens_with_the_alarm",
+        "reviewed_text_sha256": "ca585fbfee29e553fbd26b5ea295d1a373b3626f7d87d5bf82465300f4ef0551",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "damp_paper_is_not_the_pens_fault",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Giấy ẩm vẫn có thể viết tùy bút/độ ẩm; tiền đề không thể viết sai và phần quy lỗi quá gượng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "damp_paper_is_not_the_pens_fault",
+        "reviewed_text_sha256": "e744340035eb78693b9e2b0b6fd36eac9fc03285f5f005d7bf63601c3256f736",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "dark_room_before_the_body_is_ready",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cơ thể nhận ra buổi chiều chưa đi hết mờ ý và gợi claim đồng hồ sinh học không được giải thích; không cố giữ hình ảnh tối nghĩa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "dark_room_before_the_body_is_ready",
+        "reviewed_text_sha256": "f6e094b69ba4db42c3344555af50966bb29735224e506f194c22413c4d4350a7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "defense_layer_digest",
@@ -957,19 +1102,37 @@
     },
     {
       "quote_id": "each_season_has_its_own_gift",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mỗi mùa có nét riêng không chỉ thiếu mùa khác là ẩn dụ rõ về so sánh; sửa mùa đông không thiếu thành không cần giống, tránh phủ định thực tế.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "each_season_has_its_own_gift",
+        "reviewed_text_sha256": "2479c423c83bf248f02bd699bac9fc2586354e27b078802a01848e8e1851764c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "emergency_fund_can_become_breathing_time",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tiền để dành tạo thêm thời gian xoay xở khi cần là góc nhìn đời sống; bỏ thuật ngữ quỹ dự phòng và không hứa mức bảo đảm tài chính.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "emergency_fund_can_become_breathing_time",
+        "reviewed_text_sha256": "6bbf8006082104db67d04046357fc2bcc1992a402611cdaf30b253a9ff7e99ec",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "energy_layer_digest",
@@ -981,59 +1144,123 @@
     },
     {
       "quote_id": "eraser_shrinks_as_letters_straighten",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cục tẩy mòn và chữ dần ngay ngắn là phép ví quá trình sửa; thêm dần tránh khẳng định tẩy bảo đảm viết tốt.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "eraser_shrinks_as_letters_straighten",
+        "reviewed_text_sha256": "51d57afc3a19174b1acdb4f36f76c0f1e0d4620581a48604f7bd027cd29650c2",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "every_long_road_is_crossed_one_meter_at_a_time",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng ý hành trình dài bắt đầu từng bước đã giữ chương 64 B001; không thêm cùng một thông điệp chỉ đổi bước thành mét.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "every_long_road_is_crossed_one_meter_at_a_time",
+        "reviewed_text_sha256": "0fbfcae8cd2bbede57b230ed5ad8de53810593bab5ee5ebe9f052bf572efa93d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "attributed.laozi.chapter_64.first_step"
+      }
     },
     {
       "quote_id": "excitement_has_a_lifespan",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Gọi hứng khởi phai là thiết kế mà không rõ ai thiết kế hoặc cơ chế nào là claim giả chắc chắn; không giữ kiểu trấn an này.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "excitement_has_a_lifespan",
+        "reviewed_text_sha256": "9f95ad85cf6a9e02a86bdbed358a6bca30fec68be57cbf37c45948728c8bf13f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "eyes_memorize_the_unopened_page",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đọc nhiều chưa chắc hiểu qua trang sách là hình ảnh tự đủ; sửa mắt thuộc/lòng hiểu thành nhớ chữ/hiểu ý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "eyes_memorize_the_unopened_page",
+        "reviewed_text_sha256": "c857a9707f4dd6388d8d1a34629df250e73404dd85babb9fbe1ca527ed5dec43",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "familiar_cafe_remembers_the_order",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Quán nhớ món cho thấy được quan tâm; sửa cấu trúc phủ định ghế đẹp nhất để không nói mọi người chỉ cần được nhớ món.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "familiar_cafe_remembers_the_order",
+        "reviewed_text_sha256": "49a7f342f77f38b72df223118991d772fb3ae996bbd1918573328191f1a27270",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "first_burnt_batch_does_not_erase_the_kitchen",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mẻ bánh hỏng không quyết định cả buổi làm bánh; sửa mùi thơm vốn không chắc thành còn có thể làm mẻ khác, giữ độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "first_burnt_batch_does_not_erase_the_kitchen",
+        "reviewed_text_sha256": "0b2316d2624fd08dc3730801bf719564cf217cd145f3f95ba89e15edc38a2665",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "freedom_begins_when_one_path_is_not_the_only_path",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Có thêm lựa chọn giúp cảm thấy tự do hơn; sửa định nghĩa tự do bắt đầu tuyệt đối, giữ liên kết story không đọc/sửa story.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "freedom_begins_when_one_path_is_not_the_only_path",
+        "reviewed_text_sha256": "480b6a0e2f1793e3ae001cadaa596803946ccc889a429f4db7b87e8db1319213",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "growth_layer_digest",
@@ -1045,43 +1272,88 @@
     },
     {
       "quote_id": "habit_arrives_without_knocking",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Thói quen đến rồi đi không gõ cửa không giải thích gì ngoài nhân hóa, còn khiến hiểu thói quen tự biến mất; không giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "habit_arrives_without_knocking",
+        "reviewed_text_sha256": "440278fe5d67c31fc7573f56858f348c900280035aff710cf893acb50823fa33",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "hand_finds_the_key_tray",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Để chìa khóa một chỗ giúp tay tìm quen là tình huống thói quen độc lập; giữ như cảnh, không claim cơ chế thần kinh.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "hand_finds_the_key_tray",
+        "reviewed_text_sha256": "9c2e1b472893922a4dccbd4e203de83aa2264b96a01dcca2dba25c6ad050a1b1",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "hands_keep_the_hammers_echo",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bàn tay còn dư rung khi búa đã đặt là hình ảnh lao động tự đủ; sửa không chẩn đoán hay khẳng định rung là cần thiết để nghỉ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "hands_keep_the_hammers_echo",
+        "reviewed_text_sha256": "00f1427bdb1754e941c8ed563e7c20ea73215b51208bcbbc8f3efb99bf318e05",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "home_is_known_by_what_it_keeps",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đồ được giữ qua chuyển nhà có thể gợi giá trị chủ nhân; bỏ không chỉ màu sơn thành tiếng Việt mộc, không giả định mọi căn nhà giống nhau.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "home_is_known_by_what_it_keeps",
+        "reviewed_text_sha256": "43b8e02469f6743565ae41f0dd118771a02cb281512aff0bea3706d9586c7587",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "house_turns_off_one_window_at_a_time",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Ngủ đến dần như nhà tắt đèn là phép ví không claim y học; sửa giới hạn có lúc để không khẳng định giấc ngủ ai cũng cùng nhịp.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "house_turns_off_one_window_at_a_time",
+        "reviewed_text_sha256": "6d30e0be7e618900359e5606fd9324a9982c01a87298b5a5a1c926c043a05392",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "identity_layer_digest",
@@ -1101,27 +1373,54 @@
     },
     {
       "quote_id": "late_flower_meets_another_sky",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Hoa nở sớm/muộn gặp cảnh khác là hình ảnh không xếp hạng thời điểm; giữ liên kết story, không khẳng định loài hoa cụ thể.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "late_flower_meets_another_sky",
+        "reviewed_text_sha256": "5f4aea2e7f0b6dbe8697a149a34753bd0584b5036de07f1b7c4cf0c74211ea6f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "marathoner_does_not_chase_sprinter_at_start",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Marathon là từ ngoại ngữ có thể dịch nhưng câu đặt hai kiểu thi đấu vào cùng km và người chạy không nhìn là khẳng định thiếu căn cứ; loại do chất lượng, không vì ngoại ngữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "marathoner_does_not_chase_sprinter_at_start",
+        "reviewed_text_sha256": "9a672074a650034a5e89e09f988cc1a3dd9bad983982110925b5fdf1da6e52cd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "market_reopens_one_stall_at_a_time",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Khu chợ từng quầy mở lại sau mưa là cảnh hồi phục dần có ý nghĩa độc lập; thêm có thể để không mô tả mọi chợ như nhau.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "market_reopens_one_stall_at_a_time",
+        "reviewed_text_sha256": "d5f2a99d088c1f017e30c0048019011c10b6daca77b5839e17af0fe0651eb333",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "memory_layer_digest",
@@ -1133,51 +1432,105 @@
     },
     {
       "quote_id": "morning_dew_leaves_when_warm",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Không ai phủi sương là khẳng định vô căn cứ; sương có thể bốc hơi vì nhiều điều kiện, câu dễ hiểu thành cứ đợi mọi khó khăn tự tan.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "morning_dew_leaves_when_warm",
+        "reviewed_text_sha256": "f19b518000e047b344d394e15b5264d88214c912cd0a146b90f51925831581e0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "morning_enters_before_the_alarm",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Ánh sáng vào trước báo thức chỉ là miêu tả thơ, chưa có góc nhìn độc lập đủ rõ cho quote hằng ngày.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "morning_enters_before_the_alarm",
+        "reviewed_text_sha256": "555b20e7bce31fafd7279e836d16d47cddc147467e0133c67679fe76d118dae9",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "muscle_recovers_during_rest",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cơ bắp chỉ hồi phục khi nghỉ/tập chỉ kích hoạt là khẳng định sinh lý quá đơn giản; không cần claim y học này cho kho quote.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "muscle_recovers_during_rest",
+        "reviewed_text_sha256": "8b47f8c8aaf6b1720dec59d6afa3b2de14672ec7b711d2e71fec1d6d14d79738",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "musician_stays_with_one_lost_note",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tập một chỗ khó thay cả bài là hình ảnh rèn luyện cụ thể; sửa nốt lạc thành đoạn hay vấp, không khẳng định người chơi không bao giờ tập cả bản.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "musician_stays_with_one_lost_note",
+        "reviewed_text_sha256": "8f2a49b6779882e55940092c03a220a5cc1b66a46923a252cf0645b453c78ccd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "needle_reopens_the_same_hole",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kim qua cùng lỗ chỉ là chi tiết kỹ thuật và có thể vẫn tăng độ khít tùy cách khâu; ý sửa sai chưa rõ, không giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "needle_reopens_the_same_hole",
+        "reviewed_text_sha256": "1597c1085569db01054794f129753fd55cda14de7c65a19b3c2f7e31b98122ff",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "new_light_enters_where_branch_broke",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cành gãy đổi lối ánh sáng là hình ảnh có thể mở góc nhìn sau mất mát; giữ mô tả không suy tổn thương luôn đem lợi.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "new_light_enters_where_branch_broke",
+        "reviewed_text_sha256": "a1eac85b08e7daabf145c098cdbb6e1c52159f71654c6b36d7d82ed37903057e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "ninety_nine_percent_is_not_finished",
@@ -1189,19 +1542,37 @@
     },
     {
       "quote_id": "old_chair_holds_more_than_wood",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Ghế có giá trị nhờ người từng ngồi là hình ảnh ký ức trọn; viết không chỉ vì gỗ để không loại giá trị vật chất thật.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "old_chair_holds_more_than_wood",
+        "reviewed_text_sha256": "62ff8e5acd26a59e970f373b1daa4049a5fe25e6113c75d3432b283ace958b45",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "one_umbrella_keeps_two_steps_together",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Chung ô giữa mưa là hình ảnh đồng hành trọn nghĩa; không hứa chiếc ô đủ che mọi người hay mọi cơn mưa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "one_umbrella_keeps_two_steps_together",
+        "reviewed_text_sha256": "6a938e664c1953eb8e788543395f3f7f77c44219ccd0087034a219a4ce2059a3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "peace_does_not_require_a_silent_room",
@@ -1213,11 +1584,20 @@
     },
     {
       "quote_id": "pot_cools_between_lid_checks",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Việc cần thời gian và kiểm tra không đồng nghĩa đẩy nhanh là góc nhìn rõ, có giới hạn không có nghĩa chứ không cấm kiểm tra.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "pot_cools_between_lid_checks",
+        "reviewed_text_sha256": "ccc29e89c35da97134ba85efa382390091c06e9feea34df4bcbfbde3742719c9",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "projection_loop_digest",
@@ -1285,19 +1665,37 @@
     },
     {
       "quote_id": "red_light_reveals_the_trees",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Dừng đèn đỏ cho dịp nhìn cây là cảnh chú ý đời thường; bỏ hàng cây kịp hiện ra như cây trước đó không tồn tại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "red_light_reveals_the_trees",
+        "reviewed_text_sha256": "84b8e9a1370186fe13abe8c5c8e997ff82fc8f01e7c9e846e9eb202912dc2dcc",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "repeated_story_may_be_unfinished",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Câu chuyện lặp lại trong đầu không tất yếu vì chưa xong; mệnh đề chẩn đoán duy nhất về suy nghĩ lặp có thể gây hiểu sai.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "repeated_story_may_be_unfinished",
+        "reviewed_text_sha256": "1e04ebfcb3b1bee780fb73a5a06bf098d8a50e66c3e7b8271edb3798114c9183",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v043",
@@ -1309,11 +1707,20 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v276",
-      "review_round": 1,
-      "decision": "source_verification_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Có tiềm năng; cần đối chiếu nguyên bản, attribution và bản dịch trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 276 phân biệt người chỉ dạy và nỗ lực tự thực hành; ghi phỏng theo, không biến người thầy thành tác giả kinh.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v276",
+        "reviewed_text_sha256": "e202faedfe25b1b5f3c7ab0c5cde2f884eb3eb112d52f02ff804b1407a54646e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.ch17.054",
@@ -1333,43 +1740,88 @@
     },
     {
       "quote_id": "restitching_teaches_the_hand",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tháo may lại có thể giúp nhớ chỗ sai là hình ảnh học từ sửa lỗi; đổi thường thành có thể để không khẳng định mọi lặp sai đều tốt.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "restitching_teaches_the_hand",
+        "reviewed_text_sha256": "8ae0e070e226b99ccf38ef520b59e04ba459c2e7fa08760a6a1f136a937dea9b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "return_to_what_is_here",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Để ý hơi thở/bàn chân/căn phòng là gợi ý chú ý hiện tại không claim điều trị; giữ có thể và sự lựa chọn của người đọc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "return_to_what_is_here",
+        "reviewed_text_sha256": "ec92c9691e27c9b4f7055074ed80dc3d38704814efcfec3c5d621fe12d4d49a4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "river_carries_the_upstream_rain",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mưa đầu nguồn dừng mà nước dưới còn đục là hình ảnh dư âm có nguyên nhân dễ hiểu; không coi mọi dòng đục đều do mưa đầu nguồn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "river_carries_the_upstream_rain",
+        "reviewed_text_sha256": "ad7de69353767ea863f7d42012a5c2cd6c263aa710e9a63c423612ffde5a6234",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "road_dries_from_edge_inward",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đường không luôn khô từ rìa vào giữa, tùy độ dốc/bóng/nước; không đặt quy luật tự nhiên giả cho tiến triển.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "road_dries_from_edge_inward",
+        "reviewed_text_sha256": "49742c12d758a6a5e99ff57ee2ed3235526a4d7166437e22a6805899b1beff17",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "roof_releases_the_storm_slowly",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mái hiên còn nhỏ nước sau mưa là quan sát rõ về dư âm; bỏ ngôi nhà trả nước để không chồng nhân hóa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "roof_releases_the_storm_slowly",
+        "reviewed_text_sha256": "fc150cb6682896ebd25d18a8d9969e07b46dbba5208866aa022f4f7538318739",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "roots_check_themselves_after_storm",
@@ -1381,59 +1833,123 @@
     },
     {
       "quote_id": "roots_hold_when_wind_changes",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng hình ảnh rễ sâu/gốc chắc giúp bền đã giữ B002 chương 59; không thêm biến thể gió thay chiều cho cùng ý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "roots_hold_when_wind_changes",
+        "reviewed_text_sha256": "3dbd882c55bf928ab61937cf42a610fac89e2d63d0dc3fb62f7106d4aaa3394c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "research.laozi.day3.ch59.041"
+      }
     },
     {
       "quote_id": "safe_return_can_help_us_go_farther",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Có nơi an toàn để về có thể giúp can đảm đi xa; sửa mệnh đề tuyệt đối và không coi mọi gia đình đều an toàn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "safe_return_can_help_us_go_farther",
+        "reviewed_text_sha256": "aad78163f8bda573f4e9db13ab3a19dc7e580571b199ff149b6deeb8c8630252",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "scratched_table_stays_in_the_home",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bàn xước vẫn dùng được là hình ảnh chức năng không mất vì khuyết điểm; dùng có thể để không xem mọi hư hỏng đều an toàn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "scratched_table_stays_in_the_home",
+        "reviewed_text_sha256": "cc8fb6033d31790bb6eff858fa15a7d6732427a9cac64abf47da7e7ba38bba54",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "seed_grows_out_of_sight",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Rễ mầm ban đầu khuất mắt là hình ảnh tiến triển âm thầm, có nghĩa độc lập; giữ không phải mọi tiến bộ phải thấy ngay.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "seed_grows_out_of_sight",
+        "reviewed_text_sha256": "177d540340d542f8b59370138a00c4f60a12fdcedb74ccad335d75c86bceb728",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "shadow_changes_beneath_the_walker",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bóng đổi theo ngày không được nhìn chỉ là miêu tả cảnh, chưa có nghĩa độc lập rõ ngoài quan sát.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "shadow_changes_beneath_the_walker",
+        "reviewed_text_sha256": "122957d90229e75cc3ad2d8bccee362e7c24de4536ea32bcfe3bbb295c35f638",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "shadow_length_depends_on_sun",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Chiều dài bóng còn tùy chiều cao người; nói không tùy cao/thấp là sai vật lý, không giữ dù hình ảnh nghe dễ nhớ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "shadow_length_depends_on_sun",
+        "reviewed_text_sha256": "d27cd060511875578122e661558f38a2e1fb0aa97ecd16231fa2801aec50add6",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "small_flame_warms_a_small_room",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Lửa nhỏ nhất không bảo đảm sưởi phòng dù nhỏ vì thất thoát nhiệt và điều kiện; tiền đề khoa học sai để làm ẩn dụ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "small_flame_warms_a_small_room",
+        "reviewed_text_sha256": "13cc8b24a3679cd594bc91ae9171964d24f74a6bdf7087da6d294bd567705045",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "social_layer_digest",
@@ -1445,35 +1961,71 @@
     },
     {
       "quote_id": "someone_calls_at_the_last_stop",
-      "review_round": 1,
-      "decision": "story_review_required",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "Quote có tiềm năng nhưng phải review cùng story liên kết trước Release."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Có người gọi đúng trạm có thể giúp yên tâm nghỉ là cảnh nâng đỡ dễ hiểu; đổi ngủ yên hơn thành có thể bớt lo, không hứa chất lượng ngủ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "someone_calls_at_the_last_stop",
+        "reviewed_text_sha256": "397da8c098eb530e3cca4bb2fcf52f0d8ae4152104e6ccaa631d11493570a68b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "space_between_stimulus_and_response",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Một nhịp sau phản ứng đầu cho cơ hội chọn tiếp là góc nhìn có giới hạn có thể; giữ làm winner cho 27/122, không hứa kiểm soát mọi phản ứng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "space_between_stimulus_and_response",
+        "reviewed_text_sha256": "3754a19d11fc9824097e6c9e87f7fe62dbb02ca1537e243f385ff88050e51ae1",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "stable_is_not_empty",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Hệ thần kinh được thở là ẩn dụ khoác ngôn ngữ sinh lý, không có cơ sở ngày ít kịch tính thì hệ thần kinh hồi phục; ý nghỉ đã có bản 133.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "stable_is_not_empty",
+        "reviewed_text_sha256": "2112e801153a32d81da8d250386a96fbae772a293553d2a9f8422f9f6ab4de09",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "streetlight_turns_off_when_unneeded",
-      "review_round": 1,
-      "decision": "ready_for_owner_review",
+      "review_round": 3,
+      "decision": "round1_not_pass",
       "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-09-24T09:00:00Z",
-      "note_vi": "AI review vòng 1 đạt: đứng độc lập, dễ hiểu và phù hợp Selflo; chờ owner chốt."
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đèn đường tắt 5 giờ không tất yếu vì không cần, phụ thuộc hẹn giờ/hỏng/mùa/địa điểm; không giữ khẳng định nguyên nhân duy nhất.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "streetlight_turns_off_when_unneeded",
+        "reviewed_text_sha256": "5776b61b5d1f35ce2ccc40454c9598753b87db3153ce5ad4753e27fb6c6e8ceb",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "tea_waits_beside_the_screen",
@@ -1629,10 +2181,20 @@
     },
     {
       "quote_id": "research.day17.future_not_wholly_ours",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Epicurus, Thư gửi Menoeceus 127, nguyên văn Hy Lạp nói tương lai không hoàn toàn của ta/cũng không hoàn toàn ngoài ta; sửa vế ngoài mình cho rõ, không dựa bản dịch hiện đại chưa rõ quyền.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.day17.future_not_wholly_ours",
+        "reviewed_text_sha256": "10febc63ee75af2edc9297881f091124184d6229a80cb72af014cd72fd127354",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.day18.18_63",
@@ -1643,17 +2205,37 @@
     },
     {
       "quote_id": "research.day18.2_14",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Gita 2.14 nói cảm giác nóng/lạnh, dễ chịu/khó chịu đến đi; bỏ vế toàn bộ thực tại vốn không có trong đoạn nguồn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.day18.2_14",
+        "reviewed_text_sha256": "f90fd3c9372cd93a5f7f4ce553ecff451561d4a6b8b184ad72a6392486411083",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.day18.2_47",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Gita 2.47 nói hành động, không bám quả, không bám bất động; bỏ cách chia vùng kiểm soát dễ lẫn Stoicism, giữ nhãn diễn ý từ kinh.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.day18.2_47",
+        "reviewed_text_sha256": "cfa0368590f8e8ee5605eba5e05d960f5def0349896e41ba174edf91cf2fcdee",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.day18.6_26",
@@ -2465,10 +3047,20 @@
     },
     {
       "quote_id": "research.day19.katha_chariot",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Katha 1.3.3–4 là ẩn dụ bản ngã/thân/trí/tâm/giác quan/cảnh vật trên đường giải thoát; bản hiện tại chỉ là ghi chú các lớp trải nghiệm, không đủ nghĩa độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.day19.katha_chariot",
+        "reviewed_text_sha256": "d40093e289cbe2b06f6639c824c25cbdd9f46483c4504f7ecd3650887e10dfc3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.day19.katha_nachiketa",
@@ -2507,10 +3099,20 @@
     },
     {
       "quote_id": "research.day19.mundaka_question_all",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mundaka 1.1.3 hỏi tri thức về thực tại tối hậu, không phải mẹo hiểu mọi môn học; chỉ ghi một nhân vật đến hỏi cần toàn cảnh và không đủ giá trị quote riêng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.day19.mundaka_question_all",
+        "reviewed_text_sha256": "dde1a1e0e9cc1b5f9beb539dfbe92f8b60e4c653ddf6a39dc2e91b7caae4be0a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.day19.mundaka_two_knowledge",
@@ -8033,10 +8635,20 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v033",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 33 ví rèn tâm với nắn mũi tên; đối tượng là tâm chao đảo, có nghĩa khác bản kệ 80 về rèn bản thân nói chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v033",
+        "reviewed_text_sha256": "2f29bd66f6045f7c35994566ae7bf972bc48701e2f3f375b2a467d17ec700d18",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v035",
@@ -8047,17 +8659,38 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v051",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 51–52 cùng một phép ví hoa đẹp/hương với lời và hành động; gộp hai vế đối chiếu vào một bản đủ nghĩa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v051",
+        "reviewed_text_sha256": "51c965fa07edc63f7f5af6d5f3c05fe822275401db195bc66d1926f0e2508d4f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v052",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng phép ví liên tiếp kệ 51–52; bản 9 đã chứa cả lời hay không làm và lời đi cùng việc làm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.dhammapada.day11.v052",
+        "reviewed_text_sha256": "a1aa0e8ad3812dc7115617299b81addb5104b0c03d0a565031c63d39ba6f2ac9",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "research.dhammapada.day11.v051"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v065",
@@ -8102,10 +8735,20 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v122",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 122 ví việc thiện tích từng chút với bình nước; giữ cả hình ảnh lẫn ý điều tốt, không trùng kệ 121 nói điều có hại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v122",
+        "reviewed_text_sha256": "a67706f93b1764274a66e2471b8c947fdcb09b03401acf3937c02ec2b0b7391c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v129",
@@ -8123,10 +8766,20 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v133",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 133 nói lời gay gắt gây đau và bị đáp trả; bản diễn ý có giới hạn dễ nhận lại, không khẳng định mọi người đều phản ứng giống nhau.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v133",
+        "reviewed_text_sha256": "a6fedc8ee3aaa215afa73a1f553464fae34dab1f804c505f1a66f236f87d14c6",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v160",
@@ -8144,10 +8797,20 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v197",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 197 nói sống không hận giữa người hận; câu độc lập, không yêu cầu chịu đựng hành vi gây hại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v197",
+        "reviewed_text_sha256": "08a429092597442784a2503b1f7050c4640b160fef5265ff30d13395aae13acf",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v204",
@@ -8165,24 +8828,54 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v290",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 290 đặt điều kiện thấy niềm vui lớn hơn mới bỏ niềm vui nhỏ; sửa để không hiểu mọi hy sinh đều đem lại phần thưởng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v290",
+        "reviewed_text_sha256": "dfdbb414124028c27f0ee29bee035d517c710385dc87b55aadf81cb2a2d1925f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v328",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 328 có người bạn sáng suốt, sống chừng mực cùng đi; giữ có thể thay lời bảo đảm vượt mọi nguy hiểm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v328",
+        "reviewed_text_sha256": "3921e89974fad4c63f47f422c7d7851c43e050328b146b0f97ceac9cffe3b01c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v329",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kệ 329 nói nếu chưa có bạn phù hợp thì đi một mình; giữ hình ảnh voi, không cổ vũ cắt mọi quan hệ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v329",
+        "reviewed_text_sha256": "979b59bcbe109b243252122aaa84880947e10603caabdb054271b3a3ffb6af75",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v330",
@@ -14983,6 +15676,1542 @@
         "canonical_id": "research.dhammapada.day11.v223",
         "reviewed_text_sha256": "598ce20609149d33451a316f210c0d38408ae5e651a51f08cc1401f98af42a0f",
         "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "research.mn.day12.mn20_01",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "MN20 đoạn 3.1 nói chuyển từ đối tượng sinh ý nghĩ bất thiện sang đối tượng thiện; diễn giải một khả năng rèn tâm, không thành phương pháp điều trị hoặc ép gạt mọi cảm xúc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.mn.day12.mn20_01",
+        "reviewed_text_sha256": "3af8dc184c20da93a611b13d20166045942c66cb73ba5207e3e96618e611c682",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "research.mn.day12.mn22_02",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "MN22 đoạn 13 dùng bè để vượt qua chứ không nắm giữ; giữ đủ ngữ cảnh lời dạy và sang sông, không suy phải bỏ mọi điều từng học.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.mn.day12.mn22_02",
+        "reviewed_text_sha256": "07c7a5ee2cb187a928bb906b71796a193bb3133469a087acfcd222bb1466132e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.francis_bacon.bacon_friend_against_self_flattery",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bacon, Về tình bạn, có nguyên văn tự tâng bốc và sự tự do góp ý của bạn; sửa dám nói tự do thành có thể nói thật với mình.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.francis_bacon.bacon_friend_against_self_flattery",
+        "reviewed_text_sha256": "2a2ec3fe9c878915edad68215a5944198fa5a3fe5976470908428237577507a4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.francis_bacon.bacon_power_over_others_lose_self",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bacon, Về địa vị cao, đặt quyền lực đối lập mất tự do/làm chủ; bản Việt đủ ý, không gán mọi người có quyền đều mất tự chủ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.francis_bacon.bacon_power_over_others_lose_self",
+        "reviewed_text_sha256": "ecf6b82d71eef70bb05cc8333a0a85fd3ca84441fdb008fd345bec4cb51c82d4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.william_james.james_bundles_of_habit",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "James, Các quy luật của thói quen, nói phần ta chỉ lặp thói quen thì sao chép mình; giữ điều kiện thay vì gán con người chỉ là bó thói quen.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.william_james.james_bundles_of_habit",
+        "reviewed_text_sha256": "25ce17863cd4e7db84f0aaebd68bd0c135e955af53af3ebe748902619ff839a3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.william_james.james_habits_can_be_courage",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "James nêu thói quen cũng có tiết chế/can đảm, không chỉ tật xấu; sửa lời liệt kê dài thành câu Việt dễ hiểu và ghi phỏng theo.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.william_james.james_habits_can_be_courage",
+        "reviewed_text_sha256": "1d560c4d70d6274bece8783bfb5caea952e7986ee10e8a8a7df941a7bf8b303f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.william_james.james_object_occupies_mind",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đây là định nghĩa sự chú ý trong bài giảng tâm lý, không góc nhìn độc lập cho thông điệp mỗi ngày; dịch đúng vẫn quá mang tính định nghĩa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "attributed.william_james.james_object_occupies_mind",
+        "reviewed_text_sha256": "76e40e5aa4eb667a5c671a353cc11c22b08ce1bc23c06def1aeaadd062ba53c8",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.william_james.james_spectators_judgment",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nguồn nằm trong Về sự mù lòa ở con người, không phải Phúc âm của sự thư giãn như locator cũ; sửa giới hạn phán xét ngoài cuộc, không khẳng định mọi người ngoài đều sai.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.william_james.james_spectators_judgment",
+        "reviewed_text_sha256": "1221374892db3d7e8995b1c1bc1fc1143b7f6169d1e7d7f902623155501dd86d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "a_moment_cannot_represent_an_entire_journey",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Câu owner chốt độc lập, phân biệt khoảnh khắc với toàn hành trình; giữ nguyên.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "a_moment_cannot_represent_an_entire_journey",
+        "reviewed_text_sha256": "ef2de1571c9f5c7821e255112502a2e816ab86e0440d9118415ab523f80fcd0f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "a_pause_keeps_the_first_reaction_from_becoming_the_only_choice",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng ý một nhịp trước phản ứng mở thêm lựa chọn; giữ bản 161 ít đối lập yếu/mạnh và rõ hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "a_pause_keeps_the_first_reaction_from_becoming_the_only_choice",
+        "reviewed_text_sha256": "76ea5fb0731a222da0db3e262b0a96299f17896c03cf5ba709189c1c1071a59a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "space_between_stimulus_and_response"
+      }
+    },
+    {
+      "quote_id": "acceptance_is_not_giving_up",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Chấp nhận điều chưa sửa ngay có hướng đúng; sửa sự rõ ràng thành nhận ra phần còn có thể làm, tránh hứa chấp nhận tự tạo sáng suốt.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "acceptance_is_not_giving_up",
+        "reviewed_text_sha256": "ca871ced84c5e90296ce03199acc34ab13be83dc48de67b3c1743b575c4eb7dd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "another_persons_shoes_hurt",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đôi giày vừa người khác làm đau chân mình là phép ví rõ, không cần tri thức/story đi kèm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "another_persons_shoes_hurt",
+        "reviewed_text_sha256": "c4841f9ee3df3063d9a18d041f9a8e49dcc00f6d671cce95fdc04e65bce4a9bb",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "applause_ending_is_not_failure",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Vỗ tay kết thúc dù buổi diễn hay là tình huống có nghĩa độc lập; sửa không phải vì thành không có nghĩa để tránh kết luận nhân quả tuyệt đối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "applause_ending_is_not_failure",
+        "reviewed_text_sha256": "694345f1e4c0afb7d0842f8fed568baa6e635f48253113edb3a19cfa2a2b8b6d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "athlete_sits_after_finish",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Vận động viên ngồi nghỉ sau đích là hình ảnh bình thường về nghỉ không bỏ cuộc; sửa mức phổ quát cho tự nhiên.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "athlete_sits_after_finish",
+        "reviewed_text_sha256": "84aab6b3fb45e3c18335e702a411573f8118787b80ed702c9d7b1bcb811eed42",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "blinking_cursor_does_not_write_first_line",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Con trỏ nhấp nháy là hình ảnh quá riêng thao tác viết trên máy; câu chỉ thúc làm việc, không đủ góc nhìn cho kho chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "blinking_cursor_does_not_write_first_line",
+        "reviewed_text_sha256": "3ceeeda817bbdbb0850cd1eddca70c0ec7a6c0f0e11a98f676eebd3a7346c337",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "bridge_does_not_hold_the_walker",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cầu không giữ người ở lại là nhân hóa chưa rõ vai trò hỗ trợ; nếu bỏ câu sau không có ý, nếu giải thích thêm sẽ thành khẩu hiệu khác.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "bridge_does_not_hold_the_walker",
+        "reviewed_text_sha256": "556c4ac8a207c8066d0bae7a4d3701cc58b6acf827b70c1ef20e08d54d62cb1b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "carpenter_measures_the_uneven_leg",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Thợ kiểm tra chân chênh thay vì mặt đã phẳng thể hiện chú ý đúng chỗ; giữ như tình huống minh họa, không hướng dẫn nghề.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "carpenter_measures_the_uneven_leg",
+        "reviewed_text_sha256": "282c86b346a2d6786de182b706a80de8dabe09f8a53634cfc8ef107b80d46fb7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "chair_is_repaired_for_someone",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Biết người sẽ dùng chiếc ghế làm việc sửa có ý nghĩa hơn; thêm có thể để không coi đây là quy luật mọi thợ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "chair_is_repaired_for_someone",
+        "reviewed_text_sha256": "9b9fa87515d2f2d1d7952598a23963fbef7ba75e311915a7c2c7d3cc4222d2b4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "chipped_cup_stays_for_its_story",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tách sứt được giữ vì ký ức có góc nhìn rõ về giá trị; bỏ công thức có những thứ và tránh khuyên dùng tách hỏng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "chipped_cup_stays_for_its_story",
+        "reviewed_text_sha256": "85eff21abc075b04725cf52f4c3b9083dbe17ccccc291953b1116dd6f30f2ee7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "clarity_before_speed",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tốc độ cần đi cùng biết hướng là góc nhìn dễ hiểu; viết trực tiếp thay câu mở phủ định rập khuôn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "clarity_before_speed",
+        "reviewed_text_sha256": "b1b0f0778b60843e89e06486a99915d5c6ef969bf8f7380970d05347179844a0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "clock_does_not_hurry_when_watched",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nhìn đồng hồ liên tục không làm nó nhanh là hình ảnh độc lập về chờ đợi; không tuyên bố mọi kiểm tra vô ích.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "clock_does_not_hurry_when_watched",
+        "reviewed_text_sha256": "add15bb9a6774250e9d9a7cb08142432fedf6fcc8c0a0aa967520e1af5a3ed91",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "coffee_returns_a_distant_morning",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mùi cà phê có thể gợi một buổi sáng cũ là hình ảnh ký ức tự đủ; không thêm khẳng định sinh học.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "coffee_returns_a_distant_morning",
+        "reviewed_text_sha256": "4a3d77eb6aa7adb50de269843cf2477f0ae5e6f8a82b0c945ea4fb3403c2f999",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "compass_keeps_direction_not_steps",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "La bàn chỉ hướng không đi thay là hình ảnh trọn vẹn về vai trò hỗ trợ; giữ nhãn Selflo và liên kết story hiện hành.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "compass_keeps_direction_not_steps",
+        "reviewed_text_sha256": "1d74e31ab157c2b85fafc4e87746988b3a247f3bfab83fd7a374737b7dd4d4c2",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "continuous_looking_only_tires_eyes",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nhìn liên tục có thể giúp thấy thay đổi trong nhiều tình huống; câu mở phủ định quá rộng, còn vế mỏi mắt chưa có góc nhìn riêng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "continuous_looking_only_tires_eyes",
+        "reviewed_text_sha256": "c3bc2ae77e690c4a26bd7acd84863b93d67536d8f0706e86e2b8700eb01399fe",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "cook_still_wants_to_taste_the_soup",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Người nấu muốn nếm không làm bếp sáng lâu hơn như một quan sát tin cậy; hình ảnh gián tiếp quá mờ về hứng thú.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "cook_still_wants_to_taste_the_soup",
+        "reviewed_text_sha256": "0d797413ca6811c2070370aaab64b4127056c268b26a9c52759f439578a26c1e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "curtain_keeps_the_old_smoke",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Rèm còn mùi dù phòng mở là hình ảnh về dư âm, không hứa mở cửa xóa mọi khói; giữ mức có thể.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "curtain_keeps_the_old_smoke",
+        "reviewed_text_sha256": "5ec285667c95e0b1c801ddf19d6b41698db3dd502feca95fbae609194ba8b92d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "do_not_let_work_rent_your_mind_after_hours",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tan làm và ranh giới công việc có nghĩa tự đủ, không phải chỉ dẫn kỹ thuật nghề; viết như một khả năng gác việc thay mệnh lệnh phải ngừng nghĩ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "do_not_let_work_rent_your_mind_after_hours",
+        "reviewed_text_sha256": "b2c893e02c0d066cecede3ea5166a2471b1b85e74eafd1617cef8bed5219fd53",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "do_not_need_to_love_the_storm_to_love_the_journey",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Không yêu cơn bão vẫn trân trọng hành trình là ẩn dụ rõ về không cần thích mọi nghịch cảnh; không ca tụng tổn thương.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "do_not_need_to_love_the_storm_to_love_the_journey",
+        "reviewed_text_sha256": "8c2ce58f9915fbf080ab9a6f897b6c578b02570f9038971a4b405c7a4b99f37e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "do_not_wait_until_the_last_time",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Lời nhắc trân trọng trước lần cuối đủ rõ; giữ nguyên ý owner chốt, không review chuyện phía sau.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "do_not_wait_until_the_last_time",
+        "reviewed_text_sha256": "23f8494a3abab7e15627c4f91ebc15026a36c8536f16b744a78b51676020dd80",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "door_opens_more_lightly_from_inside",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cửa tự mở từ trong không tất yếu nhẹ hơn bị đẩy ngoài; phép ví ép quan hệ tự nguyện và cơ học, thiếu nghĩa rõ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "door_opens_more_lightly_from_inside",
+        "reviewed_text_sha256": "3338eca6a3e84a45343aeb5ac3d7441e2c27d5fd9b0014a116231d81271b66d4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "door_stays_where_home_begins",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cánh cửa ở chỗ cũ là hình ảnh nhà đón người về; sửa nhân hóa hỏi thành cảnh cụ thể dễ cảm hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "door_stays_where_home_begins",
+        "reviewed_text_sha256": "45d21630f635f3ff9d902eaf7f4bc8113c64644bdcafc5c39167817cf3139950",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "empty_chair_changes_the_table",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Ghế trống không làm bàn rộng hơn dễ bị hiểu trái quan sát chỗ ngồi; tác động nhớ người đã có hình ảnh ghế cũ đầy đủ hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "empty_chair_changes_the_table",
+        "reviewed_text_sha256": "64fcd1bf4ad2e3def9a3975e6f534c4941861cec5cf57d8e2596a330599db502",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "empty_desk_with_glowing_screen",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Màn hình ở bàn sau giờ làm là chi tiết công sở nhưng câu không rõ việc còn chạy hay người còn bận tâm; quá riêng và mờ cho quote chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "empty_desk_with_glowing_screen",
+        "reviewed_text_sha256": "963d9239d34ef4ebe1a9cbb197e8d7fd4a5158d63b00c0656de4152e692be13e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "energy_has_a_budget",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nhiều việc nhỏ vẫn làm mệt dù từng việc nhẹ là quan sát đời sống; đổi ngân sách năng lượng sang sức lực phổ thông, không số hóa sức khỏe.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "energy_has_a_budget",
+        "reviewed_text_sha256": "7d4e1784f42b664dcf1db56eee48818180064e7c9a8523a7080fefe664549529",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "enough_for_today",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Biết dừng khi đủ sức là góc nhìn nghỉ ngơi; bỏ công thức có những ngày để rõ, không hứa dừng luôn tiến bộ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "enough_for_today",
+        "reviewed_text_sha256": "975c7a83f21aa09f8ff5b026904535a4ba803456709579659c557541f4b8ecaa",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "even_stitch_follows_many_undoings",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng đường may tháo và học từ sai với bản 134 có tình huống rõ hơn; giữ một canonical.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "even_stitch_follows_many_undoings",
+        "reviewed_text_sha256": "d5ae70613a5d7c675daad11bec5dd4818b5568e1ee96c4f351439fe935dc3135",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "restitching_teaches_the_hand"
+      }
+    },
+    {
+      "quote_id": "faster_clock_does_not_lengthen_day",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đồng hồ chạy nhanh làm ngày có vẻ ngắn chứ bản hiện tại nói dài thêm quá hiển nhiên; không đủ ý khác biệt và có thể lẫn ngày thật/ngày cảm nhận.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "faster_clock_does_not_lengthen_day",
+        "reviewed_text_sha256": "9aa48180eba0c08c51fe9cf83c50bfb09b6194b76c0472655bc69ad18c3be1e9",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "feeling_is_signal_not_command",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cảm xúc có thể cung cấp thông tin mà không bắt buộc quyết định hành động; bỏ mệnh đề mọi cảm xúc đang nói điều quan trọng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "feeling_is_signal_not_command",
+        "reviewed_text_sha256": "c2877128b0869885ae9d57faa24723917713bab18e4036b8f626770dc3a7f8ba",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "first_needle_needs_light_not_blame",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Người mới học cần đủ điều kiện và kiên nhẫn; sửa ánh sáng thành chỉ dẫn/kiên nhẫn để khỏi hiểu kỹ năng chỉ do thiếu đèn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "first_needle_needs_light_not_blame",
+        "reviewed_text_sha256": "951af96e9615072a404a2535f2a58ff8c14813fa6bed07f19e2de1d020f2dc02",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "gentle_voice_for_the_broken_bowl",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Không có cơ sở người làm vỡ bát thường dỗ trẻ mà trách mình; câu ghép hai tình huống không liên quan để tạo hiệu ứng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "gentle_voice_for_the_broken_bowl",
+        "reviewed_text_sha256": "58438fccc140fd5ccaa7286987e432ebacaf12efdf092a2ec46be2839ac2189e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "gentleness_creates_room",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tự trách làm khó nhìn vấn đề là quan sát có giới hạn; bỏ căn phòng bên trong để tiếng Việt trực tiếp.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "gentleness_creates_room",
+        "reviewed_text_sha256": "e1be516e042f52bd28638ee847067e56e5e0e2bdcac6ef61294048fefc40cbb9",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "habit_is_a_path_worn_by_feet",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đường mòn do đi nhiều là phép ví dễ hiểu về lặp lại tạo thói quen; dùng thường thay mọi đường mòn đều không ai vẽ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "habit_is_a_path_worn_by_feet",
+        "reviewed_text_sha256": "7b41d841aa74d2f956b5b08c7c2cd2ef6b84c1200bc390ecb2b00bedec315fcc",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "hand_does_not_need_to_grip",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nắm tay nhẹ vẫn thể hiện ở cạnh là hình ảnh rõ, không đòi ai chịu lực nắm gây đau.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "hand_does_not_need_to_grip",
+        "reviewed_text_sha256": "43c9670b28ddc205c52a1dbdbbc9d2ebbb6c5e5412c70fda04096e32d176d610",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "hands_know_who_the_work_is_for",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Biết làm vì ai cho công việc thêm ý nghĩa là quan sát phổ thông; bỏ đôi tay biết để rõ chủ thể người làm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "hands_know_who_the_work_is_for",
+        "reviewed_text_sha256": "98ee5d0510e2f82fa59d34b7901a721b10f120385a2ba614f7480b94e1500538",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "kitchen_cools_after_the_flame",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bếp có thể nguội khi giảm lửa, nồi có thể nguội khi chuyển chỗ; so sánh vật lý quá tuyệt đối dễ làm sai ý nghỉ ngơi.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "kitchen_cools_after_the_flame",
+        "reviewed_text_sha256": "b7eaf347b8f6ed90c31549290518846b511de6a89cbe54438f4528a2d1c4f4b3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "kitchen_sounds_like_someone_waiting",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Tiếng bếp gợi cảm giác có người chờ là cảnh đời sống dễ hiểu, dùng đôi khi không mặc định nhà nào cũng vậy.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "kitchen_sounds_like_someone_waiting",
+        "reviewed_text_sha256": "b98f7cd106f3f2e24e96899fab332f451fcffc77c1cff6d0bbe286649d1a3a93",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "knife_sharpens_at_the_same_angle",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Góc mài dao là chi tiết kỹ thuật có ngoại lệ, câu đang giống mẹo thao tác; không mở thêm tri thức nghề cho quote chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "knife_sharpens_at_the_same_angle",
+        "reviewed_text_sha256": "59f10a11a36fcdbdc82d8ea5eeec9ed3cd641ee195882cc8bfdd8ea054c293e8",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "knots_loosen_from_the_edge",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nút thắt mở từ mép thay kéo mạnh là phép ví tự đủ; có hiếm khi/đôi khi, không biến thành quy luật mọi nút dây.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "knots_loosen_from_the_edge",
+        "reviewed_text_sha256": "bd24a35afb070966d3cd13ccce1c1920584dfce13085212b59f6709e03d014b7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "light_gives_the_room_a_shape",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Căn phòng thực tế khác về ánh sáng khi bật đèn, đồ vẫn có hình trước đó; chơi chữ có hình khiến nghĩa không chắc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "light_gives_the_room_a_shape",
+        "reviewed_text_sha256": "862702e60f23d59774dee44b75018ffe3780ae47b940e0b33fb98b9715156f41",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "lit_window_guides_the_way_home",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng ô đèn dẫn về nhà, bản đèn hiên 124 cụ thể và ít bảo đảm có người chờ hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "lit_window_guides_the_way_home",
+        "reviewed_text_sha256": "4d8d5d3d5399b7a743d06acda82d6ec4090d44bbe7527db3139a9c7fee164737",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "porch_light_marks_the_kind_of_home"
+      }
+    },
+    {
+      "quote_id": "map_does_not_lower_the_mountain",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bản đồ không đổi độ dốc nhưng giúp nhận ra đường là hình ảnh rõ về biết với làm; bỏ khẳng định chỉ bản đồ mới biết nơi dốc bắt đầu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "map_does_not_lower_the_mountain",
+        "reviewed_text_sha256": "a3537ba4868d20e5f977e6ad6bb8b714d63b5feb282cf76253d8553eea197d41",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "maps_hide_the_nearby_door",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Quá nhiều bản đồ khiến quên cửa sau lưng là tình huống thiếu hợp lý, không đủ quan sát để làm ẩn dụ lựa chọn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "maps_hide_the_nearby_door",
+        "reviewed_text_sha256": "e5238f795ab8ad3c14939568dd2194b2929d2ee4f45901c7d63f051fbc1cd766",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "mason_checks_the_string_each_row",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Kiểm dây sau mỗi hàng gạch là mô tả chuyên biệt nghề xây, không đủ góc nhìn ngoài cách làm đúng kỹ thuật.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "mason_checks_the_string_each_row",
+        "reviewed_text_sha256": "22468102c81c766060b38af6d521d225882eb72868549dd586a86d92f37a0864",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "meaning_is_often_found_in_how",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Giá trị không chỉ ở thành tựu lớn mà cả con người mình trở thành là góc nhìn rõ; sửa cách nó làm mình trở thành ai cho tự nhiên.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "meaning_is_often_found_in_how",
+        "reviewed_text_sha256": "0b70abd7681c87f6495c6a8b3f53b541e705fa75da4dd6a567bc6d7e03943481",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "morning_after_storm_starts_small",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Việc nhỏ sau bão là hình ảnh trở lại từng chút; thêm có khi vì hậu quả bão đa dạng, không thu nhỏ mọi mất mát thành quét lá.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "morning_after_storm_starts_small",
+        "reviewed_text_sha256": "68593b7227b21b1ffe525091cb6a7db50cc7aeb8077bece5e48a3a02eb86328a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "morning_thread_gathers_the_days",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Việc nhỏ lặp lại giúp ngày có nhịp là hình ảnh nhẹ về thói quen; sửa sợi chỉ đời sống cho dễ hiểu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "morning_thread_gathers_the_days",
+        "reviewed_text_sha256": "4b0051623ba007a1b991272d526c52b6052b61c3ce94398d55b22228b444bee5",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "name_the_weather_inside",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Gọi tên cảm xúc giúp nhận ra mình đang thế nào; bỏ bảo đảm nó không lớn hơn và hình ảnh ô để không thành lời khuyên tâm lý tuyệt đối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "name_the_weather_inside",
+        "reviewed_text_sha256": "e852143fd15114a6304d84a08dc19d75d8fef501a521bfe6f78a694395b35bda",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "neighboring_light_does_not_dim_this_lamp",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đèn nhà bên sáng không làm đèn mình tối là ẩn dụ rõ về so sánh không nhất thiết là tổng bằng không.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "neighboring_light_does_not_dim_this_lamp",
+        "reviewed_text_sha256": "c9062ef702890cb1af3a8fb6f2bb6935d3c357fcb9c36bde21f648010c4a9248",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "new_leaves_do_not_need_an_audience",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cây ra lá không cần người chứng kiến là hình ảnh đủ nghĩa về tiến triển âm thầm; không nói cây tự chủ như con người.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "new_leaves_do_not_need_an_audience",
+        "reviewed_text_sha256": "2cf6cbc823e9141e7ae0777a41a2e7fd3763994dd83ded26ea9cd6bd42a87a60",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "not_every_stone_is_yours_to_carry_home",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Viên đá người khác bỏ không mặc nhiên là trách nhiệm mình có đủ nghĩa về ranh giới; không cổ vũ bỏ mặc người cần giúp.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "not_every_stone_is_yours_to_carry_home",
+        "reviewed_text_sha256": "6322d7be7a91b65637bc030b04f0907ef991271b51fd0a04c10329f5a8e3d996",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "old_pattern_not_identity",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Phản ứng quen không đồng nhất toàn bộ bản thân là góc nhìn rõ; dùng không đủ để kết luận thay phủ định bản chất tuyệt đối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "old_pattern_not_identity",
+        "reviewed_text_sha256": "261c6071628da905e5df8a1b474c4bd0131b4f62ea5b0a7d613d6613a3fc43b3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "old_song_opens_a_closed_room",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Bài hát gợi căn phòng ký ức là hình ảnh độc lập; sửa mở đầu có những cho mộc hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "old_song_opens_a_closed_room",
+        "reviewed_text_sha256": "ffd73e71243b074345b66f57ca9ec0556053be5559a95f4d7e404fbb126616cc",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "ordinary_day_can_be_recharge",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng ý ngày bình thường/nghỉ để hồi sức với bản rest_is_part_of_rhythm được giữ; bỏ so sánh hồi phục nhiều nhất chưa có căn cứ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "ordinary_day_can_be_recharge",
+        "reviewed_text_sha256": "a999f2a9b55ed6418b7a99f090ae8b4610d22e4e4b505f976a01c7b55f24577c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "rest_is_part_of_rhythm"
+      }
+    },
+    {
+      "quote_id": "ordinary_morning_is_a_quiet_gift",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Giá trị buổi sáng bình thường có thể rõ hơn khi thiếu nó; sửa chỉ nhận ra để không tuyệt đối hóa và tránh giọng hù dọa mất mát.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "ordinary_morning_is_a_quiet_gift",
+        "reviewed_text_sha256": "01cbea1b5abe4484dee961af7bd5dc8a25b595bea1e92b86f08c950d12d1d1a3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "patched_cloth_finds_another_way_to_stay",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Áo vá còn dùng được là hình ảnh sửa chữa và tiếp tục; bỏ nhân hóa ở lại cho tiếng Việt dễ đọc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "patched_cloth_finds_another_way_to_stay",
+        "reviewed_text_sha256": "359b257f057d115bbd6b41bd85d02d26e8338a2df4681100002338034b10f67e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "pause_is_an_action",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng khoảng dừng để bớt quán tính phản ứng; giữ một bản 161 rõ hơn và không định nghĩa mọi dừng là hành động.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "pause_is_an_action",
+        "reviewed_text_sha256": "93a109f95636ea1f5ea1d040b1594eca4b0f42390502bf5fe4dd2f55feb0d7f5",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "space_between_stimulus_and_response"
+      }
+    },
+    {
+      "quote_id": "pillow_hollows_across_many_nights",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Gối có thể lõm chỉ sau một đêm tùy vật liệu; không dùng tiền đề sai để nói tích lũy.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "pillow_hollows_across_many_nights",
+        "reviewed_text_sha256": "71515e1045a4e561cf9192ebbe972d59ef87ad0e9bd5c90c0d0974c39b456def",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "porch_light_marks_the_kind_of_home",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đèn hiên soi gần, gợi lối về là hình ảnh tự đủ; giữ nhưng bỏ khẳng định biết ý muốn của cả căn nhà.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "porch_light_marks_the_kind_of_home",
+        "reviewed_text_sha256": "319607bf49f39f0b18a3513d889936765ab73e9307e426864d16e9af16134c5e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "price_tag_does_not_show_hours_traded",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Giá tiền và thời gian kiếm tiền là quan sát đời sống; sửa nó không biết thành không cho thấy, không đưa khuyến nghị đầu tư/mua bán.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "price_tag_does_not_show_hours_traded",
+        "reviewed_text_sha256": "aea0727795bae72840e907dd7505d1341d7d5bc90ce8ca09b5e415a495f516b5",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "progress_can_be_quiet",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Đổi phản ứng nhỏ cũng là thay đổi có thể nhận ra muộn; viết thẳng, không hứa lúc nào cũng tiến bộ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "progress_can_be_quiet",
+        "reviewed_text_sha256": "173b09de7ec6f26ba94a1c31650fd629336d8e012fe767da2e3f5ca3fc3f7194",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "quiet_house_reveals_the_clock",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Yên nhà mới nghe đồng hồ là hình ảnh chú ý đến thứ vẫn hiện hữu; thêm có lúc tránh tuyệt đối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "quiet_house_reveals_the_clock",
+        "reviewed_text_sha256": "16e74bd0d33458c9de4a63c3b2e53b006a35bfc3c446ca5aebf8e76af5bc2a55",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "rain_stopped_before_ground_dried",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mưa dừng nhưng đất chưa khô cho thấy biến cố và dư âm không hết cùng lúc; giữ nhịp câu hiện tại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "rain_stopped_before_ground_dried",
+        "reviewed_text_sha256": "40685a8c51201a21ea3175e5beb734636ed976ff30531ac62459ce1855cf7988",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "rain_waits_beneath_city_noise",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng tiếng vốn có bị tiếng ồn che, bản đồng hồ căn nhà rõ hơn và không claim tiếng mưa không nhỏ hơn giữa phố.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "rain_waits_beneath_city_noise",
+        "reviewed_text_sha256": "e1d3f964384f5d7a1fa3308ec6fc4f033122138360b3ce50fd2202a874e8832b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json",
+        "duplicate_of": "quiet_house_reveals_the_clock"
+      }
+    },
+    {
+      "quote_id": "rest_is_part_of_rhythm",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nghỉ giúp còn sức đi tiếp là góc nhìn đời sống thông thường, không nêu cơ chế thần kinh hay bảo đảm hiệu quả.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "rest_is_part_of_rhythm",
+        "reviewed_text_sha256": "6f8d4b553c3ffc389d71db885781bed3cea59f0ec86eaab877fe98ccf64fb739",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "room_changes_with_one_lamp",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Một góc sáng đủ nhìn bước tiếp là hình ảnh rõ, không cần giải thích triết lý thêm; giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "room_changes_with_one_lamp",
+        "reviewed_text_sha256": "f36068e7ea4c8b6bf5a57fbc32159488231e201d57f3812b9d7ec8742065d127",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "room_holds_the_bells_echo",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Chuông dừng mà âm còn ngân là hình ảnh dư âm trọn nghĩa; không nêu khoảng thời gian hay claim khoa học.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "room_holds_the_bells_echo",
+        "reviewed_text_sha256": "074889c8f27c6076029bc8745d68491378f734aeb1b379995cd3d7c4e8b84704",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "row_today_build_one_piece_of_tomorrows_raft",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Ẩn dụ thuyền đang nuôi mình và bè riêng có ý vẫn làm hiện tại, chuẩn bị lựa chọn; sửa thành tiếng Việt trực tiếp để khỏi cần biết nhân vật story.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "row_today_build_one_piece_of_tomorrows_raft",
+        "reviewed_text_sha256": "0f9acefed6824cd9c6166c8e477b75bb14d921736b0a3301734f730b45d93285",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "same_glass_lost_and_remaining",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cùng một ly nhìn phần mất hoặc còn là góc nhìn owner chốt, có nghĩa riêng về hướng chú ý; giữ nguyên.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "same_glass_lost_and_remaining",
+        "reviewed_text_sha256": "64bfe543fe2a518c09850c90d230aa7c0c3b17a63612dfcf1b58a27d88f88773",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "self_judgment_loop_digest",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Sai việc có thể bị chuyển thành kết luận về cả mình là quan sát tự phán xét; sửa không đến từ thành còn đến từ để không phủ nhận đau do sai thật.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "self_judgment_loop_digest",
+        "reviewed_text_sha256": "8b9caccada1ea62f809601ef6ac9cf725f4f2351a53246252a37bf6055ec1290",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "selflo.knowledge.if_i_am_wrong_but_chatgpt_agrees",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Mong câu trả lời xác nhận mình đúng là quan sát có giới hạn đôi khi, không khẳng định mọi người luôn muốn dối; giữ câu owner chốt.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "selflo.knowledge.if_i_am_wrong_but_chatgpt_agrees",
+        "reviewed_text_sha256": "5164c14000ae1ef43457e7bea04de918d81b80b3051070feafe61d1ab48fcfaf",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "selflo.knowledge.why_ai_feels_easier_to_ask",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Ngại để người khác biết mình không biết là góc nhìn quan hệ rõ, không cần đọc Knowledge; sửa cấu trúc khó nhất để bớt tuyệt đối, không đổi story.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "selflo.knowledge.why_ai_feels_easier_to_ask",
+        "reviewed_text_sha256": "aa6bbc7a1a80524d856f59a253ed4fd6495ad3ef6edfb3af63eb66698a777574",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "shop_closes_but_street_continues",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Cửa hàng đóng còn phố tiếp tục là hình ảnh bớt gánh mình phải ở lại; giữ cảnh có thể, không hứa việc nào thiếu mình cũng chạy.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "shop_closes_but_street_continues",
+        "reviewed_text_sha256": "003368971d62b41d9b487727c7d53c8cbfb69609e607555fab63b5bdc9dddb77",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "silence_between_notes_belongs_to_music",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Khoảng lặng thuộc bản nhạc là hình ảnh rõ về nhịp nghỉ; không đồng nhất im lặng trong mọi quan hệ là tốt.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "silence_between_notes_belongs_to_music",
+        "reviewed_text_sha256": "76921bd8cd30b7966ce5b85e13850caa37ab1be617e166859f96e1aa10b274ea",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "small_boundary_is_still_boundary",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Từ chối nhẹ vẫn là ranh giới là thông điệp rõ; sửa sắc thành gay gắt, không hứa người khác luôn tôn trọng lời từ chối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "small_boundary_is_still_boundary",
+        "reviewed_text_sha256": "b0941c95296874d5a2a93fb6e704868449cc357da395e1184569c1491f6a0b79",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "small_daily_expense_reaches_month_end",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Nhiều khoản nhỏ cộng thành khoản đáng kể là quan sát phép cộng; sửa không còn nhỏ tuyệt đối, không khuyên chi tiêu cụ thể.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "small_daily_expense_reaches_month_end",
+        "reviewed_text_sha256": "6c0bee662e7c312b7b2f60d537f4327f85b18e9fe404c8d3ac2b440f6aead196",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "small_suitcase_reveals_what_matters",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Chọn sách mang theo lại nói điều đáng ở lại là mâu thuẫn hướng hình ảnh, không tự đủ ý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "small_suitcase_reveals_what_matters",
+        "reviewed_text_sha256": "d9ec101b47de1efb7c0b3ac1fc5c3e01b7655d3f5938573a9bd412fa668953e7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "some_footprints_lead_toward_home",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Dấu chân nào dẫn lòng muốn đến là hình ảnh quá chung, không có tình huống hay phân biệt giá trị đủ rõ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "some_footprints_lead_toward_home",
+        "reviewed_text_sha256": "07398a0ea1d648b44c83087c73300c73cb862abb5ece79065f37f97d6db213f0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "sometimes_the_event_does_not_change_but_the_view_does",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Sự kiện giữ nguyên mà góc nhìn đổi là câu owner chốt có giới hạn đôi khi; giữ, khác bản ly nước là ví dụ cụ thể.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "sometimes_the_event_does_not_change_but_the_view_does",
+        "reviewed_text_sha256": "17925f871c61eb4cdd3f96103c95cbc1fefe6c30de79f912600da07bdf808b05",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "sprint_and_marathon_need_different_breath",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Hai kiểu chạy cần nhịp thở khác là lời về kỹ thuật thể thao hơn góc nhìn độc lập; không ép thành quy luật năng lực đời người.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "sprint_and_marathon_need_different_breath",
+        "reviewed_text_sha256": "4e0695667cda14c4e14fc026c8d8c444df7e9e1691b076a8fba4cba144daf397",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
+      }
+    },
+    {
+      "quote_id": "stars_remain_behind_clouds",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:29:49.051640Z",
+      "note_vi": "Sao khuất mây vẫn hiện hữu là hình ảnh rõ về không thấy khác không còn; sửa không mặc định mọi đêm không sao đều do mây.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B003",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "stars_remain_behind_clouds",
+        "reviewed_text_sha256": "b219c3f9edc82c1a34a193bf2ef7ee3ae6392be06fe0342ef30c9bb35b9d5d20",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b003-review.json"
       }
     }
   ]

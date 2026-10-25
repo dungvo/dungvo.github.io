@@ -475,7 +475,7 @@
     },
     {
       "id": "not_every_stone_is_yours_to_carry_home",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Viên đá nào là của mình",
       "text_vi": "Không phải viên đá nào người khác đặt xuống cũng là viên đá mình phải mang về nhà.",
@@ -488,7 +488,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library | Q10-B003: Canonical Selflo · not_every_stone_is_yours_to_carry_home; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -508,8 +508,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T15:50:35Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
         "semantic_intent": "Không phải viên đá nào người khác đặt xuống cũng là viên đá mình phải mang về nhà.",
@@ -529,11 +529,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work_achievement",
-          "ranh giới",
-          "trách nhiệm",
-          "yêu cầu mơ hồ",
-          "công việc"
+          "Công việc và lựa chọn",
+          "Selflo"
         ],
         "tie_break_order": 3010
       },
@@ -614,10 +611,10 @@
     },
     {
       "id": "small_daily_expense_reaches_month_end",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Một khoản chi nhỏ lặp lại mỗi ngày không còn nhỏ khi đứng ở cuối tháng.",
+      "text_vi": "Những khoản chi nhỏ lặp lại mỗi ngày có thể cộng thành một khoản đáng kể vào cuối tháng.",
       "subtitle_vi": null,
       "primary_theme": "work_achievement",
       "authorship": {
@@ -627,7 +624,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review"
+        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review | Q10-B003: Canonical Selflo · small_daily_expense_reaches_month_end; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -645,11 +642,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh money_pressure.",
+        "semantic_intent": "Những khoản chi nhỏ lặp lại mỗi ngày có thể cộng thành một khoản đáng kể vào cuối tháng.",
         "observation_key": "small_daily_expense_reaches_month_end",
         "structure_pattern": "everyday_observation"
       },
@@ -666,8 +663,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "money_pressure"
+          "Công việc và lựa chọn",
+          "Selflo"
         ],
         "tie_break_order": 4034
       },
@@ -683,10 +680,10 @@
     },
     {
       "id": "price_tag_does_not_show_hours_traded",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Giá trên kệ chỉ nói món đồ cần bao nhiêu tiền; nó không biết số tiền ấy phải đổi bằng bao nhiêu giờ.",
+      "text_vi": "Giá trên kệ cho biết món đồ cần bao nhiêu tiền, nhưng không cho thấy mình đã đổi bao nhiêu giờ để có số tiền ấy.",
       "subtitle_vi": null,
       "primary_theme": "work_achievement",
       "authorship": {
@@ -696,7 +693,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review"
+        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review | Q10-B003: Canonical Selflo · price_tag_does_not_show_hours_traded; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -714,11 +711,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh money_pressure.",
+        "semantic_intent": "Giá trên kệ cho biết món đồ cần bao nhiêu tiền, nhưng không cho thấy mình đã đổi bao nhiêu giờ để có số tiền ấy.",
         "observation_key": "price_tag_does_not_show_hours_traded",
         "structure_pattern": "everyday_observation"
       },
@@ -735,8 +732,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "money_pressure"
+          "Công việc và lựa chọn",
+          "Selflo"
         ],
         "tie_break_order": 4036
       },

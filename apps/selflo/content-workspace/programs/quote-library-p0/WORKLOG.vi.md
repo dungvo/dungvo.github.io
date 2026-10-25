@@ -327,3 +327,10 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 - **Q10-B002 ĐÃ ĐÓNG — 2026-10-25:** 166 câu: 75 giữ, 91 không đạt; 50 bản viết lại. Release 50 public đã xác nhận 507 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **342/5.471 đã chốt, còn 5.129** (177 released, 165 not_accepted, gồm 10 owner-closed). Commit nội dung `f2fd929`. Tiếp Q10-B003 (165); story tiếp tục tạm dừng.
 - Public kiểm chứng lúc 2026-10-25T09:04:54.870500Z; bằng chứng `reports/q10-b002-public-verification.json`; projection hiện hành dùng manifest 50 nên xác nhận lại cả 102 accepted B001.
 - Không đổi canonical/pack ở bước đóng metadata. Đúng bước tiếp theo B003, 165 ID.
+
+## 2026-10-25 — Q10-B003 kiểm định cục bộ
+
+**Q10-B003 — 2026-10-25:** Đã review 165 câu: 112 giữ, 53 không đạt; sửa 67 văn bản. Authoring 90 / Release 51: 1.851/454 quote, 63/17 story; 94 tests đạt. Đang kiểm chứng public trước khi đóng B003; chưa mở B004/story. Xem `Q10_B003_CHECKPOINT.vi.md`.
+
+- Từng ID có source context/before/after/rights retained/hash và lý do; 10 duplicate có winner accepted. 53 exclusion bền vững; giữ 10 owner-closed.
+- Thay đổi content-compatible, không đổi shared contract/app. Đúng 165 canonical quote thay đổi; story và quote ngoài batch không đổi. Chuẩn hóa nhận diện Trung Bộ Kinh/Chí Tôn Ca sau Việt hóa.

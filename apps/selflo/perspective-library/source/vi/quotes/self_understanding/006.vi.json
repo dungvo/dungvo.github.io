@@ -74,10 +74,10 @@
     },
     {
       "id": "research.mn.day12.mn20_01",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi tâm bị mắc vào một đối tượng gây hại, một khả năng là chuyển sự chú ý sang một đối tượng khác lành hơn.",
+      "text_vi": "Khi một ý nghĩ đang dẫn mình đến điều có hại, có thể thử hướng tâm sang một điều lành hơn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -86,20 +86,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "inner_awareness",
-          "attention_noise_focus",
-          "attention"
+          "Hiểu bản thân",
+          "Trung Bộ Kinh"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 20 Vitakkasaṇṭhānasutta",
-        "source_url": "https://suttacentral.net/mn20/pli/ms",
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ Kinh",
+        "source_url": "https://raw.githubusercontent.com/suttacentral/bilara-data/published/root/pli/ms/sutta/mn/mn20_root-pli-ms.json",
         "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn20_01; corpus row 750; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "source_label": "Phỏng theo Trung Bộ Kinh · kinh 20 · đoạn 3.1–3.3",
+        "source_detail": "Research ID research.mn.day12.mn20_01; corpus row 750; content_nature=translated_quote; verification=A - primary Pāḷi source located. | Q10-B003: Trung Bộ Kinh · kinh 20 · đoạn 3.1–3.3; tên/tác phẩm gốc: Majjhima Nikāya / Early Buddhist Pāḷi tradition / MN 20 Vitakkasaṇṭhānasutta; đối chiếu tại https://raw.githubusercontent.com/suttacentral/bilara-data/published/root/pli/ms/sutta/mn/mn20_root-pli-ms.json"
       },
       "metadata": {
         "concepts": [],
@@ -117,11 +116,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Khi tâm bị mắc vào một đối tượng gây hại, một khả năng là chuyển sự chú ý sang một đối tượng khác lành hơn.",
+        "semantic_intent": "Khi một ý nghĩ đang dẫn mình đến điều có hại, có thể thử hướng tâm sang một điều lành hơn.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -130,7 +129,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ Kinh · kinh 20 · đoạn 3.1–3.3"
       },
       "knowledge_basis": null,
       "tags": [
@@ -212,10 +211,10 @@
     },
     {
       "id": "research.day17.future_not_wholly_ours",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tương lai không hoàn toàn thuộc quyền mình, nhưng cũng không hoàn toàn nằm ngoài mình.",
+      "text_vi": "Tương lai không hoàn toàn do mình quyết định, nhưng cũng không hoàn toàn nằm ngoài phần mình có thể làm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -224,18 +223,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "inner_awareness"
+          "Hiểu bản thân",
+          "Thư gửi Menoeceus"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
         "author_name": "Epicurus",
-        "work": "Letter to Menoeceus",
-        "source_url": "https://ericlyonshansen.github.io/Epicurus/Letter_to_Menoeceus_Bailey_Lines.html",
+        "work": "Thư gửi Menoeceus",
+        "source_url": "https://monadnock.net/epicurus/letter.html",
         "source_language": null,
-        "source_label": "Epicurus",
-        "source_detail": "Research ID research.day17.future_not_wholly_ours; corpus row 880; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "source_label": "Phỏng theo Epicurus · Thư gửi Menoeceus",
+        "source_detail": "Research ID research.day17.future_not_wholly_ours; corpus row 880; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit. | Q10-B003: Thư gửi Menoeceus · đoạn 127; tên/tác phẩm gốc: Epicurus / Letter to Menoeceus; đối chiếu tại https://monadnock.net/epicurus/letter.html"
       },
       "metadata": {
         "concepts": [],
@@ -250,11 +250,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:46:28Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Tương lai không hoàn toàn thuộc quyền mình, nhưng cũng không hoàn toàn nằm ngoài mình.",
+        "semantic_intent": "Tương lai không hoàn toàn do mình quyết định, nhưng cũng không hoàn toàn nằm ngoài phần mình có thể làm.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -263,7 +263,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Epicurus"
+        "attribution_vi": "Phỏng theo Epicurus · Thư gửi Menoeceus"
       },
       "knowledge_basis": null,
       "tags": [
@@ -336,10 +336,10 @@
     },
     {
       "id": "research.day18.2_14",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Những cảm giác dễ chịu và khó chịu do tiếp xúc với hoàn cảnh có tính đến rồi đi; đừng vội xem trạng thái hiện tại là toàn bộ thực tại.",
+      "text_vi": "Cảm giác dễ chịu và khó chịu đến rồi đi; chúng không ở lại mãi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -348,19 +348,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "inner_awareness",
-          "change"
+          "Hiểu bản thân",
+          "Chí Tôn Ca"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?etadi=1&etgb=1&etpurohit=1&etsiva=1&field_chapter_value=2&field_nsutra_value=14&language=dv",
+        "author_name": "Truyền thống Ấn Độ",
+        "work": "Chí Tôn Ca",
+        "source_url": "https://sanskritdocuments.org/doc_giitaa/bhagvadnew.html",
         "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research ID research.day18.2_14; corpus row 900; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "source_label": "Phỏng theo Chí Tôn Ca · chương 2, câu 14",
+        "source_detail": "Research ID research.day18.2_14; corpus row 900; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit. | Q10-B003: Chí Tôn Ca · chương 2, câu 14; tên/tác phẩm gốc: Bhagavad Gita (traditionally within Mahābhārata) / Bhagavad Gita; đối chiếu tại https://sanskritdocuments.org/doc_giitaa/bhagvadnew.html"
       },
       "metadata": {
         "concepts": [],
@@ -377,11 +377,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:46:28Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Những cảm giác dễ chịu và khó chịu do tiếp xúc với hoàn cảnh có tính đến rồi đi; đừng vội xem trạng thái hiện tại là toàn bộ thực tại.",
+        "semantic_intent": "Cảm giác dễ chịu và khó chịu đến rồi đi; chúng không ở lại mãi.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -390,7 +390,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
+        "attribution_vi": "Phỏng theo Chí Tôn Ca · chương 2, câu 14"
       },
       "knowledge_basis": null,
       "tags": [
@@ -403,10 +403,10 @@
     },
     {
       "id": "research.day18.2_47",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Phần hành động của mình và kết quả cuối cùng không phải cùng một vùng kiểm soát; không bám kết quả cũng không đồng nghĩa bám vào bất động.",
+      "text_vi": "Làm phần việc của mình mà không chỉ bám vào kết quả; cũng đừng vì thế mà chọn không hành động.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -415,18 +415,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "inner_awareness"
+          "Hiểu bản thân",
+          "Chí Tôn Ca"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?choose=1&etadi=1&etgb=1&etsiva=1&etssa=1&field_chapter_value=2&field_nsutra_value=47&language=dv",
+        "author_name": "Truyền thống Ấn Độ",
+        "work": "Chí Tôn Ca",
+        "source_url": "https://sanskritdocuments.org/doc_giitaa/bhagvadnew.html",
         "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research ID research.day18.2_47; corpus row 901; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "source_label": "Phỏng theo Chí Tôn Ca · chương 2, câu 47",
+        "source_detail": "Research ID research.day18.2_47; corpus row 901; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit. | Q10-B003: Chí Tôn Ca · chương 2, câu 47; tên/tác phẩm gốc: Bhagavad Gita (traditionally within Mahābhārata) / Bhagavad Gita; đối chiếu tại https://sanskritdocuments.org/doc_giitaa/bhagvadnew.html"
       },
       "metadata": {
         "concepts": [],
@@ -441,11 +442,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-25T04:46:28Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Phần hành động của mình và kết quả cuối cùng không phải cùng một vùng kiểm soát; không bám kết quả cũng không đồng nghĩa bám vào bất động.",
+        "semantic_intent": "Làm phần việc của mình mà không chỉ bám vào kết quả; cũng đừng vì thế mà chọn không hành động.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -454,7 +455,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
+        "attribution_vi": "Phỏng theo Chí Tôn Ca · chương 2, câu 47"
       },
       "knowledge_basis": null,
       "tags": [

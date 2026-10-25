@@ -351,10 +351,10 @@
     },
     {
       "id": "safe_return_can_help_us_go_farther",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Một nơi để trở về",
-      "text_vi": "Một nơi để trở về không giữ chân mình; chính cảm giác có thể trở về mới cho mình can đảm đi xa.",
+      "text_vi": "Biết có một nơi an toàn để trở về có thể cho mình thêm can đảm đi xa.",
       "subtitle_vi": null,
       "primary_theme": "relationships",
       "authorship": {
@@ -364,7 +364,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library | Q10-B003: Canonical Selflo · safe_return_can_help_us_go_farther; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -385,10 +385,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một nơi để trở về không giữ chân mình; chính cảm giác có thể trở về mới cho mình can đảm đi xa.",
+        "semantic_intent": "Biết có một nơi an toàn để trở về có thể cho mình thêm can đảm đi xa.",
         "observation_key": null,
         "structure_pattern": "story_distillation"
       },
@@ -405,11 +405,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationships",
-          "tin cậy",
-          "điểm trở về",
-          "an toàn",
-          "khám phá"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 3000
       },
@@ -842,10 +839,10 @@
     },
     {
       "id": "selflo.knowledge.why_ai_feels_easier_to_ask",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Khi một câu hỏi để lộ điều ta chưa biết",
-      "text_vi": "Đôi khi điều khó nhất không phải là “không biết”. Điều khó hơn là để một người khác biết rằng mình không biết.",
+      "text_vi": "Có lúc mình ngại để người khác biết rằng mình không biết, hơn cả việc chưa có câu trả lời.",
       "subtitle_vi": null,
       "primary_theme": "relationships",
       "tags": [
@@ -863,8 +860,8 @@
         "work": null,
         "source_url": null,
         "source_language": "vi",
-        "source_label": "Selflo · Knowledge / Insight",
-        "source_detail": "Câu mở vào bài Knowledge đầu tiên; dùng Story Reader như lớp tương thích tạm thời."
+        "source_label": "Selflo",
+        "source_detail": "Câu mở vào bài Knowledge đầu tiên; dùng Story Reader như lớp tương thích tạm thời. | Q10-B003: Canonical Selflo · selflo.knowledge.why_ai_feels_easier_to_ask; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -888,11 +885,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-10-11T08:51:37Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một câu hỏi có thể tìm kiếm thông tin đồng thời làm lộ điều người đặt câu hỏi chưa biết.",
+        "semantic_intent": "Có lúc mình ngại để người khác biết rằng mình không biết, hơn cả việc chưa có câu trả lời.",
         "observation_key": "asking_reveals_not_knowing",
         "structure_pattern": "knowledge_preview"
       },
@@ -901,7 +898,7 @@
         "priority": 70,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · Hiểu sâu"
+        "attribution_vi": "Selflo"
       },
       "story_id": "story.why_ai_feels_easier_to_ask",
       "selection": {
@@ -909,11 +906,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationships",
-          "learning",
-          "asking",
-          "psychological safety",
-          "AI"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 2070
       },

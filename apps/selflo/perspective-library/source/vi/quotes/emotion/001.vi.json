@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "feeling_is_signal_not_command",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Tín hiệu, không phải mệnh lệnh",
-      "text_vi": "Cảm xúc đang nói một điều quan trọng. Nhưng nó không bắt buộc phải quyết định mọi điều mình làm tiếp theo.",
+      "text_vi": "Cảm xúc có thể giúp mình nhận ra một điều, nhưng không bắt buộc phải quyết định mọi việc mình làm tiếp theo.",
       "subtitle_vi": null,
       "primary_theme": "emotion",
       "authorship": {
@@ -19,7 +19,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · feeling_is_signal_not_command; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -43,11 +43,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:00:08Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Cảm xúc cung cấp tín hiệu nhưng không phải mệnh lệnh hành động.",
+        "semantic_intent": "Cảm xúc có thể giúp mình nhận ra một điều, nhưng không bắt buộc phải quyết định mọi việc mình làm tiếp theo.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -64,8 +64,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion_layer",
-          "control_layer"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": -82
       },
@@ -81,10 +81,10 @@
     },
     {
       "id": "name_the_weather_inside",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Gọi tên thời tiết bên trong",
-      "text_vi": "Gọi tên cảm xúc không làm nó lớn hơn. Nó chỉ giúp mình biết hôm nay nên mang theo chiếc ô nào.",
+      "text_vi": "Gọi tên cảm xúc có thể giúp mình nhận ra lúc này mình đang thế nào.",
       "subtitle_vi": "Nhận diện trước khi điều chỉnh",
       "primary_theme": "emotion",
       "authorship": {
@@ -94,7 +94,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · name_the_weather_inside; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -117,11 +117,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Gọi tên cảm xúc giúp mình nhận biết điều đang diễn ra bên trong.",
+        "semantic_intent": "Gọi tên cảm xúc có thể giúp mình nhận ra lúc này mình đang thế nào.",
         "observation_key": "inner_weather_umbrella",
         "structure_pattern": null
       },
@@ -138,8 +138,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion_layer",
-          "awareness"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": -76
       },
@@ -387,7 +387,7 @@
     },
     {
       "id": "light_gives_the_room_a_shape",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Căn phòng không khác đi khi bật đèn.\nChỉ là những gì vẫn ở đó bắt đầu có hình.",
       "primary_theme": "emotion",
@@ -420,9 +420,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Nhận ra không tạo ra trải nghiệm nhưng có thể làm nó rõ hình hơn.",
@@ -549,9 +549,9 @@
     },
     {
       "id": "quiet_house_reveals_the_clock",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Đến khi căn nhà yên,\nngười ta mới nghe tiếng đồng hồ đã chạy suốt đêm.",
+      "text_vi": "Có lúc căn nhà yên rồi, mình mới nghe tiếng đồng hồ vẫn chạy suốt đêm.",
       "primary_theme": "emotion",
       "authorship": {
         "author_id": "selflo",
@@ -560,7 +560,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · quiet_house_reveals_the_clock; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -583,11 +583,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:07:55Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một trạng thái có thể luôn hiện diện nhưng chỉ được nhận ra khi nhiễu giảm xuống.",
+        "semantic_intent": "Có lúc căn nhà yên rồi, mình mới nghe tiếng đồng hồ vẫn chạy suốt đêm.",
         "observation_key": "clock_heard_in_quiet_house",
         "structure_pattern": "quiet_reveals_continuous_signal"
       },
@@ -614,8 +614,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "quiet"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": 1017
       },
@@ -792,9 +792,9 @@
     },
     {
       "id": "curtain_keeps_the_old_smoke",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Căn phòng đã mở cửa từ lâu,\nnhưng rèm cửa đôi khi vẫn giữ mùi khói cũ.",
+      "text_vi": "Căn phòng đã mở cửa từ lâu, nhưng rèm cửa vẫn có thể giữ mùi khói cũ.",
       "primary_theme": "emotion",
       "authorship": {
         "author_id": "selflo",
@@ -803,7 +803,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · curtain_keeps_the_old_smoke; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -826,11 +826,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Dấu vết của trải nghiệm cũ có thể còn lại sau khi hoàn cảnh đã thay đổi.",
+        "semantic_intent": "Căn phòng đã mở cửa từ lâu, nhưng rèm cửa vẫn có thể giữ mùi khói cũ.",
         "observation_key": "old_smoke_in_curtain",
         "structure_pattern": "event_ended_trace_remains_in_material"
       },
@@ -857,8 +857,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "memory"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": 1020
       },
@@ -873,7 +873,7 @@
     },
     {
       "id": "river_carries_the_upstream_rain",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Cơn mưa đã dừng ở đầu nguồn,\ndòng nước dưới này vẫn còn đục.",
       "primary_theme": "emotion",
@@ -884,7 +884,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · river_carries_the_upstream_rain; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -908,10 +908,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Điều bắt đầu ở nơi khác hoặc lúc khác vẫn có thể hiện diện trong dòng chảy hiện tại.",
+        "semantic_intent": "Cơn mưa đã dừng ở đầu nguồn,\ndòng nước dưới này vẫn còn đục.",
         "observation_key": "muddy_river_after_upstream_rain",
         "structure_pattern": "upstream_event_shapes_downstream_state"
       },
@@ -938,8 +938,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "emotion",
-          "memory"
+          "Cảm xúc",
+          "Selflo"
         ],
         "tie_break_order": 1021
       },

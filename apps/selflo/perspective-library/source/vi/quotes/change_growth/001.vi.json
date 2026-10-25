@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "habit_is_a_path_worn_by_feet",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Đường mòn được tạo ra",
-      "text_vi": "Con đường mòn trong rừng không do ai vẽ ra. Người đi nhiều thì thành đường. Thói quen trong mình cũng vậy.",
+      "text_vi": "Đường mòn thường thành hình từ nhiều bước chân. Thói quen cũng dần hình thành qua những lần lặp lại.",
       "subtitle_vi": "Một góc nhìn về thói quen",
       "primary_theme": "change_growth",
       "authorship": {
@@ -19,7 +19,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · habit_is_a_path_worn_by_feet; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -46,11 +46,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Thói quen hình thành từ những hành động được lặp lại.",
+        "semantic_intent": "Đường mòn thường thành hình từ nhiều bước chân. Thói quen cũng dần hình thành qua những lần lặp lại.",
         "observation_key": "forest_path",
         "structure_pattern": null
       },
@@ -67,8 +67,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "behavior_layer",
-          "habit_loop"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": -94
       },
@@ -84,10 +84,10 @@
     },
     {
       "id": "progress_can_be_quiet",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Tiến bộ có thể rất yên",
-      "text_vi": "Có thay đổi không tạo ra khoảnh khắc lớn. Nó chỉ xuất hiện khi một ngày kia mình phản ứng khác đi một chút.",
+      "text_vi": "Thay đổi đôi khi chỉ được nhận ra vào một ngày mình phản ứng khác trước một chút.",
       "subtitle_vi": null,
       "primary_theme": "change_growth",
       "authorship": {
@@ -97,7 +97,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · progress_can_be_quiet; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -121,11 +121,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:00:08Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Thay đổi đôi khi chỉ hiện ra qua một phản ứng nhỏ khác với trước đây.",
+        "semantic_intent": "Thay đổi đôi khi chỉ được nhận ra vào một ngày mình phản ứng khác trước một chút.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -142,8 +142,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "growth_layer",
-          "behavior_layer"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": -66
       },
@@ -158,7 +158,7 @@
     },
     {
       "id": "seed_grows_out_of_sight",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Hạt mầm dưới đất",
       "text_vi": "Phần đầu tiên của một hạt mầm lớn lên ở nơi không ai nhìn thấy. Không phải tiến bộ nào cũng cần được thấy ngay.",
@@ -171,7 +171,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quan sát nguyên bản"
+        "source_detail": "Quan sát nguyên bản | Q10-B003: Canonical Selflo · seed_grows_out_of_sight; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -195,10 +195,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Phần đầu của sự trưởng thành có thể diễn ra trước khi người khác nhìn thấy.",
+        "semantic_intent": "Phần đầu tiên của một hạt mầm lớn lên ở nơi không ai nhìn thấy. Không phải tiến bộ nào cũng cần được thấy ngay.",
         "observation_key": "seed_under_soil",
         "structure_pattern": null
       },
@@ -215,8 +215,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "growth_layer",
-          "patience"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": -58
       },
@@ -678,7 +678,7 @@
     },
     {
       "id": "hand_finds_the_key_tray",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chìa khóa đặt cùng một chiếc khay mỗi tối.\nRồi có ngày bàn tay tìm đến đó trước khi mắt kịp nhìn.",
       "primary_theme": "change_growth",
@@ -689,7 +689,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · hand_finds_the_key_tray; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -712,11 +712,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Bối cảnh lặp lại có thể dần gọi hành động trước khi cần suy nghĩ nhiều.",
+        "semantic_intent": "Chìa khóa đặt cùng một chiếc khay mỗi tối.\nRồi có ngày bàn tay tìm đến đó trước khi mắt kịp nhìn.",
         "observation_key": "keys_in_same_tray",
         "structure_pattern": "stable_cue_precedes_conscious_search"
       },
@@ -743,8 +743,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "habit",
-          "keys"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": 1052
       },
@@ -759,7 +759,7 @@
     },
     {
       "id": "pillow_hollows_across_many_nights",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Vết lõm trên chiếc gối được tạo nên từ rất nhiều đêm,\nchẳng đêm nào đủ sức làm nó xuất hiện một mình.",
       "primary_theme": "change_growth",
@@ -792,9 +792,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Dấu vết rõ ràng có thể là kết quả tích lũy của nhiều lần nhỏ riêng biệt.",
@@ -840,7 +840,7 @@
     },
     {
       "id": "coffee_guides_the_hand_to_one_cup",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Mùi cà phê buổi sáng kéo bàn tay về đúng chiếc cốc\ntrước cả khi căn bếp sáng đèn.",
       "primary_theme": "change_growth",
@@ -873,9 +873,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Tín hiệu quen thuộc có thể khởi động một chuỗi hành động gần như tự động.",

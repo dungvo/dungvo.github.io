@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "rest_is_part_of_rhythm",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Nghỉ cũng là một nhịp",
       "text_vi": "Nghỉ không nằm ngoài hành trình. Đó là nhịp lặng giúp mình còn đủ sức để đi tiếp.",
@@ -19,7 +19,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · rest_is_part_of_rhythm; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -42,11 +42,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:00:08Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Nghỉ ngơi là một phần cần thiết của nhịp tiến về phía trước.",
+        "semantic_intent": "Nghỉ không nằm ngoài hành trình. Đó là nhịp lặng giúp mình còn đủ sức để đi tiếp.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -63,8 +63,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "energy_layer",
-          "recovery"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": -88
       },
@@ -80,10 +80,10 @@
     },
     {
       "id": "enough_for_today",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Đủ cho hôm nay",
-      "text_vi": "Có những ngày, tiến về phía trước chỉ là dừng đúng lúc và nói: đến đây đã là đủ.",
+      "text_vi": "Biết dừng đúng lúc và nói “hôm nay đến đây là đủ” cũng là một cách giữ sức để tiếp tục.",
       "subtitle_vi": null,
       "primary_theme": "rest_wellbeing",
       "authorship": {
@@ -93,7 +93,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · enough_for_today; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -117,11 +117,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:00:08Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Biết dừng đúng lúc cũng có thể là một dạng tiến bộ.",
+        "semantic_intent": "Biết dừng đúng lúc và nói “hôm nay đến đây là đủ” cũng là một cách giữ sức để tiếp tục.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -138,8 +138,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "recovery",
-          "self_compassion"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": -80
       },
@@ -155,10 +155,10 @@
     },
     {
       "id": "energy_has_a_budget",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Năng lượng cũng có ngân sách",
-      "text_vi": "Không phải việc nào cũng khó, nhưng nhiều việc nhỏ cùng lúc vẫn có thể tiêu hết phần năng lượng mình có.",
+      "text_vi": "Từng việc có thể không khó, nhưng nhiều việc nhỏ cùng lúc vẫn khiến mình mệt.",
       "subtitle_vi": null,
       "primary_theme": "rest_wellbeing",
       "authorship": {
@@ -168,7 +168,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · energy_has_a_budget; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -191,11 +191,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:00:08Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Nhiều việc nhỏ cùng lúc vẫn có thể làm cạn năng lượng.",
+        "semantic_intent": "Từng việc có thể không khó, nhưng nhiều việc nhỏ cùng lúc vẫn khiến mình mệt.",
         "observation_key": "energy_budget",
         "structure_pattern": null
       },
@@ -212,8 +212,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "energy_layer",
-          "overload"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": -68
       },
@@ -449,7 +449,7 @@
     },
     {
       "id": "stable_is_not_empty",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Ổn định không có nghĩa là nhạt nhẽo",
       "text_vi": "Có những ngày không có đỉnh cao, không có kịch tính, nhưng lại là những ngày hệ thần kinh được thở.",
@@ -499,9 +499,9 @@
         "note": "Owner approved this Selflo synthesis for standalone Release in Batch 2."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Bảo toàn presentation và selection behavior hiện hành.",
@@ -603,9 +603,9 @@
     },
     {
       "id": "shop_closes_but_street_continues",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Cửa hàng kéo cửa cuốn xuống,\ncon phố vẫn tiếp tục mà không cần người bán đứng lại bên trong.",
+      "text_vi": "Cửa hàng đã đóng, con phố vẫn tiếp tục nhịp sống bên ngoài.",
       "primary_theme": "rest_wellbeing",
       "authorship": {
         "author_id": "selflo",
@@ -614,7 +614,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · shop_closes_but_street_continues; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -637,11 +637,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một vai trò có thể tạm khép lại trong khi thế giới vẫn tiếp tục vận hành.",
+        "semantic_intent": "Cửa hàng đã đóng, con phố vẫn tiếp tục nhịp sống bên ngoài.",
         "observation_key": "shop_shutter_after_work",
         "structure_pattern": "role_closes_world_continues"
       },
@@ -668,8 +668,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "rest",
-          "work"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": 1092
       },
@@ -684,7 +684,7 @@
     },
     {
       "id": "apron_waits_on_the_hook",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chiếc tạp dề được treo lại sau bếp.\nNhững vết bột trên tay cũng cần một buổi tối để thôi nhắc chuyện làm bánh.",
       "primary_theme": "rest_wellbeing",
@@ -717,9 +717,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Dấu hiệu kết thúc vai trò giúp tạo khoảng cách với yêu cầu vừa tiêu tốn sức lực.",
@@ -765,7 +765,7 @@
     },
     {
       "id": "empty_desk_with_glowing_screen",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Bàn làm việc đã trống, màn hình vẫn sáng.\nCó những ngày công việc rời khỏi căn phòng muộn hơn người làm.",
       "primary_theme": "rest_wellbeing",
@@ -798,9 +798,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Rời vị trí làm việc không luôn đồng nghĩa với việc yêu cầu công việc đã ngừng hiện diện trong tâm trí.",
@@ -846,7 +846,7 @@
     },
     {
       "id": "kitchen_cools_after_the_flame",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Căn bếp chỉ bắt đầu nguội khi ngọn lửa đã tắt, không phải khi chiếc nồi được chuyển sang một chiếc bàn khác.",
       "primary_theme": "rest_wellbeing",
@@ -879,9 +879,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Đổi vị trí mà giữ nguyên tác nhân gây tải có thể chưa đủ để quá trình hồi phục bắt đầu.",

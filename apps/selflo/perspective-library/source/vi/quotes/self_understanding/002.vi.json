@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "neighboring_light_does_not_dim_this_lamp",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Một ngọn đèn không tối đi\nkhi căn nhà bên cạnh vừa bật sáng.",
       "primary_theme": "self_understanding",
@@ -17,7 +17,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · neighboring_light_does_not_dim_this_lamp; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -40,11 +40,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Sự nổi bật của người khác không tự động làm giảm điều mình đang có.",
+        "semantic_intent": "Một ngọn đèn không tối đi\nkhi căn nhà bên cạnh vừa bật sáng.",
         "observation_key": "lamps_in_neighboring_houses",
         "structure_pattern": "another_light_does_not_reduce_own_light"
       },
@@ -71,8 +71,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "comparison",
-          "lamp"
+          "Hiểu bản thân",
+          "Selflo"
         ],
         "tie_break_order": 1042
       },
@@ -166,7 +166,7 @@
     },
     {
       "id": "gentle_voice_for_the_broken_bowl",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Người làm vỡ chiếc bát thường hạ giọng khi dỗ một đứa trẻ,\nnhưng lại dễ quên hạ giọng với chính mình.",
       "primary_theme": "self_understanding",
@@ -199,9 +199,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Sự tử tế thường có sẵn cho người khác nhưng có thể bị rút lại khi chính mình mắc lỗi.",
@@ -246,9 +246,9 @@
     },
     {
       "id": "scratched_table_stays_in_the_home",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Chiếc bàn vẫn được dùng mỗi ngày,\ndù trên mặt gỗ có một vết xước chẳng bao giờ biến mất.",
+      "text_vi": "Một chiếc bàn có vết xước vẫn có thể được dùng mỗi ngày.",
       "primary_theme": "self_understanding",
       "authorship": {
         "author_id": "selflo",
@@ -257,7 +257,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · scratched_table_stays_in_the_home; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -280,11 +280,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một thiếu sót có thể được nhìn thấy mà không xóa bỏ toàn bộ giá trị sử dụng và sự gắn bó.",
+        "semantic_intent": "Một chiếc bàn có vết xước vẫn có thể được dùng mỗi ngày.",
         "observation_key": "scratched_wooden_table",
         "structure_pattern": "lasting_mark_does_not_cancel_whole"
       },
@@ -311,8 +311,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "self_compassion",
-          "table"
+          "Hiểu bản thân",
+          "Selflo"
         ],
         "tie_break_order": 1045
       },
@@ -327,9 +327,9 @@
     },
     {
       "id": "first_needle_needs_light_not_blame",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Bàn tay vụng lần đầu cầm kim\ncần thêm ánh sáng, không cần thêm một tiếng trách.",
+      "text_vi": "Người mới học cầm kim cần được chỉ dẫn và kiên nhẫn hơn là bị trách thêm.",
       "primary_theme": "self_understanding",
       "authorship": {
         "author_id": "selflo",
@@ -338,7 +338,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · first_needle_needs_light_not_blame; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -361,11 +361,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:51:37Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Khi còn vụng về, điều kiện hỗ trợ có thể hữu ích hơn sự phán xét tăng thêm.",
+        "semantic_intent": "Người mới học cầm kim cần được chỉ dẫn và kiên nhẫn hơn là bị trách thêm.",
         "observation_key": "beginner_hand_with_needle",
         "structure_pattern": "difficulty_needs_support_not_added_judgment"
       },
@@ -392,8 +392,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "self_compassion",
-          "needle"
+          "Hiểu bản thân",
+          "Selflo"
         ],
         "tie_break_order": 1046
       },
@@ -488,9 +488,9 @@
     },
     {
       "id": "first_burnt_batch_does_not_erase_the_kitchen",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Mẻ bánh đầu tiên cháy cạnh\nkhông làm căn bếp mất đi mùi thơm của cả buổi chiều.",
+      "text_vi": "Mẻ bánh đầu tiên bị cháy, mình vẫn có thể bắt đầu một mẻ khác.",
       "primary_theme": "self_understanding",
       "authorship": {
         "author_id": "selflo",
@@ -499,7 +499,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · first_burnt_batch_does_not_erase_the_kitchen; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -523,10 +523,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một sai sót cụ thể không cần trở thành phán quyết cho toàn bộ nỗ lực.",
+        "semantic_intent": "Mẻ bánh đầu tiên bị cháy, mình vẫn có thể bắt đầu một mẻ khác.",
         "observation_key": "burnt_first_batch",
         "structure_pattern": "single_error_does_not_define_whole_attempt"
       },
@@ -553,8 +553,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "self_compassion",
-          "baking"
+          "Hiểu bản thân",
+          "Selflo"
         ],
         "tie_break_order": 1048
       },

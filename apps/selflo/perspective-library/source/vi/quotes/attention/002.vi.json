@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "maps_hide_the_nearby_door",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Đứng trước quá nhiều tấm bản đồ,\nngười ta có thể quên cánh cửa đang ở ngay sau lưng.",
       "primary_theme": "attention",
@@ -39,9 +39,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:51:37Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quá nhiều mô phỏng hướng đi có thể che mất điều đang có thể quan sát ngay gần.",
@@ -86,9 +86,9 @@
     },
     {
       "id": "eyes_memorize_the_unopened_page",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Một trang sách đọc lại quá nhiều lần\ncó thể khiến mắt thuộc từng dòng mà lòng vẫn chưa hiểu.",
+      "text_vi": "Đọc lại nhiều lần có thể giúp mình nhớ từng dòng, nhưng chưa chắc đã hiểu điều trang sách muốn nói.",
       "primary_theme": "attention",
       "authorship": {
         "author_id": "selflo",
@@ -97,7 +97,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · eyes_memorize_the_unopened_page; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -120,11 +120,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Sự quen thuộc do lặp lại không đồng nghĩa với hiểu thêm.",
+        "semantic_intent": "Đọc lại nhiều lần có thể giúp mình nhớ từng dòng, nhưng chưa chắc đã hiểu điều trang sách muốn nói.",
         "observation_key": "rereading_same_page",
         "structure_pattern": "familiarity_increases_without_understanding"
       },
@@ -151,8 +151,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "overthinking",
-          "book"
+          "Chú ý và hiện tại",
+          "Selflo"
         ],
         "tie_break_order": 1011
       },
@@ -167,7 +167,7 @@
     },
     {
       "id": "pot_cools_between_lid_checks",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "text_vi": "Có những việc cần thời gian. Kiểm tra liên tục không có nghĩa là mình đang giúp chúng tiến triển.",
       "primary_theme": "attention",
@@ -178,7 +178,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · pot_cools_between_lid_checks; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -202,7 +202,7 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-24T23:55:29.189268Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
         "semantic_intent": "Có những việc cần thời gian. Kiểm tra liên tục không có nghĩa là mình đang giúp chúng tiến triển.",
@@ -232,8 +232,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "overthinking",
-          "pot"
+          "Chú ý và hiện tại",
+          "Selflo"
         ],
         "tie_break_order": 1012
       },

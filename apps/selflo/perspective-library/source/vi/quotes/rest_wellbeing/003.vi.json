@@ -75,10 +75,10 @@
     },
     {
       "id": "stars_remain_behind_clouds",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Đêm không thấy sao không có nghĩa là những ngôi sao đã biến mất. Mây chỉ đang đi qua.",
+      "text_vi": "Khi mây che khuất, những ngôi sao vẫn còn đó dù mình không nhìn thấy.",
       "subtitle_vi": null,
       "primary_theme": "rest_wellbeing",
       "authorship": {
@@ -88,7 +88,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review | Q10-B003: Canonical Selflo · stars_remain_behind_clouds; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -106,11 +106,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh low_energy.",
+        "semantic_intent": "Khi mây che khuất, những ngôi sao vẫn còn đó dù mình không nhìn thấy.",
         "observation_key": "stars_remain_behind_clouds",
         "structure_pattern": "everyday_observation"
       },
@@ -127,8 +127,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "low_energy"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": 4003
       },
@@ -144,7 +144,7 @@
     },
     {
       "id": "damp_paper_is_not_the_pens_fault",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Giấy ẩm không thể viết. Không phải lỗi của bút.",
@@ -174,9 +174,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh low_energy.",
@@ -282,7 +282,7 @@
     },
     {
       "id": "sprint_and_marathon_need_different_breath",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Chạy nước rút và chạy đường dài cần những nhịp thở khác nhau.",
@@ -312,9 +312,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh high_stress.",
@@ -420,7 +420,7 @@
     },
     {
       "id": "faster_clock_does_not_lengthen_day",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Đồng hồ chạy nhanh hơn không làm ngày dài thêm.",
@@ -450,9 +450,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh high_stress.",
@@ -489,10 +489,10 @@
     },
     {
       "id": "athlete_sits_after_finish",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Vận động viên sau khi về đích cũng ngồi xuống. Đó không phải là bỏ cuộc.",
+      "text_vi": "Về đích rồi, vận động viên cũng có lúc ngồi xuống nghỉ. Nghỉ không có nghĩa là bỏ cuộc.",
       "subtitle_vi": null,
       "primary_theme": "rest_wellbeing",
       "authorship": {
@@ -502,7 +502,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review | Q10-B003: Canonical Selflo · athlete_sits_after_finish; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -522,11 +522,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh after_peak.",
+        "semantic_intent": "Về đích rồi, vận động viên cũng có lúc ngồi xuống nghỉ. Nghỉ không có nghĩa là bỏ cuộc.",
         "observation_key": "athlete_sits_after_finish",
         "structure_pattern": "everyday_observation"
       },
@@ -543,8 +543,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "after_peak"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": 4016
       },
@@ -560,7 +560,7 @@
     },
     {
       "id": "excitement_has_a_lifespan",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Cảm giác hứng khởi có tuổi thọ. Đó là thiết kế, không phải lỗi.",
@@ -593,9 +593,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh after_peak.",
@@ -632,7 +632,7 @@
     },
     {
       "id": "ordinary_day_can_be_recharge",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Một ngày không có gì đặc biệt đôi khi lại là ngày cơ thể được hồi phục nhiều nhất.",
@@ -662,9 +662,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh stable_good.",
@@ -701,7 +701,7 @@
     },
     {
       "id": "silence_between_notes_belongs_to_music",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Khoảng lặng giữa hai câu nhạc cũng là một phần của bản nhạc.",
@@ -714,7 +714,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review | Q10-B003: Canonical Selflo · silence_between_notes_belongs_to_music; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -732,11 +732,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh stable_good.",
+        "semantic_intent": "Khoảng lặng giữa hai câu nhạc cũng là một phần của bản nhạc.",
         "observation_key": "silence_between_notes_belongs_to_music",
         "structure_pattern": "everyday_observation"
       },
@@ -753,8 +753,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "stable_good"
+          "Nghỉ ngơi",
+          "Selflo"
         ],
         "tie_break_order": 4033
       },

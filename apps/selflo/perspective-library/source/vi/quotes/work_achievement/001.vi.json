@@ -149,9 +149,9 @@
     },
     {
       "id": "hands_know_who_the_work_is_for",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Cùng một chiếc bàn, công việc khác đi\nkhi đôi tay biết mình đang làm điều gì và cho ai.",
+      "text_vi": "Cùng một việc, cảm giác có thể khác đi khi mình biết đang làm vì điều gì và cho ai.",
       "primary_theme": "work_achievement",
       "authorship": {
         "author_id": "selflo",
@@ -160,7 +160,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · hands_know_who_the_work_is_for; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -183,11 +183,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Cảm nhận về mục đích và kết nối có thể thay đổi cách một người hiện diện trong công việc.",
+        "semantic_intent": "Cùng một việc, cảm giác có thể khác đi khi mình biết đang làm vì điều gì và cho ai.",
         "observation_key": "hands_at_purposeful_worktable",
         "structure_pattern": "same_task_changes_with_owned_meaning"
       },
@@ -214,8 +214,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work",
-          "motivation"
+          "Công việc và lựa chọn",
+          "Selflo"
         ],
         "tie_break_order": 1077
       },
@@ -229,9 +229,9 @@
     },
     {
       "id": "chair_is_repaired_for_someone",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Người thợ sửa chiếc ghế kỹ hơn\nkhi biết ai sẽ ngồi lên nó mỗi chiều.",
+      "text_vi": "Người thợ có thể sửa chiếc ghế kỹ hơn khi biết ai sẽ ngồi lên nó mỗi chiều.",
       "primary_theme": "work_achievement",
       "authorship": {
         "author_id": "selflo",
@@ -240,7 +240,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · chair_is_repaired_for_someone; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -263,11 +263,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Mối liên hệ giữa việc làm và người được phục vụ có thể làm công việc trở nên cụ thể hơn.",
+        "semantic_intent": "Người thợ có thể sửa chiếc ghế kỹ hơn khi biết ai sẽ ngồi lên nó mỗi chiều.",
         "observation_key": "carpenter_repairs_known_users_chair",
         "structure_pattern": "relational_context_deepens_care"
       },
@@ -294,8 +294,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work",
-          "connection"
+          "Công việc và lựa chọn",
+          "Selflo"
         ],
         "tie_break_order": 1078
       },
@@ -309,7 +309,7 @@
     },
     {
       "id": "door_opens_more_lightly_from_inside",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Một cánh cửa tự mở từ bên trong\nthường nhẹ hơn cánh cửa bị đẩy mãi từ ngoài.",
       "primary_theme": "work_achievement",
@@ -342,9 +342,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:07:55Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Cảm giác lựa chọn từ bên trong khác với sức ép chỉ đến từ bên ngoài.",
@@ -389,7 +389,7 @@
     },
     {
       "id": "cook_still_wants_to_taste_the_soup",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Căn bếp sáng lâu hơn\nkhi người nấu vẫn còn muốn nếm món mình đang làm.",
       "primary_theme": "work_achievement",
@@ -422,9 +422,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Sự quan tâm nội tại đến chất lượng công việc có thể duy trì sự gắn bó khác với ép buộc đơn thuần.",
@@ -549,9 +549,9 @@
     },
     {
       "id": "musician_stays_with_one_lost_note",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Người chơi đàn không tập cả bản nhạc mỗi tối.\nCó hôm họ chỉ ngồi lại với một nốt thường bị lạc.",
+      "text_vi": "Tập đàn có hôm chỉ là ngồi lại với một đoạn mình thường vấp, thay vì chơi hết cả bài.",
       "primary_theme": "work_achievement",
       "authorship": {
         "author_id": "selflo",
@@ -560,7 +560,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · musician_stays_with_one_lost_note; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -584,10 +584,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Luyện tập có thể tập trung vào điểm chưa vững thay vì lặp lại toàn bộ điều đã biết.",
+        "semantic_intent": "Tập đàn có hôm chỉ là ngồi lại với một đoạn mình thường vấp, thay vì chơi hết cả bài.",
         "observation_key": "musician_practices_one_note",
         "structure_pattern": "whole_skill_improves_through_targeted_part"
       },
@@ -614,8 +614,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work",
-          "practice"
+          "Công việc và lựa chọn",
+          "Selflo"
         ],
         "tie_break_order": 1082
       },
@@ -631,7 +631,7 @@
     },
     {
       "id": "knife_sharpens_at_the_same_angle",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Con dao sắc lên qua nhiều lần đi đúng góc trên viên đá,\nkhông phải từ một lần mài thật mạnh.",
       "primary_theme": "work_achievement",
@@ -664,9 +664,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Sự chính xác và lặp lại có chủ đích khác với một nỗ lực lớn nhưng thiếu điều chỉnh.",
@@ -712,7 +712,7 @@
     },
     {
       "id": "carpenter_measures_the_uneven_leg",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Người thợ mộc đo lại chiếc chân bàn còn chênh,\nthay vì vuốt mãi phần mặt gỗ đã phẳng.",
       "primary_theme": "work_achievement",
@@ -723,7 +723,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · carpenter_measures_the_uneven_leg; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -746,11 +746,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Cải thiện cần quay về phần tạo ra sai lệch thay vì chỉ làm thêm phần đã tốt.",
+        "semantic_intent": "Người thợ mộc đo lại chiếc chân bàn còn chênh,\nthay vì vuốt mãi phần mặt gỗ đã phẳng.",
         "observation_key": "carpenter_checks_uneven_table_leg",
         "structure_pattern": "practice_targets_source_of_error"
       },
@@ -777,8 +777,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "work",
-          "practice"
+          "Công việc và lựa chọn",
+          "Selflo"
         ],
         "tie_break_order": 1084
       },
@@ -793,7 +793,7 @@
     },
     {
       "id": "even_stitch_follows_many_undoings",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Một mũi khâu đều được sinh ra\ntừ rất nhiều mũi khâu từng phải tháo.",
       "primary_theme": "work_achievement",
@@ -826,9 +826,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Kỹ năng vững dần qua nhiều vòng thử, nhận phản hồi và sửa lại.",
@@ -874,7 +874,7 @@
     },
     {
       "id": "mason_checks_the_string_each_row",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Bức tường thẳng bắt đầu từ việc người thợ\nnhìn lại sợi dây sau từng hàng gạch.",
       "primary_theme": "work_achievement",
@@ -907,9 +907,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Phản hồi thường xuyên giúp điều chỉnh sai lệch trước khi nó tích lũy thành kết quả lớn.",

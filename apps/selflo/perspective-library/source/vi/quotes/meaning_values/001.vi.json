@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "candle_is_seen_when_it_goes_out",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Khi nến tắt",
       "text_vi": "Ngọn nến cháy đều thường không làm ai chú ý. Nhưng khi tắt đi, mọi người mới nhìn thấy khoảng tối nó từng giữ lại.",
@@ -42,9 +42,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Giá trị của điều ổn định thường chỉ được nhận ra khi nó vắng mặt.",
@@ -79,10 +79,10 @@
     },
     {
       "id": "clarity_before_speed",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Rõ trước, nhanh sau",
-      "text_vi": "Không phải lúc nào đi nhanh hơn cũng đưa mình gần hơn. Đôi khi điều cần trước tiên là biết mình đang đi đâu.",
+      "text_vi": "Biết mình đang đi đâu cũng cần thiết như việc đi nhanh đến mức nào.",
       "subtitle_vi": null,
       "primary_theme": "meaning_values",
       "authorship": {
@@ -92,7 +92,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · clarity_before_speed; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -116,11 +116,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:00:08Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Biết hướng đi quan trọng hơn việc chỉ tăng tốc.",
+        "semantic_intent": "Biết mình đang đi đâu cũng cần thiết như việc đi nhanh đến mức nào.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -137,8 +137,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "control_layer",
-          "growth_layer"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": -84
       },
@@ -152,10 +152,10 @@
     },
     {
       "id": "meaning_is_often_found_in_how",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Ý nghĩa đôi khi nằm trong cách mình đi qua, không chỉ ở kết quả",
-      "text_vi": "Không phải mọi thứ chỉ có giá trị khi nó đưa tới kết quả lớn. Có những điều có ý nghĩa vì cách nó làm mình trở thành ai.",
+      "text_vi": "Có những việc mang ý nghĩa cả trong cách mình làm và con người mình dần trở thành, dù kết quả chưa lớn.",
       "subtitle_vi": "Nếu chỉ sống bằng kết quả, mình sẽ bỏ lỡ cách một việc đang nuôi lớn mình từ bên trong.",
       "story_id": "story.rails_that_diverge",
       "primary_theme": "meaning_values",
@@ -164,9 +164,8 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "philosophy_layer",
-          "growth_layer",
-          "identity_layer"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 5
       },
@@ -176,8 +175,8 @@
         "work": null,
         "source_url": null,
         "source_language": null,
-        "source_label": "Meaning-centered view",
-        "source_detail": "One-time legacy selection migration"
+        "source_label": "Selflo",
+        "source_detail": "One-time legacy selection migration | Q10-B003: Canonical Selflo · meaning_is_often_found_in_how; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -205,11 +204,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:06:16Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Bảo toàn presentation và selection behavior hiện hành.",
+        "semantic_intent": "Có những việc mang ý nghĩa cả trong cách mình làm và con người mình dần trở thành, dù kết quả chưa lớn.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -237,7 +236,7 @@
     },
     {
       "id": "compass_keeps_direction_not_steps",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chiếc la bàn không bước thay người đi.\nNó chỉ giữ một hướng khi con đường đổi dạng.",
       "primary_theme": "meaning_values",
@@ -248,7 +247,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, owner đã duyệt phát hành"
+        "source_detail": "Nội dung gốc Selflo, owner đã duyệt phát hành | Q10-B003: Canonical Selflo · compass_keeps_direction_not_steps; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -271,11 +270,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-07T14:13:11Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Giá trị có thể định hướng mà không quyết định thay từng lựa chọn cụ thể.",
+        "semantic_intent": "Chiếc la bàn không bước thay người đi.\nNó chỉ giữ một hướng khi con đường đổi dạng.",
         "observation_key": "compass_on_changing_road",
         "structure_pattern": "direction_guides_without_taking_steps"
       },
@@ -302,8 +301,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "values",
-          "compass"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1104
       },
@@ -316,9 +315,9 @@
     },
     {
       "id": "home_is_known_by_what_it_keeps",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Một căn nhà không chỉ được nhận ra bằng màu sơn,\nmà bằng những thứ chủ nhà chọn giữ qua nhiều lần chuyển chỗ.",
+      "text_vi": "Những món đồ được giữ qua nhiều lần chuyển nhà có thể kể điều gì đáng quý với chủ nhân.",
       "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
@@ -327,7 +326,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · home_is_known_by_what_it_keeps; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -350,11 +349,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Những lựa chọn được giữ lại qua thay đổi có thể làm lộ điều được coi trọng.",
+        "semantic_intent": "Những món đồ được giữ qua nhiều lần chuyển nhà có thể kể điều gì đáng quý với chủ nhân.",
         "observation_key": "objects_kept_across_moves",
         "structure_pattern": "repeated_choice_reveals_value"
       },
@@ -381,8 +380,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "values",
-          "home"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1105
       },
@@ -395,7 +394,7 @@
     },
     {
       "id": "small_suitcase_reveals_what_matters",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Mỗi lần chọn một cuốn sách mang theo,\nchiếc vali nhỏ cũng âm thầm kể điều gì đáng ở lại.",
       "primary_theme": "meaning_values",
@@ -428,9 +427,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:51:37Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Giới hạn buộc lựa chọn và lựa chọn có thể phản ánh điều được coi trọng.",
@@ -474,9 +473,9 @@
     },
     {
       "id": "porch_light_marks_the_kind_of_home",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Ngọn đèn ở hiên không soi hết con đường. Nó chỉ cho biết căn nhà này vẫn muốn để ai đó tìm thấy lối về.",
+      "text_vi": "Ngọn đèn ở hiên không soi hết con đường, nhưng vẫn giúp người về nhận ra lối vào nhà.",
       "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
@@ -485,7 +484,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · porch_light_marks_the_kind_of_home; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -508,11 +507,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một hành động nhỏ có thể thể hiện loại nơi chốn hoặc mối quan hệ người ta muốn tạo ra.",
+        "semantic_intent": "Ngọn đèn ở hiên không soi hết con đường, nhưng vẫn giúp người về nhận ra lối vào nhà.",
         "observation_key": "porch_light_for_returning_people",
         "structure_pattern": "small_action_signals_chosen_value"
       },
@@ -539,8 +538,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "values",
-          "light"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1107
       },
@@ -553,7 +552,7 @@
     },
     {
       "id": "some_footprints_lead_toward_home",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Một ngày bận rộn để lại rất nhiều dấu chân.\nChỉ vài dấu trong số đó dẫn về nơi lòng mình muốn đến.",
       "primary_theme": "meaning_values",
@@ -586,9 +585,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Nhiều hoạt động không tự động đồng nghĩa với nhiều hành động phù hợp điều được coi trọng.",
@@ -632,9 +631,9 @@
     },
     {
       "id": "old_chair_holds_more_than_wood",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Một chiếc ghế cũ có thể vô giá trong căn nhà,\nkhông vì gỗ tốt mà vì những người từng ngồi quanh nó.",
+      "text_vi": "Một chiếc ghế cũ có thể quý trong căn nhà không chỉ vì gỗ, mà vì những người từng ngồi quanh nó.",
       "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
@@ -643,7 +642,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · old_chair_holds_more_than_wood; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -667,10 +666,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Ý nghĩa của một vật có thể đến từ câu chuyện và kết nối quanh nó hơn là chất liệu.",
+        "semantic_intent": "Một chiếc ghế cũ có thể quý trong căn nhà không chỉ vì gỗ, mà vì những người từng ngồi quanh nó.",
         "observation_key": "old_chair_and_shared_history",
         "structure_pattern": "relational_history_creates_meaning"
       },
@@ -697,8 +696,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning",
-          "chair"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1109
       },
@@ -711,7 +710,7 @@
     },
     {
       "id": "bus_ticket_keeps_the_day_of_return",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chiếc vé xe chỉ là mảnh giấy nhỏ,\ncho đến khi nó giữ lại ngày một người quyết định trở về.",
       "primary_theme": "meaning_values",
@@ -722,7 +721,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · bus_ticket_keeps_the_day_of_return; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -746,10 +745,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một vật bình thường có thể mang ý nghĩa qua lựa chọn và câu chuyện gắn với nó.",
+        "semantic_intent": "Chiếc vé xe chỉ là mảnh giấy nhỏ,\ncho đến khi nó giữ lại ngày một người quyết định trở về.",
         "observation_key": "ticket_from_return_journey",
         "structure_pattern": "ordinary_object_holds_life_turn"
       },
@@ -776,8 +775,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning",
-          "ticket"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1110
       },
@@ -869,9 +868,9 @@
     },
     {
       "id": "morning_thread_gathers_the_days",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Một việc nhỏ lặp lại mỗi sáng\nđôi khi là sợi chỉ giữ nhiều ngày rời rạc thành một đời sống.",
+      "text_vi": "Một việc nhỏ lặp lại mỗi sáng có thể giúp những ngày rời rạc có lại một nhịp quen.",
       "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
@@ -880,7 +879,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · morning_thread_gathers_the_days; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -903,11 +902,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Những thực hành thường ngày có thể tạo cảm giác liên tục và mạch lạc qua thời gian.",
+        "semantic_intent": "Một việc nhỏ lặp lại mỗi sáng có thể giúp những ngày rời rạc có lại một nhịp quen.",
         "observation_key": "morning_ritual_as_thread",
         "structure_pattern": "small_ritual_connects_separate_days"
       },
@@ -934,8 +933,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning",
-          "morning"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1112
       },

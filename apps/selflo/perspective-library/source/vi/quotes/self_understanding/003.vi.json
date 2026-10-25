@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "another_persons_measure_cannot_fit_your_life",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Chiếc thước không may vừa cuộc đời",
       "text_vi": "Thước đo của người khác có thể cho mình một con số, nhưng không thể may vừa cuộc đời mình.",
@@ -38,9 +38,9 @@
         "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Thước đo của người khác có thể cho mình một con số, nhưng không thể may vừa cuộc đời mình.",
@@ -79,7 +79,7 @@
     },
     {
       "id": "shadow_length_depends_on_sun",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Bóng mình dài hay ngắn tùy góc mặt trời — không tùy mình cao hay thấp.",
@@ -109,9 +109,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh compare_self_judge.",
@@ -215,7 +215,7 @@
     },
     {
       "id": "marathoner_does_not_chase_sprinter_at_start",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Vận động viên marathon không nhìn người chạy nước rút ở km đầu tiên.",
@@ -245,9 +245,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh compare_self_judge.",
@@ -283,10 +283,10 @@
     },
     {
       "id": "each_season_has_its_own_gift",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Mỗi mùa có thứ chỉ mùa đó mới có. Mùa đông không thiếu thứ của mùa hè.",
+      "text_vi": "Mỗi mùa có nét riêng. Mùa đông không cần giống mùa hè.",
       "subtitle_vi": null,
       "primary_theme": "self_understanding",
       "authorship": {
@@ -296,7 +296,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review | Q10-B003: Canonical Selflo · each_season_has_its_own_gift; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -317,11 +317,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh compare_self_judge.",
+        "semantic_intent": "Mỗi mùa có nét riêng. Mùa đông không cần giống mùa hè.",
         "observation_key": "each_season_has_its_own_gift",
         "structure_pattern": "everyday_observation"
       },
@@ -338,8 +338,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "compare_self_judge"
+          "Hiểu bản thân",
+          "Selflo"
         ],
         "tie_break_order": 4029
       },

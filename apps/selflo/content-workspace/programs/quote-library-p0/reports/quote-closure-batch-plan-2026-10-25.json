@@ -391,8 +391,8 @@
       "phase": "Q10.1",
       "title_vi": "Rà Release",
       "row_count": 165,
-      "status": "planned",
-      "reviewed_count": 0,
+      "status": "verifying_public",
+      "reviewed_count": 165,
       "baseline_ids": [
         "research.dhammapada.day11.v122",
         "research.dhammapada.day11.v133",
@@ -569,7 +569,11 @@
         "pragmatism_humanistic": 4,
         "selflo": 142
       },
-      "source_group_count": 20
+      "source_group_count": 20,
+      "accepted_count": 112,
+      "not_accepted_count": 53,
+      "evidence_path": "reports/q10-b003-review.json",
+      "planned_release_revision": 51
     },
     {
       "id": "Q10-B004",

@@ -261,7 +261,7 @@
     },
     {
       "id": "do_not_wait_until_the_last_time",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Đừng đợi đến lần cuối",
       "text_vi": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.",
@@ -273,11 +273,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning_values",
-          "sự hữu hạn",
-          "gia đình",
-          "thời gian",
-          "giá trị"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 3071
       },
@@ -288,7 +285,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote kết của story LẦN CUỐI do owner cung cấp và chốt."
+        "source_detail": "Quote kết của story LẦN CUỐI do owner cung cấp và chốt. | Q10-B003: Canonical Selflo · do_not_wait_until_the_last_time; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -312,11 +309,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-10-07T00:00:00Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Sự hữu hạn không tạo ra giá trị; nó giúp ta nhận ra giá trị vốn đã hiện diện từ lâu.",
+        "semantic_intent": "Đừng đợi đến lần cuối mới nhận ra điều gì đã quan trọng với mình từ rất lâu.",
         "observation_key": "finitude_reveals_existing_value",
         "structure_pattern": "story_distillation"
       },

@@ -86,9 +86,9 @@
     },
     {
       "id": "roof_releases_the_storm_slowly",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Mưa đã tạnh từ lâu, mái hiên vẫn nhỏ giọt.\nNgôi nhà chỉ đang trả hết phần nước mình từng giữ.",
+      "text_vi": "Mưa đã tạnh từ lâu, mái hiên vẫn còn nhỏ giọt.",
       "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "selflo",
@@ -97,7 +97,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · roof_releases_the_storm_slowly; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -121,10 +121,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Dư âm sau khó khăn có thể tiếp tục trong lúc hệ thống đang dần trở lại trạng thái khác.",
+        "semantic_intent": "Mưa đã tạnh từ lâu, mái hiên vẫn còn nhỏ giọt.",
         "observation_key": "roof_drips_after_rain",
         "structure_pattern": "event_ends_recovery_continues_gradually"
       },
@@ -151,8 +151,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "resilience",
-          "rain"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 1072
       },
@@ -166,7 +166,7 @@
     },
     {
       "id": "new_light_enters_where_branch_broke",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Cành cây từng gãy không mọc lại như cũ,\nnhưng từ đó ánh sáng đi vào khu vườn theo một lối khác.",
       "primary_theme": "adversity_resilience",
@@ -177,7 +177,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · new_light_enters_where_branch_broke; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -201,10 +201,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Thích nghi sau mất mát có thể tạo hình dạng mới thay vì khôi phục nguyên trạng.",
+        "semantic_intent": "Cành cây từng gãy không mọc lại như cũ,\nnhưng từ đó ánh sáng đi vào khu vườn theo một lối khác.",
         "observation_key": "light_through_broken_branch",
         "structure_pattern": "loss_changes_form_and_opens_new_path"
       },
@@ -231,8 +231,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "resilience",
-          "branch"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 1073
       },
@@ -246,9 +246,9 @@
     },
     {
       "id": "patched_cloth_finds_another_way_to_stay",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Chiếc áo được vá không còn nguyên như trước,\nnhưng đường chỉ mới cho nó thêm một cách để ở lại.",
+      "text_vi": "Chiếc áo được vá không còn nguyên như trước, nhưng vẫn có thể được dùng tiếp.",
       "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "selflo",
@@ -257,7 +257,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · patched_cloth_finds_another_way_to_stay; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -280,11 +280,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Phục hồi có thể là một hình thức tiếp tục sống với cấu trúc đã thay đổi.",
+        "semantic_intent": "Chiếc áo được vá không còn nguyên như trước, nhưng vẫn có thể được dùng tiếp.",
         "observation_key": "patched_old_shirt",
         "structure_pattern": "repair_changes_form_but_preserves_use"
       },
@@ -311,8 +311,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "resilience",
-          "patch"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 1074
       },
@@ -326,9 +326,9 @@
     },
     {
       "id": "market_reopens_one_stall_at_a_time",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Sau trận mưa lớn, khu chợ không sáng lại cùng một lúc.\nTừng quầy nhỏ mở đèn, rồi con phố dần có tiếng người.",
+      "text_vi": "Sau mưa lớn, khu chợ có thể trở lại từ từng quầy nhỏ mở đèn, rồi con phố dần có tiếng người.",
       "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "selflo",
@@ -337,7 +337,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · market_reopens_one_stall_at_a_time; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -360,11 +360,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một hệ thống có thể phục hồi qua nhiều phần nhỏ trở lại hoạt động theo thời gian.",
+        "semantic_intent": "Sau mưa lớn, khu chợ có thể trở lại từ từng quầy nhỏ mở đèn, rồi con phố dần có tiếng người.",
         "observation_key": "market_reopens_after_storm",
         "structure_pattern": "distributed_small_returns_restore_system"
       },
@@ -391,8 +391,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "resilience",
-          "market"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 1075
       },
@@ -406,9 +406,9 @@
     },
     {
       "id": "morning_after_storm_starts_small",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Ngày sau cơn bão bắt đầu bằng những việc rất nhỏ:\ndựng lại chiếc ghế, mở cửa sổ, quét lá khỏi hiên.",
+      "text_vi": "Sau cơn bão, có khi mình bắt đầu lại bằng việc nhỏ: dựng chiếc ghế, mở cửa sổ, quét lá khỏi hiên.",
       "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "selflo",
@@ -417,7 +417,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · morning_after_storm_starts_small; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -440,11 +440,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Phục hồi thường được xây bằng các hành động bình thường và gần gũi hơn là một khoảnh khắc phi thường.",
+        "semantic_intent": "Sau cơn bão, có khi mình bắt đầu lại bằng việc nhỏ: dựng chiếc ghế, mở cửa sổ, quét lá khỏi hiên.",
         "observation_key": "small_tasks_after_storm",
         "structure_pattern": "ordinary_tasks_reassemble_daily_life"
       },
@@ -471,8 +471,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "resilience",
-          "storm"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 1076
       },

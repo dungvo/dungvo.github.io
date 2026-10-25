@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "small_boundary_is_still_boundary",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Một ranh giới nhỏ",
-      "text_vi": "Một lời từ chối nhẹ vẫn là ranh giới. Mình không cần làm nó sắc để nó có giá trị.",
+      "text_vi": "Một lời từ chối nhẹ nhàng vẫn là ranh giới. Mình không cần nói gay gắt để nó có giá trị.",
       "subtitle_vi": null,
       "primary_theme": "relationships",
       "authorship": {
@@ -19,7 +19,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · small_boundary_is_still_boundary; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -43,11 +43,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một lời từ chối nhẹ nhàng vẫn có thể bảo vệ ranh giới cá nhân.",
+        "semantic_intent": "Một lời từ chối nhẹ nhàng vẫn là ranh giới. Mình không cần nói gay gắt để nó có giá trị.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -64,8 +64,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "social_layer",
-          "control_layer"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": -86
       },
@@ -157,7 +157,7 @@
     },
     {
       "id": "empty_chair_changes_the_table",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chiếc ghế trống không làm chiếc bàn rộng hơn.\nNó chỉ làm mọi người nhận ra ai thường ngồi ở đó.",
       "primary_theme": "relationships",
@@ -190,9 +190,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Sự vắng mặt làm lộ ý nghĩa của một hiện diện quen thuộc trong nhóm.",
@@ -237,7 +237,7 @@
     },
     {
       "id": "lit_window_guides_the_way_home",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Một ô cửa sáng không rút ngắn con đường.\nNó chỉ khiến người đi biết có nơi đang đợi mình trở về.",
       "primary_theme": "relationships",
@@ -270,9 +270,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Dấu hiệu của một nơi đón nhận có thể mang ý nghĩa thuộc về trên hành trình trở lại.",
@@ -317,7 +317,7 @@
     },
     {
       "id": "one_umbrella_keeps_two_steps_together",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chiếc ô không làm mưa nhỏ đi,\nnhưng đủ để hai người bước chậm cùng nhau.",
       "primary_theme": "relationships",
@@ -328,7 +328,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · one_umbrella_keeps_two_steps_together; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -352,10 +352,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Kết nối không xóa hoàn cảnh khó chịu nhưng có thể tạo một nhịp cùng nhau.",
+        "semantic_intent": "Chiếc ô không làm mưa nhỏ đi,\nnhưng đủ để hai người bước chậm cùng nhau.",
         "observation_key": "two_people_under_umbrella",
         "structure_pattern": "shared_shelter_synchronizes_steps"
       },
@@ -382,8 +382,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationship",
-          "belonging"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 1028
       },
@@ -397,7 +397,7 @@
     },
     {
       "id": "kitchen_sounds_like_someone_waiting",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Trong căn bếp nhỏ, tiếng bát đũa va nhau\nđôi khi là cách một ngôi nhà nói rằng có người đang chờ.",
       "primary_theme": "relationships",
@@ -408,7 +408,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · kitchen_sounds_like_someone_waiting; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -431,11 +431,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Những âm thanh lặp lại của chăm sóc đời thường có thể tạo cảm giác được chờ đợi.",
+        "semantic_intent": "Trong căn bếp nhỏ, tiếng bát đũa va nhau\nđôi khi là cách một ngôi nhà nói rằng có người đang chờ.",
         "observation_key": "dishes_in_waiting_kitchen",
         "structure_pattern": "ordinary_household_sound_signals_belonging"
       },
@@ -462,8 +462,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationship",
-          "belonging"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 1029
       },
@@ -478,9 +478,9 @@
     },
     {
       "id": "familiar_cafe_remembers_the_order",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Quán quen không giữ người ta bằng chiếc ghế đẹp nhất,\nmà bằng việc có người nhớ món họ thường gọi.",
+      "text_vi": "Quán quen đôi khi giữ người ta bằng việc có người nhớ món họ thường gọi.",
       "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
@@ -489,7 +489,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · familiar_cafe_remembers_the_order; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -513,10 +513,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Được nhận ra trong những chi tiết nhỏ có thể làm một nơi trở nên thân thuộc.",
+        "semantic_intent": "Quán quen đôi khi giữ người ta bằng việc có người nhớ món họ thường gọi.",
         "observation_key": "cafe_remembers_usual_order",
         "structure_pattern": "recognition_outweighs_surface_comfort"
       },
@@ -543,8 +543,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationship",
-          "belonging"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 1030
       },
@@ -557,7 +557,7 @@
     },
     {
       "id": "bridge_does_not_hold_the_walker",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Chiếc cầu vững không giữ người ở lại giữa sông.\nNó khiến bước chân sang bờ bên kia bớt chần chừ.",
       "primary_theme": "relationships",
@@ -590,9 +590,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:07:55Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Một nền tảng đáng tin cậy có thể hỗ trợ việc bước ra thay vì giữ người ở lại.",
@@ -637,7 +637,7 @@
     },
     {
       "id": "hand_does_not_need_to_grip",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Một bàn tay không cần nắm quá chặt\nđể người bên cạnh biết mình chưa rời đi.",
       "primary_theme": "relationships",
@@ -648,7 +648,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · hand_does_not_need_to_grip; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -671,11 +671,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Sự hiện diện có thể được cảm nhận mà không cần kiểm soát hoặc giữ chặt.",
+        "semantic_intent": "Một bàn tay không cần nắm quá chặt\nđể người bên cạnh biết mình chưa rời đi.",
         "observation_key": "gentle_handhold",
         "structure_pattern": "soft_contact_signals_reliable_presence"
       },
@@ -702,8 +702,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationship",
-          "attachment"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 1032
       },
@@ -717,9 +717,9 @@
     },
     {
       "id": "someone_calls_at_the_last_stop",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Người ta ngủ yên hơn trên chuyến xe dài\nkhi biết có người sẽ gọi mình lúc đến trạm.",
+      "text_vi": "Trên chuyến xe dài, biết có người gọi mình lúc đến trạm có thể giúp mình bớt lo khi chợp mắt.",
       "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
@@ -728,7 +728,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · someone_calls_at_the_last_stop; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -752,10 +752,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Sự tin cậy vào một người đáp lại có thể tạo cảm giác an toàn khi tạm buông cảnh giác.",
+        "semantic_intent": "Trên chuyến xe dài, biết có người gọi mình lúc đến trạm có thể giúp mình bớt lo khi chợp mắt.",
         "observation_key": "wake_me_at_bus_stop",
         "structure_pattern": "expected_response_allows_temporary_rest"
       },
@@ -782,8 +782,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationship",
-          "attachment"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 1033
       },
@@ -796,9 +796,9 @@
     },
     {
       "id": "door_stays_where_home_begins",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Cánh cửa không hỏi vì sao đôi giày trở về muộn.\nNó vẫn nằm đúng chỗ để người đi biết mình đã về.",
+      "text_vi": "Đôi giày trở về muộn. Cánh cửa nhà vẫn ở chỗ quen thuộc.",
       "primary_theme": "relationships",
       "authorship": {
         "author_id": "selflo",
@@ -807,7 +807,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · door_stays_where_home_begins; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -830,11 +830,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:00:33Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Tính ổn định của nơi trở về có thể mang lại một dấu hiệu an toàn.",
+        "semantic_intent": "Đôi giày trở về muộn. Cánh cửa nhà vẫn ở chỗ quen thuộc.",
         "observation_key": "door_and_late_shoes",
         "structure_pattern": "stable_return_point_marks_safety"
       },
@@ -861,8 +861,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "relationship",
-          "attachment"
+          "Quan hệ",
+          "Selflo"
         ],
         "tie_break_order": 1034
       },

@@ -75,10 +75,10 @@
     },
     {
       "id": "acceptance_is_not_giving_up",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Chấp nhận không phải buông xuôi",
-      "text_vi": "Có những thứ mình không thể sửa ngay. Chấp nhận không làm mình yếu đi; nó đưa mình về đúng điểm bắt đầu của sự rõ ràng.",
+      "text_vi": "Chấp nhận điều chưa thể sửa ngay có thể giúp mình nhìn rõ phần vẫn còn làm được.",
       "subtitle_vi": null,
       "primary_theme": "adversity_resilience",
       "authorship": {
@@ -88,7 +88,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo"
+        "source_detail": "Nội dung gốc Selflo | Q10-B003: Canonical Selflo · acceptance_is_not_giving_up; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -112,11 +112,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Chấp nhận thực tại tạo sự rõ ràng để biết mình có thể bắt đầu từ đâu.",
+        "semantic_intent": "Chấp nhận điều chưa thể sửa ngay có thể giúp mình nhìn rõ phần vẫn còn làm được.",
         "observation_key": null,
         "structure_pattern": null
       },
@@ -133,8 +133,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "control_layer",
-          "philosophy_layer"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": -90
       },
@@ -222,7 +222,7 @@
     },
     {
       "id": "room_changes_with_one_lamp",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Một ngọn đèn nhỏ",
       "text_vi": "Căn phòng không cần sáng hết mới khác đi. Đôi khi một góc đủ sáng đã giúp mình biết bước chân tiếp theo đặt ở đâu.",
@@ -235,7 +235,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quan sát nguyên bản"
+        "source_detail": "Quan sát nguyên bản | Q10-B003: Canonical Selflo · room_changes_with_one_lamp; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -259,11 +259,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một phần nhỏ được làm sáng cũng có thể đủ cho bước tiếp theo.",
+        "semantic_intent": "Căn phòng không cần sáng hết mới khác đi. Đôi khi một góc đủ sáng đã giúp mình biết bước chân tiếp theo đặt ở đâu.",
         "observation_key": "one_lamp_in_room",
         "structure_pattern": null
       },
@@ -280,8 +280,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "clarity",
-          "small_step"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": -56
       },
@@ -296,7 +296,7 @@
     },
     {
       "id": "knots_loosen_from_the_edge",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Gỡ từ mép nút thắt",
       "text_vi": "Một nút thắt chặt hiếm khi mở ra bằng cách kéo mạnh ở giữa. Tìm được một mép nhỏ đôi khi đã là bắt đầu.",
@@ -309,7 +309,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quan sát nguyên bản"
+        "source_detail": "Quan sát nguyên bản | Q10-B003: Canonical Selflo · knots_loosen_from_the_edge; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -333,11 +333,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Vấn đề phức tạp đôi khi bắt đầu được tháo gỡ từ một điểm nhỏ có thể tiếp cận.",
+        "semantic_intent": "Một nút thắt chặt hiếm khi mở ra bằng cách kéo mạnh ở giữa. Tìm được một mép nhỏ đôi khi đã là bắt đầu.",
         "observation_key": "knot_edge",
         "structure_pattern": null
       },
@@ -354,8 +354,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "small_step",
-          "problem_solving"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": -54
       },
@@ -673,9 +673,9 @@
     },
     {
       "id": "map_does_not_lower_the_mountain",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Tấm bản đồ không làm ngọn núi thấp xuống.\nNó chỉ cho thấy nơi con dốc thật sự bắt đầu.",
+      "text_vi": "Tấm bản đồ không làm ngọn núi thấp xuống, nhưng có thể giúp mình thấy rõ đoạn đường phải đi.",
       "primary_theme": "adversity_resilience",
       "authorship": {
         "author_id": "selflo",
@@ -684,7 +684,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · map_does_not_lower_the_mountain; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -707,11 +707,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Nhận biết thực tại không xóa khó khăn nhưng có thể làm vị trí bắt đầu rõ hơn.",
+        "semantic_intent": "Tấm bản đồ không làm ngọn núi thấp xuống, nhưng có thể giúp mình thấy rõ đoạn đường phải đi.",
         "observation_key": "map_and_mountain_slope",
         "structure_pattern": "recognition_clarifies_start_without_removing_difficulty"
       },
@@ -738,8 +738,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "acceptance",
-          "map"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 1068
       },
@@ -753,7 +753,7 @@
     },
     {
       "id": "calling_mud_dry_changes_nothing",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Bùn dưới chân không biến mất\nchỉ vì con đường được gọi là khô.",
       "primary_theme": "adversity_resilience",
@@ -764,7 +764,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · calling_mud_dry_changes_nothing; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -787,11 +787,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Tên gọi mong muốn không thay thế việc nhận ra điều đang thật sự hiện diện.",
+        "semantic_intent": "Bùn dưới chân không biến mất\nchỉ vì con đường được gọi là khô.",
         "observation_key": "mud_on_called_dry_road",
         "structure_pattern": "preferred_label_does_not_change_condition"
       },
@@ -818,8 +818,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "acceptance",
-          "mud"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 1069
       },

@@ -79,7 +79,7 @@
     },
     {
       "id": "attributed.francis_bacon.bacon_power_over_others_lose_self",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": "Quyền lực và tự do",
       "text_vi": "Thật là một ham muốn kỳ lạ: tìm kiếm quyền lực rồi đánh mất tự do; muốn có quyền trên người khác nhưng lại mất quyền làm chủ chính mình.",
@@ -88,11 +88,11 @@
       "authorship": {
         "author_id": "francis_bacon",
         "author_name": "Francis Bacon",
-        "work": "The Essays of Francis Bacon",
-        "source_url": "https://www.gutenberg.org/ebooks/575",
+        "work": "Tiểu luận",
+        "source_url": "https://www.gutenberg.org/cache/epub/575/pg575-images.html",
         "source_language": "en",
-        "source_label": "Francis Bacon",
-        "source_detail": "Of Great Place. Original: It is a strange desire, to seek power and to lose liberty: or to seek power over others, and to lose power over a man's self."
+        "source_label": "Phỏng theo Francis Bacon · Về địa vị cao",
+        "source_detail": "Of Great Place. Original: It is a strange desire, to seek power and to lose liberty: or to seek power over others, and to lose power over a man's self. | Q10-B003: Về địa vị cao; tên/tác phẩm gốc: Francis Bacon / The Essays of Francis Bacon; đối chiếu tại https://www.gutenberg.org/cache/epub/575/pg575-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -114,11 +114,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-26T00:10:44Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quyền lực bên ngoài có thể đi cùng sự suy giảm tự do và khả năng làm chủ bản thân.",
+        "semantic_intent": "Thật là một ham muốn kỳ lạ: tìm kiếm quyền lực rồi đánh mất tự do; muốn có quyền trên người khác nhưng lại mất quyền làm chủ chính mình.",
         "observation_key": null,
         "structure_pattern": "translated_public_domain_quote"
       },
@@ -127,7 +127,7 @@
         "priority": 60,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Francis Bacon"
+        "attribution_vi": "Phỏng theo Francis Bacon · Về địa vị cao"
       },
       "story_id": null,
       "selection": {
@@ -135,9 +135,8 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "power",
-          "freedom",
-          "self_mastery"
+          "Công việc và lựa chọn",
+          "Tiểu luận"
         ],
         "tie_break_order": -60
       },

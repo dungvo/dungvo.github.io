@@ -87,7 +87,7 @@
     },
     {
       "id": "curtain_opens_with_the_alarm",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Sau nhiều buổi sáng, tiếng chuông vừa reo\nthì bàn tay đã tự tìm đến mép rèm cửa.",
       "primary_theme": "change_growth",
@@ -98,7 +98,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · curtain_opens_with_the_alarm; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -121,11 +121,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một tín hiệu ổn định có thể dần nối trực tiếp với hành động quen thuộc.",
+        "semantic_intent": "Sau nhiều buổi sáng, tiếng chuông vừa reo\nthì bàn tay đã tự tìm đến mép rèm cửa.",
         "observation_key": "alarm_and_curtain",
         "structure_pattern": "repeated_cue_action_link"
       },
@@ -152,8 +152,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "habit",
-          "morning"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": 1056
       },
@@ -168,9 +168,9 @@
     },
     {
       "id": "eraser_shrinks_as_letters_straighten",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Cục tẩy nhỏ dần trên bàn học,\ncòn những con chữ ngày một đứng thẳng hơn.",
+      "text_vi": "Cục tẩy nhỏ dần trên bàn học, còn những con chữ dần ngay ngắn hơn.",
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "selflo",
@@ -179,7 +179,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · eraser_shrinks_as_letters_straighten; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -203,10 +203,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Dấu vết của việc sửa sai có thể song hành với sự tiến bộ dần dần.",
+        "semantic_intent": "Cục tẩy nhỏ dần trên bàn học, còn những con chữ dần ngay ngắn hơn.",
         "observation_key": "eraser_and_straighter_letters",
         "structure_pattern": "correction_trace_accompanies_improvement"
       },
@@ -233,8 +233,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "learning",
-          "eraser"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": 1057
       },
@@ -248,7 +248,7 @@
     },
     {
       "id": "burn_mark_maps_the_flame",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Vết cháy dưới đáy nồi không kể rằng căn bếp đã thất bại.\nNó chỉ nơi ngọn lửa từng ở quá gần.",
       "primary_theme": "change_growth",
@@ -281,9 +281,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Một lỗi cụ thể có thể chỉ ra vị trí cần điều chỉnh thay vì kết luận về toàn bộ năng lực.",
@@ -329,9 +329,9 @@
     },
     {
       "id": "restitching_teaches_the_hand",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Đường may tháo ra để khâu lại\nthường để bàn tay nhớ lâu hơn nơi mũi kim từng đi sai.",
+      "text_vi": "Tháo một đường may để khâu lại có thể giúp bàn tay nhớ chỗ mũi kim từng đi sai.",
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "selflo",
@@ -340,7 +340,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · restitching_teaches_the_hand; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -364,10 +364,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Việc nhận ra và sửa lại một lỗi có thể làm thông tin trở nên đáng nhớ hơn.",
+        "semantic_intent": "Tháo một đường may để khâu lại có thể giúp bàn tay nhớ chỗ mũi kim từng đi sai.",
         "observation_key": "unstitch_and_resew",
         "structure_pattern": "correction_strengthens_memory_of_error"
       },
@@ -394,8 +394,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "learning",
-          "sewing"
+          "Thay đổi và trưởng thành",
+          "Selflo"
         ],
         "tie_break_order": 1059
       },
@@ -491,7 +491,7 @@
     },
     {
       "id": "crooked_pot_shows_the_heavy_hand",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "text_vi": "Người thợ gốm nhìn chiếc bình méo\nđể biết bàn tay đã mạnh ở đâu.",
       "primary_theme": "change_growth",
@@ -524,9 +524,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Kết quả chưa đúng có thể phản hồi cụ thể về phần thao tác cần thay đổi.",

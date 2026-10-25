@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "every_long_road_is_crossed_one_meter_at_a_time",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Một mét tiếp theo",
       "text_vi": "Không cần đi hết con đường trong một lần. Chỉ cần bước qua một mét đang ở trước mặt.",
@@ -38,9 +38,9 @@
         "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Không cần đi hết con đường trong một lần. Chỉ cần bước qua một mét đang ở trước mặt.",
@@ -79,7 +79,7 @@
     },
     {
       "id": "do_not_need_to_love_the_storm_to_love_the_journey",
-      "revision": 2,
+      "revision": 3,
       "kind": "selflo_original",
       "title_vi": "Vẫn yêu cuộc hành trình",
       "text_vi": "Mình không cần yêu cơn bão để vẫn yêu cuộc hành trình của mình.",
@@ -92,7 +92,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library | Q10-B003: Canonical Selflo · do_not_need_to_love_the_storm_to_love_the_journey; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -112,8 +112,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T15:50:35Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
         "semantic_intent": "Mình không cần yêu cơn bão để vẫn yêu cuộc hành trình của mình.",
@@ -133,11 +133,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "adversity_resilience",
-          "giông bão",
-          "chấp nhận",
-          "hành trình",
-          "thay đổi"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 3007
       },
@@ -152,7 +149,7 @@
     },
     {
       "id": "accepting_the_flood_reveals_the_road_still_open",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Đoạn đường vẫn còn đi được",
       "text_vi": "Chấp nhận con đường đang ngập không phải là bỏ cuộc; đó là lúc mình nhìn rõ đoạn đường vẫn còn đi được.",
@@ -165,7 +162,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library | Q10-B003: Canonical Selflo · accepting_the_flood_reveals_the_road_still_open; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -186,7 +183,7 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
         "semantic_intent": "Chấp nhận con đường đang ngập không phải là bỏ cuộc; đó là lúc mình nhìn rõ đoạn đường vẫn còn đi được.",
@@ -206,11 +203,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "adversity_resilience",
-          "giới hạn",
-          "chấp nhận",
-          "hành động",
-          "đường ngập"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 3014
       },
@@ -225,10 +219,10 @@
     },
     {
       "id": "a_large_task_only_needs_one_first_square",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": "Ô vuông đầu tiên",
-      "text_vi": "Một việc lớn không cần được ôm trọn để bắt đầu. Hãy tìm ô vuông đầu tiên đủ gần để đặt tay vào.",
+      "text_vi": "Một việc lớn có thể bắt đầu từ một phần nhỏ đủ gần để mình làm ngay.",
       "subtitle_vi": null,
       "primary_theme": "adversity_resilience",
       "authorship": {
@@ -238,7 +232,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library | Q10-B003: Canonical Selflo · a_large_task_only_needs_one_first_square; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -259,10 +253,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:30:24Z"
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Một việc lớn không cần được ôm trọn để bắt đầu. Hãy tìm ô vuông đầu tiên đủ gần để đặt tay vào.",
+        "semantic_intent": "Một việc lớn có thể bắt đầu từ một phần nhỏ đủ gần để mình làm ngay.",
         "observation_key": null,
         "structure_pattern": "story_distillation"
       },
@@ -279,11 +273,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "adversity_resilience",
-          "việc lớn",
-          "bắt đầu",
-          "bước nhỏ",
-          "ô vuông"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 3017
       },
@@ -298,7 +289,7 @@
     },
     {
       "id": "road_dries_from_edge_inward",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Sau mưa mặt đường khô dần từ rìa vào giữa. Chậm, nhưng theo thứ tự.",
@@ -330,9 +321,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh recovery.",
@@ -368,7 +359,7 @@
     },
     {
       "id": "small_flame_warms_a_small_room",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Ngọn lửa nhỏ nhất cũng đủ làm ấm căn phòng nếu căn phòng đủ nhỏ.",
@@ -398,9 +389,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh recovery.",
@@ -436,7 +427,7 @@
     },
     {
       "id": "rain_stopped_before_ground_dried",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Mưa đã tạnh. Mặt đất chưa khô. Nhưng mưa đã tạnh.",
@@ -449,7 +440,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review | Q10-B003: Canonical Selflo · rain_stopped_before_ground_dried; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -470,11 +461,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-17T15:10:54Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh recovery.",
+        "semantic_intent": "Mưa đã tạnh. Mặt đất chưa khô. Nhưng mưa đã tạnh.",
         "observation_key": "rain_stopped_before_ground_dried",
         "structure_pattern": "everyday_observation"
       },
@@ -491,8 +482,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "recovery"
+          "Vượt qua khó khăn",
+          "Selflo"
         ],
         "tie_break_order": 4020
       },
@@ -507,7 +498,7 @@
     },
     {
       "id": "muscle_recovers_during_rest",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Cơ bắp phục hồi trong lúc nghỉ, không phải lúc tập. Tập chỉ là kích hoạt.",
@@ -537,9 +528,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh recovery.",

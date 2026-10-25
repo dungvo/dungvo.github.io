@@ -6,9 +6,9 @@
   "quotes": [
     {
       "id": "chipped_cup_stays_for_its_story",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Tách trà sứt miệng vẫn ở lại trên kệ,\nvì có những thứ được giữ bởi câu chuyện chứ không bởi vẻ nguyên vẹn.",
+      "text_vi": "Tách trà sứt miệng vẫn được giữ trên kệ vì câu chuyện gắn với nó, dù không còn nguyên vẹn.",
       "primary_theme": "meaning_values",
       "authorship": {
         "author_id": "selflo",
@@ -17,7 +17,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · chipped_cup_stays_for_its_story; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [
@@ -40,11 +40,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T04:34:15Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Ý nghĩa và sự gắn bó có thể tồn tại dù một vật không còn hoàn hảo.",
+        "semantic_intent": "Tách trà sứt miệng vẫn được giữ trên kệ vì câu chuyện gắn với nó, dù không còn nguyên vẹn.",
         "observation_key": "chipped_teacup_on_shelf",
         "structure_pattern": "story_preserves_what_perfection_cannot"
       },
@@ -71,8 +71,8 @@
         "reflection_kind": "selflo_reflection",
         "thought_match_keys": [],
         "presentation_tags": [
-          "meaning",
-          "cup"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 1113
       },
@@ -704,10 +704,10 @@
     },
     {
       "id": "applause_ending_is_not_failure",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Tiếng vỗ tay sau buổi diễn rồi cũng dừng. Không phải vì buổi diễn không đủ hay.",
+      "text_vi": "Tiếng vỗ tay sau buổi diễn rồi cũng dừng. Điều đó không có nghĩa buổi diễn không đủ hay.",
       "subtitle_vi": null,
       "primary_theme": "meaning_values",
       "authorship": {
@@ -717,7 +717,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review"
+        "source_detail": "Materialize từ observation pool do owner cung cấp; chờ owner review | Q10-B003: Canonical Selflo · applause_ending_is_not_failure; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
       },
       "metadata": {
         "concepts": [],
@@ -738,11 +738,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh after_peak.",
+        "semantic_intent": "Tiếng vỗ tay sau buổi diễn rồi cũng dừng. Điều đó không có nghĩa buổi diễn không đủ hay.",
         "observation_key": "applause_ending_is_not_failure",
         "structure_pattern": "everyday_observation"
       },
@@ -759,8 +759,8 @@
         "reflection_kind": "observation",
         "thought_match_keys": [],
         "presentation_tags": [
-          "observation",
-          "after_peak"
+          "Ý nghĩa và giá trị",
+          "Selflo"
         ],
         "tie_break_order": 4014
       },
@@ -774,7 +774,7 @@
     },
     {
       "id": "a_good_meal_ends_with_enough",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Bữa ăn ngon nhất kết thúc bằng cảm giác no — không phải thêm một đĩa nữa.",
@@ -806,9 +806,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh after_peak.",

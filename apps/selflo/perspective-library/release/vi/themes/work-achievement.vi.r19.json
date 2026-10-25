@@ -1,0 +1,1931 @@
+{
+  "schema_version": "1.0",
+  "content_version": "framework-taxonomy-preview-15",
+  "entity": "perspective_theme",
+  "status": "approved",
+  "primary_theme": "work_achievement",
+  "display_name_vi": "Công việc và thành tựu",
+  "description_vi": "Làm việc, sáng tạo, lãnh đạo, thành công và điều mình muốn tạo ra.",
+  "language": "vi",
+  "quotes": [
+    {
+      "id": "hands_know_who_the_work_is_for",
+      "revision": 3,
+      "kind": "selflo_original",
+      "text_vi": "Cùng một việc, cảm giác có thể khác đi khi mình biết đang làm vì điều gì và cho ai.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · hands_know_who_the_work_is_for; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "motivation",
+          "purpose"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Cùng một việc, cảm giác có thể khác đi khi mình biết đang làm vì điều gì và cho ai.",
+        "observation_key": "hands_at_purposeful_worktable",
+        "structure_pattern": "same_task_changes_with_owned_meaning"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 49,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Selflo"
+        ],
+        "tie_break_order": 1077
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "chair_is_repaired_for_someone",
+      "revision": 3,
+      "kind": "selflo_original",
+      "text_vi": "Người thợ có thể sửa chiếc ghế kỹ hơn khi biết ai sẽ ngồi lên nó mỗi chiều.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · chair_is_repaired_for_someone; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "connection",
+          "craft"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Người thợ có thể sửa chiếc ghế kỹ hơn khi biết ai sẽ ngồi lên nó mỗi chiều.",
+        "observation_key": "carpenter_repairs_known_users_chair",
+        "structure_pattern": "relational_context_deepens_care"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 48,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Selflo"
+        ],
+        "tie_break_order": 1078
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "timecard_cannot_measure_presence",
+      "revision": 2,
+      "kind": "selflo_original",
+      "text_vi": "Chiếc đồng hồ chấm công biết ta đã ở đó bao lâu.\nNó không biết có phần nào trong ta thật sự có mặt.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.autonomous_motivation"
+        ],
+        "theories": [
+          "theory.self_determination_at_work"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "time",
+          "engagement"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-24T00:00:33Z"
+      },
+      "writing": {
+        "semantic_intent": "Thời gian hiện diện không phản ánh đầy đủ chất lượng gắn bó hoặc động lực với công việc.",
+        "observation_key": "timecard_and_inner_presence",
+        "structure_pattern": "measured_duration_differs_from_engagement"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 45,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.self_determination_at_work.motivation_changes_when_work_feels_owned_capable_connected"
+        ],
+        "reference_ids": [
+          "ref.parker_2022_sdt_work"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "time"
+        ],
+        "tie_break_order": 1081
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "musician_stays_with_one_lost_note",
+      "revision": 2,
+      "kind": "selflo_original",
+      "text_vi": "Tập đàn có hôm chỉ là ngồi lại với một đoạn mình thường vấp, thay vì chơi hết cả bài.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · musician_stays_with_one_lost_note; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.deliberate_practice"
+        ],
+        "theories": [
+          "theory.deliberate_practice"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "practice",
+          "music"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Tập đàn có hôm chỉ là ngồi lại với một đoạn mình thường vấp, thay vì chơi hết cả bài.",
+        "observation_key": "musician_practices_one_note",
+        "structure_pattern": "whole_skill_improves_through_targeted_part"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 44,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+        ],
+        "reference_ids": [
+          "ref.ericsson_1993_deliberate_practice"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Selflo"
+        ],
+        "tie_break_order": 1082
+      },
+      "tags": [
+        "intent:work_direction",
+        "intent:personal_growth",
+        "support:motivate",
+        "support:small_action",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "carpenter_measures_the_uneven_leg",
+      "revision": 3,
+      "kind": "selflo_original",
+      "text_vi": "Người thợ mộc đo lại chiếc chân bàn còn chênh,\nthay vì vuốt mãi phần mặt gỗ đã phẳng.",
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Nội dung gốc Selflo, sinh ở authoring time và chờ owner review | Q10-B003: Canonical Selflo · carpenter_measures_the_uneven_leg; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+          "concept.deliberate_practice"
+        ],
+        "theories": [
+          "theory.deliberate_practice"
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "practice",
+          "carpentry"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Người thợ mộc đo lại chiếc chân bàn còn chênh,\nthay vì vuốt mãi phần mặt gỗ đã phẳng.",
+        "observation_key": "carpenter_checks_uneven_table_leg",
+        "structure_pattern": "practice_targets_source_of_error"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 42,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "knowledge_basis": {
+        "core_truth_ids": [
+          "theory.deliberate_practice.improvement_needs_attention_to_the_unsteady_part"
+        ],
+        "reference_ids": [
+          "ref.ericsson_1993_deliberate_practice"
+        ]
+      },
+      "title_vi": null,
+      "subtitle_vi": null,
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "selflo_reflection",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Selflo"
+        ],
+        "tie_break_order": 1084
+      },
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "attributed.ma.vi_19.human_power",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Nếu một việc có vẻ rất khó, đừng vội kết luận rằng nó vượt quá khả năng con người. Nếu đó là điều con người có thể làm và thuộc phần việc đúng đắn của họ, hãy tin rằng bạn cũng có thể vươn tới.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 19; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "self_efficacy"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Exact passages and public-domain editions verified 2026-09-24: Project Gutenberg 10661, 55317, 3330, 2017 and 216. Vietnamese text is Selflo working translation."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T22:58:03Z"
+      },
+      "writing": {
+        "semantic_intent": "Nếu một việc có vẻ rất khó, đừng vội kết luận rằng nó vượt quá khả năng con người. Nếu đó là điều con người có thể làm và thuộc phần việc đúng đắn của họ, hãy tin rằng bạn cũng có thể vươn tới.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 19"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "self_efficacy"
+        ],
+        "tie_break_order": 1143
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.ma.vi_26.duty_elements",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Trong đời sống, hãy nhớ mỗi bổn phận được tạo nên từ nhiều phần nhỏ. Ta có thể bình tĩnh nhìn từng phần và bắt tay vào việc trước mắt, không cần nổi giận với người đang giận mình.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 26; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "calm_action"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-24T00:06:12Z"
+      },
+      "writing": {
+        "semantic_intent": "Trong đời sống, hãy nhớ mỗi bổn phận được tạo nên từ nhiều phần nhỏ. Ta có thể bình tĩnh nhìn từng phần và bắt tay vào việc trước mắt, không cần nổi giận với người đang giận mình.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 26"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "calm_action"
+        ],
+        "tie_break_order": 1145
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.ma.vi_50.good_effort",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Rốt cuộc mục tiêu của bạn là gì? Là thực hiện một nỗ lực tốt đẹp như thế này. Vậy thì bạn đã thành công, dù mục đích ban đầu chưa đạt được.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 50; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "process"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-23T23:59:42Z"
+      },
+      "writing": {
+        "semantic_intent": "Rốt cuộc mục tiêu của bạn là gì? Là thực hiện một nỗ lực tốt đẹp như thế này. Vậy thì bạn đã thành công, dù mục đích ban đầu chưa đạt được.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "midnight_quote",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 50"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "process"
+        ],
+        "tie_break_order": 1148
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.ma.vi_51.wise_work",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Người háo danh đặt hạnh phúc vào hành động của người khác. Người chạy theo khoái cảm tìm nó trong cảm giác của mình. Người khôn ngoan tạo ra nó trong chính việc mình làm.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VI, đoạn 51; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "agency"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-24T00:06:12Z"
+      },
+      "writing": {
+        "semantic_intent": "Người háo danh đặt hạnh phúc vào hành động của người khác. Người chạy theo khoái cảm tìm nó trong cảm giác của mình. Người khôn ngoan tạo ra nó trong chính việc mình làm.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "cool_observe",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VI, đoạn 51"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "agency"
+        ],
+        "tie_break_order": 1149
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.ma.viii_32.single_acts",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Hãy sắp xếp đời mình bằng từng hành động riêng lẻ; nếu mỗi hành động hoàn thành được phần của nó trong khả năng có thể, như vậy là đủ. Trong việc ấy, không ai ngăn được bạn.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "marcus_aurelius",
+        "author_name": "Marcus Aurelius",
+        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
+        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "source_language": "en",
+        "source_label": "Marcus Aurelius · Suy tưởng",
+        "source_detail": "George W. Chrystal (dịch), 1902; Quyển VIII, đoạn 32; bản Việt là bản dịch nháp Selflo từ exact English source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.stoicism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "next_step"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-13T01:41:15Z"
+      },
+      "writing": {
+        "semantic_intent": "Hãy sắp xếp đời mình bằng từng hành động riêng lẻ; nếu mỗi hành động hoàn thành được phần của nó trong khả năng có thể, như vậy là đủ. Trong việc ấy, không ai ngăn được bạn.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển VIII, đoạn 32"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work_achievement",
+          "next_step"
+        ],
+        "tie_break_order": 1159
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "not_every_stone_is_yours_to_carry_home",
+      "revision": 4,
+      "kind": "selflo_original",
+      "title_vi": "Viên đá nào là của mình",
+      "text_vi": "Không phải viên đá nào người khác đặt xuống cũng là viên đá mình phải mang về nhà.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library | Q10-B003: Canonical Selflo · not_every_stone_is_yours_to_carry_home; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "ranh giới",
+          "trách nhiệm",
+          "yêu cầu mơ hồ",
+          "công việc"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Quote Selflo gắn với story gốc do owner duyệt phát hành ngày 2026-09-23."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Không phải viên đá nào người khác đặt xuống cũng là viên đá mình phải mang về nhà.",
+        "observation_key": null,
+        "structure_pattern": "story_distillation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": "story.original_builder_and_shapeless_stones",
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Selflo"
+        ],
+        "tie_break_order": 3010
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "small_daily_expense_reaches_month_end",
+      "revision": 3,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Những khoản chi nhỏ lặp lại mỗi ngày có thể cộng thành một khoản đáng kể vào cuối tháng.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review | Q10-B003: Canonical Selflo · small_daily_expense_reaches_month_end; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "money_pressure"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Những khoản chi nhỏ lặp lại mỗi ngày có thể cộng thành một khoản đáng kể vào cuối tháng.",
+        "observation_key": "small_daily_expense_reaches_month_end",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 47,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Selflo"
+        ],
+        "tie_break_order": 4034
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "price_tag_does_not_show_hours_traded",
+      "revision": 3,
+      "kind": "selflo_original",
+      "title_vi": null,
+      "text_vi": "Giá trên kệ cho biết món đồ cần bao nhiêu tiền, nhưng không cho thấy mình đã đổi bao nhiêu giờ để có số tiền ấy.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "selflo",
+        "author_name": "Selflo",
+        "work": null,
+        "source_url": null,
+        "source_language": "vi",
+        "source_label": "Selflo",
+        "source_detail": "Bản nháp observation Selflo cho lane money_pressure; chờ owner review | Q10-B003: Canonical Selflo · price_tag_does_not_show_hours_traded; tên/tác phẩm gốc: Selflo / None; đối chiếu tại canonical source"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "observation",
+          "money_pressure"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": null
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Giá trên kệ cho biết món đồ cần bao nhiêu tiền, nhưng không cho thấy mình đã đổi bao nhiêu giờ để có số tiền ấy.",
+        "observation_key": "price_tag_does_not_show_hours_traded",
+        "structure_pattern": "everyday_observation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 40,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Selflo"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "observation",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Selflo"
+        ],
+        "tie_break_order": 4036
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
+    },
+    {
+      "id": "attributed.laozi.chapter_24.tiptoes",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Người đứng nhón chân không thể đứng vững; người bước quá dài không thể đi dễ dàng.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "laozi",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://www.gutenberg.org/ebooks/216",
+        "source_language": "en",
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 24",
+        "source_detail": "James Legge (dịch); 24; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B001: Đạo Đức Kinh · chương 24; tên/tác phẩm gốc: Laozi / The Tao Teh King, or the Tao and its Characteristics; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.taoism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "taoism",
+          "sustainable_pace"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Người đứng nhón chân không thể đứng vững; người bước quá dài không thể đi dễ dàng.",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 24"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 5026
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.confucius.book_i_ch01.learning",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Học mà bền bỉ thực hành, chẳng phải là điều vui sao?",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "confucius",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
+        "source_url": "https://www.gutenberg.org/ebooks/3330",
+        "source_language": "en",
+        "source_label": "Phỏng theo Luận Ngữ · Học Nhi",
+        "source_detail": "James Legge (dịch); I.1; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B001: Luận Ngữ · Học Nhi · 學而時習之; tên/tác phẩm gốc: Confucius / The Analects of Confucius (from the Chinese Classics); đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+          "framework.confucianism"
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "confucianism",
+          "learning"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Học mà bền bỉ thực hành, chẳng phải là điều vui sao?",
+        "observation_key": null,
+        "structure_pattern": "attributed_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 50,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Luận Ngữ · Học Nhi"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "reflection",
+        "reflection_kind": "quote",
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Luận Ngữ"
+        ],
+        "tie_break_order": 5040
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "topic:learning_habits",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.laozi.ch09.026",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Việc đã xong, biết lui lại cũng là một cách thuận theo nhịp đổi thay.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "source_language": null,
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 9",
+        "source_detail": "Research ID research.laozi.ch09.026; corpus row 27; content_nature=translated_quote; verification=A - Primary source. | Q10-B001: Đạo Đức Kinh · chương 9; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "meaning_identity_work",
+          "change"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Việc đã xong, biết lui lại cũng là một cách thuận theo nhịp đổi thay.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 9"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.laozi.day3.ch52.005",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Biết được gốc để hiểu phần ngọn; hiểu phần ngọn rồi vẫn trở về giữ gốc.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "source_language": null,
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 52",
+        "source_detail": "Research ID research.laozi.day3.ch52.005; corpus row 187; content_nature=translated_quote; verification=A - Primary source. | Q10-B001: Đạo Đức Kinh · chương 52; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Biết được gốc để hiểu phần ngọn; hiểu phần ngọn rồi vẫn trở về giữ gốc.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 52"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.laozi.day3.ch59.041",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Muốn đứng vững lâu dài, cần có rễ sâu và gốc chắc.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Đạo Đức Kinh"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "source_language": null,
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 59",
+        "source_detail": "Research ID research.laozi.day3.ch59.041; corpus row 223; content_nature=translated_quote; verification=A - Primary source. | Q10-B002: Đạo Đức Kinh · chương 59; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
+      },
+      "writing": {
+        "semantic_intent": "Muốn đứng vững lâu dài, cần có rễ sâu và gốc chắc.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 59"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.zhuangzi.day4.ch03.028",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Gặp chỗ khó, tôi thận trọng hơn, nhìn kỹ hơn và chậm lại.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Trang Tử"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Trang Tử",
+        "work": "Trang Tử",
+        "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB",
+        "source_language": null,
+        "source_label": "Phỏng theo Trang Tử · Dưỡng sinh chủ (chương 3)",
+        "source_detail": "Research ID research.zhuangzi.day4.ch03.028; corpus row 346; content_nature=translated_quote; verification=A - Primary source. | Q10-B002: Trang Tử · Dưỡng sinh chủ (chương 3); tên/tác phẩm gốc: Zhuangzi / 莊子 (Inner Chapters attribution) / 莊子 / Zhuangzi; đối chiếu tại https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
+      },
+      "writing": {
+        "semantic_intent": "Gặp chỗ khó, tôi thận trọng hơn, nhìn kỹ hơn và chậm lại.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Trang Tử · Dưỡng sinh chủ (chương 3)"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.zhuangzi.day4.ch04.032",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Dùng lửa để dập lửa, dùng nước để cứu lụt: có cách sửa lại khiến vấn đề lớn thêm.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Trang Tử"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Trang Tử",
+        "work": "Trang Tử",
+        "source_url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96",
+        "source_language": null,
+        "source_label": "Phỏng theo Trang Tử · Nhân gian thế (chương 4)",
+        "source_detail": "Research ID research.zhuangzi.day4.ch04.032; corpus row 350; content_nature=translated_quote; verification=A - Primary source. | Q10-B002: Trang Tử · Nhân gian thế (chương 4); tên/tác phẩm gốc: Zhuangzi / 莊子 (Inner Chapters attribution) / 莊子 / Zhuangzi; đối chiếu tại https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "human_judgment_ai"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
+      },
+      "writing": {
+        "semantic_intent": "Dùng lửa để dập lửa, dùng nước để cứu lụt: có cách sửa lại khiến vấn đề lớn thêm.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Trang Tử · Nhân gian thế (chương 4)"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.seneca.day9.ep019",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Nếu có thể, hãy rút mình khỏi những bận rộn ấy; nếu không, hãy giành lại mình khỏi chúng.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc & mục đích"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Lucius Annaeus Seneca",
+        "work": "Epistulae Morales",
+        "source_url": "https://la.wikisource.org/wiki/Epistulae_morales_ad_Lucilium",
+        "source_language": null,
+        "source_label": "Lucius Annaeus Seneca",
+        "source_detail": "Research ID research.seneca.day9.ep019; corpus row 608; content_nature=translated_quote; verification=A - Primary-source text located."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-12T14:50:32Z"
+      },
+      "writing": {
+        "semantic_intent": "Nếu có thể, hãy rút mình khỏi những bận rộn ấy; nếu không, hãy giành lại mình khỏi chúng.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Lucius Annaeus Seneca"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.day25.an2_12",
+      "revision": 4,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Giá trị của một người không nên bị thu gọn vào một công dụng.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "work_achievement",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Luận Ngữ"
+        ],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
+        "source_url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD",
+        "source_language": null,
+        "source_label": "Phỏng theo Luận Ngữ · Vi Chính",
+        "source_detail": "Research ID research.day25.an2_12; corpus row 1054; content_nature=translated_quote; verification=A - Chinese passage/location verified. | Q10-B001: Luận Ngữ · Vi Chính · 君子不器; tên/tác phẩm gốc: Confucius tradition / 孔子 / 論語 / Analects; đối chiếu nguyên văn tại https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "meaning_identity_work",
+          "identity"
+        ]
+      },
+      "rights": {
+        "status": "selflo_owned",
+        "note": "Owner confirmed Release 2026-09-25. Wording tiếng Việt do Selflo biên tập từ văn bản cổ thuộc phạm vi công cộng; nguồn tác phẩm và provenance được giữ trên từng quote."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T07:49:19.331150Z"
+      },
+      "writing": {
+        "semantic_intent": "Giá trị của một người không nên bị thu gọn vào một công dụng.",
+        "observation_key": null,
+        "structure_pattern": "research_candidate"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Luận Ngữ · Vi Chính"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "attributed.henry_david_thoreau.thoreau_corporation_with_conscience",
+      "revision": 2,
+      "kind": "adapted_wisdom",
+      "title_vi": "Lương tâm của một tổ chức",
+      "text_vi": "Một tổ chức tự nó không có lương tâm; nhưng một tổ chức gồm những con người có lương tâm thì có.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "henry_david_thoreau",
+        "author_name": "Henry David Thoreau",
+        "work": "Walden; Civil Disobedience",
+        "source_url": "https://www.gutenberg.org/ebooks/205",
+        "source_language": "en",
+        "source_label": "Henry David Thoreau",
+        "source_detail": "Civil Disobedience. Original: It is truly enough said that a corporation has no conscience; but a corporation of conscientious men is a corporation with a conscience."
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "work",
+          "organization",
+          "conscience"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [
+
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "owner:dungvo",
+        "reviewed_at": "2026-09-26T00:10:44Z"
+      },
+      "writing": {
+        "semantic_intent": "Trách nhiệm đạo đức của tổ chức vẫn đi qua lựa chọn của những con người bên trong nó.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Henry David Thoreau"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "work",
+          "organization",
+          "conscience"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:book_or_work"
+      ]
+    },
+    {
+      "id": "attributed.francis_bacon.bacon_power_over_others_lose_self",
+      "revision": 3,
+      "kind": "adapted_wisdom",
+      "title_vi": "Quyền lực và tự do",
+      "text_vi": "Thật là một ham muốn kỳ lạ: tìm kiếm quyền lực rồi đánh mất tự do; muốn có quyền trên người khác nhưng lại mất quyền làm chủ chính mình.",
+      "subtitle_vi": null,
+      "primary_theme": "work_achievement",
+      "authorship": {
+        "author_id": "francis_bacon",
+        "author_name": "Francis Bacon",
+        "work": "Tiểu luận",
+        "source_url": "https://www.gutenberg.org/cache/epub/575/pg575-images.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Francis Bacon · Về địa vị cao",
+        "source_detail": "Of Great Place. Original: It is a strange desire, to seek power and to lose liberty: or to seek power over others, and to lose power over a man's self. | Q10-B003: Về địa vị cao; tên/tác phẩm gốc: Francis Bacon / The Essays of Francis Bacon; đối chiếu tại https://www.gutenberg.org/cache/epub/575/pg575-images.html"
+      },
+      "metadata": {
+        "concepts": [
+
+        ],
+        "theories": [
+
+        ],
+        "frameworks": [
+
+        ],
+        "emotion_tags": [
+
+        ],
+        "keywords": [
+          "power",
+          "freedom",
+          "self_mastery"
+        ],
+        "legacy_content_kind": "translated_quote",
+        "legacy_layer_ids": [
+
+        ],
+        "legacy_behavior_ids": [
+
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Original from a Project Gutenberg public-domain edition; Vietnamese translation edited for Selflo."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:29:49.051640Z"
+      },
+      "writing": {
+        "semantic_intent": "Thật là một ham muốn kỳ lạ: tìm kiếm quyền lực rồi đánh mất tự do; muốn có quyền trên người khác nhưng lại mất quyền làm chủ chính mình.",
+        "observation_key": null,
+        "structure_pattern": "translated_public_domain_quote"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 60,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Francis Bacon · Về địa vị cao"
+      },
+      "story_id": null,
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [
+
+        ],
+        "presentation_tags": [
+          "Công việc và lựa chọn",
+          "Tiểu luận"
+        ],
+        "tie_break_order": -60
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:motivate",
+        "support:clarify",
+        "topic:work_choices",
+        "origin:book_or_work"
+      ]
+    }
+  ]
+}
