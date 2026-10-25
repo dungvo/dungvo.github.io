@@ -1,0 +1,25 @@
+{
+  "schema_version": "selflo.quote-public-verification.v1",
+  "verified_at": "2026-10-25T11:38:06.278981Z",
+  "base_url": "https://dungvo.github.io/apps/selflo/perspective-library/release/vi/",
+  "release_revision": 52,
+  "manifest_sha256": "b6b88ff3d2ba7278d5675568853b02f00e440d5176a8f05721aa8414e5896b29",
+  "quote_packs_sha256": {
+    "themes/adversity-resilience.vi.r19.json": "f1c511bfa97b33ceb0932de00274a8d50dd74bfc93ab4f4af22eb2543465d56c",
+    "themes/attention.vi.r22.json": "832832e511f3c137c7531bd5531738c3b506249200fc1511ebba328ad0bae997",
+    "themes/change-growth.vi.r20.json": "1dd9277b15cd05043e8da0a8f3cdee184342fab3634542a2d0b984511d5a5b3a",
+    "themes/emotion.vi.r17.json": "fa6df0677644bb7714d8d2f7f07cbf84617e0d0ec5484015c1de9881e6083f8a",
+    "themes/meaning-values.vi.r30.json": "77e821142d19d62b277e17115605a24c4bbdb9e60ff94db8b46f8baef02f4022",
+    "themes/relationships.vi.r21.json": "beec1ac180df2c70da65eb41cec74242cc6413b60caf90873ec82d001939373c",
+    "themes/rest-wellbeing.vi.r21.json": "1defa469dea1e38998caebbb24833e64fc3d1f3825252c66afaf95bc17f32271",
+    "themes/self-understanding.vi.r26.json": "c0802fae371eaefa1c8976c92bd1c976a11da6a97b429bd310ac59ea6ca7df3d",
+    "themes/work-achievement.vi.r20.json": "9c256bfa10e49f1bde95bf79541190b796e40f5a0255a8ed9a952ec02f371413"
+  },
+  "active_quote_count": 376,
+  "batch_id": "Q10-B004",
+  "accepted_ids_verified": 87,
+  "rejected_ids_absent": 78,
+  "source_commit": "da78a80",
+  "phase_accepted_ids_verified": 376,
+  "phase_rejected_ids_absent": 286
+}

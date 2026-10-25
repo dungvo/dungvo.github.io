@@ -583,7 +583,7 @@
       "phase": "Q10.1",
       "title_vi": "Rà Release",
       "row_count": 165,
-      "status": "verifying_public",
+      "status": "closed",
       "reviewed_count": 165,
       "baseline_ids": [
         "string_needs_enough_tension",
@@ -762,7 +762,10 @@
       "accepted_count": 87,
       "not_accepted_count": 78,
       "evidence_path": "reports/q10-b004-review.json",
-      "planned_release_revision": 52
+      "planned_release_revision": 52,
+      "completed_count": 165,
+      "public_release_revision": 52,
+      "public_verified_at": "2026-10-25T11:38:06.278981Z"
     },
     {
       "id": "Q10-B005",

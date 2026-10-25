@@ -1,5 +1,7 @@
 # Current-state review — 25/10/2026
 
+> **B004 VÀ Q10.1 ĐÃ ĐÓNG — 2026-10-25:** B004 165 câu: 87 giữ/78 loại, sửa 62 bản. Mốc rà Release đủ **662/662**: 376 giữ, 286 không đạt. Release 52 public xác nhận toàn bộ 376 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **672/5.471 đã chốt, còn 4.799** (gồm 10 owner-closed). Commit `da78a80`. Tiếp B005 (149), mốc khép kín Authoring; story tạm dừng.
+
 > **Q10-B003 ĐÃ ĐÓNG — 2026-10-25:** 165 câu: 112 giữ, 53 không đạt; 67 văn bản viết lại. Release 51 public xác nhận 454 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **507/5.471 đã chốt, còn 4.964** (289 released, 218 not_accepted, gồm 10 owner-closed). Commit nội dung `2f50a58`. Tiếp Q10-B004 (165), đợt cuối rà Release; story tiếp tục tạm dừng.
 
 > **Q10-B002 ĐÃ ĐÓNG — 2026-10-25:** 166 câu: 75 giữ, 91 không đạt; 50 bản viết lại. Release 50 public đã xác nhận 507 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **342/5.471 đã chốt, còn 5.129** (177 released, 165 not_accepted, gồm 10 owner-closed). Commit nội dung `f2fd929`. Tiếp Q10-B003 (165); story tiếp tục tạm dừng.

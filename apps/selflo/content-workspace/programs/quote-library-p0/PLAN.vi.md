@@ -1,5 +1,7 @@
 # Kế hoạch thực hiện — 100–200 dòng/đợt
 
+> **Checkpoint 2026-10-25:** P0 và Q10.1 đã xong; 662 dòng rà Release có kết luận, public 376 quote ở Release 52. Chuyển Q10.2 theo B005 (149), chưa mở story. Bằng chứng `Q10_1_RELEASE_CLOSURE.vi.md`.
+
 ## P0 — Chuẩn bị một lần
 
 - Khóa baseline ID/hash 5.471 đã chụp; xác nhận index quyết định hiện có và cách nối raw ↔ canonical trước khi ghi verdict mới.

@@ -2,18 +2,18 @@
   "schema_version": "selflo.quote-closure-progress.v1",
   "program_id": "quote-closure-5471-2026-10-25",
   "baseline_count": 5471,
-  "release_revision": 51,
+  "release_revision": 52,
   "public_verified": true,
   "counts": {
-    "released": 289,
-    "not_accepted": 218,
-    "remaining": 4964
+    "released": 376,
+    "not_accepted": 296,
+    "remaining": 4799
   },
   "not_accepted_by_reason": {
-    "weak_or_misleading": 40,
-    "duplicate": 47,
-    "too_narrow_for_selflo": 18,
-    "context_required": 103,
+    "weak_or_misleading": 65,
+    "duplicate": 68,
+    "context_required": 127,
+    "too_narrow_for_selflo": 26,
     "owner_rejected": 10
   },
   "rows": [
@@ -223,14 +223,14 @@
     },
     {
       "baseline_id": "attributed.epictetus.ench_01.appearance",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.epictetus.ench_01.control",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -241,44 +241,44 @@
     },
     {
       "baseline_id": "attributed.epictetus.ench_05.opinion",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.epictetus.ench_08.flow",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.epictetus.ench_10.use",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.epictetus.ench_12.small",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.epictetus.ench_15.banquet",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.epictetus.ench_17.role",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.epictetus.ench_20.delay",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -295,38 +295,38 @@
     },
     {
       "baseline_id": "attributed.henry_david_thoreau.thoreau_change_convulses_body",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.henry_david_thoreau.thoreau_corporation_with_conscience",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.henry_david_thoreau.thoreau_live_according_to_wisdom",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.henry_david_thoreau.thoreau_return_with_new_experience",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.henry_david_thoreau.thoreau_simple_independent_mind",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.henry_david_thoreau.thoreau_stand_aloof_from_actions",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -403,56 +403,56 @@
     },
     {
       "baseline_id": "attributed.ma.ii_06.short_life",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.ii_07.unsettled_aim",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.ii_08.own_soul",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.ii_14.past_future",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.ii_17.fame_forgotten",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iii_02.cracked_loaf",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iii_04.others_affairs",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iii_05.stand_upright",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iii_10.present_moment",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -463,20 +463,20 @@
     },
     {
       "baseline_id": "attributed.ma.iv_03.change_and_thought",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iv_03.inner_retreat",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iv_07.suppress_injury",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -487,20 +487,20 @@
     },
     {
       "baseline_id": "attributed.ma.iv_12.change_course",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iv_17.be_good_now",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iv_18.own_actions",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -511,26 +511,26 @@
     },
     {
       "baseline_id": "attributed.ma.iv_35.one_day",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iv_36.nature_change",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iv_49.brave_bearing",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.iv_49.promontory",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -547,158 +547,158 @@
     },
     {
       "baseline_id": "attributed.ma.v_16.mind_colour",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.v_20.obstruction_progress",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_03.look_within",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_06.best_revenge",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_11.return_yourself",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_19.human_power",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_21.truth_change",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_26.duty_elements",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_39.adapt_love",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_48.others_excellence",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_50.good_effort",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_51.wise_work",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vi_54.swarm_bee",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_02.renew_life",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_03.worth_pursuit",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_07.accept_help",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_08.future_reason",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_15.retain_lustre",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_28.just_calm",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_56.life_overplus",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.vii_59.fountain_good",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.viii_32.single_acts",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.viii_33.fortune_gifts",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.viii_36.present_bounds",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.viii_47.judgment_afflicts",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ma.x_16.be_one",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -1201,86 +1201,86 @@
     },
     {
       "baseline_id": "attributed.ralph_waldo_emerson.emerson_common_wisdom_silenced",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ralph_waldo_emerson.emerson_each_new_mind",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ralph_waldo_emerson.emerson_fugitive_deed_expresses_character",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ralph_waldo_emerson.emerson_love_teaches_self_knowledge",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ralph_waldo_emerson.emerson_past_into_present_hour",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.ralph_waldo_emerson.emerson_voice_tenderness_truth_courage",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_01.postponing",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_02.nowhere",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_03.loyal",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_07.mutual_learning",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_09.friends",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_13.imagination",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_20.deeds",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "attributed.seneca.letter_28.burdens",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -20977,8 +20977,8 @@
     },
     {
       "baseline_id": "research.day21.homesick",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -20989,8 +20989,8 @@
     },
     {
       "baseline_id": "research.day21.mountain_aging",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21019,14 +21019,14 @@
     },
     {
       "baseline_id": "research.day21.status_circle",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.day21.status_crowd",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21181,8 +21181,8 @@
     },
     {
       "baseline_id": "research.day22.root_cause",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21217,8 +21217,8 @@
     },
     {
       "baseline_id": "research.day23.nbk_gioitham_02",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21235,8 +21235,8 @@
     },
     {
       "baseline_id": "research.day23.nbk_nhan_02",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21271,8 +21271,8 @@
     },
     {
       "baseline_id": "research.day23.nbk_nttt_04",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21349,14 +21349,14 @@
     },
     {
       "baseline_id": "research.day24.kieu_004",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.day24.kieu_005",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21367,8 +21367,8 @@
     },
     {
       "baseline_id": "research.day24.kieu_007",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21409,8 +21409,8 @@
     },
     {
       "baseline_id": "research.day24.kieu_014",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -21439,8 +21439,8 @@
     },
     {
       "baseline_id": "research.day24.kieu_019",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31681,38 +31681,38 @@
     },
     {
       "baseline_id": "research.seneca.day9.brev1",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.brev2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.brev3",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.brev4",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.brev5",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.brev6",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31723,38 +31723,38 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep001_1",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep001_2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep001_3",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep002",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep003",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep006",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31771,38 +31771,38 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep009",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep013",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep013_2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep016",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep019",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep020",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31819,26 +31819,26 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep027",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep028",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep028_2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep032",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31849,14 +31849,14 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep047",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep047_2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31867,8 +31867,8 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep056",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31879,14 +31879,14 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep063",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep071",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31903,32 +31903,32 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep090",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep094",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep104",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep106",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep108",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31939,14 +31939,14 @@
     },
     {
       "baseline_id": "research.seneca.day9.ep119",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ep119_2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -31963,80 +31963,80 @@
     },
     {
       "baseline_id": "research.seneca.day9.ira1",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ira2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ira3",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.ira4",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.otio1",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.otio2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.otio3",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.otio4",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.otio5",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.tranq1",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.tranq2",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.tranq3",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "research.seneca.day9.tranq4",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -32617,68 +32617,68 @@
     },
     {
       "baseline_id": "string_needs_enough_tension",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "stuck_door_opens_the_other_way",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "sunlight_crosses_the_floor",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "sunlight_finds_the_scratch",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "tea_turns_bitter_when_oversteeped",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "tea_waits_beside_the_screen",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "tear_lies_flat_under_the_needle",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "ten_notifications_are_not_ten_priorities",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "ten_percent_means_recharge",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "the_opposite_chair_stays_occupied",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "the_pauses_were_the_life",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -32695,20 +32695,20 @@
     },
     {
       "baseline_id": "tight_grip_tires_before_arrival",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "timecard_cannot_measure_presence",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "tired_body_waits_for_the_train",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -32731,92 +32731,92 @@
     },
     {
       "baseline_id": "towel_reveals_what_it_carried",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "trains_leave_together_for_different_cities",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "two_trees_begin_with_different_seeds",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "two_windows_receive_the_same_sun",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "unanswered_alarm_teaches_ears_not_to_hear",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "village_road_contains_a_childhood",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "wakeful_hours_fill_the_hourglass",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "wall_reveals_the_way_around",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "wallet_lightens_before_bill_disappears",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "water_heats_before_the_kettle_sings",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "water_settles_when_untouched",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "waves_arrive_and_leave",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "window_fogs_before_clearing",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "worn_carpet_marks_a_familiar_path",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
       "baseline_id": "worn_step_remembers_many_feet",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -32827,8 +32827,8 @@
     },
     {
       "baseline_id": "wrong_turn_stays_on_the_map",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B004",
       "issue": null
     },
     {
@@ -32839,8 +32839,8 @@
     },
     {
       "baseline_id": "young_tree_tied_with_soft_cloth",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B004",
       "issue": null
     }
   ]

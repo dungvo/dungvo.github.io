@@ -1,7 +1,7 @@
 {
   "schema_version": "selflo.quote-release-phase-audit.v1",
   "phase": "Q10.1",
-  "status": "local_verified_pending_public",
+  "status": "closed",
   "audited_at": "2026-10-25T11:34:19.591348Z",
   "baseline_rows": 662,
   "accepted": 376,
@@ -28,5 +28,8 @@
   "language_scan_flags": [],
   "stories_changed": false,
   "next_batch": "Q10-B005",
-  "next_batch_count": 149
+  "next_batch_count": 149,
+  "public_verified_at": "2026-10-25T11:38:06.278981Z",
+  "public_verification": "reports/q10-b004-public-verification.json",
+  "content_commit": "da78a80"
 }

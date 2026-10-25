@@ -32,3 +32,10 @@
 - Bản Hy Lạp/Pāli/Sanskrit được lưu làm bằng chứng nguyên văn; không tái dùng lời dịch/bình luận hiện đại chưa rõ quyền. Giữ quyền/edition gốc.
 - 94 tests/publisher gates đạt; 9 pack public khớp. Quote ngoài đợt và toàn bộ story source/descriptor không đổi.
 - Corpus còn 4.964 dòng; cần B004 để khép mốc rà Release.
+
+## 2026-10-25 — Nghiệm thu B004/Q10.1
+
+- 165/165 B004 có passage/before/after/hash/reason; 87 accepted/78 not_accepted, không pending. 94 tests và publisher gates đạt.
+- Toàn mốc 662 ID khớp assignment, 376 public khớp review, 286 không active và có exclusion; nguyên bản/edition/quyền retained, không loại vì ngoại ngữ.
+- Rà ngôn ngữ hiển thị toàn tập public; giữ tên người quen dùng và provenance nội bộ. Story source/descriptor giữ nguyên.
+- Đóng T-03, chuyển T-04/B005; không đánh dấu cả chương trình hoàn tất vì còn 4.799 dòng.

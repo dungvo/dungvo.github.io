@@ -348,3 +348,10 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 
 - Từng ID có source context/before/after/rights retained/hash và lý do; 21 duplicate có winner accepted. 78 exclusion bền vững; giữ 10 owner-closed.
 - Thay đổi content-compatible, không đổi shared contract/app. Đúng 165 canonical quote thay đổi; story và quote ngoài batch không đổi. Đối soát Q10.1 đủ 662 ID và toàn bộ 376 quote active đã có review, ngôn ngữ/attribution khớp.
+
+## 2026-10-25 — Đóng B004 và Q10.1
+
+- **B004 VÀ Q10.1 ĐÃ ĐÓNG — 2026-10-25:** B004 165 câu: 87 giữ/78 loại, sửa 62 bản. Mốc rà Release đủ **662/662**: 376 giữ, 286 không đạt. Release 52 public xác nhận toàn bộ 376 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **672/5.471 đã chốt, còn 4.799** (gồm 10 owner-closed). Commit `da78a80`. Tiếp B005 (149), mốc khép kín Authoring; story tạm dừng.
+- Public lúc 2026-10-25T11:38:06.278981Z: đủ 9 pack khớp, kiểm tra cả 376 accepted và 286 rejected qua 4 batch.
+- B004 62 văn bản viết lại, 21 duplicate có winner; sửa locator/ý sai Seneca. T-03 nghiệm thu; Q10.1 không pending.
+- Projection: 376 released + 296 not_accepted + 4.799 remaining = 5.471; 296 gồm 286 mốc này + 10 owner-closed. Bước tiếp theo T-04/B005, 149. Story không thay đổi.
