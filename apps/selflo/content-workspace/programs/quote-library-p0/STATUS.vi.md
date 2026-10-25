@@ -1,9 +1,9 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
 **Ưu tiên:** P0
-**Trạng thái tổng:** Q9 batch 15 Pháp Cú đã kiểm định tại workspace; chờ lưu remote. Phần baseline bên dưới là lịch sử.
+**Trạng thái tổng:** R1–R6 đã cập nhật main tại fb65c40; đang tiếp PM-004A. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
-**Cập nhật gần nhất:** 2026-10-24 — Authoring 86 / Release 47, 16 tests pass; chưa push/merge/deploy
+**Cập nhật gần nhất:** 2026-10-25 — Authoring 87 / Release 48 (1.851/662 quote; 63/17 story); 60 tests pass sau bước đồng bộ báo cáo CLI/Studio.
 **Owner duyệt cuối:** Dũng
 **Phạm vi:** Review toàn bộ corpus; đưa mọi quote đủ điều kiện lên Release; kết luận rõ cho mọi dòng không đủ điều kiện.
 
@@ -66,6 +66,10 @@ Authoring 86: 1.851 quote/63 story; Release 47: 672 quote/17 story. Batch thêm 
 
 Chưa push/merge/deploy: automatic approval review chặn ghi remote, cần owner xác nhận trực tiếp; GitHub không còn blocker 403 đã ghi trước đây. Series vẫn chưa có thân bài. Xem [hand-off](Q9_HANDOFF_2026-10-24.vi.md) và [checkpoint](Q9_CHECKPOINT.vi.md).
 
+## Tiếp backlog — 2026-10-25
+
+R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ làm trạng thái hiện tại. PM-004A đã hoàn tất phần báo cáo: CLI dùng projection Review Matrix có kiểm tra fingerprint; không coi imported là review status. Phần đường ghi và ID mapping chưa đóng. Xem [báo cáo PM-004A](PM004A_STATUS_REPORTING_2026-10-25.vi.md).
+
 ## Đúng một bước tiếp theo
 
-Lưu toàn bộ thay đổi đã kiểm định lên branch `content/quote-classification-series-2026-10-21` sau khi xác nhận của owner được bộ kiểm tra chấp nhận; owner tự merge sau.
+Audit select/apply/promote và mapping Candidate ↔ Canonical để bảo đảm quyết định loại không bị đề xuất lại qua đường candidate.

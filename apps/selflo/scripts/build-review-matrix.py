@@ -3,6 +3,7 @@ import argparse, json, re
 from datetime import datetime, timezone
 from pathlib import Path
 from openpyxl import load_workbook
+from review_status import status_input_digests
 
 CURATED = {
     'research.dhammapada.day11.v019': (94, 'Hình ảnh mạnh; phân biệt biết và sống; source verse rõ.'),
@@ -386,6 +387,7 @@ def main():
         'schema_version':'selflo.review-matrix.v6',
         'generated_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),
         'generated_from':book.name,
+        'status_inputs_sha256':status_input_digests(root),
         'authoring_revision':authoring_manifest.get('library_revision'),
         'release_revision':release_manifest.get('library_revision'),
         'summary':summary,

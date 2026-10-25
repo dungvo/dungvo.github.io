@@ -7,6 +7,7 @@ interprets a missing decision as approval and never bypasses rights/source gates
 import argparse, copy, datetime as dt, hashlib, json, re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 from urllib.parse import quote, urlsplit, urlunsplit
+from review_status import status_input_digests
 
 THEME_MAP={
  'inner_awareness':'self_understanding','meaning_identity':'meaning_values','work_purpose':'work_achievement',
@@ -162,11 +163,39 @@ def promote_release(args):
     run(cmd)
     for i in ids:state['candidates'][i]['release']='released'
     _,_,state_path,_=state_paths(root);write(state_path,state);paths=[state_path,root/'perspective-library/source/vi',root/'perspective-library/authoring/vi',root/'perspective-library/release/vi'];commit_push(root,paths,f'Release {len(ids)} owner-approved perspective(s)',args.push);print(f'Released {len(ids)} quote(s).')
+def editorial_status(root):
+    matrix_path=root/'studio/review-matrix/data.json'
+    if not matrix_path.exists():
+        return {'availability':'missing', 'action_vi':'Tạo Review Matrix trước khi xem tiến độ biên tập.'}
+    matrix=read(matrix_path)
+    observed=matrix.get('status_inputs_sha256')
+    current=status_input_digests(root)
+    stale=[name for name,digest in current.items()
+           if digest is None or not observed or observed.get(name)!=digest]
+    if stale:
+        return {'availability':'stale', 'changed_inputs':stale,
+                'action_vi':'Chạy scripts/build-review-matrix.py để đồng bộ với manifest và review ledger hiện tại.'}
+    counts={}
+    for row in matrix['rows']:
+        key=row['pm_status'];counts[key]=counts.get(key,0)+1
+    return {'availability':'current', 'source':'studio/review-matrix/data.json',
+            'generated_at':matrix['generated_at'],
+            'authoring_revision':matrix['authoring_revision'],
+            'release_revision':matrix['release_revision'],
+            'total_quotes':len(matrix['rows']), 'states':counts,
+            'summary':matrix['summary']}
+
 def status(args):
     _,catalog_path,state_path,_=state_paths(args.root);cat=read(catalog_path);st=load_state(state_path);counts={}
     for c in cat['candidates']:
         r=st['candidates'].get(c['id'],{});key=r.get('release') or r.get('second_review') or r.get('authoring') or r.get('first_review') or 'unseen';counts[key]=counts.get(key,0)+1
-    print(json.dumps({'catalog':len(cat['candidates']),'batch_sequence':st['batch_sequence'],'states':counts},ensure_ascii=False,indent=2))
+    # Keep the original fields for callers tracking import batches. They do not
+    # represent editorial approval or the active Release catalog.
+    result={'catalog':len(cat['candidates']),'batch_sequence':st['batch_sequence'],'states':counts,
+            'states_scope':'candidate_import_workflow_only',
+            'states_note_vi':'Imported là lịch sử nhập candidate, không phải trạng thái review hoặc Release hiện tại.',
+            'editorial_status':editorial_status(args.root)}
+    print(json.dumps(result,ensure_ascii=False,indent=2))
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent);sp=p.add_subparsers(dest='cmd',required=True)
     a=sp.add_parser('select');a.add_argument('--count',type=int,default=5);a.add_argument('--date');a.add_argument('--push',action='store_true');a.set_defaults(fn=select)

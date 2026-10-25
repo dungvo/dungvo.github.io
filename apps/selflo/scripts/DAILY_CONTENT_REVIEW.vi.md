@@ -57,6 +57,10 @@ Không dùng các cờ xác nhận để bỏ qua việc kiểm tra nguồn/quy�
 
 ## Trạng thái
 
+Từ 2026-10-25, xem `editorial_status` để đối chiếu với Studio Review Matrix. Khi `availability` là `current`, các số `states` và revision lấy từ cùng projection Studio. Nếu `stale` hoặc `missing`, chạy `python3 scripts/build-review-matrix.py` rồi xem lại; CLI không hiển thị số biên tập cũ như thể hiện hành.
+
+Các trường cấp ngoài `catalog`, `batch_sequence`, `states` được giữ cho lịch sử import candidate. `states.imported` không có nghĩa quote chưa được review hoặc chưa Release. State này không cấp quyền approval. Fingerprint chỉ kiểm tra sáu đầu vào trạng thái được nêu trong `scripts/review_status.py`.
+
 ```bash
 python3 scripts/daily-content-review.py status
 ```
@@ -70,5 +74,5 @@ Với quote chuẩn đã ở Authoring, kết quả AI review được lưu riê
 - Thiếu quyết định không bao giờ được coi là approve.
 - Candidate không tự động thành Authoring.
 - Authoring không tự động thành Release.
-- 65 quote Release hiện tại không nằm trong daily Candidate catalog.
+- Catalog Candidate và tập Release có phạm vi khác nhau; không dùng số candidate imported làm số quote Release.
 - Script chỉ commit các đường dẫn của workflow; không `git add` các thay đổi khác trong repo.
