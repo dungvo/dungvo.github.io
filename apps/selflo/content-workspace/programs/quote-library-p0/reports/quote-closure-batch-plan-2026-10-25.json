@@ -15,7 +15,7 @@
       "phase": "Q10.1",
       "title_vi": "Rà Release",
       "row_count": 166,
-      "status": "verifying_public",
+      "status": "closed",
       "reviewed_count": 166,
       "baseline_ids": [
         "attributed.confucius.book_i_ch01.learning",
@@ -193,7 +193,10 @@
       "accepted_count": 102,
       "not_accepted_count": 64,
       "evidence_path": "reports/q10-b001-review.json",
-      "planned_release_revision": 49
+      "planned_release_revision": 49,
+      "completed_count": 166,
+      "public_release_revision": 49,
+      "public_verified_at": "2026-10-25T08:00:15.854924Z"
     },
     {
       "id": "Q10-B002",

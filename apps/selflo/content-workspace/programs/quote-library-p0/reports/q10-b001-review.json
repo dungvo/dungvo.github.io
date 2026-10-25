@@ -4,7 +4,7 @@
   "batch_id": "Q10-B001",
   "reviewed_at": "2026-10-25T07:49:19.331150Z",
   "reviewed_by": "ai:codex",
-  "status": "reviewed_pending_public_verification",
+  "status": "closed",
   "summary": {
     "reviewed": 166,
     "accepted": 102,
@@ -25243,5 +25243,8 @@
         ]
       }
     }
-  ]
+  ],
+  "public_verification": "reports/q10-b001-public-verification.json",
+  "release_revision": 49,
+  "release_commit": "6a32086"
 }

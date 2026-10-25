@@ -1,13 +1,13 @@
 # Q10-B001 — Review 166 dòng quote
 
-Trạng thái: đã review từng dòng và kiểm định cục bộ; chờ bản public để đóng batch.
+Trạng thái: **ĐÃ ĐÓNG Q10-B001** sau kiểm chứng public Release 49.
 
 - 166 dòng đã đối chiếu: 102 giữ lại, 64 không đạt.
 - Không đạt: 20 trùng nguồn/ý, 43 thiếu ngữ cảnh độc lập, 1 dễ gây hiểu sai.
 - 51 văn bản được biên tập lại; chuẩn hóa tên/nguồn và nhãn hiển thị của nhóm giữ lại.
 - Sửa người nói: “Mỗi ngày tự xét lại mình…” là Tăng Tử; câu khuyên can dày làm bạn xa là Tử Du, đều được ghi trong Luận Ngữ.
 - Sửa locator có khác biệt edition: đoạn nghĩ mà không học là Legge XV.30, trong khi ID cũ an15_31 được giữ ổn định; “tin hết sách” thuộc Tận Tâm hạ 3, không phải Tận Tâm thượng.
-- Authoring 88: 1.851 quote / 63 story. Release 49 dự kiến public: 598 quote / 17 story.
+- Authoring 88: 1.851 quote / 63 story. Release 49 đã public: 598 quote / 17 story.
 - Đúng 64 ID bị gỡ, không thêm ID Release; toàn bộ quote ngoài 166 ID và mọi story descriptor giữ nguyên.
 - 94/94 tests đạt; full publisher/schema/semantic/coverage gates đạt; mọi checksum/byte_count khớp.
 - Kết quả quyết định vẫn ở canonical-ai-review.json; report này là bằng chứng/đối soát, không phải ledger cạnh tranh.
@@ -26,4 +26,13 @@ Bản Việt giữ/phỏng theo từ văn bản cổ đã có cơ sở quyền t
 ## Toàn bộ kết luận của đợt
 
 
-Bước tiếp theo: cập nhật package lên main, kiểm tra manifest và 9 quote pack public rồi mới đánh closed và mở Q10-B002.
+## Xác nhận public và tiến độ corpus
+
+- Commit nội dung `6a32086` đã push main; public manifest revision 49 khớp SHA-256 local.
+- Đã tải 9 quote pack public: mọi SHA/byte_count đúng; tổng 598 quote. 102 ID giữ lại khớp văn bản/attribution; 64 ID không đạt đều vắng mặt.
+- Q10-B001: 166/166 có kết luận cuối, không còn pending.
+- Corpus: **176/5.471 đã có kết luận cuối trong chương trình**, gồm 102 released + 74 not_accepted; 74 gồm 64 mới + 10 quyết định owner mang sang, không tính là review lại.
+- **Còn 5.295 dòng**; 496 quote khác đang public vẫn chờ lượt audit của chương trình, không được tự đếm đã review.
+- Chỉ đóng B001, không đóng cả chương trình. Story vẫn tạm dừng.
+
+Bước tiếp theo: Q10-B002, 166 dòng Release theo queue; chưa mở trong lượt B001.

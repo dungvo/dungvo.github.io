@@ -1,5 +1,7 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
+> **ĐÃ ĐÓNG Q10-B001 — 2026-10-25:** 166/166 dòng có kết luận: 102 giữ lại và 64 không đạt. Public Release 49 đã xác nhận 598 quote qua 9 pack/checksum; story giữ 17. Corpus đã kết luận **176/5.471** gồm 166 đợt này + 10 owner-closed mang sang; còn **5.295**. Xem `Q10_B001_CHECKPOINT.vi.md` và `reports/quote-closure-progress.json`. Bước tiếp theo Q10-B002 (166 dòng), chưa mở.
+
 > **Q10-B001 — checkpoint 2026-10-25:** T-01/T-02 hoàn tất; đã review đủ 166 dòng, giữ 102, loại 64 (20 duplicate/43 context/1 misleading), sửa 51 văn bản và attribution Tăng Tử/Tử Du. Publisher Authoring 88 / Release 49 (1.851/598 quote; 63/17 story), 94 tests đạt. Chờ kiểm chứng public trước khi đóng batch; chưa mở B002. Bằng chứng `Q10_B001_CHECKPOINT.vi.md`, `reports/q10-b001-review.json`.
 
 > **Checkpoint spec-driven 2026-10-25:** Đã hoàn thiện bộ `README → SPEC → CURRENT_STATE_REVIEW → DECISIONS → PLAN → TASKS → REVIEWS`, kế hoạch **36 batch, 100–200 dòng/batch, mục tiêu 150**. Chưa review nội dung batch mới; quote là ưu tiên duy nhất, story tạm dừng. Đọc `PLAN.vi.md` và `TASKS.vi.md` để thực hiện.
@@ -66,4 +68,4 @@ R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ 
 
 ## Đúng một bước tiếp theo
 
-Kiểm chứng Release 49 trên public (manifest + 9 quote pack), đối soát projection closure, rồi đóng Q10-B001. Chưa mở Q10-B002 hoặc story trước bước này.
+Mở Q10-B002 (166 dòng Release) từ queue và tiếp tục cùng quy trình nguồn/ngôn ngữ/khử trùng. B001 đã đóng, không review lại 10 owner-closed. Không chuyển sang story.

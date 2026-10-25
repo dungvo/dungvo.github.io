@@ -307,3 +307,10 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 - Review 166/166: 102 accepted, 64 not_accepted; 51 văn bản biên tập. Chỉ 166 canonical quote đổi, 10 quyết định owner đóng giữ nguyên. Story/source ngoài scope không đổi.
 - Authoring 88 / Release 49 đã kiểm định cục bộ: 1.851/598 quote, 63/17 story. 94 tests đạt; SHA/byte_count đúng. Public chưa xác nhận ở checkpoint này.
 - Bước tiếp theo: push package đã kiểm định, xác nhận public và đóng B001.
+
+## 2026-10-25 — Đóng Q10-B001 sau public verification
+
+- Commit nội dung 6a32086 đã push main. Public verification lúc 2026-10-25T08:00:15.854924Z: manifest revision 49 khớp hash; 9 quote pack khớp SHA/byte_count; 598 quote.
+- 102 accepted khớp text/attribution; 64 rejected không còn active. B001 closed 166/166, 94 tests đã đạt ở commit nội dung.
+- Projection corpus: 102 released + 74 not_accepted (64 mới + 10 owner-closed) + 5.295 remaining = 5.471. Không mặc nhiên tính mọi quote public khác là đã audit.
+- Bước tiếp theo Q10-B002 (166), chưa mở. Story không thay đổi.

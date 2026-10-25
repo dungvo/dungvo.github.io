@@ -27,7 +27,7 @@ Hoàn thành
 
 | Mã | Chương trình | Ưu tiên | Trạng thái | Checkpoint hiện tại | Nơi theo dõi |
 |---|---|---:|---|---|---|
-| `PM-QUOTE-P0` | Khép kín 5.471 dòng quote | P0 | Đang thực hiện — lập plan xong | Release 48: 662 quote; workspace spec-driven, 36 batch 100–200; T-01/T-02 tiếp theo | [`quote-library-p0/STATUS.vi.md`](quote-library-p0/STATUS.vi.md) |
+| `PM-QUOTE-P0` | Khép kín 5.471 dòng quote | P0 | Đang thực hiện — lập plan xong | B001 closed 166/166; Release 49 public 598 quote; corpus 176/5.471, còn 5.295; tiếp B002 | [`quote-library-p0/STATUS.vi.md`](quote-library-p0/STATUS.vi.md) |
 | `PM-STORY-P1` | Review story chỉ có trong Authoring | P1 | Tạm dừng theo owner | Baseline: 62 Authoring, 16 Release, 46 Authoring-only; owner sẽ đọc và bổ sung sau | [`story-authoring-review/STATUS.vi.md`](story-authoring-review/STATUS.vi.md) |
 | `PM-KNOWLEDGE-P1` | Hoàn thành một bài Knowledge | P1 | Tạm dừng theo owner | Đã có bản bài 01 về so sánh xã hội/ghen tị; chờ owner đọc, chưa Authoring/Release | [`knowledge-article-p1/STATUS.vi.md`](knowledge-article-p1/STATUS.vi.md) |
 | `PM-STUDIO-P1` | Studio parity, Website Lab và Knowledge Reader | P1 | S2 hoàn thành — chờ thảo luận | Studio có 4 trang parity + Developer; chưa chốt vị trí/tổ chức Phân tích | [`studio-public-knowledge-reader/STATUS.vi.md`](studio-public-knowledge-reader/STATUS.vi.md) |
