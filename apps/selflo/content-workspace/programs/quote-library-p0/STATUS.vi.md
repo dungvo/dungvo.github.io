@@ -1,5 +1,7 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
+> **Q10-B002 ĐÃ ĐÓNG — 2026-10-25:** 166 câu: 75 giữ, 91 không đạt; 50 bản viết lại. Release 50 public đã xác nhận 507 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **342/5.471 đã chốt, còn 5.129** (177 released, 165 not_accepted, gồm 10 owner-closed). Commit nội dung `f2fd929`. Tiếp Q10-B003 (165); story tiếp tục tạm dừng.
+
 > **Q10-B002 — 2026-10-25:** Đã review đủ 166 câu: 75 giữ, 91 không đạt; sửa 50 văn bản, chuẩn hóa Kinh Pháp Cú/Trang Tử/Lão Tử. Authoring 89 / Release 50: 1.851/507 quote, 63/17 story; 94 tests đạt. Đang kiểm chứng public; chưa đóng B002, chưa mở B003/story. Xem `Q10_B002_CHECKPOINT.vi.md`.
 
 > **ĐÃ ĐÓNG Q10-B001 — 2026-10-25:** 166/166 dòng có kết luận: 102 giữ lại và 64 không đạt. Public Release 49 đã xác nhận 598 quote qua 9 pack/checksum; story giữ 17. Corpus đã kết luận **176/5.471** gồm 166 đợt này + 10 owner-closed mang sang; còn **5.295**. Xem `Q10_B001_CHECKPOINT.vi.md` và `reports/quote-closure-progress.json`. Bước tiếp theo Q10-B002 (166 dòng), chưa mở.
@@ -70,4 +72,4 @@ R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ 
 
 ## Đúng một bước tiếp theo
 
-Kiểm chứng public Release 50, cập nhật projection và đóng Q10-B002; chưa mở B003/story.
+Mở Q10-B003 (165 dòng) theo queue. B001/B002 đã đóng; không mở lại câu không đạt và không chuyển sang story.

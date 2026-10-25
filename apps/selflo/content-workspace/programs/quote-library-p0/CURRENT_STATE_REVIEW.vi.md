@@ -1,5 +1,7 @@
 # Current-state review — 25/10/2026
 
+> **Q10-B002 ĐÃ ĐÓNG — 2026-10-25:** 166 câu: 75 giữ, 91 không đạt; 50 bản viết lại. Release 50 public đã xác nhận 507 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **342/5.471 đã chốt, còn 5.129** (177 released, 165 not_accepted, gồm 10 owner-closed). Commit nội dung `f2fd929`. Tiếp Q10-B003 (165); story tiếp tục tạm dừng.
+
 ## Bằng chứng hiện hành
 
 - HEAD trước lượt lập workspace: 15a3179. Có thay đổi tài liệu kế hoạch chưa commit từ lượt trước; giữ nguyên ý định, hợp nhất thành bộ spec-driven này.

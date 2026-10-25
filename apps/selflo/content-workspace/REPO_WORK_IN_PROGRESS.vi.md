@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **Q10-B002 ĐÃ ĐÓNG — 2026-10-25:** 166 câu: 75 giữ, 91 không đạt; 50 bản viết lại. Release 50 public đã xác nhận 507 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **342/5.471 đã chốt, còn 5.129** (177 released, 165 not_accepted, gồm 10 owner-closed). Commit nội dung `f2fd929`. Tiếp Q10-B003 (165); story tiếp tục tạm dừng.
+
 > **Q10-B002 — 2026-10-25:** Đã review đủ 166 câu: 75 giữ, 91 không đạt; sửa 50 văn bản, chuẩn hóa Kinh Pháp Cú/Trang Tử/Lão Tử. Authoring 89 / Release 50: 1.851/507 quote, 63/17 story; 94 tests đạt. Đang kiểm chứng public; chưa đóng B002, chưa mở B003/story. Xem `Q10_B002_CHECKPOINT.vi.md`.
 
 > **Q10-B001 ĐÃ ĐÓNG 2026-10-25:** Commit nội dung `6a32086`, Release 49 public: 598 quote / 17 story; 9 pack/checksum đã xác nhận, 94 tests đạt. Đợt 166 dòng: 102 giữ lại, 64 không đạt. Corpus đã chốt 176/5.471 (gồm 10 owner-closed mang sang), còn 5.295. Bước tiếp theo Q10-B002 (166); story vẫn tạm dừng.

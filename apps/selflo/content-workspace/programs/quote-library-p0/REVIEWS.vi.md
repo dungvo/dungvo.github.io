@@ -18,3 +18,10 @@
 - Story không nằm trong assignment quote; không thay quote/story/manifest/decision trong lượt lập kế hoạch.
 
 Đây là review plan và kiểm tra assignment, không phải review nội dung của 5.471 dòng. Chưa chứng nhận quyền, dịch thuật hoặc Release cho batch nào. T-01/T-02 là bước thực hiện kế tiếp, không phải blocker cần owner trả lời lại về batch size đã rõ.
+
+## 2026-10-25 — Nghiệm thu Q10-B002
+
+- 166 ID có kết luận và source passage; 75 accepted/91 not_accepted, không có pending trong batch.
+- Đã giữ nguyên source rights, edition/translator và bản trước; không suy quyền từ tuổi tác giả, không loại vì ngoại ngữ. Đối chiếu tên Kinh Pháp Cú là tác phẩm.
+- 94 tests và publisher gates đạt; public 9 pack/checksum khớp. 91 exclusion, 17 winner chỉ tới accepted, không sửa story.
+- Corpus còn 5.129 dòng; kết quả đợt này không phải nghiệm thu toàn kho.

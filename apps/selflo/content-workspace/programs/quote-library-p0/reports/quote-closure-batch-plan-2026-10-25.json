@@ -203,7 +203,7 @@
       "phase": "Q10.1",
       "title_vi": "Rà Release",
       "row_count": 166,
-      "status": "verifying_public",
+      "status": "closed",
       "reviewed_count": 166,
       "baseline_ids": [
         "research.laozi.day3.ch55.019",
@@ -381,7 +381,10 @@
       "accepted_count": 75,
       "not_accepted_count": 91,
       "evidence_path": "reports/q10-b002-review.json",
-      "planned_release_revision": 50
+      "planned_release_revision": 50,
+      "completed_count": 166,
+      "public_release_revision": 50,
+      "public_verified_at": "2026-10-25T09:04:54.870500Z"
     },
     {
       "id": "Q10-B003",
