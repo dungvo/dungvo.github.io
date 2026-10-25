@@ -713,20 +713,20 @@
     },
     {
       "id": "attributed.dhammapada.verse_080.fashion_self",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Người đào giếng dẫn nước, người làm tên uốn mũi tên, thợ mộc uốn gỗ; người sáng suốt rèn chính mình.",
+      "text_vi": "Người dẫn nước điều chỉnh dòng chảy, người làm tên nắn mũi tên, thợ mộc sửa gỗ; người sáng suốt rèn chính mình.",
       "subtitle_vi": null,
       "primary_theme": "change_growth",
       "authorship": {
         "author_id": "dhammapada_tradition",
-        "author_name": "Dhammapada",
-        "work": "Dhammapada, a Collection of Verses",
-        "source_url": "https://www.gutenberg.org/ebooks/2017",
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017-images.html",
         "source_language": "en",
-        "source_label": "Dhammapada",
-        "source_detail": "F. Max Müller (dịch); 80; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 80",
+        "source_detail": "F. Max Müller (dịch); 80; bản Việt là bản dịch nháp Selflo từ exact English source | Q10-B002: Kinh Pháp Cú · kệ 80; tên/tác phẩm gốc: Dhammapada / Dhammapada, a Collection of Verses; đối chiếu tại https://www.gutenberg.org/cache/epub/2017/pg2017-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -746,11 +746,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T22:58:03Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
       },
       "writing": {
-        "semantic_intent": "Người đào giếng dẫn nước, người làm tên uốn mũi tên, thợ mộc uốn gỗ; người sáng suốt rèn chính mình.",
+        "semantic_intent": "Người dẫn nước điều chỉnh dòng chảy, người làm tên nắn mũi tên, thợ mộc sửa gỗ; người sáng suốt rèn chính mình.",
         "observation_key": null,
         "structure_pattern": "attributed_quote"
       },
@@ -759,7 +759,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada · 80"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 80"
       },
       "story_id": null,
       "selection": {
@@ -767,9 +767,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "change_growth",
-          "buddhist_text",
-          "self_shaping"
+          "Thay đổi và trưởng thành",
+          "Kinh Pháp Cú"
         ],
         "tie_break_order": 5036
       },

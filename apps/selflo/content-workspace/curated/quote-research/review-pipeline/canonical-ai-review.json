@@ -1963,17 +1963,39 @@
     },
     {
       "quote_id": "research.laozi.ch02.008",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lặp công thành bất cư, không giữ công với canonical nuôi dưỡng không chiếm hữu/cậy công đã giữ B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.ch02.008",
+        "reviewed_text_sha256": "6fbd9db6ac0095c3257defa13f8929411d7d47338be704ff5be2af8667c6e9fa",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.ch10.029"
+      }
     },
     {
       "quote_id": "research.laozi.ch08.020",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng passage nước lợi muôn vật không tranh đã có canonical attributed ở B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.ch08.020",
+        "reviewed_text_sha256": "81b50953b42a1e2b97f6dc9ede78ea844e154c9e3426994a929c5887ae1f990a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "attributed.laozi.chapter_08.water"
+      }
     },
     {
       "quote_id": "research.laozi.ch09.022",
@@ -2012,24 +2034,55 @@
     },
     {
       "quote_id": "research.laozi.ch11.030",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng passage nan hoa và khoảng trống đã giữ canonical chương 11 B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.ch11.030",
+        "reviewed_text_sha256": "f331af834824bf7c3231cf203df260d670afec4e9498861e730c5a41628e878b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "attributed.laozi.chapter_11.empty_space"
+      }
     },
     {
       "quote_id": "research.laozi.ch14.042",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chấp cổ chi đạo nói Đạo, không phải nguyên lý xưa tùy ý; câu hiện tại chung chung và có thể hiểu thành lấy xưa áp nay.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.ch14.042",
+        "reviewed_text_sha256": "08cdf7a1f627aa3c1afd15afb5b585570c93c567146d6cecf25ca65dd8deeb28",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.ch15.043",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Dự như đông thiệp xuyên có nguồn; giữ một hình ảnh thận trọng dễ hiểu, bỏ vế dè dặt mơ hồ lặp lại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.ch15.043",
+        "reviewed_text_sha256": "62e476d34e2c13116f2b4896532103d8e151e382d891d55cc59988017f3950c9",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.ch15.046",
@@ -2154,66 +2207,156 @@
     },
     {
       "quote_id": "research.laozi.day3.ch58.037",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bốn đối chiếu chương 58 tự đủ nghĩa; sửa động từ cắt người khác, thẳng mà không áp thành tiếng Việt rõ ràng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch58.037",
+        "reviewed_text_sha256": "b1bba2c6c9f9b9fb67eefd95fe4bb9b026f4f27a52df091a0e7b42a9ce9930cd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch59.040",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Trọng tích đức bị đổi thành chuẩn bị nhiều lớp nền tảng; nếu bỏ ngữ cảnh đức và trị nước thì hình ảnh không rõ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch59.040",
+        "reviewed_text_sha256": "903352187d48d3a91789234fbd9879a61644ca2fadc8c336413600370cce3869",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch61.048",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bàn về quan hệ đại quốc/tiểu quốc, thu hẹp vào đàm phán giữa hai phía; không phù hợp bộ thông điệp chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch61.048",
+        "reviewed_text_sha256": "1427313e9e2e589f57e95683f99396bc75fc3f425c5206530477aa6b76421dac",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch66.074",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 66 nói muốn ở trên thì lời khiêm hạ, đi trước thì thân ở sau; diễn giải vai trò dẫn dắt có trách nhiệm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch66.074",
+        "reviewed_text_sha256": "dda9e27d4ea6532b7d655e7b3203e506c011f7dd6fff3115426f4e6270d03cf4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch67.079",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đây là vế phủ định tiếp nối ba bảo vật; không có phần trước dễ thành phán xét cực đoan về tự phá.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch67.079",
+        "reviewed_text_sha256": "0baefd19687b819848a86a1b0e2012baa754ba5edb5991f5a944ab592f3af0cd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch68.082",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thiện thắng địch bất dữ, thiện dụng nhân vi chi hạ có nguồn; bỏ cách gọi dùng người mang nghĩa công cụ, giữ sự khiêm nhường trong dẫn dắt.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch68.082",
+        "reviewed_text_sha256": "50e59a27750522342b872739a8f9c32ad55518d834291222afd2f713a0b4b955",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch72.094",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Nguồn là lời với người cầm quyền về chỗ sống và sinh kế của dân; bản hiện tại làm mờ bạo quyền thành nhắc nhở chung, không ép sang quote hằng ngày.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch72.094",
+        "reviewed_text_sha256": "413eefc0e29e18af5ef244d03afa1722ce86ef34b829be03d7e368d87d154844",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch79.121",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 79 nói hòa đại oán tất hữu dư oán; giữ góc nhìn sự hòa giải không lập tức xóa hết tổn thương.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch79.121",
+        "reviewed_text_sha256": "cb733a33bbd32e4096b2d204736d795beafccbd162b826d9803600a818bb4b27",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch81.131",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tín ngôn bất mỹ, mỹ ngôn bất tín có nguồn; bản diễn giải tránh tuyệt đối hóa lời hay đều dối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch81.131",
+        "reviewed_text_sha256": "fc16a5c1e07703148f1ec5e60df0d1d5448bd866507a061e2646d71ae8745859",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.reaudit.day17.meno_choice_compare",
@@ -2224,17 +2367,38 @@
     },
     {
       "quote_id": "research.zhuangzi.day4.ch03.022",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng hai câu mở Dưỡng sinh chủ; đã gộp vế hữu hạn/vô hạn vào bản 134 trọn nghĩa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.zhuangzi.day4.ch03.022",
+        "reviewed_text_sha256": "5818fe147de187403cbf7b5e049c6e4dccd9b5b7ccf624fa9a08e232860c4ebe",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.zhuangzi.day4.ch03.021"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch03.029",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T22:52:11Z",
-      "note_vi": "AI review vòng 1 đạt; ứng viên Research đã được đưa vào Authoring với provenance để owner chốt."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lau dao cất là kết tình tiết Bào Đinh, không có đủ nghĩa ngoài bối cảnh.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch03.029",
+        "reviewed_text_sha256": "71f02394202d08dde581aa9012532cf3da5c60593fdb7e92d9728e5eff3e2754",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.buddhist.day14.mn63_arrow_01",
@@ -7904,17 +8068,37 @@
     },
     {
       "quote_id": "research.dhammapada.day11.v100",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 100 lời có nghĩa làm lòng lắng so nghìn lời vô nghĩa có nguồn; giữ câu Việt hiện tại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v100",
+        "reviewed_text_sha256": "78b636b198ae4607e19b1fe01d6466994761e1ba945acfe64676f552d08df4aa",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v121",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 121 bình đầy từng giọt là phép ví việc xấu tích dần; giữ cả hình ảnh và điều có hại, không dùng làm câu thành công trái đoạn nguồn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v121",
+        "reviewed_text_sha256": "ee53fb1a01b9a357a7724818596effcd03f5c1a02c0d3efc2ff194c51cea1eb7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.dhammapada.day11.v122",
@@ -10505,528 +10689,1287 @@
     },
     {
       "quote_id": "research.laozi.day3.ch55.019",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hình ảnh bàn tay trẻ sơ sinh thuộc chuỗi ví dụ về sức sống nguyên sơ; đứng riêng chỉ còn mô tả cơ thể, không đủ nghĩa cho thông điệp mỗi ngày.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch55.019",
+        "reviewed_text_sha256": "731b415b9468fba2d10f7998e20da0c67802d2dffc516954258f111dd47001cd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch55.021",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hòa hợp và điều thường hằng là hai thuật ngữ của chương 55; bản rút gọn không giải thích được mối liên hệ, sửa thành lời khuyên sẽ thêm nghĩa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch55.021",
+        "reviewed_text_sha256": "6b5686c39f778036ce79b06439264353c0f8fc38530f3343da34e95edf7fb166",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch55.023",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lặp trực tiếp mệnh đề vật tráng tắc lão đã giữ ở chương 30 trong B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch55.023",
+        "reviewed_text_sha256": "a7e4e50913f9be88f0738f1bc20cccabfbb18596c7a300ea39add0d67ac6aaec",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.day2.ch30.039"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch56.024",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Mệnh đề biết và nói ở chương 56 xác định được; giữ cách diễn giải có giới hạn, tránh suy rằng người nói ít đương nhiên hiểu sâu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch56.024",
+        "reviewed_text_sha256": "f8eee8366c0eb7c496eea26f07ee5227a7b2857dfac7034c928842392053cd52",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch56.025",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chuỗi ẩn dụ đóng cửa, hòa ánh sáng, cùng bụi đời cần giải thích huyền đồng; không đứng độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch56.025",
+        "reviewed_text_sha256": "0221829cd8a79ed23a66e42329146dbd93917f0e9bc21c49093cd6b1bee968aa",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch56.027",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Phỏng theo bất khả đắc nhi thân/sơ/lợi/hại; làm rõ sự vững vàng trước thân sơ và lợi hại, không cổ vũ vô cảm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch56.027",
+        "reviewed_text_sha256": "7461686fd5450f847ad5673c37d45afdb8fa3ad9a0730a18f2ddc6feac3b92f2",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch57.029",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bản hiện tại biến phê phán chính trị cụ thể về cấm đoán và binh khí thành quy luật mơ hồ về hệ thống; không giữ kiểu khái quát đó.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.laozi.day3.ch57.029",
+        "reviewed_text_sha256": "6ad06bba9390686a56435a3ccef36784bf29ec1542ad27c050212f5bd86ee3b3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch57.031",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 57 đối chiếu người cầm quyền bớt cưỡng ép với dân tự chuyển hóa; ghi rõ vai trò người dẫn dắt, không hứa mọi cộng đồng tự tốt lên.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch57.031",
+        "reviewed_text_sha256": "f4aa594d8617378cb7e9e202cd63156e4d68f7123bc4c70bc24df4119755992b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch57.032",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Mệnh đề vô dục và dân tự phác có nguồn; diễn giải rõ bớt áp ham muốn riêng và nét mộc mạc, tránh thuật ngữ phần mộc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch57.032",
+        "reviewed_text_sha256": "b65c61ce146cdc327753d481d9b03d6517366f647888740b80f4080702882cae",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch58.034",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng đúng passage họa/phúc chương 58 với bản attributed được giữ và liên kết story hiện hành.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch58.034",
+        "reviewed_text_sha256": "0ac5d0ff1e4e047090b6ff3c32f45dac29bff1c76c7722a87cac0024f811a37c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "attributed.laozi.chapter_58.fortune_misfortune"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch58.035",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Câu hỏi về điểm cùng cực nối trực tiếp họa/phúc và chính/kỳ; tách riêng không rõ đang hỏi điều gì.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch58.035",
+        "reviewed_text_sha256": "4574e75aabaa1a42e201d8efa608605e4d5fbfbbaddb187a6c9839a1c46d2da6",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch59.038",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Là lời tóm tắt biên tập về trị nhân sự thiên, không phải câu độc lập; giữ người và giữ hệ làm mờ đối tượng nguồn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch59.038",
+        "reviewed_text_sha256": "6677da474e6afb4a9a7b55242c837a24a9d107743992997cfbf991a74a5d25a0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch59.039",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Sớm tiết chế để trước khi cạn là cách giải thích thêm cho tảo phục, không chắc nghĩa nguyên bản; không gắn kết luận ấy cho Lão Tử.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.laozi.day3.ch59.039",
+        "reviewed_text_sha256": "b610fa13cb605d4da9e8d9f51e9652eb72548579bddcbd2df361a6a0383335f4",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch59.041",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hình ảnh thâm căn cố đế xác định được ở cuối chương 59; diễn giải như so sánh về nền tảng bền, không hứa kéo dài tuổi thọ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch59.041",
+        "reviewed_text_sha256": "31690762a63a9d1b01bcbed7924600a2b9ff2754d151f07caed414e6c80efcf7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch60.042",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Phỏng dụ nấu cá nhỏ dành cho trị nước; câu hiện tại áp thẳng thành quản trị hệ lớn quá chuyên biệt và thêm giải thích đảo nát. Loại khỏi bộ quote chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch60.042",
+        "reviewed_text_sha256": "ea40102ae43a9959c8161cfedd29b7d2dc7a4a0d35b46526d0714f12709e6baf",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch61.045",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 61 nói đại quốc ở hạ lưu, không nói biển lớn; hình ảnh sông biển ở thấp đã có bản đúng nguồn chương 66 được giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch61.045",
+        "reviewed_text_sha256": "d1326d8c5f69b9fda67e30d1e7f705ad86460b262cf53418895e0fa4dc6fcece",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.day3.ch66.073"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch61.047",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đại quốc và tiểu quốc nhận nhau là ngữ cảnh chính trị; câu riêng không cho biết ai nhận điều gì.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch61.047",
+        "reviewed_text_sha256": "762774fea65ce8c10928ad780965e00bcf36ac7d823f3aaa39f55136d481d860",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch62.051",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Nhân chi bất thiện hà khí chi hữu có nguồn rõ; giữ câu hỏi mở về không vội bỏ một người.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch62.051",
+        "reviewed_text_sha256": "d58569a4542074abc357fb11f1430e0f288501d16908b4117ea6faa942af462b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch62.052",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Mỹ ngôn khả dĩ thị/tôn hành khả dĩ gia nhân có cách đọc khó; đổi thành mua chú ý và tạo ảnh hưởng dễ biến thành chỉ dẫn thao túng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch62.052",
+        "reviewed_text_sha256": "4dfd58d021ad3c5b991a6cacaa888fbf20e94fda6e72a4880dd8d0741b07dc62",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch63.054",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ba vế vô vi/vô sự/vị vô vị bị ghép thành hướng dẫn xử lý việc lớn; không có nghĩa độc lập đủ chắc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch63.054",
+        "reviewed_text_sha256": "d15dadb1bee2d1ba1c8a5fda6e9e434bd65bc4276b32d88aaa979eba3c7aa4ca",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch63.056",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đồ nan ư dị, vi đại ư tế có nguồn rõ; giữ bản diễn giải việc khó từ lúc dễ, việc lớn từ phần nhỏ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch63.056",
+        "reviewed_text_sha256": "72e686f2eadb3a927d5c391f29a0e76abbe0ecba60e255c90550a319addae7fb",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch63.057",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng passage và ý với câu ngay trước; giữ một bản rõ hơn của chương 63.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch63.057",
+        "reviewed_text_sha256": "b9f467049391b5cee374a026c96e146e06182e387c0e2a707aacf548d3827280",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.day3.ch63.056"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch63.058",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Khinh nặc quả tín, đa dị đa nan có nguồn; làm rõ hứa dễ mất tin cậy, xem nhẹ việc dễ gặp khó.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch63.058",
+        "reviewed_text_sha256": "4dd76867c5513186fdbc457f7322c21d81909480d6039384a6063bcea5782ffb",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch63.059",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Do nan chi nên chung vô nan là thái độ không xem nhẹ khó khăn; diễn giải có giới hạn, không hứa hết mọi khó.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch63.059",
+        "reviewed_text_sha256": "52061095cd643cfd0c9e8eb479a3f529d5e919248bf92d2f54b9783ed26ea7bf",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch64.060",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chuỗi an/vị triệu/thúy/vi là các trạng thái chưa phát; bản riêng liệt kê mà không rõ chủ thể và cách hiểu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch64.060",
+        "reviewed_text_sha256": "efe9b367d01a1db65855924fe0f9ebc7cf3f9a17cd85e48b3755c42349ec3ba0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch64.061",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Vi chi ư vị hữu, trị chi ư vị loạn có nguồn; diễn giải nhận ra và xử lý trước lúc rối lớn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch64.061",
+        "reviewed_text_sha256": "099151a787d83a97e305a039a1cd2b284128faed81fa67979c4831b2967990a2",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch64.062",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng passage cây lớn/đài cao/ngàn dặm với canonical chương 64 đã giữ B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch64.062",
+        "reviewed_text_sha256": "490ef9a9c917e68df56861e8b5fe2091711d5d72979449679dc5cd1e3bd04790",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "attributed.laozi.chapter_64.first_step"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch64.064",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thận chung như thủy có nguồn rõ; giữ nhắc nhở cẩn trọng đến cuối, không bảo đảm tuyệt đối không thất bại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch64.064",
+        "reviewed_text_sha256": "fbe5e7a24e028beb01d74845010a8cc2b6a1f08b5d5b929e647a6590a660f66e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch64.065",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Dục bất dục, bất quý nan đắc chi hóa nói không chạy theo vật quý hiếm; nêu rõ của cải được săn đón thay cho thứ mơ hồ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch64.065",
+        "reviewed_text_sha256": "3910283ce8010a4a97eb3884144b71416f5b91117925ef12f837ae37181ab67c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch64.066",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Phục chúng nhân chi sở quá là trở lại điều mọi người đi quá/bỏ lỡ, không đủ căn cứ suy học những thứ người khác không coi là học; câu đang lệch và mờ ý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.laozi.day3.ch64.066",
+        "reviewed_text_sha256": "79894c4703e0ccd38346b02f6042f37d5456acd7e5c75ca0c89aec5de5aff039",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch64.067",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Phụ vạn vật chi tự nhiên nhi bất cảm vi có nguồn; diễn giải giúp sự vật phát triển mà không áp đặt, không khuyến khích bỏ mặc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch64.067",
+        "reviewed_text_sha256": "14c27c22342be854d7e46d134e3ba4e30351fb060615cb25f9fd12d578c3f953",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch66.073",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Sông biển ở thấp nên làm nơi trăm dòng hội tụ thuộc chương 66; hình ảnh đầy đủ và độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch66.073",
+        "reviewed_text_sha256": "fd0e8e800eb8f57563b175cd8c705dce810a0dfb4442ab67f0600fbf8333ad29",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch66.075",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Không nặng/không hại là mô tả người trị nước ở đoạn trước; bản riêng không rõ ai ở trên và vì sao.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch66.075",
+        "reviewed_text_sha256": "32d329c95d7121475b9b078f069bf700eb703e7ddc3cbc1b63280e344abaa9da",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch66.076",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lặp cùng mệnh đề bất tranh nên thiên hạ mạc năng dữ chi tranh đã giữ B001 chương 22.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch66.076",
+        "reviewed_text_sha256": "7d7c6651e8f42468d42ba98a86ab3c9579ef53e0fc79ecfb89d3ceff354c0b17",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.day2.ch22.007"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch67.077",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ba điều quý của chương 67 xác định được; bỏ lời dẫn văn bản nêu để câu trực tiếp dễ đọc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch67.077",
+        "reviewed_text_sha256": "fc82e37fdf15975a7aa181d19ab84a79f8b28938821a14af7b7f506d7da36ad3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch67.078",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ba cặp từ/dũng, kiệm/quảng, hậu/lãnh đạo cần giải thích quan hệ nghịch lý; bản riêng đang như công thức bảo đảm lãnh đạo.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch67.078",
+        "reviewed_text_sha256": "7234187a4d59ed90889d353d94b5c9439a578afba98e998df8b74674137c1bad",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch67.080",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cách tóm tắt văn bản dùng hình ảnh làm cả hành động lẫn bảo vệ vững không giữ được ngữ cảnh chiến thắng/phòng thủ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch67.080",
+        "reviewed_text_sha256": "827603f3b052ed2cb2b3f96daaf1889c7e93030d2f15374cf13194e12a992296",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch68.081",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thiện sĩ bất vũ, thiện chiến bất nộ có nguồn; giữ như nhắc nhở về năng lực không đồng nhất với hiếu chiến hay giận dữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch68.081",
+        "reviewed_text_sha256": "48097fe9efefd03ba01c38a5209f07276afc5e13d8881e1b02f871fbfe885a14",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch68.083",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chỉ là lời giải thích đức bất tranh của hai câu trước; sức của người khác không áp họ là phần suy diễn thêm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch68.083",
+        "reviewed_text_sha256": "8f708068e4ca6a1badca60fde5190935588e45aa811c4e6d0d9a8e7afb2155fe",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch69.085",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lời về không làm chủ chiến và tiến/lùi trong chiến trận cần ngữ cảnh quân sự; không biến thành lời khuyên luôn nhường trong đời sống.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch69.085",
+        "reviewed_text_sha256": "2a88731790d1c59807f06ebe6ea9500f1c4cf4f46abf61e3d6d5b69cd67b8214",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch69.086",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 69 cảnh báo khinh địch; diễn giải không xem nhẹ phía đối diện, không khuyến khích thù địch.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch69.086",
+        "reviewed_text_sha256": "546ab7c3beae0c4ae3bc052dcd55163d87ea6709aac92ed87b10984e19ec585f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch70.088",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ngô ngôn thậm dị tri/thậm dị hành mà thiên hạ mạc năng tri/hành có nguồn; phân biệt hiểu lời với sống được lời.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch70.088",
+        "reviewed_text_sha256": "f67009c000ab6c380e92c4639c2ef26526cf40fa13374e181b4f9dba6486bb2f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch70.089",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lời có tông, việc có quân dựa vào nghĩa Đạo trong chương; nguyên tắc chủ là tiếng Việt khó hiểu, không thể tách đủ nghĩa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch70.089",
+        "reviewed_text_sha256": "ff5805d09078d69a28c1b4ddce5ff0f4227b333fa7292d39f7e65f4b43e0bd0a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch70.090",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ít người hiểu ta nên ta quý là lời tự định vị trong nguồn; đổi thành điều ít người hiểu vẫn có giá trị quá chung, dễ hợp thức hóa quan điểm không được kiểm chứng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.laozi.day3.ch70.090",
+        "reviewed_text_sha256": "c985c6ac066bc4c37d8c555e81944f031399db18f30d13d6960797d4dcea3f63",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch70.091",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Mặc áo thô giấu ngọc là hình ảnh người hiền trong chương 70; bản riêng dễ bị hiểu theo nghĩa đồ vật hoặc tự tôn ngầm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch70.091",
+        "reviewed_text_sha256": "5da1f7cd738f000db596eadd94af50b3a80e526905701a23c01019dd81b1cbe5",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch71.092",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 71 phân biệt nhận ra chưa biết và tưởng biết; sửa điều cao, một vấn đề thành tiếng Việt trực tiếp.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch71.092",
+        "reviewed_text_sha256": "fe0a08f300fa7085abdd92b471b82beb049c2edc69ebd812bdb548187e39289c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch71.093",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng đoạn chương 71 về nhận ra cái hại của tưởng biết; một bản trọn nghĩa được giữ ở dòng 52.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch71.093",
+        "reviewed_text_sha256": "9968105ab63054968557b3f29e3c9aff791a04864cfecaaf931cbf3a1c5d1701",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.day3.ch71.092"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch72.096",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tự tri bất tự kiến, tự ái bất tự quý có nguồn; giữ phân biệt biết/yêu mình với phô và đặt mình cao.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch72.096",
+        "reviewed_text_sha256": "076cc9d4a0ed42d8dd4bbe5e3e111852fe1387eb2259b2a9063210e1b43f6f1e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch73.097",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 73 đặt cạnh dũng cảm hành động và không hành động; sửa rõ biết dừng cũng cần can đảm, không nói mọi lùi bước đều đúng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch73.097",
+        "reviewed_text_sha256": "88dbc2df0aec36ec18a459262df6b2f7d6989c00d7a99826197b29fab805af0f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch73.098",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hai cách không còn tiền đề khi đứng riêng; trùng phần mở của dòng 56 mà không đủ kết luận.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch73.098",
+        "reviewed_text_sha256": "8d5a75c0f784befb44c414c62416b3926623293f771d3b97b48c22ad93559000",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch73.099",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Nguồn nói khó biết điều trời ghét, không nói người sáng không biết đúng trong mọi tình huống; khái quát hiện tại thiếu căn cứ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.laozi.day3.ch73.099",
+        "reviewed_text_sha256": "03e3c7a99eb82b002264b23919c63e4b46e71a091717b17be5ce180be7096d62",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch74.103",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Rìu người thợ là ẩn dụ cho việc thay đấng tư sát thi hành giết chóc; bỏ ngữ cảnh thành quy luật không nên thử việc mới là hiểu ngược.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch74.103",
+        "reviewed_text_sha256": "2434ecf1a0e075cf9d659c7963a218a13a0dbbdc2ba17837de93732ac5a1186c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch75.104",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 75 nêu thuế nặng gây đói; bản tóm tắt cấu trúc phía trên bỏ nguyên nhân cụ thể. Không đưa ghi chú chính trị thành quote chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch75.104",
+        "reviewed_text_sha256": "9295381339335db4a8ca82052eed93631822254afa35516dd1f0e7948b3a4d33",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch75.105",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Phê phán người trị nước can thiệp quá mức cần ngữ cảnh chính trị chương 75; bản hệ thống rối là ghi chú biên tập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch75.105",
+        "reviewed_text_sha256": "c4f5097768c8b94af49923d1c933030dfde03f7e5344489125a83938fdfc9dcd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch76.108",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hình ảnh sống mềm/chết cứng trong chương 76 là ẩn dụ triết học; đứng riêng thành khẳng định cơ thể, không đủ góc nhìn độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch76.108",
+        "reviewed_text_sha256": "af30811d3fbad46dd61ccc0da064fa305e3d63c40d582c7d3ce1115c0f13c1d7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch76.109",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chỉ một nửa hình ảnh cây cỏ sống/chết trong chuỗi ví dụ, chưa có nghĩa độc lập ngoài quan sát vật lý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch76.109",
+        "reviewed_text_sha256": "182fea3cc1bfea80f05ca00f5d81a32141c1d4c099cbd0a23ae240fddff53cb7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch76.110",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lời dẫn văn bản đặt là ghi chú về quan hệ cương/nhu, không phải quote reader-facing.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch76.110",
+        "reviewed_text_sha256": "ea4de7f03dcb846f5c6ccd72829970848e2ec0460074231b06a21040c94eda0a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch76.111",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Trên/dưới của cứng mềm là nghịch lý thiếu đoạn giải thích; có thể bị hiểu thành giá trị cao thấp tuyệt đối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch76.111",
+        "reviewed_text_sha256": "0de6e7ae5b098566d2315cddc3ea6470c30002bd4efc2e32e983e48c25205831",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch77.112",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Giương cung cao hạ/thấp nâng là hình ảnh đầy đủ của chương 77; ghi rõ phép ví để không biến thành định luật phân phối tự nhiên.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch77.112",
+        "reviewed_text_sha256": "f53b7e6b36ce37afe0ae63587e46b568856a47f2a3dfdacc72b091811aa832fd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch77.113",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng passage bớt dư/bù thiếu; giữ dòng có hình ảnh giương cung và đầy đủ ngữ cảnh hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch77.113",
+        "reviewed_text_sha256": "efee9aa012333f274c5dc87baf1e5eb99f0c4f7ff97154636f1e471733b50459",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.day3.ch77.112"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch77.114",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Phê phán phân phối của cải trong xã hội là ý chính trị cụ thể; bản hiện tại chỉ là ghi chú hệ người, không phù hợp quote độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch77.114",
+        "reviewed_text_sha256": "b4da6b901c79c80dc01ba01fd698671fc2493cf3311dfa2a803bb88849e4675f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch77.116",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lặp vi nhi bất thị, công thành bất cư với canonical sinh dưỡng không cậy công đã giữ B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.day3.ch77.116",
+        "reviewed_text_sha256": "ee8cc153a486516605993f2763012a4b1be12b9d0cced81eceae01f90cd3386f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.ch10.029"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch78.117",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ẩn dụ nước mềm khắc cứng chương 78 có nguồn; giữ là hình ảnh sức bền của mềm mại, không mẹo kỹ thuật đi qua cái cứng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch78.117",
+        "reviewed_text_sha256": "5652981cea3507ef11785015697dafed7ecced2d5717c128a04a0cf4659389ac",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch78.118",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thiên hạ mạc bất tri/mạc năng hành chi có nguồn; diễn giải khoảng cách biết và thực hành sự mềm mại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch78.118",
+        "reviewed_text_sha256": "ce3ada9822c10591acf0817b900e7ec0fdedbd41e11eaa23247c1bec75e5f668",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch78.120",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chính ngôn nhược phản chốt một nghịch lý trước đó; câu riêng có thể hợp thức hóa bất kỳ khẳng định ngược đời nào.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch78.120",
+        "reviewed_text_sha256": "31581ca69608cc40edcc1f7ecc43f9d66190f0dd6bce03ab91a691cda7c1721b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch79.122",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Câu hỏi nối về dư oán, thiếu đối tượng khi tách riêng; làm cho xong bề mặt là lời giải thích thêm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch79.122",
+        "reviewed_text_sha256": "63c421174215d6ee08507b327a2b83388329e8bb5871b276bb79223ab96a7834",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch79.123",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Giữ phần khế ước mà không trách cầu người khác có nguồn; dùng hình ảnh cam kết và trách nhiệm thay cho mệnh lệnh bỏ mọi quyền lợi.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch79.123",
+        "reviewed_text_sha256": "16f1b1ae9ff7c5dd78ba7e41a246da4b6f0401fd98a1ea2f5ae5aa441ae88253",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch79.124",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tư khế/tư triệt là đối chiếu khế ước và thu thuế; dịch soi lỗi để thu đủ làm đổi nghĩa và gây phán xét.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch79.124",
+        "reviewed_text_sha256": "bbaebdfbe6bee2c429aa0a5878b0eb769602bf6a235b850b9c2f2118ff8fb854",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch80.127",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chương 80 là viễn cảnh nước nhỏ dân ít với công cụ không dùng; mệnh đề công cụ tồn tại không cần dùng rút quá xa ngữ cảnh, quá nghiêng về công việc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch80.127",
+        "reviewed_text_sha256": "5ffa87b29253b8d695ff2744f413d1251d4a87d0a79c9b35e6841627fbde85bc",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch80.128",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng viễn cảnh phương tiện/vũ khí không dùng của chương 80, thiên về công cụ và quân sự; không phù hợp quote chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.laozi.day3.ch80.128",
+        "reviewed_text_sha256": "92e2f27c630ae2a3cc439ff4be37088fc889cb138e7e157324995e9a06c3a6d3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch80.129",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cam kỳ thực, mỹ kỳ phục, an kỳ cư, lạc kỳ tục có nguồn; giữ góc nhìn thấy đủ trong đời sống, không kèm ý cô lập láng giềng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch80.129",
+        "reviewed_text_sha256": "df69cac104cee68698362adae5b3a132b84250b549825664774c4bbc3400a2da",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch81.132",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thiện giả bất biện, biện giả bất thiện có nguồn; phân biệt tranh luận giỏi với giá trị của điều nói, không bài bác suy luận.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch81.132",
+        "reviewed_text_sha256": "6b1b3028054461a2a63de48d43a91c6bdf52c92878b285061e3873b6f3525c19",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch81.133",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tri giả bất bác, bác giả bất tri có nguồn; giữ diễn giải có giới hạn về chiều sâu/rộng, không xem việc học rộng là xấu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch81.133",
+        "reviewed_text_sha256": "7b3a73a18db5a34c865117ce6500e3c7517065684e4b5afd6c45829c056b8e17",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch81.134",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thánh nhân bất tích nối trực tiếp việc cho người càng có thêm; bản bỏ vế sau thành phán quyết mơ hồ về tích lũy.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.day3.ch81.134",
+        "reviewed_text_sha256": "8b5674262a273b2e6609e44926dc584b9b3f8f67932c0c0b7d027422d7088634",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch81.136",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thiên chi đạo lợi nhi bất hại, thánh nhân chi đạo vi nhi bất tranh có nguồn; ghi là lý tưởng hành xử, dùng cách nói mộc hơn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.laozi.day3.ch81.136",
+        "reviewed_text_sha256": "b3270a4a86b84cca2a9a7b5ebb3730e4590f277c58382e363251254bb6e4c679",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.liezi.day5.ch01.001",
@@ -12296,381 +13239,923 @@
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.001",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tích thủy bất hậu phụ đại chu vô lực có nguồn; hình ảnh con thuyền cần nước đủ sâu tự đủ nghĩa, không thêm khẩu hiệu thành công.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch01.001",
+        "reviewed_text_sha256": "106582bb8e399fa773fd348eab6d7cc3b278568d16d517d9d2b26d3b98ed28be",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.002",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Gió nâng cánh bằng là hình ảnh chim Bằng trong vũ trụ truyện; chưa biết đôi cánh nào và dày nghĩa gì khi tách riêng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch01.002",
+        "reviewed_text_sha256": "06fbfbd034c1f610e09ae91a8aaa2a05a153dfcbbca95d1a64a0709ad97fb00c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.003",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tiểu tri bất cập đại tri và tiểu niên bất cập đại niên gắn sinh vật huyền thoại; bản bao trọn thời gian vẫn mờ và có thể thành phân hạng người.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.zhuangzi.day4.ch01.003",
+        "reviewed_text_sha256": "03de06f3b4856f269f81916cea546424e7c80060633454be1a01de091db57d93",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.004",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tống Vinh Tử không đổi vì cả thiên hạ khen/chê có nguồn; sửa cả đời thành cả thiên hạ đúng ngữ pháp và chủ thể, không cổ vũ bỏ mọi góp ý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch01.004",
+        "reviewed_text_sha256": "8d451f19228b2a716a495d23631bf5db9629a6548c46f49e226a50fc69cc5500",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.005",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Danh là khách của thực thuộc lời Hứa Do từ chối ngôi; thiếu cách hiểu danh/thực/khách, khó đứng độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch01.005",
+        "reviewed_text_sha256": "b763dc76d85378dc669bf1ae7311c45587e554e47c205a70fd63399f3603c5b0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.006",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chim một cành, chuột đầy bụng là hình ảnh Hứa Do nói nhu cầu hữu hạn; giữ hình ảnh trọn vẹn không suy mọi tham vọng đều xấu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch01.006",
+        "reviewed_text_sha256": "923397a6b7b6ec1422cd4a3e996477398cbd76bcb4aa7345011f54b194d4747c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.007",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thuốc chống nứt tay giúp giặt lụa hoặc thắng trận là ngữ cảnh; bản cùng khả năng cho kết quả khác chỉ là ghi chú suy luận quá chung.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch01.007",
+        "reviewed_text_sha256": "73807814387a3a6d896c4e91b35fc473057476deec079da974410c4e309e9a48",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch01.008",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng đoạn cây lớn vô dụng của Tiêu dao du với bản attributed đầy đủ hình ảnh được giữ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.zhuangzi.day4.ch01.008",
+        "reviewed_text_sha256": "e579eb8e4c59741554be6793120d303a124b4a16a50e827dd70f0ff98d16a2bd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "attributed.zhuangzi.chapter_01.rest_beneath_tree"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.009",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ngô táng ngã là trải nghiệm của Nam Quách Tử Kỳ; cái ta lùi xuống không giải thích được phép quên mình, không ép thành thông điệp.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch02.009",
+        "reviewed_text_sha256": "d1ec488042c48902b17b91d9d5e231b2a79e1e55bd6697ecce510817158953b1",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.010",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Gió thổi qua lỗ khác nhau sinh tiếng khác nhau ở Tề vật luận; giữ hình ảnh tự nhiên, không thêm kết luận ai cũng đúng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch02.010",
+        "reviewed_text_sha256": "e5bb3a89da9a5cfde1f8f7c070aeb2746296d796875b490a49bdab4597805784",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.011",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Nhật dĩ tâm đấu nằm trong mô tả chấp kiến và hao mòn; câu riêng biến thành khẳng định ai cũng giao chiến ngày ngày.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch02.011",
+        "reviewed_text_sha256": "ed78645b2d9b8818d9bbe0b74bfa56f85f734e315db1db764fde1ade5eaab98e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.012",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hỷ nộ ai lạc luân phiên mà không biết nguồn khởi có passage; giữ quan sát cảm xúc có giới hạn, không gán chẩn đoán.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch02.012",
+        "reviewed_text_sha256": "91ec7a86872d2b7c2bb355ec8d7bdfb6a4a903648c857c6132463edc513fd053",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.013",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bỉ/thị là phép xét tương quan góc nhìn; đại từ phía này/phía kia không đủ nghĩa nếu thiếu đoạn tranh luận.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch02.013",
+        "reviewed_text_sha256": "ca8f2be37c76178fd85aaf72a24b31dfb2504046b28ce6b7b4fe7348b188df22",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.014",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bỉ xuất ư thị, thị diệc nhân bỉ là vế tiếp của lập luận bỉ/thị; không làm thành quy luật nhân quả mọi thứ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch02.014",
+        "reviewed_text_sha256": "c05375719c39c7ff3dfe8dcdadc2ed469b57a8f26e6e85ae7e8631204a872770",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.015",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đạo ẩn ư tiểu thành, ngôn ẩn ư vinh hoa có nguồn; diễn giải bám thành tựu nhỏ có thể che cách nhìn rộng, lời hoa mỹ che điều cần nói.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch02.015",
+        "reviewed_text_sha256": "f0a8ccb64051ad001987c8af812d0188a9a1cb03183fdc91be12fbeefe728d7a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.016",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Triêu tam mộ tứ với tổng hạt không đổi nhưng khỉ vui/giận có nguồn; nói cách trình bày, không quy mọi cảm xúc thành bị lừa.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch02.016",
+        "reviewed_text_sha256": "92a74050747a3cd2f08a1b0a86ce0fa707bede4706b0408838242d58cb77ae69",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.017",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tri chỉ kỳ sở bất tri có nguồn; giữ biết dừng trước chỗ chưa rõ như giới hạn hiểu biết, không khuyến khích ngừng tìm hiểu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch02.017",
+        "reviewed_text_sha256": "dfab26e210b86d45dee3055887e763783ac2960e6246aecc23334f5cac46fcb2",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.018",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Nguồn là nghi vấn ham sống/sợ chết trong đối thoại sinh tử; bỏ đối tượng thành mọi ưa thích đều mê lầm là khái quát thêm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.zhuangzi.day4.ch02.018",
+        "reviewed_text_sha256": "bb4bf8dadfdb427b5aa5b524436101411d623c62de6d981a1767bbeacace4bc5",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.019",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đoạn tranh biện hỏi thắng có chứng minh đúng không có nguồn; câu hỏi tự đủ nghĩa, không suy không có sự thật hay không cần bằng chứng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch02.019",
+        "reviewed_text_sha256": "6b5c9d7b56c65580a2def7eb0d01c00cd00be82a544737be5547c3c2927fc67f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch02.020",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Chỉ mở đầu Trang Chu mộng điệp, thiếu cả thức dậy và nghi vấn bản ngã; không thay story bằng câu cụt.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch02.020",
+        "reviewed_text_sha256": "36549b8f0e5aa2d7ae3c34e7d6c353841224f0a2a073010a95462f0b5f27ca64",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch03.021",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Sinh hữu nhai/tri vô nhai có nguồn; nối vế chạy hữu hạn theo vô hạn để câu rõ ý về sức lực hữu hạn, không bài xích học hỏi.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch03.021",
+        "reviewed_text_sha256": "4793549173260e9e716c1aa5cd103767392220f0618ba0d44cf6b22f74f5deda",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch03.023",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bào Đinh nói Đạo tiến hơn kỹ thuật khi mổ bò; bỏ nghề và nhân vật thì nguyên lý sau kỹ thuật thành khái quát mới.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch03.023",
+        "reviewed_text_sha256": "ccee9b9704a06dd7b984974c7b94bbee38ae61bdcce60d7ecb81f7ce6604ef4c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch03.026",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Y thiên lý, nhân cố nhiên mô tả đường dao theo khớp xương, không quy luật thuận theo mọi sự vật trong đời.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch03.026",
+        "reviewed_text_sha256": "aa49e99b57d52e27b9be8a2687bcea5aa877fb3c076d4d09ac944e058832780c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch03.027",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Khe khớp và lưỡi dao là chi tiết thao tác trong truyện Bào Đinh, không quote độc lập.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch03.027",
+        "reviewed_text_sha256": "b76765da385cb07945522379f9c03df04b4a005d1ca3289056ab13500d8bfd6e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch03.028",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Mỗi khi gặp chỗ gân xương chằng chịt thì sợ, nhìn kỹ, chậm động dao có nguồn; diễn giải nhận khó thì thận trọng/chậm lại, không tạo mẹo nghề.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch03.028",
+        "reviewed_text_sha256": "99f3626bd8560f3b6f1666435b34a03e574be9cae1372e22d8e755976357840d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.030",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tiên tồn chư kỷ nhi hậu tồn chư nhân nằm trong đối thoại văn học; diễn giải tự đứng vững trước khi sửa người, không gán lời nói lịch sử cho Khổng Tử.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch04.030",
+        "reviewed_text_sha256": "031083040e28cfe53a8c8957b560b21e4dd8fbe0cfa4a97d712af4168547a87c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.031",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đức đãng hồ danh, tri xuất hồ tranh có nguồn; diễn giải chạy theo danh và dùng trí hơn thua có thể làm mình lạc hướng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch04.031",
+        "reviewed_text_sha256": "e0aaae46748fb20488f635953c3062fe31f17466702d05e41f1f91119d1061d2",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.032",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Dĩ hỏa cứu hỏa/dĩ thủy cứu thủy có nguồn; làm rõ dùng chính điều gây rối có thể khiến rối thêm, không khái quát mọi nỗ lực giúp là hại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch04.032",
+        "reviewed_text_sha256": "9fc41e254a49fe4f7b228ac0d4209bd7823753f80539dbff5dc9f5d02c27455c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.033",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tâm trai là phép tu nghe bằng khí và hư đãi vật; bản khoảng trống cho điều mới là diễn giải chưa đủ tin cậy, không thêm kiến thức vào quote.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch04.033",
+        "reviewed_text_sha256": "3b09fb04c1cc0038941410e7945f57121b3d13c424b4e27eb05b8ecf294a6035",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.034",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hư thất sinh bạch trong đối thoại tâm trai là ẩn dụ, không câu mô tả căn phòng vật lý; thiếu ngữ cảnh.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch04.034",
+        "reviewed_text_sha256": "1a3981b8791e1459268efc69ac409159d351e701a9639ec3684d3d518ceeb4f0",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.035",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Ngôn giả phong ba dính ngữ cảnh sứ giả truyền lời gây họa; ba chữ tạo sóng đứng riêng quá mơ hồ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch04.035",
+        "reviewed_text_sha256": "406b5b16ca97227ff7f37d5646cf1aae19cc8b3a24c76b71aaf52b7e9f514761",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.036",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lưỡng hỷ dật mỹ, lưỡng nộ dật ác trong chuyện truyền lời có nguồn; giữ giới hạn dễ nói quá khi vui/giận, không nói ai cũng vậy.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch04.036",
+        "reviewed_text_sha256": "ffbf065d2ce6665813290d70c40a97272596ad54b5c37b84ebf7f79f953678b1",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.037",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Vô thiên lệnh, vô khuyến thành là lời cho sứ giả về truyền mệnh; bản chung dễ cấm điều chỉnh quyết định cần thiết, không giữ thành mẹo quản lý.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "too_narrow_for_selflo",
+        "canonical_id": "research.zhuangzi.day4.ch04.037",
+        "reviewed_text_sha256": "877b5351b222eb0c91424110a9e99dcd172733a648bffc9d68e43579a050e018",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.038",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cây sống lâu do không làm gỗ được là một tình tiết cây sồi trong truyện, không tự đủ nghĩa; không suy vô dụng luôn an toàn vì Sơn mộc cho phản ví dụ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch04.038",
+        "reviewed_text_sha256": "e5313924de1808d6cbee8bbfb6b8307417a6d7b318f9c2750423185a2083454e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch04.039",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cuối Nhân gian thế nêu ai cũng biết dụng của hữu dụng, ít biết dụng của vô dụng; giữ câu hỏi về thước đo giá trị, không tuyệt đối hóa vô dụng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch04.039",
+        "reviewed_text_sha256": "79b07a25c21caa37c78d3bd66a9d4d0f40fce99c27c5c63e08db72acb2c4c268",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch05.040",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Nước đứng yên làm gương có nguồn; hình ảnh tự đủ nghĩa, không thêm mệnh lệnh phải yên mọi lúc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch05.040",
+        "reviewed_text_sha256": "4617aaba6139a85784a3c5ae4dfa2b8033693d3b2e9a8b0b59141c0ca152debb",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch05.041",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Duy chỉ năng chỉ chúng chỉ nối phẩm chất Vương Đài và nước lặng; bản làm mọi thứ lắng lại như hiệu ứng bảo đảm chưa chắc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch05.041",
+        "reviewed_text_sha256": "961c43fbd9f785807270c2b6dd11dd616e9c8978203dfa2a0266c3bd362f4613",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch05.042",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lời Thân Đồ Gia về 19 năm cùng thầy cần toàn bộ đối thoại để thấy sự chấp nhận; không phải vấn đề ngoại hình hay tàn tật nên bị loại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch05.042",
+        "reviewed_text_sha256": "d72f0035d3b5bda89e90968d20b2b249f2cf8890f279054892e8d11940254a88",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch05.043",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tương ngộ hình hài nội nhi tầm hình hài ngoại có nguồn; làm rõ nhìn con người bên trong thay vì chỉ xét hình dáng, tránh đại từ ông/ta thiếu nhân vật.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch05.043",
+        "reviewed_text_sha256": "7f55a021292f3916a36652bddd86fd43a55be3002f53942dedbe41e0826562d1",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch05.044",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Mô tả Ai Đài Tha trong câu chuyện, không mệnh đề rằng không cần nói/làm vẫn được tin; tách riêng dễ sai.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch05.044",
+        "reviewed_text_sha256": "6594cf01ea681bf3d6bd479afb16bcc79fb02691690e43e160efa02f1ae24cf2",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch05.045",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đức hữu sở trường nhi hình hữu sở vong có nguồn; giữ như khả năng phẩm chất làm ngoại hình bớt chi phối cái nhìn, không hứa ai cũng bỏ định kiến.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch05.045",
+        "reviewed_text_sha256": "7fc33005d75600d888f7712a1eeca07a216a42d44472b573a7bf543c59e7bda5",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch06.047",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Dùng biết nuôi chưa biết thuộc phân biệt thiên/nhân ở đầu Đại tông sư; nuôi khả năng ở cùng vẫn là khái niệm khó khi tách đoạn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch06.047",
+        "reviewed_text_sha256": "baac8637a49b3b2e5c46d0462c98627ea57feefbfcad488db6ab67fa6006aac3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch06.048",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tri hữu sở đãi nhi hậu đáng, sở đãi vị định có nguồn; diễn giải tri thức dựa điều kiện và cần xét lại khi điều kiện thay đổi.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch06.048",
+        "reviewed_text_sha256": "15dbf102d6d3887ab5d55d7a432da52a17fd6b5679cbe103cee820bd149c7a64",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch06.049",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hành danh thất kỷ có nguồn; giữ góc nhìn mất mình vì danh mà không thêm kết án người có thành tựu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch06.049",
+        "reviewed_text_sha256": "161e392f873e4ab24797f8cf5a87c2d7e03ccc2fa92faf360beca26021c28bef",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch06.050",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Hai cá trên cạn và quên nhau sông hồ liên quan sống/chết và quên đối đãi; tách ra dễ cổ vũ bỏ nhau lúc khó khăn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch06.050",
+        "reviewed_text_sha256": "12d6ee41bd9e401499d796aeff79e8da350578de99e1ed41477b62515831305e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch06.051",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bất vong kỳ sở thủy, bất cầu kỳ sở chung nói thái độ chân nhân với sinh tử, không câu về mục tiêu hay xuất thân; cần ngữ cảnh.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch06.051",
+        "reviewed_text_sha256": "a0218b3e4818062f91f5300d563cf6cb7eaca5533a2f25e27dd6207148956859",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch06.052",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Nguồn cá trong nước/người trong Đạo không có nội dung gồng để tồn tại; cách hiện đại hóa đang thêm claim về môi trường sống.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.zhuangzi.day4.ch06.052",
+        "reviewed_text_sha256": "0f10915c616b73cf1f74f487093deada5a4d28632434c46f70c91beec636635d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch06.054",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lời Tử Tang tìm nguyên nhân nghèo khổ kết bằng mệnh; bỏ cảnh và kết luận thì không rõ điều gì xảy ra, không thể gán đơn nhân hiện đại.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch06.054",
+        "reviewed_text_sha256": "3d86202cea126ec4c5a21d15974d683377fc6ad54f55bba27b827361cbcd08a6",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch07.055",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Bốn câu hỏi không biết là mở truyện Niết Khuyết/Vương Nghê, không có nội dung câu hỏi hay bước hiểu sau đó.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch07.055",
+        "reviewed_text_sha256": "a33bfb155019da5f36e19013d0324619bac79ef478197bc9dcf21a37ecae5c96",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch07.056",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Thuận vật tự nhiên nhi vô dung tư có nguồn; diễn giải bớt ép sự vật theo ý riêng, tránh hiểu chấp nhận mọi bất công.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch07.056",
+        "reviewed_text_sha256": "a71ae12dac09e82beab35380a302c4e7c5cebcf659c7baca3b695c397485f8de",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch07.057",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Công cái thiên hạ nhi tự bất kỷ trong Ứng đế vương lặp ý không chiếm công đã có canonical chương 10 B001; giữ provenance khác nguồn.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.zhuangzi.day4.ch07.057",
+        "reviewed_text_sha256": "ecfc7335959e6813beb214113092b26c35898cd7be254c712902fe92f0dcc1af",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.ch10.029"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch07.058",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Sử vật tự hỷ mô tả người cai trị lý tưởng trong hội thoại; câu hiện tại nhân hóa mọi sự vật mơ hồ khi tách riêng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch07.058",
+        "reviewed_text_sha256": "b96886d1cfa4f759ee68bf56a7eb943e0e7ca03035a1df9181650a9ca7ff2a4a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch07.059",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tâm như gương, không đón/đưa, ứng không tàng có nguồn; diễn giải đến thì nhận biết, qua thì không giữ chặt, không nói quên trách nhiệm.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.zhuangzi.day4.ch07.059",
+        "reviewed_text_sha256": "b8e46142783e9eefc186ee42b525b594b99f22556b28564d21b5879dc76a5041",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.zhuangzi.day4.ch07.060",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Khoan bảy lỗ làm Hỗn Độn chết là kết chuyện; nếu thiếu bối cảnh thiện ý áp đặt thì chỉ là một hành động khó hiểu, không chuyển story sang quote.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.zhuangzi.day4.ch07.060",
+        "reviewed_text_sha256": "af9b55a0aa96a8ea4d27df8aab2f9cccf0ecd9afea35c2a2d22b28243695b99d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
     },
     {
       "quote_id": "research.laozi.day3.ch65.071",
@@ -13173,6 +14658,331 @@
         "canonical_id": "attributed.laozi.chapter_64.first_step",
         "reviewed_text_sha256": "6a3de5d3c409415148b56ba1ebad40961ed824932d0da3d14f79e6c759e4d327",
         "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b001-review.json"
+      }
+    },
+    {
+      "quote_id": "research.laozi.ch02.007",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Lặp sinh nhi bất hữu, vi nhi bất thị với canonical chương 10 đã giữ B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.ch02.007",
+        "reviewed_text_sha256": "b283c26841daf5cc8ba9f0d0680fb091ccbc5f1d1a475a060890d9ab76f96f2c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.ch10.029"
+      }
+    },
+    {
+      "quote_id": "research.laozi.ch05.014",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đa ngôn số cùng bất như thủ trung liên quan ẩn dụ ống bễ chương 5; khoảng trung tâm là thuật ngữ mờ, không đủ nghĩa tách riêng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "context_required",
+        "canonical_id": "research.laozi.ch05.014",
+        "reviewed_text_sha256": "173c50b3593dbc8ddd197693f778e4ceec3dc13832b57d7bd14bec96ce19cdb7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "research.laozi.ch12.034",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Năm màu/âm/vị gây mù/điếc là lối nói cổ; bản quá nhiều gây mất khả năng phân biệt dễ thành khẳng định sức khỏe thiếu căn cứ.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.laozi.ch12.034",
+        "reviewed_text_sha256": "46115d7572342394478349c0e33066d3103342c4be6d628f60bccf5b61c7146f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "research.laozi.ch13.037",
+      "review_round": 3,
+      "decision": "round1_not_pass",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Cùng passage sủng nhục nhược kinh với bản ưu ái/lo mất đã giữ B001.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "not_accepted",
+        "reason_code": "duplicate",
+        "canonical_id": "research.laozi.ch13.037",
+        "reviewed_text_sha256": "643bebdb2f9b52eba5332ab94173fa196da86696b3285153628aac7166b92fe7",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json",
+        "duplicate_of": "research.laozi.ch13.038"
+      }
+    },
+    {
+      "quote_id": "attributed.laozi.chapter_58.fortune_misfortune",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Đúng hai vế họa/phúc chương 58; bản độc lập và liên kết story hiện hành. Không suy thành mọi khổ đau đều tốt hay đáng chịu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.laozi.chapter_58.fortune_misfortune",
+        "reviewed_text_sha256": "6660feb6c116f66f5bfd52311c863178ea1d0baf247e783d307dd2c2ac2cee5d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.zhuangzi.chapter_20.change_with_time",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Sơn mộc nói cùng thời thay đổi, không khư khư hữu dụng/vô dụng; giữ nguyên câu và nhãn nguồn, không đụng story liên kết.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.zhuangzi.chapter_20.change_with_time",
+        "reviewed_text_sha256": "31d47e43ff1dda66e372d7c8ae3adf11ff4a194ff34351d76c15e523d6eab9c1",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.zhuangzi.chapter_01.rest_beneath_tree",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Tiêu dao du kết bằng cây lớn và chỗ nghỉ; giữ đầy đủ hình ảnh để thấy công dụng khác thước đo thợ mộc, không đổi story liên kết.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.zhuangzi.chapter_01.rest_beneath_tree",
+        "reviewed_text_sha256": "42360d5f0766e3fd0f0d1eef5d609016aaa9bffd26e04dafce7934c8a65ea370",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_005.hatred",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 5 đúng đoạn chấm dứt hận bằng không hận; bản Müller dùng love, giữ lòng thương như bản phỏng theo, không hứa xóa mọi xung đột.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_005.hatred",
+        "reviewed_text_sha256": "bab224085c98665866037a36af2f73c345adc771db068735da7fe96b58b98015",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_006.end",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 6 nhắc cái chết để nguôi tranh chấp; sửa điểm cuối thành đời người hữu hạn, giữ có thể thay vì hứa tuyệt đối.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_006.end",
+        "reviewed_text_sha256": "3dc03f3c5287690ead58d67870571a5ea6e0bf51ff313b0e22a6954193b01f8e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_020.practice",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 20 nhấn thực hành hơn nhớ lời; diễn giải tham/sân/mê bằng tiếng Việt phổ thông, tách tên tác phẩm khỏi người tác giả.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_020.practice",
+        "reviewed_text_sha256": "7d6a1f96541e6ad47f44d8c63ab39ee34b6a70262d1023a783b0cdbdeab7c24d",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_035.tamed_mind",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 35 nói tâm khó giữ và rèn tâm có an lạc; đổi điều phục thành học giữ tâm ổn định cho dễ hiểu, không claim điều trị.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_035.tamed_mind",
+        "reviewed_text_sha256": "bf0af32eeda37f57eda5f80e0b84f3cb4392432a435e4ee05faaa5beb2a23fb3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_049.bee",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 49 ví người tu với ong không hại hoa; hình ảnh đầy đủ và phù hợp góc nhìn sống nhẹ với cộng đồng.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_049.bee",
+        "reviewed_text_sha256": "52f7252ba9c0e4c68c4f59cbf63b1157c5172639ce95df99c42791f6e436e3ce",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_050.own_deeds",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 50 nhắc nhìn lỗi và điều bỏ sót của chính mình; bản diễn giải không cấm nhận ra hay phản hồi hành vi sai của người khác.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_050.own_deeds",
+        "reviewed_text_sha256": "3d026810c34261363415a9fea088b9a09a3dcee7aa29d2905f5457a84e8df36b",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_080.fashion_self",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 80 có ba nghề điều chỉnh nước/mũi tên/gỗ; Müller ghi well-makers, giữ chú thích edition trong hồ sơ, diễn giải người dẫn nước để dễ đọc mà không đổi ý rèn mình.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_080.fashion_self",
+        "reviewed_text_sha256": "585584158cbe5f91790d6fd9eabe8f2d99ceff9301e62a727f50fc93c31deaa1",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_081.rock",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 81 đá không lay vì gió và khen/chê có nguồn; giữ như hình ảnh sự vững vàng, không hứa con người không có cảm xúc.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_081.rock",
+        "reviewed_text_sha256": "996200d8177d885f36d296cc8a9646e2efd7e0bb8b48dd2bf78b11339fec7379",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "attributed.dhammapada.verse_103.self_conquest",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 103 so thắng người với thắng mình có nguồn; làm rõ tự làm chủ thay cho đánh thắng chính mình, không cổ vũ trừng phạt bản thân.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "attributed.dhammapada.verse_103.self_conquest",
+        "reviewed_text_sha256": "25035d15c208a2d19abb58a2883aac15a04ed7638b30257e426a00a250f48a97",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v019",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 19 đối chiếu đọc nhiều không làm với đếm bò người khác có nguồn; giữ trọn phép ví và ý thực hành.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v019",
+        "reviewed_text_sha256": "63443e253f61273aecf6d058af4cbd1e3cf1163f321a09a78548faa8176f884e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v064",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 64 chiếc thìa trong canh không biết vị có nguồn; sửa ở cạnh tri thức thành ở cạnh người hiểu biết, phân biệt gần gũi với thấu hiểu.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v064",
+        "reviewed_text_sha256": "3c10779b63e1a00477352f915adfac880e1cf9a6c2e693bebdedd9f29c2c3a67",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
+      }
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v223",
+      "review_round": 3,
+      "decision": "release_ready_ai_approved",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-25T09:00:27.162886Z",
+      "note_vi": "Kệ 223 đối trị giận bằng tử tế, ác bằng thiện có nguồn; làm rõ đáp lại bằng tử tế, không chỉ nói không cần phản ứng giống nhau.",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B002",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.dhammapada.day11.v223",
+        "reviewed_text_sha256": "598ce20609149d33451a316f210c0d38408ae5e651a51f08cc1401f98af42a0f",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b002-review.json"
       }
     }
   ]

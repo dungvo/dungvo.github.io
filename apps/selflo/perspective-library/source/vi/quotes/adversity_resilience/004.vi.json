@@ -555,7 +555,7 @@
     },
     {
       "id": "attributed.laozi.chapter_58.fortune_misfortune",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Họa là nơi phúc tựa vào; phúc là nơi họa ẩn náu.",
@@ -564,11 +564,11 @@
       "authorship": {
         "author_id": "laozi",
         "author_name": "Lão Tử",
-        "work": "Đạo Đức Kinh · Chương 58",
-        "source_url": "https://ctext.org/dao-de-jing",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": "zh",
-        "source_label": "Lão Tử · Đạo Đức Kinh · Chương 58",
-        "source_detail": "Bản Việt dịch/diễn ý Selflo từ đoạn cổ: 禍兮福之所倚，福兮禍之所伏。 Không phải trích một bản dịch Việt đã xuất bản. Ghi tên tác giả theo quy ước thư mục của tác phẩm."
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 58",
+        "source_detail": "Bản Việt dịch/diễn ý Selflo từ đoạn cổ: 禍兮福之所倚，福兮禍之所伏。 Không phải trích một bản dịch Việt đã xuất bản. Ghi tên tác giả theo quy ước thư mục của tác phẩm. | Q10-B002: Đạo Đức Kinh · chương 58; tên/tác phẩm gốc: Lão Tử / Đạo Đức Kinh · Chương 58; đối chiếu tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
       },
       "metadata": {
         "concepts": [],
@@ -590,8 +590,8 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-13T01:15:32Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
       },
       "writing": {
         "semantic_intent": "Họa là nơi phúc tựa vào; phúc là nơi họa ẩn náu.",
@@ -603,7 +603,7 @@
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Lão Tử · Đạo Đức Kinh · Chương 58"
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 58"
       },
       "story_id": "story.old_man_and_returning_horse",
       "selection": {
@@ -611,8 +611,8 @@
         "reflection_kind": "quote",
         "thought_match_keys": [],
         "presentation_tags": [
-          "adversity_resilience",
-          "taoism"
+          "Vượt qua khó khăn",
+          "Đạo Đức Kinh"
         ],
         "tie_break_order": 6085
       },
@@ -627,10 +627,10 @@
     },
     {
       "id": "research.laozi.ch15.043",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thận trọng như người lội sông mùa đông; dè dặt như người biết quanh mình có điều cần lưu ý.",
+      "text_vi": "Thận trọng như người lội qua sông giữa mùa đông.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -639,20 +639,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "choice_direction",
-          "uncertainty_choice_agency",
-          "uncertainty"
+          "Vượt qua khó khăn",
+          "Đạo Đức Kinh"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Laozi / 老子",
-        "work": "道德經 / Tao Te Ching",
-        "source_url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": null,
-        "source_label": "Laozi / 老子",
-        "source_detail": "Research ID research.laozi.ch15.043; corpus row 44; content_nature=translated_quote; verification=A - Primary source."
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 15",
+        "source_detail": "Research ID research.laozi.ch15.043; corpus row 44; content_nature=translated_quote; verification=A - Primary source. | Q10-B002: Đạo Đức Kinh · chương 15; tên/tác phẩm gốc: Laozi / 老子 / 道德經 / Tao Te Ching; đối chiếu tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
       },
       "metadata": {
         "concepts": [],
@@ -671,10 +670,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
       },
       "writing": {
-        "semantic_intent": "Thận trọng như người lội sông mùa đông; dè dặt như người biết quanh mình có điều cần lưu ý.",
+        "semantic_intent": "Thận trọng như người lội qua sông giữa mùa đông.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -683,7 +682,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Laozi / 老子"
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 15"
       },
       "knowledge_basis": null,
       "tags": [

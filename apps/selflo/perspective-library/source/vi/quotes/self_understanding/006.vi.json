@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.dhammapada.day11.v223",
-      "revision": 3,
+      "revision": 4,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không nhất thiết phải đáp lại giận dữ bằng giận dữ, hay điều không tử tế bằng cùng một thứ.",
+      "text_vi": "Đáp lại giận dữ bằng lòng tốt, điều xấu bằng việc thiện, sự keo kiệt bằng rộng rãi, lời dối trá bằng sự thật.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -18,20 +18,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "inner_awareness",
-          "uncertainty_choice_agency",
-          "agency"
+          "Hiểu bản thân",
+          "Kinh Pháp Cú"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/17-Anger.htm",
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017-images.html",
         "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v223; corpus row 733; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "source_label": "Phỏng theo Kinh Pháp Cú · kệ 223",
+        "source_detail": "Research ID research.dhammapada.day11.v223; corpus row 733; content_nature=translated_quote; verification=A - Pāḷi verse source located. | Q10-B002: Kinh Pháp Cú · kệ 223; tên/tác phẩm gốc: Dhammapada (Buddhist canonical verse tradition) / Dhammapada (Khuddaka Nikāya 2); đối chiếu tại https://www.gutenberg.org/cache/epub/2017/pg2017-images.html"
       },
       "metadata": {
         "concepts": [],
@@ -49,11 +48,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-23T23:59:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
       },
       "writing": {
-        "semantic_intent": "Không nhất thiết phải đáp lại giận dữ bằng giận dữ, hay điều không tử tế bằng cùng một thứ.",
+        "semantic_intent": "Đáp lại giận dữ bằng lòng tốt, điều xấu bằng việc thiện, sự keo kiệt bằng rộng rãi, lời dối trá bằng sự thật.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -62,7 +61,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Kinh Pháp Cú"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú · kệ 223"
       },
       "knowledge_basis": null,
       "tags": [
@@ -144,7 +143,7 @@
     },
     {
       "id": "research.laozi.ch05.014",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Nói quá nhiều dễ đi đến cạn; có lúc giữ lại khoảng trung tâm còn hơn tiếp tục thêm lời.",
@@ -186,9 +185,9 @@
         "note": "Owner approved; ancient/public-domain source identified in canonical provenance; Vietnamese editorial rendering retained with source detail."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T00:06:12Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Nói quá nhiều dễ đi đến cạn; có lúc giữ lại khoảng trung tâm còn hơn tiếp tục thêm lời.",

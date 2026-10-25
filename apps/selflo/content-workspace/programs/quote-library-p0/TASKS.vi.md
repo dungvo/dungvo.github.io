@@ -5,7 +5,7 @@
 | T-00 | Lập workspace và khóa assignment | Q-01,Q-11,Q-12 | SPEC/PLAN/TASKS; baseline 5.471 ID; 36 batch 100–200 | Hoàn thành phần lập kế hoạch |
 | T-01 | Đối chiếu ledger/aliases/đường ghi verdict cho raw và canonical | Q-01,Q-02,Q-08 | Một decision authority; các tool cũ đọc/chặn đúng; không tạo ledger cạnh tranh | Hoàn thành 2026-10-25, evidence B001 + tests |
 | T-02 | Seed bảng tên và mẫu evidence/batch report | Q-03,Q-04,Q-05,Q-12 | Tên gốc/Việt/type/source; locator/rights/hash/reason trước batch đầu | Hoàn thành 2026-10-25, glossary v1 |
-| T-03 | Q10-B001–B004: 662 Release | Q-03–Q-10 | Review đủ từng dòng; fixes/withdrawals qua publisher; public verification | B001 đã đóng 166/166, public Release 49; B002–B004 chưa mở |
+| T-03 | Q10-B001–B004: 662 Release | Q-03–Q-10 | Review đủ từng dòng; fixes/withdrawals qua publisher; public verification | B001 đã đóng; B002 review 166/166 đang kiểm chứng public Release 50; B003–B004 chưa mở |
 | T-04 | Q10-B005–B012: 1.189 Authoring | Q-02–Q-10 | Không để câu đạt chưa publish hoặc chờ story; giữ 10 owner-rejected đóng | Chưa bắt đầu |
 | T-05 | Q10-B013–B017: 821 research/nguồn/trùng | Q-02–Q-08 | Không chốt bằng nhãn cũ; mỗi ID có evidence/verdict | Chưa bắt đầu |
 | T-06 | Q10-B018–B036: 2.799 raw | Q-02–Q-08 | Dịch/đối chiếu từng dòng; nguồn/quyền rõ; không loại do ngoại ngữ | Chưa bắt đầu |

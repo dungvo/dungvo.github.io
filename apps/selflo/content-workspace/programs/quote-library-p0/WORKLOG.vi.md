@@ -314,3 +314,10 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 - 102 accepted khớp text/attribution; 64 rejected không còn active. B001 closed 166/166, 94 tests đã đạt ở commit nội dung.
 - Projection corpus: 102 released + 74 not_accepted (64 mới + 10 owner-closed) + 5.295 remaining = 5.471. Không mặc nhiên tính mọi quote public khác là đã audit.
 - Bước tiếp theo Q10-B002 (166), chưa mở. Story không thay đổi.
+
+## 2026-10-25 — Q10-B002 kiểm định cục bộ
+
+**Q10-B002 — 2026-10-25:** Đã review đủ 166 câu: 75 giữ, 91 không đạt; sửa 50 văn bản, chuẩn hóa Kinh Pháp Cú/Trang Tử/Lão Tử. Authoring 89 / Release 50: 1.851/507 quote, 63/17 story; 94 tests đạt. Đang kiểm chứng public; chưa đóng B002, chưa mở B003/story. Xem `Q10_B002_CHECKPOINT.vi.md`.
+
+- Từng ID có source context/before/after/rights retained/hash và lý do; 17 duplicate có winner accepted. 91 exclusion bền vững; giữ 10 owner-closed.
+- Thay đổi content-compatible, không đổi shared contract/app. Đúng 166 canonical quote thay đổi; story và quote ngoài batch không đổi. Chuẩn hóa nhận diện truyền thống Kinh Pháp Cú trong matrix sau Việt hóa.

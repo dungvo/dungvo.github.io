@@ -336,7 +336,7 @@
     },
     {
       "id": "research.laozi.day3.ch55.023",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Điều bị đẩy đến cực mạnh rồi cũng đi về suy.",
@@ -376,9 +376,9 @@
         "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Điều bị đẩy đến cực mạnh rồi cũng đi về suy.",
@@ -402,7 +402,7 @@
     },
     {
       "id": "research.laozi.day3.ch63.057",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Việc khó bắt đầu từ lúc còn dễ; việc lớn bắt đầu từ điều nhỏ.",
@@ -442,9 +442,9 @@
         "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Việc khó bắt đầu từ lúc còn dễ; việc lớn bắt đầu từ điều nhỏ.",
@@ -468,7 +468,7 @@
     },
     {
       "id": "research.laozi.day3.ch64.066",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Học cả điều người khác không coi là học, và quay lại nơi số đông thường bỏ qua.",
@@ -508,9 +508,9 @@
         "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Học cả điều người khác không coi là học, và quay lại nơi số đông thường bỏ qua.",
@@ -534,10 +534,10 @@
     },
     {
       "id": "research.laozi.day3.ch70.088",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Điều đơn giản để nói chưa chắc dễ được sống.",
+      "text_vi": "Một điều dễ hiểu khi nghe, chưa chắc đã dễ sống theo.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -546,19 +546,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "Nội tâm & hiểu mình",
-          "learning"
+          "Thay đổi và trưởng thành",
+          "Đạo Đức Kinh"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Laozi",
-        "work": "道德經 / Tao Te Ching",
-        "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": null,
-        "source_label": "Laozi",
-        "source_detail": "Research ID research.laozi.day3.ch70.088; corpus row 270; content_nature=translated_quote; verification=A - Primary source."
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 70",
+        "source_detail": "Research ID research.laozi.day3.ch70.088; corpus row 270; content_nature=translated_quote; verification=A - Primary source. | Q10-B002: Đạo Đức Kinh · chương 70; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
       },
       "metadata": {
         "concepts": [],
@@ -576,10 +576,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
       },
       "writing": {
-        "semantic_intent": "Điều đơn giản để nói chưa chắc dễ được sống.",
+        "semantic_intent": "Một điều dễ hiểu khi nghe, chưa chắc đã dễ sống theo.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -588,7 +588,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Laozi"
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 70"
       },
       "knowledge_basis": null,
       "tags": [
@@ -600,7 +600,7 @@
     },
     {
       "id": "research.laozi.day3.ch76.109",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Cây cỏ khi sống mềm non; khi chết thì khô cứng.",
@@ -640,9 +640,9 @@
         "note": "Văn bản gốc cổ thuộc phạm vi công cộng; locator đối chiếu qua Wikisource; bản tiếng Việt là bản dịch làm việc của Selflo. Giữ URL provenance và attribution của witness."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Cây cỏ khi sống mềm non; khi chết thì khô cứng.",
@@ -666,10 +666,10 @@
     },
     {
       "id": "research.laozi.day3.ch78.118",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ai cũng có thể nghe rằng mềm thắng cứng, nhưng sống được điều ấy lại khó.",
+      "text_vi": "Mềm có thể thắng cứng: nhiều người biết điều ấy, nhưng thực hành lại khó.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -678,19 +678,19 @@
         "reflection_kind": null,
         "thought_match_keys": [],
         "presentation_tags": [
-          "Nội tâm & hiểu mình",
-          "learning"
+          "Thay đổi và trưởng thành",
+          "Đạo Đức Kinh"
         ],
         "tie_break_order": 0
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Laozi",
-        "work": "道德經 / Tao Te Ching",
-        "source_url": "https://zh.wikisource.org/zh-hant/%E9%81%93%E5%BE%B7%E7%B6%93_%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29",
+        "author_name": "Lão Tử",
+        "work": "Đạo Đức Kinh",
+        "source_url": "https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)",
         "source_language": null,
-        "source_label": "Laozi",
-        "source_detail": "Research ID research.laozi.day3.ch78.118; corpus row 300; content_nature=translated_quote; verification=A - Primary source."
+        "source_label": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 78",
+        "source_detail": "Research ID research.laozi.day3.ch78.118; corpus row 300; content_nature=translated_quote; verification=A - Primary source. | Q10-B002: Đạo Đức Kinh · chương 78; tên/tác phẩm gốc: Laozi / 道德經 / Tao Te Ching; đối chiếu tại https://zh.wikisource.org/wiki/%E9%81%93%E5%BE%B7%E7%B6%93_(%E7%8E%8B%E5%BC%BC%E6%9C%AC)"
       },
       "metadata": {
         "concepts": [],
@@ -708,10 +708,10 @@
       "review": {
         "status": "approved",
         "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-12T14:50:32Z"
+        "reviewed_at": "2026-10-25T09:00:27.162886Z"
       },
       "writing": {
-        "semantic_intent": "Ai cũng có thể nghe rằng mềm thắng cứng, nhưng sống được điều ấy lại khó.",
+        "semantic_intent": "Mềm có thể thắng cứng: nhiều người biết điều ấy, nhưng thực hành lại khó.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -720,7 +720,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Laozi"
+        "attribution_vi": "Phỏng theo Lão Tử · Đạo Đức Kinh · chương 78"
       },
       "knowledge_basis": null,
       "tags": [
