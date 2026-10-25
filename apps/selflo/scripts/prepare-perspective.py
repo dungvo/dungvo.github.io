@@ -10,6 +10,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from review_eligibility import ReviewEligibility
 
 RIGHTS = ('selflo_owned', 'public_domain', 'licensed', 'permission_granted')
 TAGS_BY_THEME = {
@@ -106,11 +107,13 @@ def prepare(root, args):
         raise ValueError('Supply --quote ID (repeatable), or use --list.')
     selected = []
     linked = {}
+    gate = ReviewEligibility(root)
     for ident in dict.fromkeys(args.quote):
         if ident not in quotes:
             raise ValueError('Unknown quote ID: ' + ident + '; use --list.')
         if args.channel == 'release' and ident in exclusions:
             raise ValueError('Quote is explicitly excluded by owner: ' + ident + '. Resolve the decision ledger first.')
+        gate.require_open(ident)
         q = quotes[ident]
         selected.append(q)
         sid = q.get('story_id')

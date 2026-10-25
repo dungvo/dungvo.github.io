@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **Tiếp backlog 2026-10-25 — PM-004A đường ghi:** Đã thêm gate chung chống tái đề xuất/phát hành quote bị loại qua alias; không import lại canonical khi state mất; không ghi state trước khi publisher thành công. 81/81 tests đạt; audit 1.438 candidate, bảo vệ đủ 10 quote owner loại. Không đổi Release 48. Xem `programs/quote-library-p0/PM004A_WRITE_GUARDS_2026-10-25.vi.md`. Bước tiếp theo: lập hàng review 46 story Authoring-only (PM-005), chưa thay nội dung/phát hành.
+
 > **Cập nhật 2026-10-25 — R1–R6:** Owner yêu cầu Việt hóa nhãn nguồn Release, sửa 2 quote và loại 10 quote với quyết định không đạt vĩnh viễn cho đến khi owner mở lại. Đã tạo Authoring 87 / Release 48 (1.851/662 quote; 63/17 story), rebuild Review Matrix; 55/55 tests đạt. Đã commit/push main tại `fb65c40`. Chi tiết: `programs/quote-library-p0/OWNER_REVIEW_CLEANUP_2026-10-25.vi.md`. Lịch sử upload 44 file bên dưới đã hoàn tất ở PR #2/main 9d76067 do owner merge.
 
 > **Tiếp backlog 2026-10-25 — PM-004A:** Đã đồng bộ báo cáo CLI với Review Matrix 87/48 và kiểm tra độ mới theo fingerprint; 60/60 tests đạt. Phần đọc hoàn tất, phần select/apply/promote và mapping ID còn mở. Xem `programs/quote-library-p0/PM004A_STATUS_REPORTING_2026-10-25.vi.md`.
@@ -219,7 +221,7 @@ Không nên chờ review xong toàn bộ mới Release một lần. Nên phát h
 | PM-002 | Review quote corpus — fast lane | P0 | Hoàn thành 2026-10-13 | PM-001 | 5.470/5.470 đã scan; 313 candidate mới qua gate; Release 45 có 656 quote; 4.814 tạm bỏ qua |
 | PM-003 | Phân loại 3.050 dòng chủ đề chưa rõ | Backlog | Audit xong; normalization hoãn | PM-001, taxonomy | Chỉ mở lại theo nhu cầu coverage |
 | PM-004 | Xác minh nguồn và quyền quote | Backlog | Có routing 485 source groups; hoãn phần cần verify lâu | PM-001 | Không quote Release nào còn nguồn/quyền mơ hồ |
-| PM-004A | Hợp nhất nguồn trạng thái review quote | P0 | Đã đồng bộ báo cáo CLI/Studio; còn audit đường ghi + mapping ID | PM-001 | CLI, ledger, matrix và Studio hiển thị cùng lifecycle/decision |
+| PM-004A | Hợp nhất nguồn trạng thái review quote | P0 | Đã đồng bộ báo cáo + audit/chặn đường ghi qua alias; chưa migrate state lịch sử | PM-001 | CLI, ledger, matrix và Studio hiển thị cùng lifecycle/decision |
 | PM-005 | Review 46 story Authoring-only | P1 | Đang dở | Dashboard đúng | Mỗi story có quyết định sửa/chờ/loại/release |
 | PM-006 | Hoàn thành một bài Knowledge | P1 | Parked sau pilot spec-driven | Mở session content riêng; owner chọn hướng tại `content-workspace/social-comparison-envy-v1-2026-10-13/OWNER_DECISION_PACK.md` | Một bài được owner đọc và chốt nội dung trước khi product hóa |
 | PM-007 | Mê cung kiến thức | P2 | Prototype; tạm chưa mở rộng | PM-006 hoặc một topic được chốt | Một đường đọc hoàn chỉnh, source-reviewed và user-tested |

@@ -8,6 +8,7 @@ import argparse, copy, datetime as dt, hashlib, json, re, shutil, subprocess, sy
 from pathlib import Path
 from urllib.parse import quote, urlsplit, urlunsplit
 from review_status import status_input_digests
+from review_eligibility import ReviewEligibility
 
 THEME_MAP={
  'inner_awareness':'self_understanding','meaning_identity':'meaning_values','work_purpose':'work_achievement',
@@ -49,7 +50,9 @@ def ledger_decisions(path):
     doc=read(path);out={}
     for x in doc.get('decisions',[]):
         q=x.get('quote_id'); d=x.get('quote_decision') or x.get('decision')
-        if q and d in VALID_DECISIONS: out[q]={'decision':d,'note':x.get('note') or '','updated_at':x.get('updated_at')}
+        if q and d in VALID_DECISIONS:
+            if q in out:raise ValueError('Duplicate quote ID in review ledger: '+q)
+            out[q]={'decision':d,'note':x.get('note') or '','updated_at':x.get('updated_at')}
     return doc,out
 def theme_for(c):
     area=(c.get('life_area') or '').strip()
@@ -101,10 +104,25 @@ def commit_push(root,paths,message,push):
     git(root,'add','--',*[str(Path(p).relative_to(root)) for p in paths]);git(root,'commit','-m',message);git(root,'push')
 def select(args):
     root=args.root;q,catalog_path,state_path,batches=state_paths(root);catalog=read(catalog_path);state=load_state(state_path)
-    seen=state['candidates']; available=[c for c in catalog['candidates'] if seen.get(c['id'],{}).get('first_review') not in ('queued','approved','rejected')]
+    if args.count <= 0:raise ValueError('--count must be positive')
+    gate=ReviewEligibility(root,catalog['candidates'])
+    seen=state['candidates']
+    def available_candidate(c):
+        ident=c['id']
+        if not gate.is_open(ident) or gate.canonical_ids(ident):return False
+        for key in gate.identities(ident):
+            rec=seen.get(key,{})
+            if rec.get('first_review') in ('queued','approved','rejected') or rec.get('second_review')=='rejected' or rec.get('authoring')=='imported' or rec.get('release')=='released':return False
+        return True
+    available=[c for c in catalog['candidates'] if available_candidate(c)]
     rank={'A - Primary source':0,'B - Authoritative secondary':1,'C - Plausible / needs primary':2}
     available.sort(key=lambda c:(rank.get(c.get('verification'),9),bool(c.get('duplicate_cluster_ids')),c['source_row']))
-    chosen=available[:args.count]
+    chosen=[];chosen_identities=set()
+    for candidate in available:
+        identities=gate.identities(candidate['id'])
+        if identities & chosen_identities:continue
+        chosen.append(candidate);chosen_identities.update(identities)
+        if len(chosen)==args.count:break
     if not chosen: print('No unqueued candidate remains.');return
     state['batch_sequence']+=1;day=args.date or dt.date.today().isoformat();bid=f'daily-{day}-b{state["batch_sequence"]:03d}'
     batch={'schema_version':'selflo.daily-review-batch.v1','id':bid,'sequence':state['batch_sequence'],'created_at':now(),'stage':'candidate','quote_ids':[c['id'] for c in chosen]}
@@ -116,11 +134,26 @@ def apply_ledger(args,stage):
     root=args.root;q,catalog_path,state_path,batches=state_paths(root);state=load_state(state_path);doc,decisions=ledger_decisions(args.ledger)
     expected='selflo.perspective.candidate.vi' if stage=='candidate' else 'selflo.perspective.authoring.vi'
     if doc.get('library_id')!=expected: raise ValueError(f'Ledger is {doc.get("library_id")}, expected {expected}')
+    catalog=read(catalog_path)['candidates']
+    gate=ReviewEligibility(root,catalog)
+    candidate_ids={c['id'] for c in catalog}
     changed=[]
+    # Validate the entire ledger before preparing any state change.
+    for ident,d in decisions.items():
+        if stage=='candidate' and ident not in candidate_ids:
+            raise ValueError('Unknown candidate ID: '+ident)
+        if stage=='authoring':gate.canonical_id(ident)
+        if d['decision']=='approved':
+            gate.require_open(ident)
+            for key in gate.identities(ident):
+                rec=state['candidates'].get(key,{})
+                if rec.get('first_review')=='rejected' or rec.get('second_review')=='rejected':
+                    raise ValueError('Closed candidate review decision: '+key)
     for ident,d in decisions.items():
         rec=state['candidates'].setdefault(ident,{})
         rec['first_review' if stage=='candidate' else 'second_review']=d['decision'];rec[f'{stage}_note']=d['note'];changed.append(ident)
-    state['history'].append({'at':now(),'action':f'apply_{stage}_ledger','ledger':str(args.ledger),'quote_ids':changed});write(state_path,state);print(f'Applied {len(changed)} decision(s).')
+    state['history'].append({'at':now(),'action':f'apply_{stage}_ledger','ledger':str(args.ledger),'quote_ids':changed})
+    # Caller persists this prepared state only after successful publication.
     return state,decisions
 def staged_publish(root,source_changes,channels):
     library=root/'perspective-library';publisher=root/'scripts/publish-perspective-library'
@@ -138,8 +171,16 @@ def staged_publish(root,source_changes,channels):
             shutil.copytree(src,dst)
 def promote_authoring(args):
     root=args.root;q,catalog_path,state_path,batches=state_paths(root);catalog={x['id']:x for x in read(catalog_path)['candidates']};state,decisions=apply_ledger(args,'candidate')
-    ids=[i for i,d in decisions.items() if d['decision']=='approved' and state['candidates'].get(i,{}).get('authoring')!='imported']
-    if not ids:print('No newly approved candidate to import.');return
+    gate=ReviewEligibility(root,list(catalog.values()))
+    ids=[i for i,d in decisions.items() if d['decision']=='approved' and state['candidates'].get(i,{}).get('authoring')!='imported' and not gate.canonical_ids(i)]
+    if not ids:
+        write(state_path,state)
+        print('No newly approved candidate to import.');return
+    identities_seen=set()
+    for ident in ids:
+        identities=gate.identities(ident)
+        if identities & identities_seen:raise ValueError('Multiple candidates share one quote identity: '+ident)
+        identities_seen.update(identities)
     source=root/'perspective-library/source/vi';idx=read(source/'source.json');changes={};descriptors={x['id']:x for x in idx['files']};themes={}
     for entry in idx['files']:
         if entry['kind']=='quote_pack':themes[read(source/entry['path'])['primary_theme']]=entry
@@ -154,15 +195,35 @@ def promote_authoring(args):
     for ident in ids: state['candidates'][ident]['authoring']='imported'
     write(state_path,state);paths=[state_path,source,root/'perspective-library/authoring/vi',root/'perspective-library/release/vi'];commit_push(root,paths,f'Promote {len(ids)} reviewed perspective(s) to Authoring',args.push);print(f'Imported {len(ids)} quote(s) to Authoring.')
 def promote_release(args):
-    root=args.root;state,decisions=apply_ledger(args,'authoring');ids=[i for i,d in decisions.items() if d['decision']=='approved' and state['candidates'].get(i,{}).get('authoring')=='imported' and state['candidates'].get(i,{}).get('release')!='released']
-    if not ids:print('No newly approved Authoring quote to release.');return
-    cmd=[sys.executable,str(root/'scripts/prepare-perspective.py'),'--root',str(root),'--channel','release']
-    for i in ids:cmd+=['--quote',i]
-    if args.rights:cmd+=['--rights',args.rights,'--rights-note',args.rights_note]
-    if args.confirm_knowledge_checked:cmd+=['--confirm-knowledge-checked']
-    run(cmd)
-    for i in ids:state['candidates'][i]['release']='released'
-    _,_,state_path,_=state_paths(root);write(state_path,state);paths=[state_path,root/'perspective-library/source/vi',root/'perspective-library/authoring/vi',root/'perspective-library/release/vi'];commit_push(root,paths,f'Release {len(ids)} owner-approved perspective(s)',args.push);print(f'Released {len(ids)} quote(s).')
+    root=args.root;state,decisions=apply_ledger(args,'authoring')
+    gate=ReviewEligibility(root)
+    manifest_path=root/'perspective-library/release/vi/manifest.json'
+    released=set()
+    if manifest_path.exists():
+        for entry in read(manifest_path)['files']:
+            if entry['kind']=='quote_pack':
+                released.update(q['id'] for q in read(manifest_path.parent/entry['path'])['quotes'])
+    approved={ident:gate.canonical_id(ident) for ident,d in decisions.items() if d['decision']=='approved'}
+    ids=sorted(set(approved.values())-released)
+    _,_,state_path,_=state_paths(root)
+    if ids:
+        cmd=[sys.executable,str(root/'scripts/prepare-perspective.py'),'--root',str(root),'--channel','release','--reviewer','ai:codex']
+        for i in ids:cmd+=['--quote',i]
+        if args.rights:cmd+=['--rights',args.rights,'--rights-note',args.rights_note]
+        if args.confirm_knowledge_checked:cmd+=['--confirm-knowledge-checked']
+        run(cmd)
+        # Do not record a successful release unless it is in the manifest.
+        published=set()
+        for entry in read(manifest_path)['files']:
+            if entry['kind']=='quote_pack':
+                published.update(q['id'] for q in read(manifest_path.parent/entry['path'])['quotes'])
+        if not set(ids)<=published:raise ValueError('Requested quotes absent from published Release')
+    for ident,canonical in approved.items():
+        for key in {ident,canonical} | (gate.identities(ident) & state['candidates'].keys()):
+            state['candidates'].setdefault(key,{})['release']='released'
+    write(state_path,state)
+    paths=[state_path,root/'perspective-library/source/vi',root/'perspective-library/authoring/vi',root/'perspective-library/release/vi'];commit_push(root,paths,f'Release {len(ids)} owner-approved perspective(s)',args.push)
+    print(f'Released {len(ids)} newly approved quote(s).')
 def editorial_status(root):
     matrix_path=root/'studio/review-matrix/data.json'
     if not matrix_path.exists():

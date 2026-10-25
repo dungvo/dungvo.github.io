@@ -76,3 +76,9 @@ Với quote chuẩn đã ở Authoring, kết quả AI review được lưu riê
 - Authoring không tự động thành Release.
 - Catalog Candidate và tập Release có phạm vi khác nhau; không dùng số candidate imported làm số quote Release.
 - Script chỉ commit các đường dẫn của workflow; không `git add` các thay đổi khác trong repo.
+
+## Bảo vệ quyết định đã đóng (2026-10-25)
+
+select/promote và prepare-perspective dùng chung review_eligibility.py. Rejected trong canonical hoặc state, release_quote_exclusions và round1_not_pass/source_rights_blocked trong ledger đều chặn approval qua cả ID và alias research_id_original/canonical_id. Muốn mở lại cần owner quyết định và xử lý sổ quyết định rõ ràng; ledger cũ chứa approved không tự mở lại.
+
+Candidate đã có canonical không được nhập lần hai dù state mất. Nhóm alias nhiều canonical ID, nhiều approval tạo cùng identity hoặc ledger lặp quote ID sẽ bị chặn. State chỉ được lưu sau kiểm tra/publication thành công; lỗi rights/source/publisher không ghi approved/released sớm.

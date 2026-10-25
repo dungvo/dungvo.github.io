@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-25",
+  "scope": "Read-only audit; no quote, state, manifest or content publication changes.",
+  "candidate_count": 1438,
+  "already_canonical": 1438,
+  "closed_candidates": [
+    "research.laozi.ch20.061",
+    "research.laozi.day3.ch62.050",
+    "research.laozi.day3.ch65.071",
+    "research.zhuangzi.day4.ch03.024",
+    "research.zhuangzi.day4.ch03.025",
+    "research.seneca.day9.tranq5",
+    "research.dhammapada.day11.v005",
+    "research.dhammapada.day11.v050",
+    "research.dhammapada.day11.v081",
+    "research.buddhist.day14.mn63_arrow_01",
+    "research.reaudit.day21.vieclamruong_tax"
+  ],
+  "ambiguous_candidates": [],
+  "aliases_with_different_original_id": 37,
+  "owner_rejected_ids_protected": true,
+  "input_sha256": {
+    "content-workspace/curated/quote-research/review-pipeline/review-candidates.json": "691b2e0471b9ab150487ac8cb789ac022752c3bc232b9a1c78d227fb81a0997e",
+    "content-workspace/curated/quote-research/review-pipeline/canonical-ai-review.json": "beb3c5105f1a475e8d3780731ad2d63c4f6a5300c843e1127fe085f3594a0006",
+    "content-workspace/curated/quote-research/review-pipeline/state.json": "c8a36d1c92fd0a9c74b402c5f4d4c7dbec8d856e8ed1f13e5fb12527db86fcaa",
+    "perspective-library/source/vi/source.json": "18ce9e5c7336326027e19b99e92d1929722b331175d234fa60e7dbc448e681ad"
+  }
+}

@@ -3,7 +3,7 @@
 **Ưu tiên:** P0
 **Trạng thái tổng:** R1–R6 đã cập nhật main tại fb65c40; đang tiếp PM-004A. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
-**Cập nhật gần nhất:** 2026-10-25 — Authoring 87 / Release 48 (1.851/662 quote; 63/17 story); 60 tests pass sau bước đồng bộ báo cáo CLI/Studio.
+**Cập nhật gần nhất:** 2026-10-25 — Authoring 87 / Release 48 (1.851/662 quote; 63/17 story); 81 tests pass sau bước đồng bộ báo cáo và bảo vệ đường ghi.
 **Owner duyệt cuối:** Dũng
 **Phạm vi:** Review toàn bộ corpus; đưa mọi quote đủ điều kiện lên Release; kết luận rõ cho mọi dòng không đủ điều kiện.
 
@@ -68,8 +68,8 @@ Chưa push/merge/deploy: automatic approval review chặn ghi remote, cần owne
 
 ## Tiếp backlog — 2026-10-25
 
-R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ làm trạng thái hiện tại. PM-004A đã hoàn tất phần báo cáo: CLI dùng projection Review Matrix có kiểm tra fingerprint; không coi imported là review status. Phần đường ghi và ID mapping chưa đóng. Xem [báo cáo PM-004A](PM004A_STATUS_REPORTING_2026-10-25.vi.md).
+R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ làm trạng thái hiện tại. PM-004A đã hoàn tất phần báo cáo: CLI dùng projection Review Matrix có kiểm tra fingerprint; không coi imported là review status. Đã audit đường ghi và mapping ID, thêm gate chống replay; xem [báo cáo đường ghi](PM004A_WRITE_GUARDS_2026-10-25.vi.md). State lịch sử chưa migrate. Xem [báo cáo PM-004A](PM004A_STATUS_REPORTING_2026-10-25.vi.md).
 
 ## Đúng một bước tiếp theo
 
-Audit select/apply/promote và mapping Candidate ↔ Canonical để bảo đảm quyết định loại không bị đề xuất lại qua đường candidate.
+Chuẩn bị danh sách ưu tiên review 46 story Authoring-only (PM-005), báo cáo vấn đề cho owner trước khi thay nội dung/phát hành.
