@@ -1,5 +1,7 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
+> **Q10-B003 ĐÃ ĐÓNG — 2026-10-25:** 165 câu: 112 giữ, 53 không đạt; 67 văn bản viết lại. Release 51 public xác nhận 454 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **507/5.471 đã chốt, còn 4.964** (289 released, 218 not_accepted, gồm 10 owner-closed). Commit nội dung `2f50a58`. Tiếp Q10-B004 (165), đợt cuối rà Release; story tiếp tục tạm dừng.
+
 > **Q10-B003 — 2026-10-25:** Đã review 165 câu: 112 giữ, 53 không đạt; sửa 67 văn bản. Authoring 90 / Release 51: 1.851/454 quote, 63/17 story; 94 tests đạt. Đang kiểm chứng public trước khi đóng B003; chưa mở B004/story. Xem `Q10_B003_CHECKPOINT.vi.md`.
 
 > **Q10-B002 ĐÃ ĐÓNG — 2026-10-25:** 166 câu: 75 giữ, 91 không đạt; 50 bản viết lại. Release 50 public đã xác nhận 507 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **342/5.471 đã chốt, còn 5.129** (177 released, 165 not_accepted, gồm 10 owner-closed). Commit nội dung `f2fd929`. Tiếp Q10-B003 (165); story tiếp tục tạm dừng.
@@ -15,7 +17,7 @@
 **Ưu tiên:** P0
 **Trạng thái tổng:** Ưu tiên duy nhất: lập và thực hiện kế hoạch khép kín 5.471 dòng quote. Story tạm dừng theo owner ngày 2026-10-25. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
-**Cập nhật gần nhất:** 2026-10-25 — Authoring 87 / Release 48 (1.851/662 quote; 63/17 story); 81 tests pass sau bước đồng bộ báo cáo và bảo vệ đường ghi.
+**Cập nhật gần nhất:** 2026-10-25 — Authoring 90 / Release 51 (1.851/454 quote; 63/17 story); 94 tests đạt; public đã xác nhận.
 **Owner duyệt cuối:** Dũng
 **Phạm vi:** Review toàn bộ corpus; đưa mọi quote đủ điều kiện lên Release; kết luận rõ cho mọi dòng không đủ điều kiện.
 
@@ -74,4 +76,4 @@ R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ 
 
 ## Đúng một bước tiếp theo
 
-Kiểm chứng public Release 51, cập nhật projection và đóng Q10-B003; chưa mở B004/story.
+Mở Q10-B004 (165 dòng), đợt cuối của mốc rà Release. Chốt hết mốc này trước khi qua Authoring/research; story vẫn tạm dừng. Không mở lại các câu đã không đạt.

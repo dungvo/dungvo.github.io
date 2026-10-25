@@ -334,3 +334,10 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 
 - Từng ID có source context/before/after/rights retained/hash và lý do; 10 duplicate có winner accepted. 53 exclusion bền vững; giữ 10 owner-closed.
 - Thay đổi content-compatible, không đổi shared contract/app. Đúng 165 canonical quote thay đổi; story và quote ngoài batch không đổi. Chuẩn hóa nhận diện Trung Bộ Kinh/Chí Tôn Ca sau Việt hóa.
+
+## 2026-10-25 — Đóng Q10-B003
+
+- **Q10-B003 ĐÃ ĐÓNG — 2026-10-25:** 165 câu: 112 giữ, 53 không đạt; 67 văn bản viết lại. Release 51 public xác nhận 454 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **507/5.471 đã chốt, còn 4.964** (289 released, 218 not_accepted, gồm 10 owner-closed). Commit nội dung `2f50a58`. Tiếp Q10-B004 (165), đợt cuối rà Release; story tiếp tục tạm dừng.
+- Public kiểm chứng lúc 2026-10-25T09:42:18.212076Z; bằng chứng `reports/q10-b003-public-verification.json`; projection manifest 51 xác nhận cả accepted các đợt trước.
+- 67 câu viết lại, sửa locator William James; 53 exclusion bền vững. Không sửa/phát hành story, không đổi contract/app.
+- Tiếp B004, 165 ID; còn đúng một đợt để chốt mốc rà Release trước Authoring.

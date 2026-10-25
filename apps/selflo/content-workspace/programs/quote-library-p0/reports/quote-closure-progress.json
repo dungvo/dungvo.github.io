@@ -2,49 +2,49 @@
   "schema_version": "selflo.quote-closure-progress.v1",
   "program_id": "quote-closure-5471-2026-10-25",
   "baseline_count": 5471,
-  "release_revision": 50,
+  "release_revision": 51,
   "public_verified": true,
   "counts": {
-    "released": 177,
-    "not_accepted": 165,
-    "remaining": 5129
+    "released": 289,
+    "not_accepted": 218,
+    "remaining": 4964
   },
   "not_accepted_by_reason": {
-    "owner_rejected": 10,
-    "duplicate": 37,
-    "context_required": 98,
-    "weak_or_misleading": 10,
-    "too_narrow_for_selflo": 10
+    "weak_or_misleading": 40,
+    "duplicate": 47,
+    "too_narrow_for_selflo": 18,
+    "context_required": 103,
+    "owner_rejected": 10
   },
   "rows": [
     {
       "baseline_id": "a_good_meal_ends_with_enough",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "a_large_task_only_needs_one_first_square",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "a_moment_cannot_represent_an_entire_journey",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "a_pause_keeps_the_first_reaction_from_becoming_the_only_choice",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "acceptance_is_not_giving_up",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -55,26 +55,26 @@
     },
     {
       "baseline_id": "accepting_the_flood_reveals_the_road_still_open",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "an_old_scent_can_open_an_old_room",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "another_persons_measure_cannot_fit_your_life",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "another_persons_shoes_hurt",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -85,20 +85,20 @@
     },
     {
       "baseline_id": "applause_ending_is_not_failure",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "apron_waits_on_the_hook",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "athlete_sits_after_finish",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -283,14 +283,14 @@
     },
     {
       "baseline_id": "attributed.francis_bacon.bacon_friend_against_self_flattery",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "attributed.francis_bacon.bacon_power_over_others_lose_self",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1297,26 +1297,26 @@
     },
     {
       "baseline_id": "attributed.william_james.james_bundles_of_habit",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "attributed.william_james.james_habits_can_be_courage",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "attributed.william_james.james_object_occupies_mind",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "attributed.william_james.james_spectators_judgment",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1525,8 +1525,8 @@
     },
     {
       "baseline_id": "blinking_cursor_does_not_write_first_line",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1537,74 +1537,74 @@
     },
     {
       "baseline_id": "bridge_does_not_hold_the_walker",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "burn_mark_maps_the_flame",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "bus_ticket_keeps_the_day_of_return",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "calling_mud_dry_changes_nothing",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "candle_is_seen_when_it_goes_out",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "carpenter_measures_the_uneven_leg",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "chair_is_repaired_for_someone",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "chipped_cup_stays_for_its_story",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "clarity_before_speed",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "clock_does_not_hurry_when_watched",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "coffee_guides_the_hand_to_one_cup",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "coffee_returns_a_distant_morning",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1615,20 +1615,20 @@
     },
     {
       "baseline_id": "comparison_steals_joy",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "compass_keeps_direction_not_steps",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "continuous_looking_only_tires_eyes",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1639,38 +1639,38 @@
     },
     {
       "baseline_id": "cook_still_wants_to_taste_the_soup",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "crooked_pot_shows_the_heavy_hand",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "curtain_keeps_the_old_smoke",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "curtain_opens_with_the_alarm",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "damp_paper_is_not_the_pens_fault",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "dark_room_before_the_body_is_ready",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1687,14 +1687,14 @@
     },
     {
       "baseline_id": "do_not_let_work_rent_your_mind_after_hours",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "do_not_need_to_love_the_storm_to_love_the_journey",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1705,50 +1705,50 @@
     },
     {
       "baseline_id": "do_not_wait_until_the_last_time",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "door_opens_more_lightly_from_inside",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "door_stays_where_home_begins",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "each_season_has_its_own_gift",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "emergency_fund_can_become_breathing_time",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "empty_chair_changes_the_table",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "empty_desk_with_glowing_screen",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "energy_has_a_budget",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1759,86 +1759,86 @@
     },
     {
       "baseline_id": "enough_for_today",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "eraser_shrinks_as_letters_straighten",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "even_stitch_follows_many_undoings",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "every_long_road_is_crossed_one_meter_at_a_time",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "excitement_has_a_lifespan",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "eyes_memorize_the_unopened_page",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "familiar_cafe_remembers_the_order",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "faster_clock_does_not_lengthen_day",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "feeling_is_signal_not_command",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "first_burnt_batch_does_not_erase_the_kitchen",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "first_needle_needs_light_not_blame",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "freedom_begins_when_one_path_is_not_the_only_path",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "gentle_voice_for_the_broken_bowl",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "gentleness_creates_room",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1849,50 +1849,50 @@
     },
     {
       "baseline_id": "habit_arrives_without_knocking",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "habit_is_a_path_worn_by_feet",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "hand_does_not_need_to_grip",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "hand_finds_the_key_tray",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "hands_keep_the_hammers_echo",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "hands_know_who_the_work_is_for",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "home_is_known_by_what_it_keeps",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "house_turns_off_one_window_at_a_time",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1909,80 +1909,80 @@
     },
     {
       "baseline_id": "kitchen_cools_after_the_flame",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "kitchen_sounds_like_someone_waiting",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "knife_sharpens_at_the_same_angle",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "knots_loosen_from_the_edge",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "late_flower_meets_another_sky",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "light_gives_the_room_a_shape",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "lit_window_guides_the_way_home",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "map_does_not_lower_the_mountain",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "maps_hide_the_nearby_door",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "marathoner_does_not_chase_sprinter_at_start",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "market_reopens_one_stall_at_a_time",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "mason_checks_the_string_each_row",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "meaning_is_often_found_in_how",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -1993,68 +1993,68 @@
     },
     {
       "baseline_id": "morning_after_storm_starts_small",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "morning_dew_leaves_when_warm",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "morning_enters_before_the_alarm",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "morning_thread_gathers_the_days",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "muscle_recovers_during_rest",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "musician_stays_with_one_lost_note",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "name_the_weather_inside",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "needle_reopens_the_same_hole",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "neighboring_light_does_not_dim_this_lamp",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "new_leaves_do_not_need_an_audience",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "new_light_enters_where_branch_broke",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -2065,56 +2065,56 @@
     },
     {
       "baseline_id": "not_every_stone_is_yours_to_carry_home",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "old_chair_holds_more_than_wood",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "old_pattern_not_identity",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "old_song_opens_a_closed_room",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "one_umbrella_keeps_two_steps_together",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "ordinary_day_can_be_recharge",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "ordinary_morning_is_a_quiet_gift",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "patched_cloth_finds_another_way_to_stay",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "pause_is_an_action",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -2125,8 +2125,8 @@
     },
     {
       "baseline_id": "pillow_hollows_across_many_nights",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -2137,26 +2137,26 @@
     },
     {
       "baseline_id": "porch_light_marks_the_kind_of_home",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "pot_cools_between_lid_checks",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "price_tag_does_not_show_hours_traded",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "progress_can_be_quiet",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -2167,8 +2167,8 @@
     },
     {
       "baseline_id": "quiet_house_reveals_the_clock",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -2215,26 +2215,26 @@
     },
     {
       "baseline_id": "rain_stopped_before_ground_dried",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "rain_waits_beneath_city_noise",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "red_light_reveals_the_trees",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "repeated_story_may_be_unfinished",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -20497,8 +20497,8 @@
     },
     {
       "baseline_id": "research.day17.future_not_wholly_ours",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -20581,8 +20581,8 @@
     },
     {
       "baseline_id": "research.day18.2_14",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -20593,8 +20593,8 @@
     },
     {
       "baseline_id": "research.day18.2_47",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -20695,8 +20695,8 @@
     },
     {
       "baseline_id": "research.day19.katha_chariot",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -20773,8 +20773,8 @@
     },
     {
       "baseline_id": "research.day19.mundaka_question_all",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27217,8 +27217,8 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v033",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27247,14 +27247,14 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v051",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "research.dhammapada.day11.v052",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27313,8 +27313,8 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v122",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27331,8 +27331,8 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v133",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27355,8 +27355,8 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v197",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27379,8 +27379,8 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v276",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27397,8 +27397,8 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v290",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -27409,14 +27409,14 @@
     },
     {
       "baseline_id": "research.dhammapada.day11.v328",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "research.dhammapada.day11.v329",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -30715,8 +30715,8 @@
     },
     {
       "baseline_id": "research.mn.day12.mn20_01",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -30745,8 +30745,8 @@
     },
     {
       "baseline_id": "research.mn.day12.mn22_02",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -32407,50 +32407,50 @@
     },
     {
       "baseline_id": "rest_is_part_of_rhythm",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "restitching_teaches_the_hand",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "return_to_what_is_here",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "river_carries_the_upstream_rain",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "road_dries_from_edge_inward",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "roof_releases_the_storm_slowly",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "room_changes_with_one_lamp",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "room_holds_the_bells_echo",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -32461,104 +32461,104 @@
     },
     {
       "baseline_id": "roots_hold_when_wind_changes",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "row_today_build_one_piece_of_tomorrows_raft",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "safe_return_can_help_us_go_farther",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "same_glass_lost_and_remaining",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "scratched_table_stays_in_the_home",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "seed_grows_out_of_sight",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "self_judgment_loop_digest",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "selflo.knowledge.if_i_am_wrong_but_chatgpt_agrees",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "selflo.knowledge.why_ai_feels_easier_to_ask",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "shadow_changes_beneath_the_walker",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "shadow_length_depends_on_sun",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "shop_closes_but_street_continues",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "silence_between_notes_belongs_to_music",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "small_boundary_is_still_boundary",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "small_daily_expense_reaches_month_end",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "small_flame_warms_a_small_room",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "small_suitcase_reveals_what_matters",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
@@ -32569,50 +32569,50 @@
     },
     {
       "baseline_id": "some_footprints_lead_toward_home",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "someone_calls_at_the_last_stop",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "sometimes_the_event_does_not_change_but_the_view_does",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "space_between_stimulus_and_response",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "sprint_and_marathon_need_different_breath",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "stable_is_not_empty",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "stars_remain_behind_clouds",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "released",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {
       "baseline_id": "streetlight_turns_off_when_unneeded",
-      "status": "remaining",
-      "batch_id": null,
+      "status": "not_accepted",
+      "batch_id": "Q10-B003",
       "issue": null
     },
     {

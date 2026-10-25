@@ -391,7 +391,7 @@
       "phase": "Q10.1",
       "title_vi": "Rà Release",
       "row_count": 165,
-      "status": "verifying_public",
+      "status": "closed",
       "reviewed_count": 165,
       "baseline_ids": [
         "research.dhammapada.day11.v122",
@@ -573,7 +573,10 @@
       "accepted_count": 112,
       "not_accepted_count": 53,
       "evidence_path": "reports/q10-b003-review.json",
-      "planned_release_revision": 51
+      "planned_release_revision": 51,
+      "completed_count": 165,
+      "public_release_revision": 51,
+      "public_verified_at": "2026-10-25T09:42:18.212076Z"
     },
     {
       "id": "Q10-B004",

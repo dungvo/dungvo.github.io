@@ -25,3 +25,10 @@
 - Đã giữ nguyên source rights, edition/translator và bản trước; không suy quyền từ tuổi tác giả, không loại vì ngoại ngữ. Đối chiếu tên Kinh Pháp Cú là tác phẩm.
 - 94 tests và publisher gates đạt; public 9 pack/checksum khớp. 91 exclusion, 17 winner chỉ tới accepted, không sửa story.
 - Corpus còn 5.129 dòng; kết quả đợt này không phải nghiệm thu toàn kho.
+
+## 2026-10-25 — Nghiệm thu Q10-B003
+
+- 165 ID có kết luận và nguồn: 112 accepted/53 not_accepted, không pending trong đợt. 23 dòng từ tác phẩm và 142 dòng Selflo; không loại chỉ vì ngoại ngữ.
+- Bản Hy Lạp/Pāli/Sanskrit được lưu làm bằng chứng nguyên văn; không tái dùng lời dịch/bình luận hiện đại chưa rõ quyền. Giữ quyền/edition gốc.
+- 94 tests/publisher gates đạt; 9 pack public khớp. Quote ngoài đợt và toàn bộ story source/descriptor không đổi.
+- Corpus còn 4.964 dòng; cần B004 để khép mốc rà Release.
