@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **Cập nhật 2026-10-25 — R1–R6:** Owner yêu cầu Việt hóa nhãn nguồn Release, sửa 2 quote và loại 10 quote với quyết định không đạt vĩnh viễn cho đến khi owner mở lại. Đã tạo Authoring 87 / Release 48 (1.851/662 quote; 63/17 story), rebuild Review Matrix; 55/55 tests đạt. Chưa commit/push. Chi tiết: `programs/quote-library-p0/OWNER_REVIEW_CLEANUP_2026-10-25.vi.md`. Lịch sử upload 44 file bên dưới đã hoàn tất ở PR #2/main 9d76067 do owner merge.
+
 > **Quyết định mới nhất 2026-10-25:** Owner chỉ cho phép upload toàn bộ 44 file Selflo lên `dungvo/dungvo.github.io`, branch `content/quote-classification-series-2026-10-21`; **KHÔNG merge main**. Quyết định này thay thế yêu cầu merge ghi trong lịch sử bên dưới. Đã upload và đối chiếu SHA đủ 44 file; tiến hành cập nhật branch. Phiên sau đọc trạng thái branch thực tế trước khi tiếp tục; không dùng các blocker ghi trước đó làm trạng thái hiện tại.
 
 **Trạng thái:** Bảng theo dõi đang dùng

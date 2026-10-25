@@ -343,7 +343,7 @@
     },
     {
       "id": "too_many_tabs_slow_the_important_one",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
       "text_vi": "Khi mở quá nhiều tab, máy tính sẽ làm chậm cả tab quan trọng nhất.",
@@ -373,9 +373,9 @@
         "note": null
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T08:00:21Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Quan sát đời thường cho hoàn cảnh high_stress.",
@@ -411,10 +411,10 @@
     },
     {
       "id": "roots_hold_when_wind_changes",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
       "title_vi": null,
-      "text_vi": "Gió đổi chiều nhiều lần trong ngày. Cây không ngã vì rễ, không phải vì gió nhỏ.",
+      "text_vi": "Gió đổi chiều nhiều lần trong ngày. Cây đứng vững nhờ bộ rễ bám sâu vào đất.",
       "subtitle_vi": null,
       "primary_theme": "attention",
       "authorship": {
@@ -442,11 +442,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-24T23:55:29.189268Z"
       },
       "writing": {
-        "semantic_intent": "Quan sát đời thường cho hoàn cảnh restless.",
+        "semantic_intent": "Gió đổi chiều nhiều lần trong ngày. Cây đứng vững nhờ bộ rễ bám sâu vào đất.",
         "observation_key": "roots_hold_when_wind_changes",
         "structure_pattern": "everyday_observation"
       },

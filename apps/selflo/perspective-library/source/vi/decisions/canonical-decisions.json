@@ -3,7 +3,66 @@
   "owner_gate": "CP-003-revised",
   "owner_gate_status": "approved",
   "release_quote_exclusions": [
-
+    {
+      "quote_id": "research.laozi.day3.ch65.071",
+      "reason": "Không đạt: phụ thuộc “hai cách ấy”, không đứng độc lập. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "research.laozi.day3.ch62.050",
+      "reason": "Không đạt: đại từ “Nó” không có đối tượng tham chiếu. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "research.zhuangzi.day4.ch03.024",
+      "reason": "Không đạt: mảnh chuyện con bò, thiếu ngữ cảnh khi đọc riêng. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "research.zhuangzi.day4.ch03.025",
+      "reason": "Không đạt: phụ thuộc mảnh chuyện con bò trước đó. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v005",
+      "reason": "Không đạt: trùng nguồn/kệ và ý với attributed.dhammapada.verse_005.hatred; giữ bản cũ. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v050",
+      "reason": "Không đạt: trùng nguồn/kệ và ý với attributed.dhammapada.verse_050.own_deeds; giữ bản cũ. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "research.dhammapada.day11.v081",
+      "reason": "Không đạt: trùng nguồn/kệ và ý với attributed.dhammapada.verse_081.rock; giữ bản cũ. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "too_many_tabs_slow_the_important_one",
+      "reason": "Không đạt: tình huống trình duyệt/công việc quá cụ thể, owner yêu cầu loại. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "pinned_tab_is_not_completed_work",
+      "reason": "Không đạt: tình huống trình duyệt/công việc quá cụ thể, owner yêu cầu loại. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    },
+    {
+      "quote_id": "research.seneca.day9.tranq5",
+      "reason": "Không đạt: giải thích thuật ngữ euthymia, owner yêu cầu loại các mục R5 khỏi quote Release. Đóng theo yêu cầu owner ngày 2026-10-25; không tự đề xuất review/phát hành lại.",
+      "reviewed_by": "ai:codex",
+      "reviewed_at": "2026-10-24T23:55:29.189268Z"
+    }
   ],
   "deferred_unmapped": [
     {

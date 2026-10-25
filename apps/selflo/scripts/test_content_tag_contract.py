@@ -93,7 +93,7 @@ class ContentTagSemanticContractTests(unittest.TestCase):
 
 
 class CanonicalReleaseBackfillTests(unittest.TestCase):
-    def test_exact_active_release_quote_set_is_tagged(self) -> None:
+    def test_active_release_quotes_are_tagged_and_exclusions_stay_out(self) -> None:
         source_root = APP_ROOT / "perspective-library/source/vi"
         release_root = APP_ROOT / "perspective-library/release/vi"
         source_index = read_json(source_root / "source.json")
@@ -112,10 +112,14 @@ class CanonicalReleaseBackfillTests(unittest.TestCase):
                 canonical_quotes[quote["id"]] = quote
 
         tagged_ids = {quote_id for quote_id, quote in canonical_quotes.items() if "tags" in quote}
-        # The release grows by revision; correctness is the exact identity
-        # equality below, not a historical count from Release 43.
+        # Authoring may retain tags after a quote is withdrawn. Tags do not
+        # confer approval: every active Release quote needs tags, and owner
+        # exclusions must remain absent even if their canonical tags survive.
+        decisions_entry = next(entry for entry in source_index["files"] if entry["kind"] == "authoring_decisions")
+        exclusions = {entry["quote_id"] for entry in read_json(source_root / decisions_entry["path"])["release_quote_exclusions"]}
         self.assertTrue(release_ids)
-        self.assertEqual(tagged_ids, release_ids)
+        self.assertTrue(release_ids <= tagged_ids)
+        self.assertFalse(release_ids & exclusions)
 
         catalog_entry = next(entry for entry in source_index["files"] if entry["kind"] == "content_tag_catalog")
         catalog = read_json(source_root / catalog_entry["path"])

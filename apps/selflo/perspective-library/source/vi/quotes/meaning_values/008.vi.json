@@ -6,7 +6,7 @@
   "quotes": [
     {
       "id": "research.dhammapada.day11.v050",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Điều đáng nhìn lại là những việc mình đã làm và bỏ sót, thay vì chỉ chăm chú vào lỗi của người khác.",
@@ -46,9 +46,9 @@
         "note": "Tác phẩm cổ; bản dịch tiếng Anh F. Max Müller (mất 1900), Project Gutenberg #2017 ghi Public domain in the USA. Bản Việt diễn ý mới do Selflo biên soạn từ đúng kệ được lưu trong q9-dhammapada-review.json; không dùng bản dịch Việt hiện đại hay chú giải trên website. Giữ attribution tác phẩm và translator; xem content-workspace/programs/quote-library-p0/Q9_CHECKPOINT.vi.md về phạm vi quyền."
       },
       "review": {
-        "status": "approved",
-        "reviewed_by": "ai:codex",
-        "reviewed_at": "2026-10-24T07:56:40Z"
+        "status": "rejected",
+        "reviewed_by": null,
+        "reviewed_at": null
       },
       "writing": {
         "semantic_intent": "Điều đáng nhìn lại là những việc mình đã làm và bỏ sót, thay vì chỉ chăm chú vào lỗi của người khác.",
@@ -627,7 +627,7 @@
     },
     {
       "id": "research.day25.an4_17",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
       "text_vi": "Thấy điều tốt thì nghĩ cách tiến gần; thấy điều chưa tốt thì quay lại tự xét mình.",
@@ -683,7 +683,7 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Confucius tradition / 孔子"
+        "attribution_vi": "Luận Ngữ · truyền thống Khổng Tử"
       },
       "knowledge_basis": null,
       "tags": [

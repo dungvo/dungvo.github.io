@@ -167,9 +167,9 @@
     },
     {
       "id": "pot_cools_between_lid_checks",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "text_vi": "Nồi nước không nguội nhanh hơn\nchỉ vì chiếc nắp liên tục được mở ra để nhìn.",
+      "text_vi": "Có những việc cần thời gian. Kiểm tra liên tục không có nghĩa là mình đang giúp chúng tiến triển.",
       "primary_theme": "attention",
       "authorship": {
         "author_id": "selflo",
@@ -201,11 +201,11 @@
       },
       "review": {
         "status": "approved",
-        "reviewed_by": "owner:dungvo",
-        "reviewed_at": "2026-09-24T10:31:42Z"
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-24T23:55:29.189268Z"
       },
       "writing": {
-        "semantic_intent": "Kiểm tra lặp lại không nhất thiết thúc đẩy một quá trình cần thời gian.",
+        "semantic_intent": "Có những việc cần thời gian. Kiểm tra liên tục không có nghĩa là mình đang giúp chúng tiến triển.",
         "observation_key": "checking_cooling_pot",
         "structure_pattern": "checking_interrupts_without_accelerating"
       },

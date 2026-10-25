@@ -14,6 +14,11 @@ APP_ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = APP_ROOT / "perspective-library/source/vi"
 LOCK_FILE = APP_ROOT / "perspective-library/tooling/locked-story-prose.json"
 RELEASED_STORY_IDS = {
+    "story.half_glass_two_views",
+    "story.one_event_two_perspectives",
+    "story.if_i_am_wrong_but_chatgpt_agrees",
+    "story.why_ai_feels_easier_to_ask",
+    "story.taiji_from_one_to_ten_thousand_things",
     "story.empty_boat_on_the_river",
     "story.large_tree_beyond_the_carpenters_measure",
     "story.last_time",
@@ -131,19 +136,19 @@ class StoryContractTests(unittest.TestCase):
                 self.assertEqual(semantic_sequence(release[story_id]), expected)
 
     def test_web_renderer_keeps_section_and_block_order(self) -> None:
-        renderer = (APP_ROOT / "story/app.mjs").read_text(encoding="utf-8")
+        renderer = (APP_ROOT / "studio/reader/app.mjs").read_text(encoding="utf-8")
         self.assertNotIn("blocks.shift()", renderer)
         self.assertNotIn("section.blocks.sort", renderer)
         self.assertIn("(section.blocks||[]).forEach", renderer)
 
     def test_web_renderer_uses_safe_semantic_rich_text(self) -> None:
-        renderer = (APP_ROOT / "story/app.mjs").read_text(encoding="utf-8")
+        renderer = (APP_ROOT / "studio/reader/app.mjs").read_text(encoding="utf-8")
         self.assertIn("function appendRichText", renderer)
         self.assertIn("span.textContent=run.text_vi", renderer)
         self.assertNotIn("node.innerHTML=block", renderer)
 
     def test_web_renderer_prefers_story_hero_over_theme_artwork(self) -> None:
-        renderer = (APP_ROOT / "story/app.mjs").read_text(encoding="utf-8")
+        renderer = (APP_ROOT / "studio/reader/app.mjs").read_text(encoding="utf-8")
         story_hero = "descriptors.get(story.hero_image?.file_id)"
         theme_artwork = "artworkByTheme.get(story.primary_theme)"
         self.assertIn(story_hero, renderer)
@@ -163,7 +168,7 @@ class StoryContractTests(unittest.TestCase):
     def test_selected_v2_story_shape(self) -> None:
         expected = {
             "story.old_man_and_returning_horse": (3, 8, 3, 0),
-            "story.original_if_i_lived_a_human_life": (29, 205, 11, 3),
+            "story.original_if_i_lived_a_human_life": (29, 203, 10, 3),
             "story.the_compass_does_not_walk_for_you": (12, 368, 3, 3),
             "story.empty_boat_on_the_river": (3, 8, 1, 0),
             "story.large_tree_beyond_the_carpenters_measure": (3, 8, 1, 0),
