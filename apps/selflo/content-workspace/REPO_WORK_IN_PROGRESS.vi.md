@@ -1,5 +1,13 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **B005 / RELEASE 53 ĐANG KIỂM CHỨNG — 2026-10-26:** Owner đã đồng ý phát hành/push đúng 4 câu Swahili. Release 53 cục bộ: 380 quote / 17 story; 376 quote cũ và story descriptor giữ nguyên; 94 tests đạt. Đang đẩy GitHub/kiểm chứng public, chưa cộng 4 câu vào completed. B005 chưa đóng.
+
+> **B005 / CHỜ DUYỆT RELEASE — 2026-10-26:** Hoàn tất hồ sơ quyền cho 4 câu Swahili, AI-approved trên Authoring 93; chưa phát hành. Đóng thêm 1 rights_not_cleared; B005 14 không đạt mới + 4 chờ Release + 2 owner-closed, còn 133. Corpus **686/5.471 đã chốt, còn 4.785**. Release 52 giữ nguyên; 51 tests đạt; chưa commit/push. Bản duyệt `programs/quote-library-p0/Q10_B005_RELEASE_REVIEW.vi.md`.
+
+> **B005 / SWAHILI — 2026-10-26:** Đã biên tập 5 bản Việt, chuẩn hóa nguồn Swahili và dựng Authoring 92; quyền chưa xác minh nên chưa Release. Chốt thêm 1 không đạt, tổng B005 13 mới + 2 owner-closed, còn 134. Corpus **685/5.471 đã chốt, còn 4.786**. Release 52 giữ nguyên; 36 tests đạt. Chưa commit/push. Xem `programs/quote-library-p0/Q10_B005_CHECKPOINT.vi.md`.
+
+> **B005 ĐANG MỞ — 2026-10-26:** Đã chốt mới 12 ghi chú nghiên cứu không phù hợp làm quote; bảo toàn 2 owner-closed. B005 còn 135/149 dòng chưa chốt; tìm được đầu mối nguồn cho 6 câu Swahili, chưa approve. Corpus **684/5.471 đã chốt, còn 4.787** (376 released/308 không đạt). Authoring 91 / Release 52 giữ nguyên; 31 tests đạt. Chưa commit/push. Xem `programs/quote-library-p0/Q10_B005_CHECKPOINT.vi.md`.
+
 > **B004 VÀ Q10.1 ĐÃ ĐÓNG — 2026-10-25:** B004 165 câu: 87 giữ/78 loại, sửa 62 bản. Mốc rà Release đủ **662/662**: 376 giữ, 286 không đạt. Release 52 public xác nhận toàn bộ 376 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **672/5.471 đã chốt, còn 4.799** (gồm 10 owner-closed). Commit `da78a80`. Tiếp B005 (149), mốc khép kín Authoring; story tạm dừng.
 
 > **Q10-B004 — 2026-10-25:** Đã review 165 câu: 87 giữ, 78 không đạt; sửa 62 văn bản. Authoring 91 / Release 52: 1.851/376 quote, 63/17 story; 94 tests đạt. Đối soát Q10.1 đủ 662 dòng (376 giữ/286 loại), chờ public để đóng mốc. Chưa mở B005/story. Xem `Q10_B004_CHECKPOINT.vi.md`.

@@ -244,10 +244,10 @@
     },
     {
       "id": "research.day36.african_traditions_ii_ig.001",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi hai bên mạnh xung đột, người ít quyền lực có thể chịu hậu quả lớn nhất.",
+      "text_vi": "Hai con voi xô nhau, cỏ chịu thiệt.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -262,12 +262,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "African traditions II",
-        "work": "Igbo and Swahili proverb scholarship",
-        "source_url": "https://swahiliproverbs.afrst.illinois.edu/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên African traditions II",
-        "source_detail": "Research ID research.day36.african_traditions_ii_ig.001; corpus row 1250; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
+        "author_name": "Tục ngữ Swahili",
+        "work": "Tục ngữ từ vùng Swahili (1891)",
+        "source_url": "https://www.maktaba.org/download/file/547/African_aphorisms_-_methali_za_kiswahili_.pdf",
+        "source_language": "sw",
+        "source_label": "Phỏng theo tục ngữ Swahili",
+        "source_detail": "W. E. Taylor, African Aphorisms (1891), §412, trang in 98 / trang PDF 111. Nguyên ngữ: Ndovu wawili wakisongana ziumiazo ni nyika. Bản Việt diễn ý bởi Selflo; xem evidence Q10-B005. Provenance trước biên tập: Research ID research.day36.african_traditions_ii_ig.001; corpus row 1250; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
       },
       "metadata": {
         "concepts": [],
@@ -277,16 +277,16 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify before release"
+        "status": "public_domain",
+        "note": "Nguyên ngữ từ edition Taylor 1891, passage/locator đã đối chiếu scan. Bản Việt diễn ý do Selflo biên soạn; không dùng bản dịch hiện đại bên ngoài, không phát hành scan/bình giải. Cơ sở quyền và phạm vi: content-workspace/programs/quote-library-p0/reports/q10-b005-swahili-rights.json."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-26T14:56:59.295053+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi hai bên mạnh xung đột, người ít quyền lực có thể chịu hậu quả lớn nhất.",
+        "semantic_intent": "Hai con voi xô nhau, cỏ chịu thiệt.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -295,16 +295,22 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên African traditions II"
+        "attribution_vi": "Phỏng theo tục ngữ Swahili"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day36.african_traditions_ii_ig.003",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Người no có thể khó hiểu người đói: trải nghiệm khác nhau giới hạn phán đoán.",
+      "text_vi": "Người no bụng khó biết cái đói của người khác.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -319,12 +325,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "African traditions II",
-        "work": "Igbo and Swahili proverb scholarship",
-        "source_url": "https://swahiliproverbs.afrst.illinois.edu/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên African traditions II",
-        "source_detail": "Research ID research.day36.african_traditions_ii_ig.003; corpus row 1252; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
+        "author_name": "Tục ngữ Swahili",
+        "work": "Văn xuôi và thơ của người Swahili (1907)",
+        "source_url": "https://archive.org/download/prosaundpoesiede00velt/prosaundpoesiede00velt.pdf",
+        "source_language": "sw",
+        "source_label": "Phỏng theo tục ngữ Swahili",
+        "source_detail": "Carl Velten, Prosa und Poesie der Suaheli (1907), tục ngữ 77, trang in 324 / PDF 344. Nguyên ngữ: ashibaye, hamjui mwenyi njaa. Bản Việt diễn ý bởi Selflo. Nguồn đối chiếu trước đó: Albert Scheven, Hunger–food, mục 2669; danh sách BU mục 8 hỗ trợ đối chiếu. Nguyên ngữ: Ashibaye hamjui mwenye njaa. Bản Việt diễn ý bởi Selflo; xem evidence Q10-B005. Provenance trước biên tập: Research ID research.day36.african_traditions_ii_ig.003; corpus row 1252; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
       },
       "metadata": {
         "concepts": [],
@@ -334,16 +340,16 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify before release"
+        "status": "public_domain",
+        "note": "Nguyên ngữ từ edition Velten 1907, tục ngữ 77. Bản Việt diễn ý do Selflo biên soạn; không dùng bản dịch hiện đại bên ngoài, không phát hành scan/bình giải. Cơ sở quyền và phạm vi: content-workspace/programs/quote-library-p0/reports/q10-b005-swahili-rights.json."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-26T14:56:59.295053+00:00"
       },
       "writing": {
-        "semantic_intent": "Người no có thể khó hiểu người đói: trải nghiệm khác nhau giới hạn phán đoán.",
+        "semantic_intent": "Người no bụng khó biết cái đói của người khác.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -352,9 +358,15 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên African traditions II"
+        "attribution_vi": "Phỏng theo tục ngữ Swahili"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day36.african_traditions_ii_ig.007",

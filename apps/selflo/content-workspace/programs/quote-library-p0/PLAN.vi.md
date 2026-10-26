@@ -1,5 +1,13 @@
 # Kế hoạch thực hiện — 100–200 dòng/đợt
 
+> **B005 / RELEASE 53 ĐANG KIỂM CHỨNG — 2026-10-26:** Owner đã đồng ý phát hành/push đúng 4 câu Swahili. Release 53 cục bộ: 380 quote / 17 story; 376 quote cũ và story descriptor giữ nguyên; 94 tests đạt. Đang đẩy GitHub/kiểm chứng public, chưa cộng 4 câu vào completed. B005 chưa đóng.
+
+> **B005 / CHỜ DUYỆT RELEASE — 2026-10-26:** Hoàn tất hồ sơ quyền cho 4 câu Swahili, AI-approved trên Authoring 93; chưa phát hành. Đóng thêm 1 rights_not_cleared; B005 14 không đạt mới + 4 chờ Release + 2 owner-closed, còn 133. Corpus **686/5.471 đã chốt, còn 4.785**. Release 52 giữ nguyên; 51 tests đạt; chưa commit/push. Bản duyệt `Q10_B005_RELEASE_REVIEW.vi.md`.
+
+> **B005 / SWAHILI — 2026-10-26:** Đã biên tập 5 bản Việt, chuẩn hóa nguồn Swahili và dựng Authoring 92; quyền chưa xác minh nên chưa Release. Chốt thêm 1 không đạt, tổng B005 13 mới + 2 owner-closed, còn 134. Corpus **685/5.471 đã chốt, còn 4.786**. Release 52 giữ nguyên; 36 tests đạt. Chưa commit/push. Xem `Q10_B005_CHECKPOINT.vi.md`.
+
+> **B005 ĐANG MỞ — 2026-10-26:** Đã chốt mới 12 ghi chú nghiên cứu không phù hợp làm quote; bảo toàn 2 owner-closed. B005 còn 135/149 dòng chưa chốt; tìm được đầu mối nguồn cho 6 câu Swahili, chưa approve. Corpus **684/5.471 đã chốt, còn 4.787** (376 released/308 không đạt). Authoring 91 / Release 52 giữ nguyên; 31 tests đạt. Chưa commit/push. Xem `Q10_B005_CHECKPOINT.vi.md`.
+
 > **Checkpoint 2026-10-25:** P0 và Q10.1 đã xong; 662 dòng rà Release có kết luận, public 376 quote ở Release 52. Chuyển Q10.2 theo B005 (149), chưa mở story. Bằng chứng `Q10_1_RELEASE_CLOSURE.vi.md`.
 
 ## P0 — Chuẩn bị một lần

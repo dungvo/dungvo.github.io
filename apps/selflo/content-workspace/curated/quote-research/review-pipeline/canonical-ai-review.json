@@ -4616,10 +4616,20 @@
     },
     {
       "quote_id": "research.day35.african_traditions_i_aka.002",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là hướng dẫn đọc/dịch tục ngữ theo bối cảnh, chưa phải một tục ngữ hoặc góc nhìn đời sống được truy về passage cụ thể. Giữ nguyên provenance; không phát hành ghi chú phương pháp thành lời của truyền thống Akan/Yoruba.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day35.african_traditions_i_aka.002",
+        "reviewed_text_sha256": "a8cee9bd758db367ce18bd874e022341ce6b7fb4670efa841312bc83fc2b4fc3",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day35.african_traditions_i_aka.003",
@@ -4651,108 +4661,258 @@
     },
     {
       "quote_id": "research.day35.african_traditions_i_aka.007",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Dòng mô tả chức năng thương lượng quyền lực của tục ngữ trong nghiên cứu ngôn ngữ. Phù hợp ghi chú phân tích hơn thẻ quote độc lập; không có một tục ngữ nguyên ngữ tương ứng trong hồ sơ.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day35.african_traditions_i_aka.007",
+        "reviewed_text_sha256": "2be55d5ca22716f33ff2976254e66ae0d42b7951c888629555839f904b745f1a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day35.african_traditions_i_aka.008",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là chú thích phương pháp giải thích các tục ngữ trái nhau, cần ví dụ và bối cảnh nghiên cứu. Không biến nhận xét về corpus thành một tục ngữ truyền thống.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day35.african_traditions_i_aka.008",
+        "reviewed_text_sha256": "d5fead0bf9dd570906ce3ebc0ce6ccb5e97bde62f7182d43a309fc22da78f363",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.001",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "release_ready_ai_approved",
+      "review_round": 3,
+      "reviewed_at": "2026-10-26T14:56:59.295053+00:00",
+      "note_vi": "Đã kiểm tra nguồn/edition/quyền và bản Việt diễn ý, tags và tính độc lập; không thấy bản trùng cùng passage trong canonical. Chuẩn bị Release, chưa có owner acceptance/publish. Evidence Q10-B005 và q10-b005-swahili-rights.json.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.day36.african_traditions_ii_ig.001",
+        "reviewed_text_sha256": "7f3d2384335794cb72d28485cbaf6c478567b8aea09047954140b9b62c3c1f6c",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.002",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "release_ready_ai_approved",
+      "review_round": 3,
+      "reviewed_at": "2026-10-26T14:56:59.295053+00:00",
+      "note_vi": "Đã kiểm tra nguồn/edition/quyền và bản Việt diễn ý, tags và tính độc lập; không thấy bản trùng cùng passage trong canonical. Chuẩn bị Release, chưa có owner acceptance/publish. Evidence Q10-B005 và q10-b005-swahili-rights.json.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.day36.african_traditions_ii_ig.002",
+        "reviewed_text_sha256": "5f0a91a34ece1e5a1ddcdc6c6da646812cec792d4f8f18dcb8a0d0944291dbfe",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.003",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "release_ready_ai_approved",
+      "review_round": 3,
+      "reviewed_at": "2026-10-26T14:56:59.295053+00:00",
+      "note_vi": "Đã kiểm tra nguồn/edition/quyền và bản Việt diễn ý, tags và tính độc lập; không thấy bản trùng cùng passage trong canonical. Chuẩn bị Release, chưa có owner acceptance/publish. Evidence Q10-B005 và q10-b005-swahili-rights.json.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.day36.african_traditions_ii_ig.003",
+        "reviewed_text_sha256": "0a2f0294f4462d7f035727d91cdf43f2de9c44971791d052ff6d35bc957aac3e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.004",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "release_ready_ai_approved",
+      "review_round": 3,
+      "reviewed_at": "2026-10-26T14:56:59.295053+00:00",
+      "note_vi": "Đã kiểm tra nguồn/edition/quyền và bản Việt diễn ý, tags và tính độc lập; không thấy bản trùng cùng passage trong canonical. Chuẩn bị Release, chưa có owner acceptance/publish. Evidence Q10-B005 và q10-b005-swahili-rights.json.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "accepted",
+        "reason_code": "passed",
+        "canonical_id": "research.day36.african_traditions_ii_ig.004",
+        "reviewed_text_sha256": "e8f7e6df5c4f59bc40bfbcf5c2a7d4ad28899e2ec2a5caa42e7a7fc0bff565a8",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.005",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 3,
+      "reviewed_at": "2026-10-26T14:56:59.295053+00:00",
+      "note_vi": "Không đủ cơ sở quyền cho edition/bản dịch đang dùng sau khi truy Scheven 2156, thư mục nguồn, tìm biến thể và đối chiếu OCR Taylor 1891/Velten 1907. Farsi là edition 1958, chưa có license/permission hoặc witness cũ xác minh được cho đúng câu. Không loại vì ngoại ngữ hay vì khẳng định bản thân tục ngữ bị độc quyền; đóng rights_not_cleared cho bộ quote hiện tại theo Q-05, không chờ quyền vô thời hạn. Giữ bản Việt/provenance, chỉ mở lại khi owner yêu cầu.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "rights_not_cleared",
+        "canonical_id": "research.day36.african_traditions_ii_ig.005",
+        "reviewed_text_sha256": "e49b97c9ebb05efbe44a0deb1ed09a5f919b14bf18780b159f3cf27f3677db97",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.006",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:32:48.367192+00:00",
+      "note_vi": "Có nguồn tục ngữ Swahili tại Scheven mục 1079; không loại vì ngoại ngữ hay thiếu nguồn. Bản hiện tại thêm phản biện không lãng mạn hóa thất bại, nên không còn là diễn ý trung thành của câu gốc xem vấp là tiến tới. Nếu bỏ phần thêm thì thông điệp lại dễ đồng nhất thất bại với tiến bộ. Không phát hành dưới attribution tục ngữ; giữ nguyên văn bản và provenance để audit, không tạo câu Selflo mới thay thế.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "weak_or_misleading",
+        "canonical_id": "research.day36.african_traditions_ii_ig.006",
+        "reviewed_text_sha256": "5f7954c3e9d8030d572d72ed3bb775a8586dc20746b4182877652a36506a2b64",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.007",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là quy tắc xác định niên đại/biến thể khi thu thập tục ngữ. Nó hướng dẫn người biên soạn, không phải nội dung quote cho người đọc; nguồn trang chủ không xác lập một câu truyền thống.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day36.african_traditions_ii_ig.007",
+        "reviewed_text_sha256": "cca2bcc48b973eeb4d2433b92cc2e674ed76ab284c4cc2a899cdca5a934c09fd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day36.african_traditions_ii_ig.008",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là ghi chú đánh giá mất mát khi dịch, không phải một tục ngữ Swahili/Igbo. Để lại provenance nghiên cứu; không chuyển lời bình của người biên soạn thành wisdom có attribution truyền thống.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day36.african_traditions_ii_ig.008",
+        "reviewed_text_sha256": "362053c7bd7dbb5787ab1dad183069c6caef5427dd6acc7b34ee7c069c3310b5",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.001",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là nguyên tắc biên tập chống gom cả châu lục vào một nhãn nguồn. Có ích cho quản trị corpus, nhưng chính nó không phải tục ngữ Kafa hay quote được truy tới văn bản gốc.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day37.001",
+        "reviewed_text_sha256": "ecda79b243fba7d2659e50f3ab1e3b60846fe7c9f43de14a8632153d031e5569",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.002",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Dòng bàn về chức năng giao tiếp của tục ngữ như một đối tượng nghiên cứu. Không có tục ngữ hoặc tình huống cụ thể cho người đọc; không phát hành dưới nhãn truyền thống Kafa.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day37.002",
+        "reviewed_text_sha256": "1aec9abd7d0ec6e707265d40bfe41409b7abfbf1abd24693ba7f9dc863b35046",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.003",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là lưu ý phương pháp về cách đánh giá sự khôn ngoan trong ngữ cảnh sử dụng câu nói. Cần trường hợp cụ thể để thành nội dung đọc; không phải một tục ngữ Kafa đã có passage.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day37.003",
+        "reviewed_text_sha256": "05ff108b7ddcea47ff4c96c96e320e2b78e7bba0c1ac86c4578ff1c4cdb424fd",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.004",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là hướng dẫn lưu biến thể trong dữ liệu truyền khẩu. Từ dữ liệu/lỗi/xóa cho thấy đối tượng là người nghiên cứu corpus; không phải quote đời sống dành cho người đọc Selflo.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day37.004",
+        "reviewed_text_sha256": "b2a0416f81b8f407d87407f5d703d60a0ac5d6c3eecdc51d8e233d3a43566102",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.005",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là ghi chú chuyên môn về dịch thuật và quan hệ xã hội trong ngôn ngữ. Không có câu nguyên ngữ để dịch; không dùng nhãn Kafa để biến bình luận nghiên cứu thành tục ngữ.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day37.005",
+        "reviewed_text_sha256": "ded6ded4d73db013cd37713aefb23d2033cdf1fc2d94cc91333b28abc57fb1ca",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.006",
@@ -4805,17 +4965,37 @@
     },
     {
       "quote_id": "research.day37.013",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là mô tả cơ chế hài hước/nghịch lý trong tục ngữ, nhưng không có một câu hài hước hay nghịch lý thực tế. Hợp làm ghi chú phân tích có ví dụ hơn thẻ quote đứng riêng.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day37.013",
+        "reviewed_text_sha256": "7429b25c243a509fada153a9bfaa8e301791ec6a1d53b378d6cca2b885d94f3e",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.014",
-      "decision": "ready_for_owner_review",
-      "review_round": 1,
-      "reviewed_at": "2026-09-24T23:01:46Z",
-      "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
+      "decision": "round1_not_pass",
+      "review_round": 2,
+      "reviewed_at": "2026-10-26T14:22:19.951557+00:00",
+      "note_vi": "Đây là hướng dẫn cho người đọc phục hồi điều kiện của một câu nói; chưa có câu nguồn cụ thể. Giữ ở provenance nghiên cứu, không phát hành nhận xét phương pháp dưới attribution truyền thống.",
+      "reviewed_by": "ai:codex",
+      "closure": {
+        "program_id": "quote-closure-5471-2026-10-25",
+        "batch_id": "Q10-B005",
+        "verdict": "not_accepted",
+        "reason_code": "not_reader_quote",
+        "canonical_id": "research.day37.014",
+        "reviewed_text_sha256": "b3db24e7be0edea20a6b914b14064ba5dca5a5978b5e5f2c87ced9c18e59b98a",
+        "evidence_path": "content-workspace/programs/quote-library-p0/reports/q10-b005-review.json"
+      }
     },
     {
       "quote_id": "research.day37.015",

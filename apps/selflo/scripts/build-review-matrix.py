@@ -329,6 +329,8 @@ def main():
             return 'held_not_passed', 'Giữ ngoài hàng đề xuất cho đến khi có nội dung hoặc bằng chứng mới.'
         if decision == 'story_review_required':
             return 'needs_story_review', 'AI review quote cùng story liên kết; giữ Authoring nếu story chưa đạt gate.'
+        if decision == 'release_ready_ai_approved':
+            return 'ready_for_owner_review', 'AI đã duyệt; chờ owner nghiệm thu Release và lệnh phát hành có ủy quyền.'
         if decision in ('ready_for_owner_review', 'release_shortlist'):
             return 'ready_for_ai_review', 'AI review nội dung, nguồn, quyền và bản dịch; đạt đủ gate thì Release với reviewer ai:codex.'
         if row.get('id') in duplicate_loser_ids:

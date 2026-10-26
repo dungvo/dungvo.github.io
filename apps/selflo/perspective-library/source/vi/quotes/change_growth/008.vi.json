@@ -685,10 +685,10 @@
     },
     {
       "id": "research.day36.african_traditions_ii_ig.002",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Muốn lấy điều ở thấp, đôi khi phải cúi xuống: mục tiêu có thể đòi hỏi thay đổi tư thế hoặc cách tiếp cận.",
+      "text_vi": "Muốn lấy đồ dưới gầm giường, phải cúi xuống.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -705,12 +705,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "African traditions II",
-        "work": "Igbo and Swahili proverb scholarship",
-        "source_url": "https://swahiliproverbs.afrst.illinois.edu/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên African traditions II",
-        "source_detail": "Research ID research.day36.african_traditions_ii_ig.002; corpus row 1251; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
+        "author_name": "Tục ngữ Swahili",
+        "work": "Tục ngữ từ vùng Swahili (1891)",
+        "source_url": "https://www.maktaba.org/download/file/547/African_aphorisms_-_methali_za_kiswahili_.pdf",
+        "source_language": "sw",
+        "source_label": "Phỏng theo tục ngữ Swahili",
+        "source_detail": "W. E. Taylor, African Aphorisms (1891), §316, trang in 71 / trang PDF 84. Nguyên ngữ: Mtaka cha mvunguni huinama. Bản Việt diễn ý bởi Selflo; xem evidence Q10-B005. Provenance trước biên tập: Research ID research.day36.african_traditions_ii_ig.002; corpus row 1251; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
       },
       "metadata": {
         "concepts": [],
@@ -723,16 +723,16 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify before release"
+        "status": "public_domain",
+        "note": "Nguyên ngữ từ edition Taylor 1891, passage/locator đã đối chiếu scan. Bản Việt diễn ý do Selflo biên soạn; không dùng bản dịch hiện đại bên ngoài, không phát hành scan/bình giải. Cơ sở quyền và phạm vi: content-workspace/programs/quote-library-p0/reports/q10-b005-swahili-rights.json."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-26T14:56:59.295053+00:00"
       },
       "writing": {
-        "semantic_intent": "Muốn lấy điều ở thấp, đôi khi phải cúi xuống: mục tiêu có thể đòi hỏi thay đổi tư thế hoặc cách tiếp cận.",
+        "semantic_intent": "Muốn lấy đồ dưới gầm giường, phải cúi xuống.",
         "observation_key": null,
         "structure_pattern": "research_candidate"
       },
@@ -741,9 +741,15 @@
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên African traditions II"
+        "attribution_vi": "Phỏng theo tục ngữ Swahili"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:folklore"
+      ]
     }
   ]
 }

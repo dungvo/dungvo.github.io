@@ -1,5 +1,13 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
+> **B005 / RELEASE 53 ĐANG KIỂM CHỨNG — 2026-10-26:** Owner đã đồng ý phát hành/push đúng 4 câu Swahili. Release 53 cục bộ: 380 quote / 17 story; 376 quote cũ và story descriptor giữ nguyên; 94 tests đạt. Đang đẩy GitHub/kiểm chứng public, chưa cộng 4 câu vào completed. B005 chưa đóng.
+
+> **B005 / CHỜ DUYỆT RELEASE — 2026-10-26:** Hoàn tất hồ sơ quyền cho 4 câu Swahili, AI-approved trên Authoring 93; chưa phát hành. Đóng thêm 1 rights_not_cleared; B005 14 không đạt mới + 4 chờ Release + 2 owner-closed, còn 133. Corpus **686/5.471 đã chốt, còn 4.785**. Release 52 giữ nguyên; 51 tests đạt; chưa commit/push. Bản duyệt `Q10_B005_RELEASE_REVIEW.vi.md`.
+
+> **B005 / SWAHILI — 2026-10-26:** Đã biên tập 5 bản Việt, chuẩn hóa nguồn Swahili và dựng Authoring 92; quyền chưa xác minh nên chưa Release. Chốt thêm 1 không đạt, tổng B005 13 mới + 2 owner-closed, còn 134. Corpus **685/5.471 đã chốt, còn 4.786**. Release 52 giữ nguyên; 36 tests đạt. Chưa commit/push. Xem `Q10_B005_CHECKPOINT.vi.md`.
+
+> **B005 ĐANG MỞ — 2026-10-26:** Đã chốt mới 12 ghi chú nghiên cứu không phù hợp làm quote; bảo toàn 2 owner-closed. B005 còn 135/149 dòng chưa chốt; tìm được đầu mối nguồn cho 6 câu Swahili, chưa approve. Corpus **684/5.471 đã chốt, còn 4.787** (376 released/308 không đạt). Authoring 91 / Release 52 giữ nguyên; 31 tests đạt. Chưa commit/push. Xem `Q10_B005_CHECKPOINT.vi.md`.
+
 > **B004 VÀ Q10.1 ĐÃ ĐÓNG — 2026-10-25:** B004 165 câu: 87 giữ/78 loại, sửa 62 bản. Mốc rà Release đủ **662/662**: 376 giữ, 286 không đạt. Release 52 public xác nhận toàn bộ 376 quote / 17 story qua 9 pack/checksum; 94 tests đạt. Corpus **672/5.471 đã chốt, còn 4.799** (gồm 10 owner-closed). Commit `da78a80`. Tiếp B005 (149), mốc khép kín Authoring; story tạm dừng.
 
 > **Q10-B004 — 2026-10-25:** Đã review 165 câu: 87 giữ, 78 không đạt; sửa 62 văn bản. Authoring 91 / Release 52: 1.851/376 quote, 63/17 story; 94 tests đạt. Đối soát Q10.1 đủ 662 dòng (376 giữ/286 loại), chờ public để đóng mốc. Chưa mở B005/story. Xem `Q10_B004_CHECKPOINT.vi.md`.
@@ -21,7 +29,7 @@
 **Ưu tiên:** P0
 **Trạng thái tổng:** Ưu tiên duy nhất: lập và thực hiện kế hoạch khép kín 5.471 dòng quote. Story tạm dừng theo owner ngày 2026-10-25. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
-**Cập nhật gần nhất:** 2026-10-25 — Authoring 91 / Release 52 (1.851/376 quote; 63/17 story); 94 tests đạt; Q10.1 đã đóng sau public.
+**Cập nhật gần nhất:** 2026-10-26 — B005: 4 chờ owner Release acceptance, 14 không đạt mới, 2 owner-closed; còn 133. Authoring 93 / Release 52; 51 tests đạt.
 **Owner duyệt cuối:** Dũng
 **Phạm vi:** Review toàn bộ corpus; đưa mọi quote đủ điều kiện lên Release; kết luận rõ cho mọi dòng không đủ điều kiện.
 
@@ -80,4 +88,4 @@ R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ 
 
 ## Đúng một bước tiếp theo
 
-Mở Q10-B005 (149 câu), mốc Q10.2 khép kín Authoring. Q10.1 đã đóng đủ 662/662; làm từng mốc tuần tự. Không mở lại câu không đạt và không chuyển sang story.
+Đẩy B005 đã được authorize và kiểm chứng public Release 53/9 pack; chỉ sau khi khớp mới cộng bốn câu vào completed. B005 chưa đóng, chưa mở B006/story.

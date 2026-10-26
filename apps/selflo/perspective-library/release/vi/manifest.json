@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 52,
-  "content_version": "quote-closure-q10-b004-2026-10-25",
+  "library_revision": 53,
+  "content_version": "quote-closure-q10-b005-rights-2026-10-26",
   "language": "vi",
-  "generated_at": "2026-10-25T11:34:08Z",
+  "generated_at": "2026-10-26T15:03:14Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -199,20 +199,20 @@
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 22,
-      "path": "themes/attention.vi.r22.json",
+      "revision": 23,
+      "path": "themes/attention.vi.r23.json",
       "media_type": "application/json",
-      "sha256": "832832e511f3c137c7531bd5531738c3b506249200fc1511ebba328ad0bae997",
-      "byte_count": 115542
+      "sha256": "7ad7a76b8280c2708bb23da57c343a13773f9f4335185f8420b96eb6591dedc8",
+      "byte_count": 118430
     },
     {
       "id": "theme.change_growth.vi",
       "kind": "quote_pack",
-      "revision": 20,
-      "path": "themes/change-growth.vi.r20.json",
+      "revision": 21,
+      "path": "themes/change-growth.vi.r21.json",
       "media_type": "application/json",
-      "sha256": "1dd9277b15cd05043e8da0a8f3cdee184342fab3634542a2d0b984511d5a5b3a",
-      "byte_count": 95190
+      "sha256": "7a167d77d7e0128d785e469e62f53d68621971386d937dbdcad22940b167c7f1",
+      "byte_count": 98047
     },
     {
       "id": "theme.emotion.vi",
@@ -253,11 +253,11 @@
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 26,
-      "path": "themes/self-understanding.vi.r26.json",
+      "revision": 27,
+      "path": "themes/self-understanding.vi.r27.json",
       "media_type": "application/json",
-      "sha256": "c0802fae371eaefa1c8976c92bd1c976a11da6a97b429bd310ac59ea6ca7df3d",
-      "byte_count": 333631
+      "sha256": "84f202d2edcf1fb8dc724c82a8c31655fee9ef6bec71b85cefedf569492c8f85",
+      "byte_count": 339297
     },
     {
       "id": "theme.work_achievement.vi",

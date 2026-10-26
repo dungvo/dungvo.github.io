@@ -1,0 +1,92 @@
+{
+  "schema_version": "selflo.quote-source-rights-review.v1",
+  "batch_id": "Q10-B005",
+  "reviewed_by": "ai:codex",
+  "reviewed_at": "2026-10-26T14:56:59.295053+00:00",
+  "references": {
+    "us": "https://www.copyright.gov/circs/circ22.pdf",
+    "uk": "https://www.gov.uk/copyright/how-long-copyright-lasts",
+    "taylor": "https://atom.aim25.com/index.php/taylor-william-ernest-3?sf_culture=en",
+    "germany": "https://www.gesetze-im-internet.de/englisch_urhg/englisch_urhg.html",
+    "velten": "https://commons.wikimedia.org/wiki/File:Prosa_und_Poesie_der_Suaheli_(IA_prosaundpoesiede00velt).pdf",
+    "velten_pdf": "https://archive.org/download/prosaundpoesiede00velt/prosaundpoesiede00velt.pdf",
+    "farsi": "https://www.si.edu/object/siris_sil_951327"
+  },
+  "scope_vi": "Đánh giá nguồn của đúng 4 bản Việt trong gói này. Dùng chữ tục ngữ đã in trong edition 1891/1907 và bản Việt do Selflo biên soạn; không phát hành ảnh scan, bình giải/bản dịch hiện đại của Scheven/BU hay ghi chú tay. Không coi quyền metadata của website là quyền tác phẩm. Đây là cơ sở quyền cho pipeline content, không phải khẳng định mọi tài sản trên website đều public domain.",
+  "findings": [
+    {
+      "id": "historical-edition-us",
+      "source": "us",
+      "finding_vi": "Circular 22 xác nhận quyền tác phẩm xuất bản/copyright trước 1931 đã hết tại Hoa Kỳ; đối chiếu riêng edition 1891/1907, không áp dụng cho edition mới hay phần bổ sung hiện đại."
+    },
+    {
+      "id": "taylor-origin",
+      "sources": [
+        "uk",
+        "taylor"
+      ],
+      "finding_vi": "Nguồn lưu trữ xác nhận Taylor mất năm 1927; GOV.UK nêu thời hạn tác phẩm văn học là 70 năm sau khi tác giả chết. Đối tượng sử dụng là ba câu đã in năm 1891, không phải bản dịch hiện đại. Giữ tác giả truyền khẩu khuyết danh và nhận diện Taylor là người sưu tầm, không phải tác giả tục ngữ."
+    },
+    {
+      "id": "velten-origin",
+      "sources": [
+        "germany",
+        "velten"
+      ],
+      "finding_vi": "Tục ngữ khuyết danh đã in năm 1907, §66 và §69 quy định 70 năm từ công bố và cách tính cuối năm cho tác phẩm khuyết danh. Dùng nguyên ngữ in tại tục ngữ 77; không dùng ảnh, ghi chú tay hoặc dịch Đức hiện đại. Commons xác nhận trạng thái PD tại Hoa Kỳ cho đúng scan 1907; không dùng nhãn Commons đơn lẻ để suy toàn cầu."
+    },
+    {
+      "id": "selflo-translation",
+      "finding_vi": "Bốn bản Việt trước/sau được lưu trong report từng item; biên soạn từ nguyên ngữ/hình ảnh của edition cũ. Không sao chép bản Việt ngoài và không dùng bản Anh hiện đại làm đầu vào được phát hành. Kiểm tra nguyên ngữ, nghĩa, sắc thái diễn ý và nhãn Phỏng theo."
+    },
+    {
+      "id": "hiari-not-cleared",
+      "sources": [
+        "farsi"
+      ],
+      "finding_vi": "Scheven 2156 dẫn F/B/H/L/SWA/MEM/KS; thư viện Smithsonian xác nhận edition Farsi 1958. Đã tra câu chính xác/biến thể và tìm trong OCR toàn bộ Taylor 1891 và Velten 1907; không xác lập được witness cũ tương ứng hoặc license/permission cho edition đang dùng. Không khẳng định tục ngữ hay ý tự do bị độc quyền; chỉ kết luận hồ sơ hiện tại không đủ gate. Không gửi yêu cầu quyền cho bên thứ ba."
+    }
+  ],
+  "items": [
+    {
+      "id": "research.day36.african_traditions_ii_ig.001",
+      "canonical_path": "perspective-library/source/vi/quotes/self_understanding/034.vi.json",
+      "text_sha256": "7f3d2384335794cb72d28485cbaf6c478567b8aea09047954140b9b62c3c1f6c",
+      "source_url": "https://www.maktaba.org/download/file/547/African_aphorisms_-_methali_za_kiswahili_.pdf",
+      "source_locator": "W. E. Taylor, African Aphorisms (1891), §412, trang in 98 / trang PDF 111",
+      "rights_verdict": "public_domain",
+      "editorial_verdict": "accepted_pending_owner_release",
+      "duplicate_passage_check": "no_other_canonical_witness_found"
+    },
+    {
+      "id": "research.day36.african_traditions_ii_ig.002",
+      "canonical_path": "perspective-library/source/vi/quotes/change_growth/008.vi.json",
+      "text_sha256": "5f0a91a34ece1e5a1ddcdc6c6da646812cec792d4f8f18dcb8a0d0944291dbfe",
+      "source_url": "https://www.maktaba.org/download/file/547/African_aphorisms_-_methali_za_kiswahili_.pdf",
+      "source_locator": "W. E. Taylor, African Aphorisms (1891), §316, trang in 71 / trang PDF 84",
+      "rights_verdict": "public_domain",
+      "editorial_verdict": "accepted_pending_owner_release",
+      "duplicate_passage_check": "no_other_canonical_witness_found"
+    },
+    {
+      "id": "research.day36.african_traditions_ii_ig.003",
+      "canonical_path": "perspective-library/source/vi/quotes/self_understanding/034.vi.json",
+      "text_sha256": "0a2f0294f4462d7f035727d91cdf43f2de9c44971791d052ff6d35bc957aac3e",
+      "source_url": "https://archive.org/download/prosaundpoesiede00velt/prosaundpoesiede00velt.pdf",
+      "source_locator": "Carl Velten, Prosa und Poesie der Suaheli (1907), tục ngữ 77, trang in 324 / PDF 344",
+      "rights_verdict": "public_domain",
+      "editorial_verdict": "accepted_pending_owner_release",
+      "duplicate_passage_check": "no_other_canonical_witness_found"
+    },
+    {
+      "id": "research.day36.african_traditions_ii_ig.004",
+      "canonical_path": "perspective-library/source/vi/quotes/attention/014.vi.json",
+      "text_sha256": "e8f7e6df5c4f59bc40bfbcf5c2a7d4ad28899e2ec2a5caa42e7a7fc0bff565a8",
+      "source_url": "https://www.maktaba.org/download/file/547/African_aphorisms_-_methali_za_kiswahili_.pdf",
+      "source_locator": "W. E. Taylor, African Aphorisms (1891), §304, trang in 69 / trang PDF 82",
+      "rights_verdict": "public_domain",
+      "editorial_verdict": "accepted_pending_owner_release",
+      "duplicate_passage_check": "no_other_canonical_witness_found"
+    }
+  ]
+}

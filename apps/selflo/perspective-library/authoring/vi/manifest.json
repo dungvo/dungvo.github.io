@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 91,
-  "content_version": "quote-closure-q10-b004-2026-10-25",
+  "library_revision": 93,
+  "content_version": "quote-closure-q10-b005-rights-2026-10-26",
   "language": "vi",
-  "generated_at": "2026-10-25T10:00:11Z",
+  "generated_at": "2026-10-26T14:57:02Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -208,29 +208,29 @@
     {
       "id": "theme.adversity_resilience.vi",
       "kind": "quote_pack",
-      "revision": 34,
-      "path": "themes/adversity-resilience.vi.r34.json",
+      "revision": 35,
+      "path": "themes/adversity-resilience.vi.r35.json",
       "media_type": "application/json",
-      "sha256": "5e010f9a35c0c1e9b680c5a6e1cf78b2f3f1b4a6f11170cc81a8ddcfdf183d9c",
-      "byte_count": 384797
+      "sha256": "7c35d8a738c03727c98f559e13a0a46a0473a99c5f3e9ed77b2b37b58a3b3c3a",
+      "byte_count": 384953
     },
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 37,
-      "path": "themes/attention.vi.r37.json",
+      "revision": 39,
+      "path": "themes/attention.vi.r39.json",
       "media_type": "application/json",
-      "sha256": "6ebcade0e80da1bc657fd6bc984b510097357317ad9a0b872f8f0049fe8003f7",
-      "byte_count": 686278
+      "sha256": "5fb05cd8450483d8b19e868893d16c107f1469aa721bd4461b6097c16355d881",
+      "byte_count": 686958
     },
     {
       "id": "theme.change_growth.vi",
       "kind": "quote_pack",
-      "revision": 34,
-      "path": "themes/change-growth.vi.r34.json",
+      "revision": 36,
+      "path": "themes/change-growth.vi.r36.json",
       "media_type": "application/json",
-      "sha256": "e41335cbd60b1e1734bb6b9e9ab581185b57ceb71c4dca66b8c0734491accd81",
-      "byte_count": 279883
+      "sha256": "3ca1a2d9603a57a8508905d9bf67444e174633d8dd71387abeb208a943238a17",
+      "byte_count": 280426
     },
     {
       "id": "theme.emotion.vi",
@@ -271,11 +271,11 @@
     {
       "id": "theme.self_understanding.vi",
       "kind": "quote_pack",
-      "revision": 47,
-      "path": "themes/self-understanding.vi.r47.json",
+      "revision": 49,
+      "path": "themes/self-understanding.vi.r49.json",
       "media_type": "application/json",
-      "sha256": "fa5bdfe79c6e628945886e1c85288c19d36ba74109cbdae95071775910675e82",
-      "byte_count": 1496652
+      "sha256": "fc563b2e2913eb4abc4e1644a7d2ed59f32d194d1f4167a2a941092837c933dc",
+      "byte_count": 1498086
     },
     {
       "id": "theme.work_achievement.vi",
