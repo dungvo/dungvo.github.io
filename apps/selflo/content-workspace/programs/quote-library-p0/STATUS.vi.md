@@ -1,5 +1,7 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
+> **B005 / RELEASE 53 PUBLIC — 2026-10-26:** Đã push 0839fe7; xác nhận public 380 quote / 17 story qua manifest và 9 pack/checksum. Bốn câu Swahili mới đúng bản duyệt; 14 câu không đạt vắng mặt. B005 đã chốt 18 mới + 2 owner-closed, còn 129; batch vẫn mở. Corpus **690/5.471 đã chốt, còn 4.781**. 94 tests đạt; tiếp 13 dòng intake còn mở, chưa mở B006/story.
+
 > **B005 / RELEASE 53 ĐANG KIỂM CHỨNG — 2026-10-26:** Owner đã đồng ý phát hành/push đúng 4 câu Swahili. Release 53 cục bộ: 380 quote / 17 story; 376 quote cũ và story descriptor giữ nguyên; 94 tests đạt. Đang đẩy GitHub/kiểm chứng public, chưa cộng 4 câu vào completed. B005 chưa đóng.
 
 > **B005 / CHỜ DUYỆT RELEASE — 2026-10-26:** Hoàn tất hồ sơ quyền cho 4 câu Swahili, AI-approved trên Authoring 93; chưa phát hành. Đóng thêm 1 rights_not_cleared; B005 14 không đạt mới + 4 chờ Release + 2 owner-closed, còn 133. Corpus **686/5.471 đã chốt, còn 4.785**. Release 52 giữ nguyên; 51 tests đạt; chưa commit/push. Bản duyệt `Q10_B005_RELEASE_REVIEW.vi.md`.
@@ -29,7 +31,7 @@
 **Ưu tiên:** P0
 **Trạng thái tổng:** Ưu tiên duy nhất: lập và thực hiện kế hoạch khép kín 5.471 dòng quote. Story tạm dừng theo owner ngày 2026-10-25. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
-**Cập nhật gần nhất:** 2026-10-26 — B005: 4 chờ owner Release acceptance, 14 không đạt mới, 2 owner-closed; còn 133. Authoring 93 / Release 52; 51 tests đạt.
+**Cập nhật gần nhất:** 2026-10-26 — Release 53 public / Authoring 93; 690/5.471 đã chốt, còn 4.781. B005 còn 129; 94 tests đạt, nội dung đã push 0839fe7.
 **Owner duyệt cuối:** Dũng
 **Phạm vi:** Review toàn bộ corpus; đưa mọi quote đủ điều kiện lên Release; kết luận rõ cho mọi dòng không đủ điều kiện.
 
@@ -88,4 +90,4 @@ R1–R6 đã commit/push main tại fb65c40. Không dùng blocker upload Q9 cũ 
 
 ## Đúng một bước tiếp theo
 
-Đẩy B005 đã được authorize và kiểm chứng public Release 53/9 pack; chỉ sau khi khớp mới cộng bốn câu vào completed. B005 chưa đóng, chưa mở B006/story.
+Tiếp 13 dòng intake còn mở của B005, bắt đầu nhóm `research.day35.african_traditions_i_aka.001/.003/.004/.005/.006`: truy passage/ngữ cảnh trước kết luận. B005 còn 129; không mở B006/story.

@@ -1,8 +1,8 @@
 # B005 — Bốn câu Swahili chờ duyệt phát hành
 
-**Trạng thái: owner đã đồng ý phát hành/push trong hội thoại ngày 2026-10-26; đã qua Release gate cục bộ (Release 53), đang đẩy GitHub và kiểm chứng public.**
+**Trạng thái: owner đã đồng ý phát hành/push trong hội thoại ngày 2026-10-26; đã phát hành/push tại 0839fe7; public Release 53 được xác nhận qua manifest và 9 quote pack.**
 
-Phạm vi duyệt chỉ bốn ID dưới đây. Gói đề xuất thêm bốn quote vào Release, không thêm/sửa story, app hoặc contract. Số lượng Release dự kiến 376 → 380 nếu qua gate; chưa tính bốn câu này là hoàn tất.
+Phạm vi duyệt chỉ bốn ID dưới đây. Gói đề xuất thêm bốn quote vào Release, không thêm/sửa story, app hoặc contract. Release đã tăng 376 → 380; bốn câu này đã được kiểm chứng public và tính hoàn tất. B005 vẫn còn 129 dòng.
 
 ## Nội dung để duyệt
 

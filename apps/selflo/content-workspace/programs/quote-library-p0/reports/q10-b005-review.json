@@ -12,7 +12,7 @@
     "accepted": 4,
     "not_accepted": 14,
     "carried_forward_closed": 2,
-    "remaining": 133,
+    "remaining": 129,
     "source_leads_found": 0,
     "rejection_reasons": {
       "not_reader_quote": 12,
@@ -22,7 +22,8 @@
     "rewritten_texts": 5,
     "editorial_drafts_rights_pending": 0,
     "editorial_approved_awaiting_owner_release": 0,
-    "accepted_awaiting_public_verification": 4
+    "accepted_awaiting_public_verification": 0,
+    "released": 4
   },
   "source_observations": [
     {
@@ -279,7 +280,7 @@
         "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
       },
       "verdict": "accepted",
-      "status": "accepted_awaiting_public_verification",
+      "status": "released",
       "note_vi": "Bỏ mức so sánh lớn nhất không có trong nguyên bản; giữ hình ảnh cỏ chịu thiệt khi hai con voi xô nhau. Đã nhìn trực tiếp trang scan và đối chiếu chú thích nyika là cỏ.",
       "source_observation_ids": [
         "bu-swahili",
@@ -487,7 +488,8 @@
         "note_vi": "Bỏ mức so sánh lớn nhất không có trong nguyên bản; giữ hình ảnh cỏ chịu thiệt khi hai con voi xô nhau. Đã nhìn trực tiếp trang scan và đối chiếu chú thích nyika là cỏ. Bản Việt đã sửa tại canonical; quyền vẫn unverified. Chưa đạt gate Release.",
         "reviewed_by": "ai:codex"
       },
-      "reason_code": "passed"
+      "reason_code": "passed",
+      "public_verified_at": "2026-10-26T15:08:12.737781+00:00"
     },
     {
       "ordinal": 10,
@@ -505,7 +507,7 @@
         "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
       },
       "verdict": "accepted",
-      "status": "accepted_awaiting_public_verification",
+      "status": "released",
       "note_vi": "Giữ hình ảnh đồ vật dưới gầm giường; bỏ lời bình trừu tượng về tư thế/cách tiếp cận. Taylor ghi bản huinama, khác biến thể sharti ainame trên trang giảng dạy; không trộn hai witness.",
       "source_observation_ids": [
         "bu-swahili"
@@ -727,7 +729,8 @@
         "note_vi": "Giữ hình ảnh đồ vật dưới gầm giường; bỏ lời bình trừu tượng về tư thế/cách tiếp cận. Taylor ghi bản huinama, khác biến thể sharti ainame trên trang giảng dạy; không trộn hai witness. Bản Việt đã sửa tại canonical; quyền vẫn unverified. Chưa đạt gate Release.",
         "reviewed_by": "ai:codex"
       },
-      "reason_code": "passed"
+      "reason_code": "passed",
+      "public_verified_at": "2026-10-26T15:08:12.737781+00:00"
     },
     {
       "ordinal": 11,
@@ -745,7 +748,7 @@
         "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
       },
       "verdict": "accepted",
-      "status": "accepted_awaiting_public_verification",
+      "status": "released",
       "note_vi": "Bỏ diễn giải khái quát trải nghiệm giới hạn phán đoán; giữ hình ảnh no/đói và dùng khó để tránh khẳng định con người không thể hiểu nhau. Đây là diễn ý, không ghi là dịch sát từng chữ. Chưa đọc edition nguồn L/V/F mà Scheven dẫn.",
       "source_observation_ids": [
         "bu-swahili"
@@ -952,7 +955,8 @@
         "note_vi": "Bỏ diễn giải khái quát trải nghiệm giới hạn phán đoán; giữ hình ảnh no/đói và dùng khó để tránh khẳng định con người không thể hiểu nhau. Đây là diễn ý, không ghi là dịch sát từng chữ. Chưa đọc edition nguồn L/V/F mà Scheven dẫn. Bản Việt đã sửa tại canonical; quyền vẫn unverified. Chưa đạt gate Release.",
         "reviewed_by": "ai:codex"
       },
-      "reason_code": "passed"
+      "reason_code": "passed",
+      "public_verified_at": "2026-10-26T15:08:12.737781+00:00"
     },
     {
       "ordinal": 12,
@@ -970,7 +974,7 @@
         "note_vi": "Full-corpus vòng 1 đạt: nguồn A/B, Selflo Fit High, không trùng exact với canonical."
       },
       "verdict": "accepted",
-      "status": "accepted_awaiting_public_verification",
+      "status": "released",
       "note_vi": "Nguyên bản dùng hình ảnh cơ thể bị xé, mạnh hơn bản diễn ý. Bản Việt giữ xung đột hai phía, bỏ claim giảm khả năng đi sâu. Ghi adapted_wisdom, không giả là nguyên văn dịch sát; cần review fit cuối trước Release.",
       "source_observation_ids": [
         "bu-swahili"
@@ -1192,7 +1196,8 @@
         "note_vi": "Nguyên bản dùng hình ảnh cơ thể bị xé, mạnh hơn bản diễn ý. Bản Việt giữ xung đột hai phía, bỏ claim giảm khả năng đi sâu. Ghi adapted_wisdom, không giả là nguyên văn dịch sát; cần review fit cuối trước Release. Bản Việt đã sửa tại canonical; quyền vẫn unverified. Chưa đạt gate Release.",
         "reviewed_by": "ai:codex"
       },
-      "reason_code": "passed"
+      "reason_code": "passed",
+      "public_verified_at": "2026-10-26T15:08:12.737781+00:00"
     },
     {
       "ordinal": 13,
@@ -3977,7 +3982,7 @@
       "status": "not_started"
     }
   ],
-  "limitations_vi": "Release 53 đã dựng cục bộ, thêm đúng 4 ID được owner đồng ý; chưa đếm completed cho đến kiểm chứng public. B005 vẫn mở. Chưa mở B006/story.",
+  "limitations_vi": "B005 vẫn in_progress: 18 kết luận mới (4 public released + 14 không đạt) và 2 owner-closed mang sang, còn 129 dòng. Không đánh dấu đóng cả batch; chưa mở B006/story.",
   "source_snapshots": [
     {
       "id": "taylor-1891-scan",
@@ -4059,5 +4064,7 @@
     ],
     "scope_vi": "Release đúng 4 quote; commit/push thay đổi Selflo B005; kiểm chứng public; không mở story hoặc file ngoài Selflo."
   },
-  "release_revision": 53
+  "release_revision": 53,
+  "public_verification": "reports/q10-b005-public-verification.json",
+  "release_commit": "0839fe7"
 }
