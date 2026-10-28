@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 53,
-  "content_version": "quote-closure-q10-b005-rights-2026-10-26",
+  "library_revision": 54,
+  "content_version": "three-stories-v3-endings-2026-10-28",
   "language": "vi",
-  "generated_at": "2026-10-26T15:03:14Z",
+  "generated_at": "2026-10-28T00:10:59Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -226,11 +226,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 30,
-      "path": "themes/meaning-values.vi.r30.json",
+      "revision": 31,
+      "path": "themes/meaning-values.vi.r31.json",
       "media_type": "application/json",
-      "sha256": "77e821142d19d62b277e17115605a24c4bbdb9e60ff94db8b46f8baef02f4022",
-      "byte_count": 132379
+      "sha256": "28849fb582c5fc6efc7c7b3d66e514d23e9e08540dc32f0735f2d93386bef8bd",
+      "byte_count": 139855
     },
     {
       "id": "theme.relationships.vi",
@@ -314,6 +314,15 @@
       "byte_count": 21107
     },
     {
+      "id": "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/nguoi-hoa-si-va-buc-tranh-chua-hoan-thanh/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "1fe22ea2cd2f592929b120a0c1f988c6cdaee120862fb146538452b3e985ecc1",
+      "byte_count": 24428
+    },
+    {
       "id": "story.old_man_and_returning_horse",
       "kind": "story",
       "revision": 5,
@@ -395,6 +404,15 @@
       "byte_count": 24572
     },
     {
+      "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "165d75d563e9758013aec941f1ece953cffbbe67a2cb00a25d9b891f77f470a6",
+      "byte_count": 64856
+    },
+    {
       "id": "story.the_compass_does_not_walk_for_you",
       "kind": "story",
       "revision": 10,
@@ -402,6 +420,15 @@
       "media_type": "application/json",
       "sha256": "b380b4ca6eb0495f6e9a1182343f20ac4f3be96bc8af665888e89fdf205d27e9",
       "byte_count": 92646
+    },
+    {
+      "id": "story.tiem_ban_mau_cua_cuoc_doi",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/tiem-ban-mau-cua-cuoc-doi/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "a42e1604424e60a0fa9f897222e2b8309b549daba7a6955f127c22b215aaaac4",
+      "byte_count": 27927
     },
     {
       "id": "story.tree_and_silent_goose",

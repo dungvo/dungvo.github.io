@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **BA TRUYỆN / RELEASE 54 LOCAL — 2026-10-28:** Owner yêu cầu thêm Nhìn lại và câu hỏi suy ngẫm, giữ nguyên truyện. Đã chuyển đúng ba bài sang V3; Authoring 96 / Release 54: 20 story, 383 quote. 94 tests và schema gate đạt, reader cả ba bài đã kiểm tra. Đang push/kiểm chứng public. Chi tiết: `approved-color-stories-2026-10-27/README.md`.
+
 > **B005 / RELEASE 53 PUBLIC — 2026-10-26:** Đã push 0839fe7; xác nhận public 380 quote / 17 story qua manifest và 9 pack/checksum. Bốn câu Swahili mới đúng bản duyệt; 14 câu không đạt vắng mặt. B005 đã chốt 18 mới + 2 owner-closed, còn 129; batch vẫn mở. Corpus **690/5.471 đã chốt, còn 4.781**. 94 tests đạt; tiếp 13 dòng intake còn mở, chưa mở B006/story.
 
 > **B005 / RELEASE 53 ĐANG KIỂM CHỨNG — 2026-10-26:** Owner đã đồng ý phát hành/push đúng 4 câu Swahili. Release 53 cục bộ: 380 quote / 17 story; 376 quote cũ và story descriptor giữ nguyên; 94 tests đạt. Đang đẩy GitHub/kiểm chứng public, chưa cộng 4 câu vào completed. B005 chưa đóng.

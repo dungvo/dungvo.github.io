@@ -68,3 +68,16 @@ Cần chốt scope contract/app này; không cần duyệt lại văn bản truy
 ## Checkpoint để đóng session — 2026-10-28
 
 Toàn bộ canonical source của ba truyện, excerpt links, Authoring payload/manifest và báo cáo này được lưu trên nhánh riêng. Riêng audit sinh tự động `authoring/vi/audit/r95.json` không upload vì automatic approval review từ chối bulk audit; không có nội dung truyện độc quyền nằm trong file audit này. Có thể sinh lại audit từ source bằng publisher trong checkout tạm bắt đầu từ Authoring 94 (commit `caeef780`), chép canonical source hiện tại vào rồi chạy publisher Authoring. Không cần giữ workspace phiên này để khôi phục nội dung. Chưa Release/merge main; blocker định dạng ở trên vẫn còn.
+
+
+## Cập nhật 2026-10-28 — bổ sung phần kết theo yêu cầu mới
+
+Owner yêu cầu giữ nguyên truyện và bổ sung “Nhìn lại” cùng câu hỏi suy ngẫm cho cả ba bài, tiếp tục yêu cầu release. Quyết định này thay thế hạn chế không thêm phần bổ sung ở checkpoint trước; lịch sử phía trên được giữ nguyên.
+
+- Chuyển đúng ba canonical story sang Editorial V3 (content-compatible). Khôi phục hai dòng kết gốc từ vùng takeaway Classic vào cuối body, giữ nguyên từng chữ và thứ tự, bao gồm dấu ⸻ và “Hết.”. Mỗi đoạn thoại giữ thành một turn riêng; không gộp lời của các nhân vật.
+- Thêm một đoạn Nhìn lại và hai câu hỏi mở cho từng truyện, không thêm claim nghiên cứu hoặc kết luận lựa chọn đúng/sai. Không thay contract, schema, app hoặc story cũ.
+- Authoring 96 và Release 54 dựng thành công, có schema gate đầy đủ. Release có 20 story / 383 quote; đúng ba story và ba excerpt mới, mỗi story một quote liên kết. Tất cả descriptor story Release cũ giữ nguyên; mọi checksum manifest đã đối chiếu.
+- 94 tests đạt; git diff --check đạt. Reader public local đã mở cả ba bài, xác minh phần kết nguyên văn nối tiếp trước Nhìn lại và hai câu hỏi. Catalog và Review Matrix đã rebuild.
+- Đang commit/push và kiểm chứng endpoint public; chưa coi local package là đã online.
+
+Bước tiếp theo: xác minh Release 54 trên endpoint public sau deploy.

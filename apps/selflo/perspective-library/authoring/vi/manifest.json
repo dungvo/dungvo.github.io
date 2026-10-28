@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 95,
-  "content_version": "three-approved-stories-2026-10-27",
+  "library_revision": 96,
+  "content_version": "three-stories-v3-endings-2026-10-28",
   "language": "vi",
-  "generated_at": "2026-10-27T00:11:05Z",
+  "generated_at": "2026-10-28T00:10:10Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -541,11 +541,11 @@
     {
       "id": "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/nguoi-hoa-si-va-buc-tranh-chua-hoan-thanh/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/nguoi-hoa-si-va-buc-tranh-chua-hoan-thanh/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "6fad95111d61b63636022fc6d60c972cb2ed62f7cdc4ffc5162168f6d6961a6b",
-      "byte_count": 19907
+      "sha256": "bf07932899639f6a16aa804b484805ab558688d40591a00fbcec981eab181bc1",
+      "byte_count": 24360
     },
     {
       "id": "story.nine_oclock_morning",
@@ -793,11 +793,11 @@
     {
       "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "3d24c503d61d05cadfebd89a698cadc0ea51af6eb70aaa9fd7ba3ddb4307cc35",
-      "byte_count": 45472
+      "sha256": "c3793bd83a1bea6d757238d232b688d06915fcb040bceda0b8d1880f2b47d13d",
+      "byte_count": 64787
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
@@ -838,11 +838,11 @@
     {
       "id": "story.tiem_ban_mau_cua_cuoc_doi",
       "kind": "story",
-      "revision": 1,
-      "path": "stories/tiem-ban-mau-cua-cuoc-doi/story.vi.r1.json",
+      "revision": 2,
+      "path": "stories/tiem-ban-mau-cua-cuoc-doi/story.vi.r2.json",
       "media_type": "application/json",
-      "sha256": "7bca0daef4c9759e58eb51b7656e15b638460e9a6699539932660fb1cf7afda5",
-      "byte_count": 20338
+      "sha256": "2ab3184fce8d8e379f80228dfd6995195d7beeb38847f5d2e7caebe81aeafd56",
+      "byte_count": 27859
     },
     {
       "id": "story.tree_and_silent_goose",

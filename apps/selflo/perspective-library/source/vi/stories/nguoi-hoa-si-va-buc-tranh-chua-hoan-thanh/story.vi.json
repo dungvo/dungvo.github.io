@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.2",
   "entity": "perspective_story",
   "id": "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
   "revision": 1,
   "status": "active",
   "language": "vi",
-  "reader_format": "classic_v1",
+  "reader_format": "editorial_v3",
   "title_vi": "NGƯỜI HỌA SĨ VÀ BỨC TRANH CHƯA HOÀN THÀNH",
   "subtitle_vi": "Một người họa sĩ dành cả đời vẽ bức tranh của mình, cho đến khi những trách nhiệm và lựa chọn buộc ông phải nhìn lại ý nghĩa của việc hoàn thành nó.",
   "hero_image": null,
@@ -47,9 +47,20 @@
         },
         {
           "id": "paragraph_004",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Chỉ cần có màu trong tay ông ấy, chẳng có bức tranh nào là không thể cứu vãn.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_004_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Chỉ cần có màu trong tay ông ấy, chẳng có bức tranh nào là không thể cứu vãn.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_005",
@@ -167,9 +178,20 @@
         },
         {
           "id": "paragraph_024",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cha có thể bán bức tranh này không? Chúng ta cần tiền sửa lại mái nhà trước mùa mưa.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_024_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cha có thể bán bức tranh này không? Chúng ta cần tiền sửa lại mái nhà trước mùa mưa.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_025",
@@ -179,9 +201,20 @@
         },
         {
           "id": "paragraph_026",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Đây là bức tranh cả đời cha. Cha không thể bán.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_026_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Đây là bức tranh cả đời cha. Cha không thể bán.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_027",
@@ -407,9 +440,20 @@
         },
         {
           "id": "paragraph_064",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cha đã dành cả đời cho bức tranh này. Cha có tiếc vì không hoàn thành nó không?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_064_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cha đã dành cả đời cho bức tranh này. Cha có tiếc vì không hoàn thành nó không?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_065",
@@ -419,9 +463,20 @@
         },
         {
           "id": "paragraph_066",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Có chứ.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_066_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Có chứ.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_067",
@@ -431,9 +486,20 @@
         },
         {
           "id": "paragraph_068",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Vậy cha nghĩ mình đã lựa chọn sai?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_068_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Vậy cha nghĩ mình đã lựa chọn sai?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_069",
@@ -443,9 +509,20 @@
         },
         {
           "id": "paragraph_070",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cha không biết. Đến tận bây giờ, cha vẫn không biết.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_070_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cha không biết. Đến tận bây giờ, cha vẫn không biết.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_071",
@@ -455,9 +532,20 @@
         },
         {
           "id": "paragraph_072",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Ngày xưa, cha tưởng mình giỏi vì có thể biến một vết mực hỏng thành thứ đẹp đẽ.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_072_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Ngày xưa, cha tưởng mình giỏi vì có thể biến một vết mực hỏng thành thứ đẹp đẽ.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_073",
@@ -467,15 +555,37 @@
         },
         {
           "id": "paragraph_074",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Sau này, cha mới hiểu rằng không phải vết mực nào cũng cần biến thành hoa, không phải khoảng trống nào cũng cần lấp đầy.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_074_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Sau này, cha mới hiểu rằng không phải vết mực nào cũng cần biến thành hoa, không phải khoảng trống nào cũng cần lấp đầy.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_075",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Vậy điều quan trọng nhất khi vẽ một bức tranh là gì hả cha?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_075_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Vậy điều quan trọng nhất khi vẽ một bức tranh là gì hả cha?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_076",
@@ -485,9 +595,20 @@
         },
         {
           "id": "paragraph_077",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Là biết mình đang vẽ điều gì, vì ai, và mình sẵn sàng đánh đổi điều gì cho nó.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_077_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Là biết mình đang vẽ điều gì, vì ai, và mình sẵn sàng đánh đổi điều gì cho nó.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_078",
@@ -497,9 +618,20 @@
         },
         {
           "id": "paragraph_079",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Con có thể vẽ tiếp không?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_079_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Con có thể vẽ tiếp không?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_080",
@@ -509,9 +641,20 @@
         },
         {
           "id": "paragraph_081",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Được. Nhưng đừng cố vẽ tiếp con đường của cha. Hãy vẽ con đường mà con muốn đi.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_081_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Được. Nhưng đừng cố vẽ tiếp con đường của cha. Hãy vẽ con đường mà con muốn đi.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_082",
@@ -548,13 +691,25 @@
           "type": "paragraph",
           "style": "narrative",
           "text_vi": "Bức tranh vẫn chưa hoàn thành."
+        },
+        {
+          "id": "original_ending_1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng lần này, không ai nghĩ rằng nó cần phải hoàn thành ngay."
+        },
+        {
+          "id": "original_ending_2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "⸻"
         }
       ]
     }
   ],
   "takeaway": {
-    "title_vi": "Nhưng lần này, không ai nghĩ rằng nó cần phải hoàn thành ngay.",
-    "text_vi": "⸻"
+    "title_vi": "Nhìn lại",
+    "text_vi": "Người họa sĩ vẫn tiếc phần tranh dang dở, dù lựa chọn ấy đã giúp gia đình có một mái nhà lành lặn. Sự tiếc nuối có thể ở lại cùng một quyết định mà ta vẫn có lý do để giữ."
   },
   "authorship": {
     "author_id": "selflo",
@@ -574,7 +729,22 @@
   },
   "review": {
     "status": "approved",
-    "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-10-26T23:55:32Z"
+    "reviewed_by": "owner:dungvo; ai:codex",
+    "reviewed_at": "2026-10-28T00:10:04Z"
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Khi nhìn lại một lựa chọn còn khiến bạn tiếc nuối, điều gì đã khiến bạn chọn như vậy vào lúc đó?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_2",
+        "text_vi": "Trong điều bạn đang theo đuổi, phần nào bạn muốn giữ, và phần nào bạn sẵn lòng thay đổi?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
   }
 }

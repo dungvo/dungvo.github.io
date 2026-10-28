@@ -1,51 +1,51 @@
 {
   "schema_version": "selflo.content-index-manifest.v1",
-  "generated_at": "2026-10-11T10:32:37.815981Z",
+  "generated_at": "2026-10-28T00:11:25.403086Z",
   "channel": "authoring",
-  "item_count": 1902,
+  "item_count": 1920,
   "search_mode": "local_first",
   "shards": [
     {
       "path": "quote-0001.json",
       "content_type": "quote",
       "item_count": 500,
-      "byte_count": 637891,
-      "sha256": "ff3b759fcc32584f1d2b4738104f85b2976a26426acf5358f419853702061f0d"
+      "byte_count": 634169,
+      "sha256": "c71d8a863f3156d3be85e6326bda15ac8bdfbd076d74cd5155f8d0c0181a548f"
     },
     {
       "path": "quote-0002.json",
       "content_type": "quote",
       "item_count": 500,
-      "byte_count": 645176,
-      "sha256": "f3ed816eb05074692aab552360ffdc57bb216ea5c4046c2c467ef061e9e13ff3"
+      "byte_count": 640984,
+      "sha256": "43875b5763f6e85ad3b1d074c42dee43b410de7b4436cefd85df4cf8fd0e66a2"
     },
     {
       "path": "quote-0003.json",
       "content_type": "quote",
       "item_count": 500,
-      "byte_count": 655113,
-      "sha256": "613855e558bee91b6543e97c5f21a7cae8676143b1a2a90056d23d43a004d669"
+      "byte_count": 653502,
+      "sha256": "cb02f29e2b20bd8e743b0d84803a254e0c9838df725c61bfd742c700feca49fa"
     },
     {
       "path": "quote-0004.json",
       "content_type": "quote",
-      "item_count": 342,
-      "byte_count": 439038,
-      "sha256": "3d7409d136be928877661c72c7fdaf7f4f94b18115695d70ba0b2c396257fa47"
+      "item_count": 354,
+      "byte_count": 451893,
+      "sha256": "5566553e711e7459d6f39b3094fb39f48a2a3a4041063ecd5acc05e0b852db24"
     },
     {
       "path": "story-0001.json",
       "content_type": "story",
-      "item_count": 58,
-      "byte_count": 398874,
-      "sha256": "663344275b48cb057e8d0c45b14a1150211952769ae960b3fad9225a757c50d4"
+      "item_count": 64,
+      "byte_count": 446407,
+      "sha256": "30acf4ad57ab1b8cc22a47613be9fb60515b4a9e0e3bc4af68c5aabde54bd4f2"
     },
     {
       "path": "knowledge_insight-0001.json",
       "content_type": "knowledge_insight",
       "item_count": 2,
       "byte_count": 23725,
-      "sha256": "0ede72d961093d083dd08bc5f58361f24669f792dc8b0a6ea799b3c4c4926291"
+      "sha256": "2bf1cf5526ff66081c72f6c9c1f00b253d98d6975f496143ed4a8e538e019c2e"
     }
   ]
 }

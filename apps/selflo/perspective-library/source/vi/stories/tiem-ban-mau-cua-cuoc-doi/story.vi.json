@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.2",
   "entity": "perspective_story",
   "id": "story.tiem_ban_mau_cua_cuoc_doi",
   "revision": 1,
   "status": "active",
   "language": "vi",
-  "reader_format": "classic_v1",
+  "reader_format": "editorial_v3",
   "title_vi": "TIỆM BÁN MÀU CỦA CUỘC ĐỜI",
   "subtitle_vi": "Một chàng trai tìm kiếm những màu sắc đẹp nhất cho cuộc đời, nhưng dần khám phá rằng không phải màu nào cũng có thể lựa chọn hay loại bỏ.",
   "hero_image": null,
@@ -89,9 +89,20 @@
         },
         {
           "id": "paragraph_011",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cháu muốn mua màu đẹp nhất để vẽ cuộc đời mình.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_011_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cháu muốn mua màu đẹp nhất để vẽ cuộc đời mình.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_012",
@@ -113,9 +124,20 @@
         },
         {
           "id": "paragraph_015",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cháu chỉ muốn những màu đẹp thôi.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_015_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cháu chỉ muốn những màu đẹp thôi.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_016",
@@ -125,9 +147,20 @@
         },
         {
           "id": "paragraph_017",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Vậy cháu cứ chọn.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_017_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Vậy cháu cứ chọn.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_018",
@@ -197,9 +230,20 @@
         },
         {
           "id": "paragraph_029",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Ông đã bán cho cháu những màu đẹp nhất. Tại sao bức tranh của cháu vẫn trở nên xấu xí?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_029_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Ông đã bán cho cháu những màu đẹp nhất. Tại sao bức tranh của cháu vẫn trở nên xấu xí?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_030",
@@ -209,15 +253,37 @@
         },
         {
           "id": "paragraph_031",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cháu đã dùng hết màu chưa?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_031_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cháu đã dùng hết màu chưa?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_032",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Chưa. Cháu vẫn còn rất nhiều màu hồng và màu vàng. Nhưng cháu không biết phải vẽ chúng vào đâu nữa.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_032_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Chưa. Cháu vẫn còn rất nhiều màu hồng và màu vàng. Nhưng cháu không biết phải vẽ chúng vào đâu nữa.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_033",
@@ -227,9 +293,20 @@
         },
         {
           "id": "paragraph_034",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Thử màu này xem.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_034_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Thử màu này xem.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_035",
@@ -239,9 +316,20 @@
         },
         {
           "id": "paragraph_036",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cuộc đời cháu đã đủ tối rồi. Tại sao ông còn đưa thêm màu đen?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_036_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cuộc đời cháu đã đủ tối rồi. Tại sao ông còn đưa thêm màu đen?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_037",
@@ -299,9 +387,20 @@
         },
         {
           "id": "paragraph_046",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Bức tranh này đẹp thật.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_046_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Bức tranh này đẹp thật.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_047",
@@ -311,9 +410,20 @@
         },
         {
           "id": "paragraph_048",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Nếu không có bóng đêm, cháu có nhận ra ánh đèn ấy không?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_048_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Nếu không có bóng đêm, cháu có nhận ra ánh đèn ấy không?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_049",
@@ -329,21 +439,54 @@
         },
         {
           "id": "paragraph_051",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cháu luôn nghĩ màu hồng là hạnh phúc, màu đen là đau khổ. Nhưng màu sắc tự nó không kể hết câu chuyện.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_051_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cháu luôn nghĩ màu hồng là hạnh phúc, màu đen là đau khổ. Nhưng màu sắc tự nó không kể hết câu chuyện.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_052",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Vậy chỉ cần biết phối màu là cuộc đời sẽ đẹp sao?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_052_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Vậy chỉ cần biết phối màu là cuộc đời sẽ đẹp sao?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_053",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Không. Có những vết mực cháu không thể xóa. Có những khoảng trời cháu không thể làm sáng lên. Và cũng có những điều đẹp đẽ mất đi mà không có màu nào thay thế được.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_053_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Không. Có những vết mực cháu không thể xóa. Có những khoảng trời cháu không thể làm sáng lên. Và cũng có những điều đẹp đẽ mất đi mà không có màu nào thay thế được.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_054",
@@ -443,9 +586,20 @@
         },
         {
           "id": "paragraph_070",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Cha ơi, nếu được vẽ lại cuộc đời, cha sẽ chọn màu gì?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_070_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Cha ơi, nếu được vẽ lại cuộc đời, cha sẽ chọn màu gì?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_071",
@@ -455,21 +609,54 @@
         },
         {
           "id": "paragraph_072",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Ngày trẻ, cha chỉ muốn màu sáng. Khi gặp khó khăn, cha lại nghĩ cuộc đời mình chỉ toàn màu tối.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_072_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Ngày trẻ, cha chỉ muốn màu sáng. Khi gặp khó khăn, cha lại nghĩ cuộc đời mình chỉ toàn màu tối.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_073",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Bây giờ thì sao?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_073_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Bây giờ thì sao?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_074",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Bây giờ cha biết rằng có những ngày rất đẹp, có những ngày rất buồn. Có những chuyện cha làm được, có những chuyện cha bất lực. Và có những lựa chọn đến giờ cha vẫn chưa biết đúng hay sai.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_074_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Bây giờ cha biết rằng có những ngày rất đẹp, có những ngày rất buồn. Có những chuyện cha làm được, có những chuyện cha bất lực. Và có những lựa chọn đến giờ cha vẫn chưa biết đúng hay sai.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_075",
@@ -479,9 +666,20 @@
         },
         {
           "id": "paragraph_076",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Vậy ai quyết định bức tranh của cha đẹp hay xấu?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_076_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Vậy ai quyết định bức tranh của cha đẹp hay xấu?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_077",
@@ -491,21 +689,54 @@
         },
         {
           "id": "paragraph_078",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Có lẽ không ai có thể quyết định hoàn toàn điều đó.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_078_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Có lẽ không ai có thể quyết định hoàn toàn điều đó.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_079",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Ngay cả cha sao?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_079_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Ngay cả cha sao?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_080",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Ngay cả cha.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_080_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Ngay cả cha.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_081",
@@ -515,9 +746,20 @@
         },
         {
           "id": "paragraph_082",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Nhưng cha có thể chọn mình sẽ vẽ gì tiếp theo, khi vẫn còn màu và còn chỗ để vẽ.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_082_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Nhưng cha có thể chọn mình sẽ vẽ gì tiếp theo, khi vẫn còn màu và còn chỗ để vẽ.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_083",
@@ -533,9 +775,20 @@
         },
         {
           "id": "paragraph_085",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Con có cần dùng màu này không?”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_085_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Con có cần dùng màu này không?”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_086",
@@ -545,9 +798,20 @@
         },
         {
           "id": "paragraph_087",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Có thể có, có thể không. Nhưng đừng vội vứt nó đi chỉ vì con chưa biết dùng nó vào đâu.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_087_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Có thể có, có thể không. Nhưng đừng vội vứt nó đi chỉ vì con chưa biết dùng nó vào đâu.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_088",
@@ -569,22 +833,45 @@
         },
         {
           "id": "paragraph_091",
-          "type": "paragraph",
-          "style": "dialogue",
-          "text_vi": "“Không ai được chọn tất cả những màu sắc đến với cuộc đời mình. Nhưng mỗi người đều có phần trong cách bức tranh ấy được vẽ nên.”"
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "paragraph_091_turn",
+              "speaker": null,
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "“Không ai được chọn tất cả những màu sắc đến với cuộc đời mình. Nhưng mỗi người đều có phần trong cách bức tranh ấy được vẽ nên.”"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "paragraph_092",
           "type": "paragraph",
           "style": "narrative",
           "text_vi": "Và bên dưới là một dòng chữ nhỏ hơn:"
+        },
+        {
+          "id": "original_ending_1",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "“Đừng vội gọi một bức tranh là xấu, khi câu chuyện của nó vẫn còn đang tiếp diễn.”"
+        },
+        {
+          "id": "original_ending_2",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "⸻"
         }
       ]
     }
   ],
   "takeaway": {
-    "title_vi": "“Đừng vội gọi một bức tranh là xấu, khi câu chuyện của nó vẫn còn đang tiếp diễn.”",
-    "text_vi": "⸻"
+    "title_vi": "Nhìn lại",
+    "text_vi": "Chàng trai dần nhìn thấy cả những mất mát không thể thay thế lẫn những điều vẫn còn bên mình. Khoảng sáng không xóa đi khoảng tối; cả hai cùng hiện diện trong bức tranh còn đang được vẽ."
   },
   "authorship": {
     "author_id": "selflo",
@@ -604,7 +891,22 @@
   },
   "review": {
     "status": "approved",
-    "reviewed_by": "owner:dungvo",
-    "reviewed_at": "2026-10-26T23:55:32Z"
+    "reviewed_by": "owner:dungvo; ai:codex",
+    "reviewed_at": "2026-10-28T00:10:04Z"
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Dạo này, điều gì đang chiếm phần lớn cách bạn nhìn cuộc sống của mình?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_2",
+        "text_vi": "Bên cạnh điều ấy, còn chi tiết nào trong cuộc sống mà bạn ít để ý đến?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
   }
 }
