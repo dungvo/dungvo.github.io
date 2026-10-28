@@ -38,7 +38,9 @@ Current library:
 - 300 common daily chunks across ten topic files
 - 16 onboarding and professional-email chunks
 - 15 intent-first chunks from the October 13 session
-- 353 chunks total
+- 4 source-verified publication chunks
+- 13 privacy, data-protection, and leave/HR chunks from questions 3–15
+- 370 chunks total
 
 ## Add a Think → Express scenario
 
@@ -51,6 +53,12 @@ This mode complements **Think in English**: the existing mode develops contextua
 Quick Recall draws from the complete chunk library for short, spare-minute practice. It prioritizes chunks with fewer appearances, avoids the 18 most recent chunks when alternatives are available, and asks the learner to identify the appropriate situation before revealing meaning, structure, a natural example, and a usage note.
 
 The learner can keep a chunk in rotation or hide it after mastering it. The dashboard records unique chunks seen, total appearances, hidden chunks, and available chunks. Hidden chunks can be restored individually or together, and Quick Recall history can be reset without affecting the main practice statistics.
+
+## Product history
+
+The **History** view turns the repository's English-site Git history into a learner-friendly release timeline. It records the date, meaningful content or feature added, affected area, exact commit links, related pull requests, and an in-app link to open the result. It is available from the main navigation, the Learn hub, and the footer.
+
+When a meaningful English-site feature or content collection is merged, add or update its release card in `index.html`. Preserve the exact commit or pull-request link so the visible history remains auditable rather than relying on generic commit subjects such as “Update.”
 
 ## Daily Focus and Daily Challenge
 
@@ -92,6 +100,6 @@ Scores, daily activity, weak chunks, contextual-practice results, writing drafts
 
 The learning system introduces no more than five new chunks in a session and fills the remaining reps with reinforcement. Chunks move through New, Learning, Reviewing, and Mastered stages using spaced review intervals of 1, 3, 7, 14, and 30 days. Mastery requires both repeated correct answers and at least one successful speaking use.
 
-Topics form a guided path. The next topic unlocks after at least 70% of the previous topic has been introduced. Listening mode hides the written chunk until after comprehension is tested; Speak from Memory asks for active production without choices.
+Topics form a guided path. The next topic unlocks after at least 70% of the previous topic has been introduced. Listening mode hides the written chunk until after comprehension is tested; Speak from Memory asks for active production without choices; Retype Exactly checks precise written retrieval while ignoring capitalization and punctuation.
 
 Speaking Lab results are self-reported because this static website cannot inspect a separate ChatGPT Voice session. After a conversation, learners can mark the target chunks they used from memory, and the app records those speaking uses locally.
