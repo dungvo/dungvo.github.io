@@ -240,7 +240,7 @@
     $("#categoryGrid").innerHTML = ["All", ...categories].map((category) => { const count = category === "All" ? chunks.length : chunks.filter((chunk) => chunk.sessionTitle === category).length; return `<button class="category-card ${category === topic ? "active" : ""}" data-library-topic="${escapeHtml(category)}"><strong>${escapeHtml(category)}</strong><span>${count} chunks</span></button>`; }).join("");
     $$('[data-library-topic]').forEach((button) => button.addEventListener("click", () => renderLibrary($("#chunkSearch").value, button.dataset.libraryTopic)));
     $("#libraryCount").textContent = `${filtered.length} chunk${filtered.length === 1 ? "" : "s"}`; $("#sessionCount").textContent = `${registry.sessions.length} content session${registry.sessions.length === 1 ? "" : "s"}`;
-    $("#chunkList").innerHTML = filtered.map((chunk) => `<article class="chunk-item"><h3>${escapeHtml(chunk.chunk)}</h3><span class="ipa">${escapeHtml(chunk.ipa)}</span><span class="vi-pronunciation">${escapeHtml(chunk.viPronunciation || "Listen and repeat")}</span><p>${escapeHtml(chunk.meaning)}</p><p class="situation-copy"><b>Use it:</b> ${escapeHtml(chunk.situation)}</p><button class="listen-link" data-speak="${escapeHtml(chunk.chunk)}">▶ Listen</button><span class="source-tag">${escapeHtml(chunk.sessionTitle)}</span></article>`).join("") || `<p class="context">No chunks match “${escapeHtml(query)}”.</p>`;
+    $("#chunkList").innerHTML = filtered.map((chunk) => `<article class="chunk-item">${chunk.questionNumber ? `<span class="source-tag">PRE-ASSESSMENT · QUESTION ${escapeHtml(chunk.questionNumber)}</span><p class="training-question"><b>${escapeHtml(chunk.sourceQuestion)}</b></p>` : ""}<h3>${escapeHtml(chunk.chunk)}</h3><span class="ipa">${escapeHtml(chunk.ipa)}</span><span class="vi-pronunciation">${escapeHtml(chunk.viPronunciation || "Listen and repeat")}</span><p>${escapeHtml(chunk.meaning)}</p><p class="situation-copy"><b>Use it:</b> ${escapeHtml(chunk.situation)}</p><button class="listen-link" data-speak="${escapeHtml(chunk.chunk)}">▶ Listen</button><span class="source-tag">${escapeHtml(chunk.sessionTitle)}</span></article>`).join("") || `<p class="context">No chunks match “${escapeHtml(query)}”.</p>`;
     bindPronunciation($("#chunkList"));
   }
 
@@ -443,7 +443,7 @@
     catch (_) { const area = document.createElement("textarea"); area.value = text; document.body.appendChild(area); area.select(); document.execCommand("copy"); area.remove(); $("#copyStatus").textContent = "Prompt copied. Open ChatGPT Voice and paste it."; }
   }
 
-  function supportsMode(chunk, mode) { return ["listen", "recall"].includes(mode) || !chunk.practiceModes || chunk.practiceModes.includes(mode); }
+  function supportsMode(chunk, mode) { return ["listen", "recall", "retype"].includes(mode) || !chunk.practiceModes || chunk.practiceModes.includes(mode); }
   function poolFor(review, mode, topicId) {
     const eligible = chunks.filter((chunk) => (!topicId || chunk.sessionId === topicId) && (!mode || mode === "mixed" || supportsMode(chunk, mode)));
     const ranked = [...eligible].sort((a, b) => weakness(b) - weakness(a));
@@ -463,7 +463,7 @@
   function currentMode() {
     if (session.mode !== "mixed") return session.mode;
     const chunk = session.items[session.index];
-    const modes = ["listen", "meaning", "situation", "recall", "speak", "build"].filter((mode) => supportsMode(chunk, mode) || ["listen", "recall"].includes(mode));
+    const modes = ["listen", "meaning", "situation", "recall", "retype", "speak", "build"].filter((mode) => supportsMode(chunk, mode) || ["listen", "recall", "retype"].includes(mode));
     return modes[session.index % modes.length];
   }
   function pronunciationHtml(chunk) {
@@ -491,7 +491,7 @@
     $("#sessionProgressBar").style.width = `${session.index / session.items.length * 100}%`; $("#sessionScore").textContent = `${session.score}/${session.index}`;
     if (mode === "meaning") renderChoice(chunk, "WHAT DOES THIS CHUNK MEAN?", chunk.chunk, chunk.meaning, "meaning");
     else if (mode === "situation") renderChoice(chunk, "WHAT WOULD YOU SAY?", chunk.situation, chunk.chunk, "chunk");
-    else if (mode === "build") renderBuild(chunk); else if (mode === "listen") renderListen(chunk); else if (mode === "recall") renderRecall(chunk); else renderSpeak(chunk);
+    else if (mode === "build") renderBuild(chunk); else if (mode === "listen") renderListen(chunk); else if (mode === "recall") renderRecall(chunk); else if (mode === "retype") renderRetype(chunk); else renderSpeak(chunk);
     document.title = `${session.index + 1}/${session.items.length} · Chunk Lab`;
   }
   function distractors(chunk, field) {
@@ -532,6 +532,17 @@
       $("#revealRecall").remove(); $("#recallAnswer").innerHTML = `<div class="recall-answer"><p class="eyebrow">NATURAL ANSWER</p><h2>${escapeHtml(chunk.chunk)}</h2>${pronunciationHtml(chunk)}<div class="self-rate"><button class="secondary" id="recallAgain">I need another try</button><button class="primary" id="recallGood">I said it naturally</button></div></div>`;
       bindPronunciation($("#recallAnswer")); $("#recallAgain").addEventListener("click", () => rateSpeak(false, chunk)); $("#recallGood").addEventListener("click", () => rateSpeak(true, chunk));
     });
+  }
+  function normalizeRetype(value) { return String(value).trim().toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, "").replace(/\s+/g, " "); }
+  function renderRetype(chunk) {
+    $("#practiceCard").innerHTML = `<p class="question-label">RETYPE FROM MEMORY</p><h1 class="prompt">Write the exact natural chunk.</h1><p class="context recall-situation">${escapeHtml(chunk.situation)}</p><div class="recall-instruction">Listen once if needed, then type the complete sentence without copying.</div><button class="listen-hero" id="playRetype">▶ Listen once</button><label class="retype-field"><span>Your answer</span><input id="retypeAnswer" type="text" autocomplete="off" autocapitalize="sentences" spellcheck="false" placeholder="Type the chunk from memory…"></label><button class="primary next-button" id="checkRetype">Check my answer</button><div id="feedbackSlot"></div>`;
+    $("#playRetype").addEventListener("click", () => speak(chunk.chunk, 0.96));
+    const check = () => {
+      if (session.answered || !$("#retypeAnswer").value.trim()) return;
+      session.answered = true; const correct = normalizeRetype($("#retypeAnswer").value) === normalizeRetype(chunk.chunk);
+      record(chunk.id, correct, "recall"); updateSessionScore(correct); $("#retypeAnswer").disabled = true; $("#checkRetype").remove(); renderFeedback(correct, chunk);
+    };
+    $("#checkRetype").addEventListener("click", check); $("#retypeAnswer").addEventListener("keydown", (event) => { if (event.key === "Enter") check(); }); $("#retypeAnswer").focus();
   }
   function renderSpeak(chunk) {
     $("#practiceCard").innerHTML = `<div class="speak-card"><p class="question-label">SPEAK & PRONOUNCE</p><p class="context">Read the pronunciation, listen, then say the complete chunk aloud.</p><h1 class="speak-quote">${escapeHtml(chunk.chunk)}</h1>${pronunciationHtml(chunk)}<div class="feedback"><strong>Use it like this</strong>${escapeHtml(chunk.example)}</div><div class="self-rate"><button class="secondary" id="againRate">Needs practice</button><button class="primary" id="goodRate">I said it well</button></div></div>`;
