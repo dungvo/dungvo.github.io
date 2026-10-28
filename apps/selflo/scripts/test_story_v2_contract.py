@@ -31,6 +31,9 @@ RELEASED_STORY_IDS = {
     "story.rails_that_diverge",
     "story.the_compass_does_not_walk_for_you",
     "story.tree_and_silent_goose",
+    "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
+    "story.tiem_ban_mau_cua_cuoc_doi",
+    "story.thanh_pho_cua_nhung_chiec_dong_ho",
 }
 
 

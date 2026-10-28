@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 96,
-  "content_version": "three-stories-v3-endings-2026-10-28",
+  "library_revision": 97,
+  "content_version": "three-story-standalone-quotes-2026-10-28",
   "language": "vi",
-  "generated_at": "2026-10-28T00:10:10Z",
+  "generated_at": "2026-10-28T01:56:38Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -244,11 +244,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 46,
-      "path": "themes/meaning-values.vi.r46.json",
+      "revision": 47,
+      "path": "themes/meaning-values.vi.r47.json",
       "media_type": "application/json",
-      "sha256": "fe532c14510f667aff1c7032a0595fd4ea1e6273bf6320a62b376492ba38d79d",
-      "byte_count": 304356
+      "sha256": "ef7348f3d9fd11409b2b0f19c5d51da3292390eef5cddc533438eab701d6d746",
+      "byte_count": 304768
     },
     {
       "id": "theme.relationships.vi",
@@ -541,11 +541,11 @@
     {
       "id": "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/nguoi-hoa-si-va-buc-tranh-chua-hoan-thanh/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/nguoi-hoa-si-va-buc-tranh-chua-hoan-thanh/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "bf07932899639f6a16aa804b484805ab558688d40591a00fbcec981eab181bc1",
-      "byte_count": 24360
+      "sha256": "80af5f38e86d159939f477a49aa78502683243cb70203a9ffa59409459ba2e4c",
+      "byte_count": 24284
     },
     {
       "id": "story.nine_oclock_morning",
@@ -793,11 +793,11 @@
     {
       "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "c3793bd83a1bea6d757238d232b688d06915fcb040bceda0b8d1880f2b47d13d",
-      "byte_count": 64787
+      "sha256": "2845bd259607b1e55ba26ab247853b62156be48dd419d7f26c8dfe93cc0736dd",
+      "byte_count": 64860
     },
     {
       "id": "story.the_compass_does_not_walk_for_you",
@@ -838,11 +838,11 @@
     {
       "id": "story.tiem_ban_mau_cua_cuoc_doi",
       "kind": "story",
-      "revision": 2,
-      "path": "stories/tiem-ban-mau-cua-cuoc-doi/story.vi.r2.json",
+      "revision": 3,
+      "path": "stories/tiem-ban-mau-cua-cuoc-doi/story.vi.r3.json",
       "media_type": "application/json",
-      "sha256": "2ab3184fce8d8e379f80228dfd6995195d7beeb38847f5d2e7caebe81aeafd56",
-      "byte_count": 27859
+      "sha256": "3241d50af8d187afab38fec3706d71dc8ac99b03072841444dc8e34c86d796f1",
+      "byte_count": 27855
     },
     {
       "id": "story.tree_and_silent_goose",

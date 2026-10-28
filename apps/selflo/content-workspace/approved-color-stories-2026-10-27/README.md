@@ -87,3 +87,17 @@ Bước tiếp theo: xác minh Release 54 trên endpoint public sau deploy.
 Đã push commit `3d35412` lên main. Endpoint public trả Release 54; tải đủ ba payload mới và đối chiếu SHA-256 khớp manifest, mỗi bài có Nhìn lại và hai prompt. Hoàn tất yêu cầu phát hành.
 
 Bước tiếp theo: owner đọc ba bài trên Góc nhìn public.
+
+## Cập nhật quote — 2026-10-28
+
+Owner nhận xét quote chưa đứng độc lập, giống mô tả truyện và yêu cầu cập nhật. Kiểm tra reader public xác nhận vùng dưới tiêu đề đang hiển thị subtitle mô tả, không tự lấy linked quote. Chỉnh content-compatible: thay đúng ba linked quote và đồng bộ subtitle của ba story, không đổi renderer/contract, body, Nhìn lại hoặc reflection.
+
+- Người họa sĩ: “Không phải vết mực nào cũng cần biến thành hoa, không phải khoảng trống nào cũng cần lấp đầy.”
+- Tiệm bán màu: “Không ai được chọn tất cả những màu sắc đến với cuộc đời mình. Nhưng mỗi người đều có phần trong cách bức tranh ấy được vẽ nên.”
+- Thành phố đồng hồ: “Không ai có thể quay ngược thời gian để kiểm chứng một cuộc đời khác.”
+
+Quote 1 và 3 biên tập từ truyện; quote 2 trích nội dung nguyên văn và bỏ ngoặc kép bao ngoài. Đã ghi provenance chính xác, giữ nguyên IDs/liên kết/rights và cập nhật integrity lock có lý do. Không thêm opening_quote để tránh lặp câu với subtitle.
+
+Authoring 97 / Release 55 qua schema gate; 20 story / 383 quote giữ nguyên số lượng. Chỉ theme meaning_values và ba story descriptor đổi. Đối chiếu mọi checksum; so với HEAD, từng story chỉ đổi subtitle. Cập nhật allowlist kiểm thử từ 17 lên đúng 20 story đã Release (test cũ chưa tính ba bài của Release 54); kiểm tra nội dung/thứ tự vẫn giữ nguyên. Sau khi dựng lại cả hai channel: 94/94 tests đạt; diff check đạt. Catalog và Review Matrix đã rebuild.
+
+Bước tiếp theo: push và xác minh quote/subtitle của đủ ba bài trên Release 55 public.
