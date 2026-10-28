@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 76,
-  "content_version": "quote-closure-q10-b005-rights-2026-10-26",
+  "source_revision": 78,
+  "content_version": "three-approved-stories-2026-10-27",
   "language": "vi",
-  "canonical_quote_count": 1851,
+  "canonical_quote_count": 1854,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1565,6 +1565,30 @@
       "kind": "image",
       "path": "artwork/images/taiji-day-night-v1.png",
       "media_type": "image/png"
+    },
+    {
+      "id": "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
+      "kind": "story",
+      "path": "stories/nguoi-hoa-si-va-buc-tranh-chua-hoan-thanh/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tiem_ban_mau_cua_cuoc_doi",
+      "kind": "story",
+      "path": "stories/tiem-ban-mau-cua-cuoc-doi/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "quote_fragment.meaning_values.014",
+      "kind": "quote_fragment",
+      "path": "quotes/meaning_values/014.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
+      "kind": "story",
+      "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.json",
+      "media_type": "application/json"
     }
   ]
 }
