@@ -610,7 +610,7 @@
   function bindEvents() {
     $$('[data-mode]').forEach((button) => button.addEventListener("click", () => start(button.dataset.mode)));
     $$('[data-game="daily"]').forEach((button) => button.addEventListener("click", startDailyChallenge));
-    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (dailyTimerId) { clearInterval(dailyTimerId); dailyTimerId = null; } if (view === "progress") updateProgressView(); if (view === "library") renderLibrary($("#chunkSearch")?.value || ""); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); if (view === "express") renderExpressions(); if (view === "evidence") renderEvidence(); if (view === "quick") renderQuickRecall(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
+    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (dailyTimerId) { clearInterval(dailyTimerId); dailyTimerId = null; } if (view === "progress") updateProgressView(); if (view === "library") renderLibrary("", button.dataset.historyTopic || libraryTopic); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); if (view === "express") renderExpressions(); if (view === "evidence") renderEvidence(); if (view === "quick") renderQuickRecall(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
     $("#againButton").addEventListener("click", () => start(session.sourceMode, session.topicId)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
     $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); updateDashboard(); updateProgressView(); } });
     $("#restoreHiddenChunks").addEventListener("click", restoreAllQuickChunks); $("#resetQuickRecall").addEventListener("click", resetQuickRecall);
@@ -626,7 +626,7 @@
       $("#playChunkCount").textContent = chunks.length;
       $$('[data-mode], [data-game]').forEach((button) => { button.disabled = false; });
       updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories(); renderContexts(); renderExpressions(); renderEvidence();
-      const requestedView = location.hash.slice(1); if (["play", "quick", "learn", "curriculum", "lab", "think", "express", "stories", "speaking", "progress", "library", "evidence"].includes(requestedView)) { if (requestedView === "quick") renderQuickRecall(); show(requestedView); }
+      const requestedView = location.hash.slice(1); if (["play", "quick", "learn", "curriculum", "lab", "think", "express", "stories", "speaking", "progress", "library", "evidence", "history"].includes(requestedView)) { if (requestedView === "quick") renderQuickRecall(); show(requestedView); }
     } catch (error) {
       $("#contentStatus").textContent = "Content could not be loaded"; $("#sourceNote").textContent = error.message; console.error(error, registry.errors);
     }
