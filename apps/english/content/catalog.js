@@ -17,6 +17,7 @@ window.CHUNK_CONTENT_CONFIG = {
     "content/sessions/2026-09-22-to-24.js",
     "content/sessions/2026-10-07-onboarding.js",
     "content/sessions/2026-10-13-intent-first.js",
+    "content/sessions/2026-10-25-prudential-privacy.js",
     "content/sessions/source-verified.js",
     "content/sessions/daily-01-routines.js",
     "content/sessions/daily-02-small-talk.js",
