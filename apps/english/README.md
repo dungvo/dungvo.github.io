@@ -40,7 +40,8 @@ Current library:
 - 15 intent-first chunks from the October 13 session
 - 4 source-verified publication chunks
 - 13 privacy, data-protection, and leave/HR chunks from questions 3–15
-- 370 chunks total
+- 26 onboarding, present-perfect, grammar, and natural-wish chunks from the October 28 session
+- 396 chunks total
 
 ## Add a Think → Express scenario
 
