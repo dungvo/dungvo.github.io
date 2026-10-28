@@ -81,3 +81,9 @@ Owner yêu cầu giữ nguyên truyện và bổ sung “Nhìn lại” cùng c�
 - Đang commit/push và kiểm chứng endpoint public; chưa coi local package là đã online.
 
 Bước tiếp theo: xác minh Release 54 trên endpoint public sau deploy.
+
+## Xác nhận public — 2026-10-28
+
+Đã push commit `3d35412` lên main. Endpoint public trả Release 54; tải đủ ba payload mới và đối chiếu SHA-256 khớp manifest, mỗi bài có Nhìn lại và hai prompt. Hoàn tất yêu cầu phát hành.
+
+Bước tiếp theo: owner đọc ba bài trên Góc nhìn public.
