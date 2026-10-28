@@ -121,3 +121,7 @@ Cập nhật đúng ba linked quote và subtitle story. Các câu là quote gố
 Authoring 98 / Release 56 qua schema gate đầy đủ. 20 story / 383 quote. Chỉ ba story và theme meaning_values descriptor đổi; toàn bộ checksum đạt. Catalog/Review Matrix rebuild; 94 tests đạt; git diff --check đạt. Các ghi chú mở rộng nội dung đang dirty từ phiên ý tưởng không nằm trong commit phát hành này.
 
 Bước tiếp theo: push và đối chiếu ba quote/subtitle trên Release 56 public.
+
+### Xác nhận ba quote owner duyệt đã public — Release 56
+
+Đã push commit nội dung `892ed46`. Endpoint public trả manifest Release 56 khớp local. Tải quote pack meaning_values và đủ ba story, đối chiếu SHA-256 khớp manifest; cả ba linked quote và subtitle đúng nguyên văn owner duyệt. Hoàn tất yêu cầu cập nhật + release. Bước tiếp theo: owner đọc lại ba câu trên trang truyện public.
