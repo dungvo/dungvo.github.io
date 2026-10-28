@@ -101,3 +101,9 @@ Quote 1 và 3 biên tập từ truyện; quote 2 trích nội dung nguyên văn 
 Authoring 97 / Release 55 qua schema gate; 20 story / 383 quote giữ nguyên số lượng. Chỉ theme meaning_values và ba story descriptor đổi. Đối chiếu mọi checksum; so với HEAD, từng story chỉ đổi subtitle. Cập nhật allowlist kiểm thử từ 17 lên đúng 20 story đã Release (test cũ chưa tính ba bài của Release 54); kiểm tra nội dung/thứ tự vẫn giữ nguyên. Sau khi dựng lại cả hai channel: 94/94 tests đạt; diff check đạt. Catalog và Review Matrix đã rebuild.
 
 Bước tiếp theo: push và xác minh quote/subtitle của đủ ba bài trên Release 55 public.
+
+### Đã xác minh public — quote Release 55
+
+Đã tích hợp các commit mới chỉ thuộc apps/english, không đổi phần đó, và push merge commit `333c6d3` (commit nội dung `7990b18`). Endpoint public trả manifest Release 55 khớp bản local; quote pack meaning_values và ba payload story có checksum đúng. Đã đối chiếu đủ ba linked quote và subtitle với canonical source. Hoàn tất cập nhật quote.
+
+Bước tiếp theo: owner đọc lại ba quote trên các trang truyện public.
