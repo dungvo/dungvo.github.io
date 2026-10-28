@@ -107,3 +107,17 @@ Bước tiếp theo: push và xác minh quote/subtitle của đủ ba bài trên
 Đã tích hợp các commit mới chỉ thuộc apps/english, không đổi phần đó, và push merge commit `333c6d3` (commit nội dung `7990b18`). Endpoint public trả manifest Release 55 khớp bản local; quote pack meaning_values và ba payload story có checksum đúng. Đã đối chiếu đủ ba linked quote và subtitle với canonical source. Hoàn tất cập nhật quote.
 
 Bước tiếp theo: owner đọc lại ba quote trên các trang truyện public.
+
+## Owner duyệt ba quote thông điệp — 2026-10-28
+
+Sau review sức gợi và thông điệp, owner đồng ý nguyên văn cả ba câu bên dưới và yêu cầu cập nhật + release. Chúng thay thế ba quote của Release 55:
+
+1. Người họa sĩ: “Một điều đáng theo đuổi có nhất thiết đáng để đánh đổi mọi thứ?”
+2. Tiệm bán màu: “Ta không chọn được mọi điều xảy đến, nhưng vẫn có phần trong điều sẽ xảy ra tiếp theo.”
+3. Thành phố đồng hồ: “Tiếc nuối không đủ để chứng minh rằng mình đã chọn sai.”
+
+Cập nhật đúng ba linked quote và subtitle story. Các câu là quote gốc Selflo được owner duyệt, không phải trích nguyên văn truyện; provenance và writing metadata ghi rõ thông điệp độc lập. Giữ nguyên stable IDs, links và số lượng; body/Nhìn lại/reflection không đổi. Không đổi renderer, schema hoặc contract (content-compatible).
+
+Authoring 98 / Release 56 qua schema gate đầy đủ. 20 story / 383 quote. Chỉ ba story và theme meaning_values descriptor đổi; toàn bộ checksum đạt. Catalog/Review Matrix rebuild; 94 tests đạt; git diff --check đạt. Các ghi chú mở rộng nội dung đang dirty từ phiên ý tưởng không nằm trong commit phát hành này.
+
+Bước tiếp theo: push và đối chiếu ba quote/subtitle trên Release 56 public.
