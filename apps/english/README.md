@@ -54,6 +54,12 @@ Quick Recall draws from the complete chunk library for short, spare-minute pract
 
 The learner can keep a chunk in rotation or hide it after mastering it. The dashboard records unique chunks seen, total appearances, hidden chunks, and available chunks. Hidden chunks can be restored individually or together, and Quick Recall history can be reset without affecting the main practice statistics.
 
+## Product history
+
+The **History** view turns the repository's English-site Git history into a learner-friendly release timeline. It records the date, meaningful content or feature added, affected area, exact commit links, related pull requests, and an in-app link to open the result. It is available from the main navigation, the Learn hub, and the footer.
+
+When a meaningful English-site feature or content collection is merged, add or update its release card in `index.html`. Preserve the exact commit or pull-request link so the visible history remains auditable rather than relying on generic commit subjects such as “Update.”
+
 ## Daily Focus and Daily Challenge
 
 The primary navigation is organized around **Today**, **Play**, **Learn**, and **Journey**. Today recommends a focused learning plan; Play collects the available game modes; Learn preserves the complete lesson toolkit; and Journey combines learning progress with saved game results.
