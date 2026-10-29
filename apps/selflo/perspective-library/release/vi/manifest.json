@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.vi",
-  "library_revision": 56,
-  "content_version": "three-owner-approved-message-quotes-2026-10-28",
+  "library_revision": 59,
+  "content_version": "nhung-ngay-dep-nhat-approved-quote-2026-10-29",
   "language": "vi",
-  "generated_at": "2026-10-28T02:06:47Z",
+  "generated_at": "2026-10-29T04:10:56Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -226,11 +226,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 33,
-      "path": "themes/meaning-values.vi.r33.json",
+      "revision": 36,
+      "path": "themes/meaning-values.vi.r36.json",
       "media_type": "application/json",
-      "sha256": "a1c56d395164499a12e69b4d677aa2902345c04a802ad8c40d209dc6c1c2b8d7",
-      "byte_count": 139634
+      "sha256": "9992cbe46227eaade41cda2466ac70893ebb13ac9dda5d0ef15e2fd4886d8c9e",
+      "byte_count": 142011
     },
     {
       "id": "theme.relationships.vi",
@@ -321,6 +321,15 @@
       "media_type": "application/json",
       "sha256": "cd07be3a74b90d9cbc23c8c5d92ad3da268928fe6c2f1f0b3896fc43966b135d",
       "byte_count": 24321
+    },
+    {
+      "id": "story.nhung_ngay_dep_nhat",
+      "kind": "story",
+      "revision": 3,
+      "path": "stories/nhung-ngay-dep-nhat/story.vi.r3.json",
+      "media_type": "application/json",
+      "sha256": "37982f3ec2fef6ba5272cd7043682e00ef9902d03fd891164efbefc7185b4101",
+      "byte_count": 42372
     },
     {
       "id": "story.old_man_and_returning_horse",
