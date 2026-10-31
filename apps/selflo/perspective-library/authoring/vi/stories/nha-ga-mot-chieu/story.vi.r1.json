@@ -1,0 +1,4714 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.nha_ga_mot_chieu",
+  "revision": 1,
+  "status": "active",
+  "language": "vi",
+  "reader_format": "editorial_v3",
+  "title_vi": "NHÀ GA MỘT CHIỀU",
+  "subtitle_vi": "Truyện ngắn — Kỳ ảo, phiêu lưu, hài châm biếm",
+  "hero_image": null,
+  "primary_theme": "meaning_values",
+  "metadata": {
+    "concept_ids": [
+
+    ],
+    "emotion_tags": [
+
+    ],
+    "keywords": [
+      "lựa chọn",
+      "cuộc đời khác",
+      "tiếc nuối",
+      "đánh đổi",
+      "hiện tại",
+      "kỳ ảo",
+      "nhà ga"
+    ],
+    "story_style": "parable",
+    "related_content_ids": [
+
+    ]
+  },
+  "sections": [
+    {
+      "id": "opening",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "genre",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Truyện ngắn — Kỳ ảo, phiêu lưu, hài châm biếm"
+        }
+      ]
+    },
+    {
+      "id": "part_1_opening",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "part_1",
+          "type": "part_heading",
+          "part_number": 1,
+          "title_vi": "Hồi I — Những tấm vé hấp dẫn",
+          "subtitle_vi": null
+        },
+        {
+          "id": "part_1_epigraph",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Chúng ta thường ao ước một cuộc đời khi mới nhìn thấy vài khoảnh khắc đẹp nhất của nó.",
+          "shareable": true
+        }
+      ]
+    },
+    {
+      "id": "section_01",
+      "title_vi": "1. Nhà ga không có đường ray",
+      "blocks": [
+        {
+          "id": "paragraph_0001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhà ga Một Chiều nằm ở nơi không tấm bản đồ nào đánh dấu."
+        },
+        {
+          "id": "paragraph_0002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nó có mười hai sân ga, ba mươi sáu cánh cửa, bốn quầy bán vé và một chiếc đồng hồ khổng lồ luôn chỉ đúng thời điểm mà mỗi hành khách muốn quay về."
+        },
+        {
+          "id": "paragraph_0003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ở cửa chính treo một tấm biển:"
+        },
+        {
+          "id": "paragraph_0004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "NHÀ GA MỘT CHIỀU"
+        },
+        {
+          "id": "paragraph_0005",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chúng tôi đưa bạn trở lại lựa chọn cũ. Cuộc đời tiếp theo do bạn tự sống."
+        },
+        {
+          "id": "paragraph_0006",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bên dưới, bằng chữ nhỏ hơn:"
+        },
+        {
+          "id": "paragraph_0007",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vé đã sử dụng không được hoàn trả."
+        },
+        {
+          "id": "paragraph_0008",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mặc dù vậy, quầy Khiếu Nại vẫn luôn đông khách nhất."
+        },
+        {
+          "id": "dialogue_0010",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0009",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi yêu cầu hoàn vé!"
+                }
+              ],
+              "speaker": {
+                "id": "millionaire",
+                "label_vi": "Vị khách triệu phú"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0011",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "một người đàn ông mặc vest hét lên."
+        },
+        {
+          "id": "dialogue_0013",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0012",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi đã chọn làm triệu phú. Tại sao bây giờ tôi lại bị mất ngủ?"
+                }
+              ],
+              "speaker": {
+                "id": "millionaire",
+                "label_vi": "Vị khách triệu phú"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0014",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhân viên bán vé, một cô gái trẻ tên Mây, bình thản lật hồ sơ."
+        },
+        {
+          "id": "dialogue_0018",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0015",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Thưa ông, nhà ga chỉ đưa ông trở về thời điểm ông từ chối cơ hội kinh doanh. Chúng tôi không bán giấc ngủ."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0016",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng tôi tưởng giàu rồi sẽ không phải lo nữa!"
+                }
+              ],
+              "speaker": {
+                "id": "millionaire",
+                "label_vi": "Vị khách triệu phú"
+              }
+            },
+            {
+              "id": "turn_0017",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông đã hết lo tiền. Có vẻ ông đang lo những thứ khác."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0019",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đàn ông đập bàn."
+        },
+        {
+          "id": "dialogue_0021",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0020",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi muốn đổi tiếp!"
+                }
+              ],
+              "speaker": {
+                "id": "millionaire",
+                "label_vi": "Vị khách triệu phú"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0022",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây chỉ tấm biển phía sau:"
+        },
+        {
+          "id": "paragraph_0023",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "MỖI HÀNH KHÁCH — MỘT LẦN LỰA CHỌN."
+        },
+        {
+          "id": "dialogue_0026",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0024",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi biết đọc!"
+                }
+              ],
+              "speaker": {
+                "id": "millionaire",
+                "label_vi": "Vị khách triệu phú"
+              }
+            },
+            {
+              "id": "turn_0025",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy tôi mời ông sang quầy bên phải. Ở đó có nước uống miễn phí."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0027",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đàn ông quay sang."
+        },
+        {
+          "id": "paragraph_0028",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Quầy bên phải treo biển:"
+        },
+        {
+          "id": "paragraph_0029",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "“Dành cho hành khách cần bình tĩnh trước khi đọc lại điều khoản.”"
+        },
+        {
+          "id": "paragraph_0030",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông tức tối bỏ đi."
+        },
+        {
+          "id": "paragraph_0031",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây đóng hồ sơ, gọi người tiếp theo."
+        }
+      ]
+    },
+    {
+      "id": "section_02",
+      "title_vi": "2. Cửa sổ xem trước",
+      "blocks": [
+        {
+          "id": "paragraph_0032",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khách hàng mới là một người đàn ông ngoài bốn mươi, tên Khang."
+        },
+        {
+          "id": "paragraph_0033",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh mặc áo polo, đeo ba lô, tay cầm điện thoại liên tục rung."
+        },
+        {
+          "id": "dialogue_0037",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0034",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi nghe nói ở đây có thể xem cuộc đời mình nếu chọn khác?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0035",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đúng. Anh muốn thay đổi quyết định nào?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0036",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Mười lăm năm trước, tôi được mời sang Singapore làm việc. Tôi đã từ chối vì muốn ở lại quê nhà."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0038",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây đưa anh đến một dãy cửa sổ bằng kính."
+        },
+        {
+          "id": "paragraph_0039",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mỗi cửa sổ hiện một khoảnh khắc từ một cuộc đời có thể xảy ra nếu anh chọn khác."
+        },
+        {
+          "id": "paragraph_0040",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cửa thứ nhất: Khang đứng trên sân khấu một hội nghị quốc tế, nhận giải thưởng."
+        },
+        {
+          "id": "paragraph_0041",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cửa thứ hai: anh ngồi trong căn hộ nhìn ra vịnh Marina."
+        },
+        {
+          "id": "paragraph_0042",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cửa thứ ba: anh lái xe thể thao qua một con đường ven biển."
+        },
+        {
+          "id": "paragraph_0043",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang áp sát mặt vào kính."
+        },
+        {
+          "id": "dialogue_0052",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0044",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đó thật sự là tôi sao?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0045",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Một khả năng của anh."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0046",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi giàu đến vậy à?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0047",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Có thể."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0048",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Thế xem thêm được không?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0049",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Mỗi vé tham quan có ba khoảnh khắc."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0050",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Sao chỉ ba?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0051",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì nếu xem hết cả cuộc đời, anh sẽ phải ở đây vài chục năm."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0053",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang bật cười."
+        },
+        {
+          "id": "paragraph_0054",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh nhìn lại căn hộ bên vịnh."
+        },
+        {
+          "id": "paragraph_0055",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trong cuộc sống hiện tại, anh có công việc ổn định, một căn nhà nhỏ và gia đình. Mấy năm gần đây, anh thường thấy mình dậm chân tại chỗ."
+        },
+        {
+          "id": "paragraph_0056",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ở cửa sổ kia, anh dường như là một người khác: thành công, tự tin, được đi nhiều nơi."
+        },
+        {
+          "id": "paragraph_0057",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh lấy ví."
+        },
+        {
+          "id": "dialogue_0059",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0058",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi mua vé."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0060",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây lấy một tờ đơn."
+        },
+        {
+          "id": "dialogue_0065",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0061",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Trước khi ký, anh cần biết: những gì anh vừa thấy chỉ là ba khoảnh khắc. Nhà ga không cam kết toàn bộ cuộc đời mới sẽ giống những gì anh tưởng tượng."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0062",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi hiểu."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0063",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh cũng không thể trở về cuộc đời hiện tại."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0064",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi hiểu."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0066",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây đặt cây bút trước mặt anh."
+        },
+        {
+          "id": "paragraph_0067",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang vừa định ký thì điện thoại lại rung."
+        },
+        {
+          "id": "paragraph_0068",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Là con gái anh."
+        },
+        {
+          "id": "dialogue_0070",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0069",
+              "delivery": "written",
+              "paragraphs": [
+                {
+                  "text_vi": "Ba ơi, tối nay ba về ăn cơm không? Con làm món mới."
+                }
+              ],
+              "speaker": {
+                "id": "daughter",
+                "label_vi": "Con gái Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0071",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh đọc tin nhắn rồi úp điện thoại xuống."
+        },
+        {
+          "id": "dialogue_0073",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0072",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Để tôi suy nghĩ thêm."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0074",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây gật đầu."
+        },
+        {
+          "id": "dialogue_0076",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0075",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ghế chờ ở phía bên trái."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0077",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang ngồi xuống."
+        },
+        {
+          "id": "paragraph_0078",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trên chiếc ghế bên cạnh có một người đàn ông lớn tuổi đang ăn bánh quy."
+        },
+        {
+          "id": "paragraph_0079",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông liếc tấm vé trong tay Khang."
+        },
+        {
+          "id": "dialogue_0085",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0080",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Lần đầu đến à?"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0081",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vâng."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0082",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Hồi đầu tôi cũng thích mấy cửa sổ đó lắm."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0083",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông đã từng đổi cuộc đời?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0084",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Bốn lần."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0086",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang quay phắt sang."
+        },
+        {
+          "id": "dialogue_0088",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0087",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng họ bảo chỉ được một lần!"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0089",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông già nháy mắt."
+        },
+        {
+          "id": "dialogue_0091",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0090",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đúng quy định là vậy."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part_2_opening",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "part_2",
+          "type": "part_heading",
+          "part_number": 2,
+          "title_vi": "Hồi II — Quầy tách rời hạnh phúc",
+          "subtitle_vi": null
+        },
+        {
+          "id": "part_2_epigraph",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Có những điều ta muốn quên đi, nhưng chính chúng lại là một phần của những điều ta muốn giữ.",
+          "shareable": true
+        }
+      ]
+    },
+    {
+      "id": "section_03",
+      "title_vi": "3. Dịch vụ theo yêu cầu",
+      "blocks": [
+        {
+          "id": "paragraph_0092",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông già tên Lộc, từng là một kỹ sư của nhà ga."
+        },
+        {
+          "id": "paragraph_0093",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông đã nghỉ việc từ lâu, nhưng ngày nào cũng đến ngồi ở phòng chờ, ăn bánh quy và quan sát khách mới."
+        },
+        {
+          "id": "dialogue_0095",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0094",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhà ga này có một điểm bất tiện"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0096",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "ông nói với Khang."
+        },
+        {
+          "id": "dialogue_0100",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0097",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nó bắt người ta chọn cả cuộc đời, trong khi thứ chúng ta muốn chỉ là sửa vài chỗ."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0098",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không phải vậy sao?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0099",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không. Muốn bỏ một công việc thì những người anh gặp nhờ công việc đó cũng có thể biến mất. Muốn không chuyển nhà thì những người hàng xóm ở chỗ mới cũng không còn quen anh."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0101",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông chỉ về phía cuối hành lang."
+        },
+        {
+          "id": "paragraph_0102",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ở đó có một quầy nhỏ phủ bụi, phía trên treo bảng:"
+        },
+        {
+          "id": "paragraph_0103",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "PHÒNG TÁCH RỜI HẠNH PHÚC — NGỪNG HOẠT ĐỘNG."
+        },
+        {
+          "id": "dialogue_0105",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0104",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ngày xưa tôi phụ trách cái đó."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0106",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang tò mò."
+        },
+        {
+          "id": "dialogue_0111",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0107",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nó làm gì?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0108",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tách những thứ khách muốn giữ khỏi những thứ khách muốn bỏ."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0109",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nghe hay mà."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0110",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Rất hay. Cho đến khi nó hoạt động."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0112",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc kể rằng vào ngày đầu tiên vận hành, phòng Tách Rời đông đến mức người ta xếp hàng vòng quanh nhà ga."
+        },
+        {
+          "id": "paragraph_0113",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người đàn ông muốn giữ sự nghiệp thành công nhưng loại bỏ mười năm làm việc cực nhọc."
+        },
+        {
+          "id": "paragraph_0114",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một cô gái muốn giữ người yêu hiện tại nhưng xóa cuộc cãi nhau đã khiến họ chia tay rồi quay lại với nhau."
+        },
+        {
+          "id": "paragraph_0115",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người khác muốn giữ tình bạn thân thiết nhưng bỏ những năm tháng khó khăn mà cả nhóm từng giúp đỡ nhau vượt qua."
+        },
+        {
+          "id": "paragraph_0116",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Máy xử lý tất cả yêu cầu."
+        },
+        {
+          "id": "paragraph_0117",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ban đầu, khách hàng rất hài lòng."
+        },
+        {
+          "id": "paragraph_0118",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cho đến khi những sự cố bắt đầu xuất hiện."
+        }
+      ]
+    },
+    {
+      "id": "section_04",
+      "title_vi": "4. Ngày những điều tốt đẹp biến mất",
+      "blocks": [
+        {
+          "id": "paragraph_0119",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đàn ông muốn giữ sự nghiệp thành công là khách đầu tiên trở lại."
+        },
+        {
+          "id": "dialogue_0121",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0120",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Các người làm gì công ty của tôi rồi?"
+                }
+              ],
+              "speaker": {
+                "id": "director",
+                "label_vi": "Vị giám đốc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0122",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc kiểm tra hồ sơ."
+        },
+        {
+          "id": "dialogue_0132",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0123",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Chúng tôi đã xóa mười năm làm việc cực nhọc theo yêu cầu."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0124",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Thế tại sao tôi không còn là giám đốc?"
+                }
+              ],
+              "speaker": {
+                "id": "director",
+                "label_vi": "Vị giám đốc"
+              }
+            },
+            {
+              "id": "turn_0125",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Trong mười năm ấy, ông đã gặp người đồng sáng lập công ty, học được kỹ năng quản lý và xây dựng quan hệ với các khách hàng đầu tiên."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0126",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng tôi bảo giữ thành công!"
+                }
+              ],
+              "speaker": {
+                "id": "director",
+                "label_vi": "Vị giám đốc"
+              }
+            },
+            {
+              "id": "turn_0127",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Chúng tôi đã cố."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0128",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cố thế nào?"
+                }
+              ],
+              "speaker": {
+                "id": "director",
+                "label_vi": "Vị giám đốc"
+              }
+            },
+            {
+              "id": "turn_0129",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Hệ thống đã đặt ông vào một văn phòng giám đốc."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0130",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Rồi sao?"
+                }
+              ],
+              "speaker": {
+                "id": "director",
+                "label_vi": "Vị giám đốc"
+              }
+            },
+            {
+              "id": "turn_0131",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Sau hai tuần, hội đồng quản trị sa thải ông."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0133",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đàn ông há hốc miệng."
+        },
+        {
+          "id": "paragraph_0134",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Sau đó đến lượt cô gái muốn bỏ một lần chia tay."
+        },
+        {
+          "id": "paragraph_0135",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trong cuộc đời mới, cô chưa từng cãi nhau với người yêu."
+        },
+        {
+          "id": "paragraph_0136",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng họ cũng chưa từng gặp lại sau cuộc cãi vã, chưa có cuộc trò chuyện giúp cả hai hiểu nhau hơn và chưa quyết định kết hôn."
+        },
+        {
+          "id": "paragraph_0137",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cô trở lại quầy, giơ chiếc nhẫn cưới đã biến thành một chiếc nhẫn bình thường."
+        },
+        {
+          "id": "dialogue_0139",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0138",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh ấy đâu rồi?"
+                }
+              ],
+              "speaker": {
+                "id": "woman",
+                "label_vi": "Cô gái"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0140",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc nhìn hồ sơ."
+        },
+        {
+          "id": "dialogue_0146",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0141",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Hiện đang sống ở Đà Nẵng."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0142",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi muốn gặp anh ấy!"
+                }
+              ],
+              "speaker": {
+                "id": "woman",
+                "label_vi": "Cô gái"
+              }
+            },
+            {
+              "id": "turn_0143",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cô có địa chỉ không?"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0144",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không!"
+                }
+              ],
+              "speaker": {
+                "id": "woman",
+                "label_vi": "Cô gái"
+              }
+            },
+            {
+              "id": "turn_0145",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy cô có thể bắt đầu tìm."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0147",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đến chiều, một người đàn ông khác xông vào."
+        },
+        {
+          "id": "paragraph_0148",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh đã yêu cầu xóa ba năm chăm sóc người cha mắc bệnh nặng, nhưng giữ mối quan hệ thân thiết giữa hai cha con."
+        },
+        {
+          "id": "paragraph_0149",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Máy đã xóa những ngày anh ở bệnh viện, những cuộc trò chuyện lúc chờ bác sĩ, những bữa ăn hai cha con chia nhau trong phòng bệnh."
+        },
+        {
+          "id": "paragraph_0150",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bây giờ, cha anh vẫn sống."
+        },
+        {
+          "id": "paragraph_0151",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng khi anh đến thăm, ông chỉ hỏi:"
+        },
+        {
+          "id": "dialogue_0153",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0152",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Dạo này con bận lắm hả? Lâu rồi mới thấy về."
+                }
+              ],
+              "speaker": {
+                "id": "father",
+                "label_vi": "Người cha"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0154",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đàn ông không đòi hoàn tiền."
+        },
+        {
+          "id": "paragraph_0155",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh chỉ ngồi trên ghế phòng chờ đến tận tối."
+        },
+        {
+          "id": "paragraph_0156",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang nghe đến đây thì bật cười."
+        },
+        {
+          "id": "dialogue_0158",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0157",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy cái máy đó đúng là vô dụng."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0159",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc lắc đầu."
+        },
+        {
+          "id": "dialogue_0163",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0160",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không hẳn. Có người yêu cầu bỏ một quyết định kinh doanh sai lầm. Hệ thống giúp họ tránh được khoản nợ lớn, gia đình họ nhờ đó mà bớt khổ."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0161",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Thế sao đóng cửa?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0162",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì quá nhiều người muốn giữ kết quả nhưng xóa nguyên nhân. Máy không biết phải làm thế nào."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0164",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang nhìn về quầy phủ bụi."
+        },
+        {
+          "id": "dialogue_0166",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0165",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông không sửa được à?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0167",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc nhai hết chiếc bánh quy."
+        },
+        {
+          "id": "dialogue_0171",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0168",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi đã sửa."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0169",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Rồi sao?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0170",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nó còn tệ hơn."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section_05",
+      "title_vi": "5. Lỗ hổng của những cuộc đời",
+      "blocks": [
+        {
+          "id": "paragraph_0172",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc mở chiếc túi da cũ, lấy ra một thiết bị bằng đồng trông giống đồng hồ bỏ túi."
+        },
+        {
+          "id": "dialogue_0176",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0173",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đây là thứ tôi chế tạo để giải quyết vấn đề."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0174",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nó hoạt động thế nào?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0175",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Khi một người đổi cuộc đời và không thích kết quả, thiết bị có thể đưa họ quay lại một ngã rẽ khác."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0177",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang nhìn ông."
+        },
+        {
+          "id": "dialogue_0183",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0178",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tức là được đổi nhiều lần?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0179",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Chính xác."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0180",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng không được quay lại cuộc đời cũ?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0181",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đúng. Mỗi lần chỉ có thể tạo một nhánh mới."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0182",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy ông đã đổi bốn lần?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0184",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc gật đầu."
+        },
+        {
+          "id": "dialogue_0186",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0185",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi là người đầu tiên thử nghiệm."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0187",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông kể rằng ban đầu mình chỉ muốn sửa một quyết định nhỏ."
+        },
+        {
+          "id": "paragraph_0188",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ở tuổi hai mươi tám, ông từ chối một công việc tốt vì sợ rời xa gia đình."
+        },
+        {
+          "id": "paragraph_0189",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông quay lại và nhận công việc ấy."
+        },
+        {
+          "id": "paragraph_0190",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cuộc đời mới đưa ông đến thành phố khác. Ông có sự nghiệp tốt hơn, nhiều tiền hơn."
+        },
+        {
+          "id": "paragraph_0191",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng ông không còn gặp người phụ nữ sau này trở thành vợ mình."
+        },
+        {
+          "id": "paragraph_0192",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc quyết định thử lần hai."
+        },
+        {
+          "id": "paragraph_0193",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông quay lại một thời điểm khác, chọn ở gần quê nhà nhưng mở công ty riêng."
+        },
+        {
+          "id": "paragraph_0194",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lần này ông kết hôn, có một gia đình mới và một đứa con trai."
+        },
+        {
+          "id": "paragraph_0195",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng công ty phá sản khi ông bốn mươi tuổi."
+        },
+        {
+          "id": "paragraph_0196",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông thử lần ba."
+        },
+        {
+          "id": "paragraph_0197",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Tránh được phá sản, nhưng không gặp người bạn thân đã từng giúp ông vượt qua giai đoạn khó khăn."
+        },
+        {
+          "id": "paragraph_0198",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lần thứ tư, ông chọn một cuộc sống bình yên hơn."
+        },
+        {
+          "id": "paragraph_0199",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không giàu có, không phá sản, không chuyển đi xa."
+        },
+        {
+          "id": "paragraph_0200",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc dừng lại."
+        },
+        {
+          "id": "paragraph_0201",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang sốt ruột:"
+        },
+        {
+          "id": "dialogue_0203",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0202",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Rồi lần thứ tư thế nào?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0204",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông già bỏ chiếc bánh cuối cùng vào miệng."
+        },
+        {
+          "id": "dialogue_0207",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0205",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cũng tốt."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0206",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy sao ông còn ở đây?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0208",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc nhìn thiết bị trong tay."
+        },
+        {
+          "id": "dialogue_0210",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0209",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì tôi vẫn chưa tìm thấy cuộc đời mình muốn."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0211",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đúng lúc ấy, thiết bị phát ra một tiếng tách."
+        },
+        {
+          "id": "paragraph_0212",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một tia sáng xanh chạy quanh mặt đồng hồ."
+        },
+        {
+          "id": "paragraph_0213",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ở cuối nhà ga, cánh cửa số bảy tự mở."
+        },
+        {
+          "id": "paragraph_0214",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chuông báo động vang lên."
+        },
+        {
+          "id": "paragraph_0215",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây từ quầy vé chạy tới."
+        },
+        {
+          "id": "dialogue_0217",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0216",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông Lộc! Ông lại mang cái thứ đó vào nhà ga à?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0218",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc giấu thiết bị sau lưng."
+        },
+        {
+          "id": "dialogue_0221",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0219",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi chỉ cho khách xem thôi!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0220",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông có biết nó vừa kích hoạt toàn bộ hệ thống không?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0222",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Tất cả đồng hồ trên tường bắt đầu quay ngược."
+        },
+        {
+          "id": "paragraph_0223",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những cánh cửa lần lượt mở ra."
+        },
+        {
+          "id": "paragraph_0224",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Từ bên trong vọng ra tiếng người, tiếng xe cộ, tiếng trẻ con, tiếng sóng biển."
+        },
+        {
+          "id": "paragraph_0225",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây hét lên:"
+        },
+        {
+          "id": "dialogue_0227",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0226",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đóng cửa số bảy! Mau!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0228",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng đã quá muộn."
+        },
+        {
+          "id": "paragraph_0229",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người đàn ông mặc vest bước ra từ cánh cửa số bảy."
+        },
+        {
+          "id": "paragraph_0230",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ngay sau đó, một người đàn ông mặc áo đầu bếp xuất hiện."
+        },
+        {
+          "id": "paragraph_0231",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Rồi một người đàn ông mặc đồ du lịch."
+        },
+        {
+          "id": "paragraph_0232",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cả ba đều có khuôn mặt của Lộc."
+        }
+      ]
+    },
+    {
+      "id": "part_3_opening",
+      "title_vi": null,
+      "blocks": [
+        {
+          "id": "part_3",
+          "type": "part_heading",
+          "part_number": 3,
+          "title_vi": "Hồi III — Chuyến tàu cuối cùng",
+          "subtitle_vi": null
+        },
+        {
+          "id": "part_3_epigraph",
+          "type": "statement",
+          "presentation": "leading",
+          "text_vi": "Đôi khi, phải đi qua rất nhiều cuộc đời tưởng tượng, ta mới nhận ra điều mình đã có trong một cuộc đời thật.",
+          "shareable": true
+        }
+      ]
+    },
+    {
+      "id": "section_06",
+      "title_vi": "6. Bốn ông Lộc",
+      "blocks": [
+        {
+          "id": "paragraph_0233",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ba phiên bản của Lộc nhìn nhau."
+        },
+        {
+          "id": "paragraph_0234",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc vest lên tiếng trước:"
+        },
+        {
+          "id": "dialogue_0236",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0235",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cuối cùng cũng tìm được ông!"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0237",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già lùi lại."
+        },
+        {
+          "id": "dialogue_0239",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0238",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không thể nào."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0240",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp giơ một chiếc chảo."
+        },
+        {
+          "id": "dialogue_0242",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0241",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông có biết tôi đã phải đóng cửa nhà hàng vì cái thiết bị chết tiệt này không?"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0243",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc đồ du lịch chỉ vào chiếc đồng hồ."
+        },
+        {
+          "id": "dialogue_0245",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0244",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi đã đi khắp thế giới tìm đường về, còn ông thì ngồi đây ăn bánh quy?"
+                }
+              ],
+              "speaker": {
+                "id": "traveler",
+                "label_vi": "Lộc du lịch"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0246",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang đứng giữa bốn người đàn ông giống hệt nhau, không biết nên nhìn ai."
+        },
+        {
+          "id": "paragraph_0247",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây lấy một chiếc còi."
+        },
+        {
+          "id": "dialogue_0249",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0248",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tất cả đứng yên!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0250",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không ai nghe."
+        },
+        {
+          "id": "paragraph_0251",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc vest túm cổ áo Lộc già."
+        },
+        {
+          "id": "dialogue_0253",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0252",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi muốn quay lại cuộc đời đầu tiên!"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0254",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già giằng ra."
+        },
+        {
+          "id": "dialogue_0256",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0255",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi cũng muốn!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0257",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp chen vào:"
+        },
+        {
+          "id": "dialogue_0260",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0258",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Còn tôi muốn quay về cuộc đời thứ hai!"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            },
+            {
+              "id": "turn_0259",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cuộc đời thứ hai có gì hay?"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0261",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "người mặc vest hỏi."
+        },
+        {
+          "id": "dialogue_0266",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0262",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi có vợ và con trai!"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            },
+            {
+              "id": "turn_0263",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng ông phá sản!"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            },
+            {
+              "id": "turn_0264",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi biết!"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            },
+            {
+              "id": "turn_0265",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Thế sao còn muốn về?"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0267",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp giơ chảo lên."
+        },
+        {
+          "id": "dialogue_0269",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0268",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì đó là gia đình tôi!"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0270",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây thổi còi lần nữa."
+        },
+        {
+          "id": "paragraph_0271",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lần này âm thanh vang khắp nhà ga."
+        },
+        {
+          "id": "paragraph_0272",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cả bốn ông Lộc im bặt."
+        },
+        {
+          "id": "dialogue_0274",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0273",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Các ông không phải bốn người khác nhau"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0275",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây nói."
+        },
+        {
+          "id": "dialogue_0277",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0276",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Các ông là bốn nhánh ký ức của cùng một hành khách. Thiết bị đã mở lại những dòng thời gian từng bị bỏ lại."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0278",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang hỏi:"
+        },
+        {
+          "id": "dialogue_0281",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0279",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy có thể đưa họ về không?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0280",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không. Những dòng thời gian ấy không còn lối vào ổn định."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0282",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc vest đập tay xuống bàn."
+        },
+        {
+          "id": "dialogue_0284",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0283",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng tôi đã có tất cả! Tiền bạc, địa vị, công ty lớn! Tại sao tôi vẫn không thấy đủ?"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0285",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp nhìn anh ta."
+        },
+        {
+          "id": "dialogue_0287",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0286",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì ông không có những gì tôi có."
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0288",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc đồ du lịch xen vào:"
+        },
+        {
+          "id": "dialogue_0290",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0289",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Còn tôi từng nghĩ hai ông có tất cả những gì tôi muốn."
+                }
+              ],
+              "speaker": {
+                "id": "traveler",
+                "label_vi": "Lộc du lịch"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0291",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bốn phiên bản quay sang nhìn nhau."
+        },
+        {
+          "id": "paragraph_0292",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không ai nói thêm."
+        },
+        {
+          "id": "paragraph_0293",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Rồi người mặc vest nhìn Lộc già."
+        },
+        {
+          "id": "dialogue_0295",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0294",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông là phiên bản cuối cùng. Ông đã chọn được gì?"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0296",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già nhìn quanh nhà ga."
+        },
+        {
+          "id": "dialogue_0300",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0297",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi chọn một cuộc đời ít rủi ro."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0298",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Và?"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            },
+            {
+              "id": "turn_0299",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi trở thành người sửa đồng hồ."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0301",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp bật cười."
+        },
+        {
+          "id": "dialogue_0303",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0302",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông đổi bốn cuộc đời chỉ để quay về sửa đồng hồ?"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0304",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già nổi giận:"
+        },
+        {
+          "id": "dialogue_0307",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0305",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ít nhất tôi không phá sản!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0306",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng ông có ai đợi ở nhà không?"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0308",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già không trả lời."
+        }
+      ]
+    },
+    {
+      "id": "section_07",
+      "title_vi": "7. Cuộc truy đuổi qua những ngã rẽ",
+      "blocks": [
+        {
+          "id": "paragraph_0309",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đột nhiên, chiếc đồng hồ trong tay Lộc già nổ tung."
+        },
+        {
+          "id": "paragraph_0310",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Hàng trăm mảnh bánh răng bay khắp phòng."
+        },
+        {
+          "id": "paragraph_0311",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Các cánh cửa bắt đầu thay đổi vị trí."
+        },
+        {
+          "id": "paragraph_0312",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cửa số ba dẫn đến một thành phố ven biển."
+        },
+        {
+          "id": "paragraph_0313",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cửa số tám mở ra giữa một khu chợ đông đúc."
+        },
+        {
+          "id": "paragraph_0314",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cửa số mười một xuất hiện ngay trên trần nhà ga."
+        },
+        {
+          "id": "paragraph_0315",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây nhìn bảng điều khiển."
+        },
+        {
+          "id": "dialogue_0317",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0316",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Hệ thống đang cố hợp nhất các dòng thời gian!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0318",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một chiếc vali từ cửa số tám bay ra, đập trúng bàn bán vé."
+        },
+        {
+          "id": "paragraph_0319",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một chiếc xe đạp lao qua cửa số ba, suýt tông vào Khang."
+        },
+        {
+          "id": "paragraph_0320",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Từ cửa số mười một, hàng trăm tờ giấy rơi xuống như mưa."
+        },
+        {
+          "id": "paragraph_0321",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây hét:"
+        },
+        {
+          "id": "dialogue_0323",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0322",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nếu không đóng các cửa trong mười phút, những cuộc đời sẽ trộn lẫn vào nhau!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0324",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già chạy đến bảng điều khiển."
+        },
+        {
+          "id": "dialogue_0327",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0325",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi biết cách sửa!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0326",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông đã gây ra chuyện này!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0328",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây hét lại."
+        },
+        {
+          "id": "dialogue_0330",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0329",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì thế tôi càng phải sửa!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0331",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang lao theo."
+        },
+        {
+          "id": "paragraph_0332",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bốn ông Lộc chia nhau giữ các cánh cửa."
+        },
+        {
+          "id": "paragraph_0333",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc vest dùng chiếc cặp da chặn cửa số ba."
+        },
+        {
+          "id": "paragraph_0334",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp lấy chảo đập vào bộ khóa đang kẹt."
+        },
+        {
+          "id": "paragraph_0335",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc đồ du lịch trèo lên một chiếc thang để kéo cần gạt."
+        },
+        {
+          "id": "paragraph_0336",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già điều khiển bảng máy trung tâm."
+        },
+        {
+          "id": "paragraph_0337",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng trên màn hình hiện một thông báo:"
+        },
+        {
+          "id": "paragraph_0338",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "CẦN CHỌN DÒNG THỜI GIAN GỐC ĐỂ KHÔI PHỤC."
+        },
+        {
+          "id": "paragraph_0339",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang nhìn ông."
+        },
+        {
+          "id": "dialogue_0341",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0340",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Dòng thời gian gốc là gì?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0342",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già tái mặt."
+        },
+        {
+          "id": "dialogue_0348",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0343",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cuộc đời trước khi tôi bắt đầu thay đổi."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0344",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy chọn nó đi!"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0345",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không thể."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0346",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tại sao?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0347",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì tôi đã xóa đường quay lại."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0349",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây chạy tới."
+        },
+        {
+          "id": "dialogue_0351",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0350",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nếu không chọn, nhà ga sẽ mất kiểm soát!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0352",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc nhìn màn hình."
+        },
+        {
+          "id": "paragraph_0353",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bên dưới có bốn lựa chọn."
+        },
+        {
+          "id": "paragraph_0354",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một: sự nghiệp thành công."
+        },
+        {
+          "id": "paragraph_0355",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Hai: gia đình và công ty thất bại."
+        },
+        {
+          "id": "paragraph_0356",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ba: cuộc sống du lịch tự do."
+        },
+        {
+          "id": "paragraph_0357",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bốn: cuộc sống bình yên."
+        },
+        {
+          "id": "paragraph_0358",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc vest hét:"
+        },
+        {
+          "id": "dialogue_0360",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0359",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Chọn số một!"
+                }
+              ],
+              "speaker": {
+                "id": "suit",
+                "label_vi": "Lộc mặc vest"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0361",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp hét:"
+        },
+        {
+          "id": "dialogue_0363",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0362",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Số hai!"
+                }
+              ],
+              "speaker": {
+                "id": "chef",
+                "label_vi": "Lộc đầu bếp"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0364",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người du lịch:"
+        },
+        {
+          "id": "dialogue_0366",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0365",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Số ba!"
+                }
+              ],
+              "speaker": {
+                "id": "traveler",
+                "label_vi": "Lộc du lịch"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0367",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già đưa tay về số bốn."
+        },
+        {
+          "id": "paragraph_0368",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng Khang bất ngờ hỏi:"
+        },
+        {
+          "id": "dialogue_0370",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0369",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Sao không có lựa chọn ban đầu?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0371",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc dừng lại."
+        },
+        {
+          "id": "dialogue_0374",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0372",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì cuộc đời đó đã bị bỏ lại trước khi máy được tạo ra."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0373",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy ông muốn quay về đâu nhất?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0375",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cả bốn ông Lộc cùng im lặng."
+        },
+        {
+          "id": "paragraph_0376",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cuối cùng, Lộc già nói rất nhỏ:"
+        },
+        {
+          "id": "dialogue_0378",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0377",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi muốn quay về ngày tôi từ chối công việc ở xa."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0379",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang nhìn ông."
+        },
+        {
+          "id": "dialogue_0381",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0380",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng đó là quyết định mà ông muốn thay đổi đầu tiên."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0382",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già gật đầu."
+        },
+        {
+          "id": "dialogue_0384",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0383",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Đúng."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section_08",
+      "title_vi": "8. Tấm vé không tồn tại",
+      "blocks": [
+        {
+          "id": "paragraph_0385",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những chiếc đồng hồ trên tường quay nhanh hơn."
+        },
+        {
+          "id": "paragraph_0386",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây tìm trong cuốn sổ cũ."
+        },
+        {
+          "id": "dialogue_0388",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0387",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Có một cách!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0389",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cô mở đến trang đầu tiên của hồ sơ Lộc."
+        },
+        {
+          "id": "dialogue_0391",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0390",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Mỗi hành khách đều có một dấu mốc gốc được lưu tại nhà ga. Nhưng dấu mốc ấy chỉ dùng để nhận diện, không phải để trở về."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0392",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang hỏi:"
+        },
+        {
+          "id": "dialogue_0395",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0393",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Có thể mở cửa đến đó không?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0394",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Có thể thử, nhưng không ai biết điều gì sẽ xảy ra."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0396",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già nhìn ba phiên bản còn lại."
+        },
+        {
+          "id": "paragraph_0397",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người mặc vest tháo chiếc đồng hồ đắt tiền trên tay, đặt xuống bàn."
+        },
+        {
+          "id": "paragraph_0398",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đầu bếp bỏ chiếc chảo xuống."
+        },
+        {
+          "id": "paragraph_0399",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người du lịch cởi ba lô."
+        },
+        {
+          "id": "paragraph_0400",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Họ đứng trước cánh cửa trung tâm."
+        },
+        {
+          "id": "paragraph_0401",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây nhập ngày tháng."
+        },
+        {
+          "id": "paragraph_0402",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một luồng sáng trắng xuất hiện."
+        },
+        {
+          "id": "paragraph_0403",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bên kia cánh cửa là một căn phòng nhỏ."
+        },
+        {
+          "id": "paragraph_0404",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người đàn ông hai mươi tám tuổi ngồi trước bàn, trên tay cầm thư mời làm việc."
+        },
+        {
+          "id": "paragraph_0405",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Điện thoại bên cạnh reo."
+        },
+        {
+          "id": "paragraph_0406",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh nhấc máy."
+        },
+        {
+          "id": "paragraph_0407",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một giọng phụ nữ vang lên:"
+        },
+        {
+          "id": "dialogue_0409",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0408",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh quyết định chưa? Nếu ở lại thì tối nay mình đi xem phim nhé."
+                }
+              ],
+              "speaker": {
+                "id": "caller",
+                "label_vi": "Người phụ nữ trong điện thoại"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0410",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người đàn ông trẻ cười."
+        },
+        {
+          "id": "dialogue_0412",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0411",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh đang suy nghĩ."
+                }
+              ],
+              "speaker": {
+                "id": "young_loc",
+                "label_vi": "Lộc năm hai mươi tám tuổi"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0413",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già bước tới."
+        },
+        {
+          "id": "paragraph_0414",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông nhìn căn phòng."
+        },
+        {
+          "id": "paragraph_0415",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhìn chiếc bàn, chậu cây nhỏ bên cửa sổ, chiếc áo khoác treo trên ghế."
+        },
+        {
+          "id": "paragraph_0416",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Rồi ông nhìn người đàn ông trẻ."
+        },
+        {
+          "id": "paragraph_0417",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đó là mình, trước tất cả những lần thay đổi."
+        },
+        {
+          "id": "paragraph_0418",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông đưa tay qua cánh cửa."
+        },
+        {
+          "id": "paragraph_0419",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ngay lập tức, chuông báo động vang lên dữ dội."
+        },
+        {
+          "id": "paragraph_0420",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây kéo ông lại."
+        },
+        {
+          "id": "dialogue_0424",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0421",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Không được! Cánh cửa chỉ có thể mở để quan sát!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0422",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi chỉ muốn nói với anh ta một câu!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0423",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nếu ông can thiệp, toàn bộ dòng thời gian sẽ sụp đổ!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0425",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già giằng tay."
+        },
+        {
+          "id": "dialogue_0427",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0426",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi chỉ muốn bảo anh ta đừng đi!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0428",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây giữ chặt ông."
+        },
+        {
+          "id": "dialogue_0430",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0429",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nhưng ông không biết nếu anh ta ở lại thì cuộc đời sẽ thế nào!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0431",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc già đứng sững."
+        },
+        {
+          "id": "paragraph_0432",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bên kia, người đàn ông trẻ đặt lá thư xuống bàn."
+        },
+        {
+          "id": "paragraph_0433",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh cầm điện thoại, trả lời:"
+        },
+        {
+          "id": "dialogue_0435",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0434",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Được. Tối nay anh đến."
+                }
+              ],
+              "speaker": {
+                "id": "young_loc",
+                "label_vi": "Lộc năm hai mươi tám tuổi"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0436",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Rồi cánh cửa khép lại."
+        },
+        {
+          "id": "paragraph_0437",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không có tiếng nổ."
+        },
+        {
+          "id": "paragraph_0438",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không có phép màu."
+        },
+        {
+          "id": "paragraph_0439",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chỉ có một tiếng khóa rất nhỏ."
+        },
+        {
+          "id": "paragraph_0440",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Tách."
+        },
+        {
+          "id": "paragraph_0441",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những cánh cửa khác đóng lại theo."
+        },
+        {
+          "id": "paragraph_0442",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ba phiên bản của Lộc biến mất."
+        },
+        {
+          "id": "paragraph_0443",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhà ga trở về yên tĩnh."
+        }
+      ]
+    },
+    {
+      "id": "section_09",
+      "title_vi": "9. Người chưa mua vé",
+      "blocks": [
+        {
+          "id": "paragraph_0444",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang vẫn ngồi trên chiếc ghế gỗ."
+        },
+        {
+          "id": "paragraph_0445",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Tấm vé trong tay anh đã nhàu."
+        },
+        {
+          "id": "paragraph_0446",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây đến gần."
+        },
+        {
+          "id": "dialogue_0448",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0447",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh còn muốn đổi cuộc đời không?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0449",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang nhìn dãy cửa sổ."
+        },
+        {
+          "id": "paragraph_0450",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trong một ô kính, anh vẫn thấy mình đứng trên sân khấu nhận giải thưởng."
+        },
+        {
+          "id": "paragraph_0451",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trong ô khác, anh đang ngồi ở căn hộ sang trọng."
+        },
+        {
+          "id": "paragraph_0452",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những hình ảnh vẫn rất hấp dẫn."
+        },
+        {
+          "id": "paragraph_0453",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh hỏi:"
+        },
+        {
+          "id": "dialogue_0458",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0454",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi có thể xem một cửa sổ nữa không?"
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0455",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh đã dùng hết ba lượt."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0456",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi trả thêm tiền."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0457",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh muốn xem gì?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0459",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang đưa điện thoại ra."
+        },
+        {
+          "id": "paragraph_0460",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trên màn hình là tin nhắn con gái gửi từ tối:"
+        },
+        {
+          "id": "dialogue_0463",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0461",
+              "delivery": "written",
+              "paragraphs": [
+                {
+                  "text_vi": "Ba ơi, tối nay ba về ăn cơm không? Con làm món mới."
+                }
+              ],
+              "speaker": {
+                "id": "daughter",
+                "label_vi": "Con gái Khang"
+              }
+            },
+            {
+              "id": "turn_0462",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi muốn xem tối nay ở nhà mình thế nào."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0464",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây nhìn anh."
+        },
+        {
+          "id": "dialogue_0466",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0465",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cửa sổ chỉ cho xem những cuộc đời anh chưa chọn."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0467",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang nghĩ một lát."
+        },
+        {
+          "id": "paragraph_0468",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Rồi bật cười."
+        },
+        {
+          "id": "dialogue_0470",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0469",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy chắc tôi phải tự về xem thôi."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0471",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh trả lại tấm vé."
+        },
+        {
+          "id": "paragraph_0472",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây đóng hồ sơ."
+        },
+        {
+          "id": "dialogue_0476",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0473",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Anh không muốn thay đổi quyết định nữa sao?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0474",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Có chứ. Tôi vẫn muốn đi nhiều nơi hơn, làm công việc thú vị hơn, có thêm thời gian cho mình."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            },
+            {
+              "id": "turn_0475",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy sao không bước qua?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0477",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang khoác ba lô."
+        },
+        {
+          "id": "dialogue_0479",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0478",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì những chuyện đó chưa chắc cần quay về mười lăm năm trước mới làm được."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0480",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Anh bước ra khỏi nhà ga."
+        },
+        {
+          "id": "paragraph_0481",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Trước khi đi, anh nhìn thấy Lộc già đang ngồi bên chiếc đồng hồ đã vỡ."
+        },
+        {
+          "id": "paragraph_0482",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang đặt một gói bánh quy lên bàn."
+        },
+        {
+          "id": "dialogue_0484",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0483",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Cho ông."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0485",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc ngước lên."
+        },
+        {
+          "id": "dialogue_0488",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0486",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi đâu có nhờ."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0487",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi biết."
+                }
+              ],
+              "speaker": {
+                "id": "khang",
+                "label_vi": "Khang"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0489",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khang mỉm cười rồi đi."
+        }
+      ]
+    },
+    {
+      "id": "section_10",
+      "title_vi": "10. Chuyến tàu sáng mai",
+      "blocks": [
+        {
+          "id": "paragraph_0490",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Sáng hôm sau, nhà ga Một Chiều mở cửa như thường lệ."
+        },
+        {
+          "id": "paragraph_0491",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây treo lại tấm biển “Vé đã sử dụng không được hoàn trả.”"
+        },
+        {
+          "id": "paragraph_0492",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Quầy Khiếu Nại đã có sáu người xếp hàng."
+        },
+        {
+          "id": "paragraph_0493",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người phụ nữ yêu cầu đổi cuộc đời vì đã mua sai căn nhà."
+        },
+        {
+          "id": "paragraph_0494",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người đàn ông muốn quay lại ngày từ chối một lời tỏ tình."
+        },
+        {
+          "id": "paragraph_0495",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một cậu thanh niên muốn trở về năm mười tám tuổi để chọn ngành học khác."
+        },
+        {
+          "id": "paragraph_0496",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây mở sổ, chuẩn bị cho một ngày làm việc mới."
+        },
+        {
+          "id": "paragraph_0497",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ở cuối phòng, Lộc già đang sửa chiếc đồng hồ bỏ túi."
+        },
+        {
+          "id": "paragraph_0498",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông thay một bánh răng, thử lên dây cót."
+        },
+        {
+          "id": "paragraph_0499",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chiếc đồng hồ không chạy."
+        },
+        {
+          "id": "paragraph_0500",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ông thử lần nữa."
+        },
+        {
+          "id": "paragraph_0501",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vẫn không chạy."
+        },
+        {
+          "id": "paragraph_0502",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc tháo mặt kính, nhìn những chiếc kim đã cong."
+        },
+        {
+          "id": "paragraph_0503",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây đi ngang."
+        },
+        {
+          "id": "dialogue_0509",
+          "type": "dialogue",
+          "style": "exchange",
+          "turns": [
+            {
+              "id": "turn_0504",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ông vẫn muốn sửa nó sao?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0505",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Ừ."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0506",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Nó đã hỏng hoàn toàn rồi."
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            },
+            {
+              "id": "turn_0507",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi biết."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            },
+            {
+              "id": "turn_0508",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vậy sao không mua cái mới?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0510",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Lộc nhìn cô."
+        },
+        {
+          "id": "dialogue_0512",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0511",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Vì cái này là của tôi."
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0513",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây lắc đầu, đi về quầy vé."
+        },
+        {
+          "id": "paragraph_0514",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đúng lúc ấy, một vị khách mới bước vào."
+        },
+        {
+          "id": "dialogue_0516",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0515",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Xin lỗi, ở đây có thể quay lại quá khứ không?"
+                }
+              ],
+              "speaker": {
+                "id": "guest",
+                "label_vi": "Vị khách mới"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0517",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây mỉm cười."
+        },
+        {
+          "id": "dialogue_0519",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0518",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Có. Anh muốn thay đổi điều gì?"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0520",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người khách đáp:"
+        },
+        {
+          "id": "dialogue_0522",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0521",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Tôi muốn quay về mười năm trước, khi tôi quyết định mua Bitcoin."
+                }
+              ],
+              "speaker": {
+                "id": "guest",
+                "label_vi": "Vị khách mới"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0523",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Từ cuối phòng, Lộc già ngẩng phắt đầu lên."
+        },
+        {
+          "id": "dialogue_0525",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0524",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "Khoan! Cái này tôi cũng muốn!"
+                }
+              ],
+              "speaker": {
+                "id": "loc",
+                "label_vi": "Lộc"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0526",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Mây thở dài."
+        },
+        {
+          "id": "paragraph_0527",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cô lấy chiếc còi trên bàn."
+        },
+        {
+          "id": "dialogue_0529",
+          "type": "dialogue",
+          "style": "monologue",
+          "turns": [
+            {
+              "id": "turn_0528",
+              "delivery": "spoken",
+              "paragraphs": [
+                {
+                  "text_vi": "ÔNG LỘC!"
+                }
+              ],
+              "speaker": {
+                "id": "may",
+                "label_vi": "Mây"
+              }
+            }
+          ]
+        },
+        {
+          "id": "paragraph_0530",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cả nhà ga bật cười."
+        },
+        {
+          "id": "paragraph_0531",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chiếc đồng hồ khổng lồ trên tường tiếp tục chạy."
+        },
+        {
+          "id": "paragraph_0532",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Và đâu đó ngoài kia, những con người vẫn đang sống trong những cuộc đời mà một ngày nào đó, chính họ có thể ước được quay về."
+        },
+        {
+          "id": "paragraph_0533",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Hết."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Nhìn lại",
+    "text_vi": "Điều chưa sống qua vẫn có những phần ta không nhìn thấy. Mong muốn thay đổi có thể còn đó, ngay cả khi ta quyết định giữ cuộc đời hiện tại."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Trong cuộc đời bạn từng ao ước, bạn đã nhìn thấy những gì, và còn những gì bạn chưa biết?",
+        "response_mode": "none"
+      },
+      {
+        "id": "reflection_2",
+        "text_vi": "Điều bạn muốn thay đổi có thể bắt đầu từ cuộc sống hiện tại theo cách nào?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "selflo",
+    "author_name": "Selflo",
+    "source_label": "Nội dung gốc Selflo",
+    "source_url": null
+  },
+  "editorial": {
+    "origin_type": "owner_curated_ai_assisted",
+    "source_collection_id": "owner_approved_content",
+    "source_item_id": "nha_ga_mot_chieu",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "selflo_owned",
+    "note": "Truyện gốc Selflo được owner cung cấp nguyên văn và yêu cầu đưa lên Selflo kèm quote ngày 2026-10-30. Không gán cho tác giả hay nguồn bên ngoài."
+  },
+  "review": {
+    "status": "approved",
+    "reviewed_by": "owner:dungvo; ai:codex",
+    "reviewed_at": "2026-10-30T00:36:06Z"
+  }
+}

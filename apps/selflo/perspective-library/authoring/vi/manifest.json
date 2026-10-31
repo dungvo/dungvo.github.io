@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 98,
-  "content_version": "three-owner-approved-message-quotes-2026-10-28",
+  "library_revision": 100,
+  "content_version": "nha-ga-mot-chieu-final-quote-2026-10-30",
   "language": "vi",
-  "generated_at": "2026-10-28T02:06:01Z",
+  "generated_at": "2026-10-30T02:56:38Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -244,11 +244,11 @@
     {
       "id": "theme.meaning_values.vi",
       "kind": "quote_pack",
-      "revision": 48,
-      "path": "themes/meaning-values.vi.r48.json",
+      "revision": 50,
+      "path": "themes/meaning-values.vi.r50.json",
       "media_type": "application/json",
-      "sha256": "06a86d13165787b4d4ca3de71f05f5451cf2aa258854990f156b3bc0b746ab6d",
-      "byte_count": 304135
+      "sha256": "3c09c543ea4bfdbcc427cf4533552287d106a9f57e9504dc984196c5012a32bf",
+      "byte_count": 308959
     },
     {
       "id": "theme.relationships.vi",
@@ -546,6 +546,24 @@
       "media_type": "application/json",
       "sha256": "5394b6909389329374ad64649b71d3bdf1b9c285334b43ff141ecb95431bac84",
       "byte_count": 24253
+    },
+    {
+      "id": "story.nha_ga_mot_chieu",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/nha-ga-mot-chieu/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "751bca1a8ce72a3dd4fa2d52a163c5c96a1b504e5735052bc3daf07499c691a2",
+      "byte_count": 134904
+    },
+    {
+      "id": "story.nhung_ngay_dep_nhat",
+      "kind": "story",
+      "revision": 1,
+      "path": "stories/nhung-ngay-dep-nhat/story.vi.r1.json",
+      "media_type": "application/json",
+      "sha256": "045235f922fff38d89175824954b6c3bc3601140ef85d10d6e2c992770743eb6",
+      "byte_count": 42372
     },
     {
       "id": "story.nine_oclock_morning",

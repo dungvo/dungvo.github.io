@@ -34,6 +34,8 @@ RELEASED_STORY_IDS = {
     "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
     "story.tiem_ban_mau_cua_cuoc_doi",
     "story.thanh_pho_cua_nhung_chiec_dong_ho",
+    "story.nhung_ngay_dep_nhat",
+    "story.nha_ga_mot_chieu",
 }
 
 

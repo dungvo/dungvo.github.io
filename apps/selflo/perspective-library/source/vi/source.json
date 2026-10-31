@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 81,
-  "content_version": "three-owner-approved-message-quotes-2026-10-28",
+  "source_revision": 83,
+  "content_version": "nha-ga-mot-chieu-final-quote-2026-10-30",
   "language": "vi",
-  "canonical_quote_count": 1854,
+  "canonical_quote_count": 1856,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1588,6 +1588,18 @@
       "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
       "kind": "story",
       "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.nhung_ngay_dep_nhat",
+      "kind": "story",
+      "path": "stories/nhung-ngay-dep-nhat/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.nha_ga_mot_chieu",
+      "kind": "story",
+      "path": "stories/nha-ga-mot-chieu/story.vi.json",
       "media_type": "application/json"
     }
   ]
