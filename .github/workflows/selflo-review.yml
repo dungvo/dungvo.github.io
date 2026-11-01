@@ -1,0 +1,41 @@
+name: Selflo review checks
+on:
+  pull_request:
+    paths:
+      - 'apps/selflo/**'
+      - '.github/workflows/selflo-review.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'apps/selflo/**'
+      - '.github/workflows/selflo-review.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Review Matrix interaction guards
+        run: node apps/selflo/website-system/tests/review-matrix-interaction.test.mjs
+      - name: Website config and navigation
+        working-directory: apps/selflo
+        run: |
+          node website-system/scripts/validate-config.mjs
+          node website-system/tests/routes.test.mjs
+          node website-system/tests/config-negative.test.mjs
+          node website-system/tests/studio-shell.test.mjs
+          node website-system/tests/developer-navigation.test.mjs
+          node website-system/tests/studio-build-safety.test.mjs
+      - name: Content contract tests
+        working-directory: apps/selflo
+        run: |
+          python scripts/test_story_v3_contract.py
+          python scripts/test_story_component_contract.py
+          python scripts/test_content_tag_contract.py
