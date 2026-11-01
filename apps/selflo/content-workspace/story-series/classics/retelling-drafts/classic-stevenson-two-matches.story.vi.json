@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_stevenson_two_matches",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Hai que diêm",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Two Matches” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "attention",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Two Matches",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Phi lý đời thường",
+      "Suy luận hệ quả"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người đi đường mệt và đói dừng lại trong khu rừng khô để hút tẩu. Ông chỉ còn hai que diêm."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Que đầu tiên không cháy. Ông cầm que cuối cùng và tưởng tượng nếu nó bắt lửa: tàn thuốc có thể rơi xuống cỏ khô, ngọn lửa lan qua bụi cây và những cây thông, rồi cả khu rừng cùng trang trại quanh đó có thể bị thiêu rụi."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Những hậu quả tưởng tượng nối tiếp nhau làm ông choáng váng. Ông đánh que diêm cuối cùng."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nó cũng không cháy. Người đi đường thở phào, cất tẩu vào túi và tiếp tục đi."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Một điều khiến ta thất vọng có thể mang nghĩa khác khi ta nhìn đến hệ quả chưa xảy ra."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Bạn có từng đánh giá lại một sự cố nhờ biết điều gì đã không xảy ra không?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "robert-louis-stevenson",
+    "author_name": "Robert Louis Stevenson",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/343"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "stevenson_fables_1901",
+    "source_item_id": "stevenson-two-matches",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}

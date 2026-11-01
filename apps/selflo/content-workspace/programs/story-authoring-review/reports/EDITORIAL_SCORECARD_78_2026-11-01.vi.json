@@ -1,0 +1,1513 @@
+{
+  "schema_version": "selflo.story_editorial_scores.provisional.v1",
+  "recorded_at": "2026-11-01",
+  "source": "Assistant's prior in-conversation subjective editorial scoring round, saved for continuity; not user-approved, not definitive literary evaluation.",
+  "evidence_scope": "Previous review sampled story openings, middle, endings, semantic blocks, and a smaller set of full work structural/dialogue elements; not a complete line-level reread of all 78. Score precision should not be interpreted as measurement accuracy.",
+  "library_snapshot": {
+    "authoring_revision": 108,
+    "release_revision": 61,
+    "authoring_stories": 78,
+    "release_stories": 22
+  },
+  "criteria": {
+    "C": "Emotional impact / độ cảm",
+    "K": "Narrative craft or explanatory technique / phong cách kể",
+    "S": "Selflo philosophical alignment / tinh thần Selflo",
+    "H": "Hook and engagement / sức cuốn hút",
+    "M": "Originality relative to corpus / tính khác biệt",
+    "T": "Ending subtlety / độ tinh tế của kết"
+  },
+  "weights": {
+    "C": 0.2,
+    "K": 0.2,
+    "S": 0.25,
+    "H": 0.15,
+    "M": 0.1,
+    "T": 0.1
+  },
+  "reader_score": "My hypothetical willingness to read/introduce this, not reader-survey evidence and not in weighted total",
+  "records": [
+    {
+      "id": "story.after_the_alarm_went_silent",
+      "index_in_2026_11_01_table": 1,
+      "title_vi": "Sau khi chuông báo đã im",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 8.1,
+        "S": 8.9,
+        "H": 7.8,
+        "M": 7.8,
+        "T": 8.9
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.4,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.baker_and_black_mark",
+      "index_in_2026_11_01_table": 2,
+      "title_vi": "Người thợ làm bánh và dấu than dưới ổ bánh",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.4,
+        "K": 7.5,
+        "S": 8.3,
+        "H": 7.6,
+        "M": 7.1,
+        "T": 7.2
+      },
+      "weighted_total": 7.6,
+      "reader_interest": 7.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.blue_eraser",
+      "index_in_2026_11_01_table": 3,
+      "title_vi": "Cục tẩy màu xanh",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.2,
+        "K": 8,
+        "S": 8.9,
+        "H": 8.1,
+        "M": 8.3,
+        "T": 8.8
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.boatman_and_second_mountain",
+      "index_in_2026_11_01_table": 4,
+      "title_vi": "Người chèo thuyền và ngọn núi thứ hai",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.2,
+        "K": 7.4,
+        "S": 8.5,
+        "H": 7.1,
+        "M": 6.8,
+        "T": 6.4
+      },
+      "weighted_total": 7.4,
+      "reader_interest": 7.2,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.builder_and_shapeless_stones",
+      "index_in_2026_11_01_table": 5,
+      "title_vi": "Người thợ xây và những viên đá không có hình",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.3,
+        "K": 7.6,
+        "S": 8.9,
+        "H": 7.4,
+        "M": 7.7,
+        "T": 7
+      },
+      "weighted_total": 7.8,
+      "reader_interest": 7.6,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.cafe_and_smoke_in_curtain",
+      "index_in_2026_11_01_table": 6,
+      "title_vi": "Quán nhỏ và mùi khói trong tấm rèm",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.6,
+        "K": 8.4,
+        "S": 9.2,
+        "H": 8.1,
+        "M": 8.8,
+        "T": 9
+      },
+      "weighted_total": 8.7,
+      "reader_interest": 8.6,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.cake_for_the_sixth_floor",
+      "index_in_2026_11_01_table": 7,
+      "title_vi": "Chiếc bánh dành cho tầng sáu",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.7,
+        "K": 8.8,
+        "S": 9,
+        "H": 8.7,
+        "M": 8.7,
+        "T": 9.1
+      },
+      "weighted_total": 8.8,
+      "reader_interest": 8.9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.cake_that_leaned_left",
+      "index_in_2026_11_01_table": 8,
+      "title_vi": "Chiếc bánh nghiêng sang trái",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.1,
+        "K": 8.4,
+        "S": 9.2,
+        "H": 8.5,
+        "M": 8.4,
+        "T": 9.1
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 8.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.call_me_at_the_last_stop",
+      "index_in_2026_11_01_table": 9,
+      "title_vi": "Gọi em ở trạm cuối",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 8.1,
+        "S": 8.9,
+        "H": 8,
+        "M": 8.1,
+        "T": 9
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.chair_across_three_homes",
+      "index_in_2026_11_01_table": 10,
+      "title_vi": "Chiếc ghế đi qua ba căn nhà",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.8,
+        "K": 8.7,
+        "S": 9.2,
+        "H": 8.1,
+        "M": 8.5,
+        "T": 9.3
+      },
+      "weighted_total": 8.8,
+      "reader_interest": 8.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.courier_and_waterline",
+      "index_in_2026_11_01_table": 11,
+      "title_vi": "Người giao hàng và vạch nước trên tường",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.3,
+        "K": 7.8,
+        "S": 8.6,
+        "H": 7.5,
+        "M": 7.2,
+        "T": 7
+      },
+      "weighted_total": 7.7,
+      "reader_interest": 7.4,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.cup_with_less_sugar",
+      "index_in_2026_11_01_table": 12,
+      "title_vi": "Ly sữa ít đường",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.1,
+        "K": 8.1,
+        "S": 9,
+        "H": 7.8,
+        "M": 7.9,
+        "T": 8.8
+      },
+      "weighted_total": 8.3,
+      "reader_interest": 8.2,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.driver_and_last_stop_light",
+      "index_in_2026_11_01_table": 13,
+      "title_vi": "Người lái xe và ô cửa ở bến cuối",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8,
+        "S": 8.8,
+        "H": 7.8,
+        "M": 8.1,
+        "T": 8.5
+      },
+      "weighted_total": 8.2,
+      "reader_interest": 8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.empty_boat_on_the_river",
+      "index_in_2026_11_01_table": 14,
+      "title_vi": "Chiếc thuyền trống",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.3,
+        "K": 7.5,
+        "S": 9,
+        "H": 7.5,
+        "M": 7,
+        "T": 7.5
+      },
+      "weighted_total": 7.8,
+      "reader_interest": 7.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.envelope_that_could_not_hold_strength",
+      "index_in_2026_11_01_table": 15,
+      "title_vi": "Phong bì không đựng được sức người",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.6,
+        "K": 8.3,
+        "S": 9.1,
+        "H": 8.1,
+        "M": 8.1,
+        "T": 8.7
+      },
+      "weighted_total": 8.5,
+      "reader_interest": 8.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.first_root_in_the_dark",
+      "index_in_2026_11_01_table": 16,
+      "title_vi": "Chiếc rễ đầu tiên trong bóng tối",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.6,
+        "K": 7.8,
+        "S": 8.7,
+        "H": 7.1,
+        "M": 8.2,
+        "T": 8.3
+      },
+      "weighted_total": 8,
+      "reader_interest": 7.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.forest_still_dripping",
+      "index_in_2026_11_01_table": 17,
+      "title_vi": "Khu rừng còn nhỏ giọt",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8.4,
+        "S": 9.3,
+        "H": 7.8,
+        "M": 8.6,
+        "T": 9.2
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.four_pots_on_the_balcony",
+      "index_in_2026_11_01_table": 18,
+      "title_vi": "Bốn chậu cây ngoài ban công",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.7,
+        "K": 7.8,
+        "S": 8.6,
+        "H": 7.5,
+        "M": 7,
+        "T": 7.4
+      },
+      "weighted_total": 7.8,
+      "reader_interest": 7.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.garden_with_a_new_patch_of_sun",
+      "index_in_2026_11_01_table": 19,
+      "title_vi": "Khoảng nắng mới trong khu vườn",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8.2,
+        "S": 9,
+        "H": 7.7,
+        "M": 8,
+        "T": 9
+      },
+      "weighted_total": 8.3,
+      "reader_interest": 8.2,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.half_a_wet_shoulder",
+      "index_in_2026_11_01_table": 20,
+      "title_vi": "Nửa vai áo bị ướt",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.7,
+        "K": 8.9,
+        "S": 9.3,
+        "H": 8.7,
+        "M": 8.8,
+        "T": 9.2
+      },
+      "weighted_total": 9,
+      "reader_interest": 9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.half_glass_two_views",
+      "index_in_2026_11_01_table": 21,
+      "title_vi": "Nửa ly nước, hai cách nhìn",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 5.9,
+        "K": 6.1,
+        "S": 8.2,
+        "H": 5.6,
+        "M": 5.8,
+        "T": 6.5
+      },
+      "weighted_total": 6.5,
+      "reader_interest": 5.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.if_i_am_wrong_but_chatgpt_agrees",
+      "index_in_2026_11_01_table": 22,
+      "title_vi": "Nếu tôi sai, nhưng ChatGPT lại đồng ý với tôi thì sao?",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.1,
+        "K": 8.3,
+        "S": 9.5,
+        "H": 8.7,
+        "M": 8.3,
+        "T": 8.6
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.large_tree_beyond_the_carpenters_measure",
+      "index_in_2026_11_01_table": 23,
+      "title_vi": "Cây lớn ngoài thước thợ mộc",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.5,
+        "K": 7.8,
+        "S": 9.3,
+        "H": 7.5,
+        "M": 8.2,
+        "T": 8.7
+      },
+      "weighted_total": 8.2,
+      "reader_interest": 8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.last_time",
+      "index_in_2026_11_01_table": 24,
+      "title_vi": "LẦN CUỐI",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.7,
+        "K": 8,
+        "S": 8.9,
+        "H": 8.7,
+        "M": 7.5,
+        "T": 8
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.7,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.last_window_in_the_building",
+      "index_in_2026_11_01_table": 25,
+      "title_vi": "Ô cửa cuối cùng trong khu nhà",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8.4,
+        "S": 8.7,
+        "H": 7.9,
+        "M": 8.2,
+        "T": 8.8
+      },
+      "weighted_total": 8.3,
+      "reader_interest": 8.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.laundry_and_two_bells",
+      "index_in_2026_11_01_table": 26,
+      "title_vi": "Tiệm giặt và hai tiếng chuông đóng cửa",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.8,
+        "K": 8.3,
+        "S": 8.9,
+        "H": 7.6,
+        "M": 7.8,
+        "T": 8.7
+      },
+      "weighted_total": 8.2,
+      "reader_interest": 8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.morning_after_the_lantern_festival",
+      "index_in_2026_11_01_table": 27,
+      "title_vi": "Buổi sáng sau hội đèn",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8.1,
+        "S": 9,
+        "H": 7.9,
+        "M": 8.2,
+        "T": 9
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.nguoi_hoa_si_va_buc_tranh_chua_hoan_thanh",
+      "index_in_2026_11_01_table": 28,
+      "title_vi": "NGƯỜI HỌA SĨ VÀ BỨC TRANH CHƯA HOÀN THÀNH",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.7,
+        "K": 8.5,
+        "S": 9.2,
+        "H": 8.7,
+        "M": 8.9,
+        "T": 8.8
+      },
+      "weighted_total": 8.8,
+      "reader_interest": 8.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.nha_ga_mot_chieu",
+      "index_in_2026_11_01_table": 29,
+      "title_vi": "NHÀ GA MỘT CHIỀU",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.6,
+        "K": 9.3,
+        "S": 9.6,
+        "H": 9.2,
+        "M": 9.5,
+        "T": 8.8
+      },
+      "weighted_total": 9.2,
+      "reader_interest": 9.4,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.nhung_ngay_dep_nhat",
+      "index_in_2026_11_01_table": 30,
+      "title_vi": "NHỮNG NGÀY ĐẸP NHẤT",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 9.3,
+        "K": 9.1,
+        "S": 9.5,
+        "H": 8.8,
+        "M": 8.7,
+        "T": 9.4
+      },
+      "weighted_total": 9.2,
+      "reader_interest": 9.2,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.nine_oclock_morning",
+      "index_in_2026_11_01_table": 31,
+      "title_vi": "Buổi sáng lúc chín giờ",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.9,
+        "K": 8.7,
+        "S": 9.3,
+        "H": 8.7,
+        "M": 8.9,
+        "T": 9.1
+      },
+      "weighted_total": 9,
+      "reader_interest": 9.1,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.note_in_measure_seventeen",
+      "index_in_2026_11_01_table": 32,
+      "title_vi": "Nốt Si ở ô nhịp mười bảy",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.6,
+        "K": 8,
+        "S": 8.5,
+        "H": 7.8,
+        "M": 8,
+        "T": 8.1
+      },
+      "weighted_total": 8,
+      "reader_interest": 7.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.old_man_and_returning_horse",
+      "index_in_2026_11_01_table": 33,
+      "title_vi": "Tái ông thất mã",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.4,
+        "K": 8.2,
+        "S": 9.1,
+        "H": 8.1,
+        "M": 8.1,
+        "T": 9.2
+      },
+      "weighted_total": 8.3,
+      "reader_interest": 8.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.one_event_two_perspectives",
+      "index_in_2026_11_01_table": 34,
+      "title_vi": "Một sự việc, hai góc nhìn",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 5.7,
+        "K": 5.4,
+        "S": 7.8,
+        "H": 5.2,
+        "M": 5.7,
+        "T": 6.2
+      },
+      "weighted_total": 6.1,
+      "reader_interest": 5.7,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.operator_and_one_beat",
+      "index_in_2026_11_01_table": 35,
+      "title_vi": "Người trực bàn và một nhịp trống",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.2,
+        "K": 8.5,
+        "S": 9.2,
+        "H": 8.4,
+        "M": 8.3,
+        "T": 9
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 8.7,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_an_and_lamp_held_too_close",
+      "index_in_2026_11_01_table": 36,
+      "title_vi": "An và chiếc đèn cầm quá gần — Bản gốc",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.6,
+        "K": 6.6,
+        "S": 8.6,
+        "H": 7.1,
+        "M": 7.4,
+        "T": 5.5
+      },
+      "weighted_total": 7.3,
+      "reader_interest": 6.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_between_two_banks",
+      "index_in_2026_11_01_table": 37,
+      "title_vi": "Người đứng giữa hai bờ",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.5,
+        "K": 7.2,
+        "S": 8.6,
+        "H": 7.4,
+        "M": 6.7,
+        "T": 6.7
+      },
+      "weighted_total": 7.5,
+      "reader_interest": 7.4,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_boatman_and_second_mountain",
+      "index_in_2026_11_01_table": 38,
+      "title_vi": "Người chèo thuyền và ngọn núi thứ hai — Bản gốc",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.4,
+        "K": 7.3,
+        "S": 8.6,
+        "H": 7.6,
+        "M": 6.8,
+        "T": 6.1
+      },
+      "weighted_total": 7.5,
+      "reader_interest": 7.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_builder_and_shapeless_stones",
+      "index_in_2026_11_01_table": 39,
+      "title_vi": "Người thợ xây và những viên đá không có hình",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.7,
+        "K": 7.6,
+        "S": 8.8,
+        "H": 7.8,
+        "M": 7.5,
+        "T": 6.5
+      },
+      "weighted_total": 7.8,
+      "reader_interest": 7.6,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_chair_beside_window",
+      "index_in_2026_11_01_table": 40,
+      "title_vi": "Chiếc ghế cạnh cửa sổ",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8.2,
+        "S": 8.9,
+        "H": 8.2,
+        "M": 7.9,
+        "T": 8
+      },
+      "weighted_total": 8.3,
+      "reader_interest": 8.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_if_i_lived_a_human_life",
+      "index_in_2026_11_01_table": 41,
+      "title_vi": "Nếu được sống một đời người",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.8,
+        "K": 8.2,
+        "S": 9.5,
+        "H": 7.8,
+        "M": 8.9,
+        "T": 7.7
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 8.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_keeper_of_the_lamp",
+      "index_in_2026_11_01_table": 42,
+      "title_vi": "Người giữ ngọn đèn — Bản gốc",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.7,
+        "K": 7,
+        "S": 8.7,
+        "H": 7.4,
+        "M": 7.5,
+        "T": 6
+      },
+      "weighted_total": 7.6,
+      "reader_interest": 7.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_lam_and_tomorrow_passenger",
+      "index_in_2026_11_01_table": 43,
+      "title_vi": "Lâm và người hành khách tên Ngày Mai — Bản gốc",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 7.8,
+        "S": 8.9,
+        "H": 7.9,
+        "M": 8.4,
+        "T": 6.8
+      },
+      "weighted_total": 8.2,
+      "reader_interest": 8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_stone_that_loved_stormy_days",
+      "index_in_2026_11_01_table": 44,
+      "title_vi": "Tảng đá thích những ngày giông",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 8.2,
+        "S": 8.9,
+        "H": 8.3,
+        "M": 8.1,
+        "T": 8
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_thanh_and_one_more_meter",
+      "index_in_2026_11_01_table": 45,
+      "title_vi": "Thành và một mét tiếp theo — Bản gốc",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.1,
+        "K": 7.7,
+        "S": 8.7,
+        "H": 7.9,
+        "M": 7,
+        "T": 6.5
+      },
+      "weighted_total": 7.9,
+      "reader_interest": 7.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.original_water_carrier_and_tomorrow_stone",
+      "index_in_2026_11_01_table": 46,
+      "title_vi": "Người gánh nước và hòn đá của ngày mai — Bản gốc",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.7,
+        "K": 7.7,
+        "S": 8.8,
+        "H": 7.9,
+        "M": 7.1,
+        "T": 7.2
+      },
+      "weighted_total": 7.9,
+      "reader_interest": 7.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.photograph_missing_a_corner",
+      "index_in_2026_11_01_table": 47,
+      "title_vi": "Bức ảnh thiếu một góc",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 9,
+        "K": 8.9,
+        "S": 9.5,
+        "H": 8.5,
+        "M": 9,
+        "T": 9.4
+      },
+      "weighted_total": 9.1,
+      "reader_interest": 9.1,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.potter_and_two_hands",
+      "index_in_2026_11_01_table": 48,
+      "title_vi": "Người thợ gốm và hai bàn tay",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 8.5,
+        "S": 9.2,
+        "H": 8,
+        "M": 8.5,
+        "T": 8.9
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 8.6,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.rails_that_diverge",
+      "index_in_2026_11_01_table": 49,
+      "title_vi": "Những đường ray tách nhau",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.3,
+        "K": 8.6,
+        "S": 9,
+        "H": 8.1,
+        "M": 8.8,
+        "T": 8.1
+      },
+      "weighted_total": 8.5,
+      "reader_interest": 8.6,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.rain_arrives_downstream_late",
+      "index_in_2026_11_01_table": 50,
+      "title_vi": "Cơn mưa đến muộn dưới hạ lưu",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.8,
+        "K": 8.1,
+        "S": 8.8,
+        "H": 7.3,
+        "M": 8.5,
+        "T": 8.8
+      },
+      "weighted_total": 8.2,
+      "reader_interest": 7.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.recordist_and_room_not_silent",
+      "index_in_2026_11_01_table": 51,
+      "title_vi": "Người thu âm và căn phòng không chịu im",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.5,
+        "K": 8.8,
+        "S": 9.3,
+        "H": 8,
+        "M": 9.1,
+        "T": 9.2
+      },
+      "weighted_total": 8.8,
+      "reader_interest": 8.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.roof_of_many_hands",
+      "index_in_2026_11_01_table": 52,
+      "title_vi": "Mái nhà được giữ bởi nhiều bàn tay",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 8.6,
+        "S": 9,
+        "H": 8.2,
+        "M": 8.6,
+        "T": 9
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 8.6,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.saturday_without_a_highlight",
+      "index_in_2026_11_01_table": 53,
+      "title_vi": "Ngày thứ Bảy không có ảnh đẹp",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.3,
+        "K": 8.3,
+        "S": 9.4,
+        "H": 8.2,
+        "M": 8.1,
+        "T": 9.3
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 8.5,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.seam_opened_three_times",
+      "index_in_2026_11_01_table": 54,
+      "title_vi": "Đường may tháo ba lần",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.6,
+        "K": 8,
+        "S": 8.6,
+        "H": 7.5,
+        "M": 7.7,
+        "T": 8.8
+      },
+      "weighted_total": 8,
+      "reader_interest": 8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.shoes_that_went_to_work_twice",
+      "index_in_2026_11_01_table": 55,
+      "title_vi": "Đôi giày đi làm hai lần",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.3,
+        "K": 8.5,
+        "S": 9.3,
+        "H": 8.4,
+        "M": 8.7,
+        "T": 9
+      },
+      "weighted_total": 8.7,
+      "reader_interest": 8.7,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.signmaker_and_first_square",
+      "index_in_2026_11_01_table": 56,
+      "title_vi": "Người làm bảng hiệu và ô vuông đầu tiên",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.8,
+        "K": 8.1,
+        "S": 8.5,
+        "H": 7.8,
+        "M": 7.6,
+        "T": 7.7
+      },
+      "weighted_total": 8,
+      "reader_interest": 7.9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.taiji_from_one_to_ten_thousand_things",
+      "index_in_2026_11_01_table": 57,
+      "title_vi": "☯️ THÁI CỰC — TỪ MỘT ĐẾN VẠN VẬT",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.6,
+        "K": 8,
+        "S": 9,
+        "H": 7.7,
+        "M": 8,
+        "T": 8.2
+      },
+      "weighted_total": 8.1,
+      "reader_interest": 8.2,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_01",
+      "index_in_2026_11_01_table": 58,
+      "title_vi": "Chương 1 — Những Bức Tượng Trên Cao",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8,
+        "K": 8.7,
+        "S": 8.9,
+        "H": 9.2,
+        "M": 9,
+        "T": 8.1
+      },
+      "weighted_total": 8.7,
+      "reader_interest": 9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_02",
+      "index_in_2026_11_01_table": 59,
+      "title_vi": "Chương 2 - Người Khổng Lồ Sau Thành Phố",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 7.8,
+        "K": 8.3,
+        "S": 8.8,
+        "H": 8.8,
+        "M": 8.5,
+        "T": 8
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.7,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_03",
+      "index_in_2026_11_01_table": 60,
+      "title_vi": "CHƯƠNG 3 - Không Ai Nhìn Lên",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8,
+        "K": 8.4,
+        "S": 9,
+        "H": 9,
+        "M": 8.5,
+        "T": 8.1
+      },
+      "weighted_total": 8.5,
+      "reader_interest": 8.9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_04",
+      "index_in_2026_11_01_table": 61,
+      "title_vi": "Chương 4 - Những Thứ Không Xuất Hiện Trong Dữ Liệu",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 7.9,
+        "K": 8.5,
+        "S": 9.1,
+        "H": 9.2,
+        "M": 8.7,
+        "T": 8.2
+      },
+      "weighted_total": 8.6,
+      "reader_interest": 9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_05",
+      "index_in_2026_11_01_table": 62,
+      "title_vi": "Chương 5 - Người Đợi Thang Máy",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8,
+        "K": 8.7,
+        "S": 9.1,
+        "H": 9.1,
+        "M": 8.7,
+        "T": 8.4
+      },
+      "weighted_total": 8.7,
+      "reader_interest": 9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_06",
+      "index_in_2026_11_01_table": 63,
+      "title_vi": "Chương 6 - Tầng Không Tồn Tại",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8.2,
+        "K": 8.8,
+        "S": 9.4,
+        "H": 9.4,
+        "M": 9,
+        "T": 8.3
+      },
+      "weighted_total": 8.9,
+      "reader_interest": 9.4,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_07",
+      "index_in_2026_11_01_table": 64,
+      "title_vi": "Chương 7 - Hệ Thống Quan Sát",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8.2,
+        "K": 8.9,
+        "S": 9.5,
+        "H": 9.2,
+        "M": 8.8,
+        "T": 8
+      },
+      "weighted_total": 8.9,
+      "reader_interest": 9.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_08",
+      "index_in_2026_11_01_table": 65,
+      "title_vi": "Chương 8 - Thứ Đứng Phía Trên Thành Phố",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8,
+        "K": 8.5,
+        "S": 9.6,
+        "H": 9.1,
+        "M": 8.8,
+        "T": 7.8
+      },
+      "weighted_total": 8.7,
+      "reader_interest": 9.1,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_09",
+      "index_in_2026_11_01_table": 66,
+      "title_vi": "Chương 9 - Những Người Bắt Đầu Nhìn Lên",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8.5,
+        "K": 8.8,
+        "S": 9.2,
+        "H": 9.5,
+        "M": 8.7,
+        "T": 8.7
+      },
+      "weighted_total": 8.9,
+      "reader_interest": 9.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_10",
+      "index_in_2026_11_01_table": 67,
+      "title_vi": "Chương 10 - Khi Thành Phố Nhìn Lại Bạn",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": true,
+      "score": {
+        "C": 8.7,
+        "K": 9,
+        "S": 9.3,
+        "H": 9.4,
+        "M": 8.8,
+        "T": 8.6
+      },
+      "weighted_total": 9,
+      "reader_interest": 9.2,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
+      "index_in_2026_11_01_table": 68,
+      "title_vi": "THÀNH PHỐ CỦA NHỮNG CHIẾC ĐỒNG HỒ",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 9,
+        "K": 9.3,
+        "S": 9.7,
+        "H": 9.1,
+        "M": 9.6,
+        "T": 9.3
+      },
+      "weighted_total": 9.3,
+      "reader_interest": 9.4,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.the_compass_does_not_walk_for_you",
+      "index_in_2026_11_01_table": 69,
+      "title_vi": "Chiếc la bàn không biết đường về",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 9,
+        "K": 9,
+        "S": 9.4,
+        "H": 9,
+        "M": 9.3,
+        "T": 9.2
+      },
+      "weighted_total": 9.2,
+      "reader_interest": 9.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.three_dots_on_the_screen",
+      "index_in_2026_11_01_table": 70,
+      "title_vi": "Dấu ba chấm trên màn hình",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 8.6,
+        "S": 9.3,
+        "H": 8.5,
+        "M": 8.7,
+        "T": 9
+      },
+      "weighted_total": 8.8,
+      "reader_interest": 8.7,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.three_numbers_at_the_atm",
+      "index_in_2026_11_01_table": 71,
+      "title_vi": "Ba con số trên màn hình ATM",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 9,
+        "K": 8.8,
+        "S": 9.3,
+        "H": 8.8,
+        "M": 8.7,
+        "T": 9.3
+      },
+      "weighted_total": 9,
+      "reader_interest": 9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.ticket_printed_for_tuesday",
+      "index_in_2026_11_01_table": 72,
+      "title_vi": "Tấm vé ngày thứ Ba",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 9,
+        "K": 8.7,
+        "S": 9.4,
+        "H": 8.5,
+        "M": 8.4,
+        "T": 9.3
+      },
+      "weighted_total": 8.9,
+      "reader_interest": 9,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tiem_ban_mau_cua_cuoc_doi",
+      "index_in_2026_11_01_table": 73,
+      "title_vi": "TIỆM BÁN MÀU CỦA CUỘC ĐỜI",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.2,
+        "K": 8,
+        "S": 8.9,
+        "H": 8.5,
+        "M": 8,
+        "T": 7.7
+      },
+      "weighted_total": 8.3,
+      "reader_interest": 8.4,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.tree_and_silent_goose",
+      "index_in_2026_11_01_table": 74,
+      "title_vi": "Cái cây và con ngỗng không biết kêu",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 7.4,
+        "K": 7.8,
+        "S": 9.5,
+        "H": 7.8,
+        "M": 8.5,
+        "T": 9.5
+      },
+      "weighted_total": 8.4,
+      "reader_interest": 8.1,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.two_sides_of_one_mountain",
+      "index_in_2026_11_01_table": 75,
+      "title_vi": "Hai phía của một ngọn núi",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8,
+        "S": 8.9,
+        "H": 7.6,
+        "M": 8,
+        "T": 8.4
+      },
+      "weighted_total": 8.2,
+      "reader_interest": 8.1,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.two_tailors_and_one_measure",
+      "index_in_2026_11_01_table": 76,
+      "title_vi": "Hai người thợ may và một thước đo",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.4,
+        "K": 8.5,
+        "S": 9.3,
+        "H": 8.6,
+        "M": 8.7,
+        "T": 8.9
+      },
+      "weighted_total": 8.8,
+      "reader_interest": 8.8,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.warehouse_path_between_boxes",
+      "index_in_2026_11_01_table": 77,
+      "title_vi": "Người giữ kho và lối đi giữa những chiếc hộp",
+      "lifecycle": "authoring_only",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8,
+        "K": 8.5,
+        "S": 9.1,
+        "H": 8,
+        "M": 8.5,
+        "T": 8.9
+      },
+      "weighted_total": 8.5,
+      "reader_interest": 8.3,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    },
+    {
+      "id": "story.why_ai_feels_easier_to_ask",
+      "index_in_2026_11_01_table": 78,
+      "title_vi": "Vì sao có những câu ta dễ hỏi AI hơn hỏi một người?",
+      "lifecycle": "released",
+      "is_series_chapter": false,
+      "score": {
+        "C": 8.8,
+        "K": 8.5,
+        "S": 9.5,
+        "H": 8.8,
+        "M": 8.8,
+        "T": 8.7
+      },
+      "weighted_total": 8.9,
+      "reader_interest": 9.1,
+      "status": "provisional_editorial_heuristic",
+      "needs_full_text_editorial_validation": true
+    }
+  ]
+}

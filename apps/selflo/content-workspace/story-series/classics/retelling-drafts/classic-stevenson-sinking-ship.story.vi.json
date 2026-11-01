@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_stevenson_sinking_ship",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Con tàu đang chìm",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Sinking Ship” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Sinking Ship",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Hài châm biếm",
+      "Phi lý đời thường"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một sĩ quan báo với thuyền trưởng rằng tàu đang chìm. Thuyền trưởng đáp rằng mọi con tàu, xét cho cùng, đã tiến gần ngày chìm ngay từ khi hạ thủy. Ông yêu cầu sĩ quan bình tĩnh cạo râu cho xong."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Tàu càng chìm, ông càng đưa ra những lý lẽ về thời gian và sự hữu hạn của đời người. Thủy thủ hoảng loạn, người thì uống rượu, người lại hút thuốc ở gần kho thuốc súng."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khi sĩ quan hỏi vì sao cạo râu trên con tàu chìm thì được khuyến khích, nhưng hút thuốc cạnh thuốc súng lại bị cấm, thuyền trưởng đột nhiên hưởng ứng lý lẽ rằng mọi việc đều nguy hiểm như nhau."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chỉ ít phút sau, con tàu nổ tung."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Một lập luận nghe rất thông thái vẫn có thể vô dụng khi nó bỏ qua khác biệt quan trọng trong hoàn cảnh thực."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Bạn đã gặp khi nào việc giải thích quá lâu khiến người ta quên xử lý điều trước mắt?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "robert-louis-stevenson",
+    "author_name": "Robert Louis Stevenson",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/343"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "stevenson_fables_1901",
+    "source_item_id": "stevenson-sinking-ship",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}

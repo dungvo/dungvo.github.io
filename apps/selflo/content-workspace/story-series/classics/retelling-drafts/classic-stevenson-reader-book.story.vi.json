@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_stevenson_reader_book",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Người đọc và cuốn sách",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Reader” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Reader",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Phi lý đời thường",
+      "Đối thoại"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một độc giả tức giận ném cuốn sách xuống sàn vì cho rằng nó chứa những điều khó chấp nhận."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cuốn sách lên tiếng rằng đánh nó cũng chỉ làm giảm giá bán lại; chính nó đâu có tự viết ra mình. Người đọc thừa nhận điều ấy và chuyển sang trách tác giả."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cuốn sách thử kể một câu chuyện khác để trả lời. Nhưng người đọc liên tục đoán trước kết thúc, cho rằng mọi câu chuyện rốt cuộc đều dẫn đến cái chết."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khi cuộc tranh luận chuyển sang câu hỏi ai mới là người thiếu tôn trọng sự thật, người đọc không trả lời nữa. Anh ném cuốn sách vào lửa."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Có lúc ta bác bỏ một câu chuyện trước khi chịu nghe nó kể hết."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Khi một ý kiến khiến mình khó chịu, bạn có còn muốn nghe phần chưa được nói không?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "robert-louis-stevenson",
+    "author_name": "Robert Louis Stevenson",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/343"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "stevenson_fables_1901",
+    "source_item_id": "stevenson-reader-book",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}

@@ -1,0 +1,912 @@
+{
+  "schema_version": "selflo.365.idea_backlog.v1",
+  "snapshot_date": "2026-11-01",
+  "program_id": "selflo-365",
+  "goal": "365 reading experiences over time; diverse forms without requiring a moral",
+  "unit_definition": "One reading experience / slot, not one distinct standalone work. Series episodes may fill multiple slots.",
+  "baseline": {
+    "authoring_story_records": 78,
+    "release_story_records": 22,
+    "series_in_authoring": 1,
+    "known_authored_series_chapters": 10,
+    "remaining_to_reach_365_authoring_slots": 287,
+    "baseline_status": "snapshot_not_release_ready"
+  },
+  "planning": {
+    "target_total": 365,
+    "target_categories": [
+      {
+        "category": "slice_of_life",
+        "target_count": 55
+      },
+      {
+        "category": "absurdist_allegory_and_fable",
+        "target_count": 36
+      },
+      {
+        "category": "satirical_comedy",
+        "target_count": 28
+      },
+      {
+        "category": "mystery_and_thriller",
+        "target_count": 36
+      },
+      {
+        "category": "social_speculative_fiction",
+        "target_count": 40
+      },
+      {
+        "category": "adventure_survival_time",
+        "target_count": 28
+      },
+      {
+        "category": "children_and_family",
+        "target_count": 30
+      },
+      {
+        "category": "nature_and_life",
+        "target_count": 24
+      },
+      {
+        "category": "science_and_behavior",
+        "target_count": 35
+      },
+      {
+        "category": "true_events_and_people",
+        "target_count": 23
+      },
+      {
+        "category": "reflective_and_inner_life",
+        "target_count": 20
+      },
+      {
+        "category": "dialogue_and_thought_experiment",
+        "target_count": 10
+      }
+    ],
+    "categories_are_editorial_balancing_targets": true,
+    "category_assignments_not_final": true
+  },
+  "entries": {
+    "series": [
+      {
+        "id": "idea.selflo365.S01",
+        "display_id": "S01",
+        "title_vi": "Tầng không tồn tại — Phần 2",
+        "format": "10–12 chương",
+        "planned_min_episodes": 10,
+        "planned_max_episodes": 12,
+        "styles_proposed": [
+          "social_speculative_fiction",
+          "mystery_discovery",
+          "cinematic_thriller"
+        ],
+        "premise_vi": "Minh và những người khác bắt đầu thấy hệ thống; không chắc tất cả đang nhìn cùng một sự thật. Nhận thức tập thể có thể làm thay đổi hệ thống.",
+        "audience_proposed": "Người trưởng thành thích công nghệ, bí ẩn, sci-fi, quyền tự chủ",
+        "continuation_of": "series.the_nonexistent_floor",
+        "editorial_guardrail": "Tiếp nối sau chương 10 'Kết thúc phần 1'; không xác định trước bản chất/thông số hệ thống và không sửa Phần 1 đã có.",
+        "status": "series_concept_only",
+        "authored_episodes": 0,
+        "owner_approved_full_story": false,
+        "publication_status": "not_published",
+        "source_provenance": "owner_accepted_to_save_idea_only_2026_11_01"
+      },
+      {
+        "id": "idea.selflo365.S02",
+        "display_id": "S02",
+        "title_vi": "Phòng điều tra những chuyện không đáng kể",
+        "format": "8–12 vụ án",
+        "planned_min_episodes": 8,
+        "planned_max_episodes": 12,
+        "styles_proposed": [
+          "psychological_mystery",
+          "situational_comedy",
+          "slice_of_life"
+        ],
+        "premise_vi": "Nhóm thám tử nhận những vụ tưởng nhỏ: chiếc ô xuất hiện sai chỗ, chiếc ghế trống trong ảnh họp, thư gửi từ tương lai. Mỗi vụ có lời giải riêng.",
+        "audience_proposed": "Người thích mystery nhẹ, hài và kết bất ngờ",
+        "continuation_of": null,
+        "editorial_guardrail": "Phân biệt với truyện trinh thám tội phạm; mỗi tập tự đứng được.",
+        "status": "series_concept_only",
+        "authored_episodes": 0,
+        "owner_approved_full_story": false,
+        "publication_status": "not_published",
+        "source_provenance": "owner_accepted_to_save_idea_only_2026_11_01"
+      },
+      {
+        "id": "idea.selflo365.S03",
+        "display_id": "S03",
+        "title_vi": "Bản đồ những vùng đất chưa được đặt tên",
+        "format": "8–10 chương",
+        "planned_min_episodes": 8,
+        "planned_max_episodes": 10,
+        "styles_proposed": [
+          "survival_adventure",
+          "mystery_discovery",
+          "fantasy"
+        ],
+        "premise_vi": "Đoàn thám hiểm lập bản đồ vùng đất mới, nhưng chính những người đi qua đã làm vùng đất thay đổi khiến bản đồ sai dần.",
+        "audience_proposed": "Thiếu niên và người trưởng thành thích khám phá thế giới kỳ ảo",
+        "continuation_of": null,
+        "editorial_guardrail": "Phiêu lưu hấp dẫn là mục tiêu chính; không ép kết luận triết lý.",
+        "status": "series_concept_only",
+        "authored_episodes": 0,
+        "owner_approved_full_story": false,
+        "publication_status": "not_published",
+        "source_provenance": "owner_accepted_to_save_idea_only_2026_11_01"
+      },
+      {
+        "id": "idea.selflo365.S04",
+        "display_id": "S04",
+        "title_vi": "Câu lạc bộ những phát minh không ai đặt hàng",
+        "format": "10 tập độc lập",
+        "planned_min_episodes": 10,
+        "planned_max_episodes": 10,
+        "styles_proposed": [
+          "childrens_fable",
+          "situational_comedy",
+          "science_fantasy"
+        ],
+        "premise_vi": "Nhóm trẻ chế tạo những thứ kỳ quặc: máy tìm đồ của hàng xóm, robot xin lỗi không hiểu lý do, kính nhìn dấu chân mèo; mỗi phát minh gây rắc rối thú vị.",
+        "audience_proposed": "Trẻ 8–12 tuổi, cha mẹ đọc cùng con",
+        "continuation_of": null,
+        "editorial_guardrail": "Hài và khám phá phù hợp trẻ; đừng biến mỗi tập thành bài dạy.",
+        "status": "series_concept_only",
+        "authored_episodes": 0,
+        "owner_approved_full_story": false,
+        "publication_status": "not_published",
+        "source_provenance": "owner_accepted_to_save_idea_only_2026_11_01"
+      },
+      {
+        "id": "idea.selflo365.S05",
+        "display_id": "S05",
+        "title_vi": "Nhật ký của người quan sát thiên nhiên",
+        "format": "12 bài",
+        "planned_min_episodes": 12,
+        "planned_max_episodes": 12,
+        "styles_proposed": [
+          "nature_and_life",
+          "evidence_based_explainer"
+        ],
+        "premise_vi": "Mỗi tập khởi đầu bằng hiện tượng thật như cây ngập mặn, ngủ đông, tác động của rừng lên nước; kể bằng quan sát và nguồn khoa học.",
+        "audience_proposed": "Thiếu niên, người lớn tò mò khoa học và thiên nhiên",
+        "continuation_of": null,
+        "editorial_guardrail": "Không nhân hóa thành claim khoa học; ghi rõ nguồn, mức chắc chắn, phản ví dụ.",
+        "status": "series_concept_only",
+        "authored_episodes": 0,
+        "owner_approved_full_story": false,
+        "publication_status": "not_published",
+        "source_provenance": "owner_accepted_to_save_idea_only_2026_11_01"
+      },
+      {
+        "id": "idea.selflo365.S06",
+        "display_id": "S06",
+        "title_vi": "Những quy định rất hợp lý",
+        "format": "10–15 truyện độc lập",
+        "planned_min_episodes": 10,
+        "planned_max_episodes": 15,
+        "styles_proposed": [
+          "absurdist_allegory",
+          "satirical_comedy",
+          "social_speculative_fiction"
+        ],
+        "premise_vi": "Mỗi truyện đặt trong một xã hội có luật kỳ quặc nhưng ai cũng tuân thủ hợp lý, như cấm nói 'tôi không biết' hoặc chỉ ghi nhận việc đếm được.",
+        "audience_proposed": "Người trưởng thành thích hài thông minh và nghịch lý xã hội",
+        "continuation_of": null,
+        "editorial_guardrail": "Nhân vật có lý do duy trì quy tắc; không chế giễu cá nhân hoặc ép kết nhận ra bài học.",
+        "status": "series_concept_only",
+        "authored_episodes": 0,
+        "owner_approved_full_story": false,
+        "publication_status": "not_published",
+        "source_provenance": "owner_accepted_to_save_idea_only_2026_11_01"
+      }
+    ],
+    "standalone_ideas": [
+      {
+        "id": "idea.selflo365.H01",
+        "display_id": "H01",
+        "title_vi": "Hiệp hội những người leo thang",
+        "group": "Hài hước & phi lý",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "satirical_comedy",
+          "absurdist_allegory"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người trưởng thành, thích hài tình huống và nghịch lý xã hội",
+        "premise_vi": "Một cánh cổng luôn mở, nhưng muốn vào phải leo qua hàng rào vì đó là quy trình đã được phê duyệt.",
+        "status": "idea_only",
+        "origin": "preexisting_concept_referenced",
+        "related_existing_idea_ref": "discussion-10",
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.H02",
+        "display_id": "H02",
+        "title_vi": "Bộ Đo Lường Hạnh Phúc",
+        "group": "Hài hước & phi lý",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "satirical_comedy",
+          "absurdist_allegory"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người trưởng thành, thích hài tình huống và nghịch lý xã hội",
+        "premise_vi": "Thành phố được đánh giá bằng mức hạnh phúc trung bình, nên mọi người học cách khai báo mình vui.",
+        "status": "idea_only",
+        "origin": "preexisting_concept_referenced",
+        "related_existing_idea_ref": "discussion-02",
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.H03",
+        "display_id": "H03",
+        "title_vi": "Ngày không ai được nói ‘Tôi không biết’",
+        "group": "Hài hước & phi lý",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "satirical_comedy",
+          "absurdist_allegory"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người trưởng thành, thích hài tình huống và nghịch lý xã hội",
+        "premise_vi": "Một công ty ban hành quy định nói câu ấy sẽ bị trừ điểm năng lực; các báo cáo ngày càng tự tin và sai.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.H04",
+        "display_id": "H04",
+        "title_vi": "Cuộc họp của những chiếc ghế trống",
+        "group": "Hài hước & phi lý",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "satirical_comedy",
+          "absurdist_allegory"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người trưởng thành, thích hài tình huống và nghịch lý xã hội",
+        "premise_vi": "Một tổ chức duy trì cuộc họp dù mọi người đều bận làm công việc thực tế.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.H05",
+        "display_id": "H05",
+        "title_vi": "Người chuyên giải quyết những việc đã được giải quyết",
+        "group": "Hài hước & phi lý",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "satirical_comedy",
+          "absurdist_allegory"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người trưởng thành, thích hài tình huống và nghịch lý xã hội",
+        "premise_vi": "Một công chức phát hiện mình đang sửa những lỗi do chính quy trình sửa lỗi tạo ra.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.M01",
+        "display_id": "M01",
+        "title_vi": "Căn phòng sáng đèn lúc 3:17",
+        "group": "Kỳ bí & trinh thám",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "mystery_discovery",
+          "psychological_mystery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích bí ẩn, manh mối, kết bất ngờ",
+        "premise_vi": "Trong một khu chung cư bỏ hoang, một căn phòng vẫn sáng đúng một phút mỗi đêm.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.M02",
+        "display_id": "M02",
+        "title_vi": "Lá thư gửi sau ngày người nhận biến mất",
+        "group": "Kỳ bí & trinh thám",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "mystery_discovery",
+          "psychological_mystery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích bí ẩn, manh mối, kết bất ngờ",
+        "premise_vi": "Một người nhận thư có dấu bưu điện từ ngày mai, nhưng người gửi đã biến mất từ hôm qua.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.M03",
+        "display_id": "M03",
+        "title_vi": "Bức ảnh có thêm một người",
+        "group": "Kỳ bí & trinh thám",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "mystery_discovery",
+          "psychological_mystery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích bí ẩn, manh mối, kết bất ngờ",
+        "premise_vi": "Ảnh gia đình chụp nhiều năm trước bất ngờ xuất hiện một người mà không ai nhận ra.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.M04",
+        "display_id": "M04",
+        "title_vi": "Cánh cửa thứ mười ba",
+        "group": "Kỳ bí & trinh thám",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "mystery_discovery",
+          "psychological_mystery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích bí ẩn, manh mối, kết bất ngờ",
+        "premise_vi": "Một nhân viên bảo trì phát hiện tầng mình làm việc có nhiều cửa hơn bản vẽ.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.M05",
+        "display_id": "M05",
+        "title_vi": "Vụ mất tích của một âm thanh",
+        "group": "Kỳ bí & trinh thám",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "mystery_discovery",
+          "psychological_mystery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích bí ẩn, manh mối, kết bất ngờ",
+        "premise_vi": "Toàn bộ khu phố không còn nghe thấy tiếng chuông nhà thờ, dù tháp chuông vẫn rung.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.F01",
+        "display_id": "F01",
+        "title_vi": "Người vay một giờ",
+        "group": "Khoa học giả tưởng & thời gian",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "social_speculative_fiction",
+          "mystery_discovery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích khoa học giả tưởng, công nghệ và nghịch lý về lựa chọn",
+        "premise_vi": "Một dịch vụ cho phép vay thời gian rảnh của tương lai, nhưng người dùng không biết lúc nào khoản vay sẽ bị thu lại.",
+        "status": "idea_only",
+        "origin": "preexisting_concept_referenced",
+        "related_existing_idea_ref": "discussion-04",
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Giả tưởng xã hội về vay thời gian; chưa mặc định có du hành thời gian thực sự."
+      },
+      {
+        "id": "idea.selflo365.F02",
+        "display_id": "F02",
+        "title_vi": "Thư viện của những điều chưa từng xảy ra",
+        "group": "Khoa học giả tưởng & thời gian",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "social_speculative_fiction",
+          "mystery_discovery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích khoa học giả tưởng, công nghệ và nghịch lý về lựa chọn",
+        "premise_vi": "Những cuốn sách ghi lại lịch sử của các lựa chọn chưa từng được thực hiện.",
+        "status": "idea_only",
+        "origin": "preexisting_concept_referenced",
+        "related_existing_idea_ref": "discussion-03",
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Ghi nhận ẩn dụ lựa chọn; quy tắc thay đổi quá khứ chưa được chốt."
+      },
+      {
+        "id": "idea.selflo365.F03",
+        "display_id": "F03",
+        "title_vi": "Thành phố được dự đoán chính xác",
+        "group": "Khoa học giả tưởng & thời gian",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "social_speculative_fiction",
+          "mystery_discovery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích khoa học giả tưởng, công nghệ và nghịch lý về lựa chọn",
+        "premise_vi": "Một thuật toán dự báo mọi hành động, cho đến khi người dân bắt đầu cố tình làm trái dự báo.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.F04",
+        "display_id": "F04",
+        "title_vi": "Bộ nhớ dùng chung",
+        "group": "Khoa học giả tưởng & thời gian",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "social_speculative_fiction",
+          "mystery_discovery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích khoa học giả tưởng, công nghệ và nghịch lý về lựa chọn",
+        "premise_vi": "Người ta có thể chia sẻ ký ức, nhưng hai người xem cùng một ký ức lại kể hai câu chuyện khác nhau.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.F05",
+        "display_id": "F05",
+        "title_vi": "Hành tinh không có ngày mai",
+        "group": "Khoa học giả tưởng & thời gian",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "social_speculative_fiction",
+          "mystery_discovery"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích khoa học giả tưởng, công nghệ và nghịch lý về lựa chọn",
+        "premise_vi": "Trên một hành tinh, mọi người chỉ có thể lên kế hoạch trong 24 giờ; các công trình lớn vẫn xuất hiện.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.D01",
+        "display_id": "D01",
+        "title_vi": "Bữa cơm lúc chín giờ",
+        "group": "Đời thường & quan hệ",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "slice_of_life"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích đời thường, gia đình và kết nối",
+        "premise_vi": "Một gia đình nhiều năm không ăn cùng giờ, đến một đêm tất cả tình cờ có mặt.",
+        "status": "idea_only",
+        "origin": "preexisting_concept_referenced",
+        "related_existing_idea_ref": "discussion-06",
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.D02",
+        "display_id": "D02",
+        "title_vi": "Chiếc áo mưa dư",
+        "group": "Đời thường & quan hệ",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "slice_of_life"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích đời thường, gia đình và kết nối",
+        "premise_vi": "Một chuyến đi về bị mưa giữ lại, khiến hai người vốn chỉ biết mặt bắt đầu trò chuyện.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [
+          "story.half_a_wet_shoulder"
+        ],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.D03",
+        "display_id": "D03",
+        "title_vi": "Người giữ chìa khóa dự phòng",
+        "group": "Đời thường & quan hệ",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "slice_of_life"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích đời thường, gia đình và kết nối",
+        "premise_vi": "Một bác bảo vệ biết gần hết cư dân nhưng rất ít người biết cuộc sống của bác.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.D04",
+        "display_id": "D04",
+        "title_vi": "Ngày cả nhà không có kế hoạch",
+        "group": "Đời thường & quan hệ",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "slice_of_life"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích đời thường, gia đình và kết nối",
+        "premise_vi": "Gia đình bị hủy chuyến đi và phát hiện một ngày không mục tiêu có thể diễn ra theo những cách riêng.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [
+          "story.saturday_without_a_highlight"
+        ],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Có thể trùng với 'Ngày thứ Bảy không có ảnh đẹp'; kiểm tra trước khi phát triển."
+      },
+      {
+        "id": "idea.selflo365.D05",
+        "display_id": "D05",
+        "title_vi": "Người khách cuối cùng của tiệm sửa xe",
+        "group": "Đời thường & quan hệ",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "slice_of_life"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích đời thường, gia đình và kết nối",
+        "premise_vi": "Một người thợ sắp nghỉ nghề nhận một chiếc xe từng sửa từ nhiều năm trước.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.A01",
+        "display_id": "A01",
+        "title_vi": "47 giây",
+        "group": "Phiêu lưu & hành động",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "survival_adventure",
+          "cinematic_thriller"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích hành động, khám phá, quyết định dưới áp lực",
+        "premise_vi": "Một kỹ sư có 47 giây để quyết định giữa hai phương án xử lý sự cố, khi không đủ thông tin để chắc chắn.",
+        "status": "idea_only",
+        "origin": "preexisting_concept_referenced",
+        "related_existing_idea_ref": "discussion-05",
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.A02",
+        "display_id": "A02",
+        "title_vi": "Hòn đảo di chuyển",
+        "group": "Phiêu lưu & hành động",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "survival_adventure",
+          "cinematic_thriller"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích hành động, khám phá, quyết định dưới áp lực",
+        "premise_vi": "Một nhóm thám hiểm nhận thấy hòn đảo trên bản đồ liên tục thay đổi vị trí.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.A03",
+        "display_id": "A03",
+        "title_vi": "Chuyến tàu không có điểm đến",
+        "group": "Phiêu lưu & hành động",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "survival_adventure",
+          "cinematic_thriller"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích hành động, khám phá, quyết định dưới áp lực",
+        "premise_vi": "Những hành khách lên một chuyến tàu chỉ có thể xuống khi cùng thống nhất một điểm đến.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.A04",
+        "display_id": "A04",
+        "title_vi": "Đêm mất tín hiệu",
+        "group": "Phiêu lưu & hành động",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "survival_adventure",
+          "cinematic_thriller"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích hành động, khám phá, quyết định dưới áp lực",
+        "premise_vi": "Trong một chuyến trekking, cả nhóm mất GPS và phải giải quyết bất đồng về đường về.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.A05",
+        "display_id": "A05",
+        "title_vi": "Người đưa thư qua sa mạc",
+        "group": "Phiêu lưu & hành động",
+        "content_form": "fiction_story",
+        "narrative_styles_proposed": [
+          "survival_adventure",
+          "cinematic_thriller"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích hành động, khám phá, quyết định dưới áp lực",
+        "premise_vi": "Một người phải giao thư tới vùng đất bị bỏ hoang trước khi cơn bão cát đến.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": false,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": null
+      },
+      {
+        "id": "idea.selflo365.K01",
+        "display_id": "K01",
+        "title_vi": "Vì sao bộ não nhớ những lần xấu hổ?",
+        "group": "Kiến thức, quan sát & khoa học",
+        "content_form": "evidence_based_knowledge_candidate",
+        "narrative_styles_proposed": [
+          "explainer",
+          "everyday_observation"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích tìm hiểu hiện tượng, hành vi và kiến thức có nguồn",
+        "premise_vi": "Khám phá cách ký ức cảm xúc hình thành và tại sao một sự cố cũ có thể trở lại trong đầu.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": true,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Không viết claim khoa học như sự thật nếu chưa có nghiên cứu và kiểm chứng."
+      },
+      {
+        "id": "idea.selflo365.K02",
+        "display_id": "K02",
+        "title_vi": "Một cái cây tạo ra bao nhiêu sự sống?",
+        "group": "Kiến thức, quan sát & khoa học",
+        "content_form": "evidence_based_knowledge_candidate",
+        "narrative_styles_proposed": [
+          "explainer",
+          "everyday_observation"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích tìm hiểu hiện tượng, hành vi và kiến thức có nguồn",
+        "premise_vi": "Tìm hiểu các sinh vật và chu trình sinh thái liên quan tới một cái cây duy nhất.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": true,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Không viết claim khoa học như sự thật nếu chưa có nghiên cứu và kiểm chứng."
+      },
+      {
+        "id": "idea.selflo365.K03",
+        "display_id": "K03",
+        "title_vi": "Tại sao con người lại thích nghe kể chuyện?",
+        "group": "Kiến thức, quan sát & khoa học",
+        "content_form": "evidence_based_knowledge_candidate",
+        "narrative_styles_proposed": [
+          "explainer",
+          "everyday_observation"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích tìm hiểu hiện tượng, hành vi và kiến thức có nguồn",
+        "premise_vi": "Khám phá vai trò của nhân vật, sự tò mò và suy luận trong trải nghiệm đọc.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": true,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Không viết claim khoa học như sự thật nếu chưa có nghiên cứu và kiểm chứng."
+      },
+      {
+        "id": "idea.selflo365.K04",
+        "display_id": "K04",
+        "title_vi": "Khi con số đúng nhưng kết luận sai",
+        "group": "Kiến thức, quan sát & khoa học",
+        "content_form": "evidence_based_knowledge_candidate",
+        "narrative_styles_proposed": [
+          "explainer",
+          "everyday_observation"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích tìm hiểu hiện tượng, hành vi và kiến thức có nguồn",
+        "premise_vi": "Một bài khám phá cách mẫu dữ liệu, cách đo và bối cảnh làm thay đổi kết luận thống kê.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [
+          "story.if_i_am_wrong_but_chatgpt_agrees"
+        ],
+        "research_required": true,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Không viết claim khoa học như sự thật nếu chưa có nghiên cứu và kiểm chứng."
+      },
+      {
+        "id": "idea.selflo365.K05",
+        "display_id": "K05",
+        "title_vi": "Một giọt nước đã đi qua đâu?",
+        "group": "Kiến thức, quan sát & khoa học",
+        "content_form": "evidence_based_knowledge_candidate",
+        "narrative_styles_proposed": [
+          "explainer",
+          "everyday_observation"
+        ],
+        "narrative_engine_to_design": null,
+        "audience_proposed": "Người thích tìm hiểu hiện tượng, hành vi và kiến thức có nguồn",
+        "premise_vi": "Theo dấu một giọt nước qua mây, mưa, sông, đất và sinh vật bằng kiến thức khoa học.",
+        "status": "idea_only",
+        "origin": "proposal_from_2026_11_01_discussion",
+        "related_existing_idea_ref": null,
+        "potential_overlap": [],
+        "research_required": true,
+        "requires_source_rights_review": true,
+        "owner_approved_full_story": false,
+        "authoring_story_id": null,
+        "planning_note": "Không viết claim khoa học như sự thật nếu chưa có nghiên cứu và kiểm chứng."
+      }
+    ]
+  },
+  "counts": {
+    "series_concepts": 6,
+    "standalone_ideas": 30,
+    "preexisting_standalone_concepts": 6,
+    "new_standalone_proposals": 24,
+    "all_concepts": 36
+  },
+  "dedup_rule": "Do not create duplicate canonical stories from ideas; cross-check existing registry/Authoring before outlining.",
+  "lifecycle_rule": "These are idea/research planning records only; no Story V3, Authoring, Release, owner approval or rights validation has been granted.",
+  "references": [
+    "apps/selflo/docs/SELFLO_CONTENT_VISION_STYLES_INVENTORY_2026-11-01.vi.md",
+    "apps/selflo/studio/story-landscape/ideas.json",
+    "apps/selflo/content-workspace/story-series/catalog.vi.json"
+  ]
+}

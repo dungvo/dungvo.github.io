@@ -1,0 +1,43 @@
+{
+  "verified_at": "2026-11-01T11:51:51.514817+00:00",
+  "status": "merge_validated_before_authorized_main_push",
+  "previous_shared_main": "040b4e7164113143efd6e35ccfb2d1168b45b392",
+  "local_quote_checkpoint": "f06b01b1aa9322a8c0439e3c7c8d8c4aaf440de6",
+  "incoming_main": "b6210e6a412aca1565ace15fb6bed5580bbf3a5d",
+  "incoming_commits": [
+    "b6210e6a412aca1565ace15fb6bed5580bbf3a5d",
+    "57fa8ba34752426d27188a6e66c4189ccf076651",
+    "2977bd198ea2865ca999a57b4228feb3ccdee634",
+    "e3d1e5f9127a329e203285488aa2028d533c0f8c"
+  ],
+  "resolved_conflicts": [
+    "apps/selflo/content-workspace/REPO_WORK_IN_PROGRESS.vi.md"
+  ],
+  "resolution": "preserve both incoming parked Story/Classics/ideas notes and all local B010-B016 quote checkpoint notes",
+  "unchanged_local_files_verified": 125,
+  "unchanged_incoming_files_verified": 34,
+  "unchanged_release_files_verified": 386,
+  "unit_tests": {
+    "passed": 96,
+    "failed": 0
+  },
+  "source_revision": 99,
+  "canonical_quote_count": 1897,
+  "authoring_revision": 116,
+  "release_revision": 61,
+  "release_quote_count": 385,
+  "release_story_count": 22,
+  "quote_program_counts": {
+    "released_baseline": 380,
+    "not_accepted": 1894,
+    "remaining": 3197,
+    "approved_awaiting_release": 234
+  },
+  "release_candidate_gate": "reports/main-merge-b016-release-candidate-gate-2026-11-01.json",
+  "owner_authorized_main_sync": true,
+  "force_push": false,
+  "release_promotion": false,
+  "new_story_authoring": false,
+  "note_vi": "Biên bản kiểm định trước commit merge/push; SHA merge cuối và kết quả đối chiếu remote được báo sau khi push thành công trong chat.",
+  "upstream_markdown_trailing_spaces_preserved": true
+}

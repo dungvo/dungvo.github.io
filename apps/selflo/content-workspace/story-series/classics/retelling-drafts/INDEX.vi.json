@@ -1,0 +1,177 @@
+{
+  "schema_version": "selflo.classics.short_retelling_archive.v1",
+  "snapshot": "2026-11-01",
+  "count": 20,
+  "origin_branch": "content/selflo-classics-intake-20-20261101",
+  "reason": "Branch PR #9 is stale versus main; archive draft text without changing canonical source/authoring/release.",
+  "promotion_allowed_without_editorial_review": false,
+  "required_next_gates": [
+    "check actual original story/edition and provenance",
+    "decide faithful translation vs abridged rewrite",
+    "verify edition and Vietnam translation/reuse rights",
+    "owner editorial review and changes",
+    "run strict Authoring publisher only after approved"
+  ],
+  "items": [
+    {
+      "id": "classics50.01",
+      "slug": "classic-aesop-lion-and-statue",
+      "title_vi": "Sư tử và bức tượng",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-lion-and-statue.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.02",
+      "slug": "classic-aesop-town-country-mice",
+      "title_vi": "Chuột thành thị và chuột đồng quê",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-town-country-mice.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.03",
+      "slug": "classic-aesop-dog-and-wolf",
+      "title_vi": "Con chó và con sói",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-dog-and-wolf.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.04",
+      "slug": "classic-aesop-fox-and-mask",
+      "title_vi": "Cáo và chiếc mặt nạ",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-fox-and-mask.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.05",
+      "slug": "classic-aesop-man-boy-donkey",
+      "title_vi": "Người cha, cậu bé và con lừa",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-man-boy-donkey.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.06",
+      "slug": "classic-aesop-wind-and-sun",
+      "title_vi": "Gió và Mặt Trời",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-wind-and-sun.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.07",
+      "slug": "classic-aesop-belling-cat",
+      "title_vi": "Hội nghị đeo chuông cho mèo",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-belling-cat.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.08",
+      "slug": "classic-aesop-tree-reed",
+      "title_vi": "Cây lớn và cây sậy",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-tree-reed.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.09",
+      "slug": "classic-aesop-fox-grapes",
+      "title_vi": "Cáo và chùm nho",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-fox-grapes.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.10",
+      "slug": "classic-aesop-crow-pitcher",
+      "title_vi": "Quạ và chiếc bình nước",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-crow-pitcher.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.11",
+      "slug": "classic-aesop-lions-share",
+      "title_vi": "Phần chia của sư tử",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-lions-share.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.12",
+      "slug": "classic-aesop-goose-eggs",
+      "title_vi": "Con ngỗng đẻ trứng vàng",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-aesop-goose-eggs.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/28",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.13",
+      "slug": "classic-stevenson-two-matches",
+      "title_vi": "Hai que diêm",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-two-matches.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.14",
+      "slug": "classic-stevenson-sinking-ship",
+      "title_vi": "Con tàu đang chìm",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-sinking-ship.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.15",
+      "slug": "classic-stevenson-distinguished-stranger",
+      "title_vi": "Vị khách từ hành tinh khác",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-distinguished-stranger.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.16",
+      "slug": "classic-stevenson-cart-horses",
+      "title_vi": "Hai ngựa kéo xe và ngựa cưỡi",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-cart-horses.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.17",
+      "slug": "classic-stevenson-tadpole-frog",
+      "title_vi": "Nòng nọc và ếch",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-tadpole-frog.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.18",
+      "slug": "classic-stevenson-four-reformers",
+      "title_vi": "Bốn người muốn cải cách",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-four-reformers.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.19",
+      "slug": "classic-stevenson-reader-book",
+      "title_vi": "Người đọc và cuốn sách",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-reader-book.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    },
+    {
+      "id": "classics50.20",
+      "slug": "classic-stevenson-yellow-paint",
+      "title_vi": "Thứ sơn màu vàng kỳ diệu",
+      "path": "apps/selflo/content-workspace/story-series/classics/retelling-drafts/classic-stevenson-yellow-paint.story.vi.json",
+      "original_source_url": "https://www.gutenberg.org/ebooks/343",
+      "owner_review": "needs_owner_review"
+    }
+  ]
+}

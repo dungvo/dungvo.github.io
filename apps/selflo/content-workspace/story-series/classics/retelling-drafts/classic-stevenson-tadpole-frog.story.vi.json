@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_stevenson_tadpole_frog",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Nòng nọc và ếch",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Tadpole and the Frog” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Tadpole and the Frog",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Truyện thiếu nhi",
+      "Hài châm biếm"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ếch nhìn một con nòng nọc đang bơi và lên giọng trách móc nó vì cái đuôi dài."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Ếch bảo rằng hồi mình còn là nòng nọc, mình chẳng bao giờ có đuôi như thế."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nòng nọc ngẩng lên nhìn ếch. Nó bảo rằng nếu vậy thì chắc ếch chưa từng là nòng nọc."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Chúng ta đôi khi quên chính giai đoạn mình đã trải qua khi đánh giá người đến sau."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Bạn đã bao giờ trách ai đó vì điều mình từng làm khi còn ít kinh nghiệm?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "robert-louis-stevenson",
+    "author_name": "Robert Louis Stevenson",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/343"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "stevenson_fables_1901",
+    "source_item_id": "stevenson-tadpole-frog",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}

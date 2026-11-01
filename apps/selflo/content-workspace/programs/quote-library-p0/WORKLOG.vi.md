@@ -425,3 +425,8 @@ Tích hợp remote1fc18a3 và local6917654; source91/Authoring1081866 quote78 st
 ## 2026-11-01 — B016 toàn đợt local
 
 164 ID:4 nhập canonical đạt,160 final closure;0 chưa xử lý. Source99/Authoring116(1897 quote/78 story),Release61 giữ385 quote/22 story. Corpus2.274/5.471;234 chờ.96 tests/gate đạt; workbook/raw,1893 quote canonical trước và story/Knowledge giữ nguyên. Không commit/push/deploy. Handoff `Q10_B016_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Tiếp theo B017 164 ID local.
+
+
+## 2026-11-01 — Hợp nhất main sau B016
+
+Owner yêu cầu kiểm tra main mới trước khi merge. Đã fetch4 commit tới`b6210e6a412aca1565ace15fb6bed5580bbf3a5d`, checkpoint local`f06b01b1aa9322a8c0439e3c7c8d8c4aaf440de6`; chỉ WIP xung đột và đã giữ cả hai phía.34 tệp incoming và125 tệp local ngoàiWIP nguyên byte;386 tệpRelease nguyên hash.96 tests/gate tạm234 quote đạt; Source99/Authoring116/Release61. Giữ Story/Idea parked,20 Classics draft ngoài canonical. Owner authorize push main bình thường, không force/promote Release. Handoff`MAIN_MERGE_B016_2026-11-01.vi.md`. Tiếp theo B017164ID khi owner yêu cầu.

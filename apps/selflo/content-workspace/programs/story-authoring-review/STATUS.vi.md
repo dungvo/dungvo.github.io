@@ -1,56 +1,42 @@
-# PM-STORY-P1 — Review story chỉ có trong Authoring
+# PM-STORY-P1 — Trạng thái Story / Series
 
-**Ưu tiên:** P1
-**Trạng thái tổng:** Tạm dừng theo quyết định owner
-**Bắt đầu:** 2026-10-13
-**Owner nghiệm thu cuối:** Dũng
-**Phạm vi:** 46 story có trong Authoring revision 84 nhưng chưa có trong Release revision 45.
+**Trạng thái hiện tại:** **TẠM DỪNG / PAUSED BY OWNER (2026-11-01)**. Không tự tiếp tục Story, không phát hành, không viết truyện mới cho mục tiêu 365.  
+**Nguồn đầu vào bắt buộc cho phiên AI sau:** **[SESSION_CLOSURE_2026-11-01.vi.md](SESSION_CLOSURE_2026-11-01.vi.md)**.  
+**Owner:** xác nhận hướng đi khi quay lại, chưa chấp thuận bulk promotion.
 
-## Mục tiêu
+## Snapshot kiểm chứng tại thời điểm chốt
 
-Đọc và kết luận từng story như một sản phẩm nội dung hoàn chỉnh. Mỗi story phải có đúng một quyết định: Release, cần sửa, cần xác minh nguồn/quyền, cần owner review, giữ Authoring hoặc loại.
+- Canonical Authoring manifest **rev 108**, **78 Story records**; Release manifest **rev 61**, **22 Story records**. **56 Authoring-only** (đếm theo stable `story_id`); không coi 78 là 78 tác phẩm độc lập duy nhất.
+- Một series đang có nội dung: **Tầng không tồn tại**, 10 chương toàn văn ở Authoring; rights/review vẫn chờ owner và technical reflection placeholder; không có Phần 2.
+- [Idea Library](../../idea-library/README.vi.md): **36 concept** = 6 series + 30 idea độc lập; 12 nhóm định hướng đủ 365 vị trí. Không có lịch xuất bản.
+- [Bảng điểm gợi ý 78 Story](reports/EDITORIAL_SCORECARD_78_2026-11-01.vi.json) đã được lưu lại: **chủ quan/provisional**, có trọng số và 1 series 10 chương; không phải editorial decision chính thức.
+- **Classics50:** Các tư liệu hữu ích của [PR #9](https://github.com/dungvo/dungvo.github.io/pull/9) đã được chuyển sang [kho tham khảo Classics50](../../story-series/classics/README.vi.md): 20 nháp kể lại ngắn ngoài canonical, 30 nghiên cứu chưa dịch. Không phải Authoring. PR #9 đã đóng (superseded bởi PR #14 đã merge); chỉ còn branch cũ có thể xóa thủ công trên GitHub, không merge source.json cũ.
 
-Không đặt mục tiêu đưa đủ cả 46 story lên Release. Chỉ story đạt nội dung, nguồn/quyền, metadata, hình ảnh, liên kết quote và trải nghiệm đọc mới được phát hành.
+## Quyết định chốt của owner
 
-## Definition of Done
+1. Story và Idea 365 được **lưu để phát triển khi cần**, không làm ngay.
+2. Không viết thêm, rewrite, mở Part 2, tự chuyển 50 Classics sang Authoring, merge PR #9 hay publish Story/Release.
+3. Bản đã khóa giữ nguyên. Nội dung có rights/source, image, claim hoặc review chưa đạt không tự nhận là approved.
+4. Công việc khác của repo (quote, knowledge, app) có checkpoint riêng; **chỉ Story program ở trạng thái paused** theo yêu cầu này.
 
-1. Đủ 46/46 story có review biên tập và disposition rõ.
-2. Story được đề xuất Release đã được đọc toàn bài, không chỉ vượt schema.
-3. Quyền, nguồn, mức biên tập người thật và artwork được xác nhận.
-4. Story–quote mapping hợp lệ; không duyệt story chỉ vì quote liên kết đã Release.
-5. Story đạt gate được tạo Release qua canonical pipeline và kiểm tra trên web public.
-6. Story chưa đạt vẫn ở Authoring hoặc được loại với lý do rõ.
-7. Có report tổng, worklog và checkpoint để tiếp tục mà không review lại từ đầu.
+## Review status
 
-## Phase
+| Giai đoạn | Thực trạng |
+|---|---|
+| Baseline và registry | Đã lưu / có manifest |
+| Editorial diversity / 78-scorecard | Đã có đánh giá **sơ bộ**, cần owner review; không được coi là chấm hoàn tất từng câu |
+| Story/series authorship & import | 10 chương Tầng không tồn tại đã vào Authoring; những bản còn lại theo manifest |
+| Vòng review/disposition chính thức cho 56 Authoring-only | **Chưa chốt** |
+| Source, bản quyền, artwork, kiểm thử Reader, giải thích khoa học | **Cần làm theo từng tác phẩm nếu quay lại** |
+| Release mới từ Story | **Không thực hiện / chưa được yêu cầu** |
+| 365 idea outlines / Part 2 | **Chưa bắt đầu** |
 
-| Phase | Nội dung | Trạng thái |
-|---|---|---|
-| S0 | Đồng bộ baseline Authoring/Release theo `story_id` | Hoàn thành |
-| S1 | Audit gate tự động: lifecycle, quyền, review, human edit, ảnh, quote link | Hoàn thành |
-| S2 | AI đọc và review nội dung 46 story | Tạm dừng trước khi bắt đầu review batch |
-| S3 | Sửa canonical theo kết quả review | Chưa bắt đầu |
-| S4 | Owner nghiệm thu hàng cần quyết định | Chưa bắt đầu |
-| S5 | Publish story đạt gate và kiểm tra public | Chưa bắt đầu |
+## ĐÚNG MỘT BƯỚC TIẾP THEO — CHỈ KHI OWNER YÊU CẦU
 
-## Baseline
+**Đọc [SESSION_CLOSURE](SESSION_CLOSURE_2026-11-01.vi.md), sau đó mở đúng `story_id` hoặc `idea_id` mà owner chọn để review/outline từng mục.** Tải manifest mới nhất trước khi dùng số lượng/snapshot; không tự động mở batch 50 classics hoặc sáng tác 287 bài.
 
-- Authoring revision 84: 62 story.
-- Release revision 45: 16 story.
-- Authoring-only theo stable `story_id`: 46 story.
-- Release có nhưng Authoring không có: 0 story.
+## Lịch sử không còn là snapshot hiện hành
 
-## Kết quả audit S1
+2026-10-13: Authoring rev 84 / 62 story, Release rev 45 / 16 story; 46 Authoring-only. Audit gate tự động trước đây: 0/46 release-ready, 46 chưa ảnh, 45 thiếu quyền, 41 thiếu review, 18 thiếu quote Release. **Chỉ là dữ liệu lịch sử**; báo cáo [reports/authoring-only-stories.json](reports/authoring-only-stories.json) và [WORKLOG](WORKLOG.vi.md) còn để đối chiếu, **không dùng làm số liệu hiện tại**.
 
-- Release-ready theo gate tự động: 0/46.
-- 46/46 chưa có hero image.
-- 46/46 chưa được xác nhận `human_edited = true`.
-- 45/46 chưa clear quyền.
-- 41/46 còn thiếu owner review.
-- 18/46 chưa có quote liên kết trong Release.
-
-Audit chỉ kiểm tra điều kiện dữ liệu. Nó không thay thế việc đọc toàn bài và không kết luận story hay/dở.
-
-## Đúng một bước tiếp theo
-
-Khi owner quay lại story, tiếp tục bằng việc đọc batch đầu gồm năm story đã từng được đánh dấu `approved` và story `Bức ảnh thiếu một góc`; không chạy lại baseline S0–S1.
+**Đóng checkpoint:** 2026-11-01; quyết định PAUSED BY OWNER.

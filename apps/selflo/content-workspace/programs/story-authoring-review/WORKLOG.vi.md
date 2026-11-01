@@ -20,3 +20,12 @@
 - Không review, sửa hoặc Release thêm story trong phase hiện tại.
 - Owner sẽ tự đọc và bổ sung story sau.
 - Giữ nguyên checkpoint 46 Authoring-only và report S1 để có thể tiếp tục mà không audit lại.
+
+## 2026-11-01 — Owner chốt, đóng Story session (PAUSED BY OWNER)
+
+- Xác nhận lại trên main: Authoring rev 108 có **78 Story**, Release rev 61 có **22 Story**, **56 Authoring-only**. Tầng không tồn tại 10 chương ở Authoring; không tạo Part 2/Release.
+- Lưu **sổ đánh giá sơ bộ 78 Story** (6 tiêu chí và điểm thích đọc, nguồn từ vòng review của AI) vào [reports/EDITORIAL_SCORECARD_78_2026-11-01.vi.json](reports/EDITORIAL_SCORECARD_78_2026-11-01.vi.json), không coi là owner approval hoặc review từng chữ đầy đủ.
+- Idea Library đã có 6 series + 30 idea, 12 nhóm mục tiêu 365; không sản xuất nội dung mới.
+- Phân biệt rõ PR #9 Classics 50 còn Draft và **chưa merge**, không ở Authoring main; nguyên tác/rights/dịch chưa duyệt.
+- Lưu [SESSION_CLOSURE_2026-11-01.vi.md](SESSION_CLOSURE_2026-11-01.vi.md) làm hướng dẫn AI quay lại đúng nơi: nguồn sự thật, danh sách đã lưu, tồn đọng và một bước tiếp theo.
+- Quyết định owner: **Tạm dừng Story**, chỉ làm tiếp khi owner chọn một idea/story cụ thể, không tự publish hoặc mở lại batch.

@@ -1,5 +1,13 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **HỢP NHẤT MAIN SAU B016 — 2026-11-01:** Đã tích hợp main `b6210e6` với checkpoint B010–B016 `f06b01b`, giữ đủ4 commit mới về Idea/Story/Classics. Source99 / Authoring116(1897 quote/78 story); Release61(385 quote/22 story) giữ nguyên.234 câu chờ Release;96 tests và gate đạt. Owner đã cho phép sync main; không promote Release. [Biên bản hợp nhất](programs/quote-library-p0/MAIN_MERGE_B016_2026-11-01.vi.md).
+
+> **CLASSICS50 — PRESERVED AS RESEARCH / STORY STILL PAUSED:** Đã chuyển 50 hồ sơ nghiên cứu (20 bản kể lại ngắn bảo toàn ngoài canonical, 30 nguồn tham khảo) vào [Classics50 library](story-series/classics/README.vi.md) thông qua nhánh migration sạch. Không thêm 20 vào Source/Authoring, không sửa Release. PR #9 đã đóng sau khi PR #14 merge; không merge source.json revision 84. Đọc [Story closure](programs/story-authoring-review/SESSION_CLOSURE_2026-11-01.vi.md) nếu cần quay lại.
+
+> **STORY SESSION CLOSED / PARKED — 2026-11-01:** Theo quyết định owner, tạm dừng Story/series/idea 365; **không tiếp tục viết, nhập, merge draft PR #9 hay phát hành** khi chưa có yêu cầu mới. Main snapshot: **Authoring rev 108 / 78 Story; Release rev 61 / 22 Story**; 1 series *Tầng không tồn tại* 10 chương Authoring; 36 concept 365 (6 series + 30 idea). Đã lưu scorecard 78 bài **sơ bộ**. Đọc [STORY HANDOFF](programs/story-authoring-review/SESSION_CLOSURE_2026-11-01.vi.md) trước khi làm lại; status [PM-STORY-P1](programs/story-authoring-review/STATUS.vi.md), [IDEA-365](idea-library/STATUS.vi.md). Chương trình quote/khác không bị thay đổi.
+
+> **IDEA-365 — ĐÃ LƯU / PARKED (01/11/2026):** Định hướng 365 ngày đọc Selflo, 6 concept series + 30 idea độc lập, 12 nhóm cân bằng. Chỉ là IDEA, không thêm Story/Authoring/Release và không có lịch xuất bản tự động. Canonical registry [Idea Library](idea-library/README.vi.md), trạng thái và next step [STATUS](idea-library/STATUS.vi.md). Khi owner muốn phát triển, chọn 1 ID, review overlap rồi mới nghiên cứu/outline.
+
 > **B016 HOÀN TẤT LOCAL — 2026-11-01:**164/164:4 đạt,160 không nhận. Source99 / Authoring116 (1897 quote/78 story); Release61 (385 quote/22 story) giữ nguyên. Corpus2.274/5.471 (41,56%), còn3.197;234 chờ Release.96 tests/gate đạt; chưa commit/push. [Handoff B016](programs/quote-library-p0/Q10_B016_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
 
 > **B015 HOÀN TẤT LOCAL — 2026-11-01:** 164/164: 1 đạt, 163 không nhận. Source98 / Authoring115 (1893 quote / 78 story); Release61 (385 quote / 22 story) giữ nguyên. Corpus 2.114/5.471 (38,64%), còn3.357;230 chờ Release.96 tests và gate đạt; chưa commit/push. [Handoff B015](programs/quote-library-p0/Q10_B015_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
