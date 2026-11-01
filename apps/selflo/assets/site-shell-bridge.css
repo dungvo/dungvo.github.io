@@ -1,0 +1,69 @@
+/* Shared shell bridge: same logo, navigation and typography as Public/Studio core.
+   Legacy tool headers remain as functional secondary toolbars. */
+.selflo-shell-bridge {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10000 !important;
+  isolation: isolate;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  font-family: var(--shell-sans, "DM Sans", sans-serif) !important;
+}
+.selflo-shell-bridge .selflo-shell-brand img {
+  width: 23px !important;
+  height: 23px !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+.selflo-shell-bridge .selflo-bridge-context {
+  justify-self: end;
+  color: #5c7469;
+  font: 600 11px/1.4 var(--shell-sans, "DM Sans", sans-serif);
+  white-space: nowrap;
+}
+body.selflo-shell-bridged > .global-nav {
+  display: none !important; /* Existing review tool's duplicated global menu */
+}
+body.selflo-bridge-studio > header:not(.selflo-shell-bridge) {
+  scroll-margin-top: 80px;
+}
+body.selflo-bridge-studio > header.lab-bar,
+body.selflo-bridge-studio > header.lab-header,
+body.selflo-bridge-studio > header.site-header,
+body.selflo-bridge-studio > header.topbar {
+  top: 72px !important; /* Keep tool-specific controls below global navigation */
+}
+body.selflo-bridge-studio > header:not(.selflo-shell-bridge) .brand-mark,
+body.selflo-bridge-studio > header:not(.selflo-shell-bridge) .brand-leaf,
+body.selflo-bridge-studio > header:not(.selflo-shell-bridge) .brand strong {
+  display: none !important;
+}
+body.selflo-bridge-studio > header:not(.selflo-shell-bridge) .brand small {
+  display: block !important;
+  font: 700 12px/1.35 var(--shell-sans, "DM Sans", sans-serif) !important;
+  letter-spacing: .02em;
+}
+body.selflo-bridge-studio > header.site-header > .brand,
+body.selflo-bridge-studio > header.site-header > .brand img {
+  display: none !important; /* Preview keeps its own feature navigation below the app shell */
+}
+body.selflo-bridge-public > header.public-nav {
+  display: none !important; /* Legacy About page uses the shared Public nav instead */
+}
+body.selflo-bridge-public > header:not(.selflo-shell-bridge) .wordmark {
+  display: none !important;
+}
+@media(max-width:680px) {
+  .selflo-shell-bridge .selflo-bridge-context {display:none}
+  body.selflo-bridge-studio > header.lab-bar,
+  body.selflo-bridge-studio > header.lab-header,
+  body.selflo-bridge-studio > header.site-header,
+  body.selflo-bridge-studio > header.topbar {top:64px !important}
+}
+@media(prefers-reduced-motion:reduce) {
+  .selflo-shell-bridge, .selflo-shell-bridge * {
+    scroll-behavior:auto !important;
+    transition:none !important;
+    animation:none !important;
+  }
+}
