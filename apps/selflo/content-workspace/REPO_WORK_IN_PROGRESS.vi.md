@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **REVIEW WEB — 2026-11-01:** Bổ sung hàng đợi “Không nhận · lý do review” cho 1.894 câu; hiển thị ghi chú review ngay trên card và tìm theo lý do. Tách nhãn quyết định cá nhân lưu trong trình duyệt. Chỉ đổi Studio UI, không đổi Source/Authoring/Release. Next: owner xem hàng đợi trên web.
+
 > **HỢP NHẤT MAIN SAU B016 — 2026-11-01:** Đã tích hợp main `b6210e6` với checkpoint B010–B016 `f06b01b`, giữ đủ4 commit mới về Idea/Story/Classics. Source99 / Authoring116(1897 quote/78 story); Release61(385 quote/22 story) giữ nguyên.234 câu chờ Release;96 tests và gate đạt. Owner đã cho phép sync main; không promote Release. [Biên bản hợp nhất](programs/quote-library-p0/MAIN_MERGE_B016_2026-11-01.vi.md).
 
 > **CLASSICS50 — PRESERVED AS RESEARCH / STORY STILL PAUSED:** Đã chuyển 50 hồ sơ nghiên cứu (20 bản kể lại ngắn bảo toàn ngoài canonical, 30 nguồn tham khảo) vào [Classics50 library](story-series/classics/README.vi.md) thông qua nhánh migration sạch. Không thêm 20 vào Source/Authoring, không sửa Release. PR #9 đã đóng sau khi PR #14 merge; không merge source.json revision 84. Đọc [Story closure](programs/story-authoring-review/SESSION_CLOSURE_2026-11-01.vi.md) nếu cần quay lại.
