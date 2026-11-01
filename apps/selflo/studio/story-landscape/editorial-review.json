@@ -1,0 +1,343 @@
+{
+  "schema_version": "selflo.editorial_review.v1",
+  "date": "2026-11-01",
+  "source_snapshot": "apps/selflo/studio/story-landscape/catalog.json",
+  "release_total": 22,
+  "baseline_style_counts": {
+    "Phân tích / kiến thức": 3,
+    "Ngụ ngôn ẩn dụ": 8,
+    "Chuyện đời thường": 3,
+    "Nội tâm & chiêm nghiệm": 3,
+    "Quan sát đời thường": 2,
+    "Khám phá kỳ bí": 1,
+    "Quy luật tự nhiên": 1,
+    "Phi lý đời thường": 1
+  },
+  "baseline_form_counts": {
+    "Bài phân tích / kiến thức": 3,
+    "Truyện": 17,
+    "Quan sát / góc nhìn": 2
+  },
+  "style_coverage": [
+    {
+      "style": "Nội tâm & chiêm nghiệm",
+      "primary_count": 3,
+      "secondary_count": 10,
+      "interpretation": "Có ví dụ theo nhãn chính đề xuất"
+    },
+    {
+      "style": "Truyện thiếu nhi",
+      "primary_count": 0,
+      "secondary_count": 0,
+      "interpretation": "Chưa có ví dụ nhãn chính; không khẳng định phong cách hoàn toàn vắng mặt"
+    },
+    {
+      "style": "Hài châm biếm",
+      "primary_count": 0,
+      "secondary_count": 1,
+      "interpretation": "Chưa có ví dụ nhãn chính; không khẳng định phong cách hoàn toàn vắng mặt"
+    },
+    {
+      "style": "Khám phá kỳ bí",
+      "primary_count": 1,
+      "secondary_count": 1,
+      "interpretation": "Có ví dụ theo nhãn chính đề xuất"
+    },
+    {
+      "style": "Du hành thời gian",
+      "primary_count": 0,
+      "secondary_count": 0,
+      "interpretation": "Chưa có ví dụ nhãn chính; không khẳng định phong cách hoàn toàn vắng mặt"
+    },
+    {
+      "style": "Cinematic ly kỳ",
+      "primary_count": 0,
+      "secondary_count": 0,
+      "interpretation": "Chưa có ví dụ nhãn chính; không khẳng định phong cách hoàn toàn vắng mặt"
+    },
+    {
+      "style": "Chuyện đời thường",
+      "primary_count": 3,
+      "secondary_count": 0,
+      "interpretation": "Có ví dụ theo nhãn chính đề xuất"
+    },
+    {
+      "style": "Quy luật tự nhiên",
+      "primary_count": 1,
+      "secondary_count": 4,
+      "interpretation": "Có ví dụ theo nhãn chính đề xuất"
+    },
+    {
+      "style": "Trinh thám tâm lý",
+      "primary_count": 0,
+      "secondary_count": 0,
+      "interpretation": "Chưa có ví dụ nhãn chính; không khẳng định phong cách hoàn toàn vắng mặt"
+    },
+    {
+      "style": "Phiêu lưu sinh tồn",
+      "primary_count": 0,
+      "secondary_count": 1,
+      "interpretation": "Chưa có ví dụ nhãn chính; không khẳng định phong cách hoàn toàn vắng mặt"
+    },
+    {
+      "style": "Khoa học giả tưởng xã hội",
+      "primary_count": 0,
+      "secondary_count": 1,
+      "interpretation": "Chưa có ví dụ nhãn chính; không khẳng định phong cách hoàn toàn vắng mặt"
+    },
+    {
+      "style": "Phi lý đời thường",
+      "primary_count": 1,
+      "secondary_count": 0,
+      "interpretation": "Có ví dụ theo nhãn chính đề xuất"
+    }
+  ],
+  "deep_samples": [
+    {
+      "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
+      "title": "THÀNH PHỐ CỦA NHỮNG CHIẾC ĐỒNG HỒ",
+      "slug": "thanh-pho-cua-nhung-chiec-dong-ho",
+      "engine": "Ngụ ngôn hệ thống; diễn biến/đối thoại",
+      "evidence": "Cỗ máy và nhân vật Vành tạo xung đột giữa năng lực, trách nhiệm và lựa chọn nghề; các cuộc đối thoại chuyển tình huống.",
+      "risk": "Cú soi chiếu đời thực khá rõ, nhưng đã có vùng Nhìn lại/phản tư. Không dùng làm khuôn bắt buộc cho truyện phi lý khác.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.r4.json"
+    },
+    {
+      "id": "story.nha_ga_mot_chieu",
+      "title": "NHÀ GA MỘT CHIỀU",
+      "slug": "nha-ga-mot-chieu",
+      "engine": "Phiêu lưu kỳ ảo + hài châm biếm",
+      "evidence": "Ba hồi, nhiều quầy vé/cánh cửa, nhân viên và các phiên bản cuộc đời; đối thoại tạo hài và khám phá.",
+      "risk": "Không gắn nhãn sinh tồn: đây không phải survival. Thời lượng dài nhưng có nhiều diễn biến.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/nha-ga-mot-chieu/story.vi.r1.json"
+    },
+    {
+      "id": "story.nhung_ngay_dep_nhat",
+      "title": "NHỮNG NGÀY ĐẸP NHẤT",
+      "slug": "nhung-ngay-dep-nhat",
+      "engine": "Đời thường + ký ức/quan hệ",
+      "evidence": "Họp lớp mở bằng không khí nhóm bạn, đối thoại hồi tưởng và sau đó nối sang gia đình hiện tại.",
+      "risk": "Chuyển động nhờ nhân vật và chi tiết thực, không phải thế giới ẩn dụ.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/nhung-ngay-dep-nhat/story.vi.r1.json"
+    },
+    {
+      "id": "story.original_if_i_lived_a_human_life",
+      "title": "Nếu được sống một đời người",
+      "slug": "original-if-i-lived-a-human-life",
+      "engine": "Tiểu luận phản tư dài",
+      "evidence": "Cấu trúc dài 3 phần/29 sections, chủ yếu chuỗi câu hỏi, suy tư và điểm nhấn.",
+      "risk": "Khó xem như truyện xung đột kịch tính; hợp long-form essay/journey hơn. Nhiều câu hỏi nối nhau.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/original-if-i-lived-a-human-life/story.vi.r13.json"
+    },
+    {
+      "id": "story.original_builder_and_shapeless_stones",
+      "title": "Người thợ xây và những viên đá không có hình",
+      "slug": "original-builder-and-shapeless-stones",
+      "engine": "Ngụ ngôn đời sống công việc",
+      "evidence": "Người thợ nhận yêu cầu mơ hồ; giao tiếp với ông chủ là động lực xung đột.",
+      "risk": "Có thoại thực sự thúc đẩy tình huống; kết hình ảnh 'viên đá' và vùng diễn giải có thể lặp tầng nghĩa.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/original-builder-and-shapeless-stones/story.vi.r6.json"
+    },
+    {
+      "id": "story.why_ai_feels_easier_to_ask",
+      "title": "Vì sao có những câu ta dễ hỏi AI hơn hỏi một người?",
+      "slug": "why-ai-feels-easier-to-ask",
+      "engine": "Bài giải thích dựa vào tình huống",
+      "evidence": "Mở bằng buổi học im lặng; triển khai bằng liệt kê khả năng, đặt câu hỏi và phân tích hành vi.",
+      "risk": "Phân loại theo content_form=analysis, không chỉ gắn story_style contemporary.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/why-ai-feels-easier-to-ask/story.vi.r5.json"
+    },
+    {
+      "id": "story.old_man_and_returning_horse",
+      "title": "Tái ông thất mã",
+      "slug": "old-man-and-returning-horse",
+      "engine": "Ngụ ngôn tình huống đảo chiều",
+      "evidence": "Ba lần biến cố đổi nghĩa may-rủi, kết bằng hệ quả lịch sử.",
+      "risk": "Động cơ là hệ quả liên tiếp; không cần độc thoại nội tâm.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/old-man-and-returning-horse/story.vi.r6.json"
+    },
+    {
+      "id": "story.last_time",
+      "title": "LẦN CUỐI",
+      "slug": "last-time",
+      "engine": "Tiểu luận sự kiện + đời thường",
+      "evidence": "Mở bằng sự kiện bóng đá và nối tới ý thức về những 'lần cuối'.",
+      "risk": "Không nên chấm như truyện fiction; cần kiểm chứng riêng các claim sự kiện/ticket nếu sử dụng làm nguồn Knowledge.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/last-time/story.vi.r3.json"
+    },
+    {
+      "id": "story.original_chair_beside_window",
+      "title": "Chiếc ghế cạnh cửa sổ",
+      "slug": "original-chair-beside-window",
+      "engine": "Đời thường, tâm lý nghề nghiệp",
+      "evidence": "Nhân vật mang áp lực công việc về nhà; những thay đổi nhỏ làm nổi bật ranh giới đời sống.",
+      "risk": "Vẫn có đoạn kết nhấn thông điệp; giữ khoảng mở khi viết các truyện cùng nhóm.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/original-chair-beside-window/story.vi.r6.json"
+    },
+    {
+      "id": "story.half_glass_two_views",
+      "title": "Nửa ly nước, hai cách nhìn",
+      "slug": "half-glass-two-views",
+      "engine": "Quan sát minh họa luận điểm",
+      "evidence": "Một hình ảnh quen thuộc được giải thích trực tiếp bằng nhiều cách nhìn.",
+      "risk": "Không có plot lớn; nên phân loại observation, tránh ép tiêu chí phiêu lưu/cao trào.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/half-glass-two-views/story.vi.r1.json"
+    },
+    {
+      "id": "story.original_stone_that_loved_stormy_days",
+      "title": "Tảng đá thích những ngày giông",
+      "slug": "original-stone-that-loved-stormy-days",
+      "engine": "Ngụ ngôn thiên nhiên",
+      "evidence": "Tảng đá, cây thông, suối và bão đóng vai trò nhân vật tự nhiên.",
+      "risk": "Tính biến đổi sinh thái là hình ảnh kể chuyện, không dùng để kết luận luật tự nhiên theo nghĩa khoa học.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/original-stone-that-loved-stormy-days/story.vi.r4.json"
+    },
+    {
+      "id": "story.if_i_am_wrong_but_chatgpt_agrees",
+      "title": "Nếu tôi sai, nhưng ChatGPT lại đồng ý với tôi thì sao?",
+      "slug": "if-i-am-wrong-but-chatgpt-agrees",
+      "engine": "Tiểu luận phân tích ngôi tôi",
+      "evidence": "Ngôi tôi đặt câu hỏi về phản biện của AI và mời độc giả so sánh với đời sống.",
+      "risk": "Đây là ví dụ giọng tác giả hiện diện rõ, khác ngụ ngôn; các claim về AI nên luôn có giới hạn và ví dụ phản.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/if-i-am-wrong-but-chatgpt-agrees/story.vi.r4.json"
+    },
+    {
+      "id": "story.tiem_ban_mau_cua_cuoc_doi",
+      "title": "TIỆM BÁN MÀU CỦA CUỘC ĐỜI",
+      "slug": "tiem-ban-mau-cua-cuoc-doi",
+      "engine": "Ngụ ngôn kỳ ảo đời sống",
+      "evidence": "Một cửa tiệm bán màu kỳ lạ tạo nền cho diễn biến đối thoại.",
+      "risk": "Tương đồng về chất liệu 'bức tranh cuộc đời' với Người họa sĩ; theo dõi độ trùng motif, không kết luận là trùng truyện.",
+      "review_scope": "read_full_payload_structure_and_selected_prose",
+      "owner_status": "awaiting_editorial_acceptance",
+      "source_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tiem-ban-mau-cua-cuoc-doi/story.vi.r4.json"
+    }
+  ],
+  "priorities": [
+    {
+      "rank": 1,
+      "key": "cake-that-leaned-left",
+      "title": "Chiếc bánh nghiêng sang trái",
+      "source_state": "authoring_only",
+      "primary": "Hài tình huống",
+      "purpose": "Thử tiếng cười thật từ sự cố đời thường, không thêm bài học ở cuối.",
+      "test": "Đọc nguyên bản như comedy; tiếng cười có xảy ra trước reflection không?",
+      "dependency": "Owner review bản đã có, xác minh rights và tránh chỉnh truyện khác."
+    },
+    {
+      "rank": 2,
+      "key": "blue-eraser",
+      "title": "Cục tẩy màu xanh",
+      "source_state": "authoring_only",
+      "primary": "Truyện thiếu nhi",
+      "purpose": "Có nhân vật/đồ vật gần trẻ em; thử độ tuổi, nhịp nhanh và cách thoại.",
+      "test": "Đọc thử với nhóm tuổi mục tiêu; có độc lập với thông điệp sửa sai không?",
+      "dependency": "Owner review, nguồn quyền; không mặc định phù hợp trẻ lớp 1–5."
+    },
+    {
+      "rank": 3,
+      "key": "rain-arrives-downstream-late",
+      "title": "Cơn mưa đến muộn dưới hạ lưu",
+      "source_state": "authoring_only",
+      "primary": "Quy luật tự nhiên",
+      "purpose": "Đánh giá truyện không nhân vật người, chuyển động bằng quan sát hiện tượng.",
+      "test": "Các chi tiết thiên nhiên có hợp lý; không ép chúng thành quy luật phổ quát.",
+      "dependency": "Owner review, source/rights; nếu là kiến thức khoa học cần tài liệu kiểm chứng."
+    },
+    {
+      "rank": 4,
+      "key": "discussion-05",
+      "title": "47 giây",
+      "source_state": "idea_only",
+      "primary": "Cinematic ly kỳ",
+      "purpose": "Thử hành động, áp lực thời gian, một quyết định không có đáp án rõ.",
+      "test": "Có hồi hộp nếu bỏ toàn bộ phần triết lý? Kịch tính phải xuất phát từ tình huống.",
+      "dependency": "Chỉ có synopsis; cần outline + kiểm chứng tính hợp lý của hệ thống an toàn, owner duyệt trước sáng tác."
+    },
+    {
+      "rank": 5,
+      "key": "discussion-10",
+      "title": "Hiệp hội những người leo thang",
+      "source_state": "idea_only",
+      "primary": "Phi lý đời thường",
+      "purpose": "Thử world-rule absurdist với nhân vật hành động hợp lý theo incentives.",
+      "test": "Không kết thúc dễ đoán bằng một người 'mở cửa rồi mọi người giác ngộ'.",
+      "dependency": "Đã có synopsis/phát triển tình huống; cần cơ chế thế giới, thoại và điểm ngoặt."
+    },
+    {
+      "rank": 6,
+      "key": "discussion-02",
+      "title": "Bộ Đo Lường Hạnh Phúc",
+      "source_state": "idea_only",
+      "primary": "Hài châm biếm",
+      "purpose": "Thử satirical comedy làm lộ hệ quả của việc đo hạnh phúc bằng chỉ số.",
+      "test": "Có xung đột thực giữa chính sách, con người và dữ liệu, không chỉ là bài luận giễu nhại.",
+      "dependency": "Chưa có story hoàn chỉnh; tránh dùng claim khoa học vô căn cứ."
+    },
+    {
+      "rank": 7,
+      "key": "discussion-03",
+      "title": "Thư viện của những điều chưa từng xảy ra",
+      "source_state": "idea_only",
+      "primary": "Khám phá kỳ bí",
+      "purpose": "Thử mystery dẫn dắt bằng manh mối và điều người đọc chưa biết.",
+      "test": "Quy tắc thư viện nhất quán; sự thật mở ra qua hành động, không qua diễn giải cuối.",
+      "dependency": "Thiết kế quy tắc nhân quả và kết."
+    },
+    {
+      "rank": 8,
+      "key": "discussion-17",
+      "title": "Công cụ làm nhanh hơn có lấy mất cơ hội học không?",
+      "source_state": "research_idea",
+      "primary": "Bài phân tích / tri thức",
+      "purpose": "Thử phi hư cấu có luận điểm, chứng cứ, phản ví dụ và quan sát đời thường.",
+      "test": "Phân biệt tốc độ làm việc với tốc độ học; claim khoa học phải có nguồn và giới hạn.",
+      "dependency": "Research trước: bằng chứng/giả thuyết đối lập; không giả vờ thành truyện hư cấu."
+    },
+    {
+      "rank": 9,
+      "key": "discussion-04",
+      "title": "Người vay một giờ",
+      "source_state": "idea_only",
+      "primary": "Giả tưởng xã hội / thời gian",
+      "purpose": "Thử hệ thống thời gian có quy tắc, hệ quả và nhịp phiêu lưu.",
+      "test": "Không nhầm 'vay thời gian' với du hành thời gian thực sự; giữ logic thống nhất.",
+      "dependency": "Cần quy tắc vay/trả, mức độ rủi ro và mô hình thời gian."
+    }
+  ],
+  "editorial_dimensions": [
+    "content_form",
+    "story_engine",
+    "narrator_voice",
+    "character_and_conflict",
+    "pace_and_scene",
+    "ending_and_reflection",
+    "evidence_and_rights",
+    "distinctiveness_when_read_in_sequence"
+  ],
+  "audit_limitations": "Release distribution uses proposed primary labels from editorial catalog. Deep samples: 13 full payloads inspected for structural blocks and selected prose, not an independently validated 22-story literary quality score. All owner decisions remain pending; no canonical change or release authorization."
+}
