@@ -27,19 +27,17 @@
     const artwork=item.image
       ? '<img src="'+escapeHTML(item.image)+'" alt="'+escapeHTML(item.imageAlt)+'" loading="lazy" decoding="async">'
       : '<div class="article-card-art-empty" aria-hidden="true">'+icon('book')+'</div>';
-    return '<a class="article-card-link" href="'+readUrl(item.id)+'"><article class="article-card editorial-story-card">'+artwork+
+    return '<a class="article-card-link" href="'+readUrl(item.id)+'"><article class="article-card editorial-story-card">'+'<div class="story-card-artwork">'+artwork+'</div>'+
       '<div class="article-card-body"><span class="article-type">'+icon('book')+' Story · '+escapeHTML(themeLabel(item))+'</span>'+
       '<h3>'+escapeHTML(item.title)+'</h3><p>'+escapeHTML(item.subtitle||'')+'</p>'+
       '<span class="article-meta">'+icon('clock')+' '+item.readingMinutes+' phút đọc</span></div></article></a>';
   }
   function renderQuote(item,compact=false) {
-    const img=item.image?'<img src="'+escapeHTML(item.image)+'" alt="" loading="lazy" decoding="async">':
-      '<div class="quote-fallback-art">'+icon('leaf')+'</div>';
     const attribution=item.author||'Selflo';
     const related=item.storyId&&state.storyMap.has(item.storyId)
       ? '<a class="quote-related" href="'+readUrl(item.storyId)+'">Đọc câu chuyện liên quan '+icon('arrow')+'</a>':'';
     return '<article class="quote-card quote-editorial '+(compact?'quote-compact':'quote-feed-card')+'" data-quote-id="'+escapeHTML(item.id)+'">'+
-      '<div class="quote-artwork">'+img+'</div><div class="quote-copy">'+
+      '<div class="quote-copy">'+
       '<span class="quote-eyebrow">'+icon('quote')+' '+escapeHTML(themeLabel(item))+'</span>'+
       '<blockquote>'+escapeHTML(item.text)+'</blockquote>'+
       '<div class="quote-bottom"><span class="quote-attribution">— '+escapeHTML(attribution)+'</span>'+
