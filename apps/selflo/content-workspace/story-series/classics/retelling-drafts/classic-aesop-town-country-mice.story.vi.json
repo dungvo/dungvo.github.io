@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_aesop_town_country_mice",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Chuột thành thị và chuột đồng quê",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Town Mouse and the Country Mouse” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "meaning_values",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Town Mouse and the Country Mouse",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Truyện thiếu nhi",
+      "Chuyện đời thường"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chuột thành thị đến thăm người họ hàng ở đồng quê. Bữa ăn chỉ có những hạt thóc và vài thứ giản dị. Nó bảo người bạn nên lên phố, nơi thức ăn ngon không bao giờ thiếu."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chuột đồng quê đi theo. Đúng là trong một căn nhà sang trọng, hai con tìm thấy bánh ngọt và những món ăn thừa của một bữa tiệc lớn."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nhưng chưa ăn được bao lâu, tiếng chó sủa vang lên. Cả hai phải lao vào nơi trú ẩn. Khi vừa ló đầu trở ra, lại có người đi tới và chúng phải chạy lần nữa."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Chuột đồng quê cảm ơn lời mời. Nó quyết định trở về với bữa ăn khiêm tốn của mình, nơi nó không phải giật mình giữa mỗi miếng ăn."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Hai nơi có thể mang đến hai kiểu đủ đầy khác nhau; không phải người nào cũng chọn cùng một thứ."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Bạn từng đổi lấy một lợi ích và sau đó nhận ra nó đi kèm điều gì?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "aesop-jacobs",
+    "author_name": "Aesop; Joseph Jacobs",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/28"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "aesops_fables_joseph_jacobs_1894",
+    "source_item_id": "aesop-town-country-mice",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}

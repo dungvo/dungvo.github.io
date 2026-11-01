@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_aesop_fox_and_mask",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Cáo và chiếc mặt nạ",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Fox and the Mask” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Fox and the Mask",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Phi lý đời thường",
+      "Hài châm biếm"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một con cáo lẻn vào kho đạo cụ của nhà hát. Trong bóng tối, nó chợt thấy một gương mặt uy nghi đang nhìn xuống mình, khiến nó giật bắn."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khi đến gần, cáo mới nhận ra đó chỉ là chiếc mặt nạ của diễn viên, được làm đẹp đến từng nét."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Nó ngắm nghía thật lâu, rồi nhận thấy đằng sau vẻ mặt oai phong ấy hoàn toàn rỗng."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Một gương mặt được tạo ra rất đẹp vẫn có thể không nói gì về phần nằm phía sau."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Có khi nào bạn bị thuyết phục bởi hình thức trước khi biết bên trong có gì?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "aesop-jacobs",
+    "author_name": "Aesop; Joseph Jacobs",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/28"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "aesops_fables_joseph_jacobs_1894",
+    "source_item_id": "aesop-fox-and-mask",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}
