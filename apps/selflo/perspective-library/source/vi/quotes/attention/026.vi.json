@@ -405,10 +405,10 @@
     },
     {
       "id": "authoring.b002.benedictus_de_spinoza.030",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Mọi hành động mà ta bị cảm xúc thụ động thúc đẩy, ta cũng có thể thực hiện bằng lý trí mà không cần cảm xúc ấy.",
+      "text_vi": "Một việc ta làm vì cảm xúc thụ động cũng có thể được làm từ lý trí, không cần cảm xúc ấy thúc ép.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -424,12 +424,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Benedictus de Spinoza",
-        "work": "Ethics",
-        "source_url": "https://www.gutenberg.org/ebooks/3800",
-        "source_language": null,
-        "source_label": "Benedictus de Spinoza",
-        "source_detail": "Research ID research.exp1000.b002.benedictus_de_spinoza.030; corpus row Q.E.D.; text line 7849; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "author_name": "Baruch Spinoza",
+        "work": "Ethics · IV.59 · R. H. M. Elwes1883",
+        "source_url": "https://www.gutenberg.org/cache/epub/3800/pg3800.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Baruch Spinoza",
+        "source_detail": "Ethics PartIV PropositionLIX; R. H. M. Elwes. Đoạn đối chiếu: we can be determined without emotion by reason. Ethics IV.59, quan điểm triết học của Spinoza; không phải lời hứa tắt cảm xúc hay hướng dẫn điều trị. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.exp1000.b002.benedictus_de_spinoza.030; corpus row Q.E.D.; text line 7849; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -442,27 +442,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "public_domain_us"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Mọi hành động mà ta bị cảm xúc thụ động thúc đẩy, ta cũng có thể thực hiện bằng lý trí mà không cần cảm xúc ấy.",
+        "semantic_intent": "Một việc ta làm vì cảm xúc thụ động cũng có thể được làm từ lý trí, không cần cảm xúc ấy thúc ép.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Benedictus de Spinoza"
+        "attribution_vi": "Phỏng theo Baruch Spinoza"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.10k.b009.kieu.0039.0040",

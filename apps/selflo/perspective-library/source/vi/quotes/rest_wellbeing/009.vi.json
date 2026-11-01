@@ -494,10 +494,10 @@
     },
     {
       "id": "research.day56.003",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thay đổi thói quen liên quan luyện và lặp; không chỉ là muốn mạnh hơn.",
+      "text_vi": "Một ý định tốt còn cần dịp được làm thành việc cụ thể.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -515,11 +515,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "William James",
-        "work": "The Principles of Psychology",
-        "source_url": "https://www.yorku.ca/pclassic/James/Principles/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên William James",
-        "source_detail": "Research ID research.day56.003; corpus row 1619; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+        "work": "The Principles of Psychology1890 · VolumeI",
+        "source_url": "https://www.gutenberg.org/cache/epub/57628/pg57628.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo William James",
+        "source_detail": "The Principles of Psychology1890, VolumeI ChapterIV Habit, maxim thứba. Passage: if one have not taken\nadvantage of every concrete opportunity to _act_. Diễn ý đoạn quyết tâm và cơ hội hành động; bỏ tuyên bố cơ chế thay đổi não, bỏ tuyệt đối phải tận dụng mọi cơ hội. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day56.003; corpus row 1619; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
       },
       "metadata": {
         "concepts": [],
@@ -532,27 +532,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1890; James1842–1910, không dùng dịch Việt hiện đại hoặc coi lý thuyết thần kinh lịch sử là fact mới. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Thay đổi thói quen liên quan luyện và lặp; không chỉ là muốn mạnh hơn.",
+        "semantic_intent": "Một ý định tốt còn cần dịp được làm thành việc cụ thể.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên William James"
+        "attribution_vi": "Phỏng theo William James"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day59.008",

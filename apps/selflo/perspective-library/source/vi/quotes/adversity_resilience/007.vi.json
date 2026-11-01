@@ -384,10 +384,10 @@
     },
     {
       "id": "research.mn.day12.mn21_02",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Lời nói đến với mình có thể đúng lúc hoặc sai lúc, thật hoặc không thật, dịu hoặc thô; phản ứng của mình vẫn là một lớp khác.",
+      "text_vi": "Lời người khác có thể đúng lúc hoặc sai lúc, thật hoặc không thật, dịu hoặc thô. Mình vẫn có phần lựa chọn trong lời đáp.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -403,12 +403,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 21 Kakacūpamasutta",
-        "source_url": "https://suttacentral.net/mn21/pli/ms",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn21_02; corpus row 753; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN21",
+        "source_url": "https://suttacentral.net/mn21/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN21",
+        "source_detail": "MN21:11.2–14. Đoạn đối chiếu: Their speech may be timely or untimely,. MN21:11, diễn ý sự thực hành đáp lời; không mặc định nạn nhân phải bình tĩnh/chịu đựng xúc phạm. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn21_02; corpus row 753; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -420,34 +420,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Lời nói đến với mình có thể đúng lúc hoặc sai lúc, thật hoặc không thật, dịu hoặc thô; phản ứng của mình vẫn là một lớp khác.",
+        "semantic_intent": "Lời người khác có thể đúng lúc hoặc sai lúc, thật hoặc không thật, dịu hoặc thô. Mình vẫn có phần lựa chọn trong lời đáp.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN21"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn61_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Như soi gương để nhìn lại khuôn mặt, có thể nhìn lại hành động trước khi làm, trong khi làm và sau khi làm.",
+      "text_vi": "Như soi gương để nhìn mặt, có thể nhìn lại hành động trước khi làm, trong khi làm và sau khi làm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -463,12 +469,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 61 Ambalaṭṭhikarāhulovādasutta",
-        "source_url": "https://suttacentral.net/mn61/pli/ms",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn61_01; corpus row 762; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN61",
+        "source_url": "https://suttacentral.net/mn61/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN61",
+        "source_detail": "MN61:8–11. Đoạn đối chiếu: What is the purpose of a mirror?”. MN61:8–11; giữ ba thời điểm và ví dụ gương, không yêu cầu tự kiểm soát ám ảnh từng ý nghĩ. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn61_01; corpus row 762; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -480,27 +486,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Như soi gương để nhìn lại khuôn mặt, có thể nhìn lại hành động trước khi làm, trong khi làm và sau khi làm.",
+        "semantic_intent": "Như soi gương để nhìn mặt, có thể nhìn lại hành động trước khi làm, trong khi làm và sau khi làm.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN61"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.buddhist.day14.mn63_arrow_01",

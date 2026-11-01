@@ -200,10 +200,10 @@
     },
     {
       "id": "authoring.b009.inazo_nitobe.020",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Lòng can đảm hiếm khi được xem là một đức hạnh, trừ khi nó được dùng vì chính nghĩa.",
+      "text_vi": "Can đảm còn cần được xét qua điều nó đang phục vụ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -219,12 +219,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Inazo Nitobe",
+        "author_name": "Inazō Nitobe",
         "work": "Bushido, the Soul of Japan",
-        "source_url": "https://www.gutenberg.org/ebooks/12096",
-        "source_language": null,
-        "source_label": "Inazo Nitobe",
-        "source_detail": "Research ID research.exp1000.b009.inazo_nitobe.020; corpus row And Bearing,; text line 677; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "source_url": "https://www.gutenberg.org/cache/epub/12096/pg12096.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Inazō Nitobe",
+        "source_detail": "Bushido, the Soul of Japan · Courage, the Spirit of Daring and Bearing. Passage: Courage was scarcely deemed worthy to be counted among virtues, unless\nit was exercised in the cause of Righteousness. Diễn ý đánh giá đạo đức của Nitobe, không khẳng định mọi chuẩn chính nghĩa đều giống nhau; không mang hệ võ sĩ/suicide sang lời khuyên đời sống. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b009.inazo_nitobe.020; corpus row And Bearing,; text line 677; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -237,27 +237,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Project Gutenberg: public domain in the USA"
+        "status": "public_domain",
+        "note": "Nguyên tác tiếng Anh1900/edition1905; Nitobe1862–1933, đã quá70 năm sau năm mất, Gutenberg12096. Bản Việt tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Lòng can đảm hiếm khi được xem là một đức hạnh, trừ khi nó được dùng vì chính nghĩa.",
+        "semantic_intent": "Can đảm còn cần được xét qua điều nó đang phục vụ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Inazo Nitobe"
+        "attribution_vi": "Phỏng theo Inazō Nitobe"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "do_not_wait_until_the_last_time",

@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "authoring.b010.abraham_lincoln.016",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Chế độ nô lệ bắt nguồn từ lòng ích kỷ trong bản tính con người; sự phản đối nó bắt nguồn từ tình yêu công lý.",
+      "text_vi": "Lincoln nhìn việc phản đối chế độ nô lệ như một biểu hiện của lòng yêu công lý.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -26,11 +26,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Abraham Lincoln",
-        "work": "Speeches and Letters of Abraham Lincoln, 1832-1865",
-        "source_url": "https://www.gutenberg.org/ebooks/14721",
-        "source_language": null,
-        "source_label": "Abraham Lincoln",
-        "source_detail": "Research ID research.exp1000.b010.abraham_lincoln.016; corpus row Marry; text line 1755; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "Speech at Peoria1854",
+        "source_url": "https://www.gutenberg.org/cache/epub/14721/pg14721.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Abraham Lincoln",
+        "source_detail": "Speech at Peoria, October16 1854; Speeches & Letters1832–1865. Passage: Slavery is founded in the selfishness of man's nature. Giữ rõ đây là quan điểm trong diễn văn chống mở rộng slavery, không lấy mệnh đề bản tính người làm fact khoa học. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b010.abraham_lincoln.016; corpus row Marry; text line 1755; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -43,27 +43,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Project Gutenberg: public domain in the USA"
+        "status": "public_domain",
+        "note": "Lời diễn văn Lincoln1809–1865 thuộc public domain, edition1907 Gutenberg14721. Tự diễn ý phần diễn văn, không dùng chú giải của editor hay dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Chế độ nô lệ bắt nguồn từ lòng ích kỷ trong bản tính con người; sự phản đối nó bắt nguồn từ tình yêu công lý.",
+        "semantic_intent": "Lincoln nhìn việc phản đối chế độ nô lệ như một biểu hiện của lòng yêu công lý.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Abraham Lincoln"
+        "attribution_vi": "Phỏng theo Abraham Lincoln"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "authoring.b010.oscar_wilde.011",
@@ -128,10 +134,10 @@
     },
     {
       "id": "authoring.b010.benjamin_franklin.022",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi tôi mải đề phòng một lỗi, một lỗi khác thường làm tôi bất ngờ; thói quen lợi dụng sự thiếu chú ý, và khuynh hướng đôi khi mạnh hơn lý trí.",
+      "text_vi": "Khi tôi mải đề phòng một lỗi, một lỗi khác lại làm tôi bất ngờ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -149,10 +155,10 @@
         "author_id": null,
         "author_name": "Benjamin Franklin",
         "work": "The Autobiography of Benjamin Franklin",
-        "source_url": "https://www.gutenberg.org/ebooks/148",
-        "source_language": null,
-        "source_label": "Benjamin Franklin",
-        "source_detail": "Research ID research.exp1000.b010.benjamin_franklin.022; corpus row His Autobiography; text line 2865; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "source_url": "https://www.gutenberg.org/cache/epub/148/pg148.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Benjamin Franklin",
+        "source_detail": "Autobiography, PartTwo, project of moral perfection. Passage: While my care was employ'd in guarding against one fault, I was\noften surprised by another. Giữ lời tự thuật, lược tuyên bố thói quen/lý trí tổng quát; không phán xét lỗi người khác. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b010.benjamin_franklin.022; corpus row His Autobiography; text line 2865; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -165,27 +171,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Project Gutenberg: public domain in the USA"
+        "status": "public_domain",
+        "note": "Nguyên tác Franklin1706–1790, edition Harvard Classics1909 do C.W.Eliot1834–1926 biên tập; phần tự thuật nguyên tác, không dùng lời chú giải hay dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi tôi mải đề phòng một lỗi, một lỗi khác thường làm tôi bất ngờ; thói quen lợi dụng sự thiếu chú ý, và khuynh hướng đôi khi mạnh hơn lý trí.",
+        "semantic_intent": "Khi tôi mải đề phòng một lỗi, một lỗi khác lại làm tôi bất ngờ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Benjamin Franklin"
+        "attribution_vi": "Phỏng theo Benjamin Franklin"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "selflo.knowledge.if_i_am_wrong_but_chatgpt_agrees",

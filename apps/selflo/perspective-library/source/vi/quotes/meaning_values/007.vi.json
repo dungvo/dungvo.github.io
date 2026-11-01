@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.liezi.day5.ch07.058",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Danh tiếng khó bỏ, nhưng có nên để nó làm chủ không?",
+      "text_vi": "Giữ lấy danh tiếng mà làm khổ phần đời thật của mình, cái giá ấy có đáng không?",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -25,12 +25,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Liezi / 列子 (received text; attribution debated)",
-        "work": "列子 / Liezi",
-        "source_url": "https://ctext.org/liezi/zh",
-        "source_language": null,
-        "source_label": "Liezi / 列子 (received text; attribution debated)",
-        "source_detail": "Research ID research.liezi.day5.ch07.058; corpus row 436; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Liệt Tử",
+        "work": "Liệt Tử · Dương Chu",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%88%97%E5%AD%90/%E6%A5%8A%E6%9C%B1%E7%AF%87",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Liệt Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 但惡夫守名而累實. 楊朱篇, passage 守名而累實; diễn ý thành câu hỏi mở, không bảo danh tiếng hoàn toàn vô ích, vì nguồn cũng xét lợi ích xã hội của danh. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.liezi.day5.ch07.058; corpus row 436; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -42,34 +42,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Danh tiếng khó bỏ, nhưng có nên để nó làm chủ không?",
+        "semantic_intent": "Giữ lấy danh tiếng mà làm khổ phần đời thật của mình, cái giá ấy có đáng không?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Liezi / 列子 (received text; attribution debated)"
+        "attribution_vi": "Phỏng theo Liệt Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.liezi.day5.ch07.059",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Cái thực và cái danh có thể tách nhau.",
+      "text_vi": "Có thực mà không có danh; có danh mà không có thực.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -85,12 +91,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Liezi / 列子 (received text; attribution debated)",
-        "work": "列子 / Liezi",
-        "source_url": "https://ctext.org/liezi/zh",
-        "source_language": null,
-        "source_label": "Liezi / 列子 (received text; attribution debated)",
-        "source_detail": "Research ID research.liezi.day5.ch07.059; corpus row 437; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Liệt Tử",
+        "work": "Liệt Tử · Dương Chu",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%88%97%E5%AD%90/%E6%A5%8A%E6%9C%B1%E7%AF%87",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Liệt Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 實無名，名無實. Giữ phép đối trong đối thoại đầu chương, không suy mọi danh tiếng đều giả. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.liezi.day5.ch07.059; corpus row 437; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -102,34 +108,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Cái thực và cái danh có thể tách nhau.",
+        "semantic_intent": "Có thực mà không có danh; có danh mà không có thực.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Liezi / 列子 (received text; attribution debated)"
+        "attribution_vi": "Phỏng theo Liệt Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch14.022",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Giàu sang và địa vị chỉ là những thứ tạm gửi.",
+      "text_vi": "Sự sống là phần gốc của thân mình; giàu sang chỉ là thứ tạm gửi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -145,12 +157,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/quan-yan-xun/zhs",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch14.022; corpus row 474; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyên ngôn huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%A9%AE%E8%A8%80%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 身以生為常，富貴其寄也. Giữ hai vế để người đọc hiểu cái thường/cái ký; không cô lập câu giàu sang tạm gửi thành lời phủ định vật chất. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch14.022; corpus row 474; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -162,34 +174,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Giàu sang và địa vị chỉ là những thứ tạm gửi.",
+        "semantic_intent": "Sự sống là phần gốc của thân mình; giàu sang chỉ là thứ tạm gửi.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.22.020",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu chọn một hướng khác chuẩn chung, hãy chuẩn bị cho việc có thể bị người khác cười.",
+      "text_vi": "Chọn học triết cũng có thể là chấp nhận bị cười lúc mới bắt đầu.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -206,11 +224,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.22.020; corpus row 522; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XXII; George Long. Passage: If you desire philosophy, prepare yourself from the beginning to be\nridiculed. Giữ đúng đối tượng học triết, không đổi thành mọi lựa chọn khác chuẩn đều đáng được giữ hoặc sau cùng được ngưỡng mộ. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.22.020; corpus row 522; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -222,34 +240,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nếu chọn một hướng khác chuẩn chung, hãy chuẩn bị cho việc có thể bị người khác cười.",
+        "semantic_intent": "Chọn học triết cũng có thể là chấp nhận bị cười lúc mới bắt đầu.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.51.032",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Mình còn trì hoãn bao lâu việc sống theo điều mình đã nhận là quan trọng?",
+      "text_vi": "Mình còn chờ đến bao giờ mới sống theo điều đã nhận là đáng làm?",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -266,11 +290,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.51.032; corpus row 534; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · T. W. Higginson",
+        "source_url": "https://www.gutenberg.org/cache/epub/45109/pg45109.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion LI; Thomas Wentworth Higginson. Passage: How long, then, will you delay to demand of yourself. Dùng đúngLI theo Higginson; Long10661 đánh số đoạn tương ứngL, không lấy LI của Long (phần ba loại triết học) để xác minh. Bỏ giọng sỉ nhục lười biếng. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.51.032; corpus row 534; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -282,27 +306,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ; Thomas Wentworth Higginson1823–1911, bản dịch1865 được reprint Gutenberg45109; chỉ sử dụng phần bản dịch Higginson, không dùng introduction/bibliography hiện đại của edition1955."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Mình còn trì hoãn bao lâu việc sống theo điều mình đã nhận là quan trọng?",
+        "semantic_intent": "Mình còn chờ đến bao giờ mới sống theo điều đã nhận là đáng làm?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.discourses.1_2.035",
@@ -630,10 +660,10 @@
     },
     {
       "id": "research.dhammapada.day11.v011",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu xem điều không cốt yếu là cốt yếu và bỏ qua điều cốt yếu, ta dễ đi xa khỏi điều thật sự quan trọng.",
+      "text_vi": "Coi điều không cốt yếu là cốt yếu, bỏ qua điều cốt yếu, ta dễ đi lạc điều đáng tìm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -648,12 +678,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v011; corpus row 701; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú · F. Max Muller1881",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú",
+        "source_detail": "Pháp Cú11; đối chiếu sāra/asāra, diễn ý Selflo. Đoạn đối chiếu: imagine truth in untruth. Kệ11; Muller dịch truth/untruth trong khi nguyên từ sāra/asāra là cốt yếu/không cốt yếu; dùng nghĩa cốt yếu, không gán tùy tiện người bất đồng là sai. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.dhammapada.day11.v011; corpus row 701; content_nature=translated_quote; verification=A - Pāḷi verse source located."
       },
       "metadata": {
         "concepts": [],
@@ -663,27 +693,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Nếu xem điều không cốt yếu là cốt yếu và bỏ qua điều cốt yếu, ta dễ đi xa khỏi điều thật sự quan trọng.",
+        "semantic_intent": "Coi điều không cốt yếu là cốt yếu, bỏ qua điều cốt yếu, ta dễ đi lạc điều đáng tìm.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.dhammapada.day11.v012",

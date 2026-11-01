@@ -66,10 +66,10 @@
     },
     {
       "id": "research.marcus.day8.book11.11_8.041",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tách mình khỏi cộng đồng giống như một cành tự tách khỏi cây; nhưng con người còn có khả năng nối lại.",
+      "text_vi": "Một cành bị cắt khỏi cây; một người đã xa cách người khác vẫn có thể tìm đường nối lại.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -86,11 +86,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=11",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book11.11_8.041; corpus row 589; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations XI.8; George W. Chrystal1902. Passage: to become once more, natural parts completing the whole. Giữ ẩn dụ và khả năng nối lại, không hứa mọi quan hệ nên/đều cứu được; lược lời quy lỗi mọi xa cách do thù ghét. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book11.11_8.041; corpus row 589; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -102,34 +102,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Tách mình khỏi cộng đồng giống như một cành tự tách khỏi cây; nhưng con người còn có khả năng nối lại.",
+        "semantic_intent": "Một cành bị cắt khỏi cây; một người đã xa cách người khác vẫn có thể tìm đường nối lại.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book11.11_18.043",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nhớ rằng mình cũng từng sai giúp phán xét bớt tuyệt đối.",
+      "text_vi": "Nhớ mình cũng từng sai có thể làm lời phán xét bớt nặng.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -146,11 +152,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=11",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book11.11_18.043; corpus row 591; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations XI.18, fourth consideration; George W. Chrystal1902. Passage: You yourself do often sin. Giữ điểm tự xét lỗi trong nguyên đoạn, không suy người bị hại phải tha thứ hay mất quyền phản đối. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book11.11_18.043; corpus row 591; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -162,27 +168,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nhớ rằng mình cũng từng sai giúp phán xét bớt tuyệt đối.",
+        "semantic_intent": "Nhớ mình cũng từng sai có thể làm lời phán xét bớt nặng.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.seneca.day9.ep003",

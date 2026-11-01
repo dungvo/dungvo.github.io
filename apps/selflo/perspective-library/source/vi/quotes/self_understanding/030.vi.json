@@ -384,10 +384,10 @@
     },
     {
       "id": "research.reaudit.day17.pd29_desire_types",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có ham muốn tự nhiên và cần thiết, có ham muốn tự nhiên nhưng không cần thiết, và có ham muốn phát sinh từ niềm tin rỗng.",
+      "text_vi": "Ham muốn có thứ tự nhiên và cần thiết, có thứ tự nhiên mà không cần thiết, có thứ nảy từ quan niệm rỗng.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -403,11 +403,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epicurus",
-        "work": "Principal Doctrines",
+        "work": "Các học thuyết chính yếu · R. D. Hicks1925",
         "source_url": "https://classics.mit.edu/Epicurus/princdoc.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epicurus",
-        "source_detail": "Research ID research.reaudit.day17.pd29_desire_types; corpus row 1079; content_nature=research_paraphrase; verification=A/B - location verified."
+        "source_language": "en",
+        "source_label": "Phỏng theo Epicurus",
+        "source_detail": "Principal Doctrines29; Hicks. Đoạn đối chiếu: natural and necessary. PD29, phân loại triết học, không dùng làm nhãn phán xét mọi nhu cầu khác mình. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day17.pd29_desire_types; corpus row 1079; content_nature=research_paraphrase; verification=A/B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -417,27 +417,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation edition review"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Có ham muốn tự nhiên và cần thiết, có ham muốn tự nhiên nhưng không cần thiết, và có ham muốn phát sinh từ niềm tin rỗng.",
+        "semantic_intent": "Ham muốn có thứ tự nhiên và cần thiết, có thứ tự nhiên mà không cần thiết, có thứ nảy từ quan niệm rỗng.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epicurus"
+        "attribution_vi": "Phỏng theo Epicurus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day19.mundaka_two_birds",

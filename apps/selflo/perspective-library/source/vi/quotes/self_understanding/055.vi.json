@@ -296,10 +296,10 @@
     },
     {
       "id": "authoring.b007.mary_wollstonecraft.020",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khoái lạc trước mắt hay quyền lực trước mắt thường lấn át những xác tín điềm tĩnh; con người mặc cả hạnh phúc cho hôm nay, chứ không cho cả đời.",
+      "text_vi": "Niềm vui hay quyền lực trước mắt có thể lấn át điều mình đã bình tĩnh suy xét.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -316,11 +316,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Mary Wollstonecraft",
-        "work": "A Vindication of the Rights of Woman",
-        "source_url": "https://www.gutenberg.org/ebooks/3420",
-        "source_language": null,
-        "source_label": "Mary Wollstonecraft",
-        "source_detail": "Research ID research.exp1000.b007.mary_wollstonecraft.020; corpus row Section 5.4.; text line 4743; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "A Vindication of the Rights of Woman1792",
+        "source_url": "https://www.gutenberg.org/cache/epub/3420/pg3420.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Mary Wollstonecraft",
+        "source_detail": "A Vindication of the Rights of Woman · đoạn Present pleasure, or present power. Passage: Present pleasure, or present power, carry before it these sober\nconvictions. Giữ sự đối lập lợi ích tức thời/xác tín, bỏ khái quát về phụ nữ ở đoạn tiếp, không giả đây là mô hình hành vi đã được thử nghiệm. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b007.mary_wollstonecraft.020; corpus row Section 5.4.; text line 4743; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -333,27 +333,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Project Gutenberg: public domain in the USA"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1792; Wollstonecraft1759–1797, Gutenberg3420. Selflo tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Khoái lạc trước mắt hay quyền lực trước mắt thường lấn át những xác tín điềm tĩnh; con người mặc cả hạnh phúc cho hôm nay, chứ không cho cả đời.",
+        "semantic_intent": "Niềm vui hay quyền lực trước mắt có thể lấn át điều mình đã bình tĩnh suy xét.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Mary Wollstonecraft"
+        "attribution_vi": "Phỏng theo Mary Wollstonecraft"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "authoring.b005.w_e_b_du_bois.013",
@@ -540,10 +546,10 @@
     },
     {
       "id": "authoring.b005.john_dewey.008",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Cách cư xử tốt đến từ sự giáo dưỡng tốt—hay đúng hơn, chính là sự giáo dưỡng ấy; nó được tạo nên bởi hành động lặp lại trước những kích thích quen thuộc, không phải bởi việc truyền đạt thông tin.",
+      "text_vi": "Cách cư xử được học từ những việc lặp lại quanh mình, cả khi không ai đang giảng dạy.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -560,11 +566,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "John Dewey",
-        "work": "Democracy and Education",
-        "source_url": "https://www.gutenberg.org/ebooks/852",
-        "source_language": null,
-        "source_label": "John Dewey",
-        "source_detail": "Research ID research.exp1000.b005.john_dewey.008; corpus row Democracy And Education; text line 704; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "Democracy and Education1916",
+        "source_url": "https://www.gutenberg.org/cache/epub/852/pg852.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo John Dewey",
+        "source_detail": "Democracy and Education1916, ChapterII Education as a Social Function, môi trường xã hội và manners. Passage: breeding is acquired by habitual action, in response\nto habitual stimuli, not by conveying information. Diễn ý ví dụ manners trong giáo dục bằng môi trường; bỏ sắc thái giáo dưỡng như huyết thống, không khẳng định thông tin/giảng dạy vô ích. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b005.john_dewey.008; corpus row Democracy And Education; text line 704; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -577,27 +583,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "public_domain_us"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1916; Dewey1859–1952; đã quá70 năm sau năm mất, edition trước1931. Không dùng dịch Việt hiện đại. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Cách cư xử tốt đến từ sự giáo dưỡng tốt—hay đúng hơn, chính là sự giáo dưỡng ấy; nó được tạo nên bởi hành động lặp lại trước những kích thích quen thuộc, không phải bởi việc truyền đạt thông tin.",
+        "semantic_intent": "Cách cư xử được học từ những việc lặp lại quanh mình, cả khi không ai đang giảng dạy.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "John Dewey"
+        "attribution_vi": "Phỏng theo John Dewey"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "authoring.b008.rabindranath_tagore.006",

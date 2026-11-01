@@ -123,10 +123,10 @@
     },
     {
       "id": "research.marcus.day8.book08.8_36.031",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đừng tự làm mình rối bằng cách gom quá nhiều thứ vào một khối.",
+      "text_vi": "Có lúc ta đang gánh cả những khó khăn chưa tới, thay vì một việc đang ở trước mặt.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -142,11 +142,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=8",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book08.8_36.031; corpus row 579; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations VIII.36; George W. Chrystal1902. Passage: considering the whole of life. Giữ đối tượng lo cả đời/tương lai trong VIII.36, bỏ lời phải xấu hổ và khẳng định chỉ hiện tại mới làm đau. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book08.8_36.031; corpus row 579; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -156,27 +156,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Đừng tự làm mình rối bằng cách gom quá nhiều thứ vào một khối.",
+        "semantic_intent": "Có lúc ta đang gánh cả những khó khăn chưa tới, thay vì một việc đang ở trước mặt.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book10.10_1.036",
@@ -699,10 +705,10 @@
     },
     {
       "id": "research.dhammapada.day11.v204",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Sức khỏe, biết đủ và sự tin cậy được đặt cạnh những thứ quý nhất—một lời nhắc rằng giá trị không chỉ nằm ở sở hữu.",
+      "text_vi": "Sức khỏe là của quý; biết đủ là sự giàu có; lòng tin là mối gắn bó đáng giữ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -717,12 +723,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/15-Happiness.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v204; corpus row 731; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú · F. Max Muller1881",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú",
+        "source_detail": "Pháp Cú204, trích/diễn ý ba vế đầu. Đoạn đối chiếu: contentedness the best riches. Kệ204, trích ba vế đầu và ghi rõ lược vế Niết-bàn; không giả dịch toàn kệ hay đảm bảo khỏe mạnh theo đạo đức. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.dhammapada.day11.v204; corpus row 731; content_nature=translated_quote; verification=A - Pāḷi verse source located."
       },
       "metadata": {
         "concepts": [],
@@ -732,27 +738,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Sức khỏe, biết đủ và sự tin cậy được đặt cạnh những thứ quý nhất—một lời nhắc rằng giá trị không chỉ nằm ở sở hữu.",
+        "semantic_intent": "Sức khỏe là của quý; biết đủ là sự giàu có; lòng tin là mối gắn bó đáng giữ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     }
   ]
 }

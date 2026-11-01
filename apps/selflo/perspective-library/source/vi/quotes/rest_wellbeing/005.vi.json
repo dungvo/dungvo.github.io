@@ -366,10 +366,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch07.003",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thân thể lao lực không nghỉ thì quỵ; tinh thần dùng mãi không dừng thì cạn.",
+      "text_vi": "Thân làm mãi không nghỉ thì kiệt; tinh thần dùng mãi không dừng thì cạn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -385,12 +385,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/jing-shen-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch07.003; corpus row 455; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Tinh thần huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E7%B2%BE%E7%A5%9E%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 形勞而不休則蹶，精用而不已則竭. Diễn ý quan sát cổ, không trình bày như bằng chứng y khoa, không lấy phần khí/ngũ tạng làm cơ chế hiện đại. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch07.003; corpus row 455; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -402,34 +402,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Thân thể lao lực không nghỉ thì quỵ; tinh thần dùng mãi không dừng thì cạn.",
+        "semantic_intent": "Thân làm mãi không nghỉ thì kiệt; tinh thần dùng mãi không dừng thì cạn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch16.026",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nước đục thì cá ngoi; thân quá mệt thì tinh thần dễ rối.",
+      "text_vi": "Nước đục thì cá ngoi; thân mệt quá thì tinh thần dễ rối.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -444,12 +450,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/shuo-shan-xun/zhs",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch16.026; corpus row 478; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyết sơn huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%AA%AA%E5%B1%B1%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 水濁而魚噞，形勞則神亂. Quan sát cổ được ghi rõ phỏng theo, không đưa cơ chế ngũ tạng hay claim chẩn đoán y khoa vào quote. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch16.026; corpus row 478; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -459,27 +465,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Nước đục thì cá ngoi; thân quá mệt thì tinh thần dễ rối.",
+        "semantic_intent": "Nước đục thì cá ngoi; thân mệt quá thì tinh thần dễ rối.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.8.011",
@@ -600,10 +612,10 @@
     },
     {
       "id": "research.marcus.day8.book04.4_3.013",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Người ta tìm nơi trú ở bên ngoài; nhưng cũng có một khả năng quay về bên trong mình.",
+      "text_vi": "Ngoài nơi chốn để nghỉ, ta còn có những lúc lùi lại với chính mình.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -620,11 +632,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=4",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book04.4_3.013; corpus row 561; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations IV.3; George W. Chrystal1902. Passage: you may retire into yourself at any hour you please. Diễn ý khả năng nghỉ bên trong, bỏ tuyên bố không nơi nào yên hơn hoặc luôn có thể bình tâm, không thay điều kiện an toàn bên ngoài. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book04.4_3.013; corpus row 561; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -636,27 +648,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Người ta tìm nơi trú ở bên ngoài; nhưng cũng có một khả năng quay về bên trong mình.",
+        "semantic_intent": "Ngoài nơi chốn để nghỉ, ta còn có những lúc lùi lại với chính mình.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book04.4_3.014",

@@ -416,10 +416,10 @@
     },
     {
       "id": "authoring.b007.adam_smith.019",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi sự trợ giúp cần thiết được trao qua lại từ tình yêu, lòng biết ơn, tình bạn và sự trân trọng, xã hội sẽ hưng thịnh và hạnh phúc.",
+      "text_vi": "Một cộng đồng có thể sống tốt hơn khi sự trợ giúp qua lại được nâng đỡ bằng tình yêu, lòng biết ơn, tình bạn và sự trân trọng.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -436,11 +436,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Adam Smith",
-        "work": "The Theory of Moral Sentiments",
-        "source_url": "https://www.gutenberg.org/ebooks/67363",
-        "source_language": null,
-        "source_label": "Adam Smith",
-        "source_detail": "Research ID research.exp1000.b007.adam_smith.019; corpus row Chap. Iii.; text line 3621; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "The Theory of Moral Sentiments · II.ii.3",
+        "source_url": "https://www.gutenberg.org/cache/epub/67363/pg67363.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Adam Smith",
+        "source_detail": "Theory of Moral Sentiments, PartII SectionII ChapterIII. Đoạn đối chiếu: the society flourishes and is happy. Theory of Moral Sentiments II.ii.3; nguồn cũng xét xã hội dựa trao đổi/lợi ích. Giữ có thể, không nói thiếu thiện cảm là xã hội không tồn tại. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.exp1000.b007.adam_smith.019; corpus row Chap. Iii.; text line 3621; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -453,34 +453,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Project Gutenberg: public domain in the USA"
+        "status": "public_domain",
+        "note": "Nguyên tác tiếng Anh Adam Smith (mất1790), tác phẩm1759/edition cuối1790, Gutenberg67363 public domain. Bản Việt Selflo tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi sự trợ giúp cần thiết được trao qua lại từ tình yêu, lòng biết ơn, tình bạn và sự trân trọng, xã hội sẽ hưng thịnh và hạnh phúc.",
+        "semantic_intent": "Một cộng đồng có thể sống tốt hơn khi sự trợ giúp qua lại được nâng đỡ bằng tình yêu, lòng biết ơn, tình bạn và sự trân trọng.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Adam Smith"
+        "attribution_vi": "Phỏng theo Adam Smith"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "authoring.b009.confucius.008",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tình bạn với người ngay thẳng, người chân thành và người quan sát rộng—đó là những tình bạn có ích.",
+      "text_vi": "Kết bạn với người ngay thẳng, người chân thành và người hiểu biết rộng — ấy là những tình bạn có ích.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -496,12 +502,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Confucius",
-        "work": "The Analects of Confucius",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
         "source_url": "https://www.gutenberg.org/ebooks/3330",
-        "source_language": null,
-        "source_label": "Confucius",
-        "source_detail": "Research ID research.exp1000.b009.confucius.008; corpus row Book Xvi. Ke She.; text line 2560; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "source_language": "en",
+        "source_label": "Phỏng theo Khổng Tử",
+        "source_detail": "Locator/đoạn đối chiếu: friendship with the upright. Luận Ngữ XVI.4: sửa quan sát rộng thành hiểu biết rộng để sát 多聞; chỉ trích nhóm hữu ích, không biến thành checklist phán xét bạn bè. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.exp1000.b009.confucius.008; corpus row Book Xvi. Ke She.; text line 2560; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -514,34 +520,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Project Gutenberg: public-domain translation by James Legge"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Tình bạn với người ngay thẳng, người chân thành và người quan sát rộng—đó là những tình bạn có ích.",
+        "semantic_intent": "Kết bạn với người ngay thẳng, người chân thành và người hiểu biết rộng — ấy là những tình bạn có ích.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Confucius"
+        "attribution_vi": "Phỏng theo Khổng Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "authoring.b001.marcus_tullius_cicero.040",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Lấy tình bạn khỏi cuộc đời chẳng khác nào lấy mặt trời khỏi bầu trời; các vị thần bất tử chưa ban cho ta điều gì tốt đẹp hay vui sướng hơn thế.",
+      "text_vi": "Lấy tình bạn khỏi đời sống cũng như lấy mặt trời khỏi bầu trời.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -558,11 +570,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Tullius Cicero",
-        "work": "Treatises on Friendship and Old Age",
-        "source_url": "https://www.gutenberg.org/ebooks/2808",
-        "source_language": null,
-        "source_label": "Marcus Tullius Cicero",
-        "source_detail": "Research ID research.exp1000.b001.marcus_tullius_cicero.040; corpus row On Friendship; text line 790; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "On Friendship · Evelyn S. Shuckburgh",
+        "source_url": "https://www.gutenberg.org/cache/epub/2808/pg2808.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Tullius Cicero",
+        "source_detail": "Laelius de Amicitia/On Friendship, section13, E. S. Shuckburgh; Treatises on Friendship and Old Age. Passage: take the sun out of the sky as\nfriendship from life. Trích diễn ý phép so sánh của Laelius; lược lời các vị thần không ban gì hơn, không tạo nghĩa vụ phải có nhiều bạn. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b001.marcus_tullius_cicero.040; corpus row On Friendship; text line 790; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -575,27 +587,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "public_domain_us"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ; translator Evelyn S. Shuckburgh1843–1906, bản lịch sử Gutenberg2808. Tự diễn ý, không dùng dịch Việt hiện đại. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Lấy tình bạn khỏi cuộc đời chẳng khác nào lấy mặt trời khỏi bầu trời; các vị thần bất tử chưa ban cho ta điều gì tốt đẹp hay vui sướng hơn thế.",
+        "semantic_intent": "Lấy tình bạn khỏi đời sống cũng như lấy mặt trời khỏi bầu trời.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Marcus Tullius Cicero"
+        "attribution_vi": "Phỏng theo Marcus Tullius Cicero"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "authoring.b002.francis_bacon.017",

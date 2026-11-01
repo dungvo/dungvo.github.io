@@ -458,10 +458,10 @@
     },
     {
       "id": "research.reaudit.day18.gita2_14_sensations_pass",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Những tiếp xúc của giác quan tạo nóng/lạnh, dễ chịu/khó chịu; chúng đến rồi đi, nên cần được nhìn như trạng thái thay đổi.",
+      "text_vi": "Cảm nhận nóng lạnh, dễ chịu và khó chịu đến rồi đi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -477,12 +477,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Bhagavad Gita tradition",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Bhagavad Gita tradition",
-        "source_detail": "Research ID research.reaudit.day18.gita2_14_sensations_pass; corpus row 1082; content_nature=research_paraphrase; verification=A - verse location verified."
+        "author_name": "Truyền thống Bhagavad Gita",
+        "work": "Bhagavad Gita · Edwin Arnold1885",
+        "source_url": "https://www.gutenberg.org/cache/epub/2388/pg2388.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Truyền thống Bhagavad Gita",
+        "source_detail": "Bhagavad Gita2.14; Arnold. Đoạn đối chiếu: sense-life, thrilling to the elements. Gita2.14, giữ tính thay đổi của tiếp xúc giác quan; không hứa mọi bệnh hay đau kéo dài sẽ sớm hết. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day18.gita2_14_sensations_pass; corpus row 1082; content_nature=research_paraphrase; verification=A - verse location verified."
       },
       "metadata": {
         "concepts": [],
@@ -494,27 +494,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; modern translations separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Những tiếp xúc của giác quan tạo nóng/lạnh, dễ chịu/khó chịu; chúng đến rồi đi, nên cần được nhìn như trạng thái thay đổi.",
+        "semantic_intent": "Cảm nhận nóng lạnh, dễ chịu và khó chịu đến rồi đi.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Bhagavad Gita tradition"
+        "attribution_vi": "Phỏng theo Truyền thống Bhagavad Gita"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day24.kieu_bedau",
@@ -641,10 +647,10 @@
     },
     {
       "id": "research.day26.li_lou_ii_selfattain",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Học sâu không chỉ để lặp lại lời người khác; điều quan trọng là tự mình lĩnh hội được.",
+      "text_vi": "Học đến nơi để tự mình lĩnh hội, thay vì chỉ giữ lấy lời người khác.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -659,12 +665,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Mencius / 孟子",
-        "work": "孟子 / Mencius",
-        "source_url": "https://ctext.org/mengzi/li-lou-ii",
-        "source_language": null,
-        "source_label": "Mencius / 孟子",
-        "source_detail": "Research ID research.day26.li_lou_ii_selfattain; corpus row 1118; content_nature=translated_quote; verification=A/B - passage/location verified."
+        "author_name": "Mạnh Tử",
+        "work": "Mạnh Tử · Ly Lâu hạ",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%AD%9F%E5%AD%90/%E9%9B%A2%E5%A9%81%E4%B8%8B",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Mạnh Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 君子深造之以道，欲其自得之也. 離婁下 14; 自得 là tự lĩnh hội, không phải tự sáng chế sự thật; ghi diễn ý và giữ phần đối chiếu nguồn. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.day26.li_lou_ii_selfattain; corpus row 1118; content_nature=translated_quote; verification=A/B - passage/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -674,34 +680,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient text public domain; platform/translation terms separate"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Học sâu không chỉ để lặp lại lời người khác; điều quan trọng là tự mình lĩnh hội được.",
+        "semantic_intent": "Học đến nơi để tự mình lĩnh hội, thay vì chỉ giữ lấy lời người khác.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Mencius / 孟子"
+        "attribution_vi": "Phỏng theo Mạnh Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day26.gong_sun_chou_miao_story",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Mạnh Tử dùng chuyện kéo mạ cho mau lớn để chỉ ra: cố thúc một quá trình có thể làm hỏng chính điều mình muốn giúp.",
+      "text_vi": "Người nước Tống kéo mạ lên cho mau lớn. Đến khi người con ra xem, mạ đã héo cả.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -717,12 +729,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Mencius / 孟子",
-        "work": "孟子 / Mencius",
-        "source_url": "https://ctext.org/mengzi",
-        "source_language": null,
-        "source_label": "Mencius / 孟子",
-        "source_detail": "Research ID research.day26.gong_sun_chou_miao_story; corpus row 1122; content_nature=translated_quote; verification=A/B - passage/location verified."
+        "author_name": "Mạnh Tử",
+        "work": "Mạnh Tử · Công Tôn Sửu thượng",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%AD%9F%E5%AD%90/%E5%85%AC%E5%AD%AB%E4%B8%91%E4%B8%8A",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Mạnh Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 宋人有閔其苗之不長而揠之者. Giữ sự việc và hậu quả trong 公孫丑上 2; bỏ lời diễn giảng. Không gộp thành lời khuyên mặc kệ mọi việc, vì đoạn gốc cũng phản đối bỏ chăm sóc. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.day26.gong_sun_chou_miao_story; corpus row 1122; content_nature=translated_quote; verification=A/B - passage/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -734,27 +746,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient text public domain; platform/translation terms separate"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Mạnh Tử dùng chuyện kéo mạ cho mau lớn để chỉ ra: cố thúc một quá trình có thể làm hỏng chính điều mình muốn giúp.",
+        "semantic_intent": "Người nước Tống kéo mạ lên cho mau lớn. Đến khi người con ra xem, mạ đã héo cả.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Mencius / 孟子"
+        "attribution_vi": "Phỏng theo Mạnh Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     }
   ]
 }

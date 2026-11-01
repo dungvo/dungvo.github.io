@@ -135,20 +135,20 @@
     },
     {
       "id": "attributed.epictetus.ench_04.prepare",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trước khi bắt tay vào một việc, hãy nhắc mình xem đó là loại việc gì.",
+      "text_vi": "Trước khi bắt đầu, hình dung cả những điều thường xảy ra trong việc ấy.",
       "subtitle_vi": null,
       "primary_theme": "attention",
       "authorship": {
-        "author_id": "epictetus",
+        "author_id": null,
         "author_name": "Epictetus",
-        "work": "A Selection from the Discourses of Epictetus with the Encheiridion",
-        "source_url": "https://www.gutenberg.org/ebooks/10661",
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
         "source_language": "en",
-        "source_label": "Epictetus · Encheiridion",
-        "source_detail": "George Long (dịch); IV; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion IV; George Long. Passage: remind yourself what kind of\nan act it is. Giữ chuẩn bị tình huống của ví dụ nhà tắm, không hứa dự đoán được mọi trở ngại. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: George Long (dịch); IV; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [],
@@ -163,18 +163,18 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng và bản dịch tiếng Việt trước Release."
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Trước khi bắt tay vào một việc, hãy nhắc mình xem đó là loại việc gì.",
+        "semantic_intent": "Trước khi bắt đầu, hình dung cả những điều thường xảy ra trong việc ấy.",
         "observation_key": null,
-        "structure_pattern": "attributed_quote"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
@@ -195,7 +195,13 @@
         ],
         "tie_break_order": 5002
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.epictetus.ench_20.delay",

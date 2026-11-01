@@ -376,10 +376,10 @@
     },
     {
       "id": "research.liezi.day5.ch05.047",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Mỗi khúc đàn, Chung Tử Kỳ đều nghe ra điều Bá Nha gửi trong đó.",
+      "text_vi": "Bá Nha gửi điều mình nghĩ vào tiếng đàn; Chung Tử Kỳ nghe mà hiểu được.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -394,12 +394,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Liezi / 列子 (received text; attribution debated)",
-        "work": "列子 / Liezi",
-        "source_url": "https://ctext.org/liezi/zh",
-        "source_language": null,
-        "source_label": "Liezi / 列子 (received text; attribution debated)",
-        "source_detail": "Research ID research.liezi.day5.ch05.047; corpus row 425; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Liệt Tử",
+        "work": "Liệt Tử · Thang Vấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%88%97%E5%AD%90/%E6%B9%AF%E5%95%8F%E7%AF%87",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Liệt Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 伯牙所念，鍾子期必得之. Giữ hai nhân vật để độc lập, bỏ claim mọi người nghe đều có thể đọc được tâm trí người khác. Đây là tình huống trong cổ truyện. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.liezi.day5.ch05.047; corpus row 425; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -409,27 +409,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Mỗi khúc đàn, Chung Tử Kỳ đều nghe ra điều Bá Nha gửi trong đó.",
+        "semantic_intent": "Bá Nha gửi điều mình nghĩ vào tiếng đàn; Chung Tử Kỳ nghe mà hiểu được.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Liezi / 列子 (received text; attribution debated)"
+        "attribution_vi": "Phỏng theo Liệt Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.liezi.day5.ch05.048",
@@ -493,10 +499,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch18.050",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Điều tích lũy nhỏ trong quan hệ có thể dần thành kết quả lớn.",
+      "text_vi": "Điều tử tế tích lại có thể thành phúc; oán giận tích lại có thể thành họa.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -511,12 +517,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/ren-xian-xun",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch18.050; corpus row 502; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Nhân gian huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E4%BA%BA%E9%96%93%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 積愛成福，積怨成禍. Giữ quan hệ tích lũy, giảm tính tất định; không claim nghiệp báo hoặc bảo đảm người tử tế gặp may. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch18.050; corpus row 502; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -526,27 +532,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Điều tích lũy nhỏ trong quan hệ có thể dần thành kết quả lớn.",
+        "semantic_intent": "Điều tử tế tích lại có thể thành phúc; oán giận tích lại có thể thành họa.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.16.015",
@@ -667,10 +679,10 @@
     },
     {
       "id": "research.marcus.day8.book02.2_1.005",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Chúng ta được tạo nên để cùng làm việc với nhau.",
+      "text_vi": "Ta cần nhau để cùng làm việc, như hai bàn tay cần phối hợp.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -686,11 +698,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book02.2_1.005; corpus row 553; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations II.1; George W. Chrystal1902. Passage: we are made by nature for mutual\nassistance. Giữ phép ví tay/chân của Stoic, không biến tính xã hội thành yêu cầu chịu đựng mọi quan hệ. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book02.2_1.005; corpus row 553; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -700,27 +712,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Chúng ta được tạo nên để cùng làm việc với nhau.",
+        "semantic_intent": "Ta cần nhau để cùng làm việc, như hai bàn tay cần phối hợp.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     }
   ]
 }

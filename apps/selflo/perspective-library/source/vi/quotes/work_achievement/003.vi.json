@@ -77,20 +77,20 @@
     },
     {
       "id": "attributed.confucius.book_vii_ch08.eager",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tôi không mở điều cần hiểu cho người chưa tha thiết muốn biết, cũng không nói thay người chưa tự cố diễn đạt.",
+      "text_vi": "Tôi không giảng cho người chưa tha thiết muốn hiểu, cũng không nói thay người chưa tự cố diễn đạt.",
       "subtitle_vi": null,
       "primary_theme": "work_achievement",
       "authorship": {
-        "author_id": "confucius",
-        "author_name": "Confucius",
-        "work": "The Analects of Confucius (from the Chinese Classics)",
+        "author_id": null,
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ",
         "source_url": "https://www.gutenberg.org/ebooks/3330",
         "source_language": "en",
-        "source_label": "Khổng Tử · Luận Ngữ",
-        "source_detail": "James Legge (dịch); VII.8; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Khổng Tử",
+        "source_detail": "Locator/đoạn đối chiếu: not open up the truth. Luận Ngữ VII.8, quan điểm người dạy về sự chủ động của người học; không biến thành khẳng định ai chậm hiểu đều thiếu cố gắng. Bản Việt tự biên soạn, đối chiếu Legge. Bản Việt diễn ý bởi Selflo. Provenance trước review: James Legge (dịch); VII.8; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [],
@@ -105,25 +105,25 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; cần review thẩm quyền áp dụng, cách ghi tác giả truyền thống và bản dịch tiếng Việt trước Release."
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Tôi không mở điều cần hiểu cho người chưa tha thiết muốn biết, cũng không nói thay người chưa tự cố diễn đạt.",
+        "semantic_intent": "Tôi không giảng cho người chưa tha thiết muốn hiểu, cũng không nói thay người chưa tự cố diễn đạt.",
         "observation_key": null,
-        "structure_pattern": "attributed_quote"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Khổng Tử · Luận Ngữ · VII.8"
+        "attribution_vi": "Phỏng theo Khổng Tử"
       },
       "story_id": null,
       "selection": {
@@ -137,7 +137,13 @@
         ],
         "tie_break_order": 5047
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.paulo_coelho.the_alchemist.007",

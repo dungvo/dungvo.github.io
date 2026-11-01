@@ -183,10 +183,10 @@
     },
     {
       "id": "research.dhammapada.day11.v003",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi cứ giữ chặt câu chuyện “họ đã làm tôi tổn thương”, sự đối nghịch khó lắng xuống.",
+      "text_vi": "Cứ giữ mãi câu “họ đã xúc phạm, đánh bại, lấy mất của tôi”, lòng thù hận khó lắng xuống.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -201,12 +201,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/01-Pairs.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v003; corpus row 697; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú · F. Max Muller1881",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú",
+        "source_detail": "Pháp Cú3–4; giữ một thẻ cho cặp vế. Đoạn đối chiếu: in those who harbour such thoughts. Kệ3; chỉ nói sự nuôi giữ thù hận, không phủ nhận hành vi gây hại hoặc yêu cầu người bị hại bỏ công lý. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.dhammapada.day11.v003; corpus row 697; content_nature=translated_quote; verification=A - Pāḷi verse source located."
       },
       "metadata": {
         "concepts": [],
@@ -216,27 +216,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi cứ giữ chặt câu chuyện “họ đã làm tôi tổn thương”, sự đối nghịch khó lắng xuống.",
+        "semantic_intent": "Cứ giữ mãi câu “họ đã xúc phạm, đánh bại, lấy mất của tôi”, lòng thù hận khó lắng xuống.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.dhammapada.day11.v004",
@@ -676,10 +682,10 @@
     },
     {
       "id": "research.mn.day12.mn19_02",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi một ý nghĩ xuất hiện, bước đầu có thể chỉ là nhận ra: một ý nghĩ như thế đang có mặt.",
+      "text_vi": "Khi một ý nghĩ xuất hiện, trước hết có thể nhận ra: ý nghĩ ấy đang có mặt.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -694,12 +700,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 19 Dvedhāvitakkasutta",
-        "source_url": "https://suttacentral.net/mn19/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn19_02; corpus row 748; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN19",
+        "source_url": "https://suttacentral.net/mn19/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN19",
+        "source_detail": "MN19:3.1–4. Đoạn đối chiếu: ‘This sensual thought has arisen in me.. MN19:3, diễn ý động tác nhận biết trước suy xét; không bảo nhận biết một lần làm mọi suy nghĩ biến mất. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn19_02; corpus row 748; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -709,27 +715,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi một ý nghĩ xuất hiện, bước đầu có thể chỉ là nhận ra: một ý nghĩ như thế đang có mặt.",
+        "semantic_intent": "Khi một ý nghĩ xuất hiện, trước hết có thể nhận ra: ý nghĩ ấy đang có mặt.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN19"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     }
   ]
 }

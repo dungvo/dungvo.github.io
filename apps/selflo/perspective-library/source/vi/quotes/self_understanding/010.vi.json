@@ -328,10 +328,10 @@
     },
     {
       "id": "research.reaudit.day17.meno_choice_compare",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không phải mọi khoái lạc đều nên chọn và không phải mọi đau đớn đều nên tránh; cần cân nhắc điều kéo theo sau đó.",
+      "text_vi": "Không phải niềm vui nào cũng nên chọn, cũng không phải nỗi đau nào cũng nên tránh; còn phải nhìn điều đi cùng và theo sau nó.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -348,11 +348,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epicurus",
-        "work": "Letter to Menoeceus",
+        "work": "Thư gửi Menoeceus · R. D. Hicks1925",
         "source_url": "https://classics.mit.edu/Epicurus/menoec.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epicurus",
-        "source_detail": "Research ID research.reaudit.day17.meno_choice_compare; corpus row 1081; content_nature=research_paraphrase; verification=A/B - location verified."
+        "source_language": "en",
+        "source_label": "Phỏng theo Epicurus",
+        "source_detail": "Letter to Menoeceus128–130; R. D. Hicks. Đoạn đối chiếu: we do not choose every pleasure. Letter to Menoeceus128–130, cân nhắc hệ quả, không khuyến khích chịu đau/nguy hiểm hay biện minh hành vi gây hại. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day17.meno_choice_compare; corpus row 1081; content_nature=research_paraphrase; verification=A/B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -364,27 +364,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation edition review"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Không phải mọi khoái lạc đều nên chọn và không phải mọi đau đớn đều nên tránh; cần cân nhắc điều kéo theo sau đó.",
+        "semantic_intent": "Không phải niềm vui nào cũng nên chọn, cũng không phải nỗi đau nào cũng nên tránh; còn phải nhìn điều đi cùng và theo sau nó.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epicurus"
+        "attribution_vi": "Phỏng theo Epicurus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.zhuangzi.day4.ch03.022",

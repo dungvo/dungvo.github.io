@@ -355,3 +355,33 @@ P0 hoàn thành phạm vi ưu tiên và không còn chặn phase khác. Review t
 - Public lúc 2026-10-25T11:38:06.278981Z: đủ 9 pack khớp, kiểm tra cả 376 accepted và 286 rejected qua 4 batch.
 - B004 62 văn bản viết lại, 21 duplicate có winner; sửa locator/ý sai Seneca. T-03 nghiệm thu; Q10.1 không pending.
 - Projection: 376 released + 296 not_accepted + 4.799 remaining = 5.471; 296 gồm 286 mốc này + 10 owner-closed. Bước tiếp theo T-04/B005, 149. Story không thay đổi.
+
+
+## 2026-10-31 — B005 local
+
+Review 13 dòng intake; 10 source_unverified, 3 not_reader_quote. Corpus 703/5.471, còn 4.768; B005 còn 116. Đồng bộ ledger, exclusions, projection, Matrix; 31 tests đạt. Không đổi Release/Authoring, chưa commit/push. Chi tiết `Q10_B005_LOCAL_REVIEW_2026-10-31.vi.md`. Bước tiếp theo: Review 10 dòng chưa bắt đầu kế tiếp của B005, từ `research.day72.004`, theo thứ tự assignment hiện có; chưa mở B006.
+
+
+## 2026-11-01 — B005 review toàn đợt local
+
+Lượt cuối 116 dòng: 50 đạt / 66 không nhận, đã review đủ 149/149. Authoring 101; Release 61 giữ nguyên. Corpus 769/5.471 đã chốt; 50 chờ Release không cộng completed. 95 tests và gate ứng viên tạm đạt. Handoff `Q10_B005_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Owner chốt xử lý100–200 quote/lượt, không hỏi lại giữa các bước nhỏ; GitHub write chờ lệnh trực tiếp. Bước tiếp theo: nghiệm thu/phát hành B005 khi owner ra lệnh; chưa mở B006.
+
+
+## 2026-11-01 — B006 review toàn đợt local
+
+149 ID: 48 đạt, 96 không nhận mới, 5 owner-closed giữ nguyên; không còn dòng chưa xử lý. Source 85 / Authoring 102; Release 61 không đổi. Corpus 865/5.471, còn 4.606, tổng 98 chờ Release. 95 tests và gate ứng viên tạm 98 câu đạt; không cài candidate, không commit/push. Evidence/handoff `Q10_B006_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Theo chỉ đạo tiếp tục local của owner, tiến review B006 khi B005 chờ phát hành; không coi B005 đã đóng Release. Bước tiếp theo: B007 149 dòng local.
+
+
+## 2026-11-01 — B007 review toàn đợt local
+
+149 ID:15 đạt,133 final closure mới gồm14 legacy rejection xác nhận giữ loại,1 owner-closed giữ nguyên;0 chưa xử lý. Source86 /Authoring103 /Release61 không đổi. Corpus998/5.471, còn4.473; tổng113 chờ Release.95 tests và gate candidate tạm113 câu đạt; không cài candidate, không commit/push. Handoff `Q10_B007_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Bước tiếp theo B008 149 dòng local.
+
+
+## 2026-11-01 — B008 review toàn đợt local
+
+149 ID:44 đạt,103 final closure mới gồm6 legacy rejection giữ loại,2 owner-closed giữ nguyên;0 chưa xử lý. Source89/Authoring106, Release61 không đổi. Corpus1.101/5.471, còn4.370;157 chờ Release.95 tests và gate candidate tạm157 câu đạt; không cài candidate, không commit/push. Handoff `Q10_B008_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Bước tiếp theo B009 149 dòng local.
+
+
+## 2026-11-01 — B009 review toàn đợt local
+
+149 ID:11 đạt,138 final closure không nhận gồm40 legacy block giữ loại,0 chưa xử lý. Source90/Authoring107, Release61 không đổi. Corpus1.239/5.471, còn4.232;168 chờ Release.95 tests/gate candidate tạm168 câu đạt; không cài candidate, không commit/push. Handoff `Q10_B009_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Bước tiếp theo B010 148 dòng local.

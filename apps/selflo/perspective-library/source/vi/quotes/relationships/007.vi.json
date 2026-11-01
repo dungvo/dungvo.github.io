@@ -133,10 +133,10 @@
     },
     {
       "id": "research.reaudit.day16.ne8_friendship_mutual",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thiện ý một chiều chưa đủ thành tình bạn; quan hệ cần có sự đáp lại và được hai bên nhận biết.",
+      "text_vi": "Thiện ý một chiều chưa đủ thành tình bạn; hai người còn cần đáp lại và nhận biết thiện ý của nhau.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -152,11 +152,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Aristotle",
-        "work": "Nicomachean Ethics",
-        "source_url": "https://classics.mit.edu/Aristotle/nicomachaen.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Aristotle",
-        "source_detail": "Research ID research.reaudit.day16.ne8_friendship_mutual; corpus row 1074; content_nature=research_paraphrase; verification=A/B - location verified."
+        "work": "Nicomachean Ethics · D. P. Chase1847",
+        "source_url": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Aristotle",
+        "source_detail": "NE VIII.2; Chase. Đoạn đối chiếu: the feeling must be mutually known. NE VIII.2; không xem cảm giác một phía là lỗi của người dành thiện ý. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day16.ne8_friendship_mutual; corpus row 1074; content_nature=research_paraphrase; verification=A/B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -166,34 +166,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation witness public-domain/edition review"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Thiện ý một chiều chưa đủ thành tình bạn; quan hệ cần có sự đáp lại và được hai bên nhận biết.",
+        "semantic_intent": "Thiện ý một chiều chưa đủ thành tình bạn; hai người còn cần đáp lại và nhận biết thiện ý của nhau.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Aristotle"
+        "attribution_vi": "Phỏng theo Aristotle"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day16.ne8_time_trust",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Mong muốn làm bạn có thể xuất hiện nhanh; tình bạn bền cần thời gian, quen biết và sự tin cậy được thử qua trải nghiệm.",
+      "text_vi": "Muốn làm bạn có thể rất nhanh; thành bạn cần thời gian hiểu và tin nhau.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -210,11 +216,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Aristotle",
-        "work": "Nicomachean Ethics",
-        "source_url": "https://classics.mit.edu/Aristotle/nicomachaen.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Aristotle",
-        "source_detail": "Research ID research.reaudit.day16.ne8_time_trust; corpus row 1075; content_nature=research_paraphrase; verification=A/B - location verified."
+        "work": "Nicomachean Ethics · D. P. Chase1847",
+        "source_url": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Aristotle",
+        "source_detail": "NE VIII.3; Chase. Đoạn đối chiếu: till they have eaten the requisite quantity of salt together. NE VIII.3, từ phép ví cùng ăn muối; không quy định một thời gian cố định cho mọi tình bạn. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day16.ne8_time_trust; corpus row 1075; content_nature=research_paraphrase; verification=A/B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -226,34 +232,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation witness public-domain/edition review"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Mong muốn làm bạn có thể xuất hiện nhanh; tình bạn bền cần thời gian, quen biết và sự tin cậy được thử qua trải nghiệm.",
+        "semantic_intent": "Muốn làm bạn có thể rất nhanh; thành bạn cần thời gian hiểu và tin nhau.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Aristotle"
+        "attribution_vi": "Phỏng theo Aristotle"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day16.ne9_goodwill_not_friendship",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có thể mong điều tốt cho ai đó mà chưa có sự gần gũi, chia sẻ hay nỗ lực tạo nên tình bạn.",
+      "text_vi": "Có thể mong điều tốt cho một người mà giữa mình với họ chưa có tình bạn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -269,11 +281,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Aristotle",
-        "work": "Nicomachean Ethics",
-        "source_url": "https://classics.mit.edu/Aristotle/nicomachaen.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Aristotle",
-        "source_detail": "Research ID research.reaudit.day16.ne9_goodwill_not_friendship; corpus row 1076; content_nature=research_paraphrase; verification=A/B - location verified."
+        "work": "Nicomachean Ethics · D. P. Chase1847",
+        "source_url": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Aristotle",
+        "source_detail": "NE IX.5; Chase. Đoạn đối chiếu: Kindly Feeling, though resembling Friendship. NE IX.5, phân biệt goodwill với friendship; không coi thiện ý yếu hơn hoặc vô ích. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day16.ne9_goodwill_not_friendship; corpus row 1076; content_nature=research_paraphrase; verification=A/B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -283,34 +295,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation witness public-domain/edition review"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Có thể mong điều tốt cho ai đó mà chưa có sự gần gũi, chia sẻ hay nỗ lực tạo nên tình bạn.",
+        "semantic_intent": "Có thể mong điều tốt cho một người mà giữa mình với họ chưa có tình bạn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Aristotle"
+        "attribution_vi": "Phỏng theo Aristotle"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day16.ne9_friends_not_maximize",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Số quan hệ sâu bị giới hạn bởi thời gian và khả năng cùng sống, cùng chăm sóc; nhiều hơn không tự đồng nghĩa tốt hơn.",
+      "text_vi": "Tình bạn sâu cần thời gian gần gũi; nhiều bạn hơn chưa chắc đã là tốt hơn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -326,11 +344,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Aristotle",
-        "work": "Nicomachean Ethics",
-        "source_url": "https://classics.mit.edu/Aristotle/nicomachaen.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Aristotle",
-        "source_detail": "Research ID research.reaudit.day16.ne9_friends_not_maximize; corpus row 1077; content_nature=research_paraphrase; verification=A/B - location verified."
+        "work": "Nicomachean Ethics · D. P. Chase1847",
+        "source_url": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Aristotle",
+        "source_detail": "NE IX.10; Chase. Đoạn đối chiếu: of friends likewise there is a limited number. NE IX.10, giới hạn việc thân thiết chứ không hạ giá trị mạng lưới quan hệ rộng. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day16.ne9_friends_not_maximize; corpus row 1077; content_nature=research_paraphrase; verification=A/B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -340,34 +358,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation witness public-domain/edition review"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Số quan hệ sâu bị giới hạn bởi thời gian và khả năng cùng sống, cùng chăm sóc; nhiều hơn không tự đồng nghĩa tốt hơn.",
+        "semantic_intent": "Tình bạn sâu cần thời gian gần gũi; nhiều bạn hơn chưa chắc đã là tốt hơn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Aristotle"
+        "attribution_vi": "Phỏng theo Aristotle"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day17.pd27_friendship_security",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trong những điều trí tuệ chuẩn bị cho một đời sống trọn vẹn, tình bạn được đặt ở vị trí đặc biệt quan trọng.",
+      "text_vi": "Trong những điều trí tuệ chuẩn bị cho một đời sống trọn vẹn, tình bạn có một chỗ đặc biệt.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -383,11 +407,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epicurus",
-        "work": "Principal Doctrines",
+        "work": "Các học thuyết chính yếu · R. D. Hicks1925",
         "source_url": "https://classics.mit.edu/Epicurus/princdoc.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epicurus",
-        "source_detail": "Research ID research.reaudit.day17.pd27_friendship_security; corpus row 1078; content_nature=research_paraphrase; verification=A/B - location verified."
+        "source_language": "en",
+        "source_label": "Phỏng theo Epicurus",
+        "source_detail": "Principal Doctrines27; Hicks. Đoạn đối chiếu: the acquisition of friends. Principal Doctrine27, giữ đánh giá vai trò tình bạn chứ không hứa có bạn là an toàn trước mọi hiểm họa. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day17.pd27_friendship_security; corpus row 1078; content_nature=research_paraphrase; verification=A/B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -397,27 +421,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation edition review"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Trong những điều trí tuệ chuẩn bị cho một đời sống trọn vẹn, tình bạn được đặt ở vị trí đặc biệt quan trọng.",
+        "semantic_intent": "Trong những điều trí tuệ chuẩn bị cho một đời sống trọn vẹn, tình bạn có một chỗ đặc biệt.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epicurus"
+        "attribution_vi": "Phỏng theo Epicurus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day20.panchatantra_heron_crab",

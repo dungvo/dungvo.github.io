@@ -360,10 +360,10 @@
     },
     {
       "id": "authoring.b008.classical_arabic_tradition.011",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ngày nào tôi không học được gì và không thêm gì vào hiểu biết của mình, ngày ấy không thuộc về đời tôi.",
+      "text_vi": "Ngày nào tôi không học thêm điều gì, ngày ấy như chưa thuộc về đời tôi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -379,12 +379,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Classical Arabic tradition",
-        "work": "Arabian Wisdom: Selections and Translations from the Arabic",
-        "source_url": "https://www.gutenberg.org/ebooks/33109",
-        "source_language": null,
-        "source_label": "Classical Arabic tradition",
-        "source_detail": "Research ID research.exp1000.b008.classical_arabic_tradition.011; corpus row Knowledge; text line 692; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "author_name": "Tuyển tập John Wortabet",
+        "work": "Arabian Wisdom · Knowledge · không nêu người nói",
+        "source_url": "https://www.gutenberg.org/cache/epub/33109/pg33109.txt",
+        "source_language": "en",
+        "source_label": "Tuyển tập Wortabet · không nêu người nói",
+        "source_detail": "Arabian Wisdom (John Wortabet), Knowledge; 1913 edition. Đoạn đối chiếu: That day in which I have learned nothing. Wortabet, mục Knowledge; câu nói trong tuyển tập không nêu người nói, không gán cho nhà hiền triết hay toàn thế giới Arab. Bản Việt diễn ý có như để giữ giọng tự thuật. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.exp1000.b008.classical_arabic_tradition.011; corpus row Knowledge; text line 692; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -397,27 +397,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Project Gutenberg: public-domain compilation and translation by John Wortabet"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Ngày nào tôi không học được gì và không thêm gì vào hiểu biết của mình, ngày ấy không thuộc về đời tôi.",
+        "semantic_intent": "Ngày nào tôi không học thêm điều gì, ngày ấy như chưa thuộc về đời tôi.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Classical Arabic tradition"
+        "attribution_vi": "Tuyển tập Wortabet · không nêu người nói"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "authoring.b008.saadi.010",
@@ -482,10 +488,10 @@
     },
     {
       "id": "authoring.b002.michel_de_montaigne.021",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nói thật, bao công sức và chi phí cha mẹ dành cho việc học của ta chỉ nhằm chất đầy kiến thức vào đầu; còn phán đoán và đức hạnh thì chẳng được nói tới.",
+      "text_vi": "Học để chất đầy kiến thức vào đầu, còn khả năng phán đoán và cách sống thì được học ở đâu?",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -502,11 +508,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Michel de Montaigne",
-        "work": "Essays of Michel de Montaigne — Complete",
-        "source_url": "https://www.gutenberg.org/ebooks/3600",
-        "source_language": null,
-        "source_label": "Michel de Montaigne",
-        "source_detail": "Research ID research.exp1000.b002.michel_de_montaigne.021; corpus row Of Pedantry; text line 7021; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "Essays · Cotton/Hazlitt · Of Pedantry",
+        "source_url": "https://www.gutenberg.org/cache/epub/3600/pg3600.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Michel de Montaigne",
+        "source_detail": "Essays, BookI, Of Pedantry; bản Cotton/Hazlitt Gutenberg3600 (chapterXXIV trong witness này). Passage: furnish our heads with knowledge; but not a word of judgment and virtue. Diễn ý thành câu hỏi từ phê bình giáo dục của Montaigne; không giả câu hỏi này là nguyên văn, không phủ định giá trị tri thức. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b002.michel_de_montaigne.021; corpus row Of Pedantry; text line 7021; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -519,27 +525,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "public_domain_us"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ; Charles Cotton1630–1687, editor W. Carew Hazlitt1834–1913; bản lịch sử Gutenberg3600. Tự diễn ý, không dùng dịch Việt hiện đại. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Nói thật, bao công sức và chi phí cha mẹ dành cho việc học của ta chỉ nhằm chất đầy kiến thức vào đầu; còn phán đoán và đức hạnh thì chẳng được nói tới.",
+        "semantic_intent": "Học để chất đầy kiến thức vào đầu, còn khả năng phán đoán và cách sống thì được học ở đâu?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Michel de Montaigne"
+        "attribution_vi": "Phỏng theo Michel de Montaigne"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.10k.b009.kieu.0003.0004",

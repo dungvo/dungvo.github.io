@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.huainanzi.day6.ch17.029",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thứ người này bỏ đi có thể là thứ người khác nhặt lấy; nhu cầu khác làm giá trị khác.",
+      "text_vi": "Thợ gốm bỏ sợi dây, thợ xe lại nhặt lấy: mỗi người cần một thứ khác nhau.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -24,12 +24,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/shuo-lin-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch17.029; corpus row 481; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyết lâm huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%AA%AA%E6%9E%97%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 陶人棄索，車人掇之. Giữ ví dụ vật dụng và khác biệt nhu cầu thay vì câu giá trị chung; không gán hình ảnh dây cho vật liệu khác. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch17.029; corpus row 481; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -39,34 +39,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Thứ người này bỏ đi có thể là thứ người khác nhặt lấy; nhu cầu khác làm giá trị khác.",
+        "semantic_intent": "Thợ gốm bỏ sợi dây, thợ xe lại nhặt lấy: mỗi người cần một thứ khác nhau.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch17.034",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Bước nhỏ không ngừng thì con vật chậm vẫn có thể đi xa.",
+      "text_vi": "Bước nhỏ không ngừng, rùa què cũng đi được nghìn dặm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -81,12 +87,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/shuo-lin-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch17.034; corpus row 486; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyết lâm huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%AA%AA%E6%9E%97%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 跬步不休，跛鱉千里. Giữ hình ảnh ẩn dụ truyền thống, không hứa mọi giới hạn đều vượt qua nhờ cố gắng; ghi diễn ý. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch17.034; corpus row 486; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -96,27 +102,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Bước nhỏ không ngừng thì con vật chậm vẫn có thể đi xa.",
+        "semantic_intent": "Bước nhỏ không ngừng, rùa què cũng đi được nghìn dặm.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch17.035",
@@ -234,10 +246,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch18.044",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Gỗ còn ướt mà đặt tải nặng lên thì có thể cong.",
+      "text_vi": "Gỗ còn tươi mà đắp đất nặng lên, nhà dựng xong vẫn có thể cong hỏng về sau.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -252,12 +264,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/ren-xian-xun",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch18.044; corpus row 496; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Nhân gian huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E4%BA%BA%E9%96%93%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 木尚生，加塗其上，必將撓. Ghép đủ vật liệu/tải trọng/hệ quả của truyện Cao Dương, không biến thành công thức xây dựng hiện đại. Đây là diễn ý tình huống trong nguồn. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch18.044; corpus row 496; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -267,27 +279,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Gỗ còn ướt mà đặt tải nặng lên thì có thể cong.",
+        "semantic_intent": "Gỗ còn tươi mà đắp đất nặng lên, nhà dựng xong vẫn có thể cong hỏng về sau.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch18.046",
@@ -348,10 +366,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch18.049",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tường hỏng bắt đầu từ khe; kiếm gãy thường có dấu ở chỗ khuyết.",
+      "text_vi": "Tường đổ từ khe nứt; kiếm gãy ở chỗ đã sứt.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -366,12 +384,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/ren-xian-xun",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch18.049; corpus row 501; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Nhân gian huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E4%BA%BA%E9%96%93%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 牆之壞也於隙，劍之折必有齧. Giữ hình ảnh cụ thể của nguyên văn; không thêm kết luận mọi sự cố đều có dấu hiệu mà nạn nhân phải thấy trước. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch18.049; corpus row 501; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -381,27 +399,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Tường hỏng bắt đầu từ khe; kiếm gãy thường có dấu ở chỗ khuyết.",
+        "semantic_intent": "Tường đổ từ khe nứt; kiếm gãy ở chỗ đã sứt.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.1.001",

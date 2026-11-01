@@ -1,5 +1,19 @@
 # PM-QUOTE-P0 — Trạng thái chương trình quote
 
+> **B009 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **149/149**: **11 đạt,138 không nhận (gồm40 legacy block giữ loại, không mở lại)**. Source90 /Authoring **107** /Release **61 (385 quote /22 story)**. Corpus **1.239/5.471 đã chốt (22,65%), còn4.232**; **168 câu chờ Release**, chưa cộng released. **95 tests đạt**, candidate tạm168 câu qua gate; không cài Release/commit/push. Handoff: [B009 local](Q10_B009_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B008 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **149/149**: **44 đạt,103 final closure không nhận mới (gồm6 legacy rejection giữ loại),2 owner-closed giữ nguyên**. Source89 /Authoring **106** /Release **61 (385 quote /22 story)**. Corpus **1.101/5.471 đã chốt (20,12%), còn4.370**; **157 câu chờ Release**, chưa cộng released. **95 tests đạt**, candidate tạm157 câu qua gate; không cài Release/commit/push. Handoff: [B008 local](Q10_B008_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B007 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **149/149**: **15 đạt,133 không nhận theo program closure mới (gồm14 legacy rejection giữ loại),1 owner-closed giữ nguyên**. Source86 /Authoring **103** /Release **61 (385 quote /22 story)**. Corpus **998/5.471 đã chốt (18,24%), còn4.473**; tổng **113 câu chờ Release**, chưa cộng released. **95 tests đạt**, candidate tạm113 câu qua gate, không cài Release/commit/push. Handoff: [B007 local](Q10_B007_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B006 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Xử lý đủ **149/149**: **48 đạt, 96 không nhận mới, 5 owner-closed giữ nguyên**; còn 48 chờ Release, không còn dòng chưa xử lý. Authoring **102** / Release giữ **61 (385 quote / 22 story)**. Corpus **865/5.471 đã chốt (15,81%), còn 4.606**; tổng 98 câu B005+B006 đạt nhưng chưa cộng released. **95 tests đạt**, ứng viên tạm 98 câu qua gate; không cài Release, không commit/push. Handoff: [B006 local](Q10_B006_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B005 REVIEW ĐỦ TOÀN ĐỢT — 2026-11-01:** Đã review **149/149**; lượt cuối 116 dòng gồm **50 đạt / 66 không nhận**. Authoring local **101**, Release giữ **61 (385 quote / 22 story)**. B005: 4 released + 93 không nhận + 2 owner-closed + 50 chờ Release; **99/149 khép kín**, không còn dòng chưa review. Corpus **769/5.471 đã chốt (14,06%), còn 4.702**, bao gồm 50 câu chờ phát hành. **95 tests đạt**; Release candidate tạm qua đủ gate, chưa cài vào checkout. Chưa commit/push; chờ lệnh owner. Handoff: [B005 toàn đợt local](Q10_B005_FULL_LOCAL_HANDOFF_2026-11-01.vi.md). Các checkpoint bên dưới là lịch sử.
+
+> **B005 LOCAL — 2026-10-31:** Đã review 13 intake còn mở: 10 không xác minh được nguồn cho bản hiện có, 3 ghi chú phương pháp/phân tích; không Release thêm. B005 **33/149 đã chốt, còn 116**. Corpus **703/5.471 (12,85%)**, gồm 380 released + 323 không đạt, còn 4.768. Release 61 / Authoring 100 giữ nguyên. Ledger, exclusions, projection và Matrix đã đồng bộ; 31 tests đạt. Chưa commit/push, chờ lệnh owner. Chi tiết: [Review local B005](Q10_B005_LOCAL_REVIEW_2026-10-31.vi.md).
+
+> **ĐỐI SOÁT HIỆN TẠI — 2026-10-31:** Release **61: 385 quote / 22 story** (manifest public và 9 quote pack đã xác minh); Authoring **100: 1.856 quote / 68 story**, 46 story Authoring-only. Corpus gốc vẫn **690/5.471 đã chốt (12,6%), còn 4.781**: 380 released + 310 không đạt. Cả 5 quote bổ sung nằm ngoài baseline, không cộng vào tiến độ corpus. Projection đã chạy lại với bằng chứng public mới, không có issue. B005 vẫn còn 129, trong đó 13 dòng intake đang mở; chưa review thêm trong lượt đối soát. Báo cáo: [Đối soát 2026-10-31](PROGRESS_RECONCILIATION_2026-10-31.vi.md). Các mốc bên dưới là lịch sử; không dùng số revision cũ làm snapshot hiện tại.
+
 > **B005 / RELEASE 53 PUBLIC — 2026-10-26:** Đã push 0839fe7; xác nhận public 380 quote / 17 story qua manifest và 9 pack/checksum. Bốn câu Swahili mới đúng bản duyệt; 14 câu không đạt vắng mặt. B005 đã chốt 18 mới + 2 owner-closed, còn 129; batch vẫn mở. Corpus **690/5.471 đã chốt, còn 4.781**. 94 tests đạt; tiếp 13 dòng intake còn mở, chưa mở B006/story.
 
 > **B005 / RELEASE 53 ĐANG KIỂM CHỨNG — 2026-10-26:** Owner đã đồng ý phát hành/push đúng 4 câu Swahili. Release 53 cục bộ: 380 quote / 17 story; 376 quote cũ và story descriptor giữ nguyên; 94 tests đạt. Đang đẩy GitHub/kiểm chứng public, chưa cộng 4 câu vào completed. B005 chưa đóng.
@@ -31,7 +45,7 @@
 **Ưu tiên:** P0
 **Trạng thái tổng:** Ưu tiên duy nhất: lập và thực hiện kế hoạch khép kín 5.471 dòng quote. Story tạm dừng theo owner ngày 2026-10-25. Phần baseline bên dưới là lịch sử.
 **Bắt đầu:** 2026-10-12
-**Cập nhật gần nhất:** 2026-10-26 — Release 53 public / Authoring 93; 690/5.471 đã chốt, còn 4.781. B005 còn 129; 94 tests đạt, nội dung đã push 0839fe7.
+**Cập nhật gần nhất:** 2026-11-01 — B009 đủ149:11 đạt/138 không nhận gồm40 legacy block; corpus1.239/5.471; Authoring107/Release61;168 chờ phát hành;95 tests đạt; chỉ local.
 **Owner duyệt cuối:** Dũng
 **Phạm vi:** Review toàn bộ corpus; đưa mọi quote đủ điều kiện lên Release; kết luận rõ cho mọi dòng không đủ điều kiện.
 

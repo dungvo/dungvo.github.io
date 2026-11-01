@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.day64.006",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không phải mọi suy nghĩ về công việc ngoài giờ đều có hại; positive work reflection và problem solving có thể khác với negative rumination.",
+      "text_vi": "Nhớ lại một chuyện vui ở chỗ làm khác với cứ mắc kẹt trong một chuyện khiến mình bực.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -24,12 +24,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Psychological detachment from work",
-        "work": "Psychological detachment from work",
+        "author_name": "Johannes Wendsche & Andrea Lohmann-Haislah",
+        "work": "A Meta-Analysis on Antecedents and Outcomes of Detachment from Work · Frontiers in Psychology7:2072 (2017)",
         "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5233687/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Psychological detachment from work",
-        "source_detail": "Research ID research.day64.006; corpus row 1686; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+        "source_language": "en",
+        "source_label": "Dựa trên Wendsche & Lohmann-Haislah",
+        "source_detail": "Wendsche & Lohmann-Haislah2017, Frontiers in Psychology7:2072, phần Valence of work-related thoughts; DOI10.3389/fpsyg.2016.02072; CC BY. Passage: valence of work-related thoughts might determine the outcomes of recovery. Diễn ý phân biệt positive work reflection và negative rumination; bỏ lời khẳng định mọi suy nghĩ công việc có hại, không hứa hiệu quả điều trị hay nhân quả. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day64.006; corpus row 1686; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
       },
       "metadata": {
         "concepts": [],
@@ -39,27 +39,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "licensed",
+        "note": "Copyright ©2017 Johannes Wendsche and Andrea Lohmann-Haislah. Frontiers in Psychology7:2072, DOI10.3389/fpsyg.2016.02072. Article explicitly CC BY; license https://creativecommons.org/licenses/by/4.0/ ; source https://pmc.ncbi.nlm.nih.gov/articles/PMC5233687/ . Selflo tự diễn ý/dịch và rút gọn phần phân biệt sắc thái suy nghĩ công việc; đây là thay đổi so với nguồn, không nguyên văn và không lời tác giả endorsement."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Không phải mọi suy nghĩ về công việc ngoài giờ đều có hại; positive work reflection và problem solving có thể khác với negative rumination.",
+        "semantic_intent": "Nhớ lại một chuyện vui ở chỗ làm khác với cứ mắc kẹt trong một chuyện khiến mình bực.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Psychological detachment from work"
+        "attribution_vi": "Dựa trên Wendsche & Lohmann-Haislah"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:research"
+      ]
     },
     {
       "id": "research.day64.008",

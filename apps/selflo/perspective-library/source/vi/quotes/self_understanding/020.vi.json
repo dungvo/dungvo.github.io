@@ -234,10 +234,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch13.013",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hiểu vì sao một phương pháp sinh ra thì mới biết thay đổi nó theo thời.",
+      "text_vi": "Hiểu một phép trị vì sao ra đời, mới biết thay đổi nó theo thời.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -252,12 +252,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/fan-lun-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch13.013; corpus row 465; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Phiếm luận huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E6%B0%BE%E8%AB%96%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 知法治所由生，則應時而變. Chỉnh phương pháp chung về phép trị đúng ngữ cảnh pháp/chính trị của nguyên văn; không đồng nhất mọi tri thức đều tùy ý thay đổi. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch13.013; corpus row 465; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -267,34 +267,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Hiểu vì sao một phương pháp sinh ra thì mới biết thay đổi nó theo thời.",
+        "semantic_intent": "Hiểu một phép trị vì sao ra đời, mới biết thay đổi nó theo thời.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch13.015",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Phương pháp thay theo thời; cách thực hành cũng đổi theo hoàn cảnh.",
+      "text_vi": "Phép trị đổi theo thời, lễ nghi đổi theo phong tục.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -309,12 +315,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/fan-lun-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch13.015; corpus row 467; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Phiếm luận huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E6%B0%BE%E8%AB%96%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 法與時變，禮與俗化. Giữ rõ pháp và lễ thay vì nới thành mọi phương pháp/thực hành; đây là quan điểm cổ về thích ứng. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch13.015; corpus row 467; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -324,27 +330,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Phương pháp thay theo thời; cách thực hành cũng đổi theo hoàn cảnh.",
+        "semantic_intent": "Phép trị đổi theo thời, lễ nghi đổi theo phong tục.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch13.016",
@@ -405,10 +417,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch14.018",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Cánh quá nặng vì vẻ đẹp có thể hại xương; cành lá quá tốt có thể hại rễ.",
+      "text_vi": "Cánh quá sum suê có thể hại thân; cành lá quá tốt có thể hại rễ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -423,12 +435,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/quan-yan-xun/zhs",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch14.018; corpus row 470; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyên ngôn huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%A9%AE%E8%A8%80%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 羽翼美者傷骨骸，枝葉美者害根莖. Giữ hình ảnh và tính khả năng, không biến ẩn dụ cổ thành quy luật sinh học phổ quát. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch14.018; corpus row 470; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -438,27 +450,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Cánh quá nặng vì vẻ đẹp có thể hại xương; cành lá quá tốt có thể hại rễ.",
+        "semantic_intent": "Cánh quá sum suê có thể hại thân; cành lá quá tốt có thể hại rễ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch14.019",
@@ -519,10 +537,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch14.023",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có khi ta bỏ quên điều đang có để chạy theo điều chưa có.",
+      "text_vi": "Ta có thể bỏ điều mình đang có để chạy theo điều chưa có được.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -537,12 +555,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/quan-yan-xun/zhs",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch14.023; corpus row 475; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyên ngôn huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%A9%AE%E8%A8%80%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 釋其所已有，而求其所未得也. Bỏ nhãn không biết Đạo phán xét người đọc; giữ quan sát và đánh dấu diễn ý. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch14.023; corpus row 475; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -552,34 +570,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Có khi ta bỏ quên điều đang có để chạy theo điều chưa có.",
+        "semantic_intent": "Ta có thể bỏ điều mình đang có để chạy theo điều chưa có được.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch16.024",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thành bại của việc lớn thường nảy từ những phần nhỏ.",
+      "text_vi": "Thành bại của một việc có thể bắt đầu từ những điều rất nhỏ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -594,12 +618,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/shuo-shan-xun/zhs",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch16.024; corpus row 476; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyết sơn huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%AA%AA%E5%B1%B1%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 事之成敗，必由小生. Giữ câu có thể để không xem mọi thành bại đều chỉ có một nguyên nhân nhỏ; diễn ý quan sát cổ. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch16.024; corpus row 476; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -609,34 +633,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Thành bại của việc lớn thường nảy từ những phần nhỏ.",
+        "semantic_intent": "Thành bại của một việc có thể bắt đầu từ những điều rất nhỏ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch16.027",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Bịt tai mình không làm âm thanh biến mất.",
+      "text_vi": "Bịt tai mình không làm tiếng chuông ngừng vang.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -651,12 +681,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/shuo-shan-xun/zhs",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch16.027; corpus row 479; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyết sơn huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%AA%AA%E5%B1%B1%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 自掩其耳，悖矣. Ghép đủ tiếng chuông từ tích trộm chuông trong cùng đoạn, không giữ âm thanh chung mất chất liệu. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch16.027; corpus row 479; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -666,27 +696,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Bịt tai mình không làm âm thanh biến mất.",
+        "semantic_intent": "Bịt tai mình không làm tiếng chuông ngừng vang.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     }
   ]
 }

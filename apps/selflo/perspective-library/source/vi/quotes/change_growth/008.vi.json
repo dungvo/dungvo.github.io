@@ -73,10 +73,10 @@
     },
     {
       "id": "research.day26.li_lou_teach_not_spurn",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Người có năng lực có thể dùng năng lực để nâng người chưa có, thay vì biến khác biệt thành lý do khinh bỏ.",
+      "text_vi": "Người có năng lực có thể giúp người chưa có, thay vì lấy khác biệt ấy làm lý do khinh bỏ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -92,12 +92,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Mencius / 孟子",
-        "work": "孟子 / Mencius",
-        "source_url": "https://ctext.org/mengzi/li-lou-ii",
-        "source_language": null,
-        "source_label": "Mencius / 孟子",
-        "source_detail": "Research ID research.day26.li_lou_teach_not_spurn; corpus row 1133; content_nature=translated_quote; verification=A/B - passage/location verified."
+        "author_name": "Mạnh Tử",
+        "work": "Mạnh Tử · Ly Lâu hạ",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%AD%9F%E5%AD%90/%E9%9B%A2%E5%A9%81%E4%B8%8B",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Mạnh Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 才也養不才. 離婁下 7, giữ đối lập 養/棄; không yêu cầu mọi người phải gánh việc dạy bất kể điều kiện. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.day26.li_lou_teach_not_spurn; corpus row 1133; content_nature=translated_quote; verification=A/B - passage/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -109,34 +109,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient text public domain; platform/translation terms separate"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Người có năng lực có thể dùng năng lực để nâng người chưa có, thay vì biến khác biệt thành lý do khinh bỏ.",
+        "semantic_intent": "Người có năng lực có thể giúp người chưa có, thay vì lấy khác biệt ấy làm lý do khinh bỏ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Mencius / 孟子"
+        "attribution_vi": "Phỏng theo Mạnh Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day27.ju_yi_fan_san",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Từ một trường hợp suy ra các trường hợp tương tự — học không chỉ là nhớ một đáp án.",
+      "text_vi": "Được chỉ một góc, người học còn có phần tự tìm ra ba góc kia.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -153,12 +159,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Chinese idiom tradition",
-        "work": "《論語．述而》",
+        "author_name": "Khổng Tử",
+        "work": "Luận Ngữ · Thuật NhiVII.8",
         "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=13&la=1&webMd=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Chinese idiom tradition",
-        "source_detail": "Research ID research.day27.ju_yi_fan_san; corpus row 1134; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+        "source_language": "zh",
+        "source_label": "Phỏng theo Khổng Tử",
+        "source_detail": "Luận Ngữ · Thuật NhiVII.8. Passage: 舉一隅不以三隅反. Diễn ý hình ảnh học chủ động; không giữ cách từ chối dạy người chưa hiểu thành chuẩn đánh giá phẩm giá. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day27.ju_yi_fan_san; corpus row 1134; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
       },
       "metadata": {
         "concepts": [],
@@ -171,27 +177,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Traditional/classical wording; dictionary site terms apply"
+        "status": "public_domain",
+        "note": "Cổ văn gốc đã thuộc public domain; Selflo tự dịch/diễn ý trực tiếp phần cổ văn được trích trong mục điển nguồn. Không dùng bản dịch, lời giải, chú thích hay ví dụ hiện đại của Bộ Giáo dục làm public-domain content."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Từ một trường hợp suy ra các trường hợp tương tự — học không chỉ là nhớ một đáp án.",
+        "semantic_intent": "Được chỉ một góc, người học còn có phần tự tìm ra ba góc kia.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Chinese idiom tradition"
+        "attribution_vi": "Phỏng theo Khổng Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day27.yi_yang_hua_hulu",
@@ -315,10 +327,10 @@
     },
     {
       "id": "research.day27.shu_neng_sheng_qiao",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Lặp lại đủ lâu có thể tạo ra sự tinh tế mà lý thuyết ban đầu chưa cho mình thấy.",
+      "text_vi": "Ông bán dầu rót qua lỗ đồng tiền mà không làm ướt nó, rồi nói: chỉ là tay đã quen.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -334,12 +346,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Chinese idiom tradition",
-        "work": "歐陽修《歸田錄》",
+        "author_name": "Âu Dương Tu",
+        "work": "Quy Điền Lục · quyểnI · Mại du ông",
         "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-283&la=0&webMd=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Chinese idiom tradition",
-        "source_detail": "Research ID research.day27.shu_neng_sheng_qiao; corpus row 1175; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+        "source_language": "zh",
+        "source_label": "Phỏng theo Âu Dương Tu",
+        "source_detail": "Quy Điền Lục · quyểnI · Mại du ông. Passage: 我亦無他，惟手熟爾. Giữ quan sát kỹ năng cụ thể của người bán dầu, không hứa lặp máy móc luôn đem tài nghệ. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day27.shu_neng_sheng_qiao; corpus row 1175; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
       },
       "metadata": {
         "concepts": [],
@@ -351,27 +363,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Traditional/classical wording; dictionary site terms apply"
+        "status": "public_domain",
+        "note": "Cổ văn gốc đã thuộc public domain; Selflo tự dịch/diễn ý trực tiếp phần cổ văn được trích trong mục điển nguồn. Không dùng bản dịch, lời giải, chú thích hay ví dụ hiện đại của Bộ Giáo dục làm public-domain content."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Lặp lại đủ lâu có thể tạo ra sự tinh tế mà lý thuyết ban đầu chưa cho mình thấy.",
+        "semantic_intent": "Ông bán dầu rót qua lỗ đồng tiền mà không làm ướt nó, rồi nói: chỉ là tay đã quen.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Chinese idiom tradition"
+        "attribution_vi": "Phỏng theo Âu Dương Tu"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day28.shippai",

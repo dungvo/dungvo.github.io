@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.epictetus.day7.enchiridion.6.010",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đừng lấy điều tốt thuộc về thứ bên ngoài mình làm toàn bộ lý do để nâng giá trị bản thân.",
+      "text_vi": "Có một con ngựa đẹp khác với chính mình có một phẩm chất đáng quý.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -26,11 +26,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.6.010; corpus row 512; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion VI; George Long. Passage: I have a beautiful horse. Giữ ví dụ vật sở hữu và phẩm chất riêng, không hạ thấp thành tựu/điều kiện sống của người khác. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.6.010; corpus row 512; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -42,27 +42,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Đừng lấy điều tốt thuộc về thứ bên ngoài mình làm toàn bộ lý do để nâng giá trị bản thân.",
+        "semantic_intent": "Có một con ngựa đẹp khác với chính mình có một phẩm chất đáng quý.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.14.014",
@@ -126,10 +132,10 @@
     },
     {
       "id": "research.epictetus.day7.enchiridion.19.017",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không phải cuộc đua nào cũng cần trở thành thước đo của mình.",
+      "text_vi": "Có những cuộc đua mà phần thắng vốn không chỉ nằm trong tay mình.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -146,11 +152,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.19.017; corpus row 519; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XIX; George Long. Passage: enter into no contest in which it is not\nin your power to conquer. Giữ giới hạn của cuộc tranh giành danh/chức; không đưa mẹo bất khả chiến bại hay nói nên tránh mọi thử thách. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.19.017; corpus row 519; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -162,34 +168,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Không phải cuộc đua nào cũng cần trở thành thước đo của mình.",
+        "semantic_intent": "Có những cuộc đua mà phần thắng vốn không chỉ nằm trong tay mình.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.24.021",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu kết quả ấy không nằm trong quyền mình, vì sao lại lấy nó làm toàn bộ thước đo của mình?",
+      "text_vi": "Một người bạn có thể không đem lại tiền bạc hay địa vị, mà vẫn đem lại sự tin cậy.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -206,11 +218,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.24.021; corpus row 523; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XXIV; George Long. Passage: which would you rather have, money or a\nfaithful and modest friend. Diễn ý đoạn người bạn trung tín và khiêm nhường; không nói nghèo là tốt hay mọi giúp đỡ vật chất không quan trọng. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.24.021; corpus row 523; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -222,27 +234,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nếu kết quả ấy không nằm trong quyền mình, vì sao lại lấy nó làm toàn bộ thước đo của mình?",
+        "semantic_intent": "Một người bạn có thể không đem lại tiền bạc hay địa vị, mà vẫn đem lại sự tin cậy.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.discourses.4_4.046",
@@ -306,10 +324,10 @@
     },
     {
       "id": "research.marcus.day8.book01.1_7.001",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Từ Rusticus, ông học việc sửa lại và chăm sóc tính cách của chính mình.",
+      "text_vi": "Từ Rusticus, Marcus học nhận ra những điều trong tính cách mình cần sửa.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -325,11 +343,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=1",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book01.1_7.001; corpus row 549; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations I.7; George W. Chrystal1902. Passage: my nature needed\nreform and cure. Giữ người và quan hệ học cụ thể, không thêm lời hứa tự chữa hay chẩn đoán tâm lý. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book01.1_7.001; corpus row 549; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -339,34 +357,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Từ Rusticus, ông học việc sửa lại và chăm sóc tính cách của chính mình.",
+        "semantic_intent": "Từ Rusticus, Marcus học nhận ra những điều trong tính cách mình cần sửa.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book02.2_5.007",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Mỗi giờ, làm việc trước mặt mình với sự nghiêm túc và hiện diện.",
+      "text_vi": "Việc đang ở trước mặt cũng đáng được làm với sự chăm chút.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -382,11 +406,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book02.2_5.007; corpus row 555; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations II.5; George W. Chrystal1902. Passage: do what falls\nto your hand with perfect unaffected dignity. Lược vai Roman/man và mệnh lệnh làm như lần cuối; giữ sự chú tâm/đàng hoàng của việc hiện tại. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book02.2_5.007; corpus row 555; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -396,27 +420,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Mỗi giờ, làm việc trước mặt mình với sự nghiêm túc và hiện diện.",
+        "semantic_intent": "Việc đang ở trước mặt cũng đáng được làm với sự chăm chút.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book02.2_14.008",
@@ -651,10 +681,10 @@
     },
     {
       "id": "research.marcus.day8.book08.8_1.029",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Bớt bận tâm mình sẽ trông như thế nào trong mắt người khác.",
+      "text_vi": "Chưa được nhìn nhận là người khôn ngoan vẫn không ngăn mình sống theo điều đã hiểu.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -670,11 +700,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=8",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book08.8_1.029; corpus row 577; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations VIII.1; George W. Chrystal1902. Passage: put from you all thoughts of reputation among men. Giữ việc không chạy theo tiếng philosopher, không phủ nhận tác động thật của danh tiếng và phân biệt đối xử. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book08.8_1.029; corpus row 577; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -684,27 +714,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Bớt bận tâm mình sẽ trông như thế nào trong mắt người khác.",
+        "semantic_intent": "Chưa được nhìn nhận là người khôn ngoan vẫn không ngăn mình sống theo điều đã hiểu.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     }
   ]
 }

@@ -188,10 +188,10 @@
     },
     {
       "id": "research.day30.natsukusa",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Cỏ mùa hạ phủ nơi từng là giấc mộng của những người chinh chiến — tham vọng và dấu tích không tồn tại cùng một nhịp thời gian.",
+      "text_vi": "Cỏ mùa hạ — dấu còn lại của giấc mộng những người chinh chiến.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -209,11 +209,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Oku no Hosomichi / Hiraizumi",
-        "source_url": "https://ja.wikisource.org/wiki/Page%3ABasho_Haiku_Zenshu.djvu/82",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.natsukusa; corpus row 1164; content_nature=research_paraphrase; verification=A/B - wording/location verified."
+        "work": "Haiku · nguyên Nhật · tuyển1903",
+        "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 夏草や兵どもが. Passage: 夏草や兵どもが夢の跡. Giữ hình ảnh ở Takadachi, không thêm quy luật tham vọng/thời gian hoặc tô chiến tranh thành đẹp. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.natsukusa; corpus row 1164; content_nature=research_paraphrase; verification=A/B - wording/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -226,34 +226,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Cỏ mùa hạ phủ nơi từng là giấc mộng của những người chinh chiến — tham vọng và dấu tích không tồn tại cùng một nhịp thời gian.",
+        "semantic_intent": "Cỏ mùa hạ — dấu còn lại của giấc mộng những người chinh chiến.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day30.samidare_mogami",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nhiều dòng mưa nhỏ hợp lại thành một dòng sông mạnh — accumulation có thể đổi quy mô của điều đang xảy ra.",
+      "text_vi": "Gom mưa tháng Năm, sông Mogami chảy xiết.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -270,11 +276,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Oku no Hosomichi / Mogami River",
-        "source_url": "https://www.city.ogaki.lg.jp/0000001000.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.samidare_mogami; corpus row 1166; content_nature=research_paraphrase; verification=A/B - wording/location verified."
+        "work": "Haiku · nguyên Nhật · tuyển1903",
+        "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 五月雨を集めて. Passage: 五月雨を集めて早し最上川. Giữ dòng sông trong bài thơ; bỏ accumulation như lời giải khoa học và bỏ nhiều dòng mưa nhỏ không có trong nguyên tác. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.samidare_mogami; corpus row 1166; content_nature=research_paraphrase; verification=A/B - wording/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -286,34 +292,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Nhiều dòng mưa nhỏ hợp lại thành một dòng sông mạnh — accumulation có thể đổi quy mô của điều đang xảy ra.",
+        "semantic_intent": "Gom mưa tháng Năm, sông Mogami chảy xiết.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day30.yagate_shinu",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tiếng ve đang đầy sức sống dù đời ve ngắn; biết tính hữu hạn không làm hiện tại bớt sống động.",
+      "text_vi": "Tiếng ve — chẳng có dấu gì báo rằng cái chết đã gần.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -331,11 +343,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Bashō haiku corpus",
-        "source_url": "https://www2.yamanashi-ken.ac.jp/~itoyo/basho/haikusyu/index_theme.htm",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.yagate_shinu; corpus row 1167; content_nature=research_paraphrase; verification=A/B - wording/location verified."
+        "work": "Haiku · nguyên Nhật · tuyển1903",
+        "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 頓て死ぬけしき. Passage: 頓て死ぬけしきは見えず蟬の聲. Giữ nghịch ảnh của bài thơ; không biến thành fact mọi loài ve hay lời khuyên phải sống hết mình. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.yagate_shinu; corpus row 1167; content_nature=research_paraphrase; verification=A/B - wording/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -348,34 +360,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Tiếng ve đang đầy sức sống dù đời ve ngắn; biết tính hữu hạn không làm hiện tại bớt sống động.",
+        "semantic_intent": "Tiếng ve — chẳng có dấu gì báo rằng cái chết đã gần.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day30.tsuki_hito",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ngày tháng được nhìn như những lữ khách đi qua; thời gian không đứng yên để mình hoàn tất mọi thứ rồi mới bắt đầu sống.",
+      "text_vi": "Ngày tháng là khách qua bao đời; những năm đi rồi đến cũng là người lữ hành.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "rest_wellbeing",
@@ -392,11 +410,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Oku no Hosomichi opening",
+        "work": "Oku no Hosomichi · mở đầu",
         "source_url": "https://ja.wikisource.org/wiki/%E3%81%8A%E3%81%8F%E3%81%AE%E3%81%BB%E3%81%9D%E9%81%93",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.tsuki_hito; corpus row 1170; content_nature=research_paraphrase; verification=A/B - wording/location verified."
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "Oku no Hosomichi · câu mở đầu. Passage: 月日は百代の過客にしてゆきかふ年も又旅人なり. Dịch riêng câu mở đầu, bỏ lời khuyên hoàn tất mọi thứ rồi sống. Đây là văn xuôi mở Oku no Hosomichi, không phải một bài haiku. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.tsuki_hito; corpus row 1170; content_nature=research_paraphrase; verification=A/B - wording/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -408,27 +426,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Nguyên văn Bashō1644–1694, xuất bản1702; chỉ tự dịch câu cổ văn gốc trên witness Wikisource, không dùng chú giải Miyake hay dịch hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Ngày tháng được nhìn như những lữ khách đi qua; thời gian không đứng yên để mình hoàn tất mọi thứ rồi mới bắt đầu sống.",
+        "semantic_intent": "Ngày tháng là khách qua bao đời; những năm đi rồi đến cũng là người lữ hành.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:rest_wellbeing",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day46.001",

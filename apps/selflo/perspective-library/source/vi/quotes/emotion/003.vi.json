@@ -406,10 +406,10 @@
     },
     {
       "id": "research.marcus.day8.book05.5_9.019",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đừng vội tuyệt vọng hay bỏ cuộc chỉ vì mình chưa làm được như mong muốn.",
+      "text_vi": "Một lần chưa làm được như điều mình tin không nhất thiết là lý do bỏ hẳn việc ấy.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "emotion",
@@ -426,11 +426,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=5",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book05.5_9.019; corpus row 567; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations V.9; George W. Chrystal1902. Passage: If you are beaten off, return again to the effort. Giữ trở lại thực hành khi thất bại, không yêu cầu cố mọi mục tiêu hoặc trách người cần dừng. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book05.5_9.019; corpus row 567; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -442,27 +442,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Đừng vội tuyệt vọng hay bỏ cuộc chỉ vì mình chưa làm được như mong muốn.",
+        "semantic_intent": "Một lần chưa làm được như điều mình tin không nhất thiết là lý do bỏ hẳn việc ấy.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:emotions",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.seneca.day9.ep063",
@@ -532,10 +538,10 @@
     },
     {
       "id": "research.dhammapada.day11.v129",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ai cũng biết sợ đau và mất mát; đặt mình vào vị trí của người khác có thể thay đổi cách mình hành động.",
+      "text_vi": "Ai cũng sợ bị làm đau, ai cũng sợ mất mạng; đặt mình vào người khác, bớt làm điều gây hại.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "emotion",
@@ -551,12 +557,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/10-Stick.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v129; corpus row 724; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú · F. Max Muller1881",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú",
+        "source_detail": "Pháp Cú129–130; lược đôi vế trùng. Đoạn đối chiếu: All men tremble at punishment. Kệ129, giữ lời khuyên đạo đức về không sát hại; không phát biểu mọi người có cùng ngưỡng đau hay phản ứng tâm lý. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.dhammapada.day11.v129; corpus row 724; content_nature=translated_quote; verification=A - Pāḷi verse source located."
       },
       "metadata": {
         "concepts": [],
@@ -568,27 +574,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Ai cũng biết sợ đau và mất mát; đặt mình vào vị trí của người khác có thể thay đổi cách mình hành động.",
+        "semantic_intent": "Ai cũng sợ bị làm đau, ai cũng sợ mất mạng; đặt mình vào người khác, bớt làm điều gây hại.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:emotions",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.dhammapada.day11.v130",

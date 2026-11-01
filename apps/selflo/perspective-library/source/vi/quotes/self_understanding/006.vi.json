@@ -276,10 +276,10 @@
     },
     {
       "id": "research.day18.18_63",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Sau khi trình bày teaching, câu 18.63 vẫn dành một bước cho người nghe: suy xét toàn bộ rồi hành động theo điều mình lựa chọn.",
+      "text_vi": "Suy xét điều vừa nghe, rồi hành động theo điều mình lựa chọn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -295,12 +295,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?etadi=1&etradi=1&field_chapter_value=18&field_nsutra_value=63&language=dv&setgb=1",
-        "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research ID research.day18.18_63; corpus row 907; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "author_name": "Truyền thống Bhagavad Gita",
+        "work": "Bhagavad Gita · Edwin Arnold1885",
+        "source_url": "https://www.gutenberg.org/cache/epub/2388/pg2388.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Truyền thống Bhagavad Gita",
+        "source_detail": "Bhagavad Gita18.63; Arnold. Đoạn đối chiếu: And--as thou wilt--then act. Gita18.63, lời Krishna với Arjuna; không trình bày như kinh khuyến khích bỏ mọi trách nhiệm hay bỏ phần đối thoại tiếp sau. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day18.18_63; corpus row 907; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
       },
       "metadata": {
         "concepts": [],
@@ -312,27 +312,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Sau khi trình bày teaching, câu 18.63 vẫn dành một bước cho người nghe: suy xét toàn bộ rồi hành động theo điều mình lựa chọn.",
+        "semantic_intent": "Suy xét điều vừa nghe, rồi hành động theo điều mình lựa chọn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
+        "attribution_vi": "Phỏng theo Truyền thống Bhagavad Gita"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day18.2_14",
@@ -468,10 +474,10 @@
     },
     {
       "id": "research.day18.6_26",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi tâm trí đi lang thang, practice ở đây là nhận ra và đưa nó trở lại—việc đi lạc không được mô tả như một thất bại một lần là xong.",
+      "text_vi": "Mỗi lần tâm lại đi lang thang, lại đưa nó trở về.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -488,12 +494,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?choose=1&etadi=1&etgb=1&etradi=1&field_chapter_value=6&field_nsutra_value=26&language=dv",
-        "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research ID research.day18.6_26; corpus row 906; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "author_name": "Truyền thống Bhagavad Gita",
+        "work": "Bhagavad Gita · Edwin Arnold1885",
+        "source_url": "https://www.gutenberg.org/cache/epub/2388/pg2388.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Truyền thống Bhagavad Gita",
+        "source_detail": "Bhagavad Gita6.26; The Song Celestial, Edwin Arnold1885. Đoạn đối chiếu: Let him re-curb it, let him rein it back. Gita6.26; bỏ chữ practice và lời giải thích thất bại không có trong verse. Giữ hướng thực hành tôn giáo, không đưa tác dụng chữa bệnh. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day18.6_26; corpus row 906; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
       },
       "metadata": {
         "concepts": [],
@@ -506,34 +512,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi tâm trí đi lang thang, practice ở đây là nhận ra và đưa nó trở lại—việc đi lạc không được mô tả như một thất bại một lần là xong.",
+        "semantic_intent": "Mỗi lần tâm lại đi lang thang, lại đưa nó trở về.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
+        "attribution_vi": "Phỏng theo Truyền thống Bhagavad Gita"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day19.mundaka_two_birds",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hai con chim cùng ở trên một cây: một con ăn trái, một con nhìn. Hình ảnh mở ra distinction giữa trải nghiệm đang cuốn mình đi và khả năng quan sát trải nghiệm.",
+      "text_vi": "Hai con chim cùng đậu trên một cây: một con ăn quả ngọt, một con nhìn mà không ăn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -548,12 +560,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Selected Upaniṣads / Vedic tradition",
-        "work": "Muṇḍaka Upaniṣad",
-        "source_url": "https://www.vedha360.com/library/upanishad.mundaka?lang=en&mode=study&offset=30",
-        "source_language": null,
-        "source_label": "Selected Upaniṣads / Vedic tradition",
-        "source_detail": "Research ID research.day19.mundaka_two_birds; corpus row 924; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "author_name": "Muṇḍaka Upanishad",
+        "work": "Muṇḍaka Upanishad · Max Muller1884",
+        "source_url": "https://sacred-texts.com/book/the-upanishads-part-ii/iii-1",
+        "source_language": "en",
+        "source_label": "Phỏng theo Muṇḍaka Upanishad",
+        "source_detail": "MundakaIII.1.1; Max Muller1884, SBE15. Đoạn đối chiếu: Two birds, inseparable friends, cling to the same tree. Chỉ giữ hình ảnh của MundakaIII.1.1, bỏ suy luận trải nghiệm/quan sát thành mô hình tâm lý. Source_detail giữ bối cảnh Self/Brahman và ghi trích verse, không giả là giải thích toàn bộ dụ. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day19.mundaka_two_birds; corpus row 924; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
       },
       "metadata": {
         "concepts": [],
@@ -563,27 +575,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Hai con chim cùng ở trên một cây: một con ăn trái, một con nhìn. Hình ảnh mở ra distinction giữa trải nghiệm đang cuốn mình đi và khả năng quan sát trải nghiệm.",
+        "semantic_intent": "Hai con chim cùng đậu trên một cây: một con ăn quả ngọt, một con nhìn mà không ăn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selected Upaniṣads / Vedic tradition"
+        "attribution_vi": "Phỏng theo Muṇḍaka Upanishad"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day22.life_over_gold",

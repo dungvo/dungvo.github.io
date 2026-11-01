@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.marcus.day8.book08.8_2.030",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Với mỗi hành động, hãy hỏi lại mình về nó.",
+      "text_vi": "Việc mình sắp làm sẽ để lại điều gì?",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -25,11 +25,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=8",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book08.8_2.030; corpus row 578; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations VIII.2; George W. Chrystal1902. Passage: Upon every action ask yourself, what is the effect of this for me. Diễn ý câu hỏi về kết quả/hối tiếc, bỏ yêu cầu xét mọi hành vi liên tục và câu chết làm mệnh lệnh. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book08.8_2.030; corpus row 578; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -39,27 +39,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Với mỗi hành động, hãy hỏi lại mình về nó.",
+        "semantic_intent": "Việc mình sắp làm sẽ để lại điều gì?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book08.8_47.032",
@@ -617,10 +623,10 @@
     },
     {
       "id": "research.dhammapada.day11.v025",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Bằng sự tỉnh thức và tự chủ, người ta có thể tạo một hòn đảo bên trong mà dòng nước khó cuốn mất.",
+      "text_vi": "Bằng sự tỉnh thức và tự chủ, người sáng suốt dựng cho mình một hòn đảo giữa dòng nước.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -636,12 +642,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/02-Heedfulness.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v025; corpus row 706; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú · F. Max Muller1881",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú",
+        "source_detail": "Pháp Cú25; diễn ý có lược tính tuyệt đối. Đoạn đối chiếu: an island which no flood can overwhelm. Kệ25, giữ ẩn dụ tự tu dưỡng; không hứa tự chủ làm người ta miễn nhiễm mọi biến cố. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.dhammapada.day11.v025; corpus row 706; content_nature=translated_quote; verification=A - Pāḷi verse source located."
       },
       "metadata": {
         "concepts": [],
@@ -653,27 +659,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Bằng sự tỉnh thức và tự chủ, người ta có thể tạo một hòn đảo bên trong mà dòng nước khó cuốn mất.",
+        "semantic_intent": "Bằng sự tỉnh thức và tự chủ, người sáng suốt dựng cho mình một hòn đảo giữa dòng nước.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.dhammapada.day11.v033",

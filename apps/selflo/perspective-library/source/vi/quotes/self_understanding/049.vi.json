@@ -589,10 +589,10 @@
     },
     {
       "id": "research.day56.002",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Thói quen giúp hành động quen thuộc cần ít chú ý có ý thức hơn, giải phóng nguồn lực cho việc khác.",
+      "text_vi": "Việc đã quen thường không còn cần mình để ý từng động tác như lúc mới học.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -608,11 +608,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "William James",
-        "work": "The Principles of Psychology",
-        "source_url": "https://www.yorku.ca/pclassic/James/Principles/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên William James",
-        "source_detail": "Research ID research.day56.002; corpus row 1618; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+        "work": "The Principles of Psychology1890 · VolumeI",
+        "source_url": "https://www.gutenberg.org/cache/epub/57628/pg57628.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo William James",
+        "source_detail": "The Principles of Psychology1890, VolumeI ChapterIV Habit. Passage: habit diminishes the conscious attention with\nwhich our acts are performed. Giữ ví dụ học đi, bơi, viết; bỏ lời giải thích thần kinh lịch sử và không khẳng định mọi thói quen có lợi. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day56.002; corpus row 1618; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
       },
       "metadata": {
         "concepts": [],
@@ -622,34 +622,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1890; James1842–1910, không dùng dịch Việt hiện đại hoặc coi lý thuyết thần kinh lịch sử là fact mới. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Thói quen giúp hành động quen thuộc cần ít chú ý có ý thức hơn, giải phóng nguồn lực cho việc khác.",
+        "semantic_intent": "Việc đã quen thường không còn cần mình để ý từng động tác như lúc mới học.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên William James"
+        "attribution_vi": "Phỏng theo William James"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day56.004",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Dòng ý thức thay đổi liên tục; nhãn cố định có thể bỏ mất tính chuyển động của trải nghiệm.",
+      "text_vi": "Một trạng thái đã qua không trở lại hoàn toàn như cũ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -665,11 +671,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "William James",
-        "work": "The Principles of Psychology",
-        "source_url": "https://www.yorku.ca/pclassic/James/Principles/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên William James",
-        "source_detail": "Research ID research.day56.004; corpus row 1620; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+        "work": "The Principles of Psychology1890 · VolumeI",
+        "source_url": "https://www.gutenberg.org/cache/epub/57628/pg57628.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo William James",
+        "source_detail": "The Principles of Psychology1890, VolumeI ChapterIX The Stream of Thought. Passage: no state once gone can recur and be identical\nwith what it was before. Giữ quan sát của James về dòng ý thức; bỏ suy luận nhãn bản sắc không bao trọn con người, không hứa đau buồn sẽ biến mất. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day56.004; corpus row 1620; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
       },
       "metadata": {
         "concepts": [],
@@ -679,27 +685,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1890; James1842–1910, không dùng dịch Việt hiện đại hoặc coi lý thuyết thần kinh lịch sử là fact mới. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Dòng ý thức thay đổi liên tục; nhãn cố định có thể bỏ mất tính chuyển động của trải nghiệm.",
+        "semantic_intent": "Một trạng thái đã qua không trở lại hoàn toàn như cũ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên William James"
+        "attribution_vi": "Phỏng theo William James"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     }
   ]
 }

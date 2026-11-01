@@ -768,20 +768,20 @@
     },
     {
       "id": "attributed.dhammapada.verse_160.self_lord",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Chính mình là chủ của mình; còn ai khác có thể làm chủ? Khi biết điều phục bản thân, ta tìm được một người dẫn đường hiếm có.",
+      "text_vi": "Chính mình là người dẫn dắt mình; khi biết tự rèn, ta tìm được một người dẫn đường khó có thay.",
       "subtitle_vi": null,
       "primary_theme": "self_understanding",
       "authorship": {
-        "author_id": "dhammapada_tradition",
-        "author_name": "Dhammapada",
-        "work": "Dhammapada, a Collection of Verses",
-        "source_url": "https://www.gutenberg.org/ebooks/2017",
+        "author_id": null,
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú · F. Max Muller1881",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
         "source_language": "en",
-        "source_label": "Dhammapada",
-        "source_detail": "F. Max Müller (dịch); 160; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Kinh Pháp Cú",
+        "source_detail": "Pháp Cú, kệ160; F. Max Muller. Đoạn đối chiếu: Self is the lord of self. Pháp Cú160; giữ khả năng tự tu dưỡng, không nói người gặp khó không được nhờ giúp đỡ. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: F. Max Müller (dịch); 160; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [],
@@ -796,25 +796,25 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; quote được ghi theo văn bản Dhammapada, không gán trực tiếp cho Đức Phật lịch sử; cần review truyền thống và bản dịch tiếng Việt trước Release."
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Chính mình là chủ của mình; còn ai khác có thể làm chủ? Khi biết điều phục bản thân, ta tìm được một người dẫn đường hiếm có.",
+        "semantic_intent": "Chính mình là người dẫn dắt mình; khi biết tự rèn, ta tìm được một người dẫn đường khó có thay.",
         "observation_key": null,
-        "structure_pattern": "attributed_quote"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 50,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada · 160"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú"
       },
       "story_id": null,
       "selection": {
@@ -828,7 +828,13 @@
         ],
         "tie_break_order": 5039
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     }
   ]
 }

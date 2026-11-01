@@ -306,10 +306,10 @@
     },
     {
       "id": "research.epictetus.day7.enchiridion.34.026",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi một hấp lực xuất hiện, chừa một khoảng trước khi để nó cuốn mình đi.",
+      "text_vi": "Trước một điều hấp dẫn, mình vẫn có thể chừa một khoảng rồi mới chọn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -326,11 +326,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.34.026; corpus row 528; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XXXIV; George Long. Passage: let the\nthing wait for you, and allow yourself a certain delay. Giữ độ trễ trước lạc thú, bỏ phán xét mọi vui thú phải đem hối hận hay nên luôn từ chối. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.34.026; corpus row 528; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -342,27 +342,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi một hấp lực xuất hiện, chừa một khoảng trước khi để nó cuốn mình đi.",
+        "semantic_intent": "Trước một điều hấp dẫn, mình vẫn có thể chừa một khoảng rồi mới chọn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.42.029",
@@ -480,10 +486,10 @@
     },
     {
       "id": "research.epictetus.day7.discourses.1_1.033",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nhiều năng lực làm việc của chúng, nhưng năng lực phán đoán còn phải quay lại xem chính cách mình đang phán đoán.",
+      "text_vi": "Ta có thể xem xét cả điều đang nghĩ lẫn cách mình đi đến nhận định ấy.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -500,11 +506,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://atlas.perseus.tufts.edu/library/urn%3Acts%3AgreekLit%3Atlg0557.tlg001/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.discourses.1_1.033; corpus row 535; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Discourses · Arrian · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Discourses I.1; George Long historical selection. Passage: The rational faculty; for this is the only\nfaculty that we have received which examines itself. Giữ ý tự xét lý trí trong triết học Epictetus; bỏ khẳng định chỉ một năng lực duy nhất có quyền xét mọi năng lực. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.discourses.1_1.033; corpus row 535; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -516,27 +522,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nhiều năng lực làm việc của chúng, nhưng năng lực phán đoán còn phải quay lại xem chính cách mình đang phán đoán.",
+        "semantic_intent": "Ta có thể xem xét cả điều đang nghĩ lẫn cách mình đi đến nhận định ấy.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.discourses.1_1.034",

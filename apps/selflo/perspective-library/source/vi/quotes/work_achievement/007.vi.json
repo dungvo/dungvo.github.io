@@ -177,10 +177,10 @@
     },
     {
       "id": "research.epictetus.day7.enchiridion.13.013",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu muốn tiến bộ, đôi khi phải bớt nhu cầu trông như mình đã biết.",
+      "text_vi": "Việc tiến bộ có lúc đòi mình chịu được vẻ ngoài chưa biết.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -197,11 +197,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.13.013; corpus row 515; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XIII; George Long. Passage: Wish to be considered to know nothing. Diễn ý ý willing to appear foolish trong phạm vi học/rèn luyện, không yêu cầu làm theo mọi đánh giá hay từ bỏ hiểu biết. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.13.013; corpus row 515; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -213,34 +213,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nếu muốn tiến bộ, đôi khi phải bớt nhu cầu trông như mình đã biết.",
+        "semantic_intent": "Việc tiến bộ có lúc đòi mình chịu được vẻ ngoài chưa biết.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.25.022",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Điều này đang được mua bằng giá nào?",
+      "text_vi": "Trước khi tiếc một điều chưa có, thử nhìn phần mình sẽ phải bỏ ra để đổi lấy nó.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -257,11 +263,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.25.022; corpus row 524; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XXV; George Long. Passage: if you do\nnot part with the price. Giữ cân nhắc giá của ưu đãi/bữa tiệc và việc nịnh hót trong source_detail, không coi mọi thiếu cơ hội do chưa chịu trả giá. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.25.022; corpus row 524; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -273,34 +279,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Điều này đang được mua bằng giá nào?",
+        "semantic_intent": "Trước khi tiếc một điều chưa có, thử nhìn phần mình sẽ phải bỏ ra để đổi lấy nó.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.29.024",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trước khi bắt đầu, nhìn cả yêu cầu và hệ quả của việc ấy rồi mới chọn.",
+      "text_vi": "Trước khi chọn một việc, nhìn cả điều nó đòi hỏi và điều có thể theo sau.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -317,11 +329,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.29.024; corpus row 526; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XXIX; George Long. Passage: observe the things which come first, and those which\nfollow it. Ví dụ vận động viên thi đấu cho yêu cầu/chi phí và khả năng thua; không khuyên tính hết mọi tương lai. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.29.024; corpus row 526; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -333,34 +345,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Trước khi bắt đầu, nhìn cả yêu cầu và hệ quả của việc ấy rồi mới chọn.",
+        "semantic_intent": "Trước khi chọn một việc, nhìn cả điều nó đòi hỏi và điều có thể theo sau.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.enchiridion.37.028",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu nhận một vai vượt quá sức hiện tại, ta có thể vừa kiệt sức trong vai ấy vừa bỏ mất việc mình thực sự có thể làm tốt.",
+      "text_vi": "Nhận một vai quá sức có thể khiến mình bỏ lỡ cả phần việc vốn có thể làm tốt.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -376,11 +394,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.37.028; corpus row 530; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XXXVII; George Long. Passage: If you have assumed a character above your strength. Không giữ kiệt sức như kết quả lâm sàng; nói có thể, không cố định sức hiện tại thành giới hạn mãi mãi. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.37.028; corpus row 530; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -390,34 +408,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nếu nhận một vai vượt quá sức hiện tại, ta có thể vừa kiệt sức trong vai ấy vừa bỏ mất việc mình thực sự có thể làm tốt.",
+        "semantic_intent": "Nhận một vai quá sức có thể khiến mình bỏ lỡ cả phần việc vốn có thể làm tốt.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.discourses.2_11.040",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Triết học bắt đầu khi ta nhận ra cách hiểu hiện tại của mình có thể chưa đủ.",
+      "text_vi": "Việc học triết bắt đầu từ nhận ra có những điều thiết yếu mình còn chưa hiểu đủ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -434,11 +458,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://atlas.perseus.tufts.edu/library/urn%3Acts%3AgreekLit%3Atlg0557.tlg001/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.discourses.2_11.040; corpus row 542; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Discourses · Arrian · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Discourses II.11; George Long historical selection. Passage: a\nconsciousness of his own weakness and inability about necessary things. Giữ sự nhận biết giới hạn hiểu biết, không biến yếu kém thành định nghĩa phẩm giá người học. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.discourses.2_11.040; corpus row 542; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -450,34 +474,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Triết học bắt đầu khi ta nhận ra cách hiểu hiện tại của mình có thể chưa đủ.",
+        "semantic_intent": "Việc học triết bắt đầu từ nhận ra có những điều thiết yếu mình còn chưa hiểu đủ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.discourses.2_18.041",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một thói quen có thể được làm yếu bằng cách tập một thói quen khác.",
+      "text_vi": "Một thói quen có thể được thay dần bằng việc tập làm một điều khác ở chỗ nó từng xuất hiện.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -493,11 +523,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://atlas.perseus.tufts.edu/library/urn%3Acts%3AgreekLit%3Atlg0557.tlg001/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.discourses.2_18.041; corpus row 543; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Discourses · Arrian · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Discourses II.18; George Long historical selection. Passage: accustom yourself to do something else in place of it. Giữ đề xuất thực hành trong triết học, dùng có thể/thay dần, không bảo đảm đây là cơ chế trị liệu cho mọi thói quen. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.discourses.2_18.041; corpus row 543; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -507,27 +537,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Một thói quen có thể được làm yếu bằng cách tập một thói quen khác.",
+        "semantic_intent": "Một thói quen có thể được thay dần bằng việc tập làm một điều khác ở chỗ nó từng xuất hiện.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.discourses.3_22.043",
@@ -591,10 +627,10 @@
     },
     {
       "id": "research.epictetus.day7.discourses.3_24.044",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không điều lớn nào hình thành hoàn toàn trong một khoảnh khắc.",
+      "text_vi": "Ngay cả quả sung cũng cần ra hoa, kết trái rồi chín; việc rèn tâm trí càng cần thời gian.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -610,11 +646,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://atlas.perseus.tufts.edu/library/urn%3Acts%3AgreekLit%3Atlg0557.tlg001/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.discourses.3_24.044; corpus row 546; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Discourses · Arrian · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Discourses I.15 (sửa locator trước là III.24); George Long historical selection. Passage: Nothing great, said Epictetus, is\nproduced suddenly, since not even the grape or the fig is. Sửa locator theo passage trong selection: I.15 On the profession of a philosopher, không III.24. Giữ ví dụ, bỏ tuyệt đối mọi điều lớn. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.discourses.3_24.044; corpus row 546; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -624,34 +660,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Không điều lớn nào hình thành hoàn toàn trong một khoảnh khắc.",
+        "semantic_intent": "Ngay cả quả sung cũng cần ra hoa, kết trái rồi chín; việc rèn tâm trí càng cần thời gian.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book01.1_7.002",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đọc kỹ, không hài lòng với một hiểu biết lướt qua.",
+      "text_vi": "Đọc kỹ hơn một chút, thay vì vội hài lòng với điều mới chỉ biết lướt qua.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -668,11 +710,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=1",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book01.1_7.002; corpus row 550; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations I.7; George W. Chrystal1902. Passage: to read with care; not to rest satisfied with a slight and\nsuperficial knowledge. Giữ lời học từ Rusticus về đọc kỹ, không biến thành khuyên nghi ngờ mọi hiểu biết. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book01.1_7.002; corpus row 550; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -684,27 +726,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Đọc kỹ, không hài lòng với một hiểu biết lướt qua.",
+        "semantic_intent": "Đọc kỹ hơn một chút, thay vì vội hài lòng với điều mới chỉ biết lướt qua.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     }
   ]
 }

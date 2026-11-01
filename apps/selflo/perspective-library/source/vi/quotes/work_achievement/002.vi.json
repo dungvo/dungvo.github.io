@@ -6,20 +6,20 @@
   "quotes": [
     {
       "id": "attributed.ma.iv_31.love_your_art",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy yêu nghề mình đã học, dù nghề ấy khiêm nhường, và tìm thấy niềm thư thái trong chính nó.",
+      "text_vi": "Một nghề khiêm nhường vẫn có thể đem lại niềm vui cho người đã học nó.",
       "subtitle_vi": null,
       "primary_theme": "work_achievement",
       "authorship": {
-        "author_id": "marcus_aurelius",
+        "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển IV, đoạn 31; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations IV.31; George W. Chrystal1902. Passage: Love the art which you have learned, humble though it be. Diễn ý khả năng yêu nghề đã học; không khuyên ở lại công việc gây hại hay buộc ai cũng yêu nghề hiện tại. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: George W. Chrystal (dịch), 1902; Quyển IV, đoạn 31; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [],
@@ -34,17 +34,17 @@
       },
       "rights": {
         "status": "public_domain",
-        "note": "Tác phẩm và bản dịch nguồn được sử dụng là các văn bản cổ hoặc các ấn bản thuộc phạm vi công cộng. Nội dung tiếng Việt trong Selflo được dịch, diễn đạt hoặc biên soạn lại trực tiếp từ các nguồn đã dẫn để truyền tải trung thành ý nghĩa gốc; không sao chép từ các bản dịch tiếng Việt hiện đại có bản quyền."
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Hãy yêu nghề mình đã học, dù nghề ấy khiêm nhường, và tìm thấy niềm thư thái trong chính nó.",
+        "semantic_intent": "Một nghề khiêm nhường vẫn có thể đem lại niềm vui cho người đã học nó.",
         "observation_key": null,
-        "structure_pattern": "attributed_quote"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
@@ -64,7 +64,13 @@
         ],
         "tie_break_order": 1131
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.v_01.proper_business",
@@ -545,10 +551,10 @@
     },
     {
       "id": "do_not_throw_the_stone_into_the_next_persons_lake",
-      "revision": 1,
+      "revision": 2,
       "kind": "selflo_original",
-      "title_vi": "Hồ của người kế tiếp",
-      "text_vi": "Ta không kiểm soát viên đá người khác ném xuống hồ mình, nhưng có thể chọn không ném nó sang hồ của người kế tiếp.",
+      "title_vi": "Chuyện khó chịu vừa nhận",
+      "text_vi": "Một chuyện khó chịu vừa nhận được không nhất thiết phải chuyển sang người kế tiếp.",
       "subtitle_vi": null,
       "primary_theme": "work_achievement",
       "authorship": {
@@ -558,7 +564,7 @@
         "source_url": null,
         "source_language": "vi",
         "source_label": "Selflo",
-        "source_detail": "Quote biên tập từ story gốc trong Authoring Library"
+        "source_detail": "Quote biên tập từ story gốc trong Authoring Library. Q10-B007: Lược hồ/đá để câu tự đứng, không quy mọi phản ứng thành ý chí tuyệt đối; giữ ý không truyền tiếp tổn thương. Canonical Selflo-owned story seed; story_id retained for Authoring, publisher may project null in Release while story remains draft."
       },
       "metadata": {
         "concepts": [],
@@ -574,17 +580,17 @@
       },
       "rights": {
         "status": "selflo_owned",
-        "note": "Chỉ dành cho Authoring Preview; cần owner duyệt câu chữ trước Release."
+        "note": "Giữ quyền selflo_owned đã có của seed truyện gốc, AI biên tập quote theo ủy quyền; không xác nhận owner acceptance cho Release. Story vẫn draft, không promote."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Ta không kiểm soát viên đá người khác ném xuống hồ mình, nhưng có thể chọn không ném nó sang hồ của người kế tiếp.",
+        "semantic_intent": "Một chuyện khó chịu vừa nhận được không nhất thiết phải chuyển sang người kế tiếp.",
         "observation_key": null,
-        "structure_pattern": "story_distillation"
+        "structure_pattern": "story_observation"
       },
       "display": {
         "mode": "poster",
@@ -607,7 +613,13 @@
         ],
         "tie_break_order": 3018
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:selflo"
+      ]
     },
     {
       "id": "small_daily_expense_reaches_month_end",

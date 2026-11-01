@@ -402,10 +402,10 @@
     },
     {
       "id": "research.liezi.day5.ch02.014",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Anh có biết vì sao mình bắn trúng không?",
+      "text_vi": "Bắn trúng đích rồi, anh có biết vì sao mình bắn trúng không?",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -421,12 +421,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Liezi / 列子 (received text; attribution debated)",
-        "work": "列子 / Liezi",
-        "source_url": "https://ctext.org/liezi/zh",
-        "source_language": null,
-        "source_label": "Liezi / 列子 (received text; attribution debated)",
-        "source_detail": "Research ID research.liezi.day5.ch02.014; corpus row 392; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Liệt Tử",
+        "work": "Liệt Tử · Thuyết Phù",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%88%97%E5%AD%90/%E8%AA%AA%E7%AC%A6%E7%AF%87",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Liệt Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 子知子之所以中者乎. Sửa locator từ chương2 sang Thuyết Phù/chương8; ghép đối tượng từ câu dẫn để lời hỏi đọc riêng được. Không giả đây là kết luận khoa học về kỹ năng. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.liezi.day5.ch02.014; corpus row 392; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -438,27 +438,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Anh có biết vì sao mình bắn trúng không?",
+        "semantic_intent": "Bắn trúng đích rồi, anh có biết vì sao mình bắn trúng không?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Liezi / 列子 (received text; attribution debated)"
+        "attribution_vi": "Phỏng theo Liệt Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.liezi.day5.ch04.031",

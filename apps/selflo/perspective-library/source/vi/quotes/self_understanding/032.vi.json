@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.day27.san_ren_cheng_hu",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một điều được lặp lại nhiều lần có thể bắt đầu nghe như sự thật dù bằng chứng không đổi.",
+      "text_vi": "Một người báo ngoài chợ có hổ, vua chưa tin; ba người cùng nói, ông bắt đầu tin.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -25,12 +25,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Chinese idiom tradition",
-        "work": "《戰國策．魏策二》",
+        "author_name": "Chiến Quốc Sách",
+        "work": "Chiến Quốc Sách · Ngụy SáchII · Bàng Thông và Ngụy Vương",
         "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=683&la=0&webMd=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Chinese idiom tradition",
-        "source_detail": "Research ID research.day27.san_ren_cheng_hu; corpus row 1179; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+        "source_language": "zh",
+        "source_label": "Phỏng theo Chiến Quốc Sách",
+        "source_detail": "Chiến Quốc Sách · Ngụy SáchII · Bàng Thông và Ngụy Vương. Passage: 夫市之無虎明矣，然而三人言而成虎. Kể lời thoại trong truyện Bàng Thông, không tuyên bố ba người nói là cơ chế tất định của tâm lý. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day27.san_ren_cheng_hu; corpus row 1179; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
       },
       "metadata": {
         "concepts": [],
@@ -42,27 +42,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Traditional/classical wording; dictionary site terms apply"
+        "status": "public_domain",
+        "note": "Cổ văn gốc đã thuộc public domain; Selflo tự dịch/diễn ý trực tiếp phần cổ văn được trích trong mục điển nguồn. Không dùng bản dịch, lời giải, chú thích hay ví dụ hiện đại của Bộ Giáo dục làm public-domain content."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Một điều được lặp lại nhiều lần có thể bắt đầu nghe như sự thật dù bằng chứng không đổi.",
+        "semantic_intent": "Một người báo ngoài chợ có hổ, vua chưa tin; ba người cùng nói, ông bắt đầu tin.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Chinese idiom tradition"
+        "attribution_vi": "Phỏng theo Chiến Quốc Sách"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day28.nodo",
@@ -243,10 +249,10 @@
     },
     {
       "id": "research.day30.samidare_oldpond",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Biển động và dải Ngân Hà cùng xuất hiện trong một khung nhìn: trải nghiệm có thể chứa đồng thời dữ dội và rộng lớn.",
+      "text_vi": "Biển động. Trải ngang đảo Sado, dải Ngân Hà.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -262,11 +268,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Bashō haiku corpus",
+        "work": "Haiku · nguyên Nhật · tuyển1903",
         "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.samidare_oldpond; corpus row 1186; content_nature=research_paraphrase; verification=B - wording/corpus verified."
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 荒海や佐渡に橫. Passage: 荒海や佐渡に橫ふ天の川. ID legacy có chữ oldpond nhưng passage là Arāumi, không bài ao cũ; giữ đúng tên/locator và bỏ kết luận tâm lý dữ dội/rộng lớn. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.samidare_oldpond; corpus row 1186; content_nature=research_paraphrase; verification=B - wording/corpus verified."
       },
       "metadata": {
         "concepts": [],
@@ -276,34 +282,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Biển động và dải Ngân Hà cùng xuất hiện trong một khung nhìn: trải nghiệm có thể chứa đồng thời dữ dội và rộng lớn.",
+        "semantic_intent": "Biển động. Trải ngang đảo Sado, dải Ngân Hà.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day30.kareeda",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một cành khô, con quạ, chiều thu — ít chi tiết vẫn có thể tạo đủ không gian để người đọc tự cảm.",
+      "text_vi": "Cành khô. Quạ đậu. Chiều thu.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -319,11 +331,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Bashō haiku corpus",
+        "work": "Haiku · nguyên Nhật · tuyển1903",
         "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.kareeda; corpus row 1187; content_nature=research_paraphrase; verification=B - wording/corpus verified."
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 枯枝に烏のとま. Passage: 枯枝に烏のとまりけり秋の暮. Bỏ bài học ít chi tiết tạo không gian; giữ hình ảnh trong bản1903, không thêm tâm trạng mà tác giả không nói. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.kareeda; corpus row 1187; content_nature=research_paraphrase; verification=B - wording/corpus verified."
       },
       "metadata": {
         "concepts": [],
@@ -333,34 +345,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Một cành khô, con quạ, chiều thu — ít chi tiết vẫn có thể tạo đủ không gian để người đọc tự cảm.",
+        "semantic_intent": "Cành khô. Quạ đậu. Chiều thu.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day30.kono_michi",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một con đường vắng không tự nói người đi đúng hay sai; hình ảnh giữ lại cảm giác cô độc mà không giải thích thay.",
+      "text_vi": "Con đường này, chẳng ai đi. Chiều thu.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -376,11 +394,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Late Bashō haiku",
+        "work": "Haiku · nguyên Nhật · tuyển1903",
         "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.kono_michi; corpus row 1189; content_nature=research_paraphrase; verification=B - wording/corpus verified."
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 此道や行く人な. Passage: 此道や行く人なしに秋の暮. Bỏ phán xét đúng/sai và hướng dẫn cảm cô độc; giữ khoảng mở hình ảnh. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.kono_michi; corpus row 1189; content_nature=research_paraphrase; verification=B - wording/corpus verified."
       },
       "metadata": {
         "concepts": [],
@@ -390,34 +408,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Một con đường vắng không tự nói người đi đúng hay sai; hình ảnh giữ lại cảm giác cô độc mà không giải thích thay.",
+        "semantic_intent": "Con đường này, chẳng ai đi. Chiều thu.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day31.saadi.001",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Địa vị và tuổi tác không thay thế năng lực và phán đoán.",
+      "text_vi": "Tuổi tác chưa thay được sự sáng suốt, địa vị chưa thay được năng lực.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -435,11 +459,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Saadi",
-        "work": "Gulistan / Bustan",
-        "source_url": "https://ganjoor.net/saadi/golestan",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Saadi",
-        "source_detail": "Research ID research.day31.saadi.001; corpus row 1190; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
+        "work": "Gulistan · James Ross, anthology1900",
+        "source_url": "https://www.gutenberg.org/cache/epub/13060/pg13060.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Saadi",
+        "source_detail": "Gulistan I, truyệnV trong anthology1900, đoạn người con viên quan ở Delhi. Passage: worth rests not on riches, but on talents. Diễn ý lời dẫn trong truyện viên quan trẻ; không phân hạng phẩm giá theo hiệu suất, không giữ sự quy kết giai cấp trong bản dịch cũ. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day31.saadi.001; corpus row 1190; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
       },
       "metadata": {
         "concepts": [],
@@ -452,27 +476,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify before release"
+        "status": "public_domain",
+        "note": "Nguyên tác Saadi cổ; James Ross1759–1831, bản dịch1823, anthology1900. Chỉ diễn ý phần Gulistan. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Địa vị và tuổi tác không thay thế năng lực và phán đoán.",
+        "semantic_intent": "Tuổi tác chưa thay được sự sáng suốt, địa vị chưa thay được năng lực.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Saadi"
+        "attribution_vi": "Phỏng theo Saadi"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day31.saadi.002",
@@ -538,10 +568,10 @@
     },
     {
       "id": "research.day31.saadi.003",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Quyền lực nhỏ nếu được lặp lại mà không giới hạn có thể thành bất công lớn.",
+      "text_vi": "Vua lấy một quả táo, lính có thể nhổ cả cây: một đặc quyền nhỏ có thể mở đường cho điều lớn hơn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -557,11 +587,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Saadi",
-        "work": "Gulistan / Bustan",
-        "source_url": "https://ganjoor.net/saadi/golestan",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Saadi",
-        "source_detail": "Research ID research.day31.saadi.003; corpus row 1192; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
+        "work": "Gulistan · James Ross, anthology1900",
+        "source_url": "https://www.gutenberg.org/cache/epub/13060/pg13060.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Saadi",
+        "source_detail": "Gulistan I, truyệnXIX trong anthology1900, Nushirvan trả tiền muối. Passage: Originally, the basis of\noppression in this world was small. Giữ ví dụ vua/lính trong truyện muối, không nêu như dự đoán mọi sai sót nhỏ tất yếu leo thang. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day31.saadi.003; corpus row 1192; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
       },
       "metadata": {
         "concepts": [],
@@ -571,34 +601,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify before release"
+        "status": "public_domain",
+        "note": "Nguyên tác Saadi cổ; James Ross1759–1831, bản dịch1823, anthology1900. Chỉ diễn ý phần Gulistan. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Quyền lực nhỏ nếu được lặp lại mà không giới hạn có thể thành bất công lớn.",
+        "semantic_intent": "Vua lấy một quả táo, lính có thể nhổ cả cây: một đặc quyền nhỏ có thể mở đường cho điều lớn hơn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Saadi"
+        "attribution_vi": "Phỏng theo Saadi"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day31.saadi.007",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi hết đường lui, con người có thể nói hoặc làm khác với lúc còn an toàn.",
+      "text_vi": "Trong truyện của Saadi, người tù sắp bị giết mới dám nói điều đã giữ trong lòng.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -614,11 +650,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Saadi",
-        "work": "Gulistan / Bustan",
-        "source_url": "https://ganjoor.net/saadi/golestan",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Saadi",
-        "source_detail": "Research ID research.day31.saadi.007; corpus row 1196; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
+        "work": "Gulistan · James Ross, anthology1900",
+        "source_url": "https://www.gutenberg.org/cache/epub/13060/pg13060.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Saadi",
+        "source_detail": "Gulistan I, truyệnI, người tù và hai vizir; anthology1900. Passage: whoever shall wash his hands of life will utter whatever he may\nharbor in his heart. Giữ rõ đây là tình huống truyện, bỏ suy diễn về tất cả người hết đường lui; không ca ngợi nguy hiểm hay khuyên liều mạng. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day31.saadi.007; corpus row 1196; content_nature=research_paraphrase; verification=B - Scholarly/authoritative source map; passage-level exact wording not stored."
       },
       "metadata": {
         "concepts": [],
@@ -628,27 +664,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify before release"
+        "status": "public_domain",
+        "note": "Nguyên tác Saadi cổ; James Ross1759–1831, bản dịch1823, anthology1900. Chỉ diễn ý phần Gulistan. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi hết đường lui, con người có thể nói hoặc làm khác với lúc còn an toàn.",
+        "semantic_intent": "Trong truyện của Saadi, người tù sắp bị giết mới dám nói điều đã giữ trong lòng.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Saadi"
+        "attribution_vi": "Phỏng theo Saadi"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day32.rumi_hafez.003",

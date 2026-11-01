@@ -1,0 +1,17 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Python bytecode and local test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local Python environments
+.venv/
+venv/
+
+# Local app export archives (keep content/source archives elsewhere trackable)
+/apps/*.zip

@@ -140,10 +140,10 @@
     },
     {
       "id": "research.day26.li_lou_ii_not_do",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có những điều mình quyết định không làm, rồi mới có thể dồn sức cho điều mình chọn làm.",
+      "text_vi": "Có những việc quyết định không làm, rồi mới có thể làm được việc mình chọn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -159,12 +159,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Mencius / 孟子",
-        "work": "孟子 / Mencius",
-        "source_url": "https://ctext.org/mengzi/li-lou-ii",
-        "source_language": null,
-        "source_label": "Mencius / 孟子",
-        "source_detail": "Research ID research.day26.li_lou_ii_not_do; corpus row 1116; content_nature=translated_quote; verification=A/B - passage/location verified."
+        "author_name": "Mạnh Tử",
+        "work": "Mạnh Tử · Ly Lâu hạ",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%AD%9F%E5%AD%90/%E9%9B%A2%E5%A9%81%E4%B8%8B",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Mạnh Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 人有不為也，而後可以有為. 離婁下 8; giữ lựa chọn có/không, không thêm lời hứa tập trung là chắc thành công. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.day26.li_lou_ii_not_do; corpus row 1116; content_nature=translated_quote; verification=A/B - passage/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -176,34 +176,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient text public domain; platform/translation terms separate"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Có những điều mình quyết định không làm, rồi mới có thể dồn sức cho điều mình chọn làm.",
+        "semantic_intent": "Có những việc quyết định không làm, rồi mới có thể làm được việc mình chọn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Mencius / 孟子"
+        "attribution_vi": "Phỏng theo Mạnh Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day26.liang_hui_wang_autumnhair",
-      "revision": 2,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có thể nhìn thấy điều cực nhỏ mà vẫn bỏ sót một bó củi lớn ngay trước mắt — năng lực không tự bảo đảm mình đang dùng nó đúng chỗ.",
+      "text_vi": "Nhìn rõ đầu sợi lông mùa thu mà không thấy cả xe củi — có năng lực chưa chắc đã dùng đến năng lực ấy.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -219,12 +225,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Mencius / 孟子",
-        "work": "孟子 / Mencius",
-        "source_url": "https://ctext.org/mengzi",
-        "source_language": null,
-        "source_label": "Mencius / 孟子",
-        "source_detail": "Research ID research.day26.liang_hui_wang_autumnhair; corpus row 1123; content_nature=translated_quote; verification=A/B - passage/location verified."
+        "author_name": "Mạnh Tử",
+        "work": "Mạnh Tử · Lương Huệ Vương thượng",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%AD%9F%E5%AD%90/%E6%A2%81%E6%83%A0%E7%8E%8B%E4%B8%8A",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Mạnh Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 明足以察秋毫之末. 梁惠王上 7, giữ phép so sánh năng/bất vi. Không thay thành chẩn đoán khả năng nhận thức. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.day26.liang_hui_wang_autumnhair; corpus row 1123; content_nature=translated_quote; verification=A/B - passage/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -236,27 +242,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient text public domain; platform/translation terms separate"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Có thể nhìn thấy điều cực nhỏ mà vẫn bỏ sót một bó củi lớn ngay trước mắt — năng lực không tự bảo đảm mình đang dùng nó đúng chỗ.",
+        "semantic_intent": "Nhìn rõ đầu sợi lông mùa thu mà không thấy cả xe củi — có năng lực chưa chắc đã dùng đến năng lực ấy.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Mencius / 孟子"
+        "attribution_vi": "Phỏng theo Mạnh Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day27.guo_you_bu_ji",
@@ -317,10 +329,10 @@
     },
     {
       "id": "research.day27.han_dan_xue_bu",
-      "revision": 2,
+      "revision": 4,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Học theo người khác đến mức đánh mất cách đi của mình là một rủi ro khác với học hỏi.",
+      "text_vi": "Người học cách đi ở Hàm Đan chưa học được bước mới, đã quên cả bước cũ và phải bò về.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -336,12 +348,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Chinese idiom tradition",
-        "work": "《莊子．秋水》 tradition",
+        "author_name": "Trang Tử",
+        "work": "Trang Tử · Thu Thủy · người Thọ Lăng học đi ở Hàm Đan",
         "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=712&powerMode=1",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Chinese idiom tradition",
-        "source_detail": "Research ID research.day27.han_dan_xue_bu; corpus row 1177; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+        "source_language": "zh",
+        "source_label": "Phỏng theo Trang Tử",
+        "source_detail": "Trang Tử · Thu Thủy · người Thọ Lăng học đi ở Hàm Đan. Passage: 未得國能，又失其故行矣. Giữ ngụ ngôn Thu Thủy, không nói học từ người khác tự nó khiến mất bản sắc. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day27.han_dan_xue_bu; corpus row 1177; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
       },
       "metadata": {
         "concepts": [],
@@ -353,34 +365,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Traditional/classical wording; dictionary site terms apply"
+        "status": "public_domain",
+        "note": "Cổ văn gốc đã thuộc public domain; Selflo tự dịch/diễn ý trực tiếp phần cổ văn được trích trong mục điển nguồn. Không dùng bản dịch, lời giải, chú thích hay ví dụ hiện đại của Bộ Giáo dục làm public-domain content."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Học theo người khác đến mức đánh mất cách đi của mình là một rủi ro khác với học hỏi.",
+        "semantic_intent": "Người học cách đi ở Hàm Đan chưa học được bước mới, đã quên cả bước cũ và phải bò về.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Chinese idiom tradition"
+        "attribution_vi": "Phỏng theo Trang Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day27.hua_she_tian_zu",
-      "revision": 2,
+      "revision": 4,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Sau khi một việc đã đủ, thêm nữa có thể làm nó kém đi thay vì tốt hơn.",
+      "text_vi": "Người vẽ xong con rắn sớm nhất lại mất phần rượu vì còn mải vẽ thêm chân cho nó.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -395,12 +413,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Chinese idiom tradition",
-        "work": "《戰國策．齊策二》",
+        "author_name": "Chiến Quốc Sách",
+        "work": "Chiến Quốc Sách · Tề SáchII · Trần Chẩn kể chuyện vẽ rắn",
         "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-23&la=0&webMd=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Chinese idiom tradition",
-        "source_detail": "Research ID research.day27.hua_she_tian_zu; corpus row 1178; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+        "source_language": "zh",
+        "source_label": "Phỏng theo Chiến Quốc Sách",
+        "source_detail": "Chiến Quốc Sách · Tề SáchII · Trần Chẩn kể chuyện vẽ rắn. Passage: 為蛇足者，終亡其酒. Giữ quy tắc cuộc thi trong ngụ ngôn, không suy mọi thêm thắt đều làm xấu. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day27.hua_she_tian_zu; corpus row 1178; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
       },
       "metadata": {
         "concepts": [],
@@ -410,34 +428,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Traditional/classical wording; dictionary site terms apply"
+        "status": "public_domain",
+        "note": "Cổ văn gốc đã thuộc public domain; Selflo tự dịch/diễn ý trực tiếp phần cổ văn được trích trong mục điển nguồn. Không dùng bản dịch, lời giải, chú thích hay ví dụ hiện đại của Bộ Giáo dục làm public-domain content."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Sau khi một việc đã đủ, thêm nữa có thể làm nó kém đi thay vì tốt hơn.",
+        "semantic_intent": "Người vẽ xong con rắn sớm nhất lại mất phần rượu vì còn mải vẽ thêm chân cho nó.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Chinese idiom tradition"
+        "attribution_vi": "Phỏng theo Chiến Quốc Sách"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day27.ke_zhou_qiu_jian",
-      "revision": 2,
+      "revision": 4,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "環 cảnh đã đổi mà phương pháp vẫn giữ nguyên có thể khiến một dấu mốc từng đúng trở thành sai.",
+      "text_vi": "Thuyền đã đi, kiếm vẫn ở lại dưới nước; dấu khắc trên thuyền không còn chỉ đúng chỗ kiếm rơi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -453,12 +477,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Chinese idiom tradition",
-        "work": "《呂氏春秋．察今》",
+        "author_name": "Lã Thị Xuân Thu",
+        "work": "Lã Thị Xuân Thu · Thận Đại Lãm · Sát Kim",
         "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=43&la=0&webMd=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Chinese idiom tradition",
-        "source_detail": "Research ID research.day27.ke_zhou_qiu_jian; corpus row 1173; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+        "source_language": "zh",
+        "source_label": "Phỏng theo Lã Thị Xuân Thu",
+        "source_detail": "Lã Thị Xuân Thu · Thận Đại Lãm · Sát Kim. Passage: 舟已行矣，而劍不行. Giữ sự việc và lý do dấu mốc sai, không biến thành mệnh lệnh phải đổi mọi cách làm. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day27.ke_zhou_qiu_jian; corpus row 1173; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
       },
       "metadata": {
         "concepts": [],
@@ -470,34 +494,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Traditional/classical wording; dictionary site terms apply"
+        "status": "public_domain",
+        "note": "Cổ văn gốc đã thuộc public domain; Selflo tự dịch/diễn ý trực tiếp phần cổ văn được trích trong mục điển nguồn. Không dùng bản dịch, lời giải, chú thích hay ví dụ hiện đại của Bộ Giáo dục làm public-domain content."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "環 cảnh đã đổi mà phương pháp vẫn giữ nguyên có thể khiến một dấu mốc từng đúng trở thành sai.",
+        "semantic_intent": "Thuyền đã đi, kiếm vẫn ở lại dưới nước; dấu khắc trên thuyền không còn chỉ đúng chỗ kiếm rơi.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Chinese idiom tradition"
+        "attribution_vi": "Phỏng theo Lã Thị Xuân Thu"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day27.mang_ren_mo_xiang",
-      "revision": 2,
+      "revision": 4,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một phần trải nghiệm có thể đúng mà vẫn chưa đủ để mô tả toàn bộ sự vật.",
+      "text_vi": "Chạm vào tai voi, người ấy nói voi giống cái nia; chạm vào đuôi, người khác lại nói voi giống sợi dây.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -512,12 +542,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Chinese idiom tradition",
-        "work": "《大般涅槃經》卷三十",
+        "author_name": "Truyền thống Đại Bát Niết-bàn",
+        "work": "Đại Bát Niết-bàn kinh · quyển30 · dụ những người chạm voi",
         "source_url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-321&la=0&webMd=2",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Chinese idiom tradition",
-        "source_detail": "Research ID research.day27.mang_ren_mo_xiang; corpus row 1174; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
+        "source_language": "zh",
+        "source_label": "Phỏng theo Truyền thống Đại Bát Niết-bàn",
+        "source_detail": "Đại Bát Niết-bàn kinh · quyển30 · dụ những người chạm voi. Passage: 其觸耳者，言象如箕. Giữ ví dụ những phần khác nhau thay kết luận lý thuyết mọi người đều đúng; không dùng khiếm thị làm nhãn chê con người. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day27.mang_ren_mo_xiang; corpus row 1174; content_nature=research_paraphrase; verification=A/B - idiom + allusion source verified."
       },
       "metadata": {
         "concepts": [],
@@ -527,27 +557,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Traditional/classical wording; dictionary site terms apply"
+        "status": "public_domain",
+        "note": "Cổ văn gốc đã thuộc public domain; Selflo tự dịch/diễn ý trực tiếp phần cổ văn được trích trong mục điển nguồn. Không dùng bản dịch, lời giải, chú thích hay ví dụ hiện đại của Bộ Giáo dục làm public-domain content."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Một phần trải nghiệm có thể đúng mà vẫn chưa đủ để mô tả toàn bộ sự vật.",
+        "semantic_intent": "Chạm vào tai voi, người ấy nói voi giống cái nia; chạm vào đuôi, người khác lại nói voi giống sợi dây.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Chinese idiom tradition"
+        "attribution_vi": "Phỏng theo Truyền thống Đại Bát Niết-bàn"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day71.007",

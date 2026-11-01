@@ -66,10 +66,10 @@
     },
     {
       "id": "research.liezi.day5.ch07.060",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Văn bản cho rằng con người khó nghỉ vì bị kéo bởi sống lâu, danh, vị và của.",
+      "text_vi": "Mải mong sống lâu, có danh, có địa vị, có của — người ta có thể chẳng lúc nào được nghỉ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -85,12 +85,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Liezi / 列子 (received text; attribution debated)",
-        "work": "列子 / Liezi",
-        "source_url": "https://ctext.org/liezi/zh",
-        "source_language": null,
-        "source_label": "Liezi / 列子 (received text; attribution debated)",
-        "source_detail": "Research ID research.liezi.day5.ch07.060; corpus row 438; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Liệt Tử",
+        "work": "Liệt Tử · Dương Chu",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%88%97%E5%AD%90/%E6%A5%8A%E6%9C%B1%E7%AF%87",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Liệt Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 一爲壽，二爲名，三爲位，四爲貨. Giữ bốn mối bận của nguồn, diễn ý có thể, không gán mọi căng thẳng là do tham muốn hoặc bỏ điều kiện vật chất. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.liezi.day5.ch07.060; corpus row 438; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -102,27 +102,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Văn bản cho rằng con người khó nghỉ vì bị kéo bởi sống lâu, danh, vị và của.",
+        "semantic_intent": "Mải mong sống lâu, có danh, có địa vị, có của — người ta có thể chẳng lúc nào được nghỉ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Liezi / 列子 (received text; attribution debated)"
+        "attribution_vi": "Phỏng theo Liệt Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.liezi.day5.ch08.069",
@@ -183,10 +189,10 @@
     },
     {
       "id": "research.liezi.day5.ch08.073",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Cẩn trọng với lời và hành động vì chúng có thể được người khác lặp lại.",
+      "text_vi": "Cẩn trọng lời mình nói, vì có người sẽ nói theo; cẩn trọng việc mình làm, vì có người sẽ làm theo.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -201,12 +207,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Liezi / 列子 (received text; attribution debated)",
-        "work": "列子 / Liezi",
-        "source_url": "https://ctext.org/liezi/zh",
-        "source_language": null,
-        "source_label": "Liezi / 列子 (received text; attribution debated)",
-        "source_detail": "Research ID research.liezi.day5.ch08.073; corpus row 451; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Liệt Tử",
+        "work": "Liệt Tử · Thuyết Phù",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%88%97%E5%AD%90/%E8%AA%AA%E7%AC%A6%E7%AF%87",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Liệt Tử",
+        "source_detail": "Thuyết Phù; lời Quan Doãn dặn Liệt Tử. Đoạn đối chiếu: 慎爾言，將有和之. Giữ tác động lan truyền lời/hành động của nguyên văn; không nói mọi phản ứng của người khác đều do lỗi mình. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.liezi.day5.ch08.073; corpus row 451; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -216,27 +222,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Cẩn trọng với lời và hành động vì chúng có thể được người khác lặp lại.",
+        "semantic_intent": "Cẩn trọng lời mình nói, vì có người sẽ nói theo; cẩn trọng việc mình làm, vì có người sẽ làm theo.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Liezi / 列子 (received text; attribution debated)"
+        "attribution_vi": "Phỏng theo Liệt Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.liezi.day5.ch08.074",
@@ -297,10 +309,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch09.008",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Giữ tâm mở và ý chí bớt cứng để có thể nhìn sáng hơn.",
+      "text_vi": "Giữ lòng rộng mở, bớt cố chấp vào ý riêng để nhìn việc cho rõ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -315,12 +327,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/zhu-shu-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch09.008; corpus row 460; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Chủ thuật huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E4%B8%BB%E8%A1%93%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 虛心而弱志，清明而不暗. 弱志 trong phép người trị nghe việc; diễn ý có phạm vi, không xem ý chí yếu là đức tính phổ quát. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch09.008; corpus row 460; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -330,34 +342,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Giữ tâm mở và ý chí bớt cứng để có thể nhìn sáng hơn.",
+        "semantic_intent": "Giữ lòng rộng mở, bớt cố chấp vào ý riêng để nhìn việc cho rõ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch09.009",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Dùng sức của nhiều người như xe, dùng trí của nhiều người như ngựa.",
+      "text_vi": "Lấy sức của nhiều người làm xe, lấy trí của nhiều người làm ngựa.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -372,12 +390,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/zhu-shu-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch09.009; corpus row 461; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Chủ thuật huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E4%B8%BB%E8%A1%93%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 乘眾勢以為車，禦眾智以為馬. Giữ thế tập thể và trí tập thể, không tráo thành ra lệnh huy động mọi người. Attribution Hoài Nam Tử, không tác giả hiện đại. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch09.009; corpus row 461; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -387,27 +405,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Dùng sức của nhiều người như xe, dùng trí của nhiều người như ngựa.",
+        "semantic_intent": "Lấy sức của nhiều người làm xe, lấy trí của nhiều người làm ngựa.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch09.010",
@@ -468,10 +492,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch09.012",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trong văn bản, người có trí và người có dũng vẫn được khen vì biết hỏi.",
+      "text_vi": "Văn Vương có trí vẫn ham hỏi; Vũ Vương có dũng vẫn ham hỏi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -487,12 +511,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/zhu-shu-xun/zh",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch09.012; corpus row 464; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Chủ thuật huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E4%B8%BB%E8%A1%93%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 文王智而好問，故聖；武王勇而好問，故勝. Bỏ vì vậy thành công tất định, giữ hành vi hỏi của hai nhân vật; ghi diễn ý chứ không nói đây là câu Khổng Tử. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch09.012; corpus row 464; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -504,27 +528,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Trong văn bản, người có trí và người có dũng vẫn được khen vì biết hỏi.",
+        "semantic_intent": "Văn Vương có trí vẫn ham hỏi; Vũ Vương có dũng vẫn ham hỏi.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch13.014",
@@ -588,10 +618,10 @@
     },
     {
       "id": "research.huainanzi.day6.ch16.025",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Cùng vật liệu nhưng thứ tự khác có thể cho kết quả khác.",
+      "text_vi": "Kim đi trước, chỉ theo sau thì may được áo; đảo ngược lại thì không.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -606,12 +636,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "work": "淮南子 / Huainanzi",
-        "source_url": "https://ctext.org/huainanzi/shuo-shan-xun/zhs",
-        "source_language": null,
-        "source_label": "Huainanzi / 淮南子 (compiled under Liu An court)",
-        "source_detail": "Research ID research.huainanzi.day6.ch16.025; corpus row 477; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Hoài Nam Tử",
+        "work": "Hoài Nam Tử · Thuyết sơn huấn",
+        "source_url": "https://zh.wikisource.org/wiki/%E6%B7%AE%E5%8D%97%E5%AD%90/%E8%AA%AA%E5%B1%B1%E8%A8%93",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Hoài Nam Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 先針而後縷，可以成帷. Giữ ví dụ thứ tự thao tác; không diễn ý thành đảo mọi bước đều thất bại. Bản Việt tự diễn giải ví dụ kim/chỉ trong nguồn. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.huainanzi.day6.ch16.025; corpus row 477; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -621,27 +651,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Cùng vật liệu nhưng thứ tự khác có thể cho kết quả khác.",
+        "semantic_intent": "Kim đi trước, chỉ theo sau thì may được áo; đảo ngược lại thì không.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Huainanzi / 淮南子 (compiled under Liu An court)"
+        "attribution_vi": "Phỏng theo Hoài Nam Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.huainanzi.day6.ch18.045",

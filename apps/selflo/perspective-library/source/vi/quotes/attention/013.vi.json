@@ -68,10 +68,10 @@
     },
     {
       "id": "research.dhammapada.day11.v334",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ham muốn không được nhìn thấy có thể leo phủ đời sống như dây leo, kéo tâm trí từ thứ này sang thứ khác.",
+      "text_vi": "Ham muốn không được nhìn lại có thể mọc như dây leo, kéo ta hết chỗ này sang chỗ khác.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -87,12 +87,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Dhammapada (Buddhist canonical verse tradition)",
-        "work": "Dhammapada (Khuddaka Nikāya 2)",
-        "source_url": "https://ancient-buddhist-texts.net/Texts-and-Translations/Dhammapada/24-Craving.htm",
-        "source_language": null,
-        "source_label": "Dhammapada (Buddhist canonical verse tradition)",
-        "source_detail": "Research ID research.dhammapada.day11.v334; corpus row 742; content_nature=translated_quote; verification=A - Pāḷi verse source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Kinh Pháp Cú · F. Max Muller1881",
+        "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Kinh Pháp Cú",
+        "source_detail": "Pháp Cú334; diễn ý có lược cảnh tái sinh. Đoạn đối chiếu: grows like a creeper. Kệ334, giữ hình ảnh dây leo và khỉ tìm trái; không trình bày như cơ chế nghiện đã được kiểm chứng. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.dhammapada.day11.v334; corpus row 742; content_nature=translated_quote; verification=A - Pāḷi verse source located."
       },
       "metadata": {
         "concepts": [],
@@ -104,34 +104,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translation copyright separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Ham muốn không được nhìn thấy có thể leo phủ đời sống như dây leo, kéo tâm trí từ thứ này sang thứ khác.",
+        "semantic_intent": "Ham muốn không được nhìn lại có thể mọc như dây leo, kéo ta hết chỗ này sang chỗ khác.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Dhammapada (Buddhist canonical verse tradition)"
+        "attribution_vi": "Phỏng theo Kinh Pháp Cú"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn10_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ở đây, người thực hành quan sát thân như thân, với sự tỉnh táo, hiểu rõ và có mặt.",
+      "text_vi": "Quan sát thân như thân, với sự tỉnh táo và chú tâm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -147,12 +153,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 10 Satipaṭṭhānasutta",
-        "source_url": "https://suttacentral.net/mn10/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn10_01; corpus row 744; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN10",
+        "source_url": "https://suttacentral.net/mn10/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN10",
+        "source_detail": "MN10:3.2; kāye kāyānupassī. Đoạn đối chiếu: It’s when a mendicant meditates by observing an aspect of the body—keen, aware, and mindful, rid of covetousness and displeasure for the world.. Giữ sự thực hành trong MN10, không thêm khẳng định cơ thể có đáp án cho mọi khó khăn. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn10_01; corpus row 744; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -164,27 +170,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Ở đây, người thực hành quan sát thân như thân, với sự tỉnh táo, hiểu rõ và có mặt.",
+        "semantic_intent": "Quan sát thân như thân, với sự tỉnh táo và chú tâm.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN10"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn10_02",
@@ -248,10 +260,10 @@
     },
     {
       "id": "research.mn.day12.mn118_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi hơi thở dài, chỉ cần biết hơi thở đang dài.",
+      "text_vi": "Thở vào dài, biết mình thở vào dài; thở ra dài, biết mình thở ra dài.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -267,12 +279,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 118 Ānāpānassatisutta",
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN118",
         "source_url": "https://suttacentral.net/mn118/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn118_01; corpus row 768; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "source_language": "pi",
+        "source_label": "Phỏng theo Trung Bộ · MN118",
+        "source_detail": "MN118:18.1; dīghaṁ vā assasanto. Đoạn đối chiếu: Dīghaṁ vā assasanto ‘dīghaṁ assasāmī’ti pajānāti, dīghaṁ vā passasanto ‘dīghaṁ passasāmī’ti pajānāti;. Dīgha trong nguyên Pali; witness Sujato hiện dịch heavily thay vì long. Bản Việt tự dịch Pali theo nghĩa dài, không giả dịch sát bản Anh. Chỉ ghi nhận hơi thở, không chỉ dẫn ép/nén thở. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn118_01; corpus row 768; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -284,27 +296,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi hơi thở dài, chỉ cần biết hơi thở đang dài.",
+        "semantic_intent": "Thở vào dài, biết mình thở vào dài; thở ra dài, biết mình thở ra dài.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN118"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn118_02",
@@ -557,10 +575,10 @@
     },
     {
       "id": "research.reaudit.day19.katha_chariot",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hình ảnh cỗ xe phân biệt thân, giác quan, tâm trí và năng lực phân định; hữu ích như metaphor về coordination, không phải mô hình tâm lý khoa học.",
+      "text_vi": "Thân như cỗ xe, giác quan như ngựa, tâm như dây cương, trí như người cầm cương.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -576,12 +594,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Upanishadic tradition",
-        "work": "Katha Upanishad",
-        "source_url": "https://www.upasanayoga.org/EngU.htm",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Upanishadic tradition",
-        "source_detail": "Research ID research.reaudit.day19.katha_chariot; corpus row 1087; content_nature=research_paraphrase; verification=B - location verified."
+        "author_name": "Katha Upanishad",
+        "work": "Katha Upanishad · Max Muller1884",
+        "source_url": "https://sacred-texts.com/book/the-upanishads-part-ii/i-3",
+        "source_language": "en",
+        "source_label": "Phỏng theo Katha Upanishad",
+        "source_detail": "KathaI.3.3–4; Max Muller1884. Đoạn đối chiếu: Know the Self to be sitting in the chariot. KathaI.3.3–4, trích các vế của ẩn dụ, không xem là mô hình thần kinh; phần Self/người ngồi xe giữ trong source_detail. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.reaudit.day19.katha_chariot; corpus row 1087; content_nature=research_paraphrase; verification=B - location verified."
       },
       "metadata": {
         "concepts": [],
@@ -593,27 +611,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source; translation rights vary"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Hình ảnh cỗ xe phân biệt thân, giác quan, tâm trí và năng lực phân định; hữu ích như metaphor về coordination, không phải mô hình tâm lý khoa học.",
+        "semantic_intent": "Thân như cỗ xe, giác quan như ngựa, tâm như dây cương, trí như người cầm cương.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Upanishadic tradition"
+        "attribution_vi": "Phỏng theo Katha Upanishad"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.reaudit.day23.nguyentrai_nature_attention",

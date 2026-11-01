@@ -470,10 +470,10 @@
     },
     {
       "id": "research.day38.004",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tôn trọng người khác có thể là một thực hành, không chỉ là phần thưởng khi họ đáp ứng kỳ vọng.",
+      "text_vi": "Ai đáng được kính trọng? Người biết kính trọng người khác.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -488,12 +488,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Jewish wisdom traditions",
-        "work": "Tanakh + Pirkei Avot / Mishnah",
-        "source_url": "https://www.sefaria.org/Pirkei_Avot",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Jewish wisdom traditions",
-        "source_detail": "Research ID research.day38.004; corpus row 1285; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
+        "author_name": "Ben Zoma",
+        "work": "Pirkei Avot · Joseph I. Gorfinkle1913",
+        "source_url": "https://www.gutenberg.org/cache/epub/8547/pg8547.txt",
+        "source_language": "en",
+        "source_label": "Ben Zoma · Pirkei Avot",
+        "source_detail": "Pirkei Avot4:1; Ben Zoma. Đoạn đối chiếu: He who honors others. Avot4:1; bỏ điều kiện người khác đáp ứng kỳ vọng không có trong passage, giữ cấu trúc câu hỏi truyền thống. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day38.004; corpus row 1285; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
       },
       "metadata": {
         "concepts": [],
@@ -503,34 +503,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify item-level rights"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Tôn trọng người khác có thể là một thực hành, không chỉ là phần thưởng khi họ đáp ứng kỳ vọng.",
+        "semantic_intent": "Ai đáng được kính trọng? Người biết kính trọng người khác.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Jewish wisdom traditions"
+        "attribution_vi": "Ben Zoma · Pirkei Avot"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day38.005",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một lời phán xét công bằng cần chừa chỗ cho phần câu chuyện mình chưa biết.",
+      "text_vi": "Đừng vội phán xét người khác khi chưa đứng vào hoàn cảnh của họ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -547,12 +553,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Jewish wisdom traditions",
-        "work": "Tanakh + Pirkei Avot / Mishnah",
-        "source_url": "https://www.sefaria.org/Pirkei_Avot",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Jewish wisdom traditions",
-        "source_detail": "Research ID research.day38.005; corpus row 1286; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
+        "author_name": "Hillel",
+        "work": "Pirkei Avot · Joseph I. Gorfinkle1913",
+        "source_url": "https://www.gutenberg.org/cache/epub/8547/pg8547.txt",
+        "source_language": "en",
+        "source_label": "Hillel · Pirkei Avot",
+        "source_detail": "Pirkei Avot2:4; Hillel; Gorfinkle chươngII mục5. Đoạn đối chiếu: judge not thy neighbor until thou art come into his place. Avot2:4, Hillel; không yêu cầu đình chỉ mọi đánh giá hành vi gây hại, chỉ giữ khoảng trống cho phần mình chưa biết. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day38.005; corpus row 1286; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
       },
       "metadata": {
         "concepts": [],
@@ -565,27 +571,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify item-level rights"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Một lời phán xét công bằng cần chừa chỗ cho phần câu chuyện mình chưa biết.",
+        "semantic_intent": "Đừng vội phán xét người khác khi chưa đứng vào hoàn cảnh của họ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Jewish wisdom traditions"
+        "attribution_vi": "Hillel · Pirkei Avot"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day38.008",

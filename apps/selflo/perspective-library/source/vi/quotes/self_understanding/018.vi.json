@@ -642,10 +642,10 @@
     },
     {
       "id": "research.liezi.day5.ch01.008",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trời đất không làm trọn mọi việc; người sáng không có mọi năng lực; không vật nào hữu dụng cho mọi việc.",
+      "text_vi": "Trời đất không làm trọn mọi việc; người sáng suốt không có mọi tài; không vật nào dùng được cho mọi việc.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -661,12 +661,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Liezi / 列子 (received text; attribution debated)",
-        "work": "列子 / Liezi",
-        "source_url": "https://ctext.org/liezi/zh",
-        "source_language": null,
-        "source_label": "Liezi / 列子 (received text; attribution debated)",
-        "source_detail": "Research ID research.liezi.day5.ch01.008; corpus row 386; content_nature=translated_quote; verification=A - Primary source."
+        "author_name": "Liệt Tử",
+        "work": "Liệt Tử · Thiên Thụy",
+        "source_url": "https://zh.wikisource.org/wiki/%E5%88%97%E5%AD%90/%E5%A4%A9%E7%91%9E%E7%AF%87",
+        "source_language": "zh",
+        "source_label": "Phỏng theo Liệt Tử",
+        "source_detail": "Locator/đoạn đối chiếu: 天地無全功，聖人無全能，萬物無全用. Thiên Thụy; giữ quan điểm giới hạn/phù hợp, không lấy thánh nhân trong sách làm fact về cá nhân lịch sử. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.liezi.day5.ch01.008; corpus row 386; content_nature=translated_quote; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -678,27 +678,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain ancient text / edition terms to verify"
+        "status": "public_domain",
+        "note": "Chỉ dùng cổ văn nguyên tác hoặc bản Anh James Legge (1815–1897) được Project Gutenberg ghi public domain; bản Việt do Selflo tự diễn ý. Không sao chép bản dịch Việt hiện đại, chú thích hiện đại, ảnh hoặc giao diện witness. Source/locator và text hash tại reports/q10-b005-full-local-review-2026-10-31.json. Với Wikisource giữ attribution và URL/oldid witness; chỉ lấy đoạn nguyên tác cổ, không lấy phần sửa/chú giải sáng tạo hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Trời đất không làm trọn mọi việc; người sáng không có mọi năng lực; không vật nào hữu dụng cho mọi việc.",
+        "semantic_intent": "Trời đất không làm trọn mọi việc; người sáng suốt không có mọi tài; không vật nào dùng được cho mọi việc.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Liezi / 列子 (received text; attribution debated)"
+        "attribution_vi": "Phỏng theo Liệt Tử"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.liezi.day5.ch01.009",

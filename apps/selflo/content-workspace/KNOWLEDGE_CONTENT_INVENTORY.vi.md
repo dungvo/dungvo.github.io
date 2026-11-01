@@ -171,3 +171,8 @@ Thứ tự phù hợp:
 5. Viết một bài để owner đọc; nếu bài không chạm, sửa hoặc dừng trước khi mở chủ đề tiếp theo.
 
 Candidate nên xem trước khi mở chủ đề hoàn toàn mới: nhóm `thành công của người khác / so sánh xã hội / ghen tị`, vì đã có bản phân tích và hai bản nháp. `Thái cực` và `thiên lệch chú ý tới điều tiêu cực` nên giữ ở trạng thái ý tưởng cho đến khi chọn phạm vi và câu hỏi trung tâm.
+
+
+## Ghi nhận 2026-10-28 — mở rộng dạng nội dung
+
+Owner đang review ý tưởng truyện bất ngờ, bí ẩn/ma mị, tương lai/thế giới song song/du hành thời gian, truyện trẻ em đơn giản, người trẻ chơi game/cuộc thi, luật chơi và ý tưởng thiết kế game. Không ép mọi ý tưởng vào Story; xét riêng Knowledge, Phân tích, thử thách suy luận và gói trò chơi. Chưa nghiên cứu, tạo truyện, đổi taxonomy/triết lý/contract hay phát hành. Note thống nhất: [Mở rộng nội dung: đọc, chơi và sáng tạo](content-expansion-2026-10-28/README.md). Các mục truyện vui/trẻ em ở mục 6 giữ nguyên, được liên kết thay vì mở backlog cạnh tranh.

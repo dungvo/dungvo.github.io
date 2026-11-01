@@ -186,10 +186,10 @@
     },
     {
       "id": "research.marcus.day8.book10.10_16.038",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đừng mãi bàn mình nên trở thành người thế nào; hãy bắt đầu sống phần mình đã nhận ra.",
+      "text_vi": "Nói mãi về người tử tế chưa thay được việc sống tử tế.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -206,11 +206,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=10",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book10.10_16.038; corpus row 586; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations X.16; George W. Chrystal1902. Passage: Discourse no more of what a good man should be; but be one. Giữ sự chuyển từ bàn sang làm, không bảo mọi thảo luận đạo đức vô ích. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book10.10_16.038; corpus row 586; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -222,34 +222,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Đừng mãi bàn mình nên trở thành người thế nào; hãy bắt đầu sống phần mình đã nhận ra.",
+        "semantic_intent": "Nói mãi về người tử tế chưa thay được việc sống tử tế.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.marcus.day8.book12.12_17.047",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu thấy điều đó không đúng, đừng làm; nếu thấy điều đó không thật, đừng nói.",
+      "text_vi": "Điều biết là không đúng thì đừng làm; điều biết là không thật thì đừng nói.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -265,11 +271,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "Τὰ εἰς ἑαυτόν / Meditations",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0641:book=12",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Marcus Aurelius",
-        "source_detail": "Research ID research.marcus.day8.book12.12_17.047; corpus row 595; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations XII.17; George W. Chrystal1902. Passage: If a thing be not becoming, do it not; if not true, say it not. Trích diễn ý becoming/true, không gán nguyên tắc này cho việc biết chắc mọi hoàn cảnh đạo đức. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.marcus.day8.book12.12_17.047; corpus row 595; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -279,27 +285,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; digital edition reuse terms apply"
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nếu thấy điều đó không đúng, đừng làm; nếu thấy điều đó không thật, đừng nói.",
+        "semantic_intent": "Điều biết là không đúng thì đừng làm; điều biết là không thật thì đừng nói.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Marcus Aurelius"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.seneca.day9.ep019",
@@ -426,10 +438,10 @@
     },
     {
       "id": "research.mn.day12.mn10_03",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có thể quan sát trạng thái của tâm như một trạng thái đang có mặt, thay vì mặc định đó là toàn bộ con người mình.",
+      "text_vi": "Khi tâm có tham, biết là tâm có tham; khi tâm không có tham, biết là tâm không có tham.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -445,12 +457,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 10 Satipaṭṭhānasutta",
-        "source_url": "https://suttacentral.net/mn10/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn10_03; corpus row 746; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN10",
+        "source_url": "https://suttacentral.net/mn10/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN10",
+        "source_detail": "MN10:34; quan sát tâm. Đoạn đối chiếu: It’s when a mendicant understands mind with greed as ‘mind with greed,’. Thay tổng hợp trạng thái không là toàn bộ con người bằng ví dụ nhận biết trực tiếp trong nguồn. Không xem đây là chẩn đoán hoặc nói cảm xúc là bản sắc. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn10_03; corpus row 746; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -462,34 +474,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Có thể quan sát trạng thái của tâm như một trạng thái đang có mặt, thay vì mặc định đó là toàn bộ con người mình.",
+        "semantic_intent": "Khi tâm có tham, biết là tâm có tham; khi tâm không có tham, biết là tâm không có tham.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN10"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn39_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một danh xưng chỉ thật sự có nghĩa khi cách sống dần tương ứng với điều danh xưng ấy nói.",
+      "text_vi": "Một danh xưng cần được nâng đỡ bằng cách sống tương ứng với nó.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -506,12 +524,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 39 Mahāassapurasutta",
-        "source_url": "https://suttacentral.net/mn39/pli/ms",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn39_01; corpus row 759; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN39",
+        "source_url": "https://suttacentral.net/mn39/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN39",
+        "source_detail": "MN39:2.1–4. Đoạn đối chiếu: Given this label and this claim, you should train like this: ‘We will proceed having undertaken the things that make one an ascetic and a brahmin. That way our label will be accurate and our claim correct.. MN39, từ danh xưng sa-môn sang một diễn ý giới hạn; source_detail giữ nghĩa gốc và không bảo Selflo xét phẩm giá người qua nghề nghiệp. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn39_01; corpus row 759; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -524,27 +542,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Một danh xưng chỉ thật sự có nghĩa khi cách sống dần tương ứng với điều danh xưng ấy nói.",
+        "semantic_intent": "Một danh xưng cần được nâng đỡ bằng cách sống tương ứng với nó.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN39"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn61_02",

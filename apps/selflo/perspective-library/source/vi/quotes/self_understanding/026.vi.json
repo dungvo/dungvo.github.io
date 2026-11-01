@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.mn.day12.mn19_03",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có thể xem một ý nghĩ đang dẫn tới tác động gì cho mình, cho người khác, và cho cả hai.",
+      "text_vi": "Ý nghĩ này dẫn đến điều gì cho mình, cho người khác, cho cả hai?",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -25,12 +25,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 19 Dvedhāvitakkasutta",
-        "source_url": "https://suttacentral.net/mn19/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn19_03; corpus row 749; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN19",
+        "source_url": "https://suttacentral.net/mn19/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN19",
+        "source_detail": "MN19:3.4–7. Đoạn đối chiếu: It leads to hurting myself, hurting others, and hurting both. It blocks wisdom, it’s on the side of distress, and it doesn’t lead to extinguishment.’. MN19, câu hỏi để xét tác động thay vì đòi mọi suy nghĩ phải tích cực; không đánh đồng ý nghĩ xuất hiện với hành vi gây hại. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn19_03; corpus row 749; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -42,27 +42,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Có thể xem một ý nghĩ đang dẫn tới tác động gì cho mình, cho người khác, và cho cả hai.",
+        "semantic_intent": "Ý nghĩ này dẫn đến điều gì cho mình, cho người khác, cho cả hai?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN19"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn20_02",
@@ -123,10 +129,10 @@
     },
     {
       "id": "research.mn.day12.mn27_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một dấu chân lớn chưa đủ để kết luận chắc chắn con voi nào đã đi qua; bằng chứng ban đầu chưa phải kết luận cuối.",
+      "text_vi": "Thấy một dấu chân voi lớn chưa đủ để biết chắc đó là con voi mình đang tìm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -142,12 +148,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 27 Cūḷahatthipadopamasutta",
-        "source_url": "https://suttacentral.net/mn27/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn27_01; corpus row 757; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN27",
+        "source_url": "https://suttacentral.net/mn27/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN27",
+        "source_detail": "MN27:10, dụ người thạo dấu voi. Đoạn đối chiếu: “Suppose a bull elephant tracker were to enter a bull elephant wood.. MN27 mở dụ kiểm chứng tiếp dấu chân; giữ ví dụ và giới hạn suy luận, không gán dạng kiểm chứng khoa học cho toàn bộ hành trình tôn giáo. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn27_01; corpus row 757; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -159,27 +165,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Một dấu chân lớn chưa đủ để kết luận chắc chắn con voi nào đã đi qua; bằng chứng ban đầu chưa phải kết luận cuối.",
+        "semantic_intent": "Thấy một dấu chân voi lớn chưa đủ để biết chắc đó là con voi mình đang tìm.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN27"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn27_02",
@@ -243,10 +255,10 @@
     },
     {
       "id": "research.mn.day12.mn58_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không phải điều đúng nào cũng cần nói ngay; tính đúng, ích lợi và thời điểm là những câu hỏi khác nhau.",
+      "text_vi": "Điều đúng còn cần có ích, và có lúc thích hợp để nói.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -262,12 +274,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 58 Abhayarājakumārasutta",
-        "source_url": "https://suttacentral.net/mn58/pli/ms",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn58_01; corpus row 760; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN58",
+        "source_url": "https://suttacentral.net/mn58/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN58",
+        "source_detail": "MN58:8.1–6. Đoạn đối chiếu: The Realized One knows the right time to speak so as to explain what he knows to be true, correct, and beneficial, but which is disliked by others.. MN58:8 giữ ba điều kiện chân thật/ích lợi/thời điểm, không khuyên giấu sự thật gây bất tiện hoặc bao che hành vi gây hại. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn58_01; corpus row 760; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -279,34 +291,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Không phải điều đúng nào cũng cần nói ngay; tính đúng, ích lợi và thời điểm là những câu hỏi khác nhau.",
+        "semantic_intent": "Điều đúng còn cần có ích, và có lúc thích hợp để nói.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN58"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn62_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hãy học từ đất: nhiều thứ sạch hay bẩn đi qua mà đất không vì thế trở thành chính những thứ ấy.",
+      "text_vi": "Đất đón cả thứ sạch lẫn thứ bẩn mà không vì thế ghê sợ hay oán giận.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -321,12 +339,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 62 Mahārāhulovādasutta",
-        "source_url": "https://suttacentral.net/mn62/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn62_01; corpus row 764; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN62",
+        "source_url": "https://suttacentral.net/mn62/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN62",
+        "source_detail": "MN62:13.1–5. Đoạn đối chiếu: Suppose they were to toss both clean and unclean things on the earth, like feces, urine, spit, pus, and blood. The earth isn’t horrified, repelled, and disgusted because of this.. Giữ ẩn dụ đất trong tu tập, không khẳng định con người nên chịu đựng mọi việc hay mất ranh giới cá nhân. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn62_01; corpus row 764; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -336,34 +354,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Hãy học từ đất: nhiều thứ sạch hay bẩn đi qua mà đất không vì thế trở thành chính những thứ ấy.",
+        "semantic_intent": "Đất đón cả thứ sạch lẫn thứ bẩn mà không vì thế ghê sợ hay oán giận.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN62"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn131_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Không cần sống bằng cách liên tục đuổi theo quá khứ hay treo mình vào tương lai.",
+      "text_vi": "Quá khứ đã qua, tương lai chưa tới; điều đang hiện diện có thể được nhìn rõ ngay bây giờ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -378,12 +402,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 131 Bhaddekarattasutta",
-        "source_url": "https://suttacentral.net/mn131/pli/ms",
-        "source_language": null,
-        "source_label": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn131_01; corpus row 771; content_nature=translated_quote; verification=A - primary Pāḷi source located."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN131",
+        "source_url": "https://suttacentral.net/mn131/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN131",
+        "source_detail": "MN131:3.1–6. Đoạn đối chiếu: “Don’t run back to the past,. MN131:3.1–6, không cổ vũ quên quá khứ hay bỏ lập kế hoạch. Giữ góc nhìn thực hành, không ép người đau buồn phải sống hiện tại. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn131_01; corpus row 771; content_nature=translated_quote; verification=A - primary Pāḷi source located."
       },
       "metadata": {
         "concepts": [],
@@ -393,27 +417,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Không cần sống bằng cách liên tục đuổi theo quá khứ hay treo mình vào tương lai.",
+        "semantic_intent": "Quá khứ đã qua, tương lai chưa tới; điều đang hiện diện có thể được nhìn rõ ngay bây giờ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN131"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn131_02",
@@ -594,10 +624,10 @@
     },
     {
       "id": "research.day16.happiness_activity",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một đời sống tốt không chỉ là sở hữu một trạng thái tốt; Aristotle đặt trọng tâm vào cách trạng thái ấy được sống thành hoạt động.",
+      "text_vi": "Sống tốt không chỉ là có một phẩm chất tốt, mà còn là đem phẩm chất ấy vào đời sống.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -613,11 +643,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Aristotle",
-        "work": "Nicomachean Ethics",
-        "source_url": "https://classics.mit.edu/Aristotle/nicomachaen.1.i.html",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Aristotle",
-        "source_detail": "Research ID research.day16.happiness_activity; corpus row 860; content_nature=research_paraphrase; verification=A/B - location/source verified; wording classification explicit."
+        "work": "Nicomachean Ethics · D. P. Chase1847",
+        "source_url": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Aristotle",
+        "source_detail": "Nicomachean Ethics I.8; D. P. Chase. Đoạn đối chiếu: at the Olympic games it is not the finest and strongest men who are crowned. NEI.8, đoạn so sánh người có phẩm chất và người thực sự hành động tại Olympic; không nhầm lời giới thiệu hiện đại với nguyên tác, không dịch eudaimonia thành vui nhất thời. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day16.happiness_activity; corpus row 860; content_nature=research_paraphrase; verification=A/B - location/source verified; wording classification explicit."
       },
       "metadata": {
         "concepts": [],
@@ -627,27 +657,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Một đời sống tốt không chỉ là sở hữu một trạng thái tốt; Aristotle đặt trọng tâm vào cách trạng thái ấy được sống thành hoạt động.",
+        "semantic_intent": "Sống tốt không chỉ là có một phẩm chất tốt, mà còn là đem phẩm chất ấy vào đời sống.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Aristotle"
+        "attribution_vi": "Phỏng theo Aristotle"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day17.desire_categories",

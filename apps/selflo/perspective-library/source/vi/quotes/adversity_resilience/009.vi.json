@@ -254,10 +254,10 @@
     },
     {
       "id": "research.day38.002",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Sức mạnh có thể được hiểu như khả năng điều chỉnh phản ứng của mình, không chỉ kiểm soát hoàn cảnh.",
+      "text_vi": "Ai mạnh? Người biết tự chủ trước cơn giận của mình.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -274,12 +274,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Jewish wisdom traditions",
-        "work": "Tanakh + Pirkei Avot / Mishnah",
-        "source_url": "https://www.sefaria.org/Pirkei_Avot",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Jewish wisdom traditions",
-        "source_detail": "Research ID research.day38.002; corpus row 1283; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
+        "author_name": "Ben Zoma",
+        "work": "Pirkei Avot · Joseph I. Gorfinkle1913",
+        "source_url": "https://www.gutenberg.org/cache/epub/8547/pg8547.txt",
+        "source_language": "en",
+        "source_label": "Ben Zoma · Pirkei Avot",
+        "source_detail": "Pirkei Avot4:1; Ben Zoma. Đoạn đối chiếu: He who controls his passions. Avot4:1, Ben Zoma dẫn Châm Ngôn16:32; giữ tự chủ, không xem ai phản ứng mạnh trước tổn thương là yếu. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day38.002; corpus row 1283; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
       },
       "metadata": {
         "concepts": [],
@@ -292,34 +292,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify item-level rights"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Sức mạnh có thể được hiểu như khả năng điều chỉnh phản ứng của mình, không chỉ kiểm soát hoàn cảnh.",
+        "semantic_intent": "Ai mạnh? Người biết tự chủ trước cơn giận của mình.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Jewish wisdom traditions"
+        "attribution_vi": "Ben Zoma · Pirkei Avot"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day38.006",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có lúc không phải mình phải hoàn thành mọi việc, nhưng vẫn có phần việc mình có thể bắt đầu.",
+      "text_vi": "Bạn không phải làm xong tất cả công việc, nhưng cũng không vì thế mà bỏ phần việc của mình.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -336,12 +342,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Jewish wisdom traditions",
-        "work": "Tanakh + Pirkei Avot / Mishnah",
-        "source_url": "https://www.sefaria.org/Pirkei_Avot",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Jewish wisdom traditions",
-        "source_detail": "Research ID research.day38.006; corpus row 1287; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
+        "author_name": "Rabbi Tarfon",
+        "work": "Pirkei Avot · Joseph I. Gorfinkle1913",
+        "source_url": "https://www.gutenberg.org/cache/epub/8547/pg8547.txt",
+        "source_language": "en",
+        "source_label": "Rabbi Tarfon · Pirkei Avot",
+        "source_detail": "Pirkei Avot2:16; Rabbi Tarfon; GorfinkleII.21. Đoạn đối chiếu: It is not thy duty to complete the work. Avot2:16, Rabbi Tarfon; trích vế đầu, giữ bối cảnh học/việc có phần thưởng trong source_detail; không khuyên lao lực vô hạn. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day38.006; corpus row 1287; content_nature=research_paraphrase; verification=B - Reputable source map; item-level exact wording not claimed."
       },
       "metadata": {
         "concepts": [],
@@ -354,27 +360,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / verify item-level rights"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Có lúc không phải mình phải hoàn thành mọi việc, nhưng vẫn có phần việc mình có thể bắt đầu.",
+        "semantic_intent": "Bạn không phải làm xong tất cả công việc, nhưng cũng không vì thế mà bỏ phần việc của mình.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Jewish wisdom traditions"
+        "attribution_vi": "Rabbi Tarfon · Pirkei Avot"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day39.009",

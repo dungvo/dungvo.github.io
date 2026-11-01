@@ -706,20 +706,20 @@
     },
     {
       "id": "attributed.ma.v_11.use_of_soul",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tôi đang dùng tâm hồn mình cho mục đích gì?",
+      "text_vi": "Mình đang dùng tâm trí mình vào việc gì?",
       "subtitle_vi": null,
       "primary_theme": "self_understanding",
       "authorship": {
-        "author_id": "marcus_aurelius",
+        "author_id": null,
         "author_name": "Marcus Aurelius",
-        "work": "The Meditations of the Emperor Marcus Aurelius Antoninus",
-        "source_url": "https://www.gutenberg.org/ebooks/55317",
+        "work": "Meditations · George W. Chrystal1902",
+        "source_url": "https://www.gutenberg.org/cache/epub/55317/pg55317.txt",
         "source_language": "en",
-        "source_label": "Marcus Aurelius · Suy tưởng",
-        "source_detail": "George W. Chrystal (dịch), 1902; Quyển V, đoạn 11; bản Việt là bản dịch nháp Selflo từ exact English source"
+        "source_label": "Phỏng theo Marcus Aurelius",
+        "source_detail": "Meditations V.11; George W. Chrystal1902. Passage: To what end am I using my soul. Trích diễn ý câu hỏi đầu, lược ví dụ phân hạng giới/tuổi/động vật trong phần tiếp; không giả đã dịch toàn đoạn. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: George W. Chrystal (dịch), 1902; Quyển V, đoạn 11; bản Việt là bản dịch nháp Selflo từ exact English source"
       },
       "metadata": {
         "concepts": [],
@@ -733,25 +733,25 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Chỉ dành cho Authoring Preview. Project Gutenberg ghi public domain tại Hoa Kỳ; Release vẫn bị khóa để chờ review thẩm quyền áp dụng và bản dịch song ngữ."
+        "status": "public_domain",
+        "note": "Nguyên tác Marcus Aurelius cổ; George W. Chrystal1880–1944, bản1902 dựa Foulis1742, Gutenberg55317. Tác giả/dịch giả quá70 năm sau năm mất; tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Tôi đang dùng tâm hồn mình cho mục đích gì?",
+        "semantic_intent": "Mình đang dùng tâm trí mình vào việc gì?",
         "observation_key": null,
-        "structure_pattern": "attributed_quote"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 50,
         "featured": false,
         "style": "cool_observe",
-        "attribution_vi": "Marcus Aurelius · Suy tưởng · Quyển V, đoạn 11"
+        "attribution_vi": "Phỏng theo Marcus Aurelius"
       },
       "story_id": null,
       "selection": {
@@ -764,7 +764,13 @@
         ],
         "tie_break_order": 1137
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "attributed.ma.vii_15.retain_lustre",

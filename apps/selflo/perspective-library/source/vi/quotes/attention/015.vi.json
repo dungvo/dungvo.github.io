@@ -498,10 +498,10 @@
     },
     {
       "id": "research.day56.001",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Chú ý có tính chọn lọc: tập trung vào một điều đồng nghĩa tạm rút chú ý khỏi những điều khác.",
+      "text_vi": "Chú ý vào một việc cũng là tạm rời chú ý khỏi những việc khác.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -519,11 +519,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "William James",
-        "work": "The Principles of Psychology",
-        "source_url": "https://www.yorku.ca/pclassic/James/Principles/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên William James",
-        "source_detail": "Research ID research.day56.001; corpus row 1617; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+        "work": "The Principles of Psychology1890 · VolumeI",
+        "source_url": "https://www.gutenberg.org/cache/epub/57628/pg57628.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo William James",
+        "source_detail": "The Principles of Psychology1890, VolumeI ChapterXI Attention. Passage: withdrawal from some things in order to deal effectively with others. Giữ mô tả chọn lọc của James; không mở thành phán đoán ai bị phân tâm là thiếu ý chí. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day56.001; corpus row 1617; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
       },
       "metadata": {
         "concepts": [],
@@ -536,27 +536,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1890; James1842–1910, không dùng dịch Việt hiện đại hoặc coi lý thuyết thần kinh lịch sử là fact mới. Witness Gutenberg ghi public domain USA; edition và translator kiểm tra riêng, không lấy URL truy cập được làm permission."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:19:23.528138+00:00"
       },
       "writing": {
-        "semantic_intent": "Chú ý có tính chọn lọc: tập trung vào một điều đồng nghĩa tạm rút chú ý khỏi những điều khác.",
+        "semantic_intent": "Chú ý vào một việc cũng là tạm rời chú ý khỏi những việc khác.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên William James"
+        "attribution_vi": "Phỏng theo William James"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day56.008",

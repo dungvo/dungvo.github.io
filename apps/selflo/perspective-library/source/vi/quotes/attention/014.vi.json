@@ -190,10 +190,10 @@
     },
     {
       "id": "research.day30.furuike",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ao cũ. Một con ếch nhảy xuống. Tiếng nước — một khoảnh khắc nhỏ có thể làm cả không gian trở nên có hình.",
+      "text_vi": "Ao cũ. Ếch nhảy vào. Tiếng nước.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -211,11 +211,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Bashō haiku corpus",
+        "work": "Haiku · nguyên Nhật · tuyển1903",
         "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.furuike; corpus row 1163; content_nature=research_paraphrase; verification=A/B - wording/location verified."
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 古池や蛙とびこ. Passage: 古池や蛙とびこむ水の音. Bỏ bình giảng không gian có hình; dịch trực tiếp hình ảnh/âm thanh, không giả đây là bản dịch Việt của một dịch giả khác. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.furuike; corpus row 1163; content_nature=research_paraphrase; verification=A/B - wording/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -228,34 +228,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Ao cũ. Một con ếch nhảy xuống. Tiếng nước — một khoảnh khắc nhỏ có thể làm cả không gian trở nên có hình.",
+        "semantic_intent": "Ao cũ. Ếch nhảy vào. Tiếng nước.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day30.shizukasa",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Sự tĩnh lặng không nhất thiết là không có âm thanh; đôi khi một âm thanh làm mình nhận ra độ sâu của tĩnh lặng.",
+      "text_vi": "Tĩnh lặng. Tiếng ve thấm vào đá.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -273,11 +279,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Matsuo Bashō",
-        "work": "Oku no Hosomichi / Risshakuji",
-        "source_url": "https://www2.yamanashi-ken.ac.jp/~itoyo/basho/okunohosomichi/okuno23.htm",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Matsuo Bashō",
-        "source_detail": "Research ID research.day30.shizukasa; corpus row 1165; content_nature=research_paraphrase; verification=A/B - wording/location verified."
+        "work": "Haiku · nguyên Nhật · tuyển1903",
+        "source_url": "https://ja.wikisource.org/wiki/%E8%8A%AD%E8%95%89%E4%BF%B3%E5%8F%A5%E5%85%A8%E9%9B%86",
+        "source_language": "ja",
+        "source_label": "Phỏng theo Matsuo Bashō",
+        "source_detail": "芭蕉俳句全集1903 · bài mở đầu 閑さや岩にしみ. Passage: 閑さや岩にしみ入るせみの聲. Giữ ẩn dụ cảm giác của bài thơ, không nêu âm thanh thấm đá như fact vật lý hoặc khẳng định bình yên phổ quát. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day30.shizukasa; corpus row 1165; content_nature=research_paraphrase; verification=A/B - wording/location verified."
       },
       "metadata": {
         "concepts": [],
@@ -290,27 +296,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Original historical text public domain; transcription/site terms separate"
+        "status": "public_domain",
+        "note": "Bashō1644–1694; tự dịch cổ văn nguyên Nhật trong witness1903, chỉ lấy câu thơ gốc, không dịch lời giới thiệu/chú giải hiện đại, không dùng một bản Anh/Việt có bản quyền."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:59:16.360790+00:00"
       },
       "writing": {
-        "semantic_intent": "Sự tĩnh lặng không nhất thiết là không có âm thanh; đôi khi một âm thanh làm mình nhận ra độ sâu của tĩnh lặng.",
+        "semantic_intent": "Tĩnh lặng. Tiếng ve thấm vào đá.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Matsuo Bashō"
+        "attribution_vi": "Phỏng theo Matsuo Bashō"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day32.rumi_hafez.004",

@@ -548,10 +548,10 @@
     },
     {
       "id": "research.day72.002",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Tăng lượng thông tin có thể làm tăng nhu cầu chọn cái gì đáng chú ý thay vì chỉ tăng hiểu biết.",
+      "text_vi": "Thêm thông tin chưa chắc giúp ta quyết định tốt hơn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -568,12 +568,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Attention scarcity",
-        "work": "Attention scarcity",
+        "author_name": "Peter Gordon Roetzel",
+        "work": "Quá tải thông tin trong thời đại thông tin (2019)",
         "source_url": "https://link.springer.com/article/10.1007/s40685-018-0069-z",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Attention scarcity",
-        "source_detail": "Research ID research.day72.002; corpus row 1750; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote."
+        "source_language": "en",
+        "source_label": "Diễn ý từ Peter Gordon Roetzel",
+        "source_detail": "Locator/đoạn đối chiếu: Sections 1 and 2; information-processing capacity and decision-making performance; Rights and permissions. Diễn ý giới hạn từ review của Roetzel, bỏ đối lập tăng hiểu biết chưa được định nghĩa. Đây là khả năng, không khẳng định càng ít thông tin càng tốt. CC BY 4.0 xác nhận ở trang publisher; ghi tác giả, nguồn, giấy phép và đã diễn ý. Bản Việt diễn ý bởi Selflo. Provenance trước review: Research ID research.day72.002; corpus row 1750; content_nature=research_paraphrase; verification=B/B+ - source-grounded; not direct quote. Peter Gordon Roetzel, Information overload in the information age (2019), DOI 10.1007/s40685-018-0069-z. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ ; đã dịch/diễn ý và rút gọn bởi Selflo, không phải nguyên văn tác giả. Publisher Rights and permissions đã đối chiếu 2026-10-31."
       },
       "metadata": {
         "concepts": [],
@@ -586,27 +586,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "licensed",
+        "note": "Peter Gordon Roetzel, Information overload in the information age (2019), DOI 10.1007/s40685-018-0069-z. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ ; đã dịch/diễn ý và rút gọn bởi Selflo, không phải nguyên văn tác giả. Publisher Rights and permissions đã đối chiếu 2026-10-31."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
       },
       "writing": {
-        "semantic_intent": "Tăng lượng thông tin có thể làm tăng nhu cầu chọn cái gì đáng chú ý thay vì chỉ tăng hiểu biết.",
+        "semantic_intent": "Thêm thông tin chưa chắc giúp ta quyết định tốt hơn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Attention scarcity"
+        "attribution_vi": "Diễn ý từ Peter Gordon Roetzel"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:research"
+      ]
     },
     {
       "id": "research.day72.003",

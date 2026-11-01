@@ -648,10 +648,10 @@
     },
     {
       "id": "research.epictetus.day7.enchiridion.28.023",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Nếu ai giao thân thể bạn cho người lạ, bạn sẽ phản đối; vậy tại sao lại giao tâm trí mình cho mọi lời đánh giá đi ngang qua?",
+      "text_vi": "Một lời chê của người qua đường cũng có thể chiếm cả tâm trí mình.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -668,11 +668,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0235:text=enc",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.enchiridion.28.023; corpus row 525; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Enchiridion · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Enchiridion XXVIII; George Long. Passage: you put\nyour understanding in the power of any man whom you meet. Bỏ trách xấu hổ và so sánh giao thân thể, giữ quan sát bị lời người lạ chi phối; không quy lỗi người chịu xúc phạm. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.enchiridion.28.023; corpus row 525; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -684,34 +684,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Nếu ai giao thân thể bạn cho người lạ, bạn sẽ phản đối; vậy tại sao lại giao tâm trí mình cho mọi lời đánh giá đi ngang qua?",
+        "semantic_intent": "Một lời chê của người qua đường cũng có thể chiếm cả tâm trí mình.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.epictetus.day7.discourses.2_5.039",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Vật liệu để rèn một đời sống tốt bắt đầu từ phần phán đoán của chính mình.",
+      "text_vi": "Ta không biết xúc xắc sẽ rơi thế nào; phần việc của ta là xử lý lượt đã gieo cho cẩn thận.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -728,11 +734,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Epictetus",
-        "work": "Enchiridion / Discourses",
-        "source_url": "https://atlas.perseus.tufts.edu/library/urn%3Acts%3AgreekLit%3Atlg0557.tlg001/",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Epictetus",
-        "source_detail": "Research ID research.epictetus.day7.discourses.2_5.039; corpus row 541; content_nature=empirical_finding; verification=A - Primary source."
+        "work": "Discourses · Arrian · George Long",
+        "source_url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epictetus",
+        "source_detail": "Discourses II.5; George Long historical selection. Passage: How do\nI know what the cast will be? But to use carefully and dexterously the\ncast of the dice, this is my business. Giữ ví dụ trò chơi cho vật liệu ngoài quyền/việc sử dụng, không khẳng định thiệt hại bên ngoài vô nghĩa. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.epictetus.day7.discourses.2_5.039; corpus row 541; content_nature=empirical_finding; verification=A - Primary source."
       },
       "metadata": {
         "concepts": [],
@@ -744,27 +750,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient work public domain; Perseus digital text has reuse terms"
+        "status": "public_domain",
+        "note": "Nguyên tác Epictetus cổ, Arrian ghi lại; bản Anh George Long1800–1879, edition lịch sử Gutenberg10661; chỉ tự diễn ý đoạn văn gốc, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T04:32:03.184912+00:00"
       },
       "writing": {
-        "semantic_intent": "Vật liệu để rèn một đời sống tốt bắt đầu từ phần phán đoán của chính mình.",
+        "semantic_intent": "Ta không biết xúc xắc sẽ rơi thế nào; phần việc của ta là xử lý lượt đã gieo cho cẩn thận.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Epictetus"
+        "attribution_vi": "Phỏng theo Epictetus"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:classical_text"
+      ]
     }
   ]
 }

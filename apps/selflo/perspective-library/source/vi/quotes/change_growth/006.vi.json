@@ -578,10 +578,10 @@
     },
     {
       "id": "research.mn.day12.mn22_01",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Một điều đúng vẫn có thể gây hại khi bị nắm sai cách—giống như bắt rắn sai chỗ.",
+      "text_vi": "Lời dạy bị nắm sai có thể gây hại, như con rắn bị bắt sai cách quay lại cắn người cầm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -596,12 +596,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "work": "MN 22 Alagaddūpamasutta",
-        "source_url": "https://suttacentral.net/mn22/pli/ms",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition",
-        "source_detail": "Research ID research.mn.day12.mn22_01; corpus row 754; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
+        "author_name": "Truyền thống Phật giáo",
+        "work": "Trung Bộ · MN22",
+        "source_url": "https://suttacentral.net/mn22/en/sujato",
+        "source_language": "en",
+        "source_label": "Phỏng theo Trung Bộ · MN22",
+        "source_detail": "MN22:10–12. Đoạn đối chiếu: Because they’re wrongly grasped, those teachings lead to their lasting harm and suffering.. Giữ đối tượng lời dạy, không mở thành mọi điều đúng chắc gây hại khi hiểu sai; ẩn dụ nhận thức chứ không hướng dẫn bắt rắn. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.mn.day12.mn22_01; corpus row 754; content_nature=research_paraphrase; verification=A/B - source/theme verified; wording is editorial paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -611,27 +611,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient canonical text public domain; modern translations have separate rights"
+        "status": "public_domain",
+        "note": "Nguyên tác Pali và witness Bhikkhu Sujato được SuttaCentral công bố CC0; bản Việt tự diễn ý, giữ segment ID/Pali trong evidence; không dùng bản dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Một điều đúng vẫn có thể gây hại khi bị nắm sai cách—giống như bắt rắn sai chỗ.",
+        "semantic_intent": "Lời dạy bị nắm sai có thể gây hại, như con rắn bị bắt sai cách quay lại cắn người cầm.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Majjhima Nikāya / Early Buddhist Pāḷi tradition"
+        "attribution_vi": "Phỏng theo Trung Bộ · MN22"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.mn.day12.mn22_03",
@@ -695,10 +701,10 @@
     },
     {
       "id": "research.day18.2_48",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Hành động mà không để thành công hay thất bại một mình quyết định trạng thái bên trong là một hình thức equanimity trong Gita.",
+      "text_vi": "Giữ lòng cân bằng khi hành động, bớt bị được mất kéo đi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "change_growth",
@@ -714,12 +720,12 @@
       },
       "authorship": {
         "author_id": null,
-        "author_name": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "work": "Bhagavad Gita",
-        "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?etgb=1&field_chapter_value=2&field_nsutra_value=48&language=dv&scsh=1&setgb=1",
-        "source_language": null,
-        "source_label": "Bhagavad Gita (traditionally within Mahābhārata)",
-        "source_detail": "Research ID research.day18.2_48; corpus row 902; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
+        "author_name": "Truyền thống Bhagavad Gita",
+        "work": "Bhagavad Gita · Edwin Arnold1885",
+        "source_url": "https://www.gutenberg.org/cache/epub/2388/pg2388.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Truyền thống Bhagavad Gita",
+        "source_detail": "Bhagavad Gita2.48; Arnold. Đoạn đối chiếu: Contemning gain and merit. ChươngII, đoạn equability trong bản Arnold; giữ cân bằng/không bám phần thưởng. Bản thơ không đánh số từng verse, ghi locator theo đoạn tương ứng2.48 và không mượn vế good deeds/bad của2.50 làm chứng cứ. Bản Việt diễn ý bởi Selflo, không phải nguyên văn tác giả. Provenance trước review: Research ID research.day18.2_48; corpus row 902; content_nature=translated_quote; verification=A/B - location/source verified; wording classification explicit."
       },
       "metadata": {
         "concepts": [],
@@ -731,27 +737,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Ancient source public domain; modern translations/editions separate"
+        "status": "public_domain",
+        "note": "Nguyên tác cổ và edition/bản dịch lịch sử được kiểm tra: Muller1900, Chase1902, Elwes1906, Hicks1929, Arnold1904, Wortabet1908 hoặc Gorfinkle1950 là năm mất tương ứng, đều quá70 năm; các edition trích có trước1931. Chỉ tự diễn ý phần nguyên tác/bản dịch này, không lấy phần chú giải hiện đại, ảnh hay giao diện. Gutenberg ghi public domain USA; lưu tên edition, locator và hash witness để audit."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-10-31T22:55:19.361950+00:00"
       },
       "writing": {
-        "semantic_intent": "Hành động mà không để thành công hay thất bại một mình quyết định trạng thái bên trong là một hình thức equanimity trong Gita.",
+        "semantic_intent": "Giữ lòng cân bằng khi hành động, bớt bị được mất kéo đi.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Bhagavad Gita (traditionally within Mahābhārata)"
+        "attribution_vi": "Phỏng theo Truyền thống Bhagavad Gita"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     }
   ]
 }
