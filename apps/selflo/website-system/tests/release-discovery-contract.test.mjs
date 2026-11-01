@@ -55,14 +55,14 @@ assert.match(knowledge,/manifest\.json/,'Knowledge is Release manifest driven');
 assert.ok(storyIDs.has('story.why_ai_feels_easier_to_ask'),'Knowledge article is in Release');
 for(const channel of ['', 'studio/']){
   const overview=await readFile(resolve(root,channel+'perspectives/index.html'),'utf8');
-  assert.match(overview,/assets\/release-discovery\.js\?v=1/,channel+' shared script');
+  assert.match(overview,/assets\/release-discovery\.js\?v=2/,channel+' shared script');
   assert.match(overview,/id="heroSearchForm"/,channel+' searchable header');
   assert.match(overview,/data-explore-quotes/,channel+' quote link');
   assert.match(overview,/data-explore-stories/,channel+' story link');
   assert.doesNotMatch(overview,/<script[^>]+perspectives-v3\.js/,'legacy duplicate script still active');
   for(const kind of ['quotes','stories']){
     const html=await readFile(resolve(root,channel+'perspectives/'+kind+'/index.html'),'utf8');
-    assert.match(html,/assets\/release-discovery\.js\?v=1/,channel+kind+' same runtime');
+    assert.match(html,/assets\/release-discovery\.js\?v=2/,channel+kind+' same runtime');
     assert.match(html,new RegExp('data-library-view="'+kind+'"'));
     assert.match(html,/id="catalogSentinel"/,kind+' has lazy scroll anchor');
     assert.match(html,/id="catalogLoadMore"/,kind+' has accessible fallback');
