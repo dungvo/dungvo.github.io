@@ -80,6 +80,6 @@ Tác giả gốc của những tác phẩm được chọn đã mất từ lâu;
 
 ## Branch cũ
 
-PR #9 `content/selflo-classics-intake-20-20261101` là lịch sử phát sinh batch này. Dữ liệu có ích đã được mang qua nhánh sạch phát sinh từ main; **không merge PR #9**, không dùng source.json cũ. Sau khi PR migration được merge và kiểm tra, PR #9 có thể đóng và branch cũ có thể xóa bằng GitHub UI.
+PR #9 `content/selflo-classics-intake-20-20261101` là lịch sử phát sinh batch này. Dữ liệu có ích đã được mang qua nhánh sạch phát sinh từ main; **không merge PR #9**, không dùng source.json cũ. PR #14 đã merge vào main và PR #9 đã **đóng dưới trạng thái superseded**. Branch cũ có thể xóa bằng GitHub UI sau khi xác nhận bản archive trên main.
 
 **Owner quyết định tạm dừng Story tại đây; không có tác phẩm nào trong batch Classics được coi là đã duyệt.**

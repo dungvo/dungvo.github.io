@@ -48,7 +48,7 @@
 
 ### C. 50 truyện kinh điển ngoài tác phẩm hiện hành
 
-- **PR #9 hiện OPEN + DRAFT + UNMERGED:** https://github.com/dungvo/dungvo.github.io/pull/9
+- **PR #9 hiện CLOSED / SUPERSEDED (không merge):** https://github.com/dungvo/dungvo.github.io/pull/9
 - Nhánh `content/selflo-classics-intake-20-20261101`: **20 bản kể lại ngắn tiếng Việt Story V3 draft trong canonical source chỉ trên nhánh; 30 mục nghiên cứu có nguồn/cơ chế/độc giả**, **không phải 50 bản dịch nguyên văn, không nằm trong Authoring của main**.
 - Trước khi có ý định merge/import Classics, phải đối chiếu nguyên tác, bản dịch/ấn bản, quyền và cách kể; owner duyệt từng truyện. **Không tự merge PR #9**. Với định hướng PAUSED, giữ PR để đối chiếu sau, hoặc owner chủ động quyết định đóng/giữ.
 - 36 idea 365 đã merge khác hoàn toàn 50 reference classics ở PR #9; không cộng các số để nhận "đã có 365".
@@ -82,5 +82,5 @@
 - Đã tách phần hữu ích của nhánh cũ `content/selflo-classics-intake-20-20261101` vào [Classics50 reference library](../../story-series/classics/README.vi.md) từ một nhánh mới xuất phát từ main.
 - **50 hồ sơ nghiên cứu** lưu tại [Classics50 registry](../../story-series/SELFLO_CLASSICS_50_EDITORIAL_REGISTRY.vi.json), **20 bản kể lại ngắn nguyên dữ liệu JSON** bảo toàn trong [retelling-drafts](../../story-series/classics/retelling-drafts/INDEX.vi.json) **ngoài canonical source**, **30 hồ sơ nghiên cứu** chưa dịch ở [reference catalog](../../story-series/classics/CLASSICS_BATCH30_REFERENCE_CATALOG.vi.json).
 - **Không làm thay đổi Authoring 78 Story / Release 22 Story**, không nhập 20 nháp như bản hoàn chỉnh và không tự kích hoạt publisher. Mọi truyện đều cần review nguồn/quyền, chất lượng và quyết định cụ thể từ owner.
-- **PR #9 là lịch sử cũ cần đóng sau khi xác nhận migration đã merge**, không merge nguyên nhánh cũ vì `source.json` ở revision 84 đã lỗi thời so với main revision 91. Nhánh cũ có thể được dọn bằng GitHub UI sau khi bảo toàn dữ liệu đã được xác nhận.
+- **PR #9 đã được đóng sau khi PR #14 merge**, không merge nguyên nhánh cũ vì `source.json` ở revision 84 đã lỗi thời so với main revision 91. Nhánh cũ có thể được dọn bằng GitHub UI sau khi bảo toàn dữ liệu đã được xác nhận.
 - Owner vẫn đang **PAUSED STORY**; thao tác này chỉ bảo toàn research/draft và dọn repo, **không mở lại sáng tác**.
