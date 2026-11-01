@@ -5,6 +5,7 @@ on:
       - content/selflo-tang-khong-ton-tai-10-fulltext-20261101
     paths:
       - .github/workflows/selflo-authoring-onetime.yml
+      - apps/selflo/perspective-library/source/vi/quotes/attention/027.vi.json
   workflow_dispatch:
 permissions:
   contents: write
@@ -18,7 +19,7 @@ jobs:
       - name: Publish Authoring with canonical source and strict validators
         working-directory: apps/selflo
         run: ./scripts/publish-perspective-library --channel authoring
-      - name: Verify ten chapters and preserve Release
+      - name: Verify ten chapters and ownership quotes; preserve Release
         run: |
           python3 - <<'PY'
           import json
