@@ -33,6 +33,10 @@ jobs:
           node website-system/tests/studio-shell.test.mjs
           node website-system/tests/shared-shell-integration.test.mjs
           node website-system/tests/support-contact.test.mjs
+          node website-system/tests/release-discovery-contract.test.mjs
+          node --check assets/release-discovery.js
+          node --check assets/knowledge-reader-v1.js
+          node --check website-system/scripts/build-studio.mjs
           node website-system/tests/developer-navigation.test.mjs
           node website-system/tests/studio-build-safety.test.mjs
       - name: Content contract tests
