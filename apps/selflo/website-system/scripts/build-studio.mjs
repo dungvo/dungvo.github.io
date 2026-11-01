@@ -14,7 +14,9 @@ const buildInputs = [
   'privacy/index.html',
   'assets/public-shell.css',
   'assets/public-shell-static.js',
-  'assets/perspectives-v3.js'
+  'assets/release-discovery.js',
+  'assets/release-discovery.css',
+  'assets/selflo-icons.svg'
 ];
 const sourceHash = createHash('sha256');
 sourceHash.update(`${JSON.stringify(environment)}\n${JSON.stringify(registry)}\n`);
@@ -71,7 +73,10 @@ function studioPage(html, page) {
   result = result.replace(/<header class="selflo-site-header">[\s\S]*?<\/header>/i, studioHeader(page.id));
   result = result.replace(/<footer class="selflo-site-footer">[\s\S]*?<\/footer>/i, studioFooter);
   result = result.replace('</head>', `<link rel="stylesheet" href="${studioBase}assets/studio-shell.css?v=1"></head>`);
-  if (page.id === 'perspectives') result = result.replace(`${publicBase}assets/perspectives-v3.js?v=2`, `${studioBase}assets/perspectives-v3.js?v=1`);
+  if (page.id === 'perspectives') {
+    result = result.replaceAll(`${publicBase}perspectives/quotes/`, `${studioBase}perspectives/quotes/`);
+    result = result.replaceAll(`${publicBase}perspectives/stories/`, `${studioBase}perspectives/stories/`);
+  }
   return result;
 }
 
@@ -84,8 +89,6 @@ for (const page of pages) {
 const studioAssets = resolve(repoRoot, 'studio/assets');
 await mkdir(studioAssets, {recursive: true});
 await writeFile(resolve(studioAssets, 'studio-shell.css'), await readFile(resolve(systemRoot, 'src/styles/studio-shell.css'), 'utf8'));
-const perspectivesRuntime = (await readFile(resolve(repoRoot, 'assets/perspectives-v3.js'), 'utf8')).replace("const base = '../perspective-library/release/vi/';", `const base = '${publicBase}perspective-library/release/vi/';`);
-await writeFile(resolve(studioAssets, 'perspectives-v3.js'), perspectivesRuntime);
 
 let developer = await readFile(resolve(systemRoot, 'src/pages/developer.html'), 'utf8');
 developer = developer.replace('<!-- SELFLO_STUDIO_HEADER -->', studioHeader('developer')).replace('<!-- SELFLO_STUDIO_FOOTER -->', studioFooter);
