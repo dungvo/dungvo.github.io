@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **IDEA-365 — ĐÃ LƯU / PARKED (01/11/2026):** Định hướng 365 ngày đọc Selflo, 6 concept series + 30 idea độc lập, 12 nhóm cân bằng. Chỉ là IDEA, không thêm Story/Authoring/Release và không có lịch xuất bản tự động. Canonical registry [Idea Library](idea-library/README.vi.md), trạng thái và next step [STATUS](idea-library/STATUS.vi.md). Khi owner muốn phát triển, chọn 1 ID, review overlap rồi mới nghiên cứu/outline.
+
 > **HỢP NHẤT MAIN — 2026-11-01:** Đã tích hợp main `1fc18a3` với B005–B009 local, giữ10 chương/10 quote seed mới. Source91 /Authoring **108 (1866 quote/78 story)**; Release **61 (385 quote/22 story)** không đổi. **95 tests/gate đạt**,168 quote vẫn chờ Release. Owner đã cho phép commit/push main; không promote Release. [Handoff](programs/quote-library-p0/MAIN_MERGE_2026-11-01.vi.md).
 
 > **B009 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **149/149**: **11 đạt,138 không nhận (gồm40 legacy block giữ loại, không mở lại)**. Source90 /Authoring **107** /Release **61 (385 quote /22 story)**. Corpus **1.239/5.471 đã chốt (22,65%), còn4.232**; **168 câu chờ Release**, chưa cộng released. **95 tests đạt**, candidate tạm168 câu qua gate; không cài Release/commit/push. Handoff: [B009 local](programs/quote-library-p0/Q10_B009_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
