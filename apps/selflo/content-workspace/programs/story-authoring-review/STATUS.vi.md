@@ -10,7 +10,7 @@
 - Một series đang có nội dung: **Tầng không tồn tại**, 10 chương toàn văn ở Authoring; rights/review vẫn chờ owner và technical reflection placeholder; không có Phần 2.
 - [Idea Library](../../idea-library/README.vi.md): **36 concept** = 6 series + 30 idea độc lập; 12 nhóm định hướng đủ 365 vị trí. Không có lịch xuất bản.
 - [Bảng điểm gợi ý 78 Story](reports/EDITORIAL_SCORECARD_78_2026-11-01.vi.json) đã được lưu lại: **chủ quan/provisional**, có trọng số và 1 series 10 chương; không phải editorial decision chính thức.
-- **PR #9** https://github.com/dungvo/dungvo.github.io/pull/9: 20 Classics retellings + 30 tác phẩm tham khảo; **open/draft/unmerged**, **không nằm trong Authoring của main**.
+- **Classics50:** Các tư liệu hữu ích của [PR #9](https://github.com/dungvo/dungvo.github.io/pull/9) đã được chuyển sang [kho tham khảo Classics50](../../story-series/classics/README.vi.md): 20 nháp kể lại ngắn ngoài canonical, 30 nghiên cứu chưa dịch. Không phải Authoring. PR #9 là nhánh lịch sử, cần đóng sau khi xác nhận migration; không merge source.json cũ.
 
 ## Quyết định chốt của owner
 
