@@ -63,10 +63,10 @@
     },
     {
       "id": "research.day41.leo_tolstoy.016",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Khi mục tiêu thu hẹp vào tối đa hóa sở hữu, các tín hiệu về sức khỏe và giới hạn có thể bị bỏ qua.",
+      "text_vi": "Pahom sợ mình gục xuống, nhưng vẫn chạy tiếp: anh sợ người ta gọi mình là kẻ ngốc nếu dừng lại.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -82,11 +82,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Leo Tolstoy",
-        "work": "How Much Land Does a Man Need?",
-        "source_url": "https://www.gutenberg.org/ebooks/author/136",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Leo Tolstoy",
-        "source_detail": "Research ID research.day41.leo_tolstoy.016; corpus row 1347; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
+        "work": "What Men Live By, and Other Tales · How Much Land Does a Man Need?",
+        "source_url": "https://www.gutenberg.org/cache/epub/6157/pg6157.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Leo Tolstoy",
+        "source_detail": "How Much Land Does a Man Need? · đoạn chạy về trước hoàng hôn. Passage: Though afraid of death, he could not stop.. Giữ hành động và suy nghĩ nhân vật ở đoạn cuối, không quy mọi tham vọng/đầu tư là xấu hoặc chỉ dẫn y tế. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day41.leo_tolstoy.016; corpus row 1347; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -96,27 +96,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Tolstoy1828–1910; bản dịch lịch sử Louise Maude1855–1939 và Aylmer Maude1858–1938 đã quá70 năm sau năm mất; Selflo tự diễn ý cảnh trong bản này, không dùng bản Việt/Anh hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:17:19.329460+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi mục tiêu thu hẹp vào tối đa hóa sở hữu, các tín hiệu về sức khỏe và giới hạn có thể bị bỏ qua.",
+        "semantic_intent": "Pahom sợ mình gục xuống, nhưng vẫn chạy tiếp: anh sợ người ta gọi mình là kẻ ngốc nếu dừng lại.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Leo Tolstoy"
+        "attribution_vi": "Phỏng theo Leo Tolstoy"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "research.day42.fyodor_dostoevsky.008",

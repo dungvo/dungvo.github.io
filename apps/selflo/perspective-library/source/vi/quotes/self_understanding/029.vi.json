@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.day22.flex_strength",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Mạnh dùng sức, yếu dùng chước",
+      "text_vi": "Khi không đủ sức, ta còn có thể tìm một cách làm khác.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -23,13 +23,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese proverb tradition / anonymous",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M",
-        "source_language": null,
-        "source_label": "Vietnamese proverb tradition / anonymous",
-        "source_detail": "Research ID research.day22.flex_strength; corpus row 1004; content_nature=proverb; verification=B - collection witness verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục M",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545",
+        "source_language": "vi",
+        "source_label": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/M · Mạnh dùng sức. Passage: Mạnh dùng sức, yếu dùng chước.. Tự diễn ý khả năng dùng trí thay sức, không khuyên lừa gạt hay gắn nhãn mạnh/yếu cố định. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day22.flex_strength; corpus row 1004; content_nature=proverb; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -39,34 +39,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Có tự diễn ý theo đúng phần lời cổ/nghĩa trong witness, chỉ rõ là phỏng theo, không nguyên văn."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Mạnh dùng sức, yếu dùng chước",
+        "semantic_intent": "Khi không đủ sức, ta còn có thể tìm một cách làm khác.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese proverb tradition / anonymous"
+        "attribution_vi": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day22.favor_conflict",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ăn xôi chùa ngọng miệng",
+      "text_vi": "Nhận ơn rồi, có lúc muốn nói điều mình nghĩ cũng thấy ngại.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -80,13 +86,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese proverb tradition / anonymous",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A",
-        "source_language": null,
-        "source_label": "Vietnamese proverb tradition / anonymous",
-        "source_detail": "Research ID research.day22.favor_conflict; corpus row 1006; content_nature=proverb; verification=B - collection witness verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục A",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523",
+        "source_language": "vi",
+        "source_label": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/A · Ăn xôi chùa. Passage: Ăn xôi chùa ngọng miệng.. Diễn ý xung đột nhận ơn/nói theo lẽ phải theo witness; bỏ hình ảnh khuyết tật ngôn ngữ, không suy người nhận giúp đỡ đều mất chính kiến. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day22.favor_conflict; corpus row 1006; content_nature=proverb; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -96,27 +102,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Có tự diễn ý theo đúng phần lời cổ/nghĩa trong witness, chỉ rõ là phỏng theo, không nguyên văn."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Ăn xôi chùa ngọng miệng",
+        "semantic_intent": "Nhận ơn rồi, có lúc muốn nói điều mình nghĩ cũng thấy ngại.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese proverb tradition / anonymous"
+        "attribution_vi": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day22.small_debt_big_return",
@@ -177,10 +189,10 @@
     },
     {
       "id": "research.day23.rt_th1_03",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Mùi thế đắng cay cùng mặn chát. Ít nhiều đã vậy một hai phen.",
+      "text_vi": "Mùi thế đắng cay cùng mặn chát,\nÍt nhiều đã vậy một hai phen.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -194,13 +206,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_trai",
         "author_name": "Nguyễn Trãi",
         "work": "Thuật hứng I",
-        "source_url": "https://vi.wikisource.org/wiki/Thu%E1%BA%ADt_h%E1%BB%A9ng/I",
-        "source_language": null,
-        "source_label": "Nguyễn Trãi",
-        "source_detail": "Research ID research.day23.rt_th1_03; corpus row 1015; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Thu%E1%BA%ADt_h%E1%BB%A9ng/I&oldid=20792",
+        "source_language": "vi",
+        "source_label": "Nguyễn Trãi · Thuật hứng I",
+        "source_detail": "Thuật hứngI · hai câu cuối. Passage: Mùi thế đắng cay cùng mặn chát.. Giữ giọng trải đời của chủ thể thơ, chỉ đổi dấu câu; không coi mọi người đều phải chịu cay đắng để trưởng thành. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.day23.rt_th1_03; corpus row 1015; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
       },
       "metadata": {
         "concepts": [],
@@ -210,34 +222,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Nguyễn Trãi · Thuật hứng I. Permalink https://vi.wikisource.org/w/index.php?title=Thu%E1%BA%ADt_h%E1%BB%A9ng/I&oldid=20792 ; history/credit https://vi.wikisource.org/w/index.php?title=Thu%E1%BA%ADt_h%E1%BB%A9ng/I&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Mùi thế đắng cay cùng mặn chát. Ít nhiều đã vậy một hai phen.",
+        "semantic_intent": "Mùi thế đắng cay cùng mặn chát,\nÍt nhiều đã vậy một hai phen.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Trãi"
+        "attribution_vi": "Nguyễn Trãi · Thuật hứng I"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day23.nbk_nhan_03",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Thu ăn măng trúc, đông ăn giá, Xuân tắm hồ sen, hạ tắm ao.",
+      "text_vi": "Thu ăn măng trúc, đông ăn giá,\nXuân tắm hồ sen, hạ tắm ao.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -251,13 +269,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_binh_khiem",
         "author_name": "Nguyễn Bỉnh Khiêm",
         "work": "Nhàn",
-        "source_url": "https://vi.wikisource.org/wiki/Nh%C3%A0n",
-        "source_language": null,
-        "source_label": "Nguyễn Bỉnh Khiêm",
-        "source_detail": "Research ID research.day23.nbk_nhan_03; corpus row 1020; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Nh%C3%A0n&oldid=205503",
+        "source_language": "vi",
+        "source_label": "Nguyễn Bỉnh Khiêm · Nhàn",
+        "source_detail": "Nhàn · câu5–6. Passage: Thu ăn măng trúc, đông ăn giá,\nXuân tắm hồ sen, hạ tắm ao.. Giữ cảnh sinh hoạt theo mùa; không suy thành chỉ dẫn dinh dưỡng, tắm hay hứa sống thuận tự nhiên tốt cho sức khỏe. Khác hai câu mở đầu về công cụ/lao động, giữ thêm một thẻ về cảnh mùa. Trích nguyên văn phần thơ trong bản chép đối chiếu, chỉ chuẩn hóa dấu câu/xuống dòng, không lấy chú giải và không tự diễn ý. Provenance trước review: Research ID research.day23.nbk_nhan_03; corpus row 1020; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
       },
       "metadata": {
         "concepts": [],
@@ -267,34 +285,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác thơ cổ của Nguyễn Bỉnh Khiêm (mất1585) đã thuộc public domain. Bản chép/phiên âm đối chiếu: Nhàn, Wikisource tiếng Việt và các người đóng góp; permalink https://vi.wikisource.org/w/index.php?title=Nh%C3%A0n&oldid=205503 ; lịch sử/credit tại https://vi.wikisource.org/w/index.php?title=Nh%C3%A0n&action=history . Trang công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần bản chép/chuẩn hóa này theo cùng giấy phép, không hạn chế thêm; chỉ thay dấu câu/xuống dòng, không dịch hay lấy chú thích. Không suy toàn bộ giao diện/chú giải là public domain."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T05:25:03.714005+00:00"
       },
       "writing": {
-        "semantic_intent": "Thu ăn măng trúc, đông ăn giá, Xuân tắm hồ sen, hạ tắm ao.",
+        "semantic_intent": "Thu ăn măng trúc, đông ăn giá,\nXuân tắm hồ sen, hạ tắm ao.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Bỉnh Khiêm"
+        "attribution_vi": "Nguyễn Bỉnh Khiêm · Nhàn"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day23.nbk_nttt_02",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Còn bạc, còn tiền, còn đệ tử; Hết cơm, hết rượu, hết ông tôi.",
+      "text_vi": "Còn bạc, còn tiền, còn đệ tử;\nHết cơm, hết rượu, hết ông tôi.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -308,13 +332,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_binh_khiem",
         "author_name": "Nguyễn Bỉnh Khiêm",
         "work": "Nhân tình thế thái",
-        "source_url": "https://vi.wikisource.org/wiki/Nh%C3%A2n_t%C3%ACnh_th%E1%BA%BF_th%C3%A1i_%28Nguy%E1%BB%85n_B%E1%BB%89nh_Khi%C3%AAm%29",
-        "source_language": null,
-        "source_label": "Nguyễn Bỉnh Khiêm",
-        "source_detail": "Research ID research.day23.nbk_nttt_02; corpus row 1023; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Nh%C3%A2n_t%C3%ACnh_th%E1%BA%BF_th%C3%A1i_(Nguy%E1%BB%85n_B%E1%BB%89nh_Khi%C3%AAm)&oldid=106667",
+        "source_language": "vi",
+        "source_label": "Nguyễn Bỉnh Khiêm · Nhân tình thế thái",
+        "source_detail": "Nhân tình thế thái · câu3–4. Passage: Còn bạc, còn tiền, còn đệ tử. Giữ giọng châm biếm tình đời trong bài, không trình bày thành fact tất cả quan hệ chỉ do tiền hoặc yêu cầu nghi ngờ người thân. Trích nguyên văn phần thơ trong bản chép đối chiếu, chỉ chuẩn hóa dấu câu/xuống dòng, không lấy chú giải và không tự diễn ý. Provenance trước review: Research ID research.day23.nbk_nttt_02; corpus row 1023; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
       },
       "metadata": {
         "concepts": [],
@@ -324,27 +348,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác thơ cổ của Nguyễn Bỉnh Khiêm (mất1585) đã thuộc public domain. Bản chép/phiên âm đối chiếu: Nhân tình thế thái, Wikisource tiếng Việt và các người đóng góp; permalink https://vi.wikisource.org/w/index.php?title=Nh%C3%A2n_t%C3%ACnh_th%E1%BA%BF_th%C3%A1i_(Nguy%E1%BB%85n_B%E1%BB%89nh_Khi%C3%AAm)&oldid=106667 ; lịch sử/credit tại https://vi.wikisource.org/w/index.php?title=Nh%C3%A2n_t%C3%ACnh_th%E1%BA%BF_th%C3%A1i_(Nguy%E1%BB%85n_B%E1%BB%89nh_Khi%C3%AAm)&action=history . Trang công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần bản chép/chuẩn hóa này theo cùng giấy phép, không hạn chế thêm; chỉ thay dấu câu/xuống dòng, không dịch hay lấy chú thích. Không suy toàn bộ giao diện/chú giải là public domain."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T05:25:03.714005+00:00"
       },
       "writing": {
-        "semantic_intent": "Còn bạc, còn tiền, còn đệ tử; Hết cơm, hết rượu, hết ông tôi.",
+        "semantic_intent": "Còn bạc, còn tiền, còn đệ tử;\nHết cơm, hết rượu, hết ông tôi.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Bỉnh Khiêm"
+        "attribution_vi": "Nguyễn Bỉnh Khiêm · Nhân tình thế thái"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day23.nbk_gioitham_01",
@@ -470,10 +500,10 @@
     },
     {
       "id": "research.day24.kieu_008",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Vui là vui gượng kẻo mà, Ai tri âm đó, mặn mà với ai?",
+      "text_vi": "Vui là vui gượng kẻo mà,\nAi tri âm đó, mặn mà với ai?",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -487,13 +517,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_du",
         "author_name": "Nguyễn Du",
         "work": "Truyện Kiều",
-        "source_url": "https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u",
-        "source_language": null,
-        "source_label": "Nguyễn Du",
-        "source_detail": "Research ID research.day24.kieu_008; corpus row 1036; content_nature=translated_quote; verification=A/B - passage verified in Wikisource witness; edition variants exist."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132",
+        "source_language": "vi",
+        "source_label": "Nguyễn Du · Truyện Kiều",
+        "source_detail": "Truyện Kiều · câu1247–1248 · bản Chiêm Vân Thị được trang ghi. Passage: Vui là vui gượng kẻo mà,\nAi tri âm đó, mặn mà với ai?. Giữ hai câu kể nỗi gượng vui của Kiều trong cảnh bị cưỡng ép mua vui; không đồng nhất mọi vui vẻ với che giấu bệnh lý, không thêm chẩn đoán. Trích nguyên văn phần thơ trong bản chép đối chiếu, chỉ chuẩn hóa dấu câu/xuống dòng, không lấy chú giải và không tự diễn ý. Provenance trước review: Research ID research.day24.kieu_008; corpus row 1036; content_nature=translated_quote; verification=A/B - passage verified in Wikisource witness; edition variants exist."
       },
       "metadata": {
         "concepts": [],
@@ -503,27 +533,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác thơ cổ của Nguyễn Du (mất1820) đã thuộc public domain. Bản chép/phiên âm đối chiếu: Truyện Kiều, Wikisource tiếng Việt và các người đóng góp; permalink https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132 ; lịch sử/credit tại https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&action=history . Trang công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần bản chép/chuẩn hóa này theo cùng giấy phép, không hạn chế thêm; chỉ thay dấu câu/xuống dòng, không dịch hay lấy chú thích. Không suy toàn bộ giao diện/chú giải là public domain."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T05:25:03.714005+00:00"
       },
       "writing": {
-        "semantic_intent": "Vui là vui gượng kẻo mà, Ai tri âm đó, mặn mà với ai?",
+        "semantic_intent": "Vui là vui gượng kẻo mà,\nAi tri âm đó, mặn mà với ai?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Du"
+        "attribution_vi": "Nguyễn Du · Truyện Kiều"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day24.kieu_009",

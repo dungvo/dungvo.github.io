@@ -56,3 +56,18 @@ class DailyReviewStatusTests(unittest.TestCase):
         rows=[{'id':'q','pipeline':'release','why':'Đã phát hành.'}]
         apply_closed_decisions(rows,{'q':{'decision':'round1_not_pass','note_vi':'Phải gỡ qua publisher.'}})
         self.assertNotIn('ai_review_status',rows[0])
+
+    def test_final_rejection_wins_over_raw_aggregator_issue(self):
+        # Exercise the actual Matrix classifier without loading production workbooks.
+        import ast
+        source=Path(__file__).with_name('build-review-matrix.py').read_text()
+        node=next(n for n in ast.walk(ast.parse(source))
+                  if isinstance(n,ast.FunctionDef) and n.name=='pm_status')
+        namespace={'clean':lambda value:str(value or '').strip(),'duplicate_loser_ids':set()}
+        exec(compile(ast.Module(body=[node],type_ignores=[]),'<matrix-status>','exec'),namespace)
+        classify=namespace['pm_status']
+        row={'pipeline':'excluded','issue_code':'source_below_B','ai_review_status':'round1_not_pass'}
+        self.assertEqual(classify(row)[0],'held_not_passed')
+        self.assertEqual(classify(dict(row,ai_review_status='source_verification_required'))[0],
+                         'needs_source_verification')
+        self.assertEqual(classify(dict(row,pipeline='release'))[0],'released')

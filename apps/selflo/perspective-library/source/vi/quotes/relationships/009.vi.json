@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.day43.anton_chekhov.014",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Người đánh xe trong Misery không cần một giải pháp cho cái chết của con; anh cần một nơi để nói về nó.",
+      "text_vi": "Không tìm được ai chịu nghe chuyện con trai mất, người đánh xe Iona cuối cùng kể với con ngựa của mình.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -27,11 +27,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Anton Chekhov",
-        "work": "Misery",
-        "source_url": "https://www.gutenberg.org/ebooks/author/708",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Anton Chekhov",
-        "source_detail": "Research ID research.day43.anton_chekhov.014; corpus row 1385; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
+        "work": "Misery · Constance Garnett",
+        "source_url": "https://www.gutenberg.org/cache/epub/1732/pg1732.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Anton Chekhov",
+        "source_detail": "Misery · đoạn cuối. Passage: Iona is carried away and tells her all about it.. Giữ sự việc cuối Misery và các lượt người quay đi/ngủ trong đoạn trước; bỏ khẳng định anh không cần giải pháp. Không hứa được nghe là chữa khỏi grief. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day43.anton_chekhov.014; corpus row 1385; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -44,27 +44,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Chekhov1860–1904; bản Anh Constance Garnett1861–1946 trong edition lịch sử Gutenberg (1732/1883), đều quá70 năm sau năm mất; chỉ tự diễn ý phần truyện, không dùng summary/chú giải editor hiện đại hoặc dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Người đánh xe trong Misery không cần một giải pháp cho cái chết của con; anh cần một nơi để nói về nó.",
+        "semantic_intent": "Không tìm được ai chịu nghe chuyện con trai mất, người đánh xe Iona cuối cùng kể với con ngựa của mình.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Anton Chekhov"
+        "attribution_vi": "Phỏng theo Anton Chekhov"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "research.day44.hermann_hesse.007",

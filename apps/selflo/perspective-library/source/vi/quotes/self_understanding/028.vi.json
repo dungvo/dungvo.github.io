@@ -241,10 +241,10 @@
     },
     {
       "id": "research.day21.labor_repetition",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trời ra, gắng; trời lặn, về, Ngày ngày, tháng tháng, nghiệp nghề truân-chiên.",
+      "text_vi": "Trời ra, gắng; trời lặn, về,\nNgày ngày, tháng tháng, nghiệp nghề truân chuyên.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -258,13 +258,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese oral tradition / anonymous",
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống ca dao Việt",
         "work": "Tình cảnh người nhà quê",
-        "source_url": "https://vi.wikisource.org/wiki/T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA",
-        "source_language": null,
-        "source_label": "Vietnamese oral tradition / anonymous",
-        "source_detail": "Research ID research.day21.labor_repetition; corpus row 978; content_nature=passage; verification=B - collection witness verified."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA&oldid=106637",
+        "source_language": "vi",
+        "source_label": "Phỏng theo Truyền thống ca dao Việt · Tình cảnh người nhà quê",
+        "source_detail": "Tình cảnh người nhà quê · câu7–8. Passage: Trời ra, gắng; trời lặn, về,\nNgày ngày, tháng tháng, nghiệp nghề truân-chiên.. Trích lời ca về lao động, đổi truân-chiên thành cách viết truân chuyên và ghi rõ; không ca ngợi làm kiệt sức hay coi số phận nghèo do thiếu cố gắng. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day21.labor_repetition; corpus row 978; content_nature=passage; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -274,27 +274,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống ca dao Việt · Tình cảnh người nhà quê. Permalink https://vi.wikisource.org/w/index.php?title=T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA&oldid=106637 ; history/credit https://vi.wikisource.org/w/index.php?title=T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Có tự diễn ý theo đúng phần lời cổ/nghĩa trong witness, chỉ rõ là phỏng theo, không nguyên văn."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Trời ra, gắng; trời lặn, về, Ngày ngày, tháng tháng, nghiệp nghề truân-chiên.",
+        "semantic_intent": "Trời ra, gắng; trời lặn, về,\nNgày ngày, tháng tháng, nghiệp nghề truân chuyên.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese oral tradition / anonymous"
+        "attribution_vi": "Phỏng theo Truyền thống ca dao Việt · Tình cảnh người nhà quê"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day21.domestic_expectation",
@@ -412,10 +418,10 @@
     },
     {
       "id": "research.day21.care_in_need",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 3,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Giá trị của giúp đỡ thay đổi theo thời điểm người kia cần nó nhất.",
+      "text_vi": "Một miếng khi đói bằng một đọi khi no.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -429,13 +435,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese oral tradition / anonymous",
-        "work": "Tục ngữ phong dao tradition",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M",
-        "source_language": null,
-        "source_label": "Vietnamese oral tradition / anonymous",
-        "source_detail": "Research ID research.day21.care_in_need; corpus row 983; content_nature=passage; verification=B - collection witness verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục M",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545",
+        "source_language": "vi",
+        "source_label": "Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/M · mục Một miếng khi đói. Passage: Một miếng khi đói, bằng một đọi khi no.. Đưa về đúng lời tục trong tuyển thay luận điểm khái quát; đọi là bát, ghi ở provenance, không quy giá trị giúp đỡ thành số tiền hay đòi biết ơn bắt buộc. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.day21.care_in_need; corpus row 983; content_nature=passage; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -445,34 +451,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Giá trị của giúp đỡ thay đổi theo thời điểm người kia cần nó nhất.",
+        "semantic_intent": "Một miếng khi đói bằng một đọi khi no.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese oral tradition / anonymous"
+        "attribution_vi": "Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day22.remember_planter",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 3,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Ăn trái nhớ kẻ trổng cây",
+      "text_vi": "Ăn trái nhớ kẻ trồng cây.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -486,13 +498,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese proverb tradition / anonymous",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A",
-        "source_language": null,
-        "source_label": "Vietnamese proverb tradition / anonymous",
-        "source_detail": "Research ID research.day22.remember_planter; corpus row 984; content_nature=proverb; verification=B - collection witness verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục A",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523",
+        "source_language": "vi",
+        "source_label": "Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/A · Ăn trái. Passage: Ăn trái nhớ kẻ trổng cây. Chuẩn hóa trổng trong witness thành trồng, giữ nghĩa biết ơn công người trước, không ghi sai tên một cá nhân làm tác giả lời tục. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.day22.remember_planter; corpus row 984; content_nature=proverb; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -502,34 +514,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Ăn trái nhớ kẻ trổng cây",
+        "semantic_intent": "Ăn trái nhớ kẻ trồng cây.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese proverb tradition / anonymous"
+        "attribution_vi": "Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day22.eat_watch_pot",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Ăn coi nồi, ngồi coi hướng",
+      "text_vi": "Trước khi lấy thêm cơm, mình còn có thể nhìn xem nồi còn bao nhiêu.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -543,13 +561,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese proverb tradition / anonymous",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A",
-        "source_language": null,
-        "source_label": "Vietnamese proverb tradition / anonymous",
-        "source_detail": "Research ID research.day22.eat_watch_pot; corpus row 987; content_nature=proverb; verification=B - collection witness verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục A",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523",
+        "source_language": "vi",
+        "source_label": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/A · Ăn coi nồi. Passage: Ăn coi nồi ngồi coi hướng.. Tự diễn ý riêng vế coi nồi theo lời giải nhường phần; lược ngồi coi hướng để không bị đọc thành phong thủy. Không phải nguyên văn. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day22.eat_watch_pot; corpus row 987; content_nature=proverb; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -559,27 +577,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Có tự diễn ý theo đúng phần lời cổ/nghĩa trong witness, chỉ rõ là phỏng theo, không nguyên văn."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Ăn coi nồi, ngồi coi hướng",
+        "semantic_intent": "Trước khi lấy thêm cơm, mình còn có thể nhìn xem nồi còn bao nhiêu.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese proverb tradition / anonymous"
+        "attribution_vi": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day22.carry_other_altar",

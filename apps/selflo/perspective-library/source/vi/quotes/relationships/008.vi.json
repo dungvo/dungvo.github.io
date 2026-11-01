@@ -436,10 +436,10 @@
     },
     {
       "id": "research.day41.leo_tolstoy.017",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trong Master and Man, một quan hệ quyền lực thay đổi khi tình huống sinh tồn buộc người chủ nhìn người làm như một con người cụ thể.",
+      "text_vi": "Giữa bão tuyết, Vasili phủ áo và thân mình lên Nikita. Lúc ấy, ông chỉ còn nghe tiếng thở của người làm công.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -458,10 +458,10 @@
         "author_id": null,
         "author_name": "Leo Tolstoy",
         "work": "Master and Man",
-        "source_url": "https://www.gutenberg.org/ebooks/author/136",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Leo Tolstoy",
-        "source_detail": "Research ID research.day41.leo_tolstoy.017; corpus row 1348; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
+        "source_url": "https://www.gutenberg.org/cache/epub/986/pg986.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Leo Tolstoy",
+        "source_detail": "Master and Man · phầnIX. Passage: he no longer heard the horse’s movements or\nthe whistling of the wind, but only Nikita’s breathing.. Diễn ý cảnh phầnIX, giữ hai người cụ thể; không ca ngợi tự hủy mình hoặc biến cảnh truyện thành hướng dẫn cứu hộ. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day41.leo_tolstoy.017; corpus row 1348; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -474,27 +474,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Tolstoy1828–1910; bản dịch lịch sử Louise Maude1855–1939 và Aylmer Maude1858–1938 đã quá70 năm sau năm mất; Selflo tự diễn ý cảnh trong bản này, không dùng bản Việt/Anh hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:17:19.329460+00:00"
       },
       "writing": {
-        "semantic_intent": "Trong Master and Man, một quan hệ quyền lực thay đổi khi tình huống sinh tồn buộc người chủ nhìn người làm như một con người cụ thể.",
+        "semantic_intent": "Giữa bão tuyết, Vasili phủ áo và thân mình lên Nikita. Lúc ấy, ông chỉ còn nghe tiếng thở của người làm công.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Leo Tolstoy"
+        "attribution_vi": "Phỏng theo Leo Tolstoy"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "research.day42.fyodor_dostoevsky.003",

@@ -390,3 +390,38 @@ Lượt cuối 116 dòng: 50 đạt / 66 không nhận, đã review đủ 149/14
 ## 2026-11-01 — Hợp nhất main theo yêu cầu owner
 
 Tích hợp remote1fc18a3 và local6917654; source91/Authoring1081866 quote78 story, Release61 không đổi.95 tests, checksum, Matrix/progress và gate candidate168 quote đạt.168 câu chờ Release giữ nguyên. Owner đã cho phép commit/push main; không force hoặc promote Release. Chi tiết `MAIN_MERGE_2026-11-01.vi.md`.
+
+
+## 2026-11-01 — B010 review toàn đợt local
+
+148 ID:5 đạt,143 final closure không nhận gồm44 legacy rights block giữ loại;0 chưa xử lý. Source92/Authoring109, Release61 không đổi. Corpus1.382/5.471, còn4.089;173 chờ Release.95 tests/gate candidate tạm173 quote đạt; không cài candidate, không commit/push đợt này. Giữ10 chương/10 seed quote mới từ main. Handoff `Q10_B010_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Bước tiếp theo B011 148 dòng local.
+
+
+## 2026-11-01 — B011 review toàn đợt local
+
+148 ID:24 đạt,124 final closure không nhận;0 chưa xử lý; không mở lại record đã đóng. Source94/Authoring111, Release61 không đổi. Corpus1.506/5.471, còn3.965;197 chờ Release.95 tests/gate candidate tạm197 quote đạt; không cài candidate, không commit/push. Giữ10 chương/10 seed từ main và173 accepted trước. Handoff `Q10_B011_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Bước tiếp theo B012 148 dòng local.
+
+
+## 2026-11-01 — B012 toàn đợt local
+
+148 ID:6 đạt,141 final closure mới,1 giữ nguyên quyết định owner và nối program closure;0 chưa xử lý. Source95/Authoring112, Release61 không đổi. Corpus1.648/5.471;203 chờ.95 tests/gate candidate tạm đạt; không commit/push/deploy. Handoff `Q10_B012_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Tiếp theo B013 165 ID local.
+
+
+## 2026-11-01 — B013 toàn đợt local
+
+165 ID Research: 8 nhập canonical đạt, 157 final closure; 0 chưa xử lý. Không mở record đã đóng. Source 96 / Authoring 113 (1874 quote / 78 story), Release 61 giữ 385 quote / 22 story. Corpus 1.805/5.471; 211 chờ. 95 tests và gate candidate tạm đạt; workbook và 1866 quote canonical trước giữ nguyên; không commit/push/deploy. Handoff `Q10_B013_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Tiếp theo B014 164 ID local.
+
+
+## 2026-11-01 — B014 toàn đợt local
+
+164 ID:18 nhập canonical đạt,146 final closure;0 chưa xử lý. Source97/Authoring114(1892 quote/78 story),Release61 giữ385 quote/22 story. Corpus1.951/5.471;229 chờ.96 tests và gate candidate tạm đạt; workbook/raw,1874 quote canonical trước và story/Knowledge giữ nguyên. Không commit/push/deploy. Handoff `Q10_B014_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Tiếp theo B015 164 ID local.
+
+
+## 2026-11-01 — B015 toàn đợt local
+
+164 ID:1 nhập canonical đạt,163 final closure;0 chưa xử lý. Source98/Authoring115(1893 quote/78 story),Release61 giữ385 quote/22 story. Corpus2.114/5.471;230 chờ.96 tests và gate candidate tạm đạt; workbook/raw,1892 quote canonical trước và story/Knowledge giữ nguyên. Không commit/push/deploy. Handoff `Q10_B015_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Tiếp theo B016 164 ID local.
+
+
+## 2026-11-01 — B016 toàn đợt local
+
+164 ID:4 nhập canonical đạt,160 final closure;0 chưa xử lý. Source99/Authoring116(1897 quote/78 story),Release61 giữ385 quote/22 story. Corpus2.274/5.471;234 chờ.96 tests/gate đạt; workbook/raw,1893 quote canonical trước và story/Knowledge giữ nguyên. Không commit/push/deploy. Handoff `Q10_B016_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Tiếp theo B017 164 ID local.

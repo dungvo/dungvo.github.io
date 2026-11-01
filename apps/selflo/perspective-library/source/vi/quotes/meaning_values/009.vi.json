@@ -314,10 +314,10 @@
     },
     {
       "id": "research.day43.anton_chekhov.005",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Việc thắng một cuộc cược có thể mất ý nghĩa khi con người thay đổi trong thời gian thực hiện nó.",
+      "text_vi": "Trong “Vụ cá cược”, người chờ mười lăm năm nhận tiền lại tự rời chỗ giam trước hạn, để mất chính khoản tiền mình từng ao ước.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "meaning_values",
@@ -335,11 +335,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Anton Chekhov",
-        "work": "The Bet",
-        "source_url": "https://www.gutenberg.org/ebooks/author/708",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Anton Chekhov",
-        "source_detail": "Research ID research.day43.anton_chekhov.005; corpus row 1376; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
+        "work": "The Bet · Constance Garnett",
+        "source_url": "https://www.gutenberg.org/cache/epub/1732/pg1732.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Anton Chekhov",
+        "source_detail": "The Bet · lá thư và việc rời đi trước hạn năm giờ. Passage: I renounce the two millions of which I once dreamed as of paradise. Giữ hành động cuối The Bet, không cổ vũ giam mình/từ bỏ đời sống hay coi lý lẽ khinh đời của nhân vật là chân lý tác giả. Tự diễn ý tình huống, không lời trích của Chekhov. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day43.anton_chekhov.005; corpus row 1376; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -352,27 +352,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Chekhov1860–1904; bản Anh Constance Garnett1861–1946 trong edition lịch sử Gutenberg (1732/1883), đều quá70 năm sau năm mất; chỉ tự diễn ý phần truyện, không dùng summary/chú giải editor hiện đại hoặc dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Việc thắng một cuộc cược có thể mất ý nghĩa khi con người thay đổi trong thời gian thực hiện nó.",
+        "semantic_intent": "Trong “Vụ cá cược”, người chờ mười lăm năm nhận tiền lại tự rời chỗ giam trước hạn, để mất chính khoản tiền mình từng ao ước.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Anton Chekhov"
+        "attribution_vi": "Phỏng theo Anton Chekhov"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:meaning",
+        "support:new_perspective",
+        "topic:meaning_values",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "research.day49.005",

@@ -561,10 +561,10 @@
     },
     {
       "id": "research.reaudit.day22.an_vo_dua_so_vo_dua",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Sau một trải nghiệm khiến mình sợ, một thứ chỉ giống nó cũng có thể kích hoạt dè chừng.",
+      "text_vi": "Ăn vỏ dưa, thấy vỏ dừa mà sợ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -578,13 +578,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Historical proverb collection",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A",
-        "source_language": null,
-        "source_label": "Historical proverb collection",
-        "source_detail": "Research ID research.reaudit.day22.an_vo_dua_so_vo_dua; corpus row 1100; content_nature=direct_quote; verification=B - collection location verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục A",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523",
+        "source_language": "vi",
+        "source_label": "Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/A · Ăn vỏ dưa. Passage: Ăn vỏ dưa, thấy vỏ dừa mà sợ.. Giữ hình ảnh lời tục, bỏ claim cơ chế kích hoạt tâm lý; không chẩn đoán nỗi sợ. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.reaudit.day22.an_vo_dua_so_vo_dua; corpus row 1100; content_nature=direct_quote; verification=B - collection location verified."
       },
       "metadata": {
         "concepts": [],
@@ -594,27 +594,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Historical witness; platform terms separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:17:19.329460+00:00"
       },
       "writing": {
-        "semantic_intent": "Sau một trải nghiệm khiến mình sợ, một thứ chỉ giống nó cũng có thể kích hoạt dè chừng.",
+        "semantic_intent": "Ăn vỏ dưa, thấy vỏ dừa mà sợ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Historical proverb collection"
+        "attribution_vi": "Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.reaudit.day24.kieu_memory_after_event",

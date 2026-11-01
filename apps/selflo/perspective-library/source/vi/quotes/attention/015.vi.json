@@ -130,10 +130,10 @@
     },
     {
       "id": "research.day45.franz_kafka.001",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Gregor thức dậy với một thay đổi cực lớn nhưng suy nghĩ đầu tiên vẫn quay về công việc và chuyến tàu bị lỡ.",
+      "text_vi": "Gregor tỉnh dậy trong một hình dạng khác hẳn; điều khiến anh cuống lên vẫn là chuyến tàu đi làm.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "attention",
@@ -151,11 +151,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Franz Kafka",
-        "work": "Die Verwandlung / The Metamorphosis",
-        "source_url": "https://www.gutenberg.org/ebooks/author/1735",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Franz Kafka",
-        "source_detail": "Research ID research.day45.franz_kafka.001; corpus row 1412; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
+        "work": "Die Verwandlung1915 · nguyên Đức",
+        "source_url": "https://www.gutenberg.org/cache/epub/22367/pg22367.txt",
+        "source_language": "de",
+        "source_label": "Phỏng theo Franz Kafka",
+        "source_detail": "Die Verwandlung · phầnI mở đầu. Passage: die Sorgen um die\nZuganschlüsse. Giữ hình ảnh mở đầu Die Verwandlung và nỗi lo việc/tàu, không chẩn đoán nhân vật hay nói mọi người bị áp lực đều như Gregor. Tự diễn ý nguyên Đức, không lấy bản dịch Anh hiện đại. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day45.franz_kafka.001; corpus row 1412; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -168,27 +168,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác tiếng Đức1915; Kafka1883–1924, Gutenberg22367 nguyên ngữ, không dùng bản dịch Wyllie/Muir hay bản Việt hiện đại. Chỉ tự diễn ý văn bản Kafka, không dùng lời tóm tắt web."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Gregor thức dậy với một thay đổi cực lớn nhưng suy nghĩ đầu tiên vẫn quay về công việc và chuyến tàu bị lỡ.",
+        "semantic_intent": "Gregor tỉnh dậy trong một hình dạng khác hẳn; điều khiến anh cuống lên vẫn là chuyến tàu đi làm.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Franz Kafka"
+        "attribution_vi": "Phỏng theo Franz Kafka"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "research.day46.002",

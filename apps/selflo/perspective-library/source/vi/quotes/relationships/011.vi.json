@@ -294,10 +294,10 @@
     },
     {
       "id": "authoring.b003.ralph_waldo_emerson.037",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Phần thưởng duy nhất của đức hạnh là chính đức hạnh; cách duy nhất để có một người bạn là trở thành một người bạn.",
+      "text_vi": "Muốn có tình bạn, phần của mình cũng là làm một người bạn.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -314,11 +314,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Ralph Waldo Emerson",
-        "work": "Essays — First Series",
-        "source_url": "https://www.gutenberg.org/ebooks/2944",
-        "source_language": null,
-        "source_label": "Ralph Waldo Emerson",
-        "source_detail": "Research ID research.exp1000.b003.ralph_waldo_emerson.037; corpus row Dear Friend,; text line 4029; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "Essays, First Series · Friendship",
+        "source_url": "https://www.gutenberg.org/cache/epub/2944/pg2944.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Ralph Waldo Emerson",
+        "source_detail": "Essays, First Series · Friendship1841. Passage: the only way to have a friend is to be one. Chỉ diễn ý vế tình bạn trong Friendship, lược vế virtue và tính tuyệt đối only để không hứa tử tế sẽ được đáp lại hoặc trách người cô độc. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b003.ralph_waldo_emerson.037; corpus row Dear Friend,; text line 4029; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -331,34 +331,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "public_domain_us"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1841; Emerson1803–1882, Gutenberg2944. Selflo tự diễn ý, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Phần thưởng duy nhất của đức hạnh là chính đức hạnh; cách duy nhất để có một người bạn là trở thành một người bạn.",
+        "semantic_intent": "Muốn có tình bạn, phần của mình cũng là làm một người bạn.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Ralph Waldo Emerson"
+        "attribution_vi": "Phỏng theo Ralph Waldo Emerson"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "authoring.b003.henry_david_thoreau.002",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Trong nhà tôi có ba chiếc ghế: một cho cô độc, hai cho tình bạn, ba cho hội họp.",
+      "text_vi": "Trong nhà tôi có ba chiếc ghế: một cho lúc một mình, hai cho tình bạn, ba cho những cuộc gặp gỡ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -375,11 +381,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Henry David Thoreau",
-        "work": "Walden, and On The Duty Of Civil Disobedience",
-        "source_url": "https://www.gutenberg.org/ebooks/205",
-        "source_language": null,
-        "source_label": "Henry David Thoreau",
-        "source_detail": "Research ID research.exp1000.b003.henry_david_thoreau.002; corpus row T. Carew; text line 4021; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
+        "work": "Walden1854 · Visitors",
+        "source_url": "https://www.gutenberg.org/cache/epub/205/pg205.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Henry David Thoreau",
+        "source_detail": "Walden · Visitors. Passage: I had three chairs in my house; one for solitude, two for friendship,\nthree for society.. Diễn ý trò đếm ghế trong Visitors, không biến thành quy tắc phải sống ít đồ hoặc chỉ có ba ghế. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.exp1000.b003.henry_david_thoreau.002; corpus row T. Carew; text line 4021; content_nature=direct_quote; verification=B — passage verified in registered Project Gutenberg edition."
       },
       "metadata": {
         "concepts": [],
@@ -392,27 +398,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "public_domain_us"
+        "status": "public_domain",
+        "note": "Nguyên tác Anh1854; Thoreau1817–1862, Gutenberg205, không dùng dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Trong nhà tôi có ba chiếc ghế: một cho cô độc, hai cho tình bạn, ba cho hội họp.",
+        "semantic_intent": "Trong nhà tôi có ba chiếc ghế: một cho lúc một mình, hai cho tình bạn, ba cho những cuộc gặp gỡ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Henry David Thoreau"
+        "attribution_vi": "Phỏng theo Henry David Thoreau"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "authoring.b007.adam_smith.019",
@@ -678,10 +690,10 @@
     },
     {
       "id": "research.10k.b009.kieu.0163.0164",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Người quốc sắc, kẻ thiên tài,\nTình trong như đã, mặt ngoài còn e.",
+      "text_vi": "Tình trong như đã, mặt ngoài còn e.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -697,13 +709,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_du",
         "author_name": "Nguyễn Du",
-        "work": "Truyện Kiều (Đoạn Trường Tân Thanh)",
-        "source_url": "https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u",
-        "source_language": null,
-        "source_label": "Nguyễn Du",
-        "source_detail": "Research ID research.10k.b009.kieu.0163-0164; corpus row 20004; content_nature=direct_quote; verification=A - Wikisource witness; lines 163–164 in the Wikisource transcription."
+        "work": "Truyện Kiều",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132",
+        "source_language": "vi",
+        "source_label": "Nguyễn Du · Truyện Kiều",
+        "source_detail": "Truyện Kiều · trích riêng câu164. Passage: Tình trong như đã, mặt ngoài còn e.. Chỉ trích câu164, lược câu163 quốc sắc/thiên tài để không mang phân vai giới/giá trị vào thẻ. Giữ quan sát tình cảm chưa nói, không đọc ý người khác như fact. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.10k.b009.kieu.0163-0164; corpus row 20004; content_nature=direct_quote; verification=A - Wikisource witness; lines 163–164 in the Wikisource transcription."
       },
       "metadata": {
         "concepts": [],
@@ -716,32 +728,38 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Wikisource marks the work public domain; reuse must preserve edition/transcription provenance and Wikisource licensing where applicable."
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Nguyễn Du · Truyện Kiều. Permalink https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132 ; history/credit https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Người quốc sắc, kẻ thiên tài,\nTình trong như đã, mặt ngoài còn e.",
+        "semantic_intent": "Tình trong như đã, mặt ngoài còn e.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Du"
+        "attribution_vi": "Nguyễn Du · Truyện Kiều"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.10k.b009.kieu.0181.0182",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
       "text_vi": "Người đâu gặp gỡ làm chi,\nTrăm năm biết có duyên gì hay không?",
       "subtitle_vi": null,
@@ -759,13 +777,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_du",
         "author_name": "Nguyễn Du",
-        "work": "Truyện Kiều (Đoạn Trường Tân Thanh)",
-        "source_url": "https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u",
-        "source_language": null,
-        "source_label": "Nguyễn Du",
-        "source_detail": "Research ID research.10k.b009.kieu.0181-0182; corpus row 20005; content_nature=direct_quote; verification=A - Wikisource witness; lines 181–182 in the Wikisource transcription."
+        "work": "Truyện Kiều",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132",
+        "source_language": "vi",
+        "source_label": "Nguyễn Du · Truyện Kiều",
+        "source_detail": "Truyện Kiều · câu181–182. Passage: Người đâu gặp gỡ làm chi,\nTrăm năm biết có duyên gì hay không?. Giữ lời tự hỏi của Kiều sau gặp Kim Trọng, không hứa duyên định sẵn hay quyết định thay quan hệ. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.10k.b009.kieu.0181-0182; corpus row 20005; content_nature=direct_quote; verification=A - Wikisource witness; lines 181–182 in the Wikisource transcription."
       },
       "metadata": {
         "concepts": [],
@@ -778,27 +796,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Wikisource marks the work public domain; reuse must preserve edition/transcription provenance and Wikisource licensing where applicable."
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Nguyễn Du · Truyện Kiều. Permalink https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132 ; history/credit https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
         "semantic_intent": "Người đâu gặp gỡ làm chi,\nTrăm năm biết có duyên gì hay không?",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Du"
+        "attribution_vi": "Nguyễn Du · Truyện Kiều"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:classical_text"
+      ]
     }
   ]
 }

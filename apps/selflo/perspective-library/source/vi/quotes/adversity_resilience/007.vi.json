@@ -573,10 +573,10 @@
     },
     {
       "id": "research.day21.rural_uncertainty",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 3,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Khi trời hạn hán, khi hay mưa dầm... Đồng điền lúa thóc mười phần được ba.",
+      "text_vi": "Khi trời hạn hán, khi hay mưa dầm,\nKhi trời gió bão ầm ầm,\nĐồng điền lúa thóc mười phần được ba.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -591,13 +591,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese oral tradition / anonymous",
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống ca dao Việt",
         "work": "Tình cảnh người nhà quê",
-        "source_url": "https://vi.wikisource.org/wiki/T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA",
-        "source_language": null,
-        "source_label": "Vietnamese oral tradition / anonymous",
-        "source_detail": "Research ID research.day21.rural_uncertainty; corpus row 962; content_nature=passage; verification=B - collection witness verified."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA&oldid=106637",
+        "source_language": "vi",
+        "source_label": "Truyền thống ca dao Việt · Tình cảnh người nhà quê",
+        "source_detail": "Tình cảnh người nhà quê · ba câu từ Khi trời hạn hán. Passage: Khi trời hạn hán, khi hay mưa dầm:. Giữ đầy ba câu về thời tiết/thất mùa có trong bài, thay vì nối hai mảnh bằng dấu...; không khẳng định tỉ lệ30% là số liệu mọi vụ. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.day21.rural_uncertainty; corpus row 962; content_nature=passage; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -609,34 +609,40 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống ca dao Việt · Tình cảnh người nhà quê. Permalink https://vi.wikisource.org/w/index.php?title=T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA&oldid=106637 ; history/credit https://vi.wikisource.org/w/index.php?title=T%C3%ACnh_c%E1%BA%A3nh_ng%C6%B0%E1%BB%9Di_nh%C3%A0_qu%C3%AA&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Khi trời hạn hán, khi hay mưa dầm... Đồng điền lúa thóc mười phần được ba.",
+        "semantic_intent": "Khi trời hạn hán, khi hay mưa dầm,\nKhi trời gió bão ầm ầm,\nĐồng điền lúa thóc mười phần được ba.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese oral tradition / anonymous"
+        "attribution_vi": "Truyền thống ca dao Việt · Tình cảnh người nhà quê"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day21.boat_tension",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 3,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Chẳng giậm thì thuyền chẳng đi, Giậm ra ván nát, thuyền thì long đanh.",
+      "text_vi": "Chẳng giậm thì thuyền chẳng đi,\nGiậm ra ván nát, thuyền thì long đanh.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "adversity_resilience",
@@ -651,13 +657,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese oral tradition / anonymous",
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống ca dao Việt",
         "work": "Chèo đò",
-        "source_url": "https://vi.wikisource.org/wiki/Ch%C3%A8o_%C4%91%C3%B2",
-        "source_language": null,
-        "source_label": "Vietnamese oral tradition / anonymous",
-        "source_detail": "Research ID research.day21.boat_tension; corpus row 965; content_nature=passage; verification=B - collection witness verified."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Ch%C3%A8o_%C4%91%C3%B2&oldid=106628",
+        "source_language": "vi",
+        "source_label": "Truyền thống ca dao Việt · Chèo đò",
+        "source_detail": "Chèo đò · hai câu đầu. Passage: Chẳng giậm thì thuyền chẳng đi,\nGiậm ra ván nát, thuyền thì long đanh.. Giữ thế khó của hình ảnh trong câu ca, không chuyển thành chỉ dẫn đóng/chèo thuyền hoặc khẳng định hành động luôn hỏng. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.day21.boat_tension; corpus row 965; content_nature=passage; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -669,27 +675,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống ca dao Việt · Chèo đò. Permalink https://vi.wikisource.org/w/index.php?title=Ch%C3%A8o_%C4%91%C3%B2&oldid=106628 ; history/credit https://vi.wikisource.org/w/index.php?title=Ch%C3%A8o_%C4%91%C3%B2&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Chẳng giậm thì thuyền chẳng đi, Giậm ra ván nát, thuyền thì long đanh.",
+        "semantic_intent": "Chẳng giậm thì thuyền chẳng đi,\nGiậm ra ván nát, thuyền thì long đanh.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese oral tradition / anonymous"
+        "attribution_vi": "Truyền thống ca dao Việt · Chèo đò"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:overcome_adversity",
+        "support:new_perspective",
+        "topic:adversity_recovery",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day21.ca_dao_time_uncertain",

@@ -555,8 +555,8 @@
     },
     {
       "id": "research.10k.b009.kieu.0003.0004",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
       "text_vi": "Trải qua một cuộc bể dâu,\nNhững điều trông thấy mà đau đớn lòng.",
       "subtitle_vi": null,
@@ -574,13 +574,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_du",
         "author_name": "Nguyễn Du",
-        "work": "Truyện Kiều (Đoạn Trường Tân Thanh)",
-        "source_url": "https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u",
-        "source_language": null,
-        "source_label": "Nguyễn Du",
-        "source_detail": "Research ID research.10k.b009.kieu.0003-0004; corpus row 20001; content_nature=direct_quote; verification=A - Wikisource witness; lines 3–4 in the Wikisource transcription."
+        "work": "Truyện Kiều",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132",
+        "source_language": "vi",
+        "source_label": "Nguyễn Du · Truyện Kiều",
+        "source_detail": "Truyện Kiều · câu3–4. Passage: Trải qua một cuộc bể dâu,\nNhững điều trông thấy mà đau đớn lòng.. Trích lời mở đầu, giữ giọng thương đời; không khẳng định mọi trải nghiệm chỉ là khổ hay dùng thành chẩn đoán. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.10k.b009.kieu.0003-0004; corpus row 20001; content_nature=direct_quote; verification=A - Wikisource witness; lines 3–4 in the Wikisource transcription."
       },
       "metadata": {
         "concepts": [],
@@ -593,27 +593,224 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Wikisource marks the work public domain; reuse must preserve edition/transcription provenance and Wikisource licensing where applicable."
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Nguyễn Du · Truyện Kiều. Permalink https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132 ; history/credit https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
         "semantic_intent": "Trải qua một cuộc bể dâu,\nNhững điều trông thấy mà đau đớn lòng.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Du"
+        "attribution_vi": "Nguyễn Du · Truyện Kiều"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.day25.an2_11",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Ôn lại điều cũ mà nhận ra điều mới.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "change_growth",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Khổng Tử · truyền thống Luận Ngữ",
+        "work": "Luận Ngữ",
+        "source_url": "https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD&oldid=1082965",
+        "source_language": "lzh",
+        "source_label": "Phỏng theo Khổng Tử · truyền thống Luận Ngữ · Luận Ngữ",
+        "source_detail": "Research IDresearch.day25.an2_11; Quote Library v2 row1053; Luận Ngữ · Vi ChínhII.11 · trích vế đầu. Passage: 溫故而知新 . Trích riêng vế ôn-cố-tri-tân, lược vế có thể làm thầy, ghi rõ. Không nói chỉ ôn lại luôn đủ để có hiểu biết mới. Selflo tự dịch/diễn ý chính văn Hán cổ, không phải bản dịch nguyên văn hiện đại; không dùng phần chú Vương Bật làm lời Lão Tử. Raw source: https://zh.wikisource.org/zh-hant/論語/全覽."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "learning_failure_growth",
+          "learning"
+        ]
+      },
+      "rights": {
+        "status": "licensed",
+        "note": "Chính văn Hán cổ, không dùng bản dịch hiện đại. Witness Wikisource và các người đóng góp; Luận Ngữ; credit/permalink https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD&oldid=1082965 ; history https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD&action=history . Bản chép theo CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo tự dịch/diễn ý đoạn ghi rõ, giữ attribution/link và chia sẻ phần chuyển thể này theo cùng giấy phép, không hạn chế thêm. Không dùng chú giải hiện đại hoặc coi toàn bộ collection là public domain."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:29:22.970834+00:00"
+      },
+      "writing": {
+        "semantic_intent": "Ôn lại điều cũ mà nhận ra điều mới.",
+        "observation_key": null,
+        "structure_pattern": "source_adaptation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Khổng Tử · truyền thống Luận Ngữ · Luận Ngữ"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.day25.an7_19",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Tôi không sinh ra đã biết. Tôi yêu điều xưa và siêng năng tìm hiểu.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "change_growth",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Khổng Tử · truyền thống Luận Ngữ",
+        "work": "Luận Ngữ",
+        "source_url": "https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD&oldid=1082965",
+        "source_language": "lzh",
+        "source_label": "Phỏng theo Khổng Tử · truyền thống Luận Ngữ · Luận Ngữ",
+        "source_detail": "Research IDresearch.day25.an7_19; Quote Library v2 row1071; Luận Ngữ · Thuật NhiVII.19 theo witness. Passage: 我非生而知之者，好古，敏以求之者也。 . Giữ lời tự nói củaKhổngTử và cả hiếu cổ/mẫn cầu, không chuyển thành mọi trí tuệ chỉ do nỗ lực hoặc phủ nhận khả năng bẩm sinh. Selflo tự dịch/diễn ý chính văn Hán cổ, không phải bản dịch nguyên văn hiện đại; không dùng phần chú Vương Bật làm lời Lão Tử. Raw source: https://zh.wikisource.org/zh-hant/論語/全覽."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "learning"
+        ]
+      },
+      "rights": {
+        "status": "licensed",
+        "note": "Chính văn Hán cổ, không dùng bản dịch hiện đại. Witness Wikisource và các người đóng góp; Luận Ngữ; credit/permalink https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD&oldid=1082965 ; history https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD&action=history . Bản chép theo CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo tự dịch/diễn ý đoạn ghi rõ, giữ attribution/link và chia sẻ phần chuyển thể này theo cùng giấy phép, không hạn chế thêm. Không dùng chú giải hiện đại hoặc coi toàn bộ collection là public domain."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:29:22.970834+00:00"
+      },
+      "writing": {
+        "semantic_intent": "Tôi không sinh ra đã biết. Tôi yêu điều xưa và siêng năng tìm hiểu.",
+        "observation_key": null,
+        "structure_pattern": "source_adaptation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Khổng Tử · truyền thống Luận Ngữ · Luận Ngữ"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
+    },
+    {
+      "id": "research.day17.philosophy_any_age",
+      "revision": 1,
+      "kind": "adapted_wisdom",
+      "title_vi": null,
+      "text_vi": "Việc tìm hiểu cách mình sống không có tuổi nào là quá sớm hay quá muộn.",
+      "subtitle_vi": null,
+      "story_id": null,
+      "primary_theme": "change_growth",
+      "selection": {
+        "source_type": "philosophy",
+        "reflection_kind": null,
+        "thought_match_keys": [],
+        "presentation_tags": [],
+        "tie_break_order": 0
+      },
+      "authorship": {
+        "author_id": null,
+        "author_name": "Epicurus",
+        "work": "Letter to Menoeceus · R.D.Hicks",
+        "source_url": "https://classics.mit.edu/Epicurus/menoec.html",
+        "source_language": "en",
+        "source_label": "Phỏng theo Epicurus · Letter to Menoeceus · R.D.Hicks",
+        "source_detail": "Research ID research.day17.philosophy_any_age; Quote Library v2 row 893; Letter to Menoeceus ·122 · mởđầu. Passage: no age is too early or too \nlate. Diễnýhọcminhtriết, khôngđưa hiệuquảhealthofsoul thànhclaimtrịliệu. Bản Việt tự dịch/diễn ý bởi Selflo, không phải nguyên văn. Raw source: https://classics.mit.edu/Epicurus/menoec.html."
+      },
+      "metadata": {
+        "concepts": [],
+        "theories": [],
+        "frameworks": [],
+        "emotion_tags": [],
+        "keywords": [
+          "change_loss_recovery",
+          "learning"
+        ]
+      },
+      "rights": {
+        "status": "public_domain",
+        "note": "Epicurus cổ; bản dịch RobertDrewHicks1850–1929 lịch sử, tựdiễný từMIT ghiđúngtranslator; đãquá70năm. KhôngdùngbảnBailey1957 hoặcchúgiảihiệnđạichưaclearance. B006 đã dùngđúngeditionHicks; lưuURL/hashđọclại."
+      },
+      "review": {
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T10:35:32.590859+00:00"
+      },
+      "writing": {
+        "semantic_intent": "Việc tìm hiểu cách mình sống không có tuổi nào là quá sớm hay quá muộn.",
+        "observation_key": null,
+        "structure_pattern": "source_adaptation"
+      },
+      "display": {
+        "mode": "poster",
+        "priority": 0,
+        "featured": false,
+        "style": "paper_quote",
+        "attribution_vi": "Phỏng theo Epicurus · Letter to Menoeceus · R.D.Hicks"
+      },
+      "knowledge_basis": null,
+      "tags": [
+        "intent:personal_growth",
+        "support:new_perspective",
+        "topic:change_growth",
+        "origin:classical_text"
+      ]
     }
   ]
 }

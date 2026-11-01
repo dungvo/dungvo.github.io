@@ -534,8 +534,8 @@
     },
     {
       "id": "research.10k.b009.kieu.0041.0042",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 2,
+      "kind": "verified_quote",
       "title_vi": null,
       "text_vi": "Cỏ non xanh tận chân trời,\nCành lê trắng điểm một vài bông hoa.",
       "subtitle_vi": null,
@@ -553,13 +553,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_du",
         "author_name": "Nguyễn Du",
-        "work": "Truyện Kiều (Đoạn Trường Tân Thanh)",
-        "source_url": "https://vi.wikisource.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u",
-        "source_language": null,
-        "source_label": "Nguyễn Du",
-        "source_detail": "Research ID research.10k.b009.kieu.0041-0042; corpus row 20003; content_nature=direct_quote; verification=A - Wikisource witness; lines 41–42 in the Wikisource transcription."
+        "work": "Truyện Kiều",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132",
+        "source_language": "vi",
+        "source_label": "Nguyễn Du · Truyện Kiều",
+        "source_detail": "Truyện Kiều · câu41–42. Passage: Cỏ non xanh tận chân trời,\nCành lê trắng điểm một vài bông hoa.. Giữ hình ảnh cảnh xuân, không thêm bài học chú ý hay tác dụng chữa lành. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.10k.b009.kieu.0041-0042; corpus row 20003; content_nature=direct_quote; verification=A - Wikisource witness; lines 41–42 in the Wikisource transcription."
       },
       "metadata": {
         "concepts": [],
@@ -572,27 +572,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Wikisource marks the work public domain; reuse must preserve edition/transcription provenance and Wikisource licensing where applicable."
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Nguyễn Du · Truyện Kiều. Permalink https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&oldid=205132 ; history/credit https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
         "semantic_intent": "Cỏ non xanh tận chân trời,\nCành lê trắng điểm một vài bông hoa.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Du"
+        "attribution_vi": "Nguyễn Du · Truyện Kiều"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:calm",
+        "support:new_perspective",
+        "topic:attention_presence",
+        "origin:classical_text"
+      ]
     }
   ]
 }

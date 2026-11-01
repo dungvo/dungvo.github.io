@@ -522,10 +522,10 @@
     },
     {
       "id": "research.day21.boat_roles",
-      "revision": 1,
-      "kind": "adapted_wisdom",
+      "revision": 3,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Đôi ta lên thác, xuống ghềnh, Em ra đứng mũi để anh chịu sào.",
+      "text_vi": "Đôi ta lên thác, xuống ghềnh,\nEm ra đứng mũi để anh chịu sào.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -539,13 +539,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Vietnamese oral tradition / anonymous",
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống ca dao Việt",
         "work": "Chèo đò",
-        "source_url": "https://vi.wikisource.org/wiki/Ch%C3%A8o_%C4%91%C3%B2",
-        "source_language": null,
-        "source_label": "Vietnamese oral tradition / anonymous",
-        "source_detail": "Research ID research.day21.boat_roles; corpus row 964; content_nature=passage; verification=B - collection witness verified."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Ch%C3%A8o_%C4%91%C3%B2&oldid=106628",
+        "source_language": "vi",
+        "source_label": "Truyền thống ca dao Việt · Chèo đò",
+        "source_detail": "Chèo đò · hai câu cuối. Passage: Đôi ta lên thác, xuống ghềnh,\nEm ra đứng mũi để anh chịu sào.. Giữ lời đôi lứa trong câu ca, không dùng thành phân việc giới bắt buộc cho gia đình hiện đại hay nguyên lý kỹ thuật thuyền. Trích nguyên văn phần thơ/lời tục trong bản chép, chỉ chuẩn hóa được ghi rõ và không lấy chú giải hiện đại. Provenance trước review: Research ID research.day21.boat_roles; corpus row 964; content_nature=passage; verification=B - collection witness verified."
       },
       "metadata": {
         "concepts": [],
@@ -555,27 +555,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống ca dao Việt · Chèo đò. Permalink https://vi.wikisource.org/w/index.php?title=Ch%C3%A8o_%C4%91%C3%B2&oldid=106628 ; history/credit https://vi.wikisource.org/w/index.php?title=Ch%C3%A8o_%C4%91%C3%B2&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Chỉ chuẩn hóa dấu câu/xuống dòng hoặc trích phần được ghi rõ; không lấy chú giải hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Đôi ta lên thác, xuống ghềnh, Em ra đứng mũi để anh chịu sào.",
+        "semantic_intent": "Đôi ta lên thác, xuống ghềnh,\nEm ra đứng mũi để anh chịu sào.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Vietnamese oral tradition / anonymous"
+        "attribution_vi": "Truyền thống ca dao Việt · Chèo đò"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day21.family_load",

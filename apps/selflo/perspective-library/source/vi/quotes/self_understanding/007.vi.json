@@ -6,10 +6,10 @@
   "quotes": [
     {
       "id": "research.day23.nbk_nhan_01",
-      "revision": 2,
-      "kind": "adapted_wisdom",
+      "revision": 3,
+      "kind": "verified_quote",
       "title_vi": null,
-      "text_vi": "Một mai, một cuốc, một cần câu, Thơ thẩn cùng ai vui thú nào.",
+      "text_vi": "Một mai, một cuốc, một cần câu,\nThơ thẩn cùng ai vui thú nào.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -24,13 +24,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
+        "author_id": "nguyen_binh_khiem",
         "author_name": "Nguyễn Bỉnh Khiêm",
         "work": "Nhàn",
-        "source_url": "https://vi.wikisource.org/wiki/Nh%C3%A0n",
-        "source_language": null,
-        "source_label": "Nguyễn Bỉnh Khiêm",
-        "source_detail": "Research ID research.day23.nbk_nhan_01; corpus row 1018; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
+        "source_url": "https://vi.wikisource.org/w/index.php?title=Nh%C3%A0n&oldid=205503",
+        "source_language": "vi",
+        "source_label": "Nguyễn Bỉnh Khiêm · Nhàn",
+        "source_detail": "Nhàn · hai câu đầu. Passage: Một mai, một cuốc, một cần câu,\nThơ thẩn cùng ai vui thú nào.. Giữ hai câu mở đầu và niềm vui lao động/nhàn của chủ thể trữ tình; không đổi thành lời khuyên bỏ việc/xa lánh người khác. Trích nguyên văn phần thơ trong bản chép đối chiếu, chỉ chuẩn hóa dấu câu/xuống dòng, không lấy chú giải và không tự diễn ý. Provenance trước review: Research ID research.day23.nbk_nhan_01; corpus row 1018; content_nature=translated_quote; verification=A/B - work/location verified; edition/transcription review needed."
       },
       "metadata": {
         "concepts": [],
@@ -42,27 +42,33 @@
         ]
       },
       "rights": {
-        "status": "unverified",
-        "note": "Public domain source text / likely; platform transcription licensing separate"
+        "status": "licensed",
+        "note": "Nguyên tác thơ cổ của Nguyễn Bỉnh Khiêm (mất1585) đã thuộc public domain. Bản chép/phiên âm đối chiếu: Nhàn, Wikisource tiếng Việt và các người đóng góp; permalink https://vi.wikisource.org/w/index.php?title=Nh%C3%A0n&oldid=205503 ; lịch sử/credit tại https://vi.wikisource.org/w/index.php?title=Nh%C3%A0n&action=history . Trang công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần bản chép/chuẩn hóa này theo cùng giấy phép, không hạn chế thêm; chỉ thay dấu câu/xuống dòng, không dịch hay lấy chú thích. Không suy toàn bộ giao diện/chú giải là public domain."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T05:25:03.714005+00:00"
       },
       "writing": {
-        "semantic_intent": "Một mai, một cuốc, một cần câu, Thơ thẩn cùng ai vui thú nào.",
+        "semantic_intent": "Một mai, một cuốc, một cần câu,\nThơ thẩn cùng ai vui thú nào.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_excerpt"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Nguyễn Bỉnh Khiêm"
+        "attribution_vi": "Nguyễn Bỉnh Khiêm · Nhàn"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:classical_text"
+      ]
     },
     {
       "id": "research.day23.nbk_nhan_02",

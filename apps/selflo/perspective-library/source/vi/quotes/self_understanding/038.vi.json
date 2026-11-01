@@ -182,10 +182,10 @@
     },
     {
       "id": "research.day43.anton_chekhov.016",
-      "revision": 1,
+      "revision": 3,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Chekhov cho thấy 'hạnh phúc' có thể vừa thật với một người vừa gây khó chịu cho người nhìn thấy phần bị bỏ quên.",
+      "text_vi": "Những quả lý gai còn chua và xanh, ông chủ vườn vẫn ăn và khen ngon: đó là những quả đầu tiên từ khu vườn ông đã mơ bấy lâu.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "self_understanding",
@@ -201,11 +201,11 @@
       "authorship": {
         "author_id": null,
         "author_name": "Anton Chekhov",
-        "work": "Gooseberries",
-        "source_url": "https://www.gutenberg.org/ebooks/author/708",
-        "source_language": null,
-        "source_label": "Selflo · dựa trên Anton Chekhov",
-        "source_detail": "Research ID research.day43.anton_chekhov.016; corpus row 1387; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
+        "work": "Gooseberries · Constance Garnett",
+        "source_url": "https://www.gutenberg.org/cache/epub/1883/pg1883.txt",
+        "source_language": "en",
+        "source_label": "Phỏng theo Anton Chekhov",
+        "source_detail": "Gooseberries · Nikolay Ivanovitch ăn mẻ quả đầu. Passage: They were sour and unripe. Giữ hai góc nhìn trong cảnh Gooseberries, không nói người hạnh phúc đều tự lừa hoặc phủ nhận cảm giác thật. Bỏ việc dùng Chekhov làm nghiên cứu tâm lý. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.day43.anton_chekhov.016; corpus row 1387; content_nature=research_paraphrase; verification=B+ - Work/location anchored; wording is Selflo research paraphrase."
       },
       "metadata": {
         "concepts": [],
@@ -215,27 +215,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Research only / rights review"
+        "status": "public_domain",
+        "note": "Nguyên tác Chekhov1860–1904; bản Anh Constance Garnett1861–1946 trong edition lịch sử Gutenberg (1732/1883), đều quá70 năm sau năm mất; chỉ tự diễn ý phần truyện, không dùng summary/chú giải editor hiện đại hoặc dịch Việt hiện đại."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:03:08.117814+00:00"
       },
       "writing": {
-        "semantic_intent": "Chekhov cho thấy 'hạnh phúc' có thể vừa thật với một người vừa gây khó chịu cho người nhìn thấy phần bị bỏ quên.",
+        "semantic_intent": "Những quả lý gai còn chua và xanh, ông chủ vườn vẫn ăn và khen ngon: đó là những quả đầu tiên từ khu vườn ông đã mơ bấy lâu.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Selflo · dựa trên Anton Chekhov"
+        "attribution_vi": "Phỏng theo Anton Chekhov"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:understand_self",
+        "support:new_perspective",
+        "topic:self_understanding",
+        "origin:book_or_work"
+      ]
     },
     {
       "id": "research.day43.anton_chekhov.019",

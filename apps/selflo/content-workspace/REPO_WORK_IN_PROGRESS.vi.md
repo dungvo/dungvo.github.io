@@ -1,5 +1,19 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **B016 HOÀN TẤT LOCAL — 2026-11-01:**164/164:4 đạt,160 không nhận. Source99 / Authoring116 (1897 quote/78 story); Release61 (385 quote/22 story) giữ nguyên. Corpus2.274/5.471 (41,56%), còn3.197;234 chờ Release.96 tests/gate đạt; chưa commit/push. [Handoff B016](programs/quote-library-p0/Q10_B016_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B015 HOÀN TẤT LOCAL — 2026-11-01:** 164/164: 1 đạt, 163 không nhận. Source98 / Authoring115 (1893 quote / 78 story); Release61 (385 quote / 22 story) giữ nguyên. Corpus 2.114/5.471 (38,64%), còn3.357;230 chờ Release.96 tests và gate đạt; chưa commit/push. [Handoff B015](programs/quote-library-p0/Q10_B015_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B014 HOÀN TẤT LOCAL — 2026-11-01:** 164/164: 18 đạt, 146 không nhận. Source97 / Authoring114 (1.892 quote / 78 story); Release61 (385 quote / 22 story) giữ nguyên. Corpus 1.951/5.471 (35,66%), còn 3.520; 229 chờ Release. 96 tests và gate đạt; chưa commit/push. [Handoff B014](programs/quote-library-p0/Q10_B014_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B013 HOÀN TẤT LOCAL — 2026-11-01:**165/165:8 đạt,157 không nhận. Source96/Authoring113 (1874 quote/78 story); Release61 (385 quote/22 story) giữ nguyên. Corpus1.805/5.471 (32,99%), còn3.666;211 chờ Release.95 tests và gate đạt; chưa commit/push. [Handoff B013](programs/quote-library-p0/Q10_B013_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B012 HOÀN TẤT LOCAL — 2026-11-01:**148/148:6 đạt,141 không nhận mới,1 giữ quyết định owner. Source95/Authoring112 (1866 quote/78 story); Release61 (385 quote/22 story) giữ nguyên. Corpus1.648/5.471 (30,12%), còn3.823;203 chờ Release.95 tests và gate đạt; chưa commit/push. [Handoff B012](programs/quote-library-p0/Q10_B012_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B011 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **148/148**: **24 đạt,124 không nhận**, không mở lại record đã đóng. Source94 /Authoring **111 (1866 quote/78 story)** /Release **61 (385 quote/22 story)** không đổi. Corpus **1.506/5.471 đã chốt (27,53%), còn3.965**; **197 câu chờ Release**, chưa cộng released. **95 tests/gate đạt**; chưa commit/push đợt này. Handoff: [B011 local](programs/quote-library-p0/Q10_B011_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
+> **B010 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **148/148**: **5 đạt,143 không nhận (gồm44 legacy rights block giữ loại)**. Source92 /Authoring **109 (1866 quote/78 story)** /Release **61 (385 quote/22 story)** không đổi. Corpus **1.382/5.471 đã chốt (25,26%), còn4.089**; **173 câu chờ Release**, chưa cộng released. **95 tests/gate đạt**; chưa commit/push đợt này. Handoff: [B010 local](programs/quote-library-p0/Q10_B010_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
+
 > **HỢP NHẤT MAIN — 2026-11-01:** Đã tích hợp main `1fc18a3` với B005–B009 local, giữ10 chương/10 quote seed mới. Source91 /Authoring **108 (1866 quote/78 story)**; Release **61 (385 quote/22 story)** không đổi. **95 tests/gate đạt**,168 quote vẫn chờ Release. Owner đã cho phép commit/push main; không promote Release. [Handoff](programs/quote-library-p0/MAIN_MERGE_2026-11-01.vi.md).
 
 > **B009 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **149/149**: **11 đạt,138 không nhận (gồm40 legacy block giữ loại, không mở lại)**. Source90 /Authoring **107** /Release **61 (385 quote /22 story)**. Corpus **1.239/5.471 đã chốt (22,65%), còn4.232**; **168 câu chờ Release**, chưa cộng released. **95 tests đạt**, candidate tạm168 câu qua gate; không cài Release/commit/push. Handoff: [B009 local](programs/quote-library-p0/Q10_B009_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).

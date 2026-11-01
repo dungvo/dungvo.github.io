@@ -131,10 +131,10 @@
     },
     {
       "id": "research.reaudit.day22.anbo",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đi chậm nhưng bền có thể vẫn đưa mình đi xa.",
+      "text_vi": "Đi thong thả mà bền bỉ — một cách đi đường của mình.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "work_achievement",
@@ -148,13 +148,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Historical proverb collection",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A",
-        "source_language": null,
-        "source_label": "Historical proverb collection",
-        "source_detail": "Research ID research.reaudit.day22.anbo; corpus row 1098; content_nature=translated_quote; verification=B - collection location verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục A",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523",
+        "source_language": "vi",
+        "source_label": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/A · An bộ. Passage: An bộ khả dĩ đương xa.. Tự diễn ý hình ảnh đi huởn bước thì bền trong witness, không bảo đảm đi bộ nhanh/bền hơn xe hoặc kết quả mọi mục tiêu. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.reaudit.day22.anbo; corpus row 1098; content_nature=translated_quote; verification=B - collection location verified."
       },
       "metadata": {
         "concepts": [],
@@ -164,27 +164,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Historical witness; platform terms separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&oldid=125523 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/A&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Có tự diễn ý theo đúng phần lời cổ/nghĩa trong witness, chỉ rõ là phỏng theo, không nguyên văn."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:17:19.329460+00:00"
       },
       "writing": {
-        "semantic_intent": "Đi chậm nhưng bền có thể vẫn đưa mình đi xa.",
+        "semantic_intent": "Đi thong thả mà bền bỉ — một cách đi đường của mình.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Historical proverb collection"
+        "attribution_vi": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục A"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:work_direction",
+        "support:new_perspective",
+        "topic:work_choices",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.day26.li_lou_ii_childheart",

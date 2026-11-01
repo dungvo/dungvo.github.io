@@ -568,10 +568,10 @@
     },
     {
       "id": "research.reaudit.day22.matlongtruoc",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Đôi khi nói rõ giới hạn sớm gây khó chịu trước mắt nhưng giảm rắc rối lớn hơn về sau.",
+      "text_vi": "Có lúc, nói rõ việc mình không thể nhận ngay từ đầu giúp tránh một lời hứa khó giữ.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -585,13 +585,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Historical proverb collection",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M",
-        "source_language": null,
-        "source_label": "Historical proverb collection",
-        "source_detail": "Research ID research.reaudit.day22.matlongtruoc; corpus row 1101; content_nature=direct_quote; verification=B - collection location verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục M",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545",
+        "source_language": "vi",
+        "source_label": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/M · Mất lòng trước. Passage: Mất lòng trước, được lòng sau.. Diễn ý riêng ví dụ không cho mượn để tránh trắc trở trong lời giải, không hứa đặt giới hạn luôn được lòng mọi người. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.reaudit.day22.matlongtruoc; corpus row 1101; content_nature=direct_quote; verification=B - collection location verified."
       },
       "metadata": {
         "concepts": [],
@@ -601,34 +601,40 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Historical witness; platform terms separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Có tự diễn ý theo đúng phần lời cổ/nghĩa trong witness, chỉ rõ là phỏng theo, không nguyên văn."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:17:19.329460+00:00"
       },
       "writing": {
-        "semantic_intent": "Đôi khi nói rõ giới hạn sớm gây khó chịu trước mắt nhưng giảm rắc rối lớn hơn về sau.",
+        "semantic_intent": "Có lúc, nói rõ việc mình không thể nhận ngay từ đầu giúp tránh một lời hứa khó giữ.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Historical proverb collection"
+        "attribution_vi": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.reaudit.day22.motmat_hon_muoi_goi",
-      "revision": 1,
+      "revision": 2,
       "kind": "adapted_wisdom",
       "title_vi": null,
-      "text_vi": "Có những lúc sự có mặt và qua lại với nhau có giá trị hơn nhiều món quà thay thế.",
+      "text_vi": "Có lúc, ghé thăm nhau còn quý hơn gửi quà.",
       "subtitle_vi": null,
       "story_id": null,
       "primary_theme": "relationships",
@@ -642,13 +648,13 @@
         "tie_break_order": 0
       },
       "authorship": {
-        "author_id": null,
-        "author_name": "Historical proverb collection",
-        "work": "Tục ngữ, cổ ngữ, gia ngôn",
-        "source_url": "https://vi.wikisource.org/wiki/T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M",
-        "source_language": null,
-        "source_label": "Historical proverb collection",
-        "source_detail": "Research ID research.reaudit.day22.motmat_hon_muoi_goi; corpus row 1102; content_nature=direct_quote; verification=B - collection location verified."
+        "author_id": "vietnamese_folk_tradition",
+        "author_name": "Truyền thống tục ngữ Việt",
+        "work": "Tuyển Huỳnh Tịnh Của · mục M",
+        "source_url": "https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545",
+        "source_language": "vi",
+        "source_label": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M",
+        "source_detail": "Tục ngữ, cổ ngữ, gia ngôn/M · Một mặt. Passage: Một mặt hơn mười gói.. Diễn ý lời giải lui tới với nhau; không phủ nhận người không thể gặp mặt hay định giá mọi quà tặng. Bản Việt tự diễn ý bởi Selflo, không phải nguyên văn. Provenance trước review: Research ID research.reaudit.day22.motmat_hon_muoi_goi; corpus row 1102; content_nature=direct_quote; verification=B - collection location verified."
       },
       "metadata": {
         "concepts": [],
@@ -658,27 +664,33 @@
         "keywords": []
       },
       "rights": {
-        "status": "unverified",
-        "note": "Historical witness; platform terms separate"
+        "status": "licensed",
+        "note": "Nguyên tác cổ/tư liệu truyền thống được đối chiếu qua bản chép Wikisource tiếng Việt và các người đóng góp. Credit tác giả/tuyển tập: Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M. Permalink https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&oldid=125545 ; history/credit https://vi.wikisource.org/w/index.php?title=T%E1%BB%A5c_ng%E1%BB%AF%2C_c%E1%BB%95_ng%E1%BB%AF%2C_gia_ng%C3%B4n/M&action=history . Bản chép công bố CC BY-SA4.0 https://creativecommons.org/licenses/by-sa/4.0/ ; Selflo giữ credit/link và chia sẻ phần trích/biên tập này theo cùng giấy phép, không hạn chế thêm. Có tự diễn ý theo đúng phần lời cổ/nghĩa trong witness, chỉ rõ là phỏng theo, không nguyên văn."
       },
       "review": {
-        "status": "needs_owner_review",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "ai:codex",
+        "reviewed_at": "2026-11-01T06:17:19.329460+00:00"
       },
       "writing": {
-        "semantic_intent": "Có những lúc sự có mặt và qua lại với nhau có giá trị hơn nhiều món quà thay thế.",
+        "semantic_intent": "Có lúc, ghé thăm nhau còn quý hơn gửi quà.",
         "observation_key": null,
-        "structure_pattern": "research_candidate"
+        "structure_pattern": "source_adaptation"
       },
       "display": {
         "mode": "poster",
         "priority": 0,
         "featured": false,
         "style": "paper_quote",
-        "attribution_vi": "Historical proverb collection"
+        "attribution_vi": "Phỏng theo Truyền thống tục ngữ Việt · Tuyển Huỳnh Tịnh Của · mục M"
       },
-      "knowledge_basis": null
+      "knowledge_basis": null,
+      "tags": [
+        "intent:relationships",
+        "support:new_perspective",
+        "topic:relationships",
+        "origin:folklore"
+      ]
     },
     {
       "id": "research.reaudit.day22.motmieng_khidoi",

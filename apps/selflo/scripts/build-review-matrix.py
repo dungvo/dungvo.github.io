@@ -321,12 +321,12 @@ def main():
         issue = clean(row.get('issue_code'))
         if decision == 'source_rights_blocked':
             return 'blocked_rights', 'Giải quyết quyền sử dụng hoặc giữ ngoài Release.'
+        if decision == 'round1_not_pass':
+            return 'held_not_passed', 'Giữ ngoài hàng đề xuất cho đến khi có nội dung hoặc bằng chứng mới.'
         if decision == 'source_verification_required' or issue == 'source_below_B':
             return 'needs_source_verification', 'Truy nguồn gốc/primary source và cập nhật bằng chứng.'
         if decision == 'edit_required':
             return 'needs_edit', 'Biên tập lại rồi review lại vòng một.'
-        if decision == 'round1_not_pass':
-            return 'held_not_passed', 'Giữ ngoài hàng đề xuất cho đến khi có nội dung hoặc bằng chứng mới.'
         if decision == 'story_review_required':
             return 'needs_story_review', 'AI review quote cùng story liên kết; giữ Authoring nếu story chưa đạt gate.'
         if decision == 'release_ready_ai_approved':
