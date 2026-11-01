@@ -1,17 +1,18 @@
 {
   "schema_version": "selflo.editorial_inventory.v1",
-  "snapshot": "2026-11-01",
+  "snapshot": "2026-11-01 (Authoring revision 101)",
   "data_sources": [
     "apps/selflo/api/content-index.v1/story-0001.json (2026-10-28 index, 64 entries)",
     "apps/selflo/perspective-library/authoring/vi/manifest.json",
     "apps/selflo/perspective-library/release/vi/manifest.json",
-    "four current authoring payloads missing from older index"
+    "four current authoring payloads missing from older index",
+    "2026-11-01: ten canonical Tầng không tồn tại chapters from Authoring revision 101, publisher strict schema validated"
   ],
   "limitations": "Publishing from current manifest. The 64 review_status/rights_status fields come from Oct 28 content index and may be stale. The 4 missing entries were read from payload. Styles are manual or metadata-based proposals; classification_status never implies owner approval.",
   "counts": {
-    "authoring": 68,
+    "authoring": 78,
     "release": 22,
-    "authoring_only": 46
+    "authoring_only": 56
   },
   "items": [
     {
@@ -493,6 +494,336 @@
       "source_path": "stories/empty-boat-on-the-river/story.vi.json",
       "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/empty-boat-on-the-river/story.vi.r6.json",
       "studio_url": "/apps/selflo/studio/reader/?source=release&id=story.empty_boat_on_the_river"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_01",
+      "slug": "tang-khong-ton-tai-chuong-01",
+      "title": "Chương 1 — Những Bức Tượng Trên Cao",
+      "subtitle": "“Thành phố này có quá nhiều thứ để nhìn, nên cuối cùng chẳng ai thật sự nhìn thứ gì.”",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 1"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 5,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-01/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-01/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-01/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_10",
+      "slug": "tang-khong-ton-tai-chuong-10",
+      "title": "Chương 10 - Khi Thành Phố Nhìn Lại Bạn",
+      "subtitle": "\"Không ai xây chiếc lồng đó cả. Con người chỉ dần quen sống bên trong nó.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 10"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 7,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-10/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-10/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-10/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_02",
+      "slug": "tang-khong-ton-tai-chuong-02",
+      "title": "Chương 2 - Người Khổng Lồ Sau Thành Phố",
+      "subtitle": "\"Camera không còn ghi lại sự thật. Chúng chỉ ghi lại thứ hệ thống cho phép tồn tại.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 2"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 4,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-02/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-02/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-02/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_03",
+      "slug": "tang-khong-ton-tai-chuong-03",
+      "title": "CHƯƠNG 3 - Không Ai Nhìn Lên",
+      "subtitle": "\"Có những thứ tồn tại rất lâu chỉ vì không ai còn nhìn thấy chúng.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 3"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 4,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-03/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-03/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-03/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_04",
+      "slug": "tang-khong-ton-tai-chuong-04",
+      "title": "Chương 4 - Những Thứ Không Xuất Hiện Trong Dữ Liệu",
+      "subtitle": "\"Nếu một thứ tồn tại mà không để lại dấu vết, thì có lẽ vấn đề không nằm ở dữ liệu.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 4"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 4,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-04/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-04/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-04/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_05",
+      "slug": "tang-khong-ton-tai-chuong-05",
+      "title": "Chương 5 - Người Đợi Thang Máy",
+      "subtitle": "\"Khoảng cách an toàn duy nhất giữa con người và nỗi sợ là việc nó chưa bước về phía mình.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 5"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 6,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-05/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-05/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-05/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_06",
+      "slug": "tang-khong-ton-tai-chuong-06",
+      "title": "Chương 6 - Tầng Không Tồn Tại",
+      "subtitle": "\"Không phải mọi nơi tồn tại đều xuất hiện trên bản đồ.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 6"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 6,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-06/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-06/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-06/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_07",
+      "slug": "tang-khong-ton-tai-chuong-07",
+      "title": "Chương 7 - Hệ Thống Quan Sát",
+      "subtitle": "\"Mọi hành vi đều được ghi lại. Mọi lựa chọn đều được dự đoán.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 7"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 7,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-07/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-07/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-07/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_08",
+      "slug": "tang-khong-ton-tai-chuong-08",
+      "title": "Chương 8 - Thứ Đứng Phía Trên Thành Phố",
+      "subtitle": "\"Có những thứ tồn tại quá lâu phía trên con người… đến mức cuối cùng không ai còn nhìn thấy chúng nữa.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 8"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 6,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-08/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-08/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-08/story.vi.r1.json",
+      "studio_url": null
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_09",
+      "slug": "tang-khong-ton-tai-chuong-09",
+      "title": "Chương 9 - Những Người Bắt Đầu Nhìn Lên",
+      "subtitle": "\"Hệ thống chỉ hoạt động hoàn hảo khi mọi người cùng nhìn về một hướng.\"",
+      "lifecycle": "authoring_only",
+      "review_status": "needs_owner_review",
+      "review_snapshot_date": "2026-11-01",
+      "form": "Truyện",
+      "style_primary": "Khám phá kỳ bí",
+      "style_secondary": [
+        "Khoa học giả tưởng xã hội",
+        "Cinematic ly kỳ"
+      ],
+      "classification_status": "editorial_suggestion",
+      "source_story_style": "contemporary",
+      "theme": "attention",
+      "keywords": [
+        "Tầng không tồn tại",
+        "khoa học viễn tưởng",
+        "thành phố",
+        "dữ liệu",
+        "quan sát",
+        "chương 9"
+      ],
+      "origin_type": "selflo_original",
+      "rights_status": "unverified",
+      "reading_minutes": 6,
+      "authoring_path": "apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-09/story.vi.r1.json",
+      "source_path": "stories/tang-khong-ton-tai-chuong-09/story.vi.json",
+      "github_url": "https://github.com/dungvo/dungvo.github.io/blob/main/apps/selflo/perspective-library/authoring/vi/stories/tang-khong-ton-tai-chuong-09/story.vi.r1.json",
+      "studio_url": null
     },
     {
       "id": "story.rain_arrives_downstream_late",

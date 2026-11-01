@@ -1,9 +1,9 @@
 {
   "schema_version": "selflo.perspective.authoring-source.v1",
-  "source_revision": 83,
-  "content_version": "nha-ga-mot-chieu-final-quote-2026-10-30",
+  "source_revision": 85,
+  "content_version": "tang-khong-ton-tai-v3-authoring-source-quotes-2026-11-01",
   "language": "vi",
-  "canonical_quote_count": 1856,
+  "canonical_quote_count": 1866,
   "generated_from_owner_gate": "CP-003-revised",
   "files": [
     {
@@ -1600,6 +1600,72 @@
       "id": "story.nha_ga_mot_chieu",
       "kind": "story",
       "path": "stories/nha-ga-mot-chieu/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_01",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-01/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_02",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-02/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_03",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-03/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_04",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-04/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_05",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-05/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_06",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-06/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_07",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-07/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_08",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-08/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_09",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-09/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_10",
+      "kind": "story",
+      "path": "stories/tang-khong-ton-tai-chuong-10/story.vi.json",
+      "media_type": "application/json"
+    },
+    {
+      "id": "quote_fragment.attention.027",
+      "kind": "quote_fragment",
+      "path": "quotes/attention/027.vi.json",
       "media_type": "application/json"
     }
   ]
