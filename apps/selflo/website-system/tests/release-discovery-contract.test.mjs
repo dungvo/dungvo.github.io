@@ -72,3 +72,12 @@ const builder=await readFile(resolve(root,'website-system/scripts/build-studio.m
 assert.match(builder,/publicSearch/,'Studio build must preserve shared search header');
 assert.doesNotMatch(builder,/studio\/assets\/perspectives-v3\.js/);
 console.log('Release discovery contract verified:',stories.length,'complete Stories,',storyBlocks,'blocks,',quoteCount,'Quotes; Public/Studio parity.');
+
+const style=await readFile(resolve(root,'assets/release-discovery.css'),'utf8');
+const quoteRender=runtime.slice(runtime.indexOf('function renderQuote('),runtime.indexOf('function sortStories('));
+const storyRender=runtime.slice(runtime.indexOf('function renderStory('),runtime.indexOf('function renderQuote('));
+assert.doesNotMatch(quoteRender,/quote-artwork|<img |quote-fallback-art/, 'Quote cards should be typography-only');
+assert.match(storyRender,/story-card-artwork/, 'Story cards retain artwork');
+assert.match(style,/\.catalog-grid\.story-grid\s*\{display:flex;flex-direction:column/, 'Story catalog is a compact vertical list');
+assert.match(style,/grid-template-columns:minmax\(190px,34%\) minmax\(0,1fr\)/, 'Story artwork and text are side by side');
+console.log('Quote/Story listing visual contracts passed.');
