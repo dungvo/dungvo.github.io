@@ -32,6 +32,7 @@ jobs:
           node website-system/tests/config-negative.test.mjs
           node website-system/tests/studio-shell.test.mjs
           node website-system/tests/shared-shell-integration.test.mjs
+          node website-system/tests/support-contact.test.mjs
           node website-system/tests/developer-navigation.test.mjs
           node website-system/tests/studio-build-safety.test.mjs
       - name: Content contract tests
