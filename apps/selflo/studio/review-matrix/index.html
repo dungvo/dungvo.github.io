@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="vi">
 <head>
+  <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Selflo · Quote Review</title>
@@ -17,6 +18,9 @@
 #story-review .story-grid{grid-template-columns:minmax(330px,.78fr) minmax(480px,1.22fr)!important;align-items:start}#story-review .story-detail{display:block!important;position:sticky;top:76px;max-height:calc(100vh - 96px)!important;overflow:auto!important}@media(max-width:980px){#story-review .story-grid{grid-template-columns:1fr!important}#story-review .story-detail{position:static;max-height:none!important}}
 .queue-tabs{display:flex!important;flex-wrap:wrap;gap:8px;margin-bottom:16px}.review-verdict{margin:14px 0;padding:14px 16px;background:#f5f6f3;border:1px solid var(--line);border-radius:12px;line-height:1.6;overflow-wrap:anywhere}.review-verdict.rejected{background:#fff2ee;border-color:#e8c3b7}.review-verdict strong{display:block;margin-bottom:4px}.owner-label{font-size:12px;color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:repeat(3,minmax(0,1fr))!important}}@media(max-width:520px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 </style>
+  <link rel="stylesheet" href="/apps/selflo/assets/public-shell.css?v=3">
+  <link rel="stylesheet" href="/apps/selflo/assets/site-shell-bridge.css?v=1">
+  <script defer src="/apps/selflo/assets/site-shell-bridge.js?v=1"></script>
 </head>
 <body>
 <header class="topbar"><div class="shell"><div class="brand"><div><div class="eyebrow">Selflo Content Studio</div><h1>Content Review</h1><p>Duyệt quote và story trong cùng một nơi: trạng thái, nguồn và nội dung chi tiết khi cần.</p></div><div class="top-actions"><a class="btn btn-ghost" href="../">← Studio</a><a class="btn btn-ghost" href="#story-review">Story Review</a><a class="btn btn-ghost" href="#coverage">Ma trận phủ nguồn</a><button class="btn btn-light" id="exportReview">Xuất quyết định</button></div></div><div class="metrics"><button class="metric" data-queue="all"><strong id="mTotal">—</strong><span>Tổng quote</span></button><button class="metric attention" data-queue="new_capture"><strong id="mNew">—</strong><span>Mới thu thập</span></button><button class="metric" data-queue="verify"><strong id="mVerify">—</strong><span>Cần xác minh nguồn</span></button><button class="metric" data-queue="authoring"><strong id="mAuthoring">—</strong><span>Đang ở Authoring</span></button><button class="metric" data-queue="release"><strong id="mRelease">—</strong><span>Quote đã Release</span></button><button class="metric" id="storyMetric"><strong id="mStories">—</strong><span>Story · xem danh sách</span></button></div></div></header>
