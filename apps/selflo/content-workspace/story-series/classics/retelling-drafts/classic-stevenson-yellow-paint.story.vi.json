@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_stevenson_yellow_paint",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Thứ sơn màu vàng kỳ diệu",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Yellow Paint” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Yellow Paint",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Phi lý đời thường",
+      "Hài châm biếm"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một thầy thuốc quảng cáo thứ sơn vàng có thể bảo vệ người được sơn khỏi mọi tai họa. Cả thành phố tin theo và tự hào khi thấy ai cũng được phủ sơn."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một thanh niên ban đầu chần chừ, rồi thấy bạn mình gặp tai nạn nên quyết định sơn từ đầu đến chân. Nhưng ít lâu sau chính anh bị xe cán gãy chân. Thầy thuốc giải thích sơn không chữa được tai nạn; chức năng thực sự là ngăn con người phạm lỗi."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Vài năm sau, thanh niên mắc những tội nghiêm trọng mà lớp sơn vẫn nguyên vẹn. Thầy thuốc lại bảo rằng sơn chỉ giúp giảm hậu quả ở một thế giới khác."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Khi thanh niên sắp chịu án và run sợ, ông thầy thuốc kết luận rằng nếu không có sơn, có lẽ anh còn sợ hơn nữa."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Một lời hứa có thể luôn đúng trên lời nói nếu người bán liên tục đổi cách định nghĩa kết quả."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Bạn từng gặp một lời quảng cáo mà mỗi lần thất bại lại có một cách giải thích mới?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "robert-louis-stevenson",
+    "author_name": "Robert Louis Stevenson",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/343"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "stevenson_fables_1901",
+    "source_item_id": "stevenson-yellow-paint",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}
