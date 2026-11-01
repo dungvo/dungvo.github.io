@@ -2,6 +2,9 @@
 
 **Trạng thái:** Đã lưu ý tưởng, **tạm dừng có chủ đích** (Parked / IDEA only) · **Ngày:** 01/11/2026.
 
+> **SESSION CLOSED — 2026-11-01:** Owner đã chốt tạm thời toàn bộ Story. Chỉ phát triển một ID khi owner chủ động chọn. Đọc [Story closure handoff](../programs/story-authoring-review/SESSION_CLOSURE_2026-11-01.vi.md) để biết 78 Story, Series Tầng không tồn tại, điểm 78 bài sơ bộ, PR Classics #9 đang chờ và đúng cách bắt đầu lại. Không tự tạo 365 bài hoặc lịch daily.
+
+
 ## Đã hoàn thành
 - Ghi nhận định hướng **365 ngày / 365 trải nghiệm đọc**, chưa có kế hoạch phát hành tự động.
 - Lưu **6 concept series** (S01–S06) và **30 idea độc lập** (H01–K05), có premise, thể loại dự kiến, độc giả, ID và trạng thái rõ ràng.
