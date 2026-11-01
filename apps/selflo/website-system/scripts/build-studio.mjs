@@ -70,7 +70,8 @@ function studioPage(html, page) {
   result = result.replace(/<meta name="robots"[^>]*>/i, '');
   result = result.replace(/<head>/i, '<head><meta name="robots" content="noindex,nofollow">');
   result = result.replace(/<body[^>]*>/i, match => `${match}<div class="studio-context"><span>Selflo Studio</span><b>Không public</b></div>`);
-  result = result.replace(/<header class="selflo-site-header">[\s\S]*?<\/header>/i, studioHeader(page.id));
+  const publicSearch = page.id === 'perspectives' ? result.match(/<form class="selflo-nav-search search-form"[\\s\\S]*?<\\/form>/i)?.[0] || '' : '';
+  result = result.replace(/<header class="selflo-site-header">[\\s\\S]*?<\\/header>/i, studioHeader(page.id).replace('</header>', publicSearch + '</header>'));
   result = result.replace(/<footer class="selflo-site-footer">[\s\S]*?<\/footer>/i, studioFooter);
   result = result.replace('</head>', `<link rel="stylesheet" href="${studioBase}assets/studio-shell.css?v=1"></head>`);
   if (page.id === 'perspectives') {
