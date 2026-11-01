@@ -46,3 +46,13 @@ Các kho cần tiếp tục xem trước khi tuyên bố bao phủ hoàn toàn:
 - [ ] Sau merge xác minh URL GitHub Pages public hoạt động.
 
 **Báo cáo trung thực:** Chưa khẳng định browser QA thành công nếu chưa có phép kiểm; số lượng Release là thời điểm kiểm tra, không phải realtime. Merge tài liệu + trang overview không được phép tự phát hành content từ Authoring.
+
+## 5. Tiếp tục audit — 2026-11-01, phân tách public/Studio
+
+- Đã đọc payload canonical của đủ bốn source-only: **Khi mũi tên rời khỏi dây cung** (hình ảnh người bắn cung của Khắc Kỷ), **Con chó và chiếc xe đang đi** (ẩn dụ Khắc Kỷ), **Vai diễn trên sân khấu** (Epictetus, *Encheiridion* XVII), **Cây lớn, đài cao và bước chân đầu tiên** (Lão Tử, *Đạo Đức Kinh* 64). Cả bốn đều có `review.status = needs_owner_review` và `rights.status = unverified`; **không được release**.
+- Đã tạo [Studio Story Landscape](../studio/story-landscape/) với [catalog đầy đủ](../studio/story-landscape/catalog.json) 68 record và [35 hồ sơ ý tưởng/nguồn](../studio/story-landscape/ideas.json), gồm 28 seed/chủ đề thảo luận, 3 nhóm bổ sung từ lịch sử và 4 source-only. Các nhóm có thể trùng về chủ đề, không cộng thành số truyện độc lập.
+- [Trang public](../story-landscape/) được giới hạn ở 22 record Release; [public catalog](../story-landscape/catalog.json) đã tách riêng chỉ gồm metadata hiển thị cho các bản Release và link reader; **không đưa Authoring/rights/review notes vào public feed**.
+- 3 ghi chú hồi cứu bổ sung là *Con đường chưa đi* (concept), *Nếu tôi được sống một đời người* (ý tưởng video essay/series, **không nhân đôi truyện đã Release**), và nhóm *Cách chúng ta học và suy nghĩ* (bài phi hư cấu).
+- Cảnh báo quan trọng: `noindex` và đường dẫn Studio **không tạo cơ chế xác thực/bảo mật** vì đây là GitHub Pages tĩnh trong repo public. Không lưu bí mật, dữ liệu cá nhân hoặc bản thảo cần bảo mật vào đây.
+- Các nguồn chưa có toàn văn được kiểm tra ở cấp ý tưởng; không tự biến chúng thành bản đã duyệt. Không cập nhật generated Authoring/Release. Không tự phát hành tác phẩm.
+- Các mục QA chưa hoàn thành trong §4 vẫn cần kiểm tra trực quan trên trình duyệt và kiểm tra rights thực tế. Những field review_status/rights_status trong catalog Studio có thể chậm so với canonical.
