@@ -1,28 +1,78 @@
 {
   "schema_version": "selflo.story-series-preview.v1",
-  "revision": 1,
+  "revision": 2,
   "language": "vi",
   "series": [
     {
       "id": "series.the_nonexistent_floor",
       "slug": "tang-khong-ton-tai",
       "title_vi": "Tầng không tồn tại",
-      "subtitle_vi": "Một series gồm 10 câu chuyện.",
-      "description_vi": "Nội dung từng tập sẽ được bổ sung từ nguồn do owner cung cấp. Catalog này giữ cấu trúc, thứ tự và trạng thái để website không phải hardcode series.",
+      "subtitle_vi": "Một truyện nhiều kỳ gồm 10 chương (theo danh sách URL owner cung cấp).",
+      "description_vi": "Đã ghi nhận liên kết nguồn cho bài giới thiệu và 10 chương; chưa tải được toàn văn. Các tiêu đề dưới đây là cách đọc từ URL, chưa xác minh với bài gốc. Chưa có Story V3 hoặc nội dung Authoring.",
       "status": "planning",
       "episode_count": 10,
       "artwork": null,
       "episodes": [
-        {"number": 1, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 2, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 3, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 4, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 5, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 6, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 7, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 8, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 9, "story_id": null, "title_vi": null, "status": "awaiting_content"},
-        {"number": 10, "story_id": null, "title_vi": null, "status": "awaiting_content"}
+        {
+          "number": 1,
+          "story_id": null,
+          "title_vi": "Chương 1 — Những bức tượng trên cao",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 2,
+          "story_id": null,
+          "title_vi": "Chương 2 — Người khổng lồ sau thành",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 3,
+          "story_id": null,
+          "title_vi": "Chương 3 — Không ai nhìn lên",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 4,
+          "story_id": null,
+          "title_vi": "Chương 4 — Những thứ không xuất hiện",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 5,
+          "story_id": null,
+          "title_vi": "Chương 5 — Chờ xác nhận nhan đề",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 6,
+          "story_id": null,
+          "title_vi": "Chương 6 — Tầng không tồn tại",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 7,
+          "story_id": null,
+          "title_vi": "Chương 7 — Hệ thống quan sát",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 8,
+          "story_id": null,
+          "title_vi": "Chương 8 — Chờ xác nhận nhan đề",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 9,
+          "story_id": null,
+          "title_vi": "Chương 9 — Những người bắt đầu nhìn",
+          "status": "awaiting_content"
+        },
+        {
+          "number": 10,
+          "story_id": null,
+          "title_vi": "Chương 10 — Khi thành phố nhìn lại",
+          "status": "awaiting_content"
+        }
       ]
     }
   ]
