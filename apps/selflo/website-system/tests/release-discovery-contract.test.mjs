@@ -55,14 +55,14 @@ assert.match(knowledge,/manifest\.json/,'Knowledge is Release manifest driven');
 assert.ok(storyIDs.has('story.why_ai_feels_easier_to_ask'),'Knowledge article is in Release');
 for(const channel of ['', 'studio/']){
   const overview=await readFile(resolve(root,channel+'perspectives/index.html'),'utf8');
-  assert.match(overview,/assets\/release-discovery\.js\?v=1/,channel+' shared script');
+  assert.match(overview,/assets\/release-discovery\.js\?v=2/,channel+' shared script');
   assert.match(overview,/id="heroSearchForm"/,channel+' searchable header');
   assert.match(overview,/data-explore-quotes/,channel+' quote link');
   assert.match(overview,/data-explore-stories/,channel+' story link');
   assert.doesNotMatch(overview,/<script[^>]+perspectives-v3\.js/,'legacy duplicate script still active');
   for(const kind of ['quotes','stories']){
     const html=await readFile(resolve(root,channel+'perspectives/'+kind+'/index.html'),'utf8');
-    assert.match(html,/assets\/release-discovery\.js\?v=1/,channel+kind+' same runtime');
+    assert.match(html,/assets\/release-discovery\.js\?v=2/,channel+kind+' same runtime');
     assert.match(html,new RegExp('data-library-view="'+kind+'"'));
     assert.match(html,/id="catalogSentinel"/,kind+' has lazy scroll anchor');
     assert.match(html,/id="catalogLoadMore"/,kind+' has accessible fallback');
@@ -72,3 +72,12 @@ const builder=await readFile(resolve(root,'website-system/scripts/build-studio.m
 assert.match(builder,/publicSearch/,'Studio build must preserve shared search header');
 assert.doesNotMatch(builder,/studio\/assets\/perspectives-v3\.js/);
 console.log('Release discovery contract verified:',stories.length,'complete Stories,',storyBlocks,'blocks,',quoteCount,'Quotes; Public/Studio parity.');
+
+const style=await readFile(resolve(root,'assets/release-discovery.css'),'utf8');
+const quoteRender=runtime.slice(runtime.indexOf('function renderQuote('),runtime.indexOf('function sortStories('));
+const storyRender=runtime.slice(runtime.indexOf('function renderStory('),runtime.indexOf('function renderQuote('));
+assert.doesNotMatch(quoteRender,/quote-artwork|<img |quote-fallback-art/, 'Quote cards should be typography-only');
+assert.match(storyRender,/story-card-artwork/, 'Story cards retain artwork');
+assert.match(style,/\.catalog-grid\.story-grid\s*\{display:flex;flex-direction:column/, 'Story catalog is a compact vertical list');
+assert.match(style,/grid-template-columns:minmax\(190px,34%\) minmax\(0,1fr\)/, 'Story artwork and text are side by side');
+console.log('Quote/Story listing visual contracts passed.');
