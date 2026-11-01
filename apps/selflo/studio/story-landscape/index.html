@@ -49,5 +49,12 @@ let found=ideas.filter(x=>(!g||x.provenance===g)&&(!q||[x.title,x.style_proposed
 for(let x of found){let card=create('article','item');card.append(create('h3','',x.title));let tags=create('div','tags');tags.append(create('span','tag pending',x.stage));tags.append(create('span','tag',x.style_proposed));card.append(tags);card.append(create('p','',x.notes));if(x.reference_url){const links=create('div','links'),a=create('a','','Xem nguồn/ghi chú');a.href=x.reference_url;links.append(a);card.append(links)}root.append(card)}byId('ideaStatus').textContent=found.length+' / '+ideas.length+' hồ sơ đề xuất, không phải truyện đã phát hành.'}
 async function initIdeas(){try{const response=await fetch('./ideas.json',{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();ideas=data.items||[];renderIdeas()}catch(e){byId('ideaStatus').textContent='Không tải được backlog: '+e.message}}
 byId('ideaSearch').addEventListener('input',renderIdeas);byId('ideaStage').addEventListener('change',renderIdeas);initIdeas();
+
+async function initReview(){try{const response=await fetch('./editorial-review.json',{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();const coverage=byId('coverage');
+for(const entry of data.style_coverage){const node=create('article','item');node.append(create('h3','',entry.style));node.append(create('p','','Phong cách chính: '+entry.primary_count+' · Phong cách phụ: '+entry.secondary_count));coverage.append(node)}
+const priorities=byId('priorities');for(const entry of data.priorities){const node=create('article','item');node.append(create('h3','',entry.rank+'. '+entry.title));const tags=create('div','tags');tags.append(create('span','tag pending',entry.source_state));tags.append(create('span','tag',entry.primary));node.append(tags);node.append(create('p','',entry.purpose));node.append(create('p','','Đánh giá: '+entry.test));priorities.append(node)}
+}catch(e){byId('coverage').append(create('p','','Chưa tải được báo cáo audit: '+e.message))}}
+initReview();
+
 })();
 </script></body></html>
