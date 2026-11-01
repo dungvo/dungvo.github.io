@@ -16,5 +16,9 @@ Nguồn: bản Substack export ZIP được tác giả/người dùng cung cấp
 - Không lấy email list, thông tin subscriber, dữ liệu gửi/mở email hoặc post ngoài series.
 - `review.status=needs_owner_review`, `rights.status=unverified`, `status=draft`; không tự Release.
 
-## Trạng thái
-Đây là bộ chuẩn bị import canonical Story V3. Chưa khẳng định các file đã qua Publisher Authoring hoặc đã được owner phê duyệt.
+## Trạng thái sau khi chạy Publisher (01/11/2026)
+- **Đã chạy thành công** `./scripts/publish-perspective-library --channel authoring` trên GitHub Actions (strict schema + semantic validation) tại https://github.com/dungvo/dungvo.github.io/actions/runs/41275075376.
+- Đã tạo Authoring revision **101**: 10 story `story.tang_khong_ton_tai_chuong_01` đến `_10`, còn ở dạng **draft, needs_owner_review, rights unverified**. Release revision **61** không thay đổi.
+- Publisher hiện yêu cầu mỗi Story có một owning quote. 10 quote đều được **trích nguyên văn** từ đoạn có sẵn trong chương, giữ tại `quotes/attention/027.vi.json`; không tạo câu mới. Đây là giới hạn pipeline hiện hành, không phải quyết định nhân rộng quote sáng tác cho mọi series.
+- Các trường `takeaway` và `reflection` đang là placeholder kỹ thuật, **không phải tác phẩm gốc**, cần owner review trước khi Release.
+- Nội dung hiển thị Authoring cần QA giao diện thực tế và bổ sung 10 ảnh nguồn nếu quyết định dùng ảnh. Chưa phát hành Release hoặc series public.
