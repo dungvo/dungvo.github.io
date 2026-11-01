@@ -14,6 +14,7 @@
 | Muốn hiểu các bản K1–K9 cũ | [`rhythm-knowledge/README.md`](rhythm-knowledge/README.md) | Tài liệu lịch sử của hướng Rhythm → Knowledge đã tạm dừng; không dùng làm backlog đang triển khai |
 | Muốn xem nội dung thô chưa chuẩn hóa | [`raw/`](raw/) | Bản nghiên cứu, phân tích và bài viết làm việc; không publish trực tiếp |
 | Muốn xem tài sản đã biên tập cho từng kênh | [`curated/`](curated/) | Tài sản đã được chọn hoặc chuẩn bị, nhưng vẫn phải kiểm tra trạng thái thật trước khi gọi là đã đăng/phát hành |
+| Muốn review 50 truyện kinh điển đã nghiên cứu | [`story-series/classics/README.vi.md`](story-series/classics/README.vi.md) | 50 hồ sơ tham khảo, 20 nháp kể lại ngắn bảo toàn ngoài canonical; chưa có trong Authoring |
 | Muốn xem / phát triển ý tưởng cho thư viện 365 ngày | [`idea-library/README.vi.md`](idea-library/README.vi.md) | 6 series + 30 idea, thể loại mục tiêu, ID và trạng thái IDEA-only; chưa sáng tác hoặc publish |
 | Muốn chọn phong cách cho một bài | [`editorial-styles/`](editorial-styles/) | Các style profile có ID, cấu trúc, giới hạn và checklist; không thay source/evidence gate |
 

@@ -76,3 +76,11 @@
 - Checkpoint này chỉ lưu trạng thái + scorecard + đường đọc lại; không thêm tác phẩm và không chỉnh Release.
 
 **Chốt cuối:** **PAUSED BY OWNER — DO NOT AUTOCONTINUE STORY**.
+
+## 6. Bổ sung checkpoint — bảo toàn Classics50 từ PR #9
+
+- Đã tách phần hữu ích của nhánh cũ `content/selflo-classics-intake-20-20261101` vào [Classics50 reference library](../../story-series/classics/README.vi.md) từ một nhánh mới xuất phát từ main.
+- **50 hồ sơ nghiên cứu** lưu tại [Classics50 registry](../../story-series/SELFLO_CLASSICS_50_EDITORIAL_REGISTRY.vi.json), **20 bản kể lại ngắn nguyên dữ liệu JSON** bảo toàn trong [retelling-drafts](../../story-series/classics/retelling-drafts/INDEX.vi.json) **ngoài canonical source**, **30 hồ sơ nghiên cứu** chưa dịch ở [reference catalog](../../story-series/classics/CLASSICS_BATCH30_REFERENCE_CATALOG.vi.json).
+- **Không làm thay đổi Authoring 78 Story / Release 22 Story**, không nhập 20 nháp như bản hoàn chỉnh và không tự kích hoạt publisher. Mọi truyện đều cần review nguồn/quyền, chất lượng và quyết định cụ thể từ owner.
+- **PR #9 là lịch sử cũ cần đóng sau khi xác nhận migration đã merge**, không merge nguyên nhánh cũ vì `source.json` ở revision 84 đã lỗi thời so với main revision 91. Nhánh cũ có thể được dọn bằng GitHub UI sau khi bảo toàn dữ liệu đã được xác nhận.
+- Owner vẫn đang **PAUSED STORY**; thao tác này chỉ bảo toàn research/draft và dọn repo, **không mở lại sáng tác**.

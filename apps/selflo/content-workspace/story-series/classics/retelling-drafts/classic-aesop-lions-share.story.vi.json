@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_aesop_lions_share",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Phần chia của sư tử",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Lion’s Share” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "work_achievement",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Lion’s Share",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Hài châm biếm",
+      "Phi lý đời thường"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Sư tử cùng các loài khác đi săn. Sau khi có được con mồi, chúng đem chia thành nhiều phần theo thỏa thuận."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Sư tử bước tới, nhận phần đầu tiên vì mình là vua. Nó lấy phần thứ hai với lý do mình là thành viên mạnh nhất. Phần tiếp theo, nó nói, thuộc về mình nhờ công sức đã bỏ ra."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đến phần cuối, sư tử quay sang những con vật còn lại, nhìn từng con và hỏi liệu có ai muốn tranh phần ấy với mình."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Không con nào bước lên."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Khi quyền quyết định phần thưởng thuộc về một bên, sự công bằng có thể chỉ còn nằm trên danh nghĩa."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Ai đặt ra quy tắc chia phần, và ai có thể chất vấn quy tắc ấy?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "aesop-jacobs",
+    "author_name": "Aesop; Joseph Jacobs",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/28"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "aesops_fables_joseph_jacobs_1894",
+    "source_item_id": "aesop-lions-share",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}
