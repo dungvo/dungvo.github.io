@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **STORY SESSION CLOSED / PARKED — 2026-11-01:** Theo quyết định owner, tạm dừng Story/series/idea 365; **không tiếp tục viết, nhập, merge draft PR #9 hay phát hành** khi chưa có yêu cầu mới. Main snapshot: **Authoring rev 108 / 78 Story; Release rev 61 / 22 Story**; 1 series *Tầng không tồn tại* 10 chương Authoring; 36 concept 365 (6 series + 30 idea). Đã lưu scorecard 78 bài **sơ bộ**. Đọc [STORY HANDOFF](programs/story-authoring-review/SESSION_CLOSURE_2026-11-01.vi.md) trước khi làm lại; status [PM-STORY-P1](programs/story-authoring-review/STATUS.vi.md), [IDEA-365](idea-library/STATUS.vi.md). Chương trình quote/khác không bị thay đổi.
+
 > **IDEA-365 — ĐÃ LƯU / PARKED (01/11/2026):** Định hướng 365 ngày đọc Selflo, 6 concept series + 30 idea độc lập, 12 nhóm cân bằng. Chỉ là IDEA, không thêm Story/Authoring/Release và không có lịch xuất bản tự động. Canonical registry [Idea Library](idea-library/README.vi.md), trạng thái và next step [STATUS](idea-library/STATUS.vi.md). Khi owner muốn phát triển, chọn 1 ID, review overlap rồi mới nghiên cứu/outline.
 
 > **HỢP NHẤT MAIN — 2026-11-01:** Đã tích hợp main `1fc18a3` với B005–B009 local, giữ10 chương/10 quote seed mới. Source91 /Authoring **108 (1866 quote/78 story)**; Release **61 (385 quote/22 story)** không đổi. **95 tests/gate đạt**,168 quote vẫn chờ Release. Owner đã cho phép commit/push main; không promote Release. [Handoff](programs/quote-library-p0/MAIN_MERGE_2026-11-01.vi.md).
