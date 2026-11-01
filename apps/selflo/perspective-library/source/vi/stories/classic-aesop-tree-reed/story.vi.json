@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_aesop_tree_reed",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Cây lớn và cây sậy",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Tree and the Reed” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "adversity_resilience",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Tree and the Reed",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Quy luật tự nhiên",
+      "Ngụ ngôn ẩn dụ"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một cây lớn nhìn cây sậy nhỏ ở dưới chân và cười vì nó mảnh mai, không đứng thẳng vững vàng như mình."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Cây sậy không tranh luận. Nó chỉ nói rằng mình chấp nhận cách sống của mình."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một trận gió mạnh kéo đến. Cây lớn cố giữ nguyên dáng đứng, chống lại từng cơn gió. Cây sậy nghiêng xuống theo gió rồi lại ngẩng lên khi bão đi qua."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Đến khi trời quang, cây sậy vẫn ở đó; cây lớn đã bị gió quật đổ."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Đứng vững không nhất thiết là không bao giờ chịu nghiêng."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Lúc nào linh hoạt là thích nghi, và lúc nào nó có thể thành đánh mất điều quan trọng?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "aesop-jacobs",
+    "author_name": "Aesop; Joseph Jacobs",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/28"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "aesops_fables_joseph_jacobs_1894",
+    "source_item_id": "aesop-tree-reed",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_stevenson_four_reformers",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Bốn người muốn cải cách",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Four Reformers” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "work_achievement",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Four Reformers",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Hài châm biếm",
+      "Phi lý đời thường"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Bốn người cải cách gặp nhau và cùng nhất trí rằng thế giới cần thay đổi."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người thứ nhất muốn xóa bỏ tài sản. Người thứ hai muốn xóa bỏ hôn nhân. Người thứ ba muốn xóa bỏ Thượng đế. Người thứ tư chỉ mong có thể xóa bỏ công việc."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Họ bắt đầu tranh luận xem điều gì cần làm trước. Mỗi người đưa ra một giải pháp căn bản hơn người kia. Chẳng bao lâu, cuộc trò chuyện đi từ thay đổi luật lệ, kinh sách đến xóa bỏ cả loài người."
+        },
+        {
+          "id": "p004",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Người muốn xóa bỏ công việc vẫn chưa thấy ai bàn tới mong muốn của mình."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Những người đồng ý về mục tiêu thay đổi có thể chưa đồng ý về điều phải giữ lại."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Trước một đề xuất cải cách toàn diện, điều gì cần được xem là không thể đánh đổi?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "robert-louis-stevenson",
+    "author_name": "Robert Louis Stevenson",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/343"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "stevenson_fables_1901",
+    "source_item_id": "stevenson-four-reformers",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}

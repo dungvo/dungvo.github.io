@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.2",
+  "entity": "perspective_story",
+  "id": "story.classic_aesop_lion_and_statue",
+  "revision": 1,
+  "status": "draft",
+  "language": "vi",
+  "title_vi": "Sư tử và bức tượng",
+  "subtitle_vi": "Bản kể lại tiếng Việt làm việc từ “The Lion and the Statue” · Chưa duyệt",
+  "hero_image": null,
+  "primary_theme": "self_understanding",
+  "metadata": {
+    "concept_ids": [],
+    "emotion_tags": [],
+    "keywords": [
+      "The Lion and the Statue",
+      "truyện kinh điển",
+      "Selflo Classics",
+      "Ngụ ngôn ẩn dụ",
+      "Quan sát về góc nhìn"
+    ],
+    "story_style": "parable"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "marker_vi": null,
+      "marker_unit_vi": null,
+      "title_vi": null,
+      "subtitle_vi": null,
+      "blocks": [
+        {
+          "id": "p001",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Một người đàn ông và một con sư tử tranh luận xem loài nào mạnh hơn. Người đàn ông nói rằng con người vượt trội vì có trí thông minh."
+        },
+        {
+          "id": "p002",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Để chứng minh, anh dẫn sư tử đến khu vườn và chỉ vào một pho tượng: Hercules đang ghì chặt một con sư tử, như thể chiến thắng đã được ghi lại vĩnh viễn."
+        },
+        {
+          "id": "p003",
+          "type": "paragraph",
+          "style": "narrative",
+          "text_vi": "Con sư tử nhìn pho tượng một lúc rồi bảo rằng bằng chứng ấy chưa đủ thuyết phục. Suy cho cùng, pho tượng là do con người tạc nên."
+        }
+      ]
+    }
+  ],
+  "takeaway": {
+    "title_vi": "Góc nhìn để suy nghĩ",
+    "text_vi": "Ai là người được quyền kể lại câu chuyện có thể làm thay đổi điều chúng ta gọi là bằng chứng."
+  },
+  "reflection": {
+    "prompts": [
+      {
+        "id": "reflection_1",
+        "text_vi": "Khi nghe một phiên bản rất thuyết phục, bạn thường tự hỏi ai đã làm ra nó không?",
+        "response_mode": "none"
+      }
+    ],
+    "closing_vi": null
+  },
+  "authorship": {
+    "author_id": "aesop-jacobs",
+    "author_name": "Aesop; bản tuyển và kể lại của Joseph Jacobs",
+    "source_label": "Bản kể lại tiếng Việt do Selflo biên soạn từ nguyên tác tiếng Anh thuộc tuyển tập Project Gutenberg; không phải bản dịch xuất bản.",
+    "source_url": "https://www.gutenberg.org/ebooks/28"
+  },
+  "editorial": {
+    "origin_type": "adapted_public_domain",
+    "source_collection_id": "aesops_fables_joseph_jacobs_1894",
+    "source_item_id": "aesop-lion-and-statue",
+    "human_edited": false
+  },
+  "rights": {
+    "status": "unverified",
+    "note": "Nguồn tiếng Anh Project Gutenberg ghi public domain tại Hoa Kỳ; tác giả gốc và bản biên tập cổ đã qua đời từ lâu. Chưa có quyết định kiểm tra quyền Việt Nam và quyền dịch/sử dụng cụ thể cho bản Selflo. KHÔNG RELEASE khi chưa xác minh."
+  },
+  "review": {
+    "status": "needs_owner_review",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "reader_format": "editorial_v3"
+}
