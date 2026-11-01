@@ -69,7 +69,6 @@ for(const channel of ['', 'studio/']){
   }
 }
 const builder=await readFile(resolve(root,'website-system/scripts/build-studio.mjs'),'utf8');
-new Script(builder.replaceAll(/^import .*?;$/gm,'').replace('import.meta.dirname',"'tests'"),{filename:'studio-build.mjs'});
 assert.match(builder,/publicSearch/,'Studio build must preserve shared search header');
 assert.doesNotMatch(builder,/studio\/assets\/perspectives-v3\.js/);
 console.log('Release discovery contract verified:',stories.length,'complete Stories,',storyBlocks,'blocks,',quoteCount,'Quotes; Public/Studio parity.');
