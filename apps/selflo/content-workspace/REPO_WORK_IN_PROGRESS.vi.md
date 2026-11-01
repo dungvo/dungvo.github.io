@@ -1,5 +1,7 @@
 # Selflo content repo — Kiểm kê phần đang làm dở
 
+> **HỢP NHẤT MAIN — 2026-11-01:** Đã tích hợp main `1fc18a3` với B005–B009 local, giữ10 chương/10 quote seed mới. Source91 /Authoring **108 (1866 quote/78 story)**; Release **61 (385 quote/22 story)** không đổi. **95 tests/gate đạt**,168 quote vẫn chờ Release. Owner đã cho phép commit/push main; không promote Release. [Handoff](programs/quote-library-p0/MAIN_MERGE_2026-11-01.vi.md).
+
 > **B009 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **149/149**: **11 đạt,138 không nhận (gồm40 legacy block giữ loại, không mở lại)**. Source90 /Authoring **107** /Release **61 (385 quote /22 story)**. Corpus **1.239/5.471 đã chốt (22,65%), còn4.232**; **168 câu chờ Release**, chưa cộng released. **95 tests đạt**, candidate tạm168 câu qua gate; không cài Release/commit/push. Handoff: [B009 local](programs/quote-library-p0/Q10_B009_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).
 
 > **B008 REVIEW ĐỦ TOÀN ĐỢT LOCAL — 2026-11-01:** Đủ **149/149**: **44 đạt,103 final closure không nhận mới (gồm6 legacy rejection giữ loại),2 owner-closed giữ nguyên**. Source89 /Authoring **106** /Release **61 (385 quote /22 story)**. Corpus **1.101/5.471 đã chốt (20,12%), còn4.370**; **157 câu chờ Release**, chưa cộng released. **95 tests đạt**, candidate tạm157 câu qua gate; không cài Release/commit/push. Handoff: [B008 local](programs/quote-library-p0/Q10_B008_FULL_LOCAL_HANDOFF_2026-11-01.vi.md).

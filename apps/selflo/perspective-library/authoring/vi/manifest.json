@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "entity": "perspective_library_manifest",
   "library_id": "selflo.perspective.authoring.vi",
-  "library_revision": 107,
-  "content_version": "q10-b009-full-local-review-2026-11-01",
+  "library_revision": 108,
+  "content_version": "merged-b005-b009-and-tang-khong-ton-tai-2026-11-01",
   "language": "vi",
-  "generated_at": "2026-11-01T04:59:17Z",
+  "generated_at": "2026-11-01T05:15:23Z",
   "files": [
     {
       "id": "content_tags.vi",
@@ -217,11 +217,11 @@
     {
       "id": "theme.attention.vi",
       "kind": "quote_pack",
-      "revision": 45,
-      "path": "themes/attention.vi.r45.json",
+      "revision": 46,
+      "path": "themes/attention.vi.r46.json",
       "media_type": "application/json",
-      "sha256": "dc504a5f576a23aab1bd45d579aa245e415e0f052dec4ef501bc3de58a4701d5",
-      "byte_count": 704233
+      "sha256": "adfeb802ef0976a7f8441dfbf8398467eef6e7257609a9f16781ed3a1a76e6e2",
+      "byte_count": 726236
     },
     {
       "id": "theme.change_growth.vi",
@@ -807,6 +807,96 @@
       "media_type": "application/json",
       "sha256": "1036a20c46e474ac948077d91cef19bc3873c7ab0c7e7e1a0edc599973b7f2e7",
       "byte_count": 24504
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_01",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-01/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "80aae98cd2670fe3bc90b59fa17715fc7848b2f0fd8659cade8af25ff8d300fb",
+      "byte_count": 14672
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_02",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-02/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "829c34d6bc4e762129aa125200cd8f4a2b33b6adf472180f4e905f09ba4f7e8d",
+      "byte_count": 14442
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_03",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-03/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "110bb3351c979a85281acfe660a627047121c750ef78172e34c77c15bb796bbe",
+      "byte_count": 12812
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_04",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-04/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "6f19e197438f903b14336aae60cfb297b7bdcf0dde6ce9ecd8992cb9acf084f6",
+      "byte_count": 15581
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_05",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-05/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "17f65ea7518d40804ef6384490a394a991565c24501e4c4e27df618d3f90ca07",
+      "byte_count": 19047
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_06",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-06/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "ea89c84574df26cb4701499e4b88d89aaecd103ed010ca74a29a49539ae7f643",
+      "byte_count": 20223
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_07",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-07/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "15e8eba572bb4a43f732d041dfa7dadab9ae4164474e814112401b4931678549",
+      "byte_count": 21991
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_08",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-08/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "9c8ac04bd362fe0bf656274c58a2f70acc76560a8d1c6832507fc31169042ad9",
+      "byte_count": 19633
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_09",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-09/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "c7a1b2985afcd0bdf80cbb1bf0cadfcf6ed5230f0950c3e4d5d57b4c7d4d9429",
+      "byte_count": 18365
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_10",
+      "kind": "story",
+      "revision": 2,
+      "path": "stories/tang-khong-ton-tai-chuong-10/story.vi.r2.json",
+      "media_type": "application/json",
+      "sha256": "10b910d5c26e4d91ef6d299e27d6c88c0ec66c7616251f03864f94cbbfd325a4",
+      "byte_count": 20393
     },
     {
       "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",

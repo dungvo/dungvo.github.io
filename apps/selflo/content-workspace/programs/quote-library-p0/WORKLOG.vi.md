@@ -385,3 +385,8 @@ Lượt cuối 116 dòng: 50 đạt / 66 không nhận, đã review đủ 149/14
 ## 2026-11-01 — B009 review toàn đợt local
 
 149 ID:11 đạt,138 final closure không nhận gồm40 legacy block giữ loại,0 chưa xử lý. Source90/Authoring107, Release61 không đổi. Corpus1.239/5.471, còn4.232;168 chờ Release.95 tests/gate candidate tạm168 câu đạt; không cài candidate, không commit/push. Handoff `Q10_B009_FULL_LOCAL_HANDOFF_2026-11-01.vi.md`. Bước tiếp theo B010 148 dòng local.
+
+
+## 2026-11-01 — Hợp nhất main theo yêu cầu owner
+
+Tích hợp remote1fc18a3 và local6917654; source91/Authoring1081866 quote78 story, Release61 không đổi.95 tests, checksum, Matrix/progress và gate candidate168 quote đạt.168 câu chờ Release giữ nguyên. Owner đã cho phép commit/push main; không force hoặc promote Release. Chi tiết `MAIN_MERGE_2026-11-01.vi.md`.

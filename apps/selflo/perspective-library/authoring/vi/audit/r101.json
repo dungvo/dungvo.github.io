@@ -2,9 +2,9 @@
   "schema_version": "selflo.perspective.publish-audit.v1",
   "channel": "authoring",
   "library_revision": 101,
-  "canonical_source_revision": 84,
-  "canonical_source_digest": "29b4662347de80f89962477dc8b59d30a0f942cce3279538e5726c191456be11",
-  "canonical_quote_count": 1856,
+  "canonical_source_revision": 85,
+  "canonical_source_digest": "a92e09d282d98bcfde67bc63b03e22d167d5aa904161cbfc1e52be858b02e76d",
+  "canonical_quote_count": 1866,
   "source_files": [
     {
       "id": "content_tags.vi",
@@ -98,7 +98,7 @@
     },
     {
       "id": "quote_fragment.adversity_resilience.008",
-      "sha256": "47257673eddd5a12b420cdbe2f5661b9205d07b76e0e10a14655ca668bde37fe",
+      "sha256": "b5d424eca54b684feec3a3ad9a30f0b5c7701bef0ab1a15127cdc344b017fd19",
       "path": "quotes/adversity_resilience/008.vi.json"
     },
     {
@@ -173,12 +173,12 @@
     },
     {
       "id": "quote_fragment.attention.009",
-      "sha256": "fe5fca074868bec62cbc86b354fef2807f1abf14e7941a5aeacffc2d1239a13c",
+      "sha256": "ac107d43816b8773c5191938cb2f16dd60f7feb9ac827fc1001757fc2b6e1096",
       "path": "quotes/attention/009.vi.json"
     },
     {
       "id": "quote_fragment.attention.010",
-      "sha256": "12d16c6624a81aa3f43363404769cc75182a67386511cef149e0e08cd3dfdd84",
+      "sha256": "97d0c2f5a1df74656c7d8038db936102ac960c3e729b56bb1eb5c4001ef20882",
       "path": "quotes/attention/010.vi.json"
     },
     {
@@ -208,7 +208,7 @@
     },
     {
       "id": "quote_fragment.attention.016",
-      "sha256": "04f2315a211dee7b92d242a0401df018698f9f687dcfd2c20d92e9208c3b8b65",
+      "sha256": "febe74ac1bee8e8c82bb6557a86090117ddd87bfc730ab787fe87345c9903c50",
       "path": "quotes/attention/016.vi.json"
     },
     {
@@ -262,6 +262,11 @@
       "path": "quotes/attention/026.vi.json"
     },
     {
+      "id": "quote_fragment.attention.027",
+      "sha256": "c0c0c756803530b1555be1aba4be3fe5bbe6bae79bf4565bebbb6fe9e5d5dd26",
+      "path": "quotes/attention/027.vi.json"
+    },
+    {
       "id": "quote_fragment.change_growth.001",
       "sha256": "42e2312de7727390de09c727fea60525e1fa3f9297cc6a37bb2999acba98bf40",
       "path": "quotes/change_growth/001.vi.json"
@@ -293,12 +298,12 @@
     },
     {
       "id": "quote_fragment.change_growth.007",
-      "sha256": "67aa0668f6df10d889c18b0cfd6502543f457917c7ba8c363779727ae7cc4233",
+      "sha256": "6cbc2529fd8eb8d22fed83f01d254a8138674bf12333246a7dcbe49d74a78b34",
       "path": "quotes/change_growth/007.vi.json"
     },
     {
       "id": "quote_fragment.change_growth.008",
-      "sha256": "2b4a51f5c44b695938fdcb455d958ceb37e3fd37546cee9d3921242bcaebe884",
+      "sha256": "37dae35e81a144c7450b6e24b498670a03a49909e54936336bb0a007e0e159ab",
       "path": "quotes/change_growth/008.vi.json"
     },
     {
@@ -378,12 +383,12 @@
     },
     {
       "id": "quote_fragment.meaning_values.007",
-      "sha256": "3c3f25fb80342bf6ea0c81a4107f14ef8063cb2784d9d447a0bbdf19140c1d19",
+      "sha256": "e809c4e1ca5b92cfad495e71a1d474e9569da309935a41966ba14efb00ee7eee",
       "path": "quotes/meaning_values/007.vi.json"
     },
     {
       "id": "quote_fragment.meaning_values.008",
-      "sha256": "9f0f62df362e7f748b90b2639bd6282c4a906c564423cb78d6b92a3ab84580cb",
+      "sha256": "2002ee1fc66b10a4ff402344bb598ad5bf1b42671b0e2c3b38e12f0c8a5fc3df",
       "path": "quotes/meaning_values/008.vi.json"
     },
     {
@@ -438,7 +443,7 @@
     },
     {
       "id": "quote_fragment.relationships.005",
-      "sha256": "2061675a372fee049eb70e9170ae7426aa7b0eac53468865cdb860e4a607fb7b",
+      "sha256": "b5a680f33388ab91aecd239abb8e48fd844241bd460b764bebeb12eeb7b28a93",
       "path": "quotes/relationships/005.vi.json"
     },
     {
@@ -463,12 +468,12 @@
     },
     {
       "id": "quote_fragment.relationships.010",
-      "sha256": "dfa49a7c80fcd7b0cfc11cfb63e9d8f03adf33cc6b21bae4f0fad64115e7249f",
+      "sha256": "d732276f1c934a795339f8b279c18685fc85a26ea8fb21e0bda9915a7000bff6",
       "path": "quotes/relationships/010.vi.json"
     },
     {
       "id": "quote_fragment.relationships.011",
-      "sha256": "5032b85e59dc130d48512ba7f71fb1b4c6edb79b04493f84aed9cc2289c2439e",
+      "sha256": "1be9799f61fd69bdbb666929443122289592dec8f7966e1454679e457bab7b27",
       "path": "quotes/relationships/011.vi.json"
     },
     {
@@ -493,7 +498,7 @@
     },
     {
       "id": "quote_fragment.rest_wellbeing.005",
-      "sha256": "8b42a1b934a6cf72ecec904c0aa8407f5ce1d369f81017ea6e9629d102ad3552",
+      "sha256": "6d37715e7405650b23ef5b4abed754dd8d22349d2129b1e5f55a4dd020c73f0e",
       "path": "quotes/rest_wellbeing/005.vi.json"
     },
     {
@@ -563,7 +568,7 @@
     },
     {
       "id": "quote_fragment.self_understanding.008",
-      "sha256": "40e9512fd11bb0251fb88e60fa76af5e472cb2d623c4a8f77b47924ff929c3f2",
+      "sha256": "ae6b570727c2dc0e7ab27eb3852da1071c4f7b388ce3e19ebf7f0be009a4fe2c",
       "path": "quotes/self_understanding/008.vi.json"
     },
     {
@@ -613,22 +618,22 @@
     },
     {
       "id": "quote_fragment.self_understanding.018",
-      "sha256": "bdf61b8030568020f604f5a487017c412e4d2bfe9a2a920cbcd494fb53abb7ac",
+      "sha256": "065dee465cf8545c9db78dbbd9aef70bf1fef6e2ac2627340be28b992cc6c6cf",
       "path": "quotes/self_understanding/018.vi.json"
     },
     {
       "id": "quote_fragment.self_understanding.019",
-      "sha256": "a9fd76a6fa60ebddfabd78602b6a21274186b42470afa0953a0cc11783e0f530",
+      "sha256": "2cf515b03af0117e722dd767cf8c85eb784a7bdecd2f75243df4b7794f952083",
       "path": "quotes/self_understanding/019.vi.json"
     },
     {
       "id": "quote_fragment.self_understanding.020",
-      "sha256": "4acd44d52ff323a801f7914ed6ac2800c9d67b09f2537e28d915db367cc87663",
+      "sha256": "99f7316bd89a1a33b976f27a8acf38095eda8f93ef38fdd39f10c52370430e39",
       "path": "quotes/self_understanding/020.vi.json"
     },
     {
       "id": "quote_fragment.self_understanding.021",
-      "sha256": "d6cba48038f874d9084dae92fff67abea922c05ee3d43e0b5ef3f4ea0810a20e",
+      "sha256": "30da0c848a42f624009a111b1b556f3942a3fa1774ab707bc29d10d8866233ad",
       "path": "quotes/self_understanding/021.vi.json"
     },
     {
@@ -678,7 +683,7 @@
     },
     {
       "id": "quote_fragment.self_understanding.031",
-      "sha256": "c8810c9bee19c813b4248fbf5066cf2c1a7c20def7321683a638a3cc34843d85",
+      "sha256": "03a54ab4628b6b869d84dd6cc34e2f1c8813f612181c6bab20a44de28eeba521",
       "path": "quotes/self_understanding/031.vi.json"
     },
     {
@@ -818,12 +823,12 @@
     },
     {
       "id": "quote_fragment.work_achievement.003",
-      "sha256": "d23a611bf98f1bbb11a030ca9e3a4907ecc64f2295f1e6a84d025aee6a5748fc",
+      "sha256": "4a35f83e0a88feb2ef4d09d557b4b39edfc09b380d82e29a4b8893b8075fc8b1",
       "path": "quotes/work_achievement/003.vi.json"
     },
     {
       "id": "quote_fragment.work_achievement.004",
-      "sha256": "3e9648cc90394fc77b7660bbbe6e10e6e92042784e678a75d17c6fd4e6fdcffd",
+      "sha256": "97a303c0a0bcf8bbf6f2c8c0033b57a9e08769ddd0959010b6e4929e00aa01d4",
       "path": "quotes/work_achievement/004.vi.json"
     },
     {
@@ -833,7 +838,7 @@
     },
     {
       "id": "quote_fragment.work_achievement.006",
-      "sha256": "bd87b9d7b5718f10f671ebdd7b2686cf2153256402a273998def2c35c6985ea4",
+      "sha256": "a454c70b0b64c50f5739880e8386f740a34befb67419c1399e82bb3f67669399",
       "path": "quotes/work_achievement/006.vi.json"
     },
     {
@@ -848,7 +853,7 @@
     },
     {
       "id": "quote_fragment.work_achievement.009",
-      "sha256": "ba4e0d16e18b5587b665f22dac9d461232cb20a513c27349e380be662236a4e5",
+      "sha256": "de1afbd1f4eac751358a3d9d00f60a23791248301ffcf2c015ab1dc865fe9f1d",
       "path": "quotes/work_achievement/009.vi.json"
     },
     {
@@ -868,7 +873,7 @@
     },
     {
       "id": "quote_fragment.work_achievement.013",
-      "sha256": "74dc988c59ab6033082d603e3b57bfad743596a8769fa69ea302ae8720be901f",
+      "sha256": "cd0b64bccdf801c4e1767622f811d666c2783753d995550eeb3e3dc283af512f",
       "path": "quotes/work_achievement/013.vi.json"
     },
     {
@@ -1167,6 +1172,56 @@
       "path": "stories/taiji-from-one-to-ten-thousand-things/story.vi.json"
     },
     {
+      "id": "story.tang_khong_ton_tai_chuong_01",
+      "sha256": "0c52ddf5ed951ee6008a0a2389f686b495d20b5b055d1ac75c43992683bb2f39",
+      "path": "stories/tang-khong-ton-tai-chuong-01/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_02",
+      "sha256": "51fe79df1ef34388cbe09bb212c7658201851efa8ff8ff2cf8165acb12964233",
+      "path": "stories/tang-khong-ton-tai-chuong-02/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_03",
+      "sha256": "4ce7dfb09215d86f93873e03fa0003c9449c678ff6f2ebd2724d39ed25819db2",
+      "path": "stories/tang-khong-ton-tai-chuong-03/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_04",
+      "sha256": "23bcf092883a191855a488b027fbfbb38fe91795a66ebd5c2866eeb87b4a7300",
+      "path": "stories/tang-khong-ton-tai-chuong-04/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_05",
+      "sha256": "4bc65f17ef3f71ea07bacc99e9d5dbb3378fac4516993877e886fc9d3a8f57b3",
+      "path": "stories/tang-khong-ton-tai-chuong-05/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_06",
+      "sha256": "e43e247b27cc66387d09e449152cc46e24882229525e4afe1154bf1c70971c03",
+      "path": "stories/tang-khong-ton-tai-chuong-06/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_07",
+      "sha256": "3487853040537f20556a5aca4d3934f7a8425399a9d8ae3595221ac331940e8d",
+      "path": "stories/tang-khong-ton-tai-chuong-07/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_08",
+      "sha256": "f1aca5c4060c496c62a3371be82993590d2560965f02413066c57a3f7db6294d",
+      "path": "stories/tang-khong-ton-tai-chuong-08/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_09",
+      "sha256": "7fae5a01a4468b142b71c802bc9a8f33d2605336883985ba01d54393e67558a7",
+      "path": "stories/tang-khong-ton-tai-chuong-09/story.vi.json"
+    },
+    {
+      "id": "story.tang_khong_ton_tai_chuong_10",
+      "sha256": "7ec13acc91b7d21bc09d91ad944b8af595dcfcb5a62eb0ec32c0eefc1d60a48f",
+      "path": "stories/tang-khong-ton-tai-chuong-10/story.vi.json"
+    },
+    {
       "id": "story.thanh_pho_cua_nhung_chiec_dong_ho",
       "sha256": "20f691383d67fc79f6049b8a45e706159cc16ede7adbcee8ab9c98253e8006d0",
       "path": "stories/thanh-pho-cua-nhung-chiec-dong-ho/story.vi.json"
@@ -1288,7 +1343,7 @@
     },
     {
       "id": "theme.attention.vi",
-      "sha256": "5f6f6a142a20ed84e2ba8b3fb43754fdeba34bc91e1e9e0b54615fd23ef5ce79",
+      "sha256": "bab30b304701536926f04486127142bae7d6eb32675653d9ce5368c65b21f886",
       "path": "themes/attention.vi.json"
     },
     {
@@ -1328,14 +1383,17 @@
     }
   ],
   "changed_file_ids": [
-    "theme.adversity_resilience.vi",
-    "theme.attention.vi",
-    "theme.change_growth.vi",
-    "theme.meaning_values.vi",
-    "theme.relationships.vi",
-    "theme.rest_wellbeing.vi",
-    "theme.self_understanding.vi",
-    "theme.work_achievement.vi"
+    "story.tang_khong_ton_tai_chuong_01",
+    "story.tang_khong_ton_tai_chuong_02",
+    "story.tang_khong_ton_tai_chuong_03",
+    "story.tang_khong_ton_tai_chuong_04",
+    "story.tang_khong_ton_tai_chuong_05",
+    "story.tang_khong_ton_tai_chuong_06",
+    "story.tang_khong_ton_tai_chuong_07",
+    "story.tang_khong_ton_tai_chuong_08",
+    "story.tang_khong_ton_tai_chuong_09",
+    "story.tang_khong_ton_tai_chuong_10",
+    "theme.attention.vi"
   ],
   "reused_file_ids": [
     "content_tags.vi",
@@ -1430,20 +1488,19 @@
     "story_artwork.rest_wellbeing.v1",
     "story_artwork.self_understanding.v1",
     "story_artwork.work_achievement.v1",
-    "theme.emotion.vi"
+    "theme.adversity_resilience.vi",
+    "theme.change_growth.vi",
+    "theme.emotion.vi",
+    "theme.meaning_values.vi",
+    "theme.relationships.vi",
+    "theme.rest_wellbeing.vi",
+    "theme.self_understanding.vi",
+    "theme.work_achievement.vi"
   ],
-  "story_links_projected_to_null": [
-
-  ],
-  "release_unready_quote_skips": [
-
-  ],
-  "release_empty_theme_skips": [
-
-  ],
-  "release_unpaired_story_skips": [
-
-  ],
+  "story_links_projected_to_null": [],
+  "release_unready_quote_skips": [],
+  "release_empty_theme_skips": [],
+  "release_unpaired_story_skips": [],
   "explicit_quote_exclusions": [
     {
       "quote_id": "research.laozi.day3.ch65.071",
@@ -3304,509 +3361,23 @@
       "reason": "Đây là hướng dẫn cho người đọc phục hồi điều kiện của một câu nói; chưa có câu nguồn cụ thể. Giữ ở provenance nghiên cứu, không phát hành nhận xét phương pháp dưới attribution truyền thống. Đóng theo Q10-B005; không tự đề xuất lại.",
       "reviewed_by": "ai:codex",
       "reviewed_at": "2026-10-26T14:56:59.295053+00:00"
-    },
-    {
-      "quote_id": "research.day35.african_traditions_i_aka.001",
-      "reason": "Bản Việt nói về khả năng tương trợ nhưng hồ sơ chỉ dẫn bài nghiên cứu chung, không có nguyên ngữ/locator. Trang nhà xuất bản xác định corpus Yoruba, không xác lập nhãn Akan/Yoruba gộp. Chưa xác minh được passage và phần diễn ý cộng đồng là nguồn lực; không gán câu này cho truyền thống. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day35.african_traditions_i_aka.003",
-      "reason": "Phần người trẻ học người trước và phần tự phán đoán đều chưa có passage tương ứng trong hồ sơ. Không lấy chủ đề tôn trọng người già làm bằng chứng cho toàn câu; không chuyển sang câu khác để giữ ID. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day35.african_traditions_i_aka.004",
-      "reason": "Câu về sai lầm và học tiếp chưa có nguyên ngữ, locator hay witness đối chiếu; URL cấp bài không chứng minh nội dung. Không loại vì ngôn ngữ, không khẳng định tục ngữ không tồn tại; kết luận bản ghi hiện tại không đủ căn cứ để xuất bản với attribution này. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day35.african_traditions_i_aka.005",
-      "reason": "Đây là bình luận phản biện công thức đi nhanh/đi cùng nhau, không phải bản dịch một tục ngữ được xác định. Không phát hành nhận xét về cách dùng tục ngữ dưới nhãn truyền thống Akan/Yoruba. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day35.african_traditions_i_aka.006",
-      "reason": "Chưa truy được tục ngữ hoặc passage cho đối lập danh tiếng cộng đồng/trải nghiệm riêng. Bài phương pháp và nhãn truyền thống chung không đủ xác lập tác giả hoặc nội dung câu. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.006",
-      "reason": "Không tìm được passage xác lập toàn bộ đối lập tương trợ/nghĩa vụ/lựa chọn cá nhân trong nguồn đã đọc. Các ví dụ kiểm soát chuẩn mực của nghiên cứu Kafa 2014 không đủ chứng minh diễn giải này; không gán nhận xét hiện đại cho truyền thống. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.007",
-      "reason": "Có đầu mối liên quan ở Dagnew–Wodajo 2014, trang 97: phân biệt tuổi đời và sự khôn ngoan. Tuy nhiên đó không phải câu kinh nghiệm không thay thế hoàn cảnh người nghe. Không thay quote bằng tục ngữ khác hoặc xem gần chủ đề là xác minh bản Việt hiện tại. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.008",
-      "reason": "Chưa có câu gốc hoặc đoạn dẫn cho đối lập kiên nhẫn/chịu đựng quá mức. Nguồn điểm sách không đủ và nghiên cứu bổ sung không xác lập diễn ý này. Không nâng quyền hoặc verification chỉ từ chủ đề gần nhau. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.009",
-      "reason": "Dòng là chỉ dẫn biên tập cách đọc câu về nghèo khó, chưa phải một tục ngữ cụ thể. Nghiên cứu bổ sung có bối cảnh nông nghiệp nhưng không xác lập lời phản biện này là tục ngữ Kafa; giữ làm provenance, không phát hành thẻ quote. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.010",
-      "reason": "Chưa truy được passage cho phần hiếu khách và quyền đặt ranh giới. Việc nguồn nghiên cứu nói tới chuẩn mực cộng đồng không xác lập quyền đặt ranh giới là nội dung tục ngữ; không tự thêm claim để tạo câu phù hợp Selflo. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.011",
-      "reason": "Đây có thể là một nhận xét xã hội nhưng chưa có passage nguồn cho liên hệ mức phụ thuộc/hậu quả xã hội. Không diễn giải suy rộng từ ví dụ thực địa rồi ghi là trí tuệ truyền thống. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.012",
-      "reason": "Dòng là khuyến cáo khi đánh giá chuẩn mực truyền thống qua thời đại, không có một câu tục ngữ hoặc đoạn nguồn được định vị. Thích hợp làm câu hỏi phân tích hơn quote mang attribution Kafa. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day37.015",
-      "reason": "Các khả năng giải thích im lặng chưa được nối với passage trong nguồn Kafa. Không suy ý nghĩa tâm lý từ hành vi im lặng hay gán tổng hợp hiện đại cho một truyền thống khi chưa có căn cứ. Đóng theo Q10-B005; chỉ mở lại khi có bằng chứng mới và xử lý quyết định rõ ràng.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T10:53:39.539572+00:00"
-    },
-    {
-      "quote_id": "research.day72.004",
-      "reason": "Bài Curiosity and the economics of attention đề xuất vai trò phân bổ chú ý; phần tìm thêm thông tin không luôn cải thiện quyết định chưa có passage được nối trong hồ sơ. Không coi abstract về tò mò là chứng minh toàn bộ câu ghép. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.001",
-      "reason": "AMJ 2015 mục Information Scales Faster than Attention hỗ trợ ý giới hạn chú ý. Nhưng Free Access không phải giấy phép tái sử dụng; chưa có clearance cho bản diễn ý gắn tác giả hiện đại. Giữ provenance, không tự gán public domain. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.009",
-      "reason": "AMJ có bàn chuyển chú ý giữa nhiệm vụ nhưng chưa xác lập bộ ba chọn/duy trì/chuyển tiêu điểm như định nghĩa trong câu. Không gán định nghĩa tổng hợp cho editorial này. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.006",
-      "reason": "Cùng nguồn và insight quá tải/chọn lọc thông tin với day72.002. Giữ một bản có mệnh đề rõ hơn; không phát hành thêm khẩu hiệu bảo vệ tiêu điểm. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.010",
-      "reason": "Chương The Attention Economy mục1.2–1.3 hỗ trợ chú ý hữu hạn và chọn thông tin, nhưng chưa có passage cho thiết kế hệ thống tốt giúp bỏ qua. Đã xác minh CC BY4.0, nên blocker là mapping claim, không phải quyền; không tự đổi tác giả/nguồn để giữ câu. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.003",
-      "reason": "Abstract Anderson–de Palma là mô hình cạnh tranh quảng cáo/phân bổ chú ý, không trực tiếp kiểm chứng đối lập thu hút/giá trị dài hạn. Không biến kết quả mô hình thành claim về mọi nền tảng. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.005",
-      "reason": "NIST 100-4 nói về minh bạch/xác thực synthetic content. Chưa có passage cho chuỗi nhân quả chi phí giảm rồi cạnh tranh cho từng phút chú ý tăng. Không dùng uy tín NIST để bảo chứng suy luận bổ sung. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.007",
-      "reason": "Nguồn được nhận diện là Aggregated or disaggregated information first?, chưa có passage hỗ trợ claim bản tóm tắt che chi tiết quyết định; không đánh đồng aggregation với summarization. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.day72.008",
-      "reason": "Chủ đề nghiên cứu là thứ tự thông tin tổng hợp/chi tiết trong một thiết kế cụ thể; câu hiện khái quát mọi thứ tự trình bày. Cần điều kiện và kết quả thực nghiệm trước khi chuyển thành quote phổ quát. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch13.014",
-      "reason": "Là vế đối của cùng passage với .013, không thêm insight độc lập đủ mạnh; giữ một thẻ có hai tầng nguồn trong detail. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch13.016",
-      "reason": "Câu hỏi thiên hạ có thường pháp nào trùng insight thích ứng của .015; không tách nhiều mảnh cùng lập luận thành nhiều quote. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch07.001",
-      "reason": "Phần tai mắt cần nghỉ thuộc cùng insight với câu hoàn chỉnh .003; không giữ ba thẻ nói một điều. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch07.002",
-      "reason": "Phần tinh thần cạn là mảnh cùng passage, đã giữ trong .003. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch07.005",
-      "reason": "以虛受實 nằm trong lập luận Đạo gia về hư/thực và thánh nhân. Dịch khoảng trống để nhận điều thực dễ thành chỉ dẫn nhận thức mơ hồ; cần bài giải thích thay vì thẻ độc lập. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch07.007",
-      "reason": "Chưa nối được bản Việt không đẩy quá xa/không bám quá chặt với một passage chính xác của 精神訓; không chọn câu chỉ vì nghe hợp tinh thần Đạo gia. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch14.019",
-      "reason": "Không phải lúc nào tối đa hai phía là tóm tắt quá rộng của ẩn dụ cánh/cành. Câu .018 giữ chất liệu rõ hơn; không thêm khẩu hiệu tối ưu hóa. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch14.021",
-      "reason": "Chủ đề lợi-hại đổi chiều đã có Release attributed.laozi.chapter_58.fortune_misfortune; bản này còn khái quát may mắn ngoài passage. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.038",
-      "reason": "Cặp họa-phúc và lợi-hại trùng insight Release Lão Tử 58; giữ provenance chứ không tạo thẻ diễn lại. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.040",
-      "reason": "Cùng đoạn họa-phúc đổi chiều; đã có một thẻ Release nói rõ hình ảnh, không thêm biến thể. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.041",
-      "reason": "Đại từ việc này là lời đáp trong truyện tái ông; cắt khỏi biến cố làm mất điều được hỏi. Không nối thêm truyện mới trong bước quote. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.042",
-      "reason": "Điều đang tốt là lời đáp về ngựa trong truyện; thẻ riêng thiếu sự việc và dễ đọc thành bi quan với mọi điều tốt. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.043",
-      "reason": "Kết đoạn tái ông cùng insight đã có trên Release; không thêm nhiều wording họa/phúc. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.045",
-      "reason": "Là lời giải thích trừu tượng của cùng truyện gỗ tươi .044; giữ bản có sự việc cụ thể. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.046",
-      "reason": "Thận trọng việc nhỏ và thời điểm đã được thể hiện ở Release Lão Tử 63/64; bản hiện là lời dạy chung. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.047",
-      "reason": "Cùng lập luận phòng trước cứu sau; Release Lão Tử 64 đã giữ insight này. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch18.048",
-      "reason": "Ngăn vấn đề trước khi lớn trùng trực tiếp Release Lão Tử 64; giữ nguồn thứ hai ở provenance, không tăng thẻ trùng ý. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch17.028",
-      "reason": "Không tìm được câu khắc mạn thuyền trong 說林訓 witness đã đọc. Hình ảnh quen thuộc không đủ chứng minh attribution/chương; không chuyển nguồn sang Lã Thị Xuân Thu khi chưa hoàn tất identity review. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch17.031",
-      "reason": "Thập牖/một戶 là phép ví thứ hai của cùng cặp so sánh ở .030; không tách hai thẻ cùng thông điệp. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch17.035",
-      "reason": "Câu tích lũy thành gò cùng passage và insight với .034; không phát hành hai lời khuyên kiên trì. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch17.036",
-      "reason": "Bản Việt thành do đất/cây thẳng nhờ nâng đỡ chưa khớp passage 木大者根擢，山高者基扶 đã đọc. Không lấy các hình ảnh gần nhau để nâng xác minh. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch17.037",
-      "reason": "Dương Tử khóc trước ngã đường là mảnh truyện cần bối cảnh lựa chọn/hệ quả; riêng câu chưa tạo nghĩa độc lập cho người chưa biết tích. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch09.010",
-      "reason": "Diễn giải lại phép ví tập thể ở .009, không thêm nghĩa độc lập. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.huainanzi.day6.ch09.011",
-      "reason": "Chuyên dùng tâm riêng không giữ nổi thân là lời cảnh báo người trị trong ngữ cảnh cụ thể. Tách ra thành một cái đầu không giữ nổi bản thân dễ thành hạ thấp năng lực cá nhân. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch01.003",
-      "reason": "無欲/有欲, 妙/徼 có nhiều cách đọc; bản Việt gắn dục vọng với phần biểu hiện quá dứt khoát. Cần đối chiếu chú giải trong bài, không phát hành như tâm lý học đã rõ. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch03.010",
-      "reason": "Vô vi mà trật tự hình thành đã có Release các câu chương37/57; không thêm bản diễn ý mờ từ cùng hệ lập luận. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch07.017",
-      "reason": "Vì trời đất không tự sinh nên lâu bền là lý luận Đạo gia trong chương7, không phải nguyên nhân khoa học. Câu riêng dễ thành claim vũ trụ hoặc công thức hy sinh bản thân. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch10.027",
-      "reason": "載營魄抱一 liên quan hồn/phách và phép tu dưỡng cổ; giữ những phần của mình là bản dịch lược mơ hồ, cần chú giải thay vì quote độc lập. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch14.040",
-      "reason": "夷希微 nằm trong mô tả Đạo vô hình; tách thành nhìn không thấy/nghe không được không đứng độc lập và dễ bị coi như câu đố cảm giác. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch14.041",
-      "reason": "Hình của vô hình/象 không thành vật là ontology trong chương14; không chuyển thành insight đời thường bằng cách xóa ý gốc. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch18.055",
-      "reason": "Phê phán nhân nghĩa khi đại đạo phế có lịch sử triết học cụ thể; bản Việt tự nhiên/giả tạo dễ nói mọi đạo đức là giả. Cần bài giải thích. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch18.056",
-      "reason": "Hiếu/trung xuất hiện khi loạn là nghịch lý phê phán danh xưng, không phải chứng cứ rằng người hiếu hoặc trung đều do gia đình/nước rối. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch19.057",
-      "reason": "Nét mộc mạc/bớt tư dục đã có Release chương28/37; không tăng thêm thẻ cùng hướng. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.laozi.ch20.061",
-      "reason": "Bảo toàn quyết định round1_not_pass ngày2026-09-24 phát hiện trong ledger, dù assignment ghi not_started. Chương20 có passage nhưng lời tự thuật nghịch lý vẫn cần bối cảnh; không tự mở lại câu từng đóng. Lượt này bổ sung locator/đối soát vào closure, không đảo quyết định. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch01.001",
-      "reason": "Sinh/không sinh, hóa/không hóa là phân biệt ontology ở đầu Thiên Thụy. Một vế tách riêng làm mất đối chiếu, không xem là quy luật sinh học. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch01.002",
-      "reason": "Diễn lại thường sinh/thường hóa của .001, không giữ hai mảnh cùng lập luận đã cần bối cảnh. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch01.006",
-      "reason": "Đoạn sinh khổ/lão nhàn/tử tức đi cùng thái độ về chết trong Thiên Thụy. Cắt một vế để nói đời nhọc làm lệch cân bằng và cần nguồn cảnh. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch01.009",
-      "reason": "Là lời giải thích chức năng phù hợp ngay sau passage .008; giữ một quote đủ hình ảnh. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch02.013",
-      "reason": "Mảnh dẫn truyện Liệt Tử bắn trúng; còn sai chương: truyện Quan Doãn Tử ở Thuyết Phù, không Hoàng Đế. Giữ provenance và ghi correction, không phát hành câu dẫn riêng. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch02.016",
-      "reason": "Mảnh trả lời chưa biết của cùng truyện, đã có câu hỏi đầy đủ .014; không để câu vẫn chưa biết đứng không đối tượng. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch02.018",
-      "reason": "Chưa tìm thấy nguyên văn nhìn mình đồng thời nhìn hoàn cảnh tại chương Hoàng Đế. Không nhập nhận xét tổng hợp vào lời Liệt Tử chỉ vì phù hợp chủ đề. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch04.029",
-      "reason": "Câu dẫn Khổng Tử ưu tư không cho biết vì sao, cần toàn đoạn đối thoại với Nhan Hồi; không phải quote độc lập. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch04.031",
-      "reason": "Insight biết/nói đã có Release Lão Tử 56; bản hiện còn làm nhẹ nghĩa vô ngôn trong 仲尼. Không phát hành thêm bản gần trùng. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch04.032",
-      "reason": "Không nối được mệnh đề biết kiểu chất chồng thành vướng với passage xác định trong 仲尼. Không biến diễn giải rộng thành lời cổ. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch04.034",
-      "reason": "Chưa có passage kiểm chứng cả hai vế không biết mà nói/biết mà im thiếu trách nhiệm. Không thêm nghĩa trách nhiệm hiện đại vào văn bản vô ngôn. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch04.036",
-      "reason": "Lời quý sự phù hợp là tóm tắt chung của .035, không thêm quote riêng. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.038",
-      "reason": "Câu người Kỷ lo trời sập là phần mở truyện; thực tế ở Thiên Thụy, không Thang Vấn. Tách riêng dễ thành nhãn chế giễu người lo âu; không chẩn đoán người đọc. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.040",
-      "reason": "Lời hỏi nỗi lo sụp cần đối tượng và tranh luận trong truyện người Kỷ; không dùng câu cổ để bảo người lo âu thôi lo. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.041",
-      "reason": "Chỉ là tên tích Ngu Công dời núi, không phải câu đủ nội dung; giữ research/story seed, không xuất bản như quote. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.042",
-      "reason": "Câu về con cháu tiếp tục là lời Ngu Công trong tranh luận dời núi; thiếu núi, người phản đối và bối cảnh nên không đủ đứng độc lập. Không sửa thành lời động viên mọi gia đình phải tiếp tục việc đời trước. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.044",
-      "reason": "Chỉ tóm tắt tên tích hai trẻ tranh luận mặt trời; chưa có góc nhìn hoặc passage hoàn chỉnh để làm thẻ quote. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.045",
-      "reason": "Lời cười Khổng Tử của hai trẻ cần toàn bộ tranh luận và việc không phân xử. Riêng ai bảo ông biết mọi điều dễ thành lời công kích. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.046",
-      "reason": "Câu giới thiệu Bá Nha/Chung Tử Kỳ được gộp bối cảnh cần thiết vào .047, không tách hai thẻ kể một việc. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch05.048",
-      "reason": "Ta có thể giấu tiếng lòng ở đâu là lời Bá Nha trong đoạn tri âm; riêng câu không có người nghe/tiếng đàn, dễ thành khẳng định bị đọc thấu tâm trí. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch06.049",
-      "reason": "Lực hỏi Mệnh là nhân cách hóa mở đầu chương, không phải một góc nhìn đã hoàn thành; cần đối thoại, không gán lời nhân vật cho tác giả. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch06.051",
-      "reason": "Đây là mô tả văn bản đặt câu hỏi gì, không phải lời nguồn; giữ trong analysis, không làm quote. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
-    },
-    {
-      "quote_id": "research.liezi.day5.ch06.052",
-      "reason": "Nhận hết công/hết lỗi là suy luận trách nhiệm thêm vào đối thoại Lực/Mệnh, không có passage tương ứng. Không đổi câu định mệnh thành tư vấn giảm tự trách rồi giữ attribution cổ. Đóng theo Q10-B005; không tự đề xuất lại.",
-      "reviewed_by": "ai:codex",
-      "reviewed_at": "2026-10-31T11:14:26.739116+00:00"
     }
   ],
-  "reading_intent_story_memberships_removed": [
-
-  ],
+  "reading_intent_story_memberships_removed": [],
   "release_knowledge_projection": {
-    "concept_ids": [
-
-    ],
-    "theory_ids": [
-
-    ],
-    "framework_ids": [
-
-    ],
-    "reference_ids": [
-
-    ],
-    "core_truth_ids": [
-
-    ]
+    "concept_ids": [],
+    "theory_ids": [],
+    "framework_ids": [],
+    "reference_ids": [],
+    "core_truth_ids": []
   },
   "content_tag_coverage": {
-    "quote_count": 1856,
-    "quote_count_with_openable_story": 68,
+    "quote_count": 1866,
+    "quote_count_with_openable_story": 78,
     "tags": [
       {
         "tag": "intent:calm",
-        "quote_count": 170,
+        "quote_count": 161,
         "quote_count_with_openable_story": 8
       },
       {
@@ -3816,32 +3387,32 @@
       },
       {
         "tag": "intent:understand_self",
-        "quote_count": 261,
+        "quote_count": 244,
         "quote_count_with_openable_story": 12
       },
       {
         "tag": "intent:overcome_adversity",
-        "quote_count": 55,
+        "quote_count": 54,
         "quote_count_with_openable_story": 7
       },
       {
         "tag": "intent:personal_growth",
-        "quote_count": 68,
+        "quote_count": 65,
         "quote_count_with_openable_story": 8
       },
       {
         "tag": "intent:relationships",
-        "quote_count": 63,
+        "quote_count": 57,
         "quote_count_with_openable_story": 5
       },
       {
         "tag": "intent:work_direction",
-        "quote_count": 56,
+        "quote_count": 46,
         "quote_count_with_openable_story": 3
       },
       {
         "tag": "intent:meaning",
-        "quote_count": 77,
+        "quote_count": 73,
         "quote_count_with_openable_story": 12
       },
       {
@@ -3866,12 +3437,12 @@
       },
       {
         "tag": "support:new_perspective",
-        "quote_count": 325,
+        "quote_count": 275,
         "quote_count_with_openable_story": 35
       },
       {
         "tag": "topic:attention_presence",
-        "quote_count": 97,
+        "quote_count": 90,
         "quote_count_with_openable_story": 3
       },
       {
@@ -3881,37 +3452,37 @@
       },
       {
         "tag": "topic:self_understanding",
-        "quote_count": 232,
+        "quote_count": 215,
         "quote_count_with_openable_story": 6
       },
       {
         "tag": "topic:change_growth",
-        "quote_count": 64,
+        "quote_count": 61,
         "quote_count_with_openable_story": 7
       },
       {
         "tag": "topic:adversity_recovery",
-        "quote_count": 55,
+        "quote_count": 54,
         "quote_count_with_openable_story": 7
       },
       {
         "tag": "topic:relationships",
-        "quote_count": 63,
+        "quote_count": 57,
         "quote_count_with_openable_story": 5
       },
       {
         "tag": "topic:work_choices",
-        "quote_count": 58,
+        "quote_count": 48,
         "quote_count_with_openable_story": 4
       },
       {
         "tag": "topic:meaning_values",
-        "quote_count": 77,
+        "quote_count": 73,
         "quote_count_with_openable_story": 12
       },
       {
         "tag": "topic:rest_wellbeing",
-        "quote_count": 59,
+        "quote_count": 57,
         "quote_count_with_openable_story": 5
       },
       {
@@ -3931,12 +3502,12 @@
       },
       {
         "tag": "origin:research",
-        "quote_count": 5,
+        "quote_count": 4,
         "quote_count_with_openable_story": 0
       },
       {
         "tag": "origin:classical_text",
-        "quote_count": 515,
+        "quote_count": 466,
         "quote_count_with_openable_story": 4
       },
       {
@@ -4787,6 +4358,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.day26.jinxin_seek",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.jinxin_seek",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.jinxin_seek",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.jinxin_seek",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.day28.korobanu_tsue",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -7091,6 +6686,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.liezi.day5.ch02.014",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch02.014",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch02.014",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch02.014",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.liezi.day5.ch04.031",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -7283,6 +6902,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.huainanzi.day6.ch13.017",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.017",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.017",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.017",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.huainanzi.day6.ch14.021",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -7302,6 +6945,30 @@
       },
       {
         "quote_id": "research.huainanzi.day6.ch14.021",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.030",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.030",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.030",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.030",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -7331,6 +6998,54 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.huainanzi.day6.ch17.032",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.032",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.032",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.032",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.033",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.033",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.033",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.033",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.huainanzi.day6.ch17.037",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -7374,6 +7089,30 @@
       },
       {
         "quote_id": "research.huainanzi.day6.ch18.038",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.039",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.039",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.039",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.039",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -8886,6 +8625,30 @@
       },
       {
         "quote_id": "research.day72.001",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day72.002",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day72.002",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day72.002",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day72.002",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -11579,6 +11342,246 @@
         "required_count": 1
       },
       {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch01",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch01",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch01",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch01",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch02",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch02",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch02",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch02",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch03",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch03",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch03",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch03",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch04",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch04",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch04",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch04",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch05",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch05",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch05",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch05",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch06",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch06",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch06",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch06",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch07",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch07",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch07",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch07",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch08",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch08",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch08",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch08",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch09",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch09",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch09",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch09",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch10",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch10",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch10",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "source_quote.tang_khong_ton_tai.ch10",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "quote.boatman_and_second_mountain",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -12222,6 +12225,78 @@
       },
       {
         "quote_id": "research.reaudit.day24.kieu_bedau",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_selfattain",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_selfattain",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_selfattain",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_selfattain",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_chou_miao_story",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_chou_miao_story",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_chou_miao_story",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_chou_miao_story",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_teach_not_spurn",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_teach_not_spurn",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_teach_not_spurn",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_teach_not_spurn",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -14339,6 +14414,78 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.liezi.day5.ch07.058",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.058",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.058",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.058",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.059",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.059",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.059",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.059",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.022",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.022",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.022",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.022",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.epictetus.day7.enchiridion.22.020",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -14598,6 +14745,30 @@
       },
       {
         "quote_id": "research.day23.rt_th1_01",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.tengwen_wealth",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.tengwen_wealth",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.tengwen_wealth",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.tengwen_wealth",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -15491,6 +15662,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.liezi.day5.ch05.047",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch05.047",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch05.047",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch05.047",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.liezi.day5.ch05.048",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -15510,6 +15705,30 @@
       },
       {
         "quote_id": "research.liezi.day5.ch05.048",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.050",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.050",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.050",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.050",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -16643,6 +16862,78 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.laozi.ch07.018",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch07.018",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch07.018",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch07.018",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch09.025",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch09.025",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch09.025",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch09.025",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch12.035",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch12.035",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch12.035",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch12.035",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.laozi.ch18.055",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -16758,6 +17049,30 @@
       },
       {
         "quote_id": "authoring.b007.adam_smith.019",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "authoring.b009.confucius.008",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "authoring.b009.confucius.008",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "authoring.b009.confucius.008",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "authoring.b009.confucius.008",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -17046,6 +17361,54 @@
       },
       {
         "quote_id": "research.huainanzi.day6.ch07.002",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch07.003",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch07.003",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch07.003",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch07.003",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.026",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.026",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.026",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.026",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -19283,6 +19646,54 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.day26.li_lou_ii_not_do",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_not_do",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_not_do",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_not_do",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.liang_hui_wang_autumnhair",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.liang_hui_wang_autumnhair",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.liang_hui_wang_autumnhair",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.liang_hui_wang_autumnhair",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.day27.guo_you_bu_ji",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -19499,6 +19910,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.liezi.day5.ch01.008",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch01.008",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch01.008",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch01.008",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.liezi.day5.ch01.009",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -19566,6 +20001,30 @@
       },
       {
         "quote_id": "research.liezi.day5.ch04.029",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch04.035",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch04.035",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch04.035",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch04.035",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -19643,6 +20102,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.liezi.day5.ch06.050",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch06.050",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch06.050",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch06.050",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.liezi.day5.ch06.051",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -19686,6 +20169,30 @@
       },
       {
         "quote_id": "research.liezi.day5.ch06.052",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch08.063",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch08.063",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch08.063",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch08.063",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -19835,6 +20342,54 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.huainanzi.day6.ch13.013",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.013",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.013",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.013",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.015",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.015",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.015",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch13.015",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.huainanzi.day6.ch13.016",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -19859,6 +20414,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.huainanzi.day6.ch14.018",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.018",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.018",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.018",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.huainanzi.day6.ch14.019",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -19878,6 +20457,126 @@
       },
       {
         "quote_id": "research.huainanzi.day6.ch14.019",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.023",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.023",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.023",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch14.023",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.024",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.024",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.024",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.024",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.027",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.027",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.027",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.027",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.029",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.029",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.029",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.029",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.034",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.034",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.034",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch17.034",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -19931,6 +20630,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.huainanzi.day6.ch18.044",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.044",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.044",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.044",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.huainanzi.day6.ch18.046",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -19950,6 +20673,30 @@
       },
       {
         "quote_id": "research.huainanzi.day6.ch18.046",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.049",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.049",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.049",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch18.049",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -21774,6 +22521,30 @@
       },
       {
         "quote_id": "research.reaudit.day24.kieu_memory_after_event",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_courage",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_courage",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_courage",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.gong_sun_courage",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -28787,6 +29558,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "attributed.confucius.book_vii_ch08.eager",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "attributed.confucius.book_vii_ch08.eager",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "attributed.confucius.book_vii_ch08.eager",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "attributed.confucius.book_vii_ch08.eager",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "attributed.paulo_coelho.the_alchemist.007",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -29075,6 +29870,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.laozi.ch17.054",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch17.054",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch17.054",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch17.054",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.liezi.day5.ch02.013",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -29118,6 +29937,30 @@
       },
       {
         "quote_id": "research.liezi.day5.ch02.016",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.060",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.060",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.060",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.liezi.day5.ch07.060",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -29195,6 +30038,54 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.huainanzi.day6.ch09.008",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.008",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.008",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.008",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.009",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.009",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.009",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.009",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.huainanzi.day6.ch09.010",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -29219,6 +30110,30 @@
         "required_count": 1
       },
       {
+        "quote_id": "research.huainanzi.day6.ch09.012",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.012",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.012",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch09.012",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
         "quote_id": "research.huainanzi.day6.ch13.014",
         "dimension_id": "intent",
         "actual_count": 0,
@@ -29238,6 +30153,30 @@
       },
       {
         "quote_id": "research.huainanzi.day6.ch13.014",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.025",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.025",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.025",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.huainanzi.day6.ch16.025",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -29862,6 +30801,30 @@
       },
       {
         "quote_id": "research.reaudit.day22.anbo",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_childheart",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_childheart",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_childheart",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.day26.li_lou_ii_childheart",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
@@ -30942,23 +31905,67 @@
       },
       {
         "quote_id": "research.day84.010",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch08.021",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch08.021",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch08.021",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch08.021",
+        "dimension_id": "origin",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch17.052",
+        "dimension_id": "intent",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch17.052",
+        "dimension_id": "support",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch17.052",
+        "dimension_id": "topic",
+        "actual_count": 0,
+        "required_count": 1
+      },
+      {
+        "quote_id": "research.laozi.ch17.052",
         "dimension_id": "origin",
         "actual_count": 0,
         "required_count": 1
       }
     ],
-    "single_dimension_overlaps": [
-
-    ],
-    "zero_coverage_tags": [
-
-    ],
+    "single_dimension_overlaps": [],
+    "zero_coverage_tags": [],
     "zero_story_coverage_tags": [
       "origin:book_or_work",
       "origin:research",
       "origin:folklore"
     ]
   },
-  "manifest_sha256": "877bffca84430e47dc5e11cc4963de3f7aac4c4d17cb06caa22fc21a82a2b7d2",
-  "generated_at": "2026-10-31T11:15:11Z"
+  "manifest_sha256": "3e2849167fdf00702b14999dfb3594dff00cc3db61aba1fc469d01f705fb9f66",
+  "generated_at": "2026-11-01T04:58:17Z"
 }
