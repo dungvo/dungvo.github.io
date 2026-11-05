@@ -108,10 +108,12 @@ Speaking Lab results are self-reported because this static website cannot inspec
 
 ## Listening Practice (2026-11-05)
 
-Open `#listening` from Today, Play, or Learn. This focused Vietnamese-language flow contains 30 original sentences in `content/listening/practice.js`, grouped into clarification, office directions, daily life, data work, meetings, and interviews. Each question has one Vietnamese meaning and two curated distractors.
+Open `#listening` from Today, Play, or Learn. This focused Vietnamese-language flow contains 100 original sentences. The first 30 live in `content/listening/practice.js`; 70 high-frequency additions live in `content/listening/common-chunks.js`. Ten topics cover clarification, office directions, daily life, data work, meetings, interviews, small talk, requests and responses, phone and chat, and plans and opinions. Each question has one Vietnamese meaning and two curated distractors.
 
 Five-question sessions hide the English transcript until explicitly requested or after an answer. Normal and slow playback use the installed English browser voice; answer choices unlock when audio starts or the learner explicitly reveals the transcript. Revealing before answering marks the attempt as assisted. Incorrect, assisted, and skipped sentences are prioritized for review; clean correct answers remove a sentence from the current review queue. Replays and slow playback do not count as transcript assistance.
 
 After answering, learners see the transcript, meaning, a chunk note, and a transfer prompt. They can hide the written English to speak from memory and save an original sentence locally. Speech and writing are self-practice, not automatically graded. The optional sentence list is collapsed to avoid spoiling the listening task.
 
 Progress and drafts use a separate `chunkLabListeningV1` localStorage record and do not change existing scores. Its data is scoped to this browser and is not included in the existing main-app progress reset. No microphone permission, backend, or external audio service is required. Add future sentences to the same topic schema with stable unique IDs.
+
+The common-chunk expansion preserves every original topic and sentence ID, so existing attempts, review status, and saved drafts continue to work. Each original topic now has ten sentences; four new topics add ten sentences each. Five-question sessions still prioritize weak, assisted, and unseen material rather than presenting the files in source order.
