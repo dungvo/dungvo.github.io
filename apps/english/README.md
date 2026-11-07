@@ -119,3 +119,13 @@ Progress and drafts use a separate `chunkLabListeningV1` localStorage record and
 The common-chunk expansion preserves every original topic and sentence ID, so existing attempts, review status, and saved drafts continue to work. Each original topic now has ten sentences; four new topics add ten sentences each. Five-question sessions still prioritize weak, assisted, and unseen material rather than presenting the files in source order.
 
 Selected chunks also receive a translation-trap note from `content/listening/translation-notes.js`. These notes appear only after the learner answers or explicitly reveals the transcript. Each note identifies the misleading word-by-word reading, gives one compact meaning rule, and contrasts the chunk with a similar sentence. Notes are selective so ordinary sentences keep a short feedback flow. The initial set covers 25 high-risk chunks, including `in` versus `for`, `by` versus `until`, frequency versus duration, softening language, phrasal verbs, and common idioms.
+
+### Three-level listening path (2026-11-07)
+
+Listening Practice now progresses through three distinct skills while keeping the original 100-chunk level and its `chunkLabListeningV1` progress unchanged:
+
+1. **Common Chunks** tests the intent of short, reusable phrases.
+2. **Longer Sentences** contains 30 sentences across six topics. Each answer reveals the two or three chunks that combine to create the full meaning, plus a selective note where word-by-word translation is misleading.
+3. **Real Conversations** contains 12 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
+
+Levels 2 and 3 store attempts separately in `chunkLabListeningAdvancedV1`. Opening a transcript before answering is treated as assisted practice. Playback uses browser speech synthesis, alternates available English voices by speaker in conversations, and never requires microphone access.
