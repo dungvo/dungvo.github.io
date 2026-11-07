@@ -24,6 +24,27 @@
   let dailyTimerId = null;
   let contentSource = "bundled catalog";
 
+  // Bridges connect short library chunks with longer listening material.
+  const DAILY_SENTENCE_LINKS = {
+    "l2-daily-3": ["request-hand", "request-help"], "l2-daily-5": ["request-let-know"],
+    "l2-work-1": ["meeting-update"], "l2-work-3": ["problem-root-cause", "problem-cause"],
+    "l2-work-4": ["clarify-understand", "problem-cause"], "l2-meet-3": ["clarify-see"],
+    "l2-meet-4": ["meeting-parking", "meeting-point"], "l2-meet-5": ["meeting-action", "meeting-responsible"],
+    "l2-clarify-1": ["clarify-understand", "clarify-correct", "clarify-right"], "l2-clarify-2": ["clarify-mean", "clarify-by-that"],
+    "l2-clarify-3": ["clarify-context"], "l2-clarify-4": ["request-show", "so-i-can"],
+    "l2-clarify-5": ["clarify-missed", "request-repeat"], "l2-problem-1": ["problem-wrong", "problem-investigate"],
+    "l2-problem-2": ["problem-workaround"], "l2-problem-3": ["problem-affected", "problem-impact"],
+    "l2-problem-4": ["problem-root-cause", "problem-investigate"], "l2-problem-5": ["problem-again", "request-let-know"]
+  };
+  const DAILY_CONVERSATION_LINKS = {
+    "l3-data-issue": ["problem-cause", "problem-root-cause", "meeting-update", "request-let-know"],
+    "l3-meeting-move": ["meeting-invite", "meeting-action"], "l3-clarify-deadline": ["clarify-understand", "clarify-correct"],
+    "l3-coffee-plan": ["request-let-know"], "l3-phone-delivery": ["request-check", "request-let-know"],
+    "l3-priority-change": ["problem-tradeoff", "meeting-action"], "l3-access-problem": ["problem-issue", "request-wait"],
+    "l3-lunch-order": ["every-without"], "l3-feedback": ["request-look", "request-minute"],
+    "l3-learning-plan": ["clarify-lost", "clarify-main-point"], "l3-interview-question": ["clarify-specific"]
+  };
+
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
   const shuffle = (items) => [...items].sort(() => Math.random() - 0.5);
@@ -229,7 +250,7 @@
     $("#masteredCount").textContent = chunks.filter((chunk) => learningStage(chunk) === "Mastered").length; $("#dueCount").textContent = chunks.filter(isDue).length;
     const weak = [...chunks].sort((a, b) => weakness(b) - weakness(a)).slice(0, 8);
     $("#weakList").innerHTML = weak.map((chunk) => { const stat = itemStat(chunk.id); return `<div class="weak-row"><div><strong>${escapeHtml(chunk.chunk)}</strong><span>${escapeHtml(chunk.meaning)}</span></div><span class="weak-score">${stat.wrong ? `${stat.wrong} miss${stat.wrong === 1 ? "" : "es"}` : "Not practiced"}</span></div>`; }).join("");
-    $("#dailyGameHistory").innerHTML = progress.dailyGames.length ? progress.dailyGames.slice(0, 8).map((game) => `<div class="game-history-row"><span>${escapeHtml(game.date)}</span><strong>${game.score}/${game.total} · ${game.percent}%</strong><small>${Math.ceil(game.seconds / 60)} min</small></div>`).join("") : "<p>No completed games yet.</p>";
+    $("#dailyGameHistory").innerHTML = progress.dailyGames.length ? progress.dailyGames.slice(0, 8).map((game) => `<div class="game-history-row"><span>${escapeHtml(game.date)}</span><strong>${game.score}/${game.total} · ${game.percent}%${game.xp ? ` · ${game.xp} XP` : ""}</strong><small>${Math.ceil(game.seconds / 60)} min</small></div>`).join("") : "<p>No completed games yet.</p>";
   }
   function renderLibrary(query = "", topic = libraryTopic) {
     libraryTopic = topic;
@@ -552,44 +573,120 @@
   function dailyDistractors(chunk, field, count = 3) {
     return shuffle(chunks.filter((item) => item.id !== chunk.id).map((item) => item[field]).filter((value, index, values) => value && values.indexOf(value) === index)).slice(0, count);
   }
-  function buildDailyQuestions() {
-    const selected = shuffle(chunks).slice(0, 14);
-    const questions = selected.map((chunk, index) => {
-      if (index % 3 === 0) return { type: "Meaning match", prompt: chunk.chunk, instruction: "What does this chunk mean?", answer: chunk.meaning, options: shuffle([chunk.meaning, ...dailyDistractors(chunk, "meaning")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
-      if (index % 3 === 1) return { type: "Best chunk", prompt: chunk.situation, instruction: "What would sound natural here?", answer: chunk.chunk, options: shuffle([chunk.chunk, ...dailyDistractors(chunk, "chunk")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
-      if (chunk.gap && chunk.answer && Array.isArray(chunk.alternatives)) return { type: "Fill the gap", prompt: chunk.gap, instruction: "Choose the missing word or chunk.", answer: chunk.answer, options: shuffle([chunk.answer, ...chunk.alternatives.slice(0, 3)]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
-      return { type: "Meaning match", prompt: chunk.chunk, instruction: "Choose the closest meaning.", answer: chunk.meaning, options: shuffle([chunk.meaning, ...dailyDistractors(chunk, "meaning")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id };
+  function dailyFocusChunks() {
+    const bridged = new Set([...Object.values(DAILY_SENTENCE_LINKS), ...Object.values(DAILY_CONVERSATION_LINKS)].flat());
+    const ranked = shuffle(chunks).sort((a, b) => {
+      const score = (chunk) => {
+        const stat = itemStat(chunk.id);
+        return (isDue(chunk) ? 1000 : 0) + stat.wrong * 80 + (stat.seen ? 0 : 35) + (bridged.has(chunk.id) ? 20 : 0) - stat.correct * 2;
+      };
+      return score(b) - score(a);
     });
-    questions.splice(3, 0, { type: "Image clue", prompt: "Which sentence best describes the scene?", instruction: "Use the visual details and choose the most accurate sentence.", answer: "The train has been delayed because of the weather.", options: ["The train arrived ahead of schedule.", "The train has been delayed because of the weather.", "The passengers decided to cancel the trip.", "The station is closed for the day."], explanation: "The rain, station clock, and waiting train suggest a weather-related delay. Has been delayed describes a recent event that affects the situation now.", structure: "subject + has/have been + past participle + reason", example: "The train has been delayed because of the weather.", image: true });
-    return questions.slice(0, 15);
+    const connected = ranked.filter((chunk) => bridged.has(chunk.id)).slice(0, 3);
+    return [...connected, ...ranked.filter((chunk) => !connected.some((item) => item.id === chunk.id))].slice(0, 4);
+  }
+  function linkedListeningItems(items, links, focusIds, count) {
+    return shuffle(items).sort((a, b) => {
+      const matches = (item) => (links[item.id] || []).filter((id) => focusIds.includes(id)).length;
+      return matches(b) - matches(a);
+    }).slice(0, count);
+  }
+  function dailyStageName(stage) { return ({ warmup: "Warm-up", listen: "Listen & Connect", apply: "Use It", boss: "Conversation Boss" })[stage] || "Daily"; }
+  function dailyStageNumber(stage) { return ({ warmup: 1, listen: 2, apply: 3, boss: 4 })[stage] || 1; }
+  function standardDailyQuestion(chunk, mode, stage) {
+    if (mode === "meaning") return { stage, type: "Chunk meaning", prompt: chunk.chunk, instruction: "Chunk này mang ý định gì?", answer: chunk.meaning, options: shuffle([chunk.meaning, ...dailyDistractors(chunk, "meaning")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id, linkedChunks: [chunk.chunk] };
+    if (mode === "gap" && chunk.gap && chunk.answer && Array.isArray(chunk.alternatives)) return { stage, type: "Build the chunk", prompt: chunk.gap, instruction: "Hoàn thành câu bằng phần tự nhiên nhất.", answer: chunk.answer, options: shuffle([chunk.answer, ...chunk.alternatives.slice(0, 3)]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id, linkedChunks: [chunk.chunk] };
+    return { stage, type: "Use the chunk", prompt: chunk.situation, instruction: "Trong tình huống này, bạn sẽ nói câu nào?", answer: chunk.chunk, options: shuffle([chunk.chunk, ...dailyDistractors(chunk, "chunk")]), explanation: chunk.note, structure: chunk.chunk, example: chunk.example, chunkId: chunk.id, linkedChunks: [chunk.chunk] };
+  }
+  function buildDailyQuestions() {
+    const focus = dailyFocusChunks();
+    const focusIds = focus.map((chunk) => chunk.id);
+    const advanced = window.AdvancedListening || { level2: [], conversations: [] };
+    const questions = focus.map((chunk, index) => standardDailyQuestion(chunk, index % 2 ? "situation" : "meaning", "warmup"));
+
+    linkedListeningItems(advanced.level2 || [], DAILY_SENTENCE_LINKS, focusIds, 2).forEach((item) => {
+      const linkedIds = (DAILY_SENTENCE_LINKS[item.id] || []).filter((id) => chunks.some((chunk) => chunk.id === id));
+      const linked = linkedIds.map((id) => chunks.find((chunk) => chunk.id === id)?.chunk).filter(Boolean);
+      questions.push({ stage:"listen", type:"Listen & connect", prompt:"Cả câu bạn nghe có ý nghĩa gì?", instruction:"Nghe toàn câu. Bắt lấy các chunks quen rồi chọn toàn ý.", answer:item.vi, options:shuffle([item.vi, ...item.distractors]), explanation:item.note || "Ý nghĩa được tạo bởi các chunks đi cùng nhau, không phải bản dịch từng từ.", structure:item.chunks.map((part) => part.text).join(" · "), example:item.en, audioText:item.en, transcript:item.en, advancedId:item.id, advancedType:"l2", chunkId:linkedIds.find((id) => focusIds.includes(id)) || linkedIds[0], linkedChunks:linked.length ? linked : item.chunks.map((part) => part.text) });
+    });
+
+    focus.slice(0, 2).forEach((chunk, index) => questions.push(standardDailyQuestion(chunk, index ? "gap" : "situation", "apply")));
+
+    const conversation = linkedListeningItems(advanced.conversations || [], DAILY_CONVERSATION_LINKS, focusIds, 1)[0];
+    if (conversation) {
+      const linkedIds = (DAILY_CONVERSATION_LINKS[conversation.id] || []).filter((id) => chunks.some((chunk) => chunk.id === id));
+      const audioText = conversation.turns.map((turn) => turn.text).join(" ");
+      const transcript = conversation.turns.map((turn) => ({ speaker:turn.speaker, text:turn.text }));
+      conversation.questions.forEach((question, index) => questions.push({ stage:"boss", type:"Conversation boss", prompt:question.prompt, instruction:index ? "Nghe lại nếu cần rồi chọn đáp án." : "Nghe toàn bộ hội thoại trước khi trả lời.", answer:question.options[question.answer], options:question.options, explanation:question.explanation, structure:conversation.chunks.map((item) => item.text).join(" · "), example:conversation.title, audioText, transcript, advancedId:conversation.id, advancedType:"l3", chunkId:linkedIds[index % Math.max(linkedIds.length, 1)], linkedChunks:conversation.chunks.map((item) => item.text), bossTitle:conversation.title }));
+    }
+    return { questions, focus };
   }
   function startDailyChallenge() {
     if (dailyTimerId) clearInterval(dailyTimerId);
-    dailySession = { questions: buildDailyQuestions(), index: 0, score: 0, answered: false, secondsLeft: 600, startedAt: Date.now() };
+    const plan = buildDailyQuestions();
+    dailySession = { questions: plan.questions, focus: plan.focus, index: 0, score: 0, xp: 0, combo: 0, bestCombo: 0, assisted: false, heard: false, answered: false, advancedResults: {}, secondsLeft: 720, startedAt: Date.now() };
     show("dailyGame"); renderDailyQuestion();
     dailyTimerId = setInterval(() => { if (!dailySession) return; dailySession.secondsLeft -= 1; renderDailyTimer(); if (dailySession.secondsLeft <= 0) finishDailyChallenge(); }, 1000);
   }
   function renderDailyTimer() { const seconds = Math.max(0, dailySession?.secondsLeft || 0); $("#dailyGameTimer").textContent = `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`; }
-  function dailyImageHtml() { return `<div class="daily-image-scene" role="img" aria-label="A train waiting at a station during heavy rain"><span class="scene-cloud">☁</span><i class="rain-line r1"></i><i class="rain-line r2"></i><i class="rain-line r3"></i><div class="scene-sign">STATION</div><div class="scene-train">🚆</div><time>08:45</time></div>`; }
+  function renderDailyMissionMap(stage) {
+    const stages = [["warmup","1","Warm-up"],["listen","2","Listen & Connect"],["apply","3","Use It"],["boss","★","Boss"]];
+    const current = dailyStageNumber(stage);
+    $("#dailyMissionMap").innerHTML = stages.map(([id,number,label], index) => `<div class="daily-mission ${index + 1 < current ? "complete" : index + 1 === current ? "active" : ""}"><b>${index + 1 < current ? "✓" : number}</b><span>${label}</span></div>`).join("");
+  }
+  function dailyTranscriptHtml(question) {
+    if (!question.transcript) return "";
+    if (Array.isArray(question.transcript)) return `<div class="daily-transcript"><p class="eyebrow">TRANSCRIPT</p>${question.transcript.map((turn) => `<div class="turn"><b>${escapeHtml(turn.speaker)}</b><p lang="en">${escapeHtml(turn.text)}</p></div>`).join("")}</div>`;
+    return `<div class="daily-transcript"><p class="eyebrow">CÂU ĐÃ NGHE</p><p lang="en"><b>${escapeHtml(question.transcript)}</b></p></div>`;
+  }
   function renderDailyQuestion() {
-    const question = dailySession.questions[dailySession.index]; dailySession.answered = false;
-    $("#dailyQuestionLabel").textContent = `QUESTION ${dailySession.index + 1} OF ${dailySession.questions.length}`; $("#dailyGameProgressBar").style.width = `${dailySession.index / dailySession.questions.length * 100}%`; renderDailyTimer();
-    $("#dailyGameCard").innerHTML = `<span class="challenge-label">${escapeHtml(question.type.toUpperCase())}</span>${question.image ? dailyImageHtml() : ""}<p class="daily-game-instruction">${escapeHtml(question.instruction)}</p><h2>${escapeHtml(question.prompt).replace("___", '<span class="daily-gap">___</span>')}</h2><div class="daily-answer-grid">${question.options.map((option, index) => `<button data-daily-answer="${escapeHtml(option)}"><b>${String.fromCharCode(65 + index)}</b><span>${escapeHtml(option)}</span></button>`).join("")}</div><div id="dailyAnswerFeedback"></div>`;
+    const question = dailySession.questions[dailySession.index]; dailySession.answered = false; dailySession.assisted = false; dailySession.heard = !question.audioText;
+    renderDailyMissionMap(question.stage);
+    $("#dailyQuestionLabel").textContent = `CHẶNG ${dailyStageNumber(question.stage)} · ${dailySession.index + 1}/${dailySession.questions.length}`; $("#dailyGameProgressBar").style.width = `${dailySession.index / dailySession.questions.length * 100}%`; renderDailyTimer();
+    const audioGate = question.audioText ? `<div class="daily-audio-gate">${question.stage === "boss" ? `<div class="boss-banner"><span>★</span><div><strong>${escapeHtml(question.bossTitle)}</strong><small>Conversation Boss</small></div></div>` : ""}<p>Câu chữ đang được ẩn. Nghe trước rồi mới chọn đáp án.</p><div class="daily-audio-actions"><button class="primary" id="dailyPlayAudio">▶ Nghe${question.stage === "boss" ? " hội thoại" : " câu"}</button><button class="secondary" id="dailyPlaySlow">▷ Nghe chậm</button><button class="text-button" id="dailyRevealTranscript">Hiện transcript</button></div><p class="daily-assist-note">Mở transcript vẫn được học, nhưng lượt này sẽ tính là có trợ giúp.</p><div id="dailyTranscriptSlot"></div></div>` : "";
+    $("#dailyGameCard").innerHTML = `<div class="daily-game-meta"><span class="daily-zone">${escapeHtml(dailyStageName(question.stage).toUpperCase())}</span><div class="daily-xp"><span>✦ ${dailySession.xp} XP</span><span>🔥 ${dailySession.combo} combo</span></div></div><span class="challenge-label">${escapeHtml(question.type.toUpperCase())}</span>${audioGate}<p class="daily-game-instruction">${escapeHtml(question.instruction)}</p><h2>${escapeHtml(question.prompt).replace("___", '<span class="daily-gap">___</span>')}</h2><div class="daily-answer-grid">${question.options.map((option, index) => `<button data-daily-answer="${escapeHtml(option)}" ${question.audioText ? "disabled" : ""}><b>${String.fromCharCode(65 + index)}</b><span>${escapeHtml(option)}</span></button>`).join("")}</div><div id="dailyAnswerFeedback"></div>`;
     $$('[data-daily-answer]').forEach((button) => button.addEventListener("click", () => answerDailyQuestion(question, button)));
+    if (question.audioText) {
+      const unlock = () => { dailySession.heard = true; $$('[data-daily-answer]').forEach((button) => { button.disabled = false; }); };
+      $("#dailyPlayAudio").addEventListener("click", () => { speak(question.audioText, 0.94); unlock(); });
+      $("#dailyPlaySlow").addEventListener("click", () => { speak(question.audioText, 0.72); unlock(); });
+      $("#dailyRevealTranscript").addEventListener("click", () => { dailySession.assisted = true; unlock(); $("#dailyTranscriptSlot").innerHTML = dailyTranscriptHtml(question); $("#dailyRevealTranscript").disabled = true; });
+    }
+  }
+  function collectAdvancedResult(question, cleanCorrect) {
+    if (!question.advancedId) return;
+    const result = dailySession.advancedResults[question.advancedId] || { type:question.advancedType, correct:0, total:0, assisted:false };
+    result.total += 1; if (cleanCorrect) result.correct += 1; if (dailySession.assisted) result.assisted = true;
+    dailySession.advancedResults[question.advancedId] = result;
+  }
+  function persistDailyAdvancedResults() {
+    let advanced = { l2:{}, l3:{} };
+    try { advanced = { ...advanced, ...(JSON.parse(localStorage.getItem("chunkLabListeningAdvancedV1")) || {}) }; advanced.l2 ||= {}; advanced.l3 ||= {}; } catch (_) {}
+    Object.entries(dailySession.advancedResults).forEach(([id,result]) => {
+      if (result.type === "l2") { const old=advanced.l2[id]||{}; const outcome=result.assisted?"assisted":result.correct===result.total?"correct":"wrong"; advanced.l2[id]={attempts:(old.attempts||0)+1,correct:(old.correct||0)+(outcome==="correct"?1:0),last:outcome}; }
+      if (result.type === "l3") { const old=advanced.l3[id]||{}; advanced.l3[id]={attempts:(old.attempts||0)+1,best:Math.max(old.best||0,result.correct),last:result.correct,assisted:result.assisted}; }
+    });
+    try { localStorage.setItem("chunkLabListeningAdvancedV1", JSON.stringify(advanced)); } catch (_) {}
   }
   function answerDailyQuestion(question, button) {
-    if (dailySession.answered) return; dailySession.answered = true; const correct = button.dataset.dailyAnswer === question.answer; if (correct) dailySession.score += 1;
-    if (question.chunkId) record(question.chunkId, correct);
+    if (dailySession.answered || !dailySession.heard) return; dailySession.answered = true; const correct = button.dataset.dailyAnswer === question.answer; const cleanCorrect = correct && !dailySession.assisted; if (correct) dailySession.score += 1;
+    if (cleanCorrect) { dailySession.combo += 1; const bonus = dailySession.combo > 0 && dailySession.combo % 3 === 0 ? 5 : 0; dailySession.xp += 10 + bonus; } else if (correct) { dailySession.combo = 0; dailySession.xp += 5; } else dailySession.combo = 0;
+    dailySession.bestCombo = Math.max(dailySession.bestCombo, dailySession.combo);
+    if (question.chunkId) record(question.chunkId, cleanCorrect);
+    collectAdvancedResult(question, cleanCorrect);
     $$('[data-daily-answer]').forEach((option) => { option.disabled = true; option.classList.toggle("correct", option.dataset.dailyAnswer === question.answer); }); if (!correct) button.classList.add("wrong");
-    $("#dailyAnswerFeedback").innerHTML = `<section class="daily-answer-explanation"><div><span class="spark-icon">✦</span><div><strong>${correct ? "Exactly." : "Not quite—notice the intention and structure."}</strong><p>${escapeHtml(question.explanation)}</p></div></div><dl><div><dt>Structure</dt><dd><code>${escapeHtml(question.structure)}</code></dd></div><div><dt>Natural example</dt><dd>${escapeHtml(question.example)}</dd></div></dl><button class="primary" id="nextDailyQuestion">${dailySession.index === dailySession.questions.length - 1 ? "See my result" : "Next question →"}</button></section>`;
+    const gained = cleanCorrect ? (dailySession.combo > 0 && dailySession.combo % 3 === 0 ? 15 : 10) : correct ? 5 : 0;
+    $("#dailyAnswerFeedback").innerHTML = `<section class="daily-answer-explanation"><div><span class="spark-icon">✦</span><div><strong>${correct ? dailySession.assisted ? "Đúng với trợ giúp." : "Chính xác!" : "Chưa đúng — hãy chú ý ý định của cả cụm."}</strong><p>${escapeHtml(question.explanation)}</p>${gained ? `<span class="xp-earned">+${gained} XP${gained===15?" · COMBO BONUS!":""}</span>` : ""}</div></div>${question.audioText && !$("#dailyTranscriptSlot")?.innerHTML ? dailyTranscriptHtml(question) : ""}<div class="daily-linked-chunks">${(question.linkedChunks||[]).map((chunk) => `<span>${escapeHtml(chunk)}</span>`).join("")}</div><dl><div><dt>Chunks liên kết</dt><dd><code>${escapeHtml(question.structure)}</code></dd></div><div><dt>Ví dụ tự nhiên</dt><dd>${escapeHtml(question.example)}</dd></div></dl><button class="primary" id="nextDailyQuestion">${dailySession.index === dailySession.questions.length - 1 ? "Xem phần thưởng" : "Tiếp tục hành trình →"}</button></section>`;
     $("#nextDailyQuestion").addEventListener("click", () => { dailySession.index += 1; dailySession.index >= dailySession.questions.length ? finishDailyChallenge() : renderDailyQuestion(); });
   }
   function finishDailyChallenge() {
     if (!dailySession) return; if (dailyTimerId) clearInterval(dailyTimerId); dailyTimerId = null;
     const total = dailySession.questions.length; const percent = Math.round(dailySession.score / total * 100); const seconds = Math.max(1, Math.round((Date.now() - dailySession.startedAt) / 1000));
-    progress.dailyGames.unshift({ date: todayKey(), score: dailySession.score, total, percent, seconds }); progress.dailyGames = progress.dailyGames.slice(0, 30); saveProgress();
-    $("#dailyGameProgressBar").style.width = "100%"; $("#dailyQuestionLabel").textContent = "CHALLENGE COMPLETE";
-    $("#dailyGameCard").innerHTML = `<div class="daily-result"><div class="summary-burst">${percent >= 70 ? "✓" : "↗"}</div><p class="eyebrow">YOUR DAILY RESULT</p><h2>${dailySession.score}/${total} correct</h2><strong>${percent}% accuracy · ${Math.ceil(seconds / 60)} min</strong><p>${percent >= 85 ? "Excellent recall. Your chunks are becoming automatic." : percent >= 65 ? "Good progress. Missed chunks are now prioritized for review." : "Useful practice. Review the explanations, then try again tomorrow."}</p><div><button class="secondary" data-nav="progress">View my journey</button><button class="primary" id="playDailyAgain">Play again</button></div></div>`;
+    persistDailyAdvancedResults();
+    progress.dailyGames.unshift({ date: todayKey(), score: dailySession.score, total, percent, seconds, xp:dailySession.xp, bestCombo:dailySession.bestCombo, mode:"journey" }); progress.dailyGames = progress.dailyGames.slice(0, 30); saveProgress();
+    $("#dailyGameProgressBar").style.width = "100%"; $("#dailyQuestionLabel").textContent = "HÀNH TRÌNH HOÀN THÀNH"; renderDailyMissionMap("complete");
+    $("#dailyMissionMap").innerHTML = [["✓","Warm-up"],["✓","Listening"],["✓","Use It"],["★","Boss cleared"]].map(([icon,label])=>`<div class="daily-mission complete"><b>${icon}</b><span>${label}</span></div>`).join("");
+    $("#dailyGameCard").innerHTML = `<div class="daily-result"><div class="summary-burst">${percent >= 70 ? "★" : "↗"}</div><p class="eyebrow">CHUNK ADVENTURE COMPLETE</p><h2>${dailySession.score}/${total} câu đúng</h2><div class="daily-result-xp">${dailySession.xp} XP</div><strong>${percent}% chính xác · combo cao nhất ${dailySession.bestCombo} · ${Math.ceil(seconds / 60)} phút</strong><div class="daily-result-path"><span>✓ Ôn chunks</span><span>✓ Câu dài</span><span>✓ Vận dụng</span><span>★ Hội thoại</span></div><p>${percent >= 85 ? "Bạn đã mang cùng một nhóm chunks đi qua cả bốn chặng. Đây là cách biến nhận biết thành phản xạ." : percent >= 65 ? "Tiến bộ tốt. Những chunks chưa chắc sẽ được ưu tiên trong hành trình sau." : "Một lượt luyện có ích. Hệ thống đã ghi lại các điểm khó để lần sau chọn bài phù hợp hơn."}</p><div><button class="secondary" data-nav="progress">Xem hành trình học</button><button class="primary" id="playDailyAgain">Chơi lại</button></div></div>`;
     $("#playDailyAgain").addEventListener("click", startDailyChallenge); $("#dailyGameCard [data-nav=progress]").addEventListener("click", () => { updateProgressView(); show("progress"); location.hash = "progress"; }); updateDashboard(); updateProgressView();
   }
   function selectVoice() {
