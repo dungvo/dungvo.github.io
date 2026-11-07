@@ -34,7 +34,15 @@
     "l2-clarify-3": ["clarify-context"], "l2-clarify-4": ["request-show", "so-i-can"],
     "l2-clarify-5": ["clarify-missed", "request-repeat"], "l2-problem-1": ["problem-wrong", "problem-investigate"],
     "l2-problem-2": ["problem-workaround"], "l2-problem-3": ["problem-affected", "problem-impact"],
-    "l2-problem-4": ["problem-root-cause", "problem-investigate"], "l2-problem-5": ["problem-again", "request-let-know"]
+    "l2-problem-4": ["problem-root-cause", "problem-investigate"], "l2-problem-5": ["problem-again", "request-let-know"],
+    "fl2-think-1": ["fluency-good-question", "fluency-think-second"], "fl2-think-2": ["fluency-off-top", "fluency-main-reason"],
+    "fl2-think-3": ["fluency-moment-think"], "fl2-think-4": ["fluency-how-put"], "fl2-think-5": ["fluency-not-thought"],
+    "fl2-think-6": ["fluency-might-right", "fluency-only-concern"], "fl2-structure-1": ["fluency-mean-is"],
+    "fl2-structure-2": ["fluency-another-way"], "fl2-structure-3": ["fluency-trying-say"],
+    "fl2-structure-4": ["fluency-two-things"], "fl2-structure-5": ["fluency-main-reason"], "fl2-structure-6": ["fluency-example-mind"],
+    "fl2-story-1": ["fluency-give-context"], "fl2-story-2": ["fluency-what-happened"], "fl2-story-3": ["fluency-at-first-then"],
+    "fl2-story-4": ["fluency-good-news"], "fl2-story-5": ["fluency-speaking-of"], "fl2-story-6": ["fluency-as-saying"],
+    "fl2-connect-5": ["fluency-before-forget"], "fl2-connect-6": ["fluency-get-saying"]
   };
   const DAILY_CONVERSATION_LINKS = {
     "l3-data-issue": ["problem-cause", "problem-root-cause", "meeting-update", "request-let-know"],
@@ -42,7 +50,14 @@
     "l3-coffee-plan": ["request-let-know"], "l3-phone-delivery": ["request-check", "request-let-know"],
     "l3-priority-change": ["problem-tradeoff", "meeting-action"], "l3-access-problem": ["problem-issue", "request-wait"],
     "l3-lunch-order": ["every-without"], "l3-feedback": ["request-look", "request-minute"],
-    "l3-learning-plan": ["clarify-lost", "clarify-main-point"], "l3-interview-question": ["clarify-specific"]
+    "l3-learning-plan": ["clarify-lost", "clarify-main-point"], "l3-interview-question": ["clarify-specific"],
+    "fl3-thinking-answer": ["fluency-good-question", "fluency-think-second", "fluency-off-top", "fluency-only-concern"],
+    "fl3-rephrase-status": ["fluency-mean-is", "fluency-not-quite-meant", "fluency-correct-myself"],
+    "fl3-explain-simple": ["fluency-give-context", "fluency-another-way", "fluency-main-reason"],
+    "fl3-story-incident": ["fluency-what-happened", "fluency-at-first-then", "fluency-good-news"],
+    "fl3-polite-disagreement": ["fluency-get-saying", "fluency-might-right", "fluency-see-it"],
+    "fl3-interview-pause": ["fluency-good-question", "fluency-moment-think", "fluency-example-mind", "fluency-two-things"],
+    "fl3-recover-thread": ["fluency-before-forget", "fluency-as-saying"]
   };
 
   const $ = (selector) => document.querySelector(selector);

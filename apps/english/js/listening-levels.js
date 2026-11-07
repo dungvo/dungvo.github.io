@@ -70,7 +70,7 @@
     [level1, level2, level3].forEach((panel, index) => { panel.hidden = index + 1 !== level; });
     root.querySelectorAll('[data-listening-level]').forEach(button => { const selected = Number(button.dataset.listeningLevel) === level; button.classList.toggle('active', selected); button.setAttribute('aria-selected', selected); });
     root.querySelector('.listening-head .lead').textContent = level === 1 ? 'Nghe common chunks ngắn, chọn đúng ý định rồi mở câu để học cách dùng.' : level === 2 ? 'Nghe câu dài hơn, hiểu toàn bộ ý và nhận ra các chunks tạo nên câu.' : 'Nghe một hội thoại hoàn chỉnh, trả lời câu hỏi rồi học các chunks có thể dùng lại.';
-    root.querySelector('.listening-badge').textContent = level === 1 ? 'Mức 1 · 100 chunks' : level === 2 ? 'Mức 2 · 30 câu dài' : 'Mức 3 · 12 hội thoại';
+    root.querySelector('.listening-badge').textContent = level === 1 ? 'Mức 1 · 100 chunks' : level === 2 ? `Mức 2 · ${data.level2.length} câu dài` : `Mức 3 · ${data.conversations.length} hội thoại`;
     try { localStorage.setItem('chunkLabListeningLevel', String(level)); } catch (_) {}
   }
 

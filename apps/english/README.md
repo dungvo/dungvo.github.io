@@ -41,7 +41,8 @@ Current library:
 - 4 source-verified publication chunks
 - 13 privacy, data-protection, and leave/HR chunks from questions 3–15
 - 26 onboarding, present-perfect, grammar, and natural-wish chunks from the October 28 session
-- 396 chunks total
+- 28 fluency chunks for thinking time, answer structure, rephrasing, transitions, storytelling, polite disagreement, and self-repair
+- 424 chunks total
 
 ## Add a Think → Express scenario
 
@@ -77,7 +78,7 @@ The bundled situations cover workplace communication, daily life, and article-st
 
 Guided ChatGPT Voice practice lives in `content/conversations/`. Each topic defines the learner role, ChatGPT role, opening line, discussion questions, recommended chunk IDs, and a copy-ready Live prompt. The published site automatically discovers new conversation files in this folder just as it discovers chunk-session files.
 
-The initial Speaking Lab contains 20 guided topics across daily life, workplace communication, data engineering, interviews, and open discussion.
+The Speaking Lab contains 28 guided topics across daily life, workplace communication, data engineering, interviews, open discussion, and structured fluency drills.
 
 ## Add a reading story
 
@@ -125,8 +126,8 @@ Selected chunks also receive a translation-trap note from `content/listening/tra
 Listening Practice now progresses through three distinct skills while keeping the original 100-chunk level and its `chunkLabListeningV1` progress unchanged:
 
 1. **Common Chunks** tests the intent of short, reusable phrases.
-2. **Longer Sentences** contains 30 sentences across six topics. Each answer reveals the two or three chunks that combine to create the full meaning, plus a selective note where word-by-word translation is misleading.
-3. **Real Conversations** contains 12 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
+2. **Longer Sentences** contains 54 sentences across ten topics. Each answer reveals the two or three chunks that combine to create the full meaning, plus a selective note where word-by-word translation is misleading.
+3. **Real Conversations** contains 20 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
 
 Levels 2 and 3 store attempts separately in `chunkLabListeningAdvancedV1`. Opening a transcript before answering is treated as assisted practice. Playback uses browser speech synthesis, alternates available English voices by speaker in conversations, and never requires microphone access.
 
@@ -142,3 +143,11 @@ The former random 15-question Daily Challenge is now a personalized four-stage j
 Explicit bridge maps in `js/app.js` connect library chunk IDs to the longer sentences and conversations in `content/listening/advanced-listening.js`. Selection prioritizes spaced-review items, previous mistakes, unseen content, and then connected material, so the same chunk appears in progressively richer contexts rather than unrelated random questions.
 
 Clean answers earn XP and build a combo; opening a transcript gives reduced XP and keeps the material eligible for review. Daily answers update the existing `chunkLabProgressV2` record, while sentence and conversation results also update `chunkLabListeningAdvancedV1`. Existing progress and previous Daily game history remain compatible. New journey history entries additionally store XP and best combo.
+
+## Fluency content expansion (2026-11-07)
+
+The fluency toolkit adds 28 reusable chunks that help the learner keep speaking when an answer is not ready, structure a response, rephrase an idea, connect a story, disagree politely, or recover after losing the thread. These chunks are deliberately short enough to retrieve as complete units instead of translating word by word.
+
+Listening Levels 2 and 3 now include 24 extra longer sentences and eight extra six-turn conversations. Several items train reduced or connected speech such as **did you**, **could you**, **going to**, and **have to**. The answer feedback still reveals the chunks and meaning only after listening.
+
+Speaking Lab adds eight guided fluency drills: a 60-second answer, a short story, a work update, rephrasing, polite discussion, explaining a technical idea simply, natural small talk, and interview thinking time. Their target chunks are also linked into Chunk Adventure, so the learner can meet the same expression in the library, hear it inside a sentence or conversation, and then use it in speech.
