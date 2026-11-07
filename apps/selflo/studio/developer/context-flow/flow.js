@@ -6,6 +6,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const themes={adversity_resilience:'Nghịch cảnh',attention:'Chú ý',change_growth:'Thay đổi',emotion:'Cảm xúc',meaning_values:'Ý nghĩa',relationships:'Mối quan hệ',rest_wellbeing:'Nghỉ ngơi',self_understanding:'Hiểu mình',work_achievement:'Công việc'};
 const slots=['Đêm yên tĩnh','Bình minh','Buổi sáng','Bắt đầu ngày','Giữa buổi sáng','Trước giờ nghỉ','Nghỉ trưa','Đầu giờ chiều','Đổi góc nhìn','Cuối giờ làm','Trở về','Khám phá buổi tối','Nhìn lại','Trước giờ ngủ'];
 const ranges=[[0,4],[4,6],[6,7.5],[7.5,9],[9,10.5],[10.5,11.5],[11.5,13],[13,14.5],[14.5,16],[16,17.5],[17.5,19.5],[19.5,21],[21,22.5],[22.5,24]];
+const contextGroup=(c)=>({day:c.day===1?'week_start':c.day===0||c.day===6?'weekend':'weekday',time:c.slot<=2?'early':c.slot<=5?'active':c.slot<=8?'break':c.slot<=11?'evening':'night'});
 const wants=[['calm','Tôi muốn nhẹ lòng'],['story','Một câu chuyện'],['curious','Điều gì đó bất ngờ'],['work','Góc nhìn về công việc'],['relationships','Chuyện về con người'],['play','Giải trí một chút']];
 let all=[],current=null,need='',history={date:'',seen:[],likes:[],dislikes:[],visits:0},sim=false;
 try{history={...history,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{}
@@ -32,7 +33,7 @@ if(!all.length)throw Error('Không tìm thấy nội dung Release phù hợp.');
 }
 const hash=s=>{let h=2166136261;for(const c of s){h=Math.imul(h^c.charCodeAt(0),16777619)}return h>>>0};
 function score(x,c){
-const t=x.theme;let n=(hash(x.id+'|'+c.day+'|'+c.slot)%19)/19;
+const t=x.theme,g=contextGroup(c);let n=(hash(x.id+'|'+c.day+'|'+c.slot)%19)/19;
 const morning=c.slot>=2&&c.slot<=4,night=c.slot>=12||c.slot<=1,lunch=c.slot===6,weekend=c.day===0||c.day===6;
 const prefs={
 calm:['rest_wellbeing','emotion','meaning_values'],story:[],curious:['attention','self_understanding','meaning_values'],work:['work_achievement','change_growth'],relationships:['relationships','meaning_values']
@@ -44,7 +45,7 @@ else{
 if(morning)n+=['change_growth','meaning_values','attention'].includes(t)?5:0;
 if(night)n+=['rest_wellbeing','relationships','self_understanding'].includes(t)?6:0;
 if(lunch)n+=x.type==='quote'?5:0;
-if(weekend)n+=['relationships','meaning_values','self_understanding'].includes(t)?4:0;
+if(g.day==='weekend')n+=['relationships','meaning_values','self_understanding'].includes(t)?4:0;if(g.day==='week_start')n+=['change_growth','work_achievement'].includes(t)?2:0;
 if(c.slot>=3&&c.slot<=5)n+=t==='work_achievement'?4:0;
 if(c.slot===11)n+=x.type==='story'?5:0;
 }
@@ -54,7 +55,7 @@ if(history.likes.includes(x.id))n+=1;
 if(history.dislikes.includes(x.id))n-=20;
 return n;
 }
-const reason=(x,c)=>{const day=c.day===0?'Chủ nhật':c.day===6?'cuối tuần':'ngày trong tuần';return 'Đề xuất dựa trên '+slots[c.slot].toLowerCase()+', '+day+(need?' và lựa chọn gần nhất của bạn':'')+'. Chủ đề: '+(themes[x.theme]||'Góc nhìn')+'. Selflo không suy đoán cảm xúc của bạn.'};
+const reason=(x,c)=>{const day=contextGroup(c).day==='week_start'?'đầu tuần':contextGroup(c).day==='weekend'?'cuối tuần':'ngày thường';return 'Đề xuất dựa trên '+slots[c.slot].toLowerCase()+', '+day+(need?' và lựa chọn gần nhất của bạn':'')+'. Chủ đề: '+(themes[x.theme]||'Góc nhìn')+'. Selflo không suy đoán cảm xúc của bạn.'};
 function pick(){
 const c=context();
 $('greeting').textContent=c.visit==='return'?'Một điều khác cho lần trở lại này.':['Một điều dành cho lúc này.','Có một điều đáng để khám phá.','Đôi khi chỉ cần một góc nhìn khác.'][(c.slot+c.day)%3];
