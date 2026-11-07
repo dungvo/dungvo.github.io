@@ -129,3 +129,16 @@ Listening Practice now progresses through three distinct skills while keeping th
 3. **Real Conversations** contains 12 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
 
 Levels 2 and 3 store attempts separately in `chunkLabListeningAdvancedV1`. Opening a transcript before answering is treated as assisted practice. Playback uses browser speech synthesis, alternates available English voices by speaker in conversations, and never requires microphone access.
+
+## Chunk Adventure: integrated Daily Practice (2026-11-07)
+
+The former random 15-question Daily Challenge is now a personalized four-stage journey:
+
+1. **Warm-up** retrieves four weak, due, or unseen chunks from the main library.
+2. **Listen & Connect** presents two longer sentences containing related chunks. Text and choices stay locked until playback starts; transcript help is available but marked as assisted.
+3. **Use It** asks the learner to apply the same focus chunks in a situation or sentence gap.
+4. **Conversation Boss** uses one complete dialogue and its three comprehension questions to test main idea, detail, and next action.
+
+Explicit bridge maps in `js/app.js` connect library chunk IDs to the longer sentences and conversations in `content/listening/advanced-listening.js`. Selection prioritizes spaced-review items, previous mistakes, unseen content, and then connected material, so the same chunk appears in progressively richer contexts rather than unrelated random questions.
+
+Clean answers earn XP and build a combo; opening a transcript gives reduced XP and keeps the material eligible for review. Daily answers update the existing `chunkLabProgressV2` record, while sentence and conversation results also update `chunkLabListeningAdvancedV1`. Existing progress and previous Daily game history remain compatible. New journey history entries additionally store XP and best combo.
