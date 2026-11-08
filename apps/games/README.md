@@ -12,6 +12,7 @@ Independent workspace for standalone browser games, separate from Selflo, Englis
 
 - [Chapter and season roadmap](firefly/CHAPTER_PLAN.md)
 - [Play Chapter 1 RPG](https://dungvo.github.io/apps/games/firefly/rpg/)
+- [Play tactical web battle experiment](https://dungvo.github.io/apps/games/firefly/tactics/) — turn-based map combat, two routes, recruitable ally or sword; currently separate from the RPG story prototype.
 
 ## Site
 
