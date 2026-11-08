@@ -58,3 +58,6 @@ Within 30 seconds the player controls a memorable hero in a living, beautifully 
 
 ## Current honest status
 Tactical experiment now has procedurally drawn original character sprites and animated lighting, but **not** professional production-quality character art and **not** a cohesive chapter. The previous prototypes remain separate. This charter is the team's execution plan and acceptance bar.
+
+## Tactical review pass
+- [Code review, fixes, and outstanding QA](PLAYTEST_REVIEW.md). Enemy pathfinding, secret relic, HUD/feedback and action rules improved. Live browser QA still pending.
