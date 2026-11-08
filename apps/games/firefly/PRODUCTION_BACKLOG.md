@@ -46,3 +46,10 @@ Interactive web scene: `/apps/games/firefly/visual/`. Original SVG/CSS scene com
 2. Replace prototype vector scenery with layered high-detail production artwork while retaining hotspots.
 3. Integrate this scene system into Chapter 1 exploration and tactical battle without separate demos.
 4. QA iPhone Safari and desktop Chrome before the final review gate.
+
+## 1,000-floor campaign prototype (2026-11-08)
+- New playable URL: `/apps/games/firefly/campaign/`.
+- 1,000 **deterministically generated tactical floors** in 10 visual biomes (100 floors each), boss milestones every 10 floors, connected through persistent player HP, XP, level, attack, inventory, potions and first-route choice (Lâm ally vs stronger sword).
+- Browser localStorage auto-save and continue; procedural map obstacles and cover; enemy BFS, selectable units, move/attack/magic/heal; completion at floor 1000.
+- **Important honesty:** this is NOT 1,000 handcrafted narrative levels, nor the final visually polished RPG. The same tactical encounter framework is reused with scaling difficulty and palette changes. No real-browser/device QA or automated full-campaign simulation has been performed. Balancing at high floors remains unverified and likely needs work.
+- Future: chapter-specific exploration scenes, unique enemies/boss mechanics, character sprite sheets, authored dialogue, replay secrets, sound, real-device QA and progression balancing.
