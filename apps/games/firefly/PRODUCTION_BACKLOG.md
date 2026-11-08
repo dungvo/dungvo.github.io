@@ -58,3 +58,9 @@ Interactive web scene: `/apps/games/firefly/visual/`. Original SVG/CSS scene com
 - Replaced plain tile rendering with layered gradient terrain, bespoke vector trees/grass, character silhouettes, glowing fireflies, atmospheric vignette and enhanced fantasy HUD at `campaign/`.
 - These improvements apply to the **playable 1,000-floor campaign**, not just a standalone visual mockup. No externally sourced copyrighted game art used.
 - **Status:** implemented in source, not device-QA verified. This is a meaningful visual iteration, **not** yet visually equivalent to commercial HD-2D/hand-painted RPGs. Still requires consistent authored sprite atlases, character animations, scene-specific backgrounds, distinct boss visuals and mobile playtesting.
+
+## Visual pass V4 — combat feedback
+- Implemented transient hit sparks, shockwave rings, movement dust/glow trails, healing particles, and further fantasy HUD styling in the playable campaign.
+- Reduced-motion handling retains combat feedback while avoiding idle character bob and ambient drift.
+- **Code-level QA:** JavaScript syntax validated with V8 parser. **Not yet done:** actual browser/device visual QA, animation performance, gameplay regression and final visual sign-off.
+- Final-quality blockers remain: cohesive illustrated production assets, full sprite animations, unique encounters, authored chapters, and device QA.
