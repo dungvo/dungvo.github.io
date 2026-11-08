@@ -61,3 +61,7 @@ Tactical experiment now has procedurally drawn original character sprites and an
 
 ## Tactical review pass
 - [Code review, fixes, and outstanding QA](PLAYTEST_REVIEW.md). Enemy pathfinding, secret relic, HUD/feedback and action rules improved. Live browser QA still pending.
+
+## Integrated Chapter 1 iteration (2026-11-08)
+- New playable single-page flow: `/apps/games/firefly/chapter1/`. Explore forest, visit house or watchtower, open secret chest, choose Lâm archer or stronger sword, approach gate, fight enemies on same map, earn XP/items, reach route-specific ending. Browser save via `firefly.integrated.chapter1.v1`.
+- First integration milestone only. Art is procedural Canvas; story, battle and exploration share one session, but narrative depth, bespoke polished art, combat animations, real browser QA and save migration remain open. Do not treat this as approved final Chapter 1.
