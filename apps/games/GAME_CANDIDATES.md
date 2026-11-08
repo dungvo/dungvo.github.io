@@ -78,3 +78,24 @@ Source: [Game Lab](../../selflo/studio/developer/game-lab/).
 - https://dungvo.github.io/apps/selflo/studio/developer/adventure/
 - https://dungvo.github.io/apps/selflo/studio/developer/detective/
 - https://dungvo.github.io/apps/selflo/studio/developer/game-lab/
+
+
+## 2026-11-08 — Firefly RPG direction (design proposal, not yet implemented)
+
+User requests a much deeper Firefly game, taking inspiration from the *experience* of Fire Emblem and TearRing Saga: character leveling, HP, weapons, equipment, collectible items, compelling narrative, branching choices, replaying to discover substantially different routes. Do not copy copyrighted characters, story, maps, art, or music.
+
+**Design goal:** A standalone adventure/tactical RPG, not merely collecting light dots in a maze. The existing `/apps/games/firefly/` is a playable **exploration prototype**, NOT this RPG.
+
+**Proposed pillars:**
+1. Character growth: HP, XP/levels, equipment, weapons, skills; growth through combat and exploration.
+2. Tactical combat with meaningful positioning, enemy behavior and risk/reward, preferably turn-based.
+3. Items with gameplay and narrative consequences (keys, relics, tools, healing, equipment).
+4. Branching story state: decisions affect allies, accessible routes, missions, rewards, world state and endings. Avoid fake choices that immediately converge without consequences.
+5. Replayability: multiple discoverable routes, hidden events, alternate recruits and optional discoveries; keep an event/choice registry to ensure consistency.
+6. Atmosphere: preserve Firefly's luminous fantasy art direction, compelling characters, smooth mobile interaction.
+
+**Example narrative concept (unapproved):** Chapter 1, a village losing its light. Player may rescue villagers, help a wounded gatekeeper or rush to a temple. Each path yields different ally/item/knowledge and changes later events. This is a design illustration, not canon.
+
+**Scope gate:** Before a large RPG build, create a small but complete vertical slice: one chapter, 2–3 consequential routes, 1 tactical combat encounter, XP/HP/weapon, a few usable items, and at least one replay-only discovery. Validate whether it is genuinely fun on mobile before adding dozens of chapters.
+
+**Status:** User's requested direction recorded. Specific combat rules, narrative canon and production scope still require design/review. No claim that these systems have been implemented.
