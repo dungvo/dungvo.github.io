@@ -6,7 +6,7 @@ Independent workspace for standalone browser games, separate from Selflo, Englis
 
 **[Game candidate registry and development directions](GAME_CANDIDATES.md)** — three shortlisted candidates (Ánh Sáng, Hành Trình Đom Đóm, Mystery Room), all remaining Selflo game prototypes, source links, risks, and review criteria.
 
-**Current status:** Candidates documented; no game selected for deep development. User review required before implementation.
+**Current status:** **Hành Trình Đom Đóm selected** as the first deep-development direction (2026-11-08). Next: review prototype, design a polished playable vertical slice, and seek user review. Ánh Sáng and Mystery Room remain alternatives. No migration or implementation has happened yet.
 
 ## Site
 
