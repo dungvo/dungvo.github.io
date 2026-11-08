@@ -40,3 +40,9 @@ Each chapter should have:
 
 ## Inspiration boundary
 Inspired by player agency, strategic stakes and discoverability associated with tactical RPGs such as Fire Emblem and TearRing Saga; original characters, narrative, assets, mechanics implementation and maps only.
+
+## 2026-11-08 tactical web gameplay experiment
+- New playable standalone battle: `/apps/games/firefly/tactics/` with canvas map, selectable units, movement range, attack range, cover terrain, enemy turn AI, HP, XP, level-ups, item rewards, heal potion, local save and two initial branches (recruit an archer or receive a stronger sword).
+- Research inspiration: Fire Emblem grid tactics, TearRing Saga conditional recruitment and route discoveries, Triangle Strategy consequential route choices. Use original world and assets.
+- **Not yet a polished integrated RPG:** battle is separate from exploration and dialogue prototypes, visuals use emoji characters and canvas terrain, no authored chapter-to-chapter save integration. Requires actual mobile QA and player feedback.
+- Next vertical slice: unify scene exploration, NPC dialogue, combat and narrative consequences; improve bespoke character sprites/animation and art direction; expand meaningful events and encounter variety.
