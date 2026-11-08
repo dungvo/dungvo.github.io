@@ -53,3 +53,8 @@ Interactive web scene: `/apps/games/firefly/visual/`. Original SVG/CSS scene com
 - Browser localStorage auto-save and continue; procedural map obstacles and cover; enemy BFS, selectable units, move/attack/magic/heal; completion at floor 1000.
 - **Important honesty:** this is NOT 1,000 handcrafted narrative levels, nor the final visually polished RPG. The same tactical encounter framework is reused with scaling difficulty and palette changes. No real-browser/device QA or automated full-campaign simulation has been performed. Balancing at high floors remains unverified and likely needs work.
 - Future: chapter-specific exploration scenes, unique enemies/boss mechanics, character sprite sheets, authored dialogue, replay secrets, sound, real-device QA and progression balancing.
+
+## Campaign visual pass (next iteration)
+- Replaced plain tile rendering with layered gradient terrain, bespoke vector trees/grass, character silhouettes, glowing fireflies, atmospheric vignette and enhanced fantasy HUD at `campaign/`.
+- These improvements apply to the **playable 1,000-floor campaign**, not just a standalone visual mockup. No externally sourced copyrighted game art used.
+- **Status:** implemented in source, not device-QA verified. This is a meaningful visual iteration, **not** yet visually equivalent to commercial HD-2D/hand-painted RPGs. Still requires consistent authored sprite atlases, character animations, scene-specific backgrounds, distinct boss visuals and mobile playtesting.
