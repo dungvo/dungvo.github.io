@@ -1,12 +1,18 @@
 # Games Hub — Candidate Registry & Development Directions
 
 > Updated: 2026-11-08  
-> Status: **CANDIDATES LOCKED FOR REVIEW — NO GAME SELECTED FOR DEEP DEVELOPMENT**  
-> Decision owner: product owner (user). Do not interpret candidate order as approval to implement or publish.
+> Status: **HÀNH TRÌNH ĐOM ĐÓM SELECTED FOR FIRST DEEP-DEVELOPMENT TRACK**  
+> Decision owner: product owner (user). User explicitly selected Hành Trình Đom Đóm on 2026-11-08. Selection authorizes planning/prioritization; it does not imply implementation, migration, or publication has occurred.
 
 ## Product boundary
 
 Games Hub is a standalone collection at `/apps/games/`, independent from Selflo, English, and SpendStory. Existing Selflo games are **reference prototypes**; do not move, remove, overwrite, or change them without an explicit decision. Avoid copying Selflo-specific reflection, energy, quotes, or stories as mandatory game mechanics. First review existing gameplay and visual quality, then select ONE game for a focused vertical slice. Do not build all candidates simultaneously.
+
+## Selected game and other shortlisted candidates
+
+**Selected:** Hành Trình Đom Đóm (Firefly Adventure). **Alternates retained:** Ánh Sáng / Light Quest and Mystery Room / Mystery Adventure. This is a product direction decision, not a claim that the game has been migrated or built in Games Hub.
+
+**Development focus:** Build one delightful mobile-first adventure world before expanding to many worlds. Prioritize visual atmosphere, responsive movement, meaningful exploration, satisfying light collection, distinct obstacles, clear progression, scene-integrated discovery, and curiosity about the next area. Review actual prototype first; define visual/gameplay acceptance criteria and a playable vertical slice. Keep Selflo prototype unchanged until a separate migration/implementation decision.
 
 ## Three shortlisted candidates
 
@@ -62,10 +68,10 @@ Source: [Game Lab](../../selflo/studio/developer/game-lab/).
 7. Independence from Selflo; suitability for Games Hub.
 
 ## Decision gate
-- **Now:** document candidates only; no deep-development winner selected.
-- **Next:** user plays and reviews the existing prototypes. Compare the three shortlist games against the criteria above.
-- **After selection:** create one game-specific specification, visual direction, 3-tier level plan, vertical slice, and acceptance criteria.
-- **Do not:** claim any game is approved, migrate source, change Selflo, or start building many games at once.
+- **Now:** Hành Trình Đom Đóm selected as the first deep-development direction by user; planning phase.
+- **Next:** inspect its existing prototype and create game-specific specification, visual direction, level progression, playable vertical slice and acceptance criteria.
+- **Review gate:** user reviews the improved playable experience before expanding production.
+- **Do not:** claim migration or implementation has occurred, change Selflo, or start building multiple games at once.
 
 ## Reference URLs
 - https://dungvo.github.io/apps/selflo/studio/developer/visual-games/
