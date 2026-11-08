@@ -8,6 +8,10 @@ Independent workspace for standalone browser games, separate from Selflo, Englis
 
 **Current status:** **Hành Trình Đom Đóm selected**. Playable exploration prototype and a separate branching RPG Chapter 1 vertical slice exist. Next: test on mobile, improve art/tactics, integrate exploration and RPG, then author Chapter 2. Ánh Sáng and Mystery Room remain alternatives.
 
+## Firefly production
+
+- [Web-first production charter and quality gates](firefly/PRODUCTION_CHARTER.md)
+
 ## Firefly RPG chapters
 
 - [Chapter and season roadmap](firefly/CHAPTER_PLAN.md)
