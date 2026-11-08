@@ -71,3 +71,8 @@ Tactical experiment now has procedurally drawn original character sprites and an
 - Added tap-to-walk BFS pathfinding for exploration, with movement halted at events/dialogue, and labels for points of interest inside the world.
 - Added animated damage numbers, clearer buttons, contextual instructions and UI polish.
 - Source inspection and GitHub implementation only; **not** validated by actual browser/device playtesting. Gameplay still requires deeper encounter balance, animation, story and art.
+
+## Approved quality targets & visual prototype
+- All six quality dimensions are targeted at 10/10, subject to user review, not claimed as achieved.
+- [Production backlog](PRODUCTION_BACKLOG.md) tracks P0/P1/P2 scope and release gates.
+- [Visual Foundation V1](visual/) is an original interactive SVG/CSS storybook forest scene with four hotspots, route choice, a secret, mobile layout and reduced-motion control. This is an art-direction study, not the final game or production-grade illustrated assets.
