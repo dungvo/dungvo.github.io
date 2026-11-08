@@ -11,7 +11,7 @@ const wants=[['calm','Tôi muốn nhẹ lòng'],['story','Một câu chuyện'],
 let all=[],current=null,need='',lastKinds=[],history={date:'',seen:[],likes:[],dislikes:[],visits:0},sim=false;
 try{history={...history,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(history))}catch{}};
-const today=()=>new Date().toLocaleDateString('en-CA');
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
 const slotOf=h=>ranges.findIndex(([a,b])=>h>=a&&h<b);
 const context=()=>{
 const now=new Date(),h=now.getHours()+now.getMinutes()/60;
@@ -80,7 +80,7 @@ const meta=micro?'Khoảng 1 phút · Hoạt động gốc của Selflo':game?'T
 $('feature').innerHTML='<article class="flow-card flow-card--'+esc(x.type)+'"><p class="flow-kind">'+kind+' · '+esc(themes[x.theme]||({observation:'Quan sát',curiosity:'Tò mò',play:'Giải trí',connection:'Kết nối',calm:'Thư giãn',reflection:'Nhìn lại',adventure:'Phiêu lưu'}[x.theme]||'Khám phá'))+'</p><h2>'+esc(x.title||'Một góc nhìn cho bạn')+'</h2>'+subtitle+'<p class="meta">'+meta+'</p><div class="flow-card-actions">'+action+'</div><div class="feedback"><button type="button" data-feedback="like" aria-pressed="'+history.likes.includes(x.id)+'">♡ Tôi thích</button><button type="button" data-feedback="dislike" aria-pressed="'+history.dislikes.includes(x.id)+'">Không hợp lúc này</button></div></article>';
 $('feature').querySelectorAll('[data-feedback]').forEach(b=>b.onclick=()=>{const k=b.dataset.feedback==='like'?'likes':'dislikes',other=k==='likes'?'dislikes':'likes';history[k]=[...new Set([...history[k],x.id])];history[other]=history[other].filter(id=>id!==x.id);save();render(context())});
 $('reason').textContent=reason(x,c);
-const others=all.filter(y=>y.id!==x.id&&(!history.seen.includes(y.id))&&y.type!==x.type).sort((a,b)=>score(b,c)-score(a,c)).slice(0,2);
+const others=all.filter(y=>y.id!==x.id&&(!history.seen.includes(y.id))&&y.type!==x.type&&!!y.url).sort((a,b)=>score(b,c)-score(a,c)).slice(0,2);
 $('other-list').innerHTML=others.map(y=>'<a href="'+esc(y.url||'#feature')+'"><small>'+esc(y.type==='story'?'Story':y.type==='external_story'?'Truyện tuyển chọn':y.type==='micro_discovery'?'Khám phá nhanh':y.type==='game'?'Game':'Quote')+' · '+esc(themes[y.theme]||'Góc nhìn')+'</small><strong>'+esc(y.title||y.summary.slice(0,65))+'</strong></a>').join('')||'<p class="flow-empty">Bạn đã xem khá nhiều nội dung. Hãy thử đổi chủ đề.</p>';
 }
 function advance(){
