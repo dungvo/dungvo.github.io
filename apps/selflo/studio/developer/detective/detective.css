@@ -17,3 +17,22 @@
 .case-list button,.actions button,#answers button{transition:transform .18s,background .18s,border-color .18s}
 .case-list button:hover,.actions button:hover,#answers button:hover{transform:translateY(-2px)}
 @media(prefers-reduced-motion:reduce){.hotspot{animation:none}*,*:before,*:after{transition:none!important}}
+
+/* In-world evidence card: reading stays inside the illustration, not below it */
+.scene-tip[hidden]{display:none!important}
+.scene-tip{position:absolute;z-index:7;left:50%;top:50%;transform:translate(-50%,-45%) scale(.94);width:min(88%,420px);max-height:88%;overflow:auto;overscroll-behavior:contain;padding:clamp(12px,2vw,22px);border-radius:20px;border:1px solid #e9d7a8a6;background:linear-gradient(145deg,#213b3cf5,#15282ef8);color:#f8f0df;box-shadow:0 22px 70px #000b,0 0 0 999px #07171b55;opacity:0;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);transition:opacity .24s ease,transform .24s ease}
+.scene-tip.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.tip-top,.tip-bottom{display:flex;justify-content:space-between;align-items:center;gap:9px}.tip-eyebrow{color:#e9d29b;font-size:10px;letter-spacing:.15em;font-weight:750}
+#tip-close{width:30px;height:30px;border:1px solid #83938b;border-radius:50%;background:#ffffff16;color:white;font-size:22px;line-height:1}
+.tip-content{display:flex;gap:14px;align-items:flex-start;margin:13px 0 16px}
+#tip-icon{font-size:34px;width:50px;height:50px;flex:0 0 50px;display:grid;place-items:center;border-radius:13px;background:#e3d4a72b}
+#tip-title{display:block;font:500 clamp(16px,2.6vw,23px) Georgia,serif;color:#f5e4ba;margin:0 0 6px}
+#tip-detail{font-size:clamp(12px,1.7vw,14px);line-height:1.55;margin:0;color:#e0e9dd}
+#tip-count{font-size:11px;color:#a7c3b4}
+#tip-continue{border:1px solid #e9d6a9;border-radius:22px;background:#e9d6a9;color:#243c35;font-weight:650;font-size:11px;padding:9px 12px}
+.scene-panel{background:linear-gradient(160deg,#263e3f,#172c30)}
+.scene-head{padding:3px 4px 8px;font-weight:650}
+.scene{border:2px solid #c5a77480;box-shadow:0 15px 50px #0008,0 0 35px #d2b07816}
+.hotspot.found{box-shadow:0 0 14px #b7e6ae8a}
+@media(max-width:540px){.scene-tip{width:94%;max-height:96%;padding:10px;border-radius:13px}.tip-content{gap:8px;margin:8px 0}.tip-eyebrow{font-size:8px}#tip-icon{width:32px;height:32px;flex-basis:32px;font-size:22px}#tip-title{font-size:15px}#tip-detail{font-size:11px;line-height:1.35}.tip-bottom{gap:5px}#tip-count{font-size:9px}#tip-continue{font-size:10px;padding:7px 9px}}
+@media(prefers-reduced-motion:reduce){.scene-tip{transition:none}}
