@@ -64,3 +64,8 @@ Interactive web scene: `/apps/games/firefly/visual/`. Original SVG/CSS scene com
 - Reduced-motion handling retains combat feedback while avoiding idle character bob and ambient drift.
 - **Code-level QA:** JavaScript syntax validated with V8 parser. **Not yet done:** actual browser/device visual QA, animation performance, gameplay regression and final visual sign-off.
 - Final-quality blockers remain: cohesive illustrated production assets, full sprite animations, unique encounters, authored chapters, and device QA.
+
+## V5 biome identity and progression
+- Implemented biome-specific names for regular enemies and ten distinct boss identities, biome-colored boss auras/crowns, and additional boss combat damage.
+- Added milestone narrative transitions for each 100-floor biome, fixed milestone reward text, synchronized hero stats on rewards, and clarified post-battle healing amounts.
+- JavaScript syntax validated; no real-device/browser QA or 1,000-floor playthrough verified. Art remains stylized procedural vector, not a finished hand-painted JRPG.
