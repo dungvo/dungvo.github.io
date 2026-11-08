@@ -1,12 +1,14 @@
 # Games Hub
 
-Independent workspace for experimenting with standalone browser games.
+Independent workspace for standalone browser games, separate from Selflo, English and SpendStory.
 
-## Direction
+## Planning and review
 
-- Games live separately from Selflo, English, and SpendStory.
-- Build a Games Hub landing page and individual games incrementally.
-- Shared UI and game mechanics may be reused across games.
-- No changes to existing apps are required.
+**[Game candidate registry and development directions](GAME_CANDIDATES.md)** — three shortlisted candidates (Ánh Sáng, Hành Trình Đom Đóm, Mystery Room), all remaining Selflo game prototypes, source links, risks, and review criteria.
 
-Status: workspace initialized; game implementation not started.
+**Current status:** Candidates documented; no game selected for deep development. User review required before implementation.
+
+## Site
+
+- [Games Hub](https://dungvo.github.io/apps/games/)
+- Existing Selflo prototypes remain unchanged and are used only as references.
