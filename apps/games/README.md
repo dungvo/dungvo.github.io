@@ -6,7 +6,12 @@ Independent workspace for standalone browser games, separate from Selflo, Englis
 
 **[Game candidate registry and development directions](GAME_CANDIDATES.md)** — three shortlisted candidates (Ánh Sáng, Hành Trình Đom Đóm, Mystery Room), all remaining Selflo game prototypes, source links, risks, and review criteria.
 
-**Current status:** **Hành Trình Đom Đóm selected** as the first deep-development direction (2026-11-08). Next: review prototype, design a polished playable vertical slice, and seek user review. Ánh Sáng and Mystery Room remain alternatives. No migration or implementation has happened yet.
+**Current status:** **Hành Trình Đom Đóm selected**. Playable exploration prototype and a separate branching RPG Chapter 1 vertical slice exist. Next: test on mobile, improve art/tactics, integrate exploration and RPG, then author Chapter 2. Ánh Sáng and Mystery Room remain alternatives.
+
+## Firefly RPG chapters
+
+- [Chapter and season roadmap](firefly/CHAPTER_PLAN.md)
+- [Play Chapter 1 RPG](https://dungvo.github.io/apps/games/firefly/rpg/)
 
 ## Site
 
