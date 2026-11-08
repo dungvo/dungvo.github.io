@@ -53,9 +53,9 @@ if(c.slot>=3&&c.slot<=5)n+=t==='work_achievement'?4:0;
 if(c.slot===11)n+=x.type==='story'?5:0;
 }
 if(x.type==='story'||x.type==='external_story')n+=c.slot===11||c.slot===12||weekend?2:0;if(x.type==='external_story'){n+=3;if(c.slot===11||weekend)n+=2;if(x.intent==='calm'&&night)n+=4;if(x.intent==='humor'&&lunch)n+=5;if(x.intent==='adventure'&&weekend)n+=4;if(x.intent==='mystery'&&c.slot===11)n+=5;if(x.intent==='critical'&&morning)n+=3;}
-if(x.type==='micro_discovery'){n+=3;if(x.group==='observation'&&c.slot>=2&&c.slot<=8)n+=5;if(x.group==='connection'&&weekend)n+=4;if(x.group==='reflection'&&night)n+=6}
+if(x.type==='micro_discovery'){n+=5;if(x.group==='observation'&&c.slot>=2&&c.slot<=8)n+=5;if(x.group==='connection'&&weekend)n+=4;if(x.group==='reflection'&&night)n+=6}
 if(x.type==='game'){n+=lunch?12:0;if(c.slot>=9&&c.slot<=11)n+=4}
-if(lastKinds.includes(x.type))n-=7;
+if(lastKinds.includes(x.type))n-=14;
 if(history.seen.includes(x.id))n-=100;
 if(history.likes.includes(x.id))n+=1;
 if(history.dislikes.includes(x.id))n-=20;
