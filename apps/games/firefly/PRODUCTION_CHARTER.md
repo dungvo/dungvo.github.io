@@ -65,3 +65,9 @@ Tactical experiment now has procedurally drawn original character sprites and an
 ## Integrated Chapter 1 iteration (2026-11-08)
 - New playable single-page flow: `/apps/games/firefly/chapter1/`. Explore forest, visit house or watchtower, open secret chest, choose Lâm archer or stronger sword, approach gate, fight enemies on same map, earn XP/items, reach route-specific ending. Browser save via `firefly.integrated.chapter1.v1`.
 - First integration milestone only. Art is procedural Canvas; story, battle and exploration share one session, but narrative depth, bespoke polished art, combat animations, real browser QA and save migration remain open. Do not treat this as approved final Chapter 1.
+
+## Chapter 1 game-feel pass
+- Fixed a blocking map error: Lâm's house at (2,2) had been placed on an impassable tree tile, preventing one major narrative route. Tile is now walkable.
+- Added tap-to-walk BFS pathfinding for exploration, with movement halted at events/dialogue, and labels for points of interest inside the world.
+- Added animated damage numbers, clearer buttons, contextual instructions and UI polish.
+- Source inspection and GitHub implementation only; **not** validated by actual browser/device playtesting. Gameplay still requires deeper encounter balance, animation, story and art.
