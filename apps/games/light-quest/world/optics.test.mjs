@@ -28,4 +28,20 @@ finale = activate(activate(finale, 3, 2), 3, 2); // lower prism to red
 assert.equal(trace(finale).charged.size, 1);
 assert.equal(trace(finale).won, false);
 assert.equal(solve(finale).length, 2);
-console.log('Verified all 18 World and 4 Secret Garden stages, including hints and multi-crystal gating.');
+const splitter = makeGrid(garden[4]);
+assert.equal(trace(splitter).charged.size, 1, 'The straight branch is preserved');
+assert.equal(trace(activate(splitter, 2, 2)).charged.size, 2, 'Rotating the splitter charges both branches');
+
+let dawn = makeGrid(garden[8]);
+dawn = activate(dawn, 2, 3); // split toward the relay
+assert.equal(trace(dawn).relay, false, 'A red beam cannot activate the seed relay');
+dawn = activate(dawn, 2, 2); // red to blue
+const fed = trace(dawn);
+assert.equal(fed.relay, true);
+assert.ok(fed.segments.some(ray => ray.y === 3 && ray.x === 3 && ray.nx === 4),
+  'The later split branch must open the gate for the first branch');
+assert.equal(fed.charged.size, 1);
+assert.equal(fed.won, false);
+dawn = activate(dawn, 2, 2); // blue to yellow
+assert.equal(trace(dawn).relay, false, 'Losing the blue beam closes the gates again');
+console.log('Verified 18 World and 9 Secret Garden stages, shortest hints, split rays and cross-branch relay.');

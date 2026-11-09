@@ -46,6 +46,24 @@
       <path d="M15 56q13-9 9-24t13-7q10-17 16-3t14 29q-10 18-28 16T15 56" fill="#090c21" stroke="#9879ca" stroke-width="2"/>
       <path d="M28 51q-2-19 12-14t12 14q-9 9-16 0" fill="none" stroke="#b5a4dc" stroke-width="2"/>
     </symbol>
+    <symbol id="splitter" viewBox="0 0 80 80">
+      <path d="M40 11l20 22-20 24-20-24z" fill="url(#glass)" stroke="#e9d8ff" stroke-width="2"/>
+      <path d="M21 33h37M40 12v43M27 26l13 7 12-9" fill="none" stroke="#f7efff" stroke-width="1.4"/>
+      <path d="M40 17l6 15-6 16-6-16z" fill="#d8bcff"/>
+      <path d="M12 36h10m36 0h10l-4-4m4 4-4 4" fill="none" stroke="#fff1c1" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="splitter-facet" viewBox="0 0 80 80">
+      <path d="M40 24v23" stroke="#2a2651" stroke-width="6" stroke-linecap="round"/>
+      <path d="M40 24v23" stroke="#fff4d9" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="seed" viewBox="0 0 80 80">
+      <path d="M40 53C19 40 20 23 40 13c21 10 22 27 0 40z" fill="#385c48" stroke="#9ec89c" stroke-width="2"/>
+      <path d="M40 49V33m0 7c-1-9-9-13-14-12 0 8 5 11 14 12m0-4c0-10 7-16 15-16-1 9-6 14-15 16z" fill="#bbefad" stroke="#e4ffe0" stroke-width="1.2"/>
+    </symbol>
+    <symbol id="root-gate" viewBox="0 0 80 80">
+      <path d="M13 56c7-9 9-30 13-36 3-5 11-10 14-14 3 4 11 9 14 14 4 6 6 27 13 36l-11 6c-9-15-7-28-16-39-9 11-7 24-16 39z" fill="#233c31" stroke="#84ac73" stroke-width="2"/>
+      <path d="M18 56c11-6 8-28 21-40m23 40C51 50 54 28 41 16" fill="none" stroke="#c7c984" stroke-width="2"/>
+    </symbol>
   </defs>
   <g id="assets" display="none"/>
 </svg>

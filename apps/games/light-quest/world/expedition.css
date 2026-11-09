@@ -206,3 +206,29 @@ body:has(dialog[open]) .atmosphere i { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Beyond the gates */
+.progress-gems { display: flex; align-items: center; gap: 8px; }
+.tile .splitter-facet { transform: rotate(var(--turn)); transform-origin: 50% 45%; }
+.tile[data-lit] .splitter { filter: drop-shadow(0 0 7px #d5b8fd); }
+.tile .seed, .tile .root-gate { opacity: .84; }
+.tile .seed[data-powered] { filter: drop-shadow(0 0 9px #c2ffb3); transform: scale(1.12); opacity: 1; }
+.tile .root-gate[data-powered] { opacity: .36; transform: scaleY(.58) translateY(30%); }
+.scene:is([data-area="stars"], [data-area="forest"]):not([data-explore]) .portal { display: none; }
+.scene[data-area="stars"] .mist { background: radial-gradient(ellipse, #a7a0fb32, transparent 67%); }
+.scene[data-area="forest"] .mist { background: radial-gradient(ellipse, #87efb832, transparent 67%); }
+.scene[data-dawn] .tree-light { inset: 0 0 20%; background: radial-gradient(ellipse at 32% 28%, #ffcd7584, transparent 69%); }
+.scene[data-dawn] .mist { background: radial-gradient(ellipse at 55% 37%, #ffd89f55, transparent 68%); }
+.door { color: #fff1cb; background: #101f26ee; border-color: #dfc98ea8; box-shadow: 0 4px 14px #010a10b0; min-width: 16%; }
+.door:last-child { background: #15271eeb; }
+.door[data-found] { color: #1a241d; background: linear-gradient(#ead3a2, #c6ae77); }
+.door small { display: block; font-size: 10px; opacity: .88; font-weight: 600; }
+.ending-card { text-align: center; padding: 7px 10px; }
+.ending-card span { display: block; color: #ffe6a3; font-size: 60px; line-height: 1; text-shadow: 0 0 26px #eec05a; }
+.ending-card p { line-height: 1.7; }
+@media (max-width: 620px) {
+  .scene:is([data-area="stars"], [data-area="forest"]):not([data-explore]) .backdrop img { object-position: center; }
+  .progress-gems { gap: 6px; }
+  .door { min-width: 25%; }
+  .door:first-child { left: 61%; }
+}
