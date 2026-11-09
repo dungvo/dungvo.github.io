@@ -41,6 +41,35 @@ export const garden = [
     desc: 'Nối cầu và dẫn một tia sáng qua cả hai tinh thể. Mỗi tinh thể cần một màu riêng.',
     rows: ['.../FB','...R..','...F..','SK=/..','......'],
     filters: [0, 1]
+  },
+  {
+    title: 'Chòm sao đôi', area: 'stars',
+    desc: 'Xoay lăng kính đôi. Một tia đi thẳng, tia còn lại rẽ sang tinh thể phía trên.',
+    rows: ['..T..','.....','S.P.T','.....','..#..']
+  },
+  {
+    title: 'Bản đồ trời đêm', area: 'stars',
+    desc: 'Tách tia rồi chỉnh màu riêng cho từng nhánh để thắp hai đầu bản đồ sao.',
+    rows: ['..R...','..F...','S.PF.B','..#...','......'],
+    filters: [1, 2]
+  },
+  {
+    title: 'Hạt mầm thức giấc', area: 'forest',
+    desc: 'Tia lam đánh thức hạt mầm và mở cửa rễ cây. Sau cánh cửa, tinh thể cần tia vàng.',
+    rows: ['......','......','SFAGFY','......','......'],
+    filters: [0, 1]
+  },
+  {
+    title: 'Dòng suối sau rễ', area: 'forest',
+    desc: 'Dời bóng tối, đánh thức hạt mầm, rồi xoay gương và đổi màu tia cho tinh thể bên kia suối.',
+    rows: ['.....Y','.....F','SFMAG/','......','......'],
+    filters: [0, 0]
+  },
+  {
+    title: 'Bình minh của khu vườn', area: 'dawn',
+    desc: 'Tách tia để một nhánh nuôi hạt mầm. Nhánh còn lại cần cửa rễ, cầu và tia vàng.',
+    rows: ['..B..Y','..A...','..F..=','SKPGF/','..#...'],
+    filters: [0, 0]
   }
 ];
 

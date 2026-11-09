@@ -14,9 +14,13 @@ const svgNS = 'http://www.w3.org/2000/svg';
 const pieces = new URL('./pieces.svg', import.meta.url);
 const art = scene.querySelector('picture');
 const doors = {
-  stars: { title: 'Tinh Tú', item: 'Mảnh Sao', detail: 'Những vì sao rơi xuống mặt hồ. Một mảnh sáng còn đọng lại trong tay bạn.' },
-  forest: { title: 'Rừng Sâu', item: 'Hạt Mầm', detail: 'Dưới vòm lá, một hạt mầm khẽ rung trong lòng bàn tay bạn.' }
+  stars: { title: 'Tinh Tú', item: 'Mảnh Sao', area: 'Đài quan sát', stages: [5, 6] },
+  forest: { title: 'Rừng Sâu', item: 'Hạt Mầm', area: 'Suối Rễ', stages: [7, 8] }
 };
+const gateStage = 4;
+const lastStage = garden.length;
+const chapterNames = { stars: 'Đài quan sát', forest: 'Suối Rễ', dawn: 'Bình minh' };
+const artworks = { stars: 'star-observatory', forest: 'root-grove' };
 
 function read(key) {
   try { return localStorage.getItem(key); } catch { return null; }
@@ -30,7 +34,12 @@ function write(key, value) {
   try { localStorage.setItem(key, value); } catch { /* Play remains available without storage. */ }
 }
 
-const progress = parse(prefix + (isGarden ? '.progress.v8' : '.v1'));
+const progress = isGarden ? parse(prefix + '.progress.v9') ?? parse(prefix + '.progress.v8') : parse(prefix + '.v1');
+const oldAttempt = parse(prefix + '.attempt.v8');
+const savedAttempts = isGarden ? parse(prefix + '.attempts.v9') : null;
+const attempts = new Map();
+if (oldAttempt?.level) attempts.set(oldAttempt.level, oldAttempt);
+for (const [id, attempt] of Object.entries(savedAttempts ?? {})) attempts.set(Number(id), attempt);
 const legacyComplete = isGarden && read(prefix + '.v1') === 'complete';
 const limit = value => Number.isInteger(value) && value >= 1 && value <= stages.length;
 const savedBest = progress?.best;
@@ -41,8 +50,19 @@ const savedItems = parse('light-quest.secret-garden.inventory.v8');
 const inventory = new Set(Object.keys(doors).filter(door => door === oldDoor ||
   (Array.isArray(savedItems) && savedItems.includes(door))));
 
-let unlocked = Math.max(legacyComplete ? 4 : 1, limit(progress?.unlocked) ? progress.unlocked : 1);
-let level = limit(progress?.level) ? Math.min(progress.level, unlocked) : legacyComplete ? 4 : 1;
+let unlocked = Math.max(legacyComplete ? gateStage : 1, limit(progress?.unlocked) ? progress.unlocked : 1);
+const cleared = id => Object.hasOwn(best, id) || (legacyComplete && id < gateStage);
+
+function canPlay(id) {
+  if (!limit(id)) return false;
+  if (!isGarden) return id <= unlocked;
+  if (id <= gateStage) return id === 1 || cleared(id - 1) || id <= unlocked;
+  if (id === lastStage) return Object.values(doors).every(door => cleared(door.stages[1]));
+  const door = doors[stages[id - 1].area];
+  return cleared(gateStage) && inventory.has(stages[id - 1].area) && (id === door.stages[0] || cleared(id - 1));
+}
+
+let level = canPlay(progress?.level) ? progress.level : legacyComplete ? gateStage : 1;
 let grid;
 let history = [];
 let actions = [];
@@ -51,6 +71,7 @@ let beam;
 let hint = null;
 let view;
 let exploring = false;
+let artwork = 'moonwood';
 
 function element(tag, attrs) {
   const node = document.createElementNS(svgNS, tag);
@@ -81,13 +102,20 @@ function buildBlooms() {
 }
 
 function persist() {
-  write(prefix + (isGarden ? '.progress.v8' : '.v1'), JSON.stringify({ unlocked, level, best }));
-  write(prefix + '.attempt.v8', JSON.stringify({ level, actions, exploring }));
+  const attempt = { level, actions };
+  attempts.set(level, attempt);
+  if (isGarden) {
+    write(prefix + '.progress.v9', JSON.stringify({ unlocked, level, best, exploring }));
+    write(prefix + '.attempts.v9', JSON.stringify(Object.fromEntries(attempts)));
+  } else {
+    write(prefix + '.v1', JSON.stringify({ unlocked, level, best }));
+    write(prefix + '.attempt.v8', JSON.stringify(attempt));
+  }
 }
 
 function label(cell, x, y) {
   const where = ' · hàng ' + (y + 1) + ', cột ' + (x + 1);
-  const names = { F: 'Lăng kính ' + colorNames[cell.state + 1], K: cell.state ? 'Công tắc đang bật' : 'Công tắc đang tắt', M: 'Dời bóng tối' };
+  const names = { P: 'Xoay lăng kính đôi', F: 'Lăng kính ' + colorNames[cell.state + 1], K: cell.state ? 'Công tắc đang bật' : 'Công tắc đang tắt', M: 'Dời bóng tối' };
   return (names[cell.type] ?? ('Xoay gương ' + (cell.state ? 'xuống phải' : 'lên phải'))) + where;
 }
 
@@ -97,7 +125,7 @@ function updateTile(x, y) {
   const spot = position(x, y);
   const interactive = controls.includes(type);
   const target = receivers.includes(type);
-  const kind = { S: 'crystal', T: 'crystal', R: 'crystal', B: 'crystal', Y: 'crystal', F: 'prism', K: 'switch', M: 'shadow', '#': 'wall', '=': 'bridge' }[type] ?? 'mirror';
+  const kind = { S: 'crystal', T: 'crystal', R: 'crystal', B: 'crystal', Y: 'crystal', F: 'prism', P: 'splitter', A: 'seed', G: 'root-gate', K: 'switch', M: 'shadow', '#': 'wall', '=': 'bridge' }[type] ?? 'mirror';
   let tile = tiles[y][x];
   if (tile.dataset.type !== type) {
     const replacement = document.createElement(interactive ? 'button' : 'div');
@@ -119,6 +147,7 @@ function updateTile(x, y) {
     if (type !== '.') {
       if (type !== '=' && type !== '#' && type !== 'M') replacement.append(svgUse('pedestal', 'base'));
       replacement.append(svgUse(kind, 'object ' + kind));
+      if (type === 'P') replacement.append(svgUse('splitter-facet', 'object splitter-facet'));
     }
     tile.replaceWith(replacement);
     tile = tiles[y][x] = replacement;
@@ -130,6 +159,8 @@ function updateTile(x, y) {
   tile.style.setProperty('--element', type === 'S' ? '#b6f5ff' :
     colors[type === 'F' ? cell.state + 1 : target ? receivers.indexOf(type) : 0]);
   tile.style.setProperty('--turn', (cell.state ? -44 : 44) + 'deg');
+  tile.toggleAttribute('data-lit', view.lit.has(spot));
+  if (type === 'A' || type === 'G') tile.lastElementChild.toggleAttribute('data-powered', view.relay);
   if (type === 'K') tile.lastElementChild.toggleAttribute('data-pressed', Boolean(cell.state));
   if (type === '=') tile.lastElementChild.toggleAttribute('data-powered', view.bridge);
   if (interactive) {
@@ -179,43 +210,81 @@ function drawBeam(animate) {
   }
 }
 
+function nextAction() {
+  if (exploring) {
+    return canPlay(lastStage) ? {
+      text: cleared(lastStage) ? 'Về Bình minh →' : 'Mở lối Bình minh →',
+      run: () => start(lastStage, attempts.get(lastStage))
+    } : null;
+  }
+  if (!isGarden && level === stages.length) {
+    return view.won ? { text: 'Bước vào khu vườn →', run: () => location.assign('./garden/') } : null;
+  }
+  if (isGarden && level === lastStage) {
+    return view.won ? { text: 'Xem hồi kết →', run: showEnding } : null;
+  }
+  if (isGarden && [gateStage, ...Object.values(doors).map(door => door.stages[1])].includes(level)) {
+    return cleared(level) ? {
+      text: level === gateStage ? 'Khám phá hai cánh cửa →' : 'Trở lại hai cánh cửa →',
+      run: enterDoors
+    } : null;
+  }
+  return canPlay(level + 1) ? { text: 'Màn tiếp →', run: () => start(level + 1, attempts.get(level + 1)) } : null;
+}
+
 function render(message, animate = false) {
   view = trace(grid);
   if (view.won) {
     best[level] = Math.min(best[level] ?? Infinity, actions.length);
-    unlocked = Math.max(unlocked, Math.min(level + 1, stages.length));
-    if (isGarden && level === stages.length) write(prefix + '.v1', 'complete');
+    if (!isGarden || level < gateStage) unlocked = Math.max(unlocked, Math.min(level + 1, stages.length));
+    if (isGarden && level === gateStage) write(prefix + '.v1', 'complete');
   }
-  $('chapter').textContent = exploring ? 'Khu vườn bí mật · Lối đi vừa mở' :
-    (isGarden ? 'Khu vườn bí mật' : 'Thung lũng · ' + stages[level - 1].kind) + ' / ' + String(level).padStart(2, '0');
-  $('title').textContent = exploring ? 'Hai lối qua khu vườn' : stages[level - 1].title;
+  const stage = stages[level - 1];
+  const chapter = isGarden ? chapterNames[stage.area] ?? 'Khu vườn bí mật' : 'Thung lũng · ' + stage.kind;
+  $('chapter').textContent = exploring ? 'Khu vườn bí mật · Ngã rẽ' : chapter + ' / ' + String(level).padStart(2, '0');
+  $('title').textContent = exploring ? 'Hai lối qua khu vườn' : stage.title;
+  const done = stages.filter((_, i) => cleared(i + 1)).length;
   $('progress').replaceChildren();
   if (isGarden) {
-    for (let i = 1; i <= stages.length; i++) {
+    const gems = document.createElement('span');
+    gems.className = 'progress-gems';
+    gems.setAttribute('aria-hidden', 'true');
+    for (const group of [[1, 2, 3, 4], [5, 6], [7, 8], [9]]) {
       const pip = document.createElement('i');
-      pip.toggleAttribute('data-done', Object.hasOwn(best, i) || (legacyComplete && i < 4));
-      pip.setAttribute('aria-hidden', 'true');
-      $('progress').append(pip);
+      pip.toggleAttribute('data-done', group.every(cleared));
+      gems.append(pip);
     }
+    $('progress').append(gems);
   }
-  const done = stages.filter((_, i) => Object.hasOwn(best, i + 1) || (legacyComplete && i < 3)).length;
   $('progress').append(done + ' / ' + stages.length);
   $('progress').setAttribute('aria-label', done + ' trên ' + stages.length + ' màn đã giải');
   $('objectives').textContent = exploring ? 'Chọn một cánh cửa để khám phá' :
-    'Tinh thể ' + view.charged.size + ' / ' + view.total + (view.bridge ? ' · Đã nối cầu' : '');
+    'Tinh thể ' + view.charged.size + ' / ' + view.total + (view.relay ? ' · Cửa rễ mở' : '') + (view.bridge ? ' · Đã nối cầu' : '');
   scene.toggleAttribute('data-tree', isGarden ? level > 1 || view.won : view.won);
   scene.toggleAttribute('data-bloom', isGarden ? level > 2 || level === 2 && view.won : view.won);
   scene.toggleAttribute('data-open', view.won && !exploring);
   scene.toggleAttribute('data-bridge', view.bridge);
+  scene.toggleAttribute('data-dawn', !exploring && isGarden && level === lastStage && view.won);
   $('status').textContent = exploring ? 'Túi khám phá · ' + inventory.size + ' / 2' : view.won ? '✦ Đã thắp sáng' : 'Dẫn đường cho ánh sáng';
-  $('feedback').textContent = message ?? (exploring ? 'Tinh Tú và Rừng Sâu cất giữ hai vật phẩm khác nhau.' :
-    view.won ? (level === stages.length ? 'Tia sáng đã đánh thức lối đi bí mật.' : 'Tinh thể đã sáng. Lối đi tiếp theo đã mở.') : stages[level - 1].desc);
-  $('record').textContent = actions.length + ' thao tác' + (Object.hasOwn(best, level) ? ' · Kỷ lục ' + best[level] : '');
+  const doorway = doors[stage.area];
+  const success = level === lastStage && isGarden ? 'Mảnh Sao và Hạt Mầm đã đánh thức bình minh.' :
+    doorway?.stages[1] === level ? 'Đã thắp sáng ' + doorway.area + '. Quay lại hai cánh cửa để tiếp tục.' :
+      'Tinh thể đã sáng. Lối đi tiếp theo đã mở.';
+  $('feedback').textContent = message ?? (exploring ?
+    (canPlay(lastStage) ? 'Hai vùng đất đã sáng. Mảnh Sao và Hạt Mầm cùng mở lối Bình minh.' :
+      'Mảnh Sao mở lăng kính đôi ở Tinh Tú. Hạt Mầm đánh thức cửa rễ ở Rừng Sâu.') :
+    view.won ? success : stage.desc);
+  $('record').textContent = exploring ? 'Hành trình · ' + done + ' / ' + stages.length :
+    actions.length + ' thao tác' + (Object.hasOwn(best, level) ? ' · Kỷ lục ' + best[level] : '');
+  $('undo').hidden = $('hint').hidden = exploring;
   $('undo').disabled = exploring || !history.length;
   $('hint').disabled = exploring || view.won;
-  $('reset').textContent = exploring ? 'Về thử thách' : '⟳ Chơi lại';
-  $('advance').hidden = exploring || (!view.won && level >= unlocked);
-  $('advance').textContent = level < stages.length ? 'Màn tiếp →' : isGarden ? 'Khám phá hai cánh cửa →' : 'Bước vào khu vườn →';
+  $('reset').hidden = exploring;
+  $('return-doors').hidden = !isGarden || exploring || !cleared(gateStage);
+  const next = nextAction();
+  $('advance').hidden = !next;
+  $('advance').textContent = next?.text ?? '';
+  $('advance').onclick = next?.run ?? null;
   if (!exploring) {
     grid.forEach((row, y) => row.forEach((_, x) => updateTile(x, y)));
     drawBeam(animate);
@@ -224,6 +293,8 @@ function render(message, animate = false) {
 }
 
 function changeArtwork(name) {
+  if (name === artwork) return;
+  artwork = name;
   art.querySelector('source').srcset = new URL(name + '-small.webp', import.meta.url).href;
   art.querySelector('img').src = new URL(name + '.webp', import.meta.url).href;
 }
@@ -239,7 +310,9 @@ function start(next, attempt, transition = true) {
   exploring = false;
   board.hidden = false;
   $('explore').hidden = true;
-  if (scene.hasAttribute('data-explore')) changeArtwork('moonwood');
+  const area = stages[level - 1].area;
+  changeArtwork(artworks[area] ?? 'moonwood');
+  scene.dataset.area = area ?? '';
   scene.removeAttribute('data-explore');
   scene.removeAttribute('data-door');
   grid = makeGrid(stages[level - 1]);
@@ -259,8 +332,10 @@ function start(next, attempt, transition = true) {
   }
   buildBoard();
   render();
-  if (transition) animateArrival();
-  if (isGarden && level === stages.length && view.won && attempt?.exploring === true) enterDoors();
+  if (transition) {
+    animateArrival();
+    $('title').focus({ preventScroll: true });
+  }
 }
 
 function play(x, y) {
@@ -290,7 +365,7 @@ function openMenu(title, content) {
 }
 
 function enterDoors() {
-  if (!isGarden || !view.won || level !== stages.length) return;
+  if (!isGarden || !cleared(gateStage)) return;
   exploring = true;
   board.hidden = true;
   scene.setAttribute('data-explore', '');
@@ -301,16 +376,20 @@ function enterDoors() {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'door';
+    const count = info.stages.filter(cleared).length;
     button.textContent = info.title;
+    const progress = document.createElement('small');
+    progress.textContent = count === info.stages.length ? '✓ Đã thắp sáng' : count + ' / ' + info.stages.length + ' màn';
+    button.append(progress);
     button.toggleAttribute('data-found', inventory.has(door));
     button.onclick = () => {
       const alreadyFound = inventory.has(door);
       inventory.add(door);
       write('light-quest.secret-garden.inventory.v8', JSON.stringify([...inventory]));
       write(legacyChoice, door);
-      scene.dataset.door = door;
-      button.setAttribute('data-found', '');
-      render(info.detail + (alreadyFound ? ' Trong túi đã có ' : ' Bạn nhận được ') + info.item + '.');
+      const next = info.stages.find(id => !cleared(id)) ?? info.stages[0];
+      start(next, attempts.get(next));
+      if (!alreadyFound) render('Bạn nhận được ' + info.item + '. ' + stages[next - 1].desc);
     };
     container.append(button);
   }
@@ -337,14 +416,30 @@ $('hint').onclick = () => {
   }
   const cell = grid[hint.y][hint.x];
   const nextColor = colorNames[(cell.state + 1) % 3 + 1];
-  const messages = { F: 'Đổi lăng kính được đánh dấu sang ' + nextColor + '.', K: (cell.state ? 'Tắt' : 'Bật') + ' công tắc được đánh dấu.', M: 'Dời bóng tối được đánh dấu ra khỏi đường tia.' };
+  const messages = { P: 'Xoay lăng kính đôi được đánh dấu để đổi hướng nhánh rẽ.', F: 'Đổi lăng kính được đánh dấu sang ' + nextColor + '.', K: (cell.state ? 'Tắt' : 'Bật') + ' công tắc được đánh dấu.', M: 'Dời bóng tối được đánh dấu ra khỏi đường tia.' };
   render(messages[cell.type] ?? 'Xoay tấm gương được đánh dấu, rồi theo dõi hướng mới của tia sáng.');
 };
-$('advance').onclick = () => {
-  if (level < unlocked) start(level + 1);
-  else if (view.won && isGarden) enterDoors();
-  else if (view.won) location.assign('./garden/');
-};
+$('return-doors').onclick = enterDoors;
+
+function showEnding() {
+  const content = document.createElement('div');
+  content.className = 'ending-card';
+  const seal = document.createElement('span');
+  seal.textContent = '✦';
+  seal.setAttribute('aria-hidden', 'true');
+  const story = document.createElement('p');
+  story.textContent = 'Mảnh Sao vỡ thành những hạt sáng. Hạt Mầm vươn qua khe đá, đón tia nắng đầu tiên. Từ giờ, khu vườn có thể tự giữ ánh sáng của mình.';
+  const back = document.createElement('button');
+  back.type = 'button';
+  back.textContent = 'Về hai cánh cửa';
+  back.onclick = () => {
+    menu.close();
+    enterDoors();
+  };
+  content.append(seal, story, back);
+  openMenu('Khu vườn đã thức giấc', content);
+}
+
 $('pause').onclick = () => {
   const content = document.createElement('div');
   const p = document.createElement('p');
@@ -367,13 +462,13 @@ $('journal').onclick = () => {
     const id = index + 1;
     const button = document.createElement('button');
     button.type = 'button';
-    button.disabled = id > unlocked;
-    if (id === level) button.setAttribute('aria-current', 'step');
+    button.disabled = !canPlay(id);
+    if (id === level && !exploring) button.setAttribute('aria-current', 'step');
     button.textContent = String(id).padStart(2, '0') + ' · ' + stage.title +
-      (Object.hasOwn(best, id) || legacyComplete && id < 4 ? ' ✓' : id > unlocked ? ' · Đang khóa' : '');
+      (cleared(id) ? ' ✓' : !canPlay(id) ? ' · Đang khóa' : '');
     button.onclick = () => {
       menu.close();
-      if (id !== level) start(id);
+      if (id !== level || exploring) start(id, attempts.get(id));
     };
     list.append(button);
   });
@@ -382,4 +477,5 @@ $('journal').onclick = () => {
 };
 
 buildBlooms();
-start(level, parse(prefix + '.attempt.v8'), false);
+start(level, attempts.get(level), false);
+if (isGarden && (progress?.exploring || oldAttempt?.exploring && !savedAttempts)) enterDoors();
