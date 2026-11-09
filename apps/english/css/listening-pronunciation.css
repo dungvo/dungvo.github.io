@@ -1,0 +1,12 @@
+/* Optional after-answer pronunciation, never shown before listening comprehension. */
+.pronunciation-guide{margin:17px 0;padding:17px 18px;border:1px solid #d9e0df;border-radius:15px;background:#f4f8f7;color:#233b3a}
+.pronunciation-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:13px}
+.pronunciation-heading b{font-size:15px}.pronunciation-heading span{font-size:11px;letter-spacing:.04em;color:#576c69;font-weight:650}
+.pronunciation-label{margin:12px 0 4px!important;font-size:11px!important;letter-spacing:.07em;text-transform:uppercase;color:#526a68;font-weight:800}
+.pronunciation-ipa{font-family:"Noto Sans","Segoe UI",Arial,sans-serif;font-size:18px;line-height:1.7;overflow-wrap:anywhere}
+.pronunciation-stress{font-weight:750;line-height:1.7}
+.pronunciation-vietnamese{font-weight:650;line-height:1.65}
+.pronunciation-tip{margin:10px 0!important;color:#526a68;font-size:13px}
+.pronunciation-guide small{display:block;margin-top:12px;color:#58706c;line-height:1.6}
+.pronunciation-drill{padding-top:12px;border-top:1px solid #d9e0df;font-size:13px}
+@media(max-width:760px){.pronunciation-guide{padding:14px}.pronunciation-heading{align-items:flex-start;flex-wrap:wrap}.pronunciation-ipa{font-size:16px}}
