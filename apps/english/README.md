@@ -151,3 +151,9 @@ The fluency toolkit adds 28 reusable chunks that help the learner keep speaking 
 Listening Levels 2 and 3 now include 24 extra longer sentences and eight extra six-turn conversations. Several items train reduced or connected speech such as **did you**, **could you**, **going to**, and **have to**. The answer feedback still reveals the chunks and meaning only after listening.
 
 Speaking Lab adds eight guided fluency drills: a 60-second answer, a short story, a work update, rephrasing, polite discussion, explaining a technical idea simply, natural small talk, and interview thinking time. Their target chunks are also linked into Chunk Adventure, so the learner can meet the same expression in the library, hear it inside a sentence or conversation, and then use it in speech.
+
+## Listening pronunciation coach (2026-11-09, preview branch)
+
+After a Listening transcript is opened in Levels 1, 2 or 3, the optional pronunciation coach shows curated US IPA, prominent stress/rhythm groups, an approximate Vietnamese reading guide, and a connected-speech tip when an exact matching sentence has been reviewed. It is deliberately absent before the answer/reveal so the listening comprehension task is not spoiled. No user data or localStorage keys change.
+
+The reference lives in `js/listening-pronunciation.js`, with presentation in `css/listening-pronunciation.css`. Add new phrases to the `entries` map using exact English text and manually reviewed IPA, Vietnamese approximation, stress groups and one linked-speech tip. **Never synthesize IPA or Vietnamese spelling using letter substitutions**, which are unreliable in English; sentences without a reviewed guide simply do not show the optional panel. The browser's English TTS remains the listening model. After playback, learners should practice in this order: slow listening, speaking in rhythm groups, normal-speed shadowing, then speaking from memory.
