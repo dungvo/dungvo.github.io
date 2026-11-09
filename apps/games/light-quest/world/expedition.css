@@ -229,6 +229,7 @@ body:has(dialog[open]) .atmosphere i { animation-play-state: paused; }
 @media (max-width: 620px) {
   .scene:is([data-area="stars"], [data-area="forest"]):not([data-explore]) .backdrop img { object-position: center; }
   .progress-gems { gap: 6px; }
-  .door { min-width: 25%; }
+  .door { width: 23%; min-width: 0; min-height: 48px; }
+  .door small { white-space: nowrap; }
   .door:first-child { left: 61%; }
 }

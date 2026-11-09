@@ -379,7 +379,7 @@ function enterDoors() {
     const count = info.stages.filter(cleared).length;
     button.textContent = info.title;
     const progress = document.createElement('small');
-    progress.textContent = count === info.stages.length ? '✓ Đã thắp sáng' : count + ' / ' + info.stages.length + ' thử thách';
+    progress.textContent = count === info.stages.length ? '✓ Đã thắp sáng' : count + ' / ' + info.stages.length + ' màn';
     button.append(progress);
     button.toggleAttribute('data-found', inventory.has(door));
     button.onclick = () => {
