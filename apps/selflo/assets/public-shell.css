@@ -9,3 +9,38 @@ html,body{overflow-x:clip!important}
 @media(max-width:900px){.selflo-site-header{grid-template-columns:auto 1fr 190px!important}.selflo-site-header>nav{gap:18px!important}.selflo-nav-search{width:190px}}
 @media(max-width:680px){.selflo-site-header{grid-template-columns:1fr auto!important}.selflo-nav-search{grid-column:1/-1;grid-row:2;width:100%;height:38px;margin-bottom:10px}.selflo-site-header:has(.selflo-nav-search){height:auto!important;min-height:112px!important}.selflo-site-header:has(.selflo-nav-search)>nav{top:112px}.selflo-shell-toggle{grid-column:2;grid-row:1}}
 @media(prefers-reduced-motion:reduce){.selflo-scroll-reveal{opacity:1;transform:none;transition:none}}
+
+
+/* Cross-platform Vietnamese typography: shared Public/Studio shell.
+   Keep the Lora/DM Sans visual identity while avoiding overly tight glyph spacing
+   and line boxes for Vietnamese combining marks on Windows browsers. */
+:root {
+  --shell-serif: "Lora", Georgia, "Times New Roman", serif;
+  --shell-sans: "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+.selflo-shell-brand {
+  line-height: 1.2 !important;
+  letter-spacing: -.025em !important;
+}
+.hero h1,
+.promise h2,
+.experience h2,
+.privacy-band h2,
+.latest h2,
+.catalog-hero h1 {
+  line-height: 1.17;
+  letter-spacing: -.025em;
+  overflow-wrap: break-word;
+}
+.quote-editorial blockquote {
+  line-height: 1.55 !important;
+  letter-spacing: normal;
+}
