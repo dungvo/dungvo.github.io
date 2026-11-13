@@ -111,13 +111,13 @@ Speaking Lab results are self-reported because this static website cannot inspec
 
 Open `#listening` from Today, Play, or Learn. This focused Vietnamese-language flow contains 100 original sentences. The first 30 live in `content/listening/practice.js`; 70 high-frequency additions live in `content/listening/common-chunks.js`. Ten topics cover clarification, office directions, daily life, data work, meetings, interviews, small talk, requests and responses, phone and chat, and plans and opinions. Each question has one Vietnamese meaning and two curated distractors.
 
-Five-question sessions hide the English transcript until explicitly requested or after an answer. Normal and slow playback use the installed English browser voice; answer choices unlock when audio starts or the learner explicitly reveals the transcript. Revealing before answering marks the attempt as assisted. Incorrect, assisted, and skipped sentences are prioritized for review; clean correct answers remove a sentence from the current review queue. Replays and slow playback do not count as transcript assistance.
+Rounds of up to ten questions hide the English transcript until explicitly requested or after an answer. Normal and slow playback use the installed English browser voice; answer choices unlock when audio starts or the learner explicitly reveals the transcript. Revealing before answering marks the attempt as assisted. Incorrect, assisted, and skipped sentences are prioritized for review; clean correct answers remove a sentence from the current review queue. Replays and slow playback do not count as transcript assistance.
 
 After answering, learners see the transcript, meaning, a chunk note, and a transfer prompt. They can hide the written English to speak from memory and save an original sentence locally. Speech and writing are self-practice, not automatically graded. The optional sentence list is collapsed to avoid spoiling the listening task.
 
 Progress and drafts use a separate `chunkLabListeningV1` localStorage record and do not change existing scores. Its data is scoped to this browser and is not included in the existing main-app progress reset. No microphone permission, backend, or external audio service is required. Add future sentences to the same topic schema with stable unique IDs.
 
-The common-chunk expansion preserves every original topic and sentence ID, so existing attempts, review status, and saved drafts continue to work. Each original topic now has ten sentences; four new topics add ten sentences each. Five-question sessions still prioritize weak, assisted, and unseen material rather than presenting the files in source order.
+The common-chunk expansion preserves every original topic and sentence ID, so existing attempts, review status, and saved drafts continue to work. Each original topic now has ten sentences; four new topics add ten sentences each. Rounds of up to ten questions still prioritize weak, assisted, and unseen material rather than presenting the files in source order.
 
 Selected chunks also receive a translation-trap note from `content/listening/translation-notes.js`. These notes appear only after the learner answers or explicitly reveals the transcript. Each note identifies the misleading word-by-word reading, gives one compact meaning rule, and contrasts the chunk with a similar sentence. Notes are selective so ordinary sentences keep a short feedback flow. The initial set covers 25 high-risk chunks, including `in` versus `for`, `by` versus `until`, frequency versus duration, softening language, phrasal verbs, and common idioms.
 
@@ -126,8 +126,8 @@ Selected chunks also receive a translation-trap note from `content/listening/tra
 Listening Practice now progresses through three distinct skills while keeping the original 100-chunk level and its `chunkLabListeningV1` progress unchanged:
 
 1. **Common Chunks** tests the intent of short, reusable phrases.
-2. **Longer Sentences** contains 54 sentences across ten topics. Each answer reveals the two or three chunks that combine to create the full meaning, plus a selective note where word-by-word translation is misleading.
-3. **Real Conversations** contains 20 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
+2. **Longer Sentences** contains 57 sentences across multiple topics. Each answer reveals the two or three chunks that combine to create the full meaning, plus a selective note where word-by-word translation is misleading.
+3. **Real Conversations** contains 23 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
 
 Levels 2 and 3 store attempts separately in `chunkLabListeningAdvancedV1`. Opening a transcript before answering is treated as assisted practice. Playback uses browser speech synthesis, alternates available English voices by speaker in conversations, and never requires microphone access.
 
@@ -152,8 +152,12 @@ Listening Levels 2 and 3 now include 24 extra longer sentences and eight extra s
 
 Speaking Lab adds eight guided fluency drills: a 60-second answer, a short story, a work update, rephrasing, polite discussion, explaining a technical idea simply, natural small talk, and interview thinking time. Their target chunks are also linked into Chunk Adventure, so the learner can meet the same expression in the library, hear it inside a sentence or conversation, and then use it in speech.
 
-## Listening pronunciation coach (2026-11-09, preview branch)
+## Listening pronunciation coach (2026-11-09)
 
 After a Listening transcript is opened in Levels 1, 2 or 3, the optional pronunciation coach shows curated US IPA, prominent stress/rhythm groups, an approximate Vietnamese reading guide, and a connected-speech tip when an exact matching sentence has been reviewed. It is deliberately absent before the answer/reveal so the listening comprehension task is not spoiled. No user data or localStorage keys change.
 
 The reference lives in `js/listening-pronunciation.js`, with presentation in `css/listening-pronunciation.css`. Add new phrases to the `entries` map using exact English text and manually reviewed IPA, Vietnamese approximation, stress groups and one linked-speech tip. **Never synthesize IPA or Vietnamese spelling using letter substitutions**, which are unreliable in English; sentences without a reviewed guide simply do not show the optional panel. The browser's English TTS remains the listening model. After playback, learners should practice in this order: slow listening, speaking in rhythm groups, normal-speed shadowing, then speaking from memory.
+
+### Listening rounds and workplace scenarios (2026-11-13)
+
+Levels 1 and 2 serve up to ten distinct questions per round. A topic or review queue with fewer than ten eligible items produces a shorter round. Level 3 keeps three comprehension questions per dialogue. Three new scenarios cover a delayed pipeline, a claims data request, and a technical interview about unreliable timestamps.
