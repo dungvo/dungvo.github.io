@@ -19,27 +19,36 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offse
 .intro p{max-width:40ch}
 .characters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:600px;margin:16px 0}
 .characters button{overflow:hidden;display:grid;gap:4px;padding:0;background:#10262de8;text-align:left}
-.characters img{width:100%;height:clamp(140px,32vw,250px);object-fit:cover;object-position:center 35%}
+.characters img{width:100%;height:clamp(152px,43vw,270px);object-fit:contain;object-position:center bottom;background:radial-gradient(ellipse at bottom,#345050,#101f26 74%)}
 .characters span{display:grid;padding:8px 11px;gap:4px}
 .characters strong{font:24px Georgia,serif;color:var(--gold)}
 .characters small{font-size:13px}
 .heading{padding:8px 0}
-#scene{isolation:isolate;position:relative;overflow:hidden;aspect-ratio:1000/562;border:1px solid var(--line);border-radius:13px;background:#132b34;box-shadow:0 10px 28px #0007}
+#scene{isolation:isolate;position:relative;overflow:hidden;aspect-ratio:16/9;border-radius:13px;background:#132b34;box-shadow:0 0 0 1px var(--line),0 10px 28px #0007}
 #scene picture,#land,#beam,#objects{position:absolute;inset:0;width:100%;height:100%}
-#land{object-fit:fill}
+#scene:not([data-area="hub"]){aspect-ratio:3/2}
+#land{object-fit:contain}
 #beam,#objects{pointer-events:none}
 #beam line{vector-effect:non-scaling-stroke;stroke-linecap:round}
 #objects{z-index:2}
-.marker{pointer-events:auto;position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);padding:0 5px;min-width:44px;background:#091e2be8;border-color:#e9c27ba0;font-size:clamp(10px,1.7vw,14px);line-height:1.12}
+.marker{pointer-events:auto;position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);padding:0 5px;min-width:44px;background:linear-gradient(#193840ed,#0b2129f2);border-color:#e9c27ba0;box-shadow:0 2px 10px #041217ad;border-radius:99px;font-size:clamp(10px,1.7vw,14px);line-height:1.12}
 .marker small{display:block;font-size:.8em;color:#ccdcdb}
-.marker[data-powered]{border-color:#78edff;box-shadow:0 0 12px #61ddfbb8}
+.marker[data-powered]{color:#fff0cf;border-color:#f6cd82;box-shadow:0 0 12px #e9bd5f85;background:linear-gradient(#5d4826f6,#302a1df6)}
 .marker[data-focus]{outline:2px solid #f1c479;outline-offset:3px}
 .marker.mirror{min-height:44px;width:44px;display:grid;place-items:center;padding:0}
 .mirror svg{width:34px;height:30px}
 #hero{position:absolute;z-index:3;left:var(--x);top:var(--y);transform:translate(-50%,-82%);display:grid;justify-items:center;pointer-events:none;transition:left .25s,top .25s}
 #hero img{width:clamp(22px,4.5vw,48px);height:clamp(22px,4.5vw,48px);object-fit:cover;object-position:center 12%;border:1px solid var(--gold);border-radius:50%;background:#10323a}
 #hero span{background:#081b22f0;color:var(--gold);border-radius:5px;padding:1px 4px;font-size:10px}
-#status{margin:8px 0;color:#dbe7dd;min-height:2.8em}
+.play-controls{margin-top:12px;padding:10px 12px;border:1px solid #a6905e4d;border-radius:12px;background:#10262bd9}
+#status{margin:0 0 8px;color:#e2e8dc;line-height:1.5}
+.play-controls .actions button{font-size:13px}
+.play-controls .actions{justify-content:flex-start}
+.marker.mirror{border-radius:50%;background:#10242bc7}
+.marker[data-object="cross"]{padding-inline:9px}
+.marker[data-object="skill"]{max-width:100px}
+.marker[data-object="old"]{left:clamp(27px,var(--x),100%)}
+.marker[data-object="stars"],.marker[data-object="roots"]{left:min(var(--x),calc(100% - 34px))}
 .actions{display:flex;gap:7px;flex-wrap:wrap}
 dialog{width:min(420px,calc(100% - 24px));border:1px solid var(--line);border-radius:14px;color:var(--text);background:#102a30;padding:16px}
 dialog::backdrop{background:#07131ac9}
@@ -47,12 +56,29 @@ dialog form{float:right;margin-left:8px}
 .close{width:44px;padding:0;font-size:23px}
 dialog p{color:#d7e2d7}
 @media (max-width:650px) and (orientation:portrait){
- #scene{aspect-ratio:1.16}
- .marker{font-size:10px}
+ main{width:calc(100% - 16px)}
+ .heading{padding:11px 2px}
+ .marker{font-size:11px}
  .marker small{display:none}
+ .marker[data-object="skill"]{max-width:76px}
+ .play-controls .actions button{flex:1 0 auto}
+ .play-controls{margin-top:10px}
 }
 @media (max-height:500px) and (orientation:landscape){
- main{max-width:calc(100dvh * 1.48)}
+ main{
+   width:min(1160px,100% - 20px);
+   padding-inline:max(0px,env(safe-area-inset-left) - 10px) max(0px,env(safe-area-inset-right) - 10px);
+ }
+ #play{display:grid;grid-template-columns:minmax(0,1fr) clamp(126px,21vw,224px);gap:8px 12px;align-items:start}
+ .heading{grid-column:1/-1}
+ #scene{width:min(100%,calc((100dvh - 92px) * 16 / 9));justify-self:center}
+ #scene:not([data-area="hub"]){width:min(100%,calc((100dvh - 92px) * 3 / 2))}
+ .play-controls{margin:0;padding:9px 10px}
+ .play-controls .actions button{flex:1 0 auto}
+ #status{font-size:13px}
+
+ .heading{padding:4px 0}
+ .marker small{display:none}
  header{min-height:44px}
  h1{font-size:22px}
 }
