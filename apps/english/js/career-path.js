@@ -316,7 +316,7 @@
     const [title, phrase, example, first, second, question, correct, wrong, speaking] = units[unit][3][lesson];
     let content;
     if (step === 0) content = review.length ? renderReview(review[0]) : `<h2>No phrases due</h2>${button("Start learning", "next")}`;
-    if (step === 1) content = `<h2>${esc(phrase)}</h2><p>${esc(example)}</p><div class="career-actions">${button("Play example", "play-example", "", false)}${button("Continue to Listen", "next")}</div>`;
+    if (step === 1) content = `<h2>${esc(phrase)}</h2><p>${esc(example)}</p><div class="career-actions">${button("Play example", "play-example", "", false)}${button("Search Chunk Library", "library", "", false)}${button("Continue to Listen", "next")}</div>`;
     if (step === 2) {
       const options = lesson % 2 === 0 ? [correct, wrong] : [wrong, correct];
       content = `<div class="career-actions">${button("▶ Play dialogue", "play-dialogue", "", false)}${button("Play slowly", "play-slow", "", false)}</div>
@@ -360,6 +360,7 @@
     const action = control.dataset.careerAction;
     const active = state.active;
     const lesson = active && units[active.unit][3][active.lesson];
+    if (action === "library") return document.dispatchEvent(new CustomEvent("chunklab:career-phrase", { detail: lesson[1].replaceAll("’", "\'") }));
     if (action === "play-example") return play([lesson[2]], .88);
     if (action === "play-dialogue" || action === "play-slow") return play(lesson.slice(3, 5), action === "play-slow" ? .72 : .94);
 
