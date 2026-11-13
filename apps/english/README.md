@@ -169,3 +169,7 @@ Levels 1 and 2 serve up to ten distinct questions per round. A topic or review q
 - Then: Organize Learn by situation with a next-step action. Link each lesson to its speaking drill and optional story or reading activity. Preserve stable IDs and existing progress. Check the full journey on Safari iOS and Chrome before publishing.
 - External audio: Link directly to British Council recordings. For VOA, verify individual item provenance and credit the original. Add a source URL, CEFR estimate, audio duration, rights status, and an original comprehension or speaking task before publishing each sourced lesson.
 - Check coverage: Count listening exercises linked to at least one library chunk, lessons with a speaking prompt, and audio with verified attribution. Test navigation from Listening to Library and back before every content release.
+
+## Career Path
+
+The home screen leads through six sequential stages, each with three lessons and a speaking challenge. Every lesson includes spaced review when due, a model phrase, a listening question, and an aloud response. Learners rate their own speaking practice. The path records completed lessons, challenges, in-progress steps and phrase review dates in the current browser, using a separate progress record from existing standalone practice. Reviews recur at 1, 3, 7, 14 and 30 days. A review needing help returns the next day. Audio uses the browser’s English speech synthesis.

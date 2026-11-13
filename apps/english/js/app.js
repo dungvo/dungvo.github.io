@@ -745,6 +745,12 @@
   }
 
   function bindEvents() {
+    document.addEventListener("chunklab:career-phrase", event => {
+      $("#chunkSearch").value = event.detail;
+      renderLibrary(event.detail, "All");
+      show("library");
+      location.hash = "library";
+    });
     $("#listeningView").addEventListener("click", event => {
       const button = event.target.closest("[data-listening-chunk]");
       if (!button) return;
@@ -764,7 +770,7 @@
     $$('[data-game="daily"]').forEach((button) => button.addEventListener("click", startDailyChallenge));
     $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (dailyTimerId) { clearInterval(dailyTimerId); dailyTimerId = null; } if (view === "progress") updateProgressView(); if (view === "library") { $("#chunkSearch").value = ""; renderLibrary("", button.dataset.historyTopic || "All"); } if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); if (view === "express") renderExpressions(); if (view === "evidence") renderEvidence(); if (view === "quick") renderQuickRecall(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
     $("#againButton").addEventListener("click", () => start(session.sourceMode, session.topicId)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
-    $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); updateDashboard(); updateProgressView(); } });
+    $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); document.dispatchEvent(new Event("chunklab:reset")); updateDashboard(); updateProgressView(); } });
     $("#restoreHiddenChunks").addEventListener("click", restoreAllQuickChunks); $("#resetQuickRecall").addEventListener("click", resetQuickRecall);
   }
 
