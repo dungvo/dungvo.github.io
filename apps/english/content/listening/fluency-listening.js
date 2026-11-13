@@ -90,4 +90,200 @@
     }
   ].map(c=>({...c,turns:c.turns.map(([speaker,text])=>({speaker,text})),questions:c.questions.map(([prompt,options,answer,explanation])=>({prompt,options,answer,explanation})),chunks:c.chunks.map(([text,meaning])=>({text,meaning}))}));
   data.conversations.push(...conversations);
+
+  const workplaceLessons = [
+    {
+      "id": "pipeline",
+      "title": "Báo pipeline bị trễ",
+      "category": "Công việc dữ liệu",
+      "en": "The pipeline is still running, so the dashboard won't refresh before nine.",
+      "vi": "Pipeline vẫn đang chạy nên dashboard sẽ chưa cập nhật trước 9 giờ.",
+      "distractors": [
+        "Dashboard đã cập nhật lúc 9 giờ.",
+        "Pipeline sẽ bắt đầu sau 9 giờ."
+      ],
+      "chunks": [
+        [
+          "still running",
+          "vẫn đang chạy"
+        ],
+        [
+          "won't refresh before nine",
+          "sẽ chưa cập nhật trước 9 giờ"
+        ]
+      ],
+      "turns": [
+        "Is the dashboard ready for the morning meeting?",
+        "The pipeline is still running, so the dashboard won't refresh before nine.",
+        "Can we use yesterday's numbers in the meantime?",
+        "Yes, but please label them with yesterday's date.",
+        "Got it. When should I check again?",
+        "I'll message you as soon as the refresh finishes."
+      ],
+      "questions": [
+        [
+          "Vì sao dashboard chưa sẵn sàng?",
+          [
+            "Pipeline vẫn đang chạy.",
+            "Dashboard bị xóa.",
+            "Cuộc họp bị hủy."
+          ],
+          0,
+          "Still running cho biết pipeline chưa chạy xong."
+        ],
+        [
+          "Tạm thời dùng số liệu nào?",
+          [
+            "Số tuần trước.",
+            "Số hôm qua có ghi ngày.",
+            "Số dự báo hôm nay."
+          ],
+          1,
+          "In the meantime báo hiệu giải pháp tạm thời."
+        ],
+        [
+          "Kỹ sư sẽ làm gì tiếp?",
+          [
+            "Gửi tin khi cập nhật xong.",
+            "Dời cuộc họp.",
+            "Đổi lịch chạy pipeline."
+          ],
+          0,
+          "As soon as chỉ thời điểm gửi tin."
+        ]
+      ]
+    },
+    {
+      "id": "claims",
+      "title": "Làm rõ yêu cầu dữ liệu bồi thường",
+      "category": "Công việc dữ liệu",
+      "en": "Just to confirm, you want claims submitted last month, including ones that are still open.",
+      "vi": "Để xác nhận lại, bạn muốn các hồ sơ nộp tháng trước, kể cả hồ sơ vẫn đang mở.",
+      "distractors": [
+        "Chỉ lấy hồ sơ đã chi trả tháng trước.",
+        "Chỉ lấy hồ sơ đang mở được nộp tháng này."
+      ],
+      "chunks": [
+        [
+          "just to confirm",
+          "để xác nhận lại"
+        ],
+        [
+          "still open",
+          "vẫn đang mở"
+        ]
+      ],
+      "turns": [
+        "Could you pull last month's claims for me?",
+        "Just to confirm, you want claims submitted last month, including ones that are still open.",
+        "Exactly. Use the submission date and include every status.",
+        "Do you need one row per claim or a summary by status?",
+        "One row per claim, please. I'll build the summary myself.",
+        "Great. I'll send a sample first so you can check the columns."
+      ],
+      "questions": [
+        [
+          "Dùng ngày nào để lọc?",
+          [
+            "Ngày chi trả.",
+            "Ngày nộp hồ sơ.",
+            "Ngày đóng hồ sơ."
+          ],
+          1,
+          "Use the submission date là yêu cầu lọc theo ngày nộp."
+        ],
+        [
+          "File cần chi tiết thế nào?",
+          [
+            "Một dòng mỗi hồ sơ.",
+            "Một dòng mỗi trạng thái.",
+            "Một dòng mỗi tháng."
+          ],
+          0,
+          "One row per claim nghĩa là một dòng cho mỗi hồ sơ."
+        ],
+        [
+          "Kỹ sư sẽ gửi gì trước?",
+          [
+            "Dashboard hoàn chỉnh.",
+            "Báo cáo tổng hợp.",
+            "Một mẫu để kiểm tra cột."
+          ],
+          2,
+          "Send a sample first xác định bước tiếp theo."
+        ]
+      ]
+    },
+    {
+      "id": "interview",
+      "title": "Giải thích cách phát hiện bản ghi thay đổi",
+      "category": "Phỏng vấn",
+      "en": "We compared a recent window of records because the source didn't always update its timestamp.",
+      "vi": "Chúng tôi so sánh các bản ghi trong một khoảng thời gian gần đây vì nguồn không phải lúc nào cũng cập nhật timestamp.",
+      "distractors": [
+        "Chúng tôi chỉ dựa vào timestamp của nguồn.",
+        "Chúng tôi quét toàn bộ dữ liệu mỗi giờ."
+      ],
+      "chunks": [
+        [
+          "a recent window of records",
+          "các bản ghi trong một khoảng gần đây"
+        ],
+        [
+          "didn't always update",
+          "không phải lúc nào cũng cập nhật"
+        ]
+      ],
+      "turns": [
+        "How did you catch updates without reliable timestamps?",
+        "We compared a recent window of records because the source didn't always update its timestamp.",
+        "Why did you choose a seven-day window?",
+        "Most corrections arrived within a week, and the daily check fit our runtime budget.",
+        "What if a record changed after that window?",
+        "We ran a broader monthly check to catch older corrections."
+      ],
+      "questions": [
+        [
+          "Vì sao không thể chỉ dựa vào timestamp?",
+          [
+            "Nguồn đôi lúc không cập nhật timestamp.",
+            "Timestamp bị xóa hằng ngày.",
+            "Mọi bản ghi có cùng timestamp."
+          ],
+          0,
+          "Didn't always update nêu giới hạn của nguồn."
+        ],
+        [
+          "Vì sao chọn bảy ngày?",
+          [
+            "Nguồn chỉ lưu bảy ngày.",
+            "Hầu hết chỉnh sửa đến trong một tuần và kiểm tra chạy kịp.",
+            "Quy định bắt buộc bảy ngày."
+          ],
+          1,
+          "Ứng viên nêu cả thời điểm sửa và ngân sách thời gian chạy."
+        ],
+        [
+          "Họ tìm thay đổi cũ hơn bằng cách nào?",
+          [
+            "Kiểm tra rộng hơn mỗi tháng.",
+            "Kiểm tra toàn bộ mỗi ngày.",
+            "Bỏ qua thay đổi cũ."
+          ],
+          0,
+          "A broader monthly check là bước kiểm tra bù."
+        ]
+      ]
+    }
+  ];
+  data.level2Topics.push({ id: 'workplace-followup', title: 'Trao đổi công việc & phỏng vấn' });
+  for (const { id, title, category, en, vi, distractors, chunks, turns, questions } of workplaceLessons) {
+    const phrases = chunks.map(([text, meaning]) => ({ text, meaning }));
+    data.level2.push({ id: 'work-l2-' + id, topic: 'workplace-followup', en, vi, distractors, chunks: phrases });
+    data.conversations.push({
+      id: 'work-l3-' + id, title, category, situation: title + '.', chunks: phrases,
+      turns: turns.map((text, index) => ({ speaker: index % 2 === 0 ? 'Mai' : 'Alex', text })),
+      questions: questions.map(([prompt, options, answer, explanation]) => ({ prompt, options, answer, explanation }))
+    });
+  }
 })();

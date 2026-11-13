@@ -70,7 +70,7 @@
     [level1, level2, level3].forEach((panel, index) => { panel.hidden = index + 1 !== level; });
     root.querySelectorAll('[data-listening-level]').forEach(button => { const selected = Number(button.dataset.listeningLevel) === level; button.classList.toggle('active', selected); button.setAttribute('aria-selected', selected); });
     root.querySelector('.listening-head .lead').textContent = level === 1 ? 'Nghe common chunks ngắn, chọn đúng ý định rồi mở câu để học cách dùng.' : level === 2 ? 'Nghe câu dài hơn, hiểu toàn bộ ý và nhận ra các chunks tạo nên câu.' : 'Nghe một hội thoại hoàn chỉnh, trả lời câu hỏi rồi học các chunks có thể dùng lại.';
-    root.querySelector('.listening-badge').textContent = level === 1 ? 'Mức 1 · 100 chunks' : level === 2 ? `Mức 2 · ${data.level2.length} câu dài` : `Mức 3 · ${data.conversations.length} hội thoại`;
+    root.querySelector('.listening-badge').textContent = '3 mức luyện nghe';
     try { localStorage.setItem('chunkLabListeningLevel', String(level)); } catch (_) {}
   }
 
@@ -87,7 +87,7 @@
     let candidates = shuffle(l2Pool().filter(item => !review || ['wrong','assisted','skipped'].includes(saved.l2[item.id]?.last)));
     candidates.sort((a,b) => { const rank = x => ['wrong','assisted','skipped'].includes(saved.l2[x.id]?.last) ? 0 : saved.l2[x.id]?.attempts ? 2 : 1; return rank(a)-rank(b) || (saved.l2[a.id]?.attempts||0)-(saved.l2[b.id]?.attempts||0); });
     if (!candidates.length) return;
-    l2Session = {items:candidates.slice(0,5), index:0, results:[], heard:false, assisted:false, answered:false};
+    l2Session = {items:candidates.slice(0,10), index:0, results:[], heard:false, assisted:false, answered:false};
     renderL2Question();
   }
   function l2Current() { return l2Session.items[l2Session.index]; }
@@ -110,7 +110,7 @@
     document.getElementById('l2Feedback').innerHTML=`<div class="listening-result ${outcome==='correct'?'':'assisted'}"><strong>${correct?'Đúng ý rồi.':'Chưa đúng — xem đáp án màu xanh.'}</strong><p>${outcome==='correct'?'Bây giờ xem các chunks đã tạo nên câu.':'Nghe lại một lần sau khi xem cách tách chunks.'}</p></div>`; revealL2(); document.getElementById('l2Next').disabled=false; document.getElementById('l2Skip').hidden=true;
   }
   function revealL2() { const panel=document.getElementById('l2Transcript'); if(!panel.hidden)return; const item=l2Current(); panel.hidden=false; document.getElementById('l2Reveal').hidden=true; panel.innerHTML=`<div class="listening-transcript"><p class="eyebrow">CÂU ĐÃ NGHE</p><h3 lang="en">${esc(item.en)}</h3><p>${esc(item.vi)}</p>${window.ListeningPronunciation?.html(item.en) || ""}${item.note?`<div class="advanced-note"><b>Điểm cần nhớ</b><p>${esc(item.note)}</p></div>`:''}<div class="chunk-breakdown"><b>Các chunks tạo nên câu</b>${item.chunks.map(c=>`<div><span lang="en">${esc(c.text)}</span><i>→</i><span>${esc(c.meaning)}</span></div>`).join('')}</div><p><b>Luyện lại:</b> nghe chậm, dừng trong đầu sau mỗi chunk, rồi nói lại cả câu.</p></div>`; }
-  function advanceL2() { if(!l2Session?.answered)return; stopAudio(); l2Session.index++; if(l2Session.index<l2Session.items.length){renderL2Question();return;} const good=l2Session.results.filter(x=>x==='correct').length; document.getElementById('l2Card').innerHTML=`<p class="eyebrow">HOÀN THÀNH MỨC 2</p><h2>${good} / ${l2Session.results.length} câu hiểu đúng qua nghe</h2><p>Mỗi câu dài là một chuỗi chunks. Hãy chọn một câu khó, nói lại theo từng cụm rồi nối thành câu hoàn chỉnh.</p><div class="listening-actions"><button class="primary" id="l2Again">Luyện thêm 5 câu</button><button class="secondary" id="l2Retry">Ôn câu cần luyện</button></div>`; document.getElementById('l2Again').onclick=()=>startL2(); document.getElementById('l2Retry').onclick=()=>startL2(true); }
+  function advanceL2() { if(!l2Session?.answered)return; stopAudio(); l2Session.index++; if(l2Session.index<l2Session.items.length){renderL2Question();return;} const good=l2Session.results.filter(x=>x==='correct').length; document.getElementById('l2Card').innerHTML=`<p class="eyebrow">HOÀN THÀNH MỨC 2</p><h2>${good} / ${l2Session.results.length} câu hiểu đúng qua nghe</h2><p>Mỗi câu dài là một chuỗi chunks. Hãy chọn một câu khó, nói lại theo từng cụm rồi nối thành câu hoàn chỉnh.</p><div class="listening-actions"><button class="primary" id="l2Again">Luyện lượt tiếp theo</button><button class="secondary" id="l2Retry">Ôn câu cần luyện</button></div>`; document.getElementById('l2Again').onclick=()=>startL2(); document.getElementById('l2Retry').onclick=()=>startL2(true); }
 
   function renderL3Stats() { const seen=data.conversations.filter(c=>saved.l3[c.id]?.attempts).length; const best=data.conversations.reduce((s,c)=>s+(saved.l3[c.id]?.best||0),0); document.getElementById('l3Stats').innerHTML=`<strong>${seen} / ${data.conversations.length}</strong><span>hội thoại đã luyện</span><span>${best} câu hỏi đúng ở lượt tốt nhất</span>`; }
   function startL3() {

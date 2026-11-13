@@ -40,7 +40,7 @@
       const rank = item => ['wrong','assisted','skipped'].includes(stat(item.id).last) ? 0 : !stat(item.id).attempts ? 1 : 2;
       return rank(a) - rank(b) || (stat(a.id).attempts || 0) - (stat(b.id).attempts || 0);
     });
-    session = { items: candidates.slice(0, 5), index: 0, results: [], heard: false, assisted: false, answered: false };
+    session = { items: candidates.slice(0, 10), index: 0, results: [], heard: false, assisted: false, answered: false };
     $('#listeningLibrary').open = false;
     renderQuestion();
   }
@@ -116,12 +116,12 @@
     if (session.index < session.items.length) { renderQuestion(); return; }
     const good = session.results.filter(r => r.outcome === 'correct').length;
     const assisted = session.results.filter(r => r.outcome === 'assisted').length;
-    $('#listeningCard').innerHTML = `<p class="eyebrow">HOÀN THÀNH LƯỢT LUYỆN</p><h2 tabindex="-1" id="listeningFinished">${good} / ${session.items.length} câu đúng qua nghe</h2><p>${assisted} câu có trợ giúp · ${session.results.filter(r => ['wrong','skipped'].includes(r.outcome)).length} câu sai hoặc chưa nghe ra.</p><p>Chọn một câu đã học, che chữ và nói lại. Ngày mai hãy ôn trước khi học câu mới.</p><div class="listening-library"><ol>${session.results.map(r => { const item = all.find(i => i.id === r.id); return `<li><b>${r.outcome === 'correct' ? '✓ Đúng' : r.outcome === 'assisted' ? 'Có trợ giúp' : 'Cần ôn'}</b><p lang="en">${esc(item.en)}</p><p>${esc(item.vi)}</p></li>`; }).join('')}</ol></div><div class="listening-actions"><button type="button" class="primary" id="listeningAgain">Luyện thêm 5 câu</button><button type="button" class="secondary" id="listeningRetry" ${session.results.every(r => r.outcome === 'correct') ? 'disabled' : ''}>Ôn câu cần luyện</button></div>`;
+    $('#listeningCard').innerHTML = `<p class="eyebrow">HOÀN THÀNH LƯỢT LUYỆN</p><h2 tabindex="-1" id="listeningFinished">${good} / ${session.items.length} câu đúng qua nghe</h2><p>${assisted} câu có trợ giúp · ${session.results.filter(r => ['wrong','skipped'].includes(r.outcome)).length} câu sai hoặc chưa nghe ra.</p><p>Chọn một câu đã học, che chữ và nói lại. Ngày mai hãy ôn trước khi học câu mới.</p><div class="listening-library"><ol>${session.results.map(r => { const item = all.find(i => i.id === r.id); return `<li><b>${r.outcome === 'correct' ? '✓ Đúng' : r.outcome === 'assisted' ? 'Có trợ giúp' : 'Cần ôn'}</b><p lang="en">${esc(item.en)}</p><p>${esc(item.vi)}</p></li>`; }).join('')}</ol></div><div class="listening-actions"><button type="button" class="primary" id="listeningAgain">Luyện lượt tiếp theo</button><button type="button" class="secondary" id="listeningRetry" ${session.results.every(r => r.outcome === 'correct') ? 'disabled' : ''}>Ôn câu cần luyện</button></div>`;
     $('#listeningAgain').addEventListener('click', () => start()); $('#listeningRetry').addEventListener('click', () => start(true));
     $('#listeningFinished').focus({preventScroll:true});
   }
   $('#listeningTopic').innerHTML = '<option value="all">Tất cả chủ đề</option>' + topics.map(topic => `<option value="${topic.id}">${esc(topic.title)} · ${topic.items.length} câu</option>`).join('');
-  $('#listeningTopic').addEventListener('change', () => { renderStats(); renderLibrary(); $('#listeningTopicNote').textContent = topics.find(t => t.id === $('#listeningTopic').value)?.note || 'Chọn một chủ đề hoặc luyện kết hợp. Mỗi lượt tối đa 5 câu.'; });
+  $('#listeningTopic').addEventListener('change', () => { renderStats(); renderLibrary(); $('#listeningTopicNote').textContent = topics.find(t => t.id === $('#listeningTopic').value)?.note || 'Chọn một chủ đề hoặc luyện kết hợp. Mỗi lượt tối đa 10 câu.'; });
   $('#listeningStart').addEventListener('click', () => start());
   $('#listeningReview').addEventListener('click', () => start(true));
   root.addEventListener('click', event => {
