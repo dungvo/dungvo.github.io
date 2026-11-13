@@ -286,4 +286,238 @@
       questions: questions.map(([prompt, options, answer, explanation]) => ({ prompt, options, answer, explanation }))
     });
   }
+  const followupLessons = [
+    {
+      "id": "handover",
+      "title": "Bàn giao sự cố cuối ngày",
+      "category": "Họp & phối hợp",
+      "en": "Could you let me know if the retry fails again?",
+      "vi": "Bạn báo cho tôi nếu lần chạy lại vẫn lỗi nhé?",
+      "distractors": [
+        "Hãy chạy lại ngay bây giờ.",
+        "Hãy báo khi pipeline chạy thành công."
+      ],
+      "chunks": [
+        {
+          "text": "could you let me know",
+          "meaning": "bạn báo cho tôi nhé"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Mai",
+          "text": "Is the dashboard back up?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "The dashboard is up, but the overnight import still needs a retry."
+        },
+        {
+          "speaker": "Mai",
+          "text": "Who’s watching the retry?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "I’ll watch it until six. Could you let me know if the retry fails again?"
+        },
+        {
+          "speaker": "Mai",
+          "text": "Sure. I’ll also leave a note in the handover channel."
+        },
+        {
+          "speaker": "Alex",
+          "text": "Thanks. Please include the run ID."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Việc gì còn phải làm?",
+          "options": [
+            "Tạo dashboard mới.",
+            "Chạy lại tác vụ nhập dữ liệu.",
+            "Mở lại dashboard."
+          ],
+          "answer": 1,
+          "explanation": "Chạy lại tác vụ nhập dữ liệu."
+        },
+        {
+          "prompt": "Theo dõi tới mấy giờ?",
+          "options": [
+            "Bảy giờ.",
+            "Chín giờ.",
+            "Sáu giờ."
+          ],
+          "answer": 2,
+          "explanation": "Sáu giờ."
+        },
+        {
+          "prompt": "Ghi gì vào bàn giao?",
+          "options": [
+            "Mã lượt chạy.",
+            "Tên khách hàng.",
+            "Số báo cáo."
+          ],
+          "answer": 0,
+          "explanation": "Mã lượt chạy."
+        }
+      ],
+      "speakingPrompt": "Hand over a failed job. Say what is working, what is still pending, and who should follow up."
+    },
+    {
+      "id": "dedup",
+      "title": "Giải thích số khách hàng bị đếm trùng",
+      "category": "Công việc dữ liệu",
+      "en": "The main reason is that some customers have more than one policy.",
+      "vi": "Lý do chính là một số khách hàng có nhiều hơn một hợp đồng.",
+      "distractors": [
+        "Mỗi khách hàng chỉ có một hợp đồng.",
+        "Một số hợp đồng không có khách hàng."
+      ],
+      "chunks": [
+        {
+          "text": "the main reason is",
+          "meaning": "lý do chính là"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Mai",
+          "text": "Why is the customer count higher in this report?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "The main reason is that some customers have more than one policy."
+        },
+        {
+          "speaker": "Mai",
+          "text": "So the report is counting policies?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "Yes. We need to count unique customer IDs for this metric."
+        },
+        {
+          "speaker": "Mai",
+          "text": "Does that mean we should change the premium total too?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "No. Keep the premium total as it is and update the customer count."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Vì sao số khách hàng cao hơn?",
+          "options": [
+            "Báo cáo cộng cả khách đã rời đi.",
+            "Một số khách hàng có nhiều hợp đồng.",
+            "Nguồn có thêm tháng dữ liệu."
+          ],
+          "answer": 1,
+          "explanation": "Một số khách hàng có nhiều hợp đồng."
+        },
+        {
+          "prompt": "Cần đếm theo gì?",
+          "options": [
+            "Mã hợp đồng duy nhất.",
+            "Mã báo cáo.",
+            "Mã khách hàng duy nhất."
+          ],
+          "answer": 2,
+          "explanation": "Mã khách hàng duy nhất."
+        },
+        {
+          "prompt": "Chỉ số nào cần sửa?",
+          "options": [
+            "Số khách hàng.",
+            "Tổng phí.",
+            "Cả hai chỉ số."
+          ],
+          "answer": 0,
+          "explanation": "Số khách hàng."
+        }
+      ],
+      "speakingPrompt": "Explain the difference between counting policies and counting customers in two sentences."
+    },
+    {
+      "id": "tradeoff",
+      "title": "Trả lời câu hỏi về đánh đổi",
+      "category": "Phỏng vấn",
+      "en": "Off the top of my head, the main trade-off was speed versus completeness.",
+      "vi": "Điều tôi nghĩ đến ngay là phải cân bằng giữa tốc độ và độ đầy đủ.",
+      "distractors": [
+        "Tốc độ và độ đầy đủ đều được đảm bảo ngay.",
+        "Chi phí là đánh đổi duy nhất."
+      ],
+      "chunks": [
+        {
+          "text": "off the top of my head",
+          "meaning": "theo điều tôi nghĩ ra ngay"
+        }
+      ],
+      "turns": [
+        {
+          "speaker": "Mai",
+          "text": "What trade-off did you make on that migration?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "Off the top of my head, the main trade-off was speed versus completeness."
+        },
+        {
+          "speaker": "Mai",
+          "text": "How did that affect the first release?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "We migrated active accounts first and moved the historical records in batches."
+        },
+        {
+          "speaker": "Mai",
+          "text": "How did you know the first release was ready?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "We compared record counts and checked a sample against the source."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Đánh đổi chính là gì?",
+          "options": [
+            "Dung lượng và bộ nhớ.",
+            "Tốc độ và độ đầy đủ.",
+            "Chi phí và bảo mật."
+          ],
+          "answer": 1,
+          "explanation": "Tốc độ và độ đầy đủ."
+        },
+        {
+          "prompt": "Di chuyển dữ liệu nào trước?",
+          "options": [
+            "Tất cả dữ liệu lịch sử.",
+            "Các tài khoản đã đóng.",
+            "Tài khoản đang hoạt động."
+          ],
+          "answer": 2,
+          "explanation": "Tài khoản đang hoạt động."
+        },
+        {
+          "prompt": "Họ kiểm tra trước phát hành thế nào?",
+          "options": [
+            "So số lượng và đối chiếu mẫu với nguồn.",
+            "Chỉ kiểm tra dashboard.",
+            "Chờ phản hồi khách hàng."
+          ],
+          "answer": 0,
+          "explanation": "So số lượng và đối chiếu mẫu với nguồn."
+        }
+      ],
+      "speakingPrompt": "Describe a migration trade-off you made and how you checked the result."
+    }
+  ];
+  for (const {id,title,category,en,vi,distractors,chunks,turns,questions,speakingPrompt} of followupLessons) {
+    data.level2.push({id:'work-l2-'+id,topic:'workplace-followup',en,vi,distractors,chunks});
+    data.conversations.push({id:'work-l3-'+id,title,category,situation:title+'.',chunks,turns,questions,speakingPrompt});
+  }
 })();
