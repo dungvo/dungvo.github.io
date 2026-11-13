@@ -745,6 +745,12 @@
   }
 
   function bindEvents() {
+    document.addEventListener("chunklab:career-phrase", event => {
+      $("#chunkSearch").value = event.detail;
+      renderLibrary(event.detail, "All");
+      show("library");
+      location.hash = "library";
+    });
     $("#listeningView").addEventListener("click", event => {
       const button = event.target.closest("[data-listening-chunk]");
       if (!button) return;
