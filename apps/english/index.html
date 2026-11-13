@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/listening-levels.css?v=20261107">
   <link rel="stylesheet" href="css/listening-pronunciation.css?v=20261109">
   <link rel="stylesheet" href="css/daily-journey.css?v=20261107">
+  <link rel="stylesheet" href="css/career-path.css?v=1">
 </head>
 <body>
   <div class="site-shell">
@@ -22,13 +23,14 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Chunk Lab</span>
       </button>
       <nav aria-label="Main navigation">
-        <button data-nav="home">Today</button><button data-nav="play">Play</button><button data-nav="learn">Learn</button><button data-nav="progress">Journey</button><button data-nav="history">History</button>
+        <button data-nav="home">Career Path</button><button data-nav="play">Play</button><button data-nav="learn">Learn</button><button data-nav="progress">Journey</button><button data-nav="history">History</button>
       </nav>
       <div class="header-meta"><span class="streak-badge">● <span id="headerStreak">0 day streak</span></span><button class="avatar" id="resetButton" title="Reset local progress" aria-label="Reset local progress">DV</button></div>
     </header>
 
     <main>
       <section id="homeView" class="view active">
+        <section id="careerPath" class="career-path" aria-label="Career Path"></section>
         <div class="daily-hero"><div><p class="eyebrow">TODAY · <span id="todayDate"></span></p><h1>Ten minutes.<br><em>One stronger habit.</em></h1><p class="lead">Your daily challenge mixes weak chunks, recent lessons, and useful English for real conversations.</p></div><aside class="daily-level"><span>DAILY ACTIVITY</span><strong><span id="todayCount">0</span> reps</strong><div class="wide-progress"><span id="todayProgressBar"></span></div><small id="todayMessage">A few focused reps will build automatic recall.</small></aside></div>
 
         <section class="daily-challenge-card"><div class="daily-art" aria-label="Animated learner climbing through English chunks"><span class="float-token token-a">A</span><span class="float-token token-spark">✦</span><span class="float-token token-question">?</span><div class="learning-hill"></div><div class="daily-character" aria-hidden="true">🧑🏻‍💻</div></div><div class="daily-challenge-copy"><span class="challenge-label">TODAY'S JOURNEY</span><h2>Chunk Adventure</h2><p>4 chặng · 10–15 phút · nội dung theo tiến độ của bạn</p><div class="challenge-tags"><span>Warm-up</span><span>Listening</span><span>Use it</span><span>Boss conversation</span></div><button class="primary daily-start" data-game="daily" disabled>Bắt đầu hành trình <b>→</b></button></div><div class="daily-score-ring"><strong id="dailyBestScore">—</strong><span>best today</span></div></section>
@@ -221,7 +223,8 @@
     </main>
     <footer><span>Chunk Lab · Your personal English practice</span><button class="footer-history" data-nav="history">View product history ↺</button><span id="sourceNote">Loading content…</span></footer>
   </div>
-  <script src="content/catalog.js?v=20261107"></script><script src="content/evidence/real-usage.js?v=20261015"></script><script src="content/sentence-lab/real-world-lessons.js?v=20261011"></script><script src="js/app.js?v=20261113-connected"></script><script src="js/sentence-lab.js?v=20261011"></script>
+  <script src="content/catalog.js?v=20261107"></script><script src="content/evidence/real-usage.js?v=20261015"></script><script src="content/sentence-lab/real-world-lessons.js?v=20261011"></script><script src="js/app.js?v=20261113-career"></script><script src="js/sentence-lab.js?v=20261011"></script>
   <script src="content/listening/practice.js?v=20261105"></script><script src="content/listening/common-chunks.js?v=20261106"></script><script src="content/listening/translation-notes.js?v=20261106"></script><script src="content/listening/advanced-listening.js?v=20261107"></script><script src="content/listening/fluency-listening.js?v=20261113-connected"></script><script src="js/listening-pronunciation.js?v=20261109"></script><script src="js/listening.js?v=20261113-connected"></script><script src="js/listening-levels.js?v=20261113-connected"></script>
+  <script src="js/career-path.js?v=1"></script>
 </body>
 </html>
