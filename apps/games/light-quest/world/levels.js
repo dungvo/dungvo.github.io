@@ -67,7 +67,7 @@ export const garden = [
   },
   {
     title: 'Bình minh của khu vườn', area: 'dawn',
-    desc: 'Tách tia để một nhánh nuôi hạt mầm. Nhánh còn lại cần cửa rễ, cầu và tia vàng.',
+    desc: 'Thắp sáng hai tinh thể trước khi mặt trời lên. Dấu sáng trên từng cổ vật cho biết nó đang nhận được gì.',
     rows: ['..B..Y','..A...','..F..=','SKPGF/','..#...'],
     filters: [0, 0]
   }

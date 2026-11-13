@@ -72,6 +72,15 @@ let hint = null;
 let view;
 let exploring = false;
 let artwork = 'moonwood';
+let ending = false;
+const bloomKey = 'light-quest.secret-garden.dawn-flower';
+let foundBloom = read(bloomKey) === 'found';
+const chapterMoments = {
+  1: 'Tia sáng đầu tiên đã chạm vào thân cây. Dưới tán lá có một lối đi.',
+  2: 'Hoa đã nở dọc lối đi. Bên kia là một cây cầu chưa có ánh sáng.',
+  3: 'Qua cầu, bạn thấy hai vệt sáng lọt qua khe cổng.',
+  4: 'Cánh cổng đã mở. Hai lối đi hiện ra dưới trăng.'
+};
 
 function element(tag, attrs) {
   const node = document.createElementNS(svgNS, tag);
@@ -105,7 +114,7 @@ function persist() {
   const attempt = { level, actions };
   attempts.set(level, attempt);
   if (isGarden) {
-    write(prefix + '.progress.v9', JSON.stringify({ unlocked, level, best, exploring }));
+    write(prefix + '.progress.v9', JSON.stringify({ unlocked, level, best, exploring, ending }));
     write(prefix + '.attempts.v9', JSON.stringify(Object.fromEntries(attempts)));
   } else {
     write(prefix + '.v1', JSON.stringify({ unlocked, level, best }));
@@ -211,6 +220,7 @@ function drawBeam(animate) {
 }
 
 function nextAction() {
+  if (ending) return { text: 'Về hai cánh cửa →', run: enterDoors };
   if (exploring) {
     return canPlay(lastStage) ? {
       text: cleared(lastStage) ? 'Về Bình minh →' : 'Mở lối Bình minh →',
@@ -241,8 +251,8 @@ function render(message, animate = false) {
   }
   const stage = stages[level - 1];
   const chapter = isGarden ? chapterNames[stage.area] ?? 'Khu vườn bí mật' : 'Thung lũng · ' + stage.kind;
-  $('chapter').textContent = exploring ? 'Khu vườn bí mật · Ngã rẽ' : chapter + ' / ' + String(level).padStart(2, '0');
-  $('title').textContent = exploring ? 'Hai lối qua khu vườn' : stage.title;
+  $('chapter').textContent = ending ? 'Khu vườn bí mật · Hồi kết' : exploring ? 'Khu vườn bí mật · Ngã rẽ' : chapter + ' / ' + String(level).padStart(2, '0');
+  $('title').textContent = ending ? 'Khu vườn đã thức giấc' : exploring ? 'Hai lối qua khu vườn' : stage.title;
   const done = stages.filter((_, i) => cleared(i + 1)).length;
   $('progress').replaceChildren();
   if (isGarden) {
@@ -258,7 +268,7 @@ function render(message, animate = false) {
   }
   $('progress').append(done + ' / ' + stages.length);
   $('progress').setAttribute('aria-label', done + ' trên ' + stages.length + ' màn đã giải');
-  $('objectives').textContent = exploring ? 'Chọn một cánh cửa để khám phá' :
+  $('objectives').textContent = ending ? (foundBloom ? 'Đã tìm thấy Hoa Bình Minh' : 'Tìm bông hoa dưới tia nắng') : exploring ? 'Chọn một cánh cửa để khám phá' :
     'Tinh thể ' + view.charged.size + ' / ' + view.total + (view.relay ? ' · Cửa rễ mở' : '') + (view.bridge ? ' · Đã nối cầu' : '');
   scene.toggleAttribute('data-tree', isGarden ? level > 1 || view.won : view.won);
   scene.toggleAttribute('data-bloom', isGarden ? level > 2 || level === 2 && view.won : view.won);
@@ -267,10 +277,13 @@ function render(message, animate = false) {
   scene.toggleAttribute('data-dawn', !exploring && isGarden && level === lastStage && view.won);
   $('status').textContent = exploring ? 'Túi khám phá · ' + inventory.size + ' / 2' : view.won ? '✦ Đã thắp sáng' : 'Dẫn đường cho ánh sáng';
   const doorway = doors[stage.area];
-  const success = level === lastStage && isGarden ? 'Mảnh Sao và Hạt Mầm đã đánh thức bình minh.' :
+  const success = isGarden && level === lastStage ? 'Tia sáng cuối cùng đã đến đích. Bình minh đang lên.' :
+    isGarden && chapterMoments[level] ? chapterMoments[level] :
     doorway?.stages[1] === level ? 'Đã thắp sáng ' + doorway.area + '. Quay lại hai cánh cửa để tiếp tục.' :
       'Tinh thể đã sáng. Lối đi tiếp theo đã mở.';
-  $('feedback').textContent = message ?? (exploring ?
+  $('feedback').textContent = message ?? (ending ?
+    (foundBloom ? 'Hoa Bình Minh đã được lưu trong Nhật ký hành trình.' :
+      'Ánh sao tan vào đất. Từ chỗ bạn gieo Hạt Mầm, một bông hoa đón nắng đầu tiên.') : exploring ?
     (canPlay(lastStage) ? 'Hai vùng đất đã sáng. Mảnh Sao và Hạt Mầm cùng mở lối Bình minh.' :
       'Mảnh Sao mở lăng kính đôi ở Tinh Tú. Hạt Mầm đánh thức cửa rễ ở Rừng Sâu.') :
     view.won ? success : stage.desc);
@@ -280,8 +293,8 @@ function render(message, animate = false) {
   $('undo').disabled = exploring || !history.length;
   $('hint').disabled = exploring || view.won;
   $('reset').hidden = exploring;
-  $('return-doors').hidden = !isGarden || exploring || !cleared(gateStage);
   const next = nextAction();
+  $('return-doors').hidden = !isGarden || exploring || !cleared(gateStage) || next?.run === enterDoors;
   $('advance').hidden = !next;
   $('advance').textContent = next?.text ?? '';
   $('advance').onclick = next?.run ?? null;
@@ -307,6 +320,8 @@ function animateArrival() {
 
 function start(next, attempt, transition = true) {
   level = next;
+  ending = false;
+  scene.removeAttribute('data-ending');
   exploring = false;
   board.hidden = false;
   $('explore').hidden = true;
@@ -366,6 +381,8 @@ function openMenu(title, content) {
 
 function enterDoors() {
   if (!isGarden || !cleared(gateStage)) return;
+  ending = false;
+  scene.removeAttribute('data-ending');
   exploring = true;
   board.hidden = true;
   scene.setAttribute('data-explore', '');
@@ -422,22 +439,28 @@ $('hint').onclick = () => {
 $('return-doors').onclick = enterDoors;
 
 function showEnding() {
-  const content = document.createElement('div');
-  content.className = 'ending-card';
-  const seal = document.createElement('span');
-  seal.textContent = '✦';
-  seal.setAttribute('aria-hidden', 'true');
-  const story = document.createElement('p');
-  story.textContent = 'Mảnh Sao vỡ thành những hạt sáng. Hạt Mầm vươn qua khe đá, đón tia nắng đầu tiên. Từ giờ, khu vườn có thể tự giữ ánh sáng của mình.';
-  const back = document.createElement('button');
-  back.type = 'button';
-  back.textContent = 'Về hai cánh cửa';
-  back.onclick = () => {
-    menu.close();
-    enterDoors();
+  ending = true;
+  exploring = true;
+  board.hidden = true;
+  scene.setAttribute('data-explore', '');
+  scene.setAttribute('data-ending', '');
+  changeArtwork('garden-dawn');
+  const container = $('explore');
+  const flower = document.createElement('button');
+  flower.type = 'button';
+  flower.className = 'dawn-flower';
+  flower.textContent = foundBloom ? '✓ Hoa Bình Minh' : '✦ Chạm bông hoa';
+  flower.onclick = () => {
+    foundBloom = true;
+    write(bloomKey, 'found');
+    flower.textContent = '✓ Hoa Bình Minh';
+    render('Bạn tìm thấy Hoa Bình Minh. Vật phẩm đã được thêm vào Nhật ký hành trình.');
   };
-  content.append(seal, story, back);
-  openMenu('Khu vườn đã thức giấc', content);
+  container.replaceChildren(flower);
+  container.hidden = false;
+  render();
+  animateArrival();
+  $('title').focus({ preventScroll: true });
 }
 
 $('pause').onclick = () => {
@@ -454,7 +477,9 @@ $('pause').onclick = () => {
 $('journal').onclick = () => {
   const content = document.createElement('div');
   const pack = document.createElement('p');
-  pack.textContent = 'Túi khám phá · ' + ([...inventory].map(door => doors[door].item).join(' · ') || 'Chưa có vật phẩm');
+  const items = [...inventory].map(door => doors[door].item);
+  if (foundBloom) items.push('Hoa Bình Minh');
+  pack.textContent = 'Túi khám phá · ' + (items.join(' · ') || 'Chưa có vật phẩm');
   content.append(pack);
   const list = document.createElement('div');
   list.className = 'level-list';
@@ -478,4 +503,5 @@ $('journal').onclick = () => {
 
 buildBlooms();
 start(level, attempts.get(level), false);
-if (isGarden && (progress?.exploring || oldAttempt?.exploring && !savedAttempts)) enterDoors();
+if (isGarden && progress?.ending && level === lastStage && view.won) showEnding();
+else if (isGarden && (progress?.exploring || oldAttempt?.exploring && !savedAttempts)) enterDoors();
