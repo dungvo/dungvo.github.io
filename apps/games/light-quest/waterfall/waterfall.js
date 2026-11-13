@@ -24,7 +24,7 @@ const locations = {
   source: [140, 142], mirror: [366, 269],
   stars: [885, 145], roots: [851, 420], old: [113, 418],
   upper: [739, 183], lower: [737, 386], idle: [558, 318],
-  hero: [510, 330], bank: [215, 448], crossing: [342, 356], npc: [237, 288], skill: [550, 415], inspect: [222, 398]
+  hero: [510, 330], bank: [215, 448], crossing: [342, 356], npc: [205, 287], skill: [550, 415], inspect: [288, 464]
 };
 let saved = null;
 try { saved = JSON.parse(localStorage.getItem(key)); } catch { /* Saved data is optional. */ }
@@ -44,7 +44,7 @@ const save = () => {
 
 function position(element, point) {
   element.style.setProperty('--x', point[0] / 10 + '%');
-  element.style.setProperty('--y', point[1] / 5.62 + '%');
+  element.style.setProperty('--y', point[1] / 5.625 + '%');
 }
 
 function message(text) { $('status').textContent = text; }
@@ -148,6 +148,7 @@ function render() {
   $('return').classList.toggle('gold', complete);
   if (painted !== scene) {
     painted = scene;
+    $('scene').dataset.area = scene;
     $('scene').querySelector('source').srcset = art[scene][1];
     $('land').src = art[scene][0];
   }
