@@ -18,6 +18,50 @@
     try { localStorage.setItem(KEY, JSON.stringify(saved)); $('#listeningStorageNotice').hidden = true; return true; }
     catch (_) { $('#listeningStorageNotice').hidden = false; return false; }
   }
+  function refreshTopics() {
+    const select = $('#listeningTopic');
+    const previous = select.value;
+    select.innerHTML = '<option value="all">Tất cả chủ đề</option>' + topics.map(topic => `<option value="${esc(topic.id)}">${esc(topic.title)} · ${topic.items.length}</option>`).join('');
+    if (topics.some(topic => topic.id === previous)) select.value = previous;
+    const count = document.querySelector('[data-listening-level="1"] small');
+    count.textContent = all.length + ' cụm & câu ngắn · chọn nghĩa';
+    document.querySelectorAll('[data-listening-chunk-count]').forEach(node => { node.textContent = all.length + ' cụm & câu ngắn'; });
+    renderStats();
+    if ($('#listeningLibrary').open) renderLibrary();
+  }
+
+  function mergeChunks(library) {
+    const normalize = text => text.trim().toLowerCase().replaceAll('’', "'").replace(/[.!?…]+$/, '').trim();
+    const byPhrase = new Map(all.map(item => [normalize(item.en), item]));
+    const advanced = window.AdvancedListening;
+    const groups = [
+      ['shared-library', 'Chunk Library', library.map(item => ({text:item.chunk, meaning:item.meaning, example:item.example}))],
+      ['shared-sentences', 'Cụm từ trong câu dài', (advanced?.level2 || []).flatMap(item => item.chunks.map(chunk => ({...chunk, example:item.en})))],
+      ['shared-dialogues', 'Cụm từ trong hội thoại', (advanced?.conversations || []).flatMap(item => item.chunks)]
+    ];
+    const meanings = [...new Set([...all.map(item => item.vi), ...groups.flatMap(group => group[2].map(item => item.meaning))].filter(value => typeof value === 'string' && value.trim()))];
+    for (const [id, title, phrases] of groups) {
+      const items = [];
+      for (const phrase of phrases) {
+        if (typeof phrase.text !== 'string' || typeof phrase.meaning !== 'string' || !phrase.meaning.trim()) continue;
+        const key = normalize(phrase.text);
+        if (!key) continue;
+        const existing = byPhrase.get(key);
+        if (existing) {
+          existing.sources = [...new Set([...(existing.sources || []), title])];
+          continue;
+        }
+        const offset = meanings.indexOf(phrase.meaning);
+        const distractors = [meanings[(offset + 1) % meanings.length], meanings[(offset + 2) % meanings.length]];
+        const item = {id:'shared:' + key, topic:id, en:phrase.text, vi:phrase.meaning, clue:phrase.example || '', transfer:'Dùng cụm này để nói một câu trong tình huống của bạn.', distractors, sources:[title]};
+        byPhrase.set(key, item);
+        items.push(item);
+      }
+      if (items.length) { topics.push({id,title,items}); all.push(...items); }
+    }
+    refreshTopics();
+  }
+
   function pool() { return $('#listeningTopic').value === 'all' ? all : all.filter(item => item.topic === $('#listeningTopic').value); }
   function stop() { audioSerial++; if ('speechSynthesis' in window) window.speechSynthesis.cancel(); utterance = null; }
   function renderStats() {
@@ -29,7 +73,9 @@
     $('#listeningReview').disabled = !weak.length;
   }
   function renderLibrary() {
-    $('#listeningLibraryList').innerHTML = topics.filter(topic => $('#listeningTopic').value === 'all' || topic.id === $('#listeningTopic').value).map(topic => `<h3>${esc(topic.title)}</h3><ol>${topic.items.map(item => `<li><button type="button" data-listen-library="${item.id}">${esc(item.en)} · Nghe</button><p lang="vi">${esc(item.vi)}</p></li>`).join('')}</ol>`).join('');
+    const query = $('#listeningChunkSearch').value.trim().toLowerCase();
+    const matches = item => [item.en, item.vi, ...(item.sources || [])].some(value => value.toLowerCase().includes(query));
+    $('#listeningLibraryList').innerHTML = topics.filter(topic => $('#listeningTopic').value === 'all' || topic.id === $('#listeningTopic').value).map(topic => ({...topic, items:topic.items.filter(matches)})).filter(topic => topic.items.length).map(topic => `<h3>${esc(topic.title)}</h3><ol>${topic.items.map(item => `<li><button type="button" data-listen-library="${esc(item.id)}">${esc(item.en)} · Nghe</button><p lang="vi">${esc(item.vi)}</p>${item.sources?.length ? `<small>${esc(item.sources.join(" · "))}</small>` : ""}</li>`).join('')}</ol>`).join('') || '<p>Không tìm thấy cụm phù hợp.</p>';
   }
   function start(review = false) {
     stop();
@@ -120,8 +166,7 @@
     $('#listeningAgain').addEventListener('click', () => start()); $('#listeningRetry').addEventListener('click', () => start(true));
     $('#listeningFinished').focus({preventScroll:true});
   }
-  $('#listeningTopic').innerHTML = '<option value="all">Tất cả chủ đề</option>' + topics.map(topic => `<option value="${topic.id}">${esc(topic.title)} · ${topic.items.length} câu</option>`).join('');
-  $('#listeningTopic').addEventListener('change', () => { renderStats(); renderLibrary(); $('#listeningTopicNote').textContent = topics.find(t => t.id === $('#listeningTopic').value)?.note || 'Chọn một chủ đề hoặc luyện kết hợp. Mỗi lượt tối đa 10 câu.'; });
+  $('#listeningTopic').addEventListener('change', () => { renderStats(); if ($('#listeningLibrary').open) renderLibrary(); $('#listeningTopicNote').textContent = topics.find(t => t.id === $('#listeningTopic').value)?.note || 'Chọn một chủ đề hoặc luyện kết hợp. Mỗi lượt tối đa 10 câu.'; });
   $('#listeningStart').addEventListener('click', () => start());
   $('#listeningReview').addEventListener('click', () => start(true));
   root.addEventListener('click', event => {
@@ -134,5 +179,8 @@
   new MutationObserver(() => { if (!root.classList.contains('active')) stop(); }).observe(root, { attributes: true, attributeFilter: ['class'] });
   document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
   window.addEventListener('pagehide', stop);
-  renderStats(); renderLibrary();
+  $('#listeningChunkSearch').addEventListener('input', renderLibrary);
+  $('#listeningLibrary').addEventListener('toggle', () => { if ($('#listeningLibrary').open) renderLibrary(); });
+  window.ChunkLabMergeListeningChunks = mergeChunks;
+  mergeChunks(window.ChunkLabListeningLibrary || []);
 })();
