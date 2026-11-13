@@ -267,6 +267,31 @@
     $("#weakList").innerHTML = weak.map((chunk) => { const stat = itemStat(chunk.id); return `<div class="weak-row"><div><strong>${escapeHtml(chunk.chunk)}</strong><span>${escapeHtml(chunk.meaning)}</span></div><span class="weak-score">${stat.wrong ? `${stat.wrong} miss${stat.wrong === 1 ? "" : "es"}` : "Not practiced"}</span></div>`; }).join("");
     $("#dailyGameHistory").innerHTML = progress.dailyGames.length ? progress.dailyGames.slice(0, 8).map((game) => `<div class="game-history-row"><span>${escapeHtml(game.date)}</span><strong>${game.score}/${game.total} · ${game.percent}%${game.xp ? ` · ${game.xp} XP` : ""}</strong><small>${Math.ceil(game.seconds / 60)} min</small></div>`).join("") : "<p>No completed games yet.</p>";
   }
+  function listeningChunkLinks(item, level) {
+    const map = level === 3 ? DAILY_CONVERSATION_LINKS : level === 2 ? DAILY_SENTENCE_LINKS : {};
+    const phrases = new Set([item.en, ...(item.chunks || []).map(chunk => chunk.text)].filter(Boolean).map(normalizeListeningPhrase));
+    const ids = map[item.id] || [];
+    const matches = chunks.filter(chunk => ids.includes(chunk.id) || phrases.has(normalizeListeningPhrase(chunk.chunk)));
+    return matches.length ? `<div class="listening-actions"><b>Ôn trong Chunk Library</b>${matches.map(chunk => `<button type="button" class="secondary" data-listening-chunk="${escapeHtml(chunk.chunk)}">${escapeHtml(chunk.chunk)} →</button>`).join("")}</div>` : "";
+  }
+  function normalizeListeningPhrase(text) {
+    return text.toLowerCase().replaceAll("’", "'").replace(/[.!?]+$/, "").trim();
+  }
+  window.ChunkLabListeningLinks = { html: listeningChunkLinks };
+
+  function relatedListening(chunk) {
+    const data = window.AdvancedListening;
+    if (!data) return [];
+    const phrase = normalizeListeningPhrase(chunk.chunk);
+    const matches = (item, map) => (map[item.id] || []).includes(chunk.id) ||
+      [item.en, ...item.chunks.map(part => part.text)].filter(Boolean).some(text => normalizeListeningPhrase(text) === phrase);
+    return [[2, data.level2, DAILY_SENTENCE_LINKS, "Câu dài"], [3, data.conversations, DAILY_CONVERSATION_LINKS, "Hội thoại"]]
+      .flatMap(([level, items, map, label]) => {
+        const item = items.find(candidate => matches(candidate, map));
+        return item ? [`<button type="button" class="listen-link" data-practice-level="${level}" data-practice-item="${escapeHtml(item.id)}">Luyện nghe · ${label} →</button>`] : [];
+      });
+  }
+
   function renderLibrary(query = "", topic = libraryTopic) {
     libraryTopic = topic;
     const term = query.trim().toLowerCase();
@@ -276,7 +301,7 @@
     $("#categoryGrid").innerHTML = ["All", ...categories].map((category) => { const count = category === "All" ? chunks.length : chunks.filter((chunk) => chunk.sessionTitle === category).length; return `<button class="category-card ${category === topic ? "active" : ""}" data-library-topic="${escapeHtml(category)}"><strong>${escapeHtml(category)}</strong><span>${count} chunks</span></button>`; }).join("");
     $$('[data-library-topic]').forEach((button) => button.addEventListener("click", () => renderLibrary($("#chunkSearch").value, button.dataset.libraryTopic)));
     $("#libraryCount").textContent = `${filtered.length} chunk${filtered.length === 1 ? "" : "s"}`; $("#sessionCount").textContent = `${registry.sessions.length} content session${registry.sessions.length === 1 ? "" : "s"}`;
-    $("#chunkList").innerHTML = filtered.map((chunk) => `<article class="chunk-item">${chunk.questionNumber ? `<span class="source-tag">PRE-ASSESSMENT · QUESTION ${escapeHtml(chunk.questionNumber)}</span><p class="training-question"><b>${escapeHtml(chunk.sourceQuestion)}</b></p>` : ""}<h3>${escapeHtml(chunk.chunk)}</h3><span class="ipa">${escapeHtml(chunk.ipa)}</span><span class="vi-pronunciation">${escapeHtml(chunk.viPronunciation || "Listen and repeat")}</span><p>${escapeHtml(chunk.meaning)}</p><p class="situation-copy"><b>Use it:</b> ${escapeHtml(chunk.situation)}</p><button class="listen-link" data-speak="${escapeHtml(chunk.chunk)}">▶ Listen</button><span class="source-tag">${escapeHtml(chunk.sessionTitle)}</span></article>`).join("") || `<p class="context">No chunks match “${escapeHtml(query)}”.</p>`;
+    $("#chunkList").innerHTML = filtered.map((chunk) => `<article class="chunk-item">${chunk.questionNumber ? `<span class="source-tag">PRE-ASSESSMENT · QUESTION ${escapeHtml(chunk.questionNumber)}</span><p class="training-question"><b>${escapeHtml(chunk.sourceQuestion)}</b></p>` : ""}<h3>${escapeHtml(chunk.chunk)}</h3><span class="ipa">${escapeHtml(chunk.ipa)}</span><span class="vi-pronunciation">${escapeHtml(chunk.viPronunciation || "Listen and repeat")}</span><p>${escapeHtml(chunk.meaning)}</p><p class="situation-copy"><b>Use it:</b> ${escapeHtml(chunk.situation)}</p><button class="listen-link" data-speak="${escapeHtml(chunk.chunk)}">▶ Listen</button><span class="source-tag">${escapeHtml(chunk.sessionTitle)}</span>${relatedListening(chunk).join("")}</article>`).join("") || `<p class="context">No chunks match “${escapeHtml(query)}”.</p>`;
     bindPronunciation($("#chunkList"));
   }
 
@@ -720,9 +745,24 @@
   }
 
   function bindEvents() {
+    $("#listeningView").addEventListener("click", event => {
+      const button = event.target.closest("[data-listening-chunk]");
+      if (!button) return;
+      $("#chunkSearch").value = button.dataset.listeningChunk;
+      renderLibrary(button.dataset.listeningChunk, "All");
+      show("library");
+      location.hash = "library";
+    });
+    $("#chunkList").addEventListener("click", event => {
+      const button = event.target.closest("[data-practice-item]");
+      if (!button || !window.ChunkLabListeningPractice) return;
+      show("listening");
+      location.hash = "listening";
+      window.ChunkLabListeningPractice.open(Number(button.dataset.practiceLevel), button.dataset.practiceItem);
+    });
     $$('[data-mode]').forEach((button) => button.addEventListener("click", () => start(button.dataset.mode)));
     $$('[data-game="daily"]').forEach((button) => button.addEventListener("click", startDailyChallenge));
-    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (dailyTimerId) { clearInterval(dailyTimerId); dailyTimerId = null; } if (view === "progress") updateProgressView(); if (view === "library") renderLibrary("", button.dataset.historyTopic || libraryTopic); if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); if (view === "express") renderExpressions(); if (view === "evidence") renderEvidence(); if (view === "quick") renderQuickRecall(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
+    $$('[data-nav]').forEach((button) => button.addEventListener("click", () => { const view = button.dataset.nav; if (dailyTimerId) { clearInterval(dailyTimerId); dailyTimerId = null; } if (view === "progress") updateProgressView(); if (view === "library") { $("#chunkSearch").value = ""; renderLibrary("", button.dataset.historyTopic || "All"); } if (view === "speaking") renderSpeaking(); if (view === "stories") renderStories(); if (view === "think") renderContexts(); if (view === "express") renderExpressions(); if (view === "evidence") renderEvidence(); if (view === "quick") renderQuickRecall(); show(view); location.hash = view === "home" ? "" : view; document.title = "Chunk Lab — English Practice"; }));
     $("#againButton").addEventListener("click", () => start(session.sourceMode, session.topicId)); $("#chunkSearch").addEventListener("input", (event) => renderLibrary(event.target.value));
     $("#resetButton").addEventListener("click", () => { if (confirm("Reset all scores and personalized review data on this device?")) { progress = defaultProgress(); saveProgress(); updateDashboard(); updateProgressView(); } });
     $("#restoreHiddenChunks").addEventListener("click", restoreAllQuickChunks); $("#resetQuickRecall").addEventListener("click", resetQuickRecall);

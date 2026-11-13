@@ -126,8 +126,8 @@ Selected chunks also receive a translation-trap note from `content/listening/tra
 Listening Practice now progresses through three distinct skills while keeping the original 100-chunk level and its `chunkLabListeningV1` progress unchanged:
 
 1. **Common Chunks** tests the intent of short, reusable phrases.
-2. **Longer Sentences** contains 57 sentences across multiple topics. Each answer reveals the two or three chunks that combine to create the full meaning, plus a selective note where word-by-word translation is misleading.
-3. **Real Conversations** contains 23 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
+2. **Longer Sentences** contains 60 sentences across multiple topics. Each answer reveals the two or three chunks that combine to create the full meaning, plus a selective note where word-by-word translation is misleading.
+3. **Real Conversations** contains 26 five-to-six-turn dialogues. The learner hears the complete exchange before answering three questions about the main idea, a concrete detail, and an implied action or next step. The transcript remains hidden until requested or until the questions are complete, and every result ends with reusable chunks from the conversation.
 
 Levels 2 and 3 store attempts separately in `chunkLabListeningAdvancedV1`. Opening a transcript before answering is treated as assisted practice. Playback uses browser speech synthesis, alternates available English voices by speaker in conversations, and never requires microphone access.
 
@@ -161,3 +161,11 @@ The reference lives in `js/listening-pronunciation.js`, with presentation in `cs
 ### Listening rounds and workplace scenarios (2026-11-13)
 
 Levels 1 and 2 serve up to ten distinct questions per round. A topic or review queue with fewer than ten eligible items produces a shorter round. Level 3 keeps three comprehension questions per dialogue. Three new scenarios cover a delayed pipeline, a claims data request, and a technical interview about unreliable timestamps.
+
+## Connected Listening roadmap
+
+- Shipped: Listening links matching expressions to the Chunk Library after feedback. The library opens a specific related Level 2 sentence or Level 3 conversation. The same curated IDs used by Chunk Adventure are preferred alongside exact phrase matches. An explicitly linked sentence opens as a single targeted exercise. Ordinary rounds still offer up to ten questions.
+- Next release: Create 12 complete lessons across meeting clarification, data incidents, insurance requests, and technical interviews. For each lesson, link 3–5 existing chunk IDs to a sentence, a dialogue, and a speaking prompt. Review the answer explanations and pronunciation for the key phrases.
+- Then: Organize Learn by situation with a next-step action. Link each lesson to its speaking drill and optional story or reading activity. Preserve stable IDs and existing progress. Check the full journey on Safari iOS and Chrome before publishing.
+- External audio: Link directly to British Council recordings. For VOA, verify individual item provenance and credit the original. Add a source URL, CEFR estimate, audio duration, rights status, and an original comprehension or speaking task before publishing each sourced lesson.
+- Check coverage: Count listening exercises linked to at least one library chunk, lessons with a speaking prompt, and audio with verified attribution. Test navigation from Listening to Library and back before every content release.
