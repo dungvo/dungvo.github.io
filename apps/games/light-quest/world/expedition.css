@@ -223,13 +223,42 @@ body:has(dialog[open]) .atmosphere i { animation-play-state: paused; }
 .door:last-child { background: #15271eeb; }
 .door[data-found] { color: #1a241d; background: linear-gradient(#ead3a2, #c6ae77); }
 .door small { display: block; font-size: 10px; opacity: .88; font-weight: 600; }
-.ending-card { text-align: center; padding: 7px 10px; }
-.ending-card span { display: block; color: #ffe6a3; font-size: 60px; line-height: 1; text-shadow: 0 0 26px #eec05a; }
-.ending-card p { line-height: 1.7; }
 @media (max-width: 620px) {
   .scene:is([data-area="stars"], [data-area="forest"]):not([data-explore]) .backdrop img { object-position: center; }
   .progress-gems { gap: 6px; }
   .door { width: 23%; min-width: 0; min-height: 48px; }
   .door small { white-space: nowrap; }
   .door:first-child { left: 61%; }
+}
+
+.scene-advance, .dawn-flower {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #f4dca3;
+  border-radius: 9px;
+  color: #231b11;
+  background: #efd49a;
+  box-shadow: 0 4px 18px #071314ad;
+  font-weight: 750;
+}
+.scene-advance {
+  position: absolute;
+  z-index: 6;
+  bottom: 8px;
+  right: 10px;
+  max-width: calc(100% - 20px);
+}
+.dawn-flower {
+  position: absolute;
+  left: 60%;
+  bottom: 25%;
+  transform: translateX(-50%);
+  pointer-events: auto;
+}
+.scene[data-ending] .atmosphere { display: none; }
+.scene[data-ending] .backdrop img { object-fit: cover; }
+.scene[data-ending]::after { box-shadow: inset 0 0 32px #16162060; }
+.scene[data-ending] { aspect-ratio: 1.5; }
+@media (max-width: 620px) {
+  .scene-advance { font-size: 13px; }
 }

@@ -62,3 +62,14 @@ Clearing both paths unlocks the combined dawn puzzle (9) and the story ending.
   the normal adventure after their prerequisites are met.
 - New areas load responsive WebP backgrounds on entry. The default garden image
   remains the starting artwork.
+
+## Journey map and ending
+
+The illustrated map at `/apps/games/light-quest/journey/` links the valley and
+garden campaign and the standalone classic mode. It reads the existing save
+keys to show progress and choose where to resume. The 30-stage classic page
+is still available at `/apps/games/light-quest/`.
+
+Finishing the dawn puzzle opens a sunrise scene where the player can find the
+Dawn Flower. Its discovery is saved in the journal. The campaign keeps its
+existing stage layouts and save keys.
