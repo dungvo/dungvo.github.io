@@ -783,6 +783,8 @@
       $("#sourceNote").textContent = `${chunks.length} chunks · ${contentSource}`;
       $("#playChunkCount").textContent = chunks.length;
       $$('[data-mode], [data-game]').forEach((button) => { button.disabled = false; });
+      window.ChunkLabListeningLibrary = chunks;
+      window.ChunkLabMergeListeningChunks?.(chunks);
       updateDashboard(); updateProgressView(); renderLibrary(); renderSpeaking(); renderStories(); renderContexts(); renderExpressions(); renderEvidence();
       const requestedView = location.hash.slice(1); if (["play", "quick", "learn", "listening", "curriculum", "lab", "think", "express", "stories", "speaking", "progress", "library", "evidence", "history"].includes(requestedView)) { if (requestedView === "quick") renderQuickRecall(); show(requestedView); }
     } catch (error) {
