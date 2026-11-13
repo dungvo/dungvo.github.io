@@ -1,0 +1,24 @@
+.career-path{max-width:740px;margin:0 auto 2.5rem;padding:clamp(1rem,4vw,2rem);background:#faf8f2;color:#172238;border:1px solid #e5e0d6;border-radius:24px}
+.career-path h1{font-size:clamp(2rem,6vw,3.2rem);letter-spacing:-.05em;margin:.25rem 0 .5rem;line-height:1.1}
+.career-path h2{font-size:1.1rem;margin:0 0 .35rem}
+.career-path p{line-height:1.55;margin:.45rem 0 1rem}
+.career-track,.career-lessons,.career-steps{list-style:none;padding:0;margin:1rem 0}
+.career-track li{position:relative;display:grid;grid-template-columns:2.25rem minmax(0,1fr);gap:.7rem;padding:.55rem 0}
+.career-track li:not(:last-child)::before{content:"";position:absolute;left:1.1rem;top:2.2rem;bottom:-.6rem;width:2px;background:#ccd8d5}
+.career-marker{z-index:1;display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:50%;background:#dceae6;color:#164c44;font-weight:750}
+.career-track li>div,.career-lessons li{padding:.9rem 1rem;border:1px solid #dfded6;border-radius:16px;background:#fff}
+.career-track .career-current>div{background:#e4f6f0;border-color:#79bfb0}
+.career-track small{display:block;margin-bottom:.5rem;color:#455467}
+.career-path button{min-height:44px;white-space:normal}
+.career-path .primary{background:#006658;color:white}
+.career-path .secondary{background:white;color:#17433d;border:1px solid #b0c4bd}
+.career-path #careerReview{background:#eae1fb;color:#3b2960}
+.career-steps,.career-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.career-steps li{background:#edece6;padding:.4rem .65rem;border-radius:999px;font-size:.9rem}
+.career-steps [aria-current]{background:#006658;color:white}
+.career-options,.career-lessons{display:grid;gap:.65rem}
+.career-options button{text-align:left}
+.career-options [aria-pressed=true]{background:#d8f3e9;outline:2px solid #006658}
+.career-lessons li{display:flex;justify-content:space-between;align-items:center;gap:.65rem;flex-wrap:wrap}
+.career-content{margin-top:.55rem}
+.career-eyebrow{color:#25594f;font-weight:750}
