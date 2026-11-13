@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#091a1d">
+  <title>Cầu Thác · Người Giữ Bình Minh</title>
+  <link rel="stylesheet" href="./waterfall.css">
+  <script type="module" src="./waterfall.js"></script>
+</head>
+<body>
+  <main>
+    <header><a href="../">✦ Ánh Sáng</a><span>Bản chơi thử</span><button id="pause" hidden>Tạm dừng</button></header>
+    <section id="lobby">
+      <div class="intro">
+        <h1>Người Giữ Bình Minh</h1>
+        <p>Hai con đường bị khóa sau trận mưa. Chọn người giữ đèn để tìm lối qua Cầu Thác.</p>
+        <button id="resume" class="gold" hidden>Tiếp tục</button>
+      </div>
+      <div class="characters">
+        <button data-character="an"><img src="./an.webp" width="240" height="298" alt=""><span><strong>An</strong><small>Soi dấu để tìm trụ ẩn</small></span></button>
+        <button data-character="kha"><img src="./kha.webp" width="240" height="298" alt=""><span><strong>Kha</strong><small>Đặt gương dã chiến để mở lối tắt</small></span></button>
+      </div>
+      <a class="classic" href="../">Ô sáng cổ điển · 30 màn</a>
+    </section>
+    <section id="play" hidden>
+      <div class="heading"><h1 id="title" tabindex="-1">Cầu Thác</h1><span id="explored"></span></div>
+      <div id="scene" aria-label="Cảnh giải đố">
+        <picture><source media="(max-width: 650px)" srcset="./falls-small.webp"><img id="land" src="./falls.webp" alt=""></picture>
+        <svg id="beam" viewBox="0 0 1000 562" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div id="objects"></div>
+        <div id="hero" aria-hidden="true"><img id="hero-art" src="./an.webp" alt=""><span id="hero-name"></span></div>
+      </div>
+      <p id="status" role="status"></p>
+      <div class="actions"><button id="undo">↶ Hoàn tác</button><button id="hint">✧ Gợi ý</button><button id="return" hidden>Về Cầu Thác</button></div>
+    </section>
+  </main>
+  <dialog id="modal" aria-labelledby="modal-title">
+    <form method="dialog"><button aria-label="Đóng" class="close">×</button></form>
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+    <div id="modal-actions" class="actions"></div>
+  </dialog>
+</body>
+</html>
