@@ -87,7 +87,7 @@
     let candidates = shuffle(l2Pool().filter(item => !review || ['wrong','assisted','skipped'].includes(saved.l2[item.id]?.last)));
     candidates.sort((a,b) => { const rank = x => ['wrong','assisted','skipped'].includes(saved.l2[x.id]?.last) ? 0 : saved.l2[x.id]?.attempts ? 2 : 1; return rank(a)-rank(b) || (saved.l2[a.id]?.attempts||0)-(saved.l2[b.id]?.attempts||0); });
     if (!candidates.length) return;
-    l2Session = {items:candidates.slice(0,10), index:0, results:[], heard:false, assisted:false, answered:false};
+    l2Session = {items:candidates.slice(0, Number(document.getElementById('l2RoundSize').value)), index:0, results:[], heard:false, assisted:false, answered:false};
     renderL2Question();
   }
   function l2Current() { return l2Session.items[l2Session.index]; }
@@ -139,6 +139,16 @@
   document.getElementById('l2Topic').onchange=renderL2Stats; document.getElementById('l2Start').onclick=()=>startL2(); document.getElementById('l2Review').onclick=()=>startL2(true); document.getElementById('l3Start').onclick=startL3;
   root.addEventListener('click',event=>{ const l2=event.target.closest('[data-l2-audio]'); if(l2&&l2Session)speakText(l2Current().en,l2.dataset.l2Audio==='slow'?.7:.94,'l2AudioStatus',()=>{l2Session.heard=true;enableL2();}); const l3=event.target.closest('[data-l3-audio]'); if(l3&&l3Session)speakConversation(l3Session.item.turns,l3.dataset.l3Audio==='slow'?.72:.94,'l3AudioStatus',()=>{l3Session.heard=true;document.querySelectorAll('[data-l3-option]').forEach(b=>b.disabled=false);}); if(event.target.closest('[data-advanced-stop]'))stopAudio(activeLevel===2?'l2AudioStatus':'l3AudioStatus'); });
   new MutationObserver(()=>{if(!root.classList.contains('active'))stopAudio();}).observe(root,{attributes:true,attributeFilter:['class']}); document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAudio();}); window.addEventListener('pagehide',()=>stopAudio());
+  root.addEventListener('submit', event => {
+    const form = event.target.closest('[data-recording-quiz]');
+    if (!form) return;
+    event.preventDefault();
+    const answer = new FormData(form).get('answer');
+    form.querySelector('[role="status"]').textContent = answer === 'correct'
+      ? 'Đúng rồi. Thử trả lời phần Nói thử bên dưới.'
+      : 'Chưa đúng. Nghe lại bản thu rồi thử lần nữa.';
+  });
+
   window.ChunkLabListeningPractice = {
     open(level, id) {
       const item = (level === 2 ? data.level2 : data.conversations).find(candidate => candidate.id === id);

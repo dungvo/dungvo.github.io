@@ -79,21 +79,82 @@
           <button type="button" class="secondary" data-nav="speaking">Luyện nói · Speaking Lab</button>
           <button type="button" class="secondary" data-game="daily" disabled>Học theo lộ trình · Chunk Adventure</button>
         </nav>
-        <details class="listening-library">
-          <summary>Nghe thêm từ nguồn bên ngoài</summary>
-          <ul>
-            <li><a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/making-decision" target="_blank" rel="noopener">British Council B1 · Making a decision</a> · Nghe và ghi lại quyết định của nhóm.</li>
-            <li><a href="https://learnenglish.britishcouncil.org/free-resources/listening/c1/project-management-meeting" target="_blank" rel="noopener">British Council C1 · A project management meeting</a> · Nghe ai phụ trách việc gì.</li>
-            <li><a href="https://learningenglish.voanews.com/p/5644.html" target="_blank" rel="noopener">VOA · Let's Learn English</a> · Chọn một đoạn ngắn và kể lại bằng hai câu.</li>
-          </ul>
-        </details>
         <div id="listeningLevel1">
         <div class="listening-routine"><div><b>4 phút · Nghe & hiểu</b>Nghe tự nhiên rồi nghe chậm nếu cần.</div><div><b>4 phút · Nhận ra cụm câu</b>Chọn nghĩa, mở câu và xem điểm cần nhớ.</div><div><b>5 phút · Tự nói</b>Nói theo, che câu rồi dùng trong tình huống mới.</div><div><b>2 phút · Ôn lại</b>Chọn 1–2 câu khó để luyện thêm.</div></div>
-        <div class="listening-layout"><aside class="listening-sidebar"><label for="listeningTopic">Chủ đề muốn luyện</label><select id="listeningTopic"></select><p id="listeningTopicNote">Chọn một chủ đề hoặc luyện kết hợp. Mỗi lượt tối đa 10 câu.</p><button type="button" class="primary" id="listeningStart">Luyện tối đa 10 câu</button><button type="button" class="secondary" id="listeningReview" disabled>Ôn câu cần luyện</button><div class="listening-stats" id="listeningStats"></div><small>Giọng đọc theo trình duyệt và giọng tiếng Anh có trên thiết bị. Bấm nút Nghe để phát âm thanh.</small><p id="listeningStorageNotice" hidden>Không lưu được tiến độ. Bạn vẫn có thể luyện; hãy cho phép lưu dữ liệu trang nếu muốn giữ kết quả.</p></aside><article id="listeningCard" class="listening-card"><div class="listening-empty"><p class="eyebrow">NGHE TRƯỚC KHI ĐỌC</p><h2>Bắt đầu với tối đa 10 câu.</h2><p>Chọn chủ đề bên cạnh rồi bấm Bắt đầu. Bạn được nghe lại nhiều lần. Mở câu trước khi trả lời sẽ được ghi nhận là lượt có trợ giúp để ôn lại sau.</p><p>Tiến độ lưu trong trình duyệt này, riêng cho phần luyện nghe.</p></div></article></div>
+        <div class="listening-layout"><aside class="listening-sidebar"><label for="listeningTopic">Chủ đề muốn luyện</label><select id="listeningTopic"></select><label for="listeningRoundSize">Số câu mỗi lượt</label><select id="listeningRoundSize"><option value="5">5 câu</option><option value="10" selected>10 câu</option><option value="15">15 câu</option><option value="20">20 câu</option><option value="30">30 câu</option></select><p id="listeningTopicNote">Chọn một chủ đề hoặc luyện kết hợp. Lượt luyện dùng số câu hiện có trong chủ đề.</p><button type="button" class="primary" id="listeningStart">Bắt đầu luyện</button><button type="button" class="secondary" id="listeningReview" disabled>Ôn câu cần luyện</button><div class="listening-stats" id="listeningStats"></div><small>Giọng đọc theo trình duyệt và giọng tiếng Anh có trên thiết bị. Bấm nút Nghe để phát âm thanh.</small><p id="listeningStorageNotice" hidden>Không lưu được tiến độ. Bạn vẫn có thể luyện; hãy cho phép lưu dữ liệu trang nếu muốn giữ kết quả.</p></aside><article id="listeningCard" class="listening-card"><div class="listening-empty"><p class="eyebrow">NGHE TRƯỚC KHI ĐỌC</p><h2>Chọn số câu rồi bắt đầu.</h2><p>Chọn chủ đề bên cạnh rồi bấm Bắt đầu. Bạn được nghe lại nhiều lần. Mở câu trước khi trả lời sẽ được ghi nhận là lượt có trợ giúp để ôn lại sau.</p><p>Tiến độ lưu trong trình duyệt này, riêng cho phần luyện nghe.</p></div></article></div>
         <details class="listening-library" id="listeningLibrary"><summary>Xem danh sách câu & nghĩa tiếng Việt — mở khi muốn xem trước hoặc ôn bài</summary><p>Danh sách theo chủ đề đang chọn. Giữ phần này đóng khi muốn tự kiểm tra qua nghe.</p><label for="listeningChunkSearch">Tìm cụm từ hoặc nghĩa</label><input id="listeningChunkSearch" type="search"><div id="listeningLibraryList"></div></details>
         </div>
-        <div id="listeningLevel2" class="advanced-listening-panel" hidden><div class="listening-routine"><div><b>1 · Nghe toàn câu</b>Chưa nhìn chữ, bắt lấy các cụm quen.</div><div><b>2 · Chọn toàn ý</b>Không cần hiểu từng từ riêng lẻ.</div><div><b>3 · Tách chunks</b>Xem 2–3 cụm đã tạo nên câu.</div><div><b>4 · Nối & nói lại</b>Nói từng cụm rồi nối thành câu.</div></div><div class="listening-layout"><aside class="listening-sidebar"><h2>Mức 2 · Câu dài</h2><p>Mỗi câu kết hợp 2–3 chunks thông dụng. Chọn Tất cả chủ đề để luyện đủ 10 câu.</p><label for="l2Topic">Chủ đề muốn luyện</label><select id="l2Topic"></select><button type="button" class="primary" id="l2Start">Luyện tối đa 10 câu</button><button type="button" class="secondary" id="l2Review" disabled>Ôn câu cần luyện</button><div class="listening-stats" id="l2Stats"></div><small>Đáp án chỉ mở sau khi bạn nghe hoặc chủ động xin trợ giúp.</small></aside><article id="l2Card" class="listening-card"><div class="listening-empty"><p class="eyebrow">LONGER SENTENCES</p><h2>Nghe chunks bên trong câu dài.</h2><p>Chọn chủ đề rồi bắt đầu. Mục tiêu không phải dịch từng từ, mà nhận ra các cụm quen và hiểu cả câu.</p></div></article></div></div>
-        <div id="listeningLevel3" class="advanced-listening-panel" hidden><div class="listening-routine"><div><b>1 · Nghe toàn cảnh</b>Ai đang nói và họ cần gì?</div><div><b>2 · Bắt chi tiết</b>Nghe lại để tìm thời gian, lý do, hành động.</div><div><b>3 · Trả lời</b>Ý chính, chi tiết và bước tiếp theo.</div><div><b>4 · Thu chunks</b>Học các cụm có thể dùng lại.</div></div><div class="listening-layout"><aside class="listening-sidebar"><h2>Mức 3 · Hội thoại</h2><p>Mỗi bài có 5–6 lượt nói và 3 câu hỏi nghe hiểu.</p><label for="l3Topic">Chủ đề muốn luyện</label><select id="l3Topic"></select><button type="button" class="primary" id="l3Start">Bắt đầu hội thoại</button><div class="listening-stats" id="l3Stats"></div><small>Transcript được ẩn để bạn kiểm tra khả năng nghe thật. Bạn vẫn có thể mở khi cần trợ giúp.</small></aside><article id="l3Card" class="listening-card"><div class="listening-empty"><p class="eyebrow">REAL CONVERSATIONS</p><h2>Nghe để theo kịp cuộc nói chuyện.</h2><p>Nghe toàn bộ hội thoại rồi trả lời về ý chính, chi tiết và hành động tiếp theo. Cuối bài, bạn sẽ nhận các chunks đáng học.</p></div></article></div></div>
+        <div id="listeningLevel2" class="advanced-listening-panel" hidden><div class="listening-routine"><div><b>1 · Nghe toàn câu</b>Chưa nhìn chữ, bắt lấy các cụm quen.</div><div><b>2 · Chọn toàn ý</b>Không cần hiểu từng từ riêng lẻ.</div><div><b>3 · Tách chunks</b>Xem 2–3 cụm đã tạo nên câu.</div><div><b>4 · Nối & nói lại</b>Nói từng cụm rồi nối thành câu.</div></div><div class="listening-layout"><aside class="listening-sidebar"><h2>Mức 2 · Câu dài</h2><p>Mỗi câu kết hợp 2–3 chunks thông dụng. Chọn Tất cả chủ đề để có nhiều câu hơn.</p><label for="l2Topic">Chủ đề muốn luyện</label><select id="l2Topic"></select><label for="l2RoundSize">Số câu mỗi lượt</label><select id="l2RoundSize"><option value="5">5 câu</option><option value="10" selected>10 câu</option><option value="15">15 câu</option><option value="20">20 câu</option><option value="30">30 câu</option></select><button type="button" class="primary" id="l2Start">Bắt đầu luyện</button><button type="button" class="secondary" id="l2Review" disabled>Ôn câu cần luyện</button><div class="listening-stats" id="l2Stats"></div><small>Đáp án chỉ mở sau khi bạn nghe hoặc chủ động xin trợ giúp.</small></aside><article id="l2Card" class="listening-card"><div class="listening-empty"><p class="eyebrow">LONGER SENTENCES</p><h2>Nghe chunks bên trong câu dài.</h2><p>Chọn chủ đề rồi bắt đầu. Mục tiêu không phải dịch từng từ, mà nhận ra các cụm quen và hiểu cả câu.</p></div></article></div></div>
+        <div id="listeningLevel3" class="advanced-listening-panel" hidden>
+        <details class="listening-library">
+          <summary>Hội thoại có bản thu · 5 bài từ British Council</summary>
+          <p>Mở bản thu ở trang nguồn, rồi quay lại trả lời và nói thử.</p>
+          <details class="listening-library">
+            <summary>Making a decision · B1</summary>
+            <p><a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/making-decision" target="_blank" rel="noopener">▶ Nghe bản thu gốc · British Council ↗</a></p>
+            <form data-recording-quiz>
+              <fieldset><legend>How does the team decide to handle the first phase?</legend>
+                <label><input type="radio" name="answer" value="correct" required> Start soon and keep planning the later phases.</label><br>
+                <label><input type="radio" name="answer" value="incorrect" required> Wait until every phase has a fixed schedule.</label><br>
+              </fieldset>
+              <button type="submit" class="secondary">Kiểm tra đáp án</button>
+              <p role="status"></p>
+            </form>
+            <p><b>Nói thử:</b> Explain how your team handles a plan that may change.</p>
+          </details>
+          <details class="listening-library">
+            <summary>A phone call from a customer · B1</summary>
+            <p><a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/phone-call-customer" target="_blank" rel="noopener">▶ Nghe bản thu gốc · British Council ↗</a></p>
+            <form data-recording-quiz>
+              <fieldset><legend>What does the customer want to change?</legend>
+                <label><input type="radio" name="answer" value="incorrect" required> The address for the latest delivery.</label><br>
+                <label><input type="radio" name="answer" value="correct" required> The time allowed to pay the invoice.</label><br>
+              </fieldset>
+              <button type="submit" class="secondary">Kiểm tra đáp án</button>
+              <p role="status"></p>
+            </form>
+            <p><b>Nói thử:</b> Ask a supplier for more time and explain why.</p>
+          </details>
+          <details class="listening-library">
+            <summary>Work–life balance · B1</summary>
+            <p><a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/work-life-balance" target="_blank" rel="noopener">▶ Nghe bản thu gốc · British Council ↗</a></p>
+            <form data-recording-quiz>
+              <fieldset><legend>What benefit of mobile access does the guest mention?</legend>
+                <label><input type="radio" name="answer" value="correct" required> People can move some work to a different time or place.</label><br>
+                <label><input type="radio" name="answer" value="incorrect" required> People no longer receive email outside office hours.</label><br>
+              </fieldset>
+              <button type="submit" class="secondary">Kiểm tra đáp án</button>
+              <p role="status"></p>
+            </form>
+            <p><b>Nói thử:</b> Describe one rule you use to keep work and home time separate.</p>
+          </details>
+          <details class="listening-library">
+            <summary>Chatting about a series · B1</summary>
+            <p><a href="https://learnenglish.britishcouncil.org/free-resources/listening/b1/chatting-about-series" target="_blank" rel="noopener">▶ Nghe bản thu gốc · British Council ↗</a></p>
+            <form data-recording-quiz>
+              <fieldset><legend>Why does one speaker find the newer series less exciting?</legend>
+                <label><input type="radio" name="answer" value="incorrect" required> It introduces too many new lead characters.</label><br>
+                <label><input type="radio" name="answer" value="correct" required> It is easier to guess what will happen to major characters.</label><br>
+              </fieldset>
+              <button type="submit" class="secondary">Kiểm tra đáp án</button>
+              <p role="status"></p>
+            </form>
+            <p><b>Nói thử:</b> Recommend a series and describe what makes it worth watching.</p>
+          </details>
+          <details class="listening-library">
+            <summary>A project management meeting · C1</summary>
+            <p><a href="https://learnenglish.britishcouncil.org/free-resources/listening/c1/project-management-meeting" target="_blank" rel="noopener">▶ Nghe bản thu gốc · British Council ↗</a></p>
+            <form data-recording-quiz>
+              <fieldset><legend>How will Barbara help Matteo finish the designs?</legend>
+                <label><input type="radio" name="answer" value="correct" required> She’ll take on some of his regular work.</label><br>
+                <label><input type="radio" name="answer" value="incorrect" required> She’ll take ownership of the designs herself.</label><br>
+              </fieldset>
+              <button type="submit" class="secondary">Kiểm tra đáp án</button>
+              <p role="status"></p>
+            </form>
+            <p><b>Nói thử:</b> Propose how to free up a teammate’s time before a deadline.</p>
+          </details>
+        </details><div class="listening-routine"><div><b>1 · Nghe toàn cảnh</b>Ai đang nói và họ cần gì?</div><div><b>2 · Bắt chi tiết</b>Nghe lại để tìm thời gian, lý do, hành động.</div><div><b>3 · Trả lời</b>Ý chính, chi tiết và bước tiếp theo.</div><div><b>4 · Thu chunks</b>Học các cụm có thể dùng lại.</div></div><div class="listening-layout"><aside class="listening-sidebar"><h2>Mức 3 · Hội thoại</h2><p>Mỗi bài có 5–6 lượt nói và 3 câu hỏi nghe hiểu.</p><label for="l3Topic">Chủ đề muốn luyện</label><select id="l3Topic"></select><button type="button" class="primary" id="l3Start">Bắt đầu hội thoại</button><div class="listening-stats" id="l3Stats"></div><small>Transcript được ẩn để bạn kiểm tra khả năng nghe thật. Bạn vẫn có thể mở khi cần trợ giúp.</small></aside><article id="l3Card" class="listening-card"><div class="listening-empty"><p class="eyebrow">REAL CONVERSATIONS</p><h2>Nghe để theo kịp cuộc nói chuyện.</h2><p>Nghe toàn bộ hội thoại rồi trả lời về ý chính, chi tiết và hành động tiếp theo. Cuối bài, bạn sẽ nhận các chunks đáng học.</p></div></article></div></div>
       </section>
 
       <section id="dailyGameView" class="view daily-game-view" aria-live="polite"><div class="daily-game-top"><button class="back-button" data-nav="play" aria-label="Leave Daily Journey">←</button><div><span id="dailyQuestionLabel">CHUNK ADVENTURE</span><div class="daily-game-progress"><i id="dailyGameProgressBar"></i></div></div><time id="dailyGameTimer">12:00</time></div><div id="dailyMissionMap" class="daily-mission-map" aria-label="Bốn chặng Daily Practice"></div><div id="dailyGameCard" class="daily-game-card"></div></section>
@@ -224,7 +285,7 @@
     <footer><span>Chunk Lab · Your personal English practice</span><button class="footer-history" data-nav="history">View product history ↺</button><span id="sourceNote">Loading content…</span></footer>
   </div>
   <script src="content/catalog.js?v=20261107"></script><script src="content/evidence/real-usage.js?v=20261015"></script><script src="content/sentence-lab/real-world-lessons.js?v=20261011"></script><script src="js/app.js?v=20261113-shared-chunks"></script><script src="js/sentence-lab.js?v=20261011"></script>
-  <script src="content/listening/practice.js?v=20261105"></script><script src="content/listening/common-chunks.js?v=20261106"></script><script src="content/listening/translation-notes.js?v=20261106"></script><script src="content/listening/advanced-listening.js?v=20261107"></script><script src="content/listening/fluency-listening.js?v=20261113-connected"></script><script src="js/listening-pronunciation.js?v=20261109"></script><script src="js/listening.js?v=20261113-shared-chunks"></script><script src="js/listening-levels.js?v=20261113-connected"></script>
+  <script src="content/listening/practice.js?v=20261105"></script><script src="content/listening/common-chunks.js?v=20261106"></script><script src="content/listening/translation-notes.js?v=20261106"></script><script src="content/listening/advanced-listening.js?v=20261107"></script><script src="content/listening/fluency-listening.js?v=20261113-connected"></script><script src="js/listening-pronunciation.js?v=20261109"></script><script src="js/listening.js?v=20261113-rounds"></script><script src="js/listening-levels.js?v=20261113-rounds"></script>
   <script src="js/career-path.js?v=1"></script>
 </body>
 </html>

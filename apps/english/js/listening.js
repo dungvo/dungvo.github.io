@@ -86,7 +86,7 @@
       const rank = item => ['wrong','assisted','skipped'].includes(stat(item.id).last) ? 0 : !stat(item.id).attempts ? 1 : 2;
       return rank(a) - rank(b) || (stat(a.id).attempts || 0) - (stat(b.id).attempts || 0);
     });
-    session = { items: candidates.slice(0, 10), index: 0, results: [], heard: false, assisted: false, answered: false };
+    session = { items: candidates.slice(0, Number($('#listeningRoundSize').value)), index: 0, results: [], heard: false, assisted: false, answered: false };
     $('#listeningLibrary').open = false;
     renderQuestion();
   }
@@ -166,7 +166,7 @@
     $('#listeningAgain').addEventListener('click', () => start()); $('#listeningRetry').addEventListener('click', () => start(true));
     $('#listeningFinished').focus({preventScroll:true});
   }
-  $('#listeningTopic').addEventListener('change', () => { renderStats(); if ($('#listeningLibrary').open) renderLibrary(); $('#listeningTopicNote').textContent = topics.find(t => t.id === $('#listeningTopic').value)?.note || 'Chọn một chủ đề hoặc luyện kết hợp. Mỗi lượt tối đa 10 câu.'; });
+  $('#listeningTopic').addEventListener('change', () => { renderStats(); if ($('#listeningLibrary').open) renderLibrary(); $('#listeningTopicNote').textContent = topics.find(t => t.id === $('#listeningTopic').value)?.note || 'Chọn một chủ đề hoặc luyện kết hợp. Lượt luyện dùng số câu hiện có trong chủ đề.'; });
   $('#listeningStart').addEventListener('click', () => start());
   $('#listeningReview').addEventListener('click', () => start(true));
   root.addEventListener('click', event => {
