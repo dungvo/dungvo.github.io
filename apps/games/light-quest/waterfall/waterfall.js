@@ -1,8 +1,10 @@
 import { apply, gear, initial, outputs, routes, titles, targets } from './engine.mjs';
 
-import { activate, trace } from '../world/optics.js';
+import { trace } from '../world/optics.js';
 import { chapters, routesToChapters, finale } from './chapters.js';
 import { chapterGrid, chapterHint, paintChapter } from './chapter-board.js';
+
+import { chapterMove } from './chapter-moves.js';
 
 const $ = id => document.getElementById(id);
 const key = 'light-quest.waterfall.v1';
@@ -211,8 +213,8 @@ function renderChapter(step) {
     ? room === finale ? 'Hai mạch đã sáng. Từ xa, cả tháp làng và bờ hồ cùng đón bình minh.'
       : 'Tinh thể đã sáng. Tiến độ được lưu trên bản đồ màn.'
     : stage.desc + (view.relay ? ' Cửa rễ đã mở.' : '') + (view.bridge ? ' Cầu đã nối.' : '')));
-  paintChapter($('chapter-board'), chapterBeam, grid, view, step, (x, y) => {
-    if (view.won || !activate(grid, x, y)) return;
+  paintChapter($('chapter-board'), chapterBeam, stage, grid, view, step, (x, y) => {
+    if (view.won || !chapterMove(stage, grid, x, y)) return;
     roomAttempts[room].push([x, y]);
     renderChapter();
     save();
@@ -356,12 +358,13 @@ $('chapters').onclick = () => {
       if (isOpen(id)) buttons.push([chapters[id].title + (done.has(id) ? ' ✓' : ''), () => enterRoom(id)]);
     }
   }
-  dialog('Bản đồ màn', done.size + ' / 12 màn mới đã giải. Hoàn thành phòng đầu của mỗi lối để mở khu đó. ' +
+  dialog('Bản đồ màn', done.size + ' / ' + Object.keys(chapters).length + ' màn đã giải. Hoàn thành phòng đầu của mỗi lối để mở khu đó. ' +
     'Giải xong Đài Sao và Suối Rễ để mở Hai mạch bình minh.', buttons);
 };
 $('hint').onclick = () => {
   if (room) {
-    const step = chapterHint(chapterGrid(chapters[room], roomAttempts[room]));
+    const stage = chapters[room];
+    const step = chapterHint(stage, chapterGrid(stage, roomAttempts[room]));
     if (step) renderChapter(step);
     else message('Thử hoàn tác để tìm lại đường sáng.');
     return;

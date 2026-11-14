@@ -1,4 +1,6 @@
-import { makeGrid, activate, trace, solve, controls, receivers, colorNames } from '../world/optics.js';
+import { makeGrid, solve, controls, receivers, colorNames } from '../world/optics.js';
+
+import { chapterMove, linkGroups } from './chapter-moves.js';
 
 const colors = ['#ffe6a8', '#ff7a85', '#68e8ff', '#ffe277'];
 const art = new URL('../world/pieces.svg', import.meta.url);
@@ -18,24 +20,25 @@ export function chapterGrid(stage, moves) {
   let grid = makeGrid(stage);
   for (const move of moves) {
     if (!Array.isArray(move)) break;
-    const next = activate(grid, ...move);
+    const next = chapterMove(stage, grid, ...move);
     if (!next) break;
     grid = next;
   }
   return grid;
 }
 
-export function chapterHint(grid) {
-  const step = solve(grid)?.[0];
+export function chapterHint(stage, grid) {
+  const step = solve(grid, (board, x, y) => chapterMove(stage, board, x, y))?.[0];
   if (!step) return null;
   const cell = grid[step.y][step.x];
   const label = labels[cell.type];
   const text = cell.type === 'F' ? label + ' sang ' + colorNames[(cell.state + 1) % 3 + 1] + '.' :
     label + ' ở ô đang viền sáng.';
-  return { ...step, text };
+  const linked = linkGroups(stage, step.x, step.y);
+  return { ...step, text: linked.length ? text + ' Các vật cùng nhóm cũng xoay.' : text };
 }
 
-export function paintChapter(board, beam, grid, view, step, move) {
+export function paintChapter(board, beam, stage, grid, view, step, move) {
   const width = grid[0].length;
   const height = grid.length;
   const previous = document.activeElement?.dataset.cell;
@@ -55,6 +58,17 @@ export function paintChapter(board, beam, grid, view, step, move) {
       const detail = type === 'F' ? ' · ' + colorNames[state + 1] : type === 'K' ? (state ? ' · bật' : ' · tắt') : '';
       cell.setAttribute('aria-label', labels[type] + detail + ' · hàng ' + (y + 1) + ' ô ' + (x + 1));
       cell.onclick = () => move(x, y);
+      const groups = linkGroups(stage, x, y);
+      if (groups.length) {
+        const tag = document.createElement('span');
+        tag.className = 'gear-tag';
+        tag.textContent = groups.map(group => 'ABC'[stage.links.indexOf(group)]).join('·');
+        cell.append(tag);
+        cell.setAttribute('aria-label', cell.getAttribute('aria-label') + ' · bánh răng ' + tag.textContent);
+        if (step && groups.some(group => group.some(([column, row]) => step.x === column && step.y === row))) {
+          cell.setAttribute('data-gear-hint', '');
+        }
+      }
     }
     if (icons[type]) {
       const token = svg('svg', { viewBox: '0 0 80 80', 'aria-hidden': 'true' });
