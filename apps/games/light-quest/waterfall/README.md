@@ -9,3 +9,7 @@ Bản thử nằm tại `/apps/games/light-quest/waterfall/`. Serve repository b
 - Bản thử minh họa ba lối đi bằng phòng ngắn. Nhân vật trong cảnh dùng ảnh đại diện di chuyển giữa điểm đứng. Các đoạn laser theo điểm đã thiết kế, dùng để thử đường đi và chưa mô phỏng quang học liên tục.
 
 Thiết kế tổng hợp v0.3: https://chatgpt.com/library?file_id=libfile_699a990dac4c8191b23f1d549b76e9fb&account_id=personal
+
+## Các màn mở rộng
+
+Hoàn thành phòng đầu của Đài Sao, Suối Rễ hoặc Lối Cũ để mở chuỗi màn tương ứng. Bản đồ màn cho phép tiếp tục phòng đã mở. Tổng cộng có 12 câu đố dẫn tia mới gồm 4 Đài Sao, 4 Suối Rễ, 3 Lối Cũ và 1 màn Bình minh mở sau khi giải xong hai tuyến chính. Các phòng mới tái sử dụng bộ xử lý quang học và bộ vật thể SVG của World/Garden. Hồ sơ cũ mở phòng theo các lối đã hoàn thành. Bản lưu giữ cả các thao tác trong từng phòng, nên có thể hoàn tác sau khi tải lại.

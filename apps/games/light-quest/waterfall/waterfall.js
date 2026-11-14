@@ -1,5 +1,9 @@
 import { apply, gear, initial, outputs, routes, titles, targets } from './engine.mjs';
 
+import { activate, trace } from '../world/optics.js';
+import { chapters, routesToChapters, finale } from './chapters.js';
+import { chapterGrid, chapterHint, paintChapter } from './chapter-board.js';
+
 const $ = id => document.getElementById(id);
 const key = 'light-quest.waterfall.v1';
 const modal = $('modal');
@@ -37,9 +41,30 @@ let records = Array.isArray(saved?.records) ? saved.records.filter(id => routes.
 let past = [];
 let painted = '';
 let hint = 0;
+const roomAttempts = Object.fromEntries(Object.keys(chapters).map(id => {
+  const storedMoves = saved?.roomAttempts?.[id];
+  const moves = Array.isArray(storedMoves) ? storedMoves.filter(move =>
+    Array.isArray(move) && move.length === 2 && move.every(Number.isInteger)) : [];
+  return [id, moves];
+}));
+const done = new Set(Array.isArray(saved?.done) ? saved.done.filter(id => Object.hasOwn(chapters, id)) : []);
+const chapterBeam = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+chapterBeam.id = 'chapter-beam';
+chapterBeam.setAttribute('aria-hidden', 'true');
+let room = state && isOpen(saved?.room) ? saved.room : null;
+
+function isOpen(id) {
+  if (id === finale) return done.has('T05') && done.has('R05');
+  for (const [route, list] of Object.entries(routesToChapters)) {
+    const index = list.indexOf(id);
+    if (index === 0) return records.includes(route);
+    if (index > 0) return done.has(list[index - 1]);
+  }
+  return false;
+}
 
 const save = () => {
-  try { localStorage.setItem(key, JSON.stringify({ state, records })); } catch { /* Continue in memory. */ }
+  try { localStorage.setItem(key, JSON.stringify({ state, records, room, done: [...done], roomAttempts })); } catch { /* Continue in memory. */ }
 };
 
 function position(element, point) {
@@ -136,7 +161,71 @@ function drawLight(target) {
   linePath(path);
 }
 
+function nextRoom(id) {
+  const list = Object.values(routesToChapters).find(items => items.includes(id));
+  if (!list) return null;
+  const next = list[list.indexOf(id) + 1];
+  return next ?? (isOpen(finale) && !done.has(finale) ? finale : null);
+}
+
+function useArtwork(area) {
+  if (painted === area) return;
+  painted = area;
+  $('scene').dataset.area = area;
+  $('scene').querySelector('source').srcset = art[area][1];
+  $('land').src = art[area][0];
+}
+
+function enterRoom(id) {
+  if (!isOpen(id)) return;
+  room = id;
+  hint = 0;
+  showPlay();
+  save();
+}
+
+function showNext(id) {
+  const button = $('next-room');
+  button.hidden = !id;
+  if (id) {
+    button.textContent = chapters[id].title + ' →';
+    button.onclick = () => enterRoom(id);
+  }
+}
+
+function renderChapter(step) {
+  const stage = chapters[room];
+  const area = room.startsWith('T') ? 'stars' : room.startsWith('R') ? 'roots' : 'old';
+  useArtwork(area);
+  const grid = chapterGrid(stage, roomAttempts[room]);
+  const view = trace(grid);
+  if (view.won) done.add(room);
+  $('title').textContent = stage.title;
+  $('explored').textContent = view.charged.size + ' / ' + view.total + ' tinh thể sáng';
+  $('undo').disabled = !roomAttempts[room].length;
+  $('hint').hidden = view.won;
+  $('return').hidden = false;
+  $('return').classList.remove('gold');
+  showNext(view.won ? nextRoom(room) : null);
+  message(step?.text ?? (view.won
+    ? room === finale ? 'Hai mạch đã sáng. Từ xa, cả tháp làng và bờ hồ cùng đón bình minh.'
+      : 'Tinh thể đã sáng. Tiến độ được lưu trên bản đồ màn.'
+    : stage.desc + (view.relay ? ' Cửa rễ đã mở.' : '') + (view.bridge ? ' Cầu đã nối.' : '')));
+  paintChapter($('chapter-board'), chapterBeam, grid, view, step, (x, y) => {
+    if (view.won || !activate(grid, x, y)) return;
+    roomAttempts[room].push([x, y]);
+    renderChapter();
+    save();
+  });
+}
+
 function render() {
+  $('chapter-board').hidden = !room;
+  $('objects').hidden = $('hero').hidden = $('beam').hidden = Boolean(room);
+  if (room) {
+    renderChapter();
+    return;
+  }
   const scene = state.scene;
   const powered = outputs(state)[0];
   const complete = state.charged.length === 2;
@@ -146,12 +235,8 @@ function render() {
   $('hint').hidden = complete;
   $('return').hidden = scene === 'hub';
   $('return').classList.toggle('gold', complete);
-  if (painted !== scene) {
-    painted = scene;
-    $('scene').dataset.area = scene;
-    $('scene').querySelector('source').srcset = art[scene][1];
-    $('land').src = art[scene][0];
-  }
+  useArtwork(scene);
+  showNext(complete ? routesToChapters[scene]?.find(id => !done.has(id) && isOpen(id)) : null);
   $('hero-name').textContent = names[state.hero];
   $('hero-art').src = './' + state.hero + '.webp';
   position($('hero'), scene === 'hub' && state.position === 'bank' ? locations.bank : locations.hero);
@@ -226,6 +311,7 @@ function showLobby() {
 $('lobby').querySelectorAll('[data-character]').forEach(button => {
   const start = () => {
     state = initial(button.dataset.character);
+    room = null;
     past = [];
     hint = 0;
     save();
@@ -239,14 +325,47 @@ $('pause').onclick = () => dialog('Tạm dừng', 'Hành trình được lưu sa
   ['Tiếp tục', () => {}], ['Lưu và về menu', () => { save(); showLobby(); }]
 ]);
 $('undo').onclick = () => {
+  if (room) {
+    roomAttempts[room].pop();
+    renderChapter();
+    save();
+    return;
+  }
   if (!past.length) return;
   state = past.pop();
   hint = 0;
   save();
   render();
 };
-$('return').onclick = () => perform('back');
+$('return').onclick = () => {
+  if (!room) {
+    perform('back');
+    return;
+  }
+  room = null;
+  if (state.scene !== 'hub') state = apply(state, 'back');
+  hint = 0;
+  past = [];
+  save();
+  showPlay();
+};
+$('chapters').onclick = () => {
+  const buttons = [];
+  for (const list of [...Object.values(routesToChapters), [finale]]) {
+    for (const id of list) {
+      if (isOpen(id)) buttons.push([chapters[id].title + (done.has(id) ? ' ✓' : ''), () => enterRoom(id)]);
+    }
+  }
+  dialog('Bản đồ màn', done.size + ' / 12 màn mới đã giải. Hoàn thành phòng đầu của mỗi lối để mở khu đó. ' +
+    'Giải xong Đài Sao và Suối Rễ để mở Hai mạch bình minh.', buttons);
+};
 $('hint').onclick = () => {
+  if (room) {
+    const step = chapterHint(chapterGrid(chapters[room], roomAttempts[room]));
+    if (step) renderChapter(step);
+    else message('Thử hoàn tác để tìm lại đường sáng.');
+    return;
+  }
   hint++;
   const scene = state.scene;
   const target = outputs(state)[0];
