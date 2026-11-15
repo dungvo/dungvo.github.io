@@ -11,8 +11,8 @@ let level=initial(),energy=24,turn=0,history=[],rockGone=false,loot=false,gate=f
 function snapshot(){history.push(JSON.stringify({level,energy,turn,rockGone,loot,gate,scan,monster}));if(history.length>100)history.shift()}
 function undo(){if(!history.length)return;({level,energy,turn,rockGone,loot,gate,scan,monster}=JSON.parse(history.pop()));game.scene.keys.play.paint()}
 function act(type,id){const cost={rotate:1,scan:2,repair:3,wait:0}[type];if(energy<cost){toast('Không đủ năng lượng');return}if(type==='rotate'&&!level.objects.some(o=>o.id===id&&o.type==='mirror'))return;snapshot();energy-=cost;turn++;if(type==='rotate'){const o=level.objects.find(o=>o.id===id);o.axis=(o.axis+1)%8}if(type==='scan')scan=true;
-const ray=propagate(level);if(ray.hits.some(h=>h.kind==='rock'&&h.broken)){rockGone=true;level.objects=level.objects.filter(o=>o.id!=='rock')}gate=ray.hits.some(h=>h.x===6&&h.y===0&&h.color==='gold');
-if(monster.hp>0){monster.i=(monster.i+1)%monster.route.length;[monster.x,monster.y]=monster.route[monster.i];if(turn%4===0){const target=level.objects.find(o=>o.id==='c');if(target)target.broken=true}}
+const ray=propagate(level);if(ray.beams.some(seg=>seg.color==='red'&&seg.to[0]===monster.x&&seg.to[1]===monster.y)){monster.hp=Math.max(0,monster.hp-1);if(monster.hp===0)toast('Đã tiêu diệt Quái Bóng Tối!')}if(ray.hits.some(h=>h.kind==='rock'&&h.broken)){rockGone=true;level.objects=level.objects.filter(o=>o.id!=='rock')}gate=ray.hits.some(h=>h.x===6&&h.y===0&&h.color==='gold');
+if(monster.hp>0){monster.i=(monster.i+1)%monster.route.length;[monster.x,monster.y]=monster.route[monster.i];if(turn%4===0){const target=level.objects.find(o=>o.id==='c');if(target&&!target.broken){target.broken=true;toast('Quái vật đã phá gương C!')}}}
 game.scene.keys.play.paint()}
 function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),1700)}
 class Play extends Phaser.Scene{
@@ -52,7 +52,7 @@ this.labels.push(this.add.text(928,108,'TRẠNG THÁI',{font:'bold 23px Georgia'
 this.labels.push(this.add.text(930,488,'QUÁI BÓNG TỐI\nDi chuyển mỗi lượt.\nPhá gương mỗi 4 lượt.',{font:'16px system-ui',color:'#ffcaac',lineSpacing:5}));
 this.labels.push(this.add.text(44,465,'LUMI · NGƯỜI DẪN ĐƯỜNG',{font:'bold 15px Georgia',color:'#ffe5a6'}));
 this.labels.push(this.add.text(40,560,'Xoay gương, tìm lối đi,\nđánh thức khu vườn!',{font:'15px system-ui',color:'#ffffff'}));
-$('#energy').textContent=energy;$('#turn').textContent=turn;$('#loot').textContent=loot?'Đã lấy':'Chưa lấy';if(gate&&rockGone)toast('Cổng mở! Chạm mảnh pha lê tại vị trí đá đã phá.');
+$('#energy').textContent=energy;$('#turn').textContent=turn;$('#loot').textContent=loot?'Đã lấy':'Chưa lấy';if(gate&&rockGone&&!loot&&turn>0)toast('Cổng mở! Chạm mảnh pha lê tại vị trí đá đã phá.');
 }
 }
 const game=new Phaser.Game({type:Phaser.CANVAS,parent:'game',width:W,height:H,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Play],fps:{target:30,forceSetTimeOut:true},render:{antialias:true}});
