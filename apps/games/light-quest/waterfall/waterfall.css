@@ -114,3 +114,23 @@ button.chapter-cell { z-index: 1; background: #21383996; border-color: #d7bf827a
 @media (max-width: 650px) and (orientation: portrait) {
   #chapter-board { inset: 3% 2%; }
 }
+
+.chapter-cell:has(.gear-tag) {
+  position: relative;
+  border-color: #ebc980a0;
+}
+.gear-tag {
+  position: absolute;
+  z-index: 1;
+  right: 1px;
+  top: 1px;
+  padding: 1px 3px;
+  border-radius: 4px;
+  color: #231b14;
+  background: #f3d397;
+  font: 700 clamp(9px, 2.4vw, 12px)/1.2 system-ui, sans-serif;
+  pointer-events: none;
+}
+.chapter-cell[data-gear-hint]:not([data-hint]) {
+  box-shadow: inset 0 0 0 2px #dfb465a0;
+}
