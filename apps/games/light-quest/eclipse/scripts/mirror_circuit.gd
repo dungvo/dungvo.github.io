@@ -7,7 +7,7 @@ const Art := preload("res://scripts/eclipse_art.gd")
 const SOURCE := Vector2(110, 332)
 const MIRRORS := [Vector2(329, 332), Vector2(329, 407)]
 const RECEIVER := Vector2(687, 407)
-const REACH := 115.0
+const REACH := 96.0
 
 var turned := [false, false]
 var solved := false
@@ -35,7 +35,10 @@ func _nearest(point: Vector2) -> int:
     var nearest := -1
     var distance := REACH
     for i in range(MIRRORS.size()):
-        var candidate := point.distance_to(global_position + MIRRORS[i])
+        var center: Vector2 = global_position + MIRRORS[i]
+        if i == 0 and point.y > center.y + 65:
+            continue
+        var candidate := point.distance_to(center)
         if candidate < distance:
             distance = candidate
             nearest = i
@@ -60,6 +63,7 @@ func _draw() -> void:
     for point in MIRRORS:
         draw_texture_rect(mirror, Rect2(point + Vector2(-21, -30), Vector2(42, 68)), false)
     _beam(SOURCE, first)
+    draw_circle(SOURCE, 8, Color("#fff7c045"), true)
     if turned[0]:
         _beam(first, second)
         _beam(second, RECEIVER if turned[1] else second + Vector2(-225, 0))
@@ -70,7 +74,8 @@ func _draw() -> void:
         var tilt := 1.0 if turned[i] else -1.0
         draw_line(center + Vector2(-9, -10 * tilt), center + Vector2(9, 10 * tilt), Color("#baf4ff"), 2, true)
         if hovered == i and not solved:
-            draw_string(ThemeDB.fallback_font, center + Vector2(-21, -24), "E · Xoay", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("#fff0ba"))
+            draw_arc(center, 26, 0, TAU, 36, Color("#ffd57c77"), 2, true)
+            draw_string(ThemeDB.fallback_font, center + Vector2(-36, -34), "E · Gương trên" if i == 0 else "E · Gương dưới", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("#fff0ba"))
 
 func _beam(start: Vector2, end: Vector2) -> void:
     draw_line(start, end, Color("#ff9a353b"), 14, true)

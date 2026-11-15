@@ -1,5 +1,7 @@
 extends RefCounted
 
+const AN_COMBO := preload("res://assets/eclipse/an-combo.webp")
+const MONSTER_ACTIONS := preload("res://assets/eclipse/monster-actions.webp")
 const HEROES := preload("res://assets/eclipse/heroes.webp")
 const HERO_RUN := preload("res://assets/eclipse/hero-run.webp")
 const HERO_STATES := preload("res://assets/eclipse/hero-states.webp")
@@ -49,6 +51,10 @@ static func actor_frames(is_kha: bool) -> SpriteFrames:
     _add(result, "hurt", HERO_STATES, HERO_CELL, [bank + 2], 4)
     _add(result, "death", HERO_STATES, HERO_CELL, [bank + 3], 4)
     _add(result, "attack", HEROES, HERO_CELL, [bank + 3], 6, false)
+    if not is_kha:
+        for step in range(3):
+            _add(result, "attack_%d" % (step + 1), AN_COMBO, Vector2i(256, 168), [step, step + 3], 12, false)
+            result.add_frame("attack_%d" % (step + 1), cell(HEROES, 0, HERO_CELL))
     return result
 
 static func attach_enemy(enemy: CharacterBody2D) -> AnimatedSprite2D:
@@ -56,7 +62,15 @@ static func attach_enemy(enemy: CharacterBody2D) -> AnimatedSprite2D:
     result.remove_animation("default")
     var frames: Array = {"wolf":[0,1], "golem":[2,3], "mage":[4,4], "bat":[5,6], "guardian":[7,7]}[enemy.kind]
     _add(result, "idle", CREATURES, ENEMY_CELL, frames if enemy.kind == "bat" else [frames[0]], 6)
-    _add(result, "attack", CREATURES, ENEMY_CELL, [frames[1]], 5)
+    if enemy.kind in ["wolf", "guardian"]:
+        var bank := 0 if enemy.kind == "wolf" else 3
+        for state in ["tell", "attack", "recover"]:
+            var offset := {"tell":0, "attack":1, "recover":2}
+            _add(result, state, MONSTER_ACTIONS, Vector2i(256, 192), [bank + offset[state]], 5, false)
+    else:
+        _add(result, "attack", CREATURES, ENEMY_CELL, [frames[1]], 5)
+        _add(result, "tell", CREATURES, ENEMY_CELL, [frames[0]], 5)
+        _add(result, "recover", CREATURES, ENEMY_CELL, [frames[0]], 5)
     var sprite := AnimatedSprite2D.new()
     sprite.sprite_frames = result
     sprite.offset = Vector2(0, -92)

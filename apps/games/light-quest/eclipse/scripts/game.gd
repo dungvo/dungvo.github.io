@@ -1,5 +1,8 @@
 extends Node2D
 ## Coordinates campaign rooms, combat actors and HUD.
+const Sound := preload("res://scripts/eclipse_sound.gd")
+const ATTACK_WINDUP := [0.078, 0.105, 0.145]
+const ATTACK_CYCLE := [0.26, 0.30, 0.42]
 const HealthHearts := preload("res://scripts/health_hearts.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
 const RuinStage := preload("res://scripts/ruin_stage.gd")
@@ -42,6 +45,9 @@ var attack_cooldown := 0.0
 var dash_cooldown := 0.0
 var dash_time := 0.0
 var boss_shield_time := 0.0
+var boss_pedestal_cooldown := 0.0
+var sound: Node
+var victory_panel: PanelContainer
 var enemies: Array[CharacterBody2D] = []
 var bolts: Array[Node2D] = []
 var guardian: CharacterBody2D
@@ -82,6 +88,8 @@ var motion_state := "idle"
 
 
 func _ready() -> void:
+    sound = Sound.new()
+    add_child(sound)
     _make_stage()
     _make_hero()
     light_circuit = MirrorCircuit.new()
@@ -111,7 +119,10 @@ func _make_stage() -> void:
         var ox := float(r) * ROOM_W
         _solid(Rect2(ox, FLOOR_Y, ROOM_W, 100))
         for ledge in ledges[r]:
-            _solid(Rect2(ox + ledge.x, 375, ledge.y, 25))
+            _solid(Rect2(ox + ledge.x, 375, ledge.y, 25), r == 3)
+        if r == 1:
+            _solid(Rect2(ox + 295, 410, 51, 46), true)
+            _solid(Rect2(ox + 658, 410, 60, 46), true)
         if r == 3:
             _solid(Rect2(ox + 59, 375, 106, 25))
         if r in [1, 2, 5]:
@@ -143,7 +154,7 @@ func _spawn_enemy(kind: String, x: float) -> CharacterBody2D:
     enemies.append(enemy)
     return enemy
 
-func _solid(rect: Rect2) -> void:
+func _solid(rect: Rect2, one_way := false) -> void:
     scenery.platform(rect)
     var b := StaticBody2D.new()
     b.collision_layer = Combat.WORLD
@@ -153,6 +164,7 @@ func _solid(rect: Rect2) -> void:
     var sh := RectangleShape2D.new()
     sh.size = rect.size
     s.shape = sh
+    s.one_way_collision = one_way
     b.add_child(s)
     add_child(b)
 
@@ -226,6 +238,29 @@ func _make_ui() -> void:
     dialogue_label.add_theme_font_size_override("font_size",20)
     dialogue.add_child(dialogue_label)
     dialogue.hide()
+    victory_panel = PanelContainer.new()
+    victory_panel.position = Vector2(278, 128)
+    victory_panel.custom_minimum_size = Vector2(404, 202)
+    var column := VBoxContainer.new()
+    column.add_theme_constant_override("separation", 12)
+    var title := Label.new()
+    title.text = "ĐÃ THẮP SÁNG THÁP TRĂNG"
+    title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    title.add_theme_font_size_override("font_size", 23)
+    var reward := Label.new()
+    reward.text = "Đã mở Nguyệt Lướt.
+Tháp Trăng đã an toàn."
+    reward.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    var resume := Button.new()
+    resume.text = "Tiếp tục khám phá"
+    resume.custom_minimum_size.y = 38.0
+    resume.pressed.connect(_dismiss_victory)
+    column.add_child(title)
+    column.add_child(reward)
+    column.add_child(resume)
+    victory_panel.add_child(column)
+    layer.add_child(victory_panel)
+    victory_panel.hide()
     _update_hud()
 
 func _hud_label(layer: CanvasLayer, at: Vector2, extent: Vector2, font_size: int) -> Label:
@@ -267,6 +302,9 @@ func _touch_button(parent: Control, key: String, glyph: String, center: Vector2,
 
 func _control_pressed(key: String) -> void:
     if not started or death_time > 0: return
+    if victory_panel.visible:
+        if key == "interact": _dismiss_victory()
+        return
     if dialogue.visible:
         if key == "interact": _show_dialogue(false)
         return
@@ -306,7 +344,7 @@ func _menu() -> void:
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
     var note := Label.new()
-    note.text = "Bản thử nội bộ · Chọn nhân vật\nA/D di chuyển · Space nhảy · J đánh · K lướt · L kỹ năng · E tương tác"
+    note.text = "Chơi thử Tháp Trăng · Chọn nhân vật\nA/D di chuyển · Space nhảy · J đánh · K lướt · L kỹ năng · E tương tác"
     note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(note)
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
@@ -329,7 +367,11 @@ func _input(event:InputEvent) -> void:
     if not is_instance_valid(dialogue): return
     if event.is_action_pressed("ui_cancel"):
         if dialogue.visible: _show_dialogue(false)
+        if victory_panel.visible: _dismiss_victory()
     if not started: return
+    if victory_panel.visible:
+        if event is InputEventKey and event.pressed and event.keycode == KEY_E: _dismiss_victory()
+        return
     if event is InputEventKey and event.pressed and not event.echo:
         if not dialogue.visible and event.keycode in [KEY_SPACE, KEY_W, KEY_UP]:
             jump_buffer_clock = JUMP_BUFFER_WINDOW
@@ -341,7 +383,7 @@ func _input(event:InputEvent) -> void:
             KEY_L: _skill()
 
 func _physics_process(delta:float) -> void:
-    if not started or dialogue.visible: return
+    if not started or dialogue.visible or victory_panel.visible: return
     visual_clock += delta
     if death_time > 0:
         death_time = maxf(0, death_time - delta)
@@ -356,6 +398,7 @@ func _physics_process(delta:float) -> void:
     slash_time = maxf(0, slash_time-delta)
     shake_time = maxf(0, shake_time-delta)
     boss_shield_time = maxf(0, boss_shield_time-delta)
+    boss_pedestal_cooldown = maxf(0, boss_pedestal_cooldown-delta)
     jump_buffer_clock = maxf(0, jump_buffer_clock-delta)
     _tick_vfx(delta)
     combo_window = maxf(0, combo_window - delta)
@@ -450,6 +493,13 @@ func _physics_process(delta:float) -> void:
 
 func _update_character_animation() -> void:
     var candidate := motion_state
+    if motion_state == "attack" and character == "An":
+        candidate = "attack_%d" % combo_step
+        var pose := 0 if attack_windup > 0.0 else (1 if slash_time > 0.075 else 2)
+        actor_anim.animation = candidate
+        actor_anim.pause()
+        actor_anim.set_frame_and_progress(pose, 0.0)
+        anim_label = candidate
     if anim_label != candidate:
         anim_label = candidate
         actor_anim.play(candidate)
@@ -461,8 +511,8 @@ func _update_character_animation() -> void:
 
 func _select_motion_state() -> String:
     if hurt_time > 0.0: return "hurt"
-    if slash_time > 0.0: return "attack"
     if dash_time > 0.0: return "dash"
+    if slash_time > 0.0: return "attack"
     if not hero.is_on_floor():
         return "jump" if hero.velocity.y < 0.0 else "fall"
     if absf(hero.velocity.x) > 25.0: return "run"
@@ -515,14 +565,17 @@ func show_damage(origin: Vector2, amount: int) -> void:
     drift.tween_property(value, "modulate:a", 0.0, 0.42).set_delay(0.14)
     drift.chain().tween_callback(value.queue_free)
 
-func enemy_strike(area: Rect2, origin: Vector2) -> void:
+func enemy_strike(area: Rect2, origin: Vector2) -> bool:
     var space := get_world_2d().direct_space_state
     if not Combat.overlapping(space, area, Combat.HERO_HURT).is_empty() and Combat.ray(space, origin, hero.position, Combat.WORLD).is_empty():
         damage_player(1, origin.x)
+        return true
+    return false
 
 func damage_player(amount: int, from_x: float) -> void:
     if i_frames > 0 or dash_time > 0 or dialogue.visible: return
     health -= amount
+    sound.play_cue("hurt")
     i_frames = 0.92
     hurt_time = 0.21
     hero.velocity.x = 220.0 * (1.0 if hero.position.x >= from_x else -1.0)
@@ -562,24 +615,32 @@ func _attack() -> void:
     attack_facing = facing
     combo_step = (combo_step % 3) + 1 if combo_window > 0 and character == "An" else 1
     combo_window = 0.61
-    attack_cooldown = (0.39 if combo_step == 3 else 0.26) if character == "An" else 0.46
-    attack_windup = 0.072 if character == "An" else 0.115
-    slash_time = 0.22
+    attack_cooldown = ATTACK_CYCLE[combo_step - 1] if character == "An" else 0.46
+    attack_windup = ATTACK_WINDUP[combo_step - 1] if character == "An" else 0.115
+    slash_time = attack_cooldown - 0.03
 
 func _resolve_attack() -> void:
+    sound.play_cue("cast" if character == "Kha" else "slash", 1 + (combo_step - 1) * 0.08)
     if character == "Kha":
         spawn_bolt(hero.position, Vector2(570 * attack_facing, 0), true, 1)
         return
     var reach := Hit.attack_hitbox(hero.position, attack_facing, false)
+    if combo_step == 2:
+        reach = reach.grow_individual(0, 15, 0, 0)
+    elif combo_step == 3:
+        var extension := 14.0
+        reach = reach.grow_individual(extension if attack_facing < 0 else 0, 1, extension if attack_facing > 0 else 0, 5)
     var space := get_world_2d().direct_space_state
     for hit in Combat.overlapping(space, reach, Combat.HOSTILE_HURT):
         var foe: CharacterBody2D = hit.collider.get_parent()
         if Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
             foe.take_hit(2 if combo_step == 3 else 1, self)
+            sound.play_cue("contact")
 
 func _skill() -> void:
     if not started or dialogue.visible or shield_cooldown > 0 or death_time > 0: return
     shield_cooldown = 6.0
+    sound.play_cue("light")
     if character == "Kha":
         health = mini(max_health, health + 1)
         _burst(hero.position, Color("#b1ff9d"), 21, 155)
@@ -593,13 +654,38 @@ func guardian_defeated() -> void:
     boss_dead = true
     moon_dash = true
     _persist()
+    sound.play_cue("victory")
     _say("Thủ Hộ Tháp Trăng đã gục ngã. Bạn đã mở kỹ năng Nguyệt Lướt!", 12)
+    var ending := create_tween()
+    ending.tween_interval(0.68)
+    ending.tween_callback(_show_victory)
+
+func _show_victory() -> void:
+    victory_panel.show()
+    joystick.accept_touch = false
+    _reset_touch()
+
+func _dismiss_victory() -> void:
+    victory_panel.hide()
+    joystick.accept_touch = true
+    _reset_touch()
+
+func guardian_enraged() -> void:
+    boss_shield_time = 0.0
+    boss_pedestal_cooldown = 1.45
+    emit_impact(guardian.position, Color("#d796ff"))
+    sound.play_cue("phase")
+    _say("Pha hai · Khi trụ sáng nạp lại, phá khiên. Né ba luồng đạn!", 4.2)
 
 
 func _dash() -> void:
     if not started or dash_cooldown > 0 or dialogue.visible or death_time > 0: return
     dash_cooldown=1.4 if moon_dash else 2.8
     dash_time=0.18 if moon_dash else 0.13
+    if attack_windup > 0:
+        attack_windup = 0
+        slash_time = 0
+    sound.play_cue("dash")
     _burst(hero.position+Vector2(-facing*15,5),Color("#94e9e2"),14,155)
     _say("Moon Dash!" if moon_dash else "Lướt ngắn",0.45)
 
@@ -631,6 +717,7 @@ func _interact() -> void:
         _persist()
         _say("Đã tìm thấy Nguyệt Thạch. Sinh lực tối đa tăng 1.", 3.0)
     elif room == 3 and light_circuit.rotate_near(hero.position):
+        sound.play_cue("light")
         if not activated: _say("Xoay gương để tia sáng chạm pha lê.", 2.2)
     elif room == 5 and hero.position.distance_to(Vector2(room * ROOM_W + 260, 418)) < 93:
         checkpoint = hero.position
@@ -638,14 +725,19 @@ func _interact() -> void:
         _persist()
         _say("Đã lưu tại Đài Quan Sát!", 2)
     elif room == 6 and absf(local_x - 432) < 83 and absf(hero.position.y - 418.0) < 82 and not boss_dead:
-        if boss_shield_time <= 0:
-            boss_shield_time = 6.5 if guardian.hp > 6 else 4.8
+        if boss_shield_time <= 0 and boss_pedestal_cooldown <= 0:
+            boss_shield_time = 6.5 if guardian.hp > 6 else 5.4
+            boss_pedestal_cooldown = boss_shield_time + 1.4
+            sound.play_cue("light")
             _say("Khiên Thủ Hộ đã tan. Tấn công ngay!", 3)
+        elif boss_shield_time <= 0:
+            _say("Trụ sáng đang nạp lại.", 1.25)
     else:
         _say("Đến gần người giữ đèn, gương hoặc trụ sáng rồi tương tác.", 2)
 
 func _light_completed() -> void:
     activated = true
+    sound.play_cue("victory")
     _persist()
     _say("Tia sáng đã đánh thức Cổng Đêm.", 4)
 
@@ -703,11 +795,11 @@ func _draw() -> void:
         var p:=hero.position
         if i_frames>0:draw_arc(p+Vector2(0,-6),33,0,TAU,32,Color("#ffdf8b"),3)
         if slash_time > 0 and character == "An" and attack_windup <= 0:
-            var t := 1.0 - slash_time / 0.22
+            var t := clampf(1.0 - slash_time / ATTACK_CYCLE[combo_step - 1], 0, 1)
             var angle := 0.0 if attack_facing > 0 else PI
-            var rotation := angle + (t - 0.5) * 1.25 * attack_facing
-            var center := p + Vector2(attack_facing * 25, -6)
+            var rotation := angle + (t - 0.5) * (1.25 if combo_step == 1 else 2.35) * attack_facing
+            var center := p + Vector2(attack_facing * 28, -12 if combo_step == 2 else -4)
             for band in [Vector2(57, 14), Vector2(52, 7), Vector2(51, 3)]:
                 var tint := Color("#468cff66") if band.y == 14 else (Color("#60dfffcc") if band.y == 7 else Color("#eaffff"))
                 tint.a *= minf(1, slash_time * 9)
-                draw_arc(center, band.x, rotation - 1.05, rotation + 1.05, 32, tint, band.y, true)
+                draw_arc(center, band.x + 6 * (combo_step - 1), rotation - 1.05, rotation + 1.05, 32, tint, band.y, true)

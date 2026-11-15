@@ -22,6 +22,8 @@ func _run() -> void:
         for mode in ["idle", "run", "jump", "fall", "dash", "attack", "hurt", "death"]:
             if not ensure(game.actor_anim.sprite_frames.has_animation(mode), character + " / " + mode): return
 
+    for step in range(1, 4):
+        if not ensure(game.actor_anim.sprite_frames.get_frame_count("attack_%d" % step) == 3, "three synchronized poses for combo step %d" % step): return
     var wolf = game.enemies[0]
     game.hero.position = wolf.position + Vector2(-69, -9)
     await _frames(3)
@@ -76,10 +78,22 @@ func _run() -> void:
     game._interact()
     if not ensure(game.boss_shield_time > 0, "arena pedestal drops guardian shield"): return
     boss.take_hit(boss_hp - 5, game)
-    if not ensure(boss.hp == 5, "phase transition crosses half health"): return
+    if not ensure(boss.hp == 5 and boss.phase_two and game.boss_shield_time == 0, "phase transition restores the shield"): return
+    boss.take_hit(5, game)
+    if not ensure(boss.hp == 5, "phase two shield prevents finishing before recharging"): return
+    await _frames(91)
+    game._interact()
+    if not ensure(game.boss_shield_time > 0, "phase two pedestal can be used after recharge"): return
     boss.take_hit(5, game)
     if not ensure(game.boss_dead and game.moon_dash, "guardian victory unlocks dash"): return
 
+    # Start an independent input fixture so victory UI is exercised only by campaign tests.
+    game.queue_free()
+    await process_frame
+    game = load("res://scenes/main.tscn").instantiate()
+    game.save_enabled = false
+    root.add_child(game)
+    game._start("An")
     game.hero.position = Vector2(490, 432)
     game.i_frames = 0
     await _frames(3)

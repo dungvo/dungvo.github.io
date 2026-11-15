@@ -16,8 +16,13 @@ func _capture() -> void:
     game.cam.force_update_scroll()
     game.scenery.update_camera(game.cam.get_screen_center_position().x, game.activated, true)
     game._request_attack()
-    await _settle(10)
+    for frame in range(18):
+        await physics_frame
+        if game.attack_windup <= 0 and game.slash_time > 0.075:
+            break
+    game.set_physics_process(false)
     if not await _save_frame("actual-gameplay.png"): return
+    game.set_physics_process(true)
 
     game._start("Kha")
     game.hero.position = Vector2(3 * 960 + 517, 432)
@@ -35,6 +40,12 @@ func _capture() -> void:
     game.scenery.update_camera(game.cam.get_screen_center_position().x, game.activated, true)
     await _settle(8)
     if not await _save_frame("actual-guardian.png"): return
+
+    game.hero.position = Vector2(6 * 960 + 432, 432)
+    game._interact()
+    game.guardian.take_hit(7, game)
+    await _settle(10)
+    if not await _save_frame("actual-guardian-phase-two.png"): return
     quit(0)
 
 func _settle(frames: int) -> void:

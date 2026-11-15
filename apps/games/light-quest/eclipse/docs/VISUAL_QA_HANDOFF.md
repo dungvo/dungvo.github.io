@@ -1,6 +1,6 @@
 # Light Quest Eclipse · Bàn giao QA
 
-**Quyết định phát hành: giữ draft PR #76.** Tự động cập nhật GitHub Pages vẫn tắt. Bản Eclipse trên Pages có từ trước đợt triển khai này.
+**PR #76 vẫn là draft.** Tuyến Tháp Trăng có thể đưa vào QA người chơi bằng đường dẫn riêng sau khi qua kiểm thử. Cập nhật đường dẫn phát hành GitHub Pages vẫn chờ QA Safari trên thiết bị thật.
 
 ## Phạm vi
 
@@ -31,3 +31,11 @@
 2. Tinh chỉnh bố cục tầng đá và dây leo theo từng phòng. Làm thêm chiều sâu tiền cảnh và giảm cảm giác lát lặp. Ghi lại video gameplay từ bản Web.
 3. Chạy Safari với iPhone 13 mini thật. Đo thời gian khung khi giật camera, bắn đạn, vào gauge boss và chơi ba ngón. Kiểm tra focus, xoay màn hình và resume.
 4. Đối chiếu ảnh/video với mockup và đánh giá đủ các tiêu chí trong kế hoạch. Chỉ sau đó mới cập nhật bản Eclipse công khai.
+
+## Vòng chơi thử Tháp Trăng
+
+- Combo An có ba nhịp với pose chuẩn bị, trúng đòn và thu kiếm riêng. Nhịp hai có thêm tầm đánh phía trên, nhịp ba xa hơn và gây hai sát thương. Lướt hủy nhịp chuẩn bị.
+- Sói và Thủ Hộ có pose báo đòn, lao/đập và hồi phục. Pha hai tái tạo khiên và cần kích hoạt lại trụ sáng sau khi nạp. Đường báo trước cho thấy hướng quạt ba đạn. Kết thúc tuyến hiện bảng chiến thắng và mở Nguyệt Lướt.
+- Gương trên cần nhảy lên bệ một chiều. Gương dưới có thể xoay từ nền. Test campaign đi liên tục từ Làng Trăng bằng vật lý của nhân vật đến màn thắng bằng đạn Kha, gồm rương, gương, cổng, checkpoint và hai pha boss.
+- Tám âm ngắn phát khi người chơi thao tác. Rừng Vọng có thêm bậc đá và tiền cảnh. Ảnh QA gồm thêm shot chuyển pha boss.
+- Kiểm tra tay trên iPhone, chiều sâu của tiền cảnh và độ mượt các bộ hình khác vẫn cần review riêng trước khi chọn bản phát hành chính thức.

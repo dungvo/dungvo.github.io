@@ -32,6 +32,7 @@ jobs:
         run: |
           timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
           timeout 20s godot --headless --path apps/games/light-quest/eclipse --script res://tests/hit_geometry_test.gd
+          timeout 35s godot --headless --fixed-fps 60 --path apps/games/light-quest/eclipse --script res://tests/campaign_playthrough.gd
 
   visual-qa:
     runs-on: ubuntu-latest
@@ -50,6 +51,7 @@ jobs:
           test -s apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
           test -s apps/games/light-quest/eclipse/visual-qa/actual-puzzle.png
           test -s apps/games/light-quest/eclipse/visual-qa/actual-guardian.png
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-guardian-phase-two.png
       - name: Save screenshot artifact for manual comparison
         uses: actions/upload-artifact@v4
         with:

@@ -51,10 +51,25 @@ func _ready() -> void:
             var leaves := _prop(8, Vector2(x + offset.x, 456 + offset.y), Vector2(208, 102))
             leaves.z_index = -1
             leaves.modulate = Color("#bfc2d9")
+    _dress_forest()
     plaza_chest = _prop(9, Vector2(2 * ROOM_W + 570, 456), Vector2(54, 32))
     _prop(5, Vector2(5 * ROOM_W + 260, 456), Vector2(62, 97))
     _prop(5, Vector2(6 * ROOM_W + 432, 456), Vector2(71, 109))
     gate = _prop(1, Vector2(5 * ROOM_W, 456), Vector2(174, 305))
+
+func _dress_forest() -> void:
+    var x := ROOM_W
+    _prop(5, Vector2(x + 269, 375), Vector2(44, 79))
+    _prop(3, Vector2(x + 577, 375), Vector2(47, 56))
+    var low_arch := _prop(7, Vector2(x + 659, 457), Vector2(114, 139))
+    low_arch.modulate = Color("#748cb3")
+    var garden := _prop(8, Vector2(x + 226, 451), Vector2(117, 55))
+    garden.z_index = -1
+    garden.modulate = Color("#c5c6f2")
+    var trail := _prop(8, Vector2(x + 725, 559), Vector2(194, 107))
+    trail.z_index = 2
+    trail.modulate = Color("#a3b5e6")
+    _prop(3, Vector2(x + 919, 456), Vector2(86, 108))
 
 func update_camera(camera_x: float, opened: bool, immediate := false) -> void:
     background.position.x = -63.0 - sin(camera_x * 0.0016) * 48.0
@@ -82,7 +97,8 @@ func platform(rect: Rect2) -> void:
         for i in range(bridge_count):
             _prop(2, Vector2(rect.position.x + section * (0.5 + i), rect.position.y + 141), Vector2(section + 1, 153))
     else:
-        _prop(0, Vector2(rect.get_center().x, rect.position.y + 41), Vector2(rect.size.x, 43))
+        var depth := maxf(43, rect.size.y + 7)
+        _prop(0, Vector2(rect.get_center().x, rect.position.y + depth - 2), Vector2(rect.size.x, depth))
 
 func _prop(index: int, bottom: Vector2, dimensions: Vector2) -> Sprite2D:
     var sprite := Sprite2D.new()
