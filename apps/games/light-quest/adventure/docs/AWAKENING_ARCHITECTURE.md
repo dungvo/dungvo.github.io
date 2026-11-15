@@ -31,10 +31,12 @@ In rooms with two receivers the gate opens only after both receive the correct c
 | Room | Main puzzle |
 | --- | --- |
 | Ánh Sáng Đầu Tiên | Two ways to guide gold light to the crystal, with optional discoveries and patrol interaction. |
-| Điện Lăng Kính | Split a single source and light two crystals at once. |
+| Điện Lăng Kính | Move a counterweight onto a plate or reach the relay, then stand on the other plate to light both crystals. |
 | Hành Lang Hai Màu | Route separate gold and red beams through their filters, then amplify the red beam. |
 | Mật Đạo Chéo | Trace a three-mirror path that uses both diagonal headings. |
-| Cổng Của Sói Bóng Đêm | Break a rock, survive the patrol and repair the mirror near the gate. |
+| Cổng Của Sói Bóng Đêm | Time a one-use bell to pass while the wolf pauses, or use red light and repair its damage. |
+
+The traversal rules live in `core/room-traversal.js`. An adjacent move costs one energy and can push a counterweight one cell. The player and counterweights hold pressure plates only while occupying them. A relay latches its shutter open. Closed shutters and counterweights block rays in the same optics pass as mirrors. Ringing the bell consumes one of its three turns as part of the move, leaving two more actions before the patrol resumes.
 
 ## First-room solution fixtures
 
