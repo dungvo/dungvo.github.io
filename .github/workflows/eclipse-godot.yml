@@ -46,6 +46,18 @@ jobs:
           with urllib.request.urlopen(req, timeout=20) as res: data=json.load(res)
           for x in data:print('CC0_CANDIDATE',x['name'],x['size'],x.get('download_url'))
           PY
+      - name: Inspect SpriteCanvas legal CC0 animated art links
+        run: |
+          python3 - <<'PY'
+          import urllib.request,re,html
+          url='https://spritecanvas.com/free-sprite-sheets/'
+          request=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+          with urllib.request.urlopen(request,timeout=25) as response:page=response.read().decode('utf8','replace')
+          for match in re.finditer(r'href=["\\']([^"\\']+)',page):
+              link=html.unescape(match.group(1))
+              if '.zip' in link.lower() or ('download' in link.lower() and 'moss' in link.lower()):
+                  print('ART_URL',link[:350])
+          PY
       - name: Upload source sprite, license and provenance
         uses: actions/upload-artifact@v4
         with:
