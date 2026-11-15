@@ -571,6 +571,34 @@ func _restore() -> void:
         hero.position=checkpoint
     if boss_dead:boss_hp=0
 
+# Stone faces, staggered masonry, grass rims and gold accents share exact collision bounds.
+# Procedural placeholder art: improves readability, but is NOT yet approved final tileset.
+func _draw_stone_surface(rect:Rect2) -> void:
+    draw_rect(rect,Color("#253952"))
+    var x_count := mini(50,int(ceil(rect.size.x/44.0)))
+    var y_count := mini(5,int(ceil(rect.size.y/23.0)))
+    for row in range(y_count):
+        for column in range(x_count):
+            var offset := 22.0 if row%2==1 else 0.0
+            var xx := rect.position.x + float(column)*44.0 + offset
+            var yy := rect.position.y + float(row)*23.0
+            var width := minf(41.0,rect.end.x - xx)
+            var height := minf(21.0,rect.end.y - yy)
+            if width <= 1 or height <= 1:continue
+            var shade := Color("#40536b") if (row+column)%3==0 else Color("#334762")
+            draw_rect(Rect2(xx+1,yy+1,width-2,height-2),shade)
+            draw_line(Vector2(xx+1,yy+height-2),Vector2(xx+width-1,yy+height-2),Color("#12263e"),2)
+            if (row*11+column*7)%9==0:
+                draw_line(Vector2(xx+7,yy+7),Vector2(xx+15,yy+10),Color("#8192a0"),1)
+    draw_rect(Rect2(rect.position.x,rect.position.y,rect.size.x,6),Color("#688c65"))
+    draw_line(rect.position+Vector2(0,3),Vector2(rect.end.x,rect.position.y+3),Color("#b5bd80"),2)
+    for column in range(x_count):
+        var tx:=rect.position.x + column*44.0+17.0
+        if tx >= rect.end.x:break
+        if (column*7+int(rect.position.x))%5==0:
+            draw_line(Vector2(tx,rect.position.y),Vector2(tx+3,rect.position.y-7),Color("#81bb71"),2)
+            draw_circle(Vector2(tx+4,rect.position.y-8),2,Color("#c4d89b"))
+
 func _draw() -> void:
     # Render only rooms close to camera. Avoid rebuilding distant scenery on iOS.
     var shown_room := clampi(int(hero.position.x / ROOM_W), 0, 6) if hero else 0
@@ -592,7 +620,7 @@ func _draw() -> void:
     for e in world_lines:
         var rect:Rect2 = e["rect"]
         if absf(rect.position.x - hero.position.x) < ROOM_W * 1.7:
-            draw_rect(rect,e["color"])
+            _draw_stone_surface(rect)
     # Marker objects and puzzle world interactions
     draw_rect(Rect2(5*ROOM_W-15,275,30,181),Color("#55d5ad44") if activated else Color("#e9a363cc"))
     draw_circle(Vector2(3*ROOM_W+465,359),34,Color("#ffdd85"))
