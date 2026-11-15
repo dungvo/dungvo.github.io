@@ -195,7 +195,7 @@ func _menu() -> void:
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
         var b := Button.new()
         b.text = "Chơi: " + who
-        b.pressed.connect(func(): character = who.substr(0,2).strip_edges().split(" ")[0]; started = true; menu.hide(); _say("Khám phá Tháp Trăng. Mỗi kỹ năng mở một con đường khác nhau!",3))
+        b.pressed.connect(func(): character = "Kha" if who.begins_with("Kha") else "An"; started = true; menu.hide(); _say("Khám phá Tháp Trăng. Mỗi kỹ năng mở một con đường khác nhau!",3))
         v.add_child(b)
 
 func _input(event:InputEvent) -> void:
@@ -210,7 +210,7 @@ func _input(event:InputEvent) -> void:
             KEY_R: _respawn()
 
 func _physics_process(delta:float) -> void:
-    if not started or game_won: return
+    if not started: return
     notice_time = maxf(0,notice_time-delta)
     attack_cooldown = maxf(0,attack_cooldown-delta)
     dash_cooldown = maxf(0,dash_cooldown-delta)
@@ -222,7 +222,7 @@ func _physics_process(delta:float) -> void:
     else:
         var dx := float(int(Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT) or touch["right"]) - int(Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT) or touch["left"]))
         if dx != 0: facing = int(sign(dx))
-        hero.velocity.x = dx * (character == "Kha" ? 200.0 : 235.0)
+        hero.velocity.x = dx * (200.0 if character == "Kha" else 235.0)
         if dash_time > 0:
             dash_time -= delta
             hero.velocity.x = 610.0 * facing
@@ -265,10 +265,10 @@ func _enemy_tick(delta:float) -> void:
 
 func _boss_tick(delta:float) -> void:
     if boss_hp<=0: return
-    var x := 6*ROOM_W+650
+    var x := 6.0*ROOM_W+650.0
     if absf(hero.position.x-x)<105 and hero.position.y>280:
         _damage(1)
-    if not boss_shield_time and boss_flash<=0:
+    if boss_shield_time<=0 and boss_flash<=0:
         boss_flash = 3.1
 
 func _damage(amount:int) -> void:
@@ -369,7 +369,7 @@ func _render_puzzle() -> void:
 func _puzzle_press(idx:int) -> void:
     _toggle_grid(idx)
     puzzle_moves+=1
-    if puzzles.all(func(value:int):return value==1):
+    if puzzles.all(func(value): return value == 1):
         activated=true
         puzzle_panel.hide()
         _persist()
@@ -397,7 +397,7 @@ func _restore() -> void:
     var f:=FileAccess.open(SAVE_FILE,FileAccess.READ)
     if not f:return
     var data=JSON.parse_string(f.get_as_text())
-    if not data is Dictionary:return
+    if not (data is Dictionary):return
     activated=bool(data.get("activated",false))
     met_npc=bool(data.get("met_npc",false))
     moon_dash=bool(data.get("moon_dash",false))
@@ -409,8 +409,7 @@ func _restore() -> void:
     if boss_dead:boss_hp=0
 
 func _draw() -> void:
-    var active:=clampi(int(hero.position.x/ROOM_W),0,6) if hero else 0
-    for r in range(7):
+        for r in range(7):
         var ox:=r*ROOM_W
         draw_rect(Rect2(ox,-160,ROOM_W,700),COLORS[r])
         # Starfield, parallax-like atmosphere and moon
