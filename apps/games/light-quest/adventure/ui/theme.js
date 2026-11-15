@@ -1,0 +1,3 @@
+export const THEME={panel:0x1c2c40,tileA:0x465666,tileB:0x3d4c5a,gold:0xc58c41,blue:0x80cfff,beam:0xffca53};
+export function drawMirror(g,cx,cy,axis){const a=axis*Math.PI/8,dx=Math.cos(a)*27,dy=Math.sin(a)*27;g.fillStyle(0x966a37).fillRoundedRect(cx-29,cy-29,58,58,10);g.lineStyle(8,0x80cfff).lineBetween(cx-dx,cy-dy,cx+dx,cy+dy);g.lineStyle(2,0xe2faff).lineBetween(cx-dx,cy-dy,cx+dx,cy+dy)}
+export function drawBeam(g,segments,ox,oy,cell){for(const [a,b,c,d] of segments){const x=ox+(a+.5)*cell,y=oy+(b+.5)*cell,u=ox+(c+.5)*cell,v=oy+(d+.5)*cell;g.lineStyle(15,0xffb22b,.16).lineBetween(x,y,u,v);g.lineStyle(7,0xffca53,.72).lineBetween(x,y,u,v);g.lineStyle(3,0xfff7ce).lineBetween(x,y,u,v)}}
