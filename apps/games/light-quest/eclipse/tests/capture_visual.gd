@@ -14,7 +14,7 @@ func _capture() -> void:
     root.add_child(game)
     game.started = true
     game.menu.hide()
-    game.hero.position = Vector2(470, 390)
+    game.hero.position = Vector2(470, 432)
     game.last_room = 0
     game._physics_process(0.016)
     for frame in range(5):
