@@ -21,6 +21,7 @@ func _run() -> void:
     assert(g.puzzles.all(func(value): return value == 1))
     g.puzzle_panel.hide()
     g.activated = true
+    g.started = true
     assert(g.get_node_or_null("LightGate") != null)
     g._physics_process(0.016)
     await process_frame
