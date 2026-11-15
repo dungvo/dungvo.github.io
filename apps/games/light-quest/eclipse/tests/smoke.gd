@@ -17,6 +17,11 @@ func _run() -> void:
     var g = scene.instantiate()
     root.add_child(g)
     if not ensure(g.hero != null, "hero instantiated"): return
+    if not ensure(g.actor_anim != null, "licensed animated player loaded"): return
+    for animation in ["idle_east","walk_east","jump_east","attack_east","roll_east","hurt_east"]:
+        if not ensure(g.actor_anim.sprite_frames.has_animation(animation), "animation "+animation): return
+        if not ensure(g.actor_anim.sprite_frames.get_frame_count(animation)>1, "multiple frames "+animation): return
+
     if not ensure(g.enemy_data.size() == 8, "enemy population"): return
     if not ensure(g.ROOMS.size() == 7, "room count"): return
     # Test deterministic light puzzle independently of presentation.
