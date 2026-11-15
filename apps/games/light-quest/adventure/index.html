@@ -2,19 +2,22 @@
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101c35"><title>Light Quest · Ánh Sáng Đầu Tiên</title>
 <style>
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0d182c;color:#fff;font-family:system-ui,-apple-system,sans-serif}#game{position:absolute;inset:0}canvas{display:block;margin:auto;touch-action:none}#top{position:absolute;top:env(safe-area-inset-top);left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;pointer-events:none;gap:8px;text-shadow:0 2px 8px #000}#top strong{font-family:Georgia,serif;font-size:clamp(18px,3vw,30px);color:#ffe0a1}#top span{font-size:clamp(11px,2vw,16px);text-align:center}#top a{color:#fff;text-decoration:none;pointer-events:auto;border:1px solid #a78b56;border-radius:20px;background:#18243dc9;padding:8px 12px}#bottom{position:absolute;bottom:max(12px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:9px;width:max-content;max-width:95%;background:#15233be8;border:1px solid #ae8b54;border-radius:18px;padding:10px 14px;box-shadow:0 5px 20px #0008}button{border:1px solid #bc975f;background:#27334c;color:#ffe6b2;border-radius:12px;padding:10px 12px;font-weight:700;font-size:14px;touch-action:manipulation}button:active{background:#53607d}#status{font-size:13px;min-width:100px;max-width:270px}#hint{position:absolute;top:70px;left:50%;transform:translateX(-50%);background:#15233be6;border:1px solid #aa8958;padding:8px 16px;border-radius:15px;text-align:center;max-width:90%;font-size:14px;pointer-events:none}@media(max-width:650px){#top{padding:8px}#top strong{font-size:16px}#top span{font-size:11px}#bottom{padding:7px;gap:5px}button{padding:9px;font-size:12px}#status{font-size:11px;min-width:80px;max-width:125px}#hint{top:62px;font-size:12px}}
-</style></head><body><div id="game"></div><header id="top"><strong>✧ Light Quest</strong><span>Chương 1 · Khu Vườn Thức Tỉnh<br>Ánh Sáng Đầu Tiên</span><a href="../">↩ Bản cũ</a></header><div id="hint">Chạm vào gương xanh để xoay tia sáng đến pha lê ✦</div><footer id="bottom"><button id="reset">↻ Làm lại</button><button id="undo">↶ Hoàn tác</button><button id="help">✧ Gợi ý</button><span id="status">Pha lê: 0/1</span></footer>
-<script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><script>
+</style></head><body><div id="game"></div><header id="top"><strong>✧ Light Quest</strong><span>Chương 1 · Khu Vườn Thức Tỉnh<br>Ánh Sáng Đầu Tiên</span><a href="../">↩ Bản cũ</a></header><div id="hint">Chạm gương để xoay 22,5° · phản xạ 8 hướng ✦</div><footer id="bottom"><button id="reset">↻ Làm lại</button><button id="undo">↶ Hoàn tác</button><button id="help">✧ Gợi ý</button><span id="status">Pha lê: 0/1</span></footer>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><script type="module">
+import {LEVELS} from './core/levels.js';
+import {PuzzleState} from './core/puzzle-state.js';
+import {drawMirror,drawBeam} from './ui/theme.js';
 (()=>{'use strict';
 const W=960,H=600,CELL=82,OX=376,OY=112;
 const status=document.querySelector('#status'),hint=document.querySelector('#hint');
-let mirrors=[1,1],history=[],won=false;
+let state=new PuzzleState(LEVELS[0]),won=false;
 class Garden extends Phaser.Scene{
 constructor(){super('garden')}
 create(){
 this.cameras.main.setBackgroundColor('#0b1930');
 this.g=this.add.graphics();this.beam=this.add.graphics();this.tiles=this.add.graphics();
 this.createBackground();this.paint();
-this.input.on('pointerdown',p=>{const x=Math.floor((p.x-OX)/CELL),y=Math.floor((p.y-OY)/CELL);const index=x===2&&y===2?0:x===2&&y===0?1:-1;if(index>=0&&!won){history.push([...mirrors]);mirrors[index]^=1;this.paint()}});
+this.input.on('pointerdown',p=>{const x=Math.floor((p.x-OX)/CELL),y=Math.floor((p.y-OY)/CELL);const index=state.level.mirrors.findIndex(m=>m.x===x&&m.y===y);if(index>=0&&!won){state.rotate(index,p.event?.shiftKey?-1:1);this.paint()}});
 }
 createBackground(){
 const bg=this.g;bg.fillGradientStyle(0x1c2a51,0x1c2a51,0x102f38,0x102f38).fillRect(0,0,W,H);
@@ -43,21 +46,20 @@ g.lineStyle(6,0x7c7e70).strokeRoundedRect(OX-16,OY-16,CELL*5+32,CELL*5+32,18);
 for(let y=0;y<5;y++)for(let x=0;x<5;x++){let px=OX+x*CELL,py=OY+y*CELL;g.fillStyle((x+y)%2?0x3d4c5a:0x465666).fillRoundedRect(px+2,py+2,CELL-4,CELL-4,7);g.lineStyle(1,0x667483,.65).strokeRoundedRect(px+3,py+3,CELL-6,CELL-6,7)}
 const sx=OX+CELL/2,sy=OY+2*CELL+CELL/2,tx=OX+4*CELL+CELL/2,ty=OY+CELL/2;
 g.fillStyle(0xc58c41).fillCircle(sx,sy,24);g.fillStyle(0xffd579).fillCircle(sx,sy,13);
-const paths=[];let x=0,y=2,dir=0,visited=new Set();let lit=false;
-for(let n=0;n<35;n++){const k=x+','+y+','+dir;if(visited.has(k))break;visited.add(k);let nx=x+[1,0,-1,0][dir],ny=y+[0,1,0,-1][dir];if(nx<0||ny<0||nx>4||ny>4)break;paths.push([x,y,nx,ny]);x=nx;y=ny;if(x===4&&y===0){lit=true;break}if(x===2&&y===2){dir=mirrors[0]===0?3:1}if(x===2&&y===0){dir=mirrors[1]===0?0:2}}
-for(const [a,b,c,d] of paths){let ax=OX+a*CELL+CELL/2,ay=OY+b*CELL+CELL/2,bx=OX+c*CELL+CELL/2,by=OY+d*CELL+CELL/2;this.beam.lineStyle(17,0xffb22b,.15).lineBetween(ax,ay,bx,by);this.beam.lineStyle(8,0xffca53,.7).lineBetween(ax,ay,bx,by);this.beam.lineStyle(3,0xfff7ce,1).lineBetween(ax,ay,bx,by)}
-for(let i=0;i<2;i++){let mx=OX+2*CELL+CELL/2,my=OY+(i===0?2:0)*CELL+CELL/2;g.fillStyle(0x966a37).fillRoundedRect(mx-29,my-29,58,58,10);g.lineStyle(7,0x80cfff).lineBetween(mx-22,my+(mirrors[i]? -19:19),mx+22,my+(mirrors[i]?19:-19));g.lineStyle(2,0xe2faff).lineBetween(mx-22,my+(mirrors[i]?-19:19),mx+22,my+(mirrors[i]?19:-19))}
+const result=state.result,lit=result.won;
+drawBeam(this.beam,result.segments,OX,OY,CELL);
+state.level.mirrors.forEach((m,i)=>drawMirror(g,OX+(m.x+.5)*CELL,OY+(m.y+.5)*CELL,state.angles[i]));
 g.fillStyle(0xa78351).fillCircle(tx,ty,25);g.fillStyle(lit?0x7fffe5:0x6e88c6).fillTriangle(tx,ty-24,tx-20,ty+4,tx,ty+23);g.fillTriangle(tx,ty-24,tx+20,ty+4,tx,ty+23);g.lineStyle(2,lit?0xf4ffff:0xb1dfff).strokeCircle(tx,ty,29);
 if(lit&&!won){won=true;status.textContent='✓ Pha lê đã sáng!';hint.textContent='✦ Hoàn thành! Cánh cổng cổ đã mở!';this.tweens.add({targets:this.cameras.main,alpha:{from:.75,to:1},duration:550});this.add.text(520,260,'✦ CỔNG ĐÃ MỞ ✦',{font:'bold 30px Georgia',color:'#ffe1a1',backgroundColor:'#14243bdd',padding:15}).setOrigin(.5).setDepth(5)}
 else if(!won){status.textContent='Pha lê: 0/1'}
 }
-reset(){mirrors=[1,1];history=[];won=false;this.children.list.filter(o=>o.type==='Text'&&o.text?.includes('CỔNG ĐÃ MỞ')).forEach(o=>o.destroy());hint.textContent='Chạm vào gương xanh để xoay tia sáng đến pha lê ✦';this.paint()}
-undo(){if(!history.length)return;mirrors=history.pop();won=false;this.children.list.filter(o=>o.type==='Text'&&o.text?.includes('CỔNG ĐÃ MỞ')).forEach(o=>o.destroy());hint.textContent='Chạm vào gương xanh để xoay tia sáng đến pha lê ✦';this.paint()}
+reset(){state.reset();won=false;this.children.list.filter(o=>o.type==='Text'&&o.text?.includes('CỔNG ĐÃ MỞ')).forEach(o=>o.destroy());hint.textContent='Chạm vào gương xanh để xoay tia sáng đến pha lê ✦';this.paint()}
+undo(){if(!state.history.length)return;state.undo();won=false;this.children.list.filter(o=>o.type==='Text'&&o.text?.includes('CỔNG ĐÃ MỞ')).forEach(o=>o.destroy());hint.textContent='Chạm vào gương xanh để xoay tia sáng đến pha lê ✦';this.paint()}
 }
 const game=new Phaser.Game({type:Phaser.CANVAS,parent:'game',width:W,height:H,backgroundColor:'#0b1930',render:{pixelArt:false,antialias:true},scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Garden],fps:{target:30,forceSetTimeOut:true}});
 document.querySelector('#reset').onclick=()=>game.scene.keys.garden.reset();
 document.querySelector('#undo').onclick=()=>game.scene.keys.garden.undo();
-document.querySelector('#help').onclick=()=>{hint.textContent='Gợi ý: Gương giữa hướng tia lên trên, gương trên hướng tia sang phải.'};
+document.querySelector('#help').onclick=()=>{hint.textContent='Gợi ý: Gương dưới 45° và gương trên 135°. Mỗi chạm xoay 22,5°.'};
 document.addEventListener('visibilitychange',()=>{if(document.hidden)game.loop.sleep();else game.loop.wake()});
 })();
 </script></body></html>
