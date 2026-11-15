@@ -1,0 +1,45 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><title>Light Quest · Tactical Light Demo</title><style>
+*{box-sizing:border-box}body{margin:0;background:#0c1426;color:#ffe8b7;font-family:system-ui,sans-serif}#game{height:100dvh;width:100vw;overflow:hidden}canvas{display:block;margin:auto;touch-action:none}#hud{position:fixed;bottom:max(8px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;max-width:98vw;background:#14233de9;border:2px solid #bc9250;border-radius:14px;padding:8px;box-shadow:0 4px 18px #000a}button{background:linear-gradient(#4a4b55,#1b2c40);color:#ffe2a1;border:1px solid #d5ac6a;border-radius:10px;padding:9px 11px;font-weight:700;white-space:nowrap}#msg{max-width:240px;font-size:12px}#info{position:fixed;top:max(10px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:#14233de8;border:1px solid #d5ac6a;border-radius:10px;padding:7px 13px;font-size:13px;max-width:90%;text-align:center}@media(max-width:620px){#hud{gap:3px;padding:5px}button{padding:7px 6px;font-size:11px}#msg{font-size:10px;max-width:100px}#info{font-size:11px}}</style></head><body><div id="game"></div><div id="info">Chạm gương để xoay · Nguồn vàng mở cổng · Tia đỏ phá đá</div><div id="hud"><button id="undo">↶ Hoàn tác</button><button id="reset">↻ Làm lại</button><button id="hint">✦ Gợi ý</button><button id="end">⌛ Kết thúc lượt</button><span id="msg">⚡ 12 · Lượt 0</span></div><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><script type="module">
+import {propagate} from '../core/tactical-optics.js';
+const W=1200,H=720,S=68,OX=395,OY=163;
+const msg=document.querySelector('#msg'),info=document.querySelector('#info');
+const initial=()=>({width:6,height:5,sources:[{x:0,y:2,dir:0,color:'gold',power:1},{x:0,y:4,dir:0,color:'red',power:1.5}],objects:[{id:'m1',type:'mirror',x:2,y:2,axis:0,sided:'double'},{id:'m2',type:'mirror',x:2,y:0,axis:0,sided:'double'},{type:'receiver',x:5,y:0,color:'gold'},{type:'rock',x:3,y:4,hardness:1.2}]});
+let level=initial(),energy=12,turn=0,history=[],broken=false,win=false;
+const color={gold:0xffd46d,red:0xff5b5b,blue:0x67caff,purple:0xc783ff};
+class Demo extends Phaser.Scene{
+ constructor(){super('demo')}
+ preload(){this.load.svg('reference','../mockups/tactical-light-reference.svg',{width:1200,height:720})}
+ create(){
+ this.add.image(600,360,'reference').setDepth(0);
+ this.board=this.add.graphics().setDepth(2);this.beams=this.add.graphics().setDepth(3);this.objects=this.add.graphics().setDepth(4);
+ this.labels=this.add.text(600,124,'GƯƠNG CỔ · PHẢN XẠ CHÍNH XÁC',{fontFamily:'Georgia',fontSize:'22px',color:'#ffe1a1',backgroundColor:'#15263bdc',padding:{x:18,y:8}}).setOrigin(.5).setDepth(5);
+ this.input.on('pointerdown',p=>{const x=Math.floor((p.x-OX)/S),y=Math.floor((p.y-OY)/S);const mirror=level.objects.find(o=>o.type==='mirror'&&o.x===x&&o.y===y);if(mirror&&energy>0&&!win){history.push({level:structuredClone(level),energy,turn,broken,win});mirror.axis=(mirror.axis+1)%8;energy--;turn++;this.renderBoard()}});
+ this.renderBoard();
+ }
+ renderBoard(){
+ const g=this.board,b=this.beams,o=this.objects;g.clear();b.clear();o.clear();
+ g.fillStyle(0x152436,.97).fillRoundedRect(OX-12,OY-12,6*S+24,5*S+24,13);
+ g.lineStyle(6,0xc29a5b).strokeRoundedRect(OX-12,OY-12,6*S+24,5*S+24,13);
+ for(let y=0;y<5;y++)for(let x=0;x<6;x++){g.fillStyle((x+y)%2?0x33465a:0x405268).fillRoundedRect(OX+x*S+2,OY+y*S+2,S-4,S-4,6);g.lineStyle(1,0x7a8a8b,.6).strokeRoundedRect(OX+x*S+3,OY+y*S+3,S-6,S-6,5)}
+ const r=propagate(level);
+ for(const segment of r.beams){const [x,y]=segment.from,[a,c]=segment.to,ax=OX+(x+.5)*S,ay=OY+(y+.5)*S,bx=OX+(a+.5)*S,by=OY+(c+.5)*S,col=color[segment.color]??0xffffff;b.lineStyle(20,col,.13).lineBetween(ax,ay,bx,by);b.lineStyle(9,col,.55).lineBetween(ax,ay,bx,by);b.lineStyle(3,0xffffff,.94).lineBetween(ax,ay,bx,by)}
+ for(const s of level.sources){const cx=OX+(s.x+.5)*S,cy=OY+(s.y+.5)*S;o.fillStyle(0x76532b).fillCircle(cx,cy,23);o.lineStyle(4,0xf7ca7e).strokeCircle(cx,cy,23);o.fillStyle(color[s.color]).fillCircle(cx,cy,14)}
+ for(const obj of level.objects){const cx=OX+(obj.x+.5)*S,cy=OY+(obj.y+.5)*S;
+ if(obj.type==='mirror'){o.fillStyle(0x946b37).fillRoundedRect(cx-26,cy-26,52,52,7);o.lineStyle(3,0xffd18a).strokeRoundedRect(cx-26,cy-26,52,52,7);const a=obj.axis*Math.PI/8,dx=Math.cos(a)*27,dy=Math.sin(a)*27;o.lineStyle(9,0x5dd1f4).lineBetween(cx-dx,cy-dy,cx+dx,cy+dy);o.lineStyle(2,0xffffff).lineBetween(cx-dx,cy-dy,cx+dx,cy+dy)}
+ if(obj.type==='receiver'){const hit=r.hits.some(h=>h.x===obj.x&&h.y===obj.y&&h.color==='gold');o.fillStyle(hit?0xffd86d:0x7e7191).fillCircle(cx,cy,25);o.lineStyle(5,0xf7dbaa).strokeCircle(cx,cy,25);o.fillStyle(hit?0xffffff:0x6278af).fillTriangle(cx,cy-19,cx+18,cy+13,cx-18,cy+13)}
+ if(obj.type==='rock'){const hit=r.hits.find(h=>h.kind==='rock'&&h.x===obj.x&&h.y===obj.y);if(hit?.broken)broken=true;o.fillStyle(broken?0x344657:0x806a63).fillRoundedRect(cx-24,cy-22,48,44,9);o.lineStyle(4,broken?0xf8a66c:0xc6b9a2).strokeRoundedRect(cx-24,cy-22,48,44,9);if(broken)o.lineStyle(3,0xff6b4c).lineBetween(cx-16,cy-13,cx+15,cy+15)}
+ }
+ const gold=r.hits.some(h=>h.color==='gold'&&h.x===5&&h.y===0);win=gold&&broken;
+ msg.textContent='⚡ '+energy+' · Lượt '+turn+(broken?' · Đá vỡ':'')+(gold?' · Cổng sáng':'');
+ if(win)info.textContent='✦ Hoàn thành! Đã mở cổng và phá đá để nhận vật phẩm!';
+ else if(energy<=0)info.textContent='Hết năng lượng! Hoàn tác hoặc làm lại.';
+ else info.textContent='Chạm gương để xoay 22,5° · Mở cổng vàng và phá đá đỏ';
+ }
+}
+const game=new Phaser.Game({type:Phaser.CANVAS,parent:'game',width:W,height:H,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Demo],fps:{target:30,forceSetTimeOut:true},render:{antialias:true}});
+document.querySelector('#reset').onclick=()=>{level=initial();energy=12;turn=0;history=[];broken=false;win=false;game.scene.keys.demo.renderBoard()};
+document.querySelector('#undo').onclick=()=>{if(!history.length)return;({level,energy,turn,broken,win}=history.pop());game.scene.keys.demo.renderBoard()};
+document.querySelector('#hint').onclick=()=>{info.textContent='Gợi ý: xoay cả hai gương đến 135° (6 lần chạm mỗi gương).'};
+document.querySelector('#end').onclick=()=>{turn++;energy=Math.min(12,energy+2);game.scene.keys.demo.renderBoard()};
+document.addEventListener('visibilitychange',()=>document.hidden?game.loop.sleep():game.loop.wake());
+</script></body></html>
