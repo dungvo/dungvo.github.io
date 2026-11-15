@@ -59,7 +59,7 @@ undo(){if(!state.history.length)return;state.undo();won=false;this.children.list
 const game=new Phaser.Game({type:Phaser.CANVAS,parent:'game',width:W,height:H,backgroundColor:'#0b1930',render:{pixelArt:false,antialias:true},scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Garden],fps:{target:30,forceSetTimeOut:true}});
 document.querySelector('#reset').onclick=()=>game.scene.keys.garden.reset();
 document.querySelector('#undo').onclick=()=>game.scene.keys.garden.undo();
-document.querySelector('#help').onclick=()=>{hint.textContent='Gợi ý: Gương dưới 45° và gương trên 135°. Mỗi chạm xoay 22,5°.'};
+document.querySelector('#help').onclick=()=>{hint.textContent='Gợi ý: Cả hai gương đặt 135° để tia đi lên rồi rẽ phải.'};
 document.addEventListener('visibilitychange',()=>{if(document.hidden)game.loop.sleep();else game.loop.wake()});
 })();
 </script></body></html>
