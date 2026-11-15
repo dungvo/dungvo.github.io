@@ -1,4 +1,5 @@
 import {propagate, segmentTouches} from './tactical-optics.js';
+import {createTraversal, opticsBoard, walk, walkOptions} from './room-traversal.js';
 
 export const GARDEN = {
   width: 7, height: 6, energy: 20, transmissionPerCell: .985,
@@ -27,21 +28,24 @@ export const GARDEN = {
   pattern: [[0, 1], [1, 1], [2, 1], [2, 2], [2, 3], [2, 4], [3, 4], [4, 4], [5, 4], [6, 4]]
 };
 
-export const COSTS = {rotate: 1, flip: 1, source: 1, scan: 2, repair: 3, collect: 0, wait: 0};
+export const COSTS = {rotate: 1, flip: 1, source: 1, scan: 2, repair: 3, collect: 0, walk: 1, wait: 0};
 export const mirrorById = (state, id) => state.level.objects.find(o => o.id === id && o.type === 'mirror');
 
 export function createGarden(definition = GARDEN) {
   const level = structuredClone(definition);
-  return {
-    level, energy: level.energy, turn: 0, wolf: structuredClone(level.wolf),
+  const state = {
+    level, traversal:createTraversal(level.traversal), energy: level.energy, turn: 0, wolf: structuredClone(level.wolf),
     repairStock: 0, loot: 'sealed', lootPosition: null, secret: false, collectedSecret: false, charged: [],
-    pattern: false, opened: false, route: null, optics: propagate(level)
+    pattern: false, opened: false, route: null
   };
+  state.optics = propagate(opticsBoard(state));
+  return state;
 }
 
 export function wolfIntent(state) {
   const wolf = state.wolf;
   if (!wolf?.hp) return null;
+  if (state.traversal?.bellTurns) return {type:'distracted'};
   const mirror = mirrorById(state, 'guard');
   if (wolf.step === 1 && mirror && !mirror.broken) return {type: 'break', id: mirror.id, x: mirror.x, y: mirror.y};
   const [x, y] = wolf.patrol[(wolf.step + 1) % wolf.patrol.length];
@@ -51,9 +55,11 @@ export function wolfIntent(state) {
 export function applyGardenAction(state, action) {
   const cost = COSTS[action.type];
   const mirror = mirrorById(state, action.id);
+  const step = action.type === 'walk' && walkOptions(state).find(option => option.x === action.x && option.y === action.y);
   const source = state.level.sources.find(item => item.id === action.id);
-  if (cost === undefined || (action.type === 'rotate' && (!mirror || mirror.broken)) ||
-      (action.type === 'flip' && (!mirror || mirror.broken || mirror.sided !== 'single')) ||
+  if (cost === undefined || (action.type === 'rotate' && (!mirror || mirror.broken || mirror.locked)) ||
+      (action.type === 'flip' && (!mirror || mirror.broken || mirror.locked || mirror.sided !== 'single')) ||
+      (action.type === 'walk' && !step) ||
       (action.type === 'source' && source?.id !== 'ember') ||
       (action.type === 'repair' && (!mirror?.broken || !state.repairStock)) ||
       (action.type === 'scan' && (!state.level.secret || state.secret)) ||
@@ -67,6 +73,7 @@ export function applyGardenAction(state, action) {
   next.turn++;
   next.energy -= cost;
   switch (action.type) {
+    case 'walk': events.push(...walk(next, step)); break;
     case 'rotate': {
       const raw = nextMirror.axis + (action.delta === -1 ? -1 : 1);
       nextMirror.axis = (raw + 8) % 8;
@@ -101,7 +108,7 @@ export function applyGardenAction(state, action) {
     case 'wait': next.energy = Math.min(next.level.energy, next.energy + 2); break;
   }
 
-  const beforeDamage = propagate(next.level);
+  const beforeDamage = propagate(opticsBoard(next));
   const brokenRock = beforeDamage.hits.find(hit => hit.kind === 'rock' && hit.broken);
   if (brokenRock) {
     next.level.objects = next.level.objects.filter(o => o.id !== brokenRock.id);
@@ -122,13 +129,15 @@ export function applyGardenAction(state, action) {
     mirrorById(next, intent.id).broken = true;
     events.push({...intent});
   }
-  if (intent) {
+  if (intent && intent.type !== 'distracted') {
     events.push({type:'move', from:[wolf.x, wolf.y]});
     wolf.step = (wolf.step + 1) % wolf.patrol.length;
     [wolf.x, wolf.y] = wolf.patrol[wolf.step];
   }
 
-  next.optics = propagate(next.level);
+  if (next.traversal?.bellTurns) next.traversal.bellTurns--;
+
+  next.optics = propagate(opticsBoard(next));
   const receivers = next.level.objects.filter(o => o.type === 'receiver');
   next.charged = receivers.filter(o => next.optics.hits.some(hit =>
     hit.id === o.id && hit.color === o.color && hit.power >= o.requirement)).map(o => o.id);
@@ -140,7 +149,10 @@ export function applyGardenAction(state, action) {
       beam.source === 'sun' && segmentTouches(beam, ...points[i]) && segmentTouches(beam, x, y)));
     if (!next.opened) events.push({type: 'gate', x: crystal.x, y: crystal.y});
     next.opened = true;
-    next.route ??= matches ? 'mirrors' : next.level.pattern ? 'prism' : 'gate';
+    const layout = next.level.traversal;
+    if (layout?.plates) next.route ??= next.traversal.relays.length ? 'relay' : 'counterweight';
+    else if (layout?.bell) next.route ??= next.traversal.bellUsed && wolf.hp ? 'bell' : 'repair';
+    else next.route ??= matches ? 'mirrors' : next.level.pattern ? 'prism' : 'gate';
     if (matches && !next.pattern) {
       next.pattern = true;
       events.push({type: 'pattern', x: crystal.x, y: crystal.y});

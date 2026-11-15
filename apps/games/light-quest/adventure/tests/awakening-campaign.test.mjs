@@ -39,14 +39,42 @@ test('every chapter room starts on a valid 7 by 6 board with an unsolved gate', 
   }
 });
 
-test('split prism room needs both gold receivers simultaneously', () => {
-  const first = play(1, rotate('north', -1));
+const move = ([x,y]) => ({type:'walk',x,y});
+
+test('prism room is solved with a counterweight and pressure plates without rotating a mirror', () => {
+  const initial = createGarden(AWAKENING[1]);
+  assert.equal(applyGardenAction(initial, rotate('south')).error, 'invalid');
+  const first = [[2,3],[3,3]].map(move).reduce(step, initial);
   assert.deepEqual(first.charged, ['crystal']);
   assert.equal(first.opened, false);
-  const solved = step(first, rotate('south'));
+  assert.deepEqual(first.traversal.crates[0], {id:'counterweight',x:4,y:3});
+  const solved = [[2,3],[2,4],[2,5]].map(move).reduce(step, first);
   assert.deepEqual(solved.charged, ['crystal', 'crystal-east']);
   assert.equal(solved.opened, true);
-  assert.equal(solved.pattern, false);
+  assert.equal(solved.route, 'counterweight');
+  assert.equal(solved.turn, 5);
+  assert.equal(solved.energy, 11);
+  assert.deepEqual(initial.traversal.crates[0], {id:'counterweight',x:2,y:3});
+});
+
+test('the relay offers a route that avoids the crate and stays active off the switch tile', () => {
+  const path = [[1,2],[1,1],[1,0],[1,1],[1,2],[1,3],[1,4],[2,4],[2,5]];
+  const solved = play(1, ...path.map(move));
+  assert.equal(solved.opened, true);
+  assert.equal(solved.route, 'relay');
+  assert.deepEqual(solved.traversal.crates[0], {id:'counterweight',x:2,y:3});
+  assert.deepEqual(solved.traversal.relays, ['latch']);
+});
+
+test('blocked or distant walking and impossible pushes leave energy, turn and optics intact', () => {
+  const initial = createGarden(AWAKENING[1]);
+  const pressed = play(1, move([2,3]), move([3,3]));
+  const away = step(pressed, move([2,3]));
+  for (const [state,position] of [[initial,[2,2]], [initial,[4,3]], [pressed,[4,3]], [away,[2,2]]]) {
+    const result = applyGardenAction(state, move(position));
+    assert.equal(result.error, 'invalid');
+    assert.equal(result.state, state);
+  }
 });
 
 test('two-spectrum room needs its red lens and the correct filter', () => {
@@ -77,4 +105,20 @@ test('the warden room reveals a shard at the broken rock and requires repair on 
   const solved = step(interrupted, repair);
   assert.equal(solved.opened, true);
   assert.equal(solved.repairStock, 0);
+});
+
+test('ringing the bell before the wolf moves opens a no-combat route to the warden gate', () => {
+  const rung = play(4, move([5,1]));
+  assert.equal(rung.wolf.step, 0);
+  assert.equal(rung.traversal.bellTurns, 2);
+  const solved = [ember, rotate('north')].reduce(step, rung);
+  assert.equal(solved.opened, true);
+  assert.equal(solved.route, 'bell');
+  assert.equal(solved.wolf.hp, 2);
+  assert.equal(mirrorById(solved, 'guard').broken, undefined);
+  assert.equal(solved.traversal.bellTurns, 0);
+  const off = step(solved, move([4,1]));
+  const back = step(off, move([5,1]));
+  assert.equal(back.traversal.bellTurns, 0);
+  assert.equal(mirrorById(back, 'guard').broken, true);
 });

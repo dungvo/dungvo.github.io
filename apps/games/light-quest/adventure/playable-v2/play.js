@@ -1,6 +1,7 @@
 import {applyGardenAction, createGarden, COSTS, mirrorById, wolfIntent} from '../core/garden-room.js';
 
 import {AWAKENING} from '../core/awakening-levels.js';
+import {platePressed, shutterOpen, walkOptions} from '../core/room-traversal.js';
 
 const Phaser = globalThis.Phaser;
 const $ = id => document.getElementById(id);
@@ -14,6 +15,9 @@ const COLORS = {
   red: [0xf82e42, 0xff6e62, 0xffeee4]
 };
 const EVENT_TEXT = {
+  push: 'Đã đẩy khối đá. Đặt nó lên mâm để giữ cửa nâng.',
+  relay: 'Cần gạt đã chốt cửa trên. Tìm đường tới mâm đá dưới.',
+  bell: 'Tiếng chuông giữ chân sói. Bật tia đỏ và xoay gương trước khi sói tuần tra lại.',
   scan: 'Soi Sáng đã hé lộ hoa linh quang. Hãy nhặt bông hoa trên bàn.',
   repair: 'Gương cổ đã được phục hồi.',
   shard: 'Đã nhận mảnh sửa gương. Chọn gương vỡ để dùng.',
@@ -47,6 +51,8 @@ const SPRITES = {splitter:'splitter', amplifier:'amplifier', filter:'filter', ro
 const px = n => BORDER + (n + .5) * CELL;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const BUTTONS = new Map();
+const WALK_BUTTONS = new Map();
+const defaultDevice = room => room.objects.find(device => device.type === 'mirror' && !device.locked)?.id ?? 'prism';
 const progressKey = 'light-quest-awakening-v1';
 const ROOM_BACKDROPS = {garden:'waterfall', prism:'prism-hall', ember:'ember-ruins', violet:'amethyst-cavern', night:'moonlit-fortress'};
 const THEME_WASH = {prism:0x2ccad8, ember:0xe25b45, violet:0xa66ee0, night:0x394bc5};
@@ -63,7 +69,7 @@ function loadProgress() {
 }
 const progress = loadProgress();
 let state = createGarden(AWAKENING[progress.active]);
-let selected = 'north';
+let selected = defaultDevice(state.level);
 let explorer = 'lumi';
 const history = [];
 let idleTimer;
@@ -99,7 +105,7 @@ function loadRoom(index) {
   progress.active = index;
   state = createGarden(AWAKENING[index]);
   history.length = 0;
-  selected = 'north';
+  selected = defaultDevice(state.level);
   saveProgress();
   say(state.level.intro);
   game.scene.getScene('garden').drawFloor();
@@ -163,8 +169,48 @@ function synchronizeButtons() {
   }
 }
 
+function synchronizeWalk() {
+  const active = document.activeElement;
+  const focusedWalk = active?.classList.contains('walk-control');
+  const options = state.energy >= COSTS.walk ? walkOptions(state) : [];
+  const keys = new Set(options.map(({x,y}) => `${x},${y}`));
+  for (const [key, button] of WALK_BUTTONS) {
+    if (!keys.has(key)) { button.remove(); WALK_BUTTONS.delete(key); }
+  }
+  const layout = state.level.traversal;
+  for (const {x,y,label,arrow,crate} of options) {
+    const key = `${x},${y}`;
+    let button = WALK_BUTTONS.get(key);
+    if (!button) {
+      button = document.createElement('button');
+      button.className = 'tile-control walk-control';
+      button.type = 'button';
+      button.dataset.walk = key;
+      button.style.left = `${100 * px(x) / WIDTH}%`;
+      button.style.top = `${100 * px(y) / HEIGHT}%`;
+      button.style.width = `${100 * (CELL - 5) / WIDTH}%`;
+      button.style.height = `${100 * (CELL - 5) / HEIGHT}%`;
+      button.addEventListener('click', () => commit({type:'walk', x, y}));
+      WALK_BUTTONS.set(key, button);
+      $('walk-hotspots').append(button);
+    }
+    const bell = layout.bell?.x === x && layout.bell?.y === y && !state.traversal.bellUsed;
+    const relay = layout.relays?.some(item => item.x === x && item.y === y && !state.traversal.relays.includes(item.id));
+    const plate = layout.plates?.some(item => item.x === x && item.y === y);
+    button.textContent = arrow;
+    button.dataset.push = String(Boolean(crate));
+    button.setAttribute('aria-label', crate ? `Đẩy khối đá ${label}` :
+      bell ? 'Đi tới chuông' : relay ? 'Đi tới cần gạt' : plate ? 'Bước lên mâm đá' : `Đi ${label}`);
+  }
+  $('walk-guide').hidden = !state.traversal;
+  if (focusedWalk && !active.isConnected) {
+    (WALK_BUTTONS.values().next().value ?? $('wait')).focus({preventScroll:true});
+  }
+}
+
 function synchronizeHUD() {
   synchronizeButtons();
+  synchronizeWalk();
   synchronizeLevels();
   const receivers = state.level.objects.filter(object => object.type === 'receiver');
   const charged = state.charged.length;
@@ -195,18 +241,19 @@ function synchronizeHUD() {
   $('intent').dataset.danger = String(intent?.type === 'break');
   $('intent').textContent = intent?.type === 'break'
     ? '⚠ Sói sắp phá gương Đông ở lượt kế!'
+    : intent?.type === 'distracted' ? `Sói dừng vì tiếng chuông · còn ${state.traversal.bellTurns} lượt.`
     : intent ? `Sói Bóng Đêm · ${state.wolf.hp}/2 máu. Đang tuần tra.` : '✓ Sói Bóng Đêm đã bị hạ.';
 
   const mirror = mirrorById(state, selected);
   const [name, description] = DEVICES[selected];
   const receiver = receivers.find(object => object.id === selected);
   const color = receiver?.color === 'red' ? 'đỏ' : 'vàng';
-  const info = receiver ? `Cần tia ${color} · ${state.charged.includes(selected) ? 'đã sáng' : 'chưa đủ sáng'}.` : description;
+  const info = mirror?.locked ? 'Gương cố định · đổi đường tia bằng cửa chắn sáng.' : receiver ? `Cần tia ${color} · ${state.charged.includes(selected) ? 'đã sáng' : 'chưa đủ sáng'}.` : description;
   $('selected').textContent = name;
   $('device-info').textContent = mirror?.broken
     ? 'Đã vỡ · dùng mảnh vàng để sửa.'
     : mirror ? `${(mirror.axis * 22.5).toLocaleString('vi-VN')}° · ${info}` : info;
-  $('mirror-actions').hidden = !mirror;
+  $('mirror-actions').hidden = !mirror || mirror.locked;
   $('left').disabled = $('right').disabled = !mirror || mirror.broken || state.energy < COSTS.rotate;
   $('flip').hidden = mirror?.sided !== 'single';
   $('flip').disabled = $('right').disabled;
@@ -240,6 +287,7 @@ function commit(action) {
   const messages = result.events.map(event => EVENT_TEXT[event.type]).filter(Boolean);
   if (messages.length) say(messages.join(' '));
   else if (action.type === 'source') say(state.level.sources.find(source => source.id === action.id).enabled ? 'Đã bật nguồn đỏ.' : 'Đã tắt nguồn đỏ.');
+  else if (action.type === 'walk') say('Chạm một ô sáng để đi tiếp.');
   else if (action.type === 'wait') say('Đã qua lượt và hồi năng lượng.');
   else if (action.type === 'rotate' || action.type === 'flip') say('Đã đổi hướng gương. Quan sát tia sau phản xạ.');
   render(result.events);
@@ -248,16 +296,16 @@ function commit(action) {
 function activateDevice(id) {
   selected = id;
   if (id === 'shard' || id === 'secret') {
-    selected = 'north';
+    selected = defaultDevice(state.level);
     commit({type:'collect', id});
     BUTTONS.get('north').focus({preventScroll:true});
   } else if (id === 'ember') commit({type:'source', id});
   else {
     const mirror = mirrorById(state, id);
-    if (mirror && !mirror.broken) commit({type:'rotate', id});
+    if (mirror && !mirror.broken && !mirror.locked) commit({type:'rotate', id});
     else {
       synchronizeHUD();
-      const text = mirror ? 'Chọn Sửa nếu túi có mảnh vàng.' : $('device-info').textContent;
+      const text = mirror?.broken ? 'Chọn Sửa nếu túi có mảnh vàng.' : $('device-info').textContent;
       showClue(id, DEVICES[id][0], text);
     }
   }
@@ -274,13 +322,13 @@ function wireControls() {
     if (!history.length) return;
     hideClue();
     state = history.pop();
-    selected = 'north';
+    selected = defaultDevice(state.level);
     say('Đã trở về lượt trước.');
     render();
   };
   $('reset').onclick = () => loadRoom(progress.active);
   $('hint').onclick = () => {
-    showClue('north', 'Gợi ý', state.level.hint);
+    showClue(defaultDevice(state.level), 'Gợi ý', state.level.hint);
     say(state.level.hint);
     const clueRect = $('board-clue').getBoundingClientRect();
     if (clueRect.bottom < 0 || clueRect.top > innerHeight) $('board').scrollIntoView({block:'start'});
@@ -300,6 +348,7 @@ function wireControls() {
     explorer = explorer === 'lumi' ? 'sol' : 'lumi';
     $('explorer').src = `${ASSET}${explorer}.webp`;
     $('speaker').textContent = explorer === 'lumi' ? 'Lumi' : 'Sol';
+    if (state.traversal) render();
   };
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) { clearTimeout(idleTimer); game.loop.sleep(); }
@@ -310,7 +359,11 @@ function wireControls() {
 function start() {
   class GardenScene extends Phaser.Scene {
     constructor() { super('garden'); }
-    preload() { this.load.atlas('garden', ASSET + 'garden-atlas.webp', ASSET + 'garden-atlas.json'); }
+    preload() {
+      this.load.atlas('garden', ASSET + 'garden-atlas.webp', ASSET + 'garden-atlas.json');
+      this.load.image('hero-lumi', ASSET + 'lumi.webp');
+      this.load.image('hero-sol', ASSET + 'sol.webp');
+    }
     create() {
       if (!this.textures.exists('garden')) {
         $('loading').textContent = 'Không tải được tài nguyên. Hãy tải lại trang.';
@@ -372,6 +425,46 @@ function start() {
         this.sprite('vine', x, y, size, this.floor).setAngle(angle);
       }
     }
+    drawTraversal(events) {
+      const layout = state.level.traversal;
+      if (!layout) return;
+      const travel = state.traversal;
+      const marker = this.add.graphics();
+      this.actors.add(marker);
+      const emblem = (point, glyph, active) => {
+        const x = px(point.x);
+        const y = px(point.y);
+        const color = active ? 0x8bffcf : 0xffdc90;
+        marker.lineStyle(3,color,.85).strokeRoundedRect(x-32,y-26,64,52,9);
+        this.actors.add(this.add.text(x,y,glyph,{font:'bold 26px Georgia',color:active?'#9cffd8':'#fff0b2'}).setOrigin(.5));
+      };
+      for (const plate of layout.plates ?? []) emblem(plate, '◇', platePressed(state, plate));
+      for (const relay of layout.relays ?? []) emblem(relay, '⚙', travel.relays.includes(relay.id));
+      if (layout.bell) {
+        this.sprite('shard', px(layout.bell.x), px(layout.bell.y), 61).setAlpha(travel.bellUsed ? .55 : 1);
+        emblem(layout.bell, '♫', travel.bellTurns > 0);
+      }
+      for (const crate of travel.crates) {
+        const x = px(crate.x);
+        const y = px(crate.y);
+        const block = this.sprite('wall', x, y, 84);
+        const push = events.find(event => event.type === 'push' && event.id === crate.id);
+        if (push && !reducedMotion.matches) {
+          block.setPosition(px(push.from[0]),px(push.from[1]));
+          this.tweens.add({targets:block,x,y,duration:170,ease:'Sine.easeOut'});
+        }
+      }
+      const x = px(travel.player.x);
+      const y = px(travel.player.y);
+      const hero = this.add.image(x, y + 32, `hero-${explorer}`).setOrigin(.5,1);
+      hero.setScale(92 / hero.height);
+      this.actors.add(hero);
+      const walk = events.find(event => event.type === 'walk');
+      if (walk && !reducedMotion.matches) {
+        hero.setPosition(px(walk.from[0]),px(walk.from[1]) + 32);
+        this.tweens.add({targets:hero,x,y:y+32,duration:170,ease:'Sine.easeOut'});
+      }
+    }
     paint(events = []) {
       this.tweens.killAll();
       this.actors.removeAll(true);
@@ -397,7 +490,16 @@ function start() {
       for (const object of state.level.objects) {
         const x = px(object.x);
         const y = px(object.y);
-        if (object.type === 'mirror') {
+        if (object.shutter) {
+          const open = shutterOpen(state, object);
+          const gate = this.add.graphics();
+          this.actors.add(gate);
+          gate.lineStyle(4,open ? 0x87eec3 : 0xddaa69,.86).strokeRoundedRect(x-36,y-29,72,58,7);
+          if (!open) {
+            gate.fillStyle(0x221c32,.85).fillRoundedRect(x-34,y-27,68,54,7);
+            for (const offset of [-23,-8,8,23]) gate.lineStyle(5,0xd9a76a,.95).lineBetween(x+offset,y-23,x+offset,y+23);
+          }
+        } else if (object.type === 'mirror') {
           this.sprite('tile-4', x, y, 83).setAlpha(.86);
           const frame = object.sided === 'single' ? 'mirror-single' : 'mirror-face';
           this.sprite(frame, x, y, 101).setAngle(object.axis * 22.5 + (object.flipped ? 180 : 0)).setAlpha(object.broken ? .35 : 1);
@@ -416,6 +518,7 @@ function start() {
           if (object.type === 'filter' && object.color === 'red') sprite.setTint(0xff8b90);
         }
       }
+      this.drawTraversal(events);
       if (state.loot === 'loose') this.sprite('shard', px(state.lootPosition.x), px(state.lootPosition.y), 84);
       if (state.secret && !state.collectedSecret) {
         const secret = state.level.secret;
@@ -442,7 +545,7 @@ function start() {
       if (event.x === undefined) return;
       const x = px(event.x);
       const y = px(event.y);
-      const glows = {rock:0xffab74, defeat:0xea97ff, wound:0xfb5464, break:0xfaa986, scan:0x8cffdc, gate:0xffed9b, repair:0x87f1ff, pattern:0xffed9b};
+      const glows = {bell:0x98f9d9, relay:0x98f9d9, rock:0xffab74, defeat:0xea97ff, wound:0xfb5464, break:0xfaa986, scan:0x8cffdc, gate:0xffed9b, repair:0x87f1ff, pattern:0xffed9b};
       const color = glows[event.type];
       if (!color) return;
       const sparks = this.add.graphics();

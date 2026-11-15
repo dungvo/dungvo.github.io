@@ -246,3 +246,21 @@ body[data-theme="night"] { --edge: #899acf; --panel: linear-gradient(150deg, #26
 .board-clue[data-below="true"] { top: calc(var(--clue-y) + 6.5%); bottom: auto; }
 .board-clue strong { color: var(--gold); display: block; }
 #room-progress { color: var(--muted); font-size: 12px; }
+
+.walk-control {
+  border: 1px solid #91f3cba8;
+  color: #bfffe4;
+  background: #1b755b2e;
+  font: bold clamp(12px, 1.7vw, 23px)/1 system-ui, sans-serif;
+  text-shadow: 0 2px 4px #080c14;
+}
+.walk-control[data-push="true"] { color: #ffe4a4; border-color: #ffce85d1; background: #8d531e27; }
+.walk-control:hover, .walk-control:focus-visible { background: #28847364; }
+.walk-guide {
+  padding: 4px 10px;
+  margin: 5px 3.4% 0;
+  border-radius: 9px;
+  background: #09192ae8;
+  color: #c7fae8;
+  font-size: 12px;
+}

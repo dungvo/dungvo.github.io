@@ -19,15 +19,22 @@ export const AWAKENING = [
   },
   room({
     id:'split-prism', title:'Điện Lăng Kính', theme:'prism',
-    intro:'Đánh thức hai viên pha lê cùng lúc. Lăng kính chia tia vàng thành hai nhánh.',
-    hint:'Đặt Gương Bắc nằm ngang để tia đi tới lăng kính. Dùng Gương Nam để bẻ nhánh đi xuống sang phải.'
+    intro:'Chạm ô sáng cạnh nhân vật để đi. Giữ hai mâm đá cùng lúc để nâng cửa chắn tia.',
+    hint:'Đẩy khối đá hai ô sang phải lên mâm phía trên. Sau đó đi vòng xuống mâm dưới. Cần gạt ở phía tây là lối khác.'
   }, {
     sources:[sun(1,2.65)],
     objects:[
-      mirror('north',1,1,1), branch(3,1), filter('sun-filter',5,1,'gold'), crystal('crystal',6,1,'gold',1),
-      mirror('south',3,4,1), crystal('crystal-east',6,4,'gold',.85),
+      branch(3,1), fixture('upper-shutter','wall',5,1,{shutter:true}), crystal('crystal',6,1,'gold',1),
+      fixture('south','mirror',3,4,{axis:2,sided:'double',efficiency:.94,locked:true}),
+      fixture('lower-shutter','wall',5,4,{shutter:true}), crystal('crystal-east',6,4,'gold',.85),
       wall('ruin-a',2,2), wall('ruin-b',5,3), wall('ruin-c',1,5)
-    ]
+    ],
+    traversal:{
+      start:{x:1,y:3},
+      crates:[{id:'counterweight',x:2,y:3}],
+      plates:[{id:'upper-plate',x:4,y:3,shutter:'upper-shutter'},{id:'lower-plate',x:2,y:5,shutter:'lower-shutter'}],
+      relays:[{id:'latch',x:1,y:0,shutter:'upper-shutter'}]
+    }
   }),
   room({
     id:'two-spectra', title:'Hành Lang Hai Màu', theme:'ember',
@@ -58,8 +65,8 @@ export const AWAKENING = [
   }),
   room({
     id:'night-warden', title:'Cổng Của Sói Bóng Đêm', theme:'night',
-    intro:'Phá đá chắn đường, xử lý sói và khôi phục gương dưới chân cổng.',
-    hint:'Bật tia đỏ, nhặt mảnh gương rồi để tia đỏ đi tiếp qua hàng có sói. Sửa Gương Đông và cho Gương Bắc nghiêng 45°.'
+    intro:'Đi tới chuông để đánh lạc hướng sói, hoặc dùng tia đỏ hạ nó và sửa gương đã vỡ.',
+    hint:'Bước tới chuông trước khi sói phá gương. Trong lúc sói dừng, bật tia đỏ để phá đá rồi xoay Gương Bắc nghiêng 45°.'
   }, {
     sources:[sun(1,1.9),ember(4,1.1)],
     objects:[
@@ -68,6 +75,7 @@ export const AWAKENING = [
       crystal('crystal',6,5,'gold',1.35),
       wall('ruin-a',4,3), wall('ruin-b',4,2), wall('ruin-c',5,0)
     ],
+    traversal:{start:{x:4,y:1},bell:{x:5,y:1,duration:3}},
     wolf:{x:3,y:5,hp:2,step:0,patrol:[[3,5],[3,4],[2,4],[2,5]]},
     secret:{x:5,y:3,radius:2}, lantern:[5,4]
   })
