@@ -1,0 +1,72 @@
+name: Stage the verified Eclipse playtest for Pages
+
+on:
+  push:
+    branches:
+      - codex/eclipse-pages-stage-69195e70
+    paths:
+      - .github/workflows/eclipse-pages-stage.yml
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  stage:
+    if: github.repository == 'dungvo/dungvo.github.io'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Download the Web artifact that passed mobile render QA
+        uses: actions/download-artifact@v4
+        with:
+          name: eclipse-web-preview
+          run-id: '43698283000'
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/eclipse-web-playtest
+
+      - name: Verify and stage the isolated Pages payload
+        env:
+          ARTIFACT_DIR: ${{ runner.temp }}/eclipse-web-playtest
+        run: |
+          set -euo pipefail
+          cd "$ARTIFACT_DIR"
+          sha256sum --check --strict <<'HASHES'
+          347b512529c5dca302093f7b9de6d184dd09d10e9a6fba62cbab098a891b2368  index.audio.position.worklet.js
+          5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3  index.audio.worklet.js
+          367666ea2126a7dc532fba8729ac5f6a17f999423549ce61f65f6c10ddfdad7c  index.html
+          19eb180d568bb8e17bcf4c72ca034ed3af44deeb90304deefee4e665562dfe31  index.js
+          09213c4f683913f0169ba655d3c937b5a43f7a1aa72a64b673f70a0bdf8390d1  index.pck
+          3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e  index.png
+          e4a43dbae28662b2a68f6136857a94db6695430901515800b9883f6327cb7116  index.wasm
+          HASHES
+          cd "$GITHUB_WORKSPACE"
+          destination=apps/games/light-quest/eclipse/playtest
+          test ! -e "$destination"
+          mkdir -p "$destination"
+          for name in index.html index.js index.pck index.wasm index.png index.audio.worklet.js index.audio.position.worklet.js; do
+            install -m 0644 "$ARTIFACT_DIR/$name" "$destination/$name"
+          done
+          cat > "$destination/build-info.json" <<'METADATA'
+          {
+            "commit": "69195e701d6cec1a1844336f6438e0b584ade467",
+            "qa_run": 43698283000,
+            "profile": "mobile-web-30fps",
+            "pck_sha256": "09213c4f683913f0169ba655d3c937b5a43f7a1aa72a64b673f70a0bdf8390d1"
+          }
+          METADATA
+          git add -- "$destination"
+          if git diff --cached --name-only -- . ":(exclude)$destination/" | grep -q .; then
+            echo "Unexpected paths are staged."
+            exit 1
+          fi
+          test "$(git diff --cached --name-only | wc -l)" -eq 8
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'deploy(eclipse): add mobile playtest on GitHub Pages'
+          git push origin HEAD:refs/heads/codex/eclipse-pages-payload-69195e70
+          git log -1 --format='Pages payload: %H based on %P'
