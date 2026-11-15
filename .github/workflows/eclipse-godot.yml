@@ -74,8 +74,8 @@ jobs:
 
   publish-eclipse-demo:
     name: Publish isolated Eclipse web demo
-    # Only push events from our private feature branch can publish.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/feature/light-quest-eclipse-playable-slice'
+    # Only PR #76 from this repository and our named feature branch can publish.
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'feature/light-quest-eclipse-playable-slice'
     needs: [web-preview]
     runs-on: ubuntu-latest
     permissions:
