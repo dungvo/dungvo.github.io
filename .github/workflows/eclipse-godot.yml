@@ -18,6 +18,8 @@ jobs:
         with:
           version: 4.4.1
           use-dotnet: false
+      - name: Install animated CC0 hero
+        run: python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
       - name: Import and validate Godot project
         run: |
           set -o pipefail
@@ -37,44 +39,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Download licensed Kenney prototype sprite
         run: python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
-      - name: Inspect possible animated CC0 hero sheets
-        run: |
-          python3 - <<'PY'
-          import json,urllib.request
-          url='https://api.github.com/repos/Tiddybub/2d-assets/contents/characters/oga-game-character'
-          req=urllib.request.Request(url,headers={'User-Agent':'LightQuestAssetAudit','Accept':'application/vnd.github+json'})
-          with urllib.request.urlopen(req, timeout=20) as res: data=json.load(res)
-          for x in data:print('CC0_CANDIDATE',x['name'],x['size'],x.get('download_url'))
-          PY
-      - name: Inspect SpriteCanvas legal CC0 animated art links
-        run: |
-          python3 - <<'PY'
-          import urllib.request,re,html
-          url='https://spritecanvas.com/free-sprite-sheets/'
-          request=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
-          with urllib.request.urlopen(request,timeout=25) as response:page=response.read().decode('utf8','replace')
-          for match in re.finditer(r'href="([^"]+)"',page):
-              link=html.unescape(match.group(1))
-              if '.zip' in link.lower() or ('download' in link.lower() and 'moss' in link.lower()):
-                  print('ART_URL',link[:350])
-          PY
-      - name: Audit Moss Knight animation pack structure
-        run: |
-          python3 - <<'PY'
-          import urllib.request,io,zipfile
-          url='https://spritecanvas.com/free/moss-knight-character-pack.zip'
-          r=urllib.request.Request(url,headers={'User-Agent':'LightQuestAssetAudit/1.0'})
-          with urllib.request.urlopen(r,timeout=35) as res: data=res.read()
-          print('MOSS_KNIGHT_BYTES',len(data))
-          with zipfile.ZipFile(io.BytesIO(data)) as z:
-              for x in z.infolist()[:130]:
-                  print('MOSS_FILE',x.filename,x.file_size)
-          PY
+      - name: Install CC0 Moss Knight animations
+        run: python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
       - name: Upload source sprite, license and provenance
         uses: actions/upload-artifact@v4
         with:
           name: eclipse-kenney-cc0-prototype
-          path: apps/games/light-quest/eclipse/assets/kenney/
+          path: |
+            apps/games/light-quest/eclipse/assets/kenney/
+            apps/games/light-quest/eclipse/moss-knight/
           if-no-files-found: error
 
   web-preview:
@@ -82,8 +55,10 @@ jobs:
     needs: [parse-project, asset-pack]
     steps:
       - uses: actions/checkout@v4
-      - name: Install Kenney CC0 prototype asset
-        run: python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
+      - name: Install licensed player assets
+        run: |
+          python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
+          python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
       - uses: chickensoft-games/setup-godot@v2
         with:
           version: 4.4.1
@@ -94,7 +69,8 @@ jobs:
           set -euo pipefail
           cd apps/games/light-quest/eclipse
           mkdir -p build/web
-          godot --headless --editor --import --quit
+          godot --headless --editor --import --quit 2>&1 | tee import-web.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|ERROR: Failed to load resource' import-web.log
           godot --headless --export-release Web build/web/index.html
           test -s build/web/index.html
           test -s build/web/index.wasm
