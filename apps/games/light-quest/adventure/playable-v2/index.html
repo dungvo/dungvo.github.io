@@ -40,10 +40,11 @@
 
     <section class="playfield" aria-label="Bàn chơi">
       <nav class="panel level-nav" aria-label="Các màn chơi">
-        <label for="level-select" id="room-count">Màn 1/5</label>
+        <label for="level-select" id="room-count">Màn 1/6</label>
         <select id="level-select" class="ornate" disabled aria-label="Chọn màn chơi"></select>
         <button id="next-level" class="ornate next-level" type="button" hidden>Màn tiếp →</button>
-        <span id="room-progress" aria-live="polite">0/5 đã qua</span>
+        <span id="room-progress" aria-live="polite">0/6 đã qua</span>
+        <a class="ornate campaign-link" id="return-campaign" href="./" hidden>Về chương</a>
         <strong id="chapter-complete" hidden>✓ Xong chương</strong>
       </nav>
       <div class="board" id="board" aria-busy="true">
@@ -85,9 +86,10 @@
       <div class="panel inventory">
         <h2>Túi đồ</h2>
         <dl>
+          <div id="relic-status" hidden><dt>Lõi Mặt Trời</dt><dd id="relic-stock">Chưa lấy</dd></div>
           <div><dt>Mảnh sửa gương</dt><dd id="stock">0</dd></div>
           <div><dt>Hoa linh quang</dt><dd id="flower">0</dd></div>
-          <div><dt>Ấn Đường Sáng</dt><dd id="reward">0</dd></div>
+          <div><dt id="reward-label">Ấn Đường Sáng</dt><dd id="reward">0</dd></div>
         </dl>
       </div>
       <p class="panel intent" id="intent"></p>

@@ -1,5 +1,5 @@
 import {propagate, segmentTouches} from './tactical-optics.js';
-import {createTraversal, opticsBoard, walk, walkOptions} from './room-traversal.js';
+import {createTraversal, opticsBoard, returnMissionComplete, walk, walkOptions} from './room-traversal.js';
 
 export const GARDEN = {
   width: 7, height: 6, energy: 20, transmissionPerCell: .985,
@@ -138,6 +138,15 @@ export function applyGardenAction(state, action) {
   if (next.traversal?.bellTurns) next.traversal.bellTurns--;
 
   next.optics = propagate(opticsBoard(next));
+  if (next.level.traversal?.exit) {
+    if (!next.opened && returnMissionComplete(next)) {
+      next.opened = true;
+      next.route = next.traversal.returnRelay;
+      next.traversal.carryingRelic = false;
+      events.push({type:'return', ...next.level.traversal.exit});
+    }
+    return {state:next, events};
+  }
   const receivers = next.level.objects.filter(o => o.type === 'receiver');
   next.charged = receivers.filter(o => next.optics.hits.some(hit =>
     hit.id === o.id && hit.color === o.color && hit.power >= o.requirement)).map(o => o.id);

@@ -1,7 +1,7 @@
 import {applyGardenAction, createGarden, COSTS, mirrorById, wolfIntent} from '../core/garden-room.js';
 
 import {AWAKENING} from '../core/awakening-levels.js';
-import {platePressed, shutterOpen, walkOptions} from '../core/room-traversal.js';
+import {bridgeWalkable, platePressed, shutterOpen, walkOptions} from '../core/room-traversal.js';
 
 const Phaser = globalThis.Phaser;
 const $ = id => document.getElementById(id);
@@ -15,6 +15,10 @@ const COLORS = {
   red: [0xf82e42, 0xff6e62, 0xffeee4]
 };
 const EVENT_TEXT = {
+  'relay-needs-relic': 'Cần gạt cần năng lượng từ Lõi Mặt Trời.',
+  relic: 'Đã lấy Lõi Mặt Trời. Cầu trên đã quá tải. Hãy thắp một cầu khác ở bờ đông.',
+  'rift-seal': 'Đã nhặt Ấn Vực Sáng trên cầu dưới.',
+  return: 'Đã đưa Lõi Mặt Trời về bệ. Anh đã vượt qua Vực Ánh Sáng!',
   push: 'Đã đẩy khối đá. Đặt nó lên mâm để giữ cửa nâng.',
   relay: 'Cần gạt đã chốt cửa trên. Tìm đường tới mâm đá dưới.',
   bell: 'Tiếng chuông giữ chân sói. Bật tia đỏ và xoay gương trước khi sói tuần tra lại.',
@@ -52,20 +56,27 @@ const px = n => BORDER + (n + .5) * CELL;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const BUTTONS = new Map();
 const WALK_BUTTONS = new Map();
-const defaultDevice = room => room.objects.find(device => device.type === 'mirror' && !device.locked)?.id ?? 'prism';
+const defaultDevice = room => room.objects.find(device => device.type === 'mirror' && !device.locked)?.id ??
+  room.objects.find(device => device.type === 'splitter' || device.type === 'mirror')?.id ?? room.sources[0].id;
 const progressKey = 'light-quest-awakening-v1';
-const ROOM_BACKDROPS = {garden:'waterfall', prism:'prism-hall', ember:'ember-ruins', violet:'amethyst-cavern', night:'moonlit-fortress'};
-const THEME_WASH = {prism:0x2ccad8, ember:0xe25b45, violet:0xa66ee0, night:0x394bc5};
+const lastRoom = AWAKENING.length - 1;
+const requestedRoom = Number(new URLSearchParams(location.search).get('man')) - 1;
+const practice = Boolean(AWAKENING[requestedRoom]?.traversal?.exit);
+const ROOM_BACKDROPS = {garden:'waterfall', prism:'prism-hall', ember:'ember-ruins', violet:'amethyst-cavern', night:'moonlit-fortress', rift:'amethyst-cavern'};
+const THEME_WASH = {prism:0x2ccad8, ember:0xe25b45, violet:0xa66ee0, night:0x394bc5, rift:0x293766};
 function loadProgress() {
+  const empty = AWAKENING.map(() => false);
+  if (practice) return {unlocked:requestedRoom, active:requestedRoom, cleared:empty};
   try {
     const saved = JSON.parse(localStorage.getItem(progressKey));
     if (Number.isInteger(saved?.unlocked) && saved.unlocked >= 0 && saved.unlocked < AWAKENING.length) {
-      const active = Number.isInteger(saved.active) && saved.active >= 0 ? Math.min(saved.active, saved.unlocked) : 0;
+      const unlocked = Math.min(lastRoom, saved.unlocked + Number(saved.cleared?.[saved.unlocked] === true));
+      const active = Number.isInteger(saved.active) && saved.active >= 0 ? Math.min(saved.active, unlocked) : 0;
       const cleared = AWAKENING.map((_, index) => index < saved.unlocked || saved.cleared?.[index] === true);
-      return {unlocked:saved.unlocked, active, cleared};
+      return {unlocked, active, cleared};
     }
   } catch { /* Private browser sessions can restrict storage. */ }
-  return {unlocked:0, active:0, cleared:AWAKENING.map(() => false)};
+  return {unlocked:0, active:0, cleared:empty};
 }
 const progress = loadProgress();
 let state = createGarden(AWAKENING[progress.active]);
@@ -96,11 +107,12 @@ function showClue(id, title, text) {
 }
 
 function saveProgress() {
+  if (practice) return;
   try { localStorage.setItem(progressKey, JSON.stringify(progress)); } catch { /* Progress stays in this session. */ }
 }
 
 function loadRoom(index) {
-  if (!Number.isInteger(index) || index < 0 || index > progress.unlocked) return;
+  if (!Number.isInteger(index) || index < 0 || index > progress.unlocked || (practice && index !== requestedRoom)) return;
   hideClue();
   progress.active = index;
   state = createGarden(AWAKENING[index]);
@@ -115,7 +127,7 @@ function loadRoom(index) {
 function synchronizeLevels() {
   const picker = $('level-select');
   [...picker.options].forEach((option, index) => {
-    option.disabled = index > progress.unlocked;
+    option.disabled = practice ? index !== requestedRoom : index > progress.unlocked;
     const check = progress.cleared[index] ? ' ✓' : '';
     option.textContent = `${index + 1}. ${AWAKENING[index].title}${check}`;
   });
@@ -127,10 +139,12 @@ function synchronizeLevels() {
     document.body.dataset.theme = state.level.theme;
     document.body.style.setProperty('--room-bg', `url("${ASSET}${ROOM_BACKDROPS[state.level.theme]}.webp")`);
   }
-  const isLast = progress.active === AWAKENING.length - 1;
-  $('next-level').hidden = !state.opened || isLast;
-  $('chapter-complete').hidden = !isLast || !progress.cleared.every(Boolean);
-  $('room-progress').textContent = `${progress.cleared.filter(Boolean).length}/${AWAKENING.length} đã qua`;
+  const isLast = progress.active === lastRoom;
+  $('next-level').hidden = practice || !state.opened || isLast;
+  $('chapter-complete').hidden = practice ? !progress.cleared[requestedRoom] : !isLast || !progress.cleared.every(Boolean);
+  $('chapter-complete').textContent = practice ? '✓ Xong thử thách' : '✓ Xong chương';
+  $('return-campaign').hidden = !practice;
+  $('room-progress').textContent = practice ? 'Chơi thử riêng' : `${progress.cleared.filter(Boolean).length}/${AWAKENING.length} đã qua`;
 }
 
 function say(message) {
@@ -195,14 +209,24 @@ function synchronizeWalk() {
       $('walk-hotspots').append(button);
     }
     const bell = layout.bell?.x === x && layout.bell?.y === y && !state.traversal.bellUsed;
-    const relay = layout.relays?.some(item => item.x === x && item.y === y && !state.traversal.relays.includes(item.id));
+    const relay = layout.relays?.find(item => item.x === x && item.y === y);
+    const relic = layout.relic?.x === x && layout.relic?.y === y && !state.opened && !state.traversal.carryingRelic;
+    const exit = layout.exit?.x === x && layout.exit?.y === y;
+    const bridge = layout.bridges?.some(item => item.x === x && item.y === y);
     const plate = layout.plates?.some(item => item.x === x && item.y === y);
     button.textContent = arrow;
     button.dataset.push = String(Boolean(crate));
     button.setAttribute('aria-label', crate ? `Đẩy khối đá ${label}` :
-      bell ? 'Đi tới chuông' : relay ? 'Đi tới cần gạt' : plate ? 'Bước lên mâm đá' : `Đi ${label}`);
+      bell ? 'Đi tới chuông' : relic ? 'Nhặt Lõi Mặt Trời' : exit ? 'Bước lên bệ trả lõi' :
+      bridge ? 'Bước lên cầu sáng' : relay ? relay.bridgeLabel ?? 'Đi tới cần gạt' : plate ? 'Bước lên mâm đá' : `Đi ${label}`);
   }
   $('walk-guide').hidden = !state.traversal;
+  const guide = $('walk-guide');
+  if (!layout?.exit) guide.textContent = 'Chạm ô có mũi tên để đi hoặc đẩy khối đá.';
+  else if (state.opened) guide.textContent = '✓ Đã đưa Lõi Mặt Trời về bệ.';
+  else if (!state.traversal.carryingRelic) guide.textContent = 'Chạm ô có mũi tên. Qua cầu trên để lấy lõi ở bờ đông.';
+  else if (!state.traversal.returnRelay) guide.textContent = 'Cầu trên quá tải. Mang lõi tới một trong hai cần gạt ở bờ đông.';
+  else guide.textContent = 'Đưa lõi qua cầu đang sáng, về bệ ở góc dưới bên trái.';
   if (focusedWalk && !active.isConnected) {
     (WALK_BUTTONS.values().next().value ?? $('wait')).focus({preventScroll:true});
   }
@@ -214,8 +238,14 @@ function synchronizeHUD() {
   synchronizeLevels();
   const receivers = state.level.objects.filter(object => object.type === 'receiver');
   const charged = state.charged.length;
-  $('goal').textContent = state.opened ? 'Đã mở cổng' : `Đánh thức pha lê (${charged}/${receivers.length})`;
-  $('shape').hidden = !state.level.pattern;
+  const mission = state.level.traversal?.exit;
+  $('goal').textContent = mission
+    ? (state.opened ? 'Đã trả Lõi Mặt Trời' : state.traversal.carryingRelic ? 'Mang lõi về bệ đá' : 'Qua vực và lấy Lõi Mặt Trời')
+    : (state.opened ? 'Đã mở cổng' : `Đánh thức pha lê (${charged}/${receivers.length})`);
+  $('relic-status').hidden = !mission;
+  if (mission) $('relic-stock').textContent = state.opened ? 'Đã trả' : state.traversal.carryingRelic ? 'Đang mang' : 'Chưa lấy';
+  $('shape').hidden = !state.level.pattern && !mission;
+  $('shape').textContent = mission ? 'Nhặt Ấn Vực Sáng ở cầu dưới' : 'Tạo Đường Sáng Cổ';
   $('secret-goal').hidden = !state.level.secret;
   $('wolf-goal').hidden = !state.wolf;
   $('max-energy').textContent = state.level.energy;
@@ -231,6 +261,7 @@ function synchronizeHUD() {
   $('board').dataset.route = state.route ?? '';
   $('stock').textContent = state.repairStock;
   $('flower').textContent = Number(state.collectedSecret);
+  $('reward-label').textContent = mission ? 'Ấn Vực Sáng' : 'Ấn Đường Sáng';
   $('reward').textContent = Number(state.pattern);
   $('undo').disabled = history.length === 0;
   $('scan').hidden = !state.level.secret;
@@ -284,7 +315,8 @@ function commit(action) {
     progress.unlocked = Math.max(progress.unlocked, Math.min(progress.active + 1, AWAKENING.length - 1));
     saveProgress();
   }
-  const messages = result.events.map(event => EVENT_TEXT[event.type]).filter(Boolean);
+  const messages = result.events.map(event => event.type === 'bridge' ? `${event.label} đã sáng. Có thể quay về bờ tây.` :
+    EVENT_TEXT[event.type]).filter(Boolean);
   if (messages.length) say(messages.join(' '));
   else if (action.type === 'source') say(state.level.sources.find(source => source.id === action.id).enabled ? 'Đã bật nguồn đỏ.' : 'Đã tắt nguồn đỏ.');
   else if (action.type === 'walk') say('Chạm một ô sáng để đi tiếp.');
@@ -371,6 +403,7 @@ function start() {
       }
       this.floor = this.add.container();
       this.drawFloor();
+      this.crossings = this.add.container().setDepth(1);
       this.rays = this.add.graphics().setDepth(2);
       this.actors = this.add.container().setDepth(3);
       this.effects = this.add.container().setDepth(4);
@@ -425,6 +458,30 @@ function start() {
         this.sprite('vine', x, y, size, this.floor).setAngle(angle);
       }
     }
+    drawChasm() {
+      const layout = state.level.traversal;
+      if (layout?.chasm === undefined) return;
+      const water = this.add.graphics();
+      const x = px(layout.chasm);
+      water.fillStyle(0x081125, .98).fillRect(x - CELL/2, BORDER, CELL, HEIGHT - 2 * BORDER);
+      for (let y = BORDER + 10; y < HEIGHT - BORDER; y += 26) {
+        const shift = (y % 10) * 2;
+        water.lineStyle(2,0x547bbf,.21).lineBetween(x-33+shift,y,x+34,y+5);
+      }
+      for (const edge of [-1,1]) water.lineStyle(5,0xa098c1,.72)
+        .lineBetween(x + edge*(CELL/2-2),BORDER,x + edge*(CELL/2-2),HEIGHT-BORDER);
+      for (const bridge of layout.bridges) {
+        const y = px(bridge.y);
+        const active = bridgeWalkable(state, bridge);
+        const color = bridge.fragile ? 0xf8bb63 : 0x78dbef;
+        water.lineStyle(active ? 5 : 2,color,active ? .95 : .32).strokeRoundedRect(x-54,y-26,108,52,8);
+        if (!active) continue;
+        water.fillStyle(color,.24).fillRoundedRect(x-53,y-25,106,50,8);
+        for (let dx = -44; dx < 50; dx += 14) water.lineStyle(4,color,.68).lineBetween(x+dx,y-20,x+dx,y+20);
+        if (bridge.seal && !state.pattern) this.sprite('shard', x, y, 38, this.crossings);
+      }
+      this.crossings.add(water);
+    }
     drawTraversal(events) {
       const layout = state.level.traversal;
       if (!layout) return;
@@ -439,7 +496,14 @@ function start() {
         this.actors.add(this.add.text(x,y,glyph,{font:'bold 26px Georgia',color:active?'#9cffd8':'#fff0b2'}).setOrigin(.5));
       };
       for (const plate of layout.plates ?? []) emblem(plate, '◇', platePressed(state, plate));
-      for (const relay of layout.relays ?? []) emblem(relay, '⚙', travel.relays.includes(relay.id));
+      for (const relay of layout.relays ?? []) {
+        emblem(relay, relay.axis === 1 ? '↘' : relay.axis === 2 ? '↓' : '⚙',
+          relay.mirror ? travel.returnRelay === relay.id : travel.relays.includes(relay.id));
+      }
+      if (layout.exit) {
+        this.sprite('portal', px(layout.exit.x), px(layout.exit.y), 79).setAlpha(state.opened ? 1 : .75);
+        if (!travel.carryingRelic && !state.opened) this.sprite('shard', px(layout.relic.x), px(layout.relic.y), 92);
+      }
       if (layout.bell) {
         this.sprite('shard', px(layout.bell.x), px(layout.bell.y), 61).setAlpha(travel.bellUsed ? .55 : 1);
         emblem(layout.bell, '♫', travel.bellTurns > 0);
@@ -459,10 +523,15 @@ function start() {
       const hero = this.add.image(x, y + 32, `hero-${explorer}`).setOrigin(.5,1);
       hero.setScale(92 / hero.height);
       this.actors.add(hero);
+      const cargo = travel.carryingRelic && !state.opened ? this.sprite('shard', x + 18, y - 24, 32) : null;
       const walk = events.find(event => event.type === 'walk');
       if (walk && !reducedMotion.matches) {
         hero.setPosition(px(walk.from[0]),px(walk.from[1]) + 32);
         this.tweens.add({targets:hero,x,y:y+32,duration:170,ease:'Sine.easeOut'});
+        if (cargo) {
+          cargo.setPosition(px(walk.from[0]) + 18,px(walk.from[1]) - 24);
+          this.tweens.add({targets:cargo,x:x+18,y:y-24,duration:170,ease:'Sine.easeOut'});
+        }
       }
     }
     paint(events = []) {
@@ -470,6 +539,8 @@ function start() {
       this.actors.removeAll(true);
       this.effects.removeAll(true);
       this.rays.clear();
+      this.crossings.removeAll(true);
+      this.drawChasm();
       for (const beam of state.optics.beams) {
         const [glow, edge, core] = COLORS[beam.color];
         const [x1, y1] = beam.from.map(px);
@@ -538,14 +609,14 @@ function start() {
           this.tweens.add({targets:[wolf,health], x, y, duration:180, ease:'Sine.easeOut'});
         }
       }
-      if (state.opened) this.sprite('portal', WIDTH - 25, 25, 48);
+      if (state.opened && !state.level.traversal?.exit) this.sprite('portal', WIDTH - 25, 25, 48);
       if (!reducedMotion.matches) for (const event of events) this.animate(event);
     }
     animate(event) {
       if (event.x === undefined) return;
       const x = px(event.x);
       const y = px(event.y);
-      const glows = {bell:0x98f9d9, relay:0x98f9d9, rock:0xffab74, defeat:0xea97ff, wound:0xfb5464, break:0xfaa986, scan:0x8cffdc, gate:0xffed9b, repair:0x87f1ff, pattern:0xffed9b};
+      const glows = {relic:0xffdc87, bridge:0x82edff, return:0xffe8a1, 'rift-seal':0xffe8a1, bell:0x98f9d9, relay:0x98f9d9, rock:0xffab74, defeat:0xea97ff, wound:0xfb5464, break:0xfaa986, scan:0x8cffdc, gate:0xffed9b, repair:0x87f1ff, pattern:0xffed9b};
       const color = glows[event.type];
       if (!color) return;
       const sparks = this.add.graphics();

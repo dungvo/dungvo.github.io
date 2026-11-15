@@ -264,3 +264,6 @@ body[data-theme="night"] { --edge: #899acf; --panel: linear-gradient(150deg, #26
   color: #c7fae8;
   font-size: 12px;
 }
+
+body[data-theme="rift"] { --edge: #b0a4dc; --panel: linear-gradient(150deg, #272643 4%, #0b172e 78%); }
+.campaign-link { display: inline-flex; align-items: center; text-decoration: none; }
