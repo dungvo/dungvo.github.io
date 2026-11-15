@@ -98,6 +98,16 @@ func _make_hero() -> void:
     body_shape.shape = sh
     hero.add_child(body_shape)
     add_child(hero)
+    # Sprite2D is available only after installing the reviewed CC0 pack.
+    # This stays a regular Godot sprite so it can later be replaced by AnimatedSprite2D.
+    if ResourceLoader.exists("res://assets/kenney/character.png"):
+        var sprite := Sprite2D.new()
+        sprite.name = "PlayerSprite"
+        sprite.texture = load("res://assets/kenney/character.png")
+        sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+        sprite.position = Vector2(0, -4)
+        sprite.scale = Vector2(2, 2)
+        hero.add_child(sprite)
     cam = Camera2D.new()
     cam.enabled = true
     cam.position = Vector2(0, -80)
@@ -446,9 +456,10 @@ func _draw() -> void:
         draw_rect(Rect2(bp.x-80,220,160*float(boss_hp)/12,9),Color("#e6a578"))
     if hero:
         var p:=hero.position
-        draw_circle(p+Vector2(0,-15),18,Color("#a9e4d2") if character=="Kha" else Color("#82bdff"))
-        draw_rect(Rect2(p.x-13,p.y-2,26,35),Color("#2c846d") if character=="Kha" else Color("#3d66ad"))
-        draw_circle(p+Vector2(0,-23),9,Color("#edc5a1"))
+        if not hero.has_node("PlayerSprite"):
+            draw_circle(p+Vector2(0,-15),18,Color("#a9e4d2") if character=="Kha" else Color("#82bdff"))
+            draw_rect(Rect2(p.x-13,p.y-2,26,35),Color("#2c846d") if character=="Kha" else Color("#3d66ad"))
+            draw_circle(p+Vector2(0,-23),9,Color("#edc5a1"))
         if i_frames>0:draw_arc(p+Vector2(0,-6),33,0,TAU,32,Color("#ffdf8b"),3)
         if attack_cooldown>0.22:
             draw_arc(p+Vector2(float(facing)*25,-10),28,-PI/2,PI/2,20,Color("#f8e8ba"),4)
