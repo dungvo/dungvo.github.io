@@ -27,7 +27,7 @@ var activated := false
 var met_npc := false
 var moon_dash := false
 var boss_dead := false
-var checkpoint := Vector2(130, 385)
+var checkpoint := Vector2(130, 432)
 var health := 5
 var max_health := 5
 var character := "An"
@@ -114,7 +114,7 @@ func _solid(rect:Rect2, color:Color) -> void:
 
 func _make_hero() -> void:
     hero = CharacterBody2D.new()
-    hero.position = Vector2(130, 385)
+    hero.position = Vector2(130, 432)
     hero.motion_mode = CharacterBody2D.MOTION_MODE_GROUNDED
     body_shape = CollisionShape2D.new()
     var sh := CapsuleShape2D.new()
@@ -130,8 +130,8 @@ func _make_hero() -> void:
         var animated := prefab.instantiate() as AnimatedSprite2D
         if animated != null:
             animated.name = "KnightAnimated"
-            animated.position = Vector2(0,-21)
-            animated.scale = Vector2(0.24,0.24)
+            animated.position = Vector2(0,24)
+            animated.scale = Vector2(0.36,0.36)
             animated.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
             hero.add_child(animated)
             actor_anim = animated
@@ -223,6 +223,15 @@ func _touch_button(parent:Control, key:String, text:String, x:int, y:int, size:i
     b.custom_minimum_size = Vector2(size,size)
     b.modulate.a = 0.92
     b.add_theme_font_size_override("font_size",18)
+    var background_style := StyleBoxFlat.new()
+    background_style.bg_color = Color("#112d50cc")
+    background_style.border_color = Color("#dfc080")
+    background_style.set_border_width_all(2)
+    background_style.set_corner_radius_all(24)
+    b.add_theme_stylebox_override("normal",background_style)
+    var pressed_style := background_style.duplicate() as StyleBoxFlat
+    pressed_style.bg_color = Color("#377c9cdd")
+    b.add_theme_stylebox_override("pressed",pressed_style)
     b.button_down.connect(func():
         touch[key] = true
         if key == "jump": jump_buffer_clock = JUMP_BUFFER_WINDOW
