@@ -1,6 +1,6 @@
 # Light Quest — Khu Vườn Thức Tỉnh
 
-## Run the room and its tests
+## Run the chapter and its tests
 
 Serve the repository as static files, for example with `python3 -m http.server 8000` from the repository root, then open `/apps/games/light-quest/adventure/playable-v2/`. Run `npm test` in the adventure directory. The original adventure and tactical demo retain their own entry points.
 
@@ -8,7 +8,8 @@ Serve the repository as static files, for example with `python3 -m http.server 8
 
 | Layer | File | Contract |
 | --- | --- | --- |
-| Room definition and turns | `core/garden-room.js` | Positions, sources, device parameters, objectives and patrol. `applyGardenAction` validates the action and returns a fresh snapshot and an event list. |
+| Chapter content | `core/awakening-levels.js` | Five room layouts, objectives, visual themes and contextual hints. |
+| Room turns | `core/garden-room.js` | `applyGardenAction` validates the action, resolves patrol and optical damage, and returns a fresh snapshot and events. |
 | Optics | `core/tactical-optics.js` | Cast normalized rays, resolve the closest valid positive intersection, reflect at the mirror segment, and return geometry, power, contacts and receiver hits. |
 | Stage | `playable-v2/play.js` | Phaser Canvas reuses terrain and sprite atlas frames. Map core coordinates into the board once. Render every beam directly from its returned endpoints. |
 | Controls | `playable-v2/index.html`, `playable-v2/play.css` | Native controls, keyboard focus and live status, anchored hot spots, portrait and landscape sizing, and reduced-motion support. |
@@ -21,7 +22,21 @@ Power decays exponentially with distance. Passive components divide, attenuate o
 
 A turn spends energy, resolves ray damage against the current wolf position and sealed rock, advances the wolf and applies a telegraphed mirror break when applicable. The final state is traced again after the impact changes the board. Gate and pattern awards are latched and undoable. Phaser renders this final snapshot. Reward logic only matches adjacent geometric checkpoints traced by the gold source. Optical power and the player's action energy are separate quantities.
 
-## Room solution fixtures
+## Campaign progression
+
+Each gate unlocks the next room. A local browser save records completed rooms and the last selected room. Reopening the final room retains the chapter-completion marker. The player can return to any unlocked room. Starting a room again or refreshing the page resets its board, inventory and turn count. Local progression continues in memory when storage is unavailable.
+
+In rooms with two receivers the gate opens only after both receive the correct color and strength in the same optical snapshot. Each has a visible charge indicator. Inventory and patrol objectives apply only to rooms that feature those mechanics.
+
+| Room | Main puzzle |
+| --- | --- |
+| Ánh Sáng Đầu Tiên | Two ways to guide gold light to the crystal, with optional discoveries and patrol interaction. |
+| Điện Lăng Kính | Split a single source and light two crystals at once. |
+| Hành Lang Hai Màu | Route separate gold and red beams through their filters, then amplify the red beam. |
+| Mật Đạo Chéo | Trace a three-mirror path that uses both diagonal headings. |
+| Cổng Của Sói Bóng Đêm | Break a rock, survive the patrol and repair the mirror near the gate. |
+
+## First-room solution fixtures
 
 - Turn both main mirrors to 45° to send the gold beam right, down, then right. This opens the gate and earns the pattern seal.
 - Turn the north mirror to 0° to feed the right-hand splitter. Its downward branch passes through a powered amplifier and opens the same gate.
@@ -30,8 +45,8 @@ A turn spends energy, resolves ray damage against the current wolf position and 
 
 ## Performance and compatibility
 
-The renderer uses a fixed 856 × 744 Canvas. Art is WebP, and the production entry loads the original concept only on explicit navigation to the reference file. Phaser caps animated frames at 30 fps and sleeps after effects settle and while the tab is hidden. The layout scrolls vertically when the usable height is limited. The current room is session-local. Each browser reload starts a new run.
+The renderer uses a fixed 856 × 744 Canvas. Art is WebP, and the production entry loads the original concept only on explicit navigation to the reference file. Phaser caps animated frames at 30 fps and sleeps after effects settle and while the tab is hidden. The layout scrolls vertically when the usable height is limited. The active room resets on reload while the room selection and unlocks persist.
 
 Verified in headless Chromium at 1440 × 900 and through touch at 375 × 812, 812 × 375 and 320 × 568. Both gate paths, every optional objective, repair, undo, reset and character switching were exercised. The bound Canvas emitted zero draws during a 2.5-second idle window. Device temperature and battery behavior on physical iPhone Safari remain unmeasured.
 
-The original illustration places decorative elements and mirror angles for a composed scene. The production board uses added optical components and the renderer uses the angles required by the simulator. The scope is one playable room.
+The original illustration places decorative elements and mirror angles for a composed scene. The production board uses added optical components and the renderer uses the angles required by the simulator. The chapter contains five playable rooms with individual environment illustrations, room-specific palettes and a shared sprite atlas. Selecting a fixture shows its clue over the board. The hint control positions the current room hint over its first mirror.

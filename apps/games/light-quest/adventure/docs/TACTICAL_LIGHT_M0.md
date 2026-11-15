@@ -1,6 +1,6 @@
 # Light Quest Tactical Light — implementation workstream
 
-Status — **one playable room on PR #81**. See [room architecture and QA](AWAKENING_ARCHITECTURE.md).
+Status — **a five-room playable chapter on PR #81**. See [room architecture and QA](AWAKENING_ARCHITECTURE.md).
 
 ## Non-negotiable constraints
 - Separate the optics simulator from Phaser rendering.
@@ -17,13 +17,13 @@ Status — **one playable room on PR #81**. See [room architecture and QA](AWAKE
 - core/tactical-optics.js — eight-heading geometric ray casting with single- and double-sided mirrors, filters, splitters, transmission loss, amplifiers and receivers.
 - core/garden-room.js — playable turn engine, patrol and telegraphed mirror damage, inventory, reveal skill and two gate routes.
 - assets/awakening/ and playable-v2/ — modular illustrated 2D stage and responsive HUD.
-- tests/ — 23 regression tests, including the legacy tactical contract. Run `npm test` in the adventure folder.
+- tests/ — 28 regression tests, including the legacy tactical contract. Run `npm test` in the adventure folder.
 
 ## Milestones
 1. M0 — 64 vector reflection combinations, nearest hit, back face, tangent, 2-source overlap, branch energy, amplification and bounded cycles tested.
-2. M1 — illustrated terrain, texture atlas, both character sprites, devices and responsive controls are in place for the first room.
-3. M2 — the current room combines discovery, multi-source optics and mirror damage. Two linked rooms remain future work.
-4. M3 — the room has an inventory, finite repair fragment, secondary objectives, shape reward and reveal skill. Maze and campaign progression remain future work.
+2. M1 — five illustrated environments, a shared texture atlas, both character sprites, devices, in-scene hints and responsive controls are in place.
+3. M2 — five linked rooms cover discovery, multi-source optics, diagonal reflection and mirror damage.
+4. M3 — the chapter has browser-local unlocks, a room selector, inventory, repair, secondary objectives, shape rewards and reveal. Maze exploration remains future work.
 5. M4 — desktop and touch emulation passed. A 20-minute physical iPhone Safari profile is pending.
 6. M5: deploy verified vertical slice to GitHub Pages, preserve existing legacy game.
 

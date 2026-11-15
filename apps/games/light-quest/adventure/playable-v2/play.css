@@ -17,7 +17,7 @@ body {
   color: var(--paper);
   font: 16px/1.4 system-ui, sans-serif;
   background: linear-gradient(180deg, #07122626, #07122600 55%, #07122666),
-    #07182b url("../assets/awakening/waterfall.webp") no-repeat center center / cover;
+    #07182b var(--room-bg, url("../assets/awakening/waterfall.webp")) no-repeat center center / cover;
 }
 button { font: inherit; cursor: pointer; touch-action: manipulation; }
 button:focus-visible { outline: 3px solid #c0f2ff; outline-offset: 2px; }
@@ -203,3 +203,46 @@ progress::-webkit-progress-value { border-radius: 10px; background: linear-gradi
   .explorer { height: 66%; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+
+body[data-theme="prism"] { --edge: #63b7c1; }
+body[data-theme="ember"] { --edge: #d18a54; --panel: linear-gradient(150deg, #352436 4%, #171b31 76%); }
+body[data-theme="violet"] { --edge: #a18ed3; --panel: linear-gradient(150deg, #392649 4%, #141832 76%); }
+body[data-theme="night"] { --edge: #899acf; --panel: linear-gradient(150deg, #262447 4%, #0b132a 76%); }
+.level-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 9px;
+  margin: 0 3.4% 5px;
+  padding: 5px 9px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.level-nav .ornate { min-height: 44px; padding-block: 5px; font-size: 13px; }
+.level-nav select { font-family: inherit; cursor: pointer; flex: 1 1 145px; min-width: 0; max-width: 100%; }
+.level-nav :focus-visible { outline: 3px solid #c0f2ff; outline-offset: 1px; }
+.level-nav .next-level { background: #ecc478; border-color: #ffe8a0; color: #292238; }
+.level-nav .next-level:hover { background: #ffe0a2; color: #201824; }
+@media (max-width: 840px) and (orientation: portrait), (max-width: 660px) {
+  .level-nav { margin-inline: 0; }
+}
+@media (max-height: 510px) and (min-width: 661px) {
+  .level-nav .ornate { min-height: 36px; }
+}
+
+.board-clue {
+  --clue-width: min(235px, calc(100% - 14px));
+  position: absolute;
+  z-index: 2;
+  width: var(--clue-width);
+  padding: 7px 10px;
+  left: clamp(calc(var(--clue-width) / 2 + 4px), var(--clue-x), calc(100% - var(--clue-width) / 2 - 4px));
+  bottom: calc(100% - var(--clue-y) + 6.5%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  font-size: clamp(12px, 1.05vw, 14px);
+}
+.board-clue[data-below="true"] { top: calc(var(--clue-y) + 6.5%); bottom: auto; }
+.board-clue strong { color: var(--gold); display: block; }
+#room-progress { color: var(--muted); font-size: 12px; }

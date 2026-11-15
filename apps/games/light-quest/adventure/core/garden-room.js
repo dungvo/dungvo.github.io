@@ -30,18 +30,18 @@ export const GARDEN = {
 export const COSTS = {rotate: 1, flip: 1, source: 1, scan: 2, repair: 3, collect: 0, wait: 0};
 export const mirrorById = (state, id) => state.level.objects.find(o => o.id === id && o.type === 'mirror');
 
-export function createGarden() {
-  const level = structuredClone(GARDEN);
+export function createGarden(definition = GARDEN) {
+  const level = structuredClone(definition);
   return {
     level, energy: level.energy, turn: 0, wolf: structuredClone(level.wolf),
-    repairStock: 0, loot: 'sealed', secret: false, collectedSecret: false,
+    repairStock: 0, loot: 'sealed', lootPosition: null, secret: false, collectedSecret: false, charged: [],
     pattern: false, opened: false, route: null, optics: propagate(level)
   };
 }
 
 export function wolfIntent(state) {
   const wolf = state.wolf;
-  if (!wolf.hp) return null;
+  if (!wolf?.hp) return null;
   const mirror = mirrorById(state, 'guard');
   if (wolf.step === 1 && mirror && !mirror.broken) return {type: 'break', id: mirror.id, x: mirror.x, y: mirror.y};
   const [x, y] = wolf.patrol[(wolf.step + 1) % wolf.patrol.length];
@@ -56,7 +56,7 @@ export function applyGardenAction(state, action) {
       (action.type === 'flip' && (!mirror || mirror.broken || mirror.sided !== 'single')) ||
       (action.type === 'source' && source?.id !== 'ember') ||
       (action.type === 'repair' && (!mirror?.broken || !state.repairStock)) ||
-      (action.type === 'scan' && state.secret) ||
+      (action.type === 'scan' && (!state.level.secret || state.secret)) ||
       (action.type === 'collect' && !((action.id === 'shard' && state.loot === 'loose') ||
         (action.id === 'secret' && state.secret && !state.collectedSecret)))) return {state, error: 'invalid'};
   if (state.energy < cost) return {state, error: 'energy'};
@@ -106,10 +106,11 @@ export function applyGardenAction(state, action) {
   if (brokenRock) {
     next.level.objects = next.level.objects.filter(o => o.id !== brokenRock.id);
     next.loot = 'loose';
+    next.lootPosition = {x:brokenRock.x, y:brokenRock.y};
     events.push({type: 'rock', x: brokenRock.x, y: brokenRock.y});
   }
   const wolf = next.wolf;
-  if (wolf.hp && beforeDamage.beams.some(beam => beam.color === 'red' &&
+  if (wolf?.hp && beforeDamage.beams.some(beam => beam.color === 'red' &&
       segmentTouches(beam, wolf.x, wolf.y, .33) &&
       beam.power * next.level.transmissionPerCell ** Math.hypot(wolf.x - beam.from[0], wolf.y - beam.from[1]) >= .8)) {
     wolf.hp--;
@@ -128,15 +129,18 @@ export function applyGardenAction(state, action) {
   }
 
   next.optics = propagate(next.level);
-  const crystal = next.level.objects.find(o => o.id === 'crystal');
-  if (next.optics.hits.some(hit => hit.id === crystal.id && hit.color === crystal.color && hit.power >= crystal.requirement)) {
+  const receivers = next.level.objects.filter(o => o.type === 'receiver');
+  next.charged = receivers.filter(o => next.optics.hits.some(hit =>
+    hit.id === o.id && hit.color === o.color && hit.power >= o.requirement)).map(o => o.id);
+  if (receivers.length && receivers.every(receiver => next.charged.includes(receiver.id))) {
+    const crystal = receivers.at(-1);
     const gold = next.optics.beams.filter(beam => beam.color === 'gold');
     const points = next.level.pattern;
-    const matches = points.slice(1).every(([x, y], i) => gold.some(beam =>
+    const matches = points?.length > 1 && points.slice(1).every(([x, y], i) => gold.some(beam =>
       beam.source === 'sun' && segmentTouches(beam, ...points[i]) && segmentTouches(beam, x, y)));
     if (!next.opened) events.push({type: 'gate', x: crystal.x, y: crystal.y});
     next.opened = true;
-    next.route ??= matches ? 'mirrors' : 'prism';
+    next.route ??= matches ? 'mirrors' : next.level.pattern ? 'prism' : 'gate';
     if (matches && !next.pattern) {
       next.pattern = true;
       events.push({type: 'pattern', x: crystal.x, y: crystal.y});

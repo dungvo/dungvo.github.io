@@ -16,7 +16,7 @@
       <div class="wordmark"><span aria-hidden="true">✧</span><div><strong>Light Quest</strong><small>Puzzle Adventure</small></div></div>
       <div class="chapter">
         <span>Chương 1 · Khu Vườn Thức Tỉnh</span>
-        <h1>Ánh Sáng Đầu Tiên</h1>
+        <h1 id="room-title">Ánh Sáng Đầu Tiên</h1>
       </div>
       <button id="character" class="ornate character" type="button" aria-label="Đổi người dẫn đường">Đổi nhân vật</button>
     </header>
@@ -39,9 +39,20 @@
     </aside>
 
     <section class="playfield" aria-label="Bàn chơi">
+      <nav class="panel level-nav" aria-label="Các màn chơi">
+        <label for="level-select" id="room-count">Màn 1/5</label>
+        <select id="level-select" class="ornate" disabled aria-label="Chọn màn chơi"></select>
+        <button id="next-level" class="ornate next-level" type="button" hidden>Màn tiếp →</button>
+        <span id="room-progress" aria-live="polite">0/5 đã qua</span>
+        <strong id="chapter-complete" hidden>✓ Xong chương</strong>
+      </nav>
       <div class="board" id="board" aria-busy="true">
         <div class="canvas-host" id="game" aria-hidden="true"></div>
         <div class="hotspots" id="hotspots" aria-label="Thiết bị trên bàn"></div>
+        <div class="panel board-clue" id="board-clue" role="status" hidden>
+          <strong id="clue-title"></strong>
+          <span id="clue-body"></span>
+        </div>
         <p class="loading" id="loading" role="status">Đang thắp sáng khu vườn…</p>
       </div>
       <div class="panel selection">
@@ -58,7 +69,7 @@
 
     <aside class="hud">
       <div class="panel stats">
-        <div><span>Năng lượng</span><strong><output id="energy">20</output> / 20</strong></div>
+        <div><span>Năng lượng</span><strong><output id="energy">20</output> / <span id="max-energy">20</span></strong></div>
         <progress id="meter" value="20" max="20" aria-label="Năng lượng hành động"></progress>
         <div><span>Lượt</span><strong><output id="turn">0</output></strong></div>
       </div>
