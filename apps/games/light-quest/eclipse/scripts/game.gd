@@ -3,6 +3,7 @@ extends Node2D
 const ROOM_W := 960.0
 const FLOOR_Y := 456.0
 const SAVE_FILE := "user://eclipse_save_v1.json"
+const Hit := preload("res://scripts/hit_geometry.gd")
 const ROOMS := ["Làng Trăng", "Rừng Vọng", "Hầm Bóng", "Tháp Pha Lê", "Cổng Đêm", "Đài Quan Sát", "Người Giữ Nguyệt"]
 const TIPS := ["Gặp Kha (E) để nhận nhiệm vụ.", "Đánh quái và vượt bục đá.", "Tìm đường qua những bệ đá cổ.", "Đến bàn đố (E) để thắp đèn.", "Chỉ vào được khi Tháp Pha Lê đã sáng.", "Checkpoint: đứng gần đài và nhấn E.", "Phá khiên boss bằng ánh sáng. Đánh vào lúc khiên tan."]
 const COLORS := [Color("#274b65"),Color("#163e44"),Color("#272f4c"),Color("#32425a"),Color("#38364e"),Color("#334b62"),Color("#38243e")]
@@ -413,14 +414,14 @@ func _enemy_tick(delta:float) -> void:
         if absf(hero.position.x - float(e["x"])) < 340:
             e["dir"] = signf(hero.position.x-float(e["x"]))
             e["x"] += float(e["dir"]) * float(e["speed"]) * delta
-        if absf(hero.position.x-float(e["x"]))<30 and absf(hero.position.y-float(e["y"]))<55:
+        if Hit.overlaps(Hit.player_hurtbox(hero.position), Hit.enemy_hurtbox(Vector2(float(e["x"]),float(e["y"])))):
             _damage(1)
         enemy_data[i]=e
 
 func _boss_tick(delta:float) -> void:
     if boss_hp<=0: return
     var x := 6.0*ROOM_W+650.0
-    if absf(hero.position.x-x)<105 and hero.position.y>280:
+    if Hit.overlaps(Hit.player_hurtbox(hero.position), Rect2(Vector2(x-72,320),Vector2(144,115))):
         _damage(1)
     if boss_shield_time<=0 and boss_flash<=0:
         boss_flash = 3.1
@@ -445,17 +446,18 @@ func _attack() -> void:
     attack_cooldown = 0.34 if character=="An" else 0.48
     slash_time = 0.22
     _burst(hero.position+Vector2(facing*42,-9), Color("#c9f7ff") if character=="Kha" else Color("#ffe0ab"), 7, 100)
-    var reach := 100.0 if character=="An" else 180.0
+    var reach := Hit.MAGIC_REACH if character=="Kha" else Hit.SWORD_REACH
+    var attack_area:Rect2 = Hit.attack_hitbox(hero.position, facing, character=="Kha")
     for i in range(enemy_data.size()):
         var e:Dictionary=enemy_data[i]
-        if e["alive"] and absf(hero.position.x-float(e["x"]))<reach and absf(hero.position.y-float(e["y"]))<80 and (float(e["x"])-hero.position.x)*facing>-24:
+        if e["alive"] and Hit.overlaps(attack_area, Hit.enemy_hurtbox(Vector2(float(e["x"]),float(e["y"])))):
             e["hp"]=int(e["hp"])-1
             shake_time = 0.09
             _burst(Vector2(float(e["x"]),float(e["y"])), Color("#ffb5de"), 9, 115)
             if int(e["hp"])<=0:e["alive"]=false
             enemy_data[i]=e
             break
-    if last_room==6 and not boss_dead and absf(hero.position.x-(6*ROOM_W+650))<reach+75:
+    if last_room==6 and not boss_dead and Hit.overlaps(attack_area,Rect2(Vector2(6*ROOM_W+600,310),Vector2(100,140))):
         if boss_shield_time>0:
             boss_hp-=1
             if boss_hp<=0:
