@@ -77,6 +77,27 @@ jobs:
           godot --headless --export-release Web build/web/index.html
           test -s build/web/index.html
           test -s build/web/index.wasm
+      - name: Smoke test the Web build in touch-enabled Chromium
+        run: |
+          set -euo pipefail
+          cd apps/games/light-quest/eclipse
+          npm install --prefix "${RUNNER_TEMP}/eclipse-browser" --no-audit --no-fund playwright@1.56.1
+          mkdir -p visual-qa
+          python3 -m http.server 8000 --bind 127.0.0.1 --directory build/web > "${RUNNER_TEMP}/eclipse-http.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..30}; do
+            curl --silent --fail http://127.0.0.1:8000/index.html >/dev/null && break
+            sleep 1
+          done
+          ECLIPSE_CHROME="$(command -v google-chrome)" NODE_PATH="${RUNNER_TEMP}/eclipse-browser/node_modules" node tests/browser_smoke.cjs
+      - name: Save Web landscape screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclipse-web-landscape-qa
+          path: apps/games/light-quest/eclipse/visual-qa/web-*.png
+          if-no-files-found: ignore
       - name: Upload HTML5 preview
         uses: actions/upload-artifact@v4
         with:
