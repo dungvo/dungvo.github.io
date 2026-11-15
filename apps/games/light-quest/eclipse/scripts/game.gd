@@ -409,7 +409,7 @@ func _restore() -> void:
     if boss_dead:boss_hp=0
 
 func _draw() -> void:
-        for r in range(7):
+    for r in range(7):
         var ox:=r*ROOM_W
         draw_rect(Rect2(ox,-160,ROOM_W,700),COLORS[r])
         # Starfield, parallax-like atmosphere and moon
