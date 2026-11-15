@@ -53,7 +53,7 @@ jobs:
           url='https://spritecanvas.com/free-sprite-sheets/'
           request=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
           with urllib.request.urlopen(request,timeout=25) as response:page=response.read().decode('utf8','replace')
-          for match in re.finditer(r'href=["\\']([^"\\']+)',page):
+          for match in re.finditer(r'href="([^"]+)"',page):
               link=html.unescape(match.group(1))
               if '.zip' in link.lower() or ('download' in link.lower() and 'moss' in link.lower()):
                   print('ART_URL',link[:350])
