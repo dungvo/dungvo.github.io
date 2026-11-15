@@ -1,0 +1,17 @@
+extends SceneTree
+const Hit = preload("res://scripts/hit_geometry.gd")
+func _initialize() -> void:
+    var p := Vector2(200,430)
+    var sword := Hit.attack_hitbox(p,1,false)
+    assert(sword.has_point(Vector2(250,430)))
+    assert(not sword.has_point(Vector2(150,430)))
+    assert(Hit.overlaps(sword,Hit.enemy_hurtbox(Vector2(280,430))))
+    assert(not Hit.overlaps(sword,Hit.enemy_hurtbox(Vector2(330,430))))
+    var left := Hit.attack_hitbox(p,-1,false)
+    assert(Hit.overlaps(left,Hit.enemy_hurtbox(Vector2(140,430))))
+    assert(not Hit.overlaps(left,Hit.enemy_hurtbox(Vector2(260,430))))
+    var magic := Hit.attack_hitbox(p,1,true)
+    assert(magic.size.x > sword.size.x)
+    assert(not Hit.overlaps(Hit.player_hurtbox(p),Hit.enemy_hurtbox(Vector2(250,430))))
+    print("HIT GEOMETRY PASS: left/right, melee/ranged, near/far collision")
+    quit(0)
