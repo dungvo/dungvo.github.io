@@ -19,8 +19,14 @@ jobs:
           version: 4.4.1
           use-dotnet: false
       - name: Import and validate Godot project
-        run: godot --headless --editor --path apps/games/light-quest/eclipse --import --quit
+        run: |
+          set -o pipefail
+          godot --headless --editor --path apps/games/light-quest/eclipse --import --quit 2>&1 | tee import.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script' import.log
       - name: Smoke test scene
-        run: timeout 25s godot --headless --path apps/games/light-quest/eclipse --quit-after 15
+        run: |
+          set -o pipefail
+          timeout 25s godot --headless --path apps/games/light-quest/eclipse --quit-after 15 2>&1 | tee scene.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|Invalid access' scene.log
       - name: Test gameplay mechanics
         run: timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
