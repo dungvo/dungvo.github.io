@@ -327,8 +327,6 @@ func _physics_process(delta:float) -> void:
         _burst(hero.position + Vector2(-facing*11,20), Color("#9bb6b6"), 2, 38.0)
     if actor_sprite != null:
         actor_sprite.flip_h = facing < 0
-    motion_state = _select_motion_state()
-    _update_character_animation()
         var run_bob := sin(visual_clock*19.0) * 2.0 if hero.is_on_floor() and absf(hero.velocity.x)>35 else 0.0
         actor_sprite.position = Vector2(0, -4 + run_bob)
         actor_sprite.rotation = clampf(hero.velocity.x/9000.0, -0.055,0.055)
@@ -336,6 +334,8 @@ func _physics_process(delta:float) -> void:
         var stretch := 1.08 if not hero.is_on_floor() and hero.velocity.y < 0 else 1.0
         actor_sprite.scale = Vector2(2.5 / stretch, 2.5 * stretch)
         if landing_time>0: actor_sprite.scale = Vector2(2.75,2.25)
+    motion_state = _select_motion_state()
+    _update_character_animation()
     if touch["attack"]:
         touch["attack"] = false
         _attack()
