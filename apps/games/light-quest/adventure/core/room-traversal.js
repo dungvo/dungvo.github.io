@@ -1,3 +1,5 @@
+import {segmentTouches} from './tactical-optics.js';
+
 const STEPS = [
   {dx:0, dy:-1, label:'lên', arrow:'↑'},
   {dx:1, dy:0, label:'phải', arrow:'→'},
@@ -9,16 +11,29 @@ const offset = (point, dx, dy) => ({x:point.x + dx, y:point.y + dy});
 
 export function createTraversal(layout) {
   if (!layout) return null;
-  return {player:{...layout.start}, crates:structuredClone(layout.crates ?? []), relays:[], bellTurns:0, bellUsed:false};
+  return {player:{...layout.start}, crates:structuredClone(layout.crates ?? []), relays:[], bellTurns:0, bellUsed:false, carryingRelic:false, returnRelay:null};
+}
+
+export function bridgeWalkable(state, bridge) {
+  if (bridge.fragile && state.traversal.carryingRelic) return false;
+  return state.optics.beams.some(beam => beam.color === (bridge.color ?? 'gold') &&
+    beam.endPower >= (bridge.power ?? .3) && segmentTouches(beam, bridge.x, bridge.y));
+}
+
+export function returnMissionComplete(state) {
+  const exit = state.level.traversal?.exit;
+  return Boolean(exit && state.traversal.carryingRelic && at(state.traversal.player, exit));
 }
 
 export function walkOptions(state) {
   const traversal = state.traversal;
   if (!traversal) return [];
   const {level} = state;
+  const {chasm, bridges = []} = level.traversal;
   const occupied = [...level.sources, ...level.objects];
   const blocked = point => point.x < 0 || point.y < 0 || point.x >= level.width ||
-    point.y >= level.height || occupied.some(device => at(point, device));
+    point.y >= level.height || occupied.some(device => at(point, device)) ||
+    (point.x === chasm && !bridges.some(bridge => at(bridge, point) && bridgeWalkable(state, bridge)));
   return STEPS.flatMap(({dx, dy, label, arrow}) => {
     const point = offset(traversal.player, dx, dy);
     if (blocked(point)) return [];
@@ -41,10 +56,26 @@ export function walk(state, step) {
     events.push({type:'push', id:crate.id, ...crate, from:[to.x, to.y]});
   }
   const layout = state.level.traversal;
+  if (layout.relic && at(layout.relic, to) && !state.opened && !traversal.carryingRelic) {
+    traversal.carryingRelic = true;
+    events.push({type:'relic', ...to});
+  }
+
+  if (!state.pattern && traversal.carryingRelic && layout.bridges?.some(bridge => bridge.seal && at(bridge, to))) {
+    state.pattern = true;
+    events.push({type:'rift-seal', ...to});
+  }
+
   const relay = layout.relays?.find(item => at(item, to));
-  if (relay && !traversal.relays.includes(relay.id)) {
+  if (relay?.mirror && !traversal.carryingRelic && !state.opened) {
+    events.push({type:'relay-needs-relic', ...to});
+  } else if (relay?.mirror && traversal.carryingRelic && traversal.returnRelay !== relay.id) {
+    state.level.objects.find(device => device.id === relay.mirror).axis = relay.axis;
+    traversal.returnRelay = relay.id;
+    events.push({type:'bridge', label:relay.bridgeLabel, ...to});
+  } else if (relay && !relay.mirror && !traversal.relays.includes(relay.id)) {
     traversal.relays.push(relay.id);
-    events.push({type:'relay', x:relay.x, y:relay.y});
+    events.push({type:'relay', ...to});
   }
   if (layout.bell && at(layout.bell, to) && !traversal.bellUsed) {
     traversal.bellUsed = true;

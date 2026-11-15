@@ -8,7 +8,7 @@ Serve the repository as static files, for example with `python3 -m http.server 8
 
 | Layer | File | Contract |
 | --- | --- | --- |
-| Chapter content | `core/awakening-levels.js` | Five room layouts, objectives, visual themes and contextual hints. |
+| Chapter content | `core/awakening-levels.js` | Six room layouts, objectives, visual themes and contextual hints. |
 | Room turns | `core/garden-room.js` | `applyGardenAction` validates the action, resolves patrol and optical damage, and returns a fresh snapshot and events. |
 | Optics | `core/tactical-optics.js` | Cast normalized rays, resolve the closest valid positive intersection, reflect at the mirror segment, and return geometry, power, contacts and receiver hits. |
 | Stage | `playable-v2/play.js` | Phaser Canvas reuses terrain and sprite atlas frames. Map core coordinates into the board once. Render every beam directly from its returned endpoints. |
@@ -35,8 +35,11 @@ In rooms with two receivers the gate opens only after both receive the correct c
 | Hành Lang Hai Màu | Route separate gold and red beams through their filters, then amplify the red beam. |
 | Mật Đạo Chéo | Trace a three-mirror path that uses both diagonal headings. |
 | Cổng Của Sói Bóng Đêm | Time a one-use bell to pass while the wolf pauses, or use red light and repair its damage. |
+| Vực Ánh Sáng | Cross the illuminated upper bridge, collect the heavy relic, reroute the beam to one of two return bridges, and carry the relic back to the start-side dais. |
 
 The traversal rules live in `core/room-traversal.js`. An adjacent move costs one energy and can push a counterweight one cell. The player and counterweights hold pressure plates only while occupying them. A relay latches its shutter open. Closed shutters and counterweights block rays in the same optics pass as mirrors. Ringing the bell consumes one of its three turns as part of the move, leaving two more actions before the patrol resumes.
+
+Vực Ánh Sáng derives bridge accessibility from the live ray segments in `core/room-traversal.js`. The upper bridge cannot carry the relic. An eastern relay changes the fixed mirror setting and lights one of the two return bridges. The lower route includes a collectible seal in exchange for a longer walk. Entering the exit cell with the relic ends the room. The `?man=6` practice entry opens this room directly and keeps campaign progression separate. A cleared pre-expansion chapter unlocks the sixth room when reloaded.
 
 ## First-room solution fixtures
 
@@ -51,4 +54,4 @@ The renderer uses a fixed 856 × 744 Canvas. Art is WebP, and the production ent
 
 Verified in headless Chromium at 1440 × 900 and through touch at 375 × 812, 812 × 375 and 320 × 568. Both gate paths, every optional objective, repair, undo, reset and character switching were exercised. The bound Canvas emitted zero draws during a 2.5-second idle window. Device temperature and battery behavior on physical iPhone Safari remain unmeasured.
 
-The original illustration places decorative elements and mirror angles for a composed scene. The production board uses added optical components and the renderer uses the angles required by the simulator. The chapter contains five playable rooms with individual environment illustrations, room-specific palettes and a shared sprite atlas. Selecting a fixture shows its clue over the board. The hint control positions the current room hint over its first mirror.
+The original illustration places decorative elements and mirror angles for a composed scene. The production board uses added optical components and the renderer uses the angles required by the simulator. The chapter contains six playable rooms with illustrated environments, room-specific palettes and a shared sprite atlas. Selecting a fixture shows its clue over the board. The hint control positions the current room hint over its first mirror.

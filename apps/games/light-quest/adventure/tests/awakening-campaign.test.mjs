@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {AWAKENING} from '../core/awakening-levels.js';
+import {bridgeWalkable, walkOptions} from '../core/room-traversal.js';
 import {applyGardenAction, createGarden, mirrorById} from '../core/garden-room.js';
 
 const rotate = (id, delta = 1) => ({type:'rotate', id, delta});
@@ -121,4 +122,52 @@ test('ringing the bell before the wolf moves opens a no-combat route to the ward
   const back = step(off, move([5,1]));
   assert.equal(back.traversal.bellTurns, 0);
   assert.equal(mirrorById(back, 'guard').broken, true);
+});
+
+const rift = AWAKENING.length - 1;
+const outbound = [[2,1],[3,1],[4,1],[5,1],[6,1],[6,0]];
+const backToRelays = [[6,1],[6,2],[6,3]];
+const acrossDiagonal = [[5,3],[4,3],[3,3],[2,3],[1,3],[0,3],[0,4],[0,5]];
+const acrossLower = [[6,4],[6,5],[5,5],[4,5],[4,4],[3,4],[2,4],[2,5],[1,5],[0,5]];
+
+test('the launch bridge crosses the chasm only before collecting the heavy relic', () => {
+  const start = createGarden(AWAKENING[rift]);
+  const [upper,diagonal,lower] = start.level.traversal.bridges;
+  assert.deepEqual([upper,diagonal,lower].map(bridge => bridgeWalkable(start, bridge)), [true,false,false]);
+  assert.equal(applyGardenAction(start, move([3,0])).error, 'invalid');
+  const carrier = play(rift, ...outbound.map(move));
+  assert.equal(carrier.traversal.carryingRelic, true);
+  assert.equal(carrier.opened, false);
+  assert.equal(bridgeWalkable(carrier, upper), false);
+  const atGap = [[6,1],[5,1],[4,1]].map(move).reduce(step, carrier);
+  assert.equal(walkOptions(atGap).some(point => point.x === 3 && point.y === 1), false);
+  assert.equal(applyGardenAction(atGap, move([3,1])).state, atGap);
+});
+
+test('both alternate bridges require the right optical path and deliver the relic to the exit', () => {
+  const diagonallyLit = play(rift, ...[...outbound,...backToRelays].map(move));
+  const bridges = diagonallyLit.level.traversal.bridges;
+  assert.deepEqual(bridges.map(bridge => bridgeWalkable(diagonallyLit, bridge)), [false,true,false]);
+  const across = acrossDiagonal.slice(0,-1).map(move).reduce(step, diagonallyLit);
+  assert.equal(across.opened, false, 'Crossing a bridge alone does not complete the mission');
+  const diagonalExit = step(across, move([0,5]));
+  assert.equal(diagonalExit.opened, true);
+  assert.equal(diagonalExit.route, 'diagonal-bridge');
+  assert.equal(diagonalExit.traversal.carryingRelic, false);
+  assert.equal(diagonalExit.pattern, false);
+
+  const direct = play(rift, ...[...outbound,...backToRelays,...acrossLower].map(move));
+  assert.equal(direct.opened, true);
+  assert.equal(direct.route, 'lower-bridge');
+  assert.equal(direct.pattern, true);
+  assert.deepEqual(bridges.map(bridge => bridgeWalkable(direct, bridge)), [false,false,true]);
+  assert.ok(direct.turn > diagonalExit.turn && direct.energy > 0);
+});
+
+test('the exit and the bridge controls do not work without the relic', () => {
+  const atExit = play(rift, ...[[2,1],[2,2],[1,2],[1,3],[0,3],[0,4],[0,5]].map(move));
+  assert.equal(atExit.opened, false);
+  const atRelay = play(rift, ...[[2,1],[3,1],[4,1],[5,1],[6,1],[6,2],[6,3]].map(move));
+  assert.equal(atRelay.traversal.returnRelay, null);
+  assert.equal(mirrorById(atRelay, 'north').axis, 0);
 });

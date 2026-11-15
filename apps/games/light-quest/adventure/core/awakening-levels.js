@@ -78,5 +78,28 @@ export const AWAKENING = [
     traversal:{start:{x:4,y:1},bell:{x:5,y:1,duration:3}},
     wolf:{x:3,y:5,hp:2,step:0,patrol:[[3,5],[3,4],[2,4],[2,5]]},
     secret:{x:5,y:3,radius:2}, lantern:[5,4]
+  }),
+  room({
+    id:'rift-relic', title:'Vực Ánh Sáng', theme:'rift', energy:24,
+    intro:'Dùng cầu đang sáng để qua vực. Lấy Lõi Mặt Trời rồi mang về bệ đá bên bờ xuất phát.',
+    hint:'Qua cầu trên để lấy lõi ở góc trên bên phải. Lõi quá nặng cho cầu cũ. Bước lên một cần gạt bên bờ đông để thắp cầu chéo (ngắn hơn) hoặc cầu dưới (có ấn thưởng).'
+  }, {
+    sources:[sun(1,2.3)],
+    objects:[
+      fixture('north','mirror',1,1,{axis:0,sided:'double',efficiency:.95,locked:true}),
+      fixture('south','mirror',1,4,{axis:2,sided:'double',efficiency:.95,locked:true}),
+      wall('ruin-a',4,2), wall('ruin-b',5,2), wall('ruin-c',0,2)
+    ],
+    traversal:{
+      start:{x:2,y:0},
+      chasm:3,
+      relic:{x:6,y:0},
+      exit:{x:0,y:5},
+      bridges:[{x:3,y:1,fragile:true},{x:3,y:3},{x:3,y:4,seal:true}],
+      relays:[
+        {id:'diagonal-bridge',x:6,y:3,mirror:'north',axis:1,bridgeLabel:'Cầu chéo'},
+        {id:'lower-bridge',x:5,y:5,mirror:'north',axis:2,bridgeLabel:'Cầu dưới'}
+      ]
+    }
   })
 ];
