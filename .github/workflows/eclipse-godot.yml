@@ -43,3 +43,31 @@ jobs:
           name: eclipse-kenney-cc0-prototype
           path: apps/games/light-quest/eclipse/assets/kenney/
           if-no-files-found: error
+
+  web-preview:
+    runs-on: ubuntu-latest
+    needs: [parse-project, asset-pack]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Kenney CC0 prototype asset
+        run: python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.4.1
+          use-dotnet: false
+          include-templates: true
+      - name: Import content and export web build
+        run: |
+          set -euo pipefail
+          cd apps/games/light-quest/eclipse
+          mkdir -p build/web
+          godot --headless --editor --import --quit
+          godot --headless --export-release Web build/web/index.html
+          test -s build/web/index.html
+          test -s build/web/index.wasm
+      - name: Upload HTML5 preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclipse-web-preview
+          path: apps/games/light-quest/eclipse/build/web/
+          if-no-files-found: error
