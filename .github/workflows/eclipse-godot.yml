@@ -31,7 +31,9 @@ jobs:
           timeout 25s godot --headless --path apps/games/light-quest/eclipse --quit-after 15 2>&1 | tee scene.log
           ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|Invalid access' scene.log
       - name: Test gameplay mechanics
-        run: timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
+        run: |
+          timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
+          timeout 20s godot --headless --path apps/games/light-quest/eclipse --script res://tests/hit_geometry_test.gd
 
   asset-pack:
     runs-on: ubuntu-latest
