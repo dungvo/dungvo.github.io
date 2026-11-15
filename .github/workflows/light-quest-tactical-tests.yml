@@ -1,0 +1,26 @@
+name: Light Quest Tactical Tests
+on:
+  pull_request:
+    paths:
+      - 'apps/games/light-quest/adventure/core/**'
+      - 'apps/games/light-quest/adventure/tests/**'
+      - 'apps/games/light-quest/adventure/package.json'
+      - '.github/workflows/light-quest-tactical-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'apps/games/light-quest/adventure/core/**'
+      - 'apps/games/light-quest/adventure/tests/**'
+      - 'apps/games/light-quest/adventure/package.json'
+jobs:
+  physics:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/games/light-quest/adventure
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
