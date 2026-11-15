@@ -71,3 +71,43 @@ jobs:
           name: eclipse-web-preview
           path: apps/games/light-quest/eclipse/build/web/
           if-no-files-found: error
+
+  publish-eclipse-demo:
+    name: Publish isolated Eclipse web demo
+    # Only push events from our private feature branch can publish.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/feature/light-quest-eclipse-playable-slice'
+    needs: [web-preview]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: eclipse-public-preview
+      cancel-in-progress: false
+    steps:
+      - name: Checkout site main (not feature source)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Copy pre-tested HTML5 artifact into isolated public folder
+        uses: actions/download-artifact@v4
+        with:
+          name: eclipse-web-preview
+          path: apps/games/light-quest/eclipse/
+      - name: Check build files
+        run: |
+          test -s apps/games/light-quest/eclipse/index.html
+          test -s apps/games/light-quest/eclipse/index.wasm
+          test -s apps/games/light-quest/eclipse/index.pck
+      - name: Commit demo only; preserve all other games
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/games/light-quest/eclipse/
+          if git diff --cached --quiet; then
+            echo "No changes to public Eclipse demo"
+            exit 0
+          fi
+          git commit -m "deploy(eclipse): publish isolated Godot HTML5 gameplay preview"
+          git pull --rebase origin main
+          git push origin HEAD:main
