@@ -9,7 +9,29 @@ async function run() {
         args: ['--enable-unsafe-swiftshader', '--use-angle=swiftshader'],
     });
     try {
-        const page = await browser.newPage({ viewport: { width, height }, hasTouch: true, isMobile: true });
+        const page = await browser.newPage({
+            viewport: { width, height },
+            deviceScaleFactor: 3,
+            hasTouch: true,
+            isMobile: true,
+        });
+        await page.addInitScript(() => {
+            // Sample actual WebGL drawing, independently of the display's refresh rate.
+            const original = WebGL2RenderingContext.prototype.drawElements;
+            let drew = false;
+            let present = 0;
+            WebGL2RenderingContext.prototype.drawElements = function (...args) {
+                drew = true;
+                return original.apply(this, args);
+            };
+            const sample = () => {
+                if (drew) present++;
+                drew = false;
+                requestAnimationFrame(sample);
+            };
+            requestAnimationFrame(sample);
+            window.eclipseDraws = () => present;
+        });
         const errors = [];
         const loaded = new Map();
         page.on('pageerror', error => errors.push(error.message));
@@ -55,6 +77,14 @@ async function run() {
         await page.waitForTimeout(240);
         const after = await page.screenshot({ clip: heroRegion });
         assert.notDeepEqual(after, before, 'combined input moves the render');
+        const renderedFps = await page.evaluate(async () => {
+            const start = performance.now();
+            const first = window.eclipseDraws();
+            await new Promise(resolve => setTimeout(resolve, 2200));
+            return (window.eclipseDraws() - first) * 1000 / (performance.now() - start);
+        });
+        console.log('ECLIPSE MOBILE WEB: %s rendered FPS at DPR 3', renderedFps.toFixed(1));
+        assert(renderedFps >= 8 && renderedFps <= 38, 'mobile Web draws at a measurable rate within the 30 FPS budget');
         assert.deepEqual(errors, [], 'no browser runtime errors');
         console.log('ECLIPSE WEB PASS: WASM, landscape canvas, touch character selection and combined input');
     } finally {

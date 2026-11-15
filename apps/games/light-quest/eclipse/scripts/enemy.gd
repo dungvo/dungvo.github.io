@@ -32,13 +32,13 @@ func _ready() -> void:
     sprite = Art.attach_enemy(self)
 
 func step(delta: float, game: Node2D) -> void:
+    var had_flash := flash > 0 or phase_flash > 0
     flash = maxf(0, flash - delta)
     phase_flash = maxf(0, phase_flash - delta)
     clock = maxf(0, clock - delta)
     if state == "dead":
         modulate.a = clock / 0.36
         if clock <= 0: queue_free()
-        queue_redraw()
         return
 
     var target: Vector2 = game.hero.position - position
@@ -110,7 +110,7 @@ func step(delta: float, game: Node2D) -> void:
     if sprite != null:
         sprite.flip_h = facing > 0
         sprite.modulate = Color("#ffbeb9") if flash > 0 else (Color("#ffe19a") if state == "tell" else Color.WHITE)
-    queue_redraw()
+    if had_flash or state == "tell": queue_redraw()
 
 func take_hit(amount: int, game: Node2D) -> void:
     if state == "dead": return
@@ -125,6 +125,7 @@ func take_hit(amount: int, game: Node2D) -> void:
         _set_state("recover", 0.95)
         game.guardian_enraged()
     flash = 0.13
+    queue_redraw()
     game.emit_impact(position, Color("#ff9add"))
     game.show_damage(position, amount)
     if hp == 0:
@@ -136,6 +137,7 @@ func take_hit(amount: int, game: Node2D) -> void:
 func _set_state(next: String, length: float) -> void:
     state = next
     clock = length
+    queue_redraw()
     if sprite != null:
         var animation := {"tell":"tell", "strike":"attack", "recover":"recover", "dead":"recover"}.get(next, "idle") as String
         if sprite.sprite_frames.has_animation(animation): sprite.play(animation)

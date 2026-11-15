@@ -10,6 +10,8 @@ const Combat := preload("res://scripts/combat.gd")
 const EnemyScene := preload("res://scenes/enemy.tscn")
 const LightBolt := preload("res://scripts/light_bolt.gd")
 const MirrorCircuit := preload("res://scripts/mirror_circuit.gd")
+const MOBILE_WEB_FPS := 30
+const MOBILE_PARTICLE_BUDGET := 44
 const ROOM_W := 960.0
 const FLOOR_Y := 456.0
 const SAVE_FILE := "user://eclipse_save_v1.json"
@@ -84,10 +86,16 @@ var visual_clock := 0.0
 var actor_anim: AnimatedSprite2D
 var anim_label := ""
 var motion_state := "idle"
+var mobile_web := false
+var effects_visible := false
+var guardian_shield_visible := false
 
 
 
 func _ready() -> void:
+    mobile_web = OS.has_feature("web") and DisplayServer.is_touchscreen_available()
+    if mobile_web:
+        Engine.max_fps = MOBILE_WEB_FPS
     sound = Sound.new()
     add_child(sound)
     _make_stage()
@@ -101,6 +109,7 @@ func _ready() -> void:
     if activated: light_circuit.restore_solved()
     if found_chest: scenery.plaza_chest.hide()
     if boss_dead: guardian.queue_free()
+    _update_hud()
     _menu()
 
 func _make_stage() -> void:
@@ -388,10 +397,12 @@ func _physics_process(delta:float) -> void:
     if death_time > 0:
         death_time = maxf(0, death_time - delta)
         _tick_vfx(delta)
-        queue_redraw()
+        _refresh_effects()
         if death_time <= 0: _respawn()
         return
-    notice_time = maxf(0, notice_time-delta)
+    if notice_time > 0:
+        notice_time = maxf(0, notice_time - delta)
+        if notice_time <= 0: help.text = ""
     attack_cooldown = maxf(0, attack_cooldown-delta)
     dash_cooldown = maxf(0, dash_cooldown-delta)
     i_frames = maxf(0, i_frames-delta)
@@ -488,8 +499,15 @@ func _physics_process(delta:float) -> void:
         var gate := get_node_or_null("LightGate")
         if gate != null: gate.queue_free()
     cam.offset = Vector2(sin(visual_clock*95.0)*2.3,cos(visual_clock*82.0)*1.5) if shake_time>0 else Vector2.ZERO
-    _update_hud()
-    queue_redraw()
+    _refresh_effects()
+
+func _refresh_effects() -> void:
+    var shield := is_instance_valid(guardian) and not boss_dead and boss_shield_time <= 0 and last_room >= 5
+    var dynamic := not vfx.is_empty() or i_frames > 0 or (slash_time > 0 and character == "An")
+    if dynamic or effects_visible or shield != guardian_shield_visible:
+        effects_visible = dynamic
+        guardian_shield_visible = shield
+        queue_redraw()
 
 func _update_character_animation() -> void:
     var candidate := motion_state
@@ -519,12 +537,15 @@ func _select_motion_state() -> String:
     return "idle"
 
 func _burst(origin:Vector2, color:Color, count:int, speed:float) -> void:
-    for i in range(count):
-        var angle := (float(i)/maxf(1.0,float(count-1)))*PI + PI
+    var emitted := mini(count, 10) if mobile_web else count
+    for i in range(emitted):
+        var angle := (float(i)/maxf(1.0,float(emitted-1)))*PI + PI
         var direction := Vector2(cos(angle),sin(angle))
         vfx.append({"p":origin,"v":direction*speed*randf_range(0.45,1.2),"life":0.34,"duration":0.34,"color":color})
-    if vfx.size()>100:
-        vfx = vfx.slice(vfx.size()-100)
+    var budget := MOBILE_PARTICLE_BUDGET if mobile_web else 100
+    if vfx.size() > budget:
+        vfx = vfx.slice(vfx.size() - budget)
+    _refresh_effects()
 
 func _tick_vfx(delta:float) -> void:
     for i in range(vfx.size()-1,-1,-1):
@@ -586,7 +607,7 @@ func damage_player(amount: int, from_x: float) -> void:
         death_time = 0.55
         _reset_touch()
         actor_anim.play("death")
-        _update_hud()
+    _update_hud()
 
 func _respawn() -> void:
     health = max_health
@@ -783,8 +804,7 @@ func _restore() -> void:
 
 func _draw() -> void:
     if not is_instance_valid(hero): return
-    var shown_room := clampi(int(hero.position.x / ROOM_W), 0, 6)
-    if is_instance_valid(guardian) and not boss_dead and boss_shield_time <= 0 and shown_room >= 5:
+    if guardian_shield_visible and is_instance_valid(guardian):
         draw_arc(guardian.position, 81, 0, TAU, 64, Color("#83cfe27e"), 3, true)
     for particle in vfx:
         var opacity := clampf(float(particle["life"])/float(particle["duration"]),0,1)

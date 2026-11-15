@@ -39,3 +39,9 @@
 - Gương trên cần nhảy lên bệ một chiều. Gương dưới có thể xoay từ nền. Test campaign đi liên tục từ Làng Trăng bằng vật lý của nhân vật đến màn thắng bằng đạn Kha, gồm rương, gương, cổng, checkpoint và hai pha boss.
 - Tám âm ngắn phát khi người chơi thao tác. Rừng Vọng có thêm bậc đá và tiền cảnh. Ảnh QA gồm thêm shot chuyển pha boss.
 - Kiểm tra tay trên iPhone, chiều sâu của tiền cảnh và độ mượt các bộ hình khác vẫn cần review riêng trước khi chọn bản phát hành chính thức.
+
+## Giảm tải bản Web cảm ứng
+
+- Viewport dựng hình gameplay theo kích thước 960×540, sau đó phóng theo màn hình. Giữ nguyên tọa độ điều khiển và 60 nhịp mô phỏng vật lý mỗi giây.
+- Bản Web trên thiết bị có cảm ứng giới hạn vẽ ở 30 FPS, giảm số hạt và dừng vẽ lại hiệu ứng khi khu vực đứng yên. Desktop giới hạn 60 FPS.
+- Smoke Chromium dùng DPR 3 và lấy mẫu khung hình có lệnh vẽ WebGL. Cần đo nhiệt và kiểm tra cảm giác chơi riêng bằng Safari trên iPhone thật.
