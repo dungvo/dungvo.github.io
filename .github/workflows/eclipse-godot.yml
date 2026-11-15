@@ -30,3 +30,16 @@ jobs:
           ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|Invalid access' scene.log
       - name: Test gameplay mechanics
         run: timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
+
+  asset-pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download licensed Kenney prototype sprite
+        run: python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
+      - name: Upload source sprite, license and provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclipse-kenney-cc0-prototype
+          path: apps/games/light-quest/eclipse/assets/kenney/
+          if-no-files-found: error
