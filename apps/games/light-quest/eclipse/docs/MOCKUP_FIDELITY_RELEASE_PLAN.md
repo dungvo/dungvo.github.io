@@ -35,3 +35,8 @@ This document and foundational code have been committed on `feature/light-quest-
 
 ## Handoff
 Next AI must inspect this plan and current PR code; implement the earliest unmet gate, validate with Godot, capture actual frames, and only share the production preview when visual + controls + collision pass. Do not infer completion from mockup alone.
+
+## Visual QA observations (2026-11-15, real rendered frames)
+A reproducible Godot screenshot job now runs under `xvfb-run` and uploads `eclipse-actual-gameplay-screen`. The first screenshot showed a tiny airborne-looking character, flat dark-rectangle skyline, plain terrain and overlaid controls. A subsequent screenshot after art-scale/ground-alignment work shows the character grounded and larger with styled buttons and masonry; **still far below the approved mockup**. Scene contains no painted waterfall/castle background, distinctive original An/Kha character designs, animated 4-enemy roster, ornate tile assets or polished boss encounter.
+Do not mark visual gate passed. Require side-by-side screenshots at 960×540, per-room visual review and iPhone Safari live test. An original painted waterfall/castle concept was generated in ChatGPT but is NOT in the GitHub project; it must be optimized, versioned and imported as a real licensed image resource before describing it as playable art.
+GitHub Actions workflow run #43686845035 produced the latter frame and confirmed all Godot tests; visual approval remains pending.
