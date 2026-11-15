@@ -64,6 +64,8 @@ var landing_time := 0.0
 var vfx: Array[Dictionary] = []
 var visual_clock := 0.0
 var actor_sprite: Sprite2D
+var motion_state := "idle"
+var frame_metrics := {"fps":0, "frames":0}
 
 
 func _ready() -> void:
@@ -133,6 +135,8 @@ func _make_hero() -> void:
         actor_sprite = sprite
     cam = Camera2D.new()
     cam.zoom = Vector2(1.25, 1.25)
+    cam.position_smoothing_enabled = true
+    cam.position_smoothing_speed = 9.0
     cam.enabled = true
     cam.position = Vector2(0, -80)
     cam.limit_left = 0
@@ -280,9 +284,11 @@ func _physics_process(delta:float) -> void:
         if joystick != null and absf(joystick.axis.x) > 0.02:
             dx = joystick.axis.x
         if absf(dx) > 0.18: facing = int(sign(dx))
-    var target_speed := dx * (205.0 if character == "Kha" else 245.0)
+    # A strong first impulse prevents the sluggish feel when changing direction.
+    var target_speed := dx * (215.0 if character == "Kha" else 255.0)
     var accel := RUN_ACCEL if grounded_before else AIR_ACCEL
-    hero.velocity.x = move_toward(hero.velocity.x, target_speed, (accel if absf(dx)>0.12 else RUN_FRICTION) * delta)
+    var turn_boost := 1.55 if absf(dx)>0.2 and hero.velocity.x * dx < 0.0 else 1.0
+    hero.velocity.x = move_toward(hero.velocity.x, target_speed, (accel * turn_boost if absf(dx)>0.12 else RUN_FRICTION) * delta)
     if jump_buffer_clock > 0 and coyote_clock > 0 and not blocked:
         hero.velocity.y = JUMP_SPEED
         jump_buffer_clock = 0.0
@@ -307,6 +313,7 @@ func _physics_process(delta:float) -> void:
         _burst(hero.position + Vector2(-facing*11,20), Color("#9bb6b6"), 2, 38.0)
     if actor_sprite != null:
         actor_sprite.flip_h = facing < 0
+        motion_state = _select_motion_state()
         var run_bob := sin(visual_clock*19.0) * 2.0 if hero.is_on_floor() and absf(hero.velocity.x)>35 else 0.0
         actor_sprite.position = Vector2(0, -4 + run_bob)
         actor_sprite.rotation = clampf(hero.velocity.x/9000.0, -0.055,0.055)
@@ -337,6 +344,15 @@ func _physics_process(delta:float) -> void:
     cam.offset = Vector2(sin(visual_clock*95.0)*2.3,cos(visual_clock*82.0)*1.5) if shake_time>0 else Vector2.ZERO
     _update_hud()
     queue_redraw()
+
+func _select_motion_state() -> String:
+    if i_frames > 0.0: return "hurt"
+    if slash_time > 0.0: return "attack"
+    if dash_time > 0.0: return "dash"
+    if not hero.is_on_floor():
+        return "jump" if hero.velocity.y < 0.0 else "fall"
+    if absf(hero.velocity.x) > 25.0: return "run"
+    return "idle"
 
 func _burst(origin:Vector2, color:Color, count:int, speed:float) -> void:
     for i in range(count):
@@ -521,7 +537,9 @@ func _restore() -> void:
     if boss_dead:boss_hp=0
 
 func _draw() -> void:
-    for r in range(7):
+    # Render only rooms close to camera. Avoid rebuilding distant scenery on iOS.
+    var shown_room := clampi(int(hero.position.x / ROOM_W), 0, 6) if hero else 0
+    for r in range(maxi(0,shown_room-1), mini(7,shown_room+2)):
         var ox:=r*ROOM_W
         draw_rect(Rect2(ox,-160,ROOM_W,700),COLORS[r])
         # Starfield, parallax-like atmosphere and moon
@@ -537,7 +555,9 @@ func _draw() -> void:
             draw_rect(Rect2(xx+8,295-(c%3)*37,16,30),Color("#caa76b44"))
         draw_string(ThemeDB.fallback_font,Vector2(ox+34,122),ROOMS[r],HORIZONTAL_ALIGNMENT_LEFT,-1,29,Color("#e3d59d"))
     for e in world_lines:
-        draw_rect(e["rect"],e["color"])
+        var rect:Rect2 = e["rect"]
+        if absf(rect.position.x - hero.position.x) < ROOM_W * 1.7:
+            draw_rect(rect,e["color"])
     # Marker objects and puzzle world interactions
     draw_rect(Rect2(5*ROOM_W-15,275,30,181),Color("#55d5ad44") if activated else Color("#e9a363cc"))
     draw_circle(Vector2(3*ROOM_W+465,359),34,Color("#ffdd85"))
@@ -545,11 +565,11 @@ func _draw() -> void:
     draw_circle(Vector2(6*ROOM_W+350,372),21,Color("#e6c477"))
     draw_circle(Vector2(290,393),20,Color("#d1b5dd"))
     for e in enemy_data:
-        if e["alive"]:
+        if e["alive"] and absf(float(e["x"])-hero.position.x)<ROOM_W:
             draw_circle(Vector2(e["x"],e["y"]),22,Color("#9a648f"))
             draw_circle(Vector2(float(e["x"])-7,float(e["y"])-4),4,Color("#f8ca8c"))
             draw_circle(Vector2(float(e["x"])+7,float(e["y"])-4),4,Color("#f8ca8c"))
-    if not boss_dead:
+    if not boss_dead and shown_room >= 5:
         var bp:=Vector2(6*ROOM_W+650,378)
         draw_circle(bp,75,Color("#a65c9d"))
         draw_circle(bp,54,Color("#27213d"))
