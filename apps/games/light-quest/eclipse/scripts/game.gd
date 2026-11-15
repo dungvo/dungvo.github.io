@@ -18,6 +18,7 @@ var puzzle_info: Label
 var puzzle_grid: GridContainer
 var touch := {"left":false,"right":false,"jump":false,"attack":false,"interact":false,"dash":false}
 var buttons: Dictionary = {}
+var joystick: Node2D
 var puzzles: Array[int] = []
 var puzzle_moves := 0
 var last_room := -1
@@ -106,9 +107,12 @@ func _make_hero() -> void:
         sprite.texture = load("res://assets/kenney/character.png")
         sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
         sprite.position = Vector2(0, -4)
-        sprite.scale = Vector2(2, 2)
+        sprite.region_enabled = true
+        sprite.region_rect = Rect2(0, 0, 18, 18)
+        sprite.scale = Vector2(2.5, 2.5)
         hero.add_child(sprite)
     cam = Camera2D.new()
+    cam.zoom = Vector2(1.25, 1.25)
     cam.enabled = true
     cam.position = Vector2(0, -80)
     cam.limit_left = 0
@@ -137,12 +141,13 @@ func _make_ui() -> void:
     touchbar.set_anchors_preset(Control.PRESET_FULL_RECT)
     touchbar.mouse_filter = Control.MOUSE_FILTER_IGNORE
     layer.add_child(touchbar)
-    _touch_button(touchbar,"left","◀",20,440,72)
-    _touch_button(touchbar,"right","▶",100,440,72)
-    _touch_button(touchbar,"jump","↟",620,442,65)
-    _touch_button(touchbar,"attack","⚔",696,442,65)
-    _touch_button(touchbar,"dash","➤",772,442,65)
-    _touch_button(touchbar,"interact","E",848,442,65)
+    joystick = Node2D.new()
+    joystick.set_script(load("res://scripts/virtual_joystick.gd"))
+    layer.add_child(joystick)
+    _touch_button(touchbar,"jump","NHẢY",596,420,82)
+    _touch_button(touchbar,"attack","ĐÁNH",688,420,82)
+    _touch_button(touchbar,"dash","LƯỚT",780,420,82)
+    _touch_button(touchbar,"interact","E",870,420,72)
     dialogue = PanelContainer.new()
     dialogue.position = Vector2(145,300)
     dialogue.custom_minimum_size = Vector2(670,115)
@@ -177,7 +182,8 @@ func _touch_button(parent:Control, key:String, text:String, x:int, y:int, size:i
     b.text = text
     b.position = Vector2(x,y)
     b.custom_minimum_size = Vector2(size,size)
-    b.modulate.a = 0.75
+    b.modulate.a = 0.92
+    b.add_theme_font_size_override("font_size",18)
     b.button_down.connect(func(): touch[key] = true)
     b.button_up.connect(func(): touch[key] = false)
     parent.add_child(b)
@@ -231,6 +237,8 @@ func _physics_process(delta:float) -> void:
         hero.velocity.x = move_toward(hero.velocity.x,0,28)
     else:
         var dx := float(int(Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT) or touch["right"]) - int(Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT) or touch["left"]))
+        if joystick != null:
+            dx = clampf(dx + joystick.axis.x, -1.0, 1.0)
         if dx != 0: facing = int(sign(dx))
         hero.velocity.x = dx * (200.0 if character == "Kha" else 235.0)
         if dash_time > 0:
@@ -332,7 +340,7 @@ func _interact() -> void:
     var local_x := fposmod(hero.position.x,ROOM_W)
     if last_room==0 and local_x<390:
         met_npc=true
-        dialogue_label.text="Kha: Tia sáng ở Tháp Pha Lê có thể phá lời nguyền. Hãy giải bảng ô sáng và quay lại mở Cổng Đêm. (E để đóng)"
+        dialogue_label.text="Kha: Tia sáng ở Tháp Pha Lê có thể phá lời nguyền. Hãy giải bảng ô sáng và quay lại mở Cổng Đêm. (Bấm E để đóng)"
         dialogue.show()
     elif last_room==3 and absf(local_x-465)<170:
         _open_puzzle()
@@ -395,7 +403,7 @@ func _update_hud() -> void:
     if hud==null:return
     var r:=clampi(int(hero.position.x/ROOM_W) if hero else 0,0,6)
     hud.text=("AN · KIẾM" if character=="An" else "KHA · PHÉP")+"   ♥ "+str(health)+"/"+str(max_health)+"   ✧ "+ROOMS[r]+"   ◇ "+("THẮP SÁNG" if activated else "CHƯA KÍCH HOẠT")
-    help.text=notice if notice_time>0 else "A/D: Đi · Space: Nhảy · J: Đánh · K: Lướt · E: Tương tác · R: Hồi sinh"
+    help.text=notice if notice_time>0 else "Joystick trái để di chuyển · Nhảy / Đánh / Lướt / E bên phải"
 
 func _persist() -> void:
     var f:=FileAccess.open(SAVE_FILE,FileAccess.WRITE)
