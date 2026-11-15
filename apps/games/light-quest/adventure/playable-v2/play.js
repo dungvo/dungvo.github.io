@@ -1,5 +1,5 @@
 import {propagate} from '../core/tactical-optics.js';
-const W=1200,H=720,S=72,OX=372,OY=151,COLORS={gold:0xffd36e,red:0xff625b,blue:0x72d9ff,purple:0xc68aff};
+const W=1200,H=720,S=72,OX=340,OY=136,COLORS={gold:0xffd36e,red:0xff625b,blue:0x72d9ff,purple:0xc68aff};
 const $=s=>document.querySelector(s);
 const initial=()=>({width:7,height:6,sources:[{x:0,y:2,dir:0,color:'gold',power:1},{x:0,y:5,dir:0,color:'red',power:2}],objects:[
 {id:'a',type:'mirror',x:2,y:2,axis:0,sided:'double'},{id:'b',type:'mirror',x:2,y:0,axis:0,sided:'double'},
@@ -17,7 +17,7 @@ game.scene.keys.play.paint()}
 function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),1700)}
 class Play extends Phaser.Scene{
 constructor(){super('play')}
-create(){this.cameras.main.setBackgroundColor('#09182c');this.art=this.add.graphics();this.board=this.add.graphics();this.rays=this.add.graphics();this.items=this.add.graphics();this.labels=[];this.drawBackdrop();this.paint();this.input.on('pointerdown',p=>{let x=Math.floor((p.x-OX)/S),y=Math.floor((p.y-OY)/S);if(x<0||x>=7||y<0||y>=6)return;let obj=level.objects.find(o=>o.x===x&&o.y===y);if(obj?.type==='mirror'){if(obj.broken){if(loot){snapshot();obj.broken=false;loot=false;turn++;energy=Math.max(0,energy-3);this.paint();toast('Đã phục hồi gương cổ')}else toast('Cần tìm mảnh gương để sửa')}else act('rotate',obj.id)}else if(rockGone&&!loot&&x===5&&y===5){snapshot();loot=true;this.paint();toast('Nhận mảnh gương cổ!')}else if(scan){toast('Ô ('+(x+1)+','+(y+1)+') đã được soi sáng')}else toast('Chạm vào gương để xoay')})}
+preload(){this.load.svg('temple','../assets/temple-garden.svg',{width:1200,height:720})}create(){this.cameras.main.setBackgroundColor('#09182c');this.add.image(600,360,'temple').setDepth(-10);this.art=this.add.graphics();this.board=this.add.graphics();this.rays=this.add.graphics();this.items=this.add.graphics();this.labels=[];this.paint();this.input.on('pointerdown',p=>{let x=Math.floor((p.x-OX)/S),y=Math.floor((p.y-OY)/S);if(x<0||x>=7||y<0||y>=6)return;let obj=level.objects.find(o=>o.x===x&&o.y===y);if(obj?.type==='mirror'){if(obj.broken){if(loot){snapshot();obj.broken=false;loot=false;turn++;energy=Math.max(0,energy-3);this.paint();toast('Đã phục hồi gương cổ')}else toast('Cần tìm mảnh gương để sửa')}else act('rotate',obj.id)}else if(rockGone&&!loot&&x===5&&y===5){snapshot();loot=true;this.paint();toast('Nhận mảnh gương cổ!')}else if(scan){toast('Ô ('+(x+1)+','+(y+1)+') đã được soi sáng')}else toast('Chạm vào gương để xoay')})}
 drawBackdrop(){let g=this.art;g.fillGradientStyle(0x112b45,0x122a46,0x0b2634,0x0b1c31).fillRect(0,0,W,H);
 for(let i=0;i<100;i++){let x=(i*131+47)%W,y=(i*79+17)%H;g.fillStyle(i%3===0?0x8061ac:0x2e6b65,.26).fillCircle(x,y,7+i%23)}
 g.fillStyle(0x2c3e43).fillRoundedRect(17,85,285,525,22);g.fillStyle(0x2c3e43).fillRoundedRect(900,85,285,525,22);
@@ -32,8 +32,8 @@ g.fillStyle(0x30485b).fillRoundedRect(918,477,244,101,14);g.lineStyle(3,0xa98a61
 }
 paint(){this.board.clear();this.rays.clear();this.items.clear();this.labels.forEach(t=>t.destroy());this.labels=[];
 const g=this.board,o=this.items,b=this.rays;
-g.fillStyle(0x1d2d40).fillRoundedRect(OX-14,OY-14,S*7+28,S*6+28,14);g.lineStyle(7,0x9b7951).strokeRoundedRect(OX-14,OY-14,S*7+28,S*6+28,14);
-for(let y=0;y<6;y++)for(let x=0;x<7;x++){const xx=OX+x*S,yy=OY+y*S;g.fillStyle((x+y)%2?0x394c61:0x455b69).fillRoundedRect(xx+2,yy+2,S-4,S-4,6);g.lineStyle(1,0x82908a,.5).strokeRoundedRect(xx+3,yy+3,S-6,S-6,6);if((x*7+y)%9===0){g.lineStyle(2,0x72976b,.7).lineBetween(xx+8,yy+8,xx+23,yy+15)}}
+// Illustrated floor is baked into temple-garden.svg; rays and objects stay dynamic.
+for(let y=0;y<6;y++)for(let x=0;x<7;x++){const xx=OX+x*S,yy=OY+y*S;g.fillStyle(0x13273a,.03).fillRoundedRect(xx+2,yy+2,S-4,S-4,6);if((x*7+y)%9===0){g.lineStyle(2,0x72976b,.7).lineBetween(xx+8,yy+8,xx+23,yy+15)}}
 let result=propagate(level);if(result.hits.some(h=>h.kind==='rock'&&h.broken)&&!rockGone){rockGone=true;level.objects=level.objects.filter(o=>o.id!=='rock');result=propagate(level)}
 gate=result.hits.some(h=>h.x===6&&h.y===0&&h.color==='gold');
 for(const beam of result.beams){const [x,y]=beam.from,[a,c]=beam.to;const ax=OX+(x+.5)*S,ay=OY+(y+.5)*S,bx=OX+(a+.5)*S,by=OY+(c+.5)*S,col=COLORS[beam.color];b.lineStyle(19,col,.16).lineBetween(ax,ay,bx,by);b.lineStyle(9,col,.68).lineBetween(ax,ay,bx,by);b.lineStyle(3,0xfff8dd).lineBetween(ax,ay,bx,by)}
