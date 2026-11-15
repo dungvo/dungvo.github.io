@@ -50,7 +50,7 @@ jobs:
         run: |
           set -euo pipefail
           godot --headless --editor --path apps/games/light-quest/eclipse --import --quit
-          timeout 30s godot --headless --path apps/games/light-quest/eclipse --script res://tests/capture_visual.gd
+          timeout 45s xvfb-run -a godot --path apps/games/light-quest/eclipse --script res://tests/capture_visual.gd
           test -s apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
       - name: Save screenshot artifact for manual comparison
         uses: actions/upload-artifact@v4
