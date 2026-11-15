@@ -64,6 +64,8 @@ var landing_time := 0.0
 var vfx: Array[Dictionary] = []
 var visual_clock := 0.0
 var actor_sprite: Sprite2D
+var actor_anim: AnimatedSprite2D
+var anim_label := ""
 var motion_state := "idle"
 var frame_metrics := {"fps":0, "frames":0}
 
@@ -122,7 +124,19 @@ func _make_hero() -> void:
     add_child(hero)
     # Sprite2D is available only after installing the reviewed CC0 pack.
     # This stays a regular Godot sprite so it can later be replaced by AnimatedSprite2D.
-    if ResourceLoader.exists("res://assets/kenney/character.png"):
+    if ResourceLoader.exists("res://moss-knight/godot/character.tscn"):
+        var prefab:PackedScene = load("res://moss-knight/godot/character.tscn")
+        var animated := prefab.instantiate() as AnimatedSprite2D
+        if animated != null:
+            animated.name = "KnightAnimated"
+            animated.position = Vector2(0,-21)
+            animated.scale = Vector2(0.24,0.24)
+            animated.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+            hero.add_child(animated)
+            actor_anim = animated
+            if actor_anim.sprite_frames.has_animation("idle_east"):
+                actor_anim.play("idle_east")
+    if actor_anim == null and ResourceLoader.exists("res://assets/kenney/character.png"):
         var sprite := Sprite2D.new()
         sprite.name = "PlayerSprite"
         sprite.texture = load("res://assets/kenney/character.png")
@@ -313,7 +327,8 @@ func _physics_process(delta:float) -> void:
         _burst(hero.position + Vector2(-facing*11,20), Color("#9bb6b6"), 2, 38.0)
     if actor_sprite != null:
         actor_sprite.flip_h = facing < 0
-        motion_state = _select_motion_state()
+    motion_state = _select_motion_state()
+    _update_character_animation()
         var run_bob := sin(visual_clock*19.0) * 2.0 if hero.is_on_floor() and absf(hero.velocity.x)>35 else 0.0
         actor_sprite.position = Vector2(0, -4 + run_bob)
         actor_sprite.rotation = clampf(hero.velocity.x/9000.0, -0.055,0.055)
@@ -344,6 +359,24 @@ func _physics_process(delta:float) -> void:
     cam.offset = Vector2(sin(visual_clock*95.0)*2.3,cos(visual_clock*82.0)*1.5) if shake_time>0 else Vector2.ZERO
     _update_hud()
     queue_redraw()
+
+func _update_character_animation() -> void:
+    if actor_anim == null: return
+    var base_name := "idle"
+    match motion_state:
+        "run": base_name = "walk"
+        "jump", "fall": base_name = "jump"
+        "dash": base_name = "roll"
+        "attack": base_name = "attack"
+        "hurt": base_name = "hurt"
+    var suffix := "_east" if facing >= 0 else "_west"
+    var candidate := base_name + suffix
+    if not actor_anim.sprite_frames.has_animation(candidate):
+        candidate = "idle" + suffix
+    if anim_label != candidate and actor_anim.sprite_frames.has_animation(candidate):
+        anim_label = candidate
+        actor_anim.play(candidate)
+    actor_anim.modulate = Color("#ffe3dd") if i_frames > 0 else Color.WHITE
 
 func _select_motion_state() -> String:
     if i_frames > 0.0: return "hurt"
@@ -583,7 +616,7 @@ func _draw() -> void:
         draw_circle(particle["p"], maxf(1.0,4.5*opacity),tint)
     if hero:
         var p:=hero.position
-        if not hero.has_node("PlayerSprite"):
+        if actor_anim == null and not hero.has_node("PlayerSprite"):
             draw_circle(p+Vector2(0,-15),18,Color("#a9e4d2") if character=="Kha" else Color("#82bdff"))
             draw_rect(Rect2(p.x-13,p.y-2,26,35),Color("#2c846d") if character=="Kha" else Color("#3d66ad"))
             draw_circle(p+Vector2(0,-23),9,Color("#edc5a1"))
