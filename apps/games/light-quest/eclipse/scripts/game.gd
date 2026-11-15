@@ -46,6 +46,25 @@ var notice_time := 0.0
 var game_won := false
 var started := false
 var menu: PanelContainer
+# Feel First v0.2: buffered jumps, acceleration and feedback.
+const RUN_ACCEL := 2050.0
+const RUN_FRICTION := 2300.0
+const AIR_ACCEL := 1450.0
+const JUMP_SPEED := -435.0
+const COYOTE_WINDOW := 0.13
+const JUMP_BUFFER_WINDOW := 0.15
+var coyote_clock := 0.0
+var jump_buffer_clock := 0.0
+var jump_held := false
+var was_grounded := false
+var dust_clock := 0.0
+var shake_time := 0.0
+var slash_time := 0.0
+var landing_time := 0.0
+var vfx: Array[Dictionary] = []
+var visual_clock := 0.0
+var actor_sprite: Sprite2D
+
 
 func _ready() -> void:
     _make_stage()
@@ -111,6 +130,7 @@ func _make_hero() -> void:
         sprite.region_rect = Rect2(0, 0, 18, 18)
         sprite.scale = Vector2(2.5, 2.5)
         hero.add_child(sprite)
+        actor_sprite = sprite
     cam = Camera2D.new()
     cam.zoom = Vector2(1.25, 1.25)
     cam.enabled = true
@@ -184,7 +204,10 @@ func _touch_button(parent:Control, key:String, text:String, x:int, y:int, size:i
     b.custom_minimum_size = Vector2(size,size)
     b.modulate.a = 0.92
     b.add_theme_font_size_override("font_size",18)
-    b.button_down.connect(func(): touch[key] = true)
+    b.button_down.connect(func():
+        touch[key] = true
+        if key == "jump": jump_buffer_clock = JUMP_BUFFER_WINDOW
+    )
     b.button_up.connect(func(): touch[key] = false)
     parent.add_child(b)
     buttons[key] = b
@@ -219,6 +242,8 @@ func _input(event:InputEvent) -> void:
         if puzzle_panel.visible: puzzle_panel.hide()
         elif dialogue.visible: dialogue.hide()
     if event is InputEventKey and event.pressed and not event.echo:
+        if event.keycode in [KEY_SPACE, KEY_W, KEY_UP]:
+            jump_buffer_clock = JUMP_BUFFER_WINDOW
         match event.keycode:
             KEY_E: _interact()
             KEY_J: _attack()
@@ -227,48 +252,110 @@ func _input(event:InputEvent) -> void:
 
 func _physics_process(delta:float) -> void:
     if not started: return
-    notice_time = maxf(0,notice_time-delta)
-    attack_cooldown = maxf(0,attack_cooldown-delta)
-    dash_cooldown = maxf(0,dash_cooldown-delta)
-    i_frames = maxf(0,i_frames-delta)
-    boss_shield_time = maxf(0,boss_shield_time-delta)
-    boss_flash = maxf(0,boss_flash-delta)
-    if puzzle_panel.visible or dialogue.visible:
-        hero.velocity.x = move_toward(hero.velocity.x,0,28)
+    visual_clock += delta
+    notice_time = maxf(0, notice_time-delta)
+    attack_cooldown = maxf(0, attack_cooldown-delta)
+    dash_cooldown = maxf(0, dash_cooldown-delta)
+    i_frames = maxf(0, i_frames-delta)
+    slash_time = maxf(0, slash_time-delta)
+    landing_time = maxf(0, landing_time-delta)
+    shake_time = maxf(0, shake_time-delta)
+    boss_shield_time = maxf(0, boss_shield_time-delta)
+    boss_flash = maxf(0, boss_flash-delta)
+    jump_buffer_clock = maxf(0, jump_buffer_clock-delta)
+    _tick_vfx(delta)
+    var blocked := puzzle_panel.visible or dialogue.visible
+    var grounded_before := hero.is_on_floor()
+    if grounded_before:
+        coyote_clock = COYOTE_WINDOW
     else:
-        var dx := float(int(Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT) or touch["right"]) - int(Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT) or touch["left"]))
-        if joystick != null:
-            dx = clampf(dx + joystick.axis.x, -1.0, 1.0)
-        if dx != 0: facing = int(sign(dx))
-        hero.velocity.x = dx * (200.0 if character == "Kha" else 235.0)
-        if dash_time > 0:
-            dash_time -= delta
-            hero.velocity.x = 610.0 * facing
-        if (Input.is_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_W) or touch["jump"]) and hero.is_on_floor():
-            hero.velocity.y = -430
-        if touch["attack"]:
-            touch["attack"]=false
-            _attack()
-        if touch["dash"]:
-            touch["dash"]=false
-            _dash()
-        if touch["interact"]:
-            touch["interact"]=false
-            _interact()
-    hero.velocity.y += 1000 * delta
+        coyote_clock = maxf(0, coyote_clock-delta)
+    var current_jump := bool(touch["jump"]) or Input.is_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP)
+    if current_jump and not jump_held:
+        jump_buffer_clock = JUMP_BUFFER_WINDOW
+    jump_held = current_jump
+    var dx := 0.0
+    if not blocked:
+        dx = float(int(Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT)) - int(Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT)))
+        if joystick != null and absf(joystick.axis.x) > 0.02:
+            dx = joystick.axis.x
+        if absf(dx) > 0.18: facing = int(sign(dx))
+    var target_speed := dx * (205.0 if character == "Kha" else 245.0)
+    var accel := RUN_ACCEL if grounded_before else AIR_ACCEL
+    hero.velocity.x = move_toward(hero.velocity.x, target_speed, (accel if absf(dx)>0.12 else RUN_FRICTION) * delta)
+    if jump_buffer_clock > 0 and coyote_clock > 0 and not blocked:
+        hero.velocity.y = JUMP_SPEED
+        jump_buffer_clock = 0.0
+        coyote_clock = 0.0
+        _burst(hero.position + Vector2(0,22), Color("#d7f3d6"), 9, 95.0)
+    if dash_time > 0:
+        dash_time = maxf(0, dash_time-delta)
+        hero.velocity.x = 565.0 * facing
+        hero.velocity.y *= 0.78
+    if not current_jump and hero.velocity.y < -140:
+        hero.velocity.y = maxf(hero.velocity.y, -140.0)
+    hero.velocity.y += (760.0 if hero.velocity.y < 0 else 1370.0) * delta
+    var previous_vy := hero.velocity.y
     hero.move_and_slide()
+    if not grounded_before and hero.is_on_floor() and previous_vy > 180:
+        landing_time = 0.14
+        shake_time = 0.08
+        _burst(hero.position + Vector2(0,20), Color("#a8bec0"), 12, 120.0)
+    dust_clock -= delta
+    if hero.is_on_floor() and absf(hero.velocity.x) > 95 and dust_clock <= 0:
+        dust_clock = 0.09
+        _burst(hero.position + Vector2(-facing*11,20), Color("#9bb6b6"), 2, 38.0)
+    if actor_sprite != null:
+        actor_sprite.flip_h = facing < 0
+        var run_bob := sin(visual_clock*19.0) * 2.0 if hero.is_on_floor() and absf(hero.velocity.x)>35 else 0.0
+        actor_sprite.position = Vector2(0, -4 + run_bob)
+        actor_sprite.rotation = clampf(hero.velocity.x/9000.0, -0.055,0.055)
+        actor_sprite.modulate = Color("#fff2cf") if i_frames>0 else Color.WHITE
+        var stretch := 1.08 if not hero.is_on_floor() and hero.velocity.y < 0 else 1.0
+        actor_sprite.scale = Vector2(2.5 / stretch, 2.5 * stretch)
+        if landing_time>0: actor_sprite.scale = Vector2(2.75,2.25)
+    if touch["attack"]:
+        touch["attack"] = false
+        _attack()
+    if touch["dash"]:
+        touch["dash"] = false
+        _dash()
+    if touch["interact"]:
+        touch["interact"] = false
+        _interact()
     hero.position.x = clampf(hero.position.x,25,7*ROOM_W-28)
     if hero.position.y > 620: _respawn()
-    var r := mini(6, int(hero.position.x/ROOM_W))
-    if r != last_room:
-        last_room=r
-        _say(ROOMS[r] + " · " + TIPS[r],2.6)
-    if r == 6 and not boss_dead:
+    var room := mini(6, int(hero.position.x/ROOM_W))
+    if room != last_room:
+        last_room = room
+        _say(ROOMS[room] + " · " + TIPS[room], 2.6)
+    if room == 6 and not boss_dead:
         _boss_tick(delta)
     _enemy_tick(delta)
-    if activated and get_node_or_null("LightGate"): get_node("LightGate").queue_free()
+    if activated and get_node_or_null("LightGate"):
+        get_node("LightGate").queue_free()
+    cam.offset = Vector2(sin(visual_clock*95.0)*2.3,cos(visual_clock*82.0)*1.5) if shake_time>0 else Vector2.ZERO
     _update_hud()
     queue_redraw()
+
+func _burst(origin:Vector2, color:Color, count:int, speed:float) -> void:
+    for i in range(count):
+        var angle := (float(i)/maxf(1.0,float(count-1)))*PI + PI
+        var direction := Vector2(cos(angle),sin(angle))
+        vfx.append({"p":origin,"v":direction*speed*randf_range(0.45,1.2),"life":0.34,"duration":0.34,"color":color})
+    if vfx.size()>100:
+        vfx = vfx.slice(vfx.size()-100)
+
+func _tick_vfx(delta:float) -> void:
+    for i in range(vfx.size()-1,-1,-1):
+        var particle:Dictionary = vfx[i]
+        particle["life"] = float(particle["life"])-delta
+        particle["p"] = Vector2(particle["p"]) + Vector2(particle["v"])*delta
+        particle["v"] = Vector2(particle["v"])*0.91
+        if float(particle["life"])<=0:
+            vfx.remove_at(i)
+        else:
+            vfx[i] = particle
 
 func _enemy_tick(delta:float) -> void:
     for i in range(enemy_data.size()):
@@ -293,6 +380,8 @@ func _damage(amount:int) -> void:
     if i_frames>0: return
     health-=amount
     i_frames=1.1
+    shake_time = 0.17
+    _burst(hero.position, Color("#ff9484"), 10, 145)
     _say("Trúng đòn! Né để tránh mất máu.",1.5)
     if health<=0: _respawn()
 
@@ -304,12 +393,16 @@ func _respawn() -> void:
 
 func _attack() -> void:
     if not started or puzzle_panel.visible or dialogue.visible or attack_cooldown>0: return
-    attack_cooldown = 0.42 if character=="An" else 0.65
+    attack_cooldown = 0.34 if character=="An" else 0.48
+    slash_time = 0.22
+    _burst(hero.position+Vector2(facing*42,-9), Color("#c9f7ff") if character=="Kha" else Color("#ffe0ab"), 7, 100)
     var reach := 100.0 if character=="An" else 180.0
     for i in range(enemy_data.size()):
         var e:Dictionary=enemy_data[i]
         if e["alive"] and absf(hero.position.x-float(e["x"]))<reach and absf(hero.position.y-float(e["y"]))<80 and (float(e["x"])-hero.position.x)*facing>-24:
             e["hp"]=int(e["hp"])-1
+            shake_time = 0.09
+            _burst(Vector2(float(e["x"]),float(e["y"])), Color("#ffb5de"), 9, 115)
             if int(e["hp"])<=0:e["alive"]=false
             enemy_data[i]=e
             break
@@ -328,7 +421,8 @@ func _attack() -> void:
 func _dash() -> void:
     if not started or dash_cooldown>0 or puzzle_panel.visible: return
     dash_cooldown=1.4 if moon_dash else 2.8
-    dash_time=0.18 if moon_dash else 0.10
+    dash_time=0.18 if moon_dash else 0.13
+    _burst(hero.position+Vector2(-facing*15,5),Color("#94e9e2"),14,155)
     _say("Moon Dash!" if moon_dash else "Lướt ngắn",0.45)
 
 func _interact() -> void:
@@ -462,6 +556,11 @@ func _draw() -> void:
         draw_circle(bp,17,Color("#d5a2f6") if boss_shield_time>0 else Color("#65c9f5"))
         draw_arc(bp,95,0,TAU,64,Color("#83cfe2") if boss_shield_time<=0 else Color("#f0d58a"),4)
         draw_rect(Rect2(bp.x-80,220,160*float(boss_hp)/12,9),Color("#e6a578"))
+    for particle in vfx:
+        var opacity := clampf(float(particle["life"])/float(particle["duration"]),0,1)
+        var tint:Color = particle["color"]
+        tint.a = opacity*0.84
+        draw_circle(particle["p"], maxf(1.0,4.5*opacity),tint)
     if hero:
         var p:=hero.position
         if not hero.has_node("PlayerSprite"):
@@ -469,5 +568,8 @@ func _draw() -> void:
             draw_rect(Rect2(p.x-13,p.y-2,26,35),Color("#2c846d") if character=="Kha" else Color("#3d66ad"))
             draw_circle(p+Vector2(0,-23),9,Color("#edc5a1"))
         if i_frames>0:draw_arc(p+Vector2(0,-6),33,0,TAU,32,Color("#ffdf8b"),3)
-        if attack_cooldown>0.22:
-            draw_arc(p+Vector2(float(facing)*25,-10),28,-PI/2,PI/2,20,Color("#f8e8ba"),4)
+        if slash_time>0:
+            var swing := 1.0-slash_time/0.22
+            var center := p+Vector2(float(facing)*30,-8)
+            draw_arc(center,37,-PI/2+swing*0.7,PI/2+swing*0.7,24,Color("#ffe5a9"),7)
+            draw_arc(center,47,-PI/2+swing*0.7,PI/2+swing*0.7,24,Color("#b2f0f7a9"),3)
