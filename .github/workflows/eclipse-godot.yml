@@ -23,4 +23,4 @@ jobs:
       - name: Smoke test scene
         run: timeout 25s godot --headless --path apps/games/light-quest/eclipse --quit-after 15
       - name: Test gameplay mechanics
-        run: godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
+        run: timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
