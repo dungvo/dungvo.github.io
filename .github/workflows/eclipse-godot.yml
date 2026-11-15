@@ -37,6 +37,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Download licensed Kenney prototype sprite
         run: python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
+      - name: Inspect possible animated CC0 hero sheets
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request
+          url='https://api.github.com/repos/Tiddybub/2d-assets/contents/characters/oga-game-character'
+          req=urllib.request.Request(url,headers={'User-Agent':'LightQuestAssetAudit','Accept':'application/vnd.github+json'})
+          with urllib.request.urlopen(req, timeout=20) as res: data=json.load(res)
+          for x in data:print('CC0_CANDIDATE',x['name'],x['size'],x.get('download_url'))
+          PY
       - name: Upload source sprite, license and provenance
         uses: actions/upload-artifact@v4
         with:
