@@ -35,6 +35,30 @@ jobs:
           timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
           timeout 20s godot --headless --path apps/games/light-quest/eclipse --script res://tests/hit_geometry_test.gd
 
+  visual-qa:
+    runs-on: ubuntu-latest
+    needs: [parse-project]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.4.1
+          use-dotnet: false
+      - name: Install animated art for screenshot
+        run: python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
+      - name: Capture running gameplay frame (not mockup)
+        run: |
+          set -euo pipefail
+          godot --headless --editor --path apps/games/light-quest/eclipse --import --quit
+          timeout 30s godot --headless --path apps/games/light-quest/eclipse --script res://tests/capture_visual.gd
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
+      - name: Save screenshot artifact for manual comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclipse-actual-gameplay-screen
+          path: apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
+          if-no-files-found: error
+
   asset-pack:
     runs-on: ubuntu-latest
     steps:
