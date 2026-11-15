@@ -7,7 +7,7 @@
 (()=>{'use strict';
 const W=960,H=600,CELL=82,OX=376,OY=112;
 const status=document.querySelector('#status'),hint=document.querySelector('#hint');
-let mirrors=[0,0],history=[],won=false;
+let mirrors=[1,1],history=[],won=false;
 class Garden extends Phaser.Scene{
 constructor(){super('garden')}
 create(){
@@ -51,7 +51,7 @@ g.fillStyle(0xa78351).fillCircle(tx,ty,25);g.fillStyle(lit?0x7fffe5:0x6e88c6).fi
 if(lit&&!won){won=true;status.textContent='✓ Pha lê đã sáng!';hint.textContent='✦ Hoàn thành! Cánh cổng cổ đã mở!';this.tweens.add({targets:this.cameras.main,alpha:{from:.75,to:1},duration:550});this.add.text(520,260,'✦ CỔNG ĐÃ MỞ ✦',{font:'bold 30px Georgia',color:'#ffe1a1',backgroundColor:'#14243bdd',padding:15}).setOrigin(.5).setDepth(5)}
 else if(!won){status.textContent='Pha lê: 0/1'}
 }
-reset(){mirrors=[0,0];history=[];won=false;this.children.list.filter(o=>o.type==='Text'&&o.text?.includes('CỔNG ĐÃ MỞ')).forEach(o=>o.destroy());hint.textContent='Chạm vào gương xanh để xoay tia sáng đến pha lê ✦';this.paint()}
+reset(){mirrors=[1,1];history=[];won=false;this.children.list.filter(o=>o.type==='Text'&&o.text?.includes('CỔNG ĐÃ MỞ')).forEach(o=>o.destroy());hint.textContent='Chạm vào gương xanh để xoay tia sáng đến pha lê ✦';this.paint()}
 undo(){if(!history.length)return;mirrors=history.pop();won=false;this.children.list.filter(o=>o.type==='Text'&&o.text?.includes('CỔNG ĐÃ MỞ')).forEach(o=>o.destroy());hint.textContent='Chạm vào gương xanh để xoay tia sáng đến pha lê ✦';this.paint()}
 }
 const game=new Phaser.Game({type:Phaser.CANVAS,parent:'game',width:W,height:H,backgroundColor:'#0b1930',render:{pixelArt:false,antialias:true},scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Garden],fps:{target:30,forceSetTimeOut:true}});
