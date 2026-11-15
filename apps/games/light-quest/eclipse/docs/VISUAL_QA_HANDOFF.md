@@ -16,12 +16,13 @@
 | Rừng Vọng, An và sói | Cầu rêu, cột đá, thác, trăng và lâu đài. Sói và An có silhouette riêng, có vệt kiếm và số sát thương. | Mockup có cảnh trước dày hơn, khối đá bố trí gần nhân vật và hiệu ứng đòn nhiều lớp hơn. Cầu lặp lại họa tiết giữa các phòng. |
 | Tháp Pha Lê, Kha | Hai gương, đường tia và pha lê có trạng thái hoạt động. Giải xong mở collider của cổng. | Cần puzzle nhiều cách thao tác hơn và kết hợp tốt hơn với platforming. |
 | Phòng Thủ Hộ | Sprite lớn, trụ sáng, khiên và thanh máu nhìn thấy được. | Boss cần chuỗi hình đòn đánh, phản ứng, chuyển pha và kết liễu riêng. Cần đánh giá nhịp né và phản công khi chơi tay. |
-| UI ngang | HUD ở mép trên, joystick và các nút ở hai bên. Sự kiện Godot kiểm tra được ba ngón đồng thời. | Cần Safari/iPhone 13 mini thật để đo thời gian khung hình, kiểm tra vùng tai thỏ, chạm nhanh và vị trí ngón cái. |
+| UI ngang | HUD ở mép trên, joystick và các nút ở hai bên. Ảnh Chromium phát hiện glyph tim và nút bị thiếu, nên tim được vẽ trực tiếp và nút dùng nhãn tiếng Việt. Sự kiện Godot kiểm tra được ba ngón đồng thời. | Cần Safari/iPhone 13 mini thật để đo thời gian khung hình, kiểm tra vùng tai thỏ, chạm nhanh và vị trí ngón cái. |
 
 ## Kiểm thử
 
 - Godot 4.6.3 cục bộ. Kiểm tra import và smoke qua scene thật. Phạm vi gồm quét đòn trái/phải, tường chặn kiếm và đạn, đạn tốc độ cao, mở cổng qua gương, hồi máu tối đa từ rương, khiên và qua pha Thủ Hộ, chạm ba ngón đồng thời, nhảy ngắn/dài, dash.
 - OpenGL Compatibility trên Linux. Ảnh từ viewport thật: `actual-gameplay.png`, `actual-puzzle.png` và `actual-guardian.png`. Ảnh chiến đấu được kiểm tra hai lượt. Lượt đầu phát hiện mép cầu lệch collider, đã chỉnh atlas và cao độ rồi chụp lại.
+- Chromium chạy bản HTML/WASM/PCK ở 812×375, có chọn nhân vật bằng cảm ứng và thử thao tác nhiều ngón mô phỏng.
 - Bài kiểm tra Ô sáng World/Secret Garden chạy qua 18 và 9 màn.
 
 ## Việc còn lại trước Pages

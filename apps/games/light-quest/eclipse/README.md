@@ -9,10 +9,10 @@ Mở `project.godot` bằng Godot và nhấn F5. Chọn **An** để dùng kiế
 | Thao tác | Bàn phím | Cảm ứng ngang |
 |---|---|---|
 | Di chuyển | A/D hoặc phím mũi tên | Joystick trái |
-| Nhảy | Space, W hoặc ↑ | ↑ |
-| Tấn công | J | ⚔ |
-| Lướt | K | » |
-| Đỡ đòn / hồi máu | L | ✦ |
+| Nhảy | Space, W hoặc ↑ | NHẢY |
+| Tấn công | J | ĐÁNH |
+| Lướt | K | LƯỚT |
+| Đỡ đòn / hồi máu | L | LỰC |
 | Tương tác | E | E |
 | Hồi sinh tại trạm lưu | R | Hết máu sẽ tự hồi sinh |
 

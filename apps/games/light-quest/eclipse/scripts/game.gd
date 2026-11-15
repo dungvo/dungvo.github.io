@@ -1,5 +1,6 @@
 extends Node2D
 ## Coordinates campaign rooms, combat actors and HUD.
+const HealthHearts := preload("res://scripts/health_hearts.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
 const RuinStage := preload("res://scripts/ruin_stage.gd")
 const Combat := preload("res://scripts/combat.gd")
@@ -11,11 +12,12 @@ const FLOOR_Y := 456.0
 const SAVE_FILE := "user://eclipse_save_v1.json"
 const Hit := preload("res://scripts/hit_geometry.gd")
 const ROOMS := ["Làng Trăng", "Rừng Vọng", "Hầm Bóng", "Tháp Pha Lê", "Cổng Đêm", "Đài Quan Sát", "Người Giữ Nguyệt"]
-const TIPS := ["Gặp Kha (E) để nhận nhiệm vụ.", "Đánh quái và vượt bục đá.", "Tìm đường qua những bệ đá cổ.", "Xoay hai gương để dẫn tia sáng đến pha lê.", "Chỉ vào được khi Tháp Pha Lê đã sáng.", "Checkpoint: đứng gần đài và nhấn E.", "Phá khiên boss bằng ánh sáng. Đánh vào lúc khiên tan."]
+const TIPS := ["Gặp Thợ Lưu Giữ (E) để nhận nhiệm vụ.", "Đánh quái và vượt bục đá.", "Tìm đường qua những bệ đá cổ.", "Xoay hai gương để dẫn tia sáng đến pha lê.", "Chỉ vào được khi Tháp Pha Lê đã sáng.", "Checkpoint: đứng gần đài và nhấn E.", "Phá khiên boss bằng ánh sáng. Đánh vào lúc khiên tan."]
 var hero: CharacterBody2D
 var body_shape: CollisionShape2D
 var cam: Camera2D
 var hud: Label
+var hearts: Node2D
 var help: Label
 var chapter: Label
 var light_status: Label
@@ -193,6 +195,9 @@ func _make_ui() -> void:
     add_child(layer)
     hud = _hud_label(layer, Vector2(22, 18), Vector2(312, 39), 20)
     hud.add_theme_color_override("font_color", Color("#ffe0a1"))
+    hearts = HealthHearts.new()
+    hearts.position = Vector2(79, 28)
+    layer.add_child(hearts)
     chapter = _hud_label(layer, Vector2(698, 18), Vector2(240, 32), 19)
     chapter.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
     light_status = _hud_label(layer, Vector2(698, 49), Vector2(240, 28), 14)
@@ -206,10 +211,10 @@ func _make_ui() -> void:
     joystick = Node2D.new()
     joystick.set_script(load("res://scripts/virtual_joystick.gd"))
     layer.add_child(joystick)
-    _touch_button(touchbar, "jump", "↑", Vector2(880, 379), 34)
-    _touch_button(touchbar, "attack", "⚔", Vector2(805, 449), 43)
-    _touch_button(touchbar, "dash", "»", Vector2(705, 463), 33)
-    _touch_button(touchbar, "skill", "✦", Vector2(898, 471), 33)
+    _touch_button(touchbar, "jump", "NHẢY", Vector2(880, 379), 34)
+    _touch_button(touchbar, "attack", "ĐÁNH", Vector2(805, 449), 43)
+    _touch_button(touchbar, "dash", "LƯỚT", Vector2(705, 463), 33)
+    _touch_button(touchbar, "skill", "LỰC", Vector2(898, 471), 33)
     _touch_button(touchbar, "interact", "E", Vector2(898, 299), 26)
     dialogue = PanelContainer.new()
     dialogue.position = Vector2(145,300)
@@ -250,7 +255,7 @@ func _touch_button(parent: Control, key: String, glyph: String, center: Vector2,
     face.size = Vector2.ONE * radius * 2
     face.focus_mode = Control.FOCUS_NONE
     face.mouse_filter = Control.MOUSE_FILTER_IGNORE
-    face.add_theme_font_size_override("font_size", int(radius * 0.88))
+    face.add_theme_font_size_override("font_size", 17 if key == "interact" else 15)
     var style := StyleBoxFlat.new()
     style.bg_color = Color("#0a1b34a9") if key != "attack" else Color("#492e168c")
     style.border_color = Color("#adcde9b0") if key != "attack" else Color("#ffcf77")
@@ -653,10 +658,10 @@ func _say(value:String,secs:float) -> void:
 func _update_hud() -> void:
     if hud==null:return
     var r:=clampi(int(hero.position.x/ROOM_W) if hero else 0,0,6)
-    var hearts := "♥ ".repeat(health) + "♡ ".repeat(max_health - health)
-    hud.text = ("%s  ·  %s" % [character, hearts]).strip_edges()
+    hud.text = character
+    hearts.show_health(health, max_health)
     chapter.text = ROOMS[r]
-    light_status.text = "✦  Cổng Đêm đã mở" if activated else "◇  Dẫn sáng đến Cổng Đêm"
+    light_status.text = "Cổng Đêm đã mở" if activated else "Dẫn sáng đến Cổng Đêm"
     help.text = notice if notice_time > 0 else ""
 
 func _persist() -> void:
