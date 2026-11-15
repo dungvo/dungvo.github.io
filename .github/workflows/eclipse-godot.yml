@@ -18,8 +18,6 @@ jobs:
         with:
           version: 4.4.1
           use-dotnet: false
-      - name: Install animated CC0 hero
-        run: python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
       - name: Import and validate Godot project
         run: |
           set -o pipefail
@@ -44,47 +42,26 @@ jobs:
         with:
           version: 4.4.1
           use-dotnet: false
-      - name: Install animated art for screenshot
-        run: python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
-      - name: Capture running gameplay frame (not mockup)
+      - name: Capture running gameplay frames
         run: |
           set -euo pipefail
           godot --headless --editor --path apps/games/light-quest/eclipse --import --quit
           timeout 45s xvfb-run -a godot --path apps/games/light-quest/eclipse --script res://tests/capture_visual.gd
           test -s apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-puzzle.png
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-guardian.png
       - name: Save screenshot artifact for manual comparison
         uses: actions/upload-artifact@v4
         with:
           name: eclipse-actual-gameplay-screen
-          path: apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
-          if-no-files-found: error
-
-  asset-pack:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Download licensed Kenney prototype sprite
-        run: python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
-      - name: Install CC0 Moss Knight animations
-        run: python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
-      - name: Upload source sprite, license and provenance
-        uses: actions/upload-artifact@v4
-        with:
-          name: eclipse-kenney-cc0-prototype
-          path: |
-            apps/games/light-quest/eclipse/assets/kenney/
-            apps/games/light-quest/eclipse/moss-knight/
+          path: apps/games/light-quest/eclipse/visual-qa/*.png
           if-no-files-found: error
 
   web-preview:
     runs-on: ubuntu-latest
-    needs: [parse-project, asset-pack]
+    needs: [parse-project]
     steps:
       - uses: actions/checkout@v4
-      - name: Install licensed player assets
-        run: |
-          python3 apps/games/light-quest/eclipse/tools/install_cc0_assets.py
-          python3 apps/games/light-quest/eclipse/tools/install_moss_knight.py
       - uses: chickensoft-games/setup-godot@v2
         with:
           version: 4.4.1

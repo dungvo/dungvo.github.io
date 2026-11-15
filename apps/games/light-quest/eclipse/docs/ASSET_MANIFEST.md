@@ -1,10 +1,18 @@
-# Asset manifest / policy
+# Asset manifest
 
-Current prototype uses **procedural shapes and built-in Godot font only**. No third-party sprites or sound files have been imported or redistributed.
+Production preview assets are original generated artwork prepared for this project with OpenAI image generation on 2026-11-15. User-supplied mockups guided the style and composition. Images in the game were generated as separate background and sprite assets, cropped, cleaned, packed and encoded to WebP. The game uses Godot's built-in font and does not import the formerly optional Kenney and Moss Knight assets. Their prototype install scripts remain in history and are no longer called by CI.
 
-Candidates for future selective download and legal review:
-- Orius, JIK-A-4, CC0 listed at https://jik-a-4.itch.io/orius (verify current downloadable archive terms)
-- Kenney New Platformer Pack, CC0, https://kenney.nl/assets/new-platformer-pack
-- Kenney Pixel Platformer, CC0, https://kenney.nl/assets/pixel-platformer
+| File under `assets/eclipse` | Content and in-game use |
+|---|---|
+| `moon-tower.webp` | Distant moon, castle, waterfall and valley plate |
+| `crystal-tower.webp` | Backlit Gothic gallery for the mirror circuit |
+| `guardian-hall.webp` | Violet Moon Tower boss chamber |
+| `keeper.webp` | Lantern keeper NPC in the first room |
+| `heroes.webp` | An/Kha idle, jump and attack poses; 192×168 cells |
+| `hero-run.webp` | Four running poses each for An and Kha; 192×168 cells |
+| `hero-states.webp` | Fall, dash, hurt and death poses; 192×168 cells |
+| `creatures.webp` | Wolf, golem, caster, bat and guardian; 192×192 cells |
+| `ruins.webp` | Mossy platform, door, stone bridge, crystals, mirror and light pedestal |
+| `ruin-details.webp` | Ruined pier, open arch, foreground flowers and Moonstone chest |
 
-Before each imported asset record: original URL, creator, license version, download date, SHA-256, source filename, destination, required attribution, sprite dimensions, animation names, usage. Never treat promotional images as redistributable assets.
+Source atlas dimensions and gameplay crop regions are recorded in `scripts/eclipse_art.gd`. Use the Git blob SHA for file-level provenance. There are no third-party sprite licenses to redistribute for these atlases.

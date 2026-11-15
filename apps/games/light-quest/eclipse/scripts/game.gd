@@ -1,30 +1,33 @@
 extends Node2D
-## Self-contained mechanical vertical slice. Programmatic scenery is deliberately placeholder art.
+## Coordinates campaign rooms, combat actors and HUD.
+const Art := preload("res://scripts/eclipse_art.gd")
+const RuinStage := preload("res://scripts/ruin_stage.gd")
+const Combat := preload("res://scripts/combat.gd")
+const EnemyScene := preload("res://scenes/enemy.tscn")
+const LightBolt := preload("res://scripts/light_bolt.gd")
+const MirrorCircuit := preload("res://scripts/mirror_circuit.gd")
 const ROOM_W := 960.0
 const FLOOR_Y := 456.0
 const SAVE_FILE := "user://eclipse_save_v1.json"
 const Hit := preload("res://scripts/hit_geometry.gd")
 const ROOMS := ["Làng Trăng", "Rừng Vọng", "Hầm Bóng", "Tháp Pha Lê", "Cổng Đêm", "Đài Quan Sát", "Người Giữ Nguyệt"]
-const TIPS := ["Gặp Kha (E) để nhận nhiệm vụ.", "Đánh quái và vượt bục đá.", "Tìm đường qua những bệ đá cổ.", "Đến bàn đố (E) để thắp đèn.", "Chỉ vào được khi Tháp Pha Lê đã sáng.", "Checkpoint: đứng gần đài và nhấn E.", "Phá khiên boss bằng ánh sáng. Đánh vào lúc khiên tan."]
-const COLORS := [Color("#274b65"),Color("#163e44"),Color("#272f4c"),Color("#32425a"),Color("#38364e"),Color("#334b62"),Color("#38243e")]
+const TIPS := ["Gặp Kha (E) để nhận nhiệm vụ.", "Đánh quái và vượt bục đá.", "Tìm đường qua những bệ đá cổ.", "Xoay hai gương để dẫn tia sáng đến pha lê.", "Chỉ vào được khi Tháp Pha Lê đã sáng.", "Checkpoint: đứng gần đài và nhấn E.", "Phá khiên boss bằng ánh sáng. Đánh vào lúc khiên tan."]
 var hero: CharacterBody2D
 var body_shape: CollisionShape2D
 var cam: Camera2D
 var hud: Label
 var help: Label
+var chapter: Label
+var light_status: Label
 var dialogue: PanelContainer
 var dialogue_label: Label
-var puzzle_panel: PanelContainer
-var puzzle_info: Label
-var puzzle_grid: GridContainer
-var touch := {"left":false,"right":false,"jump":false,"attack":false,"interact":false,"dash":false}
-var buttons: Dictionary = {}
+var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false}
+var control_art: Dictionary = {}
 var joystick: Node2D
-var puzzles: Array[int] = []
-var puzzle_moves := 0
 var last_room := -1
 var activated := false
 var met_npc := false
+var found_chest := false
 var moon_dash := false
 var boss_dead := false
 var checkpoint := Vector2(130, 432)
@@ -32,19 +35,26 @@ var health := 5
 var max_health := 5
 var character := "An"
 var facing := 1
-var velocity_x := 0.0
 var i_frames := 0.0
 var attack_cooldown := 0.0
 var dash_cooldown := 0.0
 var dash_time := 0.0
 var boss_shield_time := 0.0
-var boss_flash := 0.0
-var boss_hp := 12
-var enemy_data: Array[Dictionary] = []
-var world_lines: Array[Dictionary] = []
+var enemies: Array[CharacterBody2D] = []
+var bolts: Array[Node2D] = []
+var guardian: CharacterBody2D
+var light_circuit: Node2D
+var combo_step := 0
+var combo_window := 0.0
+var attack_buffer := 0.0
+var attack_windup := 0.0
+var attack_facing := 1
+var hurt_time := 0.0
+var death_time := 0.0
+var shield_cooldown := 0.0
+var scenery: Node2D
 var notice := ""
 var notice_time := 0.0
-var game_won := false
 var started := false
 var menu: PanelContainer
 # Feel First v0.2: buffered jumps, acceleration and feedback.
@@ -57,53 +67,85 @@ const JUMP_BUFFER_WINDOW := 0.15
 var coyote_clock := 0.0
 var jump_buffer_clock := 0.0
 var jump_held := false
-var was_grounded := false
 var dust_clock := 0.0
 var shake_time := 0.0
 var slash_time := 0.0
-var landing_time := 0.0
+var save_enabled := true
 var vfx: Array[Dictionary] = []
 var visual_clock := 0.0
-var actor_sprite: Sprite2D
 var actor_anim: AnimatedSprite2D
 var anim_label := ""
 var motion_state := "idle"
-var frame_metrics := {"fps":0, "frames":0}
+
 
 
 func _ready() -> void:
     _make_stage()
     _make_hero()
+    light_circuit = MirrorCircuit.new()
+    light_circuit.position = Vector2(3 * ROOM_W, 0)
+    add_child(light_circuit)
+    light_circuit.completed.connect(_light_completed)
     _make_ui()
     _restore()
+    if activated: light_circuit.restore_solved()
+    if found_chest: scenery.plaza_chest.hide()
+    if boss_dead: guardian.queue_free()
     _menu()
 
 func _make_stage() -> void:
+    scenery = RuinStage.new()
+    add_child(scenery)
+    var ledges := [
+        [Vector2(130, 168), Vector2(686, 172)],
+        [Vector2(143, 159), Vector2(473, 138), Vector2(783, 130)],
+        [Vector2(255, 144), Vector2(499, 194), Vector2(790, 127)],
+        [Vector2(229, 155), Vector2(630, 179)],
+        [Vector2(174, 194), Vector2(586, 133), Vector2(783, 118)],
+        [Vector2(436, 179), Vector2(701, 182)],
+        [Vector2(194, 135), Vector2(797, 156)]
+    ]
     for r in range(7):
         var ox := float(r) * ROOM_W
-        _solid(Rect2(ox - 8, FLOOR_Y, ROOM_W + 16, 100), Color("#293d48"))
-        if r > 0:
-            _solid(Rect2(ox + 150, 375, 130, 18), Color("#496a6a"))
-            _solid(Rect2(ox + 480, 310, 155, 18), Color("#496a6a"))
+        _solid(Rect2(ox, FLOOR_Y, ROOM_W, 100))
+        for ledge in ledges[r]:
+            _solid(Rect2(ox + ledge.x, 375, ledge.y, 25))
+        if r == 3:
+            _solid(Rect2(ox + 59, 375, 106, 25))
+        if r in [1, 2, 5]:
+            _solid(Rect2(ox + 586, 315, 115, 24))
         if r in [1,2,4,5]:
-            _solid(Rect2(ox + 730, 365, 110, 18), Color("#66808b"))
-        if r in [1,2,4,5]:
-            for j in range(2):
-                enemy_data.append({"x":ox + 430 + j * 240,"y":FLOOR_Y - 22,"hp":3 + int(r > 3),"dir":-1.0,"alive":true,"speed":36.0 + 8*r,"phase":float(j)})
+            var roster: Array = {1:["wolf", "bat"], 2:["golem", "mage"], 4:["wolf", "golem"], 5:["mage", "bat"]}[r]
+            _spawn_enemy(roster[0], ox + 435)
+            _spawn_enemy(roster[1], ox + 692)
+    guardian = _spawn_enemy("guardian", 6 * ROOM_W + 665)
     # Hard gate after room 4: collision toggled when light is activated.
     var gate := StaticBody2D.new()
     gate.name = "LightGate"
-    gate.position = Vector2(ROOM_W * 5.0, 365)
+    gate.collision_layer = Combat.WORLD
+    gate.collision_mask = 0
+    gate.position = Vector2(ROOM_W * 5.0, 301)
     var col := CollisionShape2D.new()
     var shape := RectangleShape2D.new()
-    shape.size = Vector2(30, 180)
+    shape.size = Vector2(30, 310)
     col.shape = shape
     gate.add_child(col)
     add_child(gate)
 
-func _solid(rect:Rect2, color:Color) -> void:
-    world_lines.append({"rect":rect,"color":color})
+func _spawn_enemy(kind: String, x: float) -> CharacterBody2D:
+    var enemy := EnemyScene.instantiate() as CharacterBody2D
+    enemy.kind = kind
+    var height: float = enemy.SIZES[kind].y
+    enemy.position = Vector2(x, 345.0 if kind in ["bat", "mage"] else FLOOR_Y - height * 0.5)
+    add_child(enemy)
+    enemies.append(enemy)
+    return enemy
+
+func _solid(rect: Rect2) -> void:
+    scenery.platform(rect)
     var b := StaticBody2D.new()
+    b.collision_layer = Combat.WORLD
+    b.collision_mask = 0
     b.position = rect.position + rect.size / 2
     var s := CollisionShape2D.new()
     var sh := RectangleShape2D.new()
@@ -122,38 +164,24 @@ func _make_hero() -> void:
     sh.height = 48
     body_shape.shape = sh
     hero.add_child(body_shape)
+    hero.collision_layer = Combat.HERO
+    hero.collision_mask = Combat.WORLD
+    Combat.add_hurtbox(hero, Hit.PLAYER_BODY, Combat.HERO_HURT)
     add_child(hero)
-    # Sprite2D is available only after installing the reviewed CC0 pack.
-    # This stays a regular Godot sprite so it can later be replaced by AnimatedSprite2D.
-    if ResourceLoader.exists("res://moss-knight/godot/character.tscn"):
-        var prefab:PackedScene = load("res://moss-knight/godot/character.tscn")
-        var animated := prefab.instantiate() as AnimatedSprite2D
-        if animated != null:
-            animated.name = "KnightAnimated"
-            animated.position = Vector2(0,24)
-            animated.scale = Vector2(0.36,0.36)
-            animated.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-            hero.add_child(animated)
-            actor_anim = animated
-            if actor_anim.sprite_frames.has_animation("idle_east"):
-                actor_anim.play("idle_east")
-    if actor_anim == null and ResourceLoader.exists("res://assets/kenney/character.png"):
-        var sprite := Sprite2D.new()
-        sprite.name = "PlayerSprite"
-        sprite.texture = load("res://assets/kenney/character.png")
-        sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-        sprite.position = Vector2(0, -4)
-        sprite.region_enabled = true
-        sprite.region_rect = Rect2(0, 0, 18, 18)
-        sprite.scale = Vector2(2.5, 2.5)
-        hero.add_child(sprite)
-        actor_sprite = sprite
+    actor_anim = AnimatedSprite2D.new()
+    actor_anim.offset = Vector2(0, -80)
+    actor_anim.position.y = 24.0
+    actor_anim.scale = Vector2.ONE * 0.43
+    actor_anim.z_index = 4
+    actor_anim.sprite_frames = Art.actor_frames(false)
+    hero.add_child(actor_anim)
+    actor_anim.play("idle")
     cam = Camera2D.new()
-    cam.zoom = Vector2(1.25, 1.25)
+    cam.zoom = Vector2(1.0, 1.0)
     cam.position_smoothing_enabled = true
     cam.position_smoothing_speed = 9.0
     cam.enabled = true
-    cam.position = Vector2(0, -80)
+    cam.position = Vector2(0, -142)
     cam.limit_left = 0
     cam.limit_top = -250
     cam.limit_bottom = 600
@@ -163,19 +191,14 @@ func _make_hero() -> void:
 func _make_ui() -> void:
     var layer := CanvasLayer.new()
     add_child(layer)
-    var bar := ColorRect.new()
-    bar.color = Color("#091a2bc9")
-    bar.set_anchors_preset(Control.PRESET_TOP_WIDE)
-    bar.custom_minimum_size = Vector2(960,78)
-    layer.add_child(bar)
-    hud = Label.new()
-    hud.position = Vector2(20,10)
-    hud.add_theme_font_size_override("font_size",21)
-    layer.add_child(hud)
-    help = Label.new()
-    help.position = Vector2(20,45)
-    help.add_theme_font_size_override("font_size",14)
-    layer.add_child(help)
+    hud = _hud_label(layer, Vector2(22, 18), Vector2(312, 39), 20)
+    hud.add_theme_color_override("font_color", Color("#ffe0a1"))
+    chapter = _hud_label(layer, Vector2(698, 18), Vector2(240, 32), 19)
+    chapter.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+    light_status = _hud_label(layer, Vector2(698, 49), Vector2(240, 28), 14)
+    light_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+    help = _hud_label(layer, Vector2(22, 53), Vector2(480, 30), 15)
+    help.add_theme_color_override("font_color", Color("#daebff"))
     var touchbar := Control.new()
     touchbar.set_anchors_preset(Control.PRESET_FULL_RECT)
     touchbar.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -183,10 +206,11 @@ func _make_ui() -> void:
     joystick = Node2D.new()
     joystick.set_script(load("res://scripts/virtual_joystick.gd"))
     layer.add_child(joystick)
-    _touch_button(touchbar,"jump","NHẢY",596,420,82)
-    _touch_button(touchbar,"attack","ĐÁNH",688,420,82)
-    _touch_button(touchbar,"dash","LƯỚT",780,420,82)
-    _touch_button(touchbar,"interact","E",870,420,72)
+    _touch_button(touchbar, "jump", "↑", Vector2(880, 379), 34)
+    _touch_button(touchbar, "attack", "⚔", Vector2(805, 449), 43)
+    _touch_button(touchbar, "dash", "»", Vector2(705, 463), 33)
+    _touch_button(touchbar, "skill", "✦", Vector2(898, 471), 33)
+    _touch_button(touchbar, "interact", "E", Vector2(898, 299), 26)
     dialogue = PanelContainer.new()
     dialogue.position = Vector2(145,300)
     dialogue.custom_minimum_size = Vector2(670,115)
@@ -197,49 +221,70 @@ func _make_ui() -> void:
     dialogue_label.add_theme_font_size_override("font_size",20)
     dialogue.add_child(dialogue_label)
     dialogue.hide()
-    puzzle_panel = PanelContainer.new()
-    puzzle_panel.position = Vector2(250,70)
-    puzzle_panel.custom_minimum_size = Vector2(460,390)
-    layer.add_child(puzzle_panel)
-    var pv := VBoxContainer.new()
-    puzzle_panel.add_child(pv)
-    puzzle_info = Label.new()
-    puzzle_info.add_theme_font_size_override("font_size",17)
-    pv.add_child(puzzle_info)
-    puzzle_grid = GridContainer.new()
-    puzzle_grid.columns = 5
-    pv.add_child(puzzle_grid)
-    var close_btn := Button.new()
-    close_btn.text = "Đóng bảng (ESC)"
-    close_btn.pressed.connect(func(): puzzle_panel.hide())
-    pv.add_child(close_btn)
-    puzzle_panel.hide()
     _update_hud()
 
-func _touch_button(parent:Control, key:String, text:String, x:int, y:int, size:int) -> void:
-    var b := Button.new()
-    b.text = text
-    b.position = Vector2(x,y)
-    b.custom_minimum_size = Vector2(size,size)
-    b.modulate.a = 0.92
-    b.add_theme_font_size_override("font_size",18)
-    var background_style := StyleBoxFlat.new()
-    background_style.bg_color = Color("#112d50cc")
-    background_style.border_color = Color("#dfc080")
-    background_style.set_border_width_all(2)
-    background_style.set_corner_radius_all(24)
-    b.add_theme_stylebox_override("normal",background_style)
-    var pressed_style := background_style.duplicate() as StyleBoxFlat
-    pressed_style.bg_color = Color("#377c9cdd")
-    b.add_theme_stylebox_override("pressed",pressed_style)
-    b.button_down.connect(func():
-        touch[key] = true
-        if key == "jump": jump_buffer_clock = JUMP_BUFFER_WINDOW
-    )
-    b.button_up.connect(func(): touch[key] = false)
-    parent.add_child(b)
-    buttons[key] = b
+func _hud_label(layer: CanvasLayer, at: Vector2, extent: Vector2, font_size: int) -> Label:
+    var label := Label.new()
+    label.position = at
+    label.size = extent
+    label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    label.add_theme_font_size_override("font_size", font_size)
+    label.add_theme_color_override("font_outline_color", Color("#071633"))
+    label.add_theme_constant_override("outline_size", 8)
+    layer.add_child(label)
+    return label
 
+func _touch_button(parent: Control, key: String, glyph: String, center: Vector2, radius: float) -> void:
+    var hit := TouchScreenButton.new()
+    var circle := CircleShape2D.new()
+    circle.radius = radius + 5
+    hit.shape = circle
+    hit.position = center
+    hit.pressed.connect(_control_pressed.bind(key))
+    hit.released.connect(_control_released.bind(key))
+    parent.add_child(hit)
+
+    var face := Button.new()
+    face.text = glyph
+    face.position = center - Vector2.ONE * radius
+    face.size = Vector2.ONE * radius * 2
+    face.focus_mode = Control.FOCUS_NONE
+    face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    face.add_theme_font_size_override("font_size", int(radius * 0.88))
+    var style := StyleBoxFlat.new()
+    style.bg_color = Color("#0a1b34a9") if key != "attack" else Color("#492e168c")
+    style.border_color = Color("#adcde9b0") if key != "attack" else Color("#ffcf77")
+    style.set_border_width_all(2)
+    style.set_corner_radius_all(100)
+    face.add_theme_stylebox_override("normal", style)
+    parent.add_child(face)
+    control_art[key] = face
+
+func _control_pressed(key: String) -> void:
+    if not started or death_time > 0: return
+    if dialogue.visible:
+        if key == "interact": _show_dialogue(false)
+        return
+    touch[key] = true
+    control_art[key].modulate = Color("#b6ebff")
+    if key == "jump": jump_buffer_clock = JUMP_BUFFER_WINDOW
+
+func _control_released(key: String) -> void:
+    if key == "jump": touch[key] = false
+    control_art[key].modulate = Color.WHITE
+
+func _reset_touch() -> void:
+    if is_instance_valid(joystick): joystick.release_finger()
+    for key in touch:
+        touch[key] = false
+        control_art[key].modulate = Color.WHITE
+    jump_held = false
+
+func _notification(what: int) -> void:
+    if what == NOTIFICATION_APPLICATION_FOCUS_OUT and is_instance_valid(joystick):
+        _reset_touch()
+        jump_buffer_clock = 0
+        attack_buffer = 0
 func _menu() -> void:
     menu = PanelContainer.new()
     menu.position = Vector2(270,106)
@@ -256,43 +301,67 @@ func _menu() -> void:
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
     var note := Label.new()
-    note.text = "Prototype gameplay · hình minh họa thay thế\nA/D di chuyển · Space nhảy · J đánh · K dash · E tương tác"
+    note.text = "Bản thử nội bộ · Chọn nhân vật\nA/D di chuyển · Space nhảy · J đánh · K lướt · L kỹ năng · E tương tác"
     note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(note)
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
         var b := Button.new()
         b.text = "Chơi: " + who
-        b.pressed.connect(func(): character = "Kha" if who.begins_with("Kha") else "An"; started = true; menu.hide(); _say("Khám phá Tháp Trăng. Mỗi kỹ năng mở một con đường khác nhau!",3))
+        b.pressed.connect(func(): _start("Kha" if who.begins_with("Kha") else "An"))
         v.add_child(b)
 
+func _start(who: String) -> void:
+    character = who
+    actor_anim.sprite_frames = Art.actor_frames(character == "Kha")
+    actor_anim.play("idle")
+    anim_label = "idle"
+    started = true
+    menu.hide()
+    _reset_touch()
+    _say("Khám phá Tháp Trăng", 2.0)
+
 func _input(event:InputEvent) -> void:
+    if not is_instance_valid(dialogue): return
     if event.is_action_pressed("ui_cancel"):
-        if puzzle_panel.visible: puzzle_panel.hide()
-        elif dialogue.visible: dialogue.hide()
+        if dialogue.visible: _show_dialogue(false)
+    if not started: return
     if event is InputEventKey and event.pressed and not event.echo:
-        if event.keycode in [KEY_SPACE, KEY_W, KEY_UP]:
+        if not dialogue.visible and event.keycode in [KEY_SPACE, KEY_W, KEY_UP]:
             jump_buffer_clock = JUMP_BUFFER_WINDOW
         match event.keycode:
             KEY_E: _interact()
-            KEY_J: _attack()
+            KEY_J: _request_attack()
             KEY_K: _dash()
             KEY_R: _respawn()
+            KEY_L: _skill()
 
 func _physics_process(delta:float) -> void:
-    if not started: return
+    if not started or dialogue.visible: return
     visual_clock += delta
+    if death_time > 0:
+        death_time = maxf(0, death_time - delta)
+        _tick_vfx(delta)
+        queue_redraw()
+        if death_time <= 0: _respawn()
+        return
     notice_time = maxf(0, notice_time-delta)
     attack_cooldown = maxf(0, attack_cooldown-delta)
     dash_cooldown = maxf(0, dash_cooldown-delta)
     i_frames = maxf(0, i_frames-delta)
     slash_time = maxf(0, slash_time-delta)
-    landing_time = maxf(0, landing_time-delta)
     shake_time = maxf(0, shake_time-delta)
     boss_shield_time = maxf(0, boss_shield_time-delta)
-    boss_flash = maxf(0, boss_flash-delta)
     jump_buffer_clock = maxf(0, jump_buffer_clock-delta)
     _tick_vfx(delta)
-    var blocked := puzzle_panel.visible or dialogue.visible
+    combo_window = maxf(0, combo_window - delta)
+    hurt_time = maxf(0, hurt_time - delta)
+    shield_cooldown = maxf(0, shield_cooldown - delta)
+    attack_buffer = maxf(0, attack_buffer - delta)
+    if attack_buffer > 0 and attack_cooldown <= 0:
+        _attack()
+    if attack_windup > 0:
+        attack_windup -= delta
+        if attack_windup <= 0: _resolve_attack()
     var grounded_before := hero.is_on_floor()
     if grounded_before:
         coyote_clock = COYOTE_WINDOW
@@ -303,17 +372,16 @@ func _physics_process(delta:float) -> void:
         jump_buffer_clock = JUMP_BUFFER_WINDOW
     jump_held = current_jump
     var dx := 0.0
-    if not blocked:
-        dx = float(int(Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT)) - int(Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT)))
-        if joystick != null and absf(joystick.axis.x) > 0.02:
-            dx = joystick.axis.x
-        if absf(dx) > 0.18: facing = int(sign(dx))
+    dx = float(int(Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT)) - int(Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT)))
+    if joystick != null and absf(joystick.axis.x) > 0.02:
+        dx = joystick.axis.x
+    if absf(dx) > 0.18 and dash_time <= 0: facing = int(sign(dx))
     # A strong first impulse prevents the sluggish feel when changing direction.
     var target_speed := dx * (215.0 if character == "Kha" else 255.0)
     var accel := RUN_ACCEL if grounded_before else AIR_ACCEL
     var turn_boost := 1.55 if absf(dx)>0.2 and hero.velocity.x * dx < 0.0 else 1.0
     hero.velocity.x = move_toward(hero.velocity.x, target_speed, (accel * turn_boost if absf(dx)>0.12 else RUN_FRICTION) * delta)
-    if jump_buffer_clock > 0 and coyote_clock > 0 and not blocked:
+    if jump_buffer_clock > 0 and coyote_clock > 0:
         hero.velocity.y = JUMP_SPEED
         jump_buffer_clock = 0.0
         coyote_clock = 0.0
@@ -322,36 +390,29 @@ func _physics_process(delta:float) -> void:
         dash_time = maxf(0, dash_time-delta)
         hero.velocity.x = 565.0 * facing
         hero.velocity.y *= 0.78
-    if not current_jump and hero.velocity.y < -140:
-        hero.velocity.y = maxf(hero.velocity.y, -140.0)
+    if not current_jump and hero.velocity.y < -185:
+        hero.velocity.y = maxf(hero.velocity.y, -185.0)
     hero.velocity.y += (760.0 if hero.velocity.y < 0 else 1370.0) * delta
     var previous_vy := hero.velocity.y
     hero.move_and_slide()
     if not grounded_before and hero.is_on_floor() and previous_vy > 180:
-        landing_time = 0.14
         shake_time = 0.08
         _burst(hero.position + Vector2(0,20), Color("#a8bec0"), 12, 120.0)
     dust_clock -= delta
     if hero.is_on_floor() and absf(hero.velocity.x) > 95 and dust_clock <= 0:
         dust_clock = 0.09
         _burst(hero.position + Vector2(-facing*11,20), Color("#9bb6b6"), 2, 38.0)
-    if actor_sprite != null:
-        actor_sprite.flip_h = facing < 0
-        var run_bob := sin(visual_clock*19.0) * 2.0 if hero.is_on_floor() and absf(hero.velocity.x)>35 else 0.0
-        actor_sprite.position = Vector2(0, -4 + run_bob)
-        actor_sprite.rotation = clampf(hero.velocity.x/9000.0, -0.055,0.055)
-        actor_sprite.modulate = Color("#fff2cf") if i_frames>0 else Color.WHITE
-        var stretch := 1.08 if not hero.is_on_floor() and hero.velocity.y < 0 else 1.0
-        actor_sprite.scale = Vector2(2.5 / stretch, 2.5 * stretch)
-        if landing_time>0: actor_sprite.scale = Vector2(2.75,2.25)
     motion_state = _select_motion_state()
     _update_character_animation()
     if touch["attack"]:
         touch["attack"] = false
-        _attack()
+        _request_attack()
     if touch["dash"]:
         touch["dash"] = false
         _dash()
+    if touch["skill"]:
+        touch["skill"] = false
+        _skill()
     if touch["interact"]:
         touch["interact"] = false
         _interact()
@@ -361,35 +422,40 @@ func _physics_process(delta:float) -> void:
     if room != last_room:
         last_room = room
         _say(ROOMS[room] + " · " + TIPS[room], 2.6)
-    if room == 6 and not boss_dead:
-        _boss_tick(delta)
-    _enemy_tick(delta)
-    if activated and get_node_or_null("LightGate"):
-        get_node("LightGate").queue_free()
+    for idx in range(enemies.size() - 1, -1, -1):
+        var enemy := enemies[idx]
+        if not is_instance_valid(enemy):
+            enemies.remove_at(idx)
+        elif absf(enemy.position.x - hero.position.x) < ROOM_W or enemy.state == "dead":
+            enemy.step(delta, self)
+    for idx in range(bolts.size() - 1, -1, -1):
+        var bolt := bolts[idx]
+        if not is_instance_valid(bolt):
+            bolts.remove_at(idx)
+        else:
+            bolt.step(delta, self)
+    light_circuit.set_player_position(hero.position)
+    scenery.update_camera(cam.get_screen_center_position().x, activated)
+    if activated:
+        var gate := get_node_or_null("LightGate")
+        if gate != null: gate.queue_free()
     cam.offset = Vector2(sin(visual_clock*95.0)*2.3,cos(visual_clock*82.0)*1.5) if shake_time>0 else Vector2.ZERO
     _update_hud()
     queue_redraw()
 
 func _update_character_animation() -> void:
-    if actor_anim == null: return
-    var base_name := "idle"
-    match motion_state:
-        "run": base_name = "walk"
-        "jump", "fall": base_name = "jump"
-        "dash": base_name = "roll"
-        "attack": base_name = "attack"
-        "hurt": base_name = "hurt"
-    var suffix := "_east" if facing >= 0 else "_west"
-    var candidate := base_name + suffix
-    if not actor_anim.sprite_frames.has_animation(candidate):
-        candidate = "idle" + suffix
-    if anim_label != candidate and actor_anim.sprite_frames.has_animation(candidate):
+    var candidate := motion_state
+    if anim_label != candidate:
         anim_label = candidate
         actor_anim.play(candidate)
-    actor_anim.modulate = Color("#ffe3dd") if i_frames > 0 else Color.WHITE
+    actor_anim.flip_h = (attack_facing if motion_state == "attack" else facing) < 0
+    actor_anim.modulate = Color("#ffb5ab") if hurt_time > 0 else Color.WHITE
+    var bob := sin(visual_clock * 18) * 1.4 if motion_state == "run" else 0.0
+    actor_anim.position.y = 24 + bob
+    actor_anim.rotation = -0.09 * facing if motion_state == "dash" else 0.0
 
 func _select_motion_state() -> String:
-    if i_frames > 0.0: return "hurt"
+    if hurt_time > 0.0: return "hurt"
     if slash_time > 0.0: return "attack"
     if dash_time > 0.0: return "dash"
     if not hero.is_on_floor():
@@ -416,137 +482,168 @@ func _tick_vfx(delta:float) -> void:
         else:
             vfx[i] = particle
 
-func _enemy_tick(delta:float) -> void:
-    for i in range(enemy_data.size()):
-        var e:Dictionary = enemy_data[i]
-        if not e["alive"]: continue
-        if absf(hero.position.x - float(e["x"])) < 340:
-            e["dir"] = signf(hero.position.x-float(e["x"]))
-            e["x"] += float(e["dir"]) * float(e["speed"]) * delta
-        if Hit.overlaps(Hit.player_hurtbox(hero.position), Hit.enemy_hurtbox(Vector2(float(e["x"]),float(e["y"])))):
-            _damage(1)
-        enemy_data[i]=e
+func spawn_bolt(origin: Vector2, motion: Vector2, allied: bool, amount: int) -> void:
+    var bolt := LightBolt.new()
+    bolt.position = origin
+    bolt.velocity = motion
+    bolt.friendly = allied
+    bolt.damage = amount
+    bolt.z_index = 6
+    add_child(bolt)
+    bolts.append(bolt)
 
-func _boss_tick(delta:float) -> void:
-    if boss_hp<=0: return
-    var x := 6.0*ROOM_W+650.0
-    if Hit.overlaps(Hit.player_hurtbox(hero.position), Rect2(Vector2(x-72,320),Vector2(144,115))):
-        _damage(1)
-    if boss_shield_time<=0 and boss_flash<=0:
-        boss_flash = 3.1
+func emit_impact(at: Vector2, color: Color) -> void:
+    shake_time = 0.10
+    _burst(at, color, 11, 135.0)
 
-func _damage(amount:int) -> void:
-    if i_frames>0: return
-    health-=amount
-    i_frames=1.1
+func show_damage(origin: Vector2, amount: int) -> void:
+    var value := Label.new()
+    value.text = str(amount)
+    value.position = origin + Vector2(-6, -42)
+    value.z_index = 7
+    value.add_theme_font_size_override("font_size", 18)
+    value.add_theme_color_override("font_color", Color("#ffe399"))
+    value.add_theme_constant_override("outline_size", 6)
+    add_child(value)
+    var drift := value.create_tween().set_parallel()
+    drift.tween_property(value, "position:y", value.position.y - 24, 0.42)
+    drift.tween_property(value, "modulate:a", 0.0, 0.42).set_delay(0.14)
+    drift.chain().tween_callback(value.queue_free)
+
+func enemy_strike(area: Rect2, origin: Vector2) -> void:
+    var space := get_world_2d().direct_space_state
+    if not Combat.overlapping(space, area, Combat.HERO_HURT).is_empty() and Combat.ray(space, origin, hero.position, Combat.WORLD).is_empty():
+        damage_player(1, origin.x)
+
+func damage_player(amount: int, from_x: float) -> void:
+    if i_frames > 0 or dash_time > 0 or dialogue.visible: return
+    health -= amount
+    i_frames = 0.92
+    hurt_time = 0.21
+    hero.velocity.x = 220.0 * (1.0 if hero.position.x >= from_x else -1.0)
     shake_time = 0.17
     _burst(hero.position, Color("#ff9484"), 10, 145)
-    _say("Trúng đòn! Né để tránh mất máu.",1.5)
-    if health<=0: _respawn()
+    if health <= 0:
+        health = 0
+        death_time = 0.55
+        _reset_touch()
+        actor_anim.play("death")
+        _update_hud()
 
 func _respawn() -> void:
-    health=max_health
-    hero.position=checkpoint
-    hero.velocity=Vector2.ZERO
-    _say("Hồi sinh tại điểm lưu gần nhất.",2)
+    health = max_health
+    death_time = 0
+    hurt_time = 0
+    hero.position = checkpoint
+    hero.velocity = Vector2.ZERO
+    i_frames = 1.0
+    dash_time = 0.0
+    coyote_clock = 0.0
+    attack_windup = 0.0
+    attack_buffer = 0.0
+    jump_buffer_clock = 0.0
+    for bolt in bolts:
+        if is_instance_valid(bolt): bolt.queue_free()
+    bolts.clear()
+    cam.reset_smoothing()
+    _say("Hồi sinh tại điểm lưu gần nhất.", 2)
+
+func _request_attack() -> void:
+    if not started or dialogue.visible or death_time > 0: return
+    attack_buffer = 0.17
 
 func _attack() -> void:
-    if not started or puzzle_panel.visible or dialogue.visible or attack_cooldown>0: return
-    attack_cooldown = 0.34 if character=="An" else 0.48
+    attack_buffer = 0.0
+    attack_facing = facing
+    combo_step = (combo_step % 3) + 1 if combo_window > 0 and character == "An" else 1
+    combo_window = 0.61
+    attack_cooldown = (0.39 if combo_step == 3 else 0.26) if character == "An" else 0.46
+    attack_windup = 0.072 if character == "An" else 0.115
     slash_time = 0.22
-    _burst(hero.position+Vector2(facing*42,-9), Color("#c9f7ff") if character=="Kha" else Color("#ffe0ab"), 7, 100)
-    var reach := Hit.MAGIC_REACH if character=="Kha" else Hit.SWORD_REACH
-    var attack_area:Rect2 = Hit.attack_hitbox(hero.position, facing, character=="Kha")
-    for i in range(enemy_data.size()):
-        var e:Dictionary=enemy_data[i]
-        if e["alive"] and Hit.overlaps(attack_area, Hit.enemy_hurtbox(Vector2(float(e["x"]),float(e["y"])))):
-            e["hp"]=int(e["hp"])-1
-            shake_time = 0.09
-            _burst(Vector2(float(e["x"]),float(e["y"])), Color("#ffb5de"), 9, 115)
-            if int(e["hp"])<=0:e["alive"]=false
-            enemy_data[i]=e
-            break
-    if last_room==6 and not boss_dead and Hit.overlaps(attack_area,Rect2(Vector2(6*ROOM_W+600,310),Vector2(100,140))):
-        if boss_shield_time>0:
-            boss_hp-=1
-            if boss_hp<=0:
-                boss_dead=true
-                moon_dash=true
-                game_won=true
-                _persist()
-                _say("Bạn đã đánh bại Người Giữ Nguyệt! Moon Dash đã mở. Nhấn R để hồi sinh và khám phá lại.",25)
-        else:
-            _say("Boss có khiên! Hãy kích hoạt tinh thể bằng phím E gần bệ đá.",2)
+
+func _resolve_attack() -> void:
+    if character == "Kha":
+        spawn_bolt(hero.position, Vector2(570 * attack_facing, 0), true, 1)
+        return
+    var reach := Hit.attack_hitbox(hero.position, attack_facing, false)
+    var space := get_world_2d().direct_space_state
+    for hit in Combat.overlapping(space, reach, Combat.HOSTILE_HURT):
+        var foe: CharacterBody2D = hit.collider.get_parent()
+        if Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
+            foe.take_hit(2 if combo_step == 3 else 1, self)
+
+func _skill() -> void:
+    if not started or dialogue.visible or shield_cooldown > 0 or death_time > 0: return
+    shield_cooldown = 6.0
+    if character == "Kha":
+        health = mini(max_health, health + 1)
+        _burst(hero.position, Color("#b1ff9d"), 21, 155)
+        _say("Kha · Hồi quang", 1.2)
+    else:
+        i_frames = maxf(i_frames, 0.34)
+        _burst(hero.position, Color("#92e9ff"), 16, 140)
+        _say("An · Đỡ đòn", 1.2)
+
+func guardian_defeated() -> void:
+    boss_dead = true
+    moon_dash = true
+    _persist()
+    _say("Thủ Hộ Tháp Trăng đã gục ngã. Bạn đã mở kỹ năng Nguyệt Lướt!", 12)
+
 
 func _dash() -> void:
-    if not started or dash_cooldown>0 or puzzle_panel.visible: return
+    if not started or dash_cooldown > 0 or dialogue.visible or death_time > 0: return
     dash_cooldown=1.4 if moon_dash else 2.8
     dash_time=0.18 if moon_dash else 0.13
     _burst(hero.position+Vector2(-facing*15,5),Color("#94e9e2"),14,155)
     _say("Moon Dash!" if moon_dash else "Lướt ngắn",0.45)
 
+func _show_dialogue(open: bool) -> void:
+    dialogue.visible = open
+    joystick.accept_touch = not open
+    _reset_touch()
+    jump_buffer_clock = 0
+    attack_buffer = 0
+
 func _interact() -> void:
-    if not started: return
+    if not started or death_time > 0: return
     if dialogue.visible:
-        dialogue.hide()
+        _show_dialogue(false)
         return
-    if puzzle_panel.visible:return
-    var local_x := fposmod(hero.position.x,ROOM_W)
-    if last_room==0 and local_x<390:
-        met_npc=true
-        dialogue_label.text="Kha: Tia sáng ở Tháp Pha Lê có thể phá lời nguyền. Hãy giải bảng ô sáng và quay lại mở Cổng Đêm. (Bấm E để đóng)"
-        dialogue.show()
-    elif last_room==3 and absf(local_x-465)<170:
-        _open_puzzle()
-    elif last_room==5 and absf(local_x-260)<150:
-        checkpoint=hero.position
-        health=max_health
+    var room := int(hero.position.x / ROOM_W)
+    var local_x := fposmod(hero.position.x, ROOM_W)
+    if room == 0 and hero.position.distance_to(Vector2(290, 432)) < 92:
+        met_npc = true
         _persist()
-        _say("Đã lưu tại Đài Quan Sát!",2)
-    elif last_room==6 and absf(local_x-350)<140:
-        boss_shield_time=4.5
-        _say("Ánh sáng làm tan khiên! Tấn công ngay!",3)
+        dialogue_label.text = "Thợ Lưu Giữ: Xoay hai gương ở Tháp Pha Lê để dẫn tia sáng đến Cổng Đêm. Trụ sáng trong phòng Thủ Hộ sẽ hạ khiên trong giây lát. Nhấn E để đóng."
+        _show_dialogue(true)
+    elif room == 2 and not found_chest and hero.position.distance_to(Vector2(2 * ROOM_W + 570, 428)) < 70:
+        found_chest = true
+        scenery.plaza_chest.hide()
+        max_health += 1
+        health = max_health
+        emit_impact(hero.position, Color("#ffd478"))
+        _persist()
+        _say("Đã tìm thấy Nguyệt Thạch. Sinh lực tối đa tăng 1.", 3.0)
+    elif room == 3 and light_circuit.rotate_near(hero.position):
+        if not activated: _say("Xoay gương để tia sáng chạm pha lê.", 2.2)
+    elif room == 5 and hero.position.distance_to(Vector2(room * ROOM_W + 260, 418)) < 93:
+        checkpoint = hero.position
+        health = max_health
+        _persist()
+        _say("Đã lưu tại Đài Quan Sát!", 2)
+    elif room == 6 and absf(local_x - 432) < 83 and absf(hero.position.y - 418.0) < 82 and not boss_dead:
+        if boss_shield_time <= 0:
+            boss_shield_time = 6.5 if guardian.hp > 6 else 4.8
+            _say("Khiên Thủ Hộ đã tan. Tấn công ngay!", 3)
     else:
-        _say("Không có gì để tương tác ở đây. Hãy đến gần NPC, bàn đố hoặc trạm lưu.",2)
+        _say("Đến gần người giữ đèn, gương hoặc trụ sáng rồi tương tác.", 2)
 
-func _open_puzzle() -> void:
-    if activated:
-        _say("Nguồn sáng đã bật. Cổng Đêm đang mở!",2)
-        return
-    if puzzles.size()!=25:
-        puzzles.clear()
-        for j in range(25):puzzles.append(1)
-        for k in [2,7,13,16,21,24]:
-            _toggle_grid(k)
-    puzzle_panel.show()
-    _render_puzzle()
+func _light_completed() -> void:
+    activated = true
+    _persist()
+    _say("Tia sáng đã đánh thức Cổng Đêm.", 4)
 
-func _toggle_grid(idx:int) -> void:
-    var x:=idx%5
-    var y:=int(idx/5)
-    for p in [idx,idx-1 if x>0 else -1,idx+1 if x<4 else -1,idx-5 if y>0 else -1,idx+5 if y<4 else -1]:
-        if p>=0:puzzles[p]=1-puzzles[p]
-
-func _render_puzzle() -> void:
-    for c in puzzle_grid.get_children():c.queue_free()
-    puzzle_info.text="THÁP PHA LÊ · BẢNG Ô SÁNG 5×5\nBật toàn bộ đèn để mở Cổng Đêm · %d lượt" % puzzle_moves
-    for j in range(25):
-        var b:=Button.new()
-        b.custom_minimum_size=Vector2(78,49)
-        b.text="✦" if puzzles[j] else "·"
-        b.modulate=Color("#f6d788") if puzzles[j] else Color("#698a9a")
-        b.pressed.connect(_puzzle_press.bind(j))
-        puzzle_grid.add_child(b)
-
-func _puzzle_press(idx:int) -> void:
-    _toggle_grid(idx)
-    puzzle_moves+=1
-    if puzzles.all(func(value): return value == 1):
-        activated=true
-        puzzle_panel.hide()
-        _persist()
-        _say("Cổng Đêm đã mở! Tia sáng nối với lâu đài.",4)
-    else:_render_puzzle()
 
 func _say(value:String,secs:float) -> void:
     notice=value
@@ -556,15 +653,20 @@ func _say(value:String,secs:float) -> void:
 func _update_hud() -> void:
     if hud==null:return
     var r:=clampi(int(hero.position.x/ROOM_W) if hero else 0,0,6)
-    hud.text=("AN · KIẾM" if character=="An" else "KHA · PHÉP")+"   ♥ "+str(health)+"/"+str(max_health)+"   ✧ "+ROOMS[r]+"   ◇ "+("THẮP SÁNG" if activated else "CHƯA KÍCH HOẠT")
-    help.text=notice if notice_time>0 else "Joystick trái để di chuyển · Nhảy / Đánh / Lướt / E bên phải"
+    var hearts := "♥ ".repeat(health) + "♡ ".repeat(max_health - health)
+    hud.text = ("%s  ·  %s" % [character, hearts]).strip_edges()
+    chapter.text = ROOMS[r]
+    light_status.text = "✦  Cổng Đêm đã mở" if activated else "◇  Dẫn sáng đến Cổng Đêm"
+    help.text = notice if notice_time > 0 else ""
 
 func _persist() -> void:
+    if not save_enabled: return
     var f:=FileAccess.open(SAVE_FILE,FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":1,"activated":activated,"met_npc":met_npc,"moon_dash":moon_dash,"boss_dead":boss_dead,"checkpoint":[checkpoint.x,checkpoint.y]}))
+        f.store_string(JSON.stringify({"version":1,"activated":activated,"met_npc":met_npc,"found_chest":found_chest,"moon_dash":moon_dash,"boss_dead":boss_dead,"checkpoint":[checkpoint.x,checkpoint.y]}))
 
 func _restore() -> void:
+    if not save_enabled: return
     if not FileAccess.file_exists(SAVE_FILE):return
     var f:=FileAccess.open(SAVE_FILE,FileAccess.READ)
     if not f:return
@@ -572,82 +674,21 @@ func _restore() -> void:
     if not (data is Dictionary):return
     activated=bool(data.get("activated",false))
     met_npc=bool(data.get("met_npc",false))
+    found_chest = bool(data.get("found_chest", false))
+    max_health = 6 if found_chest else 5
+    health = max_health
     moon_dash=bool(data.get("moon_dash",false))
     boss_dead=bool(data.get("boss_dead",false))
     var point=data.get("checkpoint",[130,385])
     if point is Array and point.size()==2:
         checkpoint=Vector2(float(point[0]),float(point[1]))
         hero.position=checkpoint
-    if boss_dead:boss_hp=0
-
-# Stone faces, staggered masonry, grass rims and gold accents share exact collision bounds.
-# Procedural placeholder art: improves readability, but is NOT yet approved final tileset.
-func _draw_stone_surface(rect:Rect2) -> void:
-    draw_rect(rect,Color("#253952"))
-    var x_count := mini(50,int(ceil(rect.size.x/44.0)))
-    var y_count := mini(5,int(ceil(rect.size.y/23.0)))
-    for row in range(y_count):
-        for column in range(x_count):
-            var offset := 22.0 if row%2==1 else 0.0
-            var xx := rect.position.x + float(column)*44.0 + offset
-            var yy := rect.position.y + float(row)*23.0
-            var width := minf(41.0,rect.end.x - xx)
-            var height := minf(21.0,rect.end.y - yy)
-            if width <= 1 or height <= 1:continue
-            var shade := Color("#40536b") if (row+column)%3==0 else Color("#334762")
-            draw_rect(Rect2(xx+1,yy+1,width-2,height-2),shade)
-            draw_line(Vector2(xx+1,yy+height-2),Vector2(xx+width-1,yy+height-2),Color("#12263e"),2)
-            if (row*11+column*7)%9==0:
-                draw_line(Vector2(xx+7,yy+7),Vector2(xx+15,yy+10),Color("#8192a0"),1)
-    draw_rect(Rect2(rect.position.x,rect.position.y,rect.size.x,6),Color("#688c65"))
-    draw_line(rect.position+Vector2(0,3),Vector2(rect.end.x,rect.position.y+3),Color("#b5bd80"),2)
-    for column in range(x_count):
-        var tx:=rect.position.x + column*44.0+17.0
-        if tx >= rect.end.x:break
-        if (column*7+int(rect.position.x))%5==0:
-            draw_line(Vector2(tx,rect.position.y),Vector2(tx+3,rect.position.y-7),Color("#81bb71"),2)
-            draw_circle(Vector2(tx+4,rect.position.y-8),2,Color("#c4d89b"))
 
 func _draw() -> void:
-    # Render only rooms close to camera. Avoid rebuilding distant scenery on iOS.
-    var shown_room := clampi(int(hero.position.x / ROOM_W), 0, 6) if hero else 0
-    for r in range(maxi(0,shown_room-1), mini(7,shown_room+2)):
-        var ox:=r*ROOM_W
-        draw_rect(Rect2(ox,-160,ROOM_W,700),COLORS[r])
-        # Starfield, parallax-like atmosphere and moon
-        for j in range(30):
-            var sx:=ox+fposmod(float(j*137+r*47),ROOM_W)
-            var sy:=float((j*71+r*19)%330)-60
-            draw_circle(Vector2(sx,sy),1.5,Color("#b2c7de55"))
-        draw_circle(Vector2(ox+740,70),69,Color("#f6e7ba1b"))
-        draw_circle(Vector2(ox+740,70),39,Color("#f4e3bb88"))
-        for c in range(10):
-            var xx:=ox+c*110
-            draw_rect(Rect2(xx,275-(c%3)*37,65,180),Color("#101f35b5"))
-            draw_rect(Rect2(xx+8,295-(c%3)*37,16,30),Color("#caa76b44"))
-        draw_string(ThemeDB.fallback_font,Vector2(ox+34,122),ROOMS[r],HORIZONTAL_ALIGNMENT_LEFT,-1,29,Color("#e3d59d"))
-    for e in world_lines:
-        var rect:Rect2 = e["rect"]
-        if absf(rect.position.x - hero.position.x) < ROOM_W * 1.7:
-            _draw_stone_surface(rect)
-    # Marker objects and puzzle world interactions
-    draw_rect(Rect2(5*ROOM_W-15,275,30,181),Color("#55d5ad44") if activated else Color("#e9a363cc"))
-    draw_circle(Vector2(3*ROOM_W+465,359),34,Color("#ffdd85"))
-    draw_circle(Vector2(5*ROOM_W+260,368),22,Color("#8ce2c9"))
-    draw_circle(Vector2(6*ROOM_W+350,372),21,Color("#e6c477"))
-    draw_circle(Vector2(290,393),20,Color("#d1b5dd"))
-    for e in enemy_data:
-        if e["alive"] and absf(float(e["x"])-hero.position.x)<ROOM_W:
-            draw_circle(Vector2(e["x"],e["y"]),22,Color("#9a648f"))
-            draw_circle(Vector2(float(e["x"])-7,float(e["y"])-4),4,Color("#f8ca8c"))
-            draw_circle(Vector2(float(e["x"])+7,float(e["y"])-4),4,Color("#f8ca8c"))
-    if not boss_dead and shown_room >= 5:
-        var bp:=Vector2(6*ROOM_W+650,378)
-        draw_circle(bp,75,Color("#a65c9d"))
-        draw_circle(bp,54,Color("#27213d"))
-        draw_circle(bp,17,Color("#d5a2f6") if boss_shield_time>0 else Color("#65c9f5"))
-        draw_arc(bp,95,0,TAU,64,Color("#83cfe2") if boss_shield_time<=0 else Color("#f0d58a"),4)
-        draw_rect(Rect2(bp.x-80,220,160*float(boss_hp)/12,9),Color("#e6a578"))
+    if not is_instance_valid(hero): return
+    var shown_room := clampi(int(hero.position.x / ROOM_W), 0, 6)
+    if is_instance_valid(guardian) and not boss_dead and boss_shield_time <= 0 and shown_room >= 5:
+        draw_arc(guardian.position, 81, 0, TAU, 64, Color("#83cfe27e"), 3, true)
     for particle in vfx:
         var opacity := clampf(float(particle["life"])/float(particle["duration"]),0,1)
         var tint:Color = particle["color"]
@@ -655,13 +696,13 @@ func _draw() -> void:
         draw_circle(particle["p"], maxf(1.0,4.5*opacity),tint)
     if hero:
         var p:=hero.position
-        if actor_anim == null and not hero.has_node("PlayerSprite"):
-            draw_circle(p+Vector2(0,-15),18,Color("#a9e4d2") if character=="Kha" else Color("#82bdff"))
-            draw_rect(Rect2(p.x-13,p.y-2,26,35),Color("#2c846d") if character=="Kha" else Color("#3d66ad"))
-            draw_circle(p+Vector2(0,-23),9,Color("#edc5a1"))
         if i_frames>0:draw_arc(p+Vector2(0,-6),33,0,TAU,32,Color("#ffdf8b"),3)
-        if slash_time>0:
-            var swing := 1.0-slash_time/0.22
-            var center := p+Vector2(float(facing)*30,-8)
-            draw_arc(center,37,-PI/2+swing*0.7,PI/2+swing*0.7,24,Color("#ffe5a9"),7)
-            draw_arc(center,47,-PI/2+swing*0.7,PI/2+swing*0.7,24,Color("#b2f0f7a9"),3)
+        if slash_time > 0 and character == "An" and attack_windup <= 0:
+            var t := 1.0 - slash_time / 0.22
+            var angle := 0.0 if attack_facing > 0 else PI
+            var rotation := angle + (t - 0.5) * 1.25 * attack_facing
+            var center := p + Vector2(attack_facing * 25, -6)
+            for band in [Vector2(57, 14), Vector2(52, 7), Vector2(51, 3)]:
+                var tint := Color("#468cff66") if band.y == 14 else (Color("#60dfffcc") if band.y == 7 else Color("#eaffff"))
+                tint.a *= minf(1, slash_time * 9)
+                draw_arc(center, band.x, rotation - 1.05, rotation + 1.05, 32, tint, band.y, true)

@@ -1,32 +1,34 @@
-# Light Quest Eclipse — Moon Tower vertical slice
+# Light Quest Eclipse · Tháp Trăng
 
-Engine: **Godot 4.3+**, GDScript, Compatibility renderer, no custom binary dependencies. This branch contains a **code-first mechanical prototype**, not a polished pixel-art release.
+Bản thử nội bộ Godot 4.4.1, GDScript, Compatibility. [PR #76](https://github.com/dungvo/dungvo.github.io/pull/76) chứa phần phát triển Eclipse. GitHub Pages hiện có bản Eclipse cũ.
 
-## Run
-1. Install Godot 4.3+ from https://godotengine.org/download/
-2. Open `project.godot` as an existing project.
-3. Press **F6/F5** to launch `scenes/main.tscn` / project.
-4. Choose An or Kha. **A/D / arrows** move, **Space** jump, **J** attack, **K** dash, **E** interact, **R** respawn. On-screen mobile buttons are included.
+## Chạy game
 
-## Goals
-Visit seven horizontally connected rooms, speak to Kha in the village, battle enemies, activate the 5x5 light-grid puzzle at the tower (room 4), pass the gate, save at the observatory and defeat the Moon Guardian by first breaking his shield at the light pedestal (E). Boss victory unlocks Moon Dash.
+Mở `project.godot` bằng Godot và nhấn F5. Chọn **An** để dùng kiếm và chuỗi ba đòn hoặc **Kha** để bắn đạn sáng và hồi máu.
 
-## Status / limitations
-- Implemented in-source: programmatic terrain, player movement, enemy chase, attack/dodge, puzzle, quest hints, shield boss, save, touch controls.
-- NOT implemented: imported sprites, animation frames, real tilesets, background music, fully animated combat, genuine 7-room scene transitions, item inventory.
-- QA NOT completed: this runner has no Godot binary. Validate Godot parser/runtime, mobile UX and save before merge.
-- Do not deploy as a finished game yet. Existing `light-quest.v1` Classic save is untouched. Eclipse uses `user://eclipse_save_v1.json`.
+| Thao tác | Bàn phím | Cảm ứng ngang |
+|---|---|---|
+| Di chuyển | A/D hoặc phím mũi tên | Joystick trái |
+| Nhảy | Space, W hoặc ↑ | ↑ |
+| Tấn công | J | ⚔ |
+| Lướt | K | » |
+| Đỡ đòn / hồi máu | L | ✦ |
+| Tương tác | E | E |
+| Hồi sinh tại trạm lưu | R | Hết máu sẽ tự hồi sinh |
 
-## Next
-- Import one stylistically consistent, legally verified sprite pack (source/license/author/attribution manifest).
-- Replace placeholder drawing with AnimatedSprite2D, TileMapLayer and SpriteFrames.
-- Run Godot headless `--path . --headless --quit`, fix errors, smoke-test and web export.
-- For web: single-threaded export, GDScript, Compatibility; test Safari/iPhone 13 mini in person.
+Từ Làng Trăng, đi qua Rừng Vọng và Hầm Bóng đến Tháp Pha Lê. Xoay gương **trên bệ** và **dưới bệ** để dẫn tia đến pha lê. Qua Cổng Đêm, dùng trụ tại Đài Quan Sát để lưu. Trụ trong phòng Thủ Hộ hạ khiên trong một khoảng ngắn. Thủ Hộ bắn đạn ở pha hai. Rương Nguyệt Thạch trong Hầm Bóng tăng một điểm sinh lực tối đa.
 
-## Automated build / preview (2026-11-15)
-- **Godot validation**, mechanics smoke test, **CC0 asset packaging**, and **HTML5 web export** passed in GitHub Actions run https://github.com/dungvo/dungvo.github.io/actions/runs/43671309727 .
-- Download **eclipse-web-preview** under that run's Artifacts section (GitHub sign-in may be required). ZIP contains HTML/WASM/PCK; extract all into one folder and serve via a local HTTP server, e.g. `python3 -m http.server 8000` from extracted directory, then visit http://localhost:8000/index.html .
-- Asset artifact **eclipse-kenney-cc0-prototype** preserves one selected sprite, original license and provenance. Regenerate with `python3 tools/install_cc0_assets.py`; the build does this before export.
-- The exported build is **not deployed** at dungvo.github.io yet; the existing Light Quest remains unchanged.
-- Automated testing does NOT prove mobile touch usability or final animation quality. This remains an early **mechanical** slice, not the full polished RPG.
-- Next quality milestone: real sprite animation states (idle/run/jump/attack/hurt), tilemaps per biome, enemy variety, boss telegraphs, save migration and mobile Safari playtest.
+## Kiểm tra
+
+```sh
+godot --headless --editor --import --quit
+godot --headless --script res://tests/smoke.gd
+godot --headless --script res://tests/hit_geometry_test.gd
+godot --script res://tests/capture_visual.gd
+```
+
+Lệnh chụp ảnh cần trình hiển thị đồ họa. Ba ảnh PNG nằm trong `visual-qa/`. Workflow PR chạy Godot 4.4.1, tạo ảnh QA và xuất Web một luồng dưới dạng artifact. HTML/WASM/PCK của artifact phải được phục vụ cùng nhau qua HTTP.
+
+- [Kế hoạch và tiêu chí phát hành](docs/MOCKUP_FIDELITY_RELEASE_PLAN.md)
+- [Bàn giao và đối chiếu mockup](docs/VISUAL_QA_HANDOFF.md)
+- [Nguồn gốc hình ảnh](docs/ASSET_MANIFEST.md)
