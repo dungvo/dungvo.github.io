@@ -13,18 +13,30 @@ const stages = [
   [8, 17, 'Phản chiếu', [[1,2,'D'],[6,2,'D'],[2,5,'H'],[5,5,'V'],[1,6,'A'],[6,1,'A']]],
   [8, 18, 'Giao điểm', [[1,1,'H'],[6,2,'V'],[3,3,'A'],[4,4,'A'],[2,6,'B'],[5,1,'B']]],
   [8, 19, 'Bầu trời đôi', [[1,1,'A'],[6,6,'A'],[6,1,'B'],[1,6,'B'],[3,2,'H'],[4,5,'V'],[2,4,'D'],[5,3,'D']]],
-  [8, 21, 'Vương miện ánh sáng', [[1,1,'H'],[6,6,'V'],[2,2,'D'],[5,5,'D'],[1,6,'A'],[6,1,'A'],[3,4,'B'],[4,3,'B']]]
+  [8, 21, 'Vương miện ánh sáng', [[1,1,'H'],[6,6,'V'],[2,2,'D'],[5,5,'D'],[1,6,'A'],[6,1,'A'],[3,4,'B'],[4,3,'B']]],
+  [7, 14, 'Bước mã đầu tiên', [[2,2,'K'],[4,4,'K']]],
+  [7, 15, 'Vùng sáng', [[3,3,'Q'],[1,5,'Q']]],
+  [7, 16, 'Mã và vùng', [[1,2,'K'],[5,4,'Q'],[3,3,'D']]],
+  [8, 17, 'Bốn góc trời', [[1,1,'K'],[6,6,'K'],[1,6,'Q'],[6,1,'Q']]],
+  [8, 18, 'Nhịp điệu của mã', [[2,2,'K'],[5,2,'K'],[2,5,'K'],[5,5,'K'],[3,3,'H']]],
+  [8, 19, 'Vệt sáng lan rộng', [[2,2,'Q'],[5,5,'Q'],[2,5,'V'],[5,2,'H']]],
+  [8, 19, 'Giao thoa', [[1,1,'A'],[6,6,'A'],[2,5,'K'],[5,2,'Q'],[3,3,'D']]],
+  [8, 20, 'Mật mã ngân hà', [[1,2,'K'],[6,5,'K'],[3,3,'Q'],[4,4,'Q'],[2,6,'H'],[5,1,'V']]],
+  [8, 21, 'Hai vùng liên kết', [[1,1,'B'],[6,6,'B'],[2,2,'Q'],[5,5,'Q'],[1,6,'K'],[6,1,'K']]],
+  [8, 22, 'Trái tim thiên hà', [[1,1,'A'],[6,6,'A'],[6,1,'B'],[1,6,'B'],[3,3,'Q'],[4,4,'K'],[2,5,'H'],[5,2,'V']]]
 ];
 
 export const maximum = 30 + stages.length;
-export const symbols = { D: '×', H: '↔', V: '↕', A: 'A', B: 'B' };
-export const names = { D: 'Ô chéo', H: 'Ô hàng ngang', V: 'Ô cột dọc', A: 'Ô liên kết A', B: 'Ô liên kết B' };
+export const symbols = { D: '×', H: '↔', V: '↕', A: 'A', B: 'B', K: '♞', Q: '▦' };
+export const names = { D: 'Ô chéo', H: 'Ô hàng ngang', V: 'Ô cột dọc', A: 'Ô liên kết A', B: 'Ô liên kết B', K: 'Ô bước mã', Q: 'Ô vùng 3×3' };
 export const guide = {
   D: '× Đổi ô này và bốn ô chéo.',
   H: '↔ Đổi cả hàng.',
   V: '↕ Đổi cả cột.',
   A: 'A Đổi dạng dấu cộng quanh ô vừa chạm và ô A còn lại.',
-  B: 'B Đổi dạng dấu cộng quanh ô vừa chạm và ô B còn lại.'
+  B: 'B Đổi dạng dấu cộng quanh ô vừa chạm và ô B còn lại.',
+  K: '♞ Đổi ô này và các ô cách hai bước theo một chiều, một bước theo chiều kia (như quân mã).',
+  Q: '▦ Đổi toàn bộ vùng 3×3 quanh ô này.'
 };
 
 export function advancedLevel(id, rand, solve) {
@@ -44,6 +56,16 @@ export function advancedLevel(id, rand, solve) {
   const effects = Array.from({ length: sizeSquared }, (_, index) => {
     const type = types.get(index);
     if (type === 'D') return cross(index, true);
+    if (type === 'K') {
+      const x = index % size, y = Math.floor(index / size);
+      const offsets = [[-2,-1],[-2,1],[2,-1],[2,1],[-1,-2],[-1,2],[1,-2],[1,2]];
+      return [index, ...offsets.flatMap(([dx,dy]) => x+dx>=0 && x+dx<size && y+dy>=0 && y+dy<size ? [(y+dy)*size+x+dx] : [])];
+    }
+    if (type === 'Q') {
+      const x = index % size, y = Math.floor(index / size), result = [];
+      for (let dy=-1;dy<=1;dy++) for (let dx=-1;dx<=1;dx++) if (x+dx>=0 && x+dx<size && y+dy>=0 && y+dy<size) result.push((y+dy)*size+x+dx);
+      return result;
+    }
     if (type === 'H') return Array.from({ length: size }, (_, x) => index - index % size + x);
     if (type === 'V') return Array.from({ length: size }, (_, y) => index % size + y * size);
     if (type === 'A' || type === 'B') {
