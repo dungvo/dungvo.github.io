@@ -14,7 +14,7 @@ import zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEST = ROOT / "assets" / "kenney"
-URL = "https://kenney.nl/media/pages/assets/pixel-platformer/33bb4921eb-1696667883/kenney_pixel-platformer.zip"
+URL = "https://opengameart.org/sites/default/files/kenney_pixel-platformer.zip"
 
 def main():
     DEST.mkdir(parents=True, exist_ok=True)
@@ -23,6 +23,8 @@ def main():
         archive = response.read()
     if len(archive) > 30_000_000:
         raise RuntimeError("Unusually large package; refusing")
+    if not archive.startswith(b"PK"):
+        raise RuntimeError("Download did not return ZIP bytes (possibly blocked/HTML)")
     with zipfile.ZipFile(io.BytesIO(archive)) as z:
         images = sorted(
             x for x in z.namelist()
@@ -48,7 +50,7 @@ def main():
             (DEST / "LICENSE-ORIGINAL.txt").write_bytes(z.read(license_files[0]))
         manifest = {
             "origin": URL,
-            "publisher": "Kenney",
+            "publisher": "Kenney (author upload via OpenGameArt)",
             "license": "CC0 1.0 (verify original LICENSE-ORIGINAL.txt)",
             "source_sprite": candidate,
             "sprite_sha256": hashlib.sha256(data).hexdigest(),
