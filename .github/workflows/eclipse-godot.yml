@@ -1,0 +1,24 @@
+name: Eclipse Godot headless validation
+on:
+  pull_request:
+    paths:
+      - 'apps/games/light-quest/eclipse/**'
+      - '.github/workflows/eclipse-godot.yml'
+  push:
+    paths:
+      - 'apps/games/light-quest/eclipse/**'
+      - '.github/workflows/eclipse-godot.yml'
+jobs:
+  parse-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Godot
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.4.1
+          use-dotnet: false
+      - name: Import and validate Godot project
+        run: godot --headless --editor --path apps/games/light-quest/eclipse --import --quit
+      - name: Smoke test scene
+        run: timeout 25s godot --headless --path apps/games/light-quest/eclipse --quit-after 15
