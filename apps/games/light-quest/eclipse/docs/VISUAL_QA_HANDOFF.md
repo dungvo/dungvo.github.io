@@ -44,4 +44,4 @@
 
 - Viewport dựng hình gameplay theo kích thước 960×540, sau đó phóng theo màn hình. Giữ nguyên tọa độ điều khiển và 60 nhịp mô phỏng vật lý mỗi giây.
 - Bản Web trên thiết bị có cảm ứng giới hạn vẽ ở 30 FPS, giảm số hạt và dừng vẽ lại hiệu ứng khi khu vực đứng yên. Desktop giới hạn 60 FPS.
-- Smoke Chromium dùng DPR 3 và lấy mẫu khung hình có lệnh vẽ WebGL. Cần đo nhiệt và kiểm tra cảm giác chơi riêng bằng Safari trên iPhone thật.
+- Smoke Chromium dùng DPR 3 và đo số khung hình Godot thực sự dựng và kiểm tra kích thước viewport. Cần đo nhiệt và kiểm tra cảm giác chơi riêng bằng Safari trên iPhone thật.

@@ -371,6 +371,20 @@ func _start(who: String) -> void:
     menu.hide()
     _reset_touch()
     _say("Khám phá Tháp Trăng", 2.0)
+    if OS.has_feature("web") and "--eclipse-render-probe" in OS.get_cmdline_user_args():
+        _measure_browser_render_rate()
+
+func _measure_browser_render_rate() -> void:
+    var started_at := Time.get_ticks_msec()
+    var drawn_at_start := Engine.get_frames_drawn()
+    get_tree().create_timer(2.2).timeout.connect(func():
+        var elapsed := (Time.get_ticks_msec() - started_at) / 1000.0
+        var fps := (Engine.get_frames_drawn() - drawn_at_start) / elapsed
+        var viewport_size := get_viewport().get_texture().get_size()
+        print("ECLIPSE RENDER PROBE: %.1f FPS, cap %d, viewport %dx%d" % [
+            fps, Engine.max_fps, int(viewport_size.x), int(viewport_size.y)
+        ])
+    )
 
 func _input(event:InputEvent) -> void:
     if not is_instance_valid(dialogue): return
