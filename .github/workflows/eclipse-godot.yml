@@ -58,6 +58,18 @@ jobs:
               if '.zip' in link.lower() or ('download' in link.lower() and 'moss' in link.lower()):
                   print('ART_URL',link[:350])
           PY
+      - name: Audit Moss Knight animation pack structure
+        run: |
+          python3 - <<'PY'
+          import urllib.request,io,zipfile
+          url='https://spritecanvas.com/free/moss-knight-character-pack.zip'
+          r=urllib.request.Request(url,headers={'User-Agent':'LightQuestAssetAudit/1.0'})
+          with urllib.request.urlopen(r,timeout=35) as res: data=res.read()
+          print('MOSS_KNIGHT_BYTES',len(data))
+          with zipfile.ZipFile(io.BytesIO(data)) as z:
+              for x in z.infolist()[:130]:
+                  print('MOSS_FILE',x.filename,x.file_size)
+          PY
       - name: Upload source sprite, license and provenance
         uses: actions/upload-artifact@v4
         with:
