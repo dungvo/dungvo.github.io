@@ -1,1 +1,96 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Light Quest · Phòng Giao Thoa</title><style>*{box-sizing:border-box}body{margin:0;background:#0a1529;color:#ffe5ad;font-family:system-ui,sans-serif}#game{height:100dvh;width:100vw}canvas{display:block;margin:auto;touch-action:none}#top{position:fixed;top:max(6px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);display:flex;gap:15px;align-items:center;background:#15273be8;border:2px solid #b89556;border-radius:16px;padding:8px 15px;font-size:13px;white-space:nowrap}#top strong{font:22px Georgia}#bottom{position:fixed;bottom:max(8px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;gap:7px;padding:7px;background:#15273bf2;border:2px solid #bd9a60;border-radius:16px;max-width:98vw}button{background:linear-gradient(#4c5970,#172b44);border:1px solid #d7ad68;border-radius:10px;color:#ffe5b1;font-weight:700;padding:11px 12px;white-space:nowrap}#toast{position:fixed;top:75px;left:50%;transform:translateX(-50%);background:#193447e9;border:1px solid #e1b971;border-radius:14px;padding:10px 15px;display:none;text-align:center;max-width:85vw}#toast.show{display:block}@media(max-width:600px){#top{gap:8px;padding:5px;font-size:10px}#top strong{font-size:13px}#bottom{gap:3px;padding:5px}button{padding:9px 6px;font-size:11px}#toast{top:50px;font-size:12px}}</style></head><body><div id="game"></div><div id="top"><strong>✧ LIGHT QUEST</strong><span>⚡ <span id="energy">24</span>/24</span><span>⌛ <span id="turn">0</span></span><span>◈ <span id="loot">Chưa lấy</span></span></div><div id="toast"></div><div id="bottom"><button id="undo">↶ Hoàn tác</button><button id="reset">↻ Làm lại</button><button id="scan">✧ Soi Sáng −2</button><button id="wait">⌛ Qua lượt</button><button id="hint">? Gợi ý</button></div><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><script type="module" src="./play.js"></script></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#08152a">
+  <title>Light Quest · Ánh Sáng Đầu Tiên</title>
+  <link rel="preload" href="../assets/awakening/waterfall.webp" as="image">
+  <link rel="stylesheet" href="play.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js" integrity="sha384-AvQiDMZAVLda3VtAoU5MCfBz8pzXhteb2CiUJeKBmPlWzpXj1uJ96Km11+YuFNu/" crossorigin="anonymous"></script>
+  <script type="module" src="play.js"></script>
+</head>
+<body>
+  <main class="layout">
+    <header class="masthead">
+      <div class="wordmark"><span aria-hidden="true">✧</span><div><strong>Light Quest</strong><small>Puzzle Adventure</small></div></div>
+      <div class="chapter">
+        <span>Chương 1 · Khu Vườn Thức Tỉnh</span>
+        <h1 id="room-title">Ánh Sáng Đầu Tiên</h1>
+      </div>
+      <button id="character" class="ornate character" type="button" aria-label="Đổi người dẫn đường">Đổi nhân vật</button>
+    </header>
+
+    <aside class="guide">
+      <div class="panel goals">
+        <h2><span aria-hidden="true">✥</span> Mục tiêu</h2>
+        <ul>
+          <li id="goal" data-done="false">Đánh thức pha lê</li>
+          <li id="shape" data-done="false">Tạo Đường Sáng Cổ</li>
+          <li id="secret-goal" data-done="false">Tìm hoa linh quang</li>
+          <li id="wolf-goal" data-done="false">Hạ Sói Bóng Đêm</li>
+        </ul>
+      </div>
+      <img class="explorer" id="explorer" src="../assets/awakening/lumi.webp" alt="" fetchpriority="high">
+      <div class="panel dialogue">
+        <strong id="speaker">Lumi</strong>
+        <p id="message" role="status">Chạm gương xanh để xoay. Dẫn tia vàng đến pha lê để mở cổng cổ.</p>
+      </div>
+    </aside>
+
+    <section class="playfield" aria-label="Bàn chơi">
+      <nav class="panel level-nav" aria-label="Các màn chơi">
+        <label for="level-select" id="room-count">Màn 1/5</label>
+        <select id="level-select" class="ornate" disabled aria-label="Chọn màn chơi"></select>
+        <button id="next-level" class="ornate next-level" type="button" hidden>Màn tiếp →</button>
+        <span id="room-progress" aria-live="polite">0/5 đã qua</span>
+        <strong id="chapter-complete" hidden>✓ Xong chương</strong>
+      </nav>
+      <div class="board" id="board" aria-busy="true">
+        <div class="canvas-host" id="game" aria-hidden="true"></div>
+        <div class="hotspots" id="hotspots" aria-label="Thiết bị trên bàn"></div>
+        <div class="panel board-clue" id="board-clue" role="status" hidden>
+          <strong id="clue-title"></strong>
+          <span id="clue-body"></span>
+        </div>
+        <p class="loading" id="loading" role="status">Đang thắp sáng khu vườn…</p>
+      </div>
+      <div class="panel selection">
+        <p><strong id="selected">Gương Bắc</strong><span id="device-info">Gương một mặt</span></p>
+        <div id="mirror-actions">
+          <button class="ornate" id="left" type="button" aria-label="Xoay gương ngược chiều kim đồng hồ">↶ 22,5°</button>
+          <button class="ornate" id="right" type="button" aria-label="Xoay gương theo chiều kim đồng hồ">↷ 22,5°</button>
+          <button class="ornate" id="flip" type="button">Lật mặt</button>
+          <button class="ornate" id="repair" type="button" hidden>Sửa −3</button>
+        </div>
+      </div>
+      <p class="panel mobile-message" id="mobile-message" role="status">Chạm gương xanh để xoay. Dẫn tia vàng đến pha lê để mở cổng cổ.</p>
+    </section>
+
+    <aside class="hud">
+      <div class="panel stats">
+        <div><span>Năng lượng</span><strong><output id="energy">20</output> / <span id="max-energy">20</span></strong></div>
+        <progress id="meter" value="20" max="20" aria-label="Năng lượng hành động"></progress>
+        <div><span>Lượt</span><strong><output id="turn">0</output></strong></div>
+      </div>
+      <div class="actions" aria-label="Điều khiển lượt">
+        <button class="ornate" id="scan" type="button"><span aria-hidden="true">✦</span>Soi Sáng −2</button>
+        <button class="ornate" id="wait" type="button"><span aria-hidden="true">⌛</span>Chờ +2</button>
+        <button class="ornate" id="undo" type="button"><span aria-hidden="true">↶</span>Hoàn tác</button>
+        <button class="ornate" id="reset" type="button"><span aria-hidden="true">↻</span>Làm lại</button>
+        <button class="ornate" id="hint" type="button"><span aria-hidden="true">✧</span>Gợi ý</button>
+      </div>
+      <div class="panel inventory">
+        <h2>Túi đồ</h2>
+        <dl>
+          <div><dt>Mảnh sửa gương</dt><dd id="stock">0</dd></div>
+          <div><dt>Hoa linh quang</dt><dd id="flower">0</dd></div>
+          <div><dt>Ấn Đường Sáng</dt><dd id="reward">0</dd></div>
+        </dl>
+      </div>
+      <p class="panel intent" id="intent"></p>
+    </aside>
+  </main>
+  <noscript>Cần bật JavaScript để chơi Light Quest.</noscript>
+</body>
+</html>
