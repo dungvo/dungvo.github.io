@@ -68,6 +68,10 @@ var notice_time := 0.0
 var started := false
 var menu: PanelContainer
 var demo_room_select: OptionButton
+var current_trial := 0
+const TRIAL_TITLES := ["HỒI I — TIẾNG CHUÔNG CUỐI", "HỒI II — LỜI THÌ THẦM", "HỒI III — KÝ ỨC BỊ CHÔN VÙI"]
+const TRIAL_STORY := ["Tất cả đồng hồ đã dừng. Hãy tìm Thợ Lưu Giữ và khám phá bí mật của ngôi làng.", "Rừng Vọng đang nuốt dần lối đi. Vượt qua sói và dơi để tìm đường tiến sâu hơn.", "Dưới lòng đất, ký ức bị phong ấn. Đánh bại kẻ canh giữ và tìm Nguyệt Thạch."]
+const TRIAL_OBJECTIVES := ["Nhiệm vụ: nói chuyện với Thợ Lưu Giữ (E)", "Nhiệm vụ: vượt qua sói và dơi của Rừng Vọng", "Nhiệm vụ: tìm rương Nguyệt Thạch (E)"]
 # Feel First v0.2: buffered jumps, acceleration and feedback.
 const RUN_ACCEL := 2050.0
 const RUN_FRICTION := 2300.0
@@ -379,13 +383,16 @@ func _start(who: String) -> void:
     hero.global_position = Vector2(float(selected_room) * ROOM_W + 120.0, 425.0)
     hero.velocity = Vector2.ZERO
     last_room = -1
+    current_trial = selected_room
     actor_anim.sprite_frames = Art.actor_frames(character == "Kha")
     actor_anim.play("idle")
     anim_label = "idle"
     started = true
     menu.hide()
     _reset_touch()
-    _say("Khám phá Tháp Trăng", 2.0)
+    _say(TRIAL_TITLES[current_trial], 3.0)
+    dialogue_label.text = TRIAL_TITLES[current_trial] + "\n" + TRIAL_STORY[current_trial] + "\n\nNhấn E để bắt đầu khám phá."
+    _show_dialogue(true)
     if OS.has_feature("web") and "--eclipse-render-probe" in OS.get_cmdline_user_args():
         _measure_browser_render_rate()
 
@@ -803,7 +810,10 @@ func _update_hud() -> void:
     hud.text = character
     hearts.show_health(health, max_health)
     chapter.text = ROOMS[r]
-    light_status.text = "Cổng Đêm đã mở" if activated else "Dẫn sáng đến Cổng Đêm"
+    if r == current_trial and current_trial < 3:
+        light_status.text = TRIAL_OBJECTIVES[current_trial]
+    else:
+        light_status.text = "Cổng Đêm đã mở" if activated else "Dẫn sáng đến Cổng Đêm"
     help.text = notice if notice_time > 0 else ""
 
 func _persist() -> void:
