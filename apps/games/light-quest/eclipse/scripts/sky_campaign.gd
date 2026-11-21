@@ -59,7 +59,7 @@ func _ready() -> void:
     objective = game._hud_label(hud_layer, Vector2(265, 18), Vector2(430, 60), 14)
     objective.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     objective.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-    altitude = game._hud_label(hud_layer, Vector2(695, 49), Vector2(243, 30), 14)
+    altitude = game._hud_label(hud_layer, Vector2(550, 70), Vector2(243, 23), 14)
     altitude.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
     boss_label = game._hud_label(hud_layer, Vector2(300, 86), Vector2(365, 46), 18)
     boss_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -622,8 +622,6 @@ func stop() -> void:
     timeline.hide_ui()
     hud_layer.hide()
     game.scenery.background.show()
-    game.chapter.position.x = 698
-    game.light_status.position.x = 698
     game.crouch_touch.hide()
     game.control_art.crouch.hide()
     if is_instance_valid(root): root.hide()
@@ -651,8 +649,6 @@ func update_hud() -> void:
     altitude.text = "Độ cao: %d · Trạm %d/2" % [maxi(0,int(456 - game.hero.position.y)),progress[stage].checkpoint]
     var p: Vector2 = game.hero.position
     if game.time_mode:
-        game.chapter.position.x = 550
-        game.light_status.position.x = 550
         game.chapter.text = timeline.ERAS[timeline.era]
         altitude.text = ""
         game.light_status.text = "Hầm Dẫn Nước" if timeline.underground else ("Tiệm Bà Lam" if timeline.indoors else "Bờ Đá · Hải Đăng")

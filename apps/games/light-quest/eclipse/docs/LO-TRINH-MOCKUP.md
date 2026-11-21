@@ -28,3 +28,13 @@ Tơ Kép dùng bốn Lõi nguyệt, tách khỏi mảnh đồng. Lõi đến t�
 Bố cục quầy trong game đã có ba cột như mẫu. Chân dung Bà Lam, sáu thẻ một trang, viền món được chọn, giá, chênh lệch tầm chiêu, nút xem trước và vùng thao tác đều hiện tại 960×540. Sau ảnh chụp thứ nhất, tách nền tiệm khỏi HUD đang chơi và đặt ba thao tác cạnh nhau.
 
 Bản kiểm thử tạo các ảnh `v12-forge-preview.png` và `v12-forge-twin-tether.png` từ renderer Godot. Chúng nằm trong artifact `eclipse-chapter-qa` của lượt kiểm thử phát hành. Độ hoàn thiện khung họa tiết và diễn xuất nhân vật còn giản lược so với tranh mẫu. Đợt này triển khai nâng cấp thực tế cho Thương Tơ. Các nhánh của đồ khác nằm ở đợt 3.
+
+## Đợt 2 · Bản đồ Nguyệt Thực V13
+
+Minimap góc trên phải dùng cùng dữ liệu với bản đồ toàn màn hình. Nhấn M hoặc chạm minimap để mở. Bản đồ tạm dừng gameplay, có chọn vùng, tìm lại vị trí, phóng và kéo. Toàn cảnh lập sơ đồ 28 khu theo địa hình và đường nối đang chơi được của bảy vùng. Các nhóm ở tầng khác nhau, cửa bị chặn, trụ nghỉ, móc dây, vị trí người chơi và vùng chưa ghé có ký hiệu riêng. Bản lưu cũ tiếp tục dùng được, các khu đã ghé được ghi kể từ V13.
+
+Thẻ Bờ Đá & Hải Đăng có ba lớp thời đại. Tiệm Bà Lam chỉ hiện ở Quá khứ. Tương lai có đường qua chân Cầu Đồng nếu cầu chưa gia cố. Người chơi vẫn dùng Cỗ Máy để đổi thời đại. Bản đồ có dịch chuyển hai chiều từ Cỗ Máy tới Đài Canh sau khi đã kích hoạt trụ nghỉ của chính thời đại đó. Đường xuống Hầm Dẫn Nước và các đường nối chương tiếp tục dùng địa hình, cửa và tương tác trong game.
+
+Bản đồ trong mockup dùng nhiều phòng có hình bất quy tắc và minh họa riêng theo vùng. V13 có 28 khu lập sơ đồ trên địa hình hiện có, gồm cả những đoạn hành lang và tầng leo. Các ảnh `v13-atlas-world.png`, `v13-atlas-village.png`, `v13-atlas-future.png` và `v13-minimap.png` chụp từ Godot ở 960×540. Tuyến Hải Đăng theo thời gian vẫn vào từ màn mở đầu. Sơ đồ toàn cảnh và đường đi giữa bảy chương đã có trong Vào Truyện.
+
+Kiểm thử hồi quy chạy cùng các trận boss và tuyến leo có sẵn. Kiểm thử mới xác nhận sáu cổng nối chương đi được cả hai chiều khi đủ điều kiện, tầng Vườn Treo đảo chiều, Hầm Dẫn Nước đúng độ sâu, lối Cầu Đồng đổi theo trạng thái sửa cầu, dịch chuyển hai chiều đúng điểm nghỉ, lưu cờ bản đồ và thao tác trên Godot Web bằng chuột, bàn phím và cảm ứng mô phỏng.

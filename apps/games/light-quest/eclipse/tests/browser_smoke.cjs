@@ -80,6 +80,27 @@ async function run() {
                 if (mobile) await tap(898, 299); // actual touch interaction
                 else await page.keyboard.press('e');
                 await page.waitForTimeout(200);
+                if (chapter === 0) {
+                    const hud = await canvas.screenshot();
+                    if (mobile) await tap(869, 44);
+                    else await page.keyboard.press('m');
+                    await page.waitForTimeout(180);
+                    const atlas = await canvas.screenshot({ path: path.join(evidence, `v13-atlas-${mobile ? 'touch' : 'desktop'}.png`) });
+                    assert.notDeepEqual(atlas, hud, 'atlas replaces gameplay');
+                    await page.waitForTimeout(120);
+                    assert.deepEqual(await canvas.screenshot(), atlas, 'atlas holds the gameplay frame');
+                    await tap(98, 389); // Bờ Đá & Hải Đăng
+                    await page.waitForTimeout(100);
+                    const era = await canvas.screenshot();
+                    assert.notDeepEqual(era, atlas, 'selecting a region switches the map');
+                    await tap(875, 91); // Tương lai
+                    await page.waitForTimeout(100);
+                    assert.notDeepEqual(await canvas.screenshot(), era, 'era tab renders the changed bridge route');
+                    if (mobile) await tap(891, 43);
+                    else await page.keyboard.press('Escape');
+                    await page.waitForTimeout(100);
+                    assert.notDeepEqual(await canvas.screenshot(), era, 'close restores gameplay');
+                }
                 const before = await canvas.screenshot();
                 if (mobile) {
                     const session = await context.newCDPSession(page);

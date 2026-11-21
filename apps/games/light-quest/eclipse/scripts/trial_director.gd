@@ -316,6 +316,7 @@ func next_trial() -> void:
     game._start(game.character)
 
 func return_menu() -> void:
+    if is_instance_valid(game.atlas): game.atlas.close()
     if is_instance_valid(game.sky) and game.sky.active: game.sky.stop()
     if is_instance_valid(game.arts):
         game.arts.layer.hide()

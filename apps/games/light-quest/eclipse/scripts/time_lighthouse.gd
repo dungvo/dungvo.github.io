@@ -8,6 +8,8 @@ const TECHS := ["Trăng Vỡ · quét sáng phía trước","Xuyên Vực · ké
     "Vọng Ảnh · bóng lặp đòn tại chỗ sau một nhịp","Nhật Hộ · chặn một đòn trong hai giây",
     "Tàn Khắc · làm chậm kẻ địch và bẫy trong vùng tím"]
 const MAP_WIDTH := 2600.0
+const MACHINE_STOP := Vector2(150,432)
+const WATCH_STOP := Vector2(1190,432)
 const SPEAR := 1
 const SPEAR_CORE_COST := 4
 const CORE_CISTERN := 1
@@ -63,15 +65,13 @@ var options: VBoxContainer
 var tech_button: Button
 var hidden_platform: PhysicsBody2D
 var breakable: PhysicsBody2D
-var map_button: Button
-var minimap: Control
 var underground := false
 var shaft_cover: PhysicsBody2D
 var dropping := false
 var rescued := false
+var rested := [false, false, false]
 var portrait := preload("res://assets/eclipse/forge-portrait.webp")
 var weapon_atlas := preload("res://assets/eclipse/forge-weapons.webp")
-const MapView := preload("res://scripts/coast_interface.gd")
 const SkillPreview := preload("res://scripts/forge_card.gd")
 const SHORE := preload("res://assets/eclipse/open-moon-coast.webp")
 const CISTERN := preload("res://assets/eclipse/cistern-waterworks.webp")
@@ -91,20 +91,6 @@ func _ready() -> void:
     tech_button.focus_mode = Control.FOCUS_NONE
     tech_button.pressed.connect(cast)
     ui.add_child(tech_button)
-    map_button = Button.new()
-    map_button.position = Vector2(808,12)
-    map_button.size = Vector2(130,65)
-    map_button.focus_mode = Control.FOCUS_NONE
-    map_button.tooltip_text = "Bản đồ · M"
-    map_button.pressed.connect(open_map)
-    ui.add_child(map_button)
-    minimap = MapView.new()
-    minimap.timeline = self
-    minimap.compact = true
-    minimap.position = Vector2(3,3)
-    minimap.size = Vector2(124,59)
-    minimap.mouse_filter = Control.MOUSE_FILTER_IGNORE
-    map_button.add_child(minimap)
     forge_scene = TextureRect.new()
     forge_scene.texture = FORGE
     forge_scene.size = Vector2(960,540)
@@ -281,7 +267,7 @@ func _choice(title: String, action: Callable) -> void:
 
 func _open(which: String) -> void:
     mode = which
-    var wide := which in ["forge","item","map","journal","gear","skills"]
+    var wide := which in ["forge","item","journal","gear","skills"]
     var shop := which == "forge"
     forge_scene.visible = shop
     dimmer.color = Color("#10101535") if shop else Color("#060b17a0")
@@ -509,14 +495,8 @@ func _tabs() -> void:
 
 func open_map() -> void:
     if game.dialogue.visible or game.victory_panel.visible: return
-    _open("map")
-    heading.text = "BẢN ĐỒ · "+ERAS[era]
-    copy.text = "● Vị trí hiện tại     ◇ Điểm nghỉ     Bờ Đá nối Hầm Dẫn Nước qua trục rơi"
-    _tabs()
-    var map := MapView.new()
-    map.timeline = self
-    map.custom_minimum_size = Vector2(795,257)
-    options.add_child(map)
+    close()
+    game.atlas.open()
 
 func _info_line(value: String) -> void:
     var label := Label.new()
@@ -639,12 +619,14 @@ func interact() -> void:
         elif era == 1: game._say("Tín: Dấu Bà Lam nằm dưới nhịp cầu. Cỗ máy đưa anh về thời bà còn ở đây.",5)
         else: game._say("Lò nguội lạnh. Trở về quá khứ để gặp Bà Lam.",3)
     elif absf(x-1190) < 54:
-        game.checkpoint = sky.point(Vector2(1190,432))
+        game.checkpoint = sky.point(WATCH_STOP)
         game.health = game.max_health
         var received := false
         if era == 1: received = award_lunar_core(CORE_PRESENT)
         elif era == 2: received = award_lunar_core(CORE_FUTURE)
-        if received: game._persist()
+        if not rested[era] or received:
+            rested[era] = true
+            game._persist()
         game._say("Điểm nghỉ đã mở · nhận 1 Lõi nguyệt" if received else "Đã nghỉ tại trạm hải đăng",3)
     elif absf(x-2470) < 85 and era == 2:
         if not defeated[2]:
@@ -658,6 +640,26 @@ func interact() -> void:
         game._show_victory()
     else:
         game._say("E gần cỗ máy, tiệm rèn, trạm nghỉ hoặc hải đăng · V dùng vũ khí",3)
+
+func atlas_destination() -> Vector2:
+    if not active() or indoors or not rested[era] or not game.hero.is_on_floor(): return Vector2.INF
+    var local: Vector2 = game.hero.position - Vector2(sky.origin, 0)
+    if local.distance_to(MACHINE_STOP) < 49.0: return WATCH_STOP
+    if local.distance_to(WATCH_STOP) < 49.0: return MACHINE_STOP
+    return Vector2.INF
+
+func use_atlas_anchor(destination: Vector2) -> void:
+    if destination == Vector2.INF or destination != atlas_destination(): return
+    game._set_crouch(false, true)
+    game.arts.reset()
+    reset_chain()
+    game.hero.position = sky.point(destination)
+    game.hero.velocity = Vector2.ZERO
+    game.cam.reset_smoothing()
+    game.cam.force_update_scroll()
+    game.sound.play_cue("phase")
+    game.emit_impact(game.hero.position, SHADES[era])
+    game._say("Đã tới Đài Canh" if destination == WATCH_STOP else "Đã về Bờ Đá", 2)
 
 func guardian_down() -> void:
     if defeated[era]: return
@@ -775,8 +777,6 @@ func update(delta: float) -> void:
     cooldown = maxf(0,cooldown-delta)
     flare = maxf(0,flare-delta)
     tech_button.visible = not (panel.visible or game.dialogue.visible or game.victory_panel.visible)
-    map_button.visible = tech_button.visible
-    minimap.queue_redraw()
     underground = game.hero.position.y > 566 and game.hero.position.x < sky.origin+770
     tech_button.text = "V · Tơ Kép ›" if chain_left > 0 else "V · %s" % (WEAPONS[equipped] if cooldown == 0 else "%.1fs" % cooldown)
     tech_button.modulate = Color("#9ff2ff") if chain_left > 0 else Color.WHITE
@@ -869,7 +869,7 @@ func _draw() -> void:
                 draw_arc(flare_origin,92,0,TAU,48,Color("#d5a9ff",alpha),5,true)
 
 func save_state() -> Dictionary:
-    return {"era":era,"core":core,"repaired":repaired,"lit":lit,"metal":metal,"companion":companion,"owned":owned.duplicate(),"equipped":equipped,"defeated":defeated.duplicate(),"claimed":claimed.duplicate(),"switch_open":switch_open,"rescued":rescued,"lunar_cores":lunar_cores,"lunar_awards":lunar_awards,"spear_infused":spear_infused}
+    return {"era":era,"core":core,"repaired":repaired,"lit":lit,"metal":metal,"companion":companion,"owned":owned.duplicate(),"equipped":equipped,"defeated":defeated.duplicate(),"claimed":claimed.duplicate(),"switch_open":switch_open,"rescued":rescued,"rested":rested.duplicate(),"lunar_cores":lunar_cores,"lunar_awards":lunar_awards,"spear_infused":spear_infused}
 
 func restore(data: Dictionary) -> void:
     era = clampi(int(data.get("era",1)),0,2)
@@ -878,7 +878,7 @@ func restore(data: Dictionary) -> void:
     lit = data.get("lit",false) == true
     metal = clampi(int(data.get("metal",0)),0,9)
     companion = clampi(int(data.get("companion",0)),0,1)
-    for key in ["owned","defeated","claimed"]:
+    for key in ["owned","defeated","claimed","rested"]:
         var list = data.get(key,[])
         var flags: Array = get(key)
         for index in flags.size():
@@ -893,4 +893,6 @@ func restore(data: Dictionary) -> void:
     spear_infused = owned[SPEAR] and data.get("spear_infused",false) == true
     if rescued: award_lunar_core(CORE_CISTERN)
     if defeated[0]: award_lunar_core(CORE_GUARDIAN)
+    rested[1] = rested[1] or (lunar_awards & CORE_PRESENT) != 0
+    rested[2] = rested[2] or (lunar_awards & CORE_FUTURE) != 0
     reset_chain()

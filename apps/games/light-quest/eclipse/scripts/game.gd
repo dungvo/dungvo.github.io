@@ -119,6 +119,7 @@ var time_mode := false
 var story_room := -1
 var story_hero := "An"
 var story_button: Button
+var atlas: CanvasLayer
 
 func _ready() -> void:
     mobile_web = OS.has_feature("web") and DisplayServer.is_touchscreen_available()
@@ -142,6 +143,8 @@ func _ready() -> void:
     add_child(sky)
     loadout = preload("res://scripts/loadout.gd").new()
     add_child(loadout)
+    atlas = preload("res://scripts/world_atlas.gd").new()
+    add_child(atlas)
     _restore()
     if activated: light_circuit.restore_solved()
     scenery.plaza_chest.hide()
@@ -253,9 +256,9 @@ func _make_ui() -> void:
     hearts = HealthHearts.new()
     hearts.position = Vector2(79, 28)
     layer.add_child(hearts)
-    chapter = _hud_label(layer, Vector2(698, 18), Vector2(240, 32), 19)
+    chapter = _hud_label(layer, Vector2(558, 18), Vector2(235, 32), 19)
     chapter.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-    light_status = _hud_label(layer, Vector2(698, 49), Vector2(240, 28), 14)
+    light_status = _hud_label(layer, Vector2(558, 48), Vector2(235, 28), 14)
     light_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
     help = _hud_label(layer, Vector2(22, 53), Vector2(480, 30), 15)
     help.add_theme_color_override("font_color", Color("#daebff"))
@@ -390,7 +393,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nLÒ RÈN ÁNH TRĂNG · V12"
+    title.text = "LIGHT QUEST: ECLIPSE\nBẢN ĐỒ NGUYỆT THỰC · V13"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -519,7 +522,7 @@ func _input(event:InputEvent) -> void:
     if event.is_action_pressed("ui_cancel"):
         if dialogue.visible: _show_dialogue(false)
         elif victory_panel.visible: _dismiss_victory()
-        elif started and time_mode: sky.timeline.open_map()
+        elif started and time_mode: atlas.open()
         elif started: trials.return_menu()
     if not started: return
     if victory_panel.visible:
@@ -536,8 +539,6 @@ func _input(event:InputEvent) -> void:
             KEY_L: _skill()
             KEY_Q: _signature()
             KEY_V: sky.timeline.cast()
-            KEY_M:
-                if time_mode and not dialogue.visible: sky.timeline.open_map()
             KEY_F: arts.cast(loadout.quick_art())
             KEY_1: arts.cast(0)
             KEY_2: arts.cast(1)
@@ -1115,7 +1116,7 @@ func _persist() -> void:
     if not save_enabled or not is_instance_valid(trials): return
     var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "timeline":sky.timeline.save_state(), "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
+        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "atlas":atlas.discovered.keys(), "timeline":sky.timeline.save_state(), "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -1125,6 +1126,7 @@ func _restore() -> void:
     if not data is Dictionary or data.get("version") != 2: return
     story_room = clampi(int(data.get("story_room", -1)), -1, 6)
     story_hero = "Kha" if data.get("story_hero") == "Kha" else "An"
+    atlas.restore(data.get("atlas", []))
     journey_next = clampi(int(data.get("journey_next", 0)), 0, 6)
     loadout.weapon = clampi(int(data.get("weapon", 0)), 0, 2)
     loadout.favorite = clampi(int(data.get("favorite", -1)), -1, 5)
