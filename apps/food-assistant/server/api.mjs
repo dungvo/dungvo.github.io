@@ -1,33 +1,65 @@
 import { createServer } from 'node:http';
 import { timingSafeEqual } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { basename, extname } from 'node:path';
+import { extname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
 import { createState, mutate, validateSnapshot } from '../domain.js';
 import { draftSchema, validDraft } from '../language.js';
+import { audioExtensions, audioType, maxAudioBytes } from '../voice.js';
 
 const docs = new URL('../', import.meta.url);
 const mime = { '.html': 'text/html; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.webmanifest': 'application/manifest+json',
   '.png': 'image/png', '.svg': 'image/svg+xml', '.webp': 'image/webp' };
-const staticFile = /^(?:index\.html|styles\.css|sw\.js|manifest\.webmanifest|(?:app|view|menu|language|domain|storage|icons)\.js|assets\/[\w-]+\.(?:webp|png|svg))$/;
+const staticFile = /^(?:index\.html|styles\.css|sw\.js|manifest\.webmanifest|(?:app|view|menu|language|domain|storage|icons|voice)\.js|assets\/[\w-]+\.(?:webp|png|svg))$/;
 const send = (res, status, value) => {
   res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
   res.end(JSON.stringify(value));
 };
 const denied = (status, message) => Object.assign(new Error(message), { status });
 
-async function body(req) {
+async function collect(req, limit) {
+  if (Number(req.headers['content-length']) > limit) {
+    req.resume();
+    throw denied(413, 'Dữ liệu gửi quá lớn.');
+  }
   let length = 0;
   const chunks = [];
-  for await (const chunk of req) {
+  for await (const chunk of req.iterator({ destroyOnReturn: false })) {
     length += chunk.length;
-    if (length > 256 * 1024) throw denied(413, 'Dữ liệu gửi quá lớn.');
+    if (length > limit) {
+      req.resume();
+      throw denied(413, 'Dữ liệu gửi quá lớn.');
+    }
     chunks.push(chunk);
   }
-  try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); }
+  return Buffer.concat(chunks);
+}
+
+async function body(req) {
+  const bytes = await collect(req, 256 * 1024);
+  try { return JSON.parse(bytes.toString('utf8')); }
   catch { throw denied(400, 'Dữ liệu gửi không phải JSON.'); }
+}
+
+function matchesAudioHeader(type, bytes) {
+  if (type === 'audio/mp4') return bytes.subarray(4, 8).toString('ascii') === 'ftyp';
+  if (type === 'audio/ogg') return bytes.subarray(0, 4).toString('ascii') === 'OggS';
+  return bytes.length >= 4 && bytes.readUInt32BE(0) === 0x1a45dfa3;
+}
+
+async function openAITranscription(key, audio, signal) {
+  const data = new FormData();
+  data.set('model', 'gpt-transcribe');
+  data.set('languages[]', 'vi');
+  data.set('prompt', 'Một câu gọi món tiếng Việt tại quán ăn. Chép nguyên văn số bàn, số lượng, tên món và ghi chú.');
+  data.set('file', audio, 'cau-goi-mon.' + audioExtensions[audio.type]);
+  const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+    method: 'POST', headers: { Authorization: 'Bearer ' + key }, body: data, signal,
+  });
+  if (!response.ok) throw new Error('Transcription request failed');
+  return (await response.json()).text;
 }
 
 function openDb(filename) {
@@ -69,13 +101,16 @@ async function openAI(key, model, input) {
   return JSON.parse(message?.text);
 }
 
-export function createFoodServer({ file = 'food-assistant.sqlite', token, allowedOrigins = [], aiKey, aiModel = 'gpt-4.1-mini', interpret = openAI } = {}) {
+export function createFoodServer({ file = 'food-assistant.sqlite', token, allowedOrigins = [], aiKey, aiModel = 'gpt-4.1-mini', interpret = openAI, allowTranscription = false, transcribe = openAITranscription } = {}) {
   if (typeof token !== 'string' || token.length < 24) throw new Error('FOOD_TOKEN must contain at least 24 characters.');
   const secret = Buffer.from('Bearer ' + token);
   const db = openDb(file);
   const read = db.prepare('SELECT snapshot FROM shop WHERE id=1');
   const write = db.prepare('UPDATE shop SET snapshot=? WHERE id=1');
+  const capabilities = { aiEnabled: Boolean(aiKey), transcriptionEnabled: Boolean(aiKey && allowTranscription) };
   let aiWindow = [];
+  let transcriptionWindow = [];
+  let recordingsInProgress = 0;
   const server = createServer(async (req, res) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     try {
@@ -102,7 +137,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
       const supplied = Buffer.from(req.headers.authorization ?? '');
       if (supplied.length !== secret.length || !timingSafeEqual(supplied, secret)) return send(res, 401, { message: 'Mã kết nối không hợp lệ.' });
 
-      if (req.method === 'GET' && path === '/api/state') return send(res, 200, { state: JSON.parse(read.get().snapshot), aiEnabled: Boolean(aiKey) });
+      if (req.method === 'GET' && path === '/api/state') return send(res, 200, { state: JSON.parse(read.get().snapshot), ...capabilities });
       if (req.method === 'POST' && path === '/api/command') {
         const action = await body(req);
         if (!action?.id || req.headers['idempotency-key'] !== action.id) throw denied(400, 'Idempotency-Key phải khớp mã lệnh.');
@@ -112,12 +147,42 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
           const next = mutate(current, action);
           if (next !== current) write.run(JSON.stringify(next));
           db.exec('COMMIT');
-          return send(res, 200, { state: next, aiEnabled: Boolean(aiKey) });
+          return send(res, 200, { state: next, ...capabilities });
         } catch (error) {
           db.exec('ROLLBACK');
           if (!error.code || /^SQLITE/.test(error.code)) throw error;
           return send(res, 409, { code: error.code, message: error.message, state: JSON.parse(read.get().snapshot) });
         }
+      }
+      if (req.method === 'POST' && path === '/api/transcribe') {
+        if (!capabilities.transcriptionEnabled) return send(res, 503, { message: 'Chủ quán chưa bật chuyển giọng nói qua máy chủ.' });
+        const type = audioType(req.headers['content-type'] ?? '');
+        if (!Object.hasOwn(audioExtensions, type)) throw denied(415, 'Định dạng bản thu chưa được hỗ trợ.');
+        const bytes = await collect(req, maxAudioBytes);
+        if (!matchesAudioHeader(type, bytes)) throw denied(400, 'Bản thu trống hoặc sai định dạng.');
+        const now = Date.now();
+        transcriptionWindow = transcriptionWindow.filter(time => now - time < 60000);
+        if (transcriptionWindow.length >= 12 || recordingsInProgress >= 3) throw denied(429, 'Máy chủ đang xử lý nhiều bản thu. Thử lại sau hoặc nhập câu.');
+        transcriptionWindow.push(now);
+        recordingsInProgress++;
+        const disconnected = new AbortController();
+        const cancel = () => disconnected.abort();
+        res.once('close', cancel);
+        try {
+          const signal = AbortSignal.any([disconnected.signal, AbortSignal.timeout(20000)]);
+          const result = await transcribe(aiKey, new Blob([bytes], { type }), signal);
+          const transcript = typeof result === 'string' ? result.trim() : '';
+          if (!res.destroyed) {
+            if (!transcript || transcript.length > 500) return send(res, 422, { message: 'Không nghe rõ câu gọi hoặc câu quá dài. Hãy nói lại một câu ngắn.' });
+            return send(res, 200, { transcript });
+          }
+        } catch {
+          if (!res.destroyed) return send(res, 502, { message: 'Máy chủ chưa chuyển được bản thu. Hãy thử lại hoặc nhập câu.' });
+        } finally {
+          recordingsInProgress--;
+          res.removeListener('close', cancel);
+        }
+        return;
       }
       if (req.method === 'POST' && path === '/api/interpret') {
         if (!aiKey) return send(res, 503, { message: 'Chủ quán chưa bật AI.' });
@@ -153,7 +218,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   else {
     const server = createFoodServer({ file, token: process.env.FOOD_TOKEN,
       allowedOrigins: (process.env.FOOD_ORIGINS ?? 'https://dungvo.github.io').split(',').filter(Boolean),
-      aiKey: process.env.OPENAI_API_KEY, aiModel: process.env.OPENAI_MODEL });
+      aiKey: process.env.OPENAI_API_KEY, aiModel: process.env.OPENAI_MODEL,
+      allowTranscription: process.env.FOOD_TRANSCRIBE === '1' });
     server.listen(Number(process.env.PORT ?? 8787), process.env.HOST ?? '127.0.0.1',
       () => process.stdout.write('Food Assistant API : ' + server.address().port + '\n'));
   }

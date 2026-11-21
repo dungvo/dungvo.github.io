@@ -1,6 +1,6 @@
 import { createState, mutate, OrderError, validateSnapshot } from './domain.js';
 
-const blank = () => ({ snapshot: createState(), pending: [], config: null, failure: null, aiEnabled: false });
+const blank = () => ({ snapshot: createState(), pending: [], config: null, failure: null, aiEnabled: false, transcriptionEnabled: false });
 
 export function openStore() {
   return new Promise((resolve, reject) => {
@@ -66,7 +66,8 @@ export function reconcile(doc, config, payload, sent, rejected) {
   const failure = rejected && sent && pending[0]?.action.id === sent.id
     ? { id: sent.id, code: payload.code, message: payload.message }
     : pending.some(item => item.action.id === doc.failure?.id) ? doc.failure : null;
-  return { ...doc, snapshot, pending, failure, aiEnabled: payload.aiEnabled ?? doc.aiEnabled };
+  return { ...doc, snapshot, pending, failure, aiEnabled: payload.aiEnabled ?? doc.aiEnabled,
+    transcriptionEnabled: payload.transcriptionEnabled ?? doc.transcriptionEnabled };
 }
 
 export function resolveFailure(doc, repeat) {
@@ -89,17 +90,21 @@ export function normalizeEndpoint(raw, location) {
   return url.href.replace(/\/+$/, '');
 }
 
-export async function requestAPI(config, path, input) {
+export async function requestAPI(config, path, input, signal) {
+  const audio = path === 'transcribe';
+  const timeout = AbortSignal.timeout(audio ? 25000 : path === 'interpret' ? 20000 : 6000);
   const response = await fetch(config.url + '/api/' + path, {
     method: input === undefined ? 'GET' : 'POST',
-    signal: AbortSignal.timeout(path === 'interpret' ? 20000 : 6000),
-    headers: { Authorization: 'Bearer ' + config.token, ...(input === undefined ? {} : { 'Content-Type': 'application/json' }),
+    signal: signal ? AbortSignal.any([signal, timeout]) : timeout,
+    headers: { Authorization: 'Bearer ' + config.token,
+      ...(input === undefined ? {} : { 'Content-Type': audio ? input.type : 'application/json' }),
       ...(path === 'command' ? { 'Idempotency-Key': input.id } : {}) },
-    ...(input === undefined ? {} : { body: JSON.stringify(input) }),
+    ...(input === undefined ? {} : { body: audio ? input : JSON.stringify(input) }),
     cache: 'no-store', credentials: 'omit', redirect: 'error',
   });
   const data = await response.json();
-  if (!response.ok && response.status !== 409) throw new Error(data.message ?? 'Không kết nối được máy đồng bộ.');
-  if (path !== 'interpret') validateSnapshot(data.state);
-  return { data, rejected: response.status === 409 };
+  const rejected = path === 'command' && response.status === 409;
+  if (!response.ok && !rejected) throw new Error(data.message ?? 'Không kết nối được máy đồng bộ.');
+  if (path === 'state' || path === 'command') validateSnapshot(data.state);
+  return { data, rejected };
 }

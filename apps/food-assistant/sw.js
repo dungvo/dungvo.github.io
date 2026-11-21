@@ -1,9 +1,9 @@
 const scope = new URL(self.registration.scope);
 const prefix = 'food-assistant:' + scope.pathname + ':';
-const cacheKey = prefix + '1.0.0';
+const cacheKey = prefix + '1.1.0';
 const shell = [
   './', './index.html', './styles.css', './app.js', './view.js', './domain.js', './language.js',
-  './menu.js', './storage.js', './icons.js', './manifest.webmanifest', './assets/hero.webp',
+  './menu.js', './storage.js', './icons.js', './voice.js', './manifest.webmanifest', './assets/hero.webp',
   './assets/icon-192.png', './assets/icon-512.png', './assets/tai.webp', './assets/nam.webp',
   './assets/bo-kho.webp', './assets/banh-mi.webp', './assets/com-ga.webp', './assets/goi-cuon.webp',
   './assets/tra-da.webp', './assets/ca-phe.webp',

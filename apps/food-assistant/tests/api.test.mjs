@@ -107,3 +107,100 @@ test('AI adapter từ chối món bịa đặt, schema không được tự ghi'
   assert.equal(response.status, 502);
   assert.equal((await (await fetch(url + '/api/state', { headers })).json()).state.rev, 0);
 });
+
+const webm = Buffer.from('1a45dfa301020304', 'hex');
+const mp4 = Buffer.from('000000186674797069736f6d', 'hex');
+const ogg = Buffer.from('4f67675300010203', 'hex');
+const sendClip = (url, bytes, contentType = 'audio/webm', authorization = headers) => fetch(url + '/api/transcribe', {
+  method: 'POST', headers: { ...authorization, 'Content-Type': contentType }, body: bytes,
+});
+
+test('Kết nối công bố khả năng nhận giọng nói riêng, mặc định tắt khi chỉ có khóa', async t => {
+  const { url } = await start(t, { aiKey: 'test-key' });
+  const { aiEnabled, transcriptionEnabled } = await (await fetch(url + '/api/state', { headers })).json();
+  assert.equal(aiEnabled, true);
+  assert.equal(transcriptionEnabled, false);
+  assert.equal((await sendClip(url, webm)).status, 503);
+});
+
+test('Bật thu âm nhưng thiếu khóa vẫn tắt khả năng chuyển giọng nói', async t => {
+  const { url } = await start(t, { allowTranscription: true });
+  assert.equal((await (await fetch(url + '/api/state', { headers })).json()).transcriptionEnabled, false);
+  assert.equal((await sendClip(url, webm)).status, 503);
+});
+
+for (const [type, data] of [['audio/webm;codecs=opus', webm], ['audio/mp4', mp4], ['audio/ogg', ogg]]) {
+  test('Nhận bản thu ' + type + ' và chỉ trả về văn bản', async t => {
+    const { url } = await start(t, { aiKey: 'test-key', allowTranscription: true, transcribe: async (key, audio, signal) => {
+      assert.equal(key, 'test-key');
+      assert.equal(audio.type, type.split(';')[0]);
+      assert.deepEqual(Buffer.from(await audio.arrayBuffer()), data);
+      assert.equal(signal.aborted, false);
+      return '  Bàn 4 hai phở tái  ';
+    } });
+    const response = await sendClip(url, data, type);
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), { transcript: 'Bàn 4 hai phở tái' });
+    const doc = await (await fetch(url + '/api/state', { headers })).json();
+    assert.equal(doc.state.rev, 0);
+    assert.equal(doc.transcriptionEnabled, true);
+  });
+}
+
+test('Audio endpoint kiểm tra quyền, loại tệp, header và dung lượng trước khi gọi AI', async t => {
+  const { url } = await start(t, { aiKey: 'test-key', allowTranscription: true, transcribe: () => {
+    assert.fail('invalid clips must not reach the provider');
+  } });
+  assert.equal((await sendClip(url, webm, 'audio/webm', {})).status, 401);
+  assert.equal((await sendClip(url, webm, 'text/plain')).status, 415);
+  assert.equal((await sendClip(url, mp4, 'audio/webm')).status, 400);
+  assert.equal((await sendClip(url, Buffer.alloc(0))).status, 400);
+  const large = Buffer.alloc(2 * 1024 * 1024 + 1);
+  assert.equal((await sendClip(url, large)).status, 413);
+  const stream = new ReadableStream({ start(controller) { controller.enqueue(large); controller.close(); } });
+  const response = await fetch(url + '/api/transcribe', {
+    method: 'POST', headers: { ...headers, 'Content-Type': 'audio/webm' }, body: stream, duplex: 'half',
+  });
+  assert.equal(response.status, 413);
+});
+
+test('Phản hồi transcript trống hoặc quá dài yêu cầu nói lại', async t => {
+  let result = ' ';
+  const { url } = await start(t, { aiKey: 'test-key', allowTranscription: true, transcribe: () => result });
+  assert.equal((await sendClip(url, webm)).status, 422);
+  result = 'a'.repeat(501);
+  assert.equal((await sendClip(url, webm)).status, 422);
+});
+
+test('Lỗi nhà cung cấp âm thanh trả thông báo chung, không lộ khóa', async t => {
+  const { url } = await start(t, { aiKey: 'test-key', allowTranscription: true, transcribe: () => { throw new Error('test-key'); } });
+  const response = await sendClip(url, webm);
+  assert.equal(response.status, 502);
+  assert.doesNotMatch(await response.text(), /test-key/);
+});
+
+test('Máy chủ giới hạn chuyển bản thu theo phút', async t => {
+  let used = 0;
+  const { url } = await start(t, { aiKey: 'test-key', allowTranscription: true, transcribe: () => { used++; return 'Bàn 1 trà đá'; } });
+  for (let i = 0; i < 12; i++) assert.equal((await sendClip(url, webm)).status, 200);
+  assert.equal((await sendClip(url, webm)).status, 429);
+  assert.equal(used, 12);
+});
+
+test('Yêu cầu thu tiếp theo bị chặn khi đã có ba bản đang xử lý', async t => {
+  let processing = 0;
+  let release;
+  let reached;
+  const active = new Promise(resolve => { reached = resolve; });
+  const pending = new Promise(resolve => { release = resolve; });
+  const { url } = await start(t, { aiKey: 'test-key', allowTranscription: true, transcribe: async () => {
+    if (++processing === 3) reached();
+    await pending;
+    return 'Bàn 1 trà đá';
+  } });
+  const requests = [sendClip(url, webm), sendClip(url, webm), sendClip(url, webm)];
+  await active;
+  try { assert.equal((await sendClip(url, webm)).status, 429); }
+  finally { release(); }
+  assert.deepEqual((await Promise.all(requests)).map(response => response.status), [200, 200, 200]);
+});

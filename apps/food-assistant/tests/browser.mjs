@@ -11,7 +11,17 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE ?? 'playwright');
 const folder = await mkdtemp(join(tmpdir(), 'food-browser-'));
 const token = 'browser-test-pair-token-not-real';
 const external = process.env.FOOD_TEST_URL;
-const server = external ? null : createFoodServer({ file: join(folder, 'test.sqlite'), token });
+const capturedAudio = [];
+const server = external ? null : createFoodServer({ file: join(folder, 'test.sqlite'), token,
+  aiKey: 'browser-test-fake', allowTranscription: true,
+  transcribe: async (key, audio) => {
+    assert.equal(key, 'browser-test-fake');
+    assert.match(audio.type, /^audio\/(webm|mp4|ogg)$/);
+    assert.ok(audio.size > 50);
+    capturedAudio.push(audio.size);
+    return 'Bàn 4 hai phở tái';
+  },
+});
 let browser;
 let root = external;
 const widths = [
@@ -39,7 +49,8 @@ try {
     await once(server, 'listening');
     root = 'http://127.0.0.1:' + server.address().port + '/apps/food-assistant/';
   }
-  browser = await chromium.launch({ executablePath: process.env.BROWSER_EXECUTABLE || undefined, args: ['--no-sandbox'] });
+  browser = await chromium.launch({ executablePath: process.env.BROWSER_EXECUTABLE || undefined,
+    args: ['--no-sandbox', ...(server ? ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] : [])] });
   const screenshotDirectory = process.env.FOOD_SCREENSHOTS;
   if (screenshotDirectory) await mkdir(screenshotDirectory, { recursive: true });
 
@@ -138,6 +149,61 @@ try {
     await waitText(a.locator('.order-sidebar'), 'không hành');
     await a.waitForFunction(() => document.querySelectorAll('.order-sidebar [data-cancel]').length === 0);
     console.log('PASS two independent browsers · Offline reload → outbox reconnect → kitchen sees one order → state returns to waiter');
+
+    await a.addInitScript(() => {
+      const startMediaRecorder = MediaRecorder.prototype.start;
+      MediaRecorder.prototype.start = function (...args) {
+        window.recordedBytes = 0;
+        this.addEventListener('dataavailable', event => { window.recordedBytes += event.data.size; });
+        return startMediaRecorder.apply(this, args);
+      };
+      window.SpeechRecognition = class {
+        start() {
+          queueMicrotask(() => { this.onerror({ error: 'network' }); this.onend(); });
+        }
+        abort() {}
+      };
+    });
+    await a.reload();
+    await a.locator('.hero [data-action="voice"]').click();
+    await waitText(a.getByRole('dialog'), 'Chưa nhận được giọng nói');
+    assert.equal(await a.getByRole('button', { name: 'Thu âm qua máy chủ' }).count(), 0);
+    await a.getByRole('button', { name: 'Đóng', exact: true }).click();
+    await nav(a, 'settings', 'desktop');
+    await a.getByRole('checkbox', { name: 'Cho phép nút thu âm qua máy chủ' }).check();
+    await a.getByRole('button', { name: 'Lưu cài đặt trợ lý' }).click();
+    await waitText(a.locator('#toast'), 'Đã lưu cài đặt trợ lý');
+    await a.reload();
+
+    const openVoice = () => a.locator('.hero [data-action="voice"]').click();
+    await openVoice();
+    await waitText(a.getByRole('dialog'), 'Có thể thử nút Thu âm qua máy chủ.');
+    await a.getByRole('button', { name: 'Thu âm qua máy chủ' }).click();
+    await waitText(a.getByRole('dialog'), 'Đang thu âm');
+    await a.getByRole('button', { name: 'Đóng', exact: true }).click();
+    assert.equal(capturedAudio.length, 0);
+    assert.equal(await b.locator('.ticket').count(), 1);
+
+    await openVoice();
+    await a.getByRole('button', { name: 'Thu âm qua máy chủ' }).click();
+    await a.getByRole('button', { name: 'Dừng và chuyển thành chữ' }).waitFor();
+    await a.waitForFunction(() => window.recordedBytes > 50);
+    await a.getByRole('button', { name: 'Dừng và chuyển thành chữ' }).click();
+    await waitText(a.getByRole('dialog'), 'Đọc lại câu vừa nhận').catch(async error => {
+      throw new Error(await a.locator('#speech-status').textContent(), { cause: error });
+    });
+    assert.equal(capturedAudio.length, 1);
+    assert.equal(await a.getByRole('textbox', { name: 'Câu gọi món' }).inputValue(), 'Bàn 4 hai phở tái');
+    assert.equal(await b.locator('.ticket').count(), 1);
+
+    await a.getByRole('textbox', { name: 'Câu gọi món' }).fill('Bàn 4 một phở tái');
+    await a.getByRole('button', { name: 'Kiểm tra câu gọi' }).click();
+    await a.getByRole('heading', { name: 'Kiểm tra lượt gọi · Bàn 04' }).waitFor();
+    await a.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
+    const ticket = b.locator('.ticket').filter({ has: b.getByRole('heading', { name: 'Phở tái' }) });
+    await ticket.waitFor();
+    assert.equal(await ticket.locator('.ticket-qty').textContent(), '×1');
+    console.log('PASS recorded browser audio · Browser STT error → opt-in → cancel without upload → API transcript → edit → kitchen');
   }
 } finally {
   await browser?.close();
