@@ -40,6 +40,7 @@ var mode := ""
 var indoors := false
 var ui: CanvasLayer
 var panel: PanelContainer
+var dimmer: ColorRect
 var heading: Label
 var copy: Label
 var options: VBoxContainer
@@ -57,7 +58,8 @@ var weapon_atlas := preload("res://assets/eclipse/forge-weapons.webp")
 const MapView := preload("res://scripts/coast_interface.gd")
 const SkillPreview := preload("res://scripts/forge_card.gd")
 const SHORE := preload("res://assets/eclipse/open-moon-coast.webp")
-const CISTERN := preload("res://assets/eclipse/guardian-hall.webp")
+const CISTERN := preload("res://assets/eclipse/cistern-waterworks.webp")
+const FORGE := preload("res://assets/eclipse/forge-interior.webp")
 
 
 func _ready() -> void:
@@ -87,6 +89,12 @@ func _ready() -> void:
     minimap.size = Vector2(124,59)
     minimap.mouse_filter = Control.MOUSE_FILTER_IGNORE
     map_button.add_child(minimap)
+    dimmer = ColorRect.new()
+    dimmer.color = Color("#060b17a0")
+    dimmer.size = Vector2(960,540)
+    dimmer.mouse_filter = Control.MOUSE_FILTER_STOP
+    dimmer.hide()
+    ui.add_child(dimmer)
     panel = PanelContainer.new()
     panel.position = Vector2(203,82)
     panel.custom_minimum_size = Vector2(554,340)
@@ -219,11 +227,13 @@ func active() -> bool:
 func hide_ui() -> void:
     ui.hide()
     panel.hide()
+    dimmer.hide()
     mode = ""
     queue_redraw()
 
 func close() -> void:
     panel.hide()
+    dimmer.hide()
     mode = ""
     if game.started and not game.dialogue.visible: game.joystick.accept_touch = true
 
@@ -240,7 +250,8 @@ func _open(which: String) -> void:
     panel.position = Vector2(46,52) if wide else Vector2(203,82)
     panel.custom_minimum_size = Vector2(868,420) if wide else Vector2(554,340)
     copy.show()
-    panel.reset_size()
+    panel.call_deferred("reset_size")
+    dimmer.show()
     panel.show()
     game._reset_touch()
     game.joystick.accept_touch = false
@@ -289,7 +300,7 @@ func _button(parent: Control, title: String, callback: Callable) -> Button:
     return button
 
 func show_catalog() -> void:
-    inspect_weapon(catalog_page*4)
+    inspect_weapon(catalog_page*6)
 
 func inspect_weapon(item: int) -> void:
     _open("forge")
@@ -305,33 +316,39 @@ func inspect_weapon(item: int) -> void:
     face.custom_minimum_size = Vector2(150,240)
     row.add_child(face)
     var catalog := GridContainer.new()
-    catalog.columns = 2
+    catalog.columns = 3
     catalog.add_theme_constant_override("h_separation",6)
     catalog.add_theme_constant_override("v_separation",7)
     row.add_child(catalog)
-    for index in range(catalog_page*4,catalog_page*4+4):
+    for index in range(catalog_page*6,mini(catalog_page*6+6,WEAPONS.size())):
         var choice := index
         var card := _button(catalog,"",func(): inspect_weapon(choice))
-        card.custom_minimum_size = Vector2(132,95)
+        card.custom_minimum_size = Vector2(95,104)
+        var style := StyleBoxFlat.new()
+        style.bg_color = Color("#24283b") if item == index else Color("#111a2c")
+        style.border_color = Color("#ffc96e") if item == index else Color("#5e5260")
+        style.set_border_width_all(2 if item == index else 1)
+        style.set_corner_radius_all(5)
+        card.add_theme_stylebox_override("normal",style)
         var image := TextureRect.new()
         image.texture = _weapon_icon(index)
         image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
         image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-        image.position = Vector2(5,4)
-        image.size = Vector2(122,66)
+        image.position = Vector2(3,6)
+        image.size = Vector2(89,57)
         image.mouse_filter = Control.MOUSE_FILTER_IGNORE
         card.add_child(image)
         var label := Label.new()
-        label.position = Vector2(4,68)
-        label.size = Vector2(124,23)
-        label.text = WEAPONS[index] + (" ✓" if owned[index] else "")
+        label.position = Vector2(1,62)
+        label.size = Vector2(93,39)
+        label.text = WEAPONS[index] + (" ✓" if owned[index] else "\n1 đồng")
         label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-        label.add_theme_font_size_override("font_size",12)
+        label.add_theme_font_size_override("font_size",11)
         label.mouse_filter = Control.MOUSE_FILTER_IGNORE
         card.add_child(label)
         card.modulate = Color("#ffdda5") if item == index else Color.WHITE
     var details := VBoxContainer.new()
-    details.custom_minimum_size.x = 368
+    details.custom_minimum_size.x = 350
     row.add_child(details)
     var name_label := Label.new()
     name_label.text = WEAPONS[item]
@@ -342,8 +359,14 @@ func inspect_weapon(item: int) -> void:
 "+("Đã có trong kho" if owned[item] else "Giá · 1 mảnh đồng")
     stats.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
     details.add_child(stats)
+    if item == 1:
+        var reach := Label.new()
+        reach.text = "Tầm chiêu 210 · Nguyệt Kiếm 115"
+        reach.modulate = Color("#b4eac2")
+        details.add_child(reach)
     var preview := SkillPreview.new()
     preview.weapon = item
+    preview.phase = 0.0
     preview.custom_minimum_size = Vector2(330,96)
     preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
     details.add_child(preview)
@@ -643,14 +666,6 @@ func _draw() -> void:
             for x in range(0,2601,33):
                 wave.append(start+Vector2(x,line*12+sin(x*0.027+sky.elapsed*1.7+line)*1.4))
             draw_polyline(wave,Color(0.40,0.75,0.96,0.27-line*0.04),1,true)
-    if indoors:
-        draw_rect(Rect2(sky.point(Vector2(2800,80)),Vector2(960,376)),Color("#38242b42"))
-        for x in [2890,3140,3500,3730]:
-            draw_rect(Rect2(sky.point(Vector2(x,112)),Vector2(14,344)),Color("#8d6243"))
-        var fire: Vector2 = sky.point(Vector2(3430,397))
-        draw_circle(fire,75,Color("#f9974029"))
-        draw_circle(fire,24,Color("#fb9c5138"))
-        draw_circle(fire,9,Color("#ffce8b"))
     var clock: float = sky.elapsed
     var center: Vector2 = sky.point(Vector2(150,354))
     for i in range(3):

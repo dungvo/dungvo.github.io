@@ -384,10 +384,13 @@ func _scroll_background() -> void:
     var camera: Vector2 = game.cam.get_screen_center_position()
     if game.time_mode:
         var coast: bool = not timeline.indoors and not timeline.underground
-        var art: Texture2D = timeline.SHORE if coast else timeline.CISTERN
+        var art: Texture2D = timeline.FORGE if timeline.indoors else (timeline.SHORE if coast else timeline.CISTERN)
         if backdrop.texture != art: backdrop.texture = art
         backdrop.size = Vector2(1350, maxf(540,1350.0*backdrop.texture.get_height()/backdrop.texture.get_width()))
-        backdrop.position = Vector2(-clampf(190+(camera.x-origin-480)*0.09,0,390),0)
+        if coast:
+            backdrop.position = Vector2(-clampf(190+(camera.x-origin-480)*0.09,0,390),0)
+        else:
+            backdrop.position = Vector2(-195, -maxf(0,backdrop.size.y-550)*0.65)
         backdrop.modulate = timeline.SHADES[timeline.era] if coast else Color("#cce1f3")
         return
     var altitude_ratio := clampf((456.0 - camera.y) / 2300.0, 0, 1)

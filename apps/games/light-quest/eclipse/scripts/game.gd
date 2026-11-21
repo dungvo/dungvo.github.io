@@ -389,7 +389,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nBỜ ĐÁ DƯỚI TRĂNG · V11"
+    title.text = "LIGHT QUEST: ECLIPSE\nBỜ ĐÁ DƯỚI TRĂNG · V11.1"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
