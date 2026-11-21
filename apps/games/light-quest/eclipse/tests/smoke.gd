@@ -153,7 +153,13 @@ func _run() -> void:
     game._dash()
     await _frames(2)
     if not ensure(absf(game.hero.velocity.x) > 420, "dash impulse"): return
+    game.trials.boss.awake = true
+    game.spawn_bolt(game.hero.position + Vector2(15, 0), Vector2(-200, 0), false, 1)
+    game.trials.boss.take_hit(game.trials.boss.max_hp, game)
+    if not ensure(game.i_frames >= 1.0 and game.bolts[-1].life == 0, "boss victory clears residual damage before victory panel"): return
     game.trials.return_menu()
+    await _frames(60)
+    if not ensure(not game.victory_panel.visible, "delayed victory cannot open on chapter menu"): return
     if not ensure(not game.started and game.menu.visible and not game.joystick.accept_touch, "menu pauses combat"): return
     print("ECLIPSE SMOKE PASS: geometry, walls, swept bolts, parry, heal cooldown, reactive AI, locked tells, checkpoint reset, secrets, persistence, three-finger touch, variable jump, dash and menu")
     quit(0)

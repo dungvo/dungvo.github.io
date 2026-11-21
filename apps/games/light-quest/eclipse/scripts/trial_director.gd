@@ -52,7 +52,6 @@ func _ready() -> void:
     cooldowns = game._hud_label(layer, Vector2(22, 85), Vector2(215, 50), 13)
     boss_bar = ProgressBar.new()
     boss_bar.position = Vector2(280, 137)
-    boss_bar.size = Vector2(400, 7)
     boss_bar.show_percentage = false
     boss_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
     var bar_bg := StyleBoxFlat.new()
@@ -64,6 +63,7 @@ func _ready() -> void:
     boss_bar.add_theme_stylebox_override("background", bar_bg)
     boss_bar.add_theme_stylebox_override("fill", bar_fill)
     layer.add_child(boss_bar)
+    boss_bar.size = Vector2(400, 7)
     menu_button = Button.new()
     menu_button.text = "MÀN CHƠI"
     menu_button.position = Vector2(824, 86)
@@ -263,6 +263,10 @@ func boss_defeated() -> void:
     wins[selected] = true
     arena_locked = false
     game.moon_dash = true
+    game.i_frames = maxf(game.i_frames, 1.2)
+    # Expire hostile bolts without mutating the array during a projectile hit callback.
+    for bolt in game.bolts:
+        if is_instance_valid(bolt) and not bolt.friendly: bolt.life = 0
     game._persist()
     game.sound.play_cue("victory")
     victory_title.text = TITLES[selected].to_upper() + " · ĐÃ GIẢI PHÓNG"
