@@ -67,6 +67,7 @@ var notice := ""
 var notice_time := 0.0
 var started := false
 var menu: PanelContainer
+var demo_room_select: OptionButton
 # Feel First v0.2: buffered jumps, acceleration and feedback.
 const RUN_ACCEL := 2050.0
 const RUN_FRICTION := 2300.0
@@ -339,8 +340,8 @@ func _notification(what: int) -> void:
         attack_buffer = 0
 func _menu() -> void:
     menu = PanelContainer.new()
-    menu.position = Vector2(270,106)
-    menu.custom_minimum_size = Vector2(420,290)
+    menu.position = Vector2(270,75)
+    menu.custom_minimum_size = Vector2(420,375)
     var layer := CanvasLayer.new()
     layer.layer = 10
     add_child(layer)
@@ -356,6 +357,16 @@ func _menu() -> void:
     note.text = "Chơi thử Tháp Trăng · Chọn nhân vật\nA/D di chuyển · Space nhảy · J đánh · K lướt · L kỹ năng · E tương tác"
     note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(note)
+    var selector_label := Label.new()
+    selector_label.text = "CHỌN MÀN CHƠI — CÙNG ĐỒ HỌA GODOT GỐC"
+    selector_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    v.add_child(selector_label)
+    demo_room_select = OptionButton.new()
+    demo_room_select.add_item("01 · Làng Trăng — khám phá và nhiệm vụ", 0)
+    demo_room_select.add_item("02 · Rừng Vọng — chiến đấu và vượt địa hình", 1)
+    demo_room_select.add_item("03 · Hầm Bóng — quái mạnh và rương bí mật", 2)
+    demo_room_select.custom_minimum_size.y = 38.0
+    v.add_child(demo_room_select)
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
         var b := Button.new()
         b.text = "Chơi: " + who
@@ -364,6 +375,10 @@ func _menu() -> void:
 
 func _start(who: String) -> void:
     character = who
+    var selected_room := demo_room_select.get_selected_id() if is_instance_valid(demo_room_select) else 0
+    hero.global_position = Vector2(float(selected_room) * ROOM_W + 120.0, 425.0)
+    hero.velocity = Vector2.ZERO
+    last_room = -1
     actor_anim.sprite_frames = Art.actor_frames(character == "Kha")
     actor_anim.play("idle")
     anim_label = "idle"
