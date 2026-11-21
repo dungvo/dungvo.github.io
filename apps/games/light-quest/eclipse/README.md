@@ -4,6 +4,23 @@ Godot **4.4.1**, GDScript, renderer Compatibility. Tiếp tục từ PR #85 và 
 
 **Chơi:** https://dungvo.github.io/apps/games/light-quest/eclipse/godot-play/
 
+## Bản nâng cấp đường đi và tuyệt kỹ — V3
+
+| Nội dung mới | Cách sử dụng |
+|---|---|
+| An · Nguyệt Trảm | **Q** / nút Q: chém diện rộng phía trước, mỗi mục tiêu chịu tối đa 3 sát thương trong một lượt chém |
+| Kha · Tinh Bộ | **Q** / nút Q: dịch chuyển tối đa 155 đơn vị, dừng trước tường, bắn ba tia; có cửa sổ né ngắn |
+| Bước Gió | Nhận tại **đền xanh trên bệ ở nửa đầu mỗi màn** bằng E. Thả rồi nhấn nhảy lần nữa giữa không trung; tiếp đất nạp lại |
+| Di vật đường mới | E lấy rương ở cuối nhánh. Mỗi di vật giảm 0,6 giây hồi Q; từ 5 giây xuống 3,2 giây khi đủ ba |
+
+Ba đường nhánh đều quay về tuyến checkpoint trước boss, không bắt buộc để hoàn thành nhiệm vụ chính:
+
+- **Mái Tháp Chuông — Làng Trăng:** từ đền Bước Gió nhảy hai lần lên mái tháp; dùng Q cạnh ấn tím mở đường tới di vật.
+- **Lối Tán Rừng — Rừng Vọng:** dùng Bước Gió lên bệ rêu đang di chuyển, canh vị trí rồi Q phá ấn và nhảy tới rương.
+- **Hành Lang Tinh Tú — Hầm Bóng:** Q cạnh ấn tím gần đền để hiện hai bệ pha lê có va chạm, sau đó nhảy hai lần qua hành lang trên cao.
+
+Mẹo lên đền: đi theo các bệ cũ tới ký ức ở nhánh cao, rồi nhảy sang bệ có đền xanh bên phải. Q của Kha dịch chuyển theo hướng đang nhìn; có thể dùng giữa không trung. Mở ấn trước khi nhảy qua khoảng trống. Bước Gió, ấn mở và di vật được lưu; không cần học lại khi đổi nhân vật.
+
 | Màn | Nhiệm vụ và địa hình | Boss |
 |---|---|---|
 | Làng Trăng | Nhận nhiệm vụ từ Thợ Lưu Giữ; hai khu vực cầu đá, mảnh chuông trên bệ, bí mật trên cao | Vệ Binh Chuông Tàn: áp sát, lướt chém, chém gần; pha hai có đòn nối |

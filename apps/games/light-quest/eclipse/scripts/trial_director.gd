@@ -1,5 +1,7 @@
 extends Node2D
 ## Three isolated, two-room chapters using the original Godot scene art.
+const Routes := preload("res://scripts/moon_routes.gd")
+var routes: Node2D
 const Boss := preload("res://scripts/trial_boss.gd")
 const Relic := preload("res://scripts/trial_relic.gd")
 const TITLES := ["Làng Trăng", "Rừng Vọng", "Hầm Bóng"]
@@ -92,6 +94,8 @@ func _ready() -> void:
     column.add_child(choose)
     game.victory_panel.position = Vector2(235, 120)
     game.victory_panel.custom_minimum_size.x = 490
+    routes = Routes.new()
+    add_child(routes)
 
 func begin(index: int) -> void:
     run_id += 1
@@ -140,6 +144,9 @@ func begin(index: int) -> void:
     game.dash_cooldown = 0
     game.skill_time = 0
     game.combo_window = 0
+    game.burst_cooldown = 0
+    game.burst_time = 0
+    game.air_jumps = 1 if routes.air_step_unlocked else 0
     game.vfx.clear()
     game.victory_panel.hide()
     menu_button.show()
@@ -167,9 +174,10 @@ func begin(index: int) -> void:
     # An arena divider is opened by the two sigils and the village quest.
     barrier = StaticBody2D.new()
     barrier.collision_layer = 1
-    barrier.position = Vector2(start + 1280, 285)
-    barrier.add_child(game.Combat.rectangle(Vector2(16, 350)))
+    barrier.position = Vector2(start + 1280, 78)
+    barrier.add_child(game.Combat.rectangle(Vector2(16, 756)))
     add_child(barrier)
+    routes.build(index)
     game._say(TITLES[index] + " · Hai khu vực / một bí mật / một boss", 3)
     game.dialogue_label.text = STORIES[index] + "\n\nE / nút E để đóng. Checkpoint nằm trước đấu trường."
     game._show_dialogue(true)
@@ -190,9 +198,10 @@ func tick(delta: float) -> void:
     if not active: return
     var start := selected * 1920.0
     game.hero.position.x = clampf(game.hero.position.x, start + 26, start + 1890)
+    routes.tick(delta)
     for relic in relics:
         relic.tick(delta, game.hero.position)
-    if is_instance_valid(boss) and not boss.awake and boss.state != "dead" and game.hero.position.x > start + 1340:
+    if is_instance_valid(boss) and not boss.awake and boss.state != "dead" and game.hero.position.x > start + 1340 and sigils >= 2 and (selected != 0 or game.met_npc):
         boss.awake = true
         arena_locked = true
         game._say(BOSS_NAMES[selected] + " · Vệt vàng báo đòn: né rồi phản công!", 4)
@@ -210,6 +219,7 @@ func tick(delta: float) -> void:
 
 func interact() -> bool:
     if not active: return false
+    if routes.interact(): return true
     if selected == 0 and not game.met_npc and game.hero.position.distance_to(Vector2(290, 432)) < 90:
         game.met_npc = true
         game.dialogue_label.text = "Thợ Lưu Giữ: Hai mảnh chuông nằm trên các bệ đá. Mang chúng đến Vệ Binh. Khi lưỡi kiếm lóe vàng, lướt qua đòn hoặc dùng L để phản đòn.\n\nE để đóng."
@@ -254,6 +264,9 @@ func respawn() -> void:
     checkpoint_heal_ready = true
     if is_instance_valid(boss) and boss.state != "dead": boss.reset_encounter()
     game.skill_time = 0
+    game.burst_time = 0
+    game.burst_cooldown = 0
+    game.air_jumps = 1 if routes.air_step_unlocked else 0
     game.shield_cooldown = 0
     game.dash_cooldown = 0
     game._persist()
@@ -287,6 +300,7 @@ func next_trial() -> void:
 
 func return_menu() -> void:
     active = false
+    routes.clear_hint()
     game.started = false
     game._show_dialogue(false)
     game.victory_panel.hide()
@@ -315,6 +329,7 @@ func update_hud() -> void:
         boss_bar.value = boss.hp
     boss_bar.visible = boss_label.visible
     cooldowns.text = "L · %s  %s\nK · Lướt  %s" % ["Phản đòn" if game.character == "An" else "Hồi quang / xung lực", "SẴN SÀNG" if game.shield_cooldown <= 0 else "%.1fs" % game.shield_cooldown, "SẴN SÀNG" if game.dash_cooldown <= 0 else "%.1fs" % game.dash_cooldown]
+    cooldowns.text += "\nQ · %s  %s\n%s · Di vật %d/3" % ["Nguyệt Trảm" if game.character == "An" else "Tinh Bộ", "SẴN SÀNG" if game.burst_cooldown <= 0 else "%.1fs" % game.burst_cooldown, "Bước Gió" if routes.air_step_unlocked else "Tìm đền Bước Gió", routes.claimed.count(true)]
     prompt.text = ""
     for relic in relics:
         if (not relic.used or relic.kind == "checkpoint") and relic.position.distance_to(game.hero.position) < 100:
@@ -326,6 +341,6 @@ func _draw() -> void:
     if not active: return
     if is_instance_valid(barrier):
         var x := selected * 1920 + 1280
-        draw_line(Vector2(x, 130), Vector2(x, 456), Color("#a4dbf580"), 4, true)
+        draw_line(Vector2(x, -250), Vector2(x, 456), Color("#a4dbf580"), 4, true)
         for y in range(160, 450, 38):
             draw_circle(Vector2(x, y), 4, Color("#e6e4b0"))

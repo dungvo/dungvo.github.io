@@ -1,5 +1,24 @@
 # Eclipse — báo cáo ba màn, 21/11/2026
 
+## Nâng cấp V3: tuyệt kỹ và đường nhánh
+
+- Giữ nguyên Godot 4.4.1 và bộ hình gốc. Thêm Q cho An (Nguyệt Trảm, chém quét) và Kha (Tinh Bộ, sweep capsule trước khi dịch chuyển / ba đạn). Có VFX, âm thanh, pose từ bộ animation hiện tại và nút Q cảm ứng.
+- Mỗi chương có đền học Bước Gió (nhảy hai lần), một đường nhánh và di vật giảm hồi Q. Làng Trăng có mái tháp / ấn chắn; Rừng Vọng có bệ di động `AnimatableBody2D`; Hầm Bóng có bệ tinh tú đổi từ không va chạm sang có va chạm khi Q mở ấn.
+- Save v2 cũ vẫn dùng được; trường mới thiếu sẽ lấy mặc định. Lưu Bước Gió, ấn đã mở và di vật của từng chương. Cổng nhiệm vụ được kéo cao để không thể dùng kỹ năng mới vượt qua khi chưa đủ mảnh ấn.
+
+| Kiểm tra V3 | Bằng chứng |
+|---|---|
+| Sáu lượt đi nhánh mới | `routes_playthrough.gd`: An / Kha qua ba nhánh bằng controller thật; không teleport hay sửa HP; nhảy đến đền, học Bước Gió, mở ấn bằng Q, lấy di vật và quay lại checkpoint |
+| Bệ di động | Đứng yên trên bệ và kiểm tra nhân vật được bệ chở, không chỉ tự đuổi theo bệ |
+| Tuyệt kỹ | `abilities_test.gd`: An đánh mỗi actor một lần, tường chắn đòn; Kha sweep toàn capsule và không vượt cổng ở độ cao cũ; ba đạn và hồi chiêu hoạt động |
+| Cầu tinh tú | Chưa mở ấn: layer va chạm bằng 0. Mở bằng Q: chuyển sang WORLD, rồi kiểm tra đường nhảy thật |
+| Lưu tiến độ | Khôi phục quyền nhảy lần hai, ấn mở và di vật từ save v2 |
+| Web | Cả desktop và ba ngón cảm ứng vẫn chạy; kiểm tra thêm kích hoạt Q bằng bàn phím / nút cảm ứng ở cả ba chương |
+| Đường chính | Sáu lượt An / Kha của chiến dịch cũ vẫn hoàn thành |
+| Hình ảnh | Native capture bổ sung ba cảnh đường nhánh và ba cảnh tuyệt kỹ; cảnh dàn dựng được tách khỏi kiểm thử đường đi liên tục |
+
+Q hồi 5 giây, mỗi di vật giảm 0,6 giây (đủ ba còn 3,2 giây). Tinh Bộ dừng ở vật cản; người chơi vẫn cần canh nhảy khi dịch chuyển tới bệ cao hơn. Chưa có frame vẽ tay mới hoặc kiểm tra nhiệt trên iPhone thật.
+
 ## Phạm vi phát hành
 
 - Source: `feature/eclipse-godot-room-select-v1`, PR #85; Godot **4.4.1.stable.official.49a5bc7b6**.
@@ -41,6 +60,8 @@ godot --headless --editor --import --quit
 godot --headless --fixed-fps 60 --script res://tests/smoke.gd
 godot --headless --script res://tests/hit_geometry_test.gd
 godot --headless --fixed-fps 60 --script res://tests/campaign_playthrough.gd
+godot --headless --fixed-fps 60 --script res://tests/abilities_test.gd
+godot --headless --fixed-fps 60 --script res://tests/routes_playthrough.gd
 mkdir -p build/web
 godot --headless --export-release Web build/web/index.html
 # Cần playwright; script tự phục vụ build/web qua HTTP.

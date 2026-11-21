@@ -43,7 +43,11 @@ jobs:
           grep -q 'HIT GEOMETRY PASS' geometry.log
           timeout 120s godot --headless --fixed-fps 60 --script res://tests/campaign_playthrough.gd 2>&1 | tee campaign.log
           grep -q 'ECLIPSE SIX RUNS PASS' campaign.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' smoke.log geometry.log campaign.log
+          timeout 45s godot --headless --fixed-fps 60 --script res://tests/abilities_test.gd 2>&1 | tee abilities.log
+          grep -q 'ECLIPSE ABILITIES PASS' abilities.log
+          timeout 120s godot --headless --fixed-fps 60 --script res://tests/routes_playthrough.gd 2>&1 | tee routes.log
+          grep -q 'ECLIPSE ROUTES PASS' routes.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' smoke.log geometry.log campaign.log abilities.log routes.log
       - name: Export single-threaded Godot Web
         working-directory: apps/games/light-quest/eclipse
         shell: bash
@@ -57,7 +61,7 @@ jobs:
           python3 - <<'PY'
           import hashlib, json, os, pathlib
           folder = pathlib.Path('build/web')
-          info = {'engine':'4.4.1.stable.official.49a5bc7b6','source_sha':os.environ['GITHUB_SHA'], 'release':'three-chapters-v2', 'files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in folder.iterdir() if p.is_file()}}
+          info = {'engine':'4.4.1.stable.official.49a5bc7b6','source_sha':os.environ['GITHUB_SHA'], 'release':'moon-routes-v3', 'files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in folder.iterdir() if p.is_file()}}
           (folder/'build-info.json').write_text(json.dumps(info, indent=2)+'\n')
           PY
       - uses: actions/setup-node@v4

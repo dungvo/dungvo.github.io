@@ -29,7 +29,27 @@ func _capture() -> void:
         await _save("actual-chapter-%d-phase-two.png" % (chapter + 1))
         game.queue_free()
         await process_frame
-    print("ECLIPSE CAPTURE PASS: six production-renderer chapter / boss frames")
+    for chapter in range(3):
+        var game = load("res://scenes/main.tscn").instantiate()
+        game.save_enabled = false
+        root.add_child(game)
+        game.demo_room_select.select(chapter)
+        game._start("Kha" if chapter == 2 else "An")
+        game._interact()
+        game.trials.routes.air_step_unlocked = true
+        game.hero.position = Vector2(chapter * 1920 + 985, 130)
+        game.cam.reset_smoothing()
+        game.cam.force_update_scroll()
+        game.scenery.update_camera(game.cam.get_screen_center_position().x, false, true)
+        game.trials.routes.tick(0.016)
+        game.trials.update_hud()
+        game.set_physics_process(false)
+        await _save("actual-new-route-%d.png" % (chapter + 1))
+        game._signature()
+        await _save("actual-signature-%d.png" % (chapter + 1))
+        game.queue_free()
+        await process_frame
+    print("ECLIPSE CAPTURE PASS: production-renderer chapter, boss, route and signature frames")
     quit(0)
 func _save(filename: String) -> void:
     await process_frame

@@ -100,6 +100,13 @@ async function run() {
                     await canvas.screenshot({ path: path.join(evidence, `web-desktop-chapter-${chapter + 1}.png`) });
                 }
                 assert.notDeepEqual(await canvas.screenshot(), before, 'movement / jump / attack changes rendered gameplay');
+                const signature = page.waitForEvent('console', {predicate: message => message.text().includes('ECLIPSE SIGNATURE: ' + who), timeout:10000});
+                signature.catch(()=>{});
+                if (mobile) await tap(790,354);
+                else await page.keyboard.press('q');
+                await signature;
+                await page.waitForTimeout(80);
+                await canvas.screenshot({path:path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-signature-${chapter + 1}.png`)});
                 const line = (await probe).text();
                 const match = line.match(/([\d.]+) FPS, cap (\d+), viewport (\d+)x(\d+)/);
                 assert(match, 'engine render profile is reported');

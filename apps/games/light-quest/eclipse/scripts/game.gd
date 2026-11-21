@@ -19,6 +19,13 @@ const TrialDirector := preload("res://scripts/trial_director.gd")
 var trials: Node2D
 var skill_time := 0.0
 var parry_used := false
+var air_jumps := 0
+var burst_cooldown := 0.0
+var burst_time := 0.0
+var burst_facing := 1
+var burst_origin := Vector2.ZERO
+var burst_trace := Vector2.ZERO
+var burst_hits: Array[int] = []
 const Hit := preload("res://scripts/hit_geometry.gd")
 const ROOMS := ["Làng Trăng", "Rừng Vọng", "Hầm Bóng", "Tháp Pha Lê", "Cổng Đêm", "Đài Quan Sát", "Người Giữ Nguyệt"]
 const TIPS := ["Gặp Thợ Lưu Giữ (E) để nhận nhiệm vụ.", "Đánh quái và vượt bục đá.", "Tìm đường qua những bệ đá cổ.", "Xoay hai gương để dẫn tia sáng đến pha lê.", "Chỉ vào được khi Tháp Pha Lê đã sáng.", "Checkpoint: đứng gần đài và nhấn E.", "Phá khiên boss bằng ánh sáng. Đánh vào lúc khiên tan."]
@@ -32,7 +39,7 @@ var chapter: Label
 var light_status: Label
 var dialogue: PanelContainer
 var dialogue_label: Label
-var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false}
+var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false, "burst":false}
 var control_art: Dictionary = {}
 var joystick: Node2D
 var last_room := -1
@@ -242,6 +249,7 @@ func _make_ui() -> void:
     _touch_button(touchbar, "attack", "ĐÁNH", Vector2(805, 449), 43)
     _touch_button(touchbar, "dash", "LƯỚT", Vector2(705, 463), 33)
     _touch_button(touchbar, "skill", "LỰC", Vector2(898, 471), 33)
+    _touch_button(touchbar, "burst", "Q", Vector2(790, 354), 30)
     _touch_button(touchbar, "interact", "E", Vector2(898, 299), 26)
     dialogue = PanelContainer.new()
     dialogue.position = Vector2(145,220)
@@ -359,7 +367,7 @@ func _menu() -> void:
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
     var note := Label.new()
-    note.text = "A/D di chuyển · Space nhảy · J đánh\nK lướt · L kỹ năng · E tương tác · Esc chọn màn"
+    note.text = "A/D di chuyển · Space nhảy · J đánh\nK lướt · L kỹ năng · Q tuyệt kỹ · E tương tác"
     note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(note)
     var selector_label := Label.new()
@@ -442,10 +450,14 @@ func _input(event:InputEvent) -> void:
             KEY_K: _dash()
             KEY_R: _respawn()
             KEY_L: _skill()
+            KEY_Q: _signature()
 
 func _physics_process(delta:float) -> void:
     if not started or dialogue.visible or victory_panel.visible: return
     visual_clock += delta
+    burst_cooldown = maxf(0, burst_cooldown - delta)
+    burst_time = maxf(0, burst_time - delta)
+    if burst_time > 0 and character == "An": _signature_hits()
     if death_time > 0:
         death_time = maxf(0, death_time - delta)
         _tick_vfx(delta)
@@ -477,6 +489,7 @@ func _physics_process(delta:float) -> void:
     var grounded_before := hero.is_on_floor()
     if grounded_before:
         coyote_clock = COYOTE_WINDOW
+        air_jumps = 1 if trials.routes.air_step_unlocked else 0
     else:
         coyote_clock = maxf(0, coyote_clock-delta)
     var current_jump := bool(touch["jump"]) or Input.is_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP)
@@ -498,6 +511,12 @@ func _physics_process(delta:float) -> void:
         jump_buffer_clock = 0.0
         coyote_clock = 0.0
         _burst(hero.position + Vector2(0,22), Color("#d7f3d6"), 9, 95.0)
+    elif jump_buffer_clock > 0 and not grounded_before and air_jumps > 0:
+        air_jumps -= 1
+        hero.velocity.y = JUMP_SPEED
+        jump_buffer_clock = 0
+        sound.play_cue("dash", 1.3)
+        _burst(hero.position + Vector2(0, 22), Color("#a8efda"), 14, 165)
     if dash_time > 0:
         dash_time = maxf(0, dash_time-delta)
         hero.velocity.x = 565.0 * facing
@@ -525,6 +544,9 @@ func _physics_process(delta:float) -> void:
     if touch["skill"]:
         touch["skill"] = false
         _skill()
+    if touch["burst"]:
+        touch["burst"] = false
+        _signature()
     if touch["interact"]:
         touch["interact"] = false
         _interact()
@@ -557,7 +579,7 @@ func _physics_process(delta:float) -> void:
 
 func _refresh_effects() -> void:
     var shield := is_instance_valid(guardian) and not boss_dead and boss_shield_time <= 0 and last_room >= 5
-    var dynamic := not vfx.is_empty() or i_frames > 0 or skill_time > 0 or (slash_time > 0 and character == "An")
+    var dynamic := not vfx.is_empty() or i_frames > 0 or skill_time > 0 or burst_time > 0 or (slash_time > 0 and character == "An")
     if dynamic or effects_visible or shield != guardian_shield_visible:
         effects_visible = dynamic
         guardian_shield_visible = shield
@@ -583,6 +605,7 @@ func _update_character_animation() -> void:
 
 func _select_motion_state() -> String:
     if hurt_time > 0.0: return "hurt"
+    if burst_time > 0: return "attack" if character == "Kha" else "dash"
     if skill_time > 0: return "attack" if character == "Kha" else "dash"
     if dash_time > 0.0: return "dash"
     if slash_time > 0.0: return "attack"
@@ -682,6 +705,8 @@ func _respawn() -> void:
     dash_time = 0.0
     coyote_clock = 0.0
     attack_windup = 0.0
+    burst_time = 0
+    burst_hits.clear()
     attack_buffer = 0.0
     jump_buffer_clock = 0.0
     for bolt in bolts:
@@ -748,6 +773,52 @@ func _skill_damage(radius: float, amount: int) -> void:
         if not is_instance_valid(foe) or foe.state == "dead": continue
         if foe.position.distance_to(hero.position) < radius and Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
             foe.take_hit(amount, self)
+
+func _signature() -> void:
+    if not started or dialogue.visible or victory_panel.visible or death_time > 0 or burst_cooldown > 0: return
+    burst_cooldown = maxf(3.0, 5.0 - trials.routes.claimed.count(true) * 0.6)
+    burst_time = 0.38
+    burst_facing = facing
+    burst_origin = hero.position
+    burst_trace = hero.position
+    burst_hits.clear()
+    attack_windup = 0
+    attack_buffer = 0
+    slash_time = 0
+    anim_label = ""
+    trials.routes.resonate(hero.position)
+    if character == "An":
+        sound.play_cue("slash", 0.75)
+        _signature_hits()
+        _burst(hero.position, Color("#bdefff"), 24, 240)
+        _say("An · NGUYỆT TRẢM — chém quét ba sát thương", 1.4)
+    else:
+        # Sweep the full capsule along the path. Blink never crosses a solid wall.
+        var motion := Vector2(facing * 155, 0)
+        var collision := hero.move_and_collide(motion)
+        burst_trace = hero.position
+        if collision: emit_impact(collision.get_position(), Color("#c0c9ff"))
+        i_frames = maxf(i_frames, 0.22)
+        sound.play_cue("dash", 1.1)
+        for angle in [-0.16, 0.0, 0.16]:
+            spawn_bolt(hero.position, Vector2(500 * facing, 0).rotated(angle), true, 1)
+        _burst(burst_origin, Color("#d4bbff"), 16, 190)
+        _burst(hero.position, Color("#c3f3f0"), 16, 190)
+        _say("Kha · TINH BỘ — dịch chuyển / ba tia sáng", 1.4)
+    _update_hud()
+    _refresh_effects()
+    print("ECLIPSE SIGNATURE: " + character)
+
+func _signature_hits() -> void:
+    var area := Rect2(hero.position + Vector2(-22 if burst_facing > 0 else -150, -72), Vector2(172, 140))
+    var space := get_world_2d().direct_space_state
+    for hit in Combat.overlapping(space, area, Combat.HOSTILE_HURT):
+        var foe: CharacterBody2D = hit.collider.get_parent()
+        if not is_instance_valid(foe) or foe.state == "dead" or foe.get_instance_id() in burst_hits: continue
+        if not Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty(): continue
+        burst_hits.append(foe.get_instance_id())
+        foe.take_hit(3, self)
+        sound.play_cue("contact", 0.85)
 
 func guardian_defeated() -> void:
     boss_dead = true
@@ -863,7 +934,7 @@ func _persist() -> void:
     if not save_enabled or not is_instance_valid(trials): return
     var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":2, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected}))
+        f.store_string(JSON.stringify({"version":2, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened}))
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -884,6 +955,13 @@ func _restore() -> void:
         for i in range(3):
             if fragments[i] is Array and fragments[i].size() == 2:
                 trials.collected[i] = [fragments[i][0] == true, fragments[i][1] == true]
+    trials.routes.air_step_unlocked = data.get("air_step", false) == true
+    for key in ["route_claimed", "route_opened"]:
+        var values = data.get(key, [])
+        if values is Array and values.size() == 3:
+            var clean := [false, false, false]
+            for i in range(3): clean[i] = values[i] == true
+            trials.routes.set("claimed" if key == "route_claimed" else "opened", clean)
     max_health = 5 + trials.secrets.count(true)
     health = max_health
 
@@ -898,6 +976,20 @@ func _draw() -> void:
         draw_circle(particle["p"], maxf(1.0,4.5*opacity),tint)
     if hero:
         var p:=hero.position
+        if burst_time > 0:
+            var tint := Color("#9fe4ff") if character == "An" else Color("#d5b4ff")
+            var opacity := burst_time / 0.38
+            tint.a = opacity * 0.75
+            if character == "An":
+                var angle := 0.0 if burst_facing > 0 else PI
+                var sweep := angle + (1.0 - opacity) * 1.6 * burst_facing - 0.8
+                draw_arc(p, 140, sweep - 1.2, sweep + 1.2, 48, Color(tint, opacity * 0.17), 18, true)
+                draw_arc(p, 133, sweep - 1.2, sweep + 1.2, 48, tint, 5, true)
+                draw_arc(p, 126, sweep - 1.2, sweep + 1.2, 48, Color("#ecffff"), 2, true)
+            else:
+                draw_line(burst_origin, burst_trace, Color(tint, opacity * 0.3), 20, true)
+                draw_line(burst_origin, burst_trace, tint, 3, true)
+                draw_arc(p, 36 + (1 - opacity) * 35, 0, TAU, 32, tint, 2, true)
         if skill_time > 0:
             var radius := 38.0 + (1.0 - skill_time / 0.46) * (95 if character == "Kha" else 20)
             draw_arc(p, radius, 0, TAU, 48, Color("#a6edffa0"), 4, true)
