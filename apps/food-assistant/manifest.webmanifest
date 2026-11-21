@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Food Assistant",
+  "short_name": "Food Assistant",
+  "description": "Gọi món, quản lý bàn, màn bếp và thanh toán.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#f8f7f2",
+  "background_color": "#f8f7f2",
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ],
+  "shortcuts": [{ "name": "Màn bếp", "url": "./#bep" }]
+}
