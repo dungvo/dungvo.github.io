@@ -85,7 +85,7 @@ func _ready() -> void:
     hud_layer.hide()
 
 func _blank() -> Dictionary:
-    return {"checkpoint":0,"crystal":false,"sight":false,"bell":false,"relic":false,"secret":false,"won":false}
+    return {"checkpoint":0,"crystal":false,"sight":false,"bell":false,"relic":false,"secret":false,"won":false,"guardian_down":false}
 
 func point(local: Vector2) -> Vector2:
     return Vector2(origin + (WIDTH - local.x if mirrored else local.x), local.y)
@@ -100,7 +100,7 @@ func begin(index: int) -> void:
     stage = index
     origin = 7200.0 + stage * 1800.0
     mirrored = stage == 1
-    if progress[stage].won:
+    if progress[stage].won and not game.story_mode:
         var secret: bool = progress[stage].secret
         progress[stage] = _blank()
         progress[stage].secret = secret
@@ -150,6 +150,13 @@ func begin(index: int) -> void:
     game.cam.limit_bottom = 600
     if stage == 3: _coast()
     else: _terrain()
+    if game.story_mode:
+        _marker("story_back",Vector2(102,456),"E · Về miền trước",2)
+        _detail(7,Vector2(102,456),Vector2(85,124))
+        if progress[stage].won or progress[stage].guardian_down:
+            boss_dead = true
+            if is_instance_valid(boss): boss.queue_free()
+            if stage == 3: _remove_body(coast_doors[2])
     var stations := [Vector2(140,432), Vector2(870,-144), Vector2(650,-1244)]
     if stage == 3: stations = [Vector2(140,432),Vector2(1280,226),Vector2(2460,106)]
     var cp: int = clampi(progress[stage].checkpoint, 0, 2)
@@ -173,6 +180,9 @@ E để bắt đầu · I hoặc Trang bị để đổi cách đánh."
     queue_redraw()
     print("ECLIPSE SKY: %d %s" % [stage, game.character])
 
+func story_exit() -> Vector2:
+    return Vector2(4310,105) if stage == 3 else Vector2(1240,-1730 if stage == 2 else -1430)
+
 func _width() -> float:
     return 4420.0 if stage == 3 else WIDTH
 
@@ -190,6 +200,8 @@ func _coast() -> void:
             Rect2(2410,130,330,28),Rect2(3060,205,580,36),Rect2(3690,162,310,26),Rect2(4060,105,360,32)]:
         _platform(rect)
     _platform(Rect2(2810,185,190,24),true,true)
+    if game.story_mode:
+        _platform(Rect2(3994,143,72,18),true,false,true)
     _platform(Rect2(1690,470,220,26))
     _platform(Rect2(2030,425,105,24))
     for at in [Vector2(740,264),Vector2(1030,187),Vector2(2250,151),Vector2(2530,22),Vector2(3190,100)]:
@@ -285,10 +297,10 @@ func _terrain() -> void:
     if progress[stage].relic: _remove_body(weak_floor)
     _reveal_bridge()
 
-func _platform(rect: Rect2, one_way := true, ghost := false) -> PhysicsBody2D:
+func _platform(rect: Rect2, one_way := true, ghost := false, shuttle := false) -> PhysicsBody2D:
     var r := box(rect)
     var body: PhysicsBody2D
-    if stage == 1 and ghost and rect.position.y > -500:
+    if shuttle or (stage == 1 and ghost and rect.position.y > -500):
         var carrier := AnimatableBody2D.new()
         carrier.sync_to_physics = false
         body = carrier
@@ -304,7 +316,7 @@ func _platform(rect: Rect2, one_way := true, ghost := false) -> PhysicsBody2D:
     game.scenery.remove_child(art)
     root.add_child(art)
     body.set_meta("art",art)
-    if body is AnimatableBody2D: movers.append({"body":body,"art":art,"p":body.position,"a":art.position})
+    if body is AnimatableBody2D: movers.append({"body":body,"art":art,"p":body.position,"a":art.position,"shuttle":shuttle})
     if ghost:
         ghost_bodies.append(body)
         ghost_art.append(art)
@@ -370,9 +382,12 @@ func tick(delta: float) -> void:
     game.hero.position.x = clampf(game.hero.position.x,origin + 28,origin + _width() - 28)
     best_height = maxf(best_height,456 - game.hero.position.y)
     for mover in movers:
-        var offset := Vector2(sin(elapsed * 1.1) * 28, 0)
+        var offset := Vector2(0,sin(elapsed*1.8)*54) if mover.shuttle else Vector2(sin(elapsed * 1.1) * 28, 0)
         mover.body.position = mover.p + offset
         mover.art.position = mover.a + offset
+    if game.story_mode and stage == 3 and fmod(elapsed,2.4) > 1.3:
+        if box(Rect2(3810,142,90,23)).has_point(game.hero.position+Vector2(0,19)):
+            game.damage_player(1,point(Vector2(3855,162)).x)
     for marker in markers:
         var hidden: bool = marker.kind == "secret" and not progress[stage].sight
         marker.tick(delta,game.hero.position)
@@ -471,6 +486,9 @@ func interact() -> void:
     for marker in markers:
         if game.hero.position.distance_to(marker.position) > 60: continue
         match marker.kind:
+            "story_back":
+                game.cross_story_gate(-1)
+                return
             "checkpoint1", "checkpoint2":
                 var checkpoint_index := 1 if marker.kind == "checkpoint1" else 2
                 if stage == 3:
@@ -518,6 +536,11 @@ func interact() -> void:
                 if not boss_dead:
                     game._say("Đánh bại Thủ Hộ và tìm Di Vật trong phòng kín trước",3)
                     return
+                if game.story_mode and stage < 3:
+                    progress[stage].won = true
+                    game.mark_chapter_complete(stage+3)
+                    game.cross_story_gate(1)
+                    return
                 _finish()
                 return
     game._say("E gần trụ lưu, di vật hoặc cổng đỉnh; 1–6 dùng kỹ năng",2)
@@ -529,6 +552,9 @@ func respawn() -> void:
 
 func boss_defeated() -> void:
     boss_dead = true
+    if game.story_mode:
+        progress[stage].guardian_down = true
+        game._persist()
     game.i_frames = 1.2
     for bolt in game.bolts:
         if is_instance_valid(bolt) and not bolt.friendly: bolt.life = 0
@@ -572,7 +598,7 @@ func restore(data: Variant) -> void:
         if not data[i] is Dictionary: continue
         var clean := _blank()
         clean.checkpoint = clampi(int(data[i].get("checkpoint",0)),0,2)
-        for key in ["crystal","sight","bell","relic","secret","won"]: clean[key] = data[i].get(key,false) == true
+        for key in ["crystal","sight","bell","relic","secret","won","guardian_down"]: clean[key] = data[i].get(key,false) == true
         progress[i] = clean
 
 func update_hud() -> void:
@@ -604,6 +630,12 @@ func update_hud() -> void:
 func _draw() -> void:
     if not active: return
     if stage == 3:
+        if game.story_mode:
+            var phase := fmod(elapsed,2.4)
+            for i in range(6):
+                var at := point(Vector2(3810+i*15,162))
+                var spike_height := 22.0 if phase > 1.3 else (6.0 if phase > 0.88 else 2.0)
+                draw_colored_polygon(PackedVector2Array([at,at+Vector2(7,-spike_height),at+Vector2(14,0)]),Color("#ffe6aa") if phase > 1.3 else Color("#a05e4d"))
         for i in coast_doors.size():
             var door := coast_doors[i]
             if not is_instance_valid(door) or door.collision_layer == 0: continue

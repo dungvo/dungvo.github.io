@@ -112,6 +112,10 @@ var guardian_shield_visible := false
 
 var loadout: CanvasLayer
 var journey_next := 0
+var story_mode := false
+var story_room := -1
+var story_hero := "An"
+var story_button: Button
 
 func _ready() -> void:
     mobile_web = OS.has_feature("web") and DisplayServer.is_touchscreen_available()
@@ -377,7 +381,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nCỬA NGUYỆT · V7"
+    title.text = "LIGHT QUEST: ECLIPSE\nHÀNH TRÌNH NHẬT THỰC · V8"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -403,9 +407,21 @@ func _menu() -> void:
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
         var b := Button.new()
         b.text = "Chơi: " + who
-        b.pressed.connect(func(): _start("Kha" if who.begins_with("Kha") else "An"))
+        b.pressed.connect(func():
+            story_mode = false
+            _start("Kha" if who.begins_with("Kha") else "An")
+        )
         b.custom_minimum_size.y = 38
         v.add_child(b)
+    story_button = Button.new()
+    story_button.text = "VÀO TRUYỆN · " + ("Tiếp tục" if story_room >= 0 else "Bắt đầu")
+    story_button.custom_minimum_size.y = 36
+    story_button.pressed.connect(func():
+        story_mode = true
+        demo_room_select.select(maxi(0, story_room))
+        _start(story_hero)
+    )
+    v.add_child(story_button)
     v.add_theme_constant_override("separation", 12)
     menu.add_theme_stylebox_override("panel", _panel_style())
     dialogue.add_theme_stylebox_override("panel", _panel_style())
@@ -444,6 +460,11 @@ func _start(who: String) -> void:
         sky.stop()
         trials.begin(current_trial)
         arts.reset()
+    if story_mode:
+        story_room = current_trial
+        story_hero = character
+        story_button.text = "VÀO TRUYỆN · Tiếp tục"
+        _persist()
     _update_hud()
     if OS.has_feature("web") and "--eclipse-render-probe" in OS.get_cmdline_user_args():
         _measure_browser_render_rate()
@@ -935,6 +956,15 @@ func _interact() -> void:
     if dialogue.visible:
         _show_dialogue(false)
         return
+    if story_mode and not sky.active and trials.active:
+        var local_x := hero.position.x-current_trial*1920
+        if current_trial > 0 and absf(local_x-95) < 58 and hero.position.y > 374:
+            cross_story_gate(-1)
+            return
+        if absf(local_x-1810) < 58 and hero.position.y > 374:
+            if trials.wins[current_trial]: cross_story_gate(1)
+            else: _say("Cổng còn khóa · đánh bại người canh giữ",3)
+            return
     if sky.active:
         sky.interact()
         return
@@ -998,6 +1028,23 @@ func _update_hud() -> void:
     if is_instance_valid(trials): trials.update_hud()
     if is_instance_valid(sky) and sky.active: sky.update_hud()
 
+func cross_story_gate(direction: int) -> void:
+    var destination := current_trial + direction
+    if destination < 0 or destination > 6: return
+    demo_room_select.select(destination)
+    _start(character)
+    if sky.active:
+        var at: Vector2 = sky.story_exit() if direction < 0 else Vector2(140,432)
+        hero.position = sky.point(at + Vector2(0,-24 if direction < 0 else 0))
+    else:
+        hero.position = Vector2(destination*1920 + (1800 if direction < 0 else 110),432)
+    checkpoint = hero.position
+    cam.reset_smoothing()
+    cam.force_update_scroll()
+    _show_dialogue(false)
+    sound.play_cue("light")
+    _say("Cổng đã mở · E để đi tiếp hoặc quay về",3)
+
 func mark_chapter_complete(chapter_index: int) -> void:
     journey_next = maxi(journey_next, mini(chapter_index + 1, 6))
     _persist()
@@ -1006,7 +1053,7 @@ func _persist() -> void:
     if not save_enabled or not is_instance_valid(trials): return
     var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
+        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -1014,6 +1061,8 @@ func _restore() -> void:
     if not f: return
     var data = JSON.parse_string(f.get_as_text())
     if not data is Dictionary or data.get("version") != 2: return
+    story_room = clampi(int(data.get("story_room", -1)), -1, 6)
+    story_hero = "Kha" if data.get("story_hero") == "Kha" else "An"
     journey_next = clampi(int(data.get("journey_next", 0)), 0, 6)
     loadout.weapon = clampi(int(data.get("weapon", 0)), 0, 2)
     loadout.favorite = clampi(int(data.get("favorite", -1)), -1, 5)

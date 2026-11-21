@@ -102,7 +102,7 @@ func begin(index: int) -> void:
     active = true
     selected = index
     # Replay defeated chapters from the start; preserve fragments for unfinished saves.
-    if wins[index]: collected[index] = [false, false]
+    if wins[index] and not game.story_mode: collected[index] = [false, false]
     sigils = collected[index].count(true)
     arena_locked = false
     checkpoint_heal_ready = true
@@ -123,6 +123,7 @@ func begin(index: int) -> void:
     game.hero.position = Vector2(start + (1010.0 if saved[index] and not wins[index] else 110.0), 432)
     game.hero.velocity = Vector2.ZERO
     game.checkpoint = game.hero.position
+    game.cam.limit_top = -250
     game.cam.limit_left = int(start)
     game.cam.limit_right = int(start + 1920)
     game.cam.reset_smoothing()
@@ -171,12 +172,20 @@ func begin(index: int) -> void:
     boss.arena = Vector2(start + 1320, start + 1850)
     add_child(boss)
     game.enemies.append(boss)
+    if game.story_mode:
+        if wins[index]: boss.queue_free()
+        if index > 0:
+            _relic("story_back", Vector2(start+95,432), "E · Về miền trước")
+            decorations.append(game.scenery._prop(7,Vector2(start+95,456),Vector2(88,125)))
+        _relic("story_next", Vector2(start+1810,432), "E · Cổng sang miền kế")
+        decorations.append(game.scenery._prop(7,Vector2(start+1810,456),Vector2(88,125)))
     # An arena divider is opened by the two sigils and the village quest.
     barrier = StaticBody2D.new()
     barrier.collision_layer = 1
     barrier.position = Vector2(start + 1280, 78)
     barrier.add_child(game.Combat.rectangle(Vector2(16, 756)))
     add_child(barrier)
+    if game.story_mode and wins[index]: barrier.queue_free()
     routes.build(index)
     game._say(TITLES[index] + " · Hai khu vực / một bí mật / một boss", 3)
     game.dialogue_label.text = STORIES[index] + "\n\nE / nút E để đóng. Checkpoint nằm trước đấu trường."
@@ -286,6 +295,10 @@ func boss_defeated() -> void:
     victory_title.text = TITLES[selected].to_upper() + " · ĐÃ GIẢI PHÓNG"
     victory_text.text = BOSS_NAMES[selected] + " đã gục ngã.\nNguyệt Lướt đã thức tỉnh · Bí mật: %d/3\n%s" % [secrets.count(true), "Chuông lại ngân. Tiếng vọng dẫn vào rừng." if selected == 0 else ("Lang Vương để lộ cửa hầm ký ức." if selected == 1 else "Thời gian chuyển động. Ba miền đã được giải phóng.")]
     next_button.text = "Tiếp: " + (TITLES[selected + 1] if selected < 2 else "Tháp Gió")
+    if game.story_mode:
+        game._say("Đã giải phóng miền này · đến cổng bên phải",5)
+        update_hud()
+        return
     var ending := create_tween()
     ending.tween_interval(0.75)
     var cleared := selected
