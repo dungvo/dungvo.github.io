@@ -143,7 +143,7 @@ func _region(index: int, origin: Vector2, scale_value: float, labels: bool, mark
 
 func _link(a: Vector2, b: Vector2, color: Color, reason: String, small: bool) -> void:
     var mid: Vector2
-    var stroke := 1.35 if small else 2.7
+    var stroke := 7.0 if compact else (1.35 if small else 2.7)
     var path: PackedVector2Array
     if absf(b.x - a.x) > absf(b.y - a.y):
         mid = Vector2((a.x + b.x) * 0.5, (a.y + b.y) * 0.5)
@@ -152,10 +152,10 @@ func _link(a: Vector2, b: Vector2, color: Color, reason: String, small: bool) ->
         mid = (a + b) * 0.5
         path = PackedVector2Array([a, Vector2(a.x, mid.y), Vector2(b.x, mid.y), b])
     draw_polyline(path, INK, stroke + 3, true)
-    draw_polyline(path, color.darkened(0.22), stroke, true)
+    draw_polyline(path, color if compact else color.darkened(0.22), stroke, true)
     if not reason.is_empty():
         var direction := Vector2.DOWN if absf(b.x - a.x) >= absf(b.y - a.y) else Vector2.RIGHT
-        var span := 4.0 if small else 8.0
+        var span := 16.0 if compact else (4.0 if small else 8.0)
         draw_line(mid - direction * span, mid + direction * span, INK, stroke + 5, true)
         draw_line(mid - direction * span, mid + direction * span, LOCK, stroke + 1, true)
 
@@ -169,11 +169,13 @@ func _room(rect: Rect2, color: Color, active: bool, known: bool, small: bool) ->
     draw_colored_polygon(shape, color.darkened(0.55) if known or active else INK.lightened(0.07))
     if active or known:
         shape.append(shape[0])
-        draw_polyline(shape, GOLD if active else color, 1.7 if not small else 1.15, true)
+        var stroke := 7.0 if compact else (1.15 if small else 1.7)
+        draw_polyline(shape, GOLD if active else color, stroke, true)
     else:
         for i in shape.size():
             draw_dashed_line(shape[i], shape[(i + 1) % shape.size()], color.darkened(0.24),
-                1.0 if not small else 0.85, 5 if not small else 2.5, true, true)
+                5.5 if compact else (0.85 if small else 1.0),
+                17.0 if compact else (2.5 if small else 5.0), true, true)
 
 func _anchor(at: Vector2, scale_value: float) -> void:
     draw_arc(at - Vector2(0, 7) * scale_value, 3.1 * scale_value, 0, TAU, 11, AQUA, 1.6, true)

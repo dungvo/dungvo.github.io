@@ -51,7 +51,7 @@ func _ready() -> void:
     boss_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     boss_label.add_theme_color_override("font_color", Color("#ffdab0"))
     mini_map = game._hud_label(layer, Vector2(280, 70), Vector2(400, 30), 13)
-    cooldowns = game._hud_label(layer, Vector2(22, 85), Vector2(215, 50), 13)
+    cooldowns = game._hud_label(layer, Vector2(22, 129), Vector2(240, 63), 13)
     boss_bar = ProgressBar.new()
     boss_bar.position = Vector2(280, 137)
     boss_bar.show_percentage = false
