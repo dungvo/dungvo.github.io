@@ -69,6 +69,8 @@ var started := false
 var menu: PanelContainer
 var demo_room_select: OptionButton
 var current_trial := 0
+var trial_completed := [false, false, false]
+var trial_reward_notice := ""
 const TRIAL_TITLES := ["HỒI I — TIẾNG CHUÔNG CUỐI", "HỒI II — LỜI THÌ THẦM", "HỒI III — KÝ ỨC BỊ CHÔN VÙI"]
 const TRIAL_STORY := ["Tất cả đồng hồ đã dừng. Hãy tìm Thợ Lưu Giữ và khám phá bí mật của ngôi làng.", "Rừng Vọng đang nuốt dần lối đi. Vượt qua sói và dơi để tìm đường tiến sâu hơn.", "Dưới lòng đất, ký ức bị phong ấn. Đánh bại kẻ canh giữ và tìm Nguyệt Thạch."]
 const TRIAL_OBJECTIVES := ["Nhiệm vụ: nói chuyện với Thợ Lưu Giữ (E)", "Nhiệm vụ: vượt qua sói và dơi của Rừng Vọng", "Nhiệm vụ: tìm rương Nguyệt Thạch (E)"]
@@ -391,6 +393,9 @@ func _start(who: String) -> void:
     menu.hide()
     _reset_touch()
     _say(TRIAL_TITLES[current_trial], 3.0)
+    checkpoint = hero.global_position
+    health = max_health
+    _update_hud()
     dialogue_label.text = TRIAL_TITLES[current_trial] + "\n" + TRIAL_STORY[current_trial] + "\n\nNhấn E để bắt đầu khám phá."
     _show_dialogue(true)
     if OS.has_feature("web") and "--eclipse-render-probe" in OS.get_cmdline_user_args():
@@ -429,6 +434,7 @@ func _input(event:InputEvent) -> void:
 
 func _physics_process(delta:float) -> void:
     if not started or dialogue.visible or victory_panel.visible: return
+    _check_trial_progress()
     visual_clock += delta
     if death_time > 0:
         death_time = maxf(0, death_time - delta)
@@ -804,6 +810,30 @@ func _say(value:String,secs:float) -> void:
     notice_time=secs
     _update_hud()
 
+func _check_trial_progress() -> void:
+    if current_trial < 0 or current_trial >= 3 or trial_completed[current_trial]:
+        return
+    var finished := false
+    match current_trial:
+        0:
+            finished = met_npc
+        1:
+            finished = true
+            for enemy in enemies:
+                if is_instance_valid(enemy) and enemy.global_position.x >= ROOM_W and enemy.global_position.x < 2.0 * ROOM_W:
+                    finished = false
+                    break
+        2:
+            finished = found_chest
+    if not finished:
+        return
+    trial_completed[current_trial] = true
+    checkpoint = hero.global_position
+    health = max_health
+    _persist()
+    _say("HOÀN THÀNH " + TRIAL_TITLES[current_trial] + " — đã lưu checkpoint!", 5.0)
+    emit_impact(hero.global_position, Color("#ffdd93"))
+
 func _update_hud() -> void:
     if hud==null:return
     var r:=clampi(int(hero.position.x/ROOM_W) if hero else 0,0,6)
@@ -811,7 +841,7 @@ func _update_hud() -> void:
     hearts.show_health(health, max_health)
     chapter.text = ROOMS[r]
     if r == current_trial and current_trial < 3:
-        light_status.text = TRIAL_OBJECTIVES[current_trial]
+        light_status.text = ("HOÀN THÀNH · Checkpoint đã lưu" if trial_completed[current_trial] else TRIAL_OBJECTIVES[current_trial])
     else:
         light_status.text = "Cổng Đêm đã mở" if activated else "Dẫn sáng đến Cổng Đêm"
     help.text = notice if notice_time > 0 else ""
