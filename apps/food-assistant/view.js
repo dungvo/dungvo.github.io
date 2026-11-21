@@ -146,8 +146,17 @@ function settingsPage(state, doc) {
     : '<p class="muted">Kết nối các điện thoại và máy tính bảng vào cùng một API để dùng chung đơn.</p><form data-form="connect" class="form-stack">'
     + '<label class="field">Địa chỉ API<input name="endpoint" type="url" placeholder="https://api.example.com" required></label>'
     + '<label class="field">Mã kết nối quán<input name="token" type="password" autocomplete="off" minlength="24" maxlength="256" required></label>'
-    + '<label class="checkbox"><input name="allowAI" type="checkbox">Cho phép gửi câu chưa hiểu tới AI từ máy chủ</label>'
     + '<button class="btn primary" type="submit">' + icon('link', 17) + 'Kết nối</button></form>';
+  const voice = '<section class="panel"><div class="panel-heading">' + icon('mic')
+    + '<h2>Trợ lý và giọng nói</h2></div>' + (doc.config ? '<form data-form="voice-settings" class="form-stack">'
+    + '<label class="checkbox"><input name="allowAI" type="checkbox"' + (doc.config.allowAI ? ' checked' : '')
+    + '>Dùng AI cho câu gọi khó hiểu</label><label class="checkbox"><input name="allowAudio" type="checkbox"'
+    + (doc.config.allowAudio ? ' checked' : '') + '>Cho phép nút thu âm qua máy chủ</label>'
+    + '<p class="muted">' + (doc.transcriptionEnabled
+      ? 'Khi chọn nút thu âm, bản thu được gửi tới OpenAI qua máy chủ của quán.'
+      : 'Máy chủ chưa bật chuyển giọng nói thành chữ.') + '</p>'
+    + '<button class="btn outline" type="submit">Lưu cài đặt trợ lý</button></form>'
+    : '<p class="muted">Để bổ sung thu âm khi micro trình duyệt gặp lỗi, kết nối API ở mục Kết nối thiết bị.</p>') + '</section>';
   const failure = doc.failure ? '<div class="notice" role="alert"><strong>Lệnh cần kiểm tra</strong><p>' + esc(doc.failure.message) + '</p>'
     + (doc.failure.code === 'DUPLICATE' ? '<button data-action="repeat-sync" class="btn primary">Xác nhận gọi thêm</button>' : '')
     + '<button data-action="discard-sync" class="btn outline">Bỏ lệnh này</button></div>' : '';
@@ -155,7 +164,7 @@ function settingsPage(state, doc) {
     + '<div class="settings-grid"><section class="panel"><div class="panel-heading">' + icon('tables') + '<h2>Số bàn</h2></div><form data-form="tables" class="form-stack">'
     + '<label class="field">Số bàn phục vụ<input type="number" name="count" min="1" max="60" value="' + state.tableCount + '" required></label>'
     + '<button class="btn primary" type="submit">Lưu số bàn</button></form></section>'
-    + '<section class="panel"><div class="panel-heading">' + icon('link') + '<h2>Kết nối thiết bị</h2></div>' + sync + failure + '</section>'
+    + '<section class="panel"><div class="panel-heading">' + icon('link') + '<h2>Kết nối thiết bị</h2></div>' + sync + failure + '</section>' + voice
     + '<section class="panel"><div class="panel-heading">' + icon('shield') + '<h2>Sao lưu và khôi phục</h2></div>'
     + '<p class="muted">Tải bản JSON gồm thực đơn, bàn đang mở, hóa đơn và lịch sử.</p><div class="button-row"><button class="btn outline" data-action="backup">'
     + icon('download', 17) + 'Tải bản sao</button>'

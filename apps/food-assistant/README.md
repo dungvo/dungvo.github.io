@@ -46,6 +46,7 @@ Trên máy chạy API, cần Node.js từ 22.13 hoặc 24 LTS. Đặt các biế
 | `FOOD_ORIGINS` | Danh sách origin phân cách bằng dấu phẩy. Mặc định là `https://dungvo.github.io`. |
 | `OPENAI_API_KEY` | Tùy chọn, bí mật ở backend. Khi để trống, app vẫn xử lý được các câu thông thường bằng quy tắc. |
 | `OPENAI_MODEL` | Tùy chọn, mặc định `gpt-4.1-mini`. Model phải hỗ trợ Structured Outputs. |
+| `FOOD_TRANSCRIBE` | Đặt `1` để bật chuyển bản thu tiếng Việt thành chữ bằng `gpt-transcribe`. Cần `OPENAI_API_KEY`. |
 
 Chạy từ thư mục `apps/food-assistant`.
 
@@ -53,9 +54,12 @@ Chạy từ thư mục `apps/food-assistant`.
 npm start
 ```
 
-Cấu hình reverse proxy TLS để chuyển tiếp đường dẫn `/api/` tới `127.0.0.1:8787`. Nếu muốn tự phục vụ app ở cùng địa chỉ, chuyển tiếp `/` luôn. Dùng đường dẫn có dấu gạch chéo cuối cho app. Trên từng thiết bị chọn **Cài đặt → Kết nối thiết bị**, nhập địa chỉ HTTPS và mã quán. Mỗi máy bật lựa chọn gửi câu chưa hiểu tới AI nếu muốn dùng fallback. Muốn đổi lựa chọn sau khi kết nối, ngắt rồi kết nối lại.
+Cấu hình reverse proxy TLS để chuyển tiếp đường dẫn `/api/` tới `127.0.0.1:8787`. Nếu muốn tự phục vụ app ở cùng địa chỉ, chuyển tiếp `/` luôn. Dùng đường dẫn có dấu gạch chéo cuối cho app. Trên từng thiết bị chọn **Cài đặt → Kết nối thiết bị**, nhập địa chỉ HTTPS và mã quán. Có thể bật hoặc tắt từng tính năng tại **Cài đặt → Trợ lý và giọng nói**:
 
-Khóa OpenAI nằm ở server. Chỉ câu mà bộ quy tắc yêu cầu làm rõ mới có thể được gửi cùng thực đơn, bàn đang chọn và các món chưa phục vụ của bàn đó. Âm thanh do dịch vụ nhận diện của trình duyệt xử lý. Kết quả AI là bản nháp phải qua kiểm tra schema, nghiệp vụ và xác nhận trên màn hình. Bật AI có thể phát sinh phí API theo mức sử dụng.
+- **Dùng AI cho câu gọi khó hiểu** cho phép gửi câu chữ tới AI khi bộ quy tắc cần làm rõ.
+- **Cho phép nút thu âm qua máy chủ** hiện nút riêng khi máy chủ đã bật `FOOD_TRANSCRIBE`. Bấm **Thu âm qua máy chủ**, nói rồi bấm **Dừng và chuyển thành chữ**. App tự dừng ở 15 giây. Đọc và sửa transcript trước khi bấm **Kiểm tra câu gọi**. Đóng hộp thoại giữa lúc thu sẽ bỏ đoạn thu đó.
+
+Khóa OpenAI nằm ở server. Khi dùng micro trình duyệt, âm thanh do dịch vụ của trình duyệt xử lý. Khi chọn nút thu âm qua máy chủ, app gửi bản thu tới OpenAI thông qua backend của quán và không ghi bản thu vào SQLite. Nếu bật AI cho câu khó hiểu, backend gửi câu chữ liên quan cùng thực đơn, bàn đang chọn và các món chưa phục vụ của bàn đó. Kết quả là bản nháp phải qua kiểm tra schema, nghiệp vụ và xác nhận trên màn hình. Các tính năng OpenAI có thể phát sinh phí API theo mức sử dụng.
 
 Để sao lưu SQLite, xuất snapshot dưới đây. Khi khôi phục, ngừng API, hoàn tất đồng bộ và ngắt các thiết bị đang kết nối trước, rồi chạy khôi phục và ghép nối lại. Sao lưu dữ liệu hiện tại trước khi thay thế.
 

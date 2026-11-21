@@ -4,6 +4,7 @@ import { categories, fold, money, photos, stages, stageNames } from './menu.js';
 import { normalizeEndpoint, openStore, reconcile, requestAPI, resolveFailure, submitDocument, transact, visible } from './storage.js';
 import { esc, navigation, pad, page, receiptDetails } from './view.js';
 import { icon } from './icons.js';
+import { canRecordAudio, captureAudio } from './voice.js';
 
 const content = document.querySelector('#content');
 const dialog = document.querySelector('#dialog');
@@ -15,6 +16,7 @@ let state;
 let reachable = false;
 let syncRun;
 let mic;
+let cloudMic;
 let toastTimer;
 let panelRevision = 0;
 let device;
@@ -58,8 +60,11 @@ function render(navOnly = false) {
 
 function refresh(next, force = false) {
   const changed = next.snapshot.rev !== doc?.snapshot.rev || next.config?.id !== doc?.config?.id
-    || next.aiEnabled !== doc?.aiEnabled || JSON.stringify(next.pending) !== JSON.stringify(doc?.pending)
+    || next.aiEnabled !== doc?.aiEnabled || next.transcriptionEnabled !== doc?.transcriptionEnabled
+    || next.config?.allowAI !== doc?.config?.allowAI || next.config?.allowAudio !== doc?.config?.allowAudio
+    || JSON.stringify(next.pending) !== JSON.stringify(doc?.pending)
     || next.failure?.id !== doc?.failure?.id;
+  if (cloudMic && (next.config?.id !== doc?.config?.id || !next.config?.allowAudio || !next.transcriptionEnabled)) cloudMic.abort();
   doc = next;
   const input = document.activeElement;
   const typing = content.contains(input) && input.matches('input, textarea, select');
@@ -89,7 +94,8 @@ async function sync() {
         const { data, rejected } = await requestAPI(config, item ? 'command' : 'state', item?.action);
         if (data.state.rev < next.snapshot.rev && !rejected && !item) throw new Error('Máy chủ có bản dữ liệu cũ hơn. Kiểm tra bản sao lưu trước khi tiếp tục.');
         reachable = true;
-        const changed = data.state.rev !== next.snapshot.rev || data.aiEnabled !== undefined && data.aiEnabled !== next.aiEnabled || item;
+        const changed = data.state.rev !== next.snapshot.rev || item
+          || ['aiEnabled', 'transcriptionEnabled'].some(field => data[field] !== undefined && data[field] !== next[field]);
         if (changed) {
           next = await transact(db, current => reconcile(current, config, data, item?.action, rejected));
           channel?.postMessage('updated');
@@ -125,9 +131,14 @@ async function commit(command) {
   return true;
 }
 
+function stopVoice() {
+  if (mic) { mic.abort(); mic = null; }
+  if (cloudMic) { cloudMic.abort(); cloudMic = null; }
+}
+
 function openPanel(title, html, closeLabel = 'Đóng') {
   panelRevision++;
-  if (mic) { mic.abort(); mic = null; }
+  stopVoice();
   dialog.innerHTML = '<div class="dialog-shell"><header><h2 id="dialog-title">' + esc(title)
     + '</h2><button type="button" class="icon-button" data-action="close" aria-label="' + esc(closeLabel) + '">' + icon('close') + '</button></header>'
     + '<p id="dialog-error" class="notice" role="alert" hidden></p>' + html + '</div>';
@@ -135,7 +146,7 @@ function openPanel(title, html, closeLabel = 'Đóng') {
 }
 function closePanel() {
   panelRevision++;
-  if (mic) { mic.abort(); mic = null; }
+  stopVoice();
   if (dialog.open) dialog.close();
 }
 function confirmPanel(title, html, label, callback) {
@@ -207,9 +218,15 @@ function promptVoice(start) {
   const tableAtStart = ui.table;
   const sessionsAtStart = Object.fromEntries(Object.entries(state.active).map(([n, item]) => [n, item.id]));
   const SpeechRecognition = window.SpeechRecognition ?? window.webkitSpeechRecognition;
-  openPanel('Trợ lý gọi món', '<div class="voice-box"><button id="record" class="record" aria-label="Bắt đầu nói">' + icon('mic', 28)
-    + '</button><p id="speech-status" role="status">' + (SpeechRecognition ? 'Chạm micro rồi nói bằng tiếng Việt.' : 'Trình duyệt này không có nhận diện giọng nói. Bạn có thể nhập câu lệnh.')
-    + '</p></div><form id="utterance" class="form-stack"><label class="field">Câu gọi món<textarea id="transcript" name="transcript" maxlength="500" required rows="2" placeholder="Bàn 3 hai phở tái một bò kho"></textarea></label>'
+  const cloudAvailable = doc.config?.allowAudio && doc.transcriptionEnabled && canRecordAudio();
+  const speechHint = SpeechRecognition ? 'Chạm micro rồi nói bằng tiếng Việt.'
+    : cloudAvailable ? 'Chọn thu âm qua máy chủ hoặc nhập câu gọi.'
+      : 'Trình duyệt này chưa nhận giọng nói. Bạn có thể nhập câu lệnh.';
+  openPanel('Trợ lý gọi món', '<div class="voice-box"><button id="record" class="record" aria-label="Bắt đầu nói"'
+    + (SpeechRecognition ? '' : ' disabled') + '>' + icon('mic', 28)
+    + '</button><p id="speech-status" role="status">' + speechHint + '</p>'
+    + (cloudAvailable ? '<button id="record-api" class="btn outline" type="button">Thu âm qua máy chủ</button>' : '')
+    + '</div><form id="utterance" class="form-stack"><label class="field">Câu gọi món<textarea id="transcript" name="transcript" maxlength="500" required rows="2" placeholder="Bàn 3 hai phở tái một bò kho"></textarea></label>'
     + '<button class="btn primary full" type="submit">Kiểm tra câu gọi' + icon('arrow', 17) + '</button></form>'
     + '<div class="example-buttons">' + (ui.page === 'kitchen'
       ? ['Bếp còn bao nhiêu tô?', 'Món nào cần nấu trước?']
@@ -218,11 +235,13 @@ function promptVoice(start) {
   const serial = panelRevision;
   const field = dialog.querySelector('#transcript');
   const record = dialog.querySelector('#record');
+  const apiRecord = dialog.querySelector('#record-api');
   const feedback = dialog.querySelector('#speech-status');
   const form = dialog.querySelector('#utterance');
   let interpreting = false;
   async function review() {
     if (interpreting || !field.value.trim() || serial !== panelRevision) return;
+    if (mic || cloudMic) { feedback.textContent = 'Dừng thu âm trước khi kiểm tra câu gọi.'; return; }
     interpreting = true;
     const transcript = field.value.trim();
     let draft = parse(transcript, state, tableAtStart);
@@ -251,7 +270,8 @@ function promptVoice(start) {
   }
   form.addEventListener('submit', event => { event.preventDefault(); void review().catch(showError); });
   function recordSpeech() {
-    if (!SpeechRecognition) { field.focus(); return; }
+    if (!SpeechRecognition) { if (!cloudAvailable) field.focus(); return; }
+    if (cloudMic || interpreting) return;
     if (!navigator.onLine) { feedback.textContent = 'Thiết bị đang ngoại tuyến. Hãy gõ câu hoặc chạm món.'; return; }
     if (mic) { mic.stop(); return; }
     try {
@@ -276,26 +296,86 @@ function promptVoice(start) {
         speechError = ['not-allowed', 'service-not-allowed'].includes(event.error)
           ? 'Micro hoặc dịch vụ nhận giọng nói chưa được cấp quyền. Bạn có thể nhập câu.'
           : 'Chưa nhận được giọng nói. Thử lại hoặc nhập câu gọi món.';
-        feedback.textContent = speechError;
+        feedback.textContent = speechError + (cloudAvailable ? ' Có thể thử nút Thu âm qua máy chủ.' : '');
       };
       recognition.onend = () => {
         if (mic === recognition) mic = null;
         if (serial !== panelRevision) return;
         record.classList.remove('listening');
         record.setAttribute('aria-label', 'Bắt đầu nói');
+        if (apiRecord) apiRecord.disabled = false;
         if (speechError) return;
         feedback.textContent = finalText.trim() ? 'Đã nghe xong.' : 'Chưa nghe rõ. Chạm micro để thử lại.';
         if (finalText.trim()) void review().catch(showError);
       };
-      recognition.start();
       mic = recognition;
+      recognition.start();
+      if (apiRecord) apiRecord.disabled = true;
       feedback.textContent = 'Đang nghe… Chạm micro lần nữa để dừng.';
       record.classList.add('listening');
       record.setAttribute('aria-label', 'Dừng nghe');
-    } catch (error) {
-      feedback.textContent = 'Chưa thể mở micro. Bạn có thể nhập câu gọi món.';
+    } catch {
+      mic = null;
+      feedback.textContent = cloudAvailable ? 'Chưa thể mở micro trình duyệt. Hãy thử Thu âm qua máy chủ.'
+        : 'Chưa thể mở micro. Bạn có thể nhập câu gọi món.';
     }
   }
+
+  let stopRecording;
+  async function recordViaServer() {
+    if (cloudMic) { stopRecording?.(); return; }
+    if (mic || interpreting) return;
+    const config = doc.config;
+    if (!navigator.onLine || !reachable || !config?.allowAudio || !doc.transcriptionEnabled) {
+      feedback.textContent = 'Chưa kết nối được dịch vụ thu âm. Bạn có thể nhập câu hoặc chạm món.';
+      return;
+    }
+    const controller = new AbortController();
+    cloudMic = controller;
+    field.readOnly = true;
+    record.disabled = true;
+    apiRecord.disabled = true;
+    feedback.textContent = 'Đang mở micro…';
+    try {
+      const clip = await captureAudio(controller.signal, stop => {
+        stopRecording = stop;
+        apiRecord.disabled = false;
+        apiRecord.textContent = 'Dừng và chuyển thành chữ';
+        feedback.textContent = 'Đang thu âm · Tối đa 15 giây. Bản thu sẽ gửi qua máy chủ của quán.';
+      });
+      stopRecording = null;
+      apiRecord.disabled = true;
+      if (doc.config?.id !== config.id || !doc.config.allowAudio || !doc.transcriptionEnabled) {
+        feedback.textContent = 'Kết nối hoặc quyền thu âm đã thay đổi. Mở lại trợ lý để thử lại.';
+        return;
+      }
+      feedback.textContent = 'Đang chuyển bản thu thành chữ…';
+      const { data } = await requestAPI(config, 'transcribe', clip, controller.signal);
+      if (serial !== panelRevision || controller.signal.aborted) return;
+      if (typeof data.transcript !== 'string' || !data.transcript.trim() || data.transcript.length > 500) {
+        throw new Error('Máy chủ trả về câu gọi không hợp lệ. Thử lại hoặc nhập câu.');
+      }
+      field.value = data.transcript;
+      feedback.textContent = 'Đọc lại câu vừa nhận, sửa nếu cần rồi bấm Kiểm tra câu gọi.';
+    } catch (error) {
+      if (serial === panelRevision) {
+        feedback.textContent = controller.signal.aborted ? 'Đã dừng thu âm.'
+          : error.name === 'NotAllowedError' ? 'Ứng dụng chưa được cấp quyền micro. Bạn có thể nhập câu gọi.'
+            : error.name === 'TimeoutError' ? 'Máy chủ phản hồi chậm. Thử lại hoặc nhập câu gọi.'
+              : error.message || 'Chưa nhận được bản thu. Thử lại hoặc nhập câu gọi.';
+      }
+    } finally {
+      if (cloudMic === controller) cloudMic = null;
+      if (serial === panelRevision) {
+        stopRecording = null;
+        field.readOnly = false;
+        record.disabled = !SpeechRecognition;
+        apiRecord.disabled = false;
+        apiRecord.textContent = 'Thu âm qua máy chủ';
+      }
+    }
+  }
+  apiRecord?.addEventListener('click', recordViaServer);
   record.addEventListener('click', recordSpeech);
   if (start) recordSpeech();
   else field.focus();
@@ -406,15 +486,16 @@ function editDish(id) {
 }
 
 async function connect(form) {
-  const { endpoint, token, allowAI } = Object.fromEntries(new FormData(form));
-  const config = { url: normalizeEndpoint(endpoint, location), token: token.trim(), id: crypto.randomUUID(), allowAI: allowAI === 'on' };
+  const { endpoint, token } = Object.fromEntries(new FormData(form));
+  const config = { url: normalizeEndpoint(endpoint, location), token: token.trim(), id: crypto.randomUUID(), allowAI: false, allowAudio: false };
   const rev = doc.snapshot.rev;
   const { data } = await requestAPI(config, 'state');
   async function pair() {
     const again = await requestAPI(config, 'state');
     await save(current => {
       if (current.config || current.snapshot.rev !== rev) throw new Error('Dữ liệu cục bộ vừa thay đổi. Kiểm tra lại trước khi kết nối.');
-      return { config, snapshot: again.data.state, pending: [], failure: null, aiEnabled: again.data.aiEnabled };
+      return { config, snapshot: again.data.state, pending: [], failure: null,
+        aiEnabled: Boolean(again.data.aiEnabled), transcriptionEnabled: Boolean(again.data.transcriptionEnabled) };
     });
     ui.cart = [];
     ui.cartSession = undefined;
@@ -484,7 +565,7 @@ const commands = {
     confirmPanel('Ngắt kết nối thiết bị?', '<p>Thiết bị giữ một bản dữ liệu hiện tại. Các đơn mới trên thiết bị sẽ chỉ lưu cục bộ.</p>', 'Ngắt kết nối', async () => {
       await save(current => {
         if (current.pending.length) throw new Error('Vẫn còn lệnh đang chờ đồng bộ.');
-        return { ...current, config: null, aiEnabled: false };
+        return { ...current, config: null, aiEnabled: false, transcriptionEnabled: false };
       });
       reachable = false;
       closePanel();
@@ -577,8 +658,19 @@ function wire() {
     event.preventDefault();
     const button = event.submitter;
     button.disabled = true;
-    const work = type === 'connect' ? connect(event.target) : commit(action('tables', { count: Number(new FormData(event.target).get('count')), expectedCount: state.tableCount }))
-      .then(() => toast('Đã lưu số bàn.'));
+    let work;
+    if (type === 'connect') work = connect(event.target);
+    else if (type === 'voice-settings') {
+      const form = new FormData(event.target);
+      const id = doc.config?.id;
+      work = save(current => {
+        if (!id || current.config?.id !== id) throw new Error('Kết nối đã thay đổi. Mở lại Cài đặt.');
+        return { ...current, config: { ...current.config, allowAI: form.has('allowAI'), allowAudio: form.has('allowAudio') } };
+      }).then(() => toast('Đã lưu cài đặt trợ lý.'));
+    } else {
+      work = commit(action('tables', { count: Number(new FormData(event.target).get('count')), expectedCount: state.tableCount }))
+        .then(() => toast('Đã lưu số bàn.'));
+    }
     work.catch(showError).finally(() => { button.disabled = false; });
   });
   document.addEventListener('input', event => {
@@ -597,7 +689,8 @@ function wire() {
   window.addEventListener('online', () => { render(true); void backgroundSync(); });
   window.addEventListener('offline', () => { reachable = false; render(true); });
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) transact(db).then(next => { refresh(next, true); void backgroundSync(); }).catch(showError);
+    if (document.hidden) cloudMic?.abort();
+    else transact(db).then(next => { refresh(next, true); void backgroundSync(); }).catch(showError);
   });
   setInterval(() => { if (!document.hidden) void backgroundSync(); }, 2000);
 }
