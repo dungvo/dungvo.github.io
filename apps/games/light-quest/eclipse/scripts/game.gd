@@ -14,7 +14,11 @@ const MOBILE_WEB_FPS := 30
 const MOBILE_PARTICLE_BUDGET := 44
 const ROOM_W := 960.0
 const FLOOR_Y := 456.0
-const SAVE_FILE := "user://eclipse_save_v1.json"
+const SAVE_FILE := "user://eclipse_chapters_v2.json"
+const TrialDirector := preload("res://scripts/trial_director.gd")
+var trials: Node2D
+var skill_time := 0.0
+var parry_used := false
 const Hit := preload("res://scripts/hit_geometry.gd")
 const ROOMS := ["Làng Trăng", "Rừng Vọng", "Hầm Bóng", "Tháp Pha Lê", "Cổng Đêm", "Đài Quan Sát", "Người Giữ Nguyệt"]
 const TIPS := ["Gặp Thợ Lưu Giữ (E) để nhận nhiệm vụ.", "Đánh quái và vượt bục đá.", "Tìm đường qua những bệ đá cổ.", "Xoay hai gương để dẫn tia sáng đến pha lê.", "Chỉ vào được khi Tháp Pha Lê đã sáng.", "Checkpoint: đứng gần đài và nhấn E.", "Phá khiên boss bằng ánh sáng. Đánh vào lúc khiên tan."]
@@ -69,11 +73,6 @@ var started := false
 var menu: PanelContainer
 var demo_room_select: OptionButton
 var current_trial := 0
-var trial_completed := [false, false, false]
-var trial_reward_notice := ""
-const TRIAL_TITLES := ["HỒI I — TIẾNG CHUÔNG CUỐI", "HỒI II — LỜI THÌ THẦM", "HỒI III — KÝ ỨC BỊ CHÔN VÙI"]
-const TRIAL_STORY := ["Tất cả đồng hồ đã dừng. Hãy tìm Thợ Lưu Giữ và khám phá bí mật của ngôi làng.", "Rừng Vọng đang nuốt dần lối đi. Vượt qua sói và dơi để tìm đường tiến sâu hơn.", "Dưới lòng đất, ký ức bị phong ấn. Đánh bại kẻ canh giữ và tìm Nguyệt Thạch."]
-const TRIAL_OBJECTIVES := ["Nhiệm vụ: nói chuyện với Thợ Lưu Giữ (E)", "Nhiệm vụ: vượt qua sói và dơi của Rừng Vọng", "Nhiệm vụ: tìm rương Nguyệt Thạch (E)"]
 # Feel First v0.2: buffered jumps, acceleration and feedback.
 const RUN_ACCEL := 2050.0
 const RUN_FRICTION := 2300.0
@@ -111,11 +110,14 @@ func _ready() -> void:
     light_circuit.position = Vector2(3 * ROOM_W, 0)
     add_child(light_circuit)
     light_circuit.completed.connect(_light_completed)
+    light_circuit.hide() # Original mirror puzzle is retained in source for the legacy campaign.
     _make_ui()
+    trials = TrialDirector.new()
+    add_child(trials)
     _restore()
     if activated: light_circuit.restore_solved()
-    if found_chest: scenery.plaza_chest.hide()
-    if boss_dead: guardian.queue_free()
+    scenery.plaza_chest.hide()
+    # Chapter bosses are spawned when a chapter is selected.
     _update_hud()
     _menu()
 
@@ -134,20 +136,16 @@ func _make_stage() -> void:
     for r in range(7):
         var ox := float(r) * ROOM_W
         _solid(Rect2(ox, FLOOR_Y, ROOM_W, 100))
-        for ledge in ledges[r]:
-            _solid(Rect2(ox + ledge.x, 375, ledge.y, 25), r == 3)
+        var platforms: Array = ledges[r] if r % 2 == 0 else [Vector2(143, 159)]
+        for ledge in platforms:
+            _solid(Rect2(ox + ledge.x, 375, ledge.y, 25), true)
         if r == 1:
             _solid(Rect2(ox + 295, 410, 51, 46), true)
             _solid(Rect2(ox + 658, 410, 60, 46), true)
         if r == 3:
-            _solid(Rect2(ox + 59, 375, 106, 25))
-        if r in [1, 2, 5]:
-            _solid(Rect2(ox + 586, 315, 115, 24))
-        if r in [1,2,4,5]:
-            var roster: Array = {1:["wolf", "bat"], 2:["golem", "mage"], 4:["wolf", "golem"], 5:["mage", "bat"]}[r]
-            _spawn_enemy(roster[0], ox + 435)
-            _spawn_enemy(roster[1], ox + 692)
-    guardian = _spawn_enemy("guardian", 6 * ROOM_W + 665)
+            _solid(Rect2(ox + 59, 375, 106, 25), true)
+        if r in [0, 2, 4]:
+            _solid(Rect2(ox + 586, 315, 115, 24), true)
     # Hard gate after room 4: collision toggled when light is activated.
     var gate := StaticBody2D.new()
     gate.name = "LightGate"
@@ -160,6 +158,7 @@ func _make_stage() -> void:
     col.shape = shape
     gate.add_child(col)
     add_child(gate)
+    gate.collision_layer = 0 # Chapter boundaries are handled by the trial director.
 
 func _spawn_enemy(kind: String, x: float) -> CharacterBody2D:
     var enemy := EnemyScene.instantiate() as CharacterBody2D
@@ -245,7 +244,7 @@ func _make_ui() -> void:
     _touch_button(touchbar, "skill", "LỰC", Vector2(898, 471), 33)
     _touch_button(touchbar, "interact", "E", Vector2(898, 299), 26)
     dialogue = PanelContainer.new()
-    dialogue.position = Vector2(145,300)
+    dialogue.position = Vector2(145,220)
     dialogue.custom_minimum_size = Vector2(670,115)
     layer.add_child(dialogue)
     dialogue_label = Label.new()
@@ -360,44 +359,55 @@ func _menu() -> void:
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
     var note := Label.new()
-    note.text = "Chơi thử Tháp Trăng · Chọn nhân vật\nA/D di chuyển · Space nhảy · J đánh · K lướt · L kỹ năng · E tương tác"
+    note.text = "A/D di chuyển · Space nhảy · J đánh\nK lướt · L kỹ năng · E tương tác · Esc chọn màn"
     note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(note)
     var selector_label := Label.new()
-    selector_label.text = "CHỌN MÀN CHƠI — CÙNG ĐỒ HỌA GODOT GỐC"
+    selector_label.text = "BA HỒI · TIẾNG CHUÔNG ĐÃ MẤT"
     selector_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(selector_label)
     demo_room_select = OptionButton.new()
-    demo_room_select.add_item("01 · Làng Trăng — khám phá và nhiệm vụ", 0)
-    demo_room_select.add_item("02 · Rừng Vọng — chiến đấu và vượt địa hình", 1)
-    demo_room_select.add_item("03 · Hầm Bóng — quái mạnh và rương bí mật", 2)
+    demo_room_select.add_item("01 · Làng Trăng — Vệ Binh Chuông Tàn", 0)
+    demo_room_select.add_item("02 · Rừng Vọng — Lang Vương Vọng Âm", 1)
+    demo_room_select.add_item("03 · Hầm Bóng — Kẻ Dệt Bóng", 2)
     demo_room_select.custom_minimum_size.y = 38.0
     v.add_child(demo_room_select)
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
         var b := Button.new()
         b.text = "Chơi: " + who
         b.pressed.connect(func(): _start("Kha" if who.begins_with("Kha") else "An"))
+        b.custom_minimum_size.y = 38
         v.add_child(b)
+    v.add_theme_constant_override("separation", 12)
+    menu.add_theme_stylebox_override("panel", _panel_style())
+    dialogue.add_theme_stylebox_override("panel", _panel_style())
+    victory_panel.add_theme_stylebox_override("panel", _panel_style())
+
+func _panel_style() -> StyleBoxFlat:
+    var style := StyleBoxFlat.new()
+    style.bg_color = Color("#0b1427f0")
+    style.border_color = Color("#b8a273")
+    style.set_border_width_all(1)
+    style.set_corner_radius_all(12)
+    style.content_margin_left = 20
+    style.content_margin_right = 20
+    style.content_margin_top = 16
+    style.content_margin_bottom = 16
+    return style
 
 func _start(who: String) -> void:
     character = who
-    var selected_room := demo_room_select.get_selected_id() if is_instance_valid(demo_room_select) else 0
-    hero.global_position = Vector2(float(selected_room) * ROOM_W + 120.0, 425.0)
-    hero.velocity = Vector2.ZERO
+    current_trial = demo_room_select.get_selected_id() if is_instance_valid(demo_room_select) else 0
     last_room = -1
-    current_trial = selected_room
     actor_anim.sprite_frames = Art.actor_frames(character == "Kha")
     actor_anim.play("idle")
     anim_label = "idle"
     started = true
     menu.hide()
     _reset_touch()
-    _say(TRIAL_TITLES[current_trial], 3.0)
-    checkpoint = hero.global_position
-    health = max_health
+    joystick.accept_touch = true
+    trials.begin(current_trial)
     _update_hud()
-    dialogue_label.text = TRIAL_TITLES[current_trial] + "\n" + TRIAL_STORY[current_trial] + "\n\nNhấn E để bắt đầu khám phá."
-    _show_dialogue(true)
     if OS.has_feature("web") and "--eclipse-render-probe" in OS.get_cmdline_user_args():
         _measure_browser_render_rate()
 
@@ -417,7 +427,8 @@ func _input(event:InputEvent) -> void:
     if not is_instance_valid(dialogue): return
     if event.is_action_pressed("ui_cancel"):
         if dialogue.visible: _show_dialogue(false)
-        if victory_panel.visible: _dismiss_victory()
+        elif victory_panel.visible: _dismiss_victory()
+        elif started: trials.return_menu()
     if not started: return
     if victory_panel.visible:
         if event is InputEventKey and event.pressed and event.keycode == KEY_E: _dismiss_victory()
@@ -434,7 +445,6 @@ func _input(event:InputEvent) -> void:
 
 func _physics_process(delta:float) -> void:
     if not started or dialogue.visible or victory_panel.visible: return
-    _check_trial_progress()
     visual_clock += delta
     if death_time > 0:
         death_time = maxf(0, death_time - delta)
@@ -457,6 +467,7 @@ func _physics_process(delta:float) -> void:
     combo_window = maxf(0, combo_window - delta)
     hurt_time = maxf(0, hurt_time - delta)
     shield_cooldown = maxf(0, shield_cooldown - delta)
+    skill_time = maxf(0, skill_time - delta)
     attack_buffer = maxf(0, attack_buffer - delta)
     if attack_buffer > 0 and attack_cooldown <= 0:
         _attack()
@@ -517,12 +528,13 @@ func _physics_process(delta:float) -> void:
     if touch["interact"]:
         touch["interact"] = false
         _interact()
+    trials.tick(delta)
     hero.position.x = clampf(hero.position.x,25,7*ROOM_W-28)
     if hero.position.y > 620: _respawn()
     var room := mini(6, int(hero.position.x/ROOM_W))
     if room != last_room:
         last_room = room
-        _say(ROOMS[room] + " · " + TIPS[room], 2.6)
+        _update_hud()
     for idx in range(enemies.size() - 1, -1, -1):
         var enemy := enemies[idx]
         if not is_instance_valid(enemy):
@@ -545,7 +557,7 @@ func _physics_process(delta:float) -> void:
 
 func _refresh_effects() -> void:
     var shield := is_instance_valid(guardian) and not boss_dead and boss_shield_time <= 0 and last_room >= 5
-    var dynamic := not vfx.is_empty() or i_frames > 0 or (slash_time > 0 and character == "An")
+    var dynamic := not vfx.is_empty() or i_frames > 0 or skill_time > 0 or (slash_time > 0 and character == "An")
     if dynamic or effects_visible or shield != guardian_shield_visible:
         effects_visible = dynamic
         guardian_shield_visible = shield
@@ -571,6 +583,7 @@ func _update_character_animation() -> void:
 
 func _select_motion_state() -> String:
     if hurt_time > 0.0: return "hurt"
+    if skill_time > 0: return "attack" if character == "Kha" else "dash"
     if dash_time > 0.0: return "dash"
     if slash_time > 0.0: return "attack"
     if not hero.is_on_floor():
@@ -636,6 +649,14 @@ func enemy_strike(area: Rect2, origin: Vector2) -> bool:
     return false
 
 func damage_player(amount: int, from_x: float) -> void:
+    if character == "An" and skill_time > 0 and not parry_used:
+        parry_used = true
+        sound.play_cue("contact", 1.5)
+        shield_cooldown = 2.2
+        _burst(hero.position, Color("#ebfaff"), 24, 230)
+        _say("PHẢN ĐÒN · Nguyệt Kiếm!", 1.2)
+        _skill_damage(155, 3)
+        return
     if i_frames > 0 or dash_time > 0 or dialogue.visible: return
     health -= amount
     sound.play_cue("hurt")
@@ -667,6 +688,7 @@ func _respawn() -> void:
         if is_instance_valid(bolt): bolt.queue_free()
     bolts.clear()
     cam.reset_smoothing()
+    if is_instance_valid(trials): trials.respawn()
     _say("Hồi sinh tại điểm lưu gần nhất.", 2)
 
 func _request_attack() -> void:
@@ -703,15 +725,29 @@ func _resolve_attack() -> void:
 func _skill() -> void:
     if not started or dialogue.visible or shield_cooldown > 0 or death_time > 0: return
     shield_cooldown = 6.0
+    skill_time = 0.46
+    attack_facing = facing
+    anim_label = ""
+    parry_used = false
     sound.play_cue("light")
     if character == "Kha":
         health = mini(max_health, health + 1)
-        _burst(hero.position, Color("#b1ff9d"), 21, 155)
-        _say("Kha · Hồi quang", 1.2)
+        attack_facing = facing
+        _skill_damage(145, 2)
+        spawn_bolt(hero.position + Vector2(facing * 18, -8), Vector2(470 * facing, 0), true, 2)
+        _burst(hero.position, Color("#b1ffdf"), 21, 155)
+        _say("Kha · Hồi quang — hồi 1 tim / xung lực", 1.2)
     else:
-        i_frames = maxf(i_frames, 0.34)
         _burst(hero.position, Color("#92e9ff"), 16, 140)
-        _say("An · Đỡ đòn", 1.2)
+        _say("An · Nguyệt Kính — L đúng lúc để phản đòn", 1.2)
+    _update_hud()
+
+func _skill_damage(radius: float, amount: int) -> void:
+    var space := get_world_2d().direct_space_state
+    for foe in enemies:
+        if not is_instance_valid(foe) or foe.state == "dead": continue
+        if foe.position.distance_to(hero.position) < radius and Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
+            foe.take_hit(amount, self)
 
 func guardian_defeated() -> void:
     boss_dead = true
@@ -764,6 +800,9 @@ func _interact() -> void:
     if dialogue.visible:
         _show_dialogue(false)
         return
+    if is_instance_valid(trials) and trials.active:
+        if not trials.interact(): _say("E gần pha lê / trụ lưu · nhảy để tìm bí mật trên cao", 2)
+        return
     var room := int(hero.position.x / ROOM_W)
     var local_x := fposmod(hero.position.x, ROOM_W)
     if room == 0 and hero.position.distance_to(Vector2(290, 432)) < 92:
@@ -810,66 +849,43 @@ func _say(value:String,secs:float) -> void:
     notice_time=secs
     _update_hud()
 
-func _check_trial_progress() -> void:
-    if current_trial < 0 or current_trial >= 3 or trial_completed[current_trial]:
-        return
-    var finished := false
-    match current_trial:
-        0:
-            finished = met_npc
-        1:
-            finished = true
-            for enemy in enemies:
-                if is_instance_valid(enemy) and enemy.global_position.x >= ROOM_W and enemy.global_position.x < 2.0 * ROOM_W:
-                    finished = false
-                    break
-        2:
-            finished = found_chest
-    if not finished:
-        return
-    trial_completed[current_trial] = true
-    checkpoint = hero.global_position
-    health = max_health
-    _persist()
-    _say("HOÀN THÀNH " + TRIAL_TITLES[current_trial] + " — đã lưu checkpoint!", 5.0)
-    emit_impact(hero.global_position, Color("#ffdd93"))
-
 func _update_hud() -> void:
     if hud==null:return
     var r:=clampi(int(hero.position.x/ROOM_W) if hero else 0,0,6)
     hud.text = character
     hearts.show_health(health, max_health)
     chapter.text = ROOMS[r]
-    if r == current_trial and current_trial < 3:
-        light_status.text = ("HOÀN THÀNH · Checkpoint đã lưu" if trial_completed[current_trial] else TRIAL_OBJECTIVES[current_trial])
-    else:
-        light_status.text = "Cổng Đêm đã mở" if activated else "Dẫn sáng đến Cổng Đêm"
+    light_status.text = "Ba hồi · Tiếng chuông đã mất"
     help.text = notice if notice_time > 0 else ""
+    if is_instance_valid(trials): trials.update_hud()
 
 func _persist() -> void:
-    if not save_enabled: return
-    var f:=FileAccess.open(SAVE_FILE,FileAccess.WRITE)
+    if not save_enabled or not is_instance_valid(trials): return
+    var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":1,"activated":activated,"met_npc":met_npc,"found_chest":found_chest,"moon_dash":moon_dash,"boss_dead":boss_dead,"checkpoint":[checkpoint.x,checkpoint.y]}))
+        f.store_string(JSON.stringify({"version":2, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected}))
 
 func _restore() -> void:
-    if not save_enabled: return
-    if not FileAccess.file_exists(SAVE_FILE):return
-    var f:=FileAccess.open(SAVE_FILE,FileAccess.READ)
-    if not f:return
-    var data=JSON.parse_string(f.get_as_text())
-    if not (data is Dictionary):return
-    activated=bool(data.get("activated",false))
-    met_npc=bool(data.get("met_npc",false))
-    found_chest = bool(data.get("found_chest", false))
-    max_health = 6 if found_chest else 5
+    if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
+    var f := FileAccess.open(SAVE_FILE, FileAccess.READ)
+    if not f: return
+    var data = JSON.parse_string(f.get_as_text())
+    if not data is Dictionary or data.get("version") != 2: return
+    met_npc = data.get("met_npc", false) == true
+    moon_dash = data.get("moon_dash", false) == true
+    for key in ["secrets", "wins", "saved"]:
+        var values = data.get(key, [])
+        if values is Array and values.size() == 3:
+            var validated := [false, false, false]
+            for i in range(3): validated[i] = values[i] == true
+            trials.set(key, validated)
+    var fragments = data.get("collected", [])
+    if fragments is Array and fragments.size() == 3:
+        for i in range(3):
+            if fragments[i] is Array and fragments[i].size() == 2:
+                trials.collected[i] = [fragments[i][0] == true, fragments[i][1] == true]
+    max_health = 5 + trials.secrets.count(true)
     health = max_health
-    moon_dash=bool(data.get("moon_dash",false))
-    boss_dead=bool(data.get("boss_dead",false))
-    var point=data.get("checkpoint",[130,385])
-    if point is Array and point.size()==2:
-        checkpoint=Vector2(float(point[0]),float(point[1]))
-        hero.position=checkpoint
 
 func _draw() -> void:
     if not is_instance_valid(hero): return
@@ -882,6 +898,10 @@ func _draw() -> void:
         draw_circle(particle["p"], maxf(1.0,4.5*opacity),tint)
     if hero:
         var p:=hero.position
+        if skill_time > 0:
+            var radius := 38.0 + (1.0 - skill_time / 0.46) * (95 if character == "Kha" else 20)
+            draw_arc(p, radius, 0, TAU, 48, Color("#a6edffa0"), 4, true)
+            draw_arc(p, radius - 7, 0, TAU, 48, Color("#edfff4"), 1, true)
         if i_frames>0:draw_arc(p+Vector2(0,-6),33,0,TAU,32,Color("#ffdf8b"),3)
         if slash_time > 0 and character == "An" and attack_windup <= 0:
             var t := clampf(1.0 - slash_time / ATTACK_CYCLE[combo_step - 1], 0, 1)

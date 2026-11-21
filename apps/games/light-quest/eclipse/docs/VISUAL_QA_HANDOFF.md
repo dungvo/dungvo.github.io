@@ -1,47 +1,62 @@
-# Light Quest Eclipse · Bàn giao QA
+# Eclipse — báo cáo ba màn, 21/11/2026
 
-**PR #76 vẫn là draft.** Tuyến Tháp Trăng có thể đưa vào QA người chơi bằng đường dẫn riêng sau khi qua kiểm thử. Cập nhật đường dẫn phát hành GitHub Pages vẫn chờ QA Safari trên thiết bị thật.
+## Phạm vi phát hành
 
-## Phạm vi
+- Source: `feature/eclipse-godot-room-select-v1`, PR #85; Godot **4.4.1.stable.official.49a5bc7b6**.
+- Web: https://dungvo.github.io/apps/games/light-quest/eclipse/godot-play/
+- Giữ nguyên tất cả ảnh / sprite và animation đã có; bổ sung director màn, boss state machine, tương tác và VFX trong Godot. Không có runtime HTML Canvas tự viết.
+- Ba chương có địa hình hai khu vực, hai mảnh ấn, bí mật tăng tim một lần, checkpoint và boss riêng. Cổng ngăn vào boss trước nhiệm vụ. Có chuyển màn, chọn lại nhân vật, chơi lại, thắng và trở lại khám phá.
 
-- An dùng combo kiếm ba nhịp và đỡ đòn. Kha bắn đạn ánh sáng và có kỹ năng hồi sinh lực. Sprite riêng cho từng nhân vật và từng trạng thái, gồm bốn frame chạy. Một số động tác chiến đấu và phản ứng còn dùng một pose cộng hiệu ứng.
-- Sói lao, golem đánh gần có báo đòn, pháp sư bắn đạn và dơi bổ nhào. Thủ Hộ có khiên, trụ khắc chế và thêm đạn ở nửa máu. Dùng CharacterBody2D, Area2D và truy vấn va chạm Godot.
-- Câu đố hai gương nằm trên đường đi và nối với cổng thật. Cổng, trạm lưu, rương và Thủ Hộ dùng tệp save Eclipse v1 với một trường tùy chọn mới cho rương.
-- Mỗi nút cảm ứng dùng TouchScreenButton. Joystick giữ riêng ID ngón tay. Sự kiện mất focus đặt lại trạng thái đầu vào. Bản Classic/Ô sáng giữ đường dẫn và dữ liệu trước đó.
+## Kiểm thử thực hiện
 
-## Đối chiếu ở 960×540
+| Kiểm tra | Phạm vi và kết quả |
+|---|---|
+| Import / parse | Godot 4.4.1, không lỗi script / resource |
+| Sáu lượt chơi hoàn chỉnh | An và Kha đi cả ba màn bằng controller và vật lý thật: nhận nhiệm vụ, nhảy lấy hai ấn, leo lấy bí mật, checkpoint, đánh boss chuyển pha, chiến thắng, quay về khám phá |
+| Tính trung thực của lượt chơi | Không teleport người chơi; không sửa HP, tắt AI, tăng bất tử hoặc gọi `take_hit` trực tiếp trong `campaign_playthrough.gd` |
+| Va chạm | Kiếm chỉ đánh phía trước; tường chặn kiếm và đạn; ray quét chặn đạn tốc độ 8.500 đơn vị/giây, không xuyên hurtbox |
+| Kỹ năng | An phản đòn trong cửa sổ thời gian; Kha hồi máu / xung lực có cooldown; dash có vận tốc thật |
+| Boss | Di chuyển; né khi thấy chuẩn bị kiếm; không hủy khoảng hồi phục để né; không đổi hướng đòn sau báo trước; cả sáu lượt đến pha hai và thắng |
+| Hồi sinh / save | Đưa về checkpoint, reset HP / pha boss, xóa đạn; bí mật không nhân đôi, mảnh ấn và checkpoint được khôi phục từ file save v2 |
+| Input | Chạm ba ngón: đi + nhảy + đánh, thả ngón xóa input; giữ nhảy cao hơn chạm ngắn; menu dừng combat |
+| Godot Web thực tế | Tải HTML, WASM và PCK; chọn đúng cả ba màn, có An / Kha; bàn phím desktop và ba ngón cảm ứng mô phỏng; không lỗi runtime |
+| Kích thước / tải vẽ | Viewport nội bộ 960×540; desktop cap 60, cảm ứng 812×375 ở DPR 3 cap 30; giữ vật lý 60 Hz |
 
-| Khung đối chiếu | Bằng chứng trong game | Khoảng cách với mockup |
-|---|---|---|
-| Rừng Vọng, An và sói | Cầu rêu, cột đá, thác, trăng và lâu đài. Sói và An có silhouette riêng, có vệt kiếm và số sát thương. | Mockup có cảnh trước dày hơn, khối đá bố trí gần nhân vật và hiệu ứng đòn nhiều lớp hơn. Cầu lặp lại họa tiết giữa các phòng. |
-| Tháp Pha Lê, Kha | Hai gương, đường tia và pha lê có trạng thái hoạt động. Giải xong mở collider của cổng. | Cần puzzle nhiều cách thao tác hơn và kết hợp tốt hơn với platforming. |
-| Phòng Thủ Hộ | Sprite lớn, trụ sáng, khiên và thanh máu nhìn thấy được. | Boss cần chuỗi hình đòn đánh, phản ứng, chuyển pha và kết liễu riêng. Cần đánh giá nhịp né và phản công khi chơi tay. |
-| UI ngang | HUD ở mép trên, joystick và các nút ở hai bên. Ảnh Chromium phát hiện glyph tim và nút bị thiếu, nên tim được vẽ trực tiếp và nút dùng nhãn tiếng Việt. Sự kiện Godot kiểm tra được ba ngón đồng thời. | Cần Safari/iPhone 13 mini thật để đo thời gian khung hình, kiểm tra vùng tai thỏ, chạm nhanh và vị trí ngón cái. |
+Đo cục bộ bằng Chromium và bộ dựng hình phần mềm: khoảng 34–36 FPS desktop và 25–26 FPS cảm ứng mô phỏng, tùy lượt chạy. Đây **không phải** kết quả đo trên iPhone thật. Mỗi lần CI lưu log, ảnh Web và sáu ảnh boss từ renderer Godot dưới artifact `eclipse-chapter-qa`. Ảnh boss trong `capture_visual.gd` là cảnh dàn dựng bằng production scene; bằng chứng chơi liên tục nằm riêng trong sáu lượt kiểm thử.
 
-## Kiểm thử
+## Lỗi đã sửa khi kiểm thử
 
-- Godot 4.6.3 cục bộ. Kiểm tra import và smoke qua scene thật. Phạm vi gồm quét đòn trái/phải, tường chặn kiếm và đạn, đạn tốc độ cao, mở cổng qua gương, hồi máu tối đa từ rương, khiên và qua pha Thủ Hộ, chạm ba ngón đồng thời, nhảy ngắn/dài, dash.
-- OpenGL Compatibility trên Linux. Ảnh từ viewport thật: `actual-gameplay.png`, `actual-puzzle.png` và `actual-guardian.png`. Ảnh chiến đấu được kiểm tra hai lượt. Lượt đầu phát hiện mép cầu lệch collider, đã chỉnh atlas và cao độ rồi chụp lại.
-- Chromium chạy bản HTML/WASM/PCK ở 812×375, có chọn nhân vật bằng cảm ứng và thử thao tác nhiều ngón mô phỏng.
-- Bài kiểm tra Ô sáng World/Secret Garden chạy qua 18 và 9 màn.
+- NPC chiếm nút tương tác khi đang nhảy lấy mảnh ấn gần đó.
+- Bệ cũ và trần thấp chặn đường tới mảnh ấn / bí mật: chỉnh đúng nền một chiều, kiểm tra lại đường nhảy thật.
+- Callback chiến thắng chờ lâu hơn thời gian tồn tại của boss: dùng ID lượt chơi để bảng thắng vẫn xuất hiện, không bật lạc sang lượt khác.
+- Các mảnh ấn trước checkpoint bị mất khi nạp lại: lưu riêng tiến độ từng chương.
+- Các vật thể trang trí / boss / đạn của lượt cũ không được giữ lại khi đổi màn.
+- Thanh HP boss dùng ProgressBar thật, không dựa vào ký tự khối có thể thiếu font.
 
-## Việc còn lại trước Pages
+## Cách chạy lại
 
-1. Làm thêm frame tay cho combo, lao/chém của quái, báo đòn/chuyển pha boss và chết. Kiểm tra từng frame đặt chân đúng mặt địa hình. Bổ sung âm thanh phản hồi và đánh giá tay qua toàn tuyến.
-2. Tinh chỉnh bố cục tầng đá và dây leo theo từng phòng. Làm thêm chiều sâu tiền cảnh và giảm cảm giác lát lặp. Ghi lại video gameplay từ bản Web.
-3. Chạy Safari với iPhone 13 mini thật. Đo thời gian khung khi giật camera, bắn đạn, vào gauge boss và chơi ba ngón. Kiểm tra focus, xoay màn hình và resume.
-4. Đối chiếu ảnh/video với mockup và đánh giá đủ các tiêu chí trong kế hoạch. Chỉ sau đó mới cập nhật bản Eclipse công khai.
+```sh
+godot --version # phải là 4.4.1
+godot --headless --editor --import --quit
+godot --headless --fixed-fps 60 --script res://tests/smoke.gd
+godot --headless --script res://tests/hit_geometry_test.gd
+godot --headless --fixed-fps 60 --script res://tests/campaign_playthrough.gd
+mkdir -p build/web
+godot --headless --export-release Web build/web/index.html
+# Cần playwright; script tự phục vụ build/web qua HTTP.
+ECLIPSE_CHROME=/path/to/chrome node tests/browser_smoke.cjs
+# Cần màn hình đồ họa; trên Linux CI dùng xvfb-run.
+godot --script res://tests/capture_visual.gd
+```
 
-## Vòng chơi thử Tháp Trăng
+## Giới hạn còn lại
 
-- Combo An có ba nhịp với pose chuẩn bị, trúng đòn và thu kiếm riêng. Nhịp hai có thêm tầm đánh phía trên, nhịp ba xa hơn và gây hai sát thương. Lướt hủy nhịp chuẩn bị.
-- Sói và Thủ Hộ có pose báo đòn, lao/đập và hồi phục. Pha hai tái tạo khiên và cần kích hoạt lại trụ sáng sau khi nạp. Đường báo trước cho thấy hướng quạt ba đạn. Kết thúc tuyến hiện bảng chiến thắng và mở Nguyệt Lướt.
-- Gương trên cần nhảy lên bệ một chiều. Gương dưới có thể xoay từ nền. Test campaign đi liên tục từ Làng Trăng bằng vật lý của nhân vật đến màn thắng bằng đạn Kha, gồm rương, gương, cổng, checkpoint và hai pha boss.
-- Tám âm ngắn phát khi người chơi thao tác. Rừng Vọng có thêm bậc đá và tiền cảnh. Ảnh QA gồm thêm shot chuyển pha boss.
-- Kiểm tra tay trên iPhone, chiều sâu của tiền cảnh và độ mượt các bộ hình khác vẫn cần review riêng trước khi chọn bản phát hành chính thức.
+- Chưa kiểm tra Safari / iPhone 13 mini thật: chưa kết luận nhiệt máy, pin, tai thỏ và cảm giác ngón cái khi chơi lâu. Profile 30 FPS chỉ là biện pháp giảm tải.
+- Đây là ba chương demo ngắn, không phải chiến dịch dài; địa hình và cảnh nền còn tái sử dụng asset gốc. Một số đòn vẫn dùng một pose có VFX, chưa có chuỗi frame vẽ tay mới.
+- AI là state machine phản ứng với khoảng cách, chuẩn bị đòn và trạng thái người chơi; chưa có học hành vi dài hạn hoặc tìm đường phức tạp.
+- Save nằm trên trình duyệt / thiết bị, chưa đồng bộ tài khoản; chế độ riêng tư hoặc xóa dữ liệu trình duyệt có thể mất tiến độ.
+- Cần người chơi đánh giá tiếp độ khó, nhịp phản đòn và cảm giác chiến đấu; kiểm thử tự động không thay thế được đánh giá đó.
 
-## Giảm tải bản Web cảm ứng
+## Triển khai và bảo toàn repository
 
-- Viewport dựng hình gameplay theo kích thước 960×540, sau đó phóng theo màn hình. Giữ nguyên tọa độ điều khiển và 60 nhịp mô phỏng vật lý mỗi giây.
-- Bản Web trên thiết bị có cảm ứng giới hạn vẽ ở 30 FPS, giảm số hạt và dừng vẽ lại hiệu ứng khi khu vực đứng yên. Desktop giới hạn 60 FPS.
-- Smoke Chromium dùng DPR 3 và đo số khung hình Godot thực sự dựng và kiểm tra kích thước viewport. Cần đo nhiệt và kiểm tra cảm giác chơi riêng bằng Safari trên iPhone thật.
+Workflow chỉ publish sau import, mechanics, sáu lượt chơi, browser QA và native captures thành công. Tập export đưa lên main bị giới hạn vào `apps/games/light-quest/eclipse/godot-play/`, có `build-info.json` ghi source SHA / engine / SHA-256 của từng asset. Không thay Eclipse cũ ở URL gốc, `duel-demo`, Puzzle Adventure, Classic, English hoặc Selflo.

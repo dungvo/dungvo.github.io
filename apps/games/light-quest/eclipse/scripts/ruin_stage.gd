@@ -74,10 +74,11 @@ func _dress_forest() -> void:
 func update_camera(camera_x: float, opened: bool, immediate := false) -> void:
     background.position.x = -63.0 - sin(camera_x * 0.0016) * 48.0
     previous_back.position.x = background.position.x
-    gate.visible = not opened
-    var room := clampi(int(camera_x / ROOM_W), 0, 6)
-    var palette := [Color("#bdcce7"), Color.WHITE, Color("#877fa9"), Color.WHITE, Color("#baaecf"), Color("#adceda"), Color.WHITE]
-    var target: Texture2D = PUZZLE_HALL if room == 3 else (GUARDIAN_HALL if room == 6 else Art.SCENERY)
+    gate.visible = false # Legacy gate belongs to the original campaign, not these chapters.
+    var raw_room := clampi(int(camera_x / ROOM_W), 0, 6)
+    var room: int = [0, 0, 1, 1, 2, 2, 6][raw_room]
+    var palette := [Color("#bdcce7"), Color.WHITE, Color("#b5a3cc"), Color.WHITE, Color("#baaecf"), Color("#adceda"), Color.WHITE]
+    var target: Texture2D = PUZZLE_HALL if room == 3 else (GUARDIAN_HALL if room in [2, 6] else Art.SCENERY)
     if background.texture != target:
         if crossfade and crossfade.is_valid(): crossfade.kill()
         previous_back.texture = background.texture

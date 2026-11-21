@@ -1,35 +1,30 @@
-# Light Quest Eclipse · Tháp Trăng
+# Light Quest: Eclipse — Tiếng chuông đã mất
 
-Bản thử nội bộ Godot 4.4.1, GDScript, Compatibility. [PR #76](https://github.com/dungvo/dungvo.github.io/pull/76) chứa phần phát triển Eclipse. GitHub Pages hiện có bản Eclipse cũ. Bản QA riêng cho tuyến Tháp Trăng dùng để kiểm tra trên thiết bị thật.
+Godot **4.4.1**, GDScript, renderer Compatibility. Tiếp tục từ PR #85 và bộ hình / animation Eclipse gốc. Không thay engine. Bản Web được xuất một luồng, không cần COOP/COEP.
 
-## Chạy game
+**Chơi:** https://dungvo.github.io/apps/games/light-quest/eclipse/godot-play/
 
-Mở `project.godot` bằng Godot và nhấn F5. Chọn **An** để dùng kiếm và chuỗi ba đòn hoặc **Kha** để bắn đạn sáng và hồi máu.
+| Màn | Nhiệm vụ và địa hình | Boss |
+|---|---|---|
+| Làng Trăng | Nhận nhiệm vụ từ Thợ Lưu Giữ; hai khu vực cầu đá, mảnh chuông trên bệ, bí mật trên cao | Vệ Binh Chuông Tàn: áp sát, lướt chém, chém gần; pha hai có đòn nối |
+| Rừng Vọng | Đường bệ đá khác, sói / dơi, hai ấn rừng, nhánh leo tìm ký ức | Lang Vương Vọng Âm: vồ, né kiếm, tiếng tru bắn quạt; pha hai vồ nối tiếp |
+| Hầm Bóng | Sảnh ngầm, golem / pháp sư, hai ấn ký ức, bí mật tầng cao | Kẻ Dệt Bóng: đổi vị trí trước báo đòn, bắn quạt, ấn bóng đánh đúng vùng đã báo |
+
+Mỗi màn dài 1.920 đơn vị, có trụ checkpoint trước đấu trường. Thu hai mảnh ấn để mở cổng; Làng Trăng cần nói chuyện với Thợ Lưu Giữ. Checkpoint, mảnh ấn, bí mật và chiến thắng được lưu. Khi chết, boss hồi đầy máu, bỏ pha hai và xóa đạn; người chơi giữ mảnh ấn. Chọn lại một màn đã thắng sẽ bắt đầu lượt chơi lại từ đầu. Bí mật không cộng tim lần thứ hai. Save v2 tách khỏi save chiến dịch cũ.
 
 | Thao tác | Bàn phím | Cảm ứng ngang |
 |---|---|---|
-| Di chuyển | A/D hoặc phím mũi tên | Joystick trái |
-| Nhảy | Space, W hoặc ↑ | NHẢY |
+| Di chuyển | A/D hoặc ←/→ | Joystick trái |
+| Nhảy ngắn / cao | Chạm / giữ Space | Chạm / giữ NHẢY |
 | Tấn công | J | ĐÁNH |
-| Lướt | K | LƯỚT |
-| Đỡ đòn / hồi máu | L | LỰC |
-| Tương tác | E | E |
-| Hồi sinh tại trạm lưu | R | Hết máu sẽ tự hồi sinh |
+| Lướt, có thời gian né sát thương | K | LƯỚT |
+| Kỹ năng | L | LỰC |
+| Tương tác / đóng lời thoại | E | E |
+| Chọn màn, đổi nhân vật | Esc hoặc MÀN CHƠI | MÀN CHƠI |
+| Về checkpoint | R | Tự hồi sinh khi hết máu |
 
-Từ Làng Trăng, đi qua Rừng Vọng và Hầm Bóng đến Tháp Pha Lê. Xoay gương **dưới bệ**, rồi nhảy lên bệ để xoay gương **trên bệ** và dẫn tia đến pha lê. Qua Cổng Đêm, dùng trụ tại Đài Quan Sát để lưu. Trụ trong phòng Thủ Hộ hạ khiên trong một khoảng ngắn. Ở nửa máu, Thủ Hộ dựng khiên trở lại và bắn ba luồng đạn theo hướng báo trước. Đợi trụ nạp lại rồi phá khiên lần hai. Rương Nguyệt Thạch trong Hầm Bóng tăng một điểm sinh lực tối đa.
+**An:** combo kiếm ba nhịp giữ nguyên hình động; L mở cửa sổ phản đòn 0,46 giây, chặn một đòn và phản công quanh người. Thành công giảm hồi chiêu xuống 2,2 giây, hụt cần chờ 6 giây. **Kha:** đạn sáng kiểm tra va chạm suốt quãng đường; L hồi một tim, gây xung lực gần và bắn một đạn mạnh. Kỹ năng có pose từ bộ hình gốc, VFX và âm thanh.
 
-## Kiểm tra
+Boss có hướng / vùng báo đòn khóa trước khi đánh, khoảng hồi phục để phản công, né kiếm có hồi chiêu 4,8 giây và chuyển pha ở nửa máu. Một số động tác giữ pose gốc cộng chuyển động / VFX, chưa có bộ frame vẽ tay mới.
 
-```sh
-godot --headless --editor --import --quit
-godot --headless --script res://tests/smoke.gd
-godot --headless --script res://tests/hit_geometry_test.gd
-godot --headless --fixed-fps 60 --script res://tests/campaign_playthrough.gd
-godot --script res://tests/capture_visual.gd
-```
-
-Lệnh chụp ảnh cần trình hiển thị đồ họa. Bốn ảnh PNG nằm trong `visual-qa/`. Workflow PR chạy Godot 4.4.1, tạo ảnh QA và xuất Web một luồng dưới dạng artifact. HTML/WASM/PCK của artifact phải được phục vụ cùng nhau qua HTTP.
-
-- [Kế hoạch và tiêu chí phát hành](docs/MOCKUP_FIDELITY_RELEASE_PLAN.md)
-- [Bàn giao và đối chiếu mockup](docs/VISUAL_QA_HANDOFF.md)
-- [Nguồn gốc hình ảnh](docs/ASSET_MANIFEST.md)
+Mở `project.godot` trong Godot 4.4.1 và F5. Lệnh kiểm thử / xuất Web nằm trong [báo cáo QA](docs/VISUAL_QA_HANDOFF.md). Workflow kiểm tra sáu lượt chơi thật trước khi đưa export vào duy nhất `godot-play/` trên main. Các game khác không được đưa vào tập thay đổi.
