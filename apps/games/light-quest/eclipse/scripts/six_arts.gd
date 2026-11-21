@@ -207,4 +207,3 @@ func update_hud() -> void:
     for i in range(6):
         buttons[i].modulate = Color.WHITE if cooldowns[i] <= 0 else Color(0.6, 0.65, 0.75)
         buttons[i].text = str(i + 1) + ("\n%.1f" % cooldowns[i] if cooldowns[i] > 0 else "")
-
