@@ -3,8 +3,8 @@ extends Node2D
 const Art := preload("res://scripts/eclipse_art.gd")
 const Relic := preload("res://scripts/trial_relic.gd")
 const Boss := preload("res://scripts/trial_boss.gd")
-const TITLES := ["Tháp Gió", "Vườn Treo", "Đỉnh Nguyệt"]
-const BOSS_NAMES := ["Người Gác Thiên Chung", "Lang Vương Tán Mây", "Thủ Hộ Nhật Thực"]
+const TITLES := ["Tháp Gió", "Vườn Treo", "Đỉnh Nguyệt", "Đường Chân Trời"]
+const BOSS_NAMES := ["Người Gác Thiên Chung", "Lang Vương Tán Mây", "Thủ Hộ Nhật Thực", "Vệ Binh Hải Đăng"]
 const WIDTH := 1440.0
 var game: Node2D
 var active := false
@@ -39,7 +39,7 @@ var intro := true
 
 func _ready() -> void:
     game = get_parent()
-    for i in range(3): progress.append(_blank())
+    for i in TITLES.size(): progress.append(_blank())
     back_layer = CanvasLayer.new()
     back_layer.layer = -1
     add_child(back_layer)
@@ -143,11 +143,13 @@ func begin(index: int) -> void:
     game.hero.velocity = Vector2.ZERO
     game.arts.reset()
     game.cam.limit_left = int(origin)
-    game.cam.limit_right = int(origin + WIDTH)
+    game.cam.limit_right = int(origin + _width())
     game.cam.limit_top = -2000
     game.cam.limit_bottom = 600
-    _terrain()
+    if stage == 3: _coast()
+    else: _terrain()
     var stations := [Vector2(140,432), Vector2(870,-144), Vector2(650,-1244)]
+    if stage == 3: stations = [Vector2(140,432),Vector2(1280,226),Vector2(2460,106)]
     var cp: int = clampi(progress[stage].checkpoint, 0, 2)
     game.checkpoint = point(stations[cp])
     game.hero.position = game.checkpoint
@@ -159,11 +161,55 @@ func begin(index: int) -> void:
     hud_layer.show()
     back_layer.show()
     game.dialogue_label.text = TITLES[stage] + " · Hành trình lên cao\n1 phá vách · 2 lao lên · 3 kéo móc · 4 tìm ẩn · 5 rung chuông · 6 phá sàn.\nCác nút 1–6 bên dưới dùng được ngay; nút ẤN dùng kỹ năng đang chọn.\nE để đóng · Lưu tại các trụ xanh trên đường leo."
+    if stage == 3:
+        game.dialogue_label.text = "Đường Chân Trời · Dọc bờ vực
+Qua hai trạm, tìm lõi đèn dưới vòm đá, rung chuông và vượt đài canh.
+E để bắt đầu · I hoặc Trang bị để đổi cách đánh."
     game._show_dialogue(true)
     game._say("Leo tháp · Bước Gió đã mở — có thể nhảy hai lần", 3)
     update_hud()
     queue_redraw()
     print("ECLIPSE SKY: %d %s" % [stage, game.character])
+
+func _width() -> float:
+    return 3640.0 if stage == 3 else WIDTH
+
+func _coast() -> void:
+    # Long horizontal route with three gaps, a lower detour, and a final bridge.
+    for rect in [Rect2(0,456,570,80),Rect2(650,365,220,24),
+            Rect2(950,290,250,24),Rect2(1220,250,300,30),
+            Rect2(1600,345,470,26),Rect2(2150,255,240,24),
+            Rect2(2410,130,330,28),Rect2(3060,205,580,36)]:
+        _platform(rect)
+    _platform(Rect2(2810,185,190,24),true,true)
+    _platform(Rect2(1690,470,220,26))
+    _platform(Rect2(2030,425,105,24))
+    for at in [Vector2(740,264),Vector2(1030,187),Vector2(2250,151),Vector2(2530,22),Vector2(3190,100)]:
+        _anchor(at)
+    _marker("checkpoint1",Vector2(1280,250),"E · Trạm vòm đá",0)
+    _marker("checkpoint2",Vector2(2460,130),"E · Trạm hải đăng",0)
+    _marker("relic",Vector2(1780,470),"E · Lõi đèn dưới vòm",0)
+    _marker("secret",Vector2(2050,425),"E · Kho báu chân vòm",3)
+    _marker("bell",Vector2(2590,130),"5 · Rung chuông hải đăng",4)
+    _marker("goal",Vector2(3510,205),"E · Hoàn thành hành trình",0)
+    for at in [Vector2(1280,250),Vector2(2460,130)]:
+        _detail(5,at,Vector2(46,72))
+    _detail(9,Vector2(1780,470),Vector2(48,29))
+    _detail(9,Vector2(2050,425),Vector2(48,29))
+    _detail(7,Vector2(3510,205),Vector2(110,156))
+    _enemy("bat",Vector2(1090,175))
+    _enemy("mage",Vector2(1920,290))
+    _enemy("bat",Vector2(2690,80))
+    boss = Boss.new()
+    boss.kind = "guardian"
+    boss.trial = 2
+    boss.title = BOSS_NAMES[stage]
+    boss.max_hp = 34
+    boss.position = point(Vector2(3370,205-boss.SIZES.guardian.y*0.5-2))
+    boss.arena = Vector2(origin+3075,origin+3610)
+    root.add_child(boss)
+    game.enemies.append(boss)
+    _reveal_bridge()
 
 func _terrain() -> void:
     _platform(Rect2(0,456,WIDTH,80), false)
@@ -287,7 +333,9 @@ func _enemy(kind: String, local: Vector2) -> void:
 
 func _background() -> void:
     var path := "res://assets/eclipse/ascent-atlas.webp"
-    if ResourceLoader.exists(path):
+    if stage == 3:
+        backdrop.texture = preload("res://assets/eclipse/crystal-tower.webp")
+    elif ResourceLoader.exists(path):
         var sheet: Texture2D = load(path)
         var atlas := AtlasTexture.new()
         atlas.atlas = sheet
@@ -307,7 +355,7 @@ func _scroll_background() -> void:
 func tick(delta: float) -> void:
     if not active: return
     elapsed += delta
-    game.hero.position.x = clampf(game.hero.position.x,origin + 28,origin + WIDTH - 28)
+    game.hero.position.x = clampf(game.hero.position.x,origin + 28,origin + _width() - 28)
     best_height = maxf(best_height,456 - game.hero.position.y)
     for mover in movers:
         var offset := Vector2(sin(elapsed * 1.1) * 28, 0)
@@ -318,7 +366,7 @@ func tick(delta: float) -> void:
         marker.tick(delta,game.hero.position)
         marker.visible = not hidden
         if marker.kind == "relic": marker.visible = not progress[stage].relic
-    if is_instance_valid(boss) and not boss_dead and progress[stage].bell and progress[stage].relic and absf(game.hero.position.y - boss.position.y) < 200 and game.hero.position.y <= -1450 and game.hero.position.x >= boss.arena.x and game.hero.position.x <= boss.arena.y:
+    if is_instance_valid(boss) and not boss_dead and progress[stage].bell and progress[stage].relic and absf(game.hero.position.y - boss.position.y) < 200 and (stage == 3 or game.hero.position.y <= -1450) and game.hero.position.x >= boss.arena.x and game.hero.position.x <= boss.arena.y:
         boss.awake = true
     if is_instance_valid(boss) and boss.awake and not boss_dead:
         game.hero.position.x = clampf(game.hero.position.x,boss.arena.x + 18,boss.arena.y - 18)
@@ -328,6 +376,16 @@ func tick(delta: float) -> void:
 
 func use_art(id: int, at: Vector2) -> void:
     if not active: return
+    if stage == 3:
+        if id == 3:
+            progress[stage].sight = true
+            _reveal_bridge()
+            game._persist()
+        if id == 4 and at.distance_to(point(Vector2(2590,106))) < 150:
+            progress[stage].bell = true
+            game._persist()
+            game._say("Hải đăng đã thức · đài canh mở",3)
+        return
     match id:
         0:
             if is_instance_valid(crystal) and at.distance_to(point(Vector2(420,at.y))) < 155 and at.y > -240:
@@ -411,7 +469,7 @@ func interact() -> void:
                 print("ECLIPSE SKY CHECKPOINT: %d %d" % [stage,checkpoint_index])
                 return
             "relic":
-                if is_instance_valid(weak_floor):
+                if stage != 3 and is_instance_valid(weak_floor):
                     game._say("Lên sàn phía trên, nhảy rồi dùng 6 để phá sàn",2)
                     return
                 progress[stage].relic = true
@@ -450,15 +508,19 @@ func boss_defeated() -> void:
 
 func _finish() -> void:
     progress[stage].won = true
-    game._persist()
+    game.mark_chapter_complete(stage + 3)
     game.trials.victory_title.text = TITLES[stage].to_upper() + " · CHẠM TẦNG TRỜI"
     game.trials.victory_text.text = "Đã vượt hơn %d độ cao.\nSáu kỹ năng mở đường · Di Vật đã được cứu.\nBí mật: %s" % [int(best_height),"đã tìm" if progress[stage].secret else "còn một lối ẩn sau tháp"]
-    game.trials.next_button.text = "Tiếp: " + TITLES[(stage + 1) % 3]
+    game.trials.next_button.text = "Tiếp: " + TITLES[stage + 1] if stage < 3 else "Về bản đồ"
+    if stage == 3: game.trials.victory_text.text = "Đã thắp hải đăng và hoàn thành hành trình bảy màn."
     game._show_victory()
     print("ECLIPSE SKY WIN: %d %s height=%d" % [stage,game.character,int(best_height)])
 
 func next_stage() -> void:
-    game.demo_room_select.select(3 + (stage + 1) % 3)
+    if stage == 3:
+        game.trials.return_menu()
+        return
+    game.demo_room_select.select(4 + stage)
     game._start(game.character)
 
 func stop() -> void:
@@ -475,8 +537,8 @@ func secret_count() -> int:
     return result
 
 func restore(data: Variant) -> void:
-    if not data is Array or data.size() != 3: return
-    for i in range(3):
+    if not data is Array: return
+    for i in range(mini(data.size(), TITLES.size())):
         if not data[i] is Dictionary: continue
         var clean := _blank()
         clean.checkpoint = clampi(int(data[i].get("checkpoint",0)),0,2)
@@ -490,7 +552,10 @@ func update_hud() -> void:
     game.hearts.show_health(game.health,game.max_health)
     altitude.text = "Độ cao: %d · Trạm %d/2" % [maxi(0,int(456 - game.hero.position.y)),progress[stage].checkpoint]
     var p: Vector2 = game.hero.position
-    if not progress[stage].crystal: objective.text = "1 Phá Tinh · phá vách hồng, tìm đường leo lên"
+    if stage == 3:
+        altitude.text = "Đường đi %d%% · Trạm %d/2" % [int((p.x-origin)/_width()*100),progress[stage].checkpoint]
+        objective.text = "Tìm lõi đèn dưới vòm đá (E)" if not progress[stage].relic else ("Dùng 4 hiện cầu · dùng 5 gần chuông" if not progress[stage].bell else ("Đến đài canh và đánh bại vệ binh" if not boss_dead else "Đến cổng cuối và nhấn E"))
+    elif not progress[stage].crystal: objective.text = "1 Phá Tinh · phá vách hồng, tìm đường leo lên"
     elif p.y > 130: objective.text = "2 Thiên Thăng · lao lên sân tháp ở phía trên"
     elif not progress[stage].sight: objective.text = "3 kéo móc vàng · 4 hiện cầu và lối ẩn"
     elif not progress[stage].bell: objective.text = "Leo theo cầu tinh tú · dùng 5 tại chuông xanh"
@@ -513,7 +578,7 @@ func _draw() -> void:
         draw_line(anchor + Vector2(0,-6),anchor + Vector2(0,6),Color("#fff4db"),2,true)
     if is_instance_valid(boss) and boss.awake and not boss_dead:
         for x in [boss.arena.x + 18,boss.arena.y - 18]:
-            draw_line(Vector2(x,-1600),Vector2(x,-1430),Color("#e8c7a25a"),3,true)
+            draw_line(Vector2(x,35 if stage == 3 else -1600),Vector2(x,205 if stage == 3 else -1430),Color("#e8c7a25a"),3,true)
     if is_instance_valid(crystal):
         var r := box(Rect2(406,-224,28,680))
         draw_rect(r,Color("#df8cba35"))

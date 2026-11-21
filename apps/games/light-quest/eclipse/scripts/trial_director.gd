@@ -282,9 +282,10 @@ func boss_defeated() -> void:
         if is_instance_valid(bolt) and not bolt.friendly: bolt.life = 0
     game._persist()
     game.sound.play_cue("victory")
+    game.mark_chapter_complete(selected)
     victory_title.text = TITLES[selected].to_upper() + " · ĐÃ GIẢI PHÓNG"
     victory_text.text = BOSS_NAMES[selected] + " đã gục ngã.\nNguyệt Lướt đã thức tỉnh · Bí mật: %d/3\n%s" % [secrets.count(true), "Chuông lại ngân. Tiếng vọng dẫn vào rừng." if selected == 0 else ("Lang Vương để lộ cửa hầm ký ức." if selected == 1 else "Thời gian chuyển động. Ba miền đã được giải phóng.")]
-    next_button.text = "Tiếp: " + TITLES[(selected + 1) % 3]
+    next_button.text = "Tiếp: " + (TITLES[selected + 1] if selected < 2 else "Tháp Gió")
     var ending := create_tween()
     ending.tween_interval(0.75)
     var cleared := selected
@@ -298,7 +299,7 @@ func next_trial() -> void:
     if is_instance_valid(game.sky) and game.sky.active:
         game.sky.next_stage()
         return
-    game.demo_room_select.select((selected + 1) % 3)
+    game.demo_room_select.select(selected + 1)
     game._start(game.character)
 
 func return_menu() -> void:

@@ -119,6 +119,7 @@ func cast(index: int) -> void:
         game._say("Thiên Giáng · nhảy lên trước rồi dùng 6 / ẤN", 1.6)
         return
     cooldowns[selected] = maxf(0.8, COOLDOWNS[selected] - (game.sky.secret_count() * 0.2 if is_instance_valid(game.sky) else 0))
+    if selected == game.loadout.favorite: cooldowns[selected] *= 0.8
     cast_clock = 0.44
     cast_facing = game.facing
     hit_actors.clear()

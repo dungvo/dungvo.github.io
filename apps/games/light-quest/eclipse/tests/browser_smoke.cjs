@@ -61,7 +61,7 @@ async function run() {
                 else await page.mouse.click(p.x, p.y);
             };
             await canvas.screenshot({ path: path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-menu.png`) });
-            for (let chapter = 0; chapter < 6; chapter++) {
+            for (let chapter = 0; chapter < 7; chapter++) {
                 // Godot PopupMenu is drawn inside the canvas, rather than as DOM options.
                 await tap(480, 289);
                 await page.waitForTimeout(150);
@@ -134,7 +134,7 @@ async function run() {
             assert.deepEqual(errors, [], 'no browser or Godot runtime errors');
             await context.close();
         }
-        console.log('ECLIPSE WEB PASS: actual Godot WASM, all 6 chapter selectors, An/Kha, six-art toolbar, desktop / touch, three-finger input, viewport budget, no runtime errors');
+        console.log('ECLIPSE WEB PASS: actual Godot WASM, all 7 chapter selectors, An/Kha, six-art toolbar, desktop / touch, three-finger input, viewport budget, no runtime errors');
     } finally {
         await browser.close();
         if (server) server.close();

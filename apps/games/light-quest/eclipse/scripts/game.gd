@@ -109,6 +109,9 @@ var guardian_shield_visible := false
 
 
 
+var loadout: CanvasLayer
+var journey_next := 0
+
 func _ready() -> void:
     mobile_web = OS.has_feature("web") and DisplayServer.is_touchscreen_available()
     if mobile_web:
@@ -129,6 +132,8 @@ func _ready() -> void:
     add_child(arts)
     sky = SkyCampaign.new()
     add_child(sky)
+    loadout = preload("res://scripts/loadout.gd").new()
+    add_child(loadout)
     _restore()
     if activated: light_circuit.restore_solved()
     scenery.plaza_chest.hide()
@@ -371,7 +376,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nNGUYỆT THUẬT · V5"
+    title.text = "LIGHT QUEST: ECLIPSE\nHÀNH TRÌNH · V6"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -380,7 +385,7 @@ func _menu() -> void:
     note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(note)
     var selector_label := Label.new()
-    selector_label.text = "SÁU MÀN · 04–06 LÀ HÀNH TRÌNH LEO CAO"
+    selector_label.text = "CHỌN MÀN HOẶC TIẾP TỤC HÀNH TRÌNH"
     selector_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(selector_label)
     demo_room_select = OptionButton.new()
@@ -390,7 +395,8 @@ func _menu() -> void:
     demo_room_select.add_item("04 · Tháp Gió — sáu ấn / leo tầng trời", 3)
     demo_room_select.add_item("05 · Vườn Treo — khám phá trên mây", 4)
     demo_room_select.add_item("06 · Đỉnh Nguyệt — Thủ Hộ Nhật Thực", 5)
-    demo_room_select.select(3)
+    demo_room_select.add_item("07 · Đường Chân Trời — cầu gió và đài canh", 6)
+    demo_room_select.select(journey_next)
     demo_room_select.custom_minimum_size.y = 38.0
     v.add_child(demo_room_select)
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
@@ -455,6 +461,12 @@ func _measure_browser_render_rate() -> void:
 
 func _input(event:InputEvent) -> void:
     if not is_instance_valid(dialogue): return
+    if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_I and loadout.opener.visible:
+        loadout.toggle()
+        return
+    if loadout.panel.visible:
+        if event.is_action_pressed("ui_cancel"): loadout.toggle()
+        return
     if event.is_action_pressed("ui_cancel"):
         if dialogue.visible: _show_dialogue(false)
         elif victory_panel.visible: _dismiss_victory()
@@ -473,7 +485,7 @@ func _input(event:InputEvent) -> void:
             KEY_R: _respawn()
             KEY_L: _skill()
             KEY_Q: _signature()
-            KEY_F: arts.cast(arts.selected)
+            KEY_F: arts.cast(loadout.quick_art())
             KEY_1: arts.cast(0)
             KEY_2: arts.cast(1)
             KEY_3: arts.cast(2)
@@ -482,7 +494,7 @@ func _input(event:InputEvent) -> void:
             KEY_6: arts.cast(5)
 
 func _physics_process(delta:float) -> void:
-    if not started or dialogue.visible or victory_panel.visible: return
+    if not started or dialogue.visible or victory_panel.visible or loadout.panel.visible: return
     visual_clock += delta
     burst_cooldown = maxf(0, burst_cooldown - delta)
     burst_time = maxf(0, burst_time - delta)
@@ -578,7 +590,7 @@ func _physics_process(delta:float) -> void:
         _skill()
     if touch["art"]:
         touch["art"] = false
-        arts.cast(arts.selected)
+        arts.cast(loadout.quick_art())
     if touch["burst"]:
         touch["burst"] = false
         _signature()
@@ -770,14 +782,17 @@ func _attack() -> void:
     combo_window = 0.61
     attack_cooldown = ATTACK_CYCLE[combo_step - 1] if character == "An" else 0.46
     attack_windup = ATTACK_WINDUP[combo_step - 1] if character == "An" else 0.115
+    attack_cooldown *= [1.0, 1.22, 1.48][loadout.weapon]
     slash_time = attack_cooldown - 0.03
 
 func _resolve_attack() -> void:
     sound.play_cue("cast" if character == "Kha" else "slash", 1 + (combo_step - 1) * 0.08)
     if character == "Kha":
-        spawn_bolt(hero.position, Vector2(570 * attack_facing, 0), true, 1)
+        spawn_bolt(hero.position, Vector2((740 if loadout.weapon == 1 else 570) * attack_facing, 0), true, 2 if loadout.weapon == 2 else 1)
         return
     var reach := Hit.attack_hitbox(hero.position, attack_facing, false)
+    if loadout.weapon == 1:
+        reach = reach.grow_individual(24 if attack_facing < 0 else 0, 0, 24 if attack_facing > 0 else 0, 0)
     if combo_step == 2:
         reach = reach.grow_individual(0, 15, 0, 0)
     elif combo_step == 3:
@@ -787,7 +802,7 @@ func _resolve_attack() -> void:
     for hit in Combat.overlapping(space, reach, Combat.HOSTILE_HURT):
         var foe: CharacterBody2D = hit.collider.get_parent()
         if Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
-            foe.take_hit(2 if combo_step == 3 else 1, self)
+            foe.take_hit((2 if combo_step == 3 else 1) + int(loadout.weapon == 2), self)
             sound.play_cue("contact")
 
 func _skill() -> void:
@@ -979,11 +994,15 @@ func _update_hud() -> void:
     if is_instance_valid(trials): trials.update_hud()
     if is_instance_valid(sky) and sky.active: sky.update_hud()
 
+func mark_chapter_complete(chapter_index: int) -> void:
+    journey_next = maxi(journey_next, mini(chapter_index + 1, 6))
+    _persist()
+
 func _persist() -> void:
     if not save_enabled or not is_instance_valid(trials): return
     var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":2, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
+        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -991,6 +1010,9 @@ func _restore() -> void:
     if not f: return
     var data = JSON.parse_string(f.get_as_text())
     if not data is Dictionary or data.get("version") != 2: return
+    journey_next = clampi(int(data.get("journey_next", 0)), 0, 6)
+    loadout.weapon = clampi(int(data.get("weapon", 0)), 0, 2)
+    loadout.favorite = clampi(int(data.get("favorite", -1)), -1, 5)
     met_npc = data.get("met_npc", false) == true
     moon_dash = data.get("moon_dash", false) == true
     for key in ["secrets", "wins", "saved"]:
