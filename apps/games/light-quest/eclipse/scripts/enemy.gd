@@ -106,7 +106,10 @@ func step(delta: float, game: Node2D) -> void:
         var bounds := Vector2(floorf(home.x / 960.0) * 960.0 + 42.0, floorf(home.x / 960.0) * 960.0 + 918.0)
         if (position.x <= bounds.x and velocity.x < 0) or (position.x >= bounds.y and velocity.x > 0):
             velocity.x = 0
+        var time_factor: float = game.enemy_time_factor(position)
+        velocity.x *= time_factor
         move_and_slide()
+        velocity.x /= time_factor
     if sprite != null:
         sprite.flip_h = facing > 0
         sprite.modulate = Color("#ffbeb9") if flash > 0 else (Color("#ffe19a") if state == "tell" else Color.WHITE)

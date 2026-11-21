@@ -382,7 +382,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nNGỌN ĐÈN CHƯA TẮT · V9"
+    title.text = "LIGHT QUEST: ECLIPSE\nKHO VŨ KHÍ NGUYỆT THỰC · V10"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -654,13 +654,13 @@ func _physics_process(delta:float) -> void:
         if not is_instance_valid(enemy):
             enemies.remove_at(idx)
         elif absf(enemy.position.x - hero.position.x) < ROOM_W or enemy.state == "dead":
-            enemy.step(delta, self)
+            enemy.step(delta * enemy_time_factor(enemy.position), self)
     for idx in range(bolts.size() - 1, -1, -1):
         var bolt := bolts[idx]
         if not is_instance_valid(bolt):
             bolts.remove_at(idx)
         else:
-            bolt.step(delta, self)
+            bolt.step(delta * (1.0 if bolt.friendly else enemy_time_factor(bolt.position)), self)
     light_circuit.set_player_position(hero.position)
     if not sky.active: scenery.update_camera(cam.get_screen_center_position().x, activated)
     if activated:
@@ -729,7 +729,7 @@ func _tick_vfx(delta:float) -> void:
         else:
             vfx[i] = particle
 
-func spawn_bolt(origin: Vector2, motion: Vector2, allied: bool, amount: int) -> void:
+func spawn_bolt(origin: Vector2, motion: Vector2, allied: bool, amount: int) -> Node2D:
     var bolt := LightBolt.new()
     bolt.position = origin
     bolt.velocity = motion
@@ -738,6 +738,7 @@ func spawn_bolt(origin: Vector2, motion: Vector2, allied: bool, amount: int) -> 
     bolt.z_index = 6
     add_child(bolt)
     bolts.append(bolt)
+    return bolt
 
 func emit_impact(at: Vector2, color: Color) -> void:
     shake_time = 0.10
@@ -764,6 +765,9 @@ func enemy_strike(area: Rect2, origin: Vector2) -> bool:
         return true
     return false
 
+func enemy_time_factor(at: Vector2) -> float:
+    return sky.timeline.slow_factor(at) if time_mode else 1.0
+
 func damage_player(amount: int, from_x: float) -> void:
     if character == "An" and skill_time > 0 and not parry_used:
         parry_used = true
@@ -774,6 +778,7 @@ func damage_player(amount: int, from_x: float) -> void:
         _skill_damage(155, 3)
         return
     if i_frames > 0 or dash_time > 0 or dialogue.visible: return
+    if time_mode and sky.timeline.block_hit(): return
     health -= amount
     sound.play_cue("hurt")
     i_frames = 0.92

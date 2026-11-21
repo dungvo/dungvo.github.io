@@ -46,5 +46,45 @@ func _run() -> void:
     sky.boss_defeated()
     game._interact()
     if not ensure(timeline.lit and game.victory_panel.visible,"lighthouse ending"): return
+    game._dismiss_victory()
+    timeline.restore({"era":2,"owned":[true,true,false],"equipped":1})
+    if not ensure(timeline.owned.size() == 8 and timeline.owned[1] and not timeline.owned[7],"V9 save migrates to eight slots"): return
+    game.hero.position = sky.point(Vector2(590,432))
+    game._interact()
+    game._interact()
+    if not ensure(timeline.metal == 1,"cache rewards only once"): return
+    timeline.buy(6)
+    timeline.cooldown = 0
+    timeline.cast()
+    game.i_frames = 0
+    var hp: int = game.health
+    game.damage_player(1,0)
+    if not ensure(game.health == hp and timeline.barrier_time == 0,"shield consumes one block"): return
+    game.damage_player(1,0)
+    if not ensure(game.health == hp-1,"shield cannot block twice"): return
+    game.hero.position = sky.point(Vector2(1340,432))
+    timeline.owned[4] = true
+    timeline.equipped = 4
+    timeline.cooldown = 0
+    timeline.cast()
+    await _frames(36)
+    if not ensure(timeline.switch_open,"reflected arrow hits the switch"): return
+    timeline.owned[7] = true
+    timeline.equipped = 7
+    timeline.cooldown = 0
+    timeline.cast()
+    if not ensure(game.enemy_time_factor(game.hero.position) < 1 and game.enemy_time_factor(Vector2.ZERO) == 1,"slow applies locally"): return
+    timeline.owned[5] = true
+    timeline.equipped = 5
+    timeline.cooldown = 0
+    timeline.cast()
+    if not ensure(timeline.echo > 0,"staff schedules delayed attack"): return
+    timeline.update(0.6)
+    if not ensure(timeline.echo == 0 and timeline.preview_item == 5,"echo fires after its delay"): return
+    timeline.owned[3] = true
+    timeline.equipped = 3
+    timeline.cooldown = 0
+    timeline.cast()
+    if not ensure(game.dash_time > 0 and timeline.echo > 0,"dual blades lunge and queue a follow-up"): return
     print("ECLIPSE TIMELINE PASS")
     quit(0)

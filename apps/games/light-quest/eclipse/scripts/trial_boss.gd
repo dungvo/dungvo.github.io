@@ -84,7 +84,10 @@ func step(delta: float, game: Node2D) -> void:
             velocity.x = 0
             if clock <= 0: _set_state("patrol", 0.2)
     if (position.x <= arena.x and velocity.x < 0) or (position.x >= arena.y and velocity.x > 0): velocity.x = 0
+    var time_factor: float = game.enemy_time_factor(position)
+    velocity.x *= time_factor
     move_and_slide()
+    velocity.x /= time_factor
     position.x = clampf(position.x, arena.x, arena.y)
     sprite.flip_h = facing > 0
     sprite.modulate = Color("#ffb9c4") if flash > 0 else (Color("#ffe2a4") if state == "tell" else Color.WHITE)
