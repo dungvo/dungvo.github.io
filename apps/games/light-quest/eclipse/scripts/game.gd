@@ -351,6 +351,7 @@ func _touch_button(parent: Control, key: String, glyph: String, center: Vector2,
     control_art[key] = face
 
 func _control_pressed(key: String) -> void:
+    if time_mode and sky.timeline.panel.visible: return
     if not started or death_time > 0: return
     if victory_panel.visible:
         if key == "interact": _dismiss_victory()
@@ -389,7 +390,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nBỜ ĐÁ DƯỚI TRĂNG · V11.1"
+    title.text = "LIGHT QUEST: ECLIPSE\nLÒ RÈN ÁNH TRĂNG · V12"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -847,7 +848,9 @@ func _respawn() -> void:
         if is_instance_valid(bolt): bolt.queue_free()
     bolts.clear()
     cam.reset_smoothing()
-    if sky.active: sky.respawn()
+    if sky.active:
+        if time_mode: sky.timeline.reset_chain()
+        sky.respawn()
     elif is_instance_valid(trials):
         trials.respawn()
         arts.reset()

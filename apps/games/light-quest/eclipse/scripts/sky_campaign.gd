@@ -479,11 +479,12 @@ func _reveal_bridge() -> void:
         body.collision_layer = game.Combat.WORLD if progress[stage].sight else 0
     for art in ghost_art: art.modulate = Color.WHITE if progress[stage].sight else Color(0.7,0.8,1,0.12)
 
-func nearest_anchor(at: Vector2) -> Vector2:
+func nearest_anchor(at: Vector2, excluded := Vector2.INF) -> Vector2:
     if not active: return Vector2.INF
     var best := Vector2.INF
     var distance := 10000.0
     for anchor in anchors:
+        if anchor == excluded: continue
         if anchor.y > at.y - 100: continue
         if absf(anchor.x - at.x) < 110 and at.y - anchor.y < 115: continue
         var gap := at.distance_to(anchor)

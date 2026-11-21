@@ -8,6 +8,14 @@ const TECHS := ["Trăng Vỡ · quét sáng phía trước","Xuyên Vực · ké
     "Vọng Ảnh · bóng lặp đòn tại chỗ sau một nhịp","Nhật Hộ · chặn một đòn trong hai giây",
     "Tàn Khắc · làm chậm kẻ địch và bẫy trong vùng tím"]
 const MAP_WIDTH := 2600.0
+const SPEAR := 1
+const SPEAR_CORE_COST := 4
+const CORE_CISTERN := 1
+const CORE_GUARDIAN := 2
+const CORE_PRESENT := 4
+const CORE_FUTURE := 8
+const CORE_AWARDS := CORE_CISTERN | CORE_GUARDIAN | CORE_PRESENT | CORE_FUTURE
+const TECH_REACH := [115,210,100,80,0,120,0,150]
 var sky: Node2D
 var game: Node2D
 var era := 1
@@ -32,6 +40,11 @@ var catalog_page := 0
 var equipped := 0
 var defeated := [false,false,false]
 var metal := 0
+var lunar_cores := 0
+var lunar_awards := 0
+var spear_infused := false
+var chain_left := 0.0
+var first_anchor := Vector2.INF
 var cooldown := 0.0
 var flare := 0.0
 var flare_origin := Vector2.ZERO
@@ -41,6 +54,9 @@ var indoors := false
 var ui: CanvasLayer
 var panel: PanelContainer
 var dimmer: ColorRect
+var forge_scene: TextureRect
+var base_panel: StyleBoxFlat
+var forge_panel: StyleBoxFlat
 var heading: Label
 var copy: Label
 var options: VBoxContainer
@@ -89,6 +105,14 @@ func _ready() -> void:
     minimap.size = Vector2(124,59)
     minimap.mouse_filter = Control.MOUSE_FILTER_IGNORE
     map_button.add_child(minimap)
+    forge_scene = TextureRect.new()
+    forge_scene.texture = FORGE
+    forge_scene.size = Vector2(960,540)
+    forge_scene.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+    forge_scene.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+    forge_scene.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    forge_scene.hide()
+    ui.add_child(forge_scene)
     dimmer = ColorRect.new()
     dimmer.color = Color("#060b17a0")
     dimmer.size = Vector2(960,540)
@@ -98,7 +122,11 @@ func _ready() -> void:
     panel = PanelContainer.new()
     panel.position = Vector2(203,82)
     panel.custom_minimum_size = Vector2(554,340)
-    panel.add_theme_stylebox_override("panel",game._panel_style())
+    base_panel = game._panel_style()
+    forge_panel = base_panel.duplicate()
+    forge_panel.bg_color = Color("#0e1523d9")
+    forge_panel.border_color = Color("#e1b77e")
+    panel.add_theme_stylebox_override("panel",base_panel)
     ui.add_child(panel)
     var content := VBoxContainer.new()
     content.add_theme_constant_override("separation",8)
@@ -122,6 +150,7 @@ func build() -> void:
     dropping = false
     sky.boss = null
     cooldown = 0
+    reset_chain()
     flare = 0
     echo = 0
     barrier_time = 0
@@ -157,6 +186,10 @@ func build() -> void:
     sky._platform(Rect2(1940,420,108,20),true,false,true)
     sky._anchor(Vector2(1070,281))
     sky._anchor(Vector2(2125,310))
+    if era == 2:
+        sky._anchor(Vector2(2290,174))
+        sky._platform(Rect2(2250,253,166,18))
+        sky._marker("spear_anchors",Vector2(2115,456),"Hai neo · Thương Tơ / Tơ Kép",2)
     sky._marker("time_machine",Vector2(150,456),"E · Cỗ máy thời gian",2)
     sky._marker("time_forge",Vector2(420,456),"E · Vào tiệm Bà Lam" if era == 0 else "E · Hỏi Tín",2)
     sky._marker("time_rest",Vector2(1190,456),"E · Nghỉ / lưu điểm",4)
@@ -227,12 +260,14 @@ func active() -> bool:
 func hide_ui() -> void:
     ui.hide()
     panel.hide()
+    forge_scene.hide()
     dimmer.hide()
     mode = ""
     queue_redraw()
 
 func close() -> void:
     panel.hide()
+    forge_scene.hide()
     dimmer.hide()
     mode = ""
     if game.started and not game.dialogue.visible: game.joystick.accept_touch = true
@@ -247,8 +282,13 @@ func _choice(title: String, action: Callable) -> void:
 func _open(which: String) -> void:
     mode = which
     var wide := which in ["forge","item","map","journal","gear","skills"]
-    panel.position = Vector2(46,52) if wide else Vector2(203,82)
-    panel.custom_minimum_size = Vector2(868,420) if wide else Vector2(554,340)
+    var shop := which == "forge"
+    forge_scene.visible = shop
+    dimmer.color = Color("#10101535") if shop else Color("#060b17a0")
+    panel.add_theme_stylebox_override("panel",forge_panel if shop else base_panel)
+    panel.position = Vector2(27,23) if shop else (Vector2(46,52) if wide else Vector2(203,82))
+    panel.custom_minimum_size = Vector2(906,494) if shop else (Vector2(868,420) if wide else Vector2(554,340))
+    heading.modulate = Color.WHITE
     copy.show()
     panel.call_deferred("reset_size")
     dimmer.show()
@@ -299,13 +339,43 @@ func _button(parent: Control, title: String, callback: Callable) -> Button:
     parent.add_child(button)
     return button
 
+func _emphasize(button: Button) -> void:
+    var style := StyleBoxFlat.new()
+    style.bg_color = Color("#523b28")
+    style.border_color = Color("#efbe75")
+    style.set_corner_radius_all(5)
+    style.set_border_width_all(1)
+    style.content_margin_left = 12
+    style.content_margin_right = 12
+    button.add_theme_stylebox_override("normal",style)
+
+func award_lunar_core(source: int) -> bool:
+    if (lunar_awards & source) != 0: return false
+    lunar_awards |= source
+    lunar_cores += 1
+    return true
+
+func infuse_spear() -> bool:
+    if not active() or not indoors or mode != "forge": return false
+    if not owned[SPEAR] or spear_infused or lunar_cores < SPEAR_CORE_COST: return false
+    lunar_cores -= SPEAR_CORE_COST
+    spear_infused = true
+    game.sound.play_cue("phase")
+    game._persist()
+    return true
+
+func reset_chain() -> void:
+    chain_left = 0.0
+    first_anchor = Vector2.INF
+
 func show_catalog() -> void:
     inspect_weapon(catalog_page*6)
 
 func inspect_weapon(item: int) -> void:
     _open("forge")
     heading.text = "TIỆM RÈN BÀ LAM"
-    copy.text = "Mảnh đồng  %d   ·   %s" % [metal,"Cầu đã gia cố" if repaired else "Gia cố cầu cần lõi Thủ Vệ Đá"]
+    heading.modulate = Color("#ffdda4")
+    copy.text = "Mảnh đồng  %d    ◇  Lõi nguyệt  %d" % [metal,lunar_cores]
     var row := HBoxContainer.new()
     row.add_theme_constant_override("separation",12)
     options.add_child(row)
@@ -313,7 +383,7 @@ func inspect_weapon(item: int) -> void:
     face.texture = _crop(portrait,Rect2(25,150,366,580))
     face.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
     face.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-    face.custom_minimum_size = Vector2(150,240)
+    face.custom_minimum_size = Vector2(176,244)
     row.add_child(face)
     var catalog := GridContainer.new()
     catalog.columns = 3
@@ -352,29 +422,66 @@ func inspect_weapon(item: int) -> void:
     row.add_child(details)
     var name_label := Label.new()
     name_label.text = WEAPONS[item]
-    name_label.add_theme_font_size_override("font_size",20)
+    name_label.add_theme_font_size_override("font_size",22)
+    name_label.modulate = Color("#ffe3ae")
     details.add_child(name_label)
     var stats := Label.new()
-    stats.text = TECHS[item]+"
-"+("Đã có trong kho" if owned[item] else "Giá · 1 mảnh đồng")
+    stats.text = TECHS[item]
+    stats.custom_minimum_size.x = 350
     stats.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
     details.add_child(stats)
-    if item == 1:
-        var reach := Label.new()
-        reach.text = "Tầm chiêu 210 · Nguyệt Kiếm 115"
-        reach.modulate = Color("#b4eac2")
-        details.add_child(reach)
+    var item_info := Label.new()
+    item_info.text = "Đang mang" if equipped == item else ("Đã sở hữu" if owned[item] else "Giá · 1 mảnh đồng")
+    item_info.modulate = Color("#d8c396")
+    details.add_child(item_info)
+    var reach := Label.new()
+    var candidate: int = TECH_REACH[item]
+    var current: int = TECH_REACH[equipped]
+    if candidate > 0 and current > 0:
+        var difference := candidate-current
+        reach.text = "Tầm chiêu  %d  →  %d" % [current,candidate]
+        if difference != 0: reach.text += "  (%+d)" % difference
+        reach.modulate = Color("#b4eac2") if difference > 0 else (Color("#ffb2a6") if difference < 0 else Color("#d7dff1"))
+    else:
+        reach.text = "Đòn riêng · Hồi 2,7 giây"
+    details.add_child(reach)
     var preview := SkillPreview.new()
     preview.weapon = item
+    preview.double_tether = item == SPEAR and spear_infused
     preview.phase = 0.0
-    preview.custom_minimum_size = Vector2(330,96)
+    preview.custom_minimum_size = Vector2(350,113)
     preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
     details.add_child(preview)
-    _button(details,"Thử chiêu",func():
+    var commands := HBoxContainer.new()
+    commands.add_theme_constant_override("separation",6)
+    details.add_child(commands)
+    _button(commands,"Thử chiêu",func():
         preview.phase = 0
         game.sound.play_cue("slash")
     )
-    _button(details,"Trang bị" if owned[item] else "Mua · 1 mảnh đồng",func(): buy(item))
+    var transaction := _button(commands,"Trang bị" if owned[item] else "Mua · 1 đồng",func():
+        buy(item)
+        inspect_weapon(item)
+    )
+    transaction.disabled = equipped == item or (not owned[item] and metal < 1)
+    _emphasize(transaction)
+    if item == SPEAR:
+        var infusion := Label.new()
+        infusion.add_theme_font_size_override("font_size",14)
+        infusion.text = "◆ Tơ Kép · đã mở" if spear_infused else "◇ Tơ Kép · %d / %d Lõi nguyệt" % [lunar_cores,SPEAR_CORE_COST]
+        infusion.modulate = Color("#a7eeef")
+        details.add_child(infusion)
+        var forge_actions := HBoxContainer.new()
+        details.add_child(forge_actions)
+        _button(forge_actions,"Xem Tơ Kép",func():
+            preview.double_tether = true
+            preview.phase = 0
+        )
+        var upgrade := _button(commands,"Truyền lõi · 4",func():
+            if infuse_spear(): inspect_weapon(item)
+        )
+        _emphasize(upgrade)
+        upgrade.disabled = not owned[SPEAR] or spear_infused or lunar_cores < SPEAR_CORE_COST
     var actions := HBoxContainer.new()
     options.add_child(actions)
     _button(actions,"Kho "+str(catalog_page+1)+"/2 ›",func():
@@ -438,6 +545,7 @@ func open_gear() -> void:
         var item := i
         var button := _button(grid,WEAPONS[i],func():
             equipped = item
+            reset_chain()
             game._persist()
             open_gear()
         )
@@ -461,6 +569,7 @@ func buy(item: int) -> void:
         metal -= 1
         owned[item] = true
     equipped = item
+    reset_chain()
     game._persist()
     close()
     game._say("Đã mang "+WEAPONS[item]+" · V dùng chiêu riêng",3)
@@ -495,11 +604,12 @@ func interact() -> void:
             game._say("Tín đang chờ cạnh đèn ở giữa hầm",2)
             return
         rescued = true
+        var received := award_lunar_core(CORE_CISTERN)
         game._persist()
         game.hero.position = sky.point(Vector2(366,432))
         game.hero.velocity = Vector2.ZERO
         game.cam.reset_smoothing()
-        game._say("Tín đã an toàn · cửa hầm mở về Bờ Đá",4)
+        game._say("Tín đã an toàn · nhận 1 Lõi nguyệt" if received else "Cửa hầm mở về Bờ Đá",4)
         return
     if rescued and x > 310 and x < 382 and game.hero.position.y > 375:
         game.hero.position = sky.point(Vector2(400,676))
@@ -530,7 +640,11 @@ func interact() -> void:
     elif absf(x-1190) < 54:
         game.checkpoint = sky.point(Vector2(1190,432))
         game.health = game.max_health
-        game._say("Đã nghỉ tại trạm hải đăng",3)
+        var received := false
+        if era == 1: received = award_lunar_core(CORE_PRESENT)
+        elif era == 2: received = award_lunar_core(CORE_FUTURE)
+        if received: game._persist()
+        game._say("Điểm nghỉ đã mở · nhận 1 Lõi nguyệt" if received else "Đã nghỉ tại trạm hải đăng",3)
     elif absf(x-2470) < 85 and era == 2:
         if not defeated[2]:
             game._say("Hạ Vệ Binh Mắt Đèn trước khi thắp đèn",3)
@@ -545,11 +659,13 @@ func interact() -> void:
         game._say("E gần cỗ máy, tiệm rèn, trạm nghỉ hoặc hải đăng · V dùng vũ khí",3)
 
 func guardian_down() -> void:
+    if defeated[era]: return
     defeated[era] = true
     if era == 0:
         core = true
         metal += 2
-        game._say("Nhặt lõi đồng và 2 mảnh đồng · trở lại Bà Lam",5)
+        award_lunar_core(CORE_GUARDIAN)
+        game._say("Nhận lõi đồng, 2 mảnh đồng và 1 Lõi nguyệt",5)
     else:
         game._say("Vệ Binh đã gục · đi tiếp để thắp hải đăng",5)
     game._persist()
@@ -557,7 +673,18 @@ func guardian_down() -> void:
 var preview_item := 0
 
 func cast() -> void:
-    if not active() or panel.visible or game.dialogue.visible or game.victory_panel.visible or game.death_time > 0 or cooldown > 0: return
+    if not active() or panel.visible or game.dialogue.visible or game.victory_panel.visible or game.death_time > 0: return
+    if equipped == SPEAR and spear_infused and chain_left > 0:
+        if game.hero.position.distance_to(first_anchor+Vector2(0,24)) > 75:
+            game._say("Tơ Kép · đợi tới gần neo đầu rồi bấm V",1.4)
+            return
+        if game.arts.cast(2,first_anchor):
+            reset_chain()
+            cooldown = 2.7
+            game.sound.play_cue("phase")
+            game._say("Tơ Kép · đã nối neo thứ hai",2)
+        return
+    if cooldown > 0: return
     cooldown = 2.7
     flare = 0.35
     flare_origin = game.hero.position
@@ -566,8 +693,12 @@ func cast() -> void:
     match equipped:
         0: strike(flare_origin,115,flare_direction,2)
         1:
-            if sky.nearest_anchor(game.hero.position) != Vector2.INF: game.arts.cast(2)
-            strike(flare_origin,210,flare_direction,2)
+            if sky.nearest_anchor(game.hero.position) != Vector2.INF:
+                if game.arts.cast(2) and spear_infused:
+                    first_anchor = game.arts.grapple_target-Vector2(0,24)
+                    chain_left = 1.8
+                    game._say("Tơ Kép · bấm V lần nữa khi tới gần neo",2)
+            strike(flare_origin,float(TECH_REACH[SPEAR]),flare_direction,2)
         2: strike(flare_origin,100,0,3)
         3:
             game.dash_time = 0.16
@@ -627,6 +758,7 @@ func arrow_trigger(from: Vector2, to: Vector2, reflected: bool) -> bool:
     return true
 
 func update(delta: float) -> void:
+    chain_left = maxf(0,chain_left-delta)
     var echo_was_active := echo > 0
     echo = maxf(0,echo-delta)
     if echo_was_active and echo == 0:
@@ -645,7 +777,8 @@ func update(delta: float) -> void:
     map_button.visible = tech_button.visible
     minimap.queue_redraw()
     underground = game.hero.position.y > 566 and game.hero.position.x < sky.origin+770
-    tech_button.text = "V · %s" % (WEAPONS[equipped] if cooldown == 0 else "%.1fs" % cooldown)
+    tech_button.text = "V · Tơ Kép ›" if chain_left > 0 else "V · %s" % (WEAPONS[equipped] if cooldown == 0 else "%.1fs" % cooldown)
+    tech_button.modulate = Color("#9ff2ff") if chain_left > 0 else Color.WHITE
     for marker in sky.markers: marker.tick(delta,game.hero.position)
     var x: float = game.hero.position.x - sky.origin
     if era == 2 and not repaired and companion == 1 and is_instance_valid(hidden_platform) and x > 675 and x < 1130:
@@ -735,7 +868,7 @@ func _draw() -> void:
                 draw_arc(flare_origin,92,0,TAU,48,Color("#d5a9ff",alpha),5,true)
 
 func save_state() -> Dictionary:
-    return {"era":era,"core":core,"repaired":repaired,"lit":lit,"metal":metal,"companion":companion,"owned":owned.duplicate(),"equipped":equipped,"defeated":defeated.duplicate(),"claimed":claimed.duplicate(),"switch_open":switch_open,"rescued":rescued}
+    return {"era":era,"core":core,"repaired":repaired,"lit":lit,"metal":metal,"companion":companion,"owned":owned.duplicate(),"equipped":equipped,"defeated":defeated.duplicate(),"claimed":claimed.duplicate(),"switch_open":switch_open,"rescued":rescued,"lunar_cores":lunar_cores,"lunar_awards":lunar_awards,"spear_infused":spear_infused}
 
 func restore(data: Dictionary) -> void:
     era = clampi(int(data.get("era",1)),0,2)
@@ -754,3 +887,9 @@ func restore(data: Dictionary) -> void:
     owned[0] = true
     equipped = clampi(int(data.get("equipped",0)),0,WEAPONS.size()-1)
     if not owned[equipped]: equipped = 0
+    lunar_awards = int(data.get("lunar_awards",0)) & CORE_AWARDS
+    lunar_cores = clampi(int(data.get("lunar_cores",0)),0,SPEAR_CORE_COST)
+    spear_infused = owned[SPEAR] and data.get("spear_infused",false) == true
+    if rescued: award_lunar_core(CORE_CISTERN)
+    if defeated[0]: award_lunar_core(CORE_GUARDIAN)
+    reset_chain()

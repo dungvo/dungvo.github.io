@@ -61,7 +61,9 @@ jobs:
           grep -q "ECLIPSE TIMELINE PASS" timeline.log
           timeout 35s godot --headless --fixed-fps 60 --script res://tests/coast_test.gd 2>&1 | tee coast.log
           grep -q "ECLIPSE COAST PASS" coast.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' coast.log timeline.log horizon.log journey.log smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log art-vfx.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/forge_progression_test.gd 2>&1 | tee forge.log
+          grep -q "ECLIPSE FORGE PASS" forge.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' forge.log coast.log timeline.log horizon.log journey.log smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log art-vfx.log
       - name: Export single-threaded Godot Web
         working-directory: apps/games/light-quest/eclipse
         shell: bash
@@ -93,7 +95,9 @@ jobs:
           timeout 120s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_visual.gd 2>&1 | tee renderer.log
           timeout 120s xvfb-run -a godot --audio-driver Dummy --fixed-fps 60 --script res://tests/capture_arts.gd 2>&1 | tee art-renderer.log
           grep -q 'ECLIPSE VFX CAPTURE PASS' art-renderer.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' renderer.log art-renderer.log
+          timeout 35s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_forge.gd 2>&1 | tee forge-renderer.log
+          grep -q 'ECLIPSE FORGE CAPTURE PASS' forge-renderer.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' renderer.log art-renderer.log forge-renderer.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -100,24 +100,25 @@ func reset() -> void:
     update_hud()
     queue_redraw()
 
-func cast(index: int) -> void:
-    if not game.started or game.dialogue.visible or game.victory_panel.visible or game.death_time > 0: return
+func cast(index: int, previous_anchor := Vector2.INF) -> bool:
+    if not game.started or game.dialogue.visible or game.victory_panel.visible or game.death_time > 0: return false
     selected = clampi(index, 0, 5)
-    if cooldowns[selected] > 0:
+    var chaining := selected == 2 and previous_anchor != Vector2.INF
+    if cooldowns[selected] > 0 and not chaining:
         game._say(NAMES[selected] + " · đang hồi %.1fs" % cooldowns[selected], 0.8)
         update_hud()
-        return
+        return false
     var at: Vector2 = game.hero.position
     if selected == 2:
-        var anchor: Vector2 = game.sky.nearest_anchor(at) if game.sky.active else Vector2.INF
+        var anchor: Vector2 = game.sky.nearest_anchor(at,previous_anchor) if game.sky.active else Vector2.INF
         if anchor == Vector2.INF:
             game._say("Tơ Nguyệt · đến gần móc neo vàng phía trên", 1.5)
-            return
+            return false
         grapple_target = anchor + Vector2(0, 24)
         grapple_time = 0.9
     if selected == 5 and game.hero.is_on_floor():
         game._say("Thiên Giáng · nhảy lên trước rồi dùng 6 / ẤN", 1.6)
-        return
+        return false
     cooldowns[selected] = maxf(0.8, COOLDOWNS[selected] - (game.sky.secret_count() * 0.2 if is_instance_valid(game.sky) else 0))
     if selected == game.loadout.favorite: cooldowns[selected] *= 0.8
     cast_clock = 0.44
@@ -151,6 +152,7 @@ func cast(index: int) -> void:
     update_hud()
     queue_redraw()
     print("ECLIPSE ART: %d %s" % [selected + 1, NAMES[selected]])
+    return true
 
 func tick(delta: float) -> void:
     for i in range(6): cooldowns[i] = maxf(0, cooldowns[i] - delta)

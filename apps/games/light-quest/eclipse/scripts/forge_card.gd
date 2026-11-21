@@ -5,6 +5,7 @@ const Art := preload("res://scripts/eclipse_art.gd")
 const COLORS := [Color("#bbdcff"),Color("#ffda91"),Color("#ffab72"),Color("#ded0ff"),Color("#f6d99a"),Color("#97f5de"),Color("#ffe8b0"),Color("#ddacff")]
 var frames: SpriteFrames
 var weapon := 0
+var double_tether := false
 var phase := 1.0
 
 func _ready() -> void:
@@ -38,16 +39,11 @@ func _draw() -> void:
     var alpha := sin(phase*PI)
     match weapon:
         1,4:
-            var target := Vector2(size.x*0.86,size.y*0.24)
-            var tip := at.lerp(target,minf(1,phase*3.4))
-            var strands := PackedVector2Array()
-            for i in range(17):
-                var part := float(i)/16
-                strands.append(at.lerp(tip,part)+Vector2(0,sin(part*TAU+phase*9)*5*sin(part*PI)))
-            draw_polyline(strands,Color(tint,alpha*0.24),14,true)
-            draw_polyline(strands,Color(tint,alpha),4,true)
-            draw_line(at,tip,Color("#fff1cb",alpha),1.3,true)
-            draw_arc(target,10,0,TAU,24,Color("#9eeaff",alpha),2,true)
+            var target := Vector2(size.x*0.65,size.y*0.42)
+            _thread(at,target,phase*2.8,tint,alpha)
+            if double_tether and phase > 0.34:
+                var second := Vector2(size.x*0.90,size.y*0.17)
+                _thread(target,second,(phase-0.34)*3.8,Color("#8fedff"),alpha)
         3:
             for sign_y in [-1,1]:
                 draw_line(at+Vector2(12,-15*sign_y),at+Vector2(86,14*sign_y),Color(tint,alpha),5,true)
@@ -62,3 +58,15 @@ func _draw() -> void:
         _:
             for width in [12.0,5.0,2.0]:
                 draw_arc(at+Vector2(25,0),28+phase*22,-1.15,1.15,32,Color(tint,alpha*(0.25 if width == 12 else 0.9)),width,true)
+
+
+func _thread(at: Vector2, target: Vector2, progress: float, tint: Color, alpha: float) -> void:
+    var tip := at.lerp(target,minf(1,progress))
+    var strands := PackedVector2Array()
+    for i in range(17):
+        var part := float(i)/16
+        strands.append(at.lerp(tip,part)+Vector2(0,sin(part*TAU+phase*9)*5*sin(part*PI)))
+    draw_polyline(strands,Color(tint,alpha*0.24),14,true)
+    draw_polyline(strands,Color(tint,alpha),4,true)
+    draw_line(at,tip,Color("#fff1cb",alpha),1.3,true)
+    draw_arc(target,8,0,TAU,24,Color("#9eeaff",alpha),2,true)
