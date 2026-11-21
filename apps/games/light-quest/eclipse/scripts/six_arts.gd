@@ -1,5 +1,6 @@
 extends Node2D
 ## Six distinct Godot traversal/combat arts. All movement uses the hero's collision body.
+const ArtVFX := preload("res://scripts/art_vfx.gd")
 const BossActor := preload("res://scripts/trial_boss.gd")
 const NAMES := ["Phá Tinh", "Thiên Thăng", "Tơ Nguyệt", "Nguyệt Nhãn", "Chuông Vọng", "Thiên Giáng"]
 const USES := ["lướt phá vách nứt", "lao lên tầng cao", "kéo tới móc neo vàng", "hiện cầu và phòng bí mật", "mở cửa cộng hưởng / choáng", "giáng xuống phá sàn yếu"]
@@ -8,7 +9,7 @@ const COLORS := [Color("#ffb7bd"), Color("#a8efff"), Color("#ffe3a5"), Color("#c
 var game: Node2D
 var selected := 0
 var cooldowns := [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-var effects: Array[Dictionary] = []
+var vfx := ArtVFX.new()
 var cast_clock := 0.0
 var cast_facing := 1
 var rise_time := 0.0
@@ -21,7 +22,6 @@ var layer: CanvasLayer
 var buttons: Array[Button] = []
 var caption: Label
 var ui_clock := 0.0
-var drawing_active := false
 
 class RuneIcon extends Node2D:
     var index := 0
@@ -54,16 +54,18 @@ class RuneIcon extends Node2D:
 func _ready() -> void:
     game = get_parent()
     z_index = 8
+    add_child(vfx)
     layer = CanvasLayer.new()
     layer.layer = 3
     add_child(layer)
-    caption = game._hud_label(layer, Vector2(255, 432), Vector2(390, 35), 14)
+    caption = game._hud_label(layer, Vector2(255, 448), Vector2(390, 24), 13)
     caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     for i in range(6):
         var button := Button.new()
         button.position = Vector2(260 + i * 61, 474)
         button.size = Vector2(57, 54)
         button.text = str(i + 1)
+        button.tooltip_text = NAMES[i] + " · " + USES[i]
         button.alignment = HORIZONTAL_ALIGNMENT_LEFT
         button.add_theme_font_size_override("font_size", 12)
         button.focus_mode = Control.FOCUS_NONE
@@ -92,7 +94,7 @@ func reset() -> void:
     rush_time = 0
     dive_time = 0
     grapple_time = 0
-    effects.clear()
+    vfx.clear()
     hit_actors.clear()
     layer.show()
     update_hud()
@@ -143,8 +145,7 @@ func cast(index: int) -> void:
             dive_time = 1.0
             game.sound.play_cue("slash", 0.65)
     if game.sky.active and selected != 5: game.sky.use_art(selected, at)
-    effects.append({"id":selected,"p":at,"f":cast_facing,"life":0.7,"duration":0.7})
-    game._burst(at, COLORS[selected], 20, 175)
+    vfx.begin(selected, at, cast_facing, grapple_target)
     game._say(NAMES[selected] + " · " + USES[selected], 1.8)
     update_hud()
     queue_redraw()
@@ -160,12 +161,7 @@ func tick(delta: float) -> void:
     if rush_time > 0 or rise_time > 0:
         _damage(105, 2, false)
         if game.sky.active: game.sky.use_art(0 if rush_time > 0 else 1, game.hero.position)
-    for i in range(effects.size() - 1, -1, -1):
-        effects[i]["life"] = float(effects[i]["life"]) - delta
-        if effects[i]["life"] <= 0: effects.remove_at(i)
-    var visible_effect := not effects.is_empty() or grapple_time > 0 or dive_time > 0 or rise_time > 0
-    if visible_effect or drawing_active: queue_redraw()
-    drawing_active = visible_effect
+    vfx.tick(delta, game.hero.position, rush_time, rise_time, grapple_time, dive_time, grapple_target, cast_facing)
     ui_clock -= delta
     if ui_clock <= 0:
         ui_clock = 0.1
@@ -188,7 +184,7 @@ func after_move() -> void:
         var at: Vector2 = game.hero.position + Vector2(0, 24)
         if game.sky.active: game.sky.use_art(5, at)
         _damage(190, 3, false)
-        effects.append({"id":5,"p":at,"f":game.facing,"life":0.7,"duration":0.7})
+        vfx.impact(at, game.facing)
         game.emit_impact(at, COLORS[5])
         game.sound.play_cue("contact", 0.65)
         queue_redraw()
@@ -201,56 +197,14 @@ func _damage(radius: float, amount: int, stun: bool) -> void:
         if not game.Combat.ray(space, game.hero.position, foe.position, game.Combat.WORLD).is_empty(): continue
         hit_actors.append(foe.get_instance_id())
         foe.take_hit(amount, game)
+        vfx.contact(foe.position, selected)
         if stun and foe.state not in ["dead", "phase"]:
             foe._set_state("recover", 0.42 if foe is BossActor else 1.0)
 
 func update_hud() -> void:
     if not game.started: return
-    caption.text = "%d · %s — %s" % [selected + 1, NAMES[selected], USES[selected]]
+    caption.text = "%d · %s" % [selected + 1, NAMES[selected]]
     for i in range(6):
         buttons[i].modulate = Color.WHITE if cooldowns[i] <= 0 else Color(0.6, 0.65, 0.75)
         buttons[i].text = str(i + 1) + ("\n%.1f" % cooldowns[i] if cooldowns[i] > 0 else "")
 
-func _draw() -> void:
-    if not is_instance_valid(game) or not is_instance_valid(game.hero): return
-    if grapple_time > 0:
-        var origin: Vector2 = game.hero.position + Vector2(0, -10)
-        var points := PackedVector2Array()
-        for i in range(25):
-            var t := float(i) / 24
-            points.append(origin.lerp(grapple_target - Vector2(0, 24), t) + Vector2(0, sin(t * PI) * 14))
-        draw_polyline(points, Color("#ffe2a43b"), 9, true)
-        draw_polyline(points, Color("#fff2ce"), 2, true)
-    if rise_time > 0:
-        for x in [-18, 0, 18]:
-            draw_line(game.hero.position + Vector2(x, 8), game.hero.position + Vector2(x * 1.4, 105), Color("#a0e9ff88"), 5 if x == 0 else 2, true)
-    if dive_time > 0:
-        var p: Vector2 = game.hero.position
-        draw_polyline(PackedVector2Array([p + Vector2(-28, -70), p + Vector2(0, 25), p + Vector2(28, -70)]), Color("#ffe1ad"), 4, true)
-    for fx in effects:
-        var life: float = fx.life / fx.duration
-        var t := 1.0 - life
-        var p: Vector2 = fx.p
-        var id: int = fx.id
-        var tint: Color = COLORS[id]
-        tint.a = life * 0.8
-        match id:
-            0:
-                var angle := 0.0 if int(fx.f) > 0 else PI
-                for band in [Vector2(82, 15), Vector2(74, 6), Vector2(69, 2)]:
-                    draw_arc(game.hero.position, band.x + t * 35, angle - 1.2, angle + 1.2, 40, Color(tint, tint.a * (0.3 if band.y == 15 else 1)), band.y, true)
-            1:
-                draw_arc(p + Vector2(0, 15), 32 + t * 80, PI, TAU, 40, tint, 3, true)
-                draw_line(p + Vector2(-32, 24), p + Vector2(32, 24), tint, 4, true)
-            2:
-                draw_arc(grapple_target - Vector2(0, 24), 18 + t * 28, 0, TAU, 32, tint, 2, true)
-            3, 4:
-                var radius := 30 + t * (340 if id == 3 else 220)
-                draw_arc(p, radius, 0, TAU, 64, Color(tint, tint.a * 0.25), 12, true)
-                draw_arc(p, radius - 5, 0, TAU, 64, tint, 2, true)
-                if id == 3:
-                    draw_arc(p + Vector2(0, 14), 30, PI + 0.25, TAU - 0.25, 32, tint, 2, true)
-                    draw_circle(p, 7, tint)
-            5:
-                for direction in [-1, 1]:
-                    draw_polyline(PackedVector2Array([p, p + Vector2(direction * (35 + 90 * t), -12), p + Vector2(direction * (60 + 110 * t), 0)]), tint, 4, true)

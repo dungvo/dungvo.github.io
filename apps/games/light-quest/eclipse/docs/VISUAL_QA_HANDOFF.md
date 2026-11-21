@@ -1,5 +1,18 @@
 # Eclipse — báo cáo ba màn, 21/11/2026
 
+## V5 — trau chuốt hiệu ứng sáu ấn
+
+- Phá Tinh: lưỡi liềm thuôn, nét sáng ở lõi, bóng viền trên nền sáng, dải năng lượng bám đường lướt và mảnh tinh thể.
+- Thiên Thăng: vòng xuất phát dẹt, cánh sáng cong và vệt kéo theo hướng bay lên.
+- Tơ Nguyệt: ba sợi tơ đan chuyển động, điểm sáng chạy dọc dây và nút sáng tại móc neo.
+- Nguyệt Nhãn: mắt mở, đồng tử tinh tú, cánh hoa / đường gân và các mảnh sóng dò bí mật.
+- Chuông Vọng: hình chuông chạm khắc, lắc theo nhịp, ba đợt sóng cộng hưởng có độ trễ và hạt sáng.
+- Thiên Giáng: mũi lao sáng trong lúc rơi; khi thực sự chạm sàn mới xuất hiện cánh chấn động, vết nứt và bụi sáng. Đánh trúng quái có điểm lóe gọn.
+- Giữ nguyên sáu kỹ năng, cooldown, va chạm, damage, bản đồ, nhân vật và engine 4.4.1. Rút gọn nhãn ở hotbar để bớt che hiệu ứng. Menu xóa toàn bộ dấu vết đang phát.
+- Không dùng hậu kỳ toàn màn hình, GPU light hay shader. Tối đa 10 sự kiện / 16 mẫu đường đi, giảm hạt và tần suất lấy mẫu trên cảm ứng, ngừng redraw khi idle. Đường vẽ chia thành các dải nhỏ để không lỗi triangulation khi nhân vật dừng hoặc đảo hướng.
+
+Kiểm chứng V5: `art_vfx_test.gd` kiểm tra giới hạn bộ đệm, vòng đời, đường đi đảo hướng, cấu hình cảm ứng và reset; `capture_arts.gd` chụp 5 thời điểm của mỗi kỹ năng trong production scene với vật lý đang chạy (vị trí bắt đầu được dàn dựng). Các test va chạm / hành trình V4 và Web desktop / cảm ứng vẫn chạy trong CI trước khi export được phát hành. Ảnh và log nằm trong artifact `eclipse-chapter-qa` của workflow. Chưa có đo nhiệt / pin trên iPhone thật; hiệu ứng là hình vẽ Godot theo thời gian, chưa phải bộ frame vẽ tay như Silksong.
+
 ## V4 — sáu ấn và ba màn leo cao
 
 - Sáu kỹ năng đặc biệt mới, dùng chung cho An / Kha và có tác dụng riêng với địa hình: Phá Tinh (vách nứt), Thiên Thăng (lao lên), Tơ Nguyệt (móc neo), Nguyệt Nhãn (cầu / kho báu ẩn), Chuông Vọng (cửa cộng hưởng / choáng), Thiên Giáng (phá sàn khi va chạm).

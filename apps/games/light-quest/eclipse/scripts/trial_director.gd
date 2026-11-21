@@ -303,7 +303,9 @@ func next_trial() -> void:
 
 func return_menu() -> void:
     if is_instance_valid(game.sky) and game.sky.active: game.sky.stop()
-    if is_instance_valid(game.arts): game.arts.layer.hide()
+    if is_instance_valid(game.arts):
+        game.arts.layer.hide()
+        game.arts.vfx.clear()
     active = false
     routes.clear_hint()
     game.started = false

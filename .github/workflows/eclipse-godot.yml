@@ -51,7 +51,9 @@ jobs:
           grep -q 'ECLIPSE SKY ARTS PASS' sky-arts.log
           timeout 160s godot --headless --fixed-fps 60 --script res://tests/sky_playthrough.gd 2>&1 | tee sky-campaign.log
           grep -q 'ECLIPSE SKY PASS' sky-campaign.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log
+          timeout 25s godot --headless --fixed-fps 60 --script res://tests/art_vfx_test.gd 2>&1 | tee art-vfx.log
+          grep -q 'ECLIPSE VFX PASS' art-vfx.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log art-vfx.log
       - name: Export single-threaded Godot Web
         working-directory: apps/games/light-quest/eclipse
         shell: bash
@@ -77,7 +79,13 @@ jobs:
           grep -q 'ECLIPSE WEB PASS' browser.log
       - name: Native renderer battle captures
         working-directory: apps/games/light-quest/eclipse
-        run: timeout 120s xvfb-run -a godot --script res://tests/capture_visual.gd
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 120s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_visual.gd 2>&1 | tee renderer.log
+          timeout 120s xvfb-run -a godot --audio-driver Dummy --fixed-fps 60 --script res://tests/capture_arts.gd 2>&1 | tee art-renderer.log
+          grep -q 'ECLIPSE VFX CAPTURE PASS' art-renderer.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' renderer.log art-renderer.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
