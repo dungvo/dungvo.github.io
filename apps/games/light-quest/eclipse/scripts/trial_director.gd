@@ -50,7 +50,7 @@ func _ready() -> void:
     boss_label = game._hud_label(layer, Vector2(240, 85), Vector2(480, 50), 17)
     boss_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     boss_label.add_theme_color_override("font_color", Color("#ffdab0"))
-    mini_map = game._hud_label(layer, Vector2(370, 501), Vector2(330, 30), 13)
+    mini_map = game._hud_label(layer, Vector2(280, 70), Vector2(400, 30), 13)
     cooldowns = game._hud_label(layer, Vector2(22, 85), Vector2(215, 50), 13)
     boss_bar = ProgressBar.new()
     boss_bar.position = Vector2(280, 137)
@@ -295,10 +295,15 @@ func boss_defeated() -> void:
     update_hud()
 
 func next_trial() -> void:
+    if is_instance_valid(game.sky) and game.sky.active:
+        game.sky.next_stage()
+        return
     game.demo_room_select.select((selected + 1) % 3)
     game._start(game.character)
 
 func return_menu() -> void:
+    if is_instance_valid(game.sky) and game.sky.active: game.sky.stop()
+    if is_instance_valid(game.arts): game.arts.layer.hide()
     active = false
     routes.clear_hint()
     game.started = false

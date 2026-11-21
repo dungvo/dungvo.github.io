@@ -1,0 +1,526 @@
+extends Node2D
+## Three vertical chapters, real platforms, a sealed side chamber, and summit encounters.
+const Art := preload("res://scripts/eclipse_art.gd")
+const Relic := preload("res://scripts/trial_relic.gd")
+const Boss := preload("res://scripts/trial_boss.gd")
+const TITLES := ["Tháp Gió", "Vườn Treo", "Đỉnh Nguyệt"]
+const BOSS_NAMES := ["Người Gác Thiên Chung", "Lang Vương Tán Mây", "Thủ Hộ Nhật Thực"]
+const WIDTH := 1440.0
+var game: Node2D
+var active := false
+var stage := 0
+var origin := 7200.0
+var mirrored := false
+var run_id := 0
+var root: Node2D
+var progress: Array = []
+var anchors: Array[Vector2] = []
+var markers: Array[Node2D] = []
+var ghost_bodies: Array[PhysicsBody2D] = []
+var ghost_art: Array[Node2D] = []
+var movers: Array[Dictionary] = []
+var crystal: StaticBody2D
+var weak_floor: PhysicsBody2D
+var bell_gates: Array[StaticBody2D] = []
+var boss: CharacterBody2D
+var boss_dead := false
+var elapsed := 0.0
+var best_height := 0.0
+var back_layer: CanvasLayer
+var backdrop: TextureRect
+var hud_layer: CanvasLayer
+var objective: Label
+var altitude: Label
+var boss_label: Label
+var boss_bar: ProgressBar
+var menu_button: Button
+var weak_art: Node2D
+var intro := true
+
+func _ready() -> void:
+    game = get_parent()
+    for i in range(3): progress.append(_blank())
+    back_layer = CanvasLayer.new()
+    back_layer.layer = -1
+    add_child(back_layer)
+    backdrop = TextureRect.new()
+    backdrop.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+    backdrop.stretch_mode = TextureRect.STRETCH_SCALE
+    backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    back_layer.add_child(backdrop)
+    back_layer.hide()
+    hud_layer = CanvasLayer.new()
+    hud_layer.layer = 2
+    add_child(hud_layer)
+    objective = game._hud_label(hud_layer, Vector2(265, 18), Vector2(430, 60), 14)
+    objective.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    objective.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+    altitude = game._hud_label(hud_layer, Vector2(695, 49), Vector2(243, 30), 14)
+    altitude.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+    boss_label = game._hud_label(hud_layer, Vector2(300, 86), Vector2(365, 46), 18)
+    boss_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    boss_label.add_theme_color_override("font_color", Color("#ffe1ab"))
+    boss_bar = ProgressBar.new()
+    boss_bar.position = Vector2(300,136)
+    boss_bar.show_percentage = false
+    boss_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    var bg := StyleBoxFlat.new()
+    bg.bg_color = Color("#14203bef")
+    bg.set_corner_radius_all(3)
+    var fill := StyleBoxFlat.new()
+    fill.bg_color = Color("#e9bd8c")
+    fill.set_corner_radius_all(3)
+    boss_bar.add_theme_stylebox_override("background",bg)
+    boss_bar.add_theme_stylebox_override("fill",fill)
+    hud_layer.add_child(boss_bar)
+    boss_bar.size = Vector2(365,7)
+    menu_button = Button.new()
+    menu_button.position = Vector2(824, 86)
+    menu_button.size = Vector2(112, 32)
+    menu_button.text = "MÀN CHƠI"
+    menu_button.focus_mode = Control.FOCUS_NONE
+    menu_button.pressed.connect(game.trials.return_menu)
+    hud_layer.add_child(menu_button)
+    hud_layer.hide()
+
+func _blank() -> Dictionary:
+    return {"checkpoint":0,"crystal":false,"sight":false,"bell":false,"relic":false,"secret":false,"won":false}
+
+func point(local: Vector2) -> Vector2:
+    return Vector2(origin + (WIDTH - local.x if mirrored else local.x), local.y)
+
+func box(local: Rect2) -> Rect2:
+    return Rect2(Vector2(origin + (WIDTH - local.position.x - local.size.x if mirrored else local.position.x), local.position.y), local.size)
+
+func begin(index: int) -> void:
+    stop()
+    active = true
+    run_id += 1
+    stage = index
+    origin = 7200.0 + stage * 1800.0
+    mirrored = stage == 1
+    if progress[stage].won:
+        var secret: bool = progress[stage].secret
+        progress[stage] = _blank()
+        progress[stage].secret = secret
+    for enemy in game.enemies:
+        if is_instance_valid(enemy): enemy.queue_free()
+    game.enemies.clear()
+    for bolt in game.bolts:
+        if is_instance_valid(bolt): bolt.queue_free()
+    game.bolts.clear()
+    if is_instance_valid(root): root.queue_free()
+    root = Node2D.new()
+    add_child(root)
+    anchors.clear()
+    markers.clear()
+    ghost_bodies.clear()
+    ghost_art.clear()
+    bell_gates.clear()
+    movers.clear()
+    elapsed = 0
+    best_height = 0
+    boss_dead = false
+    game.guardian = null
+    game.trials.routes.air_step_unlocked = true
+    game.health = game.max_health
+    game.death_time = 0
+    game.hurt_time = 0
+    game.skill_time = 0
+    game.burst_time = 0
+    game.burst_cooldown = 0
+    game.shield_cooldown = 0
+    game.dash_cooldown = 0
+    game.attack_buffer = 0
+    game.slash_time = 0
+    game.combo_window = 0
+    game.vfx.clear()
+    game.dash_time = 0
+    game.attack_windup = 0
+    game.attack_cooldown = 0
+    game.air_jumps = 1
+    game.i_frames = 1.0
+    game.hero.velocity = Vector2.ZERO
+    game.arts.reset()
+    game.cam.limit_left = int(origin)
+    game.cam.limit_right = int(origin + WIDTH)
+    game.cam.limit_top = -2000
+    game.cam.limit_bottom = 600
+    _terrain()
+    var stations := [Vector2(140,432), Vector2(870,-144), Vector2(650,-1244)]
+    var cp: int = clampi(progress[stage].checkpoint, 0, 2)
+    game.checkpoint = point(stations[cp])
+    game.hero.position = game.checkpoint
+    game.cam.reset_smoothing()
+    game.cam.force_update_scroll()
+    _background()
+    game.scenery.background.hide()
+    game.scenery.previous_back.hide()
+    hud_layer.show()
+    back_layer.show()
+    game.dialogue_label.text = TITLES[stage] + " · Hành trình lên cao\n1 phá vách · 2 lao lên · 3 kéo móc · 4 tìm ẩn · 5 rung chuông · 6 phá sàn.\nCác nút 1–6 bên dưới dùng được ngay; nút ẤN dùng kỹ năng đang chọn.\nE để đóng · Lưu tại các trụ xanh trên đường leo."
+    game._show_dialogue(true)
+    game._say("Leo tháp · Bước Gió đã mở — có thể nhảy hai lần", 3)
+    update_hud()
+    queue_redraw()
+    print("ECLIPSE SKY: %d %s" % [stage, game.character])
+
+func _terrain() -> void:
+    _platform(Rect2(0,456,WIDTH,80), false)
+    _platform(Rect2(90,350,205,22))
+    _platform(Rect2(500,350,190,22))
+    _platform(Rect2(475,100,230,22))
+    _platform(Rect2(760,-120,250,22))
+    _platform(Rect2(1040,-260,200,22), true, true)
+    _platform(Rect2(1100,-450,220,22), true, true)
+    _platform(Rect2(820,-620,250,22))
+    _platform(Rect2(820,-800,190,22))
+    weak_floor = _platform(Rect2(480,-840,240,22), false)
+    weak_art = weak_floor.get_meta("art")
+    _platform(Rect2(480,-700,240,24))
+    _wall(Rect2(465,-840,15,160))
+    _wall(Rect2(720,-840,15,160))
+    _platform(Rect2(260,-1030,250,22))
+    _platform(Rect2(550,-1220,230,22))
+    _platform(Rect2(800,-1430,600,34))
+    if stage == 2:
+        _platform(Rect2(980,-1730,320,24))
+        _anchor(Vector2(1100,-1826))
+    _platform(Rect2(60,-1150,150,22), true, true)
+    crystal = _wall(Rect2(406,-224,28,680))
+    bell_gates.append(_wall(Rect2(742,-950,22,315)))
+    bell_gates.append(_wall(Rect2(782,-1660,18,300)))
+    for at in [Vector2(830,-216), Vector2(560,-936), Vector2(350,-1126), Vector2(650,-1316), Vector2(930,-1526)]: _anchor(at)
+    _marker("crystal",Vector2(390,432),"1 · Phá Tinh",0)
+    _marker("rise",Vector2(560,350),"2 · Thiên Thăng",1)
+    _marker("hook",Vector2(560,100),"3 · Tơ Nguyệt",2)
+    _marker("sight",Vector2(900,-120),"4 · Nguyệt Nhãn",3)
+    _marker("bell",Vector2(895,-620),"5 · Chuông Vọng",4)
+    _marker("transfer",Vector2(900,-800),"2 lên cao · 3 kéo móc",2)
+    _marker("dive",Vector2(580,-840),"6 · Thiên Giáng",5)
+    _marker("relic",Vector2(580,-700),"E · Di vật trong phòng kín",4)
+    _marker("checkpoint1",Vector2(875,-120),"E · Trạm tầng mây",4)
+    _marker("checkpoint2",Vector2(650,-1220),"E · Trạm trước đỉnh",4)
+    _marker("secret",Vector2(125,-1150),"E · Kho báu phía sau tháp",3)
+    var end_y := -1730.0 if stage == 2 else -1430.0
+    _marker("goal",Vector2(1240,end_y),"E · Cổng tầng trời",2)
+    _detail(5,Vector2(875,-120),Vector2(46,72))
+    _detail(5,Vector2(650,-1220),Vector2(46,72))
+    _detail(9,Vector2(580,-700),Vector2(48,29))
+    _detail(9,Vector2(125,-1150),Vector2(48,29))
+    _detail(7,Vector2(1240,end_y),Vector2(110,156))
+    _enemy("bat",Vector2(1180,-340))
+    _enemy("mage",Vector2(430,-1100))
+    boss = Boss.new()
+    boss.kind = "wolf" if stage == 1 else "guardian"
+    boss.trial = stage
+    boss.title = BOSS_NAMES[stage]
+    boss.max_hp = 22 + stage * 4
+    var height: float = boss.SIZES[boss.kind].y
+    boss.position = point(Vector2(1200,-1430 - height * (0.65 if stage == 1 else 0.5) - 2))
+    boss.arena = Vector2(origin + (40 if mirrored else 820), origin + (640 if mirrored else 1370))
+    root.add_child(boss)
+    game.enemies.append(boss)
+    if progress[stage].crystal: _remove_body(crystal)
+    if progress[stage].bell:
+        for gate in bell_gates: _remove_body(gate)
+    if progress[stage].relic: _remove_body(weak_floor)
+    _reveal_bridge()
+
+func _platform(rect: Rect2, one_way := true, ghost := false) -> PhysicsBody2D:
+    var r := box(rect)
+    var body: PhysicsBody2D
+    if stage == 1 and ghost and rect.position.y > -500:
+        var carrier := AnimatableBody2D.new()
+        carrier.sync_to_physics = false
+        body = carrier
+    else: body = StaticBody2D.new()
+    body.position = r.get_center()
+    body.collision_layer = game.Combat.WORLD
+    var col: CollisionShape2D = game.Combat.rectangle(r.size)
+    col.one_way_collision = one_way
+    body.add_child(col)
+    root.add_child(body)
+    var depth := maxf(43, r.size.y + 7)
+    var art: Node2D = game.scenery._prop(0,Vector2(r.get_center().x,r.position.y + depth - 2),Vector2(r.size.x,depth))
+    game.scenery.remove_child(art)
+    root.add_child(art)
+    body.set_meta("art",art)
+    if body is AnimatableBody2D: movers.append({"body":body,"art":art,"p":body.position,"a":art.position})
+    if ghost:
+        ghost_bodies.append(body)
+        ghost_art.append(art)
+    return body
+
+func _wall(rect: Rect2) -> StaticBody2D:
+    var r := box(rect)
+    var body := StaticBody2D.new()
+    body.position = r.get_center()
+    body.collision_layer = game.Combat.WORLD
+    body.add_child(game.Combat.rectangle(r.size))
+    root.add_child(body)
+    return body
+
+func _detail(index: int, local: Vector2, size: Vector2) -> void:
+    var art: Node2D = game.scenery._prop(index,point(local),size)
+    game.scenery.remove_child(art)
+    root.add_child(art)
+
+func _anchor(local: Vector2) -> void:
+    anchors.append(point(local))
+
+func _marker(kind: String, local: Vector2, caption: String, skill: int) -> void:
+    var marker := Relic.new()
+    marker.kind = kind
+    marker.caption = caption
+    marker.position = point(local)
+    marker.tint = game.arts.COLORS[skill]
+    root.add_child(marker)
+    markers.append(marker)
+
+func _enemy(kind: String, local: Vector2) -> void:
+    var enemy: CharacterBody2D = game.EnemyScene.instantiate()
+    enemy.kind = kind
+    enemy.position = point(local)
+    root.add_child(enemy)
+    game.enemies.append(enemy)
+
+func _background() -> void:
+    var path := "res://assets/eclipse/ascent-atlas.webp"
+    if ResourceLoader.exists(path):
+        var sheet: Texture2D = load(path)
+        var atlas := AtlasTexture.new()
+        atlas.atlas = sheet
+        atlas.region = Rect2(sheet.get_width() * stage / 3.0, 0, sheet.get_width() / 3.0, sheet.get_height())
+        backdrop.texture = atlas
+    else:
+        backdrop.texture = [Art.SCENERY, preload("res://assets/eclipse/crystal-tower.webp"), preload("res://assets/eclipse/guardian-hall.webp")][stage]
+    var height := maxf(740, 1088.0 * backdrop.texture.get_height() / backdrop.texture.get_width())
+    backdrop.size = Vector2(1088,height)
+    _scroll_background()
+
+func _scroll_background() -> void:
+    var camera: Vector2 = game.cam.get_screen_center_position()
+    var altitude_ratio := clampf((456.0 - camera.y) / 2300.0, 0, 1)
+    backdrop.position = Vector2(-64 - sin(camera.x * 0.001) * 25, -(backdrop.size.y - 540) * (1 - altitude_ratio))
+
+func tick(delta: float) -> void:
+    if not active: return
+    elapsed += delta
+    game.hero.position.x = clampf(game.hero.position.x,origin + 28,origin + WIDTH - 28)
+    best_height = maxf(best_height,456 - game.hero.position.y)
+    for mover in movers:
+        var offset := Vector2(sin(elapsed * 1.1) * 28, 0)
+        mover.body.position = mover.p + offset
+        mover.art.position = mover.a + offset
+    for marker in markers:
+        var hidden: bool = marker.kind == "secret" and not progress[stage].sight
+        marker.tick(delta,game.hero.position)
+        marker.visible = not hidden
+        if marker.kind == "relic": marker.visible = not progress[stage].relic
+    if is_instance_valid(boss) and not boss_dead and progress[stage].bell and progress[stage].relic and absf(game.hero.position.y - boss.position.y) < 200 and game.hero.position.y <= -1450 and game.hero.position.x >= boss.arena.x and game.hero.position.x <= boss.arena.y:
+        boss.awake = true
+    if is_instance_valid(boss) and boss.awake and not boss_dead:
+        game.hero.position.x = clampf(game.hero.position.x,boss.arena.x + 18,boss.arena.y - 18)
+    _scroll_background()
+    update_hud()
+    queue_redraw()
+
+func use_art(id: int, at: Vector2) -> void:
+    if not active: return
+    match id:
+        0:
+            if is_instance_valid(crystal) and at.distance_to(point(Vector2(420,at.y))) < 155 and at.y > -240:
+                progress[stage].crystal = true
+                _remove_body(crystal)
+                game.emit_impact(point(Vector2(420,at.y)),Color("#ffc4da"))
+                game._persist()
+        3:
+            progress[stage].sight = true
+            _reveal_bridge()
+            game._persist()
+        4:
+            if at.distance_to(point(Vector2(895,-644))) < 180:
+                progress[stage].bell = true
+                for gate in bell_gates: _remove_body(gate)
+                game._persist()
+                game._say("Chuông đã ngân · cửa lên đỉnh mở ra",3)
+        5:
+            if is_instance_valid(weak_floor) and at.distance_to(point(Vector2(580,-840))) < 145 and at.y <= -810:
+                _remove_body(weak_floor)
+                if is_instance_valid(weak_art): weak_art.hide()
+                game._say("Sàn đã vỡ · khám phá căn phòng bên dưới",3)
+
+func _remove_body(body: PhysicsBody2D) -> void:
+    if not is_instance_valid(body): return
+    body.collision_layer = 0
+    var art: Node2D = body.get_meta("art") if body.has_meta("art") else null
+    if is_instance_valid(art): art.hide()
+    body.queue_free()
+    queue_redraw()
+
+func _reveal_bridge() -> void:
+    for body in ghost_bodies:
+        body.collision_layer = game.Combat.WORLD if progress[stage].sight else 0
+    for art in ghost_art: art.modulate = Color.WHITE if progress[stage].sight else Color(0.7,0.8,1,0.12)
+
+func nearest_anchor(at: Vector2) -> Vector2:
+    if not active: return Vector2.INF
+    var best := Vector2.INF
+    var distance := 10000.0
+    for anchor in anchors:
+        if anchor.y > at.y - 100: continue
+        if absf(anchor.x - at.x) < 110 and at.y - anchor.y < 115: continue
+        var gap := at.distance_to(anchor)
+        if gap > 500: continue
+        var score := gap - 180 if (anchor.x - at.x) * game.facing > 30 else gap + 120
+        if score < distance and _hook_clear(at, anchor):
+            best = anchor
+            distance = score
+    return best
+
+func _hook_clear(at: Vector2, anchor: Vector2) -> bool:
+    var query := PhysicsRayQueryParameters2D.create(at,anchor,game.Combat.WORLD)
+    var space := game.get_world_2d().direct_space_state
+    # A one-way ledge can be approached from below, just like the hero capsule.
+    # Solid walls, locked doors and the sealed chamber still block the thread.
+    for i in range(12):
+        var hit := space.intersect_ray(query)
+        if hit.is_empty(): return true
+        var body: PhysicsBody2D = hit.collider
+        var pass_through := false
+        for child in body.get_children():
+            if child is CollisionShape2D and child.one_way_collision: pass_through = true
+        if not pass_through: return false
+        var excluded := query.exclude
+        excluded.append(body.get_rid())
+        query.exclude = excluded
+    return false
+
+func interact() -> void:
+    for marker in markers:
+        if game.hero.position.distance_to(marker.position) > 60: continue
+        match marker.kind:
+            "checkpoint1", "checkpoint2":
+                var checkpoint_index := 1 if marker.kind == "checkpoint1" else 2
+                progress[stage].checkpoint = checkpoint_index
+                game.checkpoint = game.hero.position
+                game.health = game.max_health
+                game._persist()
+                game._say("Đã lưu trạm tầng trời · sinh lực đầy",2)
+                print("ECLIPSE SKY CHECKPOINT: %d %d" % [stage,checkpoint_index])
+                return
+            "relic":
+                if is_instance_valid(weak_floor):
+                    game._say("Lên sàn phía trên, nhảy rồi dùng 6 để phá sàn",2)
+                    return
+                progress[stage].relic = true
+                game.sound.play_cue("victory")
+                game._persist()
+                game._say("Đã tìm Di Vật Thiên Không · Thủ Hộ thức tỉnh trên đỉnh",4)
+                return
+            "secret":
+                if not progress[stage].sight: return
+                progress[stage].secret = true
+                game.health = game.max_health
+                game._persist()
+                game._say("BÍ MẬT SAU THÁP · sáu kỹ năng hồi nhanh hơn",4)
+                return
+            "goal":
+                if not boss_dead:
+                    game._say("Đánh bại Thủ Hộ và tìm Di Vật trong phòng kín trước",3)
+                    return
+                _finish()
+                return
+    game._say("E gần trụ lưu, di vật hoặc cổng đỉnh; 1–6 dùng kỹ năng",2)
+
+func respawn() -> void:
+    game.arts.reset()
+    if is_instance_valid(boss) and not boss_dead: boss.reset_encounter()
+    game.air_jumps = 1
+
+func boss_defeated() -> void:
+    boss_dead = true
+    game.i_frames = 1.2
+    for bolt in game.bolts:
+        if is_instance_valid(bolt) and not bolt.friendly: bolt.life = 0
+    game.sound.play_cue("victory")
+    game._say("Thủ Hộ đã gục ngã · tìm cổng tầng trời phía trên (E)",5)
+    update_hud()
+
+func _finish() -> void:
+    progress[stage].won = true
+    game._persist()
+    game.trials.victory_title.text = TITLES[stage].to_upper() + " · CHẠM TẦNG TRỜI"
+    game.trials.victory_text.text = "Đã vượt hơn %d độ cao.\nSáu kỹ năng mở đường · Di Vật đã được cứu.\nBí mật: %s" % [int(best_height),"đã tìm" if progress[stage].secret else "còn một lối ẩn sau tháp"]
+    game.trials.next_button.text = "Tiếp: " + TITLES[(stage + 1) % 3]
+    game._show_victory()
+    print("ECLIPSE SKY WIN: %d %s height=%d" % [stage,game.character,int(best_height)])
+
+func next_stage() -> void:
+    game.demo_room_select.select(3 + (stage + 1) % 3)
+    game._start(game.character)
+
+func stop() -> void:
+    active = false
+    back_layer.hide()
+    hud_layer.hide()
+    game.scenery.background.show()
+    if is_instance_valid(root): root.hide()
+
+func secret_count() -> int:
+    var result := 0
+    for item in progress:
+        if item.secret: result += 1
+    return result
+
+func restore(data: Variant) -> void:
+    if not data is Array or data.size() != 3: return
+    for i in range(3):
+        if not data[i] is Dictionary: continue
+        var clean := _blank()
+        clean.checkpoint = clampi(int(data[i].get("checkpoint",0)),0,2)
+        for key in ["crystal","sight","bell","relic","secret","won"]: clean[key] = data[i].get(key,false) == true
+        progress[i] = clean
+
+func update_hud() -> void:
+    if not active: return
+    game.chapter.text = TITLES[stage]
+    game.light_status.text = ""
+    game.hearts.show_health(game.health,game.max_health)
+    altitude.text = "Độ cao: %d · Trạm %d/2" % [maxi(0,int(456 - game.hero.position.y)),progress[stage].checkpoint]
+    var p: Vector2 = game.hero.position
+    if not progress[stage].crystal: objective.text = "1 Phá Tinh · phá vách hồng, tìm đường leo lên"
+    elif p.y > 130: objective.text = "2 Thiên Thăng · lao lên sân tháp ở phía trên"
+    elif not progress[stage].sight: objective.text = "3 kéo móc vàng · 4 hiện cầu và lối ẩn"
+    elif not progress[stage].bell: objective.text = "Leo theo cầu tinh tú · dùng 5 tại chuông xanh"
+    elif not progress[stage].relic: objective.text = "6 Thiên Giáng · phá sàn nứt, vào phòng kín lấy Di Vật (E)"
+    elif not boss_dead: objective.text = "Dùng móc vàng leo tới đỉnh · đánh bại " + BOSS_NAMES[stage]
+    else: objective.text = "Tiếp tục lên cổng tầng trời và nhấn E"
+    boss_label.visible = is_instance_valid(boss) and boss.awake and not boss_dead
+    boss_bar.visible = boss_label.visible
+    if boss_label.visible:
+        boss_bar.max_value = boss.max_hp
+        boss_bar.value = boss.hp
+        boss_label.text = "%s · PHA %d\n%d/%d" % [BOSS_NAMES[stage],2 if boss.phase_two else 1,boss.hp,boss.max_hp]
+
+func _draw() -> void:
+    if not active: return
+    for anchor in anchors:
+        draw_circle(anchor,20,Color("#ffe0a321"))
+        draw_arc(anchor,13,0,TAU,32,Color("#ffe3b0"),2.5,true)
+        draw_line(anchor + Vector2(-6,0),anchor + Vector2(6,0),Color("#fff4db"),2,true)
+        draw_line(anchor + Vector2(0,-6),anchor + Vector2(0,6),Color("#fff4db"),2,true)
+    if is_instance_valid(boss) and boss.awake and not boss_dead:
+        for x in [boss.arena.x + 18,boss.arena.y - 18]:
+            draw_line(Vector2(x,-1600),Vector2(x,-1430),Color("#e8c7a25a"),3,true)
+    if is_instance_valid(crystal):
+        var r := box(Rect2(406,-224,28,680))
+        draw_rect(r,Color("#df8cba35"))
+        for y in range(-220,450,60): draw_polyline(PackedVector2Array([Vector2(r.position.x,y),Vector2(r.end.x,y+30),Vector2(r.position.x,y+60)]),Color("#ffd0f1"),2,true)
+    for gate in bell_gates:
+        if not is_instance_valid(gate): continue
+        draw_line(gate.position + Vector2(0,-150),gate.position + Vector2(0,150),Color("#9cf1df99"),5,true)
+    if is_instance_valid(weak_floor):
+        var r := box(Rect2(480,-840,240,22))
+        draw_polyline(PackedVector2Array([r.position + Vector2(12,3),r.position + Vector2(70,13),r.position + Vector2(120,3),r.position + Vector2(155,17),r.position + Vector2(225,5)]),Color("#ffdca3"),3,true)

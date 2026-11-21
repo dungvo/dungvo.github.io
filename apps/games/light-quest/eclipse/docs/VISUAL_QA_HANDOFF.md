@@ -1,5 +1,23 @@
 # Eclipse — báo cáo ba màn, 21/11/2026
 
+## V4 — sáu ấn và ba màn leo cao
+
+- Sáu kỹ năng đặc biệt mới, dùng chung cho An / Kha và có tác dụng riêng với địa hình: Phá Tinh (vách nứt), Thiên Thăng (lao lên), Tơ Nguyệt (móc neo), Nguyệt Nhãn (cầu / kho báu ẩn), Chuông Vọng (cửa cộng hưởng / choáng), Thiên Giáng (phá sàn khi va chạm).
+- Ba màn mới chọn được từ menu **04–06**; mặc định chọn Tháp Gió. Đường đi từ mặt đất lên tầng cao, hai trạm lưu trên đường, phòng kín dưới sàn, kho báu ở cánh bên, boss hai pha trên đỉnh và cổng kết thúc. Vườn Treo có cầu di động và đường đảo hướng; Đỉnh Nguyệt còn tầng sau boss. Không thay engine hoặc thay nhân vật.
+- Tranh nền ba vùng mới được tạo theo phong cách Eclipse gốc và đưa vào source. HUD có sáu rune, phím 1–6, F / nút ẤN. VFX gồm lưỡi sáng, luồng lao lên, dây móc, vòng soi ẩn, sóng chuông và chấn động khi giáng xuống. Giữ giới hạn hạt / 30 FPS trên Web cảm ứng.
+
+| Kiểm tra V4 | Kết quả / giới hạn |
+|---|---|
+| `sky_playthrough.gd` | An và Kha đi liên tục cả ba màn bằng controller / vật lý thật, không teleport, không sửa HP hoặc gọi sát thương trực tiếp. Dùng sáu ấn, hai checkpoint, phòng kín, kho báu, boss hai pha và cổng. Tháp Gió / Vườn Treo đạt khoảng 1.970 độ cao; Đỉnh Nguyệt khoảng 2.244. |
+| `sky_arts_test.gd` | Kiểm tra xung lực, tường chặn móc, không mất hồi chiêu khi móc không có mục tiêu, cầu ẩn đổi va chạm, chuông chỉ mở khi đứng gần, sàn chỉ vỡ khi giáng chạm, lưu và khôi phục checkpoint trên cao. |
+| Hồi quy | Sáu lượt chiến dịch cũ và sáu lượt nhánh V3 vẫn qua, cùng kiểm tra combat / save / va chạm cũ. Tổng 18 lượt di chuyển hoàn chỉnh, trong đó sáu lượt V4 có boss / cổng tầng trời. |
+| Web | Chọn đủ sáu màn, Q, hotbar sáu ấn, bàn phím desktop và cảm ứng 3x DPR; bản Web thật của Godot. |
+| Renderer | Chụp tầng giữa / đỉnh của ba vùng và sáu VFX trong scene production. Các ảnh là fixture dàn dựng; bằng chứng đi đường liên tục nằm trong test riêng. |
+| Lỗi đã xử lý | Kéo móc đi lên qua bệ một chiều nhưng bị tường đặc chặn; thêm bệ trung chuyển; vị trí xuất hiện boss tính cả scale; không đánh thức boss khi còn ở nhánh thấp; giới hạn biên đấu trường để không rơi khỏi sàn lúc đánh; reset cooldown khi đổi màn; giải phóng body bệ di động đúng cách. |
+| Triển khai | PCK có tên theo SHA commit (`sky-<sha>.pck`) để tránh dùng nhầm gói cũ khi cache; export chỉ đưa vào thư mục Eclipse `godot-play` trên main. |
+
+Giới hạn: chưa có kiểm tra Safari / nhiệt / pin trên iPhone thật; một số động tác vẫn dùng pose gốc cộng VFX, chưa có bộ frame vẽ tay mới. Ba vùng leo cao cùng dùng cấu trúc sáu ấn, với đường đảo hướng / bệ di động / tầng cuối khác nhau; chưa phải chiến dịch dài bằng một game thương mại.
+
 ## Nâng cấp V3: tuyệt kỹ và đường nhánh
 
 - Giữ nguyên Godot 4.4.1 và bộ hình gốc. Thêm Q cho An (Nguyệt Trảm, chém quét) và Kha (Tinh Bộ, sweep capsule trước khi dịch chuyển / ba đạn). Có VFX, âm thanh, pose từ bộ animation hiện tại và nút Q cảm ứng.
@@ -62,6 +80,8 @@ godot --headless --script res://tests/hit_geometry_test.gd
 godot --headless --fixed-fps 60 --script res://tests/campaign_playthrough.gd
 godot --headless --fixed-fps 60 --script res://tests/abilities_test.gd
 godot --headless --fixed-fps 60 --script res://tests/routes_playthrough.gd
+godot --headless --fixed-fps 60 --script res://tests/sky_arts_test.gd
+godot --headless --fixed-fps 60 --script res://tests/sky_playthrough.gd
 mkdir -p build/web
 godot --headless --export-release Web build/web/index.html
 # Cần playwright; script tự phục vụ build/web qua HTTP.

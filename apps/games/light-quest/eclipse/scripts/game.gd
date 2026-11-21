@@ -15,6 +15,10 @@ const MOBILE_PARTICLE_BUDGET := 44
 const ROOM_W := 960.0
 const FLOOR_Y := 456.0
 const SAVE_FILE := "user://eclipse_chapters_v2.json"
+const SixArts := preload("res://scripts/six_arts.gd")
+const SkyCampaign := preload("res://scripts/sky_campaign.gd")
+var arts: Node2D
+var sky: Node2D
 const TrialDirector := preload("res://scripts/trial_director.gd")
 var trials: Node2D
 var skill_time := 0.0
@@ -39,7 +43,7 @@ var chapter: Label
 var light_status: Label
 var dialogue: PanelContainer
 var dialogue_label: Label
-var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false, "burst":false}
+var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false, "burst":false, "art":false}
 var control_art: Dictionary = {}
 var joystick: Node2D
 var last_room := -1
@@ -121,6 +125,10 @@ func _ready() -> void:
     _make_ui()
     trials = TrialDirector.new()
     add_child(trials)
+    arts = SixArts.new()
+    add_child(arts)
+    sky = SkyCampaign.new()
+    add_child(sky)
     _restore()
     if activated: light_circuit.restore_solved()
     scenery.plaza_chest.hide()
@@ -249,6 +257,7 @@ func _make_ui() -> void:
     _touch_button(touchbar, "attack", "ĐÁNH", Vector2(805, 449), 43)
     _touch_button(touchbar, "dash", "LƯỚT", Vector2(705, 463), 33)
     _touch_button(touchbar, "skill", "LỰC", Vector2(898, 471), 33)
+    _touch_button(touchbar, "art", "ẤN", Vector2(705, 354), 30)
     _touch_button(touchbar, "burst", "Q", Vector2(790, 354), 30)
     _touch_button(touchbar, "interact", "E", Vector2(898, 299), 26)
     dialogue = PanelContainer.new()
@@ -362,22 +371,26 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nBÍ MẬT THÁP TRĂNG"
+    title.text = "LIGHT QUEST: ECLIPSE\nTIẾNG GỌI TẦNG TRỜI · V4"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
     var note := Label.new()
-    note.text = "A/D di chuyển · Space nhảy · J đánh\nK lướt · L kỹ năng · Q tuyệt kỹ · E tương tác"
+    note.text = "A/D di chuyển · Space nhảy · J đánh\n1–6 sáu ấn · F dùng ấn · Q tuyệt kỹ · E tương tác"
     note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(note)
     var selector_label := Label.new()
-    selector_label.text = "BA HỒI · TIẾNG CHUÔNG ĐÃ MẤT"
+    selector_label.text = "SÁU MÀN · 04–06 LÀ HÀNH TRÌNH LEO CAO"
     selector_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     v.add_child(selector_label)
     demo_room_select = OptionButton.new()
     demo_room_select.add_item("01 · Làng Trăng — Vệ Binh Chuông Tàn", 0)
     demo_room_select.add_item("02 · Rừng Vọng — Lang Vương Vọng Âm", 1)
     demo_room_select.add_item("03 · Hầm Bóng — Kẻ Dệt Bóng", 2)
+    demo_room_select.add_item("04 · Tháp Gió — sáu ấn / leo tầng trời", 3)
+    demo_room_select.add_item("05 · Vườn Treo — khám phá trên mây", 4)
+    demo_room_select.add_item("06 · Đỉnh Nguyệt — Thủ Hộ Nhật Thực", 5)
+    demo_room_select.select(3)
     demo_room_select.custom_minimum_size.y = 38.0
     v.add_child(demo_room_select)
     for who in ["An — kiếm sĩ","Kha — pháp sư"]:
@@ -414,7 +427,16 @@ func _start(who: String) -> void:
     menu.hide()
     _reset_touch()
     joystick.accept_touch = true
-    trials.begin(current_trial)
+    if current_trial >= 3:
+        trials.return_menu()
+        started = true
+        menu.hide()
+        joystick.accept_touch = true
+        sky.begin(current_trial - 3)
+    else:
+        sky.stop()
+        trials.begin(current_trial)
+        arts.reset()
     _update_hud()
     if OS.has_feature("web") and "--eclipse-render-probe" in OS.get_cmdline_user_args():
         _measure_browser_render_rate()
@@ -451,6 +473,13 @@ func _input(event:InputEvent) -> void:
             KEY_R: _respawn()
             KEY_L: _skill()
             KEY_Q: _signature()
+            KEY_F: arts.cast(arts.selected)
+            KEY_1: arts.cast(0)
+            KEY_2: arts.cast(1)
+            KEY_3: arts.cast(2)
+            KEY_4: arts.cast(3)
+            KEY_5: arts.cast(4)
+            KEY_6: arts.cast(5)
 
 func _physics_process(delta:float) -> void:
     if not started or dialogue.visible or victory_panel.visible: return
@@ -464,6 +493,7 @@ func _physics_process(delta:float) -> void:
         _refresh_effects()
         if death_time <= 0: _respawn()
         return
+    arts.tick(delta)
     if notice_time > 0:
         notice_time = maxf(0, notice_time - delta)
         if notice_time <= 0: help.text = ""
@@ -521,11 +551,13 @@ func _physics_process(delta:float) -> void:
         dash_time = maxf(0, dash_time-delta)
         hero.velocity.x = 565.0 * facing
         hero.velocity.y *= 0.78
-    if not current_jump and hero.velocity.y < -185:
+    if not current_jump and hero.velocity.y < -185 and arts.rise_time <= 0 and arts.grapple_time <= 0:
         hero.velocity.y = maxf(hero.velocity.y, -185.0)
     hero.velocity.y += (760.0 if hero.velocity.y < 0 else 1370.0) * delta
     var previous_vy := hero.velocity.y
+    arts.before_move()
     hero.move_and_slide()
+    arts.after_move()
     if not grounded_before and hero.is_on_floor() and previous_vy > 180:
         shake_time = 0.08
         _burst(hero.position + Vector2(0,20), Color("#a8bec0"), 12, 120.0)
@@ -544,14 +576,21 @@ func _physics_process(delta:float) -> void:
     if touch["skill"]:
         touch["skill"] = false
         _skill()
+    if touch["art"]:
+        touch["art"] = false
+        arts.cast(arts.selected)
     if touch["burst"]:
         touch["burst"] = false
         _signature()
     if touch["interact"]:
         touch["interact"] = false
         _interact()
-    trials.tick(delta)
-    hero.position.x = clampf(hero.position.x,25,7*ROOM_W-28)
+    if sky.active:
+        sky.tick(delta)
+    else:
+        trials.tick(delta)
+        hero.position.x = clampf(hero.position.x,25,7*ROOM_W-28)
+        hero.position.y = maxf(hero.position.y, -225)
     if hero.position.y > 620: _respawn()
     var room := mini(6, int(hero.position.x/ROOM_W))
     if room != last_room:
@@ -570,7 +609,7 @@ func _physics_process(delta:float) -> void:
         else:
             bolt.step(delta, self)
     light_circuit.set_player_position(hero.position)
-    scenery.update_camera(cam.get_screen_center_position().x, activated)
+    if not sky.active: scenery.update_camera(cam.get_screen_center_position().x, activated)
     if activated:
         var gate := get_node_or_null("LightGate")
         if gate != null: gate.queue_free()
@@ -597,7 +636,7 @@ func _update_character_animation() -> void:
     if anim_label != candidate:
         anim_label = candidate
         actor_anim.play(candidate)
-    actor_anim.flip_h = (attack_facing if motion_state == "attack" else facing) < 0
+    actor_anim.flip_h = (arts.cast_facing if arts.cast_clock > 0 else (burst_facing if burst_time > 0 else (attack_facing if motion_state == "attack" else facing))) < 0
     actor_anim.modulate = Color("#ffb5ab") if hurt_time > 0 else Color.WHITE
     var bob := sin(visual_clock * 18) * 1.4 if motion_state == "run" else 0.0
     actor_anim.position.y = 24 + bob
@@ -605,6 +644,7 @@ func _update_character_animation() -> void:
 
 func _select_motion_state() -> String:
     if hurt_time > 0.0: return "hurt"
+    if arts.cast_clock > 0: return "dash" if arts.selected in [0, 2] else ("jump" if arts.selected in [1, 5] else ("attack" if character == "Kha" else "dash"))
     if burst_time > 0: return "attack" if character == "Kha" else "dash"
     if skill_time > 0: return "attack" if character == "Kha" else "dash"
     if dash_time > 0.0: return "dash"
@@ -713,7 +753,10 @@ func _respawn() -> void:
         if is_instance_valid(bolt): bolt.queue_free()
     bolts.clear()
     cam.reset_smoothing()
-    if is_instance_valid(trials): trials.respawn()
+    if sky.active: sky.respawn()
+    elif is_instance_valid(trials):
+        trials.respawn()
+        arts.reset()
     _say("Hồi sinh tại điểm lưu gần nhất.", 2)
 
 func _request_attack() -> void:
@@ -832,11 +875,13 @@ func guardian_defeated() -> void:
 
 func _show_victory() -> void:
     victory_panel.show()
+    arts.layer.hide()
     joystick.accept_touch = false
     _reset_touch()
 
 func _dismiss_victory() -> void:
     victory_panel.hide()
+    arts.layer.show()
     joystick.accept_touch = true
     _reset_touch()
 
@@ -870,6 +915,9 @@ func _interact() -> void:
     if not started or death_time > 0: return
     if dialogue.visible:
         _show_dialogue(false)
+        return
+    if sky.active:
+        sky.interact()
         return
     if is_instance_valid(trials) and trials.active:
         if not trials.interact(): _say("E gần pha lê / trụ lưu · nhảy để tìm bí mật trên cao", 2)
@@ -929,12 +977,13 @@ func _update_hud() -> void:
     light_status.text = "Ba hồi · Tiếng chuông đã mất"
     help.text = notice if notice_time > 0 else ""
     if is_instance_valid(trials): trials.update_hud()
+    if is_instance_valid(sky) and sky.active: sky.update_hud()
 
 func _persist() -> void:
     if not save_enabled or not is_instance_valid(trials): return
     var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":2, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened}))
+        f.store_string(JSON.stringify({"version":2, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -962,6 +1011,7 @@ func _restore() -> void:
             var clean := [false, false, false]
             for i in range(3): clean[i] = values[i] == true
             trials.routes.set("claimed" if key == "route_claimed" else "opened", clean)
+    if is_instance_valid(sky): sky.restore(data.get("sky", []))
     max_health = 5 + trials.secrets.count(true)
     health = max_health
 

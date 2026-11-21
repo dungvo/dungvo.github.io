@@ -139,7 +139,8 @@ func take_hit(amount: int, game: Node2D) -> void:
         _set_state("dead", 0.6)
         collision_layer = 0
         get_node("Hurtbox").set_deferred("collision_layer", 0)
-        game.trials.boss_defeated()
+        if is_instance_valid(game.sky) and game.sky.active: game.sky.boss_defeated()
+        else: game.trials.boss_defeated()
     elif hp <= max_hp / 2 and not phase_two:
         phase_two = true
         phase_flash = 0.95

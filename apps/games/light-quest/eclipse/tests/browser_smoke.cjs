@@ -35,7 +35,7 @@ async function run() {
             page.on('pageerror', error => errors.push(error.message));
             page.on('console', message => {
                 consoleLines.push(message.text());
-                if (message.type() === 'error' && !message.location().url.endsWith('/favicon.ico')) errors.push(message.text());
+                if (message.type() === 'error' && !message.location().url.endsWith('/favicon.ico')) { errors.push(message.text()); console.error('ENGINE ERROR',message.text()); }
             });
             page.on('response', response => responses.set(new URL(response.url()).pathname.split('/').pop(), response.status()));
             await page.route('**/index.html*', async route => {
@@ -48,7 +48,7 @@ async function run() {
             await page.goto(base);
             await page.locator('#status').waitFor({ state: 'detached', timeout: 60000 });
             assert.equal(responses.get('index.wasm'), 200, 'WASM loads');
-            assert.equal(responses.get('index.pck'), 200, 'PCK loads');
+            assert([...responses].some(([name,status])=>name.endsWith('.pck')&&status===200), 'Godot content pack loads');
             const canvas = page.locator('#canvas');
             const box = await canvas.boundingBox();
             assert.equal(box.width, width);
@@ -61,14 +61,14 @@ async function run() {
                 else await page.mouse.click(p.x, p.y);
             };
             await canvas.screenshot({ path: path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-menu.png`) });
-            for (let chapter = 0; chapter < 3; chapter++) {
+            for (let chapter = 0; chapter < 6; chapter++) {
                 // Godot PopupMenu is drawn inside the canvas, rather than as DOM options.
                 await tap(480, 289);
                 await page.waitForTimeout(150);
                 await tap(480, 326 + 27 * chapter);
                 await page.waitForTimeout(150);
-                const who = chapter === 1 ? 'Kha' : 'An';
-                const expected = `ECLIPSE CHAPTER: ${chapter} ${who}`;
+                const who = chapter % 3 === 1 ? 'Kha' : 'An';
+                const expected = chapter < 3 ? `ECLIPSE CHAPTER: ${chapter} ${who}` : `ECLIPSE SKY: ${chapter - 3} ${who}`;
                 const started = page.waitForEvent('console', { predicate: message => message.text().includes(expected), timeout: 10000 });
                 started.catch(() => {});
                 const probe = page.waitForEvent('console', { predicate: message => message.text().includes('ECLIPSE RENDER PROBE:'), timeout: 15000 });
@@ -107,6 +107,18 @@ async function run() {
                 await signature;
                 await page.waitForTimeout(80);
                 await canvas.screenshot({path:path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-signature-${chapter + 1}.png`)});
+                if (chapter >= 3) {
+                    for (const id of [0,3,4,1,5]) {
+                        const art = page.waitForEvent('console',{predicate:message=>message.text().startsWith(`ECLIPSE ART: ${id+1} `),timeout:10000});
+                        art.catch(()=>{});
+                        if (mobile) await tap(288+id*61,500);
+                        else await page.keyboard.press(String(id+1));
+                        await art;
+                        console.log(`WEB ART CONTROL PASS: ${mobile?"touch":"desktop"} / ${chapter} / ${id+1}`);
+                        await page.waitForTimeout(45);
+                    }
+                    await canvas.screenshot({path:path.join(evidence,`web-${mobile?'touch':'desktop'}-six-arts-${chapter-2}.png`)});
+                }
                 const line = (await probe).text();
                 const match = line.match(/([\d.]+) FPS, cap (\d+), viewport (\d+)x(\d+)/);
                 assert(match, 'engine render profile is reported');
@@ -122,7 +134,7 @@ async function run() {
             assert.deepEqual(errors, [], 'no browser or Godot runtime errors');
             await context.close();
         }
-        console.log('ECLIPSE WEB PASS: actual Godot WASM, all 3 chapter selectors, An/Kha, desktop / touch, three-finger input, viewport budget, no runtime errors');
+        console.log('ECLIPSE WEB PASS: actual Godot WASM, all 6 chapter selectors, An/Kha, six-art toolbar, desktop / touch, three-finger input, viewport budget, no runtime errors');
     } finally {
         await browser.close();
         if (server) server.close();

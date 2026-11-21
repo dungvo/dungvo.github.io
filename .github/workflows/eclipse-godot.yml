@@ -47,7 +47,11 @@ jobs:
           grep -q 'ECLIPSE ABILITIES PASS' abilities.log
           timeout 120s godot --headless --fixed-fps 60 --script res://tests/routes_playthrough.gd 2>&1 | tee routes.log
           grep -q 'ECLIPSE ROUTES PASS' routes.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' smoke.log geometry.log campaign.log abilities.log routes.log
+          timeout 45s godot --headless --fixed-fps 60 --script res://tests/sky_arts_test.gd 2>&1 | tee sky-arts.log
+          grep -q 'ECLIPSE SKY ARTS PASS' sky-arts.log
+          timeout 160s godot --headless --fixed-fps 60 --script res://tests/sky_playthrough.gd 2>&1 | tee sky-campaign.log
+          grep -q 'ECLIPSE SKY PASS' sky-campaign.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log
       - name: Export single-threaded Godot Web
         working-directory: apps/games/light-quest/eclipse
         shell: bash
@@ -58,12 +62,8 @@ jobs:
           ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' export.log
           test -s build/web/index.wasm
           test -s build/web/index.pck
-          python3 - <<'PY'
-          import hashlib, json, os, pathlib
-          folder = pathlib.Path('build/web')
-          info = {'engine':'4.4.1.stable.official.49a5bc7b6','source_sha':os.environ['GITHUB_SHA'], 'release':'moon-routes-v3', 'files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in folder.iterdir() if p.is_file()}}
-          (folder/'build-info.json').write_text(json.dumps(info, indent=2)+'\n')
-          PY
+          python3 tools/stamp_web.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -77,7 +77,7 @@ jobs:
           grep -q 'ECLIPSE WEB PASS' browser.log
       - name: Native renderer battle captures
         working-directory: apps/games/light-quest/eclipse
-        run: timeout 60s xvfb-run -a godot --script res://tests/capture_visual.gd
+        run: timeout 120s xvfb-run -a godot --script res://tests/capture_visual.gd
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -117,7 +117,8 @@ jobs:
           dest=apps/games/light-quest/eclipse/godot-play
           test -s "$dest/index.html"
           test -s "$dest/index.wasm"
-          test -s "$dest/index.pck"
+          pack=$(python3 -c 'import json; print(json.load(open("apps/games/light-quest/eclipse/godot-play/build-info.json"))["main_pack"])')
+          test -s "$dest/$pack"
           touch "$dest/.nojekyll"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

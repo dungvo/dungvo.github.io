@@ -49,6 +49,47 @@ func _capture() -> void:
         await _save("actual-signature-%d.png" % (chapter + 1))
         game.queue_free()
         await process_frame
+    for stage in range(3):
+        var game = load("res://scenes/main.tscn").instantiate()
+        game.save_enabled = false
+        root.add_child(game)
+        game.demo_room_select.select(3 + stage)
+        game._start("Kha" if stage == 1 else "An")
+        game._interact()
+        game.set_physics_process(false)
+        game.sky.use_art(3,game.hero.position)
+        for at in [Vector2(900,-644),Vector2(1100,-1750 if stage == 2 else -1454)]:
+            game.hero.position = game.sky.point(at)
+            game.cam.reset_smoothing()
+            game.cam.force_update_scroll()
+            game.sky.tick(0.016)
+            await _save("actual-sky-%d-%s.png" % [stage+1,"summit" if at.y < -1400 else "middle"])
+        game.queue_free()
+        await process_frame
+    var fx_game = load("res://scenes/main.tscn").instantiate()
+    fx_game.save_enabled = false
+    root.add_child(fx_game)
+    fx_game.demo_room_select.select(3)
+    fx_game._start("An")
+    fx_game._interact()
+    fx_game.set_physics_process(false)
+    fx_game.i_frames = 0
+    var points := [Vector2(280,432),Vector2(560,326),Vector2(560,76),Vector2(830,-144),Vector2(895,-644),Vector2(580,-930)]
+    for id in range(6):
+        fx_game.arts.reset()
+        fx_game.hero.position = fx_game.sky.point(points[id])
+        fx_game.hero.velocity = Vector2.ZERO
+        fx_game.facing = 1
+        fx_game.cam.reset_smoothing()
+        fx_game.cam.force_update_scroll()
+        fx_game.sky.tick(0.016)
+        fx_game.arts.cast(id)
+        fx_game.arts.tick(0.18)
+        fx_game.motion_state = fx_game._select_motion_state()
+        fx_game._update_character_animation()
+        await _save("actual-special-art-%d.png" % (id+1))
+    fx_game.queue_free()
+    await process_frame
     print("ECLIPSE CAPTURE PASS: production-renderer chapter, boss, route and signature frames")
     quit(0)
 func _save(filename: String) -> void:
