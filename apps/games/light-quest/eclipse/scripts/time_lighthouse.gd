@@ -276,7 +276,7 @@ func _choice(title: String, action: Callable) -> void:
     var button := Button.new()
     button.text = title
     button.custom_minimum_size.y = 31
-    button.pressed.connect(action)
+    button.pressed.connect(action,CONNECT_DEFERRED)
     options.add_child(button)
 
 func _open(which: String) -> void:
@@ -335,7 +335,7 @@ func _button(parent: Control, title: String, callback: Callable) -> Button:
     var button := Button.new()
     button.text = title
     button.custom_minimum_size.y = 34
-    button.pressed.connect(callback)
+    button.pressed.connect(callback,CONNECT_DEFERRED)
     parent.add_child(button)
     return button
 
@@ -375,7 +375,7 @@ func inspect_weapon(item: int) -> void:
     _open("forge")
     heading.text = "TIỆM RÈN BÀ LAM"
     heading.modulate = Color("#ffdda4")
-    copy.text = "Mảnh đồng  %d    ◇  Lõi nguyệt  %d" % [metal,lunar_cores]
+    copy.text = "Mảnh đồng  %d    |    Lõi nguyệt  %d" % [metal,lunar_cores]
     var row := HBoxContainer.new()
     row.add_theme_constant_override("separation",12)
     options.add_child(row)
@@ -411,7 +411,7 @@ func inspect_weapon(item: int) -> void:
         var label := Label.new()
         label.position = Vector2(1,62)
         label.size = Vector2(93,39)
-        label.text = WEAPONS[index] + (" ✓" if owned[index] else "\n1 đồng")
+        label.text = WEAPONS[index] + ("\nĐã có" if owned[index] else "\n1 đồng")
         label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
         label.add_theme_font_size_override("font_size",11)
         label.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -439,8 +439,9 @@ func inspect_weapon(item: int) -> void:
     var current: int = TECH_REACH[equipped]
     if candidate > 0 and current > 0:
         var difference := candidate-current
-        reach.text = "Tầm chiêu  %d  →  %d" % [current,candidate]
-        if difference != 0: reach.text += "  (%+d)" % difference
+        reach.text = "Tầm chiêu  %d  sang  %d" % [current,candidate]
+        if difference == 0: reach.text = "Tầm chiêu  %d" % candidate
+        else: reach.text += "  (%+d)" % difference
         reach.modulate = Color("#b4eac2") if difference > 0 else (Color("#ffb2a6") if difference < 0 else Color("#d7dff1"))
     else:
         reach.text = "Đòn riêng · Hồi 2,7 giây"
@@ -468,7 +469,7 @@ func inspect_weapon(item: int) -> void:
     if item == SPEAR:
         var infusion := Label.new()
         infusion.add_theme_font_size_override("font_size",14)
-        infusion.text = "◆ Tơ Kép · đã mở" if spear_infused else "◇ Tơ Kép · %d / %d Lõi nguyệt" % [lunar_cores,SPEAR_CORE_COST]
+        infusion.text = "Tơ Kép · đã mở" if spear_infused else "Tơ Kép · %d / %d Lõi nguyệt" % [lunar_cores,SPEAR_CORE_COST]
         infusion.modulate = Color("#a7eeef")
         details.add_child(infusion)
         var forge_actions := HBoxContainer.new()
