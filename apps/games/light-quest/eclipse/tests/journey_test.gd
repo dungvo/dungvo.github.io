@@ -29,6 +29,9 @@ func _run() -> void:
     if not ensure(not game.victory_panel.visible,"exit requires the boss"): return
     sky.boss_defeated()
     game._interact()
+    if not ensure(not game.victory_panel.visible and sky.coast_doors[2].collision_layer == 0,"boss door opens into separate lighthouse courtyard"): return
+    game.hero.position = sky.point(Vector2(4310,81))
+    game._interact()
     if not ensure(game.victory_panel.visible and sky.progress[3].won,"seventh chapter completes journey"): return
     game.trials.next_trial()
     if not ensure(game.menu.visible and not game.started,"journey ends at the map"): return

@@ -36,6 +36,7 @@ var boss_bar: ProgressBar
 var menu_button: Button
 var weak_art: Node2D
 var intro := true
+var coast_doors: Array[StaticBody2D] = []
 
 func _ready() -> void:
     game = get_parent()
@@ -117,6 +118,7 @@ func begin(index: int) -> void:
     ghost_bodies.clear()
     ghost_art.clear()
     bell_gates.clear()
+    coast_doors.clear()
     movers.clear()
     elapsed = 0
     best_height = 0
@@ -172,26 +174,36 @@ E để bắt đầu · I hoặc Trang bị để đổi cách đánh."
     print("ECLIPSE SKY: %d %s" % [stage, game.character])
 
 func _width() -> float:
-    return 3640.0 if stage == 3 else WIDTH
+    return 4420.0 if stage == 3 else WIDTH
 
 func _coast() -> void:
-    # Long horizontal route with three gaps, a lower detour, and a final bridge.
+    # Doorways divide the coast into three named rooms and double as checkpoints.
+    for door_index in range(2):
+        var at := Vector2(1280,250) if door_index == 0 else Vector2(2460,130)
+        _detail(7,at,Vector2(100,148))
+        coast_doors.append(_wall(Rect2(at.x+30,-2000,16,at.y+2000)))
+        if progress[stage].checkpoint > door_index:
+            _remove_body(coast_doors[door_index])
     for rect in [Rect2(0,456,570,80),Rect2(650,365,220,24),
             Rect2(950,290,250,24),Rect2(1220,250,300,30),
             Rect2(1600,345,140,26),Rect2(1850,345,220,26),Rect2(2150,255,240,24),
-            Rect2(2410,130,330,28),Rect2(3060,205,580,36)]:
+            Rect2(2410,130,330,28),Rect2(3060,205,580,36),Rect2(3690,162,310,26),Rect2(4060,105,360,32)]:
         _platform(rect)
     _platform(Rect2(2810,185,190,24),true,true)
     _platform(Rect2(1690,470,220,26))
     _platform(Rect2(2030,425,105,24))
     for at in [Vector2(740,264),Vector2(1030,187),Vector2(2250,151),Vector2(2530,22),Vector2(3190,100)]:
         _anchor(at)
-    _marker("checkpoint1",Vector2(1280,250),"E · Trạm vòm đá",0)
-    _marker("checkpoint2",Vector2(2460,130),"E · Trạm hải đăng",0)
+    _marker("checkpoint1",Vector2(1280,250),"E · Mở cửa Hầm Vòm",0)
+    _marker("checkpoint2",Vector2(2460,130),"E · Mở cửa Đài Canh",0)
     _marker("relic",Vector2(1780,470),"E · Lõi đèn dưới vòm",0)
     _marker("secret",Vector2(2050,425),"E · Kho báu chân vòm",3)
     _marker("bell",Vector2(2590,130),"5 · Rung chuông hải đăng",4)
-    _marker("goal",Vector2(3510,205),"E · Hoàn thành hành trình",0)
+    _marker("outer_door",Vector2(3510,205),"E · Cửa Sân Hải Đăng",0)
+    coast_doors.append(_wall(Rect2(3540,-2000,16,2205)))
+    _marker("goal",Vector2(4310,105),"E · Thắp sáng hải đăng",0)
+    _detail(7,Vector2(4310,105),Vector2(120,175))
+    _detail(5,Vector2(3850,162),Vector2(58,96))
     for at in [Vector2(1280,250),Vector2(2460,130)]:
         _detail(5,at,Vector2(46,72))
     _detail(9,Vector2(1780,470),Vector2(48,29))
@@ -461,7 +473,15 @@ func interact() -> void:
         match marker.kind:
             "checkpoint1", "checkpoint2":
                 var checkpoint_index := 1 if marker.kind == "checkpoint1" else 2
-                progress[stage].checkpoint = checkpoint_index
+                if stage == 3:
+                    progress[stage].checkpoint = maxi(progress[stage].checkpoint, checkpoint_index)
+                    var door := coast_doors[checkpoint_index-1]
+                    if is_instance_valid(door) and door.collision_layer != 0:
+                        _remove_body(door)
+                        game.sound.play_cue("light")
+                        game.emit_impact(marker.position+Vector2(30,-54),Color("#ffe3a1"))
+                else:
+                    progress[stage].checkpoint = checkpoint_index
                 game.checkpoint = game.hero.position
                 game.health = game.max_health
                 game._persist()
@@ -483,6 +503,16 @@ func interact() -> void:
                 game.health = game.max_health
                 game._persist()
                 game._say("BÍ MẬT SAU THÁP · sáu kỹ năng hồi nhanh hơn",4)
+                return
+            "outer_door":
+                if not boss_dead:
+                    game._say("Vệ Binh giữ cửa sân hải đăng",2)
+                    return
+                var exit_door := coast_doors[2]
+                if is_instance_valid(exit_door) and exit_door.collision_layer != 0:
+                    _remove_body(exit_door)
+                    game.sound.play_cue("light")
+                game._say("Cửa đã mở · vượt hai nhịp cầu và thắp đèn",3)
                 return
             "goal":
                 if not boss_dead:
@@ -553,6 +583,8 @@ func update_hud() -> void:
     altitude.text = "Độ cao: %d · Trạm %d/2" % [maxi(0,int(456 - game.hero.position.y)),progress[stage].checkpoint]
     var p: Vector2 = game.hero.position
     if stage == 3:
+        var room_name := "Cửa Biển" if p.x < origin + 1310 else ("Hầm Vòm" if p.x < origin + 2490 else ("Đài Canh" if p.x < origin + 3540 else "Sân Hải Đăng"))
+        game.chapter.text = room_name
         altitude.text = "Đường đi %d%% · Trạm %d/2" % [int((p.x-origin)/_width()*100),progress[stage].checkpoint]
         objective.text = "Tìm lõi đèn dưới vòm đá (E)" if not progress[stage].relic else ("Dùng 4 hiện cầu · dùng 5 gần chuông" if not progress[stage].bell else ("Đến đài canh và đánh bại vệ binh" if not boss_dead else "Đến cổng cuối và nhấn E"))
     elif not progress[stage].crystal: objective.text = "1 Phá Tinh · phá vách hồng, tìm đường leo lên"
@@ -571,6 +603,13 @@ func update_hud() -> void:
 
 func _draw() -> void:
     if not active: return
+    if stage == 3:
+        for i in coast_doors.size():
+            var door := coast_doors[i]
+            if not is_instance_valid(door) or door.collision_layer == 0: continue
+            var at := point([Vector2(1310,250),Vector2(2490,130),Vector2(3540,205)][i])
+            draw_line(at,at-Vector2(0,109),Color("#ffda9570"),10,true)
+            draw_line(at,at-Vector2(0,109),Color("#fff1c6"),2,true)
     for anchor in anchors:
         draw_circle(anchor,20,Color("#ffe0a321"))
         draw_arc(anchor,13,0,TAU,32,Color("#ffe3b0"),2.5,true)

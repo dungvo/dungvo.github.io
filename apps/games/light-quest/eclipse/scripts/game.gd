@@ -97,6 +97,7 @@ var jump_held := false
 var dust_clock := 0.0
 var shake_time := 0.0
 var slash_time := 0.0
+var blade_flash := 0.0
 var save_enabled := true
 var vfx: Array[Dictionary] = []
 var visual_clock := 0.0
@@ -376,7 +377,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nHÀNH TRÌNH · V6"
+    title.text = "LIGHT QUEST: ECLIPSE\nCỬA NGUYỆT · V7"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -513,6 +514,7 @@ func _physics_process(delta:float) -> void:
     dash_cooldown = maxf(0, dash_cooldown-delta)
     i_frames = maxf(0, i_frames-delta)
     slash_time = maxf(0, slash_time-delta)
+    blade_flash = maxf(0, blade_flash-delta)
     shake_time = maxf(0, shake_time-delta)
     boss_shield_time = maxf(0, boss_shield_time-delta)
     boss_pedestal_cooldown = maxf(0, boss_pedestal_cooldown-delta)
@@ -630,7 +632,7 @@ func _physics_process(delta:float) -> void:
 
 func _refresh_effects() -> void:
     var shield := is_instance_valid(guardian) and not boss_dead and boss_shield_time <= 0 and last_room >= 5
-    var dynamic := not vfx.is_empty() or i_frames > 0 or skill_time > 0 or burst_time > 0 or (slash_time > 0 and character == "An")
+    var dynamic := not vfx.is_empty() or i_frames > 0 or skill_time > 0 or burst_time > 0 or (blade_flash > 0 and character == "An")
     if dynamic or effects_visible or shield != guardian_shield_visible:
         effects_visible = dynamic
         guardian_shield_visible = shield
@@ -790,6 +792,7 @@ func _resolve_attack() -> void:
     if character == "Kha":
         spawn_bolt(hero.position, Vector2((740 if loadout.weapon == 1 else 570) * attack_facing, 0), true, 2 if loadout.weapon == 2 else 1)
         return
+    blade_flash = 0.16
     var reach := Hit.attack_hitbox(hero.position, attack_facing, false)
     if loadout.weapon == 1:
         reach = reach.grow_individual(24 if attack_facing < 0 else 0, 0, 24 if attack_facing > 0 else 0, 0)
@@ -803,6 +806,7 @@ func _resolve_attack() -> void:
         var foe: CharacterBody2D = hit.collider.get_parent()
         if Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
             foe.take_hit((2 if combo_step == 3 else 1) + int(loadout.weapon == 2), self)
+            emit_impact(foe.position, Color("#fff1bf"))
             sound.play_cue("contact")
 
 func _skill() -> void:
@@ -1067,12 +1071,30 @@ func _draw() -> void:
             draw_arc(p, radius, 0, TAU, 48, Color("#a6edffa0"), 4, true)
             draw_arc(p, radius - 7, 0, TAU, 48, Color("#edfff4"), 1, true)
         if i_frames>0:draw_arc(p+Vector2(0,-6),33,0,TAU,32,Color("#ffdf8b"),3)
-        if slash_time > 0 and character == "An" and attack_windup <= 0:
-            var t := clampf(1.0 - slash_time / ATTACK_CYCLE[combo_step - 1], 0, 1)
-            var angle := 0.0 if attack_facing > 0 else PI
-            var rotation := angle + (t - 0.5) * (1.25 if combo_step == 1 else 2.35) * attack_facing
-            var center := p + Vector2(attack_facing * 28, -12 if combo_step == 2 else -4)
-            for band in [Vector2(57, 14), Vector2(52, 7), Vector2(51, 3)]:
-                var tint := Color("#468cff66") if band.y == 14 else (Color("#60dfffcc") if band.y == 7 else Color("#eaffff"))
-                tint.a *= minf(1, slash_time * 9)
-                draw_arc(center, band.x + 6 * (combo_step - 1), rotation - 1.05, rotation + 1.05, 32, tint, band.y, true)
+        if blade_flash > 0 and character == "An" and slash_time > 0:
+            _draw_blade(p)
+
+func _draw_blade(at: Vector2) -> void:
+    var life := blade_flash / 0.16
+    var facing_sign := float(attack_facing)
+    var reach := 71.0 + (20 if loadout.weapon == 1 else 0) + (10 if combo_step == 3 else 0)
+    var tint: Color = [Color("#d1a8ff"),Color("#8ff5ed"),Color("#ffc070")][loadout.weapon]
+    var pitch := (-0.37 if combo_step == 2 else 0.24) + (1-life)*0.65
+    var outer := PackedVector2Array()
+    var inner := PackedVector2Array()
+    for index in range(25):
+        var progress := float(index)/24
+        var angle := lerpf(-1.22,1.17,progress) + pitch
+        var direction := Vector2(cos(angle)*facing_sign,sin(angle)*0.77)
+        var width := pow(sin(progress*PI),1.35)*(24 if combo_step == 3 else 16)
+        outer.append(at+Vector2(facing_sign*12,-8)+direction*reach)
+        inner.append(at+Vector2(facing_sign*12,-8)+direction*(reach-width))
+    var fill := outer.duplicate()
+    inner.reverse()
+    fill.append_array(inner.slice(1,inner.size()-1))
+    draw_polyline(outer,Color(tint,life*0.22),10,true)
+    draw_colored_polygon(fill,Color(tint,life*0.8))
+    draw_polyline(outer,Color("#fff7e6",life),2.4,true)
+    for index in range(3):
+        var spark := outer[7+index*5]+Vector2(facing_sign*(1-life)*27,0)
+        draw_line(spark,spark+Vector2(facing_sign*9,-5),Color(tint,life),2,true)
