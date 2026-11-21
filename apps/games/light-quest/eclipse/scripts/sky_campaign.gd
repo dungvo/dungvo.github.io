@@ -178,7 +178,7 @@ func _coast() -> void:
     # Long horizontal route with three gaps, a lower detour, and a final bridge.
     for rect in [Rect2(0,456,570,80),Rect2(650,365,220,24),
             Rect2(950,290,250,24),Rect2(1220,250,300,30),
-            Rect2(1600,345,470,26),Rect2(2150,255,240,24),
+            Rect2(1600,345,140,26),Rect2(1850,345,220,26),Rect2(2150,255,240,24),
             Rect2(2410,130,330,28),Rect2(3060,205,580,36)]:
         _platform(rect)
     _platform(Rect2(2810,185,190,24),true,true)

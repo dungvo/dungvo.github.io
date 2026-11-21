@@ -55,7 +55,9 @@ jobs:
           grep -q 'ECLIPSE VFX PASS' art-vfx.log
           timeout 30s godot --headless --fixed-fps 60 --script res://tests/journey_test.gd 2>&1 | tee journey.log
           grep -q 'ECLIPSE JOURNEY PASS' journey.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' journey.log smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log art-vfx.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/horizon_playthrough.gd 2>&1 | tee horizon.log
+          grep -q "V6 CONTINUOUS ROUTE PASS" horizon.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' horizon.log journey.log smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log art-vfx.log
       - name: Export single-threaded Godot Web
         working-directory: apps/games/light-quest/eclipse
         shell: bash
