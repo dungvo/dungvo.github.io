@@ -1,0 +1,70 @@
+name: Publish Light Quest Eclipse Godot to GitHub Pages
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/publish-eclipse-godot.yml'
+permissions:
+  contents: write
+concurrency:
+  group: eclipse-godot-pages
+  cancel-in-progress: false
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout original Godot game and room selector
+        uses: actions/checkout@v4
+        with:
+          ref: feature/eclipse-godot-room-select-v1
+          path: source
+      - name: Install Godot 4.4.1 with web templates
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.4.1
+          use-dotnet: false
+          include-templates: true
+      - name: Import and validate Godot
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source/apps/games/light-quest/eclipse
+          godot --headless --editor --import --quit 2>&1 | tee /tmp/eclipse-import.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|ERROR: Failed to load resource' /tmp/eclipse-import.log
+          timeout 30s godot --headless --script res://tests/smoke.gd 2>&1 | tee /tmp/eclipse-smoke.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|Invalid access' /tmp/eclipse-smoke.log
+      - name: Export Godot HTML5
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source/apps/games/light-quest/eclipse
+          mkdir -p build/web
+          godot --headless --export-release Web build/web/index.html
+          test -s build/web/index.html
+          test -s build/web/index.wasm
+          test -s build/web/index.pck
+      - name: Checkout public GitHub Pages main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: public
+          persist-credentials: true
+      - name: Publish only Godot game assets (preserve other apps)
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=public/apps/games/light-quest/eclipse/godot-play
+          mkdir -p "$dest"
+          cp source/apps/games/light-quest/eclipse/build/web/* "$dest/"
+          touch "$dest/.nojekyll"
+          cd public
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add apps/games/light-quest/eclipse/godot-play
+          if git diff --cached --quiet; then
+            echo 'Godot Pages build unchanged'
+            exit 0
+          fi
+          git commit -m 'deploy(eclipse): publish Godot room-select web game'
+          git pull --rebase origin main
+          git push origin HEAD:main
