@@ -46,6 +46,19 @@ var options: VBoxContainer
 var tech_button: Button
 var hidden_platform: PhysicsBody2D
 var breakable: PhysicsBody2D
+var map_button: Button
+var minimap: Control
+var underground := false
+var shaft_cover: PhysicsBody2D
+var dropping := false
+var rescued := false
+var portrait := preload("res://assets/eclipse/forge-portrait.webp")
+var weapon_atlas := preload("res://assets/eclipse/forge-weapons.webp")
+const MapView := preload("res://scripts/coast_interface.gd")
+const SkillPreview := preload("res://scripts/forge_card.gd")
+const SHORE := preload("res://assets/eclipse/open-moon-coast.webp")
+const CISTERN := preload("res://assets/eclipse/guardian-hall.webp")
+
 
 func _ready() -> void:
     z_index = 6
@@ -60,6 +73,20 @@ func _ready() -> void:
     tech_button.focus_mode = Control.FOCUS_NONE
     tech_button.pressed.connect(cast)
     ui.add_child(tech_button)
+    map_button = Button.new()
+    map_button.position = Vector2(808,12)
+    map_button.size = Vector2(130,65)
+    map_button.focus_mode = Control.FOCUS_NONE
+    map_button.tooltip_text = "Bản đồ · M"
+    map_button.pressed.connect(open_map)
+    ui.add_child(map_button)
+    minimap = MapView.new()
+    minimap.timeline = self
+    minimap.compact = true
+    minimap.position = Vector2(3,3)
+    minimap.size = Vector2(124,59)
+    minimap.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    map_button.add_child(minimap)
     panel = PanelContainer.new()
     panel.position = Vector2(203,82)
     panel.custom_minimum_size = Vector2(554,340)
@@ -83,6 +110,8 @@ func build() -> void:
     close()
     ui.show()
     indoors = false
+    underground = false
+    dropping = false
     sky.boss = null
     cooldown = 0
     flare = 0
@@ -92,11 +121,25 @@ func build() -> void:
     trap_clock = 0
     hidden_platform = null
     breakable = null
-    for rect in [Rect2(0,456,730,40),Rect2(1130,456,820,40),Rect2(2040,456,560,40)]:
+    for rect in [Rect2(0,456,650,40),Rect2(716,456,14,40),Rect2(1130,456,820,40),Rect2(2040,456,560,40)]:
         sky._platform(rect,false)
+    shaft_cover = sky._platform(Rect2(650,456,66,16))
+    shaft_cover.get_meta("art").modulate = Color("#6786a4a0")
+    # Low crawl slot leads to a physically connected shaft with a broad landing.
+    sky._wall(Rect2(580,321,70,104))
+    sky._detail(0,Vector2(615,425),Vector2(76,106))
+    sky._detail(0,Vector2(602,373),Vector2(101,60))
+    sky._platform(Rect2(300,700,470,60),false)
+    sky._wall(Rect2(286,523,14,237))
+    sky._wall(Rect2(770,556,18,204))
+    sky._platform(Rect2(309,628,160,20),true,false,true)
+    sky._marker("shaft",Vector2(672,456),"↓ · Luồn qua và xuống hầm",2)
+    sky._marker("cistern",Vector2(441,700),"E · Cứu Tín / mở lối lên",2)
+    sky._detail(7,Vector2(361,700),Vector2(88,125))
+    _npc(Vector2(442,673))
     if era != 2 or repaired:
         sky._platform(Rect2(730,456,400,32),false)
-        for x in [745,920,1115]: sky._detail(7,Vector2(x,456),Vector2(100,132))
+        for x in [749,1112]: sky._detail(0,Vector2(x,540),Vector2(45,84))
     else:
         sky._platform(Rect2(745,538,133,24))
         sky._platform(Rect2(958,513,172,24))
@@ -150,6 +193,18 @@ func build() -> void:
         game.enemies.append(guardian)
         sky.boss = guardian
 
+func update_drop(low: bool) -> void:
+    if not is_instance_valid(shaft_cover): return
+    var local_x: float = game.hero.position.x-sky.origin
+    if not dropping and low and local_x > 659 and local_x < 705 and game.hero.position.y > 413 and game.hero.position.y < 453:
+        game.hero.add_collision_exception_with(shaft_cover)
+        game.hero.velocity.x = 0
+        game.hero.velocity.y = 85
+        dropping = true
+    elif dropping and (game.hero.position.y > 564 or local_x < 645 or local_x > 722):
+        game.hero.remove_collision_exception_with(shaft_cover)
+        dropping = false
+
 func _npc(at: Vector2) -> void:
     var sprite := Sprite2D.new()
     sprite.texture = preload("res://assets/eclipse/keeper.webp")
@@ -181,6 +236,11 @@ func _choice(title: String, action: Callable) -> void:
 
 func _open(which: String) -> void:
     mode = which
+    var wide := which in ["forge","item","map","journal","gear","skills"]
+    panel.position = Vector2(46,52) if wide else Vector2(203,82)
+    panel.custom_minimum_size = Vector2(868,420) if wide else Vector2(554,340)
+    copy.show()
+    panel.reset_size()
     panel.show()
     game._reset_touch()
     game.joystick.accept_touch = false
@@ -211,41 +271,164 @@ func forge() -> void:
     catalog_page = 0
     show_catalog()
 
+func _crop(texture: Texture2D, rect: Rect2) -> AtlasTexture:
+    var region := AtlasTexture.new()
+    region.atlas = texture
+    region.region = rect
+    return region
+
+func _weapon_icon(item: int) -> AtlasTexture:
+    return _crop(weapon_atlas,Rect2(50+(item%4)*398,244+(item/4)*320,378,164))
+
+func _button(parent: Control, title: String, callback: Callable) -> Button:
+    var button := Button.new()
+    button.text = title
+    button.custom_minimum_size.y = 34
+    button.pressed.connect(callback)
+    parent.add_child(button)
+    return button
+
 func show_catalog() -> void:
+    inspect_weapon(catalog_page*4)
+
+func inspect_weapon(item: int) -> void:
     _open("forge")
     heading.text = "TIỆM RÈN BÀ LAM"
-    copy.text = "Bà Lam: Thử chiêu trước khi mua. Hiện có %d mảnh đồng.\nĐánh bại Thủ Vệ Đá để lấy thêm vật liệu." % metal
+    copy.text = "Mảnh đồng  %d   ·   %s" % [metal,"Cầu đã gia cố" if repaired else "Gia cố cầu cần lõi Thủ Vệ Đá"]
+    var row := HBoxContainer.new()
+    row.add_theme_constant_override("separation",12)
+    options.add_child(row)
+    var face := TextureRect.new()
+    face.texture = _crop(portrait,Rect2(25,150,366,580))
+    face.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+    face.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+    face.custom_minimum_size = Vector2(150,240)
+    row.add_child(face)
+    var catalog := GridContainer.new()
+    catalog.columns = 2
+    catalog.add_theme_constant_override("h_separation",6)
+    catalog.add_theme_constant_override("v_separation",7)
+    row.add_child(catalog)
     for index in range(catalog_page*4,catalog_page*4+4):
-        var item := index
-        _choice(WEAPONS[index]+" · "+("Trang bị" if owned[index] else "Thử / Mua"),func(): inspect_weapon(item))
-    _choice("Trang "+str(2-catalog_page)+"/2",func():
+        var choice := index
+        var card := _button(catalog,"",func(): inspect_weapon(choice))
+        card.custom_minimum_size = Vector2(132,95)
+        var image := TextureRect.new()
+        image.texture = _weapon_icon(index)
+        image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+        image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+        image.position = Vector2(5,4)
+        image.size = Vector2(122,66)
+        image.mouse_filter = Control.MOUSE_FILTER_IGNORE
+        card.add_child(image)
+        var label := Label.new()
+        label.position = Vector2(4,68)
+        label.size = Vector2(124,23)
+        label.text = WEAPONS[index] + (" ✓" if owned[index] else "")
+        label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+        label.add_theme_font_size_override("font_size",12)
+        label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+        card.add_child(label)
+        card.modulate = Color("#ffdda5") if item == index else Color.WHITE
+    var details := VBoxContainer.new()
+    details.custom_minimum_size.x = 368
+    row.add_child(details)
+    var name_label := Label.new()
+    name_label.text = WEAPONS[item]
+    name_label.add_theme_font_size_override("font_size",20)
+    details.add_child(name_label)
+    var stats := Label.new()
+    stats.text = TECHS[item]+"
+"+("Đã có trong kho" if owned[item] else "Giá · 1 mảnh đồng")
+    stats.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+    details.add_child(stats)
+    var preview := SkillPreview.new()
+    preview.weapon = item
+    preview.custom_minimum_size = Vector2(330,96)
+    preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+    details.add_child(preview)
+    _button(details,"Thử chiêu",func():
+        preview.phase = 0
+        game.sound.play_cue("slash")
+    )
+    _button(details,"Trang bị" if owned[item] else "Mua · 1 mảnh đồng",func(): buy(item))
+    var actions := HBoxContainer.new()
+    options.add_child(actions)
+    _button(actions,"Kho "+str(catalog_page+1)+"/2 ›",func():
         catalog_page = 1-catalog_page
         show_catalog()
     )
-    _choice("Gia cố cầu · cần lõi đồng" if not repaired else "Cầu đã gia cố",repair)
-    _choice("Đồng hành: "+("Cáo Dẫn Đường" if companion == 0 else "Bướm Đèn"),func():
+    _button(actions,"Gia cố cầu",repair)
+    _button(actions,"Đổi thú · "+("Cáo" if companion == 0 else "Bướm"),func():
         companion = 1-companion
         game._persist()
         show_catalog()
     )
-    _choice("Rời tiệm",close)
+    _button(actions,"Rời quầy",close)
 
-func inspect_weapon(item: int) -> void:
-    _open("item")
-    heading.text = WEAPONS[item]
-    copy.text = TECHS[item]+"\n"+("Đã có trong kho." if owned[item] else "Giá: 1 mảnh đồng.")
-    _choice("Thử chiêu",func():
-        flare_origin = game.hero.position
-        flare_direction = game.facing
-        flare = 0.55
-        preview_item = item
-        close()
-        game.sound.play_cue("slash")
-        game._say("Đòn thử · "+TECHS[item],3)
-        queue_redraw()
-    )
-    _choice("Trang bị" if owned[item] else "Mua và trang bị",func(): buy(item))
-    _choice("Về quầy",show_catalog)
+func _tabs() -> void:
+    var row := HBoxContainer.new()
+    row.add_theme_constant_override("separation",12)
+    options.add_child(row)
+    _button(row,"BẢN ĐỒ",open_map)
+    _button(row,"TRANG BỊ",open_gear)
+    _button(row,"KỸ NĂNG",open_skills)
+    _button(row,"NHẬT KÝ",open_journal)
+    _button(row,"Tiếp tục",close)
+
+func open_map() -> void:
+    if game.dialogue.visible or game.victory_panel.visible: return
+    _open("map")
+    heading.text = "BẢN ĐỒ · "+ERAS[era]
+    copy.text = "● Vị trí hiện tại     ◇ Điểm nghỉ     Bờ Đá nối Hầm Dẫn Nước qua trục rơi"
+    _tabs()
+    var map := MapView.new()
+    map.timeline = self
+    map.custom_minimum_size = Vector2(795,257)
+    options.add_child(map)
+
+func _info_line(value: String) -> void:
+    var label := Label.new()
+    label.text = value
+    label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+    options.add_child(label)
+
+func open_journal() -> void:
+    _open("journal")
+    heading.text = "NHẬT KÝ · Ngọn đèn chưa tắt"
+    copy.text = "Tín · Người gác đèn"
+    _tabs()
+    _info_line(("✓" if rescued else "○")+" Luồn qua khe Bờ Đá, xuống hầm gặp Tín và mở đường trở lên.")
+    _info_line(("✓" if core else "○")+" Về Quá khứ, thắng Thủ Vệ Đá và lấy lõi đồng.")
+    _info_line(("✓" if repaired else "○")+" Nhờ Bà Lam gia cố cầu hoặc đi lối hầm với Bướm Đèn.")
+    _info_line(("✓" if lit else "○")+" Đến Tương lai, hạ Vệ Binh và thắp Hải Đăng.")
+
+func open_gear() -> void:
+    _open("gear")
+    heading.text = "TRANG BỊ"
+    copy.text = "Đang mang · "+WEAPONS[equipped]
+    _tabs()
+    var grid := GridContainer.new()
+    grid.columns = 4
+    options.add_child(grid)
+    for i in WEAPONS.size():
+        var item := i
+        var button := _button(grid,WEAPONS[i],func():
+            equipped = item
+            game._persist()
+            open_gear()
+        )
+        button.disabled = not owned[i]
+
+func open_skills() -> void:
+    _open("skills")
+    heading.text = "KỸ NĂNG"
+    copy.text = "Chiêu vũ khí · "+TECHS[equipped]
+    _tabs()
+    _info_line("V · Chiêu vũ khí đang mang")
+    _info_line("K · Lướt   |   Q · Nguyệt Trảm   |   ↓ · Ngồi luồn qua khe")
+    _info_line("1–6 · Các ấn khám phá   |   E · Tương tác")
+    _button(options,"Về màn chọn",game.trials.return_menu)
 
 func buy(item: int) -> void:
     if not owned[item]:
@@ -284,6 +467,22 @@ func set_interior(entering: bool) -> void:
 
 func interact() -> void:
     var x: float = game.hero.position.x - sky.origin
+    if game.hero.position.y > 595 and x < 770:
+        if absf(x-441) > 88:
+            game._say("Tín đang chờ cạnh đèn ở giữa hầm",2)
+            return
+        rescued = true
+        game._persist()
+        game.hero.position = sky.point(Vector2(366,432))
+        game.hero.velocity = Vector2.ZERO
+        game.cam.reset_smoothing()
+        game._say("Tín đã an toàn · cửa hầm mở về Bờ Đá",4)
+        return
+    if rescued and x > 310 and x < 382 and game.hero.position.y > 375:
+        game.hero.position = sky.point(Vector2(400,676))
+        game.hero.velocity = Vector2.ZERO
+        game.cam.reset_smoothing()
+        return
     if indoors:
         if x < 2990: set_interior(false)
         elif absf(x-3320) < 100: forge()
@@ -420,6 +619,9 @@ func update(delta: float) -> void:
     cooldown = maxf(0,cooldown-delta)
     flare = maxf(0,flare-delta)
     tech_button.visible = not (panel.visible or game.dialogue.visible or game.victory_panel.visible)
+    map_button.visible = tech_button.visible
+    minimap.queue_redraw()
+    underground = game.hero.position.y > 566 and game.hero.position.x < sky.origin+770
     tech_button.text = "V · %s" % (WEAPONS[equipped] if cooldown == 0 else "%.1fs" % cooldown)
     for marker in sky.markers: marker.tick(delta,game.hero.position)
     var x: float = game.hero.position.x - sky.origin
@@ -432,6 +634,15 @@ func update(delta: float) -> void:
 
 func _draw() -> void:
     if not is_instance_valid(game) or not active(): return
+    if not indoors:
+        var depth := 700.0 if underground else 511.0
+        var start: Vector2 = sky.point(Vector2(0,depth))
+        draw_rect(Rect2(start,Vector2(MAP_WIDTH,126)),Color("#0d325130"))
+        for line in range(4):
+            var wave := PackedVector2Array()
+            for x in range(0,2601,33):
+                wave.append(start+Vector2(x,line*12+sin(x*0.027+sky.elapsed*1.7+line)*1.4))
+            draw_polyline(wave,Color(0.40,0.75,0.96,0.27-line*0.04),1,true)
     if indoors:
         draw_rect(Rect2(sky.point(Vector2(2800,80)),Vector2(960,376)),Color("#38242b42"))
         for x in [2890,3140,3500,3730]:
@@ -509,7 +720,7 @@ func _draw() -> void:
                 draw_arc(flare_origin,92,0,TAU,48,Color("#d5a9ff",alpha),5,true)
 
 func save_state() -> Dictionary:
-    return {"era":era,"core":core,"repaired":repaired,"lit":lit,"metal":metal,"companion":companion,"owned":owned.duplicate(),"equipped":equipped,"defeated":defeated.duplicate(),"claimed":claimed.duplicate(),"switch_open":switch_open}
+    return {"era":era,"core":core,"repaired":repaired,"lit":lit,"metal":metal,"companion":companion,"owned":owned.duplicate(),"equipped":equipped,"defeated":defeated.duplicate(),"claimed":claimed.duplicate(),"switch_open":switch_open,"rescued":rescued}
 
 func restore(data: Dictionary) -> void:
     era = clampi(int(data.get("era",1)),0,2)
@@ -523,6 +734,7 @@ func restore(data: Dictionary) -> void:
         var flags: Array = get(key)
         for index in flags.size():
             flags[index] = list is Array and index < list.size() and list[index] == true
+    rescued = data.get("rescued",false) == true
     switch_open = data.get("switch_open",false) == true
     owned[0] = true
     equipped = clampi(int(data.get("equipped",0)),0,WEAPONS.size()-1)

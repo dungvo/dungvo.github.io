@@ -150,7 +150,7 @@ func begin(index: int) -> void:
     game.cam.limit_left = int(origin)
     game.cam.limit_right = int(origin + _width())
     game.cam.limit_top = -2000
-    game.cam.limit_bottom = 600
+    game.cam.limit_bottom = 830 if game.time_mode else 600
     if game.time_mode: timeline.build()
     elif stage == 3: _coast()
     else: _terrain()
@@ -180,7 +180,7 @@ Qua hai trạm, tìm lõi đèn dưới vòm đá, rung chuông và vượt đà
 E để bắt đầu · I hoặc Trang bị để đổi cách đánh."
     if game.time_mode: game.dialogue_label.text = "NGỌN ĐÈN CHƯA TẮT\nTìm Tín trong hiện tại hoặc dùng E cạnh cỗ máy để đổi thời đại.\nV / nút vũ khí dùng chiêu riêng. E để bắt đầu."
     game._show_dialogue(true)
-    game._say("Leo tháp · Bước Gió đã mở — có thể nhảy hai lần", 3)
+    game._say("Bờ Đá · ↓ hoặc NGỒI để luồn khe · M mở bản đồ" if game.time_mode else "Leo tháp · Bước Gió đã mở — có thể nhảy hai lần", 3)
     update_hud()
     queue_redraw()
     print("ECLIPSE SKY: %d %s" % [stage, game.character])
@@ -382,6 +382,14 @@ func _background() -> void:
 
 func _scroll_background() -> void:
     var camera: Vector2 = game.cam.get_screen_center_position()
+    if game.time_mode:
+        var coast: bool = not timeline.indoors and not timeline.underground
+        var art: Texture2D = timeline.SHORE if coast else timeline.CISTERN
+        if backdrop.texture != art: backdrop.texture = art
+        backdrop.size = Vector2(1350, maxf(540,1350.0*backdrop.texture.get_height()/backdrop.texture.get_width()))
+        backdrop.position = Vector2(-clampf(190+(camera.x-origin-480)*0.09,0,390),0)
+        backdrop.modulate = timeline.SHADES[timeline.era] if coast else Color("#cce1f3")
+        return
     var altitude_ratio := clampf((456.0 - camera.y) / 2300.0, 0, 1)
     backdrop.position = Vector2(-64 - sin(camera.x * 0.001) * 25, -(backdrop.size.y - 540) * (1 - altitude_ratio))
 
@@ -402,7 +410,7 @@ func tick(delta: float) -> void:
             game.damage_player(1,point(Vector2(3855,162)).x)
     if game.time_mode:
         timeline.update(delta)
-        if is_instance_valid(boss) and not boss_dead and game.hero.position.x > origin+1285: boss.awake = true
+        if not timeline.indoors and is_instance_valid(boss) and not boss_dead and game.hero.position.x > origin+1285: boss.awake = true
         _scroll_background()
         update_hud()
         queue_redraw()
@@ -610,6 +618,10 @@ func stop() -> void:
     timeline.hide_ui()
     hud_layer.hide()
     game.scenery.background.show()
+    game.chapter.position.x = 698
+    game.light_status.position.x = 698
+    game.crouch_touch.hide()
+    game.control_art.crouch.hide()
     if is_instance_valid(root): root.hide()
 
 func secret_count() -> int:
@@ -635,8 +647,11 @@ func update_hud() -> void:
     altitude.text = "Độ cao: %d · Trạm %d/2" % [maxi(0,int(456 - game.hero.position.y)),progress[stage].checkpoint]
     var p: Vector2 = game.hero.position
     if game.time_mode:
+        game.chapter.position.x = 550
+        game.light_status.position.x = 550
         game.chapter.text = timeline.ERAS[timeline.era]
-        altitude.text = "Hải Đăng · "+("đã sáng" if timeline.lit else "chưa sáng")
+        altitude.text = ""
+        game.light_status.text = "Hầm Dẫn Nước" if timeline.underground else ("Tiệm Bà Lam" if timeline.indoors else "Bờ Đá · Hải Đăng")
         objective.text = ["Gặp Bà Lam · tìm lõi của Thủ Vệ Đá","E · Hỏi Tín bên cửa tiệm hoặc dùng cỗ máy","Vượt cầu · hạ vệ binh · thắp hải đăng"][timeline.era]
     elif stage == 3:
         var room_name := "Cửa Biển" if p.x < origin + 1310 else ("Hầm Vòm" if p.x < origin + 2490 else ("Đài Canh" if p.x < origin + 3540 else "Sân Hải Đăng"))
@@ -650,12 +665,12 @@ func update_hud() -> void:
     elif not progress[stage].relic: objective.text = "6 Thiên Giáng · phá sàn nứt, vào phòng kín lấy Di Vật (E)"
     elif not boss_dead: objective.text = "Dùng móc vàng leo tới đỉnh · đánh bại " + BOSS_NAMES[stage]
     else: objective.text = "Tiếp tục lên cổng tầng trời và nhấn E"
-    boss_label.visible = is_instance_valid(boss) and boss.awake and not boss_dead
+    boss_label.visible = is_instance_valid(boss) and boss.awake and not boss_dead and (not game.time_mode or not timeline.indoors)
     boss_bar.visible = boss_label.visible
     if boss_label.visible:
         boss_bar.max_value = boss.max_hp
         boss_bar.value = boss.hp
-        boss_label.text = "%s · PHA %d\n%d/%d" % [BOSS_NAMES[stage],2 if boss.phase_two else 1,boss.hp,boss.max_hp]
+        boss_label.text = "%s · PHA %d\n%d/%d" % [boss.title,2 if boss.phase_two else 1,boss.hp,boss.max_hp]
 
 func _draw() -> void:
     if not active: return

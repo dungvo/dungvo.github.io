@@ -43,7 +43,9 @@ var chapter: Label
 var light_status: Label
 var dialogue: PanelContainer
 var dialogue_label: Label
-var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false, "burst":false, "art":false}
+var crouched := false
+var crouch_touch: TouchScreenButton
+var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false, "burst":false, "art":false,"crouch":false}
 var control_art: Dictionary = {}
 var joystick: Node2D
 var last_room := -1
@@ -271,6 +273,11 @@ func _make_ui() -> void:
     _touch_button(touchbar, "art", "ẤN", Vector2(705, 354), 30)
     _touch_button(touchbar, "burst", "Q", Vector2(790, 354), 30)
     _touch_button(touchbar, "interact", "E", Vector2(898, 299), 26)
+    var touch_index := touchbar.get_child_count()
+    _touch_button(touchbar, "crouch", "NGỒI", Vector2(125, 365), 27)
+    crouch_touch = touchbar.get_child(touch_index)
+    crouch_touch.hide()
+    control_art.crouch.hide()
     dialogue = PanelContainer.new()
     dialogue.position = Vector2(145,220)
     dialogue.custom_minimum_size = Vector2(670,115)
@@ -356,7 +363,7 @@ func _control_pressed(key: String) -> void:
     if key == "jump": jump_buffer_clock = JUMP_BUFFER_WINDOW
 
 func _control_released(key: String) -> void:
-    if key == "jump": touch[key] = false
+    if key in ["jump","crouch"]: touch[key] = false
     control_art[key].modulate = Color.WHITE
 
 func _reset_touch() -> void:
@@ -382,7 +389,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nKHO VŨ KHÍ NGUYỆT THỰC · V10"
+    title.text = "LIGHT QUEST: ECLIPSE\nBỜ ĐÁ DƯỚI TRĂNG · V11"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -453,6 +460,7 @@ func _panel_style() -> StyleBoxFlat:
     return style
 
 func _start(who: String) -> void:
+    _set_crouch(false,true)
     character = who
     current_trial = demo_room_select.get_selected_id() if is_instance_valid(demo_room_select) else 0
     last_room = -1
@@ -478,6 +486,8 @@ func _start(who: String) -> void:
         story_hero = character
         story_button.text = "VÀO TRUYỆN · Tiếp tục"
         _persist()
+    crouch_touch.visible = time_mode
+    control_art.crouch.visible = time_mode
     _update_hud()
     if OS.has_feature("web") and "--eclipse-render-probe" in OS.get_cmdline_user_args():
         _measure_browser_render_rate()
@@ -508,6 +518,7 @@ func _input(event:InputEvent) -> void:
     if event.is_action_pressed("ui_cancel"):
         if dialogue.visible: _show_dialogue(false)
         elif victory_panel.visible: _dismiss_victory()
+        elif started and time_mode: sky.timeline.open_map()
         elif started: trials.return_menu()
     if not started: return
     if victory_panel.visible:
@@ -524,6 +535,8 @@ func _input(event:InputEvent) -> void:
             KEY_L: _skill()
             KEY_Q: _signature()
             KEY_V: sky.timeline.cast()
+            KEY_M:
+                if time_mode and not dialogue.visible: sky.timeline.open_map()
             KEY_F: arts.cast(loadout.quick_art())
             KEY_1: arts.cast(0)
             KEY_2: arts.cast(1)
@@ -531,6 +544,24 @@ func _input(event:InputEvent) -> void:
             KEY_4: arts.cast(3)
             KEY_5: arts.cast(4)
             KEY_6: arts.cast(5)
+
+func _set_crouch(low: bool, force := false) -> void:
+    if crouched == low: return
+    if not low and crouched and started and time_mode and not force:
+        var rect := RectangleShape2D.new()
+        rect.size = Vector2(21,19)
+        var query := PhysicsShapeQueryParameters2D.new()
+        query.shape = rect
+        query.transform = Transform2D(0.0,hero.position+Vector2(0,-14))
+        query.collision_mask = Combat.WORLD
+        if not get_world_2d().direct_space_state.intersect_shape(query,1).is_empty(): return
+    crouched = low
+    body_shape.shape.height = 28 if low else 48
+    body_shape.position.y = 10 if low else 0
+    actor_anim.scale.y = 0.28 if low else 0.43
+    var hurt: CollisionShape2D = hero.get_node("Hurtbox").get_child(0)
+    hurt.shape.size.y = 26 if low else Hit.PLAYER_BODY.y
+    hurt.position.y = 10 if low else 0
 
 func _physics_process(delta:float) -> void:
     if time_mode and sky.timeline.panel.visible: return
@@ -570,6 +601,8 @@ func _physics_process(delta:float) -> void:
         attack_windup -= delta
         if attack_windup <= 0: _resolve_attack()
     var grounded_before := hero.is_on_floor()
+    if time_mode:
+        _set_crouch((grounded_before or crouched) and (touch.crouch or Input.is_key_pressed(KEY_DOWN) or Input.is_key_pressed(KEY_S)))
     if grounded_before:
         coyote_clock = COYOTE_WINDOW
         air_jumps = 1 if trials.routes.air_step_unlocked else 0
@@ -585,10 +618,12 @@ func _physics_process(delta:float) -> void:
         dx = joystick.axis.x
     if absf(dx) > 0.18 and dash_time <= 0: facing = int(sign(dx))
     # A strong first impulse prevents the sluggish feel when changing direction.
-    var target_speed := dx * (215.0 if character == "Kha" else 255.0)
+    var target_speed := dx * (106.0 if crouched else (215.0 if character == "Kha" else 255.0))
     var accel := RUN_ACCEL if grounded_before else AIR_ACCEL
     var turn_boost := 1.55 if absf(dx)>0.2 and hero.velocity.x * dx < 0.0 else 1.0
     hero.velocity.x = move_toward(hero.velocity.x, target_speed, (accel * turn_boost if absf(dx)>0.12 else RUN_FRICTION) * delta)
+    if time_mode: sky.timeline.update_drop(crouched)
+    if crouched: jump_buffer_clock = 0
     if jump_buffer_clock > 0 and coyote_clock > 0:
         hero.velocity.y = JUMP_SPEED
         jump_buffer_clock = 0.0
@@ -644,7 +679,7 @@ func _physics_process(delta:float) -> void:
         trials.tick(delta)
         hero.position.x = clampf(hero.position.x,25,7*ROOM_W-28)
         hero.position.y = maxf(hero.position.y, -225)
-    if hero.position.y > 620: _respawn()
+    if hero.position.y > (830 if time_mode else 620): _respawn()
     var room := mini(6, int(hero.position.x/ROOM_W))
     if room != last_room:
         last_room = room
@@ -794,6 +829,7 @@ func damage_player(amount: int, from_x: float) -> void:
     _update_hud()
 
 func _respawn() -> void:
+    _set_crouch(false,true)
     health = max_health
     death_time = 0
     hurt_time = 0
