@@ -2,6 +2,13 @@
 
 Các ảnh là thiết kế để duyệt. Bản Web V10 nằm riêng ở [trang chơi](https://dungvo.github.io/apps/games/light-quest/eclipse/godot-play/).
 
+## Cốt truyện, tiệm rèn và đường xuống hầm
+
+- [Bờ Đá và hầm dẫn nước](bo-da-va-ham-dan-nuoc.webp)
+- [Giao diện tiệm rèn Bà Lam](tiem-ba-lam-ui.webp)
+- [Menu tạm dừng và nhật ký](menu-va-nhat-ky.webp)
+- [Cốt truyện bảy chương, nhiệm vụ và tiêu chí hình ảnh](COT-TRUYEN-VA-UI.md)
+
 ## Bản đồ, HUD và nhân vật
 
 | Mockup | Nội dung |
