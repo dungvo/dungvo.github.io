@@ -113,6 +113,7 @@ var guardian_shield_visible := false
 var loadout: CanvasLayer
 var journey_next := 0
 var story_mode := false
+var time_mode := false
 var story_room := -1
 var story_hero := "An"
 var story_button: Button
@@ -381,7 +382,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nHÀNH TRÌNH NHẬT THỰC · V8"
+    title.text = "LIGHT QUEST: ECLIPSE\nNGỌN ĐÈN CHƯA TẮT · V9"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -409,6 +410,7 @@ func _menu() -> void:
         b.text = "Chơi: " + who
         b.pressed.connect(func():
             story_mode = false
+            time_mode = false
             _start("Kha" if who.begins_with("Kha") else "An")
         )
         b.custom_minimum_size.y = 38
@@ -418,10 +420,21 @@ func _menu() -> void:
     story_button.custom_minimum_size.y = 36
     story_button.pressed.connect(func():
         story_mode = true
+        time_mode = false
         demo_room_select.select(maxi(0, story_room))
         _start(story_hero)
     )
     v.add_child(story_button)
+    var time_button := Button.new()
+    time_button.text = "CỖ MÁY THỜI GIAN · Hải Đăng"
+    time_button.custom_minimum_size.y = 36
+    time_button.pressed.connect(func():
+        story_mode = false
+        time_mode = true
+        demo_room_select.select(6)
+        _start("An")
+    )
+    v.add_child(time_button)
     v.add_theme_constant_override("separation", 12)
     menu.add_theme_stylebox_override("panel", _panel_style())
     dialogue.add_theme_stylebox_override("panel", _panel_style())
@@ -483,11 +496,14 @@ func _measure_browser_render_rate() -> void:
 
 func _input(event:InputEvent) -> void:
     if not is_instance_valid(dialogue): return
-    if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_I and loadout.opener.visible:
+    if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_I and loadout.opener.visible and not (time_mode and sky.timeline.panel.visible):
         loadout.toggle()
         return
     if loadout.panel.visible:
         if event.is_action_pressed("ui_cancel"): loadout.toggle()
+        return
+    if time_mode and sky.timeline.panel.visible:
+        if event.is_action_pressed("ui_cancel"): sky.timeline.close()
         return
     if event.is_action_pressed("ui_cancel"):
         if dialogue.visible: _show_dialogue(false)
@@ -507,6 +523,7 @@ func _input(event:InputEvent) -> void:
             KEY_R: _respawn()
             KEY_L: _skill()
             KEY_Q: _signature()
+            KEY_V: sky.timeline.cast()
             KEY_F: arts.cast(loadout.quick_art())
             KEY_1: arts.cast(0)
             KEY_2: arts.cast(1)
@@ -516,6 +533,7 @@ func _input(event:InputEvent) -> void:
             KEY_6: arts.cast(5)
 
 func _physics_process(delta:float) -> void:
+    if time_mode and sky.timeline.panel.visible: return
     if not started or dialogue.visible or victory_panel.visible or loadout.panel.visible: return
     visual_clock += delta
     burst_cooldown = maxf(0, burst_cooldown - delta)
@@ -1053,7 +1071,7 @@ func _persist() -> void:
     if not save_enabled or not is_instance_valid(trials): return
     var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
+        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "timeline":sky.timeline.save_state(), "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -1086,7 +1104,9 @@ func _restore() -> void:
             var clean := [false, false, false]
             for i in range(3): clean[i] = values[i] == true
             trials.routes.set("claimed" if key == "route_claimed" else "opened", clean)
-    if is_instance_valid(sky): sky.restore(data.get("sky", []))
+    if is_instance_valid(sky):
+        sky.restore(data.get("sky", []))
+        if data.get("timeline") is Dictionary: sky.timeline.restore(data.timeline)
     max_health = 5 + trials.secrets.count(true)
     health = max_health
 

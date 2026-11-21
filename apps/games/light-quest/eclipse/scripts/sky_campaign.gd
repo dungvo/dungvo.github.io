@@ -36,10 +36,13 @@ var boss_bar: ProgressBar
 var menu_button: Button
 var weak_art: Node2D
 var intro := true
+var timeline: Node2D
 var coast_doors: Array[StaticBody2D] = []
 
 func _ready() -> void:
     game = get_parent()
+    timeline = preload("res://scripts/time_lighthouse.gd").new()
+    add_child(timeline)
     for i in TITLES.size(): progress.append(_blank())
     back_layer = CanvasLayer.new()
     back_layer.layer = -1
@@ -100,7 +103,7 @@ func begin(index: int) -> void:
     stage = index
     origin = 7200.0 + stage * 1800.0
     mirrored = stage == 1
-    if progress[stage].won and not game.story_mode:
+    if not game.time_mode and progress[stage].won and not game.story_mode:
         var secret: bool = progress[stage].secret
         progress[stage] = _blank()
         progress[stage].secret = secret
@@ -148,7 +151,8 @@ func begin(index: int) -> void:
     game.cam.limit_right = int(origin + _width())
     game.cam.limit_top = -2000
     game.cam.limit_bottom = 600
-    if stage == 3: _coast()
+    if game.time_mode: timeline.build()
+    elif stage == 3: _coast()
     else: _terrain()
     if game.story_mode:
         _marker("story_back",Vector2(102,456),"E · Về miền trước",2)
@@ -160,7 +164,7 @@ func begin(index: int) -> void:
     var stations := [Vector2(140,432), Vector2(870,-144), Vector2(650,-1244)]
     if stage == 3: stations = [Vector2(140,432),Vector2(1280,226),Vector2(2460,106)]
     var cp: int = clampi(progress[stage].checkpoint, 0, 2)
-    game.checkpoint = point(stations[cp])
+    game.checkpoint = point(Vector2(150,432) if game.time_mode else stations[cp])
     game.hero.position = game.checkpoint
     game.cam.reset_smoothing()
     game.cam.force_update_scroll()
@@ -174,6 +178,7 @@ func begin(index: int) -> void:
         game.dialogue_label.text = "Đường Chân Trời · Dọc bờ vực
 Qua hai trạm, tìm lõi đèn dưới vòm đá, rung chuông và vượt đài canh.
 E để bắt đầu · I hoặc Trang bị để đổi cách đánh."
+    if game.time_mode: game.dialogue_label.text = "NGỌN ĐÈN CHƯA TẮT\nTìm Tín trong hiện tại hoặc dùng E cạnh cỗ máy để đổi thời đại.\nV / nút vũ khí dùng chiêu riêng. E để bắt đầu."
     game._show_dialogue(true)
     game._say("Leo tháp · Bước Gió đã mở — có thể nhảy hai lần", 3)
     update_hud()
@@ -184,6 +189,7 @@ func story_exit() -> Vector2:
     return Vector2(4310,105) if stage == 3 else Vector2(1240,-1730 if stage == 2 else -1430)
 
 func _width() -> float:
+    if game.time_mode: return timeline.MAP_WIDTH
     return 4420.0 if stage == 3 else WIDTH
 
 func _coast() -> void:
@@ -357,7 +363,9 @@ func _enemy(kind: String, local: Vector2) -> void:
 
 func _background() -> void:
     var path := "res://assets/eclipse/ascent-atlas.webp"
-    if stage == 3:
+    if game.time_mode:
+        backdrop.texture = [preload("res://assets/eclipse/moon-tower.webp"),preload("res://assets/eclipse/crystal-tower.webp"),preload("res://assets/eclipse/guardian-hall.webp")][timeline.era]
+    elif stage == 3:
         backdrop.texture = preload("res://assets/eclipse/crystal-tower.webp")
     elif ResourceLoader.exists(path):
         var sheet: Texture2D = load(path)
@@ -369,6 +377,7 @@ func _background() -> void:
         backdrop.texture = [Art.SCENERY, preload("res://assets/eclipse/crystal-tower.webp"), preload("res://assets/eclipse/guardian-hall.webp")][stage]
     var height := maxf(740, 1088.0 * backdrop.texture.get_height() / backdrop.texture.get_width())
     backdrop.size = Vector2(1088,height)
+    backdrop.modulate = timeline.SHADES[timeline.era] if game.time_mode else Color.WHITE
     _scroll_background()
 
 func _scroll_background() -> void:
@@ -379,7 +388,10 @@ func _scroll_background() -> void:
 func tick(delta: float) -> void:
     if not active: return
     elapsed += delta
-    game.hero.position.x = clampf(game.hero.position.x,origin + 28,origin + _width() - 28)
+    if game.time_mode and timeline.indoors:
+        game.hero.position.x = clampf(game.hero.position.x,origin+2828,origin+3732)
+    else:
+        game.hero.position.x = clampf(game.hero.position.x,origin + 28,origin + _width() - 28)
     best_height = maxf(best_height,456 - game.hero.position.y)
     for mover in movers:
         var offset := Vector2(0,sin(elapsed*1.8)*54) if mover.shuttle else Vector2(sin(elapsed * 1.1) * 28, 0)
@@ -388,6 +400,13 @@ func tick(delta: float) -> void:
     if game.story_mode and stage == 3 and fmod(elapsed,2.4) > 1.3:
         if box(Rect2(3810,142,90,23)).has_point(game.hero.position+Vector2(0,19)):
             game.damage_player(1,point(Vector2(3855,162)).x)
+    if game.time_mode:
+        timeline.update(delta)
+        if is_instance_valid(boss) and not boss_dead and game.hero.position.x > origin+1285: boss.awake = true
+        _scroll_background()
+        update_hud()
+        queue_redraw()
+        return
     for marker in markers:
         var hidden: bool = marker.kind == "secret" and not progress[stage].sight
         marker.tick(delta,game.hero.position)
@@ -402,7 +421,7 @@ func tick(delta: float) -> void:
     queue_redraw()
 
 func use_art(id: int, at: Vector2) -> void:
-    if not active: return
+    if not active or game.time_mode: return
     if stage == 3:
         if id == 3:
             progress[stage].sight = true
@@ -483,6 +502,9 @@ func _hook_clear(at: Vector2, anchor: Vector2) -> bool:
     return false
 
 func interact() -> void:
+    if game.time_mode:
+        timeline.interact()
+        return
     for marker in markers:
         if game.hero.position.distance_to(marker.position) > 60: continue
         match marker.kind:
@@ -552,6 +574,9 @@ func respawn() -> void:
 
 func boss_defeated() -> void:
     boss_dead = true
+    if game.time_mode:
+        timeline.guardian_down()
+        return
     if game.story_mode:
         progress[stage].guardian_down = true
         game._persist()
@@ -582,6 +607,7 @@ func next_stage() -> void:
 func stop() -> void:
     active = false
     back_layer.hide()
+    timeline.hide_ui()
     hud_layer.hide()
     game.scenery.background.show()
     if is_instance_valid(root): root.hide()
@@ -608,7 +634,11 @@ func update_hud() -> void:
     game.hearts.show_health(game.health,game.max_health)
     altitude.text = "Độ cao: %d · Trạm %d/2" % [maxi(0,int(456 - game.hero.position.y)),progress[stage].checkpoint]
     var p: Vector2 = game.hero.position
-    if stage == 3:
+    if game.time_mode:
+        game.chapter.text = timeline.ERAS[timeline.era]
+        altitude.text = "Hải Đăng · "+("đã sáng" if timeline.lit else "chưa sáng")
+        objective.text = ["Gặp Bà Lam · tìm lõi của Thủ Vệ Đá","E · Hỏi Tín bên cửa tiệm hoặc dùng cỗ máy","Vượt cầu · hạ vệ binh · thắp hải đăng"][timeline.era]
+    elif stage == 3:
         var room_name := "Cửa Biển" if p.x < origin + 1310 else ("Hầm Vòm" if p.x < origin + 2490 else ("Đài Canh" if p.x < origin + 3540 else "Sân Hải Đăng"))
         game.chapter.text = room_name
         altitude.text = "Đường đi %d%% · Trạm %d/2" % [int((p.x-origin)/_width()*100),progress[stage].checkpoint]
