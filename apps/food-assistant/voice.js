@@ -60,3 +60,11 @@ export async function captureAudio(signal, onReady) {
     for (const track of stream.getTracks()) track.stop();
   }
 }
+
+export function speechFrame(results) {
+  const segments = Array.from(results ?? []).filter(result => result[0]?.transcript?.trim());
+  return {
+    text: segments.map(result => result[0].transcript.trim()).join(' '),
+    final: segments.length > 0 && segments.every(result => result.isFinal),
+  };
+}
