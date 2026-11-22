@@ -111,6 +111,15 @@ function updateLine(session, action) {
     line.status = action.status;
   } else {
     require(line.status === 'waiting', 'STARTED', 'Chỉ sửa hoặc hủy trực tiếp món đang chờ nấu.');
+    if (action.type === 'amend') {
+      require(action.expectedNote === line.note, 'CONFLICT', 'Ghi chú vừa thay đổi. Kiểm tra lại.');
+      require((action.qty === undefined || integer(action.qty, 1, 99))
+        && (action.note === undefined || bounded(action.note, 180))
+        && (action.qty !== undefined || action.note !== undefined), 'INVALID', 'Số lượng mới hoặc ghi chú không hợp lệ.');
+      if (action.qty !== undefined) line.qty = action.qty;
+      if (action.note !== undefined) line.note = action.note;
+      return line;
+    }
     require(integer(action.qty, 1, line.qty), 'QTY', 'Số lượng hủy hoặc đổi vượt số lượng đang chờ nấu.');
     line.qty -= action.qty;
   }
@@ -140,6 +149,7 @@ export function mutate(state, action, now = new Date().toISOString()) {
     case 'stage':
     case 'cancel':
     case 'replace':
+    case 'amend':
     case 'undo':
     case 'billing':
     case 'pay':
@@ -148,10 +158,10 @@ export function mutate(state, action, now = new Date().toISOString()) {
     default:
       fail('Loại thao tác không hợp lệ.');
   }
-  if (action.type === 'add' || action.type === 'replace') {
+  if (['add', 'replace', 'amend'].includes(action.type)) {
     require(!session.billing, 'BILLING', 'Bàn đang chờ thanh toán. Mở lại bàn để sửa đơn.');
   }
-  if (['stage', 'cancel', 'replace'].includes(action.type)) {
+  if (['stage', 'cancel', 'replace', 'amend'].includes(action.type)) {
     if (action.type === 'cancel') require(!session.billing, 'BILLING', 'Mở lại bàn để hủy món.');
     affectedLine = updateLine(session, action);
   }
@@ -166,7 +176,7 @@ export function mutate(state, action, now = new Date().toISOString()) {
     const original = next.audit.find(event => event.id === action.targetId);
     require(original?.type === 'add' && original.device === action.device && lines.length
       && lines.every(line => line.status === 'waiting' && line.qty > 0)
-      && !next.audit.some(event => ['cancel', 'replace'].includes(event.type) && lines.some(line => line.id === event.details.lineId)),
+      && !next.audit.some(event => ['cancel', 'replace', 'amend'].includes(event.type) && lines.some(line => line.id === event.details.lineId)),
     'STARTED', 'Chỉ hoàn tác lượt gọi của thiết bị này khi bếp chưa bắt đầu và món chưa được sửa.');
     for (const line of lines) line.qty = 0;
     session.batches = session.batches.filter(batch => batch.id !== action.targetId);
@@ -190,7 +200,7 @@ export function mutate(state, action, now = new Date().toISOString()) {
   const details = {};
   if (action.type === 'add') details.items = structuredClone(action.items);
   if (affectedLine) Object.assign(details, { lineId: affectedLine.id, name: affectedLine.name });
-  for (const field of ['qty', 'status', 'dishId', 'targetId', 'billing', 'count', 'method']) {
+  for (const field of ['qty', 'note', 'status', 'dishId', 'targetId', 'billing', 'count', 'method']) {
     if (Object.hasOwn(action, field)) details[field] = action[field];
   }
   if (receipt) details.total = receipt.total;
@@ -222,7 +232,7 @@ export function validateSnapshot(state) {
       'BACKUP', 'Tệp sao lưu có hóa đơn không hợp lệ.');
     ids.add(item.id);
   }
-  const eventTypes = ['add', 'cancel', 'replace', 'undo', 'stage', 'billing', 'pay', 'tables', 'menu'];
+  const eventTypes = ['add', 'cancel', 'replace', 'amend', 'undo', 'stage', 'billing', 'pay', 'tables', 'menu'];
   require(state.audit.length === state.rev && Object.keys(state.seen).length === state.rev
     && state.audit.every((event, index) => plain(event) && key(event.id) && Object.hasOwn(state.seen, event.id)
       && state.seen[event.id] === index + 1 && key(event.device) && iso(event.at)

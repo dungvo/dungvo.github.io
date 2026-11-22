@@ -1,6 +1,6 @@
 const scope = new URL(self.registration.scope);
 const prefix = 'food-assistant:' + scope.pathname + ':';
-const cacheKey = prefix + '1.4.0';
+const cacheKey = prefix + '1.5.0';
 const shell = [
   './', './index.html', './styles.css', './app.js', './view.js', './domain.js', './language.js',
   './menu.js', './storage.js', './icons.js', './voice.js', './manifest.webmanifest', './assets/hero.webp',
@@ -9,7 +9,9 @@ const shell = [
   './assets/tra-da.webp', './assets/ca-phe.webp',
 ];
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(cacheKey).then(cache => cache.addAll(shell.map(path => new Request(path, { cache: 'reload' })))));
+  event.waitUntil(caches.open(cacheKey)
+    .then(cache => cache.addAll(shell.map(path => new Request(path, { cache: 'reload' }))))
+    .then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', event => {
   event.waitUntil(caches.keys().then(keys =>

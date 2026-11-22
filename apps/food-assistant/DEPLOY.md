@@ -8,7 +8,7 @@ Giải nén gói, mở Terminal trong thư mục `food-assistant`. Cần Node.js
 npm run demo
 ```
 
-Mở [http://127.0.0.1:8787/#ket-noi](http://127.0.0.1:8787/#ket-noi), dùng mã quán hiện trong Terminal. Thử **Nhập lệnh** với “Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi.” Sau khi xác nhận, màn bếp sẽ có ba món, mỗi món ×1. Demo dùng bộ nhớ và xoá dữ liệu khi dừng.
+Mở [http://127.0.0.1:8787/#ket-noi](http://127.0.0.1:8787/#ket-noi), dùng mã quán hiện trong Terminal. Thử **Nhập lệnh** với “Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi.” Sau khi bấm Lưu câu gọi, màn bếp có ba món, mỗi món ×1. Demo dùng bộ nhớ và xoá dữ liệu khi dừng.
 
 ## Một quán dùng chung Wi-Fi · Tôi chọn cách này để chạy thử
 
