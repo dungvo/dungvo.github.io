@@ -322,3 +322,50 @@ test('Địa chỉ API công khai phải có HTTPS và không chấp nhận thô
   assert.throws(() => normalizeEndpoint('http://example.com'));
   assert.throws(() => normalizeEndpoint('https://user@example.com'));
 });
+
+test('Gộp đúng tổng phở theo loại, gắn ghi chú và sửa trà đá mà giữ thứ tự', () => {
+  for (const text of [
+    'Bàn năm hai phở bò, một tái một chín, à thôi tô chín không hành, thêm hai trà đá. À trà đá một thôi.',
+    'Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi.',
+  ]) {
+    const state = createState();
+    const draft = parse(text, state);
+    assert.equal(draft.table, 5);
+    assert.equal(draft.intent, 'add');
+    assert.deepEqual(draft.items, [dish('tai'), dish('chin', 1, 'không hành'), dish('tra-da')]);
+    assert.equal(validDraft(draft, state), true);
+    const request = add(draft.items, { table: 5, sessionId: 'test-table-5' });
+    const saved = mutate(state, request, t0);
+    assert.deepEqual(kitchenQueue(saved).map(({ dishId, qty, note }) => ({ id: dishId, qty, note })), draft.items);
+    assert.equal(mutate(saved, request, t1), saved);
+  }
+});
+
+test('Tách ghi chú cho đúng một tô trong câu gọi thêm', () => {
+  const draft = parse('Bàn 5 thêm hai phở tái, một tô không hành', createState());
+  assert.equal(draft.explicit, true);
+  assert.deepEqual(draft.items, [dish('tai'), dish('tai', 1, 'không hành')]);
+});
+
+test('Câu phân loại phở thiếu số tô phải hỏi lại', () => {
+  assert.equal(parse('Bàn 5 ba phở bò một tái một chín', createState()).intent, 'clarify');
+});
+
+test('Bản sao menu cũ thiếu phở chín phải yêu cầu làm rõ', () => {
+  const state = createState();
+  state.menu = state.menu.filter(item => item.id !== 'chin');
+  assert.equal(parse('Bàn 5 hai phở bò một tái một chín', state).intent, 'clarify');
+});
+
+test('Chỉ sửa số lượng khi xác định đúng dòng món tham chiếu', () => {
+  const draft = parse('Bàn 5 một trà đá hai phở tái một trà đá à trà đá ba thôi', createState());
+  assert.equal(draft.intent, 'clarify');
+});
+
+test('Hỏi lại đúng các loại phở đang chờ nấu và hiểu cách nói đổi sang', () => {
+  const state = mutate(createState(), add([dish('tai'), dish('chin')], { table: 5 }), t0);
+  const incomplete = parse('Bàn 5 đổi một phở bò', state);
+  assert.equal(incomplete.intent, 'clarify');
+  assert.match(incomplete.question, /Phở tái hay Phở bò chín/);
+  assert.equal(parse('Bàn 5 đổi một tái sang nạm', state).replacement, 'nam');
+});

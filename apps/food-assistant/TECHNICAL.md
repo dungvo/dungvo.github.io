@@ -30,11 +30,18 @@ Flutter Web và PWA đều phụ thuộc dịch vụ giọng nói mà trình duy
 - Browser gửi bản thu WebM, MP4 hoặc Ogg dạng nhị phân tới `POST /api/transcribe`. Tối đa 15 giây ở client và 2 MiB tại API. API kiểm tra mã quán, kiểu dữ liệu, header tệp, tốc độ gọi và số bản thu đồng thời. Nhà cung cấp nhận gợi ý tiếng Việt qua `languages[]=vi`.
 - API trả transcript. Client đưa transcript vào hộp chỉnh sửa và giữ bước xác nhận nghiệp vụ trước khi lưu. Không lưu bản thu vào IndexedDB hay SQLite, cũng không thêm audio vào hàng đợi ngoại tuyến. Đóng cửa sổ giữa lúc thu hủy bản thu tại thiết bị.
 
+## Hiểu câu gọi và hạn mức
+
+- Bộ phân tích ghép số tô phở bò với số lượng từng loại đã gọi, sửa số lượng theo món được nhắc lại, và tách ghi chú cho một tô trong cùng lượt. Dùng ID từ thực đơn và giữ thứ tự dòng. Khi dữ liệu không đủ hoặc dòng tham chiếu nhập nhằng, trợ lý yêu cầu làm rõ.
+- AI fallback chỉ nhận tối đa 30 món được xếp theo độ liên quan và vài dòng đang mở. Máy chủ kiểm tra đề xuất theo thực đơn và số bàn nói rõ. Kết quả mới được gửi về để nhân viên xác nhận.
+- Sổ hạn mức lưu trong SQLite cùng database của quán. Việc giữ ngân sách nằm trong một giao dịch trước lần gọi nhà cung cấp. Phần audio dùng thời lượng được FFmpeg giải mã, phần văn bản giữ dự toán rồi cập nhật theo token nhà cung cấp trả về. Khi mất phản hồi, khoản giữ được tính tiếp để hạn chế vượt dự toán. Thời điểm phân tháng dùng múi giờ Việt Nam.
+- Nghiệm thu tại quán cần đo riêng tỷ lệ hiểu đúng ngay, tỷ lệ phải sửa hoặc hỏi lại, tỷ lệ đơn cuối sai và số lần ghi trùng khi đổi mạng. Số liệu kiểm thử mô phỏng chỉ xác nhận nghiệp vụ và luồng giao diện.
+
 ## Kết quả QA
 
 | Kiểm tra | Kết quả |
 | --- | --- |
-| `npm test` | 101 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất |
+| `npm test` | 114 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất, phân tích câu nhiều món, thời lượng giải mã và hạn mức đồng thời |
 | Chromium 375 × 812 | Luồng nhập câu tiếng Việt, kiểm tra trùng, bếp, hóa đơn và tải lại đạt |
 | Chromium 412 × 915 | Luồng như trên đạt |
 | Chromium 834 × 1112 | Luồng như trên đạt, kiểm tra các thẻ món trong màn bếp |

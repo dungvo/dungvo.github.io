@@ -147,8 +147,13 @@ function settingsPage(state, doc) {
     + '<label class="field">Địa chỉ API<input name="endpoint" type="url" placeholder="https://api.example.com" required></label>'
     + '<label class="field">Mã kết nối quán<input name="token" type="password" autocomplete="off" minlength="24" maxlength="256" required></label>'
     + '<button class="btn primary" type="submit">' + icon('link', 17) + 'Kết nối</button></form>';
+  const usage = doc.aiUsage;
+  const spend = usage ? '<div class="' + (usage.atWarning ? 'notice' : 'muted') + '"><strong>Chi phí AI ước tính tháng '
+    + esc(usage.month.slice(5)) + '</strong><p>' + money(usage.used) + ' / ' + money(usage.limit) + '</p><p>'
+    + esc(usage.audioCalls) + ' lượt chuyển giọng nói · ' + esc(usage.textCalls) + ' lượt hiểu câu'
+    + (usage.atWarning ? ' · Đã đến ngưỡng cảnh báo' : '') + '</p></div>' : '';
   const voice = '<section class="panel"><div class="panel-heading">' + icon('mic')
-    + '<h2>Trợ lý và giọng nói</h2></div>' + (doc.config ? '<form data-form="voice-settings" class="form-stack">'
+    + '<h2>Trợ lý và giọng nói</h2></div>' + spend + (doc.config ? '<form data-form="voice-settings" class="form-stack">'
     + '<label class="checkbox"><input name="allowAI" type="checkbox"' + (doc.config.allowAI ? ' checked' : '')
     + '>Dùng AI cho câu gọi khó hiểu</label><label class="checkbox"><input name="allowAudio" type="checkbox"'
     + (doc.config.allowAudio ? ' checked' : '') + '>Cho phép nút thu âm qua máy chủ</label>'

@@ -15,6 +15,8 @@ Ví dụ khác
 
 | Nhu cầu | Câu nói |
 | --- | --- |
+| Nhiều món và tự sửa câu | Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi. |
+| Ghi chú cho một trong hai tô | Bàn 5 thêm hai phở tái, một tô không hành |
 | Chọn bàn | Bàn ba |
 | Ghi chú | Bàn 3 một phở tái không hành |
 | Sửa lời nói trong cùng câu | Bàn 3 hai phở tái, à không ba |
@@ -27,6 +29,7 @@ Khi có nhiều dòng cùng món, dùng **Sửa** trên đúng dòng trong đơn
 ## Số bàn, thực đơn và dữ liệu
 
 - Vào **Cài đặt → Số bàn** để chọn từ 1 đến 60. Các bàn vượt số mới phải đóng trước khi giảm.
+- Bản sao thực đơn đã lưu được giữ nguyên khi nâng cấp. Để thử câu mẫu có phở chín trên dữ liệu cũ, thêm món **Phở bò chín**, tên gọi tắt **chín, phở chín** và giá của quán.
 - Vào **Thực đơn và giá** để thêm hoặc sửa tên, giá theo đồng, nhóm món, ảnh và biệt danh phân cách bằng dấu phẩy. Bỏ **Đang bán** khi hết món. Đơn đã gửi giữ giá lúc nhận.
 - Vào **Sao lưu và khôi phục → Tải bản sao** để tải JSON. Sao lưu định kỳ trước khi dọn dữ liệu trình duyệt hoặc đổi thiết bị. Chế độ cục bộ cho phép thay dữ liệu hiện tại bằng bản sao sau một bước xác nhận.
 - Muốn mở nhanh ứng dụng, dùng **Thêm vào màn hình chính** từ trình duyệt. Sau khi trang và tài nguyên đã được tải lần đầu, có thể mở lại và dùng thao tác chạm hoặc gõ câu khi mất mạng. Micro phụ thuộc trình duyệt, quyền truy cập và dịch vụ nhận diện của thiết bị.
@@ -46,7 +49,10 @@ Trên máy chạy API, cần Node.js từ 22.13 hoặc 24 LTS. Đặt các biế
 | `FOOD_ORIGINS` | Danh sách origin phân cách bằng dấu phẩy. Mặc định là `https://dungvo.github.io`. |
 | `OPENAI_API_KEY` | Tùy chọn, bí mật ở backend. Khi để trống, app vẫn xử lý được các câu thông thường bằng quy tắc. |
 | `OPENAI_MODEL` | Tùy chọn, mặc định `gpt-4.1-mini`. Model phải hỗ trợ Structured Outputs. |
-| `FOOD_TRANSCRIBE` | Đặt `1` để bật chuyển bản thu tiếng Việt thành chữ bằng `gpt-transcribe`. Cần `OPENAI_API_KEY`. |
+| `FOOD_TRANSCRIBE` | Đặt `1` để bật chuyển bản thu tiếng Việt thành chữ bằng `gpt-transcribe`. Cần `OPENAI_API_KEY` và lệnh `ffmpeg` trên máy chủ. |
+| `FOOD_AI_LIMIT_VND`, `FOOD_AI_WARNING_VND` | Trần ước tính mỗi tháng và ngưỡng cảnh báo. Mặc định 50.000đ và 40.000đ. |
+| `FOOD_AI_VND_PER_USD` | Tỷ giá quy đổi dùng cho hạn mức, mặc định 26.000đ/USD. |
+| `FOOD_AI_INPUT_USD`, `FOOD_AI_OUTPUT_USD` | Giá USD cho mỗi triệu token. Mặc định 0,40 và 1,60 cho model văn bản mặc định. Bắt buộc cấu hình khi đổi `OPENAI_MODEL`. |
 
 Chạy từ thư mục `apps/food-assistant`.
 
@@ -67,5 +73,7 @@ Khóa OpenAI nằm ở server. Khi dùng micro trình duyệt, âm thanh do dị
 node server/api.mjs backup > ban-sao.json
 node server/api.mjs restore ban-sao.json
 ```
+
+**Chi phí AI ước tính** hiển thị trong mục Trợ lý và giọng nói sau khi kết nối. Hạn mức tính theo tháng tại Việt Nam và lưu theo database của quán. Khi chạm hạn mức, các lượt gọi dịch vụ AI trả phí mới sẽ bị chặn nếu vượt phần còn lại. Quán vẫn có thể nhập câu, chạm món và đồng bộ bếp. Số tiền dùng để kiểm soát vận hành, trước thuế và hạ tầng. Tệp JSON sao lưu đơn không mang theo bộ đếm AI. Khi chuyển máy chủ trong cùng tháng, giữ bản SQLite nhất quán để tiếp tục theo dõi ngân sách.
 
 Chi tiết kỹ thuật và kết quả QA nằm trong [TECHNICAL.md](TECHNICAL.md).

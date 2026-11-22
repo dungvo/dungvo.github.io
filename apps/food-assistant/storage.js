@@ -67,7 +67,8 @@ export function reconcile(doc, config, payload, sent, rejected) {
     ? { id: sent.id, code: payload.code, message: payload.message }
     : pending.some(item => item.action.id === doc.failure?.id) ? doc.failure : null;
   return { ...doc, snapshot, pending, failure, aiEnabled: payload.aiEnabled ?? doc.aiEnabled,
-    transcriptionEnabled: payload.transcriptionEnabled ?? doc.transcriptionEnabled };
+    transcriptionEnabled: payload.transcriptionEnabled ?? doc.transcriptionEnabled,
+    aiUsage: Object.hasOwn(payload, 'aiUsage') ? payload.aiUsage : doc.aiUsage };
 }
 
 export function resolveFailure(doc, repeat) {

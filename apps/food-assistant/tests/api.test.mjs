@@ -204,3 +204,59 @@ test('Yêu cầu thu tiếp theo bị chặn khi đã có ba bản đang xử l�
   finally { release(); }
   assert.deepEqual((await Promise.all(requests)).map(response => response.status), [200, 200, 200]);
 });
+
+test('AI không được đổi bàn đã nói thành bàn đang chọn hoặc bàn khác', async t => {
+  let requested;
+  const { url } = await start(t, { aiKey: 'test-key', interpret: async (key, model, input) => {
+    requested = input;
+    return { table: 2, intent: 'add', items: [{ id: 'tai', qty: 1, note: '' }], replacement: null, explicit: false, question: '' };
+  } });
+  const response = await fetch(url + '/api/interpret', { method: 'POST', headers, body: JSON.stringify({ table: 2, transcript: 'Bàn 5 một tái giúp tôi' }) });
+  assert.equal(response.status, 502);
+  assert.equal(requested.selectedTable, 2);
+  assert.equal((await (await fetch(url + '/api/state', { headers })).json()).state.rev, 0);
+});
+
+test('Hạn mức dùng chung qua hai kết nối SQLite và chặn lượt gọi mới trước chi phí', async t => {
+  let providerCalls = 0;
+  const options = { aiKey: 'test-key', allowTranscription: true, budget: { limit: 30, warning: 20 },
+    transcribe: () => { providerCalls++; return 'Bàn 1 trà đá'; } };
+  const { url, file } = await start(t, options);
+  const second = createFoodServer({ ...options, token, file });
+  second.listen(0, '127.0.0.1');
+  await once(second, 'listening');
+  t.after(() => new Promise(resolve => second.close(resolve)));
+  const otherUrl = 'http://127.0.0.1:' + second.address().port;
+  const results = await Promise.all([sendClip(url, webm), sendClip(otherUrl, webm)]);
+  assert.deepEqual(results.map(response => response.status).sort(), [200, 429]);
+  assert.equal(providerCalls, 1);
+  const { aiUsage, state } = await (await fetch(otherUrl + '/api/state', { headers })).json();
+  assert.equal(aiUsage.used, 30);
+  assert.equal(aiUsage.atWarning, true);
+  assert.equal(aiUsage.audioCalls, 1);
+  assert.equal(state.rev, 0);
+  const blockedText = await fetch(url + '/api/interpret', { method: 'POST', headers, body: JSON.stringify({ table: 1, transcript: 'một món' }) });
+  assert.equal(blockedText.status, 429);
+  assert.match((await blockedText.json()).message, /hạn mức/);
+  assert.equal((await request(url, add('without-ai', 'tai'))).status, 200);
+});
+
+test('Đối chiếu chi phí văn bản theo số token trả về', async t => {
+  const { url } = await start(t, { aiKey: 'test-key', interpret: () => ({
+    draft: { table: 5, intent: 'add', items: [{ id: 'tai', qty: 1, note: '' }], replacement: null, explicit: false, question: '' },
+    usage: { input_tokens: 100, output_tokens: 50 },
+  }) });
+  const result = await fetch(url + '/api/interpret', { method: 'POST', headers, body: JSON.stringify({ table: 5, transcript: 'một tô tái' }) });
+  assert.equal(result.status, 200);
+  const { aiUsage } = await (await fetch(url + '/api/state', { headers })).json();
+  assert.equal(aiUsage.textCalls, 1);
+  assert.equal(aiUsage.used, 4);
+});
+
+test('API không chuyển nhiều bàn cho AI và không tiêu ngân sách', async t => {
+  const { url } = await start(t, { aiKey: 'test-key', interpret: () => assert.fail('must not reach provider') });
+  const response = await fetch(url + '/api/interpret', { method: 'POST', headers, body: JSON.stringify({ transcript: 'Bàn 5 tái bàn 3 nạm' }) });
+  assert.equal(response.status, 400);
+  const { aiUsage } = await (await fetch(url + '/api/state', { headers })).json();
+  assert.equal(aiUsage.used, 0);
+});
