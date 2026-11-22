@@ -101,6 +101,27 @@ async function run() {
                     await page.waitForTimeout(100);
                     assert.notDeepEqual(await canvas.screenshot(), era, 'close restores gameplay');
                 }
+                if (chapter === 0) {
+                    if (mobile) await tap(80, 106);
+                    else await page.keyboard.press('i');
+                    await page.waitForTimeout(130);
+                    const armory = await canvas.screenshot({ path: path.join(evidence, `v14-armory-${mobile ? 'touch' : 'desktop'}.png`) });
+                    await tap(103, 230); // Tinh Thạch
+                    await page.waitForTimeout(100);
+                    assert.notDeepEqual(await canvas.screenshot(), armory, 'weapon card selects live comparison');
+                    await tap(755, 388);
+                    await tap(567, 42);
+                    await page.waitForTimeout(130);
+                    const runes = await canvas.screenshot({ path: path.join(evidence, `v14-runes-${mobile ? 'touch' : 'desktop'}.png`) });
+                    assert.notDeepEqual(runes, armory, 'shared skills tab renders');
+                    await tap(380, 170);
+                    await tap(661, 370);
+                    await page.waitForTimeout(110);
+                    assert.notDeepEqual(await canvas.screenshot(), runes, 'quick cast can be pinned from the skills card');
+                    if (mobile) await tap(875, 43);
+                    else await page.keyboard.press('Escape');
+                    await page.waitForTimeout(130);
+                }
                 const before = await canvas.screenshot();
                 if (mobile) {
                     const session = await context.newCDPSession(page);

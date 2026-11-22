@@ -393,7 +393,7 @@ func _menu() -> void:
     var v := VBoxContainer.new()
     menu.add_child(v)
     var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nBẢN ĐỒ NGUYỆT THỰC · V13"
+    title.text = "LIGHT QUEST: ECLIPSE\nKHO ÁNH TRĂNG · V14"
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size",24)
     v.add_child(title)
@@ -510,20 +510,13 @@ func _measure_browser_render_rate() -> void:
 
 func _input(event:InputEvent) -> void:
     if not is_instance_valid(dialogue): return
-    if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_I and loadout.opener.visible and not (time_mode and sky.timeline.panel.visible):
-        loadout.toggle()
-        return
-    if loadout.panel.visible:
-        if event.is_action_pressed("ui_cancel"): loadout.toggle()
-        return
     if time_mode and sky.timeline.panel.visible:
         if event.is_action_pressed("ui_cancel"): sky.timeline.close()
         return
     if event.is_action_pressed("ui_cancel"):
         if dialogue.visible: _show_dialogue(false)
         elif victory_panel.visible: _dismiss_victory()
-        elif started and time_mode: atlas.open()
-        elif started: trials.return_menu()
+        elif started: loadout.open(0)
     if not started: return
     if victory_panel.visible:
         if event is InputEventKey and event.pressed and event.keycode == KEY_E: _dismiss_victory()
@@ -868,18 +861,18 @@ func _attack() -> void:
     combo_window = 0.61
     attack_cooldown = ATTACK_CYCLE[combo_step - 1] if character == "An" else 0.46
     attack_windup = ATTACK_WINDUP[combo_step - 1] if character == "An" else 0.115
-    attack_cooldown *= [1.0, 1.22, 1.48][loadout.weapon]
+    attack_cooldown *= loadout.ATTACK_RECOVERY[loadout.weapon]
     slash_time = attack_cooldown - 0.03
 
 func _resolve_attack() -> void:
     sound.play_cue("cast" if character == "Kha" else "slash", 1 + (combo_step - 1) * 0.08)
     if character == "Kha":
-        spawn_bolt(hero.position, Vector2((740 if loadout.weapon == 1 else 570) * attack_facing, 0), true, 2 if loadout.weapon == 2 else 1)
+        spawn_bolt(hero.position, Vector2(loadout.BOLT_SPEED[loadout.weapon] * attack_facing, 0), true, 1 + loadout.HIT_BONUS[loadout.weapon])
         return
     blade_flash = 0.16
     var reach := Hit.attack_hitbox(hero.position, attack_facing, false)
-    if loadout.weapon == 1:
-        reach = reach.grow_individual(24 if attack_facing < 0 else 0, 0, 24 if attack_facing > 0 else 0, 0)
+    var extra: int = loadout.EXTRA_MELEE[loadout.weapon]
+    reach = reach.grow_individual(extra if attack_facing < 0 else 0, 0, extra if attack_facing > 0 else 0, 0)
     if combo_step == 2:
         reach = reach.grow_individual(0, 15, 0, 0)
     elif combo_step == 3:
@@ -889,7 +882,7 @@ func _resolve_attack() -> void:
     for hit in Combat.overlapping(space, reach, Combat.HOSTILE_HURT):
         var foe: CharacterBody2D = hit.collider.get_parent()
         if Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
-            foe.take_hit((2 if combo_step == 3 else 1) + int(loadout.weapon == 2), self)
+            foe.take_hit((2 if combo_step == 3 else 1) + loadout.HIT_BONUS[loadout.weapon], self)
             emit_impact(foe.position, Color("#fff1bf"))
             sound.play_cue("contact")
 

@@ -22,7 +22,7 @@ var era_buttons: Array[Button] = []
 var regions: Array[Button] = []
 var atlas_button: Button
 var transit_button: Button
-var timeline_tools: HBoxContainer
+var menu_tabs: HBoxContainer
 var active_room := -1
 var refresh_clock := 0.0
 
@@ -71,14 +71,13 @@ func _ready() -> void:
         regions.append(button)
     atlas_button = _button(overlay, Rect2(26, 426, 137, 36), "Toàn cảnh", select_region.bind(-1))
     _button(overlay, Rect2(26, 468, 137, 36), "Vị trí của tôi", _locate_player)
-    timeline_tools = HBoxContainer.new()
-    timeline_tools.position = Vector2(432, 27)
-    timeline_tools.add_theme_constant_override("separation", 7)
-    overlay.add_child(timeline_tools)
-    var timeline: Node2D = game.sky.timeline
-    _button(timeline_tools, Rect2(0, 0, 91, 30), "Trang bị", _time_panel.bind(timeline.open_gear))
-    _button(timeline_tools, Rect2(0, 0, 91, 30), "Kỹ năng", _time_panel.bind(timeline.open_skills))
-    _button(timeline_tools, Rect2(0, 0, 91, 30), "Nhật ký", _time_panel.bind(timeline.open_journal))
+    menu_tabs = HBoxContainer.new()
+    menu_tabs.position = Vector2(432, 27)
+    menu_tabs.add_theme_constant_override("separation", 7)
+    overlay.add_child(menu_tabs)
+    _button(menu_tabs, Rect2(0, 0, 91, 30), "Trang bị", _open_menu.bind(0))
+    _button(menu_tabs, Rect2(0, 0, 91, 30), "Kỹ năng", _open_menu.bind(1))
+    _button(menu_tabs, Rect2(0, 0, 91, 30), "Nhật ký", _open_menu.bind(2))
     _button(overlay, Rect2(852, 27, 79, 30), "Đóng · Esc", close)
     _button(overlay, Rect2(730, 27, 35, 30), "−", _zoom.bind(-0.25))
     _button(overlay, Rect2(769, 27, 35, 30), "+", _zoom.bind(0.25))
@@ -205,9 +204,9 @@ func _locate_player() -> void:
     plot.era = current_era()
     select_region(current_region())
 
-func _time_panel(action: Callable) -> void:
+func _open_menu(page: int) -> void:
     close()
-    action.call()
+    game.loadout.open(page)
 
 func _use_anchor() -> void:
     var timeline: Node2D = game.sky.timeline
@@ -240,7 +239,6 @@ func _refresh_text() -> void:
     var region: int = plot.region
     var atlas_era: int = plot.era
     eras.visible = region == 7
-    timeline_tools.visible = game.time_mode
     var timeline: Node2D = game.sky.timeline
     var destination: Vector2 = timeline.atlas_destination() if region == 7 and atlas_era == current_era() else Vector2.INF
     transit_button.visible = destination != Vector2.INF

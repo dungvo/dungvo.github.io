@@ -267,7 +267,7 @@ func _choice(title: String, action: Callable) -> void:
 
 func _open(which: String) -> void:
     mode = which
-    var wide := which in ["forge","item","journal","gear","skills"]
+    var wide := which in ["forge","item"]
     var shop := which == "forge"
     forge_scene.visible = shop
     dimmer.color = Color("#10101535") if shop else Color("#060b17a0")
@@ -483,64 +483,9 @@ func inspect_weapon(item: int) -> void:
     )
     _button(actions,"Rời quầy",close)
 
-func _tabs() -> void:
-    var row := HBoxContainer.new()
-    row.add_theme_constant_override("separation",12)
-    options.add_child(row)
-    _button(row,"BẢN ĐỒ",open_map)
-    _button(row,"TRANG BỊ",open_gear)
-    _button(row,"KỸ NĂNG",open_skills)
-    _button(row,"NHẬT KÝ",open_journal)
-    _button(row,"Tiếp tục",close)
-
 func open_map() -> void:
-    if game.dialogue.visible or game.victory_panel.visible: return
     close()
     game.atlas.open()
-
-func _info_line(value: String) -> void:
-    var label := Label.new()
-    label.text = value
-    label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-    options.add_child(label)
-
-func open_journal() -> void:
-    _open("journal")
-    heading.text = "NHẬT KÝ · Ngọn đèn chưa tắt"
-    copy.text = "Tín · Người gác đèn"
-    _tabs()
-    _info_line(("✓" if rescued else "○")+" Luồn qua khe Bờ Đá, xuống hầm gặp Tín và mở đường trở lên.")
-    _info_line(("✓" if core else "○")+" Về Quá khứ, thắng Thủ Vệ Đá và lấy lõi đồng.")
-    _info_line(("✓" if repaired else "○")+" Nhờ Bà Lam gia cố cầu hoặc đi lối hầm với Bướm Đèn.")
-    _info_line(("✓" if lit else "○")+" Đến Tương lai, hạ Vệ Binh và thắp Hải Đăng.")
-
-func open_gear() -> void:
-    _open("gear")
-    heading.text = "TRANG BỊ"
-    copy.text = "Đang mang · "+WEAPONS[equipped]
-    _tabs()
-    var grid := GridContainer.new()
-    grid.columns = 4
-    options.add_child(grid)
-    for i in WEAPONS.size():
-        var item := i
-        var button := _button(grid,WEAPONS[i],func():
-            equipped = item
-            reset_chain()
-            game._persist()
-            open_gear()
-        )
-        button.disabled = not owned[i]
-
-func open_skills() -> void:
-    _open("skills")
-    heading.text = "KỸ NĂNG"
-    copy.text = "Chiêu vũ khí · "+TECHS[equipped]
-    _tabs()
-    _info_line("V · Chiêu vũ khí đang mang")
-    _info_line("K · Lướt   |   Q · Nguyệt Trảm   |   ↓ · Ngồi luồn qua khe")
-    _info_line("1–6 · Các ấn khám phá   |   E · Tương tác")
-    _button(options,"Về màn chọn",game.trials.return_menu)
 
 func buy(item: int) -> void:
     if not owned[item]:

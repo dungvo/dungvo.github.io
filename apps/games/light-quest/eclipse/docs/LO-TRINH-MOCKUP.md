@@ -38,3 +38,9 @@ Thẻ Bờ Đá & Hải Đăng có ba lớp thời đại. Tiệm Bà Lam chỉ 
 Bản đồ trong mockup dùng nhiều phòng có hình bất quy tắc và minh họa riêng theo vùng. V13 có 28 khu lập sơ đồ trên địa hình hiện có, gồm cả những đoạn hành lang và tầng leo. Các ảnh `v13-atlas-world.png`, `v13-atlas-village.png`, `v13-atlas-future.png` và `v13-minimap.png` chụp từ Godot ở 960×540. Sau khi xem ảnh chụp đầu, tăng độ đậm đường và nét viền của minimap, đưa chỉ số kỹ năng xuống dưới nút Kho và chuyển dấu neo xuống dưới tên khu. Tuyến Hải Đăng theo thời gian vẫn vào từ màn mở đầu. Sơ đồ toàn cảnh và đường đi giữa bảy chương đã có trong Vào Truyện.
 
 Kiểm thử hồi quy chạy cùng các trận boss và tuyến leo có sẵn. Kiểm thử mới xác nhận sáu cổng nối chương đi được cả hai chiều khi đủ điều kiện, tầng Vườn Treo đảo chiều, Hầm Dẫn Nước đúng độ sâu, lối Cầu Đồng đổi theo trạng thái sửa cầu, dịch chuyển hai chiều đúng điểm nghỉ, lưu cờ bản đồ và thao tác trên Godot Web bằng chuột, bàn phím và cảm ứng mô phỏng.
+
+## Đợt 3 · Kho Ánh Trăng V14
+
+I hoặc nút Kho mở menu chung của hành trình và Bờ Đá. Các tab Bản đồ, Trang bị, Kỹ năng và Nhật ký mở qua lại trong lúc game tạm dừng. Chọn thẻ vũ khí để xem trước, rồi bấm Trang bị để đổi. Hành trình so sánh tầm kiếm hoặc tốc độ đạn, sát thương và thời gian hồi tính từ thông số dùng trong trận. Bờ Đá có tám vũ khí, màn diễn thử chiêu V và số lõi đang giữ. Truyền lõi mở Tơ Kép vẫn được thực hiện tại tiệm Bà Lam. Sáu ấn có biểu tượng, cách dùng và nút gán F / ẤN. Nhật ký đọc tiến độ nhiệm vụ và vị trí hiện tại.
+
+Ảnh Godot 960×540 gồm `v14-armory.png`, `v14-runes.png` và `v14-journal.png`. Bố cục bám ba cột của mẫu trang bị, dùng sprite An/Kha trong bản chơi. Phần chân dung minh họa riêng, hệ giáp/phụ kiện, nhánh truyền lõi cho các vũ khí còn lại và nâng cấp hiệu ứng chiến đấu nằm ở các lượt tiếp theo.

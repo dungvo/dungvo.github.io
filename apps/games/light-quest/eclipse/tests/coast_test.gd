@@ -33,10 +33,9 @@ func _run() -> void:
     if not ensure(timeline.rescued and game.hero.position.y == 432,"rescue Tín and return to surface"): return
     timeline.open_map()
     if not ensure(game.atlas.overlay.visible and game.atlas.plot.region == 7,"full map opens from the playable coast"): return
-    game.atlas.close()
-    timeline.open_journal()
-    if not ensure(timeline.mode == "journal","journal uses rescued state"): return
-    timeline.close()
+    game.atlas._open_menu(2)
+    if not ensure(game.loadout.panel.visible and game.loadout.page == 2,"shared journal opens from the coast atlas"): return
+    game.loadout.close()
     timeline.travel(0)
     timeline.set_interior(true)
     timeline.forge()

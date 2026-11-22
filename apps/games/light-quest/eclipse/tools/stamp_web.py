@@ -20,7 +20,7 @@ config['fileSizes'][pack] = config['fileSizes'].pop('index.pck')
 html = html[:match.start(1)] + json.dumps(config, separators=(',', ':')) + html[match.end(1):]
 html_path.write_text(html)
 info = {'engine': '4.4.1.stable.official.49a5bc7b6', 'source_sha': sha,
-        'release': 'eclipse-world-atlas-v13', 'main_pack': pack,
+        'release': 'eclipse-moon-armory-v14', 'main_pack': pack,
         'files': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                   for p in folder.iterdir() if p.is_file() and p.name != 'build-info.json'}}
 (folder / 'build-info.json').write_text(json.dumps(info, indent=2) + '\n')
