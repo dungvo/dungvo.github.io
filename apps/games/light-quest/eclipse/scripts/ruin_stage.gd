@@ -1,6 +1,8 @@
 extends Node2D
 
+const GroundSurface := preload("res://scripts/ground_surface.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
+const VILLAGE := preload("res://assets/eclipse/moon-village.webp")
 const PUZZLE_HALL := preload("res://assets/eclipse/crystal-tower.webp")
 const GUARDIAN_HALL := preload("res://assets/eclipse/guardian-hall.webp")
 const KEEPER := preload("res://assets/eclipse/keeper.webp")
@@ -12,6 +14,7 @@ var crossfade: Tween
 var gate: Sprite2D
 var textures: Array[AtlasTexture] = []
 var plaza_chest: Sprite2D
+var play_surfaces: Array[Node2D] = []
 
 func _ready() -> void:
     z_index = -2
@@ -21,7 +24,7 @@ func _ready() -> void:
     back.layer = -2
     add_child(back)
     background = TextureRect.new()
-    background.texture = Art.SCENERY
+    background.texture = VILLAGE
     background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
     background.stretch_mode = TextureRect.STRETCH_SCALE
     background.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -74,10 +77,11 @@ func _dress_forest() -> void:
 func update_camera(camera_x: float, opened: bool, immediate := false) -> void:
     background.position.x = -63.0 - sin(camera_x * 0.0016) * 48.0
     previous_back.position.x = background.position.x
-    gate.visible = not opened
-    var room := clampi(int(camera_x / ROOM_W), 0, 6)
-    var palette := [Color("#bdcce7"), Color.WHITE, Color("#877fa9"), Color.WHITE, Color("#baaecf"), Color("#adceda"), Color.WHITE]
-    var target: Texture2D = PUZZLE_HALL if room == 3 else (GUARDIAN_HALL if room == 6 else Art.SCENERY)
+    gate.visible = false # Legacy gate belongs to the original campaign, not these chapters.
+    var raw_room := clampi(int(camera_x / ROOM_W), 0, 6)
+    var room: int = [0, 0, 1, 1, 2, 2, 6][raw_room]
+    var palette := [Color("#bdcce7"), Color.WHITE, Color("#b5a3cc"), Color.WHITE, Color("#baaecf"), Color("#adceda"), Color.WHITE]
+    var target: Texture2D = VILLAGE if room == 0 else (GUARDIAN_HALL if room in [2, 6] else Art.SCENERY)
     if background.texture != target:
         if crossfade and crossfade.is_valid(): crossfade.kill()
         previous_back.texture = background.texture
@@ -90,15 +94,19 @@ func update_camera(camera_x: float, opened: bool, immediate := false) -> void:
             crossfade.tween_callback(previous_back.hide)
     background.modulate = palette[room] if immediate else background.modulate.lerp(palette[room], 0.055)
 
-func platform(rect: Rect2) -> void:
-    if rect.size.y > 60:
-        var bridge_count := maxi(1, roundi(rect.size.x / 244.0))
-        var section := rect.size.x / bridge_count
-        for i in range(bridge_count):
-            _prop(2, Vector2(rect.position.x + section * (0.5 + i), rect.position.y + 141), Vector2(section + 1, 153))
-    else:
-        var depth := maxf(43, rect.size.y + 7)
-        _prop(0, Vector2(rect.get_center().x, rect.position.y + depth - 2), Vector2(rect.size.x, depth))
+func platform(rect: Rect2, collider: PhysicsBody2D) -> void:
+    var tile := surface(rect,self,rect.size.y > 60)
+    tile.collider = collider
+    play_surfaces.append(tile)
+
+func surface(rect: Rect2, parent: Node, masonry := false) -> Node2D:
+    var tile := GroundSurface.new()
+    tile.position = rect.position
+    tile.width = rect.size.x
+    tile.depth = 129.0 if masonry else maxf(32.0, rect.size.y)
+    tile.masonry = masonry
+    parent.add_child(tile)
+    return tile
 
 func _prop(index: int, bottom: Vector2, dimensions: Vector2) -> Sprite2D:
     var sprite := Sprite2D.new()

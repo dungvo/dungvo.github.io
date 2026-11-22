@@ -1,101 +1,139 @@
 extends SceneTree
-
 const Combat := preload("res://scripts/combat.gd")
+var game: Node2D
 
-func _initialize() -> void:
-    call_deferred("_run")
-
-func ensure(value: bool, label: String) -> bool:
+func _initialize() -> void: call_deferred("_run")
+func ensure(value: bool, detail: String) -> bool:
     if not value:
-        push_error("ECLIPSE TEST FAILED: " + label)
+        push_error("ECLIPSE SMOKE FAILED: " + detail)
         quit(1)
     return value
+func _frames(n: int) -> void:
+    for i in range(n): await physics_frame
+func _finger(index: int, point: Vector2, down: bool) -> void:
+    var event := InputEventScreenTouch.new()
+    event.index = index
+    event.position = point
+    event.pressed = down
+    root.push_input(event, true)
 
-func _run() -> void:
-    var game = load("res://scenes/main.tscn").instantiate()
+func _fixture(who := "An", chapter := 0) -> void:
+    if is_instance_valid(game):
+        game.queue_free()
+        await process_frame
+    game = load("res://scenes/main.tscn").instantiate()
     game.save_enabled = false
     root.add_child(game)
-    game.activated = false
-    if not ensure(game.enemies.size() == 9, "eight foes and one guardian"): return
-    for character in ["Kha", "An"]:
-        game._start(character)
-        for mode in ["idle", "run", "jump", "fall", "dash", "attack", "hurt", "death"]:
-            if not ensure(game.actor_anim.sprite_frames.has_animation(mode), character + " / " + mode): return
+    game.demo_room_select.select(chapter)
+    game._start(who)
+    game._interact()
+    await _frames(3)
 
-    for step in range(1, 4):
-        if not ensure(game.actor_anim.sprite_frames.get_frame_count("attack_%d" % step) == 3, "three synchronized poses for combo step %d" % step): return
+func _run() -> void:
+    await _fixture()
+    if not ensure(game.enemies.size() == 3, "each chapter has its own two enemies and boss"): return
+    for who in ["An", "Kha"]:
+        game._start(who)
+        game._interact()
+        await _frames(2)
+        for mode in ["idle", "run", "jump", "fall", "dash", "attack", "hurt", "death"]:
+            if not ensure(game.actor_anim.sprite_frames.has_animation(mode), who + " / " + mode): return
+    await _fixture()
+    # Freeze decisions only for collision fixtures; the full runs exercise live AI.
+    game.set_physics_process(false)
     var wolf = game.enemies[0]
     game.hero.position = wolf.position + Vector2(-69, -9)
     await _frames(3)
-    var original_hp: int = wolf.hp
+    var original: int = wolf.hp
     game.facing = -1
-    game._request_attack()
-    await _frames(10)
-    if not ensure(wolf.hp == original_hp, "left-facing slash misses an enemy to the right"): return
-    game.attack_cooldown = 0
+    game._attack()
+    game._resolve_attack()
+    if not ensure(wolf.hp == original, "directional slash misses behind"): return
     game.facing = 1
     var wall := StaticBody2D.new()
     wall.position = (game.hero.position + wolf.position) * 0.5
     wall.add_child(Combat.rectangle(Vector2(12, 130)))
     game.add_child(wall)
     await _frames(3)
-    game._request_attack()
-    await _frames(10)
-    if not ensure(wolf.hp == original_hp, "wall blocks directional slash"): return
+    game._attack()
+    game._resolve_attack()
+    if not ensure(wolf.hp == original, "wall blocks slash"): return
     game.spawn_bolt(game.hero.position, Vector2(8500, 0), true, 1)
-    await _frames(3)
-    if not ensure(wolf.hp == original_hp, "swept light bolt stops at wall"): return
+    game.bolts[-1].step(1.0 / 60, game)
+    await _frames(2)
+    if not ensure(wolf.hp == original, "wall blocks swept projectile"): return
     wall.queue_free()
     await _frames(3)
     game.spawn_bolt(game.hero.position, Vector2(8500, 0), true, 1)
-    await _frames(4)
-    if not ensure(wolf.hp == original_hp - 1, "swept light bolt strikes at high speed"): return
-    game.attack_cooldown = 0
-    game.combo_window = 0
-    game._request_attack()
-    await _frames(9)
-    if not ensure(wolf.hp < original_hp - 1, "right-facing slash reaches the wolf through its Area2D"): return
-    game.hero.position = Vector2(3 * 960 + 329, 351)
+    game.bolts[-1].step(1.0 / 60, game)
     await _frames(2)
-    game._interact()
-    if not ensure(not game.activated and game.light_circuit.turned[0], "one mirror redirects beam"): return
-    game.hero.position = Vector2(3 * 960 + 329, 430)
-    game._interact()
-    await _frames(2)
-    if not ensure(game.activated and not game.has_node("LightGate"), "second mirror opens gate"): return
-
-    game.hero.position = Vector2(2 * 960 + 570, 432)
-    game._interact()
-    game._interact()
-    if not ensure(game.found_chest and game.max_health == 6, "chest increases maximum health once"): return
-
-    var boss = game.guardian
-    game.hero.position = Vector2(6 * 960 + 430, 432)
-    await _frames(2)
-    var boss_hp: int = boss.hp
-    boss.take_hit(1, game)
-    if not ensure(boss.hp == boss_hp, "guardian shield rejects attack"): return
-    game._interact()
-    if not ensure(game.boss_shield_time > 0, "arena pedestal drops guardian shield"): return
-    boss.take_hit(boss_hp - 5, game)
-    if not ensure(boss.hp == 5 and boss.phase_two and game.boss_shield_time == 0, "phase transition restores the shield"): return
-    boss.take_hit(5, game)
-    if not ensure(boss.hp == 5, "phase two shield prevents finishing before recharging"): return
-    await _frames(91)
-    game._interact()
-    if not ensure(game.boss_shield_time > 0, "phase two pedestal can be used after recharge"): return
-    boss.take_hit(5, game)
-    if not ensure(game.boss_dead and game.moon_dash, "guardian victory unlocks dash"): return
-
-    # Start an independent input fixture so victory UI is exercised only by campaign tests.
-    game.queue_free()
-    await process_frame
-    game = load("res://scenes/main.tscn").instantiate()
-    game.save_enabled = false
-    root.add_child(game)
-    game._start("An")
-    game.hero.position = Vector2(490, 432)
+    if not ensure(wolf.hp == original - 1, "high-speed projectile cannot tunnel through hurtbox"): return
+    game._attack()
+    game._resolve_attack()
+    if not ensure(wolf.hp < original - 1, "forward melee hits actual hurtbox"): return
+    # Parry negates one strike and visibly counters; Kha heals only once per cooldown.
     game.i_frames = 0
+    game._skill()
+    var hp_before: int = game.health
+    game.damage_player(1, game.hero.position.x + 20)
+    if not ensure(game.health == hp_before and game.parry_used and game.shield_cooldown == 2.2, "timed An parry"): return
+    await _fixture("Kha")
+    game.health = 2
+    game._skill()
+    game._skill()
+    if not ensure(game.health == 3 and game.shield_cooldown > 0 and game.skill_time > 0, "Kha heal / pulse cannot be spammed"): return
+    # Boss reacts to windup, but recovery cannot be cancelled to dodge.
+    var boss = game.trials.boss
+    game.hero.position = boss.position + Vector2(-80, 0)
+    boss.awake = true
+    boss.state = "patrol"
+    boss.dodge_cooldown = 0
+    game.attack_windup = 0.14
+    boss.step(1.0 / 60, game)
+    if not ensure(boss.state == "evade" and boss.dodges == 1, "boss backstep reacts to repeated melee"): return
+    boss.state = "recover"
+    boss.clock = 0.5
+    boss.step(1.0 / 60, game)
+    if not ensure(boss.state == "recover", "recovery is a reliable punish window"): return
+    boss.state = "tell"
+    boss.move_name = "cleave"
+    boss.clock = 0.5
+    boss.charge_direction = -1
+    game.hero.position.x = boss.position.x + 150
+    boss.step(1.0 / 60, game)
+    if not ensure(boss.charge_direction == -1, "telegraphed attack direction stays locked"): return
+    # Death resets the active boss and clears hostile projectiles, retains checkpoint.
+    game.checkpoint = Vector2(1010, 432)
+    boss.hp = 1
+    boss.phase_two = true
+    game._respawn()
+    if not ensure(boss.hp == boss.max_hp and not boss.phase_two and not boss.awake and game.hero.position == game.checkpoint and game.bolts.is_empty(), "death resets encounter and returns to checkpoint"): return
+    # All three secrets are one-shot; fragment and checkpoint progress survive reload.
+    for chapter in range(3):
+        game.demo_room_select.select(chapter)
+        game._start("Kha")
+        game._interact()
+        game.hero.position = Vector2(chapter * 1920 + 638, 291)
+        game.trials.interact()
+        var maximum: int = game.max_health
+        game.trials.interact()
+        if not ensure(game.trials.secrets[chapter] and game.max_health == maximum, "secret is collected once"): return
+    game.trials.collected[1] = [true, false]
+    game.trials.saved[1] = true
+    game.save_enabled = true
+    game._persist()
+    game.trials.secrets = [false, false, false]
+    game.max_health = 5
+    game._restore()
+    if not ensure(game.max_health == 8 and game.trials.secrets == [true, true, true], "save / restore secret rewards"): return
+    game.demo_room_select.select(1)
+    game._start("Kha")
+    game._interact()
+    if not ensure(game.trials.sigils == 1 and game.hero.position.x == 2930 and game.trials.relics[0].used and not game.trials.relics[1].used, "saved fragments and chapter checkpoint resume"): return
+    DirAccess.remove_absolute(ProjectSettings.globalize_path(game.SAVE_FILE))
+    game.save_enabled = false
+    await _fixture()
+    game.hero.position = Vector2(490, 432)
     await _frames(3)
     _finger(0, Vector2(105, 452), true)
     var drag := InputEventScreenDrag.new()
@@ -105,24 +143,28 @@ func _run() -> void:
     _finger(1, Vector2(880, 379), true)
     _finger(2, Vector2(805, 449), true)
     await _frames(6)
-    if not ensure(game.joystick.axis.x > 0.6 and game.hero.velocity.x > 0 and game.hero.velocity.y < 0 and game.attack_cooldown > 0,
-            "three simultaneous fingers handle move, jump and attack"): return
-    _finger(2, Vector2(805, 449), false)
-    _finger(1, Vector2(880, 379), false)
-    _finger(0, Vector2(154, 452), false)
+    if not ensure(game.joystick.axis.x > 0.6 and game.hero.velocity.x > 0 and game.hero.velocity.y < 0 and game.attack_cooldown > 0, "three simultaneous touch fingers: move / jump / attack"): return
+    for finger in range(3): _finger(finger, Vector2(154, 452), false)
     await _frames(2)
-    if not ensure(game.joystick.axis == Vector2.ZERO and not game.touch["jump"], "release clears joystick and jump"): return
-    var short_height := await _jump_height(game, 1)
-    var long_height := await _jump_height(game, 23)
-    print("Jump tap and hold rise: %.1f and %.1f px" % [short_height, long_height])
-    if not ensure(short_height > 22 and long_height > short_height + 38, "held jump rises higher than tap jump"): return
+    if not ensure(game.joystick.axis == Vector2.ZERO and not game.touch["jump"], "touch release clears movement"): return
+    var short_jump := await _jump_height(1)
+    var long_jump := await _jump_height(23)
+    if not ensure(short_jump > 22 and long_jump > short_jump + 38, "tap / hold variable jump height"): return
     game._dash()
     await _frames(2)
-    if not ensure(game.hero.velocity.x > 420, "dash applies high-speed horizontal motion"): return
-    print("ECLIPSE SMOKE PASS: actors, directional melee, wall obstruction, swept bolts, mirrors, guardian, three-finger input")
+    if not ensure(absf(game.hero.velocity.x) > 420, "dash impulse"): return
+    game.trials.boss.awake = true
+    game.spawn_bolt(game.hero.position + Vector2(15, 0), Vector2(-200, 0), false, 1)
+    game.trials.boss.take_hit(game.trials.boss.max_hp, game)
+    if not ensure(game.i_frames >= 1.0 and game.bolts[-1].life == 0, "boss victory clears residual damage before victory panel"): return
+    game.trials.return_menu()
+    await _frames(60)
+    if not ensure(not game.victory_panel.visible, "delayed victory cannot open on chapter menu"): return
+    if not ensure(not game.started and game.menu.visible and not game.joystick.accept_touch, "menu pauses combat"): return
+    print("ECLIPSE SMOKE PASS: geometry, walls, swept bolts, parry, heal cooldown, reactive AI, locked tells, checkpoint reset, secrets, persistence, three-finger touch, variable jump, dash and menu")
     quit(0)
 
-func _jump_height(game: Node2D, hold: int) -> float:
+func _jump_height(hold: int) -> float:
     game.hero.position = Vector2(490, 432)
     game.hero.velocity = Vector2.ZERO
     await _frames(4)
@@ -133,14 +175,3 @@ func _jump_height(game: Node2D, hold: int) -> float:
         await physics_frame
         highest = minf(highest, game.hero.position.y)
     return 432.0 - highest
-
-func _frames(amount: int) -> void:
-    for frame in range(amount):
-        await physics_frame
-
-func _finger(index: int, point: Vector2, down: bool) -> void:
-    var event := InputEventScreenTouch.new()
-    event.index = index
-    event.position = point
-    event.pressed = down
-    root.push_input(event, true)

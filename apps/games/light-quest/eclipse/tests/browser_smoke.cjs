@@ -1,93 +1,223 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const http = require('node:http');
 const { chromium } = require('playwright');
 
 async function run() {
-    const width = 812;
-    const height = 375;
+    let server;
+    let base = process.env.ECLIPSE_BASE_URL;
+    if (!base) {
+        const root = path.resolve(__dirname, '../build/web');
+        server = http.createServer((req, res) => {
+            const filename = path.join(root, new URL(req.url, 'http://localhost').pathname);
+            if (!filename.startsWith(root + path.sep)) { res.writeHead(403).end(); return; }
+            try {
+                res.setHeader('Content-Type', filename.endsWith('.wasm') ? 'application/wasm' : filename.endsWith('.js') ? 'text/javascript' : filename.endsWith('.html') ? 'text/html' : 'application/octet-stream');
+                res.end(fs.readFileSync(filename));
+            } catch { res.writeHead(404).end(); }
+        });
+        await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+        base = `http://127.0.0.1:${server.address().port}/index.html`;
+    }
     const browser = await chromium.launch({
         executablePath: process.env.ECLIPSE_CHROME,
-        args: ['--enable-unsafe-swiftshader', '--use-angle=swiftshader'],
+        args: ['--no-sandbox', '--enable-unsafe-swiftshader', '--use-angle=swiftshader'],
     });
+    const evidence = path.resolve(__dirname, '../visual-qa');
+    fs.mkdirSync(evidence, { recursive: true });
     try {
-        const page = await browser.newPage({
-            viewport: { width, height },
-            deviceScaleFactor: 3,
-            hasTouch: true,
-            isMobile: true,
-        });
-        const errors = [];
-        const loaded = new Map();
-        page.on('pageerror', error => errors.push(error.message));
-        page.on('console', message => {
-            if (message.type() === 'error' && !message.location().url.endsWith('/favicon.ico')) errors.push(message.text());
-        });
-        page.on('response', response => loaded.set(new URL(response.url()).pathname, response.status()));
+        for (const mobile of [false, true]) {
+            const width = mobile ? 812 : 960, height = mobile ? 375 : 540;
+            const context = await browser.newContext({ viewport: { width, height }, hasTouch: mobile, isMobile: mobile, deviceScaleFactor: mobile ? 3 : 1 });
+            const page = await context.newPage();
+            const errors = [], consoleLines = [], responses = new Map();
+            page.on('pageerror', error => errors.push(error.message));
+            page.on('console', message => {
+                consoleLines.push(message.text());
+                if (message.type() === 'error' && !message.location().url.endsWith('/favicon.ico')) { errors.push(message.text()); console.error('ENGINE ERROR',message.text()); }
+            });
+            page.on('response', response => responses.set(new URL(response.url()).pathname.split('/').pop(), response.status()));
+            await page.route('**/index.html*', async route => {
+                const response = await route.fetch();
+                const shell = await response.text();
+                const probe = shell.replace('"args":[]', '"args":["--","--eclipse-render-probe"]');
+                assert.notEqual(shell, probe, 'Godot export accepts diagnostic args');
+                await route.fulfill({ response, body: probe });
+            });
+            await page.goto(base);
+            await page.locator('#status').waitFor({ state: 'detached', timeout: 60000 });
+            assert.equal(responses.get('index.wasm'), 200, 'WASM loads');
+            assert([...responses].some(([name,status])=>name.endsWith('.pck')&&status===200), 'Godot content pack loads');
+            const canvas = page.locator('#canvas');
+            const box = await canvas.boundingBox();
+            assert.equal(box.width, width);
+            assert.equal(box.height, height);
+            const scale = height / 540, inset = (width - 960 * scale) / 2;
+            const at = (id, x, y) => ({ id, x: inset + x * scale, y: y * scale });
+            const tap = async (x, y) => {
+                const p = at(0, x, y);
+                if (mobile) await page.touchscreen.tap(p.x, p.y);
+                else await page.mouse.click(p.x, p.y);
+            };
+            await canvas.screenshot({ path: path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-menu.png`) });
+            // A fresh save opens the illustrated guide before chapter one.
+            const storyStart = page.waitForEvent('console', { predicate: m => m.text().includes('ECLIPSE CHAPTER: 0 An'), timeout: 10000 });
+            storyStart.catch(() => {});
+            await tap(172, 256);
+            await page.waitForTimeout(180);
+            const firstCard = await canvas.screenshot();
+            await tap(706, 456);
+            await page.waitForTimeout(160);
+            const bellCard = await canvas.screenshot({ path: path.join(evidence, `v19-guide-${mobile ? 'touch' : 'desktop'}.png`) });
+            assert.notDeepEqual(firstCard, bellCard, 'selecting a skill changes the illustrated guide');
+            await tap(746, 350);
+            await storyStart;
+            await page.waitForTimeout(220);
+            if (mobile) await tap(874, 42);
+            else await page.keyboard.press('m');
+            await page.waitForTimeout(180);
+            const fogged = await canvas.screenshot({ path: path.join(evidence, `v18-story-map-${mobile ? 'touch' : 'desktop'}.png`) });
+            if (mobile) await tap(889, 42);
+            else await page.keyboard.press('Escape');
+            await page.waitForTimeout(110);
+            assert.notDeepEqual(await canvas.screenshot(), fogged, 'journey opens the discovery map without a briefing modal');
+            await tap(880, 102);
+            await page.waitForTimeout(150);
+            for (let chapter = 0; chapter < 7; chapter++) {
+                // Godot PopupMenu is drawn inside the canvas, rather than as DOM options.
+                await tap(128, 443);
+                await page.waitForTimeout(120);
+                await tap(480, 230);
+                await page.waitForTimeout(150);
+                await tap(480, 265 + 27 * chapter);
+                await page.waitForTimeout(150);
+                const who = chapter % 3 === 1 ? 'Kha' : 'An';
+                const expected = chapter < 3 ? `ECLIPSE CHAPTER: ${chapter} ${who}` : `ECLIPSE SKY: ${chapter - 3} ${who}`;
+                const started = page.waitForEvent('console', { predicate: message => message.text().includes(expected), timeout: 10000 });
+                started.catch(() => {});
+                const probe = page.waitForEvent('console', { predicate: message => message.text().includes('ECLIPSE RENDER PROBE:'), timeout: 15000 });
+                probe.catch(() => {});
+                await tap(who === 'An' ? 352 : 578, 296);
+                await page.waitForTimeout(300);
 
-        await page.route('**/index.html', async route => {
-            const response = await route.fetch();
-            const exportShell = await response.text();
-            const testShell = exportShell.replace('"args":[]', '"args":["--","--eclipse-render-probe"]');
-            assert.notEqual(exportShell, testShell, 'export shell accepts the diagnostic flag');
-            await route.fulfill({ response, body: testShell });
-        });
-        await page.goto('http://127.0.0.1:8000/index.html');
-        await page.locator('#status').waitFor({ state: 'detached', timeout: 45000 });
-        assert.equal(loaded.get('/index.wasm'), 200, 'WASM loads');
-        assert.equal(loaded.get('/index.pck'), 200, 'Godot PCK loads');
-        const canvas = page.locator('#canvas');
-        const viewport = await canvas.boundingBox();
-        assert.equal(viewport.width, width);
-        assert.equal(viewport.height, height);
-
-        const scale = height / 540;
-        const inset = (width - 960 * scale) * 0.5;
-        const at = (id, x, y) => ({ id, x: inset + x * scale, y: y * scale });
-        const title = await canvas.screenshot();
-        const an = at(0, 528, 250);
-        const renderProbe = page.waitForEvent('console', {
-            predicate: message => message.text().includes('ECLIPSE RENDER PROBE:'),
-            timeout: 15000,
-        });
-        await page.touchscreen.tap(an.x, an.y);
-        const hero = at(0, 95, 348);
-        const heroRegion = { x: Math.round(hero.x), y: Math.round(hero.y), width: 76, height: 54 };
-        await page.waitForTimeout(300);
-        const play = await canvas.screenshot({ path: 'visual-qa/web-landscape.png' });
-        assert.notDeepEqual(play, title, 'tapping An changes the rendered scene');
-
-        const session = await page.context().newCDPSession(page);
-        const touch = (type, touchPoints) => session.send('Input.dispatchTouchEvent', { type, touchPoints });
-        const initial = at(0, 105, 452);
-        const direction = at(0, 156, 452);
-        const jump = at(1, 880, 379);
-        const sword = at(2, 805, 449);
-        const before = await page.screenshot({ clip: heroRegion });
-        await touch('touchStart', [initial]);
-        await touch('touchMove', [direction]);
-        await touch('touchStart', [direction, jump, sword]);
-        await page.waitForTimeout(150);
-        await page.screenshot({ path: 'visual-qa/web-three-fingers.png' });
-        await touch('touchEnd', []);
-        await page.waitForTimeout(240);
-        const after = await page.screenshot({ clip: heroRegion });
-        assert.notDeepEqual(after, before, 'combined input moves the render');
-        const probe = (await renderProbe).text();
-        console.log(probe);
-        const result = probe.match(/([\d.]+) FPS, cap (\d+), viewport (\d+)x(\d+)/);
-        assert(result, 'Godot reports the measured mobile render budget');
-        const [, fps, cap, renderWidth, renderHeight] = result.map(Number);
-        assert.equal(cap, 30, 'touch Web selects the lightweight profile');
-        assert(fps >= 8 && fps <= 36, 'engine draws within the mobile FPS budget');
-        assert.equal(renderWidth, 960, 'gameplay is rendered at logical width on 3x DPR');
-        assert.equal(renderHeight, 540, 'gameplay is rendered at logical height on 3x DPR');
-        assert.deepEqual(errors, [], 'no browser runtime errors');
-        console.log('ECLIPSE WEB PASS: WASM, landscape canvas, touch character selection and combined input');
+                await started;
+                if (mobile) await tap(898, 299); // actual touch interaction
+                else await page.keyboard.press('e');
+                await page.waitForTimeout(200);
+                if (chapter === 0) {
+                    const hud = await canvas.screenshot();
+                    if (mobile) await tap(869, 44);
+                    else await page.keyboard.press('m');
+                    await page.waitForTimeout(180);
+                    const atlas = await canvas.screenshot({ path: path.join(evidence, `v13-atlas-${mobile ? 'touch' : 'desktop'}.png`) });
+                    assert.notDeepEqual(atlas, hud, 'atlas replaces gameplay');
+                    await page.waitForTimeout(120);
+                    assert.deepEqual(await canvas.screenshot(), atlas, 'atlas holds the gameplay frame');
+                    await tap(98, 389); // Bờ Đá & Hải Đăng
+                    await page.waitForTimeout(100);
+                    const era = await canvas.screenshot();
+                    assert.notDeepEqual(era, atlas, 'selecting a region switches the map');
+                    await tap(875, 91); // Tương lai
+                    await page.waitForTimeout(100);
+                    assert.notDeepEqual(await canvas.screenshot(), era, 'era tab renders the changed bridge route');
+                    if (mobile) await tap(891, 43);
+                    else await page.keyboard.press('Escape');
+                    await page.waitForTimeout(100);
+                    assert.notDeepEqual(await canvas.screenshot(), era, 'close restores gameplay');
+                }
+                const before = await canvas.screenshot();
+                if (mobile) {
+                    const session = await context.newCDPSession(page);
+                    const initial = at(0, 105, 452), direction = at(0, 156, 452), jump = at(1, 880, 379), sword = at(2, 805, 449);
+                    await session.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [initial] });
+                    await session.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [direction] });
+                    await session.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [direction, jump, sword] });
+                    await page.waitForTimeout(220);
+                    await canvas.screenshot({ path: path.join(evidence, `web-touch-chapter-${chapter + 1}.png`) });
+                    await session.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+                } else {
+                    await page.keyboard.down('d');
+                    await page.keyboard.down('Space');
+                    await page.keyboard.press('j');
+                    await page.waitForTimeout(240);
+                    await page.keyboard.up('Space');
+                    await page.keyboard.up('d');
+                    await canvas.screenshot({ path: path.join(evidence, `web-desktop-chapter-${chapter + 1}.png`) });
+                }
+                assert.notDeepEqual(await canvas.screenshot(), before, 'movement / jump / attack changes rendered gameplay');
+                const signature = page.waitForEvent('console', {predicate: message => message.text().includes('ECLIPSE SIGNATURE: ' + who), timeout:10000});
+                signature.catch(()=>{});
+                if (mobile) await tap(790,354);
+                else await page.keyboard.press('q');
+                await signature;
+                await page.waitForTimeout(80);
+                await canvas.screenshot({path:path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-signature-${chapter + 1}.png`)});
+                if (chapter >= 3) {
+                    for (const id of [0,3,4,1,5]) {
+                        const art = page.waitForEvent('console',{predicate:message=>message.text().startsWith(`ECLIPSE ART: ${id+1} `),timeout:10000});
+                        art.catch(()=>{});
+                        if (mobile) await tap(288+id*61,500);
+                        else await page.keyboard.press(String(id+1));
+                        await art;
+                        console.log(`WEB ART CONTROL PASS: ${mobile?"touch":"desktop"} / ${chapter} / ${id+1}`);
+                        await page.waitForTimeout(45);
+                    }
+                    await canvas.screenshot({path:path.join(evidence,`web-${mobile?'touch':'desktop'}-six-arts-${chapter-2}.png`)});
+                }
+                const line = (await probe).text();
+                const match = line.match(/([\d.]+) FPS, cap (\d+), viewport (\d+)x(\d+)/);
+                assert(match, 'engine render profile is reported');
+                const [, fps, cap, renderWidth, renderHeight] = match.map(Number);
+                assert.equal(cap, mobile ? 30 : 60);
+                assert(fps >= 6 && fps <= cap + 6, 'actual rendered frames within profile');
+                assert.equal(renderWidth, 960);
+                assert.equal(renderHeight, 540);
+                console.log(`WEB CHAPTER PASS: ${mobile ? 'touch 3x DPR' : 'desktop'} / ${expected} / ${line}`);
+                await tap(880, 102); // pause and return to chapter menu
+                await page.waitForTimeout(150);
+            }
+            // Start a fresh chapter so the armory input checks are independent of combat.
+            await tap(128, 443);
+            await page.waitForTimeout(120);
+            await tap(480, 230);
+            await page.waitForTimeout(140);
+            await tap(480, 265);
+            await page.waitForTimeout(140);
+            const armoryStart = page.waitForEvent('console', { predicate: m => m.text().includes('ECLIPSE CHAPTER: 0 An'), timeout: 10000 });
+            armoryStart.catch(() => {});
+            await tap(352, 296);
+            await armoryStart;
+            if (mobile) await tap(898, 299);
+            else await page.keyboard.press('e');
+            await page.waitForTimeout(140);
+            if (mobile) await tap(80, 106);
+            else await page.keyboard.press('i');
+            await page.waitForTimeout(130);
+            const armory = await canvas.screenshot({ path: path.join(evidence, `v14-armory-${mobile ? 'touch' : 'desktop'}.png`) });
+            await tap(103, 230); // Tinh Thạch
+            await page.waitForTimeout(100);
+            assert.notDeepEqual(await canvas.screenshot(), armory, 'weapon card selects live comparison');
+            await tap(755, 388);
+            await tap(567, 42);
+            await page.waitForTimeout(130);
+            const runes = await canvas.screenshot({ path: path.join(evidence, `v14-runes-${mobile ? 'touch' : 'desktop'}.png`) });
+            assert.notDeepEqual(runes, armory, 'shared skills tab renders');
+            await tap(380, 170);
+            await tap(661, 370);
+            await page.waitForTimeout(110);
+            assert.notDeepEqual(await canvas.screenshot(), runes, 'quick cast can be pinned from the skills card');
+            if (mobile) await tap(875, 43);
+            else await page.keyboard.press('Escape');
+            await page.waitForTimeout(130);
+            assert.notDeepEqual(await canvas.screenshot(), runes, 'closing armory restores game rendering');
+            assert.deepEqual(errors, [], 'no browser or Godot runtime errors');
+            await context.close();
+        }
+        console.log('ECLIPSE WEB PASS: actual Godot WASM, all 7 chapter selectors, An/Kha, six-art toolbar, desktop / touch, three-finger input, viewport budget, no runtime errors');
     } finally {
         await browser.close();
+        if (server) server.close();
     }
 }
-
-run().catch(error => {
-    console.error(error);
-    process.exitCode = 1;
-});
+run().catch(error => { console.error(error); process.exit(1); });

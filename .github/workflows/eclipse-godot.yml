@@ -1,67 +1,22 @@
-name: Eclipse Godot headless validation
+name: Eclipse Godot 4.4.1 chapter validation and Pages export
 on:
   pull_request:
     paths:
       - 'apps/games/light-quest/eclipse/**'
       - '.github/workflows/eclipse-godot.yml'
   push:
+    branches: [feature/eclipse-godot-room-select-v1]
     paths:
       - 'apps/games/light-quest/eclipse/**'
       - '.github/workflows/eclipse-godot.yml'
+permissions:
+  contents: read
+concurrency:
+  group: eclipse-chapters-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  parse-project:
+  validate-and-export:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Godot
-        uses: chickensoft-games/setup-godot@v2
-        with:
-          version: 4.4.1
-          use-dotnet: false
-      - name: Import and validate Godot project
-        run: |
-          set -o pipefail
-          godot --headless --editor --path apps/games/light-quest/eclipse --import --quit 2>&1 | tee import.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script' import.log
-      - name: Smoke test scene
-        run: |
-          set -o pipefail
-          timeout 25s godot --headless --path apps/games/light-quest/eclipse --quit-after 15 2>&1 | tee scene.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|Invalid access' scene.log
-      - name: Test gameplay mechanics
-        run: |
-          timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
-          timeout 20s godot --headless --path apps/games/light-quest/eclipse --script res://tests/hit_geometry_test.gd
-          timeout 35s godot --headless --fixed-fps 60 --path apps/games/light-quest/eclipse --script res://tests/campaign_playthrough.gd
-
-  visual-qa:
-    runs-on: ubuntu-latest
-    needs: [parse-project]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: chickensoft-games/setup-godot@v2
-        with:
-          version: 4.4.1
-          use-dotnet: false
-      - name: Capture running gameplay frames
-        run: |
-          set -euo pipefail
-          godot --headless --editor --path apps/games/light-quest/eclipse --import --quit
-          timeout 45s xvfb-run -a godot --path apps/games/light-quest/eclipse --script res://tests/capture_visual.gd
-          test -s apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
-          test -s apps/games/light-quest/eclipse/visual-qa/actual-puzzle.png
-          test -s apps/games/light-quest/eclipse/visual-qa/actual-guardian.png
-          test -s apps/games/light-quest/eclipse/visual-qa/actual-guardian-phase-two.png
-      - name: Save screenshot artifact for manual comparison
-        uses: actions/upload-artifact@v4
-        with:
-          name: eclipse-actual-gameplay-screen
-          path: apps/games/light-quest/eclipse/visual-qa/*.png
-          if-no-files-found: error
-
-  web-preview:
-    runs-on: ubuntu-latest
-    needs: [parse-project]
     steps:
       - uses: actions/checkout@v4
       - uses: chickensoft-games/setup-godot@v2
@@ -69,49 +24,118 @@ jobs:
           version: 4.4.1
           use-dotnet: false
           include-templates: true
-      - name: Import content and export web build
+      - name: Import and check scripts
+        working-directory: apps/games/light-quest/eclipse
+        shell: bash
         run: |
           set -euo pipefail
-          cd apps/games/light-quest/eclipse
+          godot --version | grep '^4.4.1.stable'
+          godot --headless --editor --import --quit 2>&1 | tee import.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load' import.log
+      - name: Real Godot mechanics and six complete playthroughs
+        working-directory: apps/games/light-quest/eclipse
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 45s godot --headless --fixed-fps 60 --script res://tests/smoke.gd 2>&1 | tee smoke.log
+          grep -q 'ECLIPSE SMOKE PASS' smoke.log
+          timeout 20s godot --headless --script res://tests/hit_geometry_test.gd 2>&1 | tee geometry.log
+          grep -q 'HIT GEOMETRY PASS' geometry.log
+          timeout 120s godot --headless --fixed-fps 60 --script res://tests/campaign_playthrough.gd 2>&1 | tee campaign.log
+          grep -q 'ECLIPSE SIX RUNS PASS' campaign.log
+          timeout 45s godot --headless --fixed-fps 60 --script res://tests/abilities_test.gd 2>&1 | tee abilities.log
+          grep -q 'ECLIPSE ABILITIES PASS' abilities.log
+          timeout 120s godot --headless --fixed-fps 60 --script res://tests/routes_playthrough.gd 2>&1 | tee routes.log
+          grep -q 'ECLIPSE ROUTES PASS' routes.log
+          timeout 45s godot --headless --fixed-fps 60 --script res://tests/sky_arts_test.gd 2>&1 | tee sky-arts.log
+          grep -q 'ECLIPSE SKY ARTS PASS' sky-arts.log
+          timeout 160s godot --headless --fixed-fps 60 --script res://tests/sky_playthrough.gd 2>&1 | tee sky-campaign.log
+          grep -q 'ECLIPSE SKY PASS' sky-campaign.log
+          timeout 25s godot --headless --fixed-fps 60 --script res://tests/art_vfx_test.gd 2>&1 | tee art-vfx.log
+          grep -q 'ECLIPSE VFX PASS' art-vfx.log
+          timeout 30s godot --headless --fixed-fps 60 --script res://tests/journey_test.gd 2>&1 | tee journey.log
+          grep -q 'ECLIPSE JOURNEY PASS' journey.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/horizon_playthrough.gd 2>&1 | tee horizon.log
+          grep -q "V6 CONTINUOUS ROUTE PASS" horizon.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/time_lighthouse_test.gd 2>&1 | tee timeline.log
+          grep -q "ECLIPSE TIMELINE PASS" timeline.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/coast_test.gd 2>&1 | tee coast.log
+          grep -q "ECLIPSE COAST PASS" coast.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/forge_progression_test.gd 2>&1 | tee forge.log
+          grep -q "ECLIPSE FORGE PASS" forge.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/world_atlas_test.gd 2>&1 | tee atlas.log
+          grep -q "ECLIPSE ATLAS PASS" atlas.log
+          timeout 45s godot --headless --fixed-fps 60 --script res://tests/tide_vault_test.gd 2>&1 | tee tide.log
+          grep -q "ECLIPSE TIDE PASS" tide.log
+          timeout 35s godot --headless --fixed-fps 60 --script res://tests/armory_test.gd 2>&1 | tee armory.log
+          grep -q "ECLIPSE ARMORY PASS" armory.log
+          timeout 90s godot --headless --fixed-fps 60 --script res://tests/continuous_journey_test.gd 2>&1 | tee continuous-story.log
+          grep -q "ECLIPSE CONTINUOUS STORY PASS" continuous-story.log
+          timeout 30s godot --headless --fixed-fps 60 --script res://tests/ground_contact_test.gd 2>&1 | tee ground-contact.log
+          grep -q "ECLIPSE GROUND CONTACT PASS" ground-contact.log
+          timeout 30s godot --headless --fixed-fps 60 --script res://tests/touch_polish_test.gd 2>&1 | tee touch-polish.log
+          grep -q "ECLIPSE TOUCH POLISH PASS" touch-polish.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' tide.log touch-polish.log ground-contact.log continuous-story.log armory.log atlas.log forge.log coast.log timeline.log horizon.log journey.log smoke.log geometry.log campaign.log abilities.log routes.log sky-arts.log sky-campaign.log art-vfx.log
+      - name: Export single-threaded Godot Web
+        working-directory: apps/games/light-quest/eclipse
+        shell: bash
+        run: |
+          set -euo pipefail
           mkdir -p build/web
-          godot --headless --editor --import --quit 2>&1 | tee import-web.log
-          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|ERROR: Failed to load resource' import-web.log
-          godot --headless --export-release Web build/web/index.html
-          test -s build/web/index.html
+          godot --headless --export-release Web build/web/index.html 2>&1 | tee export.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' export.log
           test -s build/web/index.wasm
-      - name: Smoke test the Web build in touch-enabled Chromium
+          test -s build/web/index.pck
+          python3 tools/stamp_web.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Browser QA on desktop and touch 3x DPR
+        working-directory: apps/games/light-quest/eclipse
+        shell: bash
         run: |
           set -euo pipefail
-          cd apps/games/light-quest/eclipse
           npm install --prefix "${RUNNER_TEMP}/eclipse-browser" --no-audit --no-fund playwright@1.56.1
-          mkdir -p visual-qa
-          python3 -m http.server 8000 --bind 127.0.0.1 --directory build/web > "${RUNNER_TEMP}/eclipse-http.log" 2>&1 &
-          server_pid=$!
-          trap 'kill "$server_pid"' EXIT
-          for attempt in {1..30}; do
-            curl --silent --fail http://127.0.0.1:8000/index.html >/dev/null && break
-            sleep 1
-          done
-          ECLIPSE_CHROME="$(command -v google-chrome)" NODE_PATH="${RUNNER_TEMP}/eclipse-browser/node_modules" node tests/browser_smoke.cjs
-      - name: Save Web landscape screenshots
+          ECLIPSE_CHROME="$(command -v google-chrome)" NODE_PATH="${RUNNER_TEMP}/eclipse-browser/node_modules" node tests/browser_smoke.cjs 2>&1 | tee browser.log
+          grep -q 'ECLIPSE WEB PASS' browser.log
+      - name: Native renderer battle captures
+        working-directory: apps/games/light-quest/eclipse
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 120s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_visual.gd 2>&1 | tee renderer.log
+          timeout 120s xvfb-run -a godot --audio-driver Dummy --fixed-fps 60 --script res://tests/capture_arts.gd 2>&1 | tee art-renderer.log
+          grep -q 'ECLIPSE VFX CAPTURE PASS' art-renderer.log
+          timeout 35s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_forge.gd 2>&1 | tee forge-renderer.log
+          grep -q 'ECLIPSE FORGE CAPTURE PASS' forge-renderer.log
+          timeout 35s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_atlas.gd 2>&1 | tee atlas-renderer.log
+          grep -q 'ECLIPSE ATLAS CAPTURE PASS' atlas-renderer.log
+          timeout 35s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_armory.gd 2>&1 | tee armory-renderer.log
+          grep -q 'ECLIPSE ARMORY CAPTURE PASS' armory-renderer.log
+          timeout 35s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_journey.gd 2>&1 | tee journey-renderer.log
+          grep -q 'ECLIPSE JOURNEY CAPTURE PASS' journey-renderer.log
+          timeout 35s xvfb-run -a godot --audio-driver Dummy --fixed-fps 60 --script res://tests/capture_combat_ink.gd 2>&1 | tee combat-ink.log
+          grep -q 'ECLIPSE COMBAT INK CAPTURE PASS' combat-ink.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' combat-ink.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' journey-renderer.log armory-renderer.log renderer.log art-renderer.log forge-renderer.log atlas-renderer.log
+      - uses: actions/upload-artifact@v4
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: eclipse-web-landscape-qa
-          path: apps/games/light-quest/eclipse/visual-qa/web-*.png
-          if-no-files-found: ignore
-      - name: Upload HTML5 preview
-        uses: actions/upload-artifact@v4
+          name: eclipse-chapter-qa
+          path: |
+            apps/games/light-quest/eclipse/*.log
+            apps/games/light-quest/eclipse/visual-qa/*.png
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
         with:
           name: eclipse-web-preview
           path: apps/games/light-quest/eclipse/build/web/
           if-no-files-found: error
-
   publish-eclipse-demo:
-    name: Publish isolated Eclipse web demo
-    # Only PR #76 from this repository and our named feature branch can publish.
-    if: false # Visual-quality gate: publishing is disabled until mockup fidelity and iPhone QA are reviewed
-    needs: [web-preview]
+    # The user authorized deployment of these chapters. Every validation above must pass.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/feature/eclipse-godot-room-select-v1'
+    needs: [validate-and-export]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -119,30 +143,29 @@ jobs:
       group: eclipse-public-preview
       cancel-in-progress: false
     steps:
-      - name: Checkout site main (not feature source)
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
-      - name: Copy pre-tested HTML5 artifact into isolated public folder
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: eclipse-web-preview
-          path: apps/games/light-quest/eclipse/
-      - name: Check build files
+          path: apps/games/light-quest/eclipse/godot-play/
+      - name: Commit only the validated Eclipse export
+        shell: bash
         run: |
-          test -s apps/games/light-quest/eclipse/index.html
-          test -s apps/games/light-quest/eclipse/index.wasm
-          test -s apps/games/light-quest/eclipse/index.pck
-      - name: Commit demo only; preserve all other games
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apps/games/light-quest/eclipse/
-          if git diff --cached --quiet; then
-            echo "No changes to public Eclipse demo"
-            exit 0
-          fi
-          git commit -m "deploy(eclipse): publish isolated Godot HTML5 gameplay preview"
+          set -euo pipefail
+          dest=apps/games/light-quest/eclipse/godot-play
+          test -s "$dest/index.html"
+          test -s "$dest/index.wasm"
+          pack=$(python3 -c 'import json; print(json.load(open("apps/games/light-quest/eclipse/godot-play/build-info.json"))["main_pack"])')
+          test -s "$dest/$pack"
+          touch "$dest/.nojekyll"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$dest"
+          if git diff --cached --quiet; then exit 0; fi
+          test -z "$(git diff --cached --name-only | grep -v '^apps/games/light-quest/eclipse/godot-play/' || true)"
+          git commit -m "deploy(eclipse): validated three-chapter Godot build ${{ github.sha }}"
           git pull --rebase origin main
           git push origin HEAD:main

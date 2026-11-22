@@ -10,11 +10,27 @@ const CREATURES := preload("res://assets/eclipse/creatures.webp")
 const RUINS := preload("res://assets/eclipse/ruins.webp")
 const SCENERY := preload("res://assets/eclipse/moon-tower.webp")
 const HERO_CELL := Vector2i(192, 168)
+const HERO_FOOTLINE := 164.0
 const ENEMY_CELL := Vector2i(192, 192)
 const RUIN_REGIONS := [
     Rect2i(3, 153, 234, 83), Rect2i(260, 8, 199, 228), Rect2i(483, 101, 234, 135),
     Rect2i(66, 328, 107, 148), Rect2i(302, 267, 115, 209), Rect2i(533, 264, 133, 212)
 ]
+
+const ILLUSTRATION := preload("res://assets/eclipse/moon-heroes-illustration.webp")
+
+static func portrait(kha: bool, closeup := false) -> AtlasTexture:
+    var cut := AtlasTexture.new()
+    cut.atlas = ILLUSTRATION
+    cut.region = Rect2(1092, 137, 227, 451) if kha else Rect2(819, 137, 242, 451)
+    if closeup:
+        cut.region = Rect2(1140, 165, 103, 119) if kha else Rect2(898, 137, 106, 126)
+    cut.filter_clip = true
+    return cut
+
+static func anchored_pose(boots: Vector2, width: float) -> Rect2:
+    var ratio := width / HERO_CELL.x
+    return Rect2(boots - Vector2(width * 0.5, HERO_FOOTLINE * ratio), Vector2(HERO_CELL) * ratio)
 
 static func cell(texture: Texture2D, index: int, size: Vector2i) -> AtlasTexture:
     var atlas := AtlasTexture.new()
@@ -36,6 +52,7 @@ static func ruin(index: int) -> AtlasTexture:
     else:
         atlas.atlas = DETAILS
         atlas.region = DETAIL_REGIONS[index - RUIN_REGIONS.size()]
+    atlas.filter_clip = true
     atlas.filter_clip = true
     return atlas
 
