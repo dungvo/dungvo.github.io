@@ -58,3 +58,7 @@ Góc trên trái có thanh sinh lực dài và thanh năng lượng kỹ năng. 
 - [Ba thời đại, một cây cầu](ba-thoi-dai.webp)
 - [Cỗ máy thời gian và bộ quái vật](co-may-va-quai.webp)
 - [Kho tám vũ khí](kho-tam-vu-khi.webp)
+
+## So sánh chuyển động V18
+
+[Bảng mẫu bốn hiệu ứng](chuyen-dong-va-va-cham.webp) và [ảnh động ghi trong Godot](bon-hieu-ung-godot.webp). Bốn khung theo thứ tự Nguyệt Trảm, quái trúng chiêu, quái tan ảnh và Bước Gió. Ảnh động phát chậm để thấy va chạm và điểm bật nhảy.
