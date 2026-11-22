@@ -4,6 +4,7 @@ const Sound := preload("res://scripts/eclipse_sound.gd")
 const ATTACK_WINDUP := [0.078, 0.105, 0.145]
 const ATTACK_CYCLE := [0.26, 0.30, 0.42]
 const HealthHearts := preload("res://scripts/health_hearts.gd")
+const TouchGlyph := preload("res://scripts/touch_glyph.gd")
 const Contact := preload("res://scripts/ground_contact.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
 const RuinStage := preload("res://scripts/ruin_stage.gd")
@@ -48,6 +49,8 @@ var crouched := false
 var crouch_touch: TouchScreenButton
 var touch := {"jump":false, "attack":false, "interact":false, "dash":false, "skill":false, "burst":false, "art":false,"crouch":false}
 var control_art: Dictionary = {}
+var pressed_controls: Dictionary = {}
+var touch_clock := 0.0
 var joystick: Node2D
 var last_room := -1
 var activated := false
@@ -279,16 +282,17 @@ func _make_ui() -> void:
     joystick = Node2D.new()
     joystick.set_script(load("res://scripts/virtual_joystick.gd"))
     layer.add_child(joystick)
-    _touch_button(touchbar, "jump", "NHẢY", Vector2(880, 379), 34)
-    _touch_button(touchbar, "attack", "ĐÁNH", Vector2(805, 449), 43)
-    _touch_button(touchbar, "dash", "LƯỚT", Vector2(705, 463), 33)
-    _touch_button(touchbar, "skill", "LỰC", Vector2(898, 471), 33)
-    _touch_button(touchbar, "art", "ẤN", Vector2(705, 354), 30)
-    _touch_button(touchbar, "burst", "Q", Vector2(790, 354), 30)
-    _touch_button(touchbar, "interact", "E", Vector2(898, 299), 26)
+    _touch_button(touchbar, "jump", Vector2(880, 379), 34)
+    _touch_button(touchbar, "attack", Vector2(805, 449), 43)
+    _touch_button(touchbar, "dash", Vector2(705, 463), 33)
+    _touch_button(touchbar, "skill", Vector2(898, 471), 33)
+    _touch_button(touchbar, "art", Vector2(705, 354), 30)
+    _touch_button(touchbar, "burst", Vector2(790, 354), 30)
+    _touch_button(touchbar, "interact", Vector2(898, 299), 26)
     var touch_index := touchbar.get_child_count()
-    _touch_button(touchbar, "crouch", "NGỒI", Vector2(125, 365), 27)
+    _touch_button(touchbar, "crouch", Vector2(125, 365), 27)
     crouch_touch = touchbar.get_child(touch_index)
+    joystick.reserved_button = crouch_touch
     crouch_touch.hide()
     control_art.crouch.hide()
     if OS.has_feature("web") and not mobile_web:
@@ -340,7 +344,7 @@ func _hud_label(layer: CanvasLayer, at: Vector2, extent: Vector2, font_size: int
     layer.add_child(label)
     return label
 
-func _touch_button(parent: Control, key: String, glyph: String, center: Vector2, radius: float) -> void:
+func _touch_button(parent: Control, key: String, center: Vector2, radius: float) -> void:
     var hit := TouchScreenButton.new()
     var circle := CircleShape2D.new()
     circle.radius = radius + 5
@@ -350,21 +354,14 @@ func _touch_button(parent: Control, key: String, glyph: String, center: Vector2,
     hit.released.connect(_control_released.bind(key))
     parent.add_child(hit)
 
-    var face := Button.new()
-    face.text = glyph
+    var face := TouchGlyph.new()
+    face.action = key
+    face.radius = radius
     face.position = center - Vector2.ONE * radius
     face.size = Vector2.ONE * radius * 2
-    face.focus_mode = Control.FOCUS_NONE
-    face.mouse_filter = Control.MOUSE_FILTER_IGNORE
-    face.add_theme_font_size_override("font_size", 17 if key == "interact" else 15)
-    var style := StyleBoxFlat.new()
-    style.bg_color = Color("#0a1b34a9") if key != "attack" else Color("#492e168c")
-    style.border_color = Color("#adcde9b0") if key != "attack" else Color("#ffcf77")
-    style.set_border_width_all(2)
-    style.set_corner_radius_all(100)
-    face.add_theme_stylebox_override("normal", style)
     parent.add_child(face)
     control_art[key] = face
+    pressed_controls[key] = false
 
 func _control_pressed(key: String) -> void:
     if loadout.panel.visible or atlas.overlay.visible: return
@@ -377,19 +374,34 @@ func _control_pressed(key: String) -> void:
         if key == "interact": _show_dialogue(false)
         return
     touch[key] = true
-    control_art[key].modulate = Color("#b6ebff")
+    pressed_controls[key] = true
+    control_art[key].sync(true, control_art[key].recovery)
     if key == "jump": jump_buffer_clock = JUMP_BUFFER_WINDOW
 
 func _control_released(key: String) -> void:
     if key in ["jump","crouch"]: touch[key] = false
-    control_art[key].modulate = Color.WHITE
+    pressed_controls[key] = false
+    control_art[key].sync(false, control_art[key].recovery)
 
 func _reset_touch() -> void:
     if is_instance_valid(joystick): joystick.release_finger()
     for key in touch:
         touch[key] = false
-        control_art[key].modulate = Color.WHITE
+        pressed_controls[key] = false
+        control_art[key].sync(false, 0.0)
     jump_held = false
+
+func _refresh_touch_recovery(delta: float) -> void:
+    if OS.has_feature("web") and not mobile_web: return
+    touch_clock -= delta
+    if touch_clock > 0.0: return
+    touch_clock = 0.05
+    var rune: int = loadout.quick_art()
+    var rune_time: float = arts.cooldowns[rune]
+    control_art.dash.sync(pressed_controls.dash, clampf(dash_cooldown / (1.4 if moon_dash else 2.8), 0.0, 1.0))
+    control_art.skill.sync(pressed_controls.skill, clampf(shield_cooldown / 6.0, 0.0, 1.0))
+    control_art.burst.sync(pressed_controls.burst, clampf(burst_cooldown / 5.0, 0.0, 1.0))
+    control_art.art.sync(pressed_controls.art, clampf(rune_time / arts.COOLDOWNS[rune], 0.0, 1.0))
 
 func _notification(what: int) -> void:
     if what == NOTIFICATION_APPLICATION_FOCUS_OUT and is_instance_valid(joystick):
@@ -701,12 +713,14 @@ func _physics_process(delta:float) -> void:
     var leading := clampf(hero.velocity.x * 0.16, -46.0, 46.0)
     cam.position.x = lerpf(cam.position.x, leading, 1.0 - exp(-delta * 4.8))
     cam.offset = Vector2(sin(visual_clock * 88.0), cos(visual_clock * 82.0)) * minf(1.6, shake_time * 12) if shake_time > 0 else Vector2.ZERO
+    _refresh_touch_recovery(delta)
     _refresh_effects()
 
 func _snap_view() -> void:
     cam.position.x = 0.0
     cam.offset = Vector2.ZERO
     ground_contact.hide()
+    ground_contact.compression = 0.0
     hero.reset_physics_interpolation()
     cam.reset_smoothing()
     cam.force_update_scroll()
@@ -734,6 +748,8 @@ func _update_character_animation() -> void:
     actor_anim.flip_h = (arts.cast_facing if arts.cast_clock > 0 else (burst_facing if burst_time > 0 else (attack_facing if motion_state == "attack" else facing))) < 0
     actor_anim.modulate = Color("#ffb5ab") if hurt_time > 0 else Color.WHITE
     actor_anim.speed_scale = clampf(absf(hero.velocity.x) / 210.0, 0.46, 1.28) if motion_state == "run" else 1.0
+    var squeeze: float = ground_contact.compression if hero.is_on_floor() and motion_state in ["idle", "run"] else 0.0
+    actor_anim.scale = Vector2(0.43 * (1.0 + squeeze * 0.08), (0.28 if crouched else 0.43) * (1.0 - squeeze * 0.12))
     actor_anim.position.y = Hit.PLAYER_BODY.y * 0.5
     actor_anim.rotation = -0.065 * facing if motion_state == "dash" and not hero.is_on_floor() else 0.0
 

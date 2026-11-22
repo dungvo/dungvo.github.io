@@ -60,3 +60,9 @@ Mép trên của tranh nền đi cùng tọa độ với hình va chạm ở c�
 Nội suy giữa các bước vật lý giúp giảm giật hình khi máy có nhịp dựng khác nhịp mô phỏng. Camera nhìn trước nhẹ theo hướng chạy và đặt lại khi sang cổng, hồi sinh hoặc dịch chuyển để tránh kéo khung hình từ điểm cũ. Cảnh ngoài bờ biển đổi vào hang bằng một đoạn mờ chồng ngắn.
 
 Bản đồ vùng đang chơi thu thập mép trên của các nền có va chạm thực. Nền đã biến mất hay chưa được kích hoạt sẽ không hiện lên sơ đồ phòng. Các vùng chưa khám phá vẫn mở dần theo tiến độ. Kiểm tra `ground_contact_test.gd` đo mép vẽ và thân va chạm, trong đó có bệ Rừng Vọng đang chuyển động.
+
+## V17 · Cảm ứng và tiếp đất
+
+Bộ nút cảm ứng dùng biểu tượng vẽ trực tiếp để chừa thêm chỗ nhìn nhân vật. Vòng nhỏ biểu thị thời gian hồi lướt, kỹ năng nhân vật, tuyệt kỹ và ấn đang gán. Vị trí chạm vẫn dùng các nút độc lập để có thể di chuyển, đánh và nhảy cùng lúc.
+
+Joystick lấy vị trí chạm làm tâm điều khiển, nên chạm sát mép vẫn bắt đầu ở trạng thái đứng yên. Nút ngồi ở Bờ Đá không giữ mất ngón điều khiển di chuyển. Lúc đáp đất, dáng nhân vật nén nhẹ quanh vị trí bàn chân, hình va chạm giữ nguyên.

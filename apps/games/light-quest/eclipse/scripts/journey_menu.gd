@@ -52,7 +52,7 @@ func _ready() -> void:
         hero_buttons.append(card)
     _button(home, Rect2(49, 425, 158, 39), "Luyện tập", _practice)
     _button(home, Rect2(217, 425, 158, 39), "Cỗ Máy", game.enter_time_coast)
-    _text(home, Rect2(49, 478, 390, 25), "V16   /   ECLIPSE", 12, Color("#9cafce"))
+    _text(home, Rect2(49, 478, 390, 25), "V17   /   ECLIPSE", 12, Color("#9cafce"))
     practice = Panel.new()
     practice.position = Vector2(240, 86)
     practice.size = Vector2(480, 369)
