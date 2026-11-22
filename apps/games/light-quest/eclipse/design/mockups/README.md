@@ -1,6 +1,6 @@
 # Light Quest Eclipse — thư viện mockup
 
-Các ảnh là thiết kế để duyệt. Bản Web V10 nằm riêng ở [trang chơi](https://dungvo.github.io/apps/games/light-quest/eclipse/godot-play/).
+Các ảnh là thiết kế để duyệt. [Chơi bản V18 trên GitHub Pages](https://dungvo.github.io/apps/games/light-quest/eclipse/godot-play/?v=e0c5e58).
 
 ## Cốt truyện, tiệm rèn và đường xuống hầm
 
