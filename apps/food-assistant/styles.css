@@ -143,6 +143,7 @@ main{width:min(100%,1440px);margin:auto;padding:26px clamp(18px,3vw,40px) 45px}
 .sync-url{overflow-wrap:anywhere}
 .button-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .form-stack{display:grid;gap:10px}
+.form-stack[hidden],#voice-transcript:empty{display:none}
 .form-stack .btn:not(.full){justify-self:start}
 .field{display:grid;gap:5px;font-size:13px;font-weight:730}
 .field input,.field select,.field textarea{width:100%;min-width:0;min-height:40px;border:1px solid #cddbd1;border-radius:9px;background:#fffefa;color:var(--ink);padding:8px 10px}

@@ -45,7 +45,7 @@ Flutter Web và PWA đều phụ thuộc dịch vụ giọng nói mà trình duy
 
 ## Tự lưu câu gọi
 
-Món, số lượng và ghi chú được tách theo thứ tự nói. Câu rõ đi qua quy tắc nghiệp vụ rồi tự lưu. Lệnh cập nhật số lượng và ghi chú chỉ áp dụng cho dòng đang chờ nấu được xác định duy nhất, giữ nguyên thứ tự dòng. Các câu nhập nhằng, lượt trùng và đề xuất từ AI cần người dùng kiểm tra. Bản web dùng trực tiếp tính năng này. Với kết nối Mac/AWS, lệnh sửa số lượng và ghi chú cần backend 1.5.
+Món, số lượng và ghi chú được tách theo thứ tự nói. Chế độ micro lưu bản câu nói gần nhất khi trình duyệt báo đã hết lời hoặc ngừng trả chữ mới. Bản câu này phải vượt qua cùng bộ kiểm tra bàn, món, số lượng và nghiệp vụ trước khi lưu. Câu rõ mở thẳng đơn của bàn. Nếu thiếu số bàn, người dùng có thể nói riêng số bàn ở lượt kế tiếp. Câu rõ đi qua quy tắc nghiệp vụ rồi tự lưu. Lệnh cập nhật số lượng và ghi chú chỉ áp dụng cho dòng đang chờ nấu được xác định duy nhất, giữ nguyên thứ tự dòng. Các câu nhập nhằng, lượt trùng và đề xuất từ AI cần người dùng kiểm tra. Bản web dùng trực tiếp tính năng này. Với kết nối Mac/AWS, lệnh sửa số lượng và ghi chú cần backend 1.5.
 
 ## Kết quả QA
 

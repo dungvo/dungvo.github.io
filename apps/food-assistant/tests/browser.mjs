@@ -136,6 +136,8 @@ try {
           result.isFinal = !window.spoken.interim;
           queueMicrotask(() => {
             this.onresult({ results: [result] });
+            if (window.spoken.emptyRevision) this.onresult({ results: [] });
+            if (window.spoken.speechEnd) this.onspeechend();
             if (!window.spoken.withoutEnd) { this.onend(); this.onend(); }
           });
         }
@@ -151,7 +153,10 @@ try {
       await mobile.evaluate(args => { window.spoken = args; }, { text, ...options });
       await mobile.locator('#mobile-nav [data-action="voice"]').click();
     };
-    await say('Bàn số 5 hai phở tái một tô không hành và một ly trà đá', { withoutEnd: true });
+    await mobile.locator('button[data-table="2"]').click();
+    await mobile.locator('button[data-dish="tai"]').click();
+    await say('Bàn số 5 hai phở tái một tô không hành và một ly trà đá',
+      { interim: true, withoutEnd: true, emptyRevision: true, speechEnd: true });
     await mobile.getByRole('heading', { name: 'Gọi món · Bàn 05' }).waitFor();
     await waitText(mobile.locator('#toast'), 'Đã gửi bếp');
     await nav(mobile, 'kitchen', 'iphone');
@@ -175,13 +180,23 @@ try {
     assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Trà đá', 'Phở nạm']);
 
     await say('Bàn 5 thêm một bò kho', { interim: true, withoutEnd: true });
-    const dialog = mobile.getByRole('dialog');
-    await mobile.waitForFunction(() => document.querySelector('#transcript').value.includes('bò kho'));
-    await dialog.getByRole('button', { name: 'Lưu câu gọi' }).click();
+    assert.equal(await mobile.getByRole('textbox', { name: 'Câu gọi món' }).isVisible(), false);
     await mobile.getByRole('heading', { name: 'Gọi món · Bàn 05' }).waitFor();
     await nav(mobile, 'kitchen', 'iphone');
     assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Trà đá', 'Phở nạm', 'Bò kho']);
-    console.log('PASS speech auto-save, missing end event, explicit stop, ordered rows, amend, cancel and replace');
+
+    await nav(mobile, 'tables', 'iphone');
+    await say('Một ly cà phê', { interim: true });
+    await waitText(mobile.getByRole('dialog'), 'Đã nghe món. Bấm micro rồi nói số bàn');
+    await mobile.evaluate(() => { window.spoken = { text: 'Bàn 6', interim: true }; });
+    await mobile.getByRole('dialog').getByRole('button', { name: 'Nói lại' }).click();
+    await mobile.getByRole('heading', { name: 'Gọi món · Bàn 06' }).waitFor();
+    await nav(mobile, 'kitchen', 'iphone');
+    assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Trà đá', 'Phở nạm', 'Bò kho', 'Cà phê sữa đá']);
+    await nav(mobile, 'tables', 'iphone');
+    await mobile.locator('button[data-table="2"]').click();
+    assert.match(await mobile.locator('#cart-panel').textContent(), /Phở tái/);
+    console.log('PASS voice only · intermediate output, missing end events, ordered save, amendment, spoken table clarification and parked draft');
     await context.close();
   }
 
@@ -247,7 +262,7 @@ try {
 
     const openVoice = () => a.locator('.hero [data-action="voice"]').click();
     await openVoice();
-    await waitText(a.getByRole('dialog'), 'Có thể thử nút Thu âm qua máy chủ.');
+    await waitText(a.getByRole('dialog'), 'Có thể dùng Thu âm qua máy chủ.');
     await a.getByRole('button', { name: 'Thu âm qua máy chủ' }).click();
     await waitText(a.getByRole('dialog'), 'Đang thu âm');
     await a.getByRole('button', { name: 'Đóng', exact: true }).click();

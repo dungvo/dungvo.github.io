@@ -4,12 +4,13 @@ import { categories, fold, money, photos, stages, stageNames } from './menu.js';
 import { normalizeEndpoint, openStore, reconcile, requestAPI, resolveFailure, submitDocument, transact, visible } from './storage.js';
 import { esc, navigation, pad, page, receiptDetails } from './view.js';
 import { icon } from './icons.js';
-import { canRecordAudio, captureAudio } from './voice.js';
+import { canRecordAudio, captureAudio, speechFrame } from './voice.js';
 
 const content = document.querySelector('#content');
 const dialog = document.querySelector('#dialog');
 const toastBox = document.querySelector('#toast');
 const ui = { page: 'tables', table: null, cart: [], cartSession: undefined, search: '', category: 'Tất cả', kitchenFilter: 'open' };
+const parkedCarts = new Map();
 let db;
 let doc;
 let state;
@@ -167,11 +168,17 @@ function confirmPanel(title, html, label, callback) {
   });
 }
 
-function go(destination, table = ui.table) {
+function go(destination, table = ui.table, parkCart = false) {
   if (ui.table !== table) {
-    if (ui.cart.length) { toast('Giỏ của bàn hiện tại chưa gửi. Gửi bếp hoặc xóa từng món trước khi đổi bàn.'); return false; }
+    if (ui.cart.length) {
+      if (!parkCart) { toast('Giỏ của bàn hiện tại chưa gửi. Gửi bếp hoặc xóa từng món trước khi đổi bàn.'); return false; }
+      parkedCarts.set(ui.table, { items: ui.cart, sessionId: ui.cartSession });
+    }
+    const restored = parkedCarts.get(table);
+    parkedCarts.delete(table);
     ui.table = table;
-    ui.cartSession = undefined;
+    ui.cart = restored?.items ?? [];
+    ui.cartSession = restored?.sessionId;
   }
   if (destination === 'order' && !ui.table) ui.table = null;
   ui.page = destination;
@@ -226,23 +233,24 @@ function draftLines(items) {
 }
 
 function promptVoice(start) {
-  const tableAtStart = ui.table;
+  const tableAtStart = ui.page === 'order' ? ui.table : null;
   const sessionsAtStart = Object.fromEntries(Object.entries(state.active).map(([n, item]) => [n, item.id]));
   const SpeechRecognition = window.SpeechRecognition ?? window.webkitSpeechRecognition;
   const cloudAvailable = doc.config?.allowAudio && doc.transcriptionEnabled && canRecordAudio();
   const speechHint = SpeechRecognition ? 'Nói trọn câu. App sẽ lưu khi đã rõ bàn, món và số lượng.'
     : cloudAvailable ? 'Chọn thu âm qua máy chủ hoặc nhập câu gọi.'
-      : 'Trình duyệt này chưa nhận giọng nói. Bạn có thể nhập câu lệnh.';
+      : 'Trình duyệt này chưa hỗ trợ nhận giọng nói. Trên iPhone, hãy mở trang trong Safari.';
   openPanel('Trợ lý gọi món', '<div class="voice-box"><button id="record" class="record" aria-label="Bắt đầu nói"'
     + (SpeechRecognition ? '' : ' disabled') + '>' + icon('mic', 28)
     + '</button><p id="speech-status" role="status">' + speechHint + '</p>'
     + (cloudAvailable ? '<button id="record-api" class="btn outline" type="button">Thu âm qua máy chủ</button>' : '')
-    + '</div><form id="utterance" class="form-stack"><label class="field">Câu gọi món<textarea id="transcript" name="transcript" maxlength="500" rows="2" placeholder="Bàn 3 hai phở tái một bò kho"></textarea></label>'
+    + (start ? '<p id="voice-transcript" class="muted" aria-live="off"></p>' : '')
+    + '</div><form id="utterance" class="form-stack"' + (start ? ' hidden' : '') + '><label class="field">Câu gọi món<textarea id="transcript" name="transcript" maxlength="500" rows="2" placeholder="Bàn 3 hai phở tái một bò kho"></textarea></label>'
     + '<button class="btn primary full" type="submit">Lưu câu gọi' + icon('arrow', 17) + '</button></form>'
-    + '<div class="example-buttons">' + (ui.page === 'kitchen'
+    + (start ? '' : '<div class="example-buttons">' + (ui.page === 'kitchen'
       ? ['Bếp còn bao nhiêu tô?', 'Món nào cần nấu trước?']
       : ['Bàn 3 hai phở tái một bò kho', 'Bàn 3 thêm hai trà đá', 'Bàn 3 sửa trà đá còn ba ly', 'Bàn 5 hai phở tái, một tô không hành'])
-      .map(example => '<button type="button" class="example" data-example="' + esc(example) + '">' + esc(example) + '</button>').join('') + '</div>');
+      .map(example => '<button type="button" class="example" data-example="' + esc(example) + '">' + esc(example) + '</button>').join('') + '</div>'));
   const serial = panelRevision;
   const field = dialog.querySelector('#transcript');
   const record = dialog.querySelector('#record');
@@ -250,9 +258,27 @@ function promptVoice(start) {
   const feedback = dialog.querySelector('#speech-status');
   const form = dialog.querySelector('#utterance');
   const submit = form.querySelector('button[type="submit"]');
+  const heard = dialog.querySelector('#voice-transcript');
+  let waitingForTable = '';
   let interpreting = false;
   let stopNative;
   let stopRecording;
+  function setTranscript(text) {
+    field.value = text.slice(0, 500);
+    if (heard) heard.textContent = field.value;
+  }
+  function parsedVoice(text) {
+    const draft = parse(text, state, tableAtStart);
+    return draft.intent === 'select' && waitingForTable
+      ? parse('Bàn ' + draft.table + ' ' + waitingForTable, state)
+      : draft;
+  }
+  const usable = draft => draft.intent !== 'clarify' && validDraft(draft, state);
+  function retrySpeech(message) {
+    feedback.textContent = message;
+    record.setAttribute('aria-label', 'Nói lại');
+    record.focus();
+  }
   async function review() {
     if (interpreting || mic || cloudMic || serial !== panelRevision) return;
     if (!field.value.trim()) { feedback.textContent = 'Nói hoặc nhập câu gọi món trước khi lưu.'; return; }
@@ -262,11 +288,19 @@ function promptVoice(start) {
     inlineError.hidden = true;
     try {
       const transcript = field.value.trim();
-      let draft = parse(transcript, state, tableAtStart);
+      let draft = parsedVoice(transcript);
+      if (start && draft.intent === 'clarify' && !tableAtStart && !mentionedTables(transcript).length) {
+        const temporary = parse(transcript, state, 1);
+        if (['add', 'amend', 'replace', 'cancel'].includes(temporary.intent) && usable(temporary)) {
+          waitingForTable = transcript;
+          retrySpeech('Đã nghe món. Bấm micro rồi nói số bàn, ví dụ “Bàn 5”.');
+          return;
+        }
+      }
       let needsReview = false;
       let aiError = '';
       if (draft.intent === 'clarify' && mentionedTables(transcript).length < 2 && doc.config?.allowAI && doc.aiEnabled && reachable && navigator.onLine) {
-        feedback.textContent = 'Đang kiểm tra câu này với AI…';
+        feedback.textContent = 'Đang xử lý câu vừa nghe…';
         try {
           const { data } = await requestAPI(doc.config, 'interpret', { transcript, table: tableAtStart });
           if (validDraft(data.draft, state) && protectsTable(data.draft, transcript, tableAtStart)) {
@@ -278,11 +312,16 @@ function promptVoice(start) {
       }
       if (serial !== panelRevision) return;
       if (field.value.trim() !== transcript) { feedback.textContent = 'Câu gọi vừa được sửa. Bấm lưu lại.'; return; }
-      if (!validDraft(draft, state) || draft.intent === 'clarify') {
-        feedback.textContent = [draft.question || 'Chưa hiểu chắc câu này. Hãy nói lại hoặc chạm món.', aiError].filter(Boolean).join(' ');
-        field.focus();
+      if (!usable(draft)) {
+        if (start) {
+          retrySpeech([draft.question || 'Chưa rõ bàn, món hoặc số lượng.', aiError, 'Bấm micro để nói lại.'].filter(Boolean).join(' '));
+        } else {
+          feedback.textContent = [draft.question || 'Chưa hiểu chắc câu này. Hãy nói lại hoặc chạm món.', aiError].filter(Boolean).join(' ');
+          field.focus();
+        }
         return;
       }
+      waitingForTable = '';
       if (draft.table && (state.active[draft.table]?.id ?? null) !== (sessionsAtStart[draft.table] ?? null)) {
         feedback.textContent = 'Lượt khách đã thay đổi. Đóng cửa sổ và mở lại để kiểm tra bàn.';
         return;
@@ -295,58 +334,55 @@ function promptVoice(start) {
   }
   form.addEventListener('submit', event => {
     event.preventDefault();
-    if (mic) { stopNative?.(true); return; }
+    if (mic) { stopNative?.(); return; }
     if (cloudMic) { stopRecording?.(); return; }
     void review().catch(showError);
   });
   function recordSpeech() {
-    if (!SpeechRecognition) { if (!cloudAvailable) field.focus(); return; }
+    if (!SpeechRecognition) return;
     if (cloudMic || interpreting) return;
-    if (!navigator.onLine) { feedback.textContent = 'Thiết bị đang ngoại tuyến. Hãy gõ câu hoặc chạm món.'; return; }
-    if (mic) { stopNative?.(false); return; }
+    if (!navigator.onLine) { retrySpeech('Thiết bị đang ngoại tuyến. Kết nối mạng rồi thử nói lại.'); return; }
+    if (mic) { stopNative?.(); return; }
     const recognition = new SpeechRecognition();
-    let finalText = '';
-    let interimText = '';
-    let speechError = '';
+    let frame = { text: '', final: false };
     let stopped = false;
-    let useVisible = false;
+    let speechEnded = false;
+    let speechError = '';
     let deadline;
     let settle;
-    function finish(forceAbort = false) {
+    function finish() {
       clearTimeout(deadline);
       clearTimeout(settle);
       if (mic !== recognition || serial !== panelRevision) return;
       mic = null;
       stopNative = undefined;
-      if (forceAbort) {
-        try { recognition.abort(); } catch { /* Already stopped. */ }
-      }
       field.readOnly = false;
       record.classList.remove('listening');
       record.setAttribute('aria-label', 'Bắt đầu nói');
       if (apiRecord) apiRecord.disabled = false;
-      if (finalText.length > 500) {
-        feedback.textContent = 'Câu gọi dài quá. Chia thành các lượt ngắn hơn rồi nói lại.';
+      const transcript = speechError ? '' : frame.text;
+      if (!transcript) {
+        const message = speechError || 'Chưa nghe được câu gọi. Bấm micro để nói lại.';
+        retrySpeech(message + (cloudAvailable ? ' Có thể dùng Thu âm qua máy chủ.' : ''));
         return;
       }
-      const complete = finalText && !interimText;
-      if ((!speechError && complete) || (useVisible && field.value.trim())) {
-        if (complete) field.value = finalText;
-        feedback.textContent = 'Đang lưu câu gọi…';
-        void review().catch(showError);
-      } else if (!speechError) {
-        feedback.textContent = field.value.trim()
-          ? 'Trình duyệt chưa trả câu cuối. Anh/chị có thể sửa phần chữ vừa nghe rồi bấm Lưu câu gọi.'
-          : 'Chưa nghe rõ. Thử micro hoặc nhập câu gọi.';
+      if (transcript.length > 500) {
+        retrySpeech('Câu gọi dài quá. Chia thành các lượt ngắn hơn rồi nói lại.');
+        return;
       }
+      setTranscript(transcript);
+      feedback.textContent = 'Đang lưu câu gọi…';
+      void review().catch(showError);
     }
-    stopNative = confirmVisible => {
-      useVisible ||= confirmVisible;
+    stopNative = () => {
       if (stopped) return;
       stopped = true;
       clearTimeout(deadline);
       clearTimeout(settle);
-      settle = setTimeout(() => finish(true), 2400);
+      settle = setTimeout(() => {
+        finish();
+        try { recognition.abort(); } catch { /* Already stopped. */ }
+      }, 1100);
       try { recognition.stop(); } catch { finish(); }
     };
     try {
@@ -355,36 +391,45 @@ function promptVoice(start) {
       recognition.interimResults = true;
       recognition.onresult = event => {
         if (mic !== recognition || serial !== panelRevision) return;
-        const segments = Array.from(event.results);
-        finalText = segments.filter(item => item.isFinal).map(item => item[0].transcript.trim()).join(' ').trim();
-        interimText = segments.filter(item => !item.isFinal).map(item => item[0].transcript.trim()).join(' ').trim();
-        field.value = [finalText, interimText].filter(Boolean).join(' ').slice(0, 500);
-        if (!stopped) {
+        const captured = speechFrame(event.results);
+        if (!captured.text) return;
+        const changed = frame.text !== captured.text || frame.final !== captured.final;
+        frame = captured;
+        setTranscript(frame.text);
+        if (changed && !stopped) {
           clearTimeout(settle);
-          if (finalText && !interimText) settle = setTimeout(() => stopNative?.(false), 1600);
+          settle = setTimeout(() => stopNative?.(), speechEnded ? 300 : frame.final ? 750 : 2400);
         }
       };
+      const endSpeech = () => {
+        if (mic !== recognition || serial !== panelRevision || stopped) return;
+        speechEnded = true;
+        clearTimeout(settle);
+        settle = setTimeout(() => stopNative?.(), 300);
+      };
+      recognition.onspeechend = endSpeech;
+      recognition.onaudioend = endSpeech;
       recognition.onerror = event => {
         if (mic !== recognition || serial !== panelRevision) return;
-        speechError = ['not-allowed', 'service-not-allowed'].includes(event.error)
-          ? 'Micro hoặc dịch vụ nhận giọng nói chưa được cấp quyền. Bạn có thể nhập câu.'
-          : 'Chưa nhận được giọng nói. Thử lại hoặc nhập câu gọi món.';
-        feedback.textContent = speechError + (cloudAvailable ? ' Có thể thử nút Thu âm qua máy chủ.' : '');
+        if (!['aborted', 'no-speech'].includes(event.error) || !stopped || !frame.text) {
+          speechError = ['not-allowed', 'service-not-allowed'].includes(event.error)
+            ? 'Trình duyệt chưa cho dùng micro. Cấp quyền trên Safari rồi nói lại.'
+            : 'Chưa nhận được giọng nói. Bấm micro để thử lại.';
+        }
         finish();
       };
-      recognition.onend = () => finish();
+      recognition.onend = finish;
       mic = recognition;
-      field.value = '';
+      setTranscript('');
       field.readOnly = true;
       if (apiRecord) apiRecord.disabled = true;
-      feedback.textContent = 'Đang nghe… Anh/chị có thể bấm Lưu câu gọi để dừng và xử lý.';
+      feedback.textContent = 'Đang nghe… Nói bàn và các món theo thứ tự.';
       record.classList.add('listening');
       record.setAttribute('aria-label', 'Dừng nghe');
-      deadline = setTimeout(() => stopNative?.(false), 15000);
+      deadline = setTimeout(() => stopNative?.(), 15000);
       recognition.start();
     } catch {
-      speechError = 'Chưa thể mở micro. Bạn có thể nhập câu gọi món.';
-      feedback.textContent = speechError;
+      speechError = 'Chưa thể mở micro. Kiểm tra quyền micro trong Safari rồi nói lại.';
       finish();
     }
   }
@@ -423,7 +468,7 @@ function promptVoice(start) {
       if (typeof data.transcript !== 'string' || !data.transcript.trim() || data.transcript.length > 500) {
         throw new Error('Máy chủ trả về câu gọi không hợp lệ. Thử lại hoặc nhập câu.');
       }
-      field.value = data.transcript;
+      setTranscript(data.transcript);
       received = true;
       feedback.textContent = 'Đang lưu câu gọi…';
     } catch (error) {
@@ -447,8 +492,10 @@ function promptVoice(start) {
   }
   apiRecord?.addEventListener('click', recordViaServer);
   record.addEventListener('click', recordSpeech);
-  if (start) recordSpeech();
-  else field.focus();
+  if (!start) field.focus();
+  else if (SpeechRecognition) recordSpeech();
+  else if (cloudAvailable) void recordViaServer();
+
 }
 
 async function handleDraft(draft, needsReview) {
@@ -468,7 +515,7 @@ async function handleDraft(draft, needsReview) {
   if (intent === 'bill') { showBill(table); return; }
   if (intent === 'add') {
     const pending = createAdd(table, draft.items, draft.explicit);
-    const saveOrder = () => sendAdd(pending, () => { if (!ui.cart.length) go('order', table); });
+    const saveOrder = () => sendAdd(pending, () => go('order', table, true));
     if (needsReview) {
       confirmPanel('Kiểm tra lượt gọi · Bàn ' + pad(table), '<p class="muted">AI đề xuất</p>' + draftLines(draft.items),
         'Gửi bếp', saveOrder);
@@ -501,7 +548,7 @@ async function handleDraft(draft, needsReview) {
   const saveChange = async () => {
     await commit(pending);
     closePanel();
-    if (!ui.cart.length) go('order', table);
+    go('order', table, true);
     toast('Đã ' + label.toLowerCase() + ' · Bàn ' + pad(table) + ' · ' + (replace ? dish.name : line.name));
   };
   if (needsReview) {
@@ -589,6 +636,7 @@ async function connect(form) {
     });
     ui.cart = [];
     ui.cartSession = undefined;
+    parkedCarts.clear();
     reachable = true;
     render();
     closePanel();
@@ -627,6 +675,7 @@ async function restore(file) {
     });
     ui.cart = [];
     ui.cartSession = undefined;
+    parkedCarts.clear();
     closePanel();
     go('tables', null);
     toast('Đã khôi phục bản sao.');

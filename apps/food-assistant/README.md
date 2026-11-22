@@ -9,7 +9,7 @@
 ## Dùng thử trên điện thoại
 
 1. Mở ứng dụng trong Safari hoặc Chrome. Chọn **Bàn 03** và chạm món, hoặc bấm micro, cấp quyền và nói **Bàn 3 hai phở tái một bò kho**. **Nhập lệnh** cũng nhận cùng câu khi micro gặp lỗi.
-2. Câu rõ được lưu ngay khi trình duyệt nhận xong. Với câu gõ, bấm **Lưu câu gọi**. App tách món, số lượng và ghi chú theo thứ tự đọc. Nói **Bàn 3 thêm hai trà đá** để tạo lượt tiếp theo. Câu giống hệt lượt trước sẽ được kiểm tra trùng trước khi gửi thêm.
+2. Micro tự lưu câu rõ khi anh/chị nói xong rồi mở đơn của bàn. Nếu quên số bàn, bấm micro lần nữa và nói số bàn. Với chế độ nhập lệnh, bấm **Lưu câu gọi**. App tách món, số lượng và ghi chú theo thứ tự đọc. Nói **Bàn 3 thêm hai trà đá** để tạo lượt tiếp theo. Câu giống hệt lượt trước sẽ được kiểm tra trùng trước khi gửi thêm.
 3. Đến **Màn bếp** và lần lượt bấm **Bắt đầu nấu**, **Đánh dấu sẵn sàng**, **Đã phục vụ**. Bếp có thể hỏi **Bếp còn bao nhiêu tô?** hoặc **Món nào cần nấu trước?**
 4. Nói **Bàn 3 tính tiền** hoặc bấm **Tính tiền** trong đơn. Xem tổng **185.000 ₫**, chọn phương thức và xác nhận đã thu. Bàn đóng sau khi tất cả món còn hiệu lực đã được phục vụ. Hóa đơn nằm ở tab **Hóa đơn**.
 
