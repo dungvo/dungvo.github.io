@@ -51,9 +51,8 @@ function orderPatch(names, words, at) {
     if (target.size && noteStart(words[end])) return { kind: 'note', match: target, end };
   }
   const [count, countLength] = quantity(words, at);
-  if (count === 1 && units.has(words[at + countLength]) && noteStart(words[at + countLength + 1])) {
-    return { kind: 'portion', end: at + countLength + 1 };
-  }
+  const afterPortion = at + countLength + Number(units.has(words[at + countLength]));
+  if (count === 1 && noteStart(words[afterPortion]) && !search(names, words, afterPortion).size) return { kind: 'portion', end: afterPortion };
   return null;
 }
 
@@ -141,6 +140,16 @@ function readItems(original, names, allowPatches = false) {
     if (match.ids.length !== 1) return { error: match.ids.length > 1 ? 'Tên gọi tắt ứng với nhiều món. Hãy nói tên đầy đủ hoặc chạm món.' : 'Có từ hoặc món chưa nhận diện. Kiểm tra lại câu gọi món.' };
     if (qty !== null && (qty < 1 || qty > 99)) return { error: 'Số lượng mỗi món phải từ 1 đến 99.' };
     next += match.size;
+    if (qty === null && allowPatches) {
+      const [spokenQty, length] = quantity(words, next);
+      const afterUnit = next + length + 1;
+      if (length && units.has(words[next + length]) && !search(names, words, afterUnit).size
+        && (afterUnit === words.length || fillers.has(words[afterUnit]) || noteStart(words[afterUnit]) || quantity(words, afterUnit)[1])) {
+        if (spokenQty < 1 || spokenQty > 99) return { error: 'Số lượng mỗi món phải từ 1 đến 99.' };
+        qty = spokenQty;
+        next = afterUnit;
+      }
+    }
     if (!noteStart(words[next]) || search(names, words, next + 1).size
       || words[next] === 'them' && quantity(words, next + 1)[1]
       || allowPatches && orderPatch(names, words, next)) {
@@ -164,8 +173,9 @@ export function mentionedTables(text) {
   const words = tokens(text).map(fold);
   return words.flatMap((word, index) => {
     if (word !== 'ban') return [];
-    const [table, size] = quantity(words, index + 1);
-    return size ? [{ table, index, size }] : [];
+    const hasLabel = words[index + 1] === 'so';
+    const [table, size] = quantity(words, index + 1 + Number(hasLabel));
+    return size ? [{ table, index, size: size + Number(hasLabel) }] : [];
   });
 }
 
@@ -189,6 +199,8 @@ export function parse(text, state, selectedTable) {
     original.splice(index, size + 1);
     words.splice(index, size + 1);
   }
+  const lead = words.findIndex(word => !fillers.has(word));
+  if (lead > 0) { original.splice(0, lead); words.splice(0, lead); }
   const sentence = words.join(' ');
   if (/^(bep )?(con bao nhieu( to| mon)?( chua ra)?|mon nao (can )?nau truoc|bep con mon gi)( vay| a)?$/.test(sentence) && (!mentions.length || sentence.startsWith('bep '))) {
     return newDraft('queue', null);
@@ -197,17 +209,39 @@ export function parse(text, state, selectedTable) {
   if (/^(tinh tien|thanh toan|lay hoa don|in hoa don)( giup| nhe| a)?$/.test(sentence)) return newDraft('bill', table);
   if (/^(con mon gi( chua ra)?|con (bao nhieu|may)( mon| to)?( chua ra)?|mon nao chua ra)( vay| a| nhe)?$/.test(sentence)) return newDraft('pending', table);
   if (!sentence) return newDraft('select', table);
-  const intent = /^(huy|bo)( mon)? /.test(sentence) ? 'cancel' : /^doi /.test(sentence) ? 'replace' : 'add';
+  const intent = /^(huy|bo)( mon)? /.test(sentence) ? 'cancel' : /^doi /.test(sentence) ? 'replace'
+    : /^(sua|chinh|cap nhat|update) /.test(sentence) ? 'amend' : 'add';
   if (intent === 'add' && /\b(?:huy|doi)\b/.test(sentence)) return clarify(table, 'Hãy đọc một thao tác mỗi lượt. Có thể dùng “à không” để sửa câu gọi.');
   const explicit = intent === 'add' && /^(them|goi them|lay them|cho them) /.test(sentence);
-  const prefix = intent === 'cancel' ? /^(huy|bo)( mon)? / : intent === 'replace' ? /^doi / : /^(?:(?:goi|lay|cho) them|them|goi mon) /;
+  const prefix = intent === 'cancel' ? /^(huy|bo)( mon)? / : intent === 'replace' ? /^doi (?:mon )?/
+    : intent === 'amend' ? /^(?:sua|chinh|cap nhat|update)(?: mon)? /
+      : /^(?:(?:goi|dat) them|them|(?:goi|dat)(?: mon)?) /;
   const stripped = sentence.replace(prefix, '');
   const remaining = original.slice(words.length - stripped.split(' ').length);
   const includeInactive = intent !== 'add';
   const names = catalog(state.menu, includeInactive);
   const replacementNames = catalog(state.menu, false);
-  if (intent === 'replace') {
-    const pivot = remaining.findIndex(word => ['thanh', 'sang'].includes(fold(word)));
+  if (intent === 'amend' || intent === 'replace') {
+    const changeWords = remaining.map(fold);
+    const match = search(names, changeWords, 0);
+    const pivot = changeWords.findIndex(word => ['thanh', 'sang', 'con', 've'].includes(word));
+    if (match.ids.length === 1 && pivot === match.size) {
+      const [qty, length] = quantity(changeWords, pivot + 1);
+      const end = pivot + 1 + length + Number(units.has(changeWords[pivot + 1 + length]));
+      if (length && end === changeWords.length) {
+        if (qty < 1 || qty > 99) return clarify(table, 'Nói số phần mới từ 1 đến 99, hoặc nói hủy món.');
+        return newDraft('amend', table, { items: [{ id: match.ids[0], qty, note: '' }] });
+      }
+    }
+    if (intent === 'amend' && match.ids.length === 1 && noteStart(changeWords[match.size])) {
+      const note = readNote(remaining, changeWords, names, match.size, false);
+      if (note?.note && note.end === remaining.length) {
+        return newDraft('amend', table, { items: [{ id: match.ids[0], qty: null, note: note.note }] });
+      }
+    }
+    if (intent === 'amend' && pivot < 1) {
+      return clarify(table, 'Nói tên món và thay đổi cần lưu, ví dụ “sửa phở tái còn ba tô” hoặc “sửa phở tái không hành”.');
+    }
     if (pivot < 1 || pivot >= remaining.length - 1) {
       const choices = /\bpho bo\b/.test(stripped) ? [...new Set((state.active[table]?.lines ?? [])
         .filter(line => line.status === 'waiting' && line.qty > 0 && fold(line.name).startsWith('pho '))
@@ -222,7 +256,7 @@ export function parse(text, state, selectedTable) {
     if (from.items?.length !== 1 || to.items?.length !== 1 || (to.items[0].qty !== 1 && to.items[0].qty !== from.items[0].qty)) {
       return clarify(table, 'Chỉ đổi một loại món mỗi lượt và giữ nguyên số lượng.');
     }
-    return newDraft(intent, table, { items: from.items, replacement: to.items[0].id });
+    return newDraft('replace', table, { items: from.items, replacement: to.items[0].id });
   }
   const corrected = remaining.map(fold);
   const correction = corrected.findIndex((word, index) => (word === 'a' && corrected[index + 1] === 'khong') || (word === 'y' && corrected[index + 1] === 'la') || (word === 'sua' && corrected[index + 1] === 'lai'));
@@ -247,9 +281,9 @@ export function parse(text, state, selectedTable) {
 
 const schemaObject = properties => ({ type: 'object', properties, required: Object.keys(properties), additionalProperties: false });
 export const draftSchema = schemaObject({
-  intent: { type: 'string', enum: ['add', 'cancel', 'replace', 'bill', 'pending', 'queue', 'select', 'clarify'] },
+  intent: { type: 'string', enum: ['add', 'cancel', 'replace', 'amend', 'bill', 'pending', 'queue', 'select', 'clarify'] },
   table: { type: ['integer', 'null'] },
-  items: { type: 'array', items: schemaObject({ id: { type: 'string' }, qty: { type: 'integer' }, note: { type: 'string' } }) },
+  items: { type: 'array', items: schemaObject({ id: { type: 'string' }, qty: { type: ['integer', 'null'] }, note: { type: 'string' } }) },
   replacement: { type: ['string', 'null'] },
   explicit: { type: 'boolean' },
   question: { type: 'string' },
@@ -266,10 +300,12 @@ export function validDraft(draft, state) {
   if (intent === 'clarify' && !question.trim()) return false;
   if (intent !== 'clarify' && question) return false;
   if (intent !== 'add' && draft.explicit) return false;
-  if ((intent === 'add' && !items.length) || (['cancel', 'replace'].includes(intent) && items.length !== 1)
-    || (!['add', 'cancel', 'replace'].includes(intent) && items.length)) return false;
+  if ((intent === 'add' && !items.length) || (['cancel', 'replace', 'amend'].includes(intent) && items.length !== 1)
+    || (!['add', 'cancel', 'replace', 'amend'].includes(intent) && items.length)) return false;
   if (intent === 'replace' ? (!dishExists(replacement, true) || items[0].id === replacement) : replacement !== null) return false;
   return items.every(item => item && Object.keys(item).length === 3 && ['id', 'qty', 'note'].every(field => Object.hasOwn(item, field))
-    && dishExists(item.id, intent === 'add') && Number.isInteger(item.qty) && item.qty >= 1 && item.qty <= 99
+    && dishExists(item.id, intent === 'add')
+    && (intent === 'amend' && item.qty === null ? (typeof item.note === 'string' && Boolean(item.note.trim()))
+      : Number.isInteger(item.qty) && item.qty >= 1 && item.qty <= 99)
     && typeof item.note === 'string' && item.note.length <= 180);
 }

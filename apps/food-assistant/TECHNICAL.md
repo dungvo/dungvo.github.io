@@ -43,11 +43,15 @@ Flutter Web và PWA đều phụ thuộc dịch vụ giọng nói mà trình duy
 - Groq dự toán theo giá niêm yết cho gói trả phí để giới hạn sử dụng, kể cả khi quán dùng gói Free. Chi phí âm thanh theo mốc tối thiểu 10 giây mỗi lượt của nhà cung cấp.
 - `FOOD_TLS_CERT` và `FOOD_TLS_KEY` bật HTTPS trực tiếp. Có thể để Node chỉ lắng nghe loopback và dùng reverse proxy HTTPS nếu hạ tầng đã có proxy.
 
+## Tự lưu câu gọi
+
+Món, số lượng và ghi chú được tách theo thứ tự nói. Câu rõ đi qua quy tắc nghiệp vụ rồi tự lưu. Lệnh cập nhật số lượng và ghi chú chỉ áp dụng cho dòng đang chờ nấu được xác định duy nhất, giữ nguyên thứ tự dòng. Các câu nhập nhằng, lượt trùng và đề xuất từ AI cần người dùng kiểm tra. Bản web dùng trực tiếp tính năng này. Với kết nối Mac/AWS, lệnh sửa số lượng và ghi chú cần backend 1.5.
+
 ## Kết quả QA
 
 | Kiểm tra | Kết quả |
 | --- | --- |
-| `npm test` | 120 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất, phân tích câu nhiều món, thời lượng giải mã và hạn mức đồng thời |
+| `npm test` | 128 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất, phân tích câu nhiều món, thời lượng giải mã và hạn mức đồng thời |
 | Chromium 375 × 812 | Luồng nhập câu tiếng Việt, kiểm tra trùng, bếp, hóa đơn và tải lại đạt |
 | Chromium 412 × 915 | Luồng như trên đạt |
 | Chromium 834 × 1112 | Luồng như trên đạt, kiểm tra các thẻ món trong màn bếp |

@@ -41,7 +41,7 @@ const ensureViewport = async page => {
 async function utterance(page, value) {
   await page.locator('button[data-action=type]').click();
   await page.getByRole('textbox', { name: 'Câu gọi món' }).fill(value);
-  await page.getByRole('button', { name: 'Kiểm tra câu gọi' }).click();
+  await page.getByRole('button', { name: 'Lưu câu gọi' }).click();
 }
 
 try {
@@ -67,8 +67,6 @@ try {
     if (screenshotDirectory) await page.screenshot({ path: join(screenshotDirectory, name + '-tables.png') });
 
     await utterance(page, 'Bàn 3 hai phở tái một bò kho');
-    await page.getByRole('heading', { name: 'Kiểm tra lượt gọi · Bàn 03' }).waitFor();
-    await page.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
     await page.getByRole('heading', { name: 'Gọi món · Bàn 03' }).waitFor();
     await ensureViewport(page);
     await page.waitForFunction(() => document.querySelector('.dish-picture img')?.naturalWidth > 0);
@@ -76,12 +74,10 @@ try {
 
     await nav(page, 'tables', name);
     await utterance(page, 'Bàn 3 hai phở tái một bò kho');
-    await page.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
     await page.getByRole('heading', { name: 'Xác nhận gọi thêm' }).waitFor();
     await page.getByRole('button', { name: 'Quay lại' }).click();
 
     await utterance(page, 'Bàn 3 thêm hai trà đá');
-    await page.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
     await page.getByRole('heading', { name: 'Gọi món · Bàn 03' }).waitFor();
     await page.reload();
     await page.locator('button[data-table="3"]').click();
@@ -122,14 +118,70 @@ try {
     const mobile = await context.newPage();
     await mobile.goto(root);
     await utterance(mobile, 'Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi.');
-    await mobile.getByRole('heading', { name: 'Kiểm tra lượt gọi · Bàn 05' }).waitFor();
-    assert.equal(await mobile.locator('main .table-card.pending').count(), 0);
-    await mobile.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
+    await mobile.getByRole('heading', { name: 'Gọi món · Bàn 05' }).waitFor();
     await nav(mobile, 'kitchen', 'iphone');
     assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Phở tái', 'Phở bò chín', 'Trà đá']);
     assert.deepEqual(await mobile.locator('.ticket-qty').allTextContents(), ['×1', '×1', '×1']);
     await waitText(mobile.locator('.ticket-note'), 'không hành');
     console.log('PASS multi-item correction · Exact table, split, quantity, note and order in kitchen');
+    await context.close();
+  }
+
+  {
+    const context = await browser.newContext({ viewport: { width: 375, height: 812 }, isMobile: true, hasTouch: true });
+    await context.addInitScript(() => {
+      window.SpeechRecognition = class {
+        start() {
+          const result = [{ transcript: window.spoken.text }];
+          result.isFinal = !window.spoken.interim;
+          queueMicrotask(() => {
+            this.onresult({ results: [result] });
+            if (!window.spoken.withoutEnd) { this.onend(); this.onend(); }
+          });
+        }
+        stop() {
+          if (!window.spoken.withoutEnd) this.onend();
+        }
+        abort() {}
+      };
+    });
+    const mobile = await context.newPage();
+    await mobile.goto(root);
+    const say = async (text, options = {}) => {
+      await mobile.evaluate(args => { window.spoken = args; }, { text, ...options });
+      await mobile.locator('#mobile-nav [data-action="voice"]').click();
+    };
+    await say('Bàn số 5 hai phở tái một tô không hành và một ly trà đá', { withoutEnd: true });
+    await mobile.getByRole('heading', { name: 'Gọi món · Bàn 05' }).waitFor();
+    await waitText(mobile.locator('#toast'), 'Đã gửi bếp');
+    await nav(mobile, 'kitchen', 'iphone');
+    assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Phở tái', 'Phở tái', 'Trà đá']);
+    assert.deepEqual(await mobile.locator('.ticket-qty').allTextContents(), ['×1', '×1', '×1']);
+    await waitText(mobile.locator('.ticket-note'), 'không hành');
+
+    await say('Bàn 5 sửa trà đá còn ba ly');
+    await waitText(mobile.locator('#toast'), 'Đã sửa món');
+    await nav(mobile, 'kitchen', 'iphone');
+    assert.deepEqual(await mobile.locator('.ticket-qty').allTextContents(), ['×1', '×1', '×3']);
+
+    await say('Bàn 5 hủy một tô phở tái không hành');
+    await waitText(mobile.locator('#toast'), 'Đã hủy món');
+    await nav(mobile, 'kitchen', 'iphone');
+    assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Phở tái', 'Trà đá']);
+
+    await say('Bàn 5 đổi một phở tái thành phở nạm');
+    await waitText(mobile.locator('#toast'), 'Đã đổi món');
+    await nav(mobile, 'kitchen', 'iphone');
+    assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Trà đá', 'Phở nạm']);
+
+    await say('Bàn 5 thêm một bò kho', { interim: true, withoutEnd: true });
+    const dialog = mobile.getByRole('dialog');
+    await mobile.waitForFunction(() => document.querySelector('#transcript').value.includes('bò kho'));
+    await dialog.getByRole('button', { name: 'Lưu câu gọi' }).click();
+    await mobile.getByRole('heading', { name: 'Gọi món · Bàn 05' }).waitFor();
+    await nav(mobile, 'kitchen', 'iphone');
+    assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Trà đá', 'Phở nạm', 'Bò kho']);
+    console.log('PASS speech auto-save, missing end event, explicit stop, ordered rows, amend, cancel and replace');
     await context.close();
   }
 
@@ -152,7 +204,6 @@ try {
     await nav(a, 'tables', 'desktop');
     await waiter.setOffline(true);
     await utterance(a, 'Bàn 3 một phở nạm không hành');
-    await a.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
     await a.getByRole('heading', { name: 'Gọi món · Bàn 03' }).waitFor();
     assert.equal(await b.locator('.ticket').count(), 0);
     await a.reload();
@@ -208,21 +259,12 @@ try {
     await a.getByRole('button', { name: 'Dừng và chuyển thành chữ' }).waitFor();
     await a.waitForFunction(() => window.recordedBytes > 1600);
     await a.getByRole('button', { name: 'Dừng và chuyển thành chữ' }).click();
-    await waitText(a.getByRole('dialog'), 'Đọc lại câu vừa nhận').catch(async error => {
-      throw new Error(await a.locator('#speech-status').textContent(), { cause: error });
-    });
+    await a.getByRole('heading', { name: 'Gọi món · Bàn 04' }).waitFor();
     assert.equal(capturedAudio.length, 1);
-    assert.equal(await a.getByRole('textbox', { name: 'Câu gọi món' }).inputValue(), 'Bàn 4 hai phở tái');
-    assert.equal(await b.locator('.ticket').count(), 1);
-
-    await a.getByRole('textbox', { name: 'Câu gọi món' }).fill('Bàn 4 một phở tái');
-    await a.getByRole('button', { name: 'Kiểm tra câu gọi' }).click();
-    await a.getByRole('heading', { name: 'Kiểm tra lượt gọi · Bàn 04' }).waitFor();
-    await a.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
     const ticket = b.locator('.ticket').filter({ has: b.getByRole('heading', { name: 'Phở tái' }) });
     await ticket.waitFor();
-    assert.equal(await ticket.locator('.ticket-qty').textContent(), '×1');
-    console.log('PASS recorded browser audio · Browser STT error → opt-in → cancel without upload → API transcript → edit → kitchen');
+    assert.equal(await ticket.locator('.ticket-qty').textContent(), '×2');
+    console.log('PASS recorded browser audio · opt-in → cancel without upload → API transcript → saved automatically');
   }
 } finally {
   await browser?.close();

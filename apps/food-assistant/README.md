@@ -9,7 +9,7 @@
 ## Dùng thử trên điện thoại
 
 1. Mở ứng dụng trong Safari hoặc Chrome. Chọn **Bàn 03** và chạm món, hoặc bấm micro, cấp quyền và nói **Bàn 3 hai phở tái một bò kho**. **Nhập lệnh** cũng nhận cùng câu khi micro gặp lỗi.
-2. Kiểm tra món, số lượng và ghi chú rồi bấm **Gửi bếp**. Nói **Bàn 3 thêm hai trà đá** để tạo lượt tiếp theo. Lặp nguyên câu đầu sẽ hiện yêu cầu xác nhận gọi thêm.
+2. Câu rõ được lưu ngay khi trình duyệt nhận xong. Với câu gõ, bấm **Lưu câu gọi**. App tách món, số lượng và ghi chú theo thứ tự đọc. Nói **Bàn 3 thêm hai trà đá** để tạo lượt tiếp theo. Câu giống hệt lượt trước sẽ được kiểm tra trùng trước khi gửi thêm.
 3. Đến **Màn bếp** và lần lượt bấm **Bắt đầu nấu**, **Đánh dấu sẵn sàng**, **Đã phục vụ**. Bếp có thể hỏi **Bếp còn bao nhiêu tô?** hoặc **Món nào cần nấu trước?**
 4. Nói **Bàn 3 tính tiền** hoặc bấm **Tính tiền** trong đơn. Xem tổng **185.000 ₫**, chọn phương thức và xác nhận đã thu. Bàn đóng sau khi tất cả món còn hiệu lực đã được phục vụ. Hóa đơn nằm ở tab **Hóa đơn**.
 
@@ -19,6 +19,8 @@ Ví dụ khác
 | --- | --- |
 | Nhiều món và tự sửa câu | Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi. |
 | Ghi chú cho một trong hai tô | Bàn 5 thêm hai phở tái, một tô không hành |
+| Sửa số lượng trên một dòng đang chờ | Bàn 3 sửa trà đá còn ba ly |
+| Sửa ghi chú trên một dòng đang chờ | Bàn 3 sửa phở tái không hành |
 | Chọn bàn | Bàn ba |
 | Ghi chú | Bàn 3 một phở tái không hành |
 | Sửa lời nói trong cùng câu | Bàn 3 hai phở tái, à không ba |
@@ -79,9 +81,9 @@ npm start
 Cấu hình reverse proxy TLS để chuyển tiếp đường dẫn `/api/` tới `127.0.0.1:8787`. Nếu muốn tự phục vụ app ở cùng địa chỉ, chuyển tiếp `/` luôn. Dùng đường dẫn có dấu gạch chéo cuối cho app. Trên từng thiết bị chọn **Cài đặt → Kết nối thiết bị**, nhập địa chỉ HTTPS và mã quán. Có thể bật hoặc tắt từng tính năng tại **Cài đặt → Trợ lý và giọng nói**:
 
 - **Dùng AI cho câu gọi khó hiểu** cho phép gửi câu chữ tới AI khi bộ quy tắc cần làm rõ.
-- **Cho phép nút thu âm qua máy chủ** hiện nút riêng khi máy chủ đã bật `FOOD_TRANSCRIBE`. Bấm **Thu âm qua máy chủ**, nói rồi bấm **Dừng và chuyển thành chữ**. App tự dừng ở 15 giây. Đọc và sửa transcript trước khi bấm **Kiểm tra câu gọi**. Đóng hộp thoại giữa lúc thu sẽ bỏ đoạn thu đó.
+- **Cho phép nút thu âm qua máy chủ** hiện nút riêng khi máy chủ đã bật `FOOD_TRANSCRIBE`. Bấm **Thu âm qua máy chủ**, nói rồi bấm **Dừng và chuyển thành chữ**. App tự dừng ở 15 giây. Khi nhận được câu hoàn chỉnh, app tự lưu câu rõ. Gợi ý từ AI cho câu khó cần xác nhận. Đóng hộp thoại giữa lúc thu sẽ bỏ đoạn thu đó.
 
-Khóa Groq hoặc OpenAI nằm ở máy chủ. Khi dùng micro trình duyệt, âm thanh do dịch vụ của trình duyệt xử lý. Khi chọn nút thu âm qua máy chủ, app gửi bản thu tới nhà cung cấp đã chọn thông qua backend của quán và không ghi bản thu vào SQLite. Nếu bật AI cho câu khó hiểu, backend gửi câu chữ liên quan cùng thực đơn, bàn đang chọn và các món chưa phục vụ của bàn đó. Kết quả là bản nháp phải qua kiểm tra schema, nghiệp vụ và xác nhận trên màn hình. Phí API phụ thuộc gói của nhà cung cấp.
+Khóa Groq hoặc OpenAI nằm ở máy chủ. Khi dùng micro trình duyệt, âm thanh do dịch vụ của trình duyệt xử lý. Khi chọn nút thu âm qua máy chủ, app gửi bản thu tới nhà cung cấp đã chọn thông qua backend của quán và không ghi bản thu vào SQLite. Nếu bật AI cho câu khó hiểu, backend gửi câu chữ liên quan cùng thực đơn, bàn đang chọn và các món chưa phục vụ của bàn đó. Gợi ý từ AI cho câu khó phải qua kiểm tra schema, nghiệp vụ và xác nhận trên màn hình. Phí API phụ thuộc gói của nhà cung cấp.
 
 Để sao lưu SQLite, xuất snapshot dưới đây. Khi khôi phục, ngừng API, hoàn tất đồng bộ và ngắt các thiết bị đang kết nối trước, rồi chạy khôi phục và ghép nối lại. Sao lưu dữ liệu hiện tại trước khi thay thế.
 

@@ -8,7 +8,7 @@ export const time = value => new Intl.DateTimeFormat('vi-VN', { hour: '2-digit',
 const fullDate = value => new Intl.DateTimeFormat('vi-VN', { dateStyle: 'short', timeStyle: 'short' }).format(new Date(value));
 const statusNames = { empty: 'Trống', pending: 'Còn món', seated: 'Đang phục vụ', billing: 'Chờ thanh toán' };
 export const views = { tables: ['tables', 'Sơ đồ bàn'], order: ['menu', 'Gọi món'], kitchen: ['kitchen', 'Màn bếp'], receipts: ['receipt', 'Hóa đơn'], settings: ['settings', 'Cài đặt'] };
-const eventNames = { add: 'Gọi món', stage: 'Cập nhật bếp', cancel: 'Hủy món', replace: 'Đổi món', undo: 'Hoàn tác', billing: 'Cập nhật thanh toán', pay: 'Đã thu tiền', tables: 'Cấu hình bàn', menu: 'Cập nhật thực đơn' };
+const eventNames = { add: 'Gọi món', stage: 'Cập nhật bếp', cancel: 'Hủy món', replace: 'Đổi món', amend: 'Sửa món', undo: 'Hoàn tác', billing: 'Cập nhật thanh toán', pay: 'Đã thu tiền', tables: 'Cấu hình bàn', menu: 'Cập nhật thực đơn' };
 const nextLabel = { waiting: 'Bắt đầu nấu', cooking: 'Đánh dấu sẵn sàng', ready: 'Đã phục vụ' };
 const tag = (status, label) => '<span class="status-pill ' + status + '"><i></i>' + esc(label) + '</span>';
 export const brand = () => '<span class="brand-mark">' + icon('logo', 26) + '</span><span>Food<span> Assistant</span><small>Gọi món &amp; Bếp</small></span>';
@@ -56,7 +56,7 @@ function tablesPage(state) {
       + '<span class="table-name">Bàn <b>' + pad(n) + '</b></span>'
       + '<span class="table-card-foot">' + (session ? count + ' phần · ' + money(total(session)) : 'Chạm để gọi món') + icon('chevron', 16) + '</span></button>';
   }).join('');
-  return '<section class="hero"><div><h1>Quản lý bàn</h1><p>Chọn bàn hoặc dùng giọng nói để gọi món.</p>'
+  return '<section class="hero"><div><h1>Quản lý bàn</h1><p>Nói số bàn và món. Câu rõ sẽ được lưu ngay.</p>'
     + '<div class="hero-buttons"><button class="btn light" data-action="voice">' + icon('mic', 19) + 'Gọi bằng giọng nói</button>'
     + '<button class="btn hero-secondary" data-action="type">' + icon('keyboard', 18) + 'Nhập lệnh</button></div></div></section>'
     + '<section class="stats" aria-label="Tình trạng bàn">' + Object.keys(stats).map(id => '<div class="stat ' + id

@@ -30,6 +30,12 @@ function serve(state) {
   return state;
 }
 const spoken = [
+  ['Bàn 5 hai phở tái, một không hành', 'add', 5, [dish('tai'), dish('tai', 1, 'không hành')]],
+  ['Bàn số 5 cho em hai tô phở tái một tô không hành và một ly trà đá', 'add', 5, [dish('tai'), dish('tai', 1, 'không hành'), dish('tra-da')]],
+  ['Bàn 5 phở tái hai tô, một bò kho', 'add', 5, [dish('tai', 2), dish('bo-kho')]],
+  ['Bàn 5 sửa phở tái còn ba tô', 'amend', 5, [dish('tai', 3)]],
+  ['Bàn 5 update trà đá không đường', 'amend', 5, [dish('tra-da', null, 'không đường')]],
+  ['Bàn 5 cập nhật phở tái thành phở nạm', 'replace', 5, [dish('tai')], 'nam'],
   ['Bàn 3 hai phở tái một bò kho', 'add', 3, [dish('tai', 2), dish('bo-kho')]],
   ['Bàn 3 thêm hai trà đá', 'add', 3, [dish('tra-da', 2)]],
   ['Bàn 3 hủy một phở tái', 'cancel', 3, [dish('tai')]],
@@ -368,4 +374,24 @@ test('Hỏi lại đúng các loại phở đang chờ nấu và hiểu cách n�
   assert.equal(incomplete.intent, 'clarify');
   assert.match(incomplete.question, /Phở tái hay Phở bò chín/);
   assert.equal(parse('Bàn 5 đổi một tái sang nạm', state).replacement, 'nam');
+});
+
+
+test('Sửa số lượng và ghi chú tại dòng hiện tại, giữ thứ tự bếp và không ghi lặp', () => {
+  const state = open([dish('tai', 2), dish('bo-kho')]);
+  const first = kitchenQueue(state)[0];
+  const update = lineAction(state, 'amend', { qty: 3, expectedNote: '', note: 'ít hành' });
+  const changed = mutate(state, update, t1);
+  const lines = kitchenQueue(changed);
+  assert.equal(lines.length, 2);
+  assert.deepEqual([lines[0].id, lines[0].sequence, lines[0].qty, lines[0].note], [first.id, first.sequence, 3, 'ít hành']);
+  assert.equal(lines[1].dishId, 'bo-kho');
+  assert.equal(mutate(changed, update, t2), changed);
+  assert.equal(validateSnapshot(changed), changed);
+});
+
+test('Sửa ghi chú không được ghi đè ghi chú vừa sửa từ thiết bị khác', () => {
+  const state = open();
+  const changed = mutate(state, lineAction(state, 'amend', { expectedNote: '', note: 'ít hành' }), t1);
+  reject(() => mutate(changed, lineAction(changed, 'amend', { expectedNote: '', note: 'không hành' }), t2), 'CONFLICT');
 });

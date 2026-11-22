@@ -69,6 +69,7 @@ export function reconcile(doc, config, payload, sent, rejected) {
   return { ...doc, snapshot, pending, failure, aiEnabled: payload.aiEnabled ?? doc.aiEnabled,
     transcriptionEnabled: payload.transcriptionEnabled ?? doc.transcriptionEnabled,
     pollIntervalMs: payload.pollIntervalMs ?? doc.pollIntervalMs,
+    amendEnabled: payload.amendEnabled ?? doc.amendEnabled,
     aiUsage: Object.hasOwn(payload, 'aiUsage') ? payload.aiUsage : doc.aiUsage };
 }
 
@@ -108,5 +109,6 @@ export async function requestAPI(config, path, input, signal) {
   const rejected = path === 'command' && response.status === 409;
   if (!response.ok && !rejected) throw new Error(data.message ?? 'Không kết nối được máy đồng bộ.');
   if (path === 'state' || path === 'command') validateSnapshot(data.state);
+  if (path === 'state') data.amendEnabled = data.amendEnabled === true;
   return { data, rejected };
 }
