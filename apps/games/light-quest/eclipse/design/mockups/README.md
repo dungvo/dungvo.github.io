@@ -62,3 +62,5 @@ Góc trên trái có thanh sinh lực dài và thanh năng lượng kỹ năng. 
 ## So sánh chuyển động V18
 
 [Bảng mẫu bốn hiệu ứng](chuyen-dong-va-va-cham.webp) và [ảnh động ghi trong Godot](bon-hieu-ung-godot.webp). Bốn khung theo thứ tự Nguyệt Trảm, quái trúng chiêu, quái tan ảnh và Bước Gió. Ảnh động phát chậm để thấy va chạm và điểm bật nhảy.
+
+[Địa đồ chụp trong Godot khi đã ghé hai khu ở Làng Trăng](dia-do-godot.webp).
