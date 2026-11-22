@@ -101,27 +101,6 @@ async function run() {
                     await page.waitForTimeout(100);
                     assert.notDeepEqual(await canvas.screenshot(), era, 'close restores gameplay');
                 }
-                if (chapter === 0) {
-                    if (mobile) await tap(80, 106);
-                    else await page.keyboard.press('i');
-                    await page.waitForTimeout(130);
-                    const armory = await canvas.screenshot({ path: path.join(evidence, `v14-armory-${mobile ? 'touch' : 'desktop'}.png`) });
-                    await tap(103, 230); // Tinh Thạch
-                    await page.waitForTimeout(100);
-                    assert.notDeepEqual(await canvas.screenshot(), armory, 'weapon card selects live comparison');
-                    await tap(755, 388);
-                    await tap(567, 42);
-                    await page.waitForTimeout(130);
-                    const runes = await canvas.screenshot({ path: path.join(evidence, `v14-runes-${mobile ? 'touch' : 'desktop'}.png`) });
-                    assert.notDeepEqual(runes, armory, 'shared skills tab renders');
-                    await tap(380, 170);
-                    await tap(661, 370);
-                    await page.waitForTimeout(110);
-                    assert.notDeepEqual(await canvas.screenshot(), runes, 'quick cast can be pinned from the skills card');
-                    if (mobile) await tap(875, 43);
-                    else await page.keyboard.press('Escape');
-                    await page.waitForTimeout(130);
-                }
                 const before = await canvas.screenshot();
                 if (mobile) {
                     const session = await context.newCDPSession(page);
@@ -173,6 +152,38 @@ async function run() {
                 await tap(880, 102); // pause and return to chapter menu
                 await page.waitForTimeout(150);
             }
+            // Start a fresh chapter so the armory input checks are independent of combat.
+            await tap(480, 289);
+            await page.waitForTimeout(140);
+            await tap(480, 326);
+            await page.waitForTimeout(140);
+            const armoryStart = page.waitForEvent('console', { predicate: m => m.text().includes('ECLIPSE CHAPTER: 0 An'), timeout: 10000 });
+            armoryStart.catch(() => {});
+            await tap(480, 340);
+            await armoryStart;
+            if (mobile) await tap(898, 299);
+            else await page.keyboard.press('e');
+            await page.waitForTimeout(140);
+            if (mobile) await tap(80, 106);
+            else await page.keyboard.press('i');
+            await page.waitForTimeout(130);
+            const armory = await canvas.screenshot({ path: path.join(evidence, `v14-armory-${mobile ? 'touch' : 'desktop'}.png`) });
+            await tap(103, 230); // Tinh Thạch
+            await page.waitForTimeout(100);
+            assert.notDeepEqual(await canvas.screenshot(), armory, 'weapon card selects live comparison');
+            await tap(755, 388);
+            await tap(567, 42);
+            await page.waitForTimeout(130);
+            const runes = await canvas.screenshot({ path: path.join(evidence, `v14-runes-${mobile ? 'touch' : 'desktop'}.png`) });
+            assert.notDeepEqual(runes, armory, 'shared skills tab renders');
+            await tap(380, 170);
+            await tap(661, 370);
+            await page.waitForTimeout(110);
+            assert.notDeepEqual(await canvas.screenshot(), runes, 'quick cast can be pinned from the skills card');
+            if (mobile) await tap(875, 43);
+            else await page.keyboard.press('Escape');
+            await page.waitForTimeout(130);
+            assert.notDeepEqual(await canvas.screenshot(), runes, 'closing armory restores game rendering');
             assert.deepEqual(errors, [], 'no browser or Godot runtime errors');
             await context.close();
         }

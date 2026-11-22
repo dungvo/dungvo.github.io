@@ -48,7 +48,7 @@ func _ready() -> void:
     var backdrop := _picture(panel, MOON, Rect2(0, 0, 960, 540))
     backdrop.modulate = Color("#7789a76b")
     _surface(panel, Rect2(11, 11, 938, 518), Color("#0912249c"), Color("#9a8663"))
-    _label(panel, Rect2(29, 19, 210, 43), "☾   E C L I P S E", 21, GOLD)
+    _label(panel, Rect2(29, 19, 210, 43), "E C L I P S E", 21, GOLD)
     _button(panel, Rect2(211, 25, 135, 34), "Bản đồ · M", _map)
     for index in range(3):
         tabs.append(_button(panel, Rect2(356 + index * 142, 25, 132, 34),
@@ -133,7 +133,7 @@ func _gear() -> void:
         var card := _button(content, Rect2(x, y, 139, 64), "", _select_weapon.bind(i), i == selected_weapon)
         var icon := _picture(card, _weapon_icon(i if temporal else STORY_ICONS[i]), Rect2(5, 4, 129, 42))
         if not unlocked: icon.modulate = Color("#9ba3b2a0")
-        var label := _label(card, Rect2(3, 44, 133, 17), list[i] + ("  ◇" if i == equipped else ""), 12, GOLD if unlocked else TEXT)
+        var label := _label(card, Rect2(3, 44, 133, 17), list[i] + ("  ·" if i == equipped else ""), 12, GOLD if unlocked else TEXT)
         label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     _hero(Rect2(352, 81, 240, 349))
     _surface(content, Rect2(602, 81, 332, 349))
@@ -165,8 +165,19 @@ func _gear() -> void:
         var infusion: String = "Tơ Kép đã mở · nối hai móc liên tiếp" if timeline.spear_infused else "Truyền 4 Lõi nguyệt ở tiệm Bà Lam để mở Tơ Kép"
         for i in range(timeline.SPEAR_CORE_COST):
             var filled: bool = i < timeline.lunar_cores
-            var slot := _label(content, Rect2(40 + i * 31, 452, 29, 43), "◆" if filled else "◇", 23, AQUA if filled else Color("#889eb7"))
-            slot.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+            var corners := PackedVector2Array([Vector2(0, -10), Vector2(10, 0), Vector2(0, 10), Vector2(-10, 0)])
+            var slot := Polygon2D.new()
+            slot.position = Vector2(54 + i * 31, 475)
+            slot.polygon = corners
+            slot.color = AQUA if filled else Color("#132438")
+            content.add_child(slot)
+            var edge := Line2D.new()
+            edge.points = corners
+            edge.closed = true
+            edge.width = 1.0
+            edge.antialiased = true
+            edge.default_color = AQUA if filled else Color("#889eb7")
+            slot.add_child(edge)
         _label(content, Rect2(182, 451, 727, 23), "LÕI NGUYỆT   %d / 4     ·     Mảnh đồng   %d" % [timeline.lunar_cores, timeline.metal], 16, AQUA)
         _label(content, Rect2(182, 476, 727, 22), infusion, 15, TEXT)
     else:
@@ -194,7 +205,7 @@ func _compare(y: float, name_text: String, values: Array, lower_better := false)
     var benefit := target < current if lower_better else target > current
     _label(content, Rect2(619, y, 169, 30), name_text, 14, TEXT)
     var tint := TEXT if target == current else (AQUA if benefit else Color("#ff9e94"))
-    _label(content, Rect2(796, y, 119, 30), "%d   →   %d" % [current, target], 15, tint)
+    _label(content, Rect2(796, y, 119, 30), "%d   >   %d" % [current, target], 15, tint)
 
 func _select_weapon(index: int) -> void:
     selected_weapon = index
@@ -275,7 +286,7 @@ func _journal() -> void:
         tasks = [[state.checkpoint > 0, "Ghé trạm nghỉ"], [state.bell, "Rung chuông mở đường"],
             [state.relic, "Tìm di vật trên tuyến khám phá"], [state.won, "Qua cổng cuối của vùng"]]
     for i in tasks.size():
-        _label(content, Rect2(48, 326 + i * 39, 535, 34), ("✓   " if tasks[i][0] else "○   ") + tasks[i][1],
+        _label(content, Rect2(48, 326 + i * 39, 535, 34), ("+   " if tasks[i][0] else "·   ") + tasks[i][1],
             16, AQUA if tasks[i][0] else TEXT)
     _surface(content, Rect2(616, 81, 318, 430))
     _label(content, Rect2(636, 98, 277, 28), "VỊ TRÍ HIỆN TẠI", 15, GOLD)
