@@ -246,10 +246,13 @@ func _skills() -> void:
         _label(tile, Rect2(73, 42, 148, 21), "Phím %d%s" % [i + 1, " · Ưu tiên" if favorite == i else ""], 13, TEXT)
     _surface(content, Rect2(543, 81, 391, 338))
     _label(content, Rect2(561, 96, 350, 44), game.arts.NAMES[selected_art], 26, GOLD)
-    _label(content, Rect2(561, 142, 350, 27), game.arts.USES[selected_art], 15, AQUA)
-    _wrap(content, Rect2(561, 192, 355, 82), GUIDES[selected_art], 17, TEXT)
+    _label(content, Rect2(561, 142, 350, 27), game.arts.USES[selected_art], 12, AQUA)
+    _picture(content, SixArts.illustration(selected_art), Rect2(561, 174, 351, 104))
+    _wrap(content, Rect2(561, 280, 355, 63), GUIDES[selected_art], 14, TEXT)
     var waiting: float = game.arts.cooldowns[selected_art]
-    _label(content, Rect2(561, 274, 350, 29), "Sẵn sàng" if waiting <= 0.0 else "Hồi chiêu còn %.1f giây" % waiting, 15, AQUA)
+    var ready_text := "Sẵn sàng" if waiting <= 0.0 else "Hồi %.1f s" % waiting
+    var status := _label(content, Rect2(818, 146, 94, 22), ready_text, 13, AQUA)
+    status.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
     var choice := _button(content, Rect2(561, 347, 218, 45), "Gán vào nút ẤN", _pin_art, true)
     choice.disabled = favorite == selected_art
     var clear := _button(content, Rect2(789, 347, 126, 45), "Bỏ ưu tiên", _clear_art)
@@ -292,6 +295,12 @@ func _journal() -> void:
         var state: Dictionary = game.sky.progress[region - 3]
         tasks = [[state.checkpoint > 0, "Ghé trạm nghỉ"], [state.bell, "Rung chuông mở đường"],
             [state.relic, "Tìm di vật trên tuyến khám phá"], [state.won, "Qua cổng cuối của vùng"]]
+    if region == 6 and not time:
+        var coast: Dictionary = game.sky.progress[3]
+        tasks = [[coast.clapper, "Dưới vách biển · nhặt lưỡi chuông đồng"],
+            [coast.tide_awake, "Gọi ghe về · rung Chuông Triều bằng ấn 5"],
+            [coast.relic and coast.bell, "Thu lõi đèn và đánh thức đài canh"],
+            [coast.won, "Thắp sáng hải đăng"]]
     for i in tasks.size():
         _label(content, Rect2(48, 326 + i * 39, 535, 34), ("+   " if tasks[i][0] else "·   ") + tasks[i][1],
             16, AQUA if tasks[i][0] else TEXT)

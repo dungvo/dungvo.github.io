@@ -11,7 +11,7 @@ func _run() -> void:
         for room in Atlas.bounds(region).size():
             var bounds: Rect2 = Atlas.bounds(region)[room]
             if not ensure(Atlas.locate(region, bounds.get_center(), 1, false) == room, "mapped area owns its collision coordinates"): return
-    if not ensure(tiles == 28 and map.current_room() == 0, "28 playable-area bounds across seven chapters"): return
+    if not ensure(tiles == 29 and map.current_room() == 0, "29 playable-area bounds across seven chapters"): return
     map.open()
     if not ensure(paused and map.plot.region == -1, "opening story atlas freezes game"): return
     var position_before: Vector2 = game.hero.position

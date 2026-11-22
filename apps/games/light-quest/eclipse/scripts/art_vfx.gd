@@ -2,6 +2,7 @@ extends Node2D
 ## Painted silhouettes, tapered ribbons and timed accents, rendered by Godot CanvasItem.
 ## No lights, shaders, full-screen passes or per-frame nodes. Geometry is bounded on mobile.
 const TINTS := [Color("#ff9eb8"), Color("#8be9ff"), Color("#ffd78b"), Color("#c5a1ff"), Color("#80efd6"), Color("#ffbe78")]
+const MOTIFS := preload("res://assets/eclipse/six-arts-emblems.webp")
 const INK := Color("#191d42")
 const MAX_EVENTS := 10
 const MAX_TRAIL := 16
@@ -146,125 +147,65 @@ func _draw() -> void:
         var f: float = fx.f
         var tint: Color = TINTS[mini(id,5)]
         match id:
-            0: _draw_crescent(p, f, age, t, tint)
-            1: _draw_ascent(p, age, t, tint)
+            0:
+                # Crystal splinters stay at the point where the dash took off.
+                for i in range(7):
+                    var shard := p + Vector2(f * (16 - i * 10 - age * 87), (i % 3 - 1) * (7 + age * 38))
+                    _petal(shard, 0 if f > 0 else PI, 18 - i, 4, tint, alpha)
+            1:
+                for i in range(6):
+                    var feather := p + Vector2((i % 2 * 2 - 1) * (15 + i * 6 + age * 22), -i * 8 + age * age * 125)
+                    _petal(feather, 0.8 + i * 0.32, 15, 5, tint, alpha)
             2:
-                var at: Vector2 = fx.target - Vector2(0,24)
-                _star(at, 18+sin(t*PI)*10, tint, alpha, age*2)
-                _ellipse(at, 17+_ease(t)*22, 0.65, -PI, PI, _c(tint,alpha*0.65), 1.5)
-                _embers(at,tint,age,fx.duration,9,65)
-            3: _draw_eye(p, age, t, tint)
-            4: _draw_bell(p, age, t, tint)
+                _motif(2, fx.target - Vector2(0,24), Vector2.ONE * (40 + sin(t*PI)*13), alpha, sin(t*TAU)*0.14)
+            3:
+                var opening := clampf(age / 0.13, 0.08, 1.0)
+                var eye := p - Vector2(0,65)
+                _motif(3, eye, Vector2(148,94*opening), alpha)
+                for i in range(5):
+                    var beam_x := (i - 2) * 41.0
+                    var reach := _ease(t) * 90
+                    draw_line(eye + Vector2(beam_x * 0.18, 12), eye + Vector2(beam_x, reach), _c(tint, alpha*0.34), 1.5, true)
+            4:
+                _draw_bell(p, age, t, tint)
             5:
-                if fx.landing: _draw_landing(p,age,t,tint)
-                else:
-                    _ellipse(p,32+_ease(t)*12,0.35,-PI,PI,_c(tint,alpha*0.75),2)
-                    _star(p+Vector2(0,22),22,tint,alpha,PI/4)
+                if fx.landing: _draw_landing(p, age, t, tint)
             6:
                 tint = TINTS[clampi(int(fx.target.x),0,5)]
                 _star(p,28*_ease(t),tint,alpha,PI/4)
                 _embers(p,tint,age,fx.duration,8,140)
     _draw_moving()
 
-func _draw_crescent(p: Vector2, f: float, age: float, t: float, tint: Color) -> void:
-    var alpha := pow(1-t,1.3)
-    var sweep := _ease(minf(t*2.4,1))
-    var center := p + Vector2(f*(15+sweep*80),-5)
-    var points := PackedVector2Array()
-    for i in range(33):
-        var u := float(i)/32
-        var angle := lerpf(-1.65,1.65,u)
-        points.append(center+Vector2(f*cos(angle)*(58+sweep*16),sin(angle)*66))
-    # Dark edge is readable even against the bright cloud backgrounds.
-    _ribbon(points,28,tint.darkened(0.75),alpha*0.9,false)
-    _ribbon(points,17,tint,alpha)
-    var back := _curve(p+Vector2(-f*70,8),p+Vector2(f*5,-42),center+Vector2(f*58,-6))
-    _ribbon(back,12,tint.lightened(0.3),alpha*0.8)
-    _star(center+Vector2(f*65,0),19,tint,alpha,PI/4)
-    _embers(center,tint,age,0.62,14,160,Vector2(f*80,0))
-
-func _draw_ascent(p: Vector2, age: float, t: float, tint: Color) -> void:
-    var alpha := pow(1-t,1.1)
-    var radius := 25+_ease(t)*48
-    _ellipse(p+Vector2(0,22),radius,0.23,-PI,PI,_c(INK,alpha*0.65),8)
-    _ellipse(p+Vector2(0,22),radius,0.23,-PI,PI,_c(tint,alpha),2)
-    for side in [-1,1]:
-        for i in range(3):
-            var start := p+Vector2(side*(8+i*8),16)
-            var end := p+Vector2(side*(30+i*14),-60-_ease(t)*80+i*18)
-            _ribbon(_curve(start,p+Vector2(side*(80+i*8),-24),end),10-i*2,tint,alpha*0.8)
-    _embers(p,tint,age,0.82,14,85,Vector2(0,-120))
-
-func _draw_eye(p: Vector2, age: float, t: float, tint: Color) -> void:
-    var alpha := pow(1-t,0.8)*minf(age/0.055,1)
-    var center := p+Vector2(0,-55)
-    var opening := minf(age/0.16,1)
-    for side in [-1,1]:
-        var lid := _curve(center+Vector2(-48,0),center+Vector2(0,side*40*opening),center+Vector2(48,0),24)
-        _ribbon(lid,7,INK,alpha,false)
-        _ribbon(lid,3,tint,alpha)
-    draw_circle(center,17,_c(INK,alpha*0.85))
-    draw_arc(center,14,0,TAU,32,_c(tint,alpha),2,true)
-    draw_circle(center,10,_c(tint,alpha*0.25))
-    _star(center,18,tint,alpha,age*0.7)
-    for i in range(8):
-        var angle := float(i)*TAU/8+age*0.12
-        _petal(center+Vector2.from_angle(angle)*22,angle,42+_ease(t)*15,12,tint,alpha*0.6)
-    # Broken expanding scan front; never a screen-filling opaque disk.
-    var radius := 50+_ease(t)*260
-    for i in range(12):
-        var angle := float(i)*TAU/12
-        _ellipse(p,radius,0.7,angle,angle+0.22,_c(tint,alpha*0.55),1.5)
-        _star(p+Vector2(cos(angle),sin(angle)*0.7)*radius,4,tint,alpha*0.6,angle)
-    _embers(center,tint,age,1.1,12,70)
+func _motif(id: int, center: Vector2, extent: Vector2, alpha: float, angle := 0.0, flip := false) -> void:
+    var cell := MOTIFS.get_size() / Vector2(3, 2)
+    var source := Rect2(Vector2(id % 3, floori(id / 3.0)) * cell, cell)
+    draw_set_transform(center, angle, Vector2(-1 if flip else 1, 1))
+    draw_texture_rect_region(MOTIFS, Rect2(-extent * 0.5, extent), source, Color(1, 1, 1, alpha))
+    draw_set_transform(Vector2.ZERO)
 
 func _draw_bell(p: Vector2, age: float, t: float, tint: Color) -> void:
-    var alpha := pow(1-t,1.2)
-    var center := p+Vector2(0,-40)
-    # An actual suspended bell silhouette, followed by three staggered tone fronts.
-    var swing := sin(age*18)*7*alpha
-    var bell := PackedVector2Array([Vector2(-21,16),Vector2(-14,4),Vector2(-12,-14),Vector2(-6,-23),Vector2(6,-23),Vector2(12,-14),Vector2(14,4),Vector2(21,16),Vector2(-21,16)])
-    for i in range(bell.size()): bell[i] = center+(bell[i].rotated(deg_to_rad(swing)))
-    draw_colored_polygon(bell,_c(INK,alpha*0.75))
-    draw_colored_polygon(bell,_c(tint,alpha*0.16))
-    draw_polyline(bell,_c(tint,alpha),2.5,true)
-    _ellipse(center+Vector2(0,15),21,0.18,0,TAU,_c(tint.lightened(0.7),alpha),1.8)
-    _petal(center+Vector2(0,6),-PI/2,23,8,tint,alpha)
-    _star(center+Vector2(0,22),8,tint,alpha)
-    for ring in range(3):
-        var local := age-float(ring)*0.12
-        if local < 0: continue
-        var u := clampf(local/0.72,0,1)
-        var r := 30+_ease(u)*195
-        var fade := (1-u)*alpha
-        for side in [0.0,PI]:
-            _ellipse(p,r,0.68,side-1.3,side+1.3,_c(INK,fade*0.4),6)
-            _ellipse(p,r,0.68,side-1.3,side+1.3,_c(tint,fade*0.9),2.0)
-        for i in range(6):
-            var angle := float(i)*TAU/6+float(ring)*0.18
-            _star(p+Vector2(cos(angle),sin(angle)*0.68)*r,5,tint,fade,angle)
-    _embers(center,tint,age,1,12,100,Vector2(0,-20))
+    var alpha := 1.0 - t
+    var swing := sin(age * 16) * 0.24 * alpha
+    var pivot := p - Vector2(0, 89)
+    _motif(4, pivot + Vector2(0, 30).rotated(swing), Vector2(72, 72), minf(1, alpha*2), swing)
+    for beat in range(3):
+        var u := (age - beat * 0.14) / 0.7
+        if u <= 0 or u >= 1: continue
+        var radius := lerpf(26, 208, _ease(u))
+        for side in [0.0, PI]:
+            _ellipse(p - Vector2(0,18), radius, 0.55, side-0.9, side+0.9, _c(tint, (1-u)*0.86), 5.0-beat)
 
 func _draw_landing(p: Vector2, age: float, t: float, tint: Color) -> void:
-    var alpha := pow(1-t,1.5)
-    var spread := _ease(minf(t*1.7,1))
-    _ellipse(p,25+spread*155,0.17,-PI,PI,_c(INK,alpha*0.6),12)
-    _ellipse(p,25+spread*155,0.17,-PI,PI,_c(tint,alpha*0.85),2.3)
-    for side in [-1,1]:
-        for i in range(3):
-            var length := (80+i*32)*spread
-            var a := p+Vector2(side*10,-3)
-            var b := p+Vector2(side*length*0.55,-68+i*12)
-            var c := p+Vector2(side*length, -13+i*6)
-            _ribbon(_curve(a,b,c),12-i*3,tint,alpha*(1.0-i*0.15))
-        var crack := PackedVector2Array([p+Vector2(side*12,0),p+Vector2(side*42,-9),p+Vector2(side*59,-2),p+Vector2(side*83,-12),p+Vector2(side*130,0)*spread])
-        draw_polyline(crack,_c(INK,alpha*0.8),7,true)
-        draw_polyline(crack,_c(tint,alpha),2,true)
-    _star(p+Vector2(0,-4),38,tint,alpha,PI/4)
-    _embers(p,tint,age,0.82,22,210,Vector2(0,-100))
+    var spread := _ease(minf(t * 2.4, 1))
+    var alpha := minf(1, (1-t)*2)
+    _motif(5, p - Vector2(0, 16), Vector2(55 + 225*spread, 57 + 70*spread), alpha)
+    for i in range(8):
+        var side := -1 if i % 2 == 0 else 1
+        var offset := Vector2(side*(15 + age*(95 + i*16)), -age*(145 + (i%3)*55) + age*age*330)
+        _petal(p + offset, age * side * 4 + i, 12+i, 7, tint.darkened(0.24), alpha)
 
 func _draw_trails() -> void:
-    for id in [0,1,2,5]:
+    for id in [0]:
         var points := PackedVector2Array()
         var alpha := 0.0
         for trail in trails:
@@ -283,12 +224,10 @@ func _draw_moving() -> void:
     var p := moving_hero
     match moving_art:
         0:
-            for side in [-1,1]:
-                _ribbon(_curve(p+Vector2(-moving_facing*100,side*19),p+Vector2(-moving_facing*38,side*30),p+Vector2(moving_facing*30,side*10)),8,TINTS[0],0.7)
+            _motif(0, p + Vector2(moving_facing*10, 0), Vector2(147, 53), 0.95, 0, moving_facing < 0)
         1:
-            for side in [-1,1]:
-                _ribbon(_curve(p+Vector2(side*27,75),p+Vector2(side*38,5),p+Vector2(0,-36)),10,TINTS[1],0.85)
-            _star(p+Vector2(0,-34),12,TINTS[1],0.8,PI/4)
+            var spread := 1.0 + sin(clock*19)*0.09
+            _motif(1, p + Vector2(0, -12), Vector2(133*spread, 102/spread), 0.98)
         2:
             var origin := p+Vector2(0,-10)
             var target := moving_target-Vector2(0,24)
@@ -304,10 +243,8 @@ func _draw_moving() -> void:
             for i in range(3):
                 var t := fposmod(clock*2.2+float(i)/3,1)
                 _star(origin.lerp(target,t),5,TINTS[2],sin(t*PI)*0.9,PI/4)
-            _star(target,12,TINTS[2],0.9,clock)
+            _motif(2, target, Vector2(39, 39), 0.95)
         5:
-            # A spear, rather than the old static V: swept shoulders and a white-hot point.
-            for side in [-1,1]:
-                _ribbon(_curve(p+Vector2(side*37,-100),p+Vector2(side*20,-14),p+Vector2(0,31)),13,TINTS[5],0.9)
-            _ribbon(PackedVector2Array([p+Vector2(0,-80),p+Vector2(0,-14),p+Vector2(0,34)]),9,TINTS[5].lightened(0.6),0.9)
-            _star(p+Vector2(0,30),15,TINTS[5],0.95,PI/4)
+            var wake := PackedVector2Array([p+Vector2(-12,-76), p+Vector2(1,30), p+Vector2(12,-76), p+Vector2(0,-40)])
+            draw_colored_polygon(wake, _c(TINTS[5], 0.68))
+            draw_line(p-Vector2(0,56), p+Vector2(0,29), Color("#fff2c7"), 3.0, true)

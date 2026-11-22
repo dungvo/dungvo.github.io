@@ -6,6 +6,22 @@ const Map := preload("res://scripts/atlas_data.gd")
 const COAST := preload("res://assets/eclipse/open-moon-coast.webp")
 const GOLD := Color("#f4d99d")
 const INK := Color("#0b162be8")
+const Arts := preload("res://scripts/six_arts.gd")
+const FIELD_NOTES := [
+    "Đứng sát vách pha lê hồng. Quay mặt vào vách rồi lướt xuyên.",
+    "Đứng dưới gờ đá cao. Lao thẳng lên rồi lái sang bệ khi gần đỉnh.",
+    "Đến dưới móc vàng, giữ đường dây thoáng. Tung tơ để kéo người qua vực.",
+    "Ở mép vực có vệt tím, mở mắt nguyệt để hiện mặt cầu có thể bước lên.",
+    "Đứng cạnh chuông rồi đánh thức nó. Sóng âm cũng làm choáng địch ở gần.",
+    "Nhảy lên trên sàn nứt rồi giáng thẳng xuống. Cú chạm đất phá sàn."
+]
+var guide: Panel
+var guide_art: TextureRect
+var guide_title: Label
+var guide_note: Label
+var guide_key: Label
+var guide_tabs: Array[Button] = []
+var guide_action: Button
 var game: Node2D
 var home: Control
 var practice: Control
@@ -50,7 +66,8 @@ func _ready() -> void:
         hero_buttons.append(card)
     _button(home, Rect2(49, 425, 158, 39), "Luyện tập", _practice)
     _button(home, Rect2(217, 425, 158, 39), "Cỗ Máy", game.enter_time_coast)
-    _text(home, Rect2(49, 478, 390, 25), "V18   /   ECLIPSE", 12, Color("#9cafce"))
+    _button(home, Rect2(49, 476, 326, 38), "Sổ tay sáu ấn", _open_guide)
+    _build_guide()
     practice = Panel.new()
     practice.position = Vector2(240, 86)
     practice.size = Vector2(480, 369)
@@ -71,6 +88,7 @@ func _ready() -> void:
     show_home()
 
 func show_home() -> void:
+    guide.hide()
     practice.hide()
     home.show()
     refresh()
@@ -90,6 +108,49 @@ func _choose(who: String) -> void:
     refresh()
 
 func _begin() -> void:
+    if game.story_room < 0:
+        _open_guide()
+    else:
+        game.enter_journey(chosen_hero)
+
+func _build_guide() -> void:
+    guide = Panel.new()
+    guide.size = Vector2(960, 540)
+    guide.add_theme_stylebox_override("panel", _style(Color("#091425"), GOLD.darkened(0.45)))
+    add_child(guide)
+    _text(guide, Rect2(30, 13, 650, 44), "Sổ tay sáu ấn", 29, GOLD)
+    _text(guide, Rect2(32, 62, 884, 26), "Khi hải đăng tắt, sáu ấn cổ là đường trở về của những con thuyền Làng Trăng.", 16, Color("#cbdcf1"))
+    _button(guide, Rect2(805, 17, 126, 39), "Về menu", show_home)
+    guide_art = _image(guide, Arts.illustration(0), Rect2(31, 105, 567, 284))
+    guide_title = _text(guide, Rect2(620, 127, 309, 43), "", 29, GOLD)
+    guide_key = _text(guide, Rect2(622, 183, 310, 31), "", 16, Color.WHITE)
+    guide_note = _text(guide, Rect2(622, 216, 304, 82), "", 17, Color("#dbe8ed"))
+    guide_note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+    guide_action = _button(guide, Rect2(620, 324, 309, 54), "Vào hành trình", _enter_from_guide, true)
+    for i in range(6):
+        var tile := _button(guide, Rect2(31 + i * 151, 407, 144, 108), "", _select_guide.bind(i))
+        _image(tile, Arts.illustration(i), Rect2(4, 4, 136, 68))
+        var nameplate := _text(tile, Rect2(3, 72, 138, 32), "%d  %s" % [i + 1, Arts.NAMES[i]], 14, Arts.COLORS[i])
+        nameplate.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+        guide_tabs.append(tile)
+
+func _open_guide() -> void:
+    guide_action.text = "Vào hành trình" if game.story_room < 0 else "Tiếp tục hành trình"
+    home.hide()
+    practice.hide()
+    _select_guide(0)
+    guide.show()
+
+func _select_guide(index: int) -> void:
+    guide_art.texture = Arts.illustration(index)
+    guide_title.text = Arts.NAMES[index]
+    guide_title.modulate = Arts.COLORS[index]
+    guide_key.text = "Phím %d  ·  Chạm ấn %d" % [index + 1, index + 1]
+    guide_note.text = FIELD_NOTES[index]
+    for i in guide_tabs.size():
+        guide_tabs[i].modulate = Color.WHITE if i == index else Color("#a1adbb")
+
+func _enter_from_guide() -> void:
     game.enter_journey(chosen_hero)
 
 func _practice() -> void:

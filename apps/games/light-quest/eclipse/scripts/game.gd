@@ -700,7 +700,8 @@ func _physics_process(delta:float) -> void:
         trials.tick(delta)
         hero.position.x = clampf(hero.position.x,25,7*ROOM_W-28)
         hero.position.y = maxf(hero.position.y, -225)
-    if hero.position.y > (830 if time_mode else 620): _respawn()
+    var fall_limit := 895 if sky.in_tide_vault(hero.position) else (830 if time_mode else 620)
+    if hero.position.y > fall_limit: _respawn()
     var room := mini(6, int(hero.position.x/ROOM_W))
     if room != last_room:
         last_room = room
@@ -1174,7 +1175,7 @@ func _persist() -> void:
         f.store_string(JSON.stringify(_progress_data()))
 
 func _progress_data() -> Dictionary:
-    return {"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "journey_complete":journey_complete, "atlas":atlas.discovered.keys(), "timeline":sky.timeline.save_state(), "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}
+    return {"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "journey_complete":journey_complete, "atlas":atlas.discovered.keys(), "atlas_floors":atlas.floor_history, "timeline":sky.timeline.save_state(), "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -1189,7 +1190,7 @@ func _apply_progress(data: Dictionary) -> void:
     journey_complete = data.get("journey_complete", false) == true
     story_hero = "Kha" if data.get("story_hero") == "Kha" else "An"
     atlas.discovered.clear()
-    atlas.restore(data.get("atlas", []))
+    atlas.restore(data.get("atlas", []), data.get("atlas_floors", {}))
     journey_next = clampi(int(data.get("journey_next", 0)), 0, 6)
     loadout.weapon = clampi(int(data.get("weapon", 0)), 0, 2)
     loadout.favorite = clampi(int(data.get("favorite", -1)), -1, 5)

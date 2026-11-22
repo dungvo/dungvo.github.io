@@ -61,10 +61,17 @@ async function run() {
                 else await page.mouse.click(p.x, p.y);
             };
             await canvas.screenshot({ path: path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-menu.png`) });
-            // The public entry goes straight into the journey, with no instruction modal.
+            // A fresh save opens the illustrated guide before chapter one.
             const storyStart = page.waitForEvent('console', { predicate: m => m.text().includes('ECLIPSE CHAPTER: 0 An'), timeout: 10000 });
             storyStart.catch(() => {});
             await tap(172, 256);
+            await page.waitForTimeout(180);
+            const firstCard = await canvas.screenshot();
+            await tap(706, 456);
+            await page.waitForTimeout(160);
+            const bellCard = await canvas.screenshot({ path: path.join(evidence, `v19-guide-${mobile ? 'touch' : 'desktop'}.png`) });
+            assert.notDeepEqual(firstCard, bellCard, 'selecting a skill changes the illustrated guide');
+            await tap(746, 350);
             await storyStart;
             await page.waitForTimeout(220);
             if (mobile) await tap(874, 42);

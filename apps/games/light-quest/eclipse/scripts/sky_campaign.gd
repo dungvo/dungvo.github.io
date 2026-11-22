@@ -5,6 +5,9 @@ const Relic := preload("res://scripts/trial_relic.gd")
 const Boss := preload("res://scripts/trial_boss.gd")
 const TITLES := ["Tháp Gió", "Vườn Treo", "Đỉnh Nguyệt", "Đường Chân Trời"]
 const BOSS_NAMES := ["Người Gác Thiên Chung", "Lang Vương Tán Mây", "Thủ Hộ Nhật Thực", "Vệ Binh Hải Đăng"]
+const VAULT := preload("res://assets/eclipse/tide-bell-vault.webp")
+const BELL_AT := Vector2(1080, 762)
+const CLAPPER_AT := Vector2(765, 786)
 const WIDTH := 1440.0
 var game: Node2D
 var active := false
@@ -93,7 +96,7 @@ func _ready() -> void:
     hud_layer.hide()
 
 func _blank() -> Dictionary:
-    return {"checkpoint":0,"crystal":false,"sight":false,"bell":false,"relic":false,"secret":false,"won":false,"guardian_down":false}
+    return {"checkpoint":0,"crystal":false,"sight":false,"bell":false,"relic":false,"secret":false,"won":false,"guardian_down":false,"clapper":false,"tide_awake":false}
 
 func point(local: Vector2) -> Vector2:
     return Vector2(origin + (WIDTH - local.x if mirrored else local.x), local.y)
@@ -155,7 +158,7 @@ func begin(index: int) -> void:
     game.cam.limit_left = int(origin)
     game.cam.limit_right = int(origin + _width())
     game.cam.limit_top = -2000
-    game.cam.limit_bottom = 830 if game.time_mode else 600
+    game.cam.limit_bottom = 830 if game.time_mode else (885 if stage == 3 else 600)
     if game.time_mode: timeline.build()
     elif stage == 3: _coast()
     else: _terrain()
@@ -212,6 +215,7 @@ func _coast() -> void:
             Rect2(1600,345,140,26),Rect2(1850,345,220,26),Rect2(2150,255,240,24),
             Rect2(2410,130,330,28),Rect2(3060,205,580,36),Rect2(3690,162,310,26),Rect2(4060,105,360,32)]:
         _platform(rect)
+    _tide_vault()
     _platform(Rect2(2810,185,190,24),true,true)
     if game.story_mode:
         _platform(Rect2(3994,143,72,18),true,false,true)
@@ -247,6 +251,32 @@ func _coast() -> void:
     root.add_child(boss)
     game.enemies.append(boss)
     _reveal_bridge()
+
+func in_tide_vault(at: Vector2) -> bool:
+    return active and stage == 3 and not game.time_mode and at.x < origin + 1260 and at.y > 495
+
+func _tide_vault() -> void:
+    _platform(Rect2(0, 786, 1260, 90), false)
+    _wall(Rect2(1242, 250, 18, 595))
+    for step in [Rect2(310, 680, 172, 22), Rect2(114, 598, 155, 22), Rect2(282, 513, 142, 20)]:
+        _platform(step)
+    _marker("clapper", CLAPPER_AT, "E · Lưỡi chuông", 2)
+    _marker("tide_bell", BELL_AT + Vector2(0, 24), "5 · Chuông Triều", 4)
+    var brass := Sprite2D.new()
+    var motif := AtlasTexture.new()
+    motif.atlas = preload("res://assets/eclipse/six-arts-emblems.webp")
+    motif.region = Rect2(320, 320, 320, 320)
+    brass.texture = motif
+    brass.position = point(BELL_AT - Vector2(0, 61))
+    brass.scale = Vector2.ONE * 0.39
+    root.add_child(brass)
+    if progress[stage].tide_awake: _tide_stairs()
+
+func _tide_stairs() -> void:
+    for step in [Rect2(995, 681, 194, 24), Rect2(837, 577, 140, 22),
+            Rect2(1002, 475, 150, 22), Rect2(874, 383, 130, 20)]:
+        _platform(step)
+    _anchor(Vector2(1100, 407))
 
 func _terrain() -> void:
     _platform(Rect2(0,456,WIDTH,80), false)
@@ -402,7 +432,8 @@ func _scroll_background(immediate := false) -> void:
     if stage == 3:
         var local_x := camera.x - origin
         var art: Texture2D = timeline.SHORE
-        if local_x > 1326 and local_x < 2470: art = timeline.CISTERN
+        if in_tide_vault(game.hero.position): art = VAULT
+        elif local_x > 1326 and local_x < 2470: art = timeline.CISTERN
         _backdrop_texture(art, immediate)
         backdrop.position = Vector2(-clampf(75 + local_x * 0.061, 0, 390), 0)
         return
@@ -451,6 +482,7 @@ func tick(delta: float) -> void:
         if marker.kind in ["goal", "outer_door"]: marker.sealed = not boss_dead
         marker.tick(delta,game.hero.position)
         marker.visible = not hidden
+        if marker.kind == "clapper": marker.visible = not progress[stage].clapper
         if marker.kind == "relic": marker.visible = not progress[stage].relic
     if is_instance_valid(boss) and not boss_dead and progress[stage].bell and progress[stage].relic and absf(game.hero.position.y - boss.position.y) < 200 and (stage == 3 or game.hero.position.y <= -1450) and game.hero.position.x >= boss.arena.x and game.hero.position.x <= boss.arena.y:
         boss.awake = true
@@ -463,6 +495,14 @@ func tick(delta: float) -> void:
 func use_art(id: int, at: Vector2) -> void:
     if not active or game.time_mode: return
     if stage == 3:
+        if id == 4 and at.distance_to(point(BELL_AT)) < 145:
+            if progress[stage].clapper and not progress[stage].tide_awake:
+                progress[stage].tide_awake = true
+                _tide_stairs()
+                game.health = game.max_health
+                game.sound.play_cue("light")
+                game._persist()
+            return
         if id == 3:
             progress[stage].sight = true
             _reveal_bridge()
@@ -551,6 +591,16 @@ func interact() -> void:
         match marker.kind:
             "story_back":
                 game.cross_story_gate(-1)
+                return
+            "clapper":
+                if not progress[stage].clapper:
+                    progress[stage].clapper = true
+                    game.sound.play_cue("light")
+                    game._persist()
+                    game._say("Trên lưỡi chuông khắc tên Tín. Tiếng chuông từng dẫn ghe về làng.", 5)
+                return
+            "tide_bell":
+                game._say("Ấn 5 để gọi những con thuyền lạc." if progress[stage].clapper else "Chuông mất tiếng. Tìm lưỡi đồng dưới vòm nước.", 4)
                 return
             "checkpoint1", "checkpoint2":
                 var checkpoint_index := 1 if marker.kind == "checkpoint1" else 2
@@ -641,7 +691,7 @@ func _finish() -> void:
     game.trials.next_button.text = "Tiếp: " + TITLES[stage + 1] if stage < 3 else "Về bản đồ"
     if stage == 3:
         game.trials.victory_title.text = "HẢI ĐĂNG ĐÃ SÁNG"
-        game.trials.victory_text.text = "Hành trình hoàn thành"
+        game.trials.victory_text.text = "Ngoài khơi, những ghe lạc nối đuôi về làng theo tiếng Chuông Triều." if progress[stage].tide_awake else "Ánh đèn trở lại. Dưới vách biển vẫn còn một quả chuông im tiếng."
         game.trials.next_button.text = "Về menu"
     game._show_victory()
     print("ECLIPSE SKY WIN: %d %s height=%d" % [stage,game.character,int(best_height)])
@@ -675,7 +725,7 @@ func restore(data: Variant) -> void:
         if not data[i] is Dictionary: continue
         var clean := _blank()
         clean.checkpoint = clampi(int(data[i].get("checkpoint",0)),0,2)
-        for key in ["crystal","sight","bell","relic","secret","won","guardian_down"]: clean[key] = data[i].get(key,false) == true
+        for key in ["crystal","sight","bell","relic","secret","won","guardian_down","clapper","tide_awake"]: clean[key] = data[i].get(key,false) == true
         progress[i] = clean
 
 func update_hud() -> void:
@@ -709,6 +759,9 @@ func update_hud() -> void:
         else:
             objective.text = ("1 · Phá vách" if not progress[stage].crystal else
                 ("4 · Hiện cầu" if not progress[stage].sight else ("5 · Rung chuông" if not progress[stage].bell else ("6 · Phá sàn" if not progress[stage].relic else ""))))
+    if in_tide_vault(p):
+        game.chapter.text = "Hầm Chuông Triều"
+        objective.text = "Nhặt lưỡi chuông · E" if not progress[stage].clapper else ("Mang lưỡi đồng tới chuông · 5" if not progress[stage].tide_awake else "Ghe đã nghe chuông · leo bậc đá về bờ")
     boss_label.visible = is_instance_valid(boss) and boss.awake and not boss_dead and (not game.time_mode or not timeline.indoors)
     boss_bar.visible = boss_label.visible
     if boss_label.visible:

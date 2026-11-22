@@ -123,6 +123,7 @@ func begin(index: int) -> void:
     game.hero.position = Vector2(start + (1010.0 if saved[index] and not wins[index] else 110.0), 432)
     game.hero.velocity = Vector2.ZERO
     game.checkpoint = game.hero.position
+    game.cam.limit_bottom = 600
     game.cam.limit_top = -250
     game.cam.limit_left = int(start)
     game.cam.limit_right = int(start + 1920)
@@ -232,7 +233,7 @@ func interact() -> bool:
     if routes.interact(): return true
     if selected == 0 and not game.met_npc and game.hero.position.distance_to(Vector2(290, 432)) < 90:
         game.met_npc = true
-        game.dialogue_label.text = "Thợ Lưu Giữ · Tìm hai mảnh chuông trên bệ đá.\nE · Tiếp tục" if game.story_mode else "Thợ Lưu Giữ: Hai mảnh chuông nằm trên các bệ đá. Mang chúng đến Vệ Binh. Khi lưỡi kiếm lóe vàng, lướt qua đòn hoặc dùng L để phản đòn.\n\nE để đóng."
+        game.dialogue_label.text = "Thợ Lưu Giữ · Ghe của Tín chưa về. Từ ngày chuông dưới vách biển im tiếng, ai còn nghe được bờ?\nHãy gom hai mảnh chuông trên bệ đá để qua cổng làng.\nE · Tiếp tục" if game.story_mode else "Thợ Lưu Giữ: Hai mảnh chuông nằm trên các bệ đá. Mang chúng đến Vệ Binh. Khi lưỡi kiếm lóe vàng, lướt qua đòn hoặc dùng L để phản đòn.\n\nE để đóng."
         game._show_dialogue(true)
         game._persist()
         return true

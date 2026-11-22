@@ -23,11 +23,11 @@ const HIGH_WORLD := [Rect2(0, 0, 1440, 470), Rect2(0, -640, 1440, 640),
     Rect2(0, -960, 1440, 320), Rect2(0, -1900, 1440, 940)]
 const HIGH_DRAW := [Rect2(78, 255, 222, 60), Rect2(218, 180, 240, 55),
     Rect2(103, 106, 211, 54), Rect2(249, 27, 203, 60)]
-const COAST_NAMES := ["Vách Biển", "Hầm Vòm", "Đài Canh", "Sân Hải Đăng"]
+const COAST_NAMES := ["Vách Biển", "Hầm Vòm", "Đài Canh", "Sân Hải Đăng", "Hầm Chuông Triều"]
 const COAST_WORLD := [Rect2(0, 110, 1326, 365), Rect2(1326, 90, 1164, 410),
-    Rect2(2490, -75, 1050, 345), Rect2(3540, -95, 880, 365)]
+    Rect2(2490, -75, 1050, 345), Rect2(3540, -95, 880, 365), Rect2(0, 475, 1260, 365)]
 const COAST_DRAW := [Rect2(36, 163, 120, 70), Rect2(174, 191, 118, 91),
-    Rect2(312, 103, 115, 82), Rect2(448, 68, 119, 69)]
+    Rect2(312, 103, 115, 82), Rect2(448, 68, 119, 69), Rect2(31, 265, 137, 66)]
 const TIME_NAMES := ["Bờ Đá", "Cầu Đồng", "Đài Canh", "Hải Đăng", "Hầm Dẫn Nước",
     "Tiệm Bà Lam", "Lối Dưới Cầu"]
 const TIME_WORLD := [Rect2(0, 250, 730, 316), Rect2(730, 256, 400, 210),
@@ -95,7 +95,7 @@ static func project(region: int, room: int, local: Vector2, inline_label := fals
 static func links(region: int, era: int, repaired: bool) -> Array:
     if region < 3: return [[0, 2, ""], [0, 1, "wind"], [1, 2, "seal"], [2, 3, "sigils"]]
     if region < 6: return [[0, 1, "crystal"], [1, 2, "bell"], [2, 3, "relic"]]
-    if region == 6: return [[0, 1, "coast1"], [1, 2, "coast2"], [2, 3, "warden"]]
+    if region == 6: return [[0, 1, "coast1"], [1, 2, "coast2"], [2, 3, "warden"], [0, 4, ""]]
     var legs := [[0, 1, ""], [2, 3, ""], [0, 4, ""]]
     if era == 0: legs.append([0, 5, ""])
     if era == 2 and not repaired:
@@ -111,7 +111,7 @@ const WORLD_ROOMS := [
     [Rect2(410,183,53,22), Rect2(428,137,38,23), Rect2(400,91,45,23), Rect2(429,48,40,23)],
     [Rect2(492,152,54,20), Rect2(515,112,43,22), Rect2(493,74,40,19), Rect2(525,36,51,19)],
     [Rect2(600,118,49,20), Rect2(637,85,43,21), Rect2(610,53,37,18), Rect2(648,23,47,21)],
-    [Rect2(546,231,54,24), Rect2(607,257,45,24), Rect2(670,224,42,23), Rect2(726,194,55,27)]
+    [Rect2(546,231,54,24), Rect2(607,257,45,24), Rect2(670,224,42,23), Rect2(726,194,55,27), Rect2(535,281,56,22)]
 ]
 const WORLD_LABELS := [Vector2(28,92), Vector2(223,55), Vector2(199,292),
     Vector2(375,29), Vector2(493,15), Vector2(624,158), Vector2(637,302)]

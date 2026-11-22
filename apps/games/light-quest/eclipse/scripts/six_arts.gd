@@ -6,6 +6,16 @@ const NAMES := ["Phá Tinh", "Thiên Thăng", "Tơ Nguyệt", "Nguyệt Nhãn", 
 const USES := ["lướt phá vách nứt", "lao lên tầng cao", "kéo tới móc neo vàng", "hiện cầu và phòng bí mật", "mở cửa cộng hưởng / choáng", "giáng xuống phá sàn yếu"]
 const COOLDOWNS := [2.5, 3.0, 1.2, 5.0, 4.5, 2.3]
 const COLORS := [Color("#ffb7bd"), Color("#a8efff"), Color("#ffe3a5"), Color("#c9b4ff"), Color("#9ff3e2"), Color("#ffd39c")]
+const GUIDE_ART := preload("res://assets/eclipse/six-arts-field-guide.webp")
+
+static func illustration(index: int) -> AtlasTexture:
+    var card := AtlasTexture.new()
+    card.atlas = GUIDE_ART
+    var cell := GUIDE_ART.get_size() / Vector2(3, 2)
+    card.region = Rect2(Vector2(index % 3, floori(index / 3.0)) * cell, cell)
+    card.filter_clip = true
+    return card
+
 var game: Node2D
 var selected := 0
 var cooldowns := [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]

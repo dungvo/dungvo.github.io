@@ -10,6 +10,7 @@ const GOLD := Color("#ecd5a2")
 const RULE := Color("#938160")
 var game: Node2D
 var discovered := {}
+var floor_history := {}
 var opener: Button
 var minimap: Control
 var overlay: Control
@@ -300,7 +301,7 @@ func _refresh_text() -> void:
         for i in range(7):
             for room in Atlas.names(i).size():
                 if discovered.has(Atlas.key(i, room, 0)): seen += 1
-        description.text = "%d / 28 khu đã ghé   ·   %s" % [seen, "Chạm vùng đã ghé để xem địa hình" if game.story_mode else "Các màn luyện tập"]
+        description.text = "%d / 29 khu đã ghé   ·   %s" % [seen, "Chạm vùng đã ghé để xem địa hình" if game.story_mode else "Các màn luyện tập"]
         return
     var messages := PackedStringArray()
     for link in Atlas.links(region, atlas_era, repaired()):
@@ -358,17 +359,32 @@ func survey() -> void:
     var exact: Rect2 = Atlas.bounds(region)[room]
     if not exact.has_point(local_position()): return
     var key := Atlas.key(region, room, current_era())
-    if discovered.has(key): return
+    var segments := []
+    for lip in _live_terrain(region, room, true):
+        segments.append([lip.position.x, lip.position.y, lip.size.x, lip.size.y])
+    if discovered.has(key) and floor_history.get(key) == segments: return
+    floor_history[key] = segments
     discovered[key] = true
     game._persist()
 
-func restore(data: Variant) -> void:
+func restore(data: Variant, floors: Variant = {}) -> void:
+    floor_history.clear()
     if not data is Array: return
     for region in Atlas.NAMES.size():
         for room in Atlas.names(region).size():
             for era in (range(3) if region == 7 else range(1)):
                 var key := Atlas.key(region, room, era)
-                if key in data: discovered[key] = true
+                if key not in data: continue
+                discovered[key] = true
+                if not floors is Dictionary or not floors.get(key) is Array: continue
+                var accepted := []
+                for entry in floors[key].slice(0, 128):
+                    if not entry is Array or entry.size() != 4: continue
+                    if not entry.all(func(n): return typeof(n) in [TYPE_FLOAT, TYPE_INT] and is_finite(float(n))): continue
+                    var segment := Rect2(entry[0], entry[1], entry[2], entry[3])
+                    if segment.has_area() and Atlas.bounds(region)[room].grow(0.01).encloses(segment):
+                        accepted.append(entry)
+                floor_history[key] = accepted
 
 func gate(region: int, kind: String, era: int) -> String:
     if kind.is_empty(): return ""
@@ -411,8 +427,15 @@ func gate(region: int, kind: String, era: int) -> String:
     return ""
 
 func terrain(index: int, room: int, era: int) -> Array[Rect2]:
+    if index == current_region() and (index != 7 or era == current_era()):
+        return _live_terrain(index, room, false)
     var result: Array[Rect2] = []
-    if index != current_region() or (index == 7 and era != current_era()): return result
+    for s in floor_history.get(Atlas.key(index, room, era), []):
+        result.append(Rect2(s[0], s[1], s[2], s[3]))
+    return result
+
+func _live_terrain(index: int, room: int, stationary_only: bool) -> Array[Rect2]:
+    var result: Array[Rect2] = []
     var surfaces: Array = []
     if game.sky.active:
         surfaces = game.sky.root.get_children()
@@ -423,6 +446,7 @@ func terrain(index: int, room: int, era: int) -> Array[Rect2]:
     var room_bounds: Rect2 = Atlas.bounds(index)[room]
     for surface in surfaces:
         if not surface is GroundSurface or not is_instance_valid(surface.collider): continue
+        if stationary_only and surface.collider is AnimatableBody2D: continue
         if surface.collider.collision_layer == 0: continue
         var lip: Rect2 = surface.lip()
         lip.position.x -= float(game.sky.origin) if game.sky.active else index * 1920.0

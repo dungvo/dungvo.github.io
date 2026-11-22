@@ -76,3 +76,11 @@ Làng Trăng có tranh nền riêng. Màn chọn, kho và thanh máu dùng chân
 Bốn dải hình trong combat-ink.webp chạy ở tọa độ thế giới. An vung một lưỡi trăng theo hướng đánh. Sát thương đã xác nhận tạo sao vàng và quái nghiêng người. Đòn kết liễu làm sprite tan thành hạt tím. Khi nhảy và tiếp đất, gió bung ra ở điểm chạm đất. Kiểm tra bằng capture_combat_ink.gd với va chạm, máu quái và vận tốc nhảy của cảnh thật.
 
 Bản đồ gồm 28 khu của hành trình hiện có. Linh, hệ giáp và các nhánh truyền lõi còn lại thuộc thiết kế chưa hoàn thiện. Số tư thế hoạt họa của nhân vật và quái vẫn thấp hơn tranh mẫu.
+
+## V19 · Tiếng chuông gọi ghe về
+
+Chọn **Đi cảnh** ở lượt đầu để mở sổ tay sáu ấn. Mỗi thẻ cho thấy một tình huống chơi, mục tiêu và thao tác. Người chơi đã có tiến trình có thể mở lại từ menu. Trong kho, thẻ kỹ năng dùng cùng tranh với sổ tay. Khi thi triển, các ấn có hình và chuyển động riêng gắn với người, móc hoặc điểm va chạm.
+
+Thợ Lưu Giữ kể về ghe của Tín. Đi thẳng qua khe đầu tiên ở Đường Chân Trời sẽ rơi xuống Hầm Chuông Triều. Nhặt lưỡi đồng bằng E, tới chuông và dùng ấn 5. Bậc đá mới dẫn lên mặt biển và kết truyện ở hải đăng thay đổi. Bậc bên trái luôn mở. Có thể thử riêng ở Luyện tập → Đường Chân Trời.
+
+Địa đồ có 29 khu trong bảy chương. Địa hình tĩnh được ghi theo phòng và thời đại khi khảo sát. Với dữ liệu V18, ghé lại phòng cũ để bổ sung nét địa hình vào bản lưu.
