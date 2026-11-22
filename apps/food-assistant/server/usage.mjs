@@ -1,7 +1,7 @@
 const localMonth = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh', year: 'numeric', month: '2-digit' });
 
-export function trackUsage(db, { limit = 50000, warning = 40000, exchange = 26000, inputRate = 0.4, outputRate = 1.6 } = {}) {
-  if (![limit, warning, exchange, inputRate, outputRate].every(value => Number.isFinite(value) && value > 0)
+export function trackUsage(db, { limit = 50000, warning = 40000, exchange = 26000, inputRate = 0.4, outputRate = 1.6, audioRate = 0.0045, minimumMs = 0 } = {}) {
+  if (![limit, warning, exchange, inputRate, outputRate, audioRate].every(value => Number.isFinite(value) && value > 0)
     || warning > limit || limit > 1e8 || exchange > 1e6 || inputRate > 1000 || outputRate > 1000) {
     throw new Error('Cấu hình hạn mức AI không hợp lệ.');
   }
@@ -45,7 +45,7 @@ export function trackUsage(db, { limit = 50000, warning = 40000, exchange = 2600
     }
   }
   return { status, reserve,
-    audioCost: ms => Math.ceil(ms * exchange * 0.0045 / 60),
+    audioCost: ms => Math.ceil(Math.max(ms, minimumMs) * exchange * audioRate / 60),
     textCost: (inputTokens, outputTokens) => Math.ceil((inputTokens * inputRate + outputTokens * outputRate) * exchange / 1000),
   };
 }

@@ -1,4 +1,5 @@
 import { createServer } from 'node:http';
+import { createServer as createHttpsServer } from 'node:https';
 import { timingSafeEqual } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { extname } from 'node:path';
@@ -10,6 +11,7 @@ import { audioExtensions, audioType, maxAudioBytes } from '../voice.js';
 import { fold } from '../menu.js';
 import { boundedAudio } from './audio.mjs';
 import { trackUsage } from './usage.mjs';
+import { groqProvider } from './groq.mjs';
 
 const docs = new URL('../', import.meta.url);
 const mime = { '.html': 'text/html; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8',
@@ -119,20 +121,27 @@ async function openAI(key, model, input) {
   return { draft, usage: result.usage };
 }
 
-export function createFoodServer({ file = 'food-assistant.sqlite', token, allowedOrigins = [], aiKey, aiModel = 'gpt-4.1-mini', interpret = openAI, allowTranscription = false, transcribe = openAITranscription, budget,
-  prepareAudio = transcribe === openAITranscription ? boundedAudio : async audio => ({ audio, milliseconds: 15000 }) } = {}) {
+export function createFoodServer({ file = 'food-assistant.sqlite', token, allowedOrigins = [], aiKey, provider = 'openai',
+  aiModel = provider === 'groq' ? 'openai/gpt-oss-20b' : 'gpt-4.1-mini', interpret, transcribe, allowTranscription = false,
+  budget, tls, prepareAudio = transcribe ? async audio => ({ audio, milliseconds: 15000 }) : boundedAudio, providerFetch } = {}) {
   if (typeof token !== 'string' || token.length < 24) throw new Error('FOOD_TOKEN must contain at least 24 characters.');
+  if (!['openai', 'groq'].includes(provider)) throw new Error('FOOD_AI_PROVIDER phải là openai hoặc groq.');
+  if (provider === 'groq' && aiModel !== 'openai/gpt-oss-20b') throw new Error('Model Groq phải là openai/gpt-oss-20b.');
+  const groq = provider === 'groq' ? groqProvider(providerFetch) : null;
+  const interpretOrder = interpret ?? groq?.interpret ?? openAI;
+  const transcribeClip = transcribe ?? groq?.transcribe ?? openAITranscription;
   const secret = Buffer.from('Bearer ' + token);
   const db = openDb(file);
   const read = db.prepare('SELECT snapshot FROM shop WHERE id=1');
   const write = db.prepare('UPDATE shop SET snapshot=? WHERE id=1');
-  const usage = trackUsage(db, budget);
-  const replyState = state => ({ state, ...capabilities, aiUsage: aiKey ? usage.status() : null });
-  const capabilities = { aiEnabled: Boolean(aiKey), transcriptionEnabled: Boolean(aiKey && allowTranscription) };
+  const rate = provider === 'groq' ? { inputRate: 0.075, outputRate: 0.30, audioRate: 0.04 / 60, minimumMs: 10000 } : {};
+  const usage = trackUsage(db, { ...budget, ...rate });
+  const replyState = state => ({ state, ...capabilities, aiUsage: aiKey ? { ...usage.status(), provider } : null });
+  const capabilities = { aiEnabled: Boolean(aiKey), transcriptionEnabled: Boolean(aiKey && allowTranscription), aiProvider: aiKey ? provider : null };
   let aiWindow = [];
   let transcriptionWindow = [];
   let recordingsInProgress = 0;
-  const server = createServer(async (req, res) => {
+  const handler = async (req, res) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     try {
       const path = new URL(req.url, 'http://localhost').pathname.replace(/^\/apps\/food-assistant(?=\/)/, '');
@@ -195,7 +204,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
           signal.throwIfAborted();
           const reserved = usage.reserve('audio', usage.audioCost(clip.milliseconds));
           if (!reserved) throw denied(429, 'Đã đến hạn mức AI tháng này. Hãy nhập câu gọi hoặc chạm món.');
-          const result = await transcribe(aiKey, clip.audio, signal);
+          const result = await transcribeClip(aiKey, clip.audio, signal);
           const transcript = typeof result === 'string' ? result.trim() : '';
           if (!res.destroyed) {
             if (!transcript || transcript.length > 500) return send(res, 422, { message: 'Không nghe rõ câu gọi hoặc câu quá dài. Hãy nói lại một câu ngắn.' });
@@ -230,7 +239,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
           + Buffer.byteLength(instructions) + Buffer.byteLength(JSON.stringify(draftSchema)) + 512, outputTokens));
         if (!reserved) throw denied(429, 'Đã đến hạn mức AI tháng này. Hãy nhập câu gọi hoặc chạm món.');
         try {
-          const result = await interpret(aiKey, aiModel, prompt);
+          const result = await interpretOrder(aiKey, aiModel, prompt, { instructions, schema: draftSchema, outputTokens });
           const actual = result?.usage;
           if (Number.isSafeInteger(actual?.input_tokens) && actual.input_tokens >= 0
             && Number.isSafeInteger(actual?.output_tokens) && actual.output_tokens >= 0) {
@@ -243,13 +252,17 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
             throw new Error('Invalid structured output');
           }
           return send(res, 200, { draft });
-        } catch { return send(res, 502, { message: 'AI chưa hiểu chắc câu này. Dùng thực đơn hoặc thử đọc lại.' }); }
+        } catch (error) {
+          return send(res, error.status ?? 502, { message: error.status ? error.message
+            : 'AI chưa hiểu chắc câu này. Dùng thực đơn hoặc thử đọc lại.' });
+        }
       }
       return send(res, 404, { message: 'Không tìm thấy.' });
     } catch (error) {
       if (!res.headersSent) send(res, error.status ?? (error.code === 'ENOENT' ? 404 : 500), { message: error.status ? error.message : 'Máy đồng bộ chưa xử lý được.' });
     }
-  });
+  };
+  const server = tls ? createHttpsServer(tls, handler) : createServer(handler);
   server.on('close', () => db.close());
   return server;
 }
@@ -260,16 +273,20 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   else if (process.argv[2] === 'restore') importBackup(file, readFileSync(process.argv[3], 'utf8'));
   else {
     const env = process.env;
-    if (env.OPENAI_API_KEY && env.OPENAI_MODEL && env.OPENAI_MODEL !== 'gpt-4.1-mini'
+    const provider = env.FOOD_AI_PROVIDER ?? 'openai';
+    if (Boolean(env.FOOD_TLS_CERT) !== Boolean(env.FOOD_TLS_KEY)) throw new Error('Cần cấu hình cả FOOD_TLS_CERT và FOOD_TLS_KEY.');
+    const tls = env.FOOD_TLS_CERT ? { cert: readFileSync(env.FOOD_TLS_CERT), key: readFileSync(env.FOOD_TLS_KEY) } : undefined;
+    if (provider === 'openai' && env.OPENAI_API_KEY && env.OPENAI_MODEL && env.OPENAI_MODEL !== 'gpt-4.1-mini'
       && (!env.FOOD_AI_INPUT_USD || !env.FOOD_AI_OUTPUT_USD)) throw new Error('Hãy đặt FOOD_AI_INPUT_USD và FOOD_AI_OUTPUT_USD cho model văn bản tùy chỉnh.');
-    const server = createFoodServer({ file, token: env.FOOD_TOKEN,
+    const server = createFoodServer({ file, token: env.FOOD_TOKEN, provider, tls,
       budget: { limit: Number(env.FOOD_AI_LIMIT_VND ?? 50000), warning: Number(env.FOOD_AI_WARNING_VND ?? 40000),
         exchange: Number(env.FOOD_AI_VND_PER_USD ?? 26000), inputRate: Number(env.FOOD_AI_INPUT_USD ?? 0.4),
         outputRate: Number(env.FOOD_AI_OUTPUT_USD ?? 1.6) },
       allowedOrigins: (process.env.FOOD_ORIGINS ?? 'https://dungvo.github.io').split(',').filter(Boolean),
-      aiKey: process.env.OPENAI_API_KEY, aiModel: process.env.OPENAI_MODEL,
-      allowTranscription: process.env.FOOD_TRANSCRIBE === '1' });
+      aiKey: provider === 'groq' ? env.GROQ_API_KEY : env.OPENAI_API_KEY,
+      aiModel: provider === 'openai' ? env.OPENAI_MODEL : undefined, allowTranscription: env.FOOD_TRANSCRIBE === '1' });
     server.listen(Number(process.env.PORT ?? 8787), process.env.HOST ?? '127.0.0.1',
-      () => process.stdout.write('Food Assistant API : ' + server.address().port + '\n'));
+      () => process.stdout.write('Food Assistant (' + provider + ') · ' + (tls ? 'https' : 'http')
+        + '://' + server.address().address + ':' + server.address().port + '/\n'));
   }
 }
