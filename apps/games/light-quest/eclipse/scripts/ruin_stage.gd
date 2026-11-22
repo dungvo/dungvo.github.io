@@ -1,5 +1,6 @@
 extends Node2D
 
+const GroundSurface := preload("res://scripts/ground_surface.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
 const PUZZLE_HALL := preload("res://assets/eclipse/crystal-tower.webp")
 const GUARDIAN_HALL := preload("res://assets/eclipse/guardian-hall.webp")
@@ -12,6 +13,7 @@ var crossfade: Tween
 var gate: Sprite2D
 var textures: Array[AtlasTexture] = []
 var plaza_chest: Sprite2D
+var play_surfaces: Array[Node2D] = []
 
 func _ready() -> void:
     z_index = -2
@@ -91,15 +93,19 @@ func update_camera(camera_x: float, opened: bool, immediate := false) -> void:
             crossfade.tween_callback(previous_back.hide)
     background.modulate = palette[room] if immediate else background.modulate.lerp(palette[room], 0.055)
 
-func platform(rect: Rect2) -> void:
-    if rect.size.y > 60:
-        var bridge_count := maxi(1, roundi(rect.size.x / 244.0))
-        var section := rect.size.x / bridge_count
-        for i in range(bridge_count):
-            _prop(2, Vector2(rect.position.x + section * (0.5 + i), rect.position.y + 141), Vector2(section + 1, 153))
-    else:
-        var depth := maxf(43, rect.size.y + 7)
-        _prop(0, Vector2(rect.get_center().x, rect.position.y + depth - 2), Vector2(rect.size.x, depth))
+func platform(rect: Rect2, collider: PhysicsBody2D) -> void:
+    var tile := surface(rect,self,rect.size.y > 60)
+    tile.collider = collider
+    play_surfaces.append(tile)
+
+func surface(rect: Rect2, parent: Node, masonry := false) -> Node2D:
+    var tile := GroundSurface.new()
+    tile.position = rect.position
+    tile.width = rect.size.x
+    tile.depth = 129.0 if masonry else maxf(32.0, rect.size.y)
+    tile.masonry = masonry
+    parent.add_child(tile)
+    return tile
 
 func _prop(index: int, bottom: Vector2, dimensions: Vector2) -> Sprite2D:
     var sprite := Sprite2D.new()

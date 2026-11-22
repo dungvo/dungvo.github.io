@@ -4,6 +4,7 @@ const Sound := preload("res://scripts/eclipse_sound.gd")
 const ATTACK_WINDUP := [0.078, 0.105, 0.145]
 const ATTACK_CYCLE := [0.26, 0.30, 0.42]
 const HealthHearts := preload("res://scripts/health_hearts.gd")
+const Contact := preload("res://scripts/ground_contact.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
 const RuinStage := preload("res://scripts/ruin_stage.gd")
 const Combat := preload("res://scripts/combat.gd")
@@ -104,6 +105,7 @@ var save_enabled := true
 var vfx: Array[Dictionary] = []
 var visual_clock := 0.0
 var actor_anim: AnimatedSprite2D
+var ground_contact: Node2D
 var anim_label := ""
 var motion_state := "idle"
 var mobile_web := false
@@ -203,7 +205,6 @@ func _spawn_enemy(kind: String, x: float) -> CharacterBody2D:
     return enemy
 
 func _solid(rect: Rect2, one_way := false) -> void:
-    scenery.platform(rect)
     var b := StaticBody2D.new()
     b.collision_layer = Combat.WORLD
     b.collision_mask = 0
@@ -215,6 +216,7 @@ func _solid(rect: Rect2, one_way := false) -> void:
     s.one_way_collision = one_way
     b.add_child(s)
     add_child(b)
+    scenery.platform(rect,b)
 
 func _make_hero() -> void:
     hero = CharacterBody2D.new()
@@ -230,8 +232,13 @@ func _make_hero() -> void:
     hero.collision_mask = Combat.WORLD
     Combat.add_hurtbox(hero, Hit.PLAYER_BODY, Combat.HERO_HURT)
     add_child(hero)
+    ground_contact = Contact.new()
+    ground_contact.z_index = 3
+    ground_contact.position.y = Hit.PLAYER_BODY.y * 0.5
+    ground_contact.hide()
+    hero.add_child(ground_contact)
     actor_anim = AnimatedSprite2D.new()
-    actor_anim.offset = Vector2(0, -80)
+    actor_anim.offset.y = Art.HERO_CELL.y * 0.5 - Art.HERO_FOOTLINE
     actor_anim.position.y = 24.0
     actor_anim.scale = Vector2.ONE * 0.43
     actor_anim.z_index = 4
@@ -241,7 +248,8 @@ func _make_hero() -> void:
     cam = Camera2D.new()
     cam.zoom = Vector2(1.0, 1.0)
     cam.position_smoothing_enabled = true
-    cam.position_smoothing_speed = 9.0
+    cam.position_smoothing_speed = 10.0
+    cam.process_callback = Camera2D.CAMERA2D_PROCESS_PHYSICS
     cam.enabled = true
     cam.position = Vector2(0, -142)
     cam.limit_left = 0
@@ -555,6 +563,7 @@ func _physics_process(delta:float) -> void:
     burst_time = maxf(0, burst_time - delta)
     if burst_time > 0 and character == "An": _signature_hits()
     if death_time > 0:
+        ground_contact.hide()
         death_time = maxf(0, death_time - delta)
         _tick_vfx(delta)
         _refresh_effects()
@@ -630,9 +639,13 @@ func _physics_process(delta:float) -> void:
     arts.before_move()
     hero.move_and_slide()
     arts.after_move()
+    ground_contact.visible = hero.is_on_floor()
     if not grounded_before and hero.is_on_floor() and previous_vy > 180:
-        shake_time = 0.08
+        ground_contact.compression = 1.0
         _burst(hero.position + Vector2(0,20), Color("#a8bec0"), 12, 120.0)
+    if ground_contact.visible and ground_contact.compression > 0:
+        ground_contact.compression = maxf(0, ground_contact.compression - delta * 6.5)
+        ground_contact.queue_redraw()
     dust_clock -= delta
     if hero.is_on_floor() and absf(hero.velocity.x) > 95 and dust_clock <= 0:
         dust_clock = 0.09
@@ -685,8 +698,18 @@ func _physics_process(delta:float) -> void:
     if activated:
         var gate := get_node_or_null("LightGate")
         if gate != null: gate.queue_free()
-    cam.offset = Vector2(sin(visual_clock*95.0)*2.3,cos(visual_clock*82.0)*1.5) if shake_time>0 else Vector2.ZERO
+    var leading := clampf(hero.velocity.x * 0.16, -46.0, 46.0)
+    cam.position.x = lerpf(cam.position.x, leading, 1.0 - exp(-delta * 4.8))
+    cam.offset = Vector2(sin(visual_clock * 88.0), cos(visual_clock * 82.0)) * minf(1.6, shake_time * 12) if shake_time > 0 else Vector2.ZERO
     _refresh_effects()
+
+func _snap_view() -> void:
+    cam.position.x = 0.0
+    cam.offset = Vector2.ZERO
+    ground_contact.hide()
+    hero.reset_physics_interpolation()
+    cam.reset_smoothing()
+    cam.force_update_scroll()
 
 func _refresh_effects() -> void:
     var shield := is_instance_valid(guardian) and not boss_dead and boss_shield_time <= 0 and last_room >= 5
@@ -710,9 +733,9 @@ func _update_character_animation() -> void:
         actor_anim.play(candidate)
     actor_anim.flip_h = (arts.cast_facing if arts.cast_clock > 0 else (burst_facing if burst_time > 0 else (attack_facing if motion_state == "attack" else facing))) < 0
     actor_anim.modulate = Color("#ffb5ab") if hurt_time > 0 else Color.WHITE
-    var bob := sin(visual_clock * 18) * 1.4 if motion_state == "run" else 0.0
-    actor_anim.position.y = 24 + bob
-    actor_anim.rotation = -0.09 * facing if motion_state == "dash" else 0.0
+    actor_anim.speed_scale = clampf(absf(hero.velocity.x) / 210.0, 0.46, 1.28) if motion_state == "run" else 1.0
+    actor_anim.position.y = Hit.PLAYER_BODY.y * 0.5
+    actor_anim.rotation = -0.065 * facing if motion_state == "dash" and not hero.is_on_floor() else 0.0
 
 func _select_motion_state() -> String:
     if hurt_time > 0.0: return "hurt"
@@ -830,7 +853,7 @@ func _respawn() -> void:
     for bolt in bolts:
         if is_instance_valid(bolt): bolt.queue_free()
     bolts.clear()
-    cam.reset_smoothing()
+    _snap_view()
     if sky.active:
         if time_mode: sky.timeline.reset_chain()
         sky.respawn()
@@ -1084,8 +1107,7 @@ func cross_story_gate(direction: int) -> void:
     else:
         hero.position = Vector2(destination*1920 + (1800 if direction < 0 else 110),432)
     checkpoint = hero.position
-    cam.reset_smoothing()
-    cam.force_update_scroll()
+    _snap_view()
     _show_dialogue(false)
     sound.play_cue("light")
     atlas.survey()

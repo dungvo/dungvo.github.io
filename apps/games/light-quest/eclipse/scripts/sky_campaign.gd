@@ -28,6 +28,8 @@ var elapsed := 0.0
 var best_height := 0.0
 var back_layer: CanvasLayer
 var backdrop: TextureRect
+var transition_back: TextureRect
+var backdrop_fade: Tween
 var hud_layer: CanvasLayer
 var objective: Label
 var altitude: Label
@@ -52,6 +54,9 @@ func _ready() -> void:
     backdrop.stretch_mode = TextureRect.STRETCH_SCALE
     backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
     back_layer.add_child(backdrop)
+    transition_back = backdrop.duplicate() as TextureRect
+    back_layer.add_child(transition_back)
+    transition_back.hide()
     back_layer.hide()
     hud_layer = CanvasLayer.new()
     hud_layer.layer = 2
@@ -168,8 +173,7 @@ func begin(index: int) -> void:
     if game.story_mode and stage == 3 and game.journey_complete:
         game.checkpoint = point(story_exit() - Vector2(0,24))
     game.hero.position = game.checkpoint
-    game.cam.reset_smoothing()
-    game.cam.force_update_scroll()
+    game._snap_view()
     _background()
     game.scenery.background.hide()
     game.scenery.previous_back.hide()
@@ -320,10 +324,8 @@ func _platform(rect: Rect2, one_way := true, ghost := false, shuttle := false) -
     col.one_way_collision = one_way
     body.add_child(col)
     root.add_child(body)
-    var depth := maxf(43, r.size.y + 7)
-    var art: Node2D = game.scenery._prop(0,Vector2(r.get_center().x,r.position.y + depth - 2),Vector2(r.size.x,depth))
-    game.scenery.remove_child(art)
-    root.add_child(art)
+    var art: Node2D = game.scenery.surface(r, root, r.size.y >= 60)
+    art.collider = body
     body.set_meta("art",art)
     if body is AnimatableBody2D: movers.append({"body":body,"art":art,"p":body.position,"a":art.position,"shuttle":shuttle})
     if ghost:
@@ -381,15 +383,16 @@ func _background() -> void:
     var height := maxf(740, 1088.0 * backdrop.texture.get_height() / backdrop.texture.get_width())
     backdrop.size = Vector2(1088,height)
     backdrop.modulate = timeline.SHADES[timeline.era] if game.time_mode else Color.WHITE
-    _scroll_background()
+    if backdrop_fade and backdrop_fade.is_valid(): backdrop_fade.kill()
+    transition_back.hide()
+    _scroll_background(true)
 
-func _scroll_background() -> void:
+func _scroll_background(immediate := false) -> void:
     var camera: Vector2 = game.cam.get_screen_center_position()
     if game.time_mode:
         var coast: bool = not timeline.indoors and not timeline.underground
         var art: Texture2D = timeline.FORGE if timeline.indoors else (timeline.SHORE if coast else timeline.CISTERN)
-        if backdrop.texture != art: backdrop.texture = art
-        backdrop.size = Vector2(1350, maxf(540,1350.0*backdrop.texture.get_height()/backdrop.texture.get_width()))
+        _backdrop_texture(art, immediate)
         if coast:
             backdrop.position = Vector2(-clampf(190+(camera.x-origin-480)*0.09,0,390),0)
         else:
@@ -400,13 +403,26 @@ func _scroll_background() -> void:
         var local_x := camera.x - origin
         var art: Texture2D = timeline.SHORE
         if local_x > 1326 and local_x < 2470: art = timeline.CISTERN
-        if backdrop.texture != art:
-            backdrop.texture = art
-            backdrop.size = Vector2(1350, maxf(540, 1350.0 * art.get_height() / art.get_width()))
+        _backdrop_texture(art, immediate)
         backdrop.position = Vector2(-clampf(75 + local_x * 0.061, 0, 390), 0)
         return
     var altitude_ratio := clampf((456.0 - camera.y) / 2300.0, 0, 1)
     backdrop.position = Vector2(-64 - sin(camera.x * 0.001) * 25, -(backdrop.size.y - 540) * (1 - altitude_ratio))
+
+func _backdrop_texture(art: Texture2D, immediate: bool) -> void:
+    if backdrop.texture == art: return
+    if backdrop_fade and backdrop_fade.is_valid(): backdrop_fade.kill()
+    if not immediate:
+        transition_back.texture = backdrop.texture
+        transition_back.size = backdrop.size
+        transition_back.position = backdrop.position
+        transition_back.modulate = backdrop.modulate
+        transition_back.show()
+        backdrop_fade = create_tween()
+        backdrop_fade.tween_property(transition_back, "modulate:a", 0.0, 0.32)
+        backdrop_fade.tween_callback(transition_back.hide)
+    backdrop.texture = art
+    backdrop.size = Vector2(1350, maxf(540, 1350.0 * art.get_height() / art.get_width()))
 
 func tick(delta: float) -> void:
     if not active: return

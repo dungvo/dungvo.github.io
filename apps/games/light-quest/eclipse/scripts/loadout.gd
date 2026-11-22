@@ -1,5 +1,6 @@
 extends CanvasLayer
 ## Shared pause screen. Story weapons affect basic attacks; era weapons carry the V technique.
+const GroundSurface := preload("res://scripts/ground_surface.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
 const SixArts := preload("res://scripts/six_arts.gd")
 const Hit := preload("res://scripts/hit_geometry.gd")
@@ -188,12 +189,14 @@ func _hero(rect: Rect2) -> void:
     _surface(content, rect)
     var scene := _picture(content, COAST, rect.grow(-1))
     scene.modulate = Color("#a0b4d9")
-    var stone := _picture(content, Art.ruin(0), Rect2(rect.position + Vector2(29, 268), Vector2(182, 57)))
-    stone.stretch_mode = TextureRect.STRETCH_SCALE
-    stone.modulate = Color("#a6b0d2")
+    var stone := GroundSurface.new()
+    stone.position = rect.position + Vector2(23, 267)
+    stone.width = 194
+    stone.depth = 53
+    content.add_child(stone)
     var sprite: Texture2D = Art.cell(Art.HEROES, 4 if game.character == "Kha" else 0, Art.HERO_CELL)
-    var figure := _picture(content, sprite, Rect2(rect.position + Vector2(12, 66), Vector2(216, 240)))
-    figure.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+    var figure := _picture(content, sprite, Art.anchored_pose(rect.position + Vector2(120, 267), 205))
+    figure.stretch_mode = TextureRect.STRETCH_SCALE
     var nameplate := _label(content, Rect2(rect.position + Vector2(12, 13), Vector2(216, 33)), game.character, 24, GOLD)
     nameplate.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     _surface(content, Rect2(rect.position + Vector2(14, 54), Vector2(212, 8)), Color("#2a1830"), Color("#a68b68"))

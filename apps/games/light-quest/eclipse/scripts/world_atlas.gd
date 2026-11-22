@@ -1,6 +1,7 @@
 extends CanvasLayer
 ## One atlas for the story, chapter replays and the lighthouse's three eras.
 const Atlas := preload("res://scripts/atlas_data.gd")
+const GroundSurface := preload("res://scripts/ground_surface.gd")
 const Plot := preload("res://scripts/atlas_plot.gd")
 const COAST_ART := preload("res://assets/eclipse/open-moon-coast.webp")
 const CAVERN_ART := preload("res://assets/eclipse/cistern-waterworks.webp")
@@ -40,7 +41,7 @@ func _ready() -> void:
     minimap.position = Vector2(4, 2)
     minimap.size = Vector2(122, 53)
     opener.add_child(minimap)
-    var emblem := _label(opener, Rect2(6, 48, 118, 15), "BẢN ĐỒ · M", 10, GOLD)
+    var emblem := _label(opener, Rect2(6, 48, 118, 15), "BẢN ĐỒ", 10, GOLD)
     emblem.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     overlay = Control.new()
     add_child(overlay)
@@ -55,10 +56,10 @@ func _ready() -> void:
     background.mouse_filter = Control.MOUSE_FILTER_IGNORE
     background.modulate = Color("#a1a6c75c")
     overlay.add_child(background)
-    _shade(overlay, Rect2(10, 10, 940, 520), Color("#0a142584"))
+    _shade(overlay, Rect2(10, 10, 940, 520), Color("#0a1425a7"))
     _frame(Rect2(9, 9, 942, 522), Color("#a08a60"))
     _frame(Rect2(14, 14, 932, 512), Color("#70664e"))
-    _label(overlay, Rect2(27, 22, 310, 40), "☾   BẢN ĐỒ KHÁM PHÁ", 25, GOLD)
+    _label(overlay, Rect2(27, 22, 310, 40), "BẢN ĐỒ KHÁM PHÁ", 25, GOLD)
     heading = _label(overlay, Rect2(190, 70, 574, 30), "", 22, GOLD)
     subheading = _label(overlay, Rect2(191, 102, 714, 23), "", 13, Color("#bac8e2"))
     _shade(overlay, Rect2(28, 63, 903, 1), RULE)
@@ -256,7 +257,7 @@ func _refresh_text() -> void:
     background.modulate = [Color("#deb78b6b"), Color("#a1a6c76b"), Color("#c098d06b")][atlas_era] if region == 7 else Color("#a1a6c75c")
     heading.text = "Hành trình qua bảy vùng" if region < 0 else Atlas.NAMES[region]
     var here := "%s / %s" % [Atlas.NAMES[current_region()], Atlas.names(current_region())[current_room()]]
-    subheading.text = "Đang ở %s%s" % [here, (" · " + Atlas.ERAS[current_era()]) if game.time_mode else ""]
+    subheading.text = "%s%s" % [here, (" · " + Atlas.ERAS[current_era()]) if game.time_mode else ""]
     if region == 7 and not game.time_mode:
         subheading.text = "Mở Cỗ Máy Thời Gian ở màn vào game để đến Bờ Đá"
     elif region == 7 and atlas_era != current_era():
@@ -375,6 +376,27 @@ func gate(region: int, kind: String, era: int) -> String:
             elif state.won or state.guardian_down: return ""
             return "Hạ Vệ Binh rồi mở cửa Sân Hải Đăng"
     return ""
+
+func terrain(index: int, room: int, era: int) -> Array[Rect2]:
+    var result: Array[Rect2] = []
+    if index != current_region() or (index == 7 and era != current_era()): return result
+    var surfaces: Array = []
+    if game.sky.active:
+        surfaces = game.sky.root.get_children()
+    else:
+        surfaces.append_array(game.scenery.play_surfaces)
+        if is_instance_valid(game.trials.routes.root):
+            surfaces.append_array(game.trials.routes.root.get_children())
+    var room_bounds: Rect2 = Atlas.bounds(index)[room]
+    for surface in surfaces:
+        if not surface is GroundSurface or not is_instance_valid(surface.collider): continue
+        if surface.collider.collision_layer == 0: continue
+        var lip: Rect2 = surface.lip()
+        lip.position.x -= float(game.sky.origin) if game.sky.active else index * 1920.0
+        if index == 4: lip.position.x = game.sky.WIDTH - lip.end.x
+        var segment := lip.intersection(room_bounds)
+        if segment.has_area(): result.append(segment)
+    return result
 
 func pins(region: int, era: int) -> Array:
     var points := []

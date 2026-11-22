@@ -1,5 +1,6 @@
 extends Control
 ## Front door to the continuous journey and the independent practice rooms.
+const GroundSurface := preload("res://scripts/ground_surface.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
 const Map := preload("res://scripts/atlas_data.gd")
 const COAST := preload("res://assets/eclipse/open-moon-coast.webp")
@@ -28,11 +29,14 @@ func _ready() -> void:
     _image(self, shade, Rect2(0, 0, 960, 540))
     home = Control.new()
     add_child(home)
-    var ledge := _image(home, Art.ruin(0), Rect2(527, 433, 365, 99))
-    ledge.modulate = Color("#adb2db")
-    ledge.stretch_mode = TextureRect.STRETCH_SCALE
-    lead = _image(home, Art.cell(Art.HEROES, 0, Art.HERO_CELL), Rect2(518, 127, 386, 351))
-    lead.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+    var coast_ledge := GroundSurface.new()
+    coast_ledge.position = Vector2(515, 453)
+    coast_ledge.width = 445
+    coast_ledge.depth = 95
+    coast_ledge.masonry = true
+    home.add_child(coast_ledge)
+    lead = _image(home, Art.cell(Art.HEROES, 0, Art.HERO_CELL), Art.anchored_pose(Vector2(720, 453), 285))
+    lead.stretch_mode = TextureRect.STRETCH_SCALE
     _text(home, Rect2(48, 44, 450, 39), "L I G H T   Q U E S T", 22, Color("#efe8ca"))
     _text(home, Rect2(46, 83, 550, 83), "ECLIPSE", 68, GOLD)
     _line(home, Rect2(51, 173, 324, 1), Color("#dfbe75"))
@@ -48,7 +52,7 @@ func _ready() -> void:
         hero_buttons.append(card)
     _button(home, Rect2(49, 425, 158, 39), "Luyện tập", _practice)
     _button(home, Rect2(217, 425, 158, 39), "Cỗ Máy", game.enter_time_coast)
-    _text(home, Rect2(49, 478, 390, 25), "V15   /   HẢI ĐĂNG", 12, Color("#9cafce"))
+    _text(home, Rect2(49, 478, 390, 25), "V16   /   ECLIPSE", 12, Color("#9cafce"))
     practice = Panel.new()
     practice.position = Vector2(240, 86)
     practice.size = Vector2(480, 369)

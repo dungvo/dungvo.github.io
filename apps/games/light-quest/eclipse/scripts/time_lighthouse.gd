@@ -518,8 +518,7 @@ func set_interior(entering: bool) -> void:
     else: game.checkpoint = sky.point(Vector2(150,432))
     game.cam.limit_left = int(sky.origin + (2800 if entering else 0))
     game.cam.limit_right = int(sky.origin + (3760 if entering else MAP_WIDTH))
-    game.cam.reset_smoothing()
-    game.cam.force_update_scroll()
+    game._snap_view()
     sky.backdrop.modulate = Color("#c89777") if entering else SHADES[era]
     game._say("E · Nói chuyện với Bà Lam ở quầy" if entering else "Đã ra khỏi tiệm rèn",3)
 
@@ -534,13 +533,13 @@ func interact() -> void:
         game._persist()
         game.hero.position = sky.point(Vector2(366,432))
         game.hero.velocity = Vector2.ZERO
-        game.cam.reset_smoothing()
+        game._snap_view()
         game._say("Tín đã an toàn · nhận 1 Lõi nguyệt" if received else "Cửa hầm mở về Bờ Đá",4)
         return
     if rescued and x > 310 and x < 382 and game.hero.position.y > 375:
         game.hero.position = sky.point(Vector2(400,676))
         game.hero.velocity = Vector2.ZERO
-        game.cam.reset_smoothing()
+        game._snap_view()
         return
     if indoors:
         if x < 2990: set_interior(false)
@@ -600,8 +599,7 @@ func use_atlas_anchor(destination: Vector2) -> void:
     reset_chain()
     game.hero.position = sky.point(destination)
     game.hero.velocity = Vector2.ZERO
-    game.cam.reset_smoothing()
-    game.cam.force_update_scroll()
+    game._snap_view()
     game.sound.play_cue("phase")
     game.emit_impact(game.hero.position, SHADES[era])
     game._say("Đã tới Đài Canh" if destination == WATCH_STOP else "Đã về Bờ Đá", 2)

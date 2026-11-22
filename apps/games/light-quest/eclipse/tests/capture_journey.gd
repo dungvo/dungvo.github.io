@@ -8,19 +8,22 @@ func _capture() -> void:
     var game = load("res://scenes/main.tscn").instantiate()
     game.save_enabled = false
     root.add_child(game)
-    await _save("v15-main-menu.png")
+    await _save("v16-main-menu.png")
     game.enter_journey("An")
     await create_timer(0.38).timeout
-    await _save("v15-village-arrival.png")
+    await _save("v16-village-arrival.png")
+    game.hero.position = Vector2(995, 432)
+    game.atlas.survey()
+    game._snap_view()
     game.atlas.open()
-    await _save("v15-discovery-map.png")
+    await _save("v16-discovery-map.png")
     game.atlas.close()
     game.story_room = 6
     game.journey_complete = true
     game.sky.progress[3].won = true
     game.enter_journey("An")
     await create_timer(1.4).timeout
-    await _save("v15-lit-lighthouse.png")
+    await _save("v16-lit-lighthouse.png")
     print("ECLIPSE JOURNEY CAPTURE PASS")
     quit()
 

@@ -126,8 +126,7 @@ func begin(index: int) -> void:
     game.cam.limit_top = -250
     game.cam.limit_left = int(start)
     game.cam.limit_right = int(start + 1920)
-    game.cam.reset_smoothing()
-    game.cam.force_update_scroll()
+    game._snap_view()
     game.scenery.update_camera(start + 480, false, true)
     game.guardian = null
     game.boss_dead = false

@@ -70,7 +70,8 @@ func build(index: int) -> void:
             ferry.add_child(game.Combat.rectangle(Vector2(125, 20)))
             ferry.get_child(0).one_way_collision = true
             root.add_child(ferry)
-            ferry_art = _art_platform(Rect2(base_x + 920, 195, 125, 20))
+            ferry_art = _art_platform(Rect2(ferry.position - Vector2(62.5, 10), Vector2(125, 20)))
+            ferry_art.collider = ferry
             _platform(Vector2(1135, 165), Vector2(120, 22))
         2:
             bridge_bodies.append(_platform(Vector2(940, 180), Vector2(140, 22), true))
@@ -119,14 +120,12 @@ func _platform(point: Vector2, extent: Vector2, ghost := false) -> StaticBody2D:
     body.add_child(col)
     root.add_child(body)
     var art := _art_platform(rect)
+    art.collider = body
     if ghost: bridge_art.append(art)
     return body
 
 func _art_platform(rect: Rect2) -> Node2D:
-    var depth := maxf(43, rect.size.y + 7)
-    var art: Node2D = game.scenery._prop(0, Vector2(rect.get_center().x, rect.position.y + depth - 2), Vector2(rect.size.x, depth))
-    game.scenery.remove_child(art)
-    root.add_child(art)
+    var art: Node2D = game.scenery.surface(rect, root)
     art.z_index = -1
     return art
 
@@ -138,7 +137,7 @@ func tick(delta: float) -> void:
         if is_instance_valid(marker): marker.tick(delta, game.hero.position)
     if is_instance_valid(ferry):
         ferry.position.x = base_x + 982 + sin(elapsed * 1.25) * 70
-        ferry_art.position.x = ferry.position.x
+        ferry_art.position.x = ferry.position.x - ferry_art.width * 0.5
     var x: float = game.hero.position.x - base_x
     hint.text = ""
     if x > 700 and x < 1280:

@@ -52,3 +52,11 @@ Từ menu có tranh nền, chọn An hoặc Kha rồi chọn **Đi cảnh** đ�
 Bản đồ chính mở tại vùng hiện tại, bổ sung những khu vừa đặt chân tới. Chọn Toàn cảnh để xem nối kết đã khám phá. Chế độ Luyện tập có bộ chọn màn riêng. Kết quả luyện tập không ghi đè hành trình. Cỗ Máy mở tuyến phụ Bờ Đá và giữ dữ liệu vũ khí, lõi và thời đại đã có.
 
 Bài kiểm tra `continuous_journey_test.gd` dùng điều khiển Godot, va chạm và đòn đánh để qua đủ bảy vùng trong một lượt với Kha, từ menu tới lúc thắp Hải Đăng. Dùng ảnh Godot 960×540 để kiểm tra menu, màn vào Làng Trăng, bản đồ đang khám phá và Hải Đăng đã sáng.
+
+## V16 · Nền, chuyển động và bản đồ
+
+Mép trên của tranh nền đi cùng tọa độ với hình va chạm ở cả nền thường và bệ động. Tư thế chân An/Kha dùng cùng mốc trong menu, kho và lúc chơi. Bệ Rừng Vọng lấy hình từ góc trái của thân va chạm sau mỗi lần dịch chuyển.
+
+Nội suy giữa các bước vật lý giúp giảm giật hình khi máy có nhịp dựng khác nhịp mô phỏng. Camera nhìn trước nhẹ theo hướng chạy và đặt lại khi sang cổng, hồi sinh hoặc dịch chuyển để tránh kéo khung hình từ điểm cũ. Cảnh ngoài bờ biển đổi vào hang bằng một đoạn mờ chồng ngắn.
+
+Bản đồ vùng đang chơi thu thập mép trên của các nền có va chạm thực. Nền đã biến mất hay chưa được kích hoạt sẽ không hiện lên sơ đồ phòng. Các vùng chưa khám phá vẫn mở dần theo tiến độ. Kiểm tra `ground_contact_test.gd` đo mép vẽ và thân va chạm, trong đó có bệ Rừng Vọng đang chuyển động.

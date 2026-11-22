@@ -83,10 +83,14 @@ func _draw() -> void:
     var fit := size / base
     draw_set_transform(shift, 0.0, fit * zoom)
     if not compact:
-        for y in range(20, 342, 23):
-            draw_line(Vector2(0, y), Vector2(base.x, y), Color("#9eb8d916"), 0.85)
-        for x in range(25, int(base.x), 25):
-            draw_line(Vector2(x, 0), Vector2(x, 342), Color("#9eb8d911"), 0.85)
+        for y in range(25, 342, 25):
+            for x in range(25, int(base.x), 25):
+                draw_circle(Vector2(x, y), 0.8, Color("#c3cde42d"))
+        if region >= 0:
+            for radius in [55.0, 88.0]:
+                draw_arc(Vector2(525, 49), radius, 0, TAU, 48, Color("#e9d7ab23"), 0.8, true)
+            draw_line(Vector2(513, 49), Vector2(537, 49), Color("#e9d7ab65"), 1.0, true)
+            draw_line(Vector2(525, 37), Vector2(525, 61), Color("#e9d7ab65"), 1.0, true)
     if region >= 0:
         _region(region, Vector2.ZERO, 1.0, not compact, true)
     else:
@@ -135,6 +139,12 @@ func _region(index: int, origin: Vector2, scale_value: float, labels: bool, mark
         var known: bool = atlas.discovered.has(Atlas.key(index, i, visited_era))
         _room(rect, color, i == player_room, known, scale_value < 1.0)
         if labels:
+            for lip in atlas.terrain(index, i, era):
+                var left := origin + Atlas.project(index, i, lip.position, true) * scale_value
+                var right := origin + Atlas.project(index, i, lip.position + Vector2(lip.size.x, 0), true) * scale_value
+                if left.distance_to(right) < 2.5: continue
+                draw_line(left, right, Color(color.lightened(0.34), 0.64), 1.6, true)
+                draw_line(left + Vector2(0, 3), right + Vector2(0, 3), Color(color, 0.22), 2.5, true)
             var name: String = Atlas.names(index)[i]
             var font := ThemeDB.fallback_font
             draw_string(font, rect.position + Vector2(1, 20), name, HORIZONTAL_ALIGNMENT_CENTER,
@@ -182,7 +192,12 @@ func _room(rect: Rect2, color: Color, active: bool, known: bool, small: bool) ->
     var shape := PackedVector2Array([a + Vector2(notch, 0), Vector2(b.x - notch, a.y),
         Vector2(b.x, a.y + notch), b - Vector2(0, notch), b - Vector2(notch, 0),
         Vector2(a.x + notch, b.y), Vector2(a.x, b.y - notch), a + Vector2(0, notch)])
-    draw_colored_polygon(shape, color.darkened(0.55) if known or active else INK.lightened(0.07))
+    var fill := INK.lerp(color, 0.21 if active else (0.13 if known else 0.05))
+    if compact or small:
+        draw_colored_polygon(shape, fill)
+    else:
+        draw_polygon(shape, PackedColorArray([fill.lightened(0.09), fill.lightened(0.09), fill,
+            fill.darkened(0.32), fill.darkened(0.32), fill.darkened(0.32), fill.darkened(0.32), fill]))
     if active or known:
         shape.append(shape[0])
         var stroke := 7.0 if compact else (1.15 if small else 1.7)
