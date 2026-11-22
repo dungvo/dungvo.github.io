@@ -27,6 +27,25 @@ var menu_tabs: HBoxContainer
 var active_room := -1
 var refresh_clock := 0.0
 
+class LegendMark extends Control:
+    var kind := 0
+    var tint := Color.WHITE
+
+    func _draw() -> void:
+        match kind:
+            0:
+                draw_circle(Vector2.ZERO, 4, tint, true, -1.0, true)
+            1:
+                var points := PackedVector2Array([Vector2(0,-5), Vector2(5,0), Vector2(0,5), Vector2(-5,0), Vector2(0,-5)])
+                draw_polyline(points, tint, 1.4, true)
+            2:
+                draw_arc(Vector2(0, -1), 5, 0, PI, 12, tint, 1.4, true)
+                draw_line(Vector2(0, -5), Vector2(0, 4), tint, 1.4, true)
+            3:
+                draw_line(Vector2(-6, 0), Vector2(6, 0), tint, 2.5, true)
+            4:
+                draw_dashed_line(Vector2(-6, 0), Vector2(6, 0), tint, 1.5, 3.0, true, true)
+
 func _ready() -> void:
     game = get_parent()
     layer = 18
@@ -99,11 +118,19 @@ func _ready() -> void:
     description = _label(overlay, Rect2(189, 462, 730, 29), "", 13, Color("#f2e9d5"))
     description.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
     transit_button = _button(overlay, Rect2(736, 465, 186, 29), "", _use_anchor)
-    _label(overlay, Rect2(191, 495, 136, 21), "●  Vị trí hiện tại", 12, GOLD)
-    _label(overlay, Rect2(326, 495, 116, 21), "◇  Điểm nghỉ", 12, Plot.AQUA)
-    _label(overlay, Rect2(443, 495, 117, 21), "⌣  Móc dây", 12, Plot.AQUA)
-    _label(overlay, Rect2(555, 495, 138, 21), "━  Cửa / lối khóa", 12, Plot.LOCK)
-    _label(overlay, Rect2(713, 495, 196, 21), "┄  Khu chưa ghé", 12, Color("#b9c6df"))
+    var legend := [
+        [191, "Vị trí hiện tại", GOLD], [326, "Điểm nghỉ", Plot.AQUA], [443, "Móc dây", Plot.AQUA],
+        [555, "Cửa / lối khóa", Plot.LOCK], [713, "Khu chưa ghé", Color("#b9c6df")]
+    ]
+    for i in legend.size():
+        var item: Array = legend[i]
+        var mark := LegendMark.new()
+        mark.kind = i
+        mark.tint = item[2]
+        mark.position = Vector2(item[0] + 5, 506)
+        mark.mouse_filter = Control.MOUSE_FILTER_IGNORE
+        overlay.add_child(mark)
+        _label(overlay, Rect2(item[0] + 16, 495, 120, 21), item[1], 12, item[2])
     overlay.hide()
 
 func _button(parent: Node, rect: Rect2, title: String, action: Callable) -> Button:
