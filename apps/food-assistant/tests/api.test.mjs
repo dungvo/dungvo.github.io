@@ -260,3 +260,81 @@ test('API không chuyển nhiều bàn cho AI và không tiêu ngân sách', asy
   const { aiUsage } = await (await fetch(url + '/api/state', { headers })).json();
   assert.equal(aiUsage.used, 0);
 });
+
+test('Groq chọn JSON Schema, chuẩn hóa token và kiểm tra bản nháp trước khi trả về', async t => {
+  let sent = 0;
+  const { url } = await start(t, { aiKey: 'fake-groq-key', provider: 'groq', providerFetch: async (target, options) => {
+    sent++;
+    assert.equal(target, 'https://api.groq.com/openai/v1/chat/completions');
+    assert.equal(options.headers.Authorization, 'Bearer fake-groq-key');
+    const json = JSON.parse(options.body);
+    assert.equal(json.model, 'openai/gpt-oss-20b');
+    assert.equal(json.response_format.json_schema.strict, true);
+    assert.equal(json.response_format.json_schema.schema.additionalProperties, false);
+    assert.match(json.messages[1].content, /trà đá/);
+    return Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify({
+      intent: 'add', table: 5, items: [{ id: 'tra-da', qty: 1, note: '' }], replacement: null, explicit: false, question: '',
+    }) } }], usage: { prompt_tokens: 100, completion_tokens: 50 } });
+  } });
+  const result = await fetch(url + '/api/interpret', { method: 'POST', headers, body: JSON.stringify({ table: 5, transcript: 'một trà đá' }) });
+  assert.equal(result.status, 200);
+  assert.equal((await result.json()).draft.items[0].id, 'tra-da');
+  assert.equal(sent, 1);
+  const { state, aiUsage, aiProvider } = await (await fetch(url + '/api/state', { headers })).json();
+  assert.equal(aiProvider, 'groq');
+  assert.equal(aiUsage.provider, 'groq');
+  assert.equal(aiUsage.textCalls, 1);
+  assert.equal(aiUsage.used, 1);
+  assert.equal(state.rev, 0);
+});
+
+test('Groq chuyển giọng nói qua multipart tiếng Việt và dự toán tối thiểu 10 giây', async t => {
+  const { url } = await start(t, { aiKey: 'fake-groq-key', provider: 'groq', allowTranscription: true,
+    prepareAudio: async () => ({ audio: new Blob(['RIFF'], { type: 'audio/wav' }), milliseconds: 3500 }),
+    providerFetch: async (target, options) => {
+      assert.equal(target, 'https://api.groq.com/openai/v1/audio/transcriptions');
+      assert.equal(options.headers.Authorization, 'Bearer fake-groq-key');
+      assert.equal(options.body.get('language'), 'vi');
+      assert.equal(options.body.get('model'), 'whisper-large-v3-turbo');
+      const audio = options.body.get('file');
+      assert.equal(audio.type, 'audio/wav');
+      assert.equal(audio.name, 'cau-goi-mon.wav');
+      return Response.json({ text: 'Bàn năm hai phở tái' });
+    } });
+  const response = await sendClip(url, webm);
+  assert.equal(response.status, 200);
+  assert.deepEqual(await response.json(), { transcript: 'Bàn năm hai phở tái' });
+  const { aiUsage, state } = await (await fetch(url + '/api/state', { headers })).json();
+  assert.equal(aiUsage.used, 3);
+  assert.equal(aiUsage.audioCalls, 1);
+  assert.equal(state.rev, 0);
+});
+
+test('Groq hết hạn mức trả lỗi rõ và đặt món tay vẫn hoạt động', async t => {
+  let calls = 0;
+  const { url } = await start(t, { aiKey: 'fake-groq-key', provider: 'groq', providerFetch: async target => {
+    calls++;
+    assert.ok(target.startsWith('https://api.groq.com/'));
+    return Response.json({ error: { message: 'fake-groq-key should never appear' } }, { status: 429 });
+  } });
+  const response = await fetch(url + '/api/interpret', { method: 'POST', headers, body: JSON.stringify({ table: 5, transcript: 'một trà đá' }) });
+  assert.equal(response.status, 429);
+  const data = await response.json();
+  assert.match(data.message, /giới hạn lượt sử dụng/);
+  assert.doesNotMatch(data.message, /fake-groq-key/);
+  assert.equal(calls, 1);
+  assert.equal((await request(url, add('using-menu', 'tai'))).status, 200);
+});
+
+test('Groq trả lỗi xác thực an toàn và không tự chuyển sang một API khác', async t => {
+  let calls = 0;
+  const { url } = await start(t, { aiKey: 'fake-groq-key', provider: 'groq', providerFetch: async target => {
+    calls++;
+    assert.ok(target.startsWith('https://api.groq.com/'));
+    return Response.json({ error: { message: 'fake-groq-key should never appear' } }, { status: 401 });
+  } });
+  const result = await fetch(url + '/api/interpret', { method: 'POST', headers, body: JSON.stringify({ table: 5, transcript: 'một trà đá' }) });
+  assert.equal(result.status, 503);
+  assert.match((await result.json()).message, /Kiểm tra khóa/);
+  assert.equal(calls, 1);
+});

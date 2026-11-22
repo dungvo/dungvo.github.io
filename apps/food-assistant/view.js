@@ -148,17 +148,20 @@ function settingsPage(state, doc) {
     + '<label class="field">Mã kết nối quán<input name="token" type="password" autocomplete="off" minlength="24" maxlength="256" required></label>'
     + '<button class="btn primary" type="submit">' + icon('link', 17) + 'Kết nối</button></form>';
   const usage = doc.aiUsage;
+  const service = usage?.provider === 'groq' ? 'Groq' : 'OpenAI';
   const spend = usage ? '<div class="' + (usage.atWarning ? 'notice' : 'muted') + '"><strong>Chi phí AI ước tính tháng '
     + esc(usage.month.slice(5)) + '</strong><p>' + money(usage.used) + ' / ' + money(usage.limit) + '</p><p>'
     + esc(usage.audioCalls) + ' lượt chuyển giọng nói · ' + esc(usage.textCalls) + ' lượt hiểu câu'
-    + (usage.atWarning ? ' · Đã đến ngưỡng cảnh báo' : '') + '</p></div>' : '';
+    + (usage.atWarning ? ' · Đã đến ngưỡng cảnh báo' : '') + '</p>'
+    + (service === 'Groq' ? '<p>Groq · Ước tính theo giá trả phí để giữ hạn mức. Chi phí thực tế theo gói Groq của quán.</p>' : '')
+    + '</div>' : '';
   const voice = '<section class="panel"><div class="panel-heading">' + icon('mic')
     + '<h2>Trợ lý và giọng nói</h2></div>' + spend + (doc.config ? '<form data-form="voice-settings" class="form-stack">'
     + '<label class="checkbox"><input name="allowAI" type="checkbox"' + (doc.config.allowAI ? ' checked' : '')
     + '>Dùng AI cho câu gọi khó hiểu</label><label class="checkbox"><input name="allowAudio" type="checkbox"'
     + (doc.config.allowAudio ? ' checked' : '') + '>Cho phép nút thu âm qua máy chủ</label>'
     + '<p class="muted">' + (doc.transcriptionEnabled
-      ? 'Khi chọn nút thu âm, bản thu được gửi tới OpenAI qua máy chủ của quán.'
+      ? 'Khi chọn nút thu âm, bản thu được gửi tới ' + service + ' qua máy chủ của quán.'
       : 'Máy chủ chưa bật chuyển giọng nói thành chữ.') + '</p>'
     + '<button class="btn outline" type="submit">Lưu cài đặt trợ lý</button></form>'
     : '<p class="muted">Để bổ sung thu âm khi micro trình duyệt gặp lỗi, kết nối API ở mục Kết nối thiết bị.</p>') + '</section>';

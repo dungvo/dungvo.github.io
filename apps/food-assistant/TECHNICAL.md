@@ -26,8 +26,8 @@ Flutter Web và PWA đều phụ thuộc dịch vụ giọng nói mà trình duy
 
 ## Thu âm qua máy chủ
 
-- Micro trình duyệt vẫn là đường mặc định. Backend chỉ công bố tính năng thu âm khi nhận cả khóa OpenAI và `FOOD_TRANSCRIBE=1`. Thiết bị bật quyền riêng trong Cài đặt và người dùng bấm nút thu âm riêng.
-- Browser gửi bản thu WebM, MP4 hoặc Ogg dạng nhị phân tới `POST /api/transcribe`. Tối đa 15 giây ở client và 2 MiB tại API. API kiểm tra mã quán, kiểu dữ liệu, header tệp, tốc độ gọi và số bản thu đồng thời. Nhà cung cấp nhận gợi ý tiếng Việt qua `languages[]=vi`.
+- Micro trình duyệt vẫn là đường mặc định. Backend chỉ công bố tính năng thu âm khi nhận khóa của nhà cung cấp đã chọn và `FOOD_TRANSCRIBE=1`. Thiết bị bật quyền riêng trong Cài đặt và người dùng bấm nút thu âm riêng.
+- Browser gửi bản thu WebM, MP4 hoặc Ogg dạng nhị phân tới `POST /api/transcribe`. Tối đa 15 giây ở client và 2 MiB tại API. API kiểm tra mã quán, kiểu dữ liệu, header tệp, tốc độ gọi và số bản thu đồng thời. OpenAI nhận gợi ý tiếng Việt qua `languages[]=vi`, còn Groq qua `language=vi`.
 - API trả transcript. Client đưa transcript vào hộp chỉnh sửa và giữ bước xác nhận nghiệp vụ trước khi lưu. Không lưu bản thu vào IndexedDB hay SQLite, cũng không thêm audio vào hàng đợi ngoại tuyến. Đóng cửa sổ giữa lúc thu hủy bản thu tại thiết bị.
 
 ## Hiểu câu gọi và hạn mức
@@ -37,11 +37,17 @@ Flutter Web và PWA đều phụ thuộc dịch vụ giọng nói mà trình duy
 - Sổ hạn mức lưu trong SQLite cùng database của quán. Việc giữ ngân sách nằm trong một giao dịch trước lần gọi nhà cung cấp. Phần audio dùng thời lượng được FFmpeg giải mã, phần văn bản giữ dự toán rồi cập nhật theo token nhà cung cấp trả về. Khi mất phản hồi, khoản giữ được tính tiếp để hạn chế vượt dự toán. Thời điểm phân tháng dùng múi giờ Việt Nam.
 - Nghiệm thu tại quán cần đo riêng tỷ lệ hiểu đúng ngay, tỷ lệ phải sửa hoặc hỏi lại, tỷ lệ đơn cuối sai và số lần ghi trùng khi đổi mạng. Số liệu kiểm thử mô phỏng chỉ xác nhận nghiệp vụ và luồng giao diện.
 
+## Nhà cung cấp và HTTPS
+
+- `FOOD_AI_PROVIDER=groq` dùng Chat Completions với JSON Schema cho GPT-OSS 20B và audio transcription cho Whisper Large V3 Turbo. Cả hai vẫn qua bộ kiểm tra, ghi nhận lượt và điều kiện xác nhận sẵn có. Khi Groq trả 429, API trả tình trạng quota cho người dùng.
+- Groq dự toán theo giá niêm yết cho gói trả phí để giới hạn sử dụng, kể cả khi quán dùng gói Free. Chi phí âm thanh theo mốc tối thiểu 10 giây mỗi lượt của nhà cung cấp.
+- `FOOD_TLS_CERT` và `FOOD_TLS_KEY` bật HTTPS trực tiếp. Có thể để Node chỉ lắng nghe loopback và dùng reverse proxy HTTPS nếu hạ tầng đã có proxy.
+
 ## Kết quả QA
 
 | Kiểm tra | Kết quả |
 | --- | --- |
-| `npm test` | 114 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất, phân tích câu nhiều món, thời lượng giải mã và hạn mức đồng thời |
+| `npm test` | 118 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất, phân tích câu nhiều món, thời lượng giải mã và hạn mức đồng thời |
 | Chromium 375 × 812 | Luồng nhập câu tiếng Việt, kiểm tra trùng, bếp, hóa đơn và tải lại đạt |
 | Chromium 412 × 915 | Luồng như trên đạt |
 | Chromium 834 × 1112 | Luồng như trên đạt, kiểm tra các thẻ món trong màn bếp |
@@ -62,5 +68,5 @@ Có thể dùng `BROWSER_EXECUTABLE` cho binary Chromium sẵn có và `FOOD_SCR
 ## Phạm vi của bản phát hành
 
 - Đã kiểm thử luồng từ transcript và các kích thước đại diện trên Chromium. Cần nghiệm thu micro tiếng Việt trên Safari, Chrome Android và trong tiếng ồn của quán. Chế độ offline hỗ trợ nhập/chạm; micro web có thể cần mạng.
-- Bản công khai chạy trực tiếp theo chế độ một thiết bị. Đồng bộ có API và đã chạy qua hai profile thử. Quán cần một máy chủ HTTPS riêng để ghép thiết bị thật. AI và chuyển bản thu qua máy chủ dùng backend và khóa của quán. Bài kiểm thử dùng phản hồi mô phỏng, cần xác minh với tài khoản nhà cung cấp khi cấu hình.
+- Bản công khai chạy trực tiếp theo chế độ một thiết bị. Đồng bộ có API và đã chạy qua hai profile thử. Quán cần một máy chủ HTTPS riêng để ghép thiết bị thật. AI và chuyển bản thu qua máy chủ dùng backend và khóa Groq hoặc OpenAI của quán. Bài kiểm thử dùng phản hồi mô phỏng, cần xác minh với tài khoản nhà cung cấp khi cấu hình.
 - Bluetooth và bản Flutter cho App Store/Google Play nằm ngoài phạm vi bản PWA. Phần chọn ảnh hỗ trợ bộ ảnh có sẵn của app.

@@ -14,7 +14,7 @@ const token = 'browser-test-pair-token-not-real';
 const external = process.env.FOOD_TEST_URL;
 const capturedAudio = [];
 const server = external ? null : createFoodServer({ file: join(folder, 'test.sqlite'), token,
-  aiKey: 'browser-test-fake', allowTranscription: true, prepareAudio: boundedAudio,
+  aiKey: 'browser-test-fake', provider: 'groq', allowTranscription: true, prepareAudio: boundedAudio,
   transcribe: async (key, audio) => {
     assert.equal(key, 'browser-test-fake');
     assert.equal(audio.type, 'audio/wav');
@@ -188,6 +188,7 @@ try {
     await a.getByRole('button', { name: 'Đóng', exact: true }).click();
     await nav(a, 'settings', 'desktop');
     await waitText(a.locator('main'), 'Chi phí AI ước tính tháng');
+    await waitText(a.locator('main'), 'bản thu được gửi tới Groq');
     await a.getByRole('checkbox', { name: 'Cho phép nút thu âm qua máy chủ' }).check();
     await a.getByRole('button', { name: 'Lưu cài đặt trợ lý' }).click();
     await waitText(a.locator('#toast'), 'Đã lưu cài đặt trợ lý');

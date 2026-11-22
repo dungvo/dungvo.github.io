@@ -35,6 +35,17 @@ Khi có nhiều dòng cùng món, dùng **Sửa** trên đúng dòng trong đơn
 - Muốn mở nhanh ứng dụng, dùng **Thêm vào màn hình chính** từ trình duyệt. Sau khi trang và tài nguyên đã được tải lần đầu, có thể mở lại và dùng thao tác chạm hoặc gõ câu khi mất mạng. Micro phụ thuộc trình duyệt, quyền truy cập và dịch vụ nhận diện của thiết bị.
 - Trên thiết bị đã kết nối API, lệnh chờ gửi được lưu qua lần tải lại. Khi có xung đột, vào **Cài đặt → Kết nối thiết bị** để xem lỗi, xác nhận nếu là lượt trùng thật hoặc bỏ lệnh và nhập lại. Kiểm tra biểu tượng đồng bộ trước khi chủ động báo bếp.
 
+## Thử AI bằng Groq Free
+
+Một khóa Groq dùng cho cả **hiểu câu gọi món** bằng GPT-OSS 20B và **chuyển giọng nói tiếng Việt thành chữ** bằng Whisper Large V3 Turbo. Dùng tài khoản Groq ở gói Free để thử trong quota của tài khoản. Theo dõi giới hạn và tình trạng gói trực tiếp trong Groq. Khi Groq báo đã chạm giới hạn, nhân viên có thể gõ câu hoặc chạm món. [Giới hạn Groq](https://console.groq.com/docs/rate-limits) · [Điều kiện nâng gói](https://console.groq.com/docs/billing-faqs)
+
+1. Trên Mac hoặc máy chủ, lấy mã nguồn. Cài Node.js 22.13 trở lên. Cài thêm FFmpeg nếu dùng thu âm qua backend.
+2. Trong thư mục `apps/food-assistant`, chạy `cp .env.example .env`. Tạo mã quán bằng `openssl rand -hex 32`. Tạo khóa tại [Groq Console](https://console.groq.com/keys) và điền vào `.env` trên máy chạy backend. `FOOD_TRANSCRIBE=1` bật thu âm phía máy chủ.
+3. Chạy `npm run start:local` và mở `http://127.0.0.1:8787/` trên máy đó. Vào **Cài đặt → Kết nối thiết bị**, nhập địa chỉ trên và mã quán. Trong **Trợ lý và giọng nói**, bật từng chức năng cần thử.
+4. Để iPhone và máy bếp kết nối cùng Wi-Fi, dùng địa chỉ HTTPS của máy Mac. Có thể đặt `HOST=0.0.0.0` và cấu hình `FOOD_TLS_CERT`, `FOOD_TLS_KEY` cho chứng chỉ khớp tên hoặc IP máy Mac, được hai máy tin cậy. Mở chính địa chỉ HTTPS đó trên cả hai máy rồi nhập cùng mã quán. iPhone cần bật tin cậy TLS nếu quản trị viên dùng chứng chỉ gốc cài thủ công. [Hướng dẫn Apple](https://support.apple.com/en-us/102390)
+
+Với Groq, màn hình **Chi phí AI ước tính** dùng đơn giá trả phí làm tham chiếu để giữ hạn mức của quán. Số tiền thực tế phụ thuộc gói dự án trên Groq. Đặt khóa API trên backend. Các thiết bị chỉ nhận mã quán.
+
 ## Dùng nhiều thiết bị và bật AI
 
 Hai máy có thể dùng cùng mạng Wi-Fi, với API chạy trên máy quán và có địa chỉ HTTPS mà cả hai truy cập được. Cũng có thể dùng backend riêng qua Internet. Máy bếp mở tab **Màn bếp** trong suốt ca làm việc. Kết nối cần địa chỉ API và mã kết nối quán. Có thể nhập bản sao cục bộ vào SQLite của máy quán trước khi ghép thiết bị.
@@ -47,9 +58,12 @@ Trên máy chạy API, cần Node.js từ 22.13 hoặc 24 LTS. Đặt các biế
 | `FOOD_DB` | Đường dẫn SQLite, đặt trên ổ đĩa bền vững. Mặc định là `food-assistant.sqlite` ở thư mục chạy. |
 | `HOST`, `PORT` | Mặc định `127.0.0.1:8787`, dùng reverse proxy HTTPS trước máy chủ khi truy cập từ thiết bị khác. |
 | `FOOD_ORIGINS` | Danh sách origin phân cách bằng dấu phẩy. Mặc định là `https://dungvo.github.io`. |
+| `FOOD_AI_PROVIDER` | `groq` hoặc `openai`. Mẫu `.env` dùng Groq. Máy chủ cũ thiếu biến này tiếp tục dùng OpenAI. |
+| `GROQ_API_KEY` | Khóa Groq, chỉ dùng với `FOOD_AI_PROVIDER=groq`. |
+| `FOOD_TLS_CERT`, `FOOD_TLS_KEY` | Tùy chọn. Cặp đường dẫn chứng chỉ HTTPS và khóa cho máy chủ phục vụ trực tiếp; dùng cùng nhau. |
 | `OPENAI_API_KEY` | Tùy chọn, bí mật ở backend. Khi để trống, app vẫn xử lý được các câu thông thường bằng quy tắc. |
 | `OPENAI_MODEL` | Tùy chọn, mặc định `gpt-4.1-mini`. Model phải hỗ trợ Structured Outputs. |
-| `FOOD_TRANSCRIBE` | Đặt `1` để bật chuyển bản thu tiếng Việt thành chữ bằng `gpt-transcribe`. Cần `OPENAI_API_KEY` và lệnh `ffmpeg` trên máy chủ. |
+| `FOOD_TRANSCRIBE` | Đặt `1` để bật chuyển bản thu tiếng Việt thành chữ bằng `whisper-large-v3-turbo` (Groq) hoặc `gpt-transcribe` (OpenAI). Cần khóa của nhà cung cấp và `ffmpeg`. |
 | `FOOD_AI_LIMIT_VND`, `FOOD_AI_WARNING_VND` | Trần ước tính mỗi tháng và ngưỡng cảnh báo. Mặc định 50.000đ và 40.000đ. |
 | `FOOD_AI_VND_PER_USD` | Tỷ giá quy đổi dùng cho hạn mức, mặc định 26.000đ/USD. |
 | `FOOD_AI_INPUT_USD`, `FOOD_AI_OUTPUT_USD` | Giá USD cho mỗi triệu token. Mặc định 0,40 và 1,60 cho model văn bản mặc định. Bắt buộc cấu hình khi đổi `OPENAI_MODEL`. |
@@ -65,7 +79,7 @@ Cấu hình reverse proxy TLS để chuyển tiếp đường dẫn `/api/` tớ
 - **Dùng AI cho câu gọi khó hiểu** cho phép gửi câu chữ tới AI khi bộ quy tắc cần làm rõ.
 - **Cho phép nút thu âm qua máy chủ** hiện nút riêng khi máy chủ đã bật `FOOD_TRANSCRIBE`. Bấm **Thu âm qua máy chủ**, nói rồi bấm **Dừng và chuyển thành chữ**. App tự dừng ở 15 giây. Đọc và sửa transcript trước khi bấm **Kiểm tra câu gọi**. Đóng hộp thoại giữa lúc thu sẽ bỏ đoạn thu đó.
 
-Khóa OpenAI nằm ở server. Khi dùng micro trình duyệt, âm thanh do dịch vụ của trình duyệt xử lý. Khi chọn nút thu âm qua máy chủ, app gửi bản thu tới OpenAI thông qua backend của quán và không ghi bản thu vào SQLite. Nếu bật AI cho câu khó hiểu, backend gửi câu chữ liên quan cùng thực đơn, bàn đang chọn và các món chưa phục vụ của bàn đó. Kết quả là bản nháp phải qua kiểm tra schema, nghiệp vụ và xác nhận trên màn hình. Các tính năng OpenAI có thể phát sinh phí API theo mức sử dụng.
+Khóa Groq hoặc OpenAI nằm ở máy chủ. Khi dùng micro trình duyệt, âm thanh do dịch vụ của trình duyệt xử lý. Khi chọn nút thu âm qua máy chủ, app gửi bản thu tới nhà cung cấp đã chọn thông qua backend của quán và không ghi bản thu vào SQLite. Nếu bật AI cho câu khó hiểu, backend gửi câu chữ liên quan cùng thực đơn, bàn đang chọn và các món chưa phục vụ của bàn đó. Kết quả là bản nháp phải qua kiểm tra schema, nghiệp vụ và xác nhận trên màn hình. Phí API phụ thuộc gói của nhà cung cấp.
 
 Để sao lưu SQLite, xuất snapshot dưới đây. Khi khôi phục, ngừng API, hoàn tất đồng bộ và ngắt các thiết bị đang kết nối trước, rồi chạy khôi phục và ghép nối lại. Sao lưu dữ liệu hiện tại trước khi thay thế.
 
