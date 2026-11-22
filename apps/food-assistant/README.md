@@ -17,6 +17,8 @@ Ví dụ khác
 
 | Nhu cầu | Câu nói |
 | --- | --- |
+| Gọi phở mặc định | Hai tô phở bàn 3 → bàn 3, hai phở tái |
+| Điện thoại nghe nhầm chữ “bàn” | Hai phở tái bằng số 3 → bàn 3, hai phở tái |
 | Nhiều món và tự sửa câu | Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi. |
 | Ghi chú cho một trong hai tô | Bàn 5 thêm hai phở tái, một tô không hành |
 | Sửa số lượng trên một dòng đang chờ | Bàn 3 sửa trà đá còn ba ly |
@@ -27,6 +29,8 @@ Ví dụ khác
 | Hủy một phần đang chờ nấu | Bàn 3 hủy một phở tái |
 | Đổi phần đang chờ nấu | Bàn 3 đổi một tái thành nạm |
 | Xem món chưa phục vụ | Bàn 3 còn món gì chưa ra? |
+
+Khi quán có 8 bàn, câu “Bạn số 32 tô phở” được tách thành bàn 3, hai tô phở tái. Nếu quán có bàn 32, nói rõ “bàn 32 một tô phở” để gọi cho bàn đó. Phở chín và phở nạm vẫn gọi theo tên riêng. Nếu quán đã đặt tên hoặc biệt danh “phở” cho một món, ứng dụng ưu tiên cấu hình của quán.
 
 Khi có nhiều dòng cùng món, dùng **Sửa** trên đúng dòng trong đơn bàn. Có thể hoàn tác lượt gọi vừa gửi khi các dòng đó còn nguyên và bếp chưa bắt đầu. Nếu bàn đang chờ thu tiền, mở lại bàn trước khi gọi hoặc sửa món.
 

@@ -30,6 +30,20 @@ function serve(state) {
   return state;
 }
 const spoken = [
+  ['Hai phở tái bằng số 3', 'add', 3, [dish('tai', 2)]],
+  ['2 tô phở bàn 3', 'add', 3, [dish('tai', 2)]],
+  ['Hai tô phở bằng 2', 'add', 2, [dish('tai', 2)]],
+  ['Hai tô phở bằng số 3 thêm một ly trà đá', 'add', 3, [dish('tai', 2), dish('tra-da')]],
+  ['Bằng số hai cho hai tô phở', 'add', 2, [dish('tai', 2)]],
+  ['Bạn số 32 tô phở', 'add', 3, [dish('tai', 2)]],
+  ['Bàn số 32 tô phở nạm', 'add', 3, [dish('nam', 2)]],
+  ['Hai tô phở chín bằng ba', 'add', 3, [dish('chin', 2)]],
+  ['Hai tô phở, một tô không hành, một trà đá bằng số 3', 'add', 3, [dish('tai'), dish('tai', 1, 'không hành'), dish('tra-da')]],
+  ['Bằng số 2 thêm một tô phở', 'add', 2, [dish('tai')]],
+  ['Bàn 3 hai phở tái bằng số 4', 'clarify', null, []],
+  ['Bàn 3 phở tái ghi chú chia đều bằng 2', 'add', 3, [dish('tai', 1, 'chia đều bằng 2')]],
+  ['Bàn số ba mươi hai tô phở', 'clarify', null, []],
+  ['Bàn số 32 hai tô phở', 'clarify', null, []],
   ['Bàn 5 hai phở tái, một không hành', 'add', 5, [dish('tai'), dish('tai', 1, 'không hành')]],
   ['Bàn số 5 cho em hai tô phở tái một tô không hành và một ly trà đá', 'add', 5, [dish('tai'), dish('tai', 1, 'không hành'), dish('tra-da')]],
   ['Bàn 5 phở tái hai tô, một bò kho', 'add', 5, [dish('tai', 2), dish('bo-kho')]],
@@ -394,4 +408,29 @@ test('Sửa ghi chú không được ghi đè ghi chú vừa sửa từ thiết 
   const state = open();
   const changed = mutate(state, lineAction(state, 'amend', { expectedNote: '', note: 'ít hành' }), t1);
   reject(() => mutate(changed, lineAction(changed, 'amend', { expectedNote: '', note: 'không hành' }), t2), 'CONFLICT');
+});
+
+test('Số bàn hai chữ số có thật không bị tách khi nhận giọng nói', () => {
+  const state = createState();
+  state.tableCount = 40;
+  const draft = parse('Bàn số 32 hai tô phở', state);
+  assert.equal(draft.table, 32);
+  assert.deepEqual(draft.items, [dish('tai', 2)]);
+  assert.equal(parse('Bàn số 32 tô phở', state).intent, 'clarify');
+});
+
+test('Phở mặc định tôn trọng biệt danh, món tạm hết và tên đã đổi trong thực đơn cũ', () => {
+  const state = createState();
+  const rare = state.menu.find(item => item.id === 'tai');
+  const brisket = state.menu.find(item => item.id === 'nam');
+  rare.active = false;
+  assert.equal(parse('2 tô phở bàn 3', state).intent, 'clarify');
+  rare.active = true;
+  rare.name = 'Mì xào';
+  assert.equal(parse('2 tô phở bàn 3', state).intent, 'clarify');
+  rare.name = 'Phở tái';
+  brisket.aliases.push('phở');
+  assert.deepEqual(parse('2 tô phở bàn 3', state).items, [dish('nam', 2)]);
+  brisket.active = false;
+  assert.equal(parse('2 tô phở bàn 3', state).intent, 'clarify');
 });
