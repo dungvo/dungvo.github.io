@@ -24,7 +24,13 @@ var era := 1
 var core := false
 var repaired := false
 var lit := false
+const FAMILIARS := preload("res://assets/eclipse/moon-familiars.webp")
+const FAMILIAR_NAMES := ["Cáo Dẫn Đường", "Bướm Đèn", "Quạ Bóng", "Hươu Sương"]
+const GIFTS := ["Dẫn đến kho đồng gần nhất", "Soi lối dưới cầu gãy", "Mổ quái trong tầm nhìn", "Hồi máu khi xung quanh yên"]
 var companion := 0
+var familiar_clock := 0.0
+var familiar_target := Vector2.INF
+var familiar_glow := 0.0
 var owned := [true,false,false,false,false,false,false,false]
 const CACHES := [Vector2(575,432),Vector2(1910,432),Vector2(520,432),Vector2(1200,432),Vector2(590,432),Vector2(2395,432)]
 const CACHE_ERAS := [0,0,1,1,2,2]
@@ -142,6 +148,9 @@ func build() -> void:
     barrier_time = 0
     slow_time = 0
     trap_clock = 0
+    familiar_clock = 0
+    familiar_target = Vector2.INF
+    familiar_glow = 0
     hidden_platform = null
     breakable = null
     for rect in [Rect2(0,456,650,40),Rect2(716,456,14,40),Rect2(1130,456,820,40),Rect2(2040,456,560,40)]:
@@ -292,7 +301,39 @@ func machine() -> void:
     for index in range(3):
         var destination := index
         _choice(ERAS[index]+(" · đang ở đây" if index == era else ""),func(): travel(destination))
+    _choice("Đồng hành", choose_familiar)
     _choice("Đóng",close)
+
+func _familiar_crop(index: int) -> AtlasTexture:
+    var extent := FAMILIARS.get_size() * 0.5
+    return _crop(FAMILIARS, Rect2(Vector2(index % 2, index / 2) * extent, extent))
+
+func choose_familiar() -> void:
+    _open("familiar")
+    heading.text = "ĐỒNG HÀNH"
+    copy.text = FAMILIAR_NAMES[companion] + "  ·  " + GIFTS[companion]
+    var row := HBoxContainer.new()
+    options.add_child(row)
+    for i in range(4):
+        var card := _button(row, FAMILIAR_NAMES[i], equip_familiar.bind(i))
+        card.custom_minimum_size = Vector2(119, 125)
+        card.icon = _familiar_crop(i)
+        card.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+        card.vertical_icon_alignment = VERTICAL_ALIGNMENT_TOP
+        card.expand_icon = true
+        card.add_theme_font_size_override("font_size", 13)
+        if i == companion: _emphasize(card)
+    _choice("Tiếp tục", close)
+
+func equip_familiar(index: int) -> void:
+    if index < 0 or index >= FAMILIAR_NAMES.size(): return
+    if index != companion:
+        companion = index
+        familiar_clock = 0
+        familiar_target = Vector2.INF
+        familiar_glow = 0
+        game._persist()
+    choose_familiar()
 
 func travel(destination: int) -> void:
     close()
@@ -476,11 +517,7 @@ func inspect_weapon(item: int) -> void:
         show_catalog()
     )
     _button(actions,"Gia cố cầu",repair)
-    _button(actions,"Đổi thú · "+("Cáo" if companion == 0 else "Bướm"),func():
-        companion = 1-companion
-        game._persist()
-        show_catalog()
-    )
+    _button(actions,"Đồng hành",choose_familiar)
     _button(actions,"Rời quầy",close)
 
 func open_map() -> void:
@@ -716,6 +753,7 @@ func update(delta: float) -> void:
         flare = 0.28
     barrier_time = maxf(0,barrier_time-delta)
     slow_time = maxf(0,slow_time-delta)
+    _update_familiar(delta)
     trap_clock += delta*slow_factor(sky.point(Vector2(1995,410)))
     cooldown = maxf(0,cooldown-delta)
     flare = maxf(0,flare-delta)
@@ -731,6 +769,45 @@ func update(delta: float) -> void:
     if era == 2 and x > 1970 and x < 2025 and fmod(trap_clock,2.6) > 1.6 and game.hero.position.y > 389 and game.hero.position.y < 430:
         game.damage_player(1,sky.origin+1995)
     queue_redraw()
+
+func _update_familiar(delta: float) -> void:
+    familiar_glow = maxf(0, familiar_glow - delta)
+    familiar_clock += delta
+    var hero: Vector2 = game.hero.position
+    if companion == 0:
+        if familiar_clock < 0.22: return
+        familiar_clock = 0
+        familiar_target = Vector2.INF
+        if indoors: return
+        for i in CACHES.size():
+            if CACHE_ERAS[i] != era or claimed[i]: continue
+            var cache: Vector2 = sky.point(CACHES[i])
+            if not familiar_target.is_finite() or hero.distance_squared_to(cache) < hero.distance_squared_to(familiar_target):
+                familiar_target = cache
+        return
+    if companion == 1 or indoors or familiar_clock < (3.8 if companion == 2 else 1.0): return
+    var nearest: Node2D = null
+    var distance := 175.0 if companion == 2 else 265.0
+    for enemy in game.enemies:
+        if not is_instance_valid(enemy) or enemy.state == "dead": continue
+        var gap := hero.distance_to(enemy.position)
+        if gap >= distance: continue
+        if not game.Combat.ray(get_world_2d().direct_space_state, hero, enemy.position, game.Combat.WORLD).is_empty(): continue
+        distance = gap
+        nearest = enemy
+    if companion == 2 and nearest:
+        familiar_clock = 0
+        familiar_glow = 0.32
+        familiar_target = nearest.position
+        nearest.take_hit(1, game)
+    elif companion == 3:
+        if nearest or game.i_frames > 0 or game.hurt_time > 0:
+            familiar_clock = 0
+        elif familiar_clock >= 10.0 and game.health < game.max_health:
+            familiar_clock = 0
+            game.health += 1
+            game._burst(hero, Color("#adfbdc"), 12, 102)
+            game._update_hud()
 
 func _draw() -> void:
     if not is_instance_valid(game) or not active(): return
@@ -756,15 +833,25 @@ func _draw() -> void:
     var forge_light: Vector2 = sky.point(Vector2(420,408))
     draw_circle(forge_light,35,Color(1.0,0.65,0.3,0.14 if era == 0 else 0.035))
     var hero: Vector2 = game.hero.position
-    var familiar := hero+Vector2(-33,-35 if companion == 1 else 13+sin(clock*7)*3)
-    draw_circle(familiar,19,Color(SHADES[era],0.14))
-    draw_circle(familiar,6,Color("#ffdc87") if companion == 1 else Color("#e5efff"))
-    if companion == 1:
-        var flutter := 3+absf(sin(clock*15))*8
-        draw_circle(familiar+Vector2(-flutter,-3),4,Color("#ffe8ad"))
-        draw_circle(familiar+Vector2(flutter,-3),4,Color("#ffe8ad"))
-    elif absf(hero.x-sky.origin-1040) < 360:
-        for i in range(5): draw_circle(sky.point(Vector2(1010+i*13,502)),3,Color("#e0eaff"))
+    var flying := companion in [1,2]
+    var familiar := hero + Vector2(-game.facing * (42 if flying else 52), (-33 if flying else 6) + sin(clock * 5) * 3)
+    var reach := 50.0 if companion == 1 else 63.0
+    var width := reach * (0.80 + absf(sin(clock * 10)) * 0.20) if companion == 1 else reach
+    var cell := FAMILIARS.get_size() * 0.5
+    draw_set_transform(familiar, 0, Vector2(game.facing, 1))
+    draw_texture_rect_region(FAMILIARS, Rect2(-width/2, -reach/2, width, reach), Rect2(Vector2(companion%2,companion/2)*cell,cell))
+    draw_set_transform(Vector2.ZERO, 0, Vector2.ONE)
+    if companion == 0 and familiar_target.is_finite():
+        var axis := familiar.direction_to(familiar_target)
+        for i in range(5):
+            var at := familiar + axis * (26 + i * 12) + Vector2(0,sin(clock*3+i)*2)
+            draw_circle(at, 1.7, Color("#d3dffa", 0.80 - i * 0.10), true, -1, true)
+    elif companion == 1:
+        var lantern := familiar + Vector2(1,11)
+        for ring in range(5):
+            draw_circle(lantern, 32.0 - ring*5, Color("#ffd786", 0.025 + ring * 0.012), true, -1, true)
+    if companion == 2 and familiar_glow > 0 and familiar_target.is_finite():
+        draw_line(familiar, familiar_target, Color("#bf93ff", familiar_glow * 2.2), 1.7, true)
     if era == 2:
         for i in range(4):
             var at: Vector2 = sky.point(Vector2(1970+i*13,422))
@@ -820,7 +907,7 @@ func restore(data: Dictionary) -> void:
     repaired = data.get("repaired",false) == true
     lit = data.get("lit",false) == true
     metal = clampi(int(data.get("metal",0)),0,9)
-    companion = clampi(int(data.get("companion",0)),0,1)
+    companion = clampi(int(data.get("companion",0)),0,3)
     for key in ["owned","defeated","claimed","rested"]:
         var list = data.get(key,[])
         var flags: Array = get(key)

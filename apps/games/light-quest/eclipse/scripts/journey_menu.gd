@@ -29,14 +29,12 @@ func _ready() -> void:
     _image(self, shade, Rect2(0, 0, 960, 540))
     home = Control.new()
     add_child(home)
-    var coast_ledge := GroundSurface.new()
-    coast_ledge.position = Vector2(515, 453)
-    coast_ledge.width = 445
-    coast_ledge.depth = 95
-    coast_ledge.masonry = true
-    home.add_child(coast_ledge)
-    lead = _image(home, Art.cell(Art.HEROES, 0, Art.HERO_CELL), Art.anchored_pose(Vector2(720, 453), 285))
-    lead.stretch_mode = TextureRect.STRETCH_SCALE
+    var portrait_frame := Panel.new()
+    portrait_frame.position = Vector2(543, 35)
+    portrait_frame.size = Vector2(266, 469)
+    portrait_frame.add_theme_stylebox_override("panel", _style(INK, GOLD.darkened(0.28)))
+    home.add_child(portrait_frame)
+    lead = _image(portrait_frame, Art.portrait(false), Rect2(4, 4, 258, 461))
     _text(home, Rect2(48, 44, 450, 39), "L I G H T   Q U E S T", 22, Color("#efe8ca"))
     _text(home, Rect2(46, 83, 550, 83), "ECLIPSE", 68, GOLD)
     _line(home, Rect2(51, 173, 324, 1), Color("#dfbe75"))
@@ -45,14 +43,14 @@ func _ready() -> void:
     for i in range(2):
         var who := "An" if i == 0 else "Kha"
         var card := _button(home, Rect2(49 + i * 168, 303, 158, 101), "", _choose.bind(who))
-        var pose := _image(card, Art.cell(Art.HEROES, i * 4, Art.HERO_CELL), Rect2(4, 3, 87, 94))
+        var pose := _image(card, Art.portrait(i == 1, true), Rect2(4, 3, 87, 94))
         pose.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
         _text(card, Rect2(88, 24, 61, 27), who, 19, GOLD)
         _text(card, Rect2(88, 51, 68, 22), "Kiếm" if i == 0 else "Pháp", 13, Color("#cdd9ef"))
         hero_buttons.append(card)
     _button(home, Rect2(49, 425, 158, 39), "Luyện tập", _practice)
     _button(home, Rect2(217, 425, 158, 39), "Cỗ Máy", game.enter_time_coast)
-    _text(home, Rect2(49, 478, 390, 25), "V17   /   ECLIPSE", 12, Color("#9cafce"))
+    _text(home, Rect2(49, 478, 390, 25), "V18   /   ECLIPSE", 12, Color("#9cafce"))
     practice = Panel.new()
     practice.position = Vector2(240, 86)
     practice.size = Vector2(480, 369)
@@ -82,7 +80,7 @@ func refresh() -> void:
     if returning: chosen_hero = game.story_hero
     continue_button.text = "TIẾP TỤC" if returning else "ĐI CẢNH"
     travel_label.text = Map.NAMES[game.story_room] if returning else "Làng Trăng"
-    lead.texture = Art.cell(Art.HEROES, 4 if chosen_hero == "Kha" else 0, Art.HERO_CELL)
+    lead.texture = Art.portrait(chosen_hero == "Kha")
     for i in hero_buttons.size():
         hero_buttons[i].modulate = GOLD if chosen_hero == ("An" if i == 0 else "Kha") else Color.WHITE
         hero_buttons[i].disabled = returning

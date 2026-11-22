@@ -70,7 +70,7 @@ async function run() {
             if (mobile) await tap(874, 42);
             else await page.keyboard.press('m');
             await page.waitForTimeout(180);
-            const fogged = await canvas.screenshot({ path: path.join(evidence, `v17-story-map-${mobile ? 'touch' : 'desktop'}.png`) });
+            const fogged = await canvas.screenshot({ path: path.join(evidence, `v18-story-map-${mobile ? 'touch' : 'desktop'}.png`) });
             if (mobile) await tap(889, 42);
             else await page.keyboard.press('Escape');
             await page.waitForTimeout(110);

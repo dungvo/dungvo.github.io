@@ -102,3 +102,16 @@ static func links(region: int, era: int, repaired: bool) -> Array:
         legs.append_array([[1, 6, ""], [6, 2, "moth"]])
     else: legs.append([1, 2, ""])
     return legs
+
+# Cartographer's overview. IDs match the playable-area bounds above in every chapter.
+const WORLD_ROOMS := [
+    [Rect2(17,132,49,23), Rect2(76,100,58,20), Rect2(80,146,45,23), Rect2(141,136,46,26)],
+    [Rect2(209,123,43,22), Rect2(250,69,58,21), Rect2(258,110,42,21), Rect2(322,102,44,27)],
+    [Rect2(174,218,50,19), Rect2(239,190,51,20), Rect2(243,238,45,22), Rect2(318,237,48,30)],
+    [Rect2(410,183,53,22), Rect2(428,137,38,23), Rect2(400,91,45,23), Rect2(429,48,40,23)],
+    [Rect2(492,152,54,20), Rect2(515,112,43,22), Rect2(493,74,40,19), Rect2(525,36,51,19)],
+    [Rect2(600,118,49,20), Rect2(637,85,43,21), Rect2(610,53,37,18), Rect2(648,23,47,21)],
+    [Rect2(546,231,54,24), Rect2(607,257,45,24), Rect2(670,224,42,23), Rect2(726,194,55,27)]
+]
+const WORLD_LABELS := [Vector2(28,92), Vector2(223,55), Vector2(199,292),
+    Vector2(375,29), Vector2(493,15), Vector2(624,158), Vector2(637,302)]

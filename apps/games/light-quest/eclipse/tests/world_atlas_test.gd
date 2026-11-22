@@ -13,13 +13,16 @@ func _run() -> void:
             if not ensure(Atlas.locate(region, bounds.get_center(), 1, false) == room, "mapped area owns its collision coordinates"): return
     if not ensure(tiles == 28 and map.current_room() == 0, "28 playable-area bounds across seven chapters"): return
     map.open()
-    if not ensure(paused and map.plot.region == 0, "opening story atlas freezes game"): return
+    if not ensure(paused and map.plot.region == -1, "opening story atlas freezes game"): return
     var position_before: Vector2 = game.hero.position
     game.joystick.axis = Vector2.RIGHT
     await _frames(10)
     if not ensure(game.hero.position == position_before, "hero stays still while inspecting map"): return
     game.joystick.axis = Vector2.ZERO
-    map.select_region(0)
+    if not ensure(Atlas.WORLD_ROOMS.size() == 7 and map.regions[1].disabled, "overview shows seven territories without opening an unexplored region"): return
+    var first: Rect2 = Atlas.WORLD_ROOMS[0][0]
+    map.plot._select_at(first.get_center() * map.plot.size / Vector2(800,342))
+    if not ensure(map.plot.region == 0, "tapping a charted chamber enters its regional floor map"): return
     map.select_room(3)
     if not ensure("người giữ cổng" in map.description.text, "chapter exit shows its real unlock condition"): return
     map._zoom(0.5)

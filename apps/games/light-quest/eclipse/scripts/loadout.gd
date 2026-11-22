@@ -32,6 +32,7 @@ var weapon := 0
 var favorite := -1
 var game: Node2D
 var panel: Control
+var portrait_button: Button
 var opener: Button
 var content: Control
 var tabs: Array[Button] = []
@@ -45,6 +46,15 @@ func _ready() -> void:
     process_mode = Node.PROCESS_MODE_ALWAYS
     opener = _button(self, Rect2(21, 88, 125, 36), "KHO · I", toggle)
     opener.hide()
+    portrait_button = Button.new()
+    portrait_button.flat = true
+    portrait_button.focus_mode = Control.FOCUS_NONE
+    portrait_button.tooltip_text = "Trang bị · I"
+    portrait_button.position = Vector2(20, 9)
+    portrait_button.size = Vector2(50, 50)
+    portrait_button.pressed.connect(toggle, CONNECT_DEFERRED)
+    add_child(portrait_button)
+    portrait_button.hide()
     panel = _surface(self, Rect2(0, 0, 960, 540), Color("#070b17"), Color.TRANSPARENT)
     var backdrop := _picture(panel, MOON, Rect2(0, 0, 960, 540))
     backdrop.modulate = Color("#7789a76b")
@@ -62,7 +72,9 @@ func can_open() -> bool:
     return game.started and not game.dialogue.visible and not game.victory_panel.visible and game.death_time <= 0 and not game.sky.timeline.panel.visible and not game.atlas.overlay.visible
 
 func _process(_delta: float) -> void:
-    if is_instance_valid(game.atlas): opener.visible = can_open() and not panel.visible
+    if is_instance_valid(game.atlas):
+        opener.visible = can_open() and not panel.visible
+        portrait_button.visible = opener.visible
 
 func _input(event: InputEvent) -> void:
     if not event is InputEventKey or not event.pressed or event.echo: return
@@ -187,16 +199,8 @@ func _gear() -> void:
 
 func _hero(rect: Rect2) -> void:
     _surface(content, rect)
-    var scene := _picture(content, COAST, rect.grow(-1))
-    scene.modulate = Color("#a0b4d9")
-    var stone := GroundSurface.new()
-    stone.position = rect.position + Vector2(23, 267)
-    stone.width = 194
-    stone.depth = 53
-    content.add_child(stone)
-    var sprite: Texture2D = Art.cell(Art.HEROES, 4 if game.character == "Kha" else 0, Art.HERO_CELL)
-    var figure := _picture(content, sprite, Art.anchored_pose(rect.position + Vector2(120, 267), 205))
-    figure.stretch_mode = TextureRect.STRETCH_SCALE
+    _picture(content, Art.portrait(game.character == "Kha"), rect.grow(-2))
+    _surface(content, Rect2(rect.position + Vector2(1,1), Vector2(rect.size.x - 2, 64)), Color("#0a101acb"), Color.TRANSPARENT)
     var nameplate := _label(content, Rect2(rect.position + Vector2(12, 13), Vector2(216, 33)), game.character, 24, GOLD)
     nameplate.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     _surface(content, Rect2(rect.position + Vector2(14, 54), Vector2(212, 8)), Color("#2a1830"), Color("#a68b68"))

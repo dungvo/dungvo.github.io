@@ -9,6 +9,26 @@ func _run() -> void:
     var timeline = sky.timeline
     game._interact()
     if not ensure(timeline.mode == "machine","machine can be reached at spawn"): return
+    timeline.choose_familiar()
+    if not ensure(timeline.options.get_child(0).get_child_count() == 4, "four illustrated familiar choices"): return
+    timeline.equip_familiar(0)
+    timeline.close()
+    timeline._update_familiar(0.3)
+    if not ensure(timeline.familiar_target.is_finite(), "fox points at an unclaimed cache in the current era"): return
+    timeline.equip_familiar(3)
+    timeline.close()
+    game.i_frames = 0
+    game.health = game.max_health - 1
+    timeline._update_familiar(10.1)
+    if not ensure(game.health == game.max_health, "stag restores one health in a safe area"): return
+    timeline.equip_familiar(2)
+    timeline.close()
+    var foe: Node2D = game._spawn_enemy("wolf", game.hero.position.x + 68)
+    foe.position.y = game.hero.position.y
+    await _frames(2)
+    var hp_before: int = foe.hp
+    timeline._update_familiar(4.0)
+    if not ensure(foe.hp == hp_before - 1, "raven strikes a visible nearby enemy"): return
     timeline.travel(2)
     if not ensure(timeline.hidden_platform.collision_layer == 0,"unrepaired future has a broken bridge"): return
     timeline.companion = 1

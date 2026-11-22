@@ -113,6 +113,9 @@ jobs:
           grep -q 'ECLIPSE ARMORY CAPTURE PASS' armory-renderer.log
           timeout 35s xvfb-run -a godot --audio-driver Dummy --script res://tests/capture_journey.gd 2>&1 | tee journey-renderer.log
           grep -q 'ECLIPSE JOURNEY CAPTURE PASS' journey-renderer.log
+          timeout 35s xvfb-run -a godot --audio-driver Dummy --fixed-fps 60 --script res://tests/capture_combat_ink.gd 2>&1 | tee combat-ink.log
+          grep -q 'ECLIPSE COMBAT INK CAPTURE PASS' combat-ink.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' combat-ink.log
           ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR:' journey-renderer.log armory-renderer.log renderer.log art-renderer.log forge-renderer.log atlas-renderer.log
       - uses: actions/upload-artifact@v4
         if: always()

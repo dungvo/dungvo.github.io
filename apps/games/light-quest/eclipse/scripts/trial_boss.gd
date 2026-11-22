@@ -129,14 +129,14 @@ func _begin_strike(game: Node2D) -> void:
     if move_name == "pounce" and is_on_floor(): velocity.y = -175
     game.sound.play_cue("contact", 0.72)
 
-func take_hit(amount: int, game: Node2D) -> void:
+func take_hit(amount: int, game: Node2D, contact_at := Vector2.INF) -> void:
     if state == "dead" or not awake: return
     if state in ["evade", "phase"]:
         game.emit_impact(position, Color("#b6e7ff"))
         return
     hp = maxi(0, hp - amount)
     flash = 0.12
-    game.emit_impact(position, Color("#ffd3b2"))
+    game.enemy_feedback(self, hp == 0, contact_at, Vector2(SIZES[kind]).x * 0.5)
     game.show_damage(position, amount)
     if hp == 0:
         _set_state("dead", 0.6)

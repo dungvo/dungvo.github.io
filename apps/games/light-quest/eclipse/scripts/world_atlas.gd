@@ -87,6 +87,7 @@ func _ready() -> void:
     for index in Atlas.NAMES.size():
         var button := _button(overlay, Rect2(26, 99 + index * 39, 137, 34), Atlas.NAMES[index], select_region.bind(index))
         button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+        button.add_theme_font_size_override("font_size", 11 if index in [6,7] else 13)
         button.add_theme_color_override("font_color", Color(Atlas.COLORS[index]))
         regions.append(button)
     atlas_button = _button(overlay, Rect2(26, 426, 137, 36), "Toàn cảnh", select_region.bind(-1))
@@ -120,7 +121,7 @@ func _ready() -> void:
     transit_button = _button(overlay, Rect2(736, 465, 186, 29), "", _use_anchor)
     var legend := [
         [191, "Vị trí hiện tại", GOLD], [326, "Điểm nghỉ", Plot.AQUA], [443, "Móc dây", Plot.AQUA],
-        [555, "Cửa / lối khóa", Plot.LOCK], [713, "Khu chưa ghé", Color("#b9c6df")]
+        [555, "Cửa / lối khóa", Plot.LOCK], [713, "Chưa khảo sát", Color("#b9c6df")]
     ]
     for i in legend.size():
         var item: Array = legend[i]
@@ -220,7 +221,7 @@ func open() -> void:
     opener.hide()
     get_tree().paused = true
     plot.era = current_era()
-    select_region(current_region() if game.time_mode or game.story_mode else -1)
+    select_region(current_region() if game.time_mode else -1)
 
 func close() -> void:
     if not overlay.visible: return
@@ -277,12 +278,17 @@ func _refresh_text() -> void:
     for i in era_buttons.size():
         era_buttons[i].modulate = GOLD if i == atlas_era else Color.WHITE
     for i in regions.size():
-        regions[i].visible = region_visible(i)
-        regions[i].modulate = GOLD if i == region else Color.WHITE
+        regions[i].visible = i < 7 or not game.story_mode
+        regions[i].disabled = not region_visible(i)
+        var count := 0
+        for room in Atlas.names(i).size():
+            if discovered.has(Atlas.key(i, room, atlas_era)): count += 1
+        regions[i].text = "%s  %d/%d" % [Atlas.NAMES[i], count, Atlas.names(i).size()] if i < 7 else Atlas.NAMES[i]
+        regions[i].modulate = GOLD if i == region else (Color("#b9bbcd") if regions[i].disabled else Color.WHITE)
     atlas_button.modulate = GOLD if region == -1 else Color.WHITE
     background.texture = CAVERN_ART if region == 2 else (COAST_ART if region >= 6 else MOON_ART)
     background.modulate = [Color("#deb78b6b"), Color("#a1a6c76b"), Color("#c098d06b")][atlas_era] if region == 7 else Color("#a1a6c75c")
-    heading.text = "Hành trình qua bảy vùng" if region < 0 else Atlas.NAMES[region]
+    heading.text = "Địa đồ Nguyệt Thực" if region < 0 else Atlas.NAMES[region]
     var here := "%s / %s" % [Atlas.NAMES[current_region()], Atlas.names(current_region())[current_room()]]
     subheading.text = "%s%s" % [here, (" · " + Atlas.ERAS[current_era()]) if game.time_mode else ""]
     if region == 7 and not game.time_mode:
@@ -294,7 +300,7 @@ func _refresh_text() -> void:
         for i in range(7):
             for room in Atlas.names(i).size():
                 if discovered.has(Atlas.key(i, room, 0)): seen += 1
-        description.text = "%d / 28 khu đã ghé   ·   %s" % [seen, "Đường hiện dần khi khám phá" if game.story_mode else "Các màn luyện tập"]
+        description.text = "%d / 28 khu đã ghé   ·   %s" % [seen, "Chạm vùng đã ghé để xem địa hình" if game.story_mode else "Các màn luyện tập"]
         return
     var messages := PackedStringArray()
     for link in Atlas.links(region, atlas_era, repaired()):

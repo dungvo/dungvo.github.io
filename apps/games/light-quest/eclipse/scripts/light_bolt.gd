@@ -38,10 +38,10 @@ func step(delta: float, game: Node2D) -> void:
         return
     if collider is Area2D:
         if friendly:
-            collider.get_parent().take_hit(damage, game)
+            collider.get_parent().take_hit(damage, game, hit.position)
         else:
             game.damage_player(damage, global_position.x)
-    game.emit_impact(hit.position, Color("#97edff") if friendly else Color("#c692ff"))
+    if not friendly or not (collider is Area2D): game.emit_impact(hit.position, Color("#97edff") if friendly else Color("#c692ff"))
     queue_free()
 
 func _draw() -> void:

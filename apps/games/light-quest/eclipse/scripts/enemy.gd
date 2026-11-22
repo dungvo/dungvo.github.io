@@ -20,6 +20,7 @@ var goal_direction := Vector2.LEFT
 var phase_two := false
 var phase_flash := 0.0
 var dealt_strike := false
+var recoil_tween: Tween
 var sprite: AnimatedSprite2D
 
 func _ready() -> void:
@@ -115,7 +116,7 @@ func step(delta: float, game: Node2D) -> void:
         sprite.modulate = Color("#ffbeb9") if flash > 0 else (Color("#ffe19a") if state == "tell" else Color.WHITE)
     if had_flash or state == "tell": queue_redraw()
 
-func take_hit(amount: int, game: Node2D) -> void:
+func take_hit(amount: int, game: Node2D, contact_at := Vector2.INF) -> void:
     if state == "dead": return
     if kind == "guardian" and game.boss_shield_time <= 0:
         game.emit_impact(position, Color("#f7d377"))
@@ -129,7 +130,7 @@ func take_hit(amount: int, game: Node2D) -> void:
         game.guardian_enraged()
     flash = 0.13
     queue_redraw()
-    game.emit_impact(position, Color("#ff9add"))
+    game.enemy_feedback(self, hp == 0, contact_at, Vector2(SIZES[kind]).x * 0.5)
     game.show_damage(position, amount)
     if hp == 0:
         _set_state("dead", 0.36)

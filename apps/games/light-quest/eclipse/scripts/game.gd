@@ -12,6 +12,9 @@ const Combat := preload("res://scripts/combat.gd")
 const EnemyScene := preload("res://scenes/enemy.tscn")
 const LightBolt := preload("res://scripts/light_bolt.gd")
 const MirrorCircuit := preload("res://scripts/mirror_circuit.gd")
+const Flourish := preload("res://scripts/combat_flourish.gd")
+const DISSOLVE := preload("res://scripts/shadow_dissolve.gdshader")
+var flourish := Flourish.new()
 const MOBILE_WEB_FPS := 30
 const MOBILE_PARTICLE_BUDGET := 44
 const ROOM_W := 960.0
@@ -136,6 +139,9 @@ func _ready() -> void:
     add_child(sound)
     _make_stage()
     _make_hero()
+    flourish.z_index = 9
+    flourish.small_screen = mobile_web
+    add_child(flourish)
     light_circuit = MirrorCircuit.new()
     light_circuit.position = Vector2(3 * ROOM_W, 0)
     add_child(light_circuit)
@@ -474,6 +480,8 @@ func _panel_style() -> StyleBoxFlat:
     return style
 
 func _start(who: String) -> void:
+    flourish.reset()
+    vfx.clear()
     _set_crouch(false,true)
     character = who
     current_trial = demo_room_select.get_selected_id() if is_instance_valid(demo_room_select) else 0
@@ -570,6 +578,7 @@ func _set_crouch(low: bool, force := false) -> void:
 func _physics_process(delta:float) -> void:
     if time_mode and sky.timeline.panel.visible: return
     if not started or dialogue.visible or victory_panel.visible or loadout.panel.visible: return
+    flourish.tick(delta)
     visual_clock += delta
     burst_cooldown = maxf(0, burst_cooldown - delta)
     burst_time = maxf(0, burst_time - delta)
@@ -633,12 +642,14 @@ func _physics_process(delta:float) -> void:
         hero.velocity.y = JUMP_SPEED
         jump_buffer_clock = 0.0
         coyote_clock = 0.0
+        flourish.play(Flourish.WIND, hero.position + Vector2(0,18), facing, 110)
         _burst(hero.position + Vector2(0,22), Color("#d7f3d6"), 9, 95.0)
     elif jump_buffer_clock > 0 and not grounded_before and air_jumps > 0:
         air_jumps -= 1
         hero.velocity.y = JUMP_SPEED
         jump_buffer_clock = 0
         sound.play_cue("dash", 1.3)
+        flourish.play(Flourish.WIND, hero.position + Vector2(0, 17), facing, 142)
         _burst(hero.position + Vector2(0, 22), Color("#a8efda"), 14, 165)
     if dash_time > 0:
         dash_time = maxf(0, dash_time-delta)
@@ -654,6 +665,7 @@ func _physics_process(delta:float) -> void:
     ground_contact.visible = hero.is_on_floor()
     if not grounded_before and hero.is_on_floor() and previous_vy > 180:
         ground_contact.compression = 1.0
+        flourish.play(Flourish.WIND, hero.position + Vector2(0, 19), facing, clampf(previous_vy * 0.19, 64, 130))
         _burst(hero.position + Vector2(0,20), Color("#a8bec0"), 12, 120.0)
     if ground_contact.visible and ground_contact.compression > 0:
         ground_contact.compression = maxf(0, ground_contact.compression - delta * 6.5)
@@ -768,9 +780,11 @@ func _select_motion_state() -> String:
 func _burst(origin:Vector2, color:Color, count:int, speed:float) -> void:
     var emitted := mini(count, 10) if mobile_web else count
     for i in range(emitted):
-        var angle := (float(i)/maxf(1.0,float(emitted-1)))*PI + PI
+        var angle := (float(i) + randf_range(0.12, 0.88)) * PI / emitted + PI
         var direction := Vector2(cos(angle),sin(angle))
-        vfx.append({"p":origin,"v":direction*speed*randf_range(0.45,1.2),"life":0.34,"duration":0.34,"color":color})
+        var lifetime := randf_range(0.23, 0.48)
+        vfx.append({"p":origin, "v":direction*speed*randf_range(0.45,1.2), "life":lifetime, "duration":lifetime,
+            "color":color, "dust":speed < 130, "seed":randf_range(-PI,PI)})
     var budget := MOBILE_PARTICLE_BUDGET if mobile_web else 100
     if vfx.size() > budget:
         vfx = vfx.slice(vfx.size() - budget)
@@ -781,7 +795,7 @@ func _tick_vfx(delta:float) -> void:
         var particle:Dictionary = vfx[i]
         particle["life"] = float(particle["life"])-delta
         particle["p"] = Vector2(particle["p"]) + Vector2(particle["v"])*delta
-        particle["v"] = Vector2(particle["v"])*0.91
+        particle["v"] = Vector2(particle["v"])*exp(-delta * 3.8) + Vector2.DOWN * (90 if particle["dust"] else 132) * delta
         if float(particle["life"])<=0:
             vfx.remove_at(i)
         else:
@@ -797,6 +811,25 @@ func spawn_bolt(origin: Vector2, motion: Vector2, allied: bool, amount: int) -> 
     add_child(bolt)
     bolts.append(bolt)
     return bolt
+
+func enemy_feedback(foe: Node2D, slain: bool, point: Vector2, radius: float) -> void:
+    var forward := 1 if foe.position.x >= hero.position.x else -1
+    var at := point if point.is_finite() else foe.position - Vector2(forward * radius * 0.56, 2)
+    shake_time = 0.09
+    flourish.play(Flourish.CONTACT, at, forward, 82.0)
+    if not slain:
+        # Recoil moves the drawing, leaving combat timing and hurtboxes intact.
+        var body: AnimatedSprite2D = foe.sprite
+        body.rotation = 0.075 * forward
+        if foe.recoil_tween and foe.recoil_tween.is_valid(): foe.recoil_tween.kill()
+        foe.recoil_tween = body.create_tween()
+        foe.recoil_tween.tween_property(body, "rotation", 0.0, 0.14).set_trans(Tween.TRANS_SINE)
+    if slain:
+        flourish.play(Flourish.ASH, foe.position - Vector2(0, 8), forward, clampf(radius * 3.8, 98, 188))
+        var ink := ShaderMaterial.new()
+        ink.shader = DISSOLVE
+        foe.sprite.material = ink
+        foe.create_tween().tween_method(func(value: float): ink.set_shader_parameter("dissolve", value), 0.0, 1.0, 0.35)
 
 func emit_impact(at: Vector2, color: Color) -> void:
     shake_time = 0.10
@@ -898,6 +931,7 @@ func _resolve_attack() -> void:
         spawn_bolt(hero.position, Vector2(loadout.BOLT_SPEED[loadout.weapon] * attack_facing, 0), true, 1 + loadout.HIT_BONUS[loadout.weapon])
         return
     blade_flash = 0.16
+    flourish.play(Flourish.SWEEP, hero.position + Vector2(attack_facing * 43, -9), attack_facing, 94 + loadout.EXTRA_MELEE[loadout.weapon])
     var reach := Hit.attack_hitbox(hero.position, attack_facing, false)
     var extra: int = loadout.EXTRA_MELEE[loadout.weapon]
     reach = reach.grow_individual(extra if attack_facing < 0 else 0, 0, extra if attack_facing > 0 else 0, 0)
@@ -911,7 +945,6 @@ func _resolve_attack() -> void:
         var foe: CharacterBody2D = hit.collider.get_parent()
         if Combat.ray(space, hero.position, foe.position, Combat.WORLD).is_empty():
             foe.take_hit((2 if combo_step == 3 else 1) + loadout.HIT_BONUS[loadout.weapon], self)
-            emit_impact(foe.position, Color("#fff1bf"))
             sound.play_cue("contact")
 
 func _skill() -> void:
@@ -957,6 +990,7 @@ func _signature() -> void:
     if character == "An":
         sound.play_cue("slash", 0.75)
         _signature_hits()
+        flourish.play(Flourish.SWEEP, hero.position + Vector2(facing * 67, -9), facing, 160)
         _burst(hero.position, Color("#bdefff"), 24, 240)
         _say("An · NGUYỆT TRẢM — chém quét ba sát thương", 1.4)
     else:
@@ -1104,7 +1138,8 @@ func _say(value:String,secs:float) -> void:
 func _update_hud() -> void:
     if hud==null:return
     var r:=clampi(int(hero.position.x/ROOM_W) if hero else 0,0,6)
-    hud.text = character
+    hud.text = ""
+    hearts.show_hero(character)
     hearts.show_health(health, max_health)
     chapter.text = ROOMS[r]
     light_status.text = "Ba hồi · Tiếng chuông đã mất"
@@ -1192,7 +1227,16 @@ func _draw() -> void:
         var opacity := clampf(float(particle["life"])/float(particle["duration"]),0,1)
         var tint:Color = particle["color"]
         tint.a = opacity*0.84
-        draw_circle(particle["p"], maxf(1.0,4.5*opacity),tint)
+        var at: Vector2 = particle.p
+        if particle.dust:
+            var drift := Vector2.from_angle(particle.seed) * 2
+            draw_circle(at + drift, 1.8 + 3.0 * (1-opacity), Color(tint, opacity * 0.21), true, -1, true)
+            draw_line(at, at + drift, Color(tint, opacity * 0.67), 1.2, true)
+        else:
+            var axis := Vector2(particle.v).normalized()
+            var tail := at - axis * (4.0 + 7.0 * opacity)
+            draw_line(tail, at, Color(tint, opacity * 0.32), 3.6, true)
+            draw_line(tail.lerp(at, 0.25), at, Color(tint.lightened(0.72), opacity), 1.2, true)
     if hero:
         var p:=hero.position
         if burst_time > 0:
@@ -1200,11 +1244,13 @@ func _draw() -> void:
             var opacity := burst_time / 0.38
             tint.a = opacity * 0.75
             if character == "An":
-                var angle := 0.0 if burst_facing > 0 else PI
-                var sweep := angle + (1.0 - opacity) * 1.6 * burst_facing - 0.8
-                draw_arc(p, 140, sweep - 1.2, sweep + 1.2, 48, Color(tint, opacity * 0.17), 18, true)
-                draw_arc(p, 133, sweep - 1.2, sweep + 1.2, 48, tint, 5, true)
-                draw_arc(p, 126, sweep - 1.2, sweep + 1.2, 48, Color("#ecffff"), 2, true)
+                # The painted crescent carries the attack. A thin afterimage follows its tip.
+                var sweep := (1.0-opacity) * 1.5 - 0.8
+                var arc := PackedVector2Array()
+                for i in range(22):
+                    var angle := sweep - 0.92 + i * 0.075
+                    arc.append(p + Vector2(cos(angle) * burst_facing * 127, sin(angle) * 52 - 8))
+                draw_polyline(arc, Color(tint, opacity * 0.55), 1.45, true)
             else:
                 draw_line(burst_origin, burst_trace, Color(tint, opacity * 0.3), 20, true)
                 draw_line(burst_origin, burst_trace, tint, 3, true)
@@ -1213,7 +1259,11 @@ func _draw() -> void:
             var radius := 38.0 + (1.0 - skill_time / 0.46) * (95 if character == "Kha" else 20)
             draw_arc(p, radius, 0, TAU, 48, Color("#a6edffa0"), 4, true)
             draw_arc(p, radius - 7, 0, TAU, 48, Color("#edfff4"), 1, true)
-        if i_frames>0:draw_arc(p+Vector2(0,-6),33,0,TAU,32,Color("#ffdf8b"),3)
+        if i_frames > 0:
+            var fade := minf(i_frames * 3, 1.0)
+            for side in [-1,1]:
+                var tip := p + Vector2(side * 21, -7)
+                draw_line(tip, tip + Vector2(side * 4,-9), Color("#fff1c4",fade * 0.7), 1.5, true)
         if blade_flash > 0 and character == "An" and slash_time > 0:
             _draw_blade(p)
 
@@ -1229,7 +1279,7 @@ func _draw_blade(at: Vector2) -> void:
         var progress := float(index)/24
         var angle := lerpf(-1.22,1.17,progress) + pitch
         var direction := Vector2(cos(angle)*facing_sign,sin(angle)*0.77)
-        var width := pow(sin(progress*PI),1.35)*(24 if combo_step == 3 else 16)
+        var width := pow(maxf(0.0, sin(progress*PI)),1.35)*(24 if combo_step == 3 else 16)
         outer.append(at+Vector2(facing_sign*12,-8)+direction*reach)
         inner.append(at+Vector2(facing_sign*12,-8)+direction*(reach-width))
     var fill := outer.duplicate()

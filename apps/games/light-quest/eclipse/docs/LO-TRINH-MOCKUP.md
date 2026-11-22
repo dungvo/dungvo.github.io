@@ -66,3 +66,13 @@ Bản đồ vùng đang chơi thu thập mép trên của các nền có va ch�
 Bộ nút cảm ứng dùng biểu tượng vẽ trực tiếp để chừa thêm chỗ nhìn nhân vật. Vòng nhỏ biểu thị thời gian hồi lướt, kỹ năng nhân vật, tuyệt kỹ và ấn đang gán. Vị trí chạm vẫn dùng các nút độc lập để có thể di chuyển, đánh và nhảy cùng lúc.
 
 Joystick lấy vị trí chạm làm tâm điều khiển, nên chạm sát mép vẫn bắt đầu ở trạng thái đứng yên. Nút ngồi ở Bờ Đá không giữ mất ngón điều khiển di chuyển. Lúc đáp đất, dáng nhân vật nén nhẹ quanh vị trí bàn chân, hình va chạm giữ nguyên.
+
+## V18 · Địa đồ và chuyển động chiến đấu
+
+Địa đồ mở toàn cảnh 28 khu của bảy vùng. Tranh khắc có làng, tán cây, vòm hầm, tháp và bờ biển. Các đường viền mờ biểu thị phần chưa khảo sát. Chọn một vùng đã tới để xem phòng, mặt bệ va chạm và điểm neo. Bờ Đá giữ bản đồ riêng theo thời đại.
+
+Làng Trăng có tranh nền riêng. Màn chọn, kho và thanh máu dùng chân dung từ ảnh duyệt của An và Kha. Chạm chân dung trong HUD để mở kho. Bốn thú ở Cỗ Máy hoặc tiệm Bà Lam có tranh riêng. Cáo chỉ kho đồng chưa mở trong thời đại đang chơi, Bướm Đèn soi đường dưới cầu, Quạ tấn công quái trong tầm nhìn và Hươu hồi một máu sau mười giây an toàn.
+
+Bốn dải hình trong combat-ink.webp chạy ở tọa độ thế giới. An vung một lưỡi trăng theo hướng đánh. Sát thương đã xác nhận tạo sao vàng và quái nghiêng người. Đòn kết liễu làm sprite tan thành hạt tím. Khi nhảy và tiếp đất, gió bung ra ở điểm chạm đất. Kiểm tra bằng capture_combat_ink.gd với va chạm, máu quái và vận tốc nhảy của cảnh thật.
+
+Bản đồ gồm 28 khu của hành trình hiện có. Linh, hệ giáp và các nhánh truyền lõi còn lại thuộc thiết kế chưa hoàn thiện. Số tư thế hoạt họa của nhân vật và quái vẫn thấp hơn tranh mẫu.

@@ -17,6 +17,17 @@ const RUIN_REGIONS := [
     Rect2i(66, 328, 107, 148), Rect2i(302, 267, 115, 209), Rect2i(533, 264, 133, 212)
 ]
 
+const ILLUSTRATION := preload("res://assets/eclipse/moon-heroes-illustration.webp")
+
+static func portrait(kha: bool, closeup := false) -> AtlasTexture:
+    var cut := AtlasTexture.new()
+    cut.atlas = ILLUSTRATION
+    cut.region = Rect2(1092, 137, 227, 451) if kha else Rect2(819, 137, 242, 451)
+    if closeup:
+        cut.region = Rect2(1140, 165, 103, 119) if kha else Rect2(898, 137, 106, 126)
+    cut.filter_clip = true
+    return cut
+
 static func anchored_pose(boots: Vector2, width: float) -> Rect2:
     var ratio := width / HERO_CELL.x
     return Rect2(boots - Vector2(width * 0.5, HERO_FOOTLINE * ratio), Vector2(HERO_CELL) * ratio)

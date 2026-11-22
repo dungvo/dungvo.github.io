@@ -2,6 +2,7 @@ extends Node2D
 
 const GroundSurface := preload("res://scripts/ground_surface.gd")
 const Art := preload("res://scripts/eclipse_art.gd")
+const VILLAGE := preload("res://assets/eclipse/moon-village.webp")
 const PUZZLE_HALL := preload("res://assets/eclipse/crystal-tower.webp")
 const GUARDIAN_HALL := preload("res://assets/eclipse/guardian-hall.webp")
 const KEEPER := preload("res://assets/eclipse/keeper.webp")
@@ -23,7 +24,7 @@ func _ready() -> void:
     back.layer = -2
     add_child(back)
     background = TextureRect.new()
-    background.texture = Art.SCENERY
+    background.texture = VILLAGE
     background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
     background.stretch_mode = TextureRect.STRETCH_SCALE
     background.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -80,7 +81,7 @@ func update_camera(camera_x: float, opened: bool, immediate := false) -> void:
     var raw_room := clampi(int(camera_x / ROOM_W), 0, 6)
     var room: int = [0, 0, 1, 1, 2, 2, 6][raw_room]
     var palette := [Color("#bdcce7"), Color.WHITE, Color("#b5a3cc"), Color.WHITE, Color("#baaecf"), Color("#adceda"), Color.WHITE]
-    var target: Texture2D = PUZZLE_HALL if room == 3 else (GUARDIAN_HALL if room in [2, 6] else Art.SCENERY)
+    var target: Texture2D = VILLAGE if room == 0 else (GUARDIAN_HALL if room in [2, 6] else Art.SCENERY)
     if background.texture != target:
         if crossfade and crossfade.is_valid(): crossfade.kill()
         previous_back.texture = background.texture
