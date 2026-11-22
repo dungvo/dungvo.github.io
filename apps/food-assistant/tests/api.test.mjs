@@ -33,6 +33,7 @@ test('API phục vụ app và JavaScript với MIME hợp lệ', async t => {
 test('API từ chối mã kết nối sai hoặc origin ngoài danh sách', async t => {
   const { url } = await start(t);
   assert.equal((await fetch(url + '/api/state')).status, 401);
+  assert.deepEqual(await (await fetch(url + '/api/health')).json(), { status: 'ok' });
   assert.equal((await fetch(url + '/api/state', { headers: { ...headers, Origin: 'https://untrusted.example' } })).status, 403);
   const allowed = await fetch(url + '/api/command', { method: 'OPTIONS', headers: { Origin: 'https://dungvo.github.io' } });
   assert.equal(allowed.status, 204);

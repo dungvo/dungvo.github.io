@@ -1,6 +1,6 @@
 const scope = new URL(self.registration.scope);
 const prefix = 'food-assistant:' + scope.pathname + ':';
-const cacheKey = prefix + '1.3.0';
+const cacheKey = prefix + '1.4.0';
 const shell = [
   './', './index.html', './styles.css', './app.js', './view.js', './domain.js', './language.js',
   './menu.js', './storage.js', './icons.js', './voice.js', './manifest.webmanifest', './assets/hero.webp',

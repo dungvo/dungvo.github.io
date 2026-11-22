@@ -6,7 +6,7 @@ const bytesPerSecond = 32000;
 export async function boundedAudio(blob, signal) {
   const input = Buffer.from(await blob.arrayBuffer());
   const pcm = await new Promise((resolve, reject) => {
-    const child = spawn('ffmpeg', ['-nostdin', '-loglevel', 'error', '-protocol_whitelist', 'pipe,cache',
+    const child = spawn(process.env.FOOD_FFMPEG_BIN || 'ffmpeg', ['-nostdin', '-loglevel', 'error', '-protocol_whitelist', 'pipe,cache',
       '-threads', '1', '-f', formats[blob.type], '-read_ahead_limit', '2097152', '-i', 'cache:pipe:0',
       '-map', '0:a:0', '-t', '16', '-ac', '1', '-ar', '16000', '-f', 's16le', 'pipe:1'], {
       stdio: ['pipe', 'pipe', 'ignore'], signal: AbortSignal.any([signal, AbortSignal.timeout(4000)]),

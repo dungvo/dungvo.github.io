@@ -2,6 +2,8 @@
 
 [Mở Food Assistant](https://dungvo.github.io/apps/food-assistant/) · [Mở màn bếp](https://dungvo.github.io/apps/food-assistant/#bep)
 
+[Chạy demo, dùng Wi-Fi ở quán, hoặc triển khai AWS](DEPLOY.md)
+
 Ứng dụng cho quán ăn nhỏ gồm sơ đồ bàn, gọi món tiếng Việt, màn bếp, thu tiền và lịch sử. Bản web dùng được trên một thiết bị ngay sau khi mở. Muốn điện thoại gọi món và tablet nhận đơn cùng lúc, kết nối hai máy với cùng API của quán.
 
 ## Dùng thử trên điện thoại

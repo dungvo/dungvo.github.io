@@ -1,0 +1,151 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Food Assistant pilot with private S3, CloudFront, Lambda Function URL and DynamoDB.
+Parameters:
+  FoodToken:
+    Type: String
+    NoEcho: true
+    AllowedPattern: '[a-zA-Z0-9_-]{24,128}'
+  GroqApiKey:
+    Type: String
+    NoEcho: true
+    Default: ''
+  FfmpegLayerArn:
+    Type: String
+    Default: ''
+    Description: Optional trusted Lambda Linux x86_64 layer containing /opt/bin/ffmpeg.
+  ExtraOrigin:
+    Type: String
+    Default: 'https://dungvo.github.io'
+Conditions:
+  ServerSpeech: !Not [!Equals [!Ref FfmpegLayerArn, '']]
+Resources:
+  ShopData:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+      BillingMode: PROVISIONED
+      ProvisionedThroughput:
+        ReadCapacityUnits: 25
+        WriteCapacityUnits: 25
+  SiteBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+  SiteAccess:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub '${AWS::StackName}-s3'
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+  Site:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: Food Assistant
+        DefaultRootObject: index.html
+        PriceClass: PriceClass_200
+        Origins:
+          - Id: app
+            DomainName: !GetAtt SiteBucket.RegionalDomainName
+            OriginAccessControlId: !Ref SiteAccess
+            S3OriginConfig:
+              OriginAccessIdentity: ''
+        DefaultCacheBehavior:
+          TargetOriginId: app
+          ViewerProtocolPolicy: redirect-to-https
+          Compress: true
+          AllowedMethods: [GET, HEAD]
+          CachePolicyId: '658327ea-f89d-4fab-a63d-7e88639e58f6'
+  SitePolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref SiteBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: { Service: cloudfront.amazonaws.com }
+            Action: 's3:GetObject'
+            Resource: !Sub '${SiteBucket.Arn}/*'
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub 'arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${Site}'
+  Backend:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: nodejs24.x
+      Architectures: [x86_64]
+      MemorySize: 256
+      Timeout: 27
+      CodeUri: build/lambda/
+      Handler: entry.handler
+      Layers: !If [ServerSpeech, [!Ref FfmpegLayerArn], !Ref AWS::NoValue]
+      Environment:
+        Variables:
+          FOOD_TOKEN: !Ref FoodToken
+          GROQ_API_KEY: !Ref GroqApiKey
+          FOOD_TABLE: !Ref ShopData
+          FOOD_ORIGINS: !Sub 'https://${Site.DomainName},${ExtraOrigin}'
+          FOOD_TRANSCRIBE: !If [ServerSpeech, '1', '0']
+          FOOD_FFMPEG_BIN: /opt/bin/ffmpeg
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action: ['dynamodb:GetItem', 'dynamodb:PutItem', 'dynamodb:UpdateItem']
+              Resource: !GetAtt ShopData.Arn
+  BackendLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${Backend}'
+      RetentionInDays: 14
+  BackendUrl:
+    Type: AWS::Lambda::Url
+    DependsOn: BackendLogs
+    Properties:
+      TargetFunctionArn: !GetAtt Backend.Arn
+      AuthType: NONE
+      InvokeMode: BUFFERED
+  PublicUrlPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref Backend
+      Action: lambda:InvokeFunctionUrl
+      Principal: '*'
+      FunctionUrlAuthType: NONE
+  PublicInvokeOnlyThroughUrl:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref Backend
+      Action: lambda:InvokeFunction
+      Principal: '*'
+      InvokedViaFunctionUrl: true
+Outputs:
+  SiteUrl:
+    Value: !Sub 'https://${Site.DomainName}/'
+  ApiUrl:
+    Value: !GetAtt BackendUrl.FunctionUrl
+  SiteBucketName:
+    Value: !Ref SiteBucket
+  CloudFrontId:
+    Value: !Ref Site

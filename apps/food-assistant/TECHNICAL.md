@@ -47,7 +47,7 @@ Flutter Web và PWA đều phụ thuộc dịch vụ giọng nói mà trình duy
 
 | Kiểm tra | Kết quả |
 | --- | --- |
-| `npm test` | 118 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất, phân tích câu nhiều món, thời lượng giải mã và hạn mức đồng thời |
+| `npm test` | 120 kiểm thử đạt gồm phân tích câu, chống trùng, hủy/đổi món, đơn ngoài bàn, bàn đã đóng, thu tiền nhiều lượt, SQLite, hai thiết bị gửi đồng thời, lỗi đồng bộ, khôi phục và AI adapter mô phỏng, định dạng bản thu, xác thực, giới hạn dung lượng và tần suất, phân tích câu nhiều món, thời lượng giải mã và hạn mức đồng thời |
 | Chromium 375 × 812 | Luồng nhập câu tiếng Việt, kiểm tra trùng, bếp, hóa đơn và tải lại đạt |
 | Chromium 412 × 915 | Luồng như trên đạt |
 | Chromium 834 × 1112 | Luồng như trên đạt, kiểm tra các thẻ món trong màn bếp |
