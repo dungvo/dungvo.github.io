@@ -44,3 +44,11 @@ Kiểm thử hồi quy chạy cùng các trận boss và tuyến leo có sẵn. 
 I hoặc nút Kho mở menu chung của hành trình và Bờ Đá. Các tab Bản đồ, Trang bị, Kỹ năng và Nhật ký mở qua lại trong lúc game tạm dừng. Chọn thẻ vũ khí để xem trước, rồi bấm Trang bị để đổi. Hành trình so sánh tầm kiếm hoặc tốc độ đạn, sát thương và thời gian hồi tính từ thông số dùng trong trận. Bờ Đá có tám vũ khí, màn diễn thử chiêu V và số lõi đang giữ. Truyền lõi mở Tơ Kép vẫn được thực hiện tại tiệm Bà Lam. Sáu ấn có biểu tượng, cách dùng và nút gán F / ẤN. Nhật ký đọc tiến độ nhiệm vụ và vị trí hiện tại.
 
 Ảnh Godot 960×540 gồm `v14-armory.png`, `v14-runes.png` và `v14-journal.png`. Bố cục bám ba cột của mẫu trang bị, dùng sprite An/Kha trong bản chơi. Phần chân dung minh họa riêng, hệ giáp/phụ kiện, nhánh truyền lõi cho các vũ khí còn lại và nâng cấp hiệu ứng chiến đấu nằm ở các lượt tiếp theo.
+
+## V15 · Hành trình liền mạch
+
+Từ menu có tranh nền, chọn An hoặc Kha rồi chọn **Đi cảnh** để bắt đầu tại Làng Trăng. Khi đã chơi, **Tiếp tục** mở lại vùng lưu gần nhất. Đường chính qua Làng Trăng, Rừng Vọng, Hầm Bóng, Tháp Gió, Vườn Treo, Đỉnh Nguyệt, Đường Chân Trời rồi kết ở Sân Hải Đăng. Các cửa mỗi vùng nằm trong địa hình, mở theo tiến độ và dùng E khi đứng gần. Cổng ngược cho phép quay lại vùng đã đi qua. Thắp đèn sau trận cuối tạo luồng sáng trong cảnh và ghi mốc hoàn thành.
+
+Bản đồ chính mở tại vùng hiện tại, bổ sung những khu vừa đặt chân tới. Chọn Toàn cảnh để xem nối kết đã khám phá. Chế độ Luyện tập có bộ chọn màn riêng. Kết quả luyện tập không ghi đè hành trình. Cỗ Máy mở tuyến phụ Bờ Đá và giữ dữ liệu vũ khí, lõi và thời đại đã có.
+
+Bài kiểm tra `continuous_journey_test.gd` dùng điều khiển Godot, va chạm và đòn đánh để qua đủ bảy vùng trong một lượt với Kha, từ menu tới lúc thắp Hải Đăng. Dùng ảnh Godot 960×540 để kiểm tra menu, màn vào Làng Trăng, bản đồ đang khám phá và Hải Đăng đã sáng.

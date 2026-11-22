@@ -10,7 +10,6 @@ func _capture() -> void:
     root.add_child(game)
     game.story_mode = true
     game._start("An")
-    game._interact()
     game.atlas.survey()
     await _save("v13-minimap.png")
     game.atlas.open()

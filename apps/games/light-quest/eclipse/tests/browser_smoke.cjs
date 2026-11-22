@@ -61,11 +61,29 @@ async function run() {
                 else await page.mouse.click(p.x, p.y);
             };
             await canvas.screenshot({ path: path.join(evidence, `web-${mobile ? 'touch' : 'desktop'}-menu.png`) });
+            // The public entry goes straight into the journey, with no instruction modal.
+            const storyStart = page.waitForEvent('console', { predicate: m => m.text().includes('ECLIPSE CHAPTER: 0 An'), timeout: 10000 });
+            storyStart.catch(() => {});
+            await tap(172, 256);
+            await storyStart;
+            await page.waitForTimeout(220);
+            if (mobile) await tap(874, 42);
+            else await page.keyboard.press('m');
+            await page.waitForTimeout(180);
+            const fogged = await canvas.screenshot({ path: path.join(evidence, `v15-story-map-${mobile ? 'touch' : 'desktop'}.png`) });
+            if (mobile) await tap(889, 42);
+            else await page.keyboard.press('Escape');
+            await page.waitForTimeout(110);
+            assert.notDeepEqual(await canvas.screenshot(), fogged, 'journey opens the discovery map without a briefing modal');
+            await tap(880, 102);
+            await page.waitForTimeout(150);
             for (let chapter = 0; chapter < 7; chapter++) {
                 // Godot PopupMenu is drawn inside the canvas, rather than as DOM options.
-                await tap(480, 289);
+                await tap(128, 443);
+                await page.waitForTimeout(120);
+                await tap(480, 230);
                 await page.waitForTimeout(150);
-                await tap(480, 326 + 27 * chapter);
+                await tap(480, 265 + 27 * chapter);
                 await page.waitForTimeout(150);
                 const who = chapter % 3 === 1 ? 'Kha' : 'An';
                 const expected = chapter < 3 ? `ECLIPSE CHAPTER: ${chapter} ${who}` : `ECLIPSE SKY: ${chapter - 3} ${who}`;
@@ -73,7 +91,7 @@ async function run() {
                 started.catch(() => {});
                 const probe = page.waitForEvent('console', { predicate: message => message.text().includes('ECLIPSE RENDER PROBE:'), timeout: 15000 });
                 probe.catch(() => {});
-                await tap(480, who === 'An' ? 340 : 390);
+                await tap(who === 'An' ? 352 : 578, 296);
                 await page.waitForTimeout(300);
 
                 await started;
@@ -153,13 +171,15 @@ async function run() {
                 await page.waitForTimeout(150);
             }
             // Start a fresh chapter so the armory input checks are independent of combat.
-            await tap(480, 289);
+            await tap(128, 443);
+            await page.waitForTimeout(120);
+            await tap(480, 230);
             await page.waitForTimeout(140);
-            await tap(480, 326);
+            await tap(480, 265);
             await page.waitForTimeout(140);
             const armoryStart = page.waitForEvent('console', { predicate: m => m.text().includes('ECLIPSE CHAPTER: 0 An'), timeout: 10000 });
             armoryStart.catch(() => {});
-            await tap(480, 340);
+            await tap(352, 296);
             await armoryStart;
             if (mobile) await tap(898, 299);
             else await page.keyboard.press('e');

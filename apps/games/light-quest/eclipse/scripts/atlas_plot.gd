@@ -67,13 +67,13 @@ func _select_at(at: Vector2) -> void:
     if region == -1:
         coordinate *= Vector2(800, 342) / size
         for i in OVERVIEW.size():
-            if Rect2(OVERVIEW[i], Atlas.SIZE * RANK + Vector2(5, 22)).has_point(coordinate):
+            if atlas.region_visible(i) and Rect2(OVERVIEW[i], Atlas.SIZE * RANK + Vector2(5, 22)).has_point(coordinate):
                 atlas.select_region(i)
                 return
     else:
         coordinate *= Atlas.SIZE / size
         for room in Atlas.boxes(region).size():
-            if Atlas.exists(region, room, era, atlas.repaired()) and Atlas.boxes(region)[room].has_point(coordinate):
+            if atlas.room_visible(region, room, era) and Atlas.exists(region, room, era, atlas.repaired()) and Atlas.boxes(region)[room].has_point(coordinate):
                 atlas.select_room(room)
                 return
 
@@ -91,12 +91,14 @@ func _draw() -> void:
         _region(region, Vector2.ZERO, 1.0, not compact, true)
     else:
         for i in range(6):
+            if not atlas.room_visible(i, 3, era) or not atlas.room_visible(i + 1, 0, era): continue
             var a: Rect2 = Atlas.boxes(i)[3]
             var b: Rect2 = Atlas.boxes(i + 1)[0]
             var left: Vector2 = OVERVIEW[i] + a.get_center() * RANK
             var right: Vector2 = OVERVIEW[i + 1] + b.get_center() * RANK
             _link(left, right, Color("#cfb489"), atlas.gate(i, "exit", era), true)
         for i in OVERVIEW.size():
+            if not atlas.region_visible(i): continue
             _region(i, OVERVIEW[i], RANK, false, true)
             var font := ThemeDB.fallback_font
             draw_string(font, OVERVIEW[i] + Vector2(-14, 83), Atlas.NAMES[i],
@@ -111,9 +113,23 @@ func _region(index: int, origin: Vector2, scale_value: float, labels: bool, mark
     for link in Atlas.links(index, era, atlas.repaired()):
         var left: Vector2 = rooms[link[0]].get_center() * scale_value + origin
         var right: Vector2 = rooms[link[1]].get_center() * scale_value + origin
-        _link(left, right, color, atlas.gate(index, link[2], era), scale_value < 1.0)
+        var left_seen: bool = atlas.room_visible(index, link[0], era)
+        var right_seen: bool = atlas.room_visible(index, link[1], era)
+        if left_seen and right_seen:
+            _link(left, right, color, atlas.gate(index, link[2], era), scale_value < 1.0)
+        elif left_seen or right_seen:
+            var seen: Vector2 = left if left_seen else right
+            var edge: Vector2 = right if left_seen else left
+            var room: Rect2 = rooms[link[0] if left_seen else link[1]]
+            var outward := seen.direction_to(edge)
+            var span := room.size * scale_value * 0.5
+            var border := minf(span.x / maxf(0.001, absf(outward.x)), span.y / maxf(0.001, absf(outward.y)))
+            var start := seen + outward * border
+            var finish := start + outward * (4.0 if scale_value < 1.0 else 16.0)
+            var tint := color if atlas.gate(index, link[2], era).is_empty() else LOCK
+            draw_dashed_line(start, finish, tint, 2.0 if not compact else 6.0, 3.0 if not compact else 12.0, true, true)
     for i in rooms.size():
-        if not Atlas.exists(index, i, era, atlas.repaired()): continue
+        if not Atlas.exists(index, i, era, atlas.repaired()) or not atlas.room_visible(index, i, era): continue
         var rect: Rect2 = rooms[i]
         rect = Rect2(origin + rect.position * scale_value, rect.size * scale_value)
         var known: bool = atlas.discovered.has(Atlas.key(index, i, visited_era))
@@ -126,7 +142,7 @@ func _region(index: int, origin: Vector2, scale_value: float, labels: bool, mark
     if markers and (region >= 0 or active):
         for pin in atlas.pins(index, era):
             var room := Atlas.locate(index, pin.at, era, atlas.repaired())
-            if region == -1 and room != player_room: continue
+            if not atlas.room_visible(index, room, era) or (region == -1 and room != player_room): continue
             var at := origin + Atlas.project(index, room, pin.at, labels) * scale_value
             if compact:
                 draw_circle(at, 7.0, AQUA if pin.kind == "hook" or pin.live else Color("#a1afbb"), true, -1.0, true)

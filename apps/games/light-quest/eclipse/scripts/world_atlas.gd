@@ -192,7 +192,7 @@ func open() -> void:
     opener.hide()
     get_tree().paused = true
     plot.era = current_era()
-    select_region(current_region() if game.time_mode else -1)
+    select_region(current_region() if game.time_mode or game.story_mode else -1)
 
 func close() -> void:
     if not overlay.visible: return
@@ -220,6 +220,7 @@ func _zoom(amount: float) -> void:
     plot.magnify(amount, plot.size * 0.5)
 
 func select_region(region: int) -> void:
+    if region >= 0 and not region_visible(region): return
     plot.region = region
     active_room = -1
     plot.reset_view()
@@ -248,6 +249,7 @@ func _refresh_text() -> void:
     for i in era_buttons.size():
         era_buttons[i].modulate = GOLD if i == atlas_era else Color.WHITE
     for i in regions.size():
+        regions[i].visible = region_visible(i)
         regions[i].modulate = GOLD if i == region else Color.WHITE
     atlas_button.modulate = GOLD if region == -1 else Color.WHITE
     background.texture = CAVERN_ART if region == 2 else (COAST_ART if region >= 6 else MOON_ART)
@@ -264,7 +266,7 @@ func _refresh_text() -> void:
         for i in range(7):
             for room in Atlas.names(i).size():
                 if discovered.has(Atlas.key(i, room, 0)): seen += 1
-        description.text = "%d / 28 khu đã ghé   ·   %s" % [seen, "Chọn một vùng để xem đường đi" if game.story_mode else "Cổng nối bảy vùng dùng trong Vào Truyện"]
+        description.text = "%d / 28 khu đã ghé   ·   %s" % [seen, "Đường hiện dần khi khám phá" if game.story_mode else "Các màn luyện tập"]
         return
     var messages := PackedStringArray()
     for link in Atlas.links(region, atlas_era, repaired()):
@@ -286,6 +288,16 @@ func _refresh_text() -> void:
         description.text = messages[0] + "   ·   Chạm khu để xem lối nối"
     else:
         description.text = "Chạm một khu để xem lối nối   ·   Dùng + và kéo để xem gần"
+
+func room_visible(region: int, room: int, era: int) -> bool:
+    return not game.story_mode or discovered.has(Atlas.key(region, room, era)) or (region == current_region() and room == current_room())
+
+func region_visible(region: int) -> bool:
+    if not game.story_mode: return true
+    if region == 7: return false
+    for room in Atlas.names(region).size():
+        if room_visible(region, room, 0): return true
+    return false
 
 func current_region() -> int:
     return 7 if game.time_mode else game.current_trial
@@ -358,7 +370,7 @@ func gate(region: int, kind: String, era: int) -> String:
             if state.checkpoint < 2: return "Tương tác trụ trước Đài Canh"
         "warden":
             if region == current_region() and game.sky.active and game.sky.coast_doors.size() > 2:
-                var door: StaticBody2D = game.sky.coast_doors[2]
+                var door = game.sky.coast_doors[2]
                 if not is_instance_valid(door) or door.collision_layer == 0: return ""
             elif state.won or state.guardian_down: return ""
             return "Hạ Vệ Binh rồi mở cửa Sân Hải Đăng"

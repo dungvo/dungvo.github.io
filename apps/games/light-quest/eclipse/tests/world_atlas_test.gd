@@ -13,7 +13,7 @@ func _run() -> void:
             if not ensure(Atlas.locate(region, bounds.get_center(), 1, false) == room, "mapped area owns its collision coordinates"): return
     if not ensure(tiles == 28 and map.current_room() == 0, "28 playable-area bounds across seven chapters"): return
     map.open()
-    if not ensure(paused and map.plot.region == -1, "opening story atlas freezes game"): return
+    if not ensure(paused and map.plot.region == 0, "opening story atlas freezes game"): return
     var position_before: Vector2 = game.hero.position
     game.joystick.axis = Vector2.RIGHT
     await _frames(10)
@@ -31,7 +31,6 @@ func _run() -> void:
     for region in range(6):
         game.demo_room_select.select(region)
         game._start("An")
-        game._interact()
         if region < 3:
             game.hero.position = Vector2(region * 1920 + 1810, 432)
             game._interact()

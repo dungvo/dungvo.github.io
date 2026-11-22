@@ -3,6 +3,7 @@ extends Node2D
 var kind := "sigil"
 var caption := ""
 var used := false
+var sealed := false
 var time := 0.0
 var tint := Color("#97e7ff")
 var label: Label
@@ -30,7 +31,19 @@ func tick(delta: float, player: Vector2) -> void:
 func _draw() -> void:
     var glow := 0.15 + sin(time * 2.2) * 0.06
     draw_circle(Vector2(0, -18), 28, Color(tint, glow))
-    if kind == "checkpoint":
+    if kind in ["story_next", "story_back", "goal", "outer_door"]:
+        var at := Vector2(0, -30)
+        var color := Color("#eea286") if sealed else Color("#ffe1a1")
+        draw_arc(at, 21, PI, TAU, 24, color, 2.3, true)
+        draw_line(at + Vector2(-21, 0), at + Vector2(-21, 19), color, 2.3, true)
+        draw_line(at + Vector2(21, 0), at + Vector2(21, 19), color, 2.3, true)
+        if sealed:
+            draw_line(at + Vector2(-12, -5), at + Vector2(12, -5), color, 3.5, true)
+        else:
+            var direction := -1 if kind == "story_back" else 1
+            draw_polyline(PackedVector2Array([at + Vector2(-3 * direction, -10), at + Vector2(7 * direction, 0),
+                at + Vector2(-3 * direction, 10)]), color, 3.5, true)
+    elif kind == "checkpoint":
         draw_arc(Vector2(0, -22), 23, 0, TAU, 32, tint, 2, true)
         draw_line(Vector2(0, -46), Vector2(0, -4), tint, 3, true)
         draw_arc(Vector2(0, -22), 14, 0, TAU, 24, Color("#fff3d5"), 1, true)

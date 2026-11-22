@@ -38,7 +38,6 @@ func _run() -> void:
     game.story_mode = true
     game.demo_room_select.select(2)
     game._start("An")
-    game._interact()
     game.hero.position = Vector2(2*1920+1810,432)
     game._interact()
     if not ensure(game.current_trial == 2,"story gate requires a victory"): return
@@ -50,7 +49,6 @@ func _run() -> void:
     if not ensure(game.current_trial == 2 and not game.sky.active and game.trials.wins[2],"backtrack without losing victory"): return
     game.demo_room_select.select(6)
     game._start("An")
-    game._interact()
     if not ensure(game.sky.boss_dead and game.sky.movers.size() == 1,"story preserves boss and creates lift"): return
     var lift: AnimatableBody2D = game.sky.movers[0].body
     var original_y := lift.position.y

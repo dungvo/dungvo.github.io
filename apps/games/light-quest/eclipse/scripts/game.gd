@@ -83,7 +83,7 @@ var scenery: Node2D
 var notice := ""
 var notice_time := 0.0
 var started := false
-var menu: PanelContainer
+var menu: Control
 var demo_room_select: OptionButton
 var current_trial := 0
 # Feel First v0.2: buffered jumps, acceleration and feedback.
@@ -118,7 +118,9 @@ var story_mode := false
 var time_mode := false
 var story_room := -1
 var story_hero := "An"
-var story_button: Button
+var journey_complete := false
+var practice_snapshot: Dictionary = {}
+var curtain: Control
 var atlas: CanvasLayer
 
 func _ready() -> void:
@@ -281,6 +283,9 @@ func _make_ui() -> void:
     crouch_touch = touchbar.get_child(touch_index)
     crouch_touch.hide()
     control_art.crouch.hide()
+    if OS.has_feature("web") and not mobile_web:
+        touchbar.hide()
+        joystick.hide()
     dialogue = PanelContainer.new()
     dialogue.position = Vector2(145,220)
     dialogue.custom_minimum_size = Vector2(670,115)
@@ -354,6 +359,7 @@ func _touch_button(parent: Control, key: String, glyph: String, center: Vector2,
     control_art[key] = face
 
 func _control_pressed(key: String) -> void:
+    if loadout.panel.visible or atlas.overlay.visible: return
     if time_mode and sky.timeline.panel.visible: return
     if not started or death_time > 0: return
     if victory_panel.visible:
@@ -383,73 +389,57 @@ func _notification(what: int) -> void:
         jump_buffer_clock = 0
         attack_buffer = 0
 func _menu() -> void:
-    menu = PanelContainer.new()
-    menu.position = Vector2(270,75)
-    menu.custom_minimum_size = Vector2(420,375)
     var layer := CanvasLayer.new()
     layer.layer = 10
     add_child(layer)
+    menu = preload("res://scripts/journey_menu.gd").new()
+    menu.game = self
     layer.add_child(menu)
-    var v := VBoxContainer.new()
-    menu.add_child(v)
-    var title := Label.new()
-    title.text = "LIGHT QUEST: ECLIPSE\nKHO ÁNH TRĂNG · V14"
-    title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-    title.add_theme_font_size_override("font_size",24)
-    v.add_child(title)
-    var note := Label.new()
-    note.text = "A/D di chuyển · Space nhảy · J đánh\n1–6 sáu ấn · F dùng ấn · Q tuyệt kỹ · E tương tác"
-    note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-    v.add_child(note)
-    var selector_label := Label.new()
-    selector_label.text = "CHỌN MÀN HOẶC TIẾP TỤC HÀNH TRÌNH"
-    selector_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-    v.add_child(selector_label)
-    demo_room_select = OptionButton.new()
-    demo_room_select.add_item("01 · Làng Trăng — Vệ Binh Chuông Tàn", 0)
-    demo_room_select.add_item("02 · Rừng Vọng — Lang Vương Vọng Âm", 1)
-    demo_room_select.add_item("03 · Hầm Bóng — Kẻ Dệt Bóng", 2)
-    demo_room_select.add_item("04 · Tháp Gió — sáu ấn / leo tầng trời", 3)
-    demo_room_select.add_item("05 · Vườn Treo — khám phá trên mây", 4)
-    demo_room_select.add_item("06 · Đỉnh Nguyệt — Thủ Hộ Nhật Thực", 5)
-    demo_room_select.add_item("07 · Đường Chân Trời — cầu gió và đài canh", 6)
-    demo_room_select.select(journey_next)
-    demo_room_select.custom_minimum_size.y = 38.0
-    v.add_child(demo_room_select)
-    for who in ["An — kiếm sĩ","Kha — pháp sư"]:
-        var b := Button.new()
-        b.text = "Chơi: " + who
-        b.pressed.connect(func():
-            story_mode = false
-            time_mode = false
-            _start("Kha" if who.begins_with("Kha") else "An")
-        )
-        b.custom_minimum_size.y = 38
-        v.add_child(b)
-    story_button = Button.new()
-    story_button.text = "VÀO TRUYỆN · " + ("Tiếp tục" if story_room >= 0 else "Bắt đầu")
-    story_button.custom_minimum_size.y = 36
-    story_button.pressed.connect(func():
-        story_mode = true
-        time_mode = false
-        demo_room_select.select(maxi(0, story_room))
-        _start(story_hero)
-    )
-    v.add_child(story_button)
-    var time_button := Button.new()
-    time_button.text = "CỖ MÁY THỜI GIAN · Hải Đăng"
-    time_button.custom_minimum_size.y = 36
-    time_button.pressed.connect(func():
-        story_mode = false
-        time_mode = true
-        demo_room_select.select(6)
-        _start("An")
-    )
-    v.add_child(time_button)
-    v.add_theme_constant_override("separation", 12)
-    menu.add_theme_stylebox_override("panel", _panel_style())
+    demo_room_select = menu.options
+    var announcements := CanvasLayer.new()
+    announcements.layer = 5
+    add_child(announcements)
+    curtain = preload("res://scripts/journey_curtain.gd").new()
+    announcements.add_child(curtain)
+    curtain.hide()
     dialogue.add_theme_stylebox_override("panel", _panel_style())
     victory_panel.add_theme_stylebox_override("panel", _panel_style())
+
+func enter_journey(who: String) -> void:
+    story_mode = true
+    time_mode = false
+    demo_room_select.select(maxi(0, story_room))
+    _start(story_hero if story_room >= 0 else who)
+
+func enter_practice(who: String) -> void:
+    practice_snapshot = _progress_data().duplicate(true)
+    story_mode = false
+    time_mode = false
+    var index := demo_room_select.get_selected_id()
+    met_npc = index != 0
+    if index < 3:
+        trials.wins[index] = false
+        trials.saved[index] = false
+        trials.collected[index] = [false, false]
+    else:
+        sky.progress[index - 3] = sky._blank()
+    _start(who)
+
+func enter_time_coast() -> void:
+    story_mode = false
+    time_mode = true
+    demo_room_select.select(6)
+    _start("An")
+
+func show_front_menu() -> void:
+    if not practice_snapshot.is_empty():
+        _apply_progress(practice_snapshot)
+        practice_snapshot.clear()
+    story_mode = false
+    time_mode = false
+    curtain.hide()
+    menu.show_home()
+    menu.show()
 
 func _panel_style() -> StyleBoxFlat:
     var style := StyleBoxFlat.new()
@@ -472,23 +462,22 @@ func _start(who: String) -> void:
     actor_anim.play("idle")
     anim_label = "idle"
     started = true
+    victory_panel.hide()
     menu.hide()
     _reset_touch()
     joystick.accept_touch = true
     if current_trial >= 3:
-        trials.return_menu()
-        started = true
-        menu.hide()
-        joystick.accept_touch = true
+        trials.suspend()
         sky.begin(current_trial - 3)
     else:
         sky.stop()
         trials.begin(current_trial)
         arts.reset()
     if story_mode:
+        notice_time = 0.0
         story_room = current_trial
         story_hero = character
-        story_button.text = "VÀO TRUYỆN · Tiếp tục"
+        curtain.show_region(atlas.Atlas.NAMES[story_room])
         _persist()
     crouch_touch.visible = time_mode
     control_art.crouch.visible = time_mode
@@ -1099,17 +1088,20 @@ func cross_story_gate(direction: int) -> void:
     cam.force_update_scroll()
     _show_dialogue(false)
     sound.play_cue("light")
-    _say("Cổng đã mở · E để đi tiếp hoặc quay về",3)
+    atlas.survey()
 
 func mark_chapter_complete(chapter_index: int) -> void:
     journey_next = maxi(journey_next, mini(chapter_index + 1, 6))
     _persist()
 
 func _persist() -> void:
-    if not save_enabled or not is_instance_valid(trials): return
+    if not save_enabled or not is_instance_valid(trials) or not practice_snapshot.is_empty(): return
     var f := FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     if f:
-        f.store_string(JSON.stringify({"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "atlas":atlas.discovered.keys(), "timeline":sky.timeline.save_state(), "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}))
+        f.store_string(JSON.stringify(_progress_data()))
+
+func _progress_data() -> Dictionary:
+    return {"version":2, "journey_next":journey_next, "story_room":story_room, "story_hero":story_hero, "journey_complete":journey_complete, "atlas":atlas.discovered.keys(), "timeline":sky.timeline.save_state(), "weapon":loadout.weapon, "favorite":loadout.favorite, "met_npc":met_npc, "moon_dash":moon_dash, "secrets":trials.secrets, "wins":trials.wins, "saved":trials.saved, "collected":trials.collected, "air_step":trials.routes.air_step_unlocked, "route_claimed":trials.routes.claimed, "route_opened":trials.routes.opened, "sky":sky.progress if is_instance_valid(sky) else []}
 
 func _restore() -> void:
     if not save_enabled or not FileAccess.file_exists(SAVE_FILE): return
@@ -1117,8 +1109,13 @@ func _restore() -> void:
     if not f: return
     var data = JSON.parse_string(f.get_as_text())
     if not data is Dictionary or data.get("version") != 2: return
+    _apply_progress(data)
+
+func _apply_progress(data: Dictionary) -> void:
     story_room = clampi(int(data.get("story_room", -1)), -1, 6)
+    journey_complete = data.get("journey_complete", false) == true
     story_hero = "Kha" if data.get("story_hero") == "Kha" else "An"
+    atlas.discovered.clear()
     atlas.restore(data.get("atlas", []))
     journey_next = clampi(int(data.get("journey_next", 0)), 0, 6)
     loadout.weapon = clampi(int(data.get("weapon", 0)), 0, 2)

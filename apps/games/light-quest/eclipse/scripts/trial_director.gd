@@ -150,6 +150,7 @@ func begin(index: int) -> void:
     game.air_jumps = 1 if routes.air_step_unlocked else 0
     game.vfx.clear()
     game.victory_panel.hide()
+    menu_button.text = "MENU" if game.story_mode else "MÀN CHƠI"
     menu_button.show()
     var roster: Array = [["wolf", "golem"], ["wolf", "bat"], ["golem", "mage"]][index]
     game._spawn_enemy(roster[0], start + 440)
@@ -189,7 +190,7 @@ func begin(index: int) -> void:
     routes.build(index)
     game._say(TITLES[index] + " · Hai khu vực / một bí mật / một boss", 3)
     game.dialogue_label.text = STORIES[index] + "\n\nE / nút E để đóng. Checkpoint nằm trước đấu trường."
-    game._show_dialogue(true)
+    game._show_dialogue(not game.story_mode)
     update_hud()
     queue_redraw()
     print("ECLIPSE CHAPTER: %d %s" % [selected, game.character])
@@ -209,6 +210,7 @@ func tick(delta: float) -> void:
     game.hero.position.x = clampf(game.hero.position.x, start + 26, start + 1890)
     routes.tick(delta)
     for relic in relics:
+        if relic.kind == "story_next": relic.sealed = not wins[selected]
         relic.tick(delta, game.hero.position)
     if is_instance_valid(boss) and not boss.awake and boss.state != "dead" and game.hero.position.x > start + 1340 and sigils >= 2 and (selected != 0 or game.met_npc):
         boss.awake = true
@@ -231,7 +233,7 @@ func interact() -> bool:
     if routes.interact(): return true
     if selected == 0 and not game.met_npc and game.hero.position.distance_to(Vector2(290, 432)) < 90:
         game.met_npc = true
-        game.dialogue_label.text = "Thợ Lưu Giữ: Hai mảnh chuông nằm trên các bệ đá. Mang chúng đến Vệ Binh. Khi lưỡi kiếm lóe vàng, lướt qua đòn hoặc dùng L để phản đòn.\n\nE để đóng."
+        game.dialogue_label.text = "Thợ Lưu Giữ · Tìm hai mảnh chuông trên bệ đá.\nE · Tiếp tục" if game.story_mode else "Thợ Lưu Giữ: Hai mảnh chuông nằm trên các bệ đá. Mang chúng đến Vệ Binh. Khi lưỡi kiếm lóe vàng, lướt qua đòn hoặc dùng L để phản đòn.\n\nE để đóng."
         game._show_dialogue(true)
         game._persist()
         return true
@@ -322,14 +324,17 @@ func return_menu() -> void:
     if is_instance_valid(game.arts):
         game.arts.layer.hide()
         game.arts.vfx.clear()
-    active = false
-    routes.clear_hint()
+    suspend()
     game.started = false
     game._show_dialogue(false)
     game.victory_panel.hide()
-    game.menu.show()
     game.joystick.accept_touch = false
     game._reset_touch()
+    game.show_front_menu()
+
+func suspend() -> void:
+    active = false
+    routes.clear_hint()
     boss_label.hide()
     if is_instance_valid(boss_bar): boss_bar.hide()
     prompt.text = ""
@@ -345,6 +350,9 @@ func update_hud() -> void:
     game.light_status.text = "Đã giải phóng" if wins[selected] else "Khám phá / đấu trường"
     objective.text = ("Gặp Thợ Lưu Giữ · E" if selected == 0 and not game.met_npc else ("Thu mảnh ấn %d/2 · E gần pha lê" % sigils if sigils < 2 else "Đánh bại " + BOSS_NAMES[selected]))
     if is_instance_valid(boss) and boss.state == "dead": objective.text = "Màn hoàn thành · Có thể tiếp tục tìm bí mật"
+    if game.story_mode:
+        game.light_status.text = ""
+        objective.text = ("E · Thợ Lưu Giữ" if not game.met_npc and selected == 0 else ("%d / 2 mảnh ấn" % sigils if sigils < 2 else "")) if not wins[selected] else ""
     boss_label.visible = is_instance_valid(boss) and boss.awake and boss.state != "dead"
     if boss_label.visible:
         boss_label.text = "%s · PHA %d\n%d / %d" % [BOSS_NAMES[selected], 2 if boss.phase_two else 1, boss.hp, boss.max_hp]
@@ -352,12 +360,14 @@ func update_hud() -> void:
         boss_bar.value = boss.hp
     boss_bar.visible = boss_label.visible
     cooldowns.text = "L · %s  %s\nK · Lướt  %s" % ["Phản đòn" if game.character == "An" else "Hồi quang / xung lực", "SẴN SÀNG" if game.shield_cooldown <= 0 else "%.1fs" % game.shield_cooldown, "SẴN SÀNG" if game.dash_cooldown <= 0 else "%.1fs" % game.dash_cooldown]
+    cooldowns.visible = not game.story_mode
     cooldowns.text += "\nQ · %s  %s\n%s · Di vật %d/3" % ["Nguyệt Trảm" if game.character == "An" else "Tinh Bộ", "SẴN SÀNG" if game.burst_cooldown <= 0 else "%.1fs" % game.burst_cooldown, "Bước Gió" if routes.air_step_unlocked else "Tìm đền Bước Gió", routes.claimed.count(true)]
     prompt.text = ""
     for relic in relics:
         if (not relic.used or relic.kind == "checkpoint") and relic.position.distance_to(game.hero.position) < 100:
             prompt.text = relic.caption
     var local_x: float = game.hero.position.x - selected * 1920
+    mini_map.visible = not game.story_mode
     mini_map.text = "LỐI ĐI  %d%%   ·   ẤN %d/2   ·   BÍ MẬT %s" % [clampi(int(local_x / 19.2), 0, 100), sigils, "ĐÃ TÌM" if secrets[selected] else "?"]
 
 func _draw() -> void:

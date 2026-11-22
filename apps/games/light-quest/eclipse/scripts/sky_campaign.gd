@@ -165,6 +165,8 @@ func begin(index: int) -> void:
     if stage == 3: stations = [Vector2(140,432),Vector2(1280,226),Vector2(2460,106)]
     var cp: int = clampi(progress[stage].checkpoint, 0, 2)
     game.checkpoint = point(Vector2(150,432) if game.time_mode else stations[cp])
+    if game.story_mode and stage == 3 and game.journey_complete:
+        game.checkpoint = point(story_exit() - Vector2(0,24))
     game.hero.position = game.checkpoint
     game.cam.reset_smoothing()
     game.cam.force_update_scroll()
@@ -179,7 +181,8 @@ func begin(index: int) -> void:
 Qua hai trạm, tìm lõi đèn dưới vòm đá, rung chuông và vượt đài canh.
 E để bắt đầu · I hoặc Trang bị để đổi cách đánh."
     if game.time_mode: game.dialogue_label.text = "NGỌN ĐÈN CHƯA TẮT\nTìm Tín trong hiện tại hoặc dùng E cạnh cỗ máy để đổi thời đại.\nV / nút vũ khí dùng chiêu riêng. E để bắt đầu."
-    game._show_dialogue(true)
+    game._show_dialogue(not game.story_mode)
+    menu_button.text = "MENU" if game.story_mode else "MÀN CHƠI"
     game._say("Bờ Đá · ↓ hoặc NGỒI để luồn khe · M mở bản đồ" if game.time_mode else "Leo tháp · Bước Gió đã mở — có thể nhảy hai lần", 3)
     update_hud()
     queue_redraw()
@@ -393,6 +396,15 @@ func _scroll_background() -> void:
             backdrop.position = Vector2(-195, -maxf(0,backdrop.size.y-550)*0.65)
         backdrop.modulate = timeline.SHADES[timeline.era] if coast else Color("#cce1f3")
         return
+    if stage == 3:
+        var local_x := camera.x - origin
+        var art: Texture2D = timeline.SHORE
+        if local_x > 1326 and local_x < 2470: art = timeline.CISTERN
+        if backdrop.texture != art:
+            backdrop.texture = art
+            backdrop.size = Vector2(1350, maxf(540, 1350.0 * art.get_height() / art.get_width()))
+        backdrop.position = Vector2(-clampf(75 + local_x * 0.061, 0, 390), 0)
+        return
     var altitude_ratio := clampf((456.0 - camera.y) / 2300.0, 0, 1)
     backdrop.position = Vector2(-64 - sin(camera.x * 0.001) * 25, -(backdrop.size.y - 540) * (1 - altitude_ratio))
 
@@ -420,6 +432,7 @@ func tick(delta: float) -> void:
         return
     for marker in markers:
         var hidden: bool = marker.kind == "secret" and not progress[stage].sight
+        if marker.kind in ["goal", "outer_door"]: marker.sealed = not boss_dead
         marker.tick(delta,game.hero.position)
         marker.visible = not hidden
         if marker.kind == "relic": marker.visible = not progress[stage].relic
@@ -575,6 +588,11 @@ func interact() -> void:
                     game.mark_chapter_complete(stage+3)
                     game.cross_story_gate(1)
                     return
+                if game.story_mode and stage == 3:
+                    game.journey_complete = true
+                    game.checkpoint = point(story_exit() - Vector2(0,24))
+                    game.sound.play_cue("victory")
+                    game.emit_impact(point(story_exit() - Vector2(0,140)), Color("#ffdea0"))
                 _finish()
                 return
     game._say("E gần trụ lưu, di vật hoặc cổng đỉnh; 1–6 dùng kỹ năng",2)
@@ -605,7 +623,10 @@ func _finish() -> void:
     game.trials.victory_title.text = TITLES[stage].to_upper() + " · CHẠM TẦNG TRỜI"
     game.trials.victory_text.text = "Đã vượt hơn %d độ cao.\nSáu kỹ năng mở đường · Di Vật đã được cứu.\nBí mật: %s" % [int(best_height),"đã tìm" if progress[stage].secret else "còn một lối ẩn sau tháp"]
     game.trials.next_button.text = "Tiếp: " + TITLES[stage + 1] if stage < 3 else "Về bản đồ"
-    if stage == 3: game.trials.victory_text.text = "Đã thắp hải đăng và hoàn thành hành trình bảy màn."
+    if stage == 3:
+        game.trials.victory_title.text = "HẢI ĐĂNG ĐÃ SÁNG"
+        game.trials.victory_text.text = "Hành trình hoàn thành"
+        game.trials.next_button.text = "Về menu"
     game._show_victory()
     print("ECLIPSE SKY WIN: %d %s height=%d" % [stage,game.character,int(best_height)])
 
@@ -665,6 +686,13 @@ func update_hud() -> void:
     elif not progress[stage].relic: objective.text = "6 Thiên Giáng · phá sàn nứt, vào phòng kín lấy Di Vật (E)"
     elif not boss_dead: objective.text = "Dùng móc vàng leo tới đỉnh · đánh bại " + BOSS_NAMES[stage]
     else: objective.text = "Tiếp tục lên cổng tầng trời và nhấn E"
+    if game.story_mode:
+        altitude.text = ""
+        if stage == 3:
+            objective.text = "" if progress[stage].won else ("Lõi đèn" if not progress[stage].relic else ("5 · Chuông" if not progress[stage].bell else ""))
+        else:
+            objective.text = ("1 · Phá vách" if not progress[stage].crystal else
+                ("4 · Hiện cầu" if not progress[stage].sight else ("5 · Rung chuông" if not progress[stage].bell else ("6 · Phá sàn" if not progress[stage].relic else ""))))
     boss_label.visible = is_instance_valid(boss) and boss.awake and not boss_dead and (not game.time_mode or not timeline.indoors)
     boss_bar.visible = boss_label.visible
     if boss_label.visible:
@@ -687,6 +715,15 @@ func _draw() -> void:
             var at := point([Vector2(1310,250),Vector2(2490,130),Vector2(3540,205)][i])
             draw_line(at,at-Vector2(0,109),Color("#ffda9570"),10,true)
             draw_line(at,at-Vector2(0,109),Color("#fff1c6"),2,true)
+    if stage == 3 and not game.time_mode and progress[stage].won:
+        var focus := point(story_exit() - Vector2(0,149))
+        var slope := sin(elapsed * 0.8) * 49
+        for side in [-1, 1]:
+            var beam := PackedVector2Array([focus, focus + Vector2(side * 620, slope - 114), focus + Vector2(side * 620, slope + 38)])
+            draw_polygon(beam, PackedColorArray([Color("#ffe4a975"), Color("#ffe4a900"), Color("#ffe4a900")]))
+        draw_circle(focus, 34, Color("#ffd58436"), true, -1.0, true)
+        draw_circle(focus, 16, Color("#ffdfa596"), true, -1.0, true)
+        draw_circle(focus, 8, Color("#fff5ce"), true, -1.0, true)
     for anchor in anchors:
         draw_circle(anchor,20,Color("#ffe0a321"))
         draw_arc(anchor,13,0,TAU,32,Color("#ffe3b0"),2.5,true)
