@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createRequire } from 'node:module';
 import { createFoodServer } from '../server/api.mjs';
+import { boundedAudio } from '../server/audio.mjs';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE ?? 'playwright');
@@ -13,11 +14,11 @@ const token = 'browser-test-pair-token-not-real';
 const external = process.env.FOOD_TEST_URL;
 const capturedAudio = [];
 const server = external ? null : createFoodServer({ file: join(folder, 'test.sqlite'), token,
-  aiKey: 'browser-test-fake', allowTranscription: true,
+  aiKey: 'browser-test-fake', allowTranscription: true, prepareAudio: boundedAudio,
   transcribe: async (key, audio) => {
     assert.equal(key, 'browser-test-fake');
-    assert.match(audio.type, /^audio\/(webm|mp4|ogg)$/);
-    assert.ok(audio.size > 50);
+    assert.equal(audio.type, 'audio/wav');
+    assert.ok(audio.size > 1600);
     capturedAudio.push(audio.size);
     return 'Bàn 4 hai phở tái';
   },
@@ -116,6 +117,22 @@ try {
     await context.close();
   }
 
+  {
+    const context = await browser.newContext({ viewport: { width: 375, height: 812 }, isMobile: true, hasTouch: true });
+    const mobile = await context.newPage();
+    await mobile.goto(root);
+    await utterance(mobile, 'Bàn 5 hai phở bò, một tái một chín. Tô chín không hành. Hai trà đá, à một thôi.');
+    await mobile.getByRole('heading', { name: 'Kiểm tra lượt gọi · Bàn 05' }).waitFor();
+    assert.equal(await mobile.locator('main .table-card.pending').count(), 0);
+    await mobile.getByRole('dialog').getByRole('button', { name: 'Gửi bếp' }).click();
+    await nav(mobile, 'kitchen', 'iphone');
+    assert.deepEqual(await mobile.locator('.ticket h2').allTextContents(), ['Phở tái', 'Phở bò chín', 'Trà đá']);
+    assert.deepEqual(await mobile.locator('.ticket-qty').allTextContents(), ['×1', '×1', '×1']);
+    await waitText(mobile.locator('.ticket-note'), 'không hành');
+    console.log('PASS multi-item correction · Exact table, split, quantity, note and order in kitchen');
+    await context.close();
+  }
+
   if (server) {
     const waiter = await browser.newContext();
     const chef = await browser.newContext();
@@ -170,6 +187,7 @@ try {
     assert.equal(await a.getByRole('button', { name: 'Thu âm qua máy chủ' }).count(), 0);
     await a.getByRole('button', { name: 'Đóng', exact: true }).click();
     await nav(a, 'settings', 'desktop');
+    await waitText(a.locator('main'), 'Chi phí AI ước tính tháng');
     await a.getByRole('checkbox', { name: 'Cho phép nút thu âm qua máy chủ' }).check();
     await a.getByRole('button', { name: 'Lưu cài đặt trợ lý' }).click();
     await waitText(a.locator('#toast'), 'Đã lưu cài đặt trợ lý');
@@ -187,7 +205,7 @@ try {
     await openVoice();
     await a.getByRole('button', { name: 'Thu âm qua máy chủ' }).click();
     await a.getByRole('button', { name: 'Dừng và chuyển thành chữ' }).waitFor();
-    await a.waitForFunction(() => window.recordedBytes > 50);
+    await a.waitForFunction(() => window.recordedBytes > 1600);
     await a.getByRole('button', { name: 'Dừng và chuyển thành chữ' }).click();
     await waitText(a.getByRole('dialog'), 'Đọc lại câu vừa nhận').catch(async error => {
       throw new Error(await a.locator('#speech-status').textContent(), { cause: error });

@@ -1,5 +1,5 @@
 import { kitchenQueue, OrderError, total, validateSnapshot } from './domain.js';
-import { parse, validDraft } from './language.js';
+import { mentionedTables, parse, protectsTable, validDraft } from './language.js';
 import { categories, fold, money, photos, stages, stageNames } from './menu.js';
 import { normalizeEndpoint, openStore, reconcile, requestAPI, resolveFailure, submitDocument, transact, visible } from './storage.js';
 import { esc, navigation, pad, page, receiptDetails } from './view.js';
@@ -60,6 +60,7 @@ function render(navOnly = false) {
 
 function refresh(next, force = false) {
   const changed = next.snapshot.rev !== doc?.snapshot.rev || next.config?.id !== doc?.config?.id
+    || JSON.stringify(next.aiUsage) !== JSON.stringify(doc?.aiUsage)
     || next.aiEnabled !== doc?.aiEnabled || next.transcriptionEnabled !== doc?.transcriptionEnabled
     || next.config?.allowAI !== doc?.config?.allowAI || next.config?.allowAudio !== doc?.config?.allowAudio
     || JSON.stringify(next.pending) !== JSON.stringify(doc?.pending)
@@ -95,6 +96,7 @@ async function sync() {
         if (data.state.rev < next.snapshot.rev && !rejected && !item) throw new Error('Máy chủ có bản dữ liệu cũ hơn. Kiểm tra bản sao lưu trước khi tiếp tục.');
         reachable = true;
         const changed = data.state.rev !== next.snapshot.rev || item
+          || data.aiUsage !== undefined && JSON.stringify(data.aiUsage) !== JSON.stringify(next.aiUsage)
           || ['aiEnabled', 'transcriptionEnabled'].some(field => data[field] !== undefined && data[field] !== next[field]);
         if (changed) {
           next = await transact(db, current => reconcile(current, config, data, item?.action, rejected));
@@ -230,7 +232,7 @@ function promptVoice(start) {
     + '<button class="btn primary full" type="submit">Kiểm tra câu gọi' + icon('arrow', 17) + '</button></form>'
     + '<div class="example-buttons">' + (ui.page === 'kitchen'
       ? ['Bếp còn bao nhiêu tô?', 'Món nào cần nấu trước?']
-      : ['Bàn 3 hai phở tái một bò kho', 'Bàn 3 thêm hai trà đá', 'Bàn 3 còn món gì chưa ra?'])
+      : ['Bàn 3 hai phở tái một bò kho', 'Bàn 3 thêm hai trà đá', 'Bàn 5 hai phở bò một tái một chín, tô chín không hành, hai trà đá à một thôi'])
       .map(example => '<button type="button" class="example" data-example="' + esc(example) + '">' + esc(example) + '</button>').join('') + '</div>');
   const serial = panelRevision;
   const field = dialog.querySelector('#transcript');
@@ -246,19 +248,23 @@ function promptVoice(start) {
     const transcript = field.value.trim();
     let draft = parse(transcript, state, tableAtStart);
     let source = 'Đã nhận diện câu gọi';
-    if (draft.intent === 'clarify' && doc.config?.allowAI && doc.aiEnabled && reachable && navigator.onLine) {
+    let aiError = '';
+    if (draft.intent === 'clarify' && mentionedTables(transcript).length < 2 && doc.config?.allowAI && doc.aiEnabled && reachable && navigator.onLine) {
       feedback.textContent = 'Đang kiểm tra câu này với AI…';
       try {
-        const { data } = await requestAPI(doc.config, 'interpret', { transcript, table: draft.table ?? tableAtStart });
-        if (validDraft(data.draft, state)) { draft = data.draft; source = 'AI đề xuất'; }
+        const { data } = await requestAPI(doc.config, 'interpret', { transcript, table: tableAtStart });
+        if (validDraft(data.draft, state) && protectsTable(data.draft, transcript, tableAtStart)) {
+          draft = data.draft; source = 'AI đề xuất';
+        }
       } catch (error) {
-        if (serial === panelRevision) feedback.textContent = error.message;
+        aiError = error.message;
       }
     }
     interpreting = false;
     if (serial !== panelRevision) return;
+    if (field.value.trim() !== transcript) { feedback.textContent = 'Câu gọi vừa được sửa. Bấm kiểm tra lại.'; return; }
     if (!validDraft(draft, state) || draft.intent === 'clarify') {
-      feedback.textContent = draft.question || 'Chưa hiểu chắc câu này. Hãy nói lại hoặc chạm món.';
+      feedback.textContent = [draft.question || 'Chưa hiểu chắc câu này. Hãy nói lại hoặc chạm món.', aiError].filter(Boolean).join(' ');
       field.focus();
       return;
     }
@@ -495,7 +501,8 @@ async function connect(form) {
     await save(current => {
       if (current.config || current.snapshot.rev !== rev) throw new Error('Dữ liệu cục bộ vừa thay đổi. Kiểm tra lại trước khi kết nối.');
       return { config, snapshot: again.data.state, pending: [], failure: null,
-        aiEnabled: Boolean(again.data.aiEnabled), transcriptionEnabled: Boolean(again.data.transcriptionEnabled) };
+        aiEnabled: Boolean(again.data.aiEnabled), transcriptionEnabled: Boolean(again.data.transcriptionEnabled),
+        aiUsage: again.data.aiUsage ?? null };
     });
     ui.cart = [];
     ui.cartSession = undefined;
@@ -565,7 +572,7 @@ const commands = {
     confirmPanel('Ngắt kết nối thiết bị?', '<p>Thiết bị giữ một bản dữ liệu hiện tại. Các đơn mới trên thiết bị sẽ chỉ lưu cục bộ.</p>', 'Ngắt kết nối', async () => {
       await save(current => {
         if (current.pending.length) throw new Error('Vẫn còn lệnh đang chờ đồng bộ.');
-        return { ...current, config: null, aiEnabled: false, transcriptionEnabled: false };
+        return { ...current, config: null, aiEnabled: false, transcriptionEnabled: false, aiUsage: null };
       });
       reachable = false;
       closePanel();
