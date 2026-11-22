@@ -15,6 +15,7 @@ let doc;
 let state;
 let reachable = false;
 let syncRun;
+let lastSyncAt = 0;
 let mic;
 let cloudMic;
 let toastTimer;
@@ -83,6 +84,7 @@ async function save(edit) {
 async function sync() {
   if (!doc?.config || !navigator.onLine) return;
   if (syncRun) return syncRun;
+  lastSyncAt = Date.now();
   syncRun = (async () => {
     try {
       const initial = await transact(db);
@@ -97,7 +99,7 @@ async function sync() {
         reachable = true;
         const changed = data.state.rev !== next.snapshot.rev || item
           || data.aiUsage !== undefined && JSON.stringify(data.aiUsage) !== JSON.stringify(next.aiUsage)
-          || ['aiEnabled', 'transcriptionEnabled'].some(field => data[field] !== undefined && data[field] !== next[field]);
+          || ['aiEnabled', 'transcriptionEnabled', 'pollIntervalMs'].some(field => data[field] !== undefined && data[field] !== next[field]);
         if (changed) {
           next = await transact(db, current => reconcile(current, config, data, item?.action, rejected));
           channel?.postMessage('updated');
@@ -502,7 +504,7 @@ async function connect(form) {
       if (current.config || current.snapshot.rev !== rev) throw new Error('Dữ liệu cục bộ vừa thay đổi. Kiểm tra lại trước khi kết nối.');
       return { config, snapshot: again.data.state, pending: [], failure: null,
         aiEnabled: Boolean(again.data.aiEnabled), transcriptionEnabled: Boolean(again.data.transcriptionEnabled),
-        aiUsage: again.data.aiUsage ?? null };
+        aiUsage: again.data.aiUsage ?? null, pollIntervalMs: again.data.pollIntervalMs };
     });
     ui.cart = [];
     ui.cartSession = undefined;
@@ -623,7 +625,11 @@ function noteCart(id) {
 
 async function onButton(button) {
   const data = button.dataset;
-  if (data.page) { go(data.page); return; }
+  if (data.page) {
+    if (['#bep', '#ket-noi'].includes(location.hash)) history.replaceState(null, '', location.pathname + location.search);
+    go(data.page);
+    return;
+  }
   if (data.table) { closePanel(); go('order', Number(data.table)); return; }
   if (data.action && commands[data.action]) { await commands[data.action](); return; }
   if (data.dish) { cartChange(data.dish, 1); return; }
@@ -652,7 +658,20 @@ async function onButton(button) {
   }
 }
 
+function linkedPage() {
+  if (location.hash === '#bep') return 'kitchen';
+  if (location.hash === '#ket-noi') {
+    ui.pairEndpoint = location.origin;
+    return 'settings';
+  }
+  return null;
+}
+
 function wire() {
+  window.addEventListener('hashchange', () => {
+    const target = linkedPage();
+    if (target) go(target);
+  });
   document.addEventListener('click', event => {
     const button = event.target.closest('button');
     if (!button || button.disabled || !Object.keys(button.dataset).length || button.dataset.busy) return;
@@ -699,7 +718,10 @@ function wire() {
     if (document.hidden) cloudMic?.abort();
     else transact(db).then(next => { refresh(next, true); void backgroundSync(); }).catch(showError);
   });
-  setInterval(() => { if (!document.hidden) void backgroundSync(); }, 2000);
+  setInterval(() => {
+    const delay = Math.max(2000, Math.min(60000, Number(doc.pollIntervalMs) || 2000));
+    if (!document.hidden && Date.now() - lastSyncAt >= delay) void backgroundSync();
+  }, 2000);
 }
 
 async function boot() {
@@ -710,7 +732,7 @@ async function boot() {
     localStorage.setItem(key, device);
   } catch { device = crypto.randomUUID(); }
   doc = await transact(db);
-  if (location.hash === '#bep') ui.page = 'kitchen';
+  ui.page = linkedPage() ?? ui.page;
   wire();
   render();
   void backgroundSync();

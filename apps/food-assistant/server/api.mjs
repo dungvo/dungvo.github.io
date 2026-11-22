@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import { extname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
-import { createState, mutate, validateSnapshot } from '../domain.js';
+import { createState, mutate, OrderError, validateSnapshot } from '../domain.js';
 import { draftSchema, mentionedTables, protectsTable, validDraft } from '../language.js';
 import { audioExtensions, audioType, maxAudioBytes } from '../voice.js';
 import { fold } from '../menu.js';
@@ -121,9 +121,27 @@ async function openAI(key, model, input) {
   return { draft, usage: result.usage };
 }
 
+function sqliteBackend(file, options) {
+  const db = openDb(file);
+  const get = db.prepare('SELECT snapshot FROM shop WHERE id=1');
+  const put = db.prepare('UPDATE shop SET snapshot=? WHERE id=1');
+  const read = () => JSON.parse(get.get().snapshot);
+  function commit(action) {
+    db.exec('BEGIN IMMEDIATE');
+    try {
+      const state = read();
+      const next = mutate(state, action);
+      if (next !== state) put.run(JSON.stringify(next));
+      db.exec('COMMIT');
+      return next;
+    } catch (error) { db.exec('ROLLBACK'); throw error; }
+  }
+  return { read, commit, usage: trackUsage(db, options), close: () => db.close() };
+}
+
 export function createFoodServer({ file = 'food-assistant.sqlite', token, allowedOrigins = [], aiKey, provider = 'openai',
   aiModel = provider === 'groq' ? 'openai/gpt-oss-20b' : 'gpt-4.1-mini', interpret, transcribe, allowTranscription = false,
-  budget, tls, prepareAudio = transcribe ? async audio => ({ audio, milliseconds: 15000 }) : boundedAudio, providerFetch } = {}) {
+  budget, tls, backend, pollIntervalMs = 2000, prepareAudio = transcribe ? async audio => ({ audio, milliseconds: 15000 }) : boundedAudio, providerFetch } = {}) {
   if (typeof token !== 'string' || token.length < 24) throw new Error('FOOD_TOKEN must contain at least 24 characters.');
   if (!['openai', 'groq'].includes(provider)) throw new Error('FOOD_AI_PROVIDER phải là openai hoặc groq.');
   if (provider === 'groq' && aiModel !== 'openai/gpt-oss-20b') throw new Error('Model Groq phải là openai/gpt-oss-20b.');
@@ -131,13 +149,12 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
   const interpretOrder = interpret ?? groq?.interpret ?? openAI;
   const transcribeClip = transcribe ?? groq?.transcribe ?? openAITranscription;
   const secret = Buffer.from('Bearer ' + token);
-  const db = openDb(file);
-  const read = db.prepare('SELECT snapshot FROM shop WHERE id=1');
-  const write = db.prepare('UPDATE shop SET snapshot=? WHERE id=1');
   const rate = provider === 'groq' ? { inputRate: 0.075, outputRate: 0.30, audioRate: 0.04 / 60, minimumMs: 10000 } : {};
-  const usage = trackUsage(db, { ...budget, ...rate });
-  const replyState = state => ({ state, ...capabilities, aiUsage: aiKey ? { ...usage.status(), provider } : null });
-  const capabilities = { aiEnabled: Boolean(aiKey), transcriptionEnabled: Boolean(aiKey && allowTranscription), aiProvider: aiKey ? provider : null };
+  const options = { ...budget, ...rate };
+  const store = backend ? backend(options) : sqliteBackend(file, options);
+  const { usage } = store;
+  const replyState = async state => ({ state, ...capabilities, aiUsage: aiKey ? { ...await usage.status(), provider } : null });
+  const capabilities = { pollIntervalMs, aiEnabled: Boolean(aiKey), transcriptionEnabled: Boolean(aiKey && allowTranscription), aiProvider: aiKey ? provider : null };
   let aiWindow = [];
   let transcriptionWindow = [];
   let recordingsInProgress = 0;
@@ -164,24 +181,22 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
       }
       if (req.method === 'OPTIONS') { res.writeHead(204); return res.end(); }
+      if (req.method === 'GET' && path === '/api/health') {
+        if (!backend) await store.read();
+        return send(res, 200, { status: 'ok' });
+      }
       const supplied = Buffer.from(req.headers.authorization ?? '');
       if (supplied.length !== secret.length || !timingSafeEqual(supplied, secret)) return send(res, 401, { message: 'Mã kết nối không hợp lệ.' });
 
-      if (req.method === 'GET' && path === '/api/state') return send(res, 200, replyState(JSON.parse(read.get().snapshot)));
+      if (req.method === 'GET' && path === '/api/state') return send(res, 200, await replyState(await store.read()));
       if (req.method === 'POST' && path === '/api/command') {
         const action = await body(req);
         if (!action?.id || req.headers['idempotency-key'] !== action.id) throw denied(400, 'Idempotency-Key phải khớp mã lệnh.');
-        db.exec('BEGIN IMMEDIATE');
         try {
-          const current = JSON.parse(read.get().snapshot);
-          const next = mutate(current, action);
-          if (next !== current) write.run(JSON.stringify(next));
-          db.exec('COMMIT');
-          return send(res, 200, replyState(next));
+          return send(res, 200, { state: await store.commit(action), ...capabilities });
         } catch (error) {
-          db.exec('ROLLBACK');
-          if (!error.code || /^SQLITE/.test(error.code)) throw error;
-          return send(res, 409, { code: error.code, message: error.message, state: JSON.parse(read.get().snapshot) });
+          if (!(error instanceof OrderError)) throw error;
+          return send(res, 409, { code: error.code, message: error.message, state: await store.read() });
         }
       }
       if (req.method === 'POST' && path === '/api/transcribe') {
@@ -202,7 +217,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
           const signal = AbortSignal.any([disconnected.signal, AbortSignal.timeout(20000)]);
           const clip = await prepareAudio(new Blob([bytes], { type }), signal);
           signal.throwIfAborted();
-          const reserved = usage.reserve('audio', usage.audioCost(clip.milliseconds));
+          const reserved = await usage.reserve('audio', usage.audioCost(clip.milliseconds));
           if (!reserved) throw denied(429, 'Đã đến hạn mức AI tháng này. Hãy nhập câu gọi hoặc chạm món.');
           const result = await transcribeClip(aiKey, clip.audio, signal);
           const transcript = typeof result === 'string' ? result.trim() : '';
@@ -226,7 +241,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
         aiWindow = aiWindow.filter(time => Date.now() - time < 60000);
         if (aiWindow.length >= 12) throw denied(429, 'AI đang bận. Dùng thực đơn hoặc thử lại sau.');
         aiWindow.push(Date.now());
-        const state = JSON.parse(read.get().snapshot);
+        const state = await store.read();
         const selectedTable = Number.isInteger(input.table) && input.table >= 1 && input.table <= state.tableCount ? input.table : null;
         const mentions = mentionedTables(input.transcript);
         if (mentions.length > 1 || mentions.some(({ table }) => table < 1 || table > state.tableCount)) throw denied(400, 'Chọn một bàn đã được cấu hình.');
@@ -235,7 +250,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
           .map(({ dishId, qty, status }) => ({ dishId, qty, status }));
         const prompt = { transcript: input.transcript, selectedTable, tableCount: state.tableCount,
           menu: selectMenu(state.menu, input.transcript, activeItems), activeItems };
-        const reserved = usage.reserve('text', usage.textCost(Buffer.byteLength(JSON.stringify(prompt))
+        const reserved = await usage.reserve('text', usage.textCost(Buffer.byteLength(JSON.stringify(prompt))
           + Buffer.byteLength(instructions) + Buffer.byteLength(JSON.stringify(draftSchema)) + 512, outputTokens));
         if (!reserved) throw denied(429, 'Đã đến hạn mức AI tháng này. Hãy nhập câu gọi hoặc chạm món.');
         try {
@@ -243,7 +258,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
           const actual = result?.usage;
           if (Number.isSafeInteger(actual?.input_tokens) && actual.input_tokens >= 0
             && Number.isSafeInteger(actual?.output_tokens) && actual.output_tokens >= 0) {
-            reserved(usage.textCost(actual.input_tokens, actual.output_tokens));
+            await reserved(usage.textCost(actual.input_tokens, actual.output_tokens));
           }
           const draft = result?.draft ?? result;
           if (!validDraft(draft, state) || !protectsTable(draft, input.transcript, selectedTable)
@@ -263,7 +278,7 @@ export function createFoodServer({ file = 'food-assistant.sqlite', token, allowe
     }
   };
   const server = tls ? createHttpsServer(tls, handler) : createServer(handler);
-  server.on('close', () => db.close());
+  server.on('close', () => store.close?.());
   return server;
 }
 

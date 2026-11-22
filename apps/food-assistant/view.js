@@ -138,13 +138,13 @@ function receiptsPage(state) {
       + '</span><small>' + fullDate(event.at) + '</small></div></li>').join('') + '</ul>' : '<p class="muted">Chưa ghi nhận thao tác.</p>') + '</section>';
 }
 
-function settingsPage(state, doc) {
+function settingsPage(state, doc, pairEndpoint) {
   const queued = doc.pending.length;
   const sync = doc.config ? '<p class="muted sync-url">' + esc(doc.config.url) + '</p><p>' + queued + ' lệnh đang chờ gửi.'
     + (doc.aiEnabled ? ' AI đã sẵn sàng.' : ' AI chưa được cấu hình trên máy chủ.') + '</p><div class="button-row"><button class="btn outline" data-action="sync-now">Đồng bộ lại</button>'
     + '<button class="btn outline" data-action="disconnect">Ngắt kết nối</button></div>'
     : '<p class="muted">Kết nối các điện thoại và máy tính bảng vào cùng một API để dùng chung đơn.</p><form data-form="connect" class="form-stack">'
-    + '<label class="field">Địa chỉ API<input name="endpoint" type="url" placeholder="https://api.example.com" required></label>'
+    + '<label class="field">Địa chỉ API<input name="endpoint" type="url" placeholder="https://api.example.com" value="' + esc(pairEndpoint) + '" required></label>'
     + '<label class="field">Mã kết nối quán<input name="token" type="password" autocomplete="off" minlength="24" maxlength="256" required></label>'
     + '<button class="btn primary" type="submit">' + icon('link', 17) + 'Kết nối</button></form>';
   const usage = doc.aiUsage;
@@ -188,7 +188,7 @@ export function page(state, ui, doc) {
   if (ui.page === 'order') return orderPage(state, ui);
   if (ui.page === 'kitchen') return kitchenPage(state, ui);
   if (ui.page === 'receipts') return receiptsPage(state);
-  if (ui.page === 'settings') return settingsPage(state, doc);
+  if (ui.page === 'settings') return settingsPage(state, doc, ui.pairEndpoint);
   return tablesPage(state);
 }
 

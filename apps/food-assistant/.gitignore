@@ -7,3 +7,7 @@ node_modules/
 food-assistant-*.json
 
 !.env.example
+.food-lan/
+
+!.env.aws.example
+aws/build/

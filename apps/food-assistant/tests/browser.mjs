@@ -139,9 +139,9 @@ try {
     const a = await waiter.newPage();
     const b = await chef.newPage();
     for (const page of [a, b]) {
-      await page.goto(root);
-      await nav(page, 'settings', 'desktop');
-      await page.getByLabel('Địa chỉ API').fill(new URL(root).origin);
+      await page.goto(root + '#ket-noi');
+      await page.getByLabel('Địa chỉ API').waitFor();
+      assert.equal(await page.getByLabel('Địa chỉ API').inputValue(), new URL(root).origin);
       await page.getByLabel('Mã kết nối quán').fill(token);
       await page.getByRole('button', { name: 'Kết nối', exact: true }).click();
       await waitText(page.locator('main'), '0 lệnh đang chờ');
