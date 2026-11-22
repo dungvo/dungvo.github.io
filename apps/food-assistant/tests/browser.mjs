@@ -200,6 +200,36 @@ try {
     await context.close();
   }
 
+  for (const [phrase, table] of [
+    ['Hai phở tái bằng số 3', '03'],
+    ['2 tô phở bàn 3', '03'],
+    ['Hai tô phở bằng 2', '02'],
+    ['Bạn số 32 tô phở', '03'],
+  ]) {
+    const context = await browser.newContext({ viewport: { width: 375, height: 812 }, isMobile: true, hasTouch: true });
+    await context.addInitScript(text => {
+      window.SpeechRecognition = class {
+        start() {
+          const result = [{ transcript: text }];
+          result.isFinal = false;
+          queueMicrotask(() => { this.onresult({ results: [result] }); this.onend(); this.onend(); });
+        }
+        abort() {}
+      };
+    }, phrase);
+    const kitchen = await context.newPage();
+    await kitchen.goto(root + '#bep');
+    const waiter = await context.newPage();
+    await waiter.goto(root);
+    await waiter.locator('#mobile-nav [data-action="voice"]').click();
+    await waiter.getByRole('heading', { name: 'Gọi món · Bàn ' + table }).waitFor();
+    await kitchen.locator('.ticket h2').getByText('Phở tái', { exact: true }).waitFor();
+    assert.deepEqual(await kitchen.locator('.ticket-head strong').allTextContents(), [table]);
+    assert.deepEqual(await kitchen.locator('.ticket-qty').allTextContents(), ['×2']);
+    await context.close();
+    console.log('PASS mic → kitchen · ' + phrase + ' → Bàn ' + table + ', Phở tái ×2');
+  }
+
   if (server) {
     const waiter = await browser.newContext();
     const chef = await browser.newContext();

@@ -289,7 +289,7 @@ function promptVoice(start) {
     try {
       const transcript = field.value.trim();
       let draft = parsedVoice(transcript);
-      if (start && draft.intent === 'clarify' && !tableAtStart && !mentionedTables(transcript).length) {
+      if (start && draft.intent === 'clarify' && !tableAtStart && !mentionedTables(transcript, state.tableCount).length) {
         const temporary = parse(transcript, state, 1);
         if (['add', 'amend', 'replace', 'cancel'].includes(temporary.intent) && usable(temporary)) {
           waitingForTable = transcript;
@@ -299,11 +299,11 @@ function promptVoice(start) {
       }
       let needsReview = false;
       let aiError = '';
-      if (draft.intent === 'clarify' && mentionedTables(transcript).length < 2 && doc.config?.allowAI && doc.aiEnabled && reachable && navigator.onLine) {
+      if (draft.intent === 'clarify' && mentionedTables(transcript, state.tableCount).length < 2 && doc.config?.allowAI && doc.aiEnabled && reachable && navigator.onLine) {
         feedback.textContent = 'Đang xử lý câu vừa nghe…';
         try {
           const { data } = await requestAPI(doc.config, 'interpret', { transcript, table: tableAtStart });
-          if (validDraft(data.draft, state) && protectsTable(data.draft, transcript, tableAtStart)) {
+          if (validDraft(data.draft, state) && protectsTable(data.draft, transcript, tableAtStart, state.tableCount)) {
             draft = data.draft; needsReview = true;
           }
         } catch (error) {

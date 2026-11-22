@@ -21,12 +21,22 @@ function quantity(words, at = 0) {
 }
 
 function catalog(menu, includeInactive) {
-  return menu.filter(item => item.active || includeInactive).flatMap(item =>
+  const available = menu.filter(item => item.active || includeInactive);
+  const names = available.flatMap(item =>
     [item.name, ...item.aliases].map((alias, index) => ({ id: item.id, words: fold(alias).split(' '), exact: index === 0 })));
+  // Resolve against the saved menu too, including restaurants that already assigned “phở”.
+  const assigned = menu.some(item => [item.name, ...item.aliases].some(alias => fold(alias) === 'pho'));
+  if (!assigned) {
+    for (const item of available.filter(item => ['pho tai', 'pho bo tai'].includes(fold(item.name)))) {
+      names.push({ id: item.id, words: ['pho'], exact: false, barePho: true });
+    }
+  }
+  return names;
 }
 
 function search(names, words, at) {
-  const matches = names.filter(entry => entry.words.every((word, index) => word === words[at + index]));
+  const matches = names.filter(entry => !(entry.barePho && words[at + 1] === 'bo')
+    && entry.words.every((word, index) => word === words[at + index]));
   const size = Math.max(0, ...matches.map(entry => entry.words.length));
   const longest = matches.filter(entry => entry.words.length === size);
   const candidates = longest.some(entry => entry.exact) ? longest.filter(entry => entry.exact) : longest;
@@ -169,18 +179,35 @@ const newDraft = (intent, table, values = {}) => ({
 });
 const clarify = (table, question) => newDraft('clarify', table, { question });
 
-export function mentionedTables(text) {
-  const words = tokens(text).map(fold);
+export function mentionedTables(text, tableCount) {
+  const original = tokens(text.normalize('NFC'));
+  const words = original.map(fold);
   return words.flatMap((word, index) => {
-    if (word !== 'ban') return [];
+    const misheard = ['bằng', 'bang'].includes(original[index].toLowerCase());
+    if (word !== 'ban' && !misheard) return [];
     const hasLabel = words[index + 1] === 'so';
-    const [table, size] = quantity(words, index + 1 + Number(hasLabel));
-    return size ? [{ table, index, size: size + Number(hasLabel) }] : [];
+    const numberAt = index + 1 + Number(hasLabel);
+    const [table, length] = quantity(words, numberAt);
+    if (!length) return [];
+    const end = numberAt + length;
+    // “bằng” can be part of a note or a comparison. Accept it as a table label
+    // at an order boundary, outside an explicitly dictated note.
+    const nextItem = ['them', 'va'].includes(words[end]) && quantity(words, end + 1)[1];
+    if (misheard && index > 0 && ((!nextItem && !words.slice(end).every(w => fillers.has(w)))
+      || words.slice(0, index).join(' ').includes('ghi chu'))) return [];
+    const size = end - index - 1;
+    // Dictation can join “ba, hai tô” as “32 tô”. A real configured table wins.
+    const digits = words[numberAt];
+    if (table > tableCount && /^[1-9][1-9]$/.test(digits) && Number(digits[0]) <= tableCount
+      && units.has(words[end]) && index === 0) {
+      return [{ table: Number(digits[0]), index, size, servingQty: digits[1] }];
+    }
+    return [{ table, index, size }];
   });
 }
 
-export function protectsTable(draft, text, selectedTable) {
-  const mentions = mentionedTables(text);
+export function protectsTable(draft, text, selectedTable, tableCount) {
+  const mentions = mentionedTables(text, tableCount);
   if (draft.intent === 'clarify') return true;
   if (draft.intent === 'queue') return mentions.length === 0;
   return mentions.length === 1 ? draft.table === mentions[0].table : mentions.length === 0 && draft.table === selectedTable;
@@ -191,13 +218,14 @@ export function parse(text, state, selectedTable) {
   const original = tokens(text);
   const words = original.map(fold);
   let table = selectedTable ?? null;
-  const mentions = mentionedTables(text);
+  const mentions = mentionedTables(text, state.tableCount);
   if (mentions.length > 1) return clarify(table, 'Mỗi câu chỉ nên gọi cho một bàn. Vui lòng chọn bàn cụ thể.');
   if (mentions.length) {
-    const { table: id, index, size } = mentions[0];
+    const { table: id, index, size, servingQty } = mentions[0];
     table = id;
-    original.splice(index, size + 1);
-    words.splice(index, size + 1);
+    const retained = servingQty ? [servingQty] : [];
+    original.splice(index, size + 1, ...retained);
+    words.splice(index, size + 1, ...retained);
   }
   const lead = words.findIndex(word => !fillers.has(word));
   if (lead > 0) { original.splice(0, lead); words.splice(0, lead); }
