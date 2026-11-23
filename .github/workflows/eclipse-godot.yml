@@ -1,0 +1,148 @@
+name: Eclipse Godot headless validation
+on:
+  pull_request:
+    paths:
+      - 'apps/games/light-quest/eclipse/**'
+      - '.github/workflows/eclipse-godot.yml'
+  push:
+    paths:
+      - 'apps/games/light-quest/eclipse/**'
+      - '.github/workflows/eclipse-godot.yml'
+jobs:
+  parse-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Godot
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.4.1
+          use-dotnet: false
+      - name: Import and validate Godot project
+        run: |
+          set -o pipefail
+          godot --headless --editor --path apps/games/light-quest/eclipse --import --quit 2>&1 | tee import.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script' import.log
+      - name: Smoke test scene
+        run: |
+          set -o pipefail
+          timeout 25s godot --headless --path apps/games/light-quest/eclipse --quit-after 15 2>&1 | tee scene.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|Invalid access' scene.log
+      - name: Test gameplay mechanics
+        run: |
+          timeout 35s godot --headless --path apps/games/light-quest/eclipse --script res://tests/smoke.gd
+          timeout 20s godot --headless --path apps/games/light-quest/eclipse --script res://tests/hit_geometry_test.gd
+          timeout 35s godot --headless --fixed-fps 60 --path apps/games/light-quest/eclipse --script res://tests/campaign_playthrough.gd
+
+  visual-qa:
+    runs-on: ubuntu-latest
+    needs: [parse-project]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.4.1
+          use-dotnet: false
+      - name: Capture running gameplay frames
+        run: |
+          set -euo pipefail
+          godot --headless --editor --path apps/games/light-quest/eclipse --import --quit
+          timeout 45s xvfb-run -a godot --path apps/games/light-quest/eclipse --script res://tests/capture_visual.gd
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-gameplay.png
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-puzzle.png
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-guardian.png
+          test -s apps/games/light-quest/eclipse/visual-qa/actual-guardian-phase-two.png
+      - name: Save screenshot artifact for manual comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclipse-actual-gameplay-screen
+          path: apps/games/light-quest/eclipse/visual-qa/*.png
+          if-no-files-found: error
+
+  web-preview:
+    runs-on: ubuntu-latest
+    needs: [parse-project]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.4.1
+          use-dotnet: false
+          include-templates: true
+      - name: Import content and export web build
+        run: |
+          set -euo pipefail
+          cd apps/games/light-quest/eclipse
+          mkdir -p build/web
+          godot --headless --editor --import --quit 2>&1 | tee import-web.log
+          ! grep -Eq 'SCRIPT ERROR|Parse Error|ERROR: Failed to load script|ERROR: Failed to load resource' import-web.log
+          godot --headless --export-release Web build/web/index.html
+          test -s build/web/index.html
+          test -s build/web/index.wasm
+      - name: Smoke test the Web build in touch-enabled Chromium
+        run: |
+          set -euo pipefail
+          cd apps/games/light-quest/eclipse
+          npm install --prefix "${RUNNER_TEMP}/eclipse-browser" --no-audit --no-fund playwright@1.56.1
+          mkdir -p visual-qa
+          python3 -m http.server 8000 --bind 127.0.0.1 --directory build/web > "${RUNNER_TEMP}/eclipse-http.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..30}; do
+            curl --silent --fail http://127.0.0.1:8000/index.html >/dev/null && break
+            sleep 1
+          done
+          ECLIPSE_CHROME="$(command -v google-chrome)" NODE_PATH="${RUNNER_TEMP}/eclipse-browser/node_modules" node tests/browser_smoke.cjs
+      - name: Save Web landscape screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclipse-web-landscape-qa
+          path: apps/games/light-quest/eclipse/visual-qa/web-*.png
+          if-no-files-found: ignore
+      - name: Upload HTML5 preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclipse-web-preview
+          path: apps/games/light-quest/eclipse/build/web/
+          if-no-files-found: error
+
+  publish-eclipse-demo:
+    name: Publish isolated Eclipse web demo
+    # Only PR #76 from this repository and our named feature branch can publish.
+    if: false # Visual-quality gate: publishing is disabled until mockup fidelity and iPhone QA are reviewed
+    needs: [web-preview]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: eclipse-public-preview
+      cancel-in-progress: false
+    steps:
+      - name: Checkout site main (not feature source)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Copy pre-tested HTML5 artifact into isolated public folder
+        uses: actions/download-artifact@v4
+        with:
+          name: eclipse-web-preview
+          path: apps/games/light-quest/eclipse/
+      - name: Check build files
+        run: |
+          test -s apps/games/light-quest/eclipse/index.html
+          test -s apps/games/light-quest/eclipse/index.wasm
+          test -s apps/games/light-quest/eclipse/index.pck
+      - name: Commit demo only; preserve all other games
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/games/light-quest/eclipse/
+          if git diff --cached --quiet; then
+            echo "No changes to public Eclipse demo"
+            exit 0
+          fi
+          git commit -m "deploy(eclipse): publish isolated Godot HTML5 gameplay preview"
+          git pull --rebase origin main
+          git push origin HEAD:main
