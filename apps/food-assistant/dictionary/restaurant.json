@@ -1,0 +1,253 @@
+{
+  "version": "4.0.0",
+  "defaultFood": "tai",
+  "tablePrefixes": [
+    "bàn",
+    "bàn số",
+    "số bàn",
+    "số",
+    "bằng",
+    "bào",
+    "bàng"
+  ],
+  "numbers": [
+    "không",
+    "một",
+    "hai",
+    "ba",
+    "bốn",
+    "năm",
+    "sáu",
+    "bảy",
+    "tám",
+    "chín"
+  ],
+  "regionalDigits": {
+    "tư": 4,
+    "lăm": 5,
+    "mốt": 1,
+    "bẩy": 7,
+    "mười": 10
+  },
+  "units": [
+    "tô",
+    "tôi",
+    "bát",
+    "ổ",
+    "chén",
+    "ly",
+    "chai",
+    "phần",
+    "dĩa",
+    "đĩa",
+    "quả",
+    "hột"
+  ],
+  "actions": {
+    "add": [
+      "thêm",
+      "gọi",
+      "lấy",
+      "cho",
+      "kêu",
+      "gọi thêm"
+    ],
+    "cancel": [
+      "hủy",
+      "bỏ",
+      "bớt",
+      "không lấy"
+    ],
+    "replace": [
+      "đổi",
+      "thay"
+    ],
+    "amend": [
+      "sửa",
+      "chỉnh"
+    ]
+  },
+  "modifiers": {
+    "không hành": [
+      "ko hành",
+      "k hành",
+      "khỏi hành",
+      "bỏ hành"
+    ],
+    "không tiêu": [
+      "ko tiêu",
+      "k tiêu",
+      "khỏi tiêu",
+      "bỏ tiêu"
+    ],
+    "giá trụng": [
+      "trụng giá",
+      "giá chín"
+    ],
+    "rau trụng": [
+      "trụng rau",
+      "rau chín"
+    ],
+    "ít hành": [
+      "hành ít"
+    ],
+    "không rau": [
+      "khỏi rau"
+    ],
+    "ít bánh": [
+      "bánh ít"
+    ],
+    "nhiều bánh": [
+      "bánh nhiều"
+    ],
+    "nước riêng": [
+      "nước lèo riêng"
+    ],
+    "không ớt": [
+      "ko ớt"
+    ],
+    "mang về": [
+      "đem về"
+    ]
+  },
+  "menu": [
+    {
+      "id": "tai",
+      "name": "Phở tái",
+      "unit": "tô",
+      "aliases": [
+        "phở",
+        "tái",
+        "phở bò tái",
+        "phở tải",
+        "phở thái"
+      ]
+    },
+    {
+      "id": "nam",
+      "name": "Phở nạm",
+      "unit": "tô",
+      "aliases": [
+        "nạm",
+        "phở nam"
+      ]
+    },
+    {
+      "id": "gan",
+      "name": "Phở gân",
+      "unit": "tô",
+      "aliases": [
+        "gân",
+        "phở gơn"
+      ]
+    },
+    {
+      "id": "gau",
+      "name": "Phở gầu",
+      "unit": "tô",
+      "aliases": [
+        "gầu",
+        "gàu",
+        "gào",
+        "phở gào"
+      ]
+    },
+    {
+      "id": "banh-mi",
+      "name": "Bánh mì bò kho",
+      "unit": "phần",
+      "aliases": [
+        "bánh mì kho",
+        "bò kho bánh mì"
+      ]
+    },
+    {
+      "id": "hu-tieu-bo-kho",
+      "name": "Hủ tiếu bò kho",
+      "unit": "tô",
+      "aliases": [
+        "hủ tíu bò kho"
+      ]
+    },
+    {
+      "id": "pho-bo-kho",
+      "name": "Phở bò kho",
+      "unit": "tô",
+      "aliases": [
+        "phở kho",
+        "phỏ bồ kho"
+      ]
+    },
+    {
+      "id": "bo-kho",
+      "name": "Bò kho",
+      "unit": "tô",
+      "aliases": [
+        "bò co",
+        "bò ko"
+      ]
+    },
+    {
+      "id": "extra-tai",
+      "name": "Chén tái thêm",
+      "unit": "chén",
+      "aliases": [
+        "chén tái",
+        "tái thêm",
+        "chén thịt tái"
+      ]
+    },
+    {
+      "id": "egg",
+      "name": "Hột gà",
+      "unit": "quả",
+      "aliases": [
+        "trứng",
+        "trứng gà",
+        "trứng hột gà",
+        "họt gà",
+        "hột gà chần"
+      ]
+    },
+    {
+      "id": "tai-egg",
+      "name": "Tái hột gà",
+      "unit": "chén",
+      "aliases": [
+        "tái họt gà",
+        "tái trứng",
+        "chén tái hột gà"
+      ]
+    },
+    {
+      "id": "extra-bread",
+      "name": "Bánh mì thêm",
+      "unit": "ổ",
+      "aliases": [
+        "bánh mì",
+        "banhs mì",
+        "thêm bánh mì",
+        "ổ bánh mì"
+      ]
+    },
+    {
+      "id": "extra-meat",
+      "name": "Thịt thêm",
+      "unit": "chén",
+      "aliases": [
+        "thêm thịt",
+        "chén thịt"
+      ]
+    },
+    {
+      "id": "extra-soup",
+      "name": "Nước lèo thêm",
+      "unit": "chén",
+      "aliases": [
+        "thêm nước lèo",
+        "nước dùng thêm",
+        "nước lèo"
+      ]
+    }
+  ]
+}
