@@ -34,13 +34,9 @@ Cần customer features (age, tenure, history), agent features (specialization, 
 
 Customer + Agent + Policy + Interaction signals → Unified Identity, Relationship Graph, Feature Store → Needs, Agent Influence, Protection Gap, Risk, Propensity/Uplift, Value → Decision Intelligence (evidence, eligibility, suitability, consent) → Protect, Retain, Grow → Measurement & Learning (customer outcomes, experiment, feedback). Không tối ưu doanh số đơn thuần; cân bằng kết quả khách hàng và doanh nghiệp.
 
-## 9. Đánh giá V24
+## 9. Đánh giá nền tảng hiện tại
 
-Identity, Overview và Lineage đúng hướng kỹ thuật; Customer 360 thiếu nhu cầu và quyền lợi; Relationship thiếu phân tích Agent; Segmentation thiên về hợp đồng; Feature Store thiếu Agent/Interaction; ML thiên về propensity; Next Best Action thiếu điều kiện quyết định. Agent Intelligence, Protection Intelligence và Customer Needs Intelligence chưa có. V24 là prototype, không phải nền tảng hoàn chỉnh.
-
-## 10. Roadmap nghiệp vụ
-
-V25 Insurance Business Framework; V26 Agent 360 & Agent Influence; V27 Protection & Coverage Intelligence; V28 Customer Needs Intelligence; V29 Customer Journey & Interaction; V30 Propensity, Uplift & Decision Intelligence; V31 Customer Outcome Measurement; V32 Premium UI & Integration QA. Đây là roadmap đề xuất, chưa phải tính năng đã triển khai.
+Identity, Overview và Lineage đúng hướng kỹ thuật; Customer 360 thiếu nhu cầu và quyền lợi; Relationship thiếu phân tích Agent; Segmentation thiên về hợp đồng; Feature Store thiếu Agent/Interaction; ML thiên về propensity; Next Best Action thiếu điều kiện quyết định. Agent Intelligence, Protection Intelligence và Customer Needs Intelligence chưa có. Nền tảng hiện tại là prototype, không phải nền tảng hoàn chỉnh.
 
 ## Nguyên tắc phát triển
 
@@ -57,3 +53,45 @@ V25 Insurance Business Framework; V26 Agent 360 & Agent Influence; V27 Protectio
 - Hiểu khách hàng hay chỉ hiểu hợp đồng đã bán?
 - Dự báo nhu cầu hay khả năng đại lý bán được sản phẩm?
 - Tối ưu doanh số ngắn hạn hay giá trị quan hệ 10–20 năm?
+
+
+## 10. Tính khả thi dữ liệu bảo hiểm
+
+| Bài toán | Có thể quan sát nếu đủ nguồn | Cần bổ sung | Không được kết luận |
+| --- | --- | --- | --- |
+| Agent Intelligence | Customer/Agent counts, sales mix, ANP, persistency | CRM, agent history, survey for interactions/NPS | Không gán % ảnh hưởng nhân quả từ sales |
+| Protection Intelligence | Benefit/Rider, sum assured, expiry nếu có chi tiết quyền lợi | FNA, thu nhập, nghĩa vụ, người phụ thuộc, bảo hiểm ngoài công ty | Không chấm % đủ bảo vệ nếu chưa có nhu cầu mục tiêu |
+| Customer Needs | Policy, payment, claim, cancellation: hành vi quan sát | CRM, exposure, response, FNA, survey, direct interaction | Không biến lịch sử mua hoặc score thành nhu cầu |
+| Predictive & Decision | Lapse, churn, MA Recapture, X-Sell nếu có lịch sử và nhãn phù hợp | Eligibility, suitability, consent; treatment/control và outcome cho uplift | Không xem propensity là nhu cầu hoặc causal impact |
+
+Ví dụ giả lập: Agent A có 80% hợp đồng bảo vệ, B có 20%, C có 35%, toàn công ty 45%. Đây là sales mix, không phải tỷ lệ ảnh hưởng của đại lý. So sánh cần kiểm soát phân khúc, thời điểm, khu vực, sản phẩm và cỡ mẫu. Protection Portfolio có thể hiển thị quyền lợi thực tế, nhưng chưa kết luận đủ/thiếu nếu thiếu FNA. Không mua có thể vì chưa được giới thiệu. Nhiều record giao dịch không đồng nghĩa hiểu động cơ mua.
+
+### Data Readiness
+
+1. Transaction: Client, Policy, Payment, Agent
+2. Behavioral: History, Claim, Service
+3. Predictive: Feature, lịch sử, nhãn và kiểm định
+4. Needs: FNA, CRM, Survey, Direct Interaction
+5. Decision: Suitability, Consent, Experiment, Uplift
+
+Ưu tiên identity, 360, relationship, segmentation, payment behavior, agent mix, persistency; maturity nếu có ngày đáo hạn; coverage nếu có benefit; ML nếu đủ lịch sử và nhãn. Needs, protection gap và uplift phụ thuộc dữ liệu bổ sung.
+
+## 11. Quyết định thiết kế đã thống nhất
+
+| Module hiện có | Hướng tích hợp đề xuất |
+| --- | --- |
+| Overview | Identity flow, portfolio; thêm tóm tắt data readiness |
+| Customer 360 | Giữ graph 2D, hành trình, phí; gom Protection Portfolio, Needs & Evidence, Agent context vào tab hiện có hoặc tab con |
+| Segmentation | Thêm phân khúc theo payment, persistency, agent/product mix; so sánh nhóm tương đồng |
+| Relationship Explorer | Giữ 3D/2D; thêm góc nhìn Agent và quan hệ đã xác minh |
+| Feature Store / ML / Lineage | Mở rộng feature, model, nguồn, grain, snapshot, nhãn và giới hạn; giữ module kỹ thuật |
+| Action Intelligence | Gom suitability, consent, evidence, hỗ trợ duy trì, experiment và uplift |
+| Data Workspace | Gom kiểm kê nguồn, chất lượng, lịch sử, nhãn và Data Readiness Explorer |
+| Business Cases / Vision | Danh mục bài toán và kiến thức; liên kết module hiện có, không nhân bản dashboard |
+
+- Evolution, không Rewrite: giữ code, chart, dữ liệu, layout và tính năng đang hoạt động; không thay đổi lớn nếu chưa duyệt mockup.
+- Ưu tiên gom nội dung vào module/tab hiện có; chỉ thêm tab con khi có câu hỏi nghiệp vụ riêng; menu mới là ngoại lệ cần thống nhất.
+- Mockup là tham chiếu visual, không phải bằng chứng dữ liệu. Không hiển thị số giả lập như KPI thực tế.
+- Data readiness là điều kiện cần, không đủ: kiểm tra coverage, chất lượng, lịch sử, grain, nhãn, point-in-time và thiết kế nhân quả.
+- Chưa kiểm kê schema thực tế; chỉ yêu cầu tên nhóm bảng và ý nghĩa, không yêu cầu record thật.
+- Không đưa roadmap theo số phiên bản lên Vision & Knowledge.
