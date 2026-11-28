@@ -64,3 +64,9 @@ Góc trên trái có thanh sinh lực dài và thanh năng lượng kỹ năng. 
 [Bảng mẫu bốn hiệu ứng](chuyen-dong-va-va-cham.webp) và [ảnh động ghi trong Godot](bon-hieu-ung-godot.webp). Bốn khung theo thứ tự Nguyệt Trảm, quái trúng chiêu, quái tan ảnh và Bước Gió. Ảnh động phát chậm để thấy va chạm và điểm bật nhảy.
 
 [Địa đồ chụp trong Godot khi đã ghé hai khu ở Làng Trăng](dia-do-godot.webp).
+
+## Sổ tay sáu ấn và Hầm Chuông Triều
+
+[Tranh hướng dẫn sáu ấn](so-tay-sau-an.webp) · [Ảnh động từ sáu lần thi triển trong Godot](sau-an-godot.webp) · [Hình hiệu ứng dùng trong trận](sau-an-do-hoa.webp).
+
+[Tranh nền hầm](ham-chuong-trieu-minh-hoa.webp) · [Ảnh đánh thức Chuông Triều trong game](ham-chuong-trieu-godot.webp). Đi thẳng qua khe đầu của Đường Chân Trời để xuống hầm. Lấy lưỡi chuông bằng E rồi dùng ấn 5 cạnh chuông đồng.
